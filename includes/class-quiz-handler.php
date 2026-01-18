@@ -88,8 +88,8 @@ class IELTS_CM_Quiz_Handler {
         
         foreach ($questions as $index => $question) {
             // Calculate max score for each question type
-            if ($question['type'] === 'closed_question') {
-                // Closed question - points equal to number of correct answers
+            if ($question['type'] === 'closed_question' || $question['type'] === 'closed_question_dropdown') {
+                // Closed question (including dropdown variant) - points equal to number of correct answers
                 $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
                 $max_score += max(1, $correct_answer_count);
             } elseif ($question['type'] === 'open_question') {
@@ -349,6 +349,129 @@ class IELTS_CM_Quiz_Handler {
                 // Set correct_answer to include field_results for frontend feedback
                 $correct_answer = array(
                     'field_results' => $field_results
+                );
+            } elseif ($question['type'] === 'closed_question_dropdown') {
+                // Closed question dropdown - multiple choice rendered as inline dropdowns
+                // Similar to open_question in terms of field handling, but validates against mc_options
+                $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                $mc_options = isset($question['mc_options']) && is_array($question['mc_options']) ? $question['mc_options'] : array();
+                
+                // Get correct indices for each dropdown position
+                $correct_indices_by_position = array();
+                $option_feedback = array();
+                
+                // Build option feedback map for all options
+                foreach ($mc_options as $opt_idx => $option) {
+                    if (isset($option['feedback']) && !empty($option['feedback'])) {
+                        $option_feedback[$opt_idx] = wp_kses_post($option['feedback']);
+                    }
+                }
+                
+                // Parse correct_answer to get which option is correct for each dropdown
+                // Expected format: "field_1:0|field_2:1|field_3:2" (field_num:option_index)
+                if (isset($question['correct_answer']) && !empty($question['correct_answer'])) {
+                    $correct_parts = explode('|', $question['correct_answer']);
+                    foreach ($correct_parts as $part) {
+                        $part_split = explode(':', $part, 2);
+                        if (count($part_split) === 2) {
+                            $field_num_str = trim($part_split[0]);
+                            // Extract field number from "field_1" format
+                            if (preg_match('/field_(\d+)/', $field_num_str, $matches)) {
+                                $field_num = intval($matches[1]);
+                                $correct_idx = intval(trim($part_split[1]));
+                                $correct_indices_by_position[$field_num] = $correct_idx;
+                            }
+                        }
+                    }
+                }
+                
+                // Get user answers - handle nested format from JavaScript
+                $user_answers = array();
+                if (isset($answers[$index]) && is_array($answers[$index])) {
+                    $user_answers = $answers[$index];
+                } else {
+                    // Flat format: answers['answer_0_field_1'], answers['answer_0_field_2']
+                    for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
+                        $field_answer_key = 'answer_' . $index . '_field_' . $field_num;
+                        if (isset($answers[$field_answer_key])) {
+                            $user_answers[$field_num] = $answers[$field_answer_key];
+                        }
+                    }
+                }
+                
+                // Get the display question numbers for this question
+                $display_start = isset($question_display_numbers[$index]['start']) ? $question_display_numbers[$index]['start'] : 1;
+                
+                $field_results = array();
+                $field_feedbacks = array();
+                $all_correct = true;
+                $any_answered = false;
+                
+                for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
+                    $user_field_answer = isset($user_answers[$field_num]) ? trim($user_answers[$field_num]) : '';
+                    $field_question_num = $display_start + $field_num - 1;
+                    $field_correct = false;
+                    
+                    if (!empty($user_field_answer)) {
+                        $any_answered = true;
+                        $user_option_idx = intval($user_field_answer);
+                        
+                        // Validate that the option index exists in mc_options
+                        if (!isset($mc_options[$user_option_idx])) {
+                            // Invalid option index - treat as incorrect and continue without feedback
+                            $all_correct = false;
+                            // Don't continue here - we still need to store field result below
+                        } else {
+                            // Check if user's answer is correct
+                            if (isset($correct_indices_by_position[$field_num]) && $correct_indices_by_position[$field_num] === $user_option_idx) {
+                                $field_correct = true;
+                                $points_earned++;
+                                
+                                // Get feedback from the selected option
+                                if (isset($mc_options[$user_option_idx]['feedback']) && !empty($mc_options[$user_option_idx]['feedback'])) {
+                                    $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($mc_options[$user_option_idx]['feedback']) . '</span>';
+                                    $field_feedbacks[] = $feedback_text;
+                                }
+                            } else {
+                                $all_correct = false;
+                                
+                                // Get feedback from the selected incorrect option
+                                if (isset($mc_options[$user_option_idx]['feedback']) && !empty($mc_options[$user_option_idx]['feedback'])) {
+                                    $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($mc_options[$user_option_idx]['feedback']) . '</span>';
+                                    $field_feedbacks[] = $feedback_text;
+                                }
+                            }
+                        }
+                    } else {
+                        $all_correct = false;
+                        
+                        // No answer provided
+                        if (isset($question['no_answer_feedback']) && !empty($question['no_answer_feedback'])) {
+                            $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($question['no_answer_feedback']) . '</span>';
+                            $field_feedbacks[] = $feedback_text;
+                        }
+                    }
+                    
+                    // Store field result for frontend
+                    $correct_option_idx = isset($correct_indices_by_position[$field_num]) ? $correct_indices_by_position[$field_num] : null;
+                    $field_results[$field_num] = array(
+                        'correct' => $field_correct,
+                        'user_answer' => $user_field_answer,
+                        'correct_answer_idx' => $correct_option_idx,
+                        'question_number' => $field_question_num
+                    );
+                }
+                
+                $score += $points_earned;
+                $is_correct = $all_correct && $any_answered;
+                
+                // Combine all field feedbacks
+                $feedback = !empty($field_feedbacks) ? implode('<br>', $field_feedbacks) : '';
+                
+                // Set correct_answer to include field_results and option_feedback for frontend feedback
+                $correct_answer = array(
+                    'field_results' => $field_results,
+                    'option_feedback' => $option_feedback
                 );
             } else {
                 // Unknown or unsupported question type - treat as incorrect with feedback

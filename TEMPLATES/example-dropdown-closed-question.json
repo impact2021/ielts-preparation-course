@@ -1,0 +1,156 @@
+{
+  "title": "Example: Dropdown Closed Question",
+  "content": "This exercise demonstrates the new closed_question_dropdown type, which displays multiple choice options as inline dropdown menus.",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct option from the dropdown menu.",
+      "question": "I know that [dropdown] this might be difficult.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "completing",
+          "is_correct": true,
+          "feedback": "Correct! 'Completing' is the right verb form here. The sentence requires a gerund (verb+ing form) after 'that'."
+        },
+        {
+          "text": "complete",
+          "is_correct": false,
+          "feedback": "Incorrect. The sentence requires a gerund (verb+ing form) after 'that', not the base form of the verb."
+        },
+        {
+          "text": "completed",
+          "is_correct": false,
+          "feedback": "Incorrect. The past tense doesn't fit the context of this sentence. You need a gerund (verb+ing form)."
+        },
+        {
+          "text": "to complete",
+          "is_correct": false,
+          "feedback": "Incorrect. An infinitive doesn't work here. The sentence needs a gerund (verb+ing form) after 'that'."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'completing'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the paragraph by selecting the correct options from the dropdown menus.",
+      "question": "The student [dropdown] to the library yesterday and [dropdown] three books on history.",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "go",
+          "is_correct": false,
+          "feedback": "Incorrect. This is present tense, but the word 'yesterday' indicates that the sentence needs past tense."
+        },
+        {
+          "text": "went",
+          "is_correct": true,
+          "feedback": "Correct! 'Went' is the past tense of 'go', which matches with 'yesterday'."
+        },
+        {
+          "text": "going",
+          "is_correct": false,
+          "feedback": "Incorrect. The gerund form doesn't fit this sentence structure. You need a simple past tense verb."
+        },
+        {
+          "text": "will go",
+          "is_correct": false,
+          "feedback": "Incorrect. This is future tense, but 'yesterday' indicates the action happened in the past."
+        },
+        {
+          "text": "borrow",
+          "is_correct": false,
+          "feedback": "Incorrect. This is present tense, but the sentence needs past tense to match with 'yesterday'."
+        },
+        {
+          "text": "borrowed",
+          "is_correct": true,
+          "feedback": "Correct! 'Borrowed' is the past tense and matches with 'yesterday'."
+        },
+        {
+          "text": "borrowing",
+          "is_correct": false,
+          "feedback": "Incorrect. The gerund form doesn't work here. You need a simple past tense verb."
+        },
+        {
+          "text": "will borrow",
+          "is_correct": false,
+          "feedback": "Incorrect. This is future tense, but the action happened 'yesterday' (in the past)."
+        }
+      ],
+      "correct_answer": "field_1:1|field_2:5",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are 'went' and 'borrowed'.",
+      "points": 2
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the sentences by selecting the correct prepositions from the dropdown menus.",
+      "question": "She has been working [dropdown] this company [dropdown] five years, and she is responsible [dropdown] managing the sales team.",
+      "correct_answer_count": 3,
+      "mc_options": [
+        {
+          "text": "at",
+          "is_correct": true,
+          "feedback": "Correct! 'At' is used with companies/organizations when referring to working at a place."
+        },
+        {
+          "text": "in",
+          "is_correct": false,
+          "feedback": "Incorrect. 'In' is not typically used with companies in this context. We say 'work at a company', not 'work in a company'."
+        },
+        {
+          "text": "on",
+          "is_correct": false,
+          "feedback": "Incorrect. 'On' is not the right preposition for companies. We use 'at' to indicate working at a specific place."
+        },
+        {
+          "text": "for (duration)",
+          "is_correct": true,
+          "feedback": "Correct! 'For' is used to indicate a duration of time (five years)."
+        },
+        {
+          "text": "since",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Since' is used with a specific point in time (e.g., 'since 2019'), not a duration like 'five years'."
+        },
+        {
+          "text": "during",
+          "is_correct": false,
+          "feedback": "Incorrect. 'During' is used with specific periods (e.g., 'during the summer'), not durations measured in years."
+        },
+        {
+          "text": "of",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Responsible of' is not correct English. The correct phrase is 'responsible for'."
+        },
+        {
+          "text": "to",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Responsible to' means accountable to someone, not in charge of something. We say 'responsible for managing', not 'responsible to managing'."
+        },
+        {
+          "text": "for (responsibility)",
+          "is_correct": true,
+          "feedback": "Correct! 'Responsible for' means in charge of or having the duty to manage something."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:3|field_3:8",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are 'at', 'for (duration)', and 'for (responsibility)'.",
+      "points": 3
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
