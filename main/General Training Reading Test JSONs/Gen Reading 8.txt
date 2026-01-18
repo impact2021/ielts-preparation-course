@@ -1,854 +1,262 @@
-<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
-					</legend>
+SECTION 1
+Reading Passage 1
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Party in the Park
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1754" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div class="ito-scroll-container">
-  <div class="ito-scroll-box">
-    <div>
-      <h2>Party in the Park</h2>
-      <p><strong>A:</strong> The 6th Annual ‘Party in the Park’ will be held on the 22nd of July at the usual venue (New Lynn Park). This year we are pleased to announce a number of new features, as well as the all the traditional stalls, music and games that have made the Party in the Park such a success in previous years.</p>
-      <p><strong>B:</strong> Live music will be provided on two stages throughout the day, with over 20 different bands. Festival favourites ‘Leaning Out’ will return again, as well as Irish dancing troupe the Emerald Slippers.&nbsp; New acts this year are Screener, recently returned from a hugely successful tour of Europe, and Spider Slice, one of our home grown bands that have enjoyed great critical success over the last year.</p>
-      <p><strong>C:</strong> There will be the traditional handicraft stalls, where you can watch local craftsman and artists at work as well as chance to purchase some of their unique products. Come and see the John Henry, a local artist who will draw pictures of portraits on request. There will also be a stall run by The Woodman, a local favourite who will again have wooden products on sale as well as short workshops on wood crafting for all those enthusiastic amateurs.</p>
-      <p><strong>D:</strong> There will be plenty of food and drink stalls, ranging from sandwiches and coffee right through to ice creams served in pineapple halves and freshly squeezed exotic fruit juices. And of course, there will be plenty of opportunities to sample the products before you buy!</p>
-      <p><strong>E:</strong> Due to the success of the event in previous years, we have added additional parking space this year. There will be two different car parks; the first, just off Turner Street, is allocated to people running stalls on the day, and a car park for the general public on Judd Road. We also have an overflow car park on Smith Lane, just a 10 minute walk from the event. The event is free to enter, but there is a charge of £1.50 for parking (please note that this must be paid in cash at the gate).</p>
-      <p><strong>F:</strong> Hopefully the weather will be good, but the event will proceed regardless so make sure you bring some wet weather gear if it looks like rain on the day.</p>
-      <p><strong>G:</strong> Please remember that this is an alcohol-free event. Anyone drinking alcohol within the park grounds will be asked to leave by security. We also ask smokers to use only the designated areas and to put all cigarette ends in the bins provided</p>
-    </div>
-  </div>
-  <div class="ito-scroll-box">
-    <p class="style1"><strong>Section 1</strong></p>
-    <div>
-      <p>The reading passage has seven paragraphs <strong>A – G</strong>.</p>
-      <p>Choose the correct heading for paragraphs <strong>B</strong><strong>-G</strong> from the list of headings below.</p>
-      <p>Type the correct number <strong>I-XI</strong> in boxes <strong>1-6</strong>:</p>
-      <ol style="list-style-type: upper-roman" type="I">
-        <li>Take precautions</li>
-        <li>Certain restrictions at the event</li>
-        <li>Music lessons</li>
-        <li>Exhibitors plying their trade</li>
-        <li>Restaurant facilities</li>
-        <li>Weather forecast</li>
-        <li>Reduced parking conditions</li>
-        <li>National and international talent</li>
-        <li>Tastes to savour</li>
-        <li>Fun for all the family</li>
-        <li>Access to the event</li>
-      </ol>
-      <ol>
-        <li>Paragraph B BLANK 1 of 6</li>
-        <li>Paragraph C BLANK 2 of 6</li>
-        <li>Paragraph D BLANK 3 of 6</li>
-        <li>Paragraph E BLANK 4 of 6</li>
-        <li>Paragraph F BLANK 5 of 6</li>
-        <li>Paragraph G BLANK 6 of 6</li>
-      </ol>
-    </div>
-  </div>
-</div>											</legend>
+A
+The 6th Annual ‘Party in the Park’ will be held on 22 July at the usual venue, New Lynn Park. This year there will be a number of new features, as well as the traditional stalls, music and games that have made the event popular in previous years.
 
-											<div class="ito-scroll-container">
-<div class="ito-scroll-box">
-<div>
-<h2>Party in the Park</h2>
-<p><strong>A:</strong> The 6th Annual ‘Party in the Park’ will be held on the 22nd of July at the usual venue (New Lynn Park). This year we are pleased to announce a number of new features, as well as the all the traditional stalls, music and games that have made the Party in the Park such a success in previous years.</p>
-<p><strong>B:</strong> Live music will be provided on two stages throughout the day, with over 20 different bands. Festival favourites ‘Leaning Out’ will return again, as well as Irish dancing troupe the Emerald Slippers.&nbsp; New acts this year are Screener, recently returned from a hugely successful tour of Europe, and Spider Slice, one of our home grown bands that have enjoyed great critical success over the last year.</p>
-<p><strong>C:</strong> There will be the traditional handicraft stalls, where you can watch local craftsman and artists at work as well as chance to purchase some of their unique products. Come and see the John Henry, a local artist who will draw pictures of portraits on request. There will also be a stall run by The Woodman, a local favourite who will again have wooden products on sale as well as short workshops on wood crafting for all those enthusiastic amateurs.</p>
-<p><strong>D:</strong> There will be plenty of food and drink stalls, ranging from sandwiches and coffee right through to ice creams served in pineapple halves and freshly squeezed exotic fruit juices. And of course, there will be plenty of opportunities to sample the products before you buy!</p>
-<p><strong>E:</strong> Due to the success of the event in previous years, we have added additional parking space this year. There will be two different car parks; the first, just off Turner Street, is allocated to people running stalls on the day, and a car park for the general public on Judd Road. We also have an overflow car park on Smith Lane, just a 10 minute walk from the event. The event is free to enter, but there is a charge of £1.50 for parking (please note that this must be paid in cash at the gate).</p>
-<p><strong>F:</strong> Hopefully the weather will be good, but the event will proceed regardless so make sure you bring some wet weather gear if it looks like rain on the day.</p>
-<p><strong>G:</strong> Please remember that this is an alcohol-free event. Anyone drinking alcohol within the park grounds will be asked to leave by security. We also ask smokers to use only the designated areas and to put all cigarette ends in the bins provided</p>
-<p></p></div>
-<p></p></div>
-<div class="ito-scroll-box">
-<p class="style1"><strong>Section 1</strong></p>
-<div>
-<p>The reading passage has seven paragraphs <strong>A – G</strong>.</p>
-<p>Choose the correct heading for paragraphs <strong>B</strong><strong>-G</strong> from the list of headings below.</p>
-<p>Type the correct number <strong>I-XI</strong> in boxes <strong>1-6</strong>:</p>
-<ol style="list-style-type: upper-roman;" type="I">
-<li>Take precautions</li>
-<li>Certain restrictions at the event</li>
-<li>Music lessons</li>
-<li>Exhibitors plying their trade</li>
-<li>Restaurant facilities</li>
-<li>Weather forecast</li>
-<li>Reduced parking conditions</li>
-<li>National and international talent</li>
-<li>Tastes to savour</li>
-<li>Fun for all the family</li>
-<li>Access to the event</li>
-</ol>
-<ol>
-<li>Paragraph B <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(viii)</span></span></span></label></li>
-<li>Paragraph C <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(iv)</span></span></span></label></li>
-<li>Paragraph D <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(ix)</span></span></span></label></li>
-<li>Paragraph E <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(xi)</span></span></span></label></li>
-<li>Paragraph F <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(i)</span></span></span></label></li>
-<li>Paragraph G <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="2" type="text" value="" size="2" maxlength="7" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(ii)</span></span></span></label></li>
-</ol></div>
-<p></p></div>
-</div>
-										</fieldset>
+B
+Live music will be provided on two stages throughout the day, with over 20 different bands. Festival favourites Leaning Out will return, along with Irish dancing troupe The Emerald Slippers. New acts include Screener, recently returned from a successful European tour, and Spider Slice, a popular local band.
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 6										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+C
+There will be traditional handicraft stalls where visitors can watch local craftspeople and artists at work and purchase unique products. Local artist John Henry will draw portraits on request. The Woodman will sell wooden products and run short wood-craft workshops.
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol>
-<li>VIII – the paragraph refers to the different musicians (talent), with an Irish group (international) and ‘home grown’ (national) bands.</li>
-<li>IV – the paragraph refers to handicraft (trade) stalls (exhibitors)</li>
-<li>IX – the paragraph talks about the food and drink that will be available.</li>
-<li>XI – the paragraph refers to car parking and ways to get to and from the event.</li>
-<li>I – the paragraph refers to having suitable clothing if the weather turns bad (hence ‘taking precautions’)</li>
-<li>II – the paragraph talks about alcohol and smoking restrictions. </li>
-</ol>
-</div>
-						</div>
-					</div>
-				
-				
-												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+D
+There will be a wide range of food and drink stalls, from sandwiches and coffee to ice creams served in pineapple halves and freshly squeezed exotic fruit juices. Visitors will be able to sample products before buying.
 
-									<div style="margin-bottom: 20px;"></div>
-							</li>
+E
+Additional parking has been arranged. Two car parks are available: Turner Street for stallholders and Judd Road for the general public. An overflow car park on Smith Lane is a 10-minute walk away. Entry is free, but parking costs £1.50 (cash only).
 
-		
-			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1755,&quot;question_post_id&quot;:71970474}">
-				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
-				Question <span>2</span> of <span>5</span>				</div>
-				<h5 style="display: none;" class="wpProQuiz_header">
-					<span>2</span>. Question
-				</h5>
+F
+The event will proceed regardless of weather conditions. Visitors are advised to bring wet-weather gear if rain is forecast.
 
-				
-								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
-					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1755">
-											</legend>
+G
+This is an alcohol-free event. Anyone drinking alcohol inside the park will be asked to leave. Smokers must use designated areas and dispose of cigarette ends responsibly.
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Questions 1–6
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1755" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div class="ito-scroll-container">
-<div class="ito-scroll-box">
-<p style="text-align: center"><strong>Westgate Gym</strong></p>
-<p>Opening hours:<br>6 a.m. to 8 p.m. Monday to Friday. 7 a.m. to 1 p.m. weekends.<br><strong>Facilities</strong></p>
-<ul>
-<li>Sauna</li>
-<li>Exercise bicycles</li>
-<li>Boxing equipment</li>
-<li>Free weights</li>
-<li>Stations to work on individual muscle areas</li>
-<li>Hot showers</li>
-</ul>
-<p><strong>Classes</strong></p>
-<p><strong>Awesome Abs</strong><br>This class focuses on your abdominal muscles, giving an intense workout to get you in the best possible shape. Class sizes up to 12 with a private trainer.<br>Duration: 20 minutes<br>Days: Mondays and Wednesdays at 11 a.m.</p>
-<p><strong>Kick class</strong><br>Get fit with this popular martial arts influenced class. You’ll kick, jab and punch your way to better health whilst actively reducing your level of stress! Class sizes of up to 20.<br>Duration: 30 minutes<br>Days: Tuesdays at 4 p.m. and Thursdays at 7 p.m.</p>
-<p><strong>X-Ride</strong><br>Get on the highway to health in this addictive indoor ride. Our exercise bicycles are a great way to calorie burn your way to better fitness. The X-Ride class will take you through all levels of difficulty, with simulated uphill, downhill, street and mountain levels. We have 24 bicycles, so it’s a first come, first served class. Be here early to avoid disappointment!<br>Duration: 1 hour<br>Days: Mondays and Wednesdays at 5 p.m. Fridays at 4 p.m.</p>
-<p><strong>Pilates</strong><br>Increase your flexibility with our Pilates class. Designed for beginners, this class requires no previous experience in a Pilates class. With groups no bigger than 6 people to one trainer, you can be sure of getting a personal experience.<br>Duration: 45 minutes<br>Days: Wednesdays and Thursdays at 1 p.m.</p>
-<p><strong>Flex</strong><br>Perfect for people trying to lose weight without trying to build too much muscle, this class will help you get in good shape without heavy lifting, as well as giving you a good workout. Maximum 18 per class.<br>Duration: 45 minutes<br>Days: Mondays only 4 p.m.</p>
-<p><strong>Energiser</strong><br>The ideal choice for people keen to have a little extra energy in their daily lives, the ENERGISER class will help you feel refreshed and ready to go! Over 6 weeks, this class will help build your energy and stamina, giving you some simple techniques that you can do at home or in the office to maintain your level of energy and fitness. Group sizes of up to 14.<br>Duration: 30 minutes<br>Days: Saturdays at 10 a.m. and Sundays 11 a.m.</p>
-<p><strong>Sculpt</strong><br>This class is for those looking to build muscles and strength. You will show how to use different weights to target specific sets of muscles to build an all-over definition. NOTE: some experience of weight lifting is recommended before enrolling in this class. Maximum 8 people per class.<br>Duration: 40 minutes<br>Days: Mondays at 7 a.m. and 4 p.m., Tuesdays at 4 p.m. and Fridays 7 a.m. and 5 p.m.</p>
-</div>
-<div class="ito-scroll-box"><em><strong>Questions 7 to 14</strong></em><br><br><br><em><strong>Questions 7 to 10</strong></em><br>Do the following statements agree with the information given in the reading passage?<br>In boxes 7-10 on your answer sheet write<br><strong>TRUE</strong> if the statement agrees with the information<br><strong>FALSE</strong> if the statement contradicts the information<br><strong>NOT GIVEN</strong> if there is no information on this
-<ol start="7">
-<li>7. All classes are available at least twice a week. BLANK 1 of 8</li>
-<li>8. ‘Awesome Abs’ is the shortest class. BLANK 2 of 8</li>
-<li>9. One of the classes is only available at the weekend. BLANK 3 of 8</li>
-<li>10. You need to book a spot to join the X-Ride class. BLANK 4 of 8</li>
-</ol>
-<hr>
-<p><em><strong>Questions 11 – 14</strong></em></p>
-<p>Answer the questions below using <strong><em>ONE WORD ONLY</em></strong> from the passage for each answer.</p>
-<ol start="11">
-<li>Which class recommends some experience? BLANK 5 of 8</li>
-<li>Which class has the fewest possible students? BLANK 6 of 8</li>
-<li>Which class reduces stress by using fighting positions? BLANK 7 of 8</li>
-<li>Which class will teach you skills you practice outside the gym? BLANK 8 of 8</li>
-</ol>
-</div>
-</div>											</legend>
+[This is a matching headings question.
+There are 6 questions.
+Choose the correct heading (I–XI) for paragraphs B–G.]
 
-											<div class="ito-scroll-container">
-<div class="ito-scroll-box">
-<p style="text-align: center;"><strong>Westgate Gym</strong></p>
-<p>Opening hours:<br>6 a.m. to 8 p.m. Monday to Friday. 7 a.m. to 1 p.m. weekends.<br><strong>Facilities</strong></p>
-<ul>
-<li>Sauna</li>
-<li>Exercise bicycles</li>
-<li>Boxing equipment</li>
-<li>Free weights</li>
-<li>Stations to work on individual muscle areas</li>
-<li>Hot showers</li>
-</ul>
-<p><strong>Classes</strong></p>
-<p><strong>Awesome Abs</strong><br>This class focuses on your abdominal muscles, giving an intense workout to get you in the best possible shape. Class sizes up to 12 with a private trainer.<br>Duration: 20 minutes<br>Days: Mondays and Wednesdays at 11 a.m.</p>
-<p><strong>Kick class</strong><br>Get fit with this popular martial arts influenced class. You’ll kick, jab and punch your way to better health whilst actively reducing your level of stress! Class sizes of up to 20.<br>Duration: 30 minutes<br>Days: Tuesdays at 4 p.m. and Thursdays at 7 p.m.</p>
-<p><strong>X-Ride</strong><br>Get on the highway to health in this addictive indoor ride. Our exercise bicycles are a great way to calorie burn your way to better fitness. The X-Ride class will take you through all levels of difficulty, with simulated uphill, downhill, street and mountain levels. We have 24 bicycles, so it’s a first come, first served class. Be here early to avoid disappointment!<br>Duration: 1 hour<br>Days: Mondays and Wednesdays at 5 p.m. Fridays at 4 p.m.</p>
-<p><strong>Pilates</strong><br>Increase your flexibility with our Pilates class. Designed for beginners, this class requires no previous experience in a Pilates class. With groups no bigger than 6 people to one trainer, you can be sure of getting a personal experience.<br>Duration: 45 minutes<br>Days: Wednesdays and Thursdays at 1 p.m.</p>
-<p><strong>Flex</strong><br>Perfect for people trying to lose weight without trying to build too much muscle, this class will help you get in good shape without heavy lifting, as well as giving you a good workout. Maximum 18 per class.<br>Duration: 45 minutes<br>Days: Mondays only 4 p.m.</p>
-<p><strong>Energiser</strong><br>The ideal choice for people keen to have a little extra energy in their daily lives, the ENERGISER class will help you feel refreshed and ready to go! Over 6 weeks, this class will help build your energy and stamina, giving you some simple techniques that you can do at home or in the office to maintain your level of energy and fitness. Group sizes of up to 14.<br>Duration: 30 minutes<br>Days: Saturdays at 10 a.m. and Sundays 11 a.m.</p>
-<p><strong>Sculpt</strong><br>This class is for those looking to build muscles and strength. You will show how to use different weights to target specific sets of muscles to build an all-over definition. NOTE: some experience of weight lifting is recommended before enrolling in this class. Maximum 8 people per class.<br>Duration: 40 minutes<br>Days: Mondays at 7 a.m. and 4 p.m., Tuesdays at 4 p.m. and Fridays 7 a.m. and 5 p.m.</p>
-</div>
-<div class="ito-scroll-box"><em><strong>Questions 7 to 14</strong></em><p></p>
-<p><em><strong>Questions 7 to 10</strong></em><br>Do the following statements agree with the information given in the reading passage?<br>In boxes 7-10 on your answer sheet write<br><strong>TRUE</strong> if the statement agrees with the information<br><strong>FALSE</strong> if the statement contradicts the information<br><strong>NOT GIVEN</strong> if there is no information on this</p>
-<ol start="7">
-<li>7. All classes are available at least twice a week. <label><span class="screen-reader-text">Fill in the blank 1 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
-<li>8. ‘Awesome Abs’ is the shortest class. <label><span class="screen-reader-text">Fill in the blank 2 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
-<li>9. One of the classes is only available at the weekend. <label><span class="screen-reader-text">Fill in the blank 3 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
-<li>10. You need to book a spot to join the X-Ride class. <label><span class="screen-reader-text">Fill in the blank 4 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
-</ol>
-<hr>
-<p><em><strong>Questions 11 – 14</strong></em></p>
-<p>Answer the questions below using <strong><em>ONE WORD ONLY</em></strong> from the passage for each answer.</p>
-<ol start="11">
-<li>Which class recommends some experience? <label><span class="screen-reader-text">Fill in the blank 5 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="12" type="text" value="" size="12" maxlength="17" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(sculpt,sculpt class)</span></span></span></label></li>
-<li>Which class has the fewest possible students? <label><span class="screen-reader-text">Fill in the blank 6 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="13" type="text" value="" size="13" maxlength="18" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(pilates,pilates class)</span></span></span></label></li>
-<li>Which class reduces stress by using fighting positions? <label><span class="screen-reader-text">Fill in the blank 7 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="10" type="text" value="" size="10" maxlength="15" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(kick,kick class)</span></span></span></label></li>
-<li>Which class will teach you skills you practice outside the gym? <label><span class="screen-reader-text">Fill in the blank 8 of 8</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="15" type="text" value="" size="15" maxlength="20" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(energiser,energiser class)</span></span></span></label></li>
-</ol>
-</div>
-</div>
-										</fieldset>
+List of Headings
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 8										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 8									Points									</span>
+I. Take precautions
+II. Certain restrictions at the event
+III. Music lessons
+IV. Exhibitors plying their trade
+V. Restaurant facilities
+VI. Weather forecast
+VII. Reduced parking conditions
+VIII. National and international talent
+IX. Tastes to savour
+X. Fun for all the family
+XI. Access to the event
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="7">
-<li>False – flex class only once a week</li>
-<li>True – 20 minutes only</li>
-<li>True – the Energiser class is only Saturday and Sunday</li>
-<li>False – ‘first come, first served’</li>
-<li>Sculpt – ‘NOTE: some experience of weight lifting is recommended before enrolling in this class.’</li>
-<li>Pilates (only 6)</li>
-<li>Kick class – ‘…martial arts influenced class. You’ll kick, jab and punch your way to better health’.</li>
-<li>Energiser (giving you some simple techniques that you can do at home or in the office)</li>
-</ol>
-</div>
-						</div>
-					</div>
-				
-				
-												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+Paragraph B
+Answer: VIII
 
-									<div style="margin-bottom: 20px;"></div>
-							</li>
+Paragraph C
+Answer: IV
 
-		
-			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1756,&quot;question_post_id&quot;:71970475}">
-				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
-				Question <span>3</span> of <span>5</span>				</div>
-				<h5 style="display: none;" class="wpProQuiz_header">
-					<span>3</span>. Question
-				</h5>
+Paragraph D
+Answer: IX
 
-				
-								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
-					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1756">
-											</legend>
+Paragraph E
+Answer: XI
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Paragraph F
+Answer: I
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1756" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div class="ito-scroll-container">
-  <div class="ito-scroll-box">
-    <p>To all staff</p>
-    <p>This year we will be continuing our investment in training, and expanding the courses and conferences available. The following training sessions / days will be offered throughout the year. It is essential that you register your interest in any of the optional training days with your Department Head, line manager or supervisor as soon as possible.</p>
-    <table border="1" width="100%" cellspacing="0" cellpadding="0">
-      <tbody>
-        <tr>
-          <td valign="top" width="25%"><strong>Course</strong></td>
-          <td valign="top" width="75%">
-            <h3>Health and Safety in the workplace level 1</h3>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Details</td>
-          <td valign="top">This course will take 2 hours a day over four days to complete. It is a mandatory requirement for all staff and covers the basic aspects of creating, maintaining and working in a safe environment. A government issued National Certificate will be awarded to all employees that complete this course.</td>
-        </tr>
-        <tr>
-          <td valign="top">Open to</td>
-          <td valign="top">All employees</td>
-        </tr>
-        <tr>
-          <td valign="top">Allocation</td>
-          <td valign="top">Mandatory for all employees that have not already completed the course</td>
-        </tr>
-        <tr>
-          <td valign="top">Location</td>
-          <td valign="top">In company</td>
-        </tr>
-        <tr>
-          <td valign="top">Time</td>
-          <td valign="top">25th -28th January</td>
-        </tr>
-      </tbody>
-    </table>
-    <table border="1" width="100%" cellspacing="0" cellpadding="0">
-      <tbody>
-        <tr>
-          <td valign="top" width="25%">Course</td>
-          <td valign="top" width="75%">
-            <h3>Health and Safety in the workplace level 2</h3>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Details</td>
-          <td valign="top">This course will take 2 hours a day over four days to complete. Attendance is optional but Completion of Health and Safety in the workplace level 1 is required before attendance. As with the Level 1 course, a government issued National Certificate will be awarded to all employees that complete this course.</td>
-        </tr>
-        <tr>
-          <td valign="top">Open to</td>
-          <td valign="top">All employees</td>
-        </tr>
-        <tr>
-          <td valign="top">Allocation</td>
-          <td valign="top">Maximum 24 places</td>
-        </tr>
-        <tr>
-          <td valign="top">Location</td>
-          <td valign="top">In company</td>
-        </tr>
-        <tr>
-          <td valign="top">Time</td>
-          <td valign="top">14th -18th February</td>
-        </tr>
-      </tbody>
-    </table>
-    <table border="1" width="100%" cellspacing="0" cellpadding="0">
-      <tbody>
-        <tr>
-          <td valign="top" width="25%">Course</td>
-          <td valign="top" width="75%">
-            <h3>Fork lift licence</h3>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Details</td>
-          <td valign="top">Half day course that leads to a level 1 forklift licence. All attendees must have a current driving licence. Attendance at two additional sessions will be required (to be scheduled)</td>
-        </tr>
-        <tr>
-          <td valign="top">Open to</td>
-          <td valign="top">Warehousing staff only</td>
-        </tr>
-        <tr>
-          <td valign="top">Allocation</td>
-          <td valign="top">Maximum 8 places</td>
-        </tr>
-        <tr>
-          <td valign="top">Location</td>
-          <td valign="top">Crown Fork Hoist Training, Alderman Street</td>
-        </tr>
-        <tr>
-          <td valign="top">Time</td>
-          <td valign="top">22nd April</td>
-        </tr>
-      </tbody>
-    </table>
-    <table border="1" width="100%" cellspacing="0" cellpadding="0">
-      <tbody>
-        <tr>
-          <td valign="top" width="25%">Course</td>
-          <td valign="top" width="75%">
-            <h3>Conference : Motivating staff</h3>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Details</td>
-          <td valign="top">3 day conference with guest speakers from different areas of business. Delegates will be required to stay overnight for two nights. All conference fees and accommodation will be covered with an allowance for meals. Partners can be taken but will incur an additional cost.</td>
-        </tr>
-        <tr>
-          <td valign="top">Open to</td>
-          <td valign="top">Department Managers only</td>
-        </tr>
-        <tr>
-          <td valign="top">Allocation</td>
-          <td valign="top">Maximum 12 places</td>
-        </tr>
-        <tr>
-          <td valign="top">Location</td>
-          <td valign="top">Landsdowne Hotel &nbsp;(2 nights’ accommodation provided)</td>
-        </tr>
-        <tr>
-          <td valign="top">Time</td>
-          <td valign="top">2nd June – 5th June</td>
-        </tr>
-      </tbody>
-    </table>
-    <table border="1" width="100%" cellspacing="0" cellpadding="0">
-      <tbody>
-        <tr>
-          <td valign="top" width="25%">Course</td>
-          <td valign="top" width="75%">
-            <h3>Trax database system</h3>
-          </td>
-        </tr>
-        <tr>
-          <td valign="top">Details:</td>
-          <td valign="top">A half day course focussing on how to use the new customer management database.</td>
-        </tr>
-        <tr>
-          <td valign="top">Open to</td>
-          <td valign="top">All secretarial staff</td>
-        </tr>
-        <tr>
-          <td valign="top">Allocation</td>
-          <td valign="top">Mandatory for all secretarial staff</td>
-        </tr>
-        <tr>
-          <td valign="top">Location</td>
-          <td valign="top">In company</td>
-        </tr>
-        <tr>
-          <td valign="top">Time</td>
-          <td valign="top">16th July</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="ito-scroll-box">
-    <em><strong>SECTION 2</strong></em>
-    <br><br>
-    <em><strong>Questions 15 – 19</strong></em>
-    <p>Answer the questions below using <strong><em>NO MORE THAN THREE WORDS AND/OR A NUMBER</em></strong> from the passage for each answer.</p>
-    <ol start="15">
-      <li>Attendees on the 3 day conference will be staying where? BLANK 1 of 5</li>
-      <li>Who is required to go to the training session on a new computer programme? BLANK 2 of 5</li>
-      <li>What will people completing the Health and Safety Level 1 course be awarded? BLANK 3 of 5</li>
-      <li>How many sessions do staff need to attend to obtain a fork lift licence? BLANK 4 of 5</li>
-      <li>Which training event can employees take wives or husbands to? BLANK 5 of 5</li>
-    </ol>
-  </div>
-</div>											</legend>
+Paragraph G
+Answer: II
 
-											<div class="ito-scroll-container">
-<div class="ito-scroll-box">
-<p>To all staff</p>
-<p>This year we will be continuing our investment in training, and expanding the courses and conferences available. The following training sessions / days will be offered throughout the year. It is essential that you register your interest in any of the optional training days with your Department Head, line manager or supervisor as soon as possible.</p>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="25%"><strong>Course</strong></td>
-<td valign="top" width="75%">
-<h3>Health and Safety in the workplace level 1</h3>
-</td>
-</tr>
-<tr>
-<td valign="top">Details</td>
-<td valign="top">This course will take 2 hours a day over four days to complete. It is a mandatory requirement for all staff and covers the basic aspects of creating, maintaining and working in a safe environment. A government issued National Certificate will be awarded to all employees that complete this course.</td>
-</tr>
-<tr>
-<td valign="top">Open to</td>
-<td valign="top">All employees</td>
-</tr>
-<tr>
-<td valign="top">Allocation</td>
-<td valign="top">Mandatory for all employees that have not already completed the course</td>
-</tr>
-<tr>
-<td valign="top">Location</td>
-<td valign="top">In company</td>
-</tr>
-<tr>
-<td valign="top">Time</td>
-<td valign="top">25th -28th January</td>
-</tr>
-</tbody>
-</table>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="25%">Course</td>
-<td valign="top" width="75%">
-<h3>Health and Safety in the workplace level 2</h3>
-</td>
-</tr>
-<tr>
-<td valign="top">Details</td>
-<td valign="top">This course will take 2 hours a day over four days to complete. Attendance is optional but Completion of Health and Safety in the workplace level 1 is required before attendance. As with the Level 1 course, a government issued National Certificate will be awarded to all employees that complete this course.</td>
-</tr>
-<tr>
-<td valign="top">Open to</td>
-<td valign="top">All employees</td>
-</tr>
-<tr>
-<td valign="top">Allocation</td>
-<td valign="top">Maximum 24 places</td>
-</tr>
-<tr>
-<td valign="top">Location</td>
-<td valign="top">In company</td>
-</tr>
-<tr>
-<td valign="top">Time</td>
-<td valign="top">14th -18th February</td>
-</tr>
-</tbody>
-</table>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="25%">Course</td>
-<td valign="top" width="75%">
-<h3>Fork lift licence</h3>
-</td>
-</tr>
-<tr>
-<td valign="top">Details</td>
-<td valign="top">Half day course that leads to a level 1 forklift licence. All attendees must have a current driving licence. Attendance at two additional sessions will be required (to be scheduled)</td>
-</tr>
-<tr>
-<td valign="top">Open to</td>
-<td valign="top">Warehousing staff only</td>
-</tr>
-<tr>
-<td valign="top">Allocation</td>
-<td valign="top">Maximum 8 places</td>
-</tr>
-<tr>
-<td valign="top">Location</td>
-<td valign="top">Crown Fork Hoist Training, Alderman Street</td>
-</tr>
-<tr>
-<td valign="top">Time</td>
-<td valign="top">22nd April</td>
-</tr>
-</tbody>
-</table>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="25%">Course</td>
-<td valign="top" width="75%">
-<h3>Conference : Motivating staff</h3>
-</td>
-</tr>
-<tr>
-<td valign="top">Details</td>
-<td valign="top">3 day conference with guest speakers from different areas of business. Delegates will be required to stay overnight for two nights. All conference fees and accommodation will be covered with an allowance for meals. Partners can be taken but will incur an additional cost.</td>
-</tr>
-<tr>
-<td valign="top">Open to</td>
-<td valign="top">Department Managers only</td>
-</tr>
-<tr>
-<td valign="top">Allocation</td>
-<td valign="top">Maximum 12 places</td>
-</tr>
-<tr>
-<td valign="top">Location</td>
-<td valign="top">Landsdowne Hotel &nbsp;(2 nights’ accommodation provided)</td>
-</tr>
-<tr>
-<td valign="top">Time</td>
-<td valign="top">2nd June – 5th June</td>
-</tr>
-</tbody>
-</table>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="25%">Course</td>
-<td valign="top" width="75%">
-<h3>Trax database system</h3>
-</td>
-</tr>
-<tr>
-<td valign="top">Details:</td>
-<td valign="top">A half day course focussing on how to use the new customer management database.</td>
-</tr>
-<tr>
-<td valign="top">Open to</td>
-<td valign="top">All secretarial staff</td>
-</tr>
-<tr>
-<td valign="top">Allocation</td>
-<td valign="top">Mandatory for all secretarial staff</td>
-</tr>
-<tr>
-<td valign="top">Location</td>
-<td valign="top">In company</td>
-</tr>
-<tr>
-<td valign="top">Time</td>
-<td valign="top">16th July</td>
-</tr>
-</tbody>
-</table></div>
-<div class="ito-scroll-box">
-    <em><strong>SECTION 2</strong></em><p></p>
-<p>    <em><strong>Questions 15 – 19</strong></em></p>
-<p>Answer the questions below using <strong><em>NO MORE THAN THREE WORDS AND/OR A NUMBER</em></strong> from the passage for each answer.</p>
-<ol start="15">
-<li>Attendees on the 3 day conference will be staying where? <label><span class="screen-reader-text">Fill in the blank 1 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="16" type="text" value="" size="16" maxlength="21" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(landsdowne hotel)</span></span></span></label></li>
-<li>Who is required to go to the training session on a new computer programme? <label><span class="screen-reader-text">Fill in the blank 2 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="21" type="text" value="" size="21" maxlength="26" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(all secretarial staff,secretarial staff,the secretarial staff)</span></span></span></label></li>
-<li>What will people completing the Health and Safety Level 1 course be awarded? <label><span class="screen-reader-text">Fill in the blank 3 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="24" type="text" value="" size="24" maxlength="29" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(national certificate,a national certificate,the national certificate)</span></span></span></label></li>
-<li>How many sessions do staff need to attend to obtain a fork lift licence? <label><span class="screen-reader-text">Fill in the blank 4 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="14" type="text" value="" size="14" maxlength="19" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(3,three,3 sessions,three sessions)</span></span></span></label></li>
-<li>Which training event can employees take wives or husbands to? <label><span class="screen-reader-text">Fill in the blank 5 of 5</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="29" type="text" value="" size="29" maxlength="34" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(motivating staff,conference: motivating staff,motivating staff conference,conference motivating staff,conference : motivating staff,conference : motivating staff)</span></span></span></label></li>
-</ol></div>
-</div>
-										</fieldset>
+SECTION 2
+Reading Passage 2
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 5										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 5									Points									</span>
+Westgate Gym
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="15">
-<li>Landsdowne Hotel – ‘3 day conference…LOCATION: Landsdowne Hotel’</li>
-<li>All secretarial staff – ‘A half day course focussing on how to use the new customer management database.’</li>
-<li>National Certificate – ‘A government issued National Certificate will be awarded to all employees that complete this course.’</li>
-<li>3 – ‘Attendance at two additional sessions will be required’</li>
-<li>Motivating staff – ‘Partners can be taken but will incur an additional cost.’</li>
-</ol>
-</div>
-						</div>
-					</div>
-				
-				
-												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+Opening hours
+6 a.m. – 8 p.m. Monday to Friday
+7 a.m. – 1 p.m. weekends
 
-									<div style="margin-bottom: 20px;"></div>
-							</li>
+Facilities
+Sauna; exercise bicycles; boxing equipment; free weights; muscle-specific stations; hot showers
 
-		
-			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1757,&quot;question_post_id&quot;:71970476}">
-				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
-				Question <span>4</span> of <span>5</span>				</div>
-				<h5 style="display: none;" class="wpProQuiz_header">
-					<span>4</span>. Question
-				</h5>
+Classes
 
-				
-								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
-					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1757">
-											</legend>
+Awesome Abs
+Duration: 20 minutes
+Days: Mondays and Wednesdays at 11 a.m.
+Maximum 12 students
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Kick Class
+Martial-arts-influenced class reducing stress through punching and kicking
+Duration: 30 minutes
+Days: Tuesdays at 4 p.m. and Thursdays at 7 p.m.
+Maximum 20 students
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1757" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div class="ito-scroll-container">
-  <div class="ito-scroll-box">
-    <h3 style="text-align: center">Induction programmes</h3>
-    <p>Every organisation, large or small, should have a well-considered programme to introduce new employees to the company and help them build a degree of familiarity with their new workplace. This is referred to as an ‘induction’ programme and includes two specific aspects – , orientation, which focuses on getting the new employer familiar with the office environment, and socialisation which covers the establishment of building working relationships with their new colleagues.</p>
-    <p>However, designing an appropriate and cost-effective induction package can often be a huge challenge. A delicate balance has to be struck between providing all the information that new employees need (and are able to assimilate) without the employee being diverted from the essential process of integrating into their new environment.</p>
-    <p>The purpose of induction is to ensure the effective integration of staff into the organisation and research has shown that induction programmes increase staff retention. In order to provide a good induction programme, the following elements need to be considered:</p>
-    <ul>
-      <li>Physical orientation – pointing out where the facilities are</li>
-      <li>Organisational orientation – showing how the new arrival how they fit in the organisation’s strategy and goals</li>
-      <li>Health and safety information</li>
-      <li>Details of the organisation itself – history, products / services, culture and values</li>
-      <li>A clear outline of the job/role requirements and an explanation of the terms and conditions of employment&nbsp; (although this could arguably have already been covered in the interview process)</li>
-    </ul>
-    <p>It is a common misconception that only new employees need an induction to the company. In fact, it has been proven that a specifically tailored induction can be of great value to current and former employees, such as those returning from long-term absence or maternity/paternity leave, senior appointments, or recently promoted staff. Tailor-made programmes should also be available for contractors brought in for a specific purpose.</p>
-    <p>The dangers of not having an induction programme were identified in a Harvard study, which found that new employees did not really understand the organisation itself or their role in it, in turn leading to</p>
-    <ul>
-      <li>poor integration into the team</li>
-      <li>low morale, particularly for the new employee</li>
-      <li>loss of productivity</li>
-      <li>failure to work to their highest potential</li>
-    </ul>
-    <p>In extreme cases, the new employee leaves, either through resignation or dismissal.</p>
-    <p>The question of who should be involved in the creation and delivery of an induction programme is often left until to the Human Resources department, yet this has proven to lead to a generic ‘one size fits all’ type of induction, which has far less value than a more personalised approach. There will be slight variations between companies depending on size and variety of products or services, but the ideal approach seems to be an integrated induction requiring input from a number of areas within the company.</p>
-    <p>Typically, the inductee’s future manager or supervisor will oversee the explanation of departmental organisation, the requirements of the job, the purpose and operation of any probationary period and other internal processes. Human Resources would cover those aspects typically referred to as ‘housekeeping’ – this would include ensuring all contact details, payment details etc had been recorded accurately.&nbsp; Explaining legal health and safety issues could also be covered by the HR department, although (if one has been appointed) this would ideally be the Safety Officer’s role.</p>
-    <p>Many inductions make the common error of getting the manager or supervisor to provide an escorted tour of the department and introduce fellow workers, yet it has been found to be more beneficial for team building to actually nominate a colleague with roughly equal status in the company. These people also have been found best to give day-to-day guidance in local procedures for the first couple of weeks, as it creates a mentor-like arrangement giving the new employee someone to ask questions without having to repeatedly report to the manager.</p>
-    <p>Having given an explanation of the department’s role in the country, the direct manager should ideally then invite a senior manager to give an overview of the organisation, its history, products and services, quality system and culture. This allows the new employee to see the company as having a sense of horizontal integration.</p>
-  </div>
-  <div class="ito-scroll-box">
-    <em><strong>Questions 20 – 24</strong></em>
-    <p>Complete the notes below using <strong><em>NO MORE THAN THREE WORDS </em></strong>from the passage for each answer.</p>
-    <ol start="20">
-      <li>Induction programmes should consider orientation and BLANK 1 of 10 of new employee.</li>
-      <li>Need to balance between the information given and keeping focussed on BLANK 2 of 10 into the new workplace.</li>
-      <li>Inductions can also be useful for BLANK 3 of 10 who are not directly employed but will be working with the company.</li>
-      <li>Research conducted in BLANK 4 of 10 found that there is a link between morale and the induction programme.</li>
-      <li>The ideal induction should not be handled by BLANK 5 of 10 alone.</li>
-    </ol>
-    <hr>
-    <em><strong>Questions 25 – 29</strong></em>
-    <em>Match a responsiblity from the list with the correct role <strong>A-E</strong>.</em>
-    <ol style="list-style-type: upper-alpha" type="A">
-      <li>HR department</li>
-      <li>Manager / supervisor</li>
-      <li>Safety Officer</li>
-      <li>Colleague</li>
-      <li>Senior manager</li>
-    </ol>
-    <ol start="25">
-      <li>The ideal choice for getting to know other staff BLANK 6 of 10</li>
-      <li>Responsible for collecting personal information BLANK 7 of 10</li>
-      <li>Covers aspects of law relating to the workplace BLANK 8 of 10</li>
-      <li>How the employee’s immediate environment is structured BLANK 9 of 10</li>
-      <li>The company’s organisation and background BLANK 10 of 10</li>
-    </ol>
-  </div>
-</div>											</legend>
+X-Ride
+Indoor cycling class with simulated terrains
+Duration: 1 hour
+Days: Mondays and Wednesdays at 5 p.m.; Fridays at 4 p.m.
+24 bicycles available; first come, first served
 
-											<div class="ito-scroll-container">
-<div class="ito-scroll-box">
-<h3 style="text-align: center;">Induction programmes</h3>
-<p>Every organisation, large or small, should have a well-considered programme to introduce new employees to the company and help them build a degree of familiarity with their new workplace. This is referred to as an ‘induction’ programme and includes two specific aspects – , orientation, which focuses on getting the new employer familiar with the office environment, and socialisation which covers the establishment of building working relationships with their new colleagues.</p>
-<p>However, designing an appropriate and cost-effective induction package can often be a huge challenge. A delicate balance has to be struck between providing all the information that new employees need (and are able to assimilate) without the employee being diverted from the essential process of integrating into their new environment.</p>
-<p>The purpose of induction is to ensure the effective integration of staff into the organisation and research has shown that induction programmes increase staff retention. In order to provide a good induction programme, the following elements need to be considered:</p>
-<ul>
-<li>Physical orientation – pointing out where the facilities are</li>
-<li>Organisational orientation – showing how the new arrival how they fit in the organisation’s strategy and goals</li>
-<li>Health and safety information</li>
-<li>Details of the organisation itself – history, products / services, culture and values</li>
-<li>A clear outline of the job/role requirements and an explanation of the terms and conditions of employment&nbsp; (although this could arguably have already been covered in the interview process)</li>
-</ul>
-<p>It is a common misconception that only new employees need an induction to the company. In fact, it has been proven that a specifically tailored induction can be of great value to current and former employees, such as those returning from long-term absence or maternity/paternity leave, senior appointments, or recently promoted staff. Tailor-made programmes should also be available for contractors brought in for a specific purpose.</p>
-<p>The dangers of not having an induction programme were identified in a Harvard study, which found that new employees did not really understand the organisation itself or their role in it, in turn leading to</p>
-<ul>
-<li>poor integration into the team</li>
-<li>low morale, particularly for the new employee</li>
-<li>loss of productivity</li>
-<li>failure to work to their highest potential</li>
-</ul>
-<p>In extreme cases, the new employee leaves, either through resignation or dismissal.</p>
-<p>The question of who should be involved in the creation and delivery of an induction programme is often left until to the Human Resources department, yet this has proven to lead to a generic ‘one size fits all’ type of induction, which has far less value than a more personalised approach. There will be slight variations between companies depending on size and variety of products or services, but the ideal approach seems to be an integrated induction requiring input from a number of areas within the company.</p>
-<p>Typically, the inductee’s future manager or supervisor will oversee the explanation of departmental organisation, the requirements of the job, the purpose and operation of any probationary period and other internal processes. Human Resources would cover those aspects typically referred to as ‘housekeeping’ – this would include ensuring all contact details, payment details etc had been recorded accurately.&nbsp; Explaining legal health and safety issues could also be covered by the HR department, although (if one has been appointed) this would ideally be the Safety Officer’s role.</p>
-<p>Many inductions make the common error of getting the manager or supervisor to provide an escorted tour of the department and introduce fellow workers, yet it has been found to be more beneficial for team building to actually nominate a colleague with roughly equal status in the company. These people also have been found best to give day-to-day guidance in local procedures for the first couple of weeks, as it creates a mentor-like arrangement giving the new employee someone to ask questions without having to repeatedly report to the manager.</p>
-<p>Having given an explanation of the department’s role in the country, the direct manager should ideally then invite a senior manager to give an overview of the organisation, its history, products and services, quality system and culture. This allows the new employee to see the company as having a sense of horizontal integration.</p>
-<p></p></div>
-<div class="ito-scroll-box">
-    <em><strong>Questions 20 – 24</strong></em><p></p>
-<p>Complete the notes below using <strong><em>NO MORE THAN THREE WORDS </em></strong>from the passage for each answer.</p>
-<ol start="20">
-<li>Induction programmes should consider orientation and <label><span class="screen-reader-text">Fill in the blank 1 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="13" type="text" value="" size="13" maxlength="18" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(socialisation,socialization)</span></span></span></label> of new employee.</li>
-<li>Need to balance between the information given and keeping focussed on <label><span class="screen-reader-text">Fill in the blank 2 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="22" type="text" value="" size="22" maxlength="27" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(process of integrating,integrating,process of integration,integration)</span></span></span></label> into the new workplace.</li>
-<li>Inductions can also be useful for <label><span class="screen-reader-text">Fill in the blank 3 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="11" type="text" value="" size="11" maxlength="16" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(contractors)</span></span></span></label> who are not directly employed but will be working with the company.</li>
-<li>Research conducted in <label><span class="screen-reader-text">Fill in the blank 4 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="15" type="text" value="" size="15" maxlength="20" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(harvard,harvard study,a harvard study)</span></span></span></label> found that there is a link between morale and the induction programme.</li>
-<li>The ideal induction should not be handled by <label><span class="screen-reader-text">Fill in the blank 5 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="26" type="text" value="" size="26" maxlength="31" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(human resources,human resources department)</span></span></span></label> alone.</li>
-</ol>
-<hr>
-<p>    <em><strong>Questions 25 – 29</strong></em><br>
-    <em>Match a responsiblity from the list with the correct role <strong>A-E</strong>.</em></p>
-<ol style="list-style-type: upper-alpha;" type="A">
-<li>HR department</li>
-<li>Manager / supervisor</li>
-<li>Safety Officer</li>
-<li>Colleague</li>
-<li>Senior manager</li>
-</ol>
-<ol start="25">
-<li>The ideal choice for getting to know other staff <label><span class="screen-reader-text">Fill in the blank 6 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></li>
-<li>Responsible for collecting personal information <label><span class="screen-reader-text">Fill in the blank 7 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></li>
-<li>Covers aspects of law relating to the workplace <label><span class="screen-reader-text">Fill in the blank 8 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></li>
-<li>How the employee’s immediate environment is structured <label><span class="screen-reader-text">Fill in the blank 9 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></li>
-<li>The company’s organisation and background <label><span class="screen-reader-text">Fill in the blank 10 of 10</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(e)</span></span></span></label></li>
-</ol></div>
-</div>
-										</fieldset>
+Pilates
+Designed for beginners
+Duration: 45 minutes
+Days: Wednesdays and Thursdays at 1 p.m.
+Maximum 6 students
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 10										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 10									Points									</span>
+Flex
+Weight-loss-focused class
+Duration: 45 minutes
+Days: Mondays at 4 p.m.
+Maximum 18 students
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="20">
-<li>Socialisation – ‘orientation, which focuses on getting the new employer familiar with the office environment, and socialisation which covers the establishment of building working relationships with their new colleagues.’</li>
-<li>Integrating / Integration – ‘A delicate balance has to be struck between providing all the information that new employees need (and are able to assimilate) without the employee being diverted from the essential process of integrating into their new environment.’</li>
-<li>Contractors – ‘Tailor-made programmes should also be available for contractors brought in for a specific purpose.’</li>
-<li>(a) Harvard (study) – ‘The dangers of not having an induction programme were identified in a Harvard study conducted in the late ‘90s.’</li>
-<li>Human Resources – ‘who should be involved in the creation and delivery of an induction programme is often left until to the Human Resources department, yet this has proven to lead to a generic ‘one size fits all’ type of induction, which has far less value than a more personalised approach’</li>
-<li>D – ‘Many inductions make the common error of getting the manager or supervisor to provide an escorted tour of the department and introduce fellow workers, yet it has been found to be more beneficial for team building to actually nominate a colleague with roughly equal status in the company.’</li>
-<li>A – ‘Human Resources would cover those aspects typically referred to as ‘housekeeping’ – this would include ensuring all contact details, payment details etc had been recorded accurately.’</li>
-<li>C – ‘Explaining legal health and safety issues could also be covered by the HR department, although (if one has been appointed) this would ideally be the Safety Officer’s role.’</li>
-<li>B – ‘Having given an explanation of the department’s role in the country, the direct manager…’</li>
-<li>E – ‘a senior manager to give an overview of the organisation, its history, products and services, quality system and culture.’</li>
+Energiser
+Builds energy and stamina with techniques usable at home or work
+Duration: 30 minutes
+Days: Saturdays at 10 a.m. and Sundays at 11 a.m.
+Maximum 14 students
+
+Sculpt
+Muscle-building class
+Some weight-lifting experience recommended
+Duration: 40 minutes
+Days: Mondays at 7 a.m. and 4 p.m.; Tuesdays at 4 p.m.; Fridays at 7 a.m. and 5 p.m.
+Maximum 8 students
+
+Questions 7–10
+
+[TRUE / FALSE / NOT GIVEN]
+
+All classes are available at least twice a week.
+Answer: FALSE
+
+‘Awesome Abs’ is the shortest class.
+Answer: TRUE
+
+One of the classes is only available at the weekend.
+Answer: TRUE
+
+You need to book a place to join the X-Ride class.
+Answer: FALSE
+
+Questions 11–14
+
+[Short answer – ONE WORD ONLY]
+
+Which class recommends some experience?
+Answer: Sculpt
+
+Which class has the fewest possible students?
+Answer: Pilates
+
+Which class reduces stress by using fighting positions?
+Answer: Kick
+
+Which class teaches skills you can practise outside the gym?
+Answer: Energiser
+
+SECTION 3
+Reading Passage 3
+
+Staff Training Opportunities
+
+Health and Safety in the Workplace – Level 1
+Mandatory for all employees
+Government-issued National Certificate awarded
+25–28 January
+
+Health and Safety in the Workplace – Level 2
+Optional
+Level 1 required
+Maximum 24 places
+14–18 February
+
+Fork Lift Licence
+Half-day course
+Current driving licence required
+Two additional sessions required
+Maximum 8 places
+22 April
+
+Conference: Motivating Staff
+Three-day conference
+Two nights’ accommodation included
+Partners may attend at extra cost
+Maximum 12 places
+2–5 June
+Location: Landsdowne Hotel
+
+Trax Database System
+Half-day course
+Mandatory for all secretarial staff
+16 July
+
+Questions 15–19
+
+[Short answer – NO MORE THAN THREE WORDS AND/OR A NUMBER]
+
+Where will conference attendees stay overnight?
+Answer: Landsdowne Hotel
+
+Who must attend training on the new computer programme?
+Answer: secretarial staff
+
+What will participants completing Health and Safety Level 1 receive?
+Answer: National Certificate
+
+How many sessions are required for the fork lift licence?
+Answer: 3
+
+Which training event allows partners to attend?
+Answer: Motivating Staff
+
+Reading Passage 4
+
+Induction Programmes
+
+Induction programmes help new employees become familiar with the workplace and include orientation and socialisation. Research shows that effective induction improves staff retention and morale.
+
+Inductions should balance information delivery with helping employees integrate into their new environment. Tailored inductions are also useful for contractors, returning staff and promoted employees.
+
+Research from a Harvard study identified risks of poor induction, including low morale and loss of productivity.
+
+Effective induction requires input from multiple roles, including managers, colleagues, HR staff, safety officers and senior management.
+
+Questions 20–24
+
+[Complete the notes – NO MORE THAN THREE WORDS]
+
+Induction programmes should consider orientation and _____ of new employees.
+Answer: socialisation
+
+Inductions must balance information with the process of _____ into the workplace.
+Answer: integrating
+
+Inductions can also be useful for _____ who are not directly employed.
+Answer: contractors
+
+Research conducted in _____ found a link between morale and induction.
+Answer: Harvard
+
+Induction should not be handled by _____ alone.
+Answer: Human Resources
+
+Questions 25–29
+
+[Matching roles – choose A–E]
+
+A. HR department
+B. Manager / supervisor
+C. Safety Officer
+D. Colleague
+E. Senior manager
+
+Best person for helping new staff get to know colleagues
+Answer: D
+
+Responsible for collecting personal information
+Answer: A
+
+Covers legal health and safety issues
+Answer: C
+
+Explains how the employee’s immediate environment is organised
+Answer: B
+
+Provides an overview of the company’s background and structure
+Answer: E
