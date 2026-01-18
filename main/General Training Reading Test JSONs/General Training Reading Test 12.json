@@ -1,0 +1,1602 @@
+{
+    "title": "General Training Reading Test 12",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Questions 1–4\n\nMatch each statement to the correct category. Write the correct letter A, B, C, or D.",
+            "question": "1. Should only be packaged in boxes.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Miscellaneous items.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": true,
+                    "feedback": "Correct! Miscellaneous items should be placed in boxes with names clearly written on the box."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. The school does not have many of these items to sell at the moment.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Kitchenware.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that Kitchenware items are currently in short supply."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Should be labelled in one of three ways.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Clothes.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": true,
+                    "feedback": "Correct! Clothes should be marked as 'For Men', 'For Women' or 'For Children'."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. The school wants more of these which would be suitable for youngsters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Books.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states they are especially looking for children's novels."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 5–9\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "5. The event is being held to raise money for school facilities.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. The school is collecting fresh fruit and vegetables to donate to a homeless shelter.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. Items will be picked up by volunteers between 9.30am and 3.00pm.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. Mr William Taylor will make arrangements for items to be collected.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "9. All helpers for the event are now confirmed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 10–14\n\nMatch each book to the correct description. Write the correct Roman numeral I–IX.\n\nAn example is provided below:\n\nExample: Book A - I",
+            "question": "10. Book B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is II: A book about European artists. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": true,
+                    "feedback": "Correct! Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "11. Book C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is III: A book for secondary school students. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": true,
+                    "feedback": "Correct! Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Book D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IV: A book for those who enjoy walking. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": true,
+                    "feedback": "Correct! Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "13. Book F",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VI: A book comparing two ancient civilizations' art. Book F is 'An academic comparison of ancient Egyptian and Greek art.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": true,
+                    "feedback": "Correct! Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "14. Book G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VII: A book with activities for children. Book G is 'A creative activity book for children, covering art and craft projects.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": true,
+                    "feedback": "Correct! Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 15–17\n\nMatch each statement to the correct week. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
+            "question": "15. The first assignment must be completed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states that trainees 'submit Assignment 1'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "16. The first assessed teaching is done.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states trainees 'are formally assessed' for the first time.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. Different ways of teaching are demonstrated.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Week 1. Week 1 covers 'Introduction to different teaching methodologies and styles'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 18–20\n\nDo the following statements agree with the information given in Reading Text 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "18. Assignment 1 can be handwritten.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "19. The grammar training is easy for native speakers.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "20. The fourth week has the most trainees quitting the course.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21–23\n\nChoose the correct letter A, B, C, or D.",
+            "question": "21. Staff…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: must attend three sessions. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: must attend all sessions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "B: must attend only the first and second session",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "C: do not have to attend if they make arrangements with their supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "D: must attend three sessions",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                }
+            ],
+            "options": "A: must attend all sessions\nB: must attend only the first and second session\nC: do not have to attend if they make arrangements with their supervisor\nD: must attend three sessions",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "22. The first session…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: has been arranged because of previous problems. Session 1 'Focuses on correct procedures following recent incidents'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: is about how to make a complaint",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "B: has been arranged because of previous problems",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "C: will be held outside the company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "D: is likely to have few attendees",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                }
+            ],
+            "options": "A: is about how to make a complaint\nB: has been arranged because of previous problems\nC: will be held outside the company\nD: is likely to have few attendees",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. The third session…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: has limited seating. Session 3 is 'Limited to 70 places'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: is the only one to have two facilitators",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "B: will have two speakers from another company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "C: is already fully booked",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "D: has limited seating",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 3 is 'Limited to 70 places'."
+                }
+            ],
+            "options": "A: is the only one to have two facilitators\nB: will have two speakers from another company\nC: is already fully booked\nD: has limited seating",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 24–26\n\nMatch each statement to the correct session. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
+            "question": "24. Which session will not be held in the company?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'Held externally at the Logan Hotel'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 4 is 'Held externally at the Logan Hotel'."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. Which session will have two facilitators from within the company?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. Which session is intended to prepare staff for future changes?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Session 2. Session 2 'Covers upcoming changes to branding, stationery and uniforms'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 29 –40 which are based on Reading Passage 3.\n\nComplete each sentence with the correct ending A-H below",
+            "question": "The meaning of 'Luau' traditionally referred to…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F (a vegetable used in Hawai'ian cuisine). The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. Paragraph describing beliefs mentions community sharing, but not what 'Luau' originally meant."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. The passage discusses how luaus changed, but the word 'Luau' originally referred to a vegetable."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. This is a reason for celebrations, not what 'Luau' meant."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. This describes the Lei, not 'Luau'."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. 'Luau' isn't related to gender restrictions."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)' - a vegetable used in Hawai'ian cuisine."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. Flowers indicate marital status, not the word 'Luau'."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. This relates to Hawaiian beliefs, not what 'Luau' meant."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Necklaces are presented…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (as a sign of warmth and kindness). The passage states: 'a Lei – a necklace made out of woven flowers or shells that is given as a display of affection'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Prosperity is shared, but this isn't why necklaces are presented."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage discusses how practices changed, but not why necklaces are given."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. This is a reason for celebrations, not why necklaces are given."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'a Lei – a necklace made out of woven flowers or shells that is given as a display of affection' - as a sign of warmth and kindness."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Necklaces are given to all guests, not only to women."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. This describes what 'Luau' means, not why necklaces are given."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Flowers indicate marital status, not necklaces."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. This relates to Hawaiian beliefs, not why necklaces are given."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Flowers are worn in different ways…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G (to indicate marital status). The passage states: 'placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This relates to beliefs about prosperity, not flowers."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This describes how practices evolved, not why flowers are worn differently."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This is a celebration reason, not why flowers are worn differently."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This describes necklaces, not flowers."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Flowers aren't restricted to women only."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This describes 'Luau', not flowers."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available' - to indicate marital status."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This relates to beliefs, not flowers."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Hawai'ians believe that good luck…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (should be divided amongst the community). The passage states: 'They also believed that prosperity should be shared with family and friends'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'They also believed that prosperity should be divided amongst the community' (paraphrased as 'prosperity should be shared with family and friends')."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This describes how practices changed, not beliefs about prosperity."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This is a celebration reason, not a belief about prosperity."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This describes necklaces, not prosperity beliefs."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This relates to eating restrictions, not prosperity beliefs."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This describes 'Luau', not prosperity beliefs."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This relates to flowers, not prosperity beliefs."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. While the passage mentions honoring gods, the question asks about 'good luck' (prosperity), which 'should be shared with family and friends' (divided amongst the community)."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the flowchart.\n\nChoose NO MORE THAN ONE WORD from Reading Passage 3 for each answer.",
+            "question": "The imu is lined with [field 1]",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "logs",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'.",
+                    "no_answer": "The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A [field 1] is lit in the pit",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "fire",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'.",
+                    "no_answer": "The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The rocks are [field 1]",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "heated",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: HEATED. The passage states: 'the rocks are heated'.",
+                    "no_answer": "The correct answer is: HEATED. The passage states: 'the rocks are heated'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The [field 1] turns to coal",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "wood",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'.",
+                    "no_answer": "The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in the reading passage?\n\nIn boxes 37 -40 on your answer sheet write\n\nTRUE if the statement agrees with the information\n\nFALSE if the statement contradicts the information\n\nNOT GIVEN if there is no information on this",
+            "question": "Hawai'i is the only American state made up of islands.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Hawaii is made up of islands, it doesn't state whether it's the only American state made up of islands. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions that Hawaii 'is the newest of the 50 states' and 'encompasses almost all of the entire volcanic Hawaiian Island chain', but never states it's the ONLY American state made up of islands."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't say Hawaii is NOT the only island state - it simply doesn't provide this information."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage doesn't state whether Hawaii is the only American state made up of islands or not - this information is simply NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Necklaces given to guests must be made up of flowers.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states: 'a Lei – a necklace made out of woven flowers or shells', so necklaces can be made from shells too, not just flowers. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Lei necklaces can be made from 'woven flowers OR shells', so they don't MUST be made of flowers."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'a Lei – a necklace made out of woven flowers or shells' - so they can also be made out of shells, not just flowers."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly provides this information: 'a necklace made out of woven flowers or shells'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Prior to the 1800s it was taboo for women to eat certain types of food.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'Many centuries ago in ancient Hawaii... Commoners and women were also prohibited to eat certain delicacies. This all changed in 1819.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'Many centuries ago in ancient Hawaii, men and woman ate separately. Commoners and women were also prohibited to eat certain delicacies.' This was before the change in 1819."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage explicitly states: 'Commoners and women were also prohibited to eat certain delicacies' in ancient Hawaii, before the 1819 change."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly provides this information: 'Commoners and women were also prohibited to eat certain delicacies.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Modern Hawai'ian food is influenced by Samoan culture.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions the fire dance 'hails from Samoan origin' but doesn't state that modern Hawaiian food is influenced by Samoan culture. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions Asian and North American influences on food, and that the fire dance comes from Samoan origin, but doesn't say Samoan culture influences modern Hawaiian FOOD."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't contradict this, it just doesn't mention Samoan food influence specifically."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions Asian influences (rice) and North American influences (corned beef) on food, and mentions a Samoan fire dance, but doesn't state that modern Hawaiian food is influenced by Samoan culture."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "text_id": 0,
+            "title": "Reading Text 1",
+            "content": "<h4><strong>Highbury Mall Directory</strong></h4>\n\n<p>Level\tShop\tProducts\tOpening Times<br>\n1\tDerek Smith Electrical\tElectrical goods, computer accessories, digital cameras\tMon–Sat 8:00am–7:00pm; Sun 10:00am–4:00pm<br>\n1\tPam’s Designs\tLadies clothing, hats, handbags, cosmetics\tMon–Fri 9:00am–6:00pm; Sat–Sun 10:00am–4:00pm<br>\n1\tSuperquik Auto\tCar accessories, tools, hardware\tMon–Sat 9:00am–5:00pm; Closed Sunday<br>\n2\tMarbacks\tCDs, DVDs, concert tickets\tMon–Fri 9:00am–7:00pm; Sat–Sun 10:00am–2:00pm<br>\n2\tGet Ahead\tHair styling, salon, beauty treatments\tMon–Sat 9:00am–6:00pm; Sun 10:00am–3:00pm<br>\n2\tCraft World\tHobbies, crafts, models, toys\tEvery day 10:00am–4:00pm<br>\n3\tMichael Hall\tJewellery, watches, belts, handbags, accessories\tMon–Fri 9:00am–6:00pm; Sat–Sun 10:00am–4:00pm<br>\n3\tPepper Pot\tStationery, paper goods, stamps\tMon–Sat 8:00am–6:00pm; Sun 10:00am–3:00pm<br>\nQuestions 1–6</p>\n\n<p>[This is a matching question.<br>\nThere are 6 questions.<br>\nChoose the correct shop A–H.]</p>\n\n<p>A. Derek Smith Electrical<br>\nB. Pam’s Designs<br>\nC. Superquik Auto<br>\nD. Marbacks<br>\nE. Get Ahead<br>\nF. Craft World<br>\nG. Michael Hall<br>\nH. Pepper Pot</p>\n\n<h4><strong>The shop on level 1 that stays open the latest during the week\nAnswer: A</strong></h4>\n\n<h4><strong>The best place to buy a birthday card\nAnswer: H</strong></h4>\n\n<h4><strong>Sells items similar to Pam’s Designs\nAnswer: G</strong></h4>\n\n<h4><strong>Has no changes in opening hours\nAnswer: F</strong></h4>\n\n<h4><strong>The best place to buy music\nAnswer: D</strong></h4>\n\n<h4><strong>Is open on the fewest days\nAnswer: C</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
+            "tags": []
+        },
+        {
+            "text_id": 1,
+            "title": "Reading Text 2",
+            "content": "<h4><strong>DVD Supreme – Terms and Conditions</strong></h4>\n\n<p>New Members<br>\nNew members receive half price on their first four DVD rentals (excluding new releases). Membership cards must be presented when renting. Other people may use your card if they know the four-digit PIN.</p>\n\n<p>Returns<br>\nAll DVDs must be returned before 6:00pm on the due date. Late returns incur a 50% fee for the first 24 hours and a full daily rental fee thereafter.</p>\n\n<h4><strong>Rental Types</strong></h4>\n\n<h4><strong>New releases: overnight rental for $8</strong></h4>\n\n<h4><strong>Recent releases: $8 for three nights</strong></h4>\n\n<h4><strong>Weekly titles: $5 for seven nights</strong></h4>\n\n<p>Special Offers<br>\nTwo new releases for $12<br>\nThree recent releases for $10<br>\nFive weekly titles for $10</p>\n\n<p>Care of DVDs<br>\nDamaged, lost or scratched DVDs are charged at replacement cost and may result in membership cancellation.</p>\n\n<h4><strong>Questions 7–12</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>New members can rent any four DVDs at half price.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Membership cards may be used by other people.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>New release DVDs must be returned the next morning.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>A single recent release DVD costs less than a new release DVD.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Membership is always cancelled if a DVD is damaged.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>There is a limit on how many DVDs can be rented at one time.\nAnswer: NOT GIVEN</strong></h4>",
+            "tags": []
+        },
+        {
+            "title": "Reading Text 5",
+            "content": "<strong>The Hawai'ian luau</strong>\n\nHawai'i, incorporated as an American state on August 21st 1959, is the newest of the 50 states of the United States of America and is situated southwest of the continental United States, southeast of Japan and northeast of Australia – its geographical position and political affiliations have influenced the multi-cultural face of contemporary Hawa'ii. Hawai'i has over a million permanent residents along with many visitors and a large number of U.S. military personnel who are based there. The state encompasses almost all of the entire volcanic Hawaiian Island chain, which comprises hundreds of islands spread over 2,400 km. The archipelago (a cluster of tectonically formed islands) that makes up Hawai'i is physiographically and ethnologically part of the Polynesian subregion of Oceania.\n\nA 'Luau' is a feast that is celebrated by the Hawaiian people and is considered one of the highlights of a Hawaiian vacation for holiday makers from all over the world. <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau) which are combined with chicken or seafood and baked in coconut milk</span>. This dish so often came to be served at such celebrations that the celebrations themselves later took on the name of the taro top.\n\nWhen attending a Luau, guests can expect to be welcomed with a Lei – <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">a necklace made out of woven flowers or shells that is given as a display of affection</span> – and a wide variety of delicious food. Dishes such as salmon, poi, kalua pork, chicken and sweet potatoes are served at the Luau, all of which are traditional Hawai'ian foods. Another highlight of a Luau is the Hula the traditional Hawaiian dance with which most are familiar regardless of whether they have made a visit to Hawaii. The Luau is not intended to be formal, on the contrary, it is a fun and interactive event and attendees may be given the opportunity to participate in arts, crafts and games, or may be given the opportunity to witness Polynesian performances based on cultural practices.\n\nThe 'Imu', is a fundamental feature of a Luau. It is the pit in which a whole pig is cooked under the ground. The imu is dug and lined with <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">logs</span> and topped with rocks. A <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">fire</span> is lit in the pit, and the rocks are <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">heated</span>. The heat turns the <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">wood</span> to coal. At this point, banana stalks are placed on top of the rocks, followed by banana leaves, on which the pig is placed. Wet burlap sacks cover the pit and six to ten hours later, depending on the pig's size, the meat is cooked and ready for the Luau feast.\n\nGuests at the Luau are given their 'Lei' as they arrive on the scene. Also when dressing for the Luau, women can elect to place a flower behind their right or left ear. This action is not purely ornamental; <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available</span>. Luau feasts are eaten on the floor, not from around a dining table nor with guests seated on chairs. The food is placed onto leaves that cover a type of woven mat called the 'Lauhala' mat and traditionally people would eat using only their hands.\n\nLuaus held these days are generally not as large-scale as those that were hosted by Hawaiian royalty in the 1800s, but they are a huge amount of fun and feature the same delicious traditional foods. Throughout history, Hawai'ian people have gathered together to celebrate special occasions with a feast; however, how these gatherings were formulated has changed with time. Some of the reasons to celebrate may have included honoring a victory in war, honoring a warrior, celebrating the harvest or the launch of a new canoe. The Hawai'ians believed that it was important to honor their gods and to seek their fellowship, help or pardon. They also believed that <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">prosperity should be shared with family and friends</span>. This type of celebration was traditionally known as 'aha'aina, meaning gathering, and it wasn't until later in 1856 that these celebrations were referred to as Luaus.\n\nMany centuries ago in ancient Hawaii, men and woman ate separately. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Commoners and women were also prohibited to eat certain delicacies</span>. This all changed in 1819, when King Kamehameha II dissolved the traditional religious practices and abolished many other religious laws. A feast where the King ate with women was the symbolic act which ended the Hawai'ian religious taboos, and the Luau was born. An enormous amount of preparation goes into a Luau party as often these parties can last up to 3 days and need to be extremely well organized.\n\nModern day Hawaii displays a melting pot of cultures so Luaus today often exhibit influences from other cultures. For example, rice has become a popular side dish to include at the Luau party – an acknowledgement of Asian influences and many Hawaiians now regularly consume corned beef – inherited from North American culture – and have perfected many different ways to create interesting meals with it. Outside influences are not a recent development – a dangerous, yet exciting fire dance is often performed at professional Luaus but history states this hails from Samoan origin. Today, the Luau is a major visitor attraction and gatherings are held daily throughout the islands of Hawaii. A luau is said to be the true experience of 'aloha' (love).\n",
+            "text_id": 4
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "general_training",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_general_training_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    }
+}

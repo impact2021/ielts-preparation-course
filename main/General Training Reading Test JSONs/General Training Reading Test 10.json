@@ -1,0 +1,1709 @@
+{
+    "title": "General Training Reading Test 10",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Questions 1–4\n\nMatch each statement to the correct category. Write the correct letter A, B, C, or D.",
+            "question": "1. Should only be packaged in boxes.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Miscellaneous items.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": true,
+                    "feedback": "Correct! Miscellaneous items should be placed in boxes with names clearly written on the box."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Miscellaneous items (ornaments, pictures, toys, games, handbags etc.) should be placed in boxes. The correct answer is A."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. The school does not have many of these items to sell at the moment.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Kitchenware.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that Kitchenware items are currently in short supply."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states that Kitchenware 'These items are currently in short supply.' The correct answer is B."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. Should be labelled in one of three ways.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Clothes.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": true,
+                    "feedback": "Correct! Clothes should be marked as 'For Men', 'For Women' or 'For Children'."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states Clothes should be marked 'For Men, For Women or For Children'. The correct answer is C."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. The school wants more of these which would be suitable for youngsters.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Books.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Miscellaneous items",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "B: Kitchenware",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "C: Clothes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'We are especially looking for children's novels.' The correct answer is D."
+                },
+                {
+                    "text": "D: Books",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states they are especially looking for children's novels."
+                }
+            ],
+            "options": "A: Miscellaneous items\nB: Kitchenware\nC: Clothes\nD: Books",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 5–9\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "5. The event is being held to raise money for school facilities.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the event is to assist in funding 'the new children's playground in the centre of town', not school facilities."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. The school is collecting fresh fruit and vegetables to donate to a homeless shelter.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states they are collecting 'tinned, dried or packet foodstuffs only', not fresh fruit and vegetables."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. Items will be picked up by volunteers between 9.30am and 3.00pm.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions bringing items to school reception between 9.30am and 3.00pm, but doesn't specify pickup times."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. Mr William Taylor will make arrangements for items to be collected.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to contact Mr William Taylor who 'will arrange for one of our volunteer parents to pick up your donation.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "9. All helpers for the event are now confirmed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'we are also still looking for additional volunteers', indicating not all helpers are confirmed."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 10–14\n\nMatch each book to the correct description. Write the correct Roman numeral I–IX.\n\nAn example is provided below:\n\nExample: Book A - I",
+            "question": "10. Book B",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is II: A book about European artists. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": true,
+                    "feedback": "Correct! Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book B is described as 'A reference book for art enthusiasts, with historical accounts and illustrations of European masters.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "11. Book C",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is III: A book for secondary school students. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": true,
+                    "feedback": "Correct! Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book C is 'A large educational book covering science, history, geography and art', suitable for secondary students."
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Book D",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is IV: A book for those who enjoy walking. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": true,
+                    "feedback": "Correct! Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book D is 'A guide to lesser-known hiking tracks for outdoor enthusiasts.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "13. Book F",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VI: A book comparing two ancient civilizations' art. Book F is 'An academic comparison of ancient Egyptian and Greek art.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": true,
+                    "feedback": "Correct! Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book F is 'An academic comparison of ancient Egyptian and Greek art.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "14. Book G",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is VII: A book with activities for children. Book G is 'A creative activity book for children, covering art and craft projects.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "I: A book for young children who are learning to read",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "II: A book about European artists",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "III: A book for secondary school students",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "IV: A book for those who enjoy walking",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "V: A book for those who like outdoor activities and camping",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VI: A book comparing two ancient civilizations' art",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VII: A book with activities for children",
+                    "is_correct": true,
+                    "feedback": "Correct! Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "VIII: A book about hiking in Europe",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                },
+                {
+                    "text": "IX: A book about classical music",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Book G is 'A creative activity book for children, covering art and craft projects.'"
+                }
+            ],
+            "options": "I: A book for young children who are learning to read\nII: A book about European artists\nIII: A book for secondary school students\nIV: A book for those who enjoy walking\nV: A book for those who like outdoor activities and camping\nVI: A book comparing two ancient civilizations' art\nVII: A book with activities for children\nVIII: A book about hiking in Europe\nIX: A book about classical music",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 15–17\n\nMatch each statement to the correct week. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
+            "question": "15. The first assignment must be completed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states that trainees 'submit Assignment 1'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 3 states that trainees 'submit Assignment 1'."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states that trainees 'submit Assignment 1'."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "16. The first assessed teaching is done.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Week 3. Week 3 states trainees 'are formally assessed' for the first time.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 3 states trainees 'are formally assessed' for the first time."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 3 states trainees 'are formally assessed' for the first time."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. Different ways of teaching are demonstrated.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: Week 1. Week 1 covers 'Introduction to different teaching methodologies and styles'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Week 1",
+                    "is_correct": true,
+                    "feedback": "Correct! Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "B: Week 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "C: Week 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                },
+                {
+                    "text": "D: Week 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Week 1 covers 'Introduction to different teaching methodologies and styles'."
+                }
+            ],
+            "options": "A: Week 1\nB: Week 2\nC: Week 3\nD: Week 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 18–20\n\nDo the following statements agree with the information given in Reading Text 3?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "18. Assignment 1 can be handwritten.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage only states that Assignment 2 'must be computer typed', implying Assignment 1 can be handwritten."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "19. The grammar training is easy for native speakers.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'Intensive grammar study' but doesn't discuss difficulty for native speakers."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "20. The fourth week has the most trainees quitting the course.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the dropout rate 'increases in Week 4 due to the pressure of assessment.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21–23\n\nChoose the correct letter A, B, C, or D.",
+            "question": "21. Staff…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: must attend three sessions. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: must attend all sessions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "B: must attend only the first and second session",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "C: do not have to attend if they make arrangements with their supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                },
+                {
+                    "text": "D: must attend three sessions",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Attendance at the first and second sessions is compulsory, as well as one additional session chosen from the remaining options.'"
+                }
+            ],
+            "options": "A: must attend all sessions\nB: must attend only the first and second session\nC: do not have to attend if they make arrangements with their supervisor\nD: must attend three sessions",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "22. The first session…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: has been arranged because of previous problems. Session 1 'Focuses on correct procedures following recent incidents'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: is about how to make a complaint",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "B: has been arranged because of previous problems",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "C: will be held outside the company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                },
+                {
+                    "text": "D: is likely to have few attendees",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 1 'Focuses on correct procedures following recent incidents'."
+                }
+            ],
+            "options": "A: is about how to make a complaint\nB: has been arranged because of previous problems\nC: will be held outside the company\nD: is likely to have few attendees",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. The third session…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: has limited seating. Session 3 is 'Limited to 70 places'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: is the only one to have two facilitators",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "B: will have two speakers from another company",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "C: is already fully booked",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 3 is 'Limited to 70 places'."
+                },
+                {
+                    "text": "D: has limited seating",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 3 is 'Limited to 70 places'."
+                }
+            ],
+            "options": "A: is the only one to have two facilitators\nB: will have two speakers from another company\nC: is already fully booked\nD: has limited seating",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 24–26\n\nMatch each statement to the correct session. Write the correct letter A–D.\n\nAnswer options may be used more than once.",
+            "question": "24. Which session will not be held in the company?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'Held externally at the Logan Hotel'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'Held externally at the Logan Hotel'."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 4 is 'Held externally at the Logan Hotel'."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. Which session will have two facilitators from within the company?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Session 4. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 4 is 'run by Jane Williams with Ruth Madocs from HR', both internal staff."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. Which session is intended to prepare staff for future changes?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Session 2. Session 2 'Covers upcoming changes to branding, stationery and uniforms'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A: Session 1",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "B: Session 2",
+                    "is_correct": true,
+                    "feedback": "Correct! Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "C: Session 3",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                },
+                {
+                    "text": "D: Session 4",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Session 2 'Covers upcoming changes to branding, stationery and uniforms'."
+                }
+            ],
+            "options": "A: Session 1\nB: Session 2\nC: Session 3\nD: Session 4",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 26 – 40 which are based on Reading Passage 3.\r\n\r\nQuestions 26 – 29\r\n\r\nComplete the sentences below. Use NO MORE THAN THREE WORDS from the text.",
+            "question": "Without office technology we couldn't [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "work from home"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states that 'The technology available to us now means that we no longer need to be in the same office building as our colleagues'.",
+                    "incorrect": "Incorrect. Review Paragraph B which discusses how technology enables us to do business from different locations.",
+                    "no_answer": "Please provide an answer. The correct answer is 'work from home'. Paragraph B states that technology means we can do business efficiently regardless of location."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "With fewer requirements for space, businesses can benefit from lower static [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "costs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C mentions that 'a workforce set up in such a way requires far less office space' reducing fixed costs.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses the financial benefits for companies of having home-based workers.",
+                    "no_answer": "Please provide an answer. The correct answer is 'costs'. Paragraph C states that home-based workers require less office space reducing fixed costs."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Despite political pressure, public transport is still [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "unpopular"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph D states that 'Governments have been trying for years to persuade us to forsake our private car journey' but 'this is still unpopular'.",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses people's resistance to using buses or trains instead of private cars.",
+                    "no_answer": "Please provide an answer. The correct answer is 'unpopular'. Paragraph D states that governments have tried to persuade us to use public transport but 'this is still unpopular'."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "It is important that the social aspects of working in an office are not [field 1].",
+            "points": 1,
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "overlooked"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph E emphasizes that 'The relationships we have with our colleagues...are a significant part of our life and should not be overlooked'.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the importance of workplace relationships and social aspects.",
+                    "no_answer": "Please provide an answer. The correct answer is 'overlooked'. Paragraph E states that workplace relationships 'are a significant part of our life and should not be overlooked'."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary by using words from the box below. Write the correct letter A - H.\r\n\r\nA benefits\r\nB friendships\r\nC conduct business\r\nD workplace\r\nE financial\r\nF flexibility\r\nG release\r\nH psychological",
+            "question": "Technology has allowed us to (30) [field 1] at home instead of the office. For the company, there are (31) [field 2] incentives and for the employee there is more (32) [field 3]. There are even (33) [field 4] for the environment. However, there is a (34) [field 5] factor to be considered.",
+            "points": 5,
+            "no_answer_feedback": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 5,
+            "field_answers": {
+                "1": "C",
+                "2": "E",
+                "3": "F",
+                "4": "A",
+                "5": "H"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review the passage to find the words that best complete the summary.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "2": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses the financial incentives for companies.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "3": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph C which discusses employee benefits of working from home.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "4": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses environmental benefits.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                },
+                "5": {
+                    "correct": "Correct! All your answers accurately summarize the key points about working from home.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the psychological and social factors of working from home.",
+                    "no_answer": "Please provide answers for all fields. The correct answers are: Field 1: C (conduct business), Field 2: E (financial), Field 3: F (flexibility), Field 4: A (benefits), Field 5: H (psychological)."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the appropriate heading for each paragraph of the following text from the list below.\r\n\r\nList of headings\r\n\r\nParagraph A",
+            "question": "Paragraph A",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'I. Time for a change?'. Paragraph A asks questions about wanting change and suggests working from home.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IV. Flexibility of technology'. Paragraph B discusses how technology enables working from home.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'VII. Benefits for all'. Paragraph C discusses benefits for both companies and employees.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family)."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'IX. Keeping it clean'. Paragraph D discusses environmental benefits and pollution reduction.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'II. Social impact'. Paragraph E discusses workplace relationships and social interactions.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is 'X. The best of both worlds'. Paragraph F suggests combining home-based work with regular meetings.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "I. Time for a change?",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "II. Social impact",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "III. Management decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IV. Flexibility of technology",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "V. Wasted time on the road",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VI. Technology keeping us at home",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VII. Benefits for all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "VIII. Business in the workplace",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "IX. Keeping it clean",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                },
+                {
+                    "text": "X. The best of both worlds",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution."
+                }
+            ],
+            "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "text_id": 0,
+            "title": "Reading Text 1",
+            "content": "<div class=\"style1\" id=\"text\">\n<p class=\"style1\" style=\"text-align: center\"><strong>WWW.TRADE WITH ME.COM</strong></p>\n<ol style=\"list-style-type: upper-alpha\" type=\"A\">\n<li><span class=\"style1\">For sale: iPhone X. In very good condition without protective rubber case. Headphones are gone but otherwise in perfect working order. Looking for £150 but willing to accept offers.</span></li>\n<li><span class=\"style1\">52 inch flat screen LCD television for sale. Small scratch on the top but the screen is OK. Have to sell because I am leaving the country, so will consider any offer.</span></li>\n<li><span class=\"style1\">Playstation games (20 different games). Brand new, in box with manuals. Unwanted gift. All reasonable offers considered.</span></li>\n<li><span class=\"style1\">For sale – complete dining room set (6 chairs and table). In reasonable condition although may need repainting. Table can fold for storage. Buyer will need to collect. £250 (price is non-negotiable)</span></li>\n<li><span class=\"style1\">Zanussi Fridge Freezer. 1.6 metres tall. Four years old. Motor still works but door is not sealing closed (will need new seal). Free to anyone willing to collect.</span></li>\n<li><span class=\"style1\">Wanted: cheap laptop computer. Doesn’t need to be in very good condition so long as it works. Needed for word processing and surfing the internet, but not much more. Willing to pay up to £200 for the right machine. Must have all cables and accessories, as well as a carry bag.</span></li>\n<li><span class=\"style1\">Boat trailer needed. Must be able to take small boat (2 metres long).  Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</span></li>\n<li><span class=\"style1\">I am looking for any antique figurines from the Lladro collection. Will pay a good price for any authentic pieces in good condition. We will come to you to evaluate any piece that you are interested in selling, but please send a photograph of the figurine first. </span></li>\n</ol>\n</div>",
+            "tags": []
+        },
+        {
+            "text_id": 1,
+            "title": "Reading Text 2",
+            "content": "<div class=\"style1\" id=\"text\">\n<p class=\"style1\" style=\"text-align: center\"><strong>WWW.TRADE WITH ME.COM</strong></p>\n<ol style=\"list-style-type: upper-alpha\" type=\"A\">\n<li><span class=\"style1\">For sale: iPhone X. In very good condition without protective rubber case. Headphones are gone but otherwise in perfect working order. Looking for £150 but willing to accept offers.</span></li>\n<li><span class=\"style1\">52 inch flat screen LCD television for sale. Small scratch on the top but the screen is OK. Have to sell because I am leaving the country, so will consider any offer.</span></li>\n<li><span class=\"style1\">Playstation games (20 different games). Brand new, in box with manuals. Unwanted gift. All reasonable offers considered.</span></li>\n<li><span class=\"style1\">For sale – complete dining room set (6 chairs and table). In reasonable condition although may need repainting. Table can fold for storage. Buyer will need to collect. £250 (price is non-negotiable)</span></li>\n<li><span class=\"style1\">Zanussi Fridge Freezer. 1.6 metres tall. Four years old. Motor still works but door is not sealing closed (will need new seal). Free to anyone willing to collect.</span></li>\n<li><span class=\"style1\">Wanted: cheap laptop computer. Doesn’t need to be in very good condition so long as it works. Needed for word processing and surfing the internet, but not much more. Willing to pay up to £200 for the right machine. Must have all cables and accessories, as well as a carry bag.</span></li>\n<li><span class=\"style1\">Boat trailer needed. Must be able to take small boat (2 metres long).  Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</span></li>\n<li><span class=\"style1\">I am looking for any antique figurines from the Lladro collection. Will pay a good price for any authentic pieces in good condition. We will come to you to evaluate any piece that you are interested in selling, but please send a photograph of the figurine first. </span></li>\n</ol>\n</div>",
+            "tags": []
+        },
+        {
+            "text_id": 2,
+            "title": "Reading Text 3",
+            "content": "<div class=\"style1\" id=\"text\">\n<div class=\"style1\" id=\"text\">\n<p style=\"text-align: center\"><strong>GREAT BARRIER TOURISM INFO</strong></p>\n<em><strong>Great Barrier Island water taxis</strong></em>\n\nWharf to wharf at a time that suits you – 24 hours a day, 7 days a week, 365 days of the year. Great Barrier water taxis can take you from the main harbour to any of the local marinas for a set fee using our on-demand service – you call us and tell us when you want to leave and where you want to go, and we’ll be there. Our fleet of safe, high speed and comfortable Water Taxis are driven by professional skippers who have years of local experience.\n\n<em><strong>Fishing charter</strong></em>\n\nUnlike road taxis, we can deliver you to more than just your final destination – we service the Hauraki Gulf so can drop you on one of the secret, secluded beaches or perfect fishing spots. Catch your own fish for dinner!  The clean and sparkling blue waters in the local area are abundant with sea life, and our knowledgeable skippers can guarantee you won’t return empty handed. Fishing charters are aboard our high speed boat, comfortable for a maximum of 4 people. A half-day fishing charter costs $275, which includes fuel and skipper.\n\n<em><strong>Harbour tours</strong></em>\n\nWe also offer the best in harbour tours, taking you from the Great Barrier wharf to all the places of interest. Get perfect views of the city, as well as the harbour bridge, before setting off to the see the internationally famous Dorin Cliffs. From here we sail to Westhaven Marina, one of the largest marinas in the southern hemisphere and home to a wide range of pleasure boats of all shapes and sizes. Then on to Golden Sands beach before returning to the wharf via the Marble, a stunning rock formation that can’t be seen without a boat. The whole trip takes two hours, with an option to stop at Golden Sands beach and catch the next water taxi back to the wharf. The harbour tour costs $45 per person and includes tea, coffee and light snacks.\n\n</div>\n</div>",
+            "tags": []
+        },
+        {
+            "text_id": 3,
+            "title": "Reading Text 4",
+            "content": "<div class=\"style1\" id=\"text\">\n<div class=\"style1\" id=\"text\">\n<p style=\"text-align: center\"><strong>GREAT BARRIER TOURISM INFO</strong></p>\n<p><em><strong>Great Barrier Island water taxis</strong></em></p>\n<p>Wharf to wharf at a time that suits you – 24 hours a day, 7 days a week, 365 days of the year. Great Barrier water taxis can take you from the main harbour to any of the local marinas for a set fee using our on-demand service – you call us and tell us when you want to leave and where you want to go, and we’ll be there. Our fleet of safe, high speed and comfortable Water Taxis are driven by professional skippers who have years of local experience.</p>\n<p><em><strong>Fishing charter</strong></em></p>\n<p>Unlike road taxis, we can deliver you to more than just your final destination – we service the Hauraki Gulf so can drop you on one of the secret, secluded beaches or perfect fishing spots. Catch your own fish for dinner!  The clean and sparkling blue waters in the local area are abundant with sea life, and our knowledgeable skippers can guarantee you won’t return empty handed. Fishing charters are aboard our high speed boat, comfortable for a maximum of 4 people. A half-day fishing charter costs $275, which includes fuel and skipper.</p>\n<p><em><strong>Harbour tours</strong></em></p>\n<p>We also offer the best in harbour tours, taking you from the Great Barrier wharf to all the places of interest. Get perfect views of the city, as well as the harbour bridge, before setting off to the see the internationally famous Dorin Cliffs. From here we sail to Westhaven Marina, one of the largest marinas in the southern hemisphere and home to a wide range of pleasure boats of all shapes and sizes. Then on to Golden Sands beach before returning to the wharf via the Marble, a stunning rock formation that can’t be seen without a boat. The whole trip takes two hours, with an option to stop at Golden Sands beach and catch the next water taxi back to the wharf. The harbour tour costs $45 per person and includes tea, coffee and light snacks.</p>\n</div>\n</div>",
+            "tags": []
+        },
+        {
+            "title": "Reading Text 5",
+            "content": "<h3>Reading Passage 3</h3>\r\n<h4>You should spend about 20 minutes on Questions 26 - 40 which are based on Reading Passage 3.</h4>\r\n\r\n<h2>Working from home</h2>\r\n\r\n<p><strong>A:</strong><span id=\"passage-q35\" data-question=\"35\"></span> Can you feel your anxiety and stress levels increasing every time you get caught in a traffic jam? Do you find it difficult to control your tongue when your boss points out your shortcomings yet again? Do you just not have the right kind of office attire, hate spending hours shopping for it and, frankly, would feel much better if you only had more independence, more freedom, more flexible hours and fewer people on your back? Do you yearn for state-of-the-art technology in your home, that ... wait for it ... you haven't had to pay for? If you are shouting an enthusiastic 'Yes!' in answer to these questions, then it could be time to make a career and life change that may not even require you to quit your job. Just suggest to your boss that you wish to become one of the new breed of executives whose office is based at home.</p>\r\n\r\n<p><strong>B:</strong><span id=\"passage-q36\" data-question=\"36\"></span> Working from home is a relatively new phenomenon, but is becoming an increasingly popular option with both businesses and employees. The technology available to us now means that <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">we no longer need to be in the same office building as our colleagues to communicate effectively with each other</span>. E-mail, video conferencing, mobile telephones and more, mean that <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">we can do business just as efficiently, regardless of our location</span>.</p>\r\n\r\n<p><strong>C:</strong><span id=\"passage-q37\" data-question=\"37\"></span> Companies may choose to employ a proportion of their staff as home-based workers, as, of course, a workforce set up in such a way requires far less office space and fewer parking facilities. <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The fixed costs of a business can be dramatically reduced</span>. Employees can enjoy the added benefits of freedom to schedule the day as they choose and freedom to spend more time at home with their families. Working from home can be a particularly valid option for young mothers who wish to pursue their careers but find it impossible to be out of the house for nine or ten hours per day.</p>\r\n\r\n<p><strong>D:</strong><span id=\"passage-q38\" data-question=\"38\"></span> We can even go so far as to say that the working-from-home phenomenon could be one of the answers to the pollution problems which the modern world has inflicted upon itself. Fewer people travelling to work every day equals fewer cars. Fewer cars, of course, equates to lower CO2 levels in the atmosphere. Governments have been trying for years to persuade us to forsake our private car journey to work each day for the hideous experience of a crowded bus or train, but <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">this is still unpopular</span>. Most of us have been resistant, even when parking fees in city areas have been on the rise and unpredictable traffic patterns mean we have to leave our house 30 minutes earlier than necessary anyway. But working from home gives us no excuse whatsoever to emit CO2 into the atmosphere twice a day in our working week.</p>\r\n\r\n<p><strong>E:</strong><span id=\"passage-q39\" data-question=\"39\"></span> But what are the drawbacks to working from home? There must be some or everybody would be doing it. For many of us, work is a means of escaping our nearest and dearest and making our own mark on the world. The relationships we have with our colleagues, be they good or bad, are a significant part of our life and <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">should not be overlooked</span> - after all, full-time workers spend a third of their day in their workplace. After-hours pursuits of a game of squash or a pint in the pub become part of our daily routine. We cement sound friendships at work and an astounding percentage of us meet our life partner at our place of work. The people there have similar ambitions and business interests and we are, after all, social animals. The majority of us become depressed and withdrawn if we do not have enough interaction with others. Some people who work from home feel that, because they do spend a large proportion of the day at home alone with few distractions, they are actually much more productive and can get tasks done in a much shorter time than in an office environment. Others, however, may be demotivated by the isolation and find it difficult to get down to tasks which have a more intangible deadline.</p>\r\n\r\n<p><strong>F:</strong><span id=\"passage-q40\" data-question=\"40\"></span> As with most aspects of life, a balance is probably the best solution for the majority of workers - a job based at home which requires regular contact with colleagues at regular meetings. Management surveys show that successful business is easier if we operate as a team: brainstorming and sharing ideas and offering support and motivation to each other. After all, we are only human and we need others to complain to if we have a bad day at work!</p>",
+            "text_id": 4
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "general_training",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_general_training_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    }
+}
