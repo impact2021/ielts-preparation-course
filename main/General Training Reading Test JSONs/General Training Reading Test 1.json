@@ -4,7 +4,7 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Questions 1-6: Match each feature to the correct transport pass (A, B, or C). Write the correct letter A, B, or C.",
+            "instructions": "Questions 1-6: Match each feature to the correct transport pass (A, B, C, or D). Write the correct letter A, B, C, or D.",
             "question": "Offers reductions for older people",
             "points": 1,
             "no_answer_feedback": "The correct answer is A (Travel Rider pass offers \u00a330 for students and pensioners, compared to \u00a342 for adults).",
@@ -28,9 +28,14 @@
                     "text": "C: Destination Pass",
                     "is_correct": false,
                     "feedback": "Incorrect. The Destination Pass mentions student and group discounts but not pensioner discounts. The correct answer is A (Travel Rider pass)."
+                },
+                {
+                    "text": "D: None of the above",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Travel Rider pass does offer reductions for older people (pensioners). The correct answer is A (Travel Rider pass)."
                 }
             ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass",
+            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -60,9 +65,14 @@
                     "text": "C: Destination Pass",
                     "is_correct": true,
                     "feedback": "Correct! The Destination Pass is available through travel agents worldwide or can be purchased through our website."
+                },
+                {
+                    "text": "D: None of the above",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Destination Pass can be purchased through the website. The correct answer is C (Destination Pass)."
                 }
             ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass",
+            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -71,7 +81,7 @@
             "instructions": "",
             "question": "Allows travel by train",
             "points": 1,
-            "no_answer_feedback": "The correct answer is C (Destination Pass). The passage mentions it includes coach and ferry travel, and students should note that none of the passes explicitly mention train travel.",
+            "no_answer_feedback": "The correct answer is D (None of the above). None of the three transport passes explicitly mention train travel.",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
@@ -81,20 +91,25 @@
                 {
                     "text": "A: Travel Rider pass",
                     "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass allows travel on NorWest and Metro Link bus within the city, not train. The correct answer is C."
+                    "feedback": "Incorrect. The Travel Rider pass allows travel on NorWest and Metro Link bus within the city, not train. The correct answer is D (None of the above)."
                 },
                 {
                     "text": "B: Flexi-Pass",
                     "is_correct": false,
-                    "feedback": "Incorrect. The Flexi-Pass allows travel on InterCity Coachlines and cross-channel ferry, not train. The correct answer is C."
+                    "feedback": "Incorrect. The Flexi-Pass allows travel on InterCity Coachlines and cross-channel ferry, not train. The correct answer is D (None of the above)."
                 },
                 {
                     "text": "C: Destination Pass",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Destination Pass includes coach and ferry travel, but not train. The correct answer is D (None of the above)."
+                },
+                {
+                    "text": "D: None of the above",
                     "is_correct": true,
-                    "feedback": "Correct! While the Destination Pass includes coach and ferry travel, this is the best answer among the three transport passes available."
+                    "feedback": "Correct! None of the three transport passes explicitly mention train travel."
                 }
             ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass",
+            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -124,9 +139,14 @@
                     "text": "C: Destination Pass",
                     "is_correct": true,
                     "feedback": "Correct! The Destination Pass includes the additional options to sail on Brentwood Lake."
+                },
+                {
+                    "text": "D: None of the above",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Destination Pass does include the option to sail on Brentwood Lake. The correct answer is C (Destination Pass)."
                 }
             ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass",
+            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -156,9 +176,14 @@
                     "text": "C: Destination Pass",
                     "is_correct": false,
                     "feedback": "Incorrect. The Destination Pass is a fixed itinerary pass with no mention of topping up. The correct answer is B (Flexi-Pass)."
+                },
+                {
+                    "text": "D: None of the above",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Flexi-Pass can be topped up for more travel. The correct answer is B (Flexi-Pass)."
                 }
             ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass",
+            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
@@ -188,9 +213,14 @@
                     "text": "C: Destination Pass",
                     "is_correct": false,
                     "feedback": "Incorrect. The Destination Pass is for touring routes throughout the country, not urban transport. The correct answer is A (Travel Rider pass)."
+                },
+                {
+                    "text": "D: None of the above",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Travel Rider pass is designed for urban transport (bus travel within the city). The correct answer is A (Travel Rider pass)."
                 }
             ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass",
+            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
