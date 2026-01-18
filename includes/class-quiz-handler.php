@@ -418,28 +418,28 @@ class IELTS_CM_Quiz_Handler {
                         
                         // Validate that the option index exists in mc_options
                         if (!isset($mc_options[$user_option_idx])) {
-                            // Invalid option index - treat as incorrect
+                            // Invalid option index - treat as incorrect and continue without feedback
                             $all_correct = false;
-                            continue;
-                        }
-                        
-                        // Check if user's answer is correct
-                        if (isset($correct_indices_by_position[$field_num]) && $correct_indices_by_position[$field_num] === $user_option_idx) {
-                            $field_correct = true;
-                            $points_earned++;
-                            
-                            // Get feedback from the selected option
-                            if (isset($mc_options[$user_option_idx]['feedback']) && !empty($mc_options[$user_option_idx]['feedback'])) {
-                                $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($mc_options[$user_option_idx]['feedback']) . '</span>';
-                                $field_feedbacks[] = $feedback_text;
-                            }
+                            // Don't continue here - we still need to store field result below
                         } else {
-                            $all_correct = false;
-                            
-                            // Get feedback from the selected incorrect option
-                            if (isset($mc_options[$user_option_idx]['feedback']) && !empty($mc_options[$user_option_idx]['feedback'])) {
-                                $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($mc_options[$user_option_idx]['feedback']) . '</span>';
-                                $field_feedbacks[] = $feedback_text;
+                            // Check if user's answer is correct
+                            if (isset($correct_indices_by_position[$field_num]) && $correct_indices_by_position[$field_num] === $user_option_idx) {
+                                $field_correct = true;
+                                $points_earned++;
+                                
+                                // Get feedback from the selected option
+                                if (isset($mc_options[$user_option_idx]['feedback']) && !empty($mc_options[$user_option_idx]['feedback'])) {
+                                    $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($mc_options[$user_option_idx]['feedback']) . '</span>';
+                                    $field_feedbacks[] = $feedback_text;
+                                }
+                            } else {
+                                $all_correct = false;
+                                
+                                // Get feedback from the selected incorrect option
+                                if (isset($mc_options[$user_option_idx]['feedback']) && !empty($mc_options[$user_option_idx]['feedback'])) {
+                                    $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($mc_options[$user_option_idx]['feedback']) . '</span>';
+                                    $field_feedbacks[] = $feedback_text;
+                                }
                             }
                         }
                     } else {
