@@ -1,0 +1,1508 @@
+{
+    "title": "General Training Reading Test 2",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Questions 1 \u2013 7\n\nDo the following statements agree with the information given in Reading Text 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "1. There are more available copies of the Bill Benjamin album than the Gerome and the Jives album.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 2",
+            "question": "2. The blues album on sale for less than \u00a320 will be available from the middle of September.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! The statement is TRUE based on the reading passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is TRUE based on the reading passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 3",
+            "question": "3. The Janine Reynard album is only available at the cheaper price for a limited time.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! The statement is TRUE based on the reading passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is TRUE based on the reading passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 4",
+            "question": "4. The Seeking Solitude jazz album is available for the first time in the UK.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 5",
+            "question": "5. Jessica Wilson is a famous female blues and jazz artist from the UK.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! The statement is TRUE based on the reading passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is TRUE based on the reading passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 6",
+            "question": "6. Not all special offers are available to customers outside the UK.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Correct! The statement is TRUE based on the reading passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The statement is TRUE based on the reading passage."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage confirms this statement."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage does provide information about this."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7",
+            "question": "7. Express delivery in the UK costs \u00a36.50.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. In the IELTS test, you should always take a guess as there's no penalty for wrong answers.",
+            "correct_feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage contradicts this statement."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Incorrect. The correct answer is FALSE. Please review the passage carefully."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly states the opposite."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 8 \u2013 10\n\nChoose the correct letter A, B, C, or D.",
+            "question": "8. What is the annual cost of family membership at Brightwood Leisure Centre?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (\u00a3450 annually).",
+            "correct_feedback": "Correct! Family membership costs \u00a3450 annually.",
+            "incorrect_feedback": "Incorrect. The correct answer is C (\u00a3450 annually).",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: \u00a3120 per year",
+                    "is_correct": false,
+                    "feedback": "Incorrect. That is the student membership price. The correct answer is C (\u00a3450 annually)."
+                },
+                {
+                    "text": "B: \u00a3280 per year",
+                    "is_correct": false,
+                    "feedback": "Incorrect. That is the full membership price. The correct answer is C (\u00a3450 annually)."
+                },
+                {
+                    "text": "C: \u00a3450 annually",
+                    "is_correct": true,
+                    "feedback": "Correct! Family membership costs \u00a3450 annually for up to four household members."
+                },
+                {
+                    "text": "D: \u00a3600 per year",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (\u00a3450 annually)."
+                }
+            ],
+            "options": "A: \u00a3120 per year\nB: \u00a3280 per year\nC: \u00a3450 annually\nD: \u00a3600 per year",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "9. What type of swimwear is NOT acceptable in the pool area?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (shorts and t-shirts).",
+            "correct_feedback": "Correct! Shorts and t-shirts are not acceptable.",
+            "incorrect_feedback": "Incorrect. The correct answer is B (shorts and t-shirts).",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: Swimming caps",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Swimming caps are recommended but not mandatory. The correct answer is B."
+                },
+                {
+                    "text": "B: Shorts and t-shirts",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that shorts and t-shirts are not acceptable in the pool area."
+                },
+                {
+                    "text": "C: One-piece swimsuits",
+                    "is_correct": false,
+                    "feedback": "Incorrect. One-piece swimsuits are appropriate swimwear. The correct answer is B."
+                },
+                {
+                    "text": "D: Swim trunks",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Swim trunks are appropriate swimwear. The correct answer is B."
+                }
+            ],
+            "options": "A: Swimming caps\nB: Shorts and t-shirts\nC: One-piece swimsuits\nD: Swim trunks",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "10. When does Brightwood Leisure Centre operate on weekends?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (8:00 AM to 6:00 PM).",
+            "correct_feedback": "Correct! Weekend hours are 8:00 AM to 6:00 PM.",
+            "incorrect_feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM).",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice",
+            "mc_options": [
+                {
+                    "text": "A: 6:00 AM to 10:00 PM",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Those are the weekday hours. The correct answer is C."
+                },
+                {
+                    "text": "B: 7:00 AM to 8:00 PM",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM)."
+                },
+                {
+                    "text": "C: 8:00 AM to 6:00 PM",
+                    "is_correct": true,
+                    "feedback": "Correct! The centre operates from 8:00 AM to 6:00 PM on weekends."
+                },
+                {
+                    "text": "D: 9:00 AM to 5:00 PM",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C (8:00 AM to 6:00 PM)."
+                }
+            ],
+            "options": "A: 6:00 AM to 10:00 PM\nB: 7:00 AM to 8:00 PM\nC: 8:00 AM to 6:00 PM\nD: 9:00 AM to 5:00 PM",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 11 \u2013 14\n\nComplete each sentence with the correct ending, A, B, C, or D.",
+            "question": "11. Members can bring guests to the centre provided that",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (the guests are accompanied by the member at all times).",
+            "correct_feedback": "Correct! Guests must be accompanied by their sponsoring member at all times.",
+            "incorrect_feedback": "Incorrect. The correct answer is A.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_sentence_endings",
+            "mc_options": [
+                {
+                    "text": "A: the guests are accompanied by the member at all times",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that guests must be accompanied by their sponsoring member at all times."
+                },
+                {
+                    "text": "B: the guests have their own membership card",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Guest passes are free and valid for one visit only. The correct answer is A."
+                },
+                {
+                    "text": "C: the guests pay an additional fee",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Guest passes are free. The correct answer is A."
+                },
+                {
+                    "text": "D: the guests attend during off-peak hours",
+                    "is_correct": false,
+                    "feedback": "Incorrect. No such restriction is mentioned. The correct answer is A."
+                }
+            ],
+            "options": "A: the guests are accompanied by the member at all times\nB: the guests have their own membership card\nC: the guests pay an additional fee\nD: the guests attend during off-peak hours",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Frequent guests who visit more than six times per year are",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (encouraged to become members).",
+            "correct_feedback": "Correct! Frequent guests are encouraged to become members.",
+            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_sentence_endings",
+            "mc_options": [
+                {
+                    "text": "A: required to pay a visitor fee",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not require them to pay a fee. The correct answer is B."
+                },
+                {
+                    "text": "B: encouraged to become members",
+                    "is_correct": true,
+                    "feedback": "Correct! Frequent guests are encouraged to become members to enjoy unlimited access."
+                },
+                {
+                    "text": "C: given priority booking for classes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Priority booking is only for members. The correct answer is B."
+                },
+                {
+                    "text": "D: not permitted to bring a guest",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B (encouraged to become members)."
+                }
+            ],
+            "options": "A: required to pay a visitor fee\nB: encouraged to become members\nC: given priority booking for classes\nD: not permitted to bring a guest",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "13. Swimming lessons at Brightwood Leisure Centre are held",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (every Saturday morning from 9:00 AM to 4:00 PM for children aged 3-10).",
+            "correct_feedback": "Correct! Swimming lessons are held every Saturday morning.",
+            "incorrect_feedback": "Incorrect. The correct answer is C.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_sentence_endings",
+            "mc_options": [
+                {
+                    "text": "A: three times a week during weekday evenings",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lessons are held on Saturday mornings. The correct answer is C."
+                },
+                {
+                    "text": "B: only for children aged 5-14 years old",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Swimming lessons are for ages 3-10. The correct answer is C."
+                },
+                {
+                    "text": "C: every Saturday morning for children aged 3-10 years",
+                    "is_correct": true,
+                    "feedback": "Correct! Swimming lessons are held every Saturday morning from 9:00 AM to 4:00 PM for children aged 3-10."
+                },
+                {
+                    "text": "D: only during school holidays",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Holiday camps are for school holidays; swimming lessons are regular Saturday programs. The correct answer is C."
+                }
+            ],
+            "options": "A: three times a week during weekday evenings\nB: only for children aged 5-14 years old\nC: every Saturday morning for children aged 3-10 years\nD: only during school holidays",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "14. Children attending centre activities must have",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (a completed medical consent form on file).",
+            "correct_feedback": "Correct! A medical consent form is required.",
+            "incorrect_feedback": "Incorrect. The correct answer is D.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_sentence_endings",
+            "mc_options": [
+                {
+                    "text": "A: parental supervision at all times",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The requirement is a medical consent form. The correct answer is D."
+                },
+                {
+                    "text": "B: a valid health insurance policy",
+                    "is_correct": false,
+                    "feedback": "Incorrect. A medical consent form is required, not insurance. The correct answer is D."
+                },
+                {
+                    "text": "C: a swimming ability assessment",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The requirement is a medical consent form. The correct answer is D."
+                },
+                {
+                    "text": "D: a completed medical consent form on file",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that children must have a completed medical consent form on file with emergency contact information and relevant medical conditions."
+                }
+            ],
+            "options": "A: parental supervision at all times\nB: a valid health insurance policy\nC: a swimming ability assessment\nD: a completed medical consent form on file",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 15 \u2013 20\n\nDo the following statements agree with the information given in Reading Text 4?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "15. You should research industry salary standards before negotiating with your manager.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE.",
+            "correct_feedback": "Correct! The passage states you should research salary standards before starting negotiations.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage clearly recommends researching salary standards. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides information about this. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "16. You should focus on personal financial needs when presenting your case for a pay rise.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE.",
+            "correct_feedback": "Correct! You should focus on the value you bring to the company, not personal needs.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE.",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states to focus on value brought to the company, not personal needs. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage clearly states to focus on value brought to the company rather than personal financial needs."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides this information. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. It is best to request a pay rise during the morning hours.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN.",
+            "correct_feedback": "Correct! The passage does not mention the time of day.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN.",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage discusses timing (after projects, during reviews) but not time of day. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not provide information about time of day. The correct answer is NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "18. If your initial pay rise request is declined, you should ask about future opportunities.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE.",
+            "correct_feedback": "Correct! The passage advises asking what would make you eligible for a raise in the future.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states to ask what improvements would make you eligible for a raise in the future."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage recommends asking about future opportunities. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "19. Your manager must make a decision about your pay rise request within one week.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE.",
+            "correct_feedback": "Correct! The passage mentions requesting a follow-up within two weeks, not one week.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE.",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage mentions a two-week timeframe for follow-up, not one week. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage suggests requesting a follow-up meeting within two weeks, not one week."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides timing information. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "20. Negotiation for salary increases is a standard business practice.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE.",
+            "correct_feedback": "Correct! The passage states that negotiation is a normal business practice.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE.",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage explicitly states that negotiation is a normal business practice."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage confirms negotiation is a normal practice. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 21 \u2013 26\n\nWhich section of the cover letter rules does each of the following apply to? Write the correct section heading, A, B, C, or D.",
+            "question": "21. Your address, the date, and the employer's details",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (Format and Structure).",
+            "correct_feedback": "Correct! Contact information and addresses are discussed in the Format and Structure section.",
+            "incorrect_feedback": "Incorrect. The correct answer is A.",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Format and Structure",
+                    "is_correct": true,
+                    "feedback": "Correct! The Format and Structure section covers contact information, date, and employer details."
+                },
+                {
+                    "text": "B: Content Guidelines",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
+                },
+                {
+                    "text": "C: Closing Statements",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
+                },
+                {
+                    "text": "D: Common Mistakes to Avoid",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in the Format and Structure section. The correct answer is A."
+                }
+            ],
+            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "22. Why you are interested in the company and role",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (Content Guidelines).",
+            "correct_feedback": "Correct! Explaining your interest is part of the Content Guidelines section.",
+            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Format and Structure",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is content-related. The correct answer is B."
+                },
+                {
+                    "text": "B: Content Guidelines",
+                    "is_correct": true,
+                    "feedback": "Correct! Explaining interest in the company and role is covered in the Content Guidelines section."
+                },
+                {
+                    "text": "C: Closing Statements",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+                },
+                {
+                    "text": "D: Common Mistakes to Avoid",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+                }
+            ],
+            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "23. Expressing enthusiasm and requesting an interview",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C (Closing Statements).",
+            "correct_feedback": "Correct! These elements belong in the Closing Statements section.",
+            "incorrect_feedback": "Incorrect. The correct answer is C.",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Format and Structure",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about closing statements. The correct answer is C."
+                },
+                {
+                    "text": "B: Content Guidelines",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about closing statements. The correct answer is C."
+                },
+                {
+                    "text": "C: Closing Statements",
+                    "is_correct": true,
+                    "feedback": "Correct! Expressing enthusiasm and requesting an interview are part of the Closing Statements section."
+                },
+                {
+                    "text": "D: Common Mistakes to Avoid",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in Closing Statements. The correct answer is C."
+                }
+            ],
+            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "24. Using appropriate professional formatting and margins",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (Format and Structure).",
+            "correct_feedback": "Correct! Formatting and margins are part of Format and Structure.",
+            "incorrect_feedback": "Incorrect. The correct answer is A.",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Format and Structure",
+                    "is_correct": true,
+                    "feedback": "Correct! Formatting and margins are covered in the Format and Structure section."
+                },
+                {
+                    "text": "B: Content Guidelines",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about formatting. The correct answer is A."
+                },
+                {
+                    "text": "C: Closing Statements",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about formatting. The correct answer is A."
+                },
+                {
+                    "text": "D: Common Mistakes to Avoid",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in Format and Structure. The correct answer is A."
+                }
+            ],
+            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "25. Not using generic letters and avoiding informal language",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (Common Mistakes to Avoid).",
+            "correct_feedback": "Correct! These are mistakes discussed in the Common Mistakes section.",
+            "incorrect_feedback": "Incorrect. The correct answer is D.",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Format and Structure",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
+                },
+                {
+                    "text": "B: Content Guidelines",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
+                },
+                {
+                    "text": "C: Closing Statements",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about mistakes to avoid. The correct answer is D."
+                },
+                {
+                    "text": "D: Common Mistakes to Avoid",
+                    "is_correct": true,
+                    "feedback": "Correct! Not using generic letters and avoiding informal language are mistakes to avoid."
+                }
+            ],
+            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "26. Mentioning the specific position and job listing source",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (Content Guidelines).",
+            "correct_feedback": "Correct! The opening paragraph details are part of Content Guidelines.",
+            "incorrect_feedback": "Incorrect. The correct answer is B.",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Format and Structure",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is about content. The correct answer is B."
+                },
+                {
+                    "text": "B: Content Guidelines",
+                    "is_correct": true,
+                    "feedback": "Correct! The opening paragraph details about position and job listing are part of Content Guidelines."
+                },
+                {
+                    "text": "C: Closing Statements",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+                },
+                {
+                    "text": "D: Common Mistakes to Avoid",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is in Content Guidelines. The correct answer is B."
+                }
+            ],
+            "options": "A: Format and Structure\nB: Content Guidelines\nC: Closing Statements\nD: Common Mistakes to Avoid",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 27 \u2013 40\n\nDo the following statements agree with the information given in Reading Text 6?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "27. William Shakespeare died in 1616.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Paragraph A states: 'The 23rd of April, 2016, marked the four hundredth anniversary of the death...of William Shakespeare' - 400 years before 2016 is 1616.",
+            "correct_feedback": "Correct! Paragraph A states: 'The 23rd of April, 2016, marked the four hundredth anniversary of the death...of William Shakespeare' - 400 years before 2016 is 1616.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph A states: 'The 23rd of April, 2016, marked the four hundredth anniversary of the death...of William Shakespeare' - 400 years before 2016 is 1616.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A states: 'The 23rd of April, 2016, marked the four hundredth anniversary of the death...of William Shakespeare' - 400 years before 2016 is 1616."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph A states: 'The 23rd of April, 2016, marked the four hundredth anniversary of the death...of William Shakespeare' - 400 years before 2016 is 1616."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph A states: 'The 23rd of April, 2016, marked the four hundredth anniversary of the death...of William Shakespeare' - 400 years before 2016 is 1616."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. In The Tempest, King Alonso is Prospero\u2019s brother.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Paragraph D explains that 'his only brother - the treacherous Antonio' is Prospero's brother, not King Alonso. King Alonso is a separate character.",
+            "correct_feedback": "Correct! Paragraph D explains that 'his only brother - the treacherous Antonio' is Prospero's brother, not King Alonso. King Alonso is a separate character.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Paragraph D explains that 'his only brother - the treacherous Antonio' is Prospero's brother, not King Alonso. King Alonso is a separate character.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph D explains that 'his only brother - the treacherous Antonio' is Prospero's brother, not King Alonso. King Alonso is a separate character."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D explains that 'his only brother - the treacherous Antonio' is Prospero's brother, not King Alonso. King Alonso is a separate character."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Paragraph D explains that 'his only brother - the treacherous Antonio' is Prospero's brother, not King Alonso. King Alonso is a separate character."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. The Tempest was written in 1611.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Paragraph C states the play was 'performed for the first time...on the 1st of November, 1611,' the exact year it was written is not specified.",
+            "correct_feedback": "Correct! While Paragraph C states the play was 'performed for the first time...on the 1st of November, 1611,' the exact year it was written is not specified.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. While Paragraph C states the play was 'performed for the first time...on the 1st of November, 1611,' the exact year it was written is not specified.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While Paragraph C states the play was 'performed for the first time...on the 1st of November, 1611,' the exact year it was written is not specified."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While Paragraph C states the play was 'performed for the first time...on the 1st of November, 1611,' the exact year it was written is not specified."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph C states the play was 'performed for the first time...on the 1st of November, 1611,' the exact year it was written is not specified."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. A Discovery of the Bermudas was based on true events.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Paragraph E mentions 'A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists,' which the playwright read.",
+            "correct_feedback": "Correct! Paragraph E mentions 'A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists,' which the playwright read.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph E mentions 'A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists,' which the playwright read.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E mentions 'A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists,' which the playwright read."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph E mentions 'A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists,' which the playwright read."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph E mentions 'A Discovery of the Bermudas, detailing the real-life account of the shipwreck of English colonists,' which the playwright read."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. King James I funded the publication of the First Folio.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. Paragraph B discusses the First Folio publication but does not mention who funded it.",
+            "correct_feedback": "Correct! Paragraph B discusses the First Folio publication but does not mention who funded it.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B discusses the First Folio publication but does not mention who funded it.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B discusses the First Folio publication but does not mention who funded it."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B discusses the First Folio publication but does not mention who funded it."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses the First Folio publication but does not mention who funded it."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. The Tempest has been adapted for cinema.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Paragraph G states the play 'continues to be appreciated...in a variety of media formats, ranging from...television and big screen adaptations.'",
+            "correct_feedback": "Correct! Paragraph G states the play 'continues to be appreciated...in a variety of media formats, ranging from...television and big screen adaptations.'",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph G states the play 'continues to be appreciated...in a variety of media formats, ranging from...television and big screen adaptations.'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G states the play 'continues to be appreciated...in a variety of media formats, ranging from...television and big screen adaptations.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph G states the play 'continues to be appreciated...in a variety of media formats, ranging from...television and big screen adaptations.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Paragraph G states the play 'continues to be appreciated...in a variety of media formats, ranging from...television and big screen adaptations.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "33. Many consider William Shakespeare to be the ___ in the world.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: greatest dramatist. Paragraph A states that Shakespeare is 'a figure that many regard as being the world's greatest dramatist.'",
+            "correct_feedback": "Correct! Paragraph A states that Shakespeare is 'a figure that many regard as being the world's greatest dramatist.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: greatest dramatist. Paragraph A states that Shakespeare is 'a figure that many regard as being the world's greatest dramatist.'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "greatest dramatist"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph A states that Shakespeare is 'a figure that many regard as being the world's greatest dramatist.'",
+                    "incorrect": "Incorrect. The correct answer is: greatest dramatist. Paragraph A states that Shakespeare is 'a figure that many regard as being the world's greatest dramatist.'",
+                    "no_answer": "The correct answer is: greatest dramatist. Paragraph A states that Shakespeare is 'a figure that many regard as being the world's greatest dramatist.'"
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "34. A total of ___ plays were published for the first time in the First Folio.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 18|eighteen. Paragraph B states: 'Among the 36 plays appearing...are eighteen of Shakespeare's works that had never been previously published.'",
+            "correct_feedback": "Correct! Paragraph B states: 'Among the 36 plays appearing...are eighteen of Shakespeare's works that had never been previously published.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: 18|eighteen. Paragraph B states: 'Among the 36 plays appearing...are eighteen of Shakespeare's works that had never been previously published.'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "18|eighteen"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states: 'Among the 36 plays appearing...are eighteen of Shakespeare's works that had never been previously published.'",
+                    "incorrect": "Incorrect. The correct answer is: 18|eighteen. Paragraph B states: 'Among the 36 plays appearing...are eighteen of Shakespeare's works that had never been previously published.'",
+                    "no_answer": "The correct answer is: 18|eighteen. Paragraph B states: 'Among the 36 plays appearing...are eighteen of Shakespeare's works that had never been previously published.'"
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "35. A performance of The Tempest was given in the ___ in 1613.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: royal court. Paragraph C states: 'Another performance of the play was given at the royal court two years later.'",
+            "correct_feedback": "Correct! Paragraph C states: 'Another performance of the play was given at the royal court two years later.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: royal court. Paragraph C states: 'Another performance of the play was given at the royal court two years later.'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "royal court"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C states: 'Another performance of the play was given at the royal court two years later.'",
+                    "incorrect": "Incorrect. The correct answer is: royal court. Paragraph C states: 'Another performance of the play was given at the royal court two years later.'",
+                    "no_answer": "The correct answer is: royal court. Paragraph C states: 'Another performance of the play was given at the royal court two years later.'"
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "36. Some viewed Prospero\u2019s last monologue as an expression of Shakespeare\u2019s plan ___ .",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: to retire. Paragraph D states: 'some early critics...viewed Prospero's final speech...as representing the author's announcement...of his own intention to retire from the playwright profession.'",
+            "correct_feedback": "Correct! Paragraph D states: 'some early critics...viewed Prospero's final speech...as representing the author's announcement...of his own intention to retire from the playwright profession.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: to retire. Paragraph D states: 'some early critics...viewed Prospero's final speech...as representing the author's announcement...of his own intention to retire from the playwright profession.'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "to retire"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph D states: 'some early critics...viewed Prospero's final speech...as representing the author's announcement...of his own intention to retire from the playwright profession.'",
+                    "incorrect": "Incorrect. The correct answer is: to retire. Paragraph D states: 'some early critics...viewed Prospero's final speech...as representing the author's announcement...of his own intention to retire from the playwright profession.'",
+                    "no_answer": "The correct answer is: to retire. Paragraph D states: 'some early critics...viewed Prospero's final speech...as representing the author's announcement...of his own intention to retire from the playwright profession.'"
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "37. Colonial and ___ themes were prominent topics in The Tempest.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: supernatural. Paragraph E states: 'The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest...'",
+            "correct_feedback": "Correct! Paragraph E states: 'The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest...'",
+            "incorrect_feedback": "Incorrect. The correct answer is: supernatural. Paragraph E states: 'The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest...'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "field_count": 1,
+            "field_answers": {
+                "1": "supernatural"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph E states: 'The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest...'",
+                    "incorrect": "Incorrect. The correct answer is: supernatural. Paragraph E states: 'The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest...'",
+                    "no_answer": "The correct answer is: supernatural. Paragraph E states: 'The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest...'"
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Names of individuals behind the publication of the First Folio.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'",
+            "correct_feedback": "Correct! Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'",
+            "incorrect_feedback": "Incorrect. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B. Paragraph B states: 'The content of the First Folio was prepared and compiled by Henry Condell and John Heminges, two friends and colleagues of the playwright.'"
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Works that had a direct influence on The Tempest.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest.",
+            "correct_feedback": "Correct! Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest.",
+            "incorrect_feedback": "Incorrect. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E. Paragraph E discusses 'A Discovery of the Bermudas' and 'Metamorphoses' by Ovid as works that directly influenced The Tempest."
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The structure of The Tempest. ",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress.",
+            "correct_feedback": "Correct! Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress.",
+            "incorrect_feedback": "Incorrect. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress.",
+            "reading_text_id": 5,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Paragraph A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                },
+                {
+                    "text": "Paragraph B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                },
+                {
+                    "text": "Paragraph C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                },
+                {
+                    "text": "Paragraph D",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                },
+                {
+                    "text": "Paragraph E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                },
+                {
+                    "text": "Paragraph F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                },
+                {
+                    "text": "Paragraph G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D. Paragraph D explains the structure of the play, mentioning 'five separate acts' and describing how the scenes and story progress."
+                }
+            ],
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Text 1",
+            "content": "<h4><strong>Hidden Treasures Music Store \u2013 September Members' Newsletter</strong></h4>\n\n<p>Stockists of rare and collectors' items \u2013 take a walk down Memory Lane!</p>\n\n<h5>Music categories</h5>\n<p>J \u2013 Jazz  B \u2013 Blues  R \u2013 Rock & Roll</p>\n\n<h5>New Arrivals This Month</h5>\n<h6>Under \u00a320</h6>\n\n<p><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Bill Benjamin (J) \u2013 A rare chance to buy the artist's first album. 5 copies in stock.</span></p>\n\n<p>Gerome and the Jives (R) \u2013 10 copies remaining. Reduced from \u00a330.</p>\n\n<p><span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Giles Bertram (B) \u2013 Currently out of stock. Expected delivery 25 September.</span></p>\n\n<p>The Rockerbillies (R) \u2013 Digitally remastered for enhanced quality.</p>\n\n<h6>Under \u00a330</h6>\n\n<p>Clyde Forstrum (J/B) \u2013 A mix of cover songs from well-known jazz and blues artists.</p>\n\n<p>The Kings of Temple Street (B) \u2013 Award-winning blues band from New Orleans.</p>\n\n<p>Brian Jefferson (B) \u2013 Includes the chart-topping song \"Forever Yours\".</p>\n\n<p><span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Janine Reynard (R) \u2013 Special offer this month only. Usually \u00a355.</span></p>\n\n<h6>Under \u00a350</h6>\n\n<p>The Real McCoy (R) \u2013 Voted their best album of all time by K20 radio listeners.</p>\n\n<p><span id=\"passage-q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Seeking Solitude (J) \u2013 First time available in store.</span></p>\n\n<p>Johnny Baxter (B) \u2013 New arrival from the USA. Only available from Hidden Treasures in the UK.</p>\n\n<p><span id=\"passage-q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Jessica Wilson (B/J) \u2013 The UK's best-known female jazz and blues star.</span></p>\n\n<h5>Additional Special Offers</h5>\n\n<p><span id=\"passage-q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">\u00a320 voucher with any purchase over \u00a3100 (available until 5 October)</span></p>\n\n<p>Free delivery within the UK only for orders over \u00a36 (valid until 30 September)</p>\n\n<p>Purchases over \u00a360 automatically entered into prize draw</p>\n\n<h5>Delivery Details</h5>\n\n<h6>Within the UK</h6>\n\n<p><span id=\"passage-q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">\u00a36.50 regular post</span></p>\n\n<p>\u00a316.80 courier service (next day delivery)</p>\n\n<h6>Outside the UK</h6>\n\n<p>Contact the store for prices</p>\n\n<p>Surface delivery: approximately 6\u20138 weeks</p>\n\n<p>Airmail delivery: 1\u20132 weeks</p>"
+        },
+        {
+            "title": "Reading Text 2",
+            "content": "<h4><strong>Brightwood Leisure Centre \u2013 Facilities and Rules</strong></h4>\n\n<p>Welcome to Brightwood Leisure Centre. To ensure all members and guests enjoy their visit safely, please observe the following rules and regulations.</p>\n\n<h5>Membership Categories</h5>\n\n<p><span id=\"passage-q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Full membership is available to individuals aged 16 years and above, with an annual fee of \u00a3280</span>. This includes unlimited access to all facilities during opening hours and priority booking for classes.</p>\n\n<p>Student membership is available to full-time students aged 18-25 for \u00a3120 per year. Valid student identification must be presented at registration.</p>\n\n<p><span id=\"passage-q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Family membership covering up to four household members costs \u00a3450 annually</span> and is ideal for families who want to exercise together.</p>\n\n<h5>Facility Rules</h5>\n\n<p><span id=\"passage-q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">All swimmers must wear appropriate swimwear in the pool area; shorts and t-shirts are not acceptable</span>. Swimming caps are recommended but not mandatory. Shower facilities are available before and after use of the pool.</p>\n\n<p>Gym equipment must be used only as instructed by staff. Members must complete an induction session before using the weights room for the first time. Mobile phones should be set to silent mode in all facilities.</p>\n\n<p>Children under 8 years old are not permitted in the gym or weights room. Children aged 8-15 may use the gym only when supervised by an adult member.</p>\n\n<h5>Booking and Cancellations</h5>\n\n<p>Classes should be booked online at least 24 hours in advance. Cancellations must be made 12 hours before the class start time to avoid a \u00a35 cancellation fee. No-shows will be recorded, and members with more than three no-shows in a month will have their class booking privileges suspended for one week.</p>\n\n<h5>Safety and Conduct</h5>\n\n<p>Staff members reserve the right to ask members to leave if they fail to comply with rules or behave inappropriately. All accidents should be reported immediately to staff. First aid facilities are available at the front desk.</p>\n\n<p>The centre operates from 6:00 AM to 10:00 PM weekdays and 8:00 AM to 6:00 PM weekends.</p>"
+        },
+        {
+            "title": "Reading Text 3",
+            "content": "<h4><strong>Guest and Children Policies at Brightwood Leisure Centre</strong></h4>\n\n<h5>Guest Privileges</h5>\n\n<p><span id=\"passage-q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">Members can bring up to two guests per visit, though guests must be accompanied by their sponsoring member at all times</span>. Guest passes are free and valid for one visit only.</p>\n\n<p>Guests do not have access to the changing facilities without supervision and must follow all centre rules. Guests are not permitted to use the weights room or attend specialized classes.</p>\n\n<p><span id=\"passage-q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Frequent guests who visit more than six times per year are encouraged to become members</span> to enjoy unlimited access to all facilities.</p>\n\n<h5>Children's Programmes</h5>\n\n<p><span id=\"passage-q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">The centre offers swimming lessons for children aged 3-10 years old, held every Saturday morning from 9:00 AM to 4:00 PM</span>. Classes are taught by qualified instructors and grouped by ability level.</p>\n\n<p>Holiday camps are available during school holidays for children aged 5-14. These camps include a variety of activities such as swimming, games, sports, and craft activities. Early booking is essential as places are limited.</p>\n\n<p><span id=\"passage-q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Children attending any centre activities must have a completed medical consent form on file</span>. This form should include emergency contact information and any relevant medical conditions.</p>\n\n<h5>Additional Information</h5>\n\n<p>Parents and caregivers are welcome to observe swimming lessons from the viewing gallery. For enquiries about children's programs, please contact the centre directly.</p>"
+        },
+        {
+            "title": "Reading Text 4",
+            "content": "<h4><strong>Guidelines for Negotiating a Pay Rise at Work</strong></h4>\n\n<p>Many employees feel uncertain about requesting a pay increase from their employer. However, with proper preparation and a professional approach, salary negotiations can be successful.</p>\n\n<h5>Before You Start</h5>\n\n<p><span id=\"passage-q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Research industry salary standards for your position, experience level, and geographic location before initiating any discussion with your manager</span>. This ensures your request is realistic and backed by data.</p>\n\n<p><span id=\"passage-q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">Document your achievements and contributions over the past year, including successful projects, additional responsibilities you have assumed, and positive feedback from colleagues or clients</span>. This evidence strengthens your case considerably.</p>\n\n<p>Choose an appropriate time to request a meeting\u2014ideally after a successful project completion, during performance reviews, or when the company is performing well financially.</p>\n\n<h5>The Negotiation Meeting</h5>\n\n<p><span id=\"passage-q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Start the conversation by thanking your manager for considering your request and expressing your commitment to the organization</span>. This sets a positive tone for the discussion.</p>\n\n<p><span id=\"passage-q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Present your case clearly by explaining why you deserve a raise, focusing on the value you bring to the company rather than personal financial needs</span>. Mention specific accomplishments and how you have improved efficiency or contributed to company goals.</p>\n\n<p>Listen carefully to your manager's feedback. They may outline concerns, budget constraints, or offer alternative benefits such as additional vacation days or flexible working arrangements.</p>\n\n<h5>After the Discussion</h5>\n\n<p><span id=\"passage-q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">If your manager needs time to consider, request a follow-up meeting within two weeks to discuss their decision</span>. Agree on a specific date before the meeting concludes.</p>\n\n<p><span id=\"passage-q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Even if your initial request is declined, ask what specific improvements or achievements would make you eligible for a raise in the future, and establish clear goals to work towards</span>. This demonstrates your commitment to professional growth and keeps the door open for future negotiations.</p>\n\n<p>Remember that negotiation is a normal business practice, and most employers expect employees to request pay increases periodically.</p>"
+        },
+        {
+            "title": "Reading Text 5",
+            "content": "<h4><strong>Essential Rules for Writing an Effective Cover Letter</strong></h4>\n\n<h5>Format and Structure</h5>\n\n<p><span id=\"passage-q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">A cover letter should be one page long, written on white paper with professional margins of one inch on all sides</span>. Use a standard business font such as Arial or Times New Roman in size 11 or 12.</p>\n\n<p><span id=\"passage-q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">Include your contact information at the top of the letter, followed by the date, and then the employer's name and company address</span>. Address the letter to a specific person whenever possible; research the hiring manager's name on the company website or LinkedIn.</p>\n\n<h5>Content Guidelines</h5>\n\n<p><span id=\"passage-q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">The opening paragraph should mention the specific position you are applying for and where you found the job listing</span>. This shows that you have tailored your application to this particular opportunity.</p>\n\n<p><span id=\"passage-q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">In the main body, explain why you are interested in the company and the role, highlighting how your skills and experience match the job requirements</span>. Use specific examples from your background to demonstrate your qualifications.</p>\n\n<p>Avoid repeating information that is already in your CV. Instead, add value by explaining your genuine interest in the position and what you can contribute to the organization.</p>\n\n<h5>Closing Statements</h5>\n\n<p><span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Conclude with a strong closing paragraph that expresses your enthusiasm for the opportunity and includes a call to action, such as requesting an interview</span>. Thank the reader for their time and consideration.</p>\n\n<p><span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Sign off professionally with \"Sincerely\" or \"Best regards\" followed by your full name typed below, leaving space for your handwritten signature if submitting a printed copy</span>. Proofread carefully for spelling and grammar errors before sending.</p>\n\n<h5>Common Mistakes to Avoid</h5>\n\n<p>Do not use generic cover letters. Each letter should be customized for the specific position and company. Avoid using informal language or jokes that may not be appropriate in a professional context. Never include negative comments about previous employers.</p>"
+        },
+        {
+            "title": "Reading Text 6",
+            "content": "The Tempest: Shakespeare\u2019s Final Play\r\n\r\nA: <span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The 23rd of April, 2016, marked the four hundredth anniversary of the death of the world-renowned English playwright and poet, William Shakespeare</span>, at the age of 52. Numerous festivals, exhibitions, theatrical performances and other events were held around the world to commemorate the special anniversary year and celebrate and honour the life and continuing legacy of <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">a figure that many regard as being the world\u2019s greatest dramatist</span>. In addition to the multitude of celebrations held in the author\u2019s home town of Stratford-upon-Avon in Warwickshire, England, one of the more notable highlights across the Atlantic in the United States was the exhibition of Shakespeare\u2019s First Folio, featuring discussion panels and a display of First Folio editions and digital content, in addition to local performances. The exhibition tour, its full title being First Folio: The Book That Gave Us Shakespeare, travelled to all fifty American states, as well as the country\u2019s capital, Washington D.C., and the territory of Puerto Rico.\r\n\r\nB: First published in 1623, seven years following Shakespeare\u2019s death, the book known as the First Folio is widely regarded by scholars as being the first authentic print collection of all the plays attributed to William Shakespeare. <span id=\"passage-q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">The content of the First Folio was prepared and compiled by Henry Condell and John Heminges</span>, two friends and colleagues of the playwright. <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">The Folio was published by the Stationers Company syndicate</span> under the title Mr. William Shakespeare\u2019s Comedies, Histories, &amp; Tragedies. Of the estimated 750 copies of the First Folio that were originally printed, fewer than 250 survive today, each worth millions of dollars. The largest collection of First Folios is held by the Folger Shakespeare Library in Washington, D.C., with a total of 82 copies. Among the 36 plays appearing in the pages of the First Folio are <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">eighteen of Shakespeare\u2019s works that had never been previously published</span>, including Twelfth Night, Antony and Cleopatra, The Taming of the Shrew, Comedy of Errors, Macbeth and The Tempest.\r\n\r\nC: While there is not universal consensus, the overwhelming majority of contemporary Shakespeare critics consider The Tempest to have been the last of the plays penned by the bard. It is the first of Shakespeare\u2019s works to appear in the contents of the First Folio, among his collected comedies. Today, The Tempest is regarded as one of Shakespeare\u2019s greatest works. Perhaps due to the fact that it was the final play of his writing career as a playwright, more is known about the early performances of The Tempest than many of Shakespeare\u2019s other dramatic works. <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It was performed for the first time in Whitehall, London, on the 1st of November, 1611</span>, for an audience that included King James I. <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Another performance of the play was given at the royal court two years later</span>, forming part of the entertainment celebrating the marriage of the king\u2019s daughter, Elizabeth, to Prince Frederick of Bohemia.\r\n\r\nD: As far as plot is concerned, The Tempest is set on a remote island where the deposed Duke of Milan, Prospero, and his daughter have been banished. Possessed of magical powers, Prospero conjures up a storm, or tempest, that causes a boat carrying a group of people from the mainland, including <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">his only brother \u2013 the treacherous Antonio \u2013 as well as King Alonso of Naples</span>, to become shipwrecked on the island. <span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">The play then moves through a number of scenes in five separate acts</span>, as the various characters interact. By the conclusion of the story, Prospero\u2019s daughter, Miranda, and the son of King Alonso, Prince Ferdinand, have met and fallen in love and are married in Act IV of the play. At the same time, Prospero is redeemed and his former title and position are restored by the king as a result of revelations of his brother\u2019s treachery. In the final scene, the epilogue of the play, Prospero, alone on the stage, addresses the audience in an extended monologue, renouncing his magical powers. With regard to this last scene, some early critics of Shakespeare\u2019s work <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">viewed Prospero\u2019s final speech in The Tempest as representing the author\u2019s announcement to the audience of his own intention to retire from the playwright profession</span>.\r\n\r\nE: In terms of Shakespeare\u2019s sources of inspiration for the writing of The Tempest, scholars have pointed out that each of the playwright\u2019s dramatic works was very much influenced by popular topics and concerns of the day, and that the author would make use of existing written material, drawing on literature and other documents from a variety of sources for many of his ideas. The bard\u2019s final play is no exception in this respect. Of particular note is a pamphlet that was published in England in 1610 under the title <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\"><span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">A Discovery of the Bermudas, detailing the real-life account</span> of the shipwreck of English colonists</span> bound for Virginia in North America, which the playwright is known to have read. As well as funding the Virginia expedition, King James I had also written an essay on magic in 1603. <span id=\"passage-q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">The fact that the themes of colonialism and the supernatural both feature strongly in The Tempest</span> reflects that these topics were broadly popular in Shakespeare\u2019s day when the play was written and performed. Experts have also pointed out that the author copied large parts of Prospero\u2019s soliloquy at the end of the play from a speech made by the character Medea in the epic poem Metamorphoses, written by the Roman poet, Ovid.\r\n\r\nF: The fact that the 1623 First Folio publication of Shakespeare\u2019s works opens with The Tempest is both a reflection of the play\u2019s popularity at the time, as well as a significant factor in its subsequent critical history. Its position in first place certainly gave readers, academics and literary critics a strongly favourable impression of The Tempest in comparison with the author\u2019s other works. Many felt, for example, that the bard\u2019s final play represented the pinnacle of Shakespeare\u2019s career, the playwright working at the height of his powers. In addition, the order of the works published in the First Folio lent greater weight to the idea that the character of the magician Prospero had been written by Shakespeare as a semi-autobiographical figure, intended to represent the genuine feelings of the author, at least at some level.\r\n\r\nG: Today, more than four centuries after The Tempest was written, it remains one of William Shakespeare\u2019s most popular and widely-recognised works. As with his other plays, it has been translated into and published in dozens of languages. These dramatic works, with their well-drawn, complex characters and compelling storylines, have had a tremendous impact on the theatre, as well as the English language and culture. The bard\u2019s swan song, The Tempest, <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">continues to be appreciated by modern audiences across the globe to this day in a variety of media formats, ranging from print publications of the original play and live theatrical performances to television and big screen adaptations</span>."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "general_training",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_general_training_reading",
+        "timer_minutes": "60",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-18 01:24:16",
+        "exported_by": "system",
+        "plugin_version": "12.1",
+        "format_version": "1.0"
+    }
+}
