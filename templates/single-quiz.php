@@ -713,7 +713,12 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                     $dropdown_num = 1;
                                     
                                     // Replace each [dropdown] placeholder with a select element
-                                    while (stripos($processed_text, '[dropdown]') !== false && $dropdown_num <= $correct_answer_count) {
+                                    while ($dropdown_num <= $correct_answer_count) {
+                                        // Check if placeholder exists before attempting replacement
+                                        if (stripos($processed_text, '[dropdown]') === false) {
+                                            break; // No more placeholders to replace
+                                        }
+                                        
                                         // Build the select dropdown
                                         $select_field = '<select name="answer_' . esc_attr($index) . '_field_' . esc_attr($dropdown_num) . '" class="answer-select-inline closed-question-dropdown" data-field-num="' . esc_attr($dropdown_num) . '">';
                                         $select_field .= '<option value="">-</option>'; // Empty default option
@@ -726,8 +731,13 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         
                                         $select_field .= '</select>';
                                         
-                                        // Replace the first occurrence of [dropdown]
-                                        $processed_text = preg_replace('/\[dropdown\]/i', $select_field, $processed_text, 1);
+                                        // Replace the first occurrence of [dropdown] and verify replacement happened
+                                        $new_text = preg_replace('/\[dropdown\]/i', $select_field, $processed_text, 1);
+                                        if ($new_text === $processed_text) {
+                                            // No replacement occurred, break to prevent infinite loop
+                                            break;
+                                        }
+                                        $processed_text = $new_text;
                                         $dropdown_num++;
                                     }
                                     

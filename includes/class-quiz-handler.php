@@ -416,6 +416,13 @@ class IELTS_CM_Quiz_Handler {
                         $any_answered = true;
                         $user_option_idx = intval($user_field_answer);
                         
+                        // Validate that the option index exists in mc_options
+                        if (!isset($mc_options[$user_option_idx])) {
+                            // Invalid option index - treat as incorrect
+                            $all_correct = false;
+                            continue;
+                        }
+                        
                         // Check if user's answer is correct
                         if (isset($correct_indices_by_position[$field_num]) && $correct_indices_by_position[$field_num] === $user_option_idx) {
                             $field_correct = true;
