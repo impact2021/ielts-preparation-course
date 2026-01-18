@@ -1,678 +1,176 @@
-<strong>Read the texts and answer the questions. Type your answers in the spaces provided.</strong></span></p>
-					</legend>
+SECTION 1
+Reading Passage 1
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Thorn Brook Rain Forest Express
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1749" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<h3>Thorn Brook Forest Express</h3>
-Jump on board the Thorn Brook Rain Forest Express train and have a family adventure on a narrow gauge railway into the Whean Ranges, were you can see glow worms and amazing rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, you get to travel over wooden bridges, through numerous tunnels, view ancient forest and look out over the Corille Harbour.
-Prices<sup>*1</sup>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="50%"><span class="style1">Adults</span></td>
-<td valign="top" width="50%"><span class="style1">£10.00&nbsp;&nbsp; </span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Children (6 – 15 years)</span></td>
-<td valign="top" width="50%"><span class="style1">£5.00&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Infants (0-5&nbsp; years)</span></td>
-<td valign="top" width="50%"><span class="style1">FREE</span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Senior citizens</span></td>
-<td valign="top" width="50%"><span class="style1">£5.00&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Group bookings (the whole train)<sup>*2</sup></span></td>
-<td valign="top" width="50%"><span class="style1">Please contact us for pricing </span></td>
-</tr>
-</tbody>
-</table>
-*1 Prices entitle the passenger to one return ride on the Thorn Brook Rain Forest Express. Prices and timetable may change without prior notice.
-*2 Conditions for group bookings:
-<ul>
- 	<li>Minimum group is 7 or more people. We require a deposit (the balance will then be payable on the day of your trip).</li>
- 	<li>Your booking will not be confirmed until we have received your deposit.</li>
- 	<li>Your deposit must be received within 10 days of making the booking</li>
- 	<li>If you cancel more than 8 days prior to your booking, we will refund your deposit in full. After that time, no refund will be given although we may be able to reschedule for another day.</li>
- 	<li>If the trip is cancelled due to weather or operational reasons, we will refund your deposit in full</li>
-</ul>
+Jump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the Whean Ranges, where you can see glow worms and rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over Corille Harbour.
+
+Prices
+Adults: £10.00
+Children (6–15 years): £5.00
+Infants (0–5 years): Free
+Senior citizens: £5.00
+Group bookings (whole train): Contact for pricing
+
+Prices include one return ride. Prices and timetable may change without notice.
+
+Group booking conditions
+Minimum group size is seven people. A deposit is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than eight days before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.
+
 General information
+Payment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.
 
-Method of payment is either cash or cheque. Sorry, we have no credit card facilities. Please report no later than 15 minutes before departure
+Important note
+The train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.
 
-Please note: booking is essential. To avoid disappointment, please book at least 2 weeks in advance.
+Questions 1–7
 
-<em><strong>IMPORTANT NOTE:</strong></em> The train line passes through two tunnels, one of which is 0.7km long. The lights are dimmed to enable passengers to view the glow worms. Please be aware of this if you suffer Nyctophobia (fear of the dark), or are claustrophobic (have a fear of confined spaces).
+[This is a summary completion question.
+There are 7 questions.
+Use NO MORE THAN TWO WORDS from the passage.]
 
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<p class="style1"><strong>Section 1
-</strong></p>
+Travels to the (1) ________ to see wildlife and forest before stopping close to (2) ________.
+The journey has views across (3) ________.
+Costs £5.00 for children and senior citizens, and (4) ________ for passengers up to 5 years old.
+A (5) ________ is required for group bookings and is refunded only if cancelled more than (6) ________ before departure.
+People with certain phobias are advised that the train passes through (7) ________.
 
-<div id="text" class="style1">
+Answer: Whean Ranges
 
-<strong>Questions 1 – 7</strong>
+Answer: Huia Dam
 
-Complete the summary <em><strong>USING NO MORE THAN TWO WORDS</strong></em> from the passage for each answer.
+Answer: Corille Harbour
 
-Travels to the [1]BLANK 1 of 7 to see wildlife and forest before stopping close to [2]BLANK 2 of 7. Journey has views across [3]BLANK 3 of 7. Costs £5.00 for children and older passengers – [4]BLANK 4 of 7 for passengers up to 5 years old. A [5]BLANK 5 of 7 is required, which is refunded only if cancelled more than [6]BLANK 6 of 7 before departure. People with certain phobias are advised that the train passes through [7]BLANK 7 of 7.
-<p class="style1"></p>
+Answer: free
 
-</div>
-</div>											</legend>
+Answer: deposit
 
-											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<h3>Thorn Brook Forest Express</h3>
-<p>Jump on board the Thorn Brook Rain Forest Express train and have a family adventure on a narrow gauge railway into the Whean Ranges, were you can see glow worms and amazing rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, you get to travel over wooden bridges, through numerous tunnels, view ancient forest and look out over the Corille Harbour.<br>
-Prices<sup>*1</sup></p>
-<table border="1" width="100%" cellspacing="0" cellpadding="0">
-<tbody>
-<tr>
-<td valign="top" width="50%"><span class="style1">Adults</span></td>
-<td valign="top" width="50%"><span class="style1">£10.00&nbsp;&nbsp; </span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Children (6 – 15 years)</span></td>
-<td valign="top" width="50%"><span class="style1">£5.00&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Infants (0-5&nbsp; years)</span></td>
-<td valign="top" width="50%"><span class="style1">FREE</span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Senior citizens</span></td>
-<td valign="top" width="50%"><span class="style1">£5.00&nbsp;&nbsp;&nbsp;&nbsp; </span></td>
-</tr>
-<tr>
-<td valign="top" width="50%"><span class="style1">Group bookings (the whole train)<sup>*2</sup></span></td>
-<td valign="top" width="50%"><span class="style1">Please contact us for pricing </span></td>
-</tr>
-</tbody>
-</table>
-<p>*1 Prices entitle the passenger to one return ride on the Thorn Brook Rain Forest Express. Prices and timetable may change without prior notice.<br>
-*2 Conditions for group bookings:</p>
-<ul>
-<li>Minimum group is 7 or more people. We require a deposit (the balance will then be payable on the day of your trip).</li>
-<li>Your booking will not be confirmed until we have received your deposit.</li>
-<li>Your deposit must be received within 10 days of making the booking</li>
-<li>If you cancel more than 8 days prior to your booking, we will refund your deposit in full. After that time, no refund will be given although we may be able to reschedule for another day.</li>
-<li>If the trip is cancelled due to weather or operational reasons, we will refund your deposit in full</li>
-</ul>
-<p>General information</p>
-<p>Method of payment is either cash or cheque. Sorry, we have no credit card facilities. Please report no later than 15 minutes before departure</p>
-<p>Please note: booking is essential. To avoid disappointment, please book at least 2 weeks in advance.</p>
-<p><em><strong>IMPORTANT NOTE:</strong></em> The train line passes through two tunnels, one of which is 0.7km long. The lights are dimmed to enable passengers to view the glow worms. Please be aware of this if you suffer Nyctophobia (fear of the dark), or are claustrophobic (have a fear of confined spaces).</p>
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<p class="style1"><strong>Section 1<br>
-</strong></p>
-<div id="text" class="style1">
-<p><strong>Questions 1 – 7</strong></p>
-<p>Complete the summary <em><strong>USING NO MORE THAN TWO WORDS</strong></em> from the passage for each answer.</p>
-<p>Travels to the [1]<label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="12" type="text" value="" size="12" maxlength="17" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(whean ranges)</span></span></span></label> to see wildlife and forest before stopping close to [2]<label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="8" type="text" value="" size="8" maxlength="13" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(huia dam)</span></span></span></label>. Journey has views across [3]<label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="15" type="text" value="" size="15" maxlength="20" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(corille harbour)</span></span></span></label>. Costs £5.00 for children and older passengers – [4]<label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(free)</span></span></span></label> for passengers up to 5 years old. A [5]<label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="7" type="text" value="" size="7" maxlength="12" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(deposit)</span></span></span></label> is required, which is refunded only if cancelled more than [6]<label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="10" type="text" value="" size="10" maxlength="15" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(8 days,eight days)</span></span></span></label> before departure. People with certain phobias are advised that the train passes through [7]<label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="11" type="text" value="" size="11" maxlength="16" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(2 tunnels,two tunnels,tunnels)</span></span></span></label>.</p>
-<p class="style1">
-</p></div>
-</div>
-										</fieldset>
+Answer: 8 days
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 7										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+Answer: tunnels
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="1" type="1">
-<li>WHEAN RANGES</li>
-<li>HUIA DAM</li>
-<li>CORILLE HARBOUR</li>
-<li>FREE</li>
-<li>DEPOSIT</li>
-<li>8 / EIGHT DAYS</li>
-<li>TUNNELS / TUNNELS</li>
-</ol>
-<p>&nbsp;</p>
-</div>
-						</div>
-					</div>
-				
-				
-												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+SECTION 1 (continued)
+Reading Passage 2
 
-									<div style="margin-bottom: 20px;"></div>
-							</li>
+The Appliance Store Sale
 
-		
-			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1750,&quot;question_post_id&quot;:71970468}">
-				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
-				Question <span>2</span> of <span>5</span>				</div>
-				<h5 style="display: none;" class="wpProQuiz_header">
-					<span>2</span>. Question
-				</h5>
+From March 1st to March 8th, The Appliance Store will hold its third annual clearance sale. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The first 100 customers receive an additional 20% discount.
 
-				
-								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
-					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1750">
-											</legend>
+Computers
+Desktop computers are reduced by up to 50%. Laptops are available for under £200, including accessories. Computer accessories are also discounted. All computers include a 12-month guarantee, extended to 24 months for models over £1000.
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Kitchen appliances
+Fridges, freezers, microwaves and toasters are discounted. Combination packages provide greater savings.
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1750" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div align="center">
-<h3>The Appliance Store sale!</h3>
-</div>
-From March 1st to March 8th, The Appliance Store will be having its third annual clearance sale. Prices will be slashed to as much as 50% of normal retail price. Household brands going for crazy prices!
+Televisions
+LCD and plasma televisions are reduced by up to 30%. Stock is limited.
 
-The sale begins at 8.00 a.m. on March 1st. The first 100 customers through the door will have a further 20% discounted from their purchase, so we recommend you get here earlier to avoid disappointment.
-<h4>Computers</h4>
-Desktop computers will be on sale, with reductions of up to 50% on all major brands. Laptops will also be heavily reduced – pick one up for less than £200 including carry case and wireless mouse! Computer accessories will also be on sale, with keyboards, monitors and other accessories also heavily discounted.
+Questions 8–14
 
-Our knowledgeable and friendly staff are on hand to advise you about the best computer for your needs. We even have our free 20 minute training sessions to get you started using your new computer, so even if you are a first time computer owner, we have something for you!
+[TRUE / FALSE / NOT GIVEN]
 
-All PC Technology computers come with a standard 12 month guarantee (24 months for any model over £1000) to give you peace of mind when buying your new machine.
-<h4>Kitchen appliances</h4>
-Fridges, freezers, microwaves, and toasters will all be on sale, with combination packages (buy two kitchen items for a bigger discount) making this our greatest sale yet! Even the stainless steel appliances are hugely reduced to make way for new stock.
-<h4>Televisions</h4>
-Flat screen LCD and plasma televisions are also reduced, with some brands as much as 30% off! We have a limited stock on televisions, so come early to secure a bargain! We have the new Panasonic Viera II with internal DVD player for the lowest price in town.
+This is the first sale the Appliance Store has held.
+Answer: FALSE
 
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
+Extra discounts are available to a limited number of customers.
+Answer: TRUE
 
-<em><strong>Questions 8 to 14</strong></em>
+All computers are discounted by exactly 50%.
+Answer: FALSE
 
-Do the following statements agree with the information given in the reading passage?
+Computer accessories receive larger discounts than laptops.
+Answer: NOT GIVEN
 
-In boxes 8-14 on your answer sheet write
+Every computer has a one-year guarantee.
+Answer: FALSE
 
-<strong>TRUE</strong> if the statement agrees with the information
+Buying multiple kitchen items results in bigger discounts.
+Answer: TRUE
 
-<strong>FALSE</strong> if the statement contradicts the information
+Plasma televisions are discounted more than LCD televisions.
+Answer: NOT GIVEN
 
-<strong>NOT </strong><strong>GIVEN</strong> if there is no information on this
-<ol start="8">
- 	<li>This is the first sale the Appliance Store has had. BLANK 1 of 7</li>
- 	<li>Additional discounts are available to a limited number of people. BLANK 2 of 7<strong>
-</strong></li>
- 	<li>All computers have 50% off. BLANK 3 of 7</li>
- 	<li>Computer accessories are more heavily discounted than laptops. BLANK 4 of 7</li>
- 	<li>All computers have the standard one year guarantee. BLANK 5 of 7</li>
- 	<li>Buying more than one kitchen item will mean bigger savings. BLANK 6 of 7</li>
- 	<li>Plasma televisions have a bigger discount than LCD televisions. BLANK 7 of 7</li>
-</ol>
-</div>
-</div>											</legend>
+SECTION 2
+Reading Passage 3
 
-											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div align="center">
-<h3>The Appliance Store sale!</h3>
-</div>
-<p>From March 1st to March 8th, The Appliance Store will be having its third annual clearance sale. Prices will be slashed to as much as 50% of normal retail price. Household brands going for crazy prices!</p>
-<p>The sale begins at 8.00 a.m. on March 1st. The first 100 customers through the door will have a further 20% discounted from their purchase, so we recommend you get here earlier to avoid disappointment.</p>
-<h4>Computers</h4>
-<p>Desktop computers will be on sale, with reductions of up to 50% on all major brands. Laptops will also be heavily reduced – pick one up for less than £200 including carry case and wireless mouse! Computer accessories will also be on sale, with keyboards, monitors and other accessories also heavily discounted.</p>
-<p>Our knowledgeable and friendly staff are on hand to advise you about the best computer for your needs. We even have our free 20 minute training sessions to get you started using your new computer, so even if you are a first time computer owner, we have something for you!</p>
-<p>All PC Technology computers come with a standard 12 month guarantee (24 months for any model over £1000) to give you peace of mind when buying your new machine.</p>
-<h4>Kitchen appliances</h4>
-<p>Fridges, freezers, microwaves, and toasters will all be on sale, with combination packages (buy two kitchen items for a bigger discount) making this our greatest sale yet! Even the stainless steel appliances are hugely reduced to make way for new stock.</p>
-<h4>Televisions</h4>
-<p>Flat screen LCD and plasma televisions are also reduced, with some brands as much as 30% off! We have a limited stock on televisions, so come early to secure a bargain! We have the new Panasonic Viera II with internal DVD player for the lowest price in town.</p>
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<p><em><strong>Questions 8 to 14</strong></em></p>
-<p>Do the following statements agree with the information given in the reading passage?</p>
-<p>In boxes 8-14 on your answer sheet write</p>
-<p><strong>TRUE</strong> if the statement agrees with the information</p>
-<p><strong>FALSE</strong> if the statement contradicts the information</p>
-<p><strong>NOT </strong><strong>GIVEN</strong> if there is no information on this</p>
-<ol start="8">
-<li>This is the first sale the Appliance Store has had. <label><span class="screen-reader-text">Fill in the blank 1 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
-<li>Additional discounts are available to a limited number of people. <label><span class="screen-reader-text">Fill in the blank 2 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label><strong><br>
-</strong></li>
-<li>All computers have 50% off. <label><span class="screen-reader-text">Fill in the blank 3 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
-<li>Computer accessories are more heavily discounted than laptops. <label><span class="screen-reader-text">Fill in the blank 4 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
-<li>All computers have the standard one year guarantee. <label><span class="screen-reader-text">Fill in the blank 5 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="5" type="text" value="" size="5" maxlength="10" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(false)</span></span></span></label></li>
-<li>Buying more than one kitchen item will mean bigger savings. <label><span class="screen-reader-text">Fill in the blank 6 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="4" type="text" value="" size="4" maxlength="9" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(true)</span></span></span></label></li>
-<li>Plasma televisions have a bigger discount than LCD televisions. <label><span class="screen-reader-text">Fill in the blank 7 of 7</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="9" type="text" value="" size="9" maxlength="14" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(not given)</span></span></span></label></li>
-</ol>
-</div>
-</div>
-										</fieldset>
+Rainbow Recruitment
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 7										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 7									Points									</span>
+Rainbow Recruitment provides temporary employment opportunities across various industries.
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="8">
-<li>False (third)</li>
-<li>True (The first 100 customers through the door will have a further 20% discounted from their purchase)</li>
-<li>False (up to 50%)</li>
-<li>Not given</li>
-<li>False (24 months for any model over £1000)</li>
-<li>True (buy two kitchen items for a bigger discount)</li>
-<li>Not given</li>
-</ol>
-</div>
-						</div>
-					</div>
-				
-				
-												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+Current positions
 
-									<div style="margin-bottom: 20px;"></div>
-							</li>
+Fruit pickers / packers – Weekly contracts; earnings depend on speed; transport required
 
-		
-			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1751,&quot;question_post_id&quot;:71970469}">
-				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
-				Question <span>3</span> of <span>5</span>				</div>
-				<h5 style="display: none;" class="wpProQuiz_header">
-					<span>3</span>. Question
-				</h5>
+Labourer – Six-week contract; forklift licence essential
 
-				
-								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
-					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1751">
-											</legend>
+Relief teacher – Temporary cover for sick leave
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Web designer – One-month contract; occasional office attendance
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1751" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<h3>Rainbow Recruitment</h3>
-Savings running low? Need some extra cash for a holiday or special occasion? Need to pay a few bills but not looking for permanent work? Let us find you a temporary job to fill in the gap. Rainbow Recruitment is looking for temps for wide variety of positions starting immediately, with excellent rates and flexible terms. We have contracts from one week to one year in many different industries, and offer a guaranteed payment every week!
-<h4><span id="text">Current positions available:</span></h4>
-<h4>Fruit pickers / packers</h4>
-Fit and energetic people required to pick and pack a variety of fruit. Weekly contract and the possibility to earn over £400 a week (depending on how fast you work). You will need your own transport to reach the workplace, but all other equipment (ladders, storage bins etc) will be provided. Training will be given if required.
-<h4>Labourer</h4>
-2 people required for a 6 week contract on a building site in Stevenson Industrial estate. No experience needed as any relevant training will be given. General duties include keeping the area clear, removing debris and other unwanted material off site and unloading building materials. A licence to drive a forklift truck is essential.
-<h4>Relief teacher</h4>
-Teacher required immediately to cover sick leave absences. The candidate must be fully qualified with at least two years teaching experience in high schools. Will be required to cover geography and English language classes. Initial contract is for two weeks but possibility of further work if mutually acceptable.
-<h4>Web designer</h4>
-Website designer with graphic design training needed for a one month contract starting in two weeks. Must be able to work independently; would suit someone who has a home office as attendance in the company only required for occasional meetings.
-<h4>Accountant</h4>
-Junior accountant required for busy company with two branch offices. This initial contract is for 3 months but likely to be extended. Suitable candidate will have qualifications and experience in the field. Tasks will include supporting the accounts department, overseeing staff payroll and maintaining inventory records. Applicant will need to work alternately in both branches.
-<h4>Care giver</h4>
-Caring, sensitive person required to care for elderly lady in her own home. Live in position, five days on three days off. Light duties, cooking and cleaning, as well as some company. No qualifications required but some experience would help.
+Accountant – Three-month contract; work across two branches
 
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<p class="style1"><strong>Section 2
-</strong></p>
+Care giver – Live-in role caring for an elderly woman
 
-<div id="text" class="style1">
+Questions 15–20
 
-<em><strong>Questions 15 to 20</strong></em>
+[This is a matching question.
+There are 6 questions.]
 
-Match the following statements to the job advertised in the read<strong>I</strong>ng passage.
-<ol style="list-style-type: upper-alpha" type="A">
- 	<li>Fruit pickers / packers</li>
- 	<li>Labourer</li>
- 	<li>Relief teacher</li>
- 	<li>Web designer</li>
- 	<li>Accountant</li>
- 	<li>Care giver</li>
-</ol>
-Write the correct letter <strong>A – F</strong> in boxes <strong>15-20</strong> on your answer sheet.
-<ol start="15">
- 	<li>Only limited travel required BLANK 1 of 6</li>
- 	<li>Will not be in the same place each day BLANK 2 of 6</li>
- 	<li>Must be able to drive specific equipment BLANK 3 of 6</li>
- 	<li>Will need to relocate for the job BLANK 4 of 6</li>
- 	<li>Will be temporarily replacing other staff BLANK 5 of 6</li>
- 	<li>Income will be variable dependent on speed BLANK 6 of 6</li>
-</ol>
-</div>
-&nbsp;
+A. Fruit pickers / packers
+B. Labourer
+C. Relief teacher
+D. Web designer
+E. Accountant
+F. Care giver
 
-</div>											</legend>
+Only limited travel required
+Answer: D
 
-											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<h3>Rainbow Recruitment</h3>
-<p>Savings running low? Need some extra cash for a holiday or special occasion? Need to pay a few bills but not looking for permanent work? Let us find you a temporary job to fill in the gap. Rainbow Recruitment is looking for temps for wide variety of positions starting immediately, with excellent rates and flexible terms. We have contracts from one week to one year in many different industries, and offer a guaranteed payment every week!</p>
-<h4><span id="text">Current positions available:</span></h4>
-<h4>Fruit pickers / packers</h4>
-<p>Fit and energetic people required to pick and pack a variety of fruit. Weekly contract and the possibility to earn over £400 a week (depending on how fast you work). You will need your own transport to reach the workplace, but all other equipment (ladders, storage bins etc) will be provided. Training will be given if required.</p>
-<h4>Labourer</h4>
-<p>2 people required for a 6 week contract on a building site in Stevenson Industrial estate. No experience needed as any relevant training will be given. General duties include keeping the area clear, removing debris and other unwanted material off site and unloading building materials. A licence to drive a forklift truck is essential.</p>
-<h4>Relief teacher</h4>
-<p>Teacher required immediately to cover sick leave absences. The candidate must be fully qualified with at least two years teaching experience in high schools. Will be required to cover geography and English language classes. Initial contract is for two weeks but possibility of further work if mutually acceptable.</p>
-<h4>Web designer</h4>
-<p>Website designer with graphic design training needed for a one month contract starting in two weeks. Must be able to work independently; would suit someone who has a home office as attendance in the company only required for occasional meetings.</p>
-<h4>Accountant</h4>
-<p>Junior accountant required for busy company with two branch offices. This initial contract is for 3 months but likely to be extended. Suitable candidate will have qualifications and experience in the field. Tasks will include supporting the accounts department, overseeing staff payroll and maintaining inventory records. Applicant will need to work alternately in both branches.</p>
-<h4>Care giver</h4>
-<p>Caring, sensitive person required to care for elderly lady in her own home. Live in position, five days on three days off. Light duties, cooking and cleaning, as well as some company. No qualifications required but some experience would help.</p>
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<p class="style1"><strong>Section 2<br>
-</strong></p>
-<div id="text" class="style1">
-<p><em><strong>Questions 15 to 20</strong></em></p>
-<p>Match the following statements to the job advertised in the read<strong>I</strong>ng passage.</p>
-<ol style="list-style-type: upper-alpha" type="A">
-<li>Fruit pickers / packers</li>
-<li>Labourer</li>
-<li>Relief teacher</li>
-<li>Web designer</li>
-<li>Accountant</li>
-<li>Care giver</li>
-</ol>
-<p>Write the correct letter <strong>A – F</strong> in boxes <strong>15-20</strong> on your answer sheet.</p>
-<ol start="15">
-<li>Only limited travel required <label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(d)</span></span></span></label></li>
-<li>Will not be in the same place each day <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(e)</span></span></span></label></li>
-<li>Must be able to drive specific equipment <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(b)</span></span></span></label></li>
-<li>Will need to relocate for the job <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(f)</span></span></span></label></li>
-<li>Will be temporarily replacing other staff <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(c)</span></span></span></label></li>
-<li>Income will be variable dependent on speed <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="1" type="text" value="" size="1" maxlength="6" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(a)</span></span></span></label></li>
-</ol>
-</div>
-<p>&nbsp;</p>
-</div>
-										</fieldset>
+Will not work in the same place each day
+Answer: E
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 6										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+Must be able to operate specialised machinery
+Answer: B
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="15">
-<li>D – Attendance in the company only required for occasional meetings.</li>
-<li>E – Applicant will need to work alternately in both branches.</li>
-<li>B – A licence to drive a forklift truck is essential.</li>
-<li>F – Live in position</li>
-<li>C – Teacher required immediately to cover sick leave absences.</li>
-<li>A – … possibility to earn over £400 a week (depending on how fast you work).</li>
-</ol>
-</div>
-						</div>
-					</div>
-				
-				
-												<input type="button" name="back" value="Back" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: left ; margin-right: 10px ; display: none;"> 												<input type="button" name="check" value="Check" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right ; margin-right: 10px ; display: none;"> 								<input type="button" name="next" value="Next" class="wpProQuiz_button wpProQuiz_QuestionButton" style="float: right; display: none;" data-question-lock="true"> 								<div style="clear: both;"></div>
+Requires living at the workplace
+Answer: F
 
-									<div style="margin-bottom: 20px;"></div>
-							</li>
+Temporarily replaces existing staff
+Answer: C
 
-		
-			<li class="wpProQuiz_listItem" style="" data-type="cloze_answer" data-question-meta="{&quot;type&quot;:&quot;cloze_answer&quot;,&quot;question_pro_id&quot;:1752,&quot;question_post_id&quot;:71970470}">
-				<div aria-level="2" class="wpProQuiz_question_page" style="display:none;" role="heading">
-				Question <span>4</span> of <span>5</span>				</div>
-				<h5 style="display: none;" class="wpProQuiz_header">
-					<span>4</span>. Question
-				</h5>
+Earnings depend on how fast the person works
+Answer: A
 
-				
-								<fieldset class="wpProQuiz_question" style="margin: 10px 0px 0px 0px;" tabindex="0">
-					<legend class="wpProQuiz_question_text" id="ld-quiz__question-title--1752">
-											</legend>
+SECTION 3
+Reading Passage 4
 
-					<div class="wpProQuiz_clear" style="clear:both;"></div>
+Holiday and Leave Entitlements
 
-										
-										<div class="wpProQuiz_questionList" data-question_id="1752" data-type="cloze_answer">
-						
-								<div class="wpProQuiz_questionListItem" data-pos="0">
-																			<fieldset>
-											<legend class="screen-reader-text">
-												<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<h3>Holiday Entitlement</h3>
-<ul>
- 	<li>All employees are entitled to a minimum of&nbsp;5.6 weeks paid annual leave (28 days for someone working&nbsp;five days a&nbsp;week).</li>
- 	<li>Part-time workers are entitled to the same level of holiday pro rata (so 5.6 times your usual working week, e.g. 22.4 days for someone working four days a week)</li>
- 	<li>You start building up holiday as soon as you start work</li>
- 	<li>The company has the right to refuse holiday applications on unless 6 weeks’ notice is given in writing.</li>
- 	<li>You get paid your normal pay for your holiday</li>
- 	<li>Holidays may not be exchanged for payment, unless you will no longer be working for the company</li>
- 	<li>Public holidays are included in your minimum entitlement</li>
- 	<li>You continue to be entitled to your holiday leave in addition to any maternity (or paternity) leave. See below for maternity/paternity leave.</li>
- 	<li>Holidays can be accumulated over multiple years to a maximum of 8 weeks. Any additional holiday beyond this must be taken or lost; no payment will be made for holiday time an employee does not take</li>
- 	<li>In the event of a public holiday falling on a Saturday or Sunday, the holiday will be taken on the following Monday</li>
-</ul>
-<h4>Compassionate leave</h4>
-In the event of a death or serious illness or emergency involving a ‘dependant’ in the family, employees are also entitled to compassionate leave. A dependant could be your husband, wife, partner, child, parent, or anyone living in your household as a member of the family. A dependant may also be anyone who reasonably relies on you for help in an emergency, for example an elderly neighbour living alone who falls and breaks a leg and you are the closest on hand.
-You are allowed ‘reasonable’ time off to deal with the emergency and make any arrangements that are needed. There’s no limit to the number of times you can take time off for dependants. However, if the company feels that this is being abused, an investigation may be instigated.
-Note that payment for compassionate leave is discretionary, and in most cases the company will continue to pay normal wages, but this should first be confirmed in writing with your manager or supervisor.
-<h4>Maternity and paternity leave</h4>
-Statutory Maternity Leave is for 52 weeks, although mothers-to-be are only entitled to receive Maternity pay for the first 38 weeks of the leave. To claim maternity leave, you must satisfy the following requirements:
-<ul>
- 	<li>notify the company in writing 28 days before the commencement of the leave</li>
- 	<li>have been employed continuously by the company at least 26 weeks before the baby is due</li>
- 	<li>leave can only be taken 11 weeks before the week your baby is due</li>
-</ul>
-If you are a father-to-be or you will be responsible with the mother for bringing up a child, you could have the right to paternity leave and pay, providing you meet the following requirements:
-<ul>
- 	<li>You must be taking the time off to support the mother or carer for the baby and intend to be fully involved in their upbringing.</li>
- 	<li>Have been employed continuously by the company at least 26 weeks before the baby is due</li>
- 	<li>The leave is taken on or after the day the baby is born</li>
- 	<li>Paternity leave has to finish within 56 days of the baby being born.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
+Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff). Holiday requests require six weeks’ written notice. Holidays may be accumulated up to a maximum of eight weeks.
 
-<em><strong>Questions 21 – 28</strong></em>
+Compassionate leave is available for emergencies involving dependants. Abuse of leave may result in an investigation.
 
-Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> from the passage for each answer.
+Maternity leave lasts 52 weeks, with pay for the first 38 weeks. Paternity leave must be taken within 56 days of the birth.
 
-Type your answers in boxes <strong>21 – 28</strong> on your answer sheet.
-<ol start="21">
- 	<li>How many days off does a full time employee get?BLANK 1 of 6<strong>
-</strong></li>
- 	<li>How long before your holiday do you need to request time off? BLANK 2 of 6</li>
- 	<li>What is the maximum length of holiday an employee can accrue? BLANK 3 of 6</li>
- 	<li>If the company feels that employees are taking advantage of certain leave entitlements, what may be started? BLANK 4 of 6</li>
- 	<li>How many weeks will employees be paid when on maternity leave? BLANK 5 of 6</li>
- 	<li>What must be completed 56 days after the birth of the baby? BLANK 6 of 6</li>
-</ol>
-</div>
-&nbsp;
+Questions 21–28
 
-</div>											</legend>
+[Short answer questions.
+Use NO MORE THAN THREE WORDS AND/OR A NUMBER.]
 
-											<div style="float: right;width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<div id="text" class="style1">
-<h3>Holiday Entitlement</h3>
-<ul>
-<li>All employees are entitled to a minimum of&nbsp;5.6 weeks paid annual leave (28 days for someone working&nbsp;five days a&nbsp;week).</li>
-<li>Part-time workers are entitled to the same level of holiday pro rata (so 5.6 times your usual working week, e.g. 22.4 days for someone working four days a week)</li>
-<li>You start building up holiday as soon as you start work</li>
-<li>The company has the right to refuse holiday applications on unless 6 weeks’ notice is given in writing.</li>
-<li>You get paid your normal pay for your holiday</li>
-<li>Holidays may not be exchanged for payment, unless you will no longer be working for the company</li>
-<li>Public holidays are included in your minimum entitlement</li>
-<li>You continue to be entitled to your holiday leave in addition to any maternity (or paternity) leave. See below for maternity/paternity leave.</li>
-<li>Holidays can be accumulated over multiple years to a maximum of 8 weeks. Any additional holiday beyond this must be taken or lost; no payment will be made for holiday time an employee does not take</li>
-<li>In the event of a public holiday falling on a Saturday or Sunday, the holiday will be taken on the following Monday</li>
-</ul>
-<h4>Compassionate leave</h4>
-<p>In the event of a death or serious illness or emergency involving a ‘dependant’ in the family, employees are also entitled to compassionate leave. A dependant could be your husband, wife, partner, child, parent, or anyone living in your household as a member of the family. A dependant may also be anyone who reasonably relies on you for help in an emergency, for example an elderly neighbour living alone who falls and breaks a leg and you are the closest on hand.<br>
-You are allowed ‘reasonable’ time off to deal with the emergency and make any arrangements that are needed. There’s no limit to the number of times you can take time off for dependants. However, if the company feels that this is being abused, an investigation may be instigated.<br>
-Note that payment for compassionate leave is discretionary, and in most cases the company will continue to pay normal wages, but this should first be confirmed in writing with your manager or supervisor.</p>
-<h4>Maternity and paternity leave</h4>
-<p>Statutory Maternity Leave is for 52 weeks, although mothers-to-be are only entitled to receive Maternity pay for the first 38 weeks of the leave. To claim maternity leave, you must satisfy the following requirements:</p>
-<ul>
-<li>notify the company in writing 28 days before the commencement of the leave</li>
-<li>have been employed continuously by the company at least 26 weeks before the baby is due</li>
-<li>leave can only be taken 11 weeks before the week your baby is due</li>
-</ul>
-<p>If you are a father-to-be or you will be responsible with the mother for bringing up a child, you could have the right to paternity leave and pay, providing you meet the following requirements:</p>
-<ul>
-<li>You must be taking the time off to support the mother or carer for the baby and intend to be fully involved in their upbringing.</li>
-<li>Have been employed continuously by the company at least 26 weeks before the baby is due</li>
-<li>The leave is taken on or after the day the baby is born</li>
-<li>Paternity leave has to finish within 56 days of the baby being born.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div style="width: 47%;height: 350px;border: 1px solid #000;padding: 1%">
-<div id="text" class="style1">
-<p><em><strong>Questions 21 – 28</strong></em></p>
-<p>Answer the questions below using <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> from the passage for each answer.</p>
-<p>Type your answers in boxes <strong>21 – 28</strong> on your answer sheet.</p>
-<ol start="21">
-<li>How many days off does a full time employee get?<label><span class="screen-reader-text">Fill in the blank 1 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="17" type="text" value="" size="17" maxlength="22" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(28 days,twenty eight days,twenty-eight days,28,twenty eight,twenty-eight)</span></span></span></label><strong><br>
-</strong></li>
-<li>How long before your holiday do you need to request time off? <label><span class="screen-reader-text">Fill in the blank 2 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="16" type="text" value="" size="16" maxlength="21" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(6 weeks,six weeks,6 weeks before,six weeks before)</span></span></span></label></li>
-<li>What is the maximum length of holiday an employee can accrue? <label><span class="screen-reader-text">Fill in the blank 3 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="11" type="text" value="" size="11" maxlength="16" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(8 weeks,eight weeks)</span></span></span></label></li>
-<li>If the company feels that employees are taking advantage of certain leave entitlements, what may be started? <label><span class="screen-reader-text">Fill in the blank 4 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="16" type="text" value="" size="16" maxlength="21" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(an investigation,investigation)</span></span></span></label></li>
-<li>How many weeks will employees be paid when on maternity leave? <label><span class="screen-reader-text">Fill in the blank 5 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="24" type="text" value="" size="24" maxlength="29" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(38 weeks,38,thirty eight weeks,thirty eight,thirty-eight weeks,thirty-eight,first 38 weeks,first 38,first thirty eight weeks,first thirty eight,first thirty-eight weeks,first thirty-eight)</span></span></span></label></li>
-<li>What must be completed 56 days after the birth of the baby? <label><span class="screen-reader-text">Fill in the blank 6 of 6</span><span class="wpProQuiz_cloze wpProQuiz_answerIncorrect"><input autocomplete="off" data-wordlen="15" type="text" value="" size="15" maxlength="20" disabled="disabled"><span class="ld-quiz__cloze-icon ld-quiz__cloze-icon--incorrect dashicons"></span> <span class="wpProQuiz_clozeCorrect" style=""><span class="ld-quiz__cloze-results--correct-answer">(paternity leave,paternity)</span></span></span></label></li>
-</ol>
-</div>
-<p>&nbsp;</p>
-</div>
-										</fieldset>
+How many days’ holiday does a full-time employee receive?
+Answer: 28 days
 
-																		</div>
-													</div>
-									</fieldset>
-									<div class="wpProQuiz_response" style="">
-						<div style="display: none;" class="wpProQuiz_correct">
-															<div>
-									<span class="wpProQuiz_response_correct_label" style="float: left;">
-									Correct									</span>
-									<span class="wpProQuiz_response_correct_points_label" style="float: right;">
-										<span class="wpProQuiz_responsePoints">0</span>
-										 / 6										Points									</span>
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"></div>
-						</div>
-						<div style="" class="wpProQuiz_incorrect">
-															<div>
-									<span style="float: left;">
-										Incorrect									</span>
-									<span style="float: right;"><span class="wpProQuiz_responsePoints">0</span> / 6									Points									</span>
+How much notice is required to request holiday leave?
+Answer: 6 weeks
 
-									<div style="clear: both;"></div>
-								</div>
-														<div class="wpProQuiz_AnswerMessage"><ol start="21">
-<li><b>28 (days)</b> – ‘28 days for someone working five days a week’</li>
-<li><b>6 weeks</b> – ‘The company has the right to refuse holiday applications on unless 6 weeks’ notice is given in writing’</li>
-<li><b>8 weeks </b>– ‘Holidays can be accumulated over multiple years to a maximum of 8 weeks’</li>
-<li><b>(An) investigation</b> – ‘There’s no limit to the number of times you can take time off for dependants. However, if the company feels that this is being abused, an investigation may be instigated’</li>
-<li><b>38 weeks</b> – ‘mothers-to-be are only entitled to receive Maternity pay for the first 38 weeks of the leave’</li>
-<li><b>Paternity leave</b> – ‘The leave period has to finish within 56 days of the baby being born’</li>
+What is the maximum holiday entitlement that can be carried over?
+Answer: 8 weeks
+
+What may be started if compassionate leave is abused?
+Answer: an investigation
+
+For how many weeks is maternity pay provided?
+Answer: 38 weeks
+
+What must be completed within 56 days after the baby is born?
+Answer: paternity leave
