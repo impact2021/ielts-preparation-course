@@ -407,6 +407,515 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
+            "question": "Paragraph B",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph C",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph D",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph E",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph F",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Paragraph G",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "i. Government profiteering at the expense of citizens",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
+                },
+                {
+                    "text": "ii. A balance provides the best options",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
+                },
+                {
+                    "text": "iii. Resistance to a change in attitudes",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
+                },
+                {
+                    "text": "iv. Landowners the driving force for positive political change",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
+                },
+                {
+                    "text": "v. Renewable forests unable to get public support",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
+                },
+                {
+                    "text": "vi. The risks of an unequal share of land",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
+                },
+                {
+                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
+                },
+                {
+                    "text": "viii. Options for alternative income generation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
+                },
+                {
+                    "text": "ix. The impact personal decisions can have",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
+                }
+            ],
+            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
+            "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
+                    "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
+                    "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "INTERNATIONAL TRAVEL|international travel"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
+                    "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
+                    "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "LANDLESS|landless"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
+                    "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
+                    "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
+                    "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
+                    "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
+                    "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
+                    "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
+                }
+            }
         }
     ],
     "reading_texts": [

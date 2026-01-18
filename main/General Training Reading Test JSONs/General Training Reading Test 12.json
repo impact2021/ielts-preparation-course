@@ -393,6 +393,474 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 29 –40 which are based on Reading Passage 3.\n\nComplete each sentence with the correct ending A-H below",
+            "question": "The meaning of 'Luau' traditionally referred to…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F (a vegetable used in Hawai'ian cuisine). The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. Paragraph describing beliefs mentions community sharing, but not what 'Luau' originally meant."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. The passage discusses how luaus changed, but the word 'Luau' originally referred to a vegetable."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. This is a reason for celebrations, not what 'Luau' meant."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. This describes the Lei, not 'Luau'."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. 'Luau' isn't related to gender restrictions."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau)' - a vegetable used in Hawai'ian cuisine."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. Flowers indicate marital status, not the word 'Luau'."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F. This relates to Hawaiian beliefs, not what 'Luau' meant."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Necklaces are presented…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (as a sign of warmth and kindness). The passage states: 'a Lei – a necklace made out of woven flowers or shells that is given as a display of affection'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Prosperity is shared, but this isn't why necklaces are presented."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. The passage discusses how practices changed, but not why necklaces are given."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. This is a reason for celebrations, not why necklaces are given."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'a Lei – a necklace made out of woven flowers or shells that is given as a display of affection' - as a sign of warmth and kindness."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Necklaces are given to all guests, not only to women."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. This describes what 'Luau' means, not why necklaces are given."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Flowers indicate marital status, not necklaces."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. This relates to Hawaiian beliefs, not why necklaces are given."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Flowers are worn in different ways…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G (to indicate marital status). The passage states: 'placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This relates to beliefs about prosperity, not flowers."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This describes how practices evolved, not why flowers are worn differently."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This is a celebration reason, not why flowers are worn differently."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This describes necklaces, not flowers."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Flowers aren't restricted to women only."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This describes 'Luau', not flowers."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available' - to indicate marital status."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. This relates to beliefs, not flowers."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Hawai'ians believe that good luck…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (should be divided amongst the community). The passage states: 'They also believed that prosperity should be shared with family and friends'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A. should be divided amongst the community",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'They also believed that prosperity should be divided amongst the community' (paraphrased as 'prosperity should be shared with family and friends')."
+                },
+                {
+                    "text": "B. has changed over time",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This describes how practices changed, not beliefs about prosperity."
+                },
+                {
+                    "text": "C. a celebration of the success of a warrior.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This is a celebration reason, not a belief about prosperity."
+                },
+                {
+                    "text": "D. as a sign of warmth and kindness",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This describes necklaces, not prosperity beliefs."
+                },
+                {
+                    "text": "E. only to women",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This relates to eating restrictions, not prosperity beliefs."
+                },
+                {
+                    "text": "F. a vegetable used in Hawai'ian cuisine.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This describes 'Luau', not prosperity beliefs."
+                },
+                {
+                    "text": "G. to indicate marital status",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. This relates to flowers, not prosperity beliefs."
+                },
+                {
+                    "text": "H. must be shared with the gods",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. While the passage mentions honoring gods, the question asks about 'good luck' (prosperity), which 'should be shared with family and friends' (divided amongst the community)."
+                }
+            ],
+            "options": "A. should be divided amongst the community\nB. has changed over time\nC. a celebration of the success of a warrior.\nD. as a sign of warmth and kindness\nE. only to women\nF. a vegetable used in Hawai'ian cuisine.\nG. to indicate marital status\nH. must be shared with the gods",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the flowchart.\n\nChoose NO MORE THAN ONE WORD from Reading Passage 3 for each answer.",
+            "question": "The imu is lined with [field 1]",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "logs",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'.",
+                    "no_answer": "The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "A [field 1] is lit in the pit",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "fire",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'.",
+                    "no_answer": "The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The rocks are [field 1]",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "heated",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: HEATED. The passage states: 'the rocks are heated'.",
+                    "no_answer": "The correct answer is: HEATED. The passage states: 'the rocks are heated'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The [field 1] turns to coal",
+            "points": 1,
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "diagram_completion",
+            "mc_options": [],
+            "options": "",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "Flowchart Completion",
+            "correct_answer": "wood",
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Well done.",
+                    "incorrect": "Incorrect. The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'.",
+                    "no_answer": "The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'. Always try to answer even if unsure—there's no penalty in IELTS."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in the reading passage?\n\nIn boxes 37 -40 on your answer sheet write\n\nTRUE if the statement agrees with the information\n\nFALSE if the statement contradicts the information\n\nNOT GIVEN if there is no information on this",
+            "question": "Hawai'i is the only American state made up of islands.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Hawaii is made up of islands, it doesn't state whether it's the only American state made up of islands. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions that Hawaii 'is the newest of the 50 states' and 'encompasses almost all of the entire volcanic Hawaiian Island chain', but never states it's the ONLY American state made up of islands."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't say Hawaii is NOT the only island state - it simply doesn't provide this information."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage doesn't state whether Hawaii is the only American state made up of islands or not - this information is simply NOT GIVEN."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Necklaces given to guests must be made up of flowers.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states: 'a Lei – a necklace made out of woven flowers or shells', so necklaces can be made from shells too, not just flowers. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Lei necklaces can be made from 'woven flowers OR shells', so they don't MUST be made of flowers."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'a Lei – a necklace made out of woven flowers or shells' - so they can also be made out of shells, not just flowers."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage clearly provides this information: 'a necklace made out of woven flowers or shells'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Prior to the 1800s it was taboo for women to eat certain types of food.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states: 'Many centuries ago in ancient Hawaii... Commoners and women were also prohibited to eat certain delicacies. This all changed in 1819.' Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states: 'Many centuries ago in ancient Hawaii, men and woman ate separately. Commoners and women were also prohibited to eat certain delicacies.' This was before the change in 1819."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage explicitly states: 'Commoners and women were also prohibited to eat certain delicacies' in ancient Hawaii, before the 1819 change."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage clearly provides this information: 'Commoners and women were also prohibited to eat certain delicacies.'"
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Modern Hawai'ian food is influenced by Samoan culture.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions the fire dance 'hails from Samoan origin' but doesn't state that modern Hawaiian food is influenced by Samoan culture. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage mentions Asian and North American influences on food, and that the fire dance comes from Samoan origin, but doesn't say Samoan culture influences modern Hawaiian FOOD."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't contradict this, it just doesn't mention Samoan food influence specifically."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions Asian influences (rice) and North American influences (corned beef) on food, and mentions a Samoan fire dance, but doesn't state that modern Hawaiian food is influenced by Samoan culture."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         }
     ],
     "reading_texts": [
@@ -409,9 +877,9 @@
             "tags": []
         },
         {
-            "title": "Reading Text 5",
+            "title": "Reading Text 3",
             "content": "<strong>The Hawai'ian luau</strong>\n\nHawai'i, incorporated as an American state on August 21st 1959, is the newest of the 50 states of the United States of America and is situated southwest of the continental United States, southeast of Japan and northeast of Australia – its geographical position and political affiliations have influenced the multi-cultural face of contemporary Hawa'ii. Hawai'i has over a million permanent residents along with many visitors and a large number of U.S. military personnel who are based there. The state encompasses almost all of the entire volcanic Hawaiian Island chain, which comprises hundreds of islands spread over 2,400 km. The archipelago (a cluster of tectonically formed islands) that makes up Hawai'i is physiographically and ethnologically part of the Polynesian subregion of Oceania.\n\nA 'Luau' is a feast that is celebrated by the Hawaiian people and is considered one of the highlights of a Hawaiian vacation for holiday makers from all over the world. <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">The Luau was so named due to an ingredient present in one of Hawaii's favourite dishes – the young and tender leaves of the taro plant (luau) which are combined with chicken or seafood and baked in coconut milk</span>. This dish so often came to be served at such celebrations that the celebrations themselves later took on the name of the taro top.\n\nWhen attending a Luau, guests can expect to be welcomed with a Lei – <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">a necklace made out of woven flowers or shells that is given as a display of affection</span> – and a wide variety of delicious food. Dishes such as salmon, poi, kalua pork, chicken and sweet potatoes are served at the Luau, all of which are traditional Hawai'ian foods. Another highlight of a Luau is the Hula the traditional Hawaiian dance with which most are familiar regardless of whether they have made a visit to Hawaii. The Luau is not intended to be formal, on the contrary, it is a fun and interactive event and attendees may be given the opportunity to participate in arts, crafts and games, or may be given the opportunity to witness Polynesian performances based on cultural practices.\n\nThe 'Imu', is a fundamental feature of a Luau. It is the pit in which a whole pig is cooked under the ground. The imu is dug and lined with <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">logs</span> and topped with rocks. A <span id=\"passage-q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">fire</span> is lit in the pit, and the rocks are <span id=\"passage-q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">heated</span>. The heat turns the <span id=\"passage-q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">wood</span> to coal. At this point, banana stalks are placed on top of the rocks, followed by banana leaves, on which the pig is placed. Wet burlap sacks cover the pit and six to ten hours later, depending on the pig's size, the meat is cooked and ready for the Luau feast.\n\nGuests at the Luau are given their 'Lei' as they arrive on the scene. Also when dressing for the Luau, women can elect to place a flower behind their right or left ear. This action is not purely ornamental; <span id=\"passage-q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">placing a flower over the left ear indicates that one is 'taken' or in a relationship, and placing a flower over the right ear indicates that one is single and available</span>. Luau feasts are eaten on the floor, not from around a dining table nor with guests seated on chairs. The food is placed onto leaves that cover a type of woven mat called the 'Lauhala' mat and traditionally people would eat using only their hands.\n\nLuaus held these days are generally not as large-scale as those that were hosted by Hawaiian royalty in the 1800s, but they are a huge amount of fun and feature the same delicious traditional foods. Throughout history, Hawai'ian people have gathered together to celebrate special occasions with a feast; however, how these gatherings were formulated has changed with time. Some of the reasons to celebrate may have included honoring a victory in war, honoring a warrior, celebrating the harvest or the launch of a new canoe. The Hawai'ians believed that it was important to honor their gods and to seek their fellowship, help or pardon. They also believed that <span id=\"passage-q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">prosperity should be shared with family and friends</span>. This type of celebration was traditionally known as 'aha'aina, meaning gathering, and it wasn't until later in 1856 that these celebrations were referred to as Luaus.\n\nMany centuries ago in ancient Hawaii, men and woman ate separately. <span id=\"passage-q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Commoners and women were also prohibited to eat certain delicacies</span>. This all changed in 1819, when King Kamehameha II dissolved the traditional religious practices and abolished many other religious laws. A feast where the King ate with women was the symbolic act which ended the Hawai'ian religious taboos, and the Luau was born. An enormous amount of preparation goes into a Luau party as often these parties can last up to 3 days and need to be extremely well organized.\n\nModern day Hawaii displays a melting pot of cultures so Luaus today often exhibit influences from other cultures. For example, rice has become a popular side dish to include at the Luau party – an acknowledgement of Asian influences and many Hawaiians now regularly consume corned beef – inherited from North American culture – and have perfected many different ways to create interesting meals with it. Outside influences are not a recent development – a dangerous, yet exciting fire dance is often performed at professional Luaus but history states this hails from Samoan origin. Today, the Luau is a major visitor attraction and gatherings are held daily throughout the islands of Hawaii. A luau is said to be the true experience of 'aloha' (love).\n",
-            "text_id": 4
+            "text_id": 2
         }
     ],
     "settings": {

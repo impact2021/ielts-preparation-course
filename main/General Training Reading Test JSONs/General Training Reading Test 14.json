@@ -309,6 +309,613 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
+            "question": "27. People from all around the world are united by the way they think about culture",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. Our 'values' are the most important aspect of ideology",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. Secularism is the most widely accepted system of beliefs, values and ideals",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. Shamans act as intermediaries between spirits and the living",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. Agricultural societies benefited from religion",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "32. All the people from the Aztec civilisation were rich",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "33. In the seventeenth and eighteenth centuries, European people began turning towards science",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "yes_no_not_given",
+            "mc_options": [
+                {
+                    "text": "YES",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NO",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "YES\nNO\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
+            "question": "34. Fill in blank 30",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "belief",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "latter",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "religion",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "faith",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "ascendancy",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "former",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "rational",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "decline",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "animism",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "shaman",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. Fill in blank 31",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "belief",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "latter",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "religion",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "faith",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "ascendancy",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "former",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "rational",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "decline",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "animism",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "shaman",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. Fill in blank 32",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "belief",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "latter",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "religion",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "faith",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "ascendancy",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "former",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "rational",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "decline",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "animism",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "shaman",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. Fill in blank 33",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "belief",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "latter",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "religion",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "faith",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "ascendancy",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "former",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "rational",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "decline",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "animism",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "shaman",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "38. Fill in blank 34",
+            "points": 1,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "belief",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "latter",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "religion",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "faith",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "ascendancy",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "former",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "rational",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "decline",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "animism",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "shaman",
+                    "is_correct": false,
+                    "feedback": "Correct!"
+                }
+            ],
+            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer",
+            "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
+            "question": "Answer the questions (Questions 35-40):",
+            "field_count": 6,
+            "field_labels": [
+                "35. What are beliefs, values and ideals specific categories of?",
+                "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
+                "37. In Europe, what title was given to the advance of science and logic?",
+                "38. In addition to religion, what else influenced the development of capitalism?",
+                "39. Before modern advances in technology, what did anthropologists consider societies to be?",
+                "40. What theory is symbolic of the tensions between religion and science?"
+            ],
+            "field_answers": [
+                "ideology",
+                "human sacrifice|human blood",
+                "age of enlightenment|enlightenment",
+                "science",
+                "fully independent systems|independent systems|independent",
+                "natural evolution|evolution"
+            ],
+            "points": 6,
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! You found all the answers.",
+                    "incorrect": "Review Reading Passage 3 to find these answers.",
+                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+                },
+                "2": {
+                    "correct": "Excellent! You found all the answers.",
+                    "incorrect": "Review Reading Passage 3 to find these answers.",
+                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+                },
+                "3": {
+                    "correct": "Excellent! You found all the answers.",
+                    "incorrect": "Review Reading Passage 3 to find these answers.",
+                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+                },
+                "4": {
+                    "correct": "Excellent! You found all the answers.",
+                    "incorrect": "Review Reading Passage 3 to find these answers.",
+                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+                },
+                "5": {
+                    "correct": "Excellent! You found all the answers.",
+                    "incorrect": "Review Reading Passage 3 to find these answers.",
+                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+                },
+                "6": {
+                    "correct": "Excellent! You found all the answers.",
+                    "incorrect": "Review Reading Passage 3 to find these answers.",
+                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+                }
+            }
         }
     ],
     "reading_texts": [

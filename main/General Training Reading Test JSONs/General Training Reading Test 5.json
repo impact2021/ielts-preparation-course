@@ -1,894 +1,1330 @@
 {
-    "title": "General Training Reading Test 5",
-    "content": "",
-    "questions": [
+  "title": "General Training Reading Test 5",
+  "content": "",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Questions 1\u20137\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+      "question": "On Wednesdays the shortest class is Abdominal strengthening.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
         {
-            "type": "closed_question",
-            "instructions": "Questions 1–7\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
-            "question": "On Wednesdays the shortest class is Abdominal strengthening.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The class on Mondays which is open to private members only is held in the Indoor Sports Hall.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Only one of the Tuesday classes is held outside.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The Aerobics and Tae Kwon Do classes are of the same duration.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "There is only one class held on each weekday before midday.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "No experience is required to attend the Yoga class held on Fridays.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "There are fewer classes available during university holidays.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 8–10\n\nChoose the correct letter, A, B, C, or D.",
-            "question": "Members who upset other users of the leisure centre",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
-            "mc_options": [
-                {
-                    "text": "A. will be reported to the Club Manager",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "B. will be given a warning",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "C. will have their membership cancelled",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "D. will be reported to the Membership Secretary",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "A. will be reported to the Club Manager\nB. will be given a warning\nC. will have their membership cancelled\nD. will be reported to the Membership Secretary",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Membership may be put on hold",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
-            "mc_options": [
-                {
-                    "text": "A. within fourteen days of joining",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "B. through arrangement with the manager",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "C. if the Membership Secretary agrees",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "D. in cases of injury only",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "A. within fourteen days of joining\nB. through arrangement with the manager\nC. if the Membership Secretary agrees\nD. in cases of injury only",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Damage to members’ vehicles",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
-            "mc_options": [
-                {
-                    "text": "A. is unlikely due to secure parking",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "B. will be paid for by the centre if it is their fault",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "C. is not the responsibility of the centre",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "D. may result from staff negligence",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "A. is unlikely due to secure parking\nB. will be paid for by the centre if it is their fault\nC. is not the responsibility of the centre\nD. may result from staff negligence",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11–14\n\nAnswer the questions below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
-            "question": "During what should you start looking at the dress code employees seem to be following?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What might men want to think about wearing or not wearing on the second day?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Apart from being in the same office, what makes a colleague a useful guide for what to wear?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What type of company is introducing management uniforms?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15–20\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
-            "question": "A mistake equally common across all types of employee is the premature acceptance of the first salary offer.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Employees can become demoralised despite receiving a pay rise.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Many people are unsuccessful in salary negotiations because of poor research.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "It is important to clearly state the expected pay rise at the beginning of negotiations.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "A negotiation could include discussion of benefits other than salary.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "You should avoid salary negotiations when the employment market is weak.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 21–27\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
-            "question": "Training and development programmes are usually created after weaknesses are identified.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Staff training always leads directly to promotion.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Companies prefer to recruit new employees rather than train existing staff.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Staff morale may improve as a result of training.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Customer service training is often overlooked.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Training employees to work with people from different cultural backgrounds benefits organisations more than many realise.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Employees should avoid maintaining contact with employers after unsuccessful negotiations.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
         }
-    ],
-    "reading_texts": [
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The class on Mondays which is open to private members only is held in the Indoor Sports Hall.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
         {
-            "text_id": 0,
-            "title": "Reading Text 1",
-            "content": "<h4><strong>City University Gym – Term-time Weekday Schedule (Semesters 1 & 2)</strong></h4>\n\n<p>Mondays & Wednesdays<br>\nAbdominal strengthening – 07:45–08:15 – Main Gym – Joanna<br>\nGym Circuit – 12:00–13:00 – Main Gym – Steve<br>\nFive-a-side football – 12:00–13:00 – Outdoor pitch – Mark<br>\nAerobics – 17:30–18:30 – Dance studio – Claire<br>\nTae Kwon Do – 18:30–19:30 – Indoor sports hall – Kim</p>\n\n<p>Tuesdays<br>\nYoga – 08:00–09:00 – Indoor sports hall – Priya<br>\nJogging club – 12:30–13:15 – Outdoor track – Staff<br>\nBasketball – 18:00–19:00 – Indoor sports hall – Alex</p>\n\n<p>Thursdays<br>\nPilates – 09:00–10:00 – Main Gym – Joanna<br>\nGym Circuit – 12:00–13:00 – Main Gym – Steve<br>\nBadminton – 17:00–18:00 – Indoor sports hall – Staff</p>\n\n<p>Fridays<br>\nYoga – 10:00–11:00 – Indoor sports hall – Priya<br>\nSwimming – 16:00–17:00 – University pool – Staff</p>\n\n<p>During university holidays, only selected classes operate.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 7 questions (1–7).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.<br>\nAll questions refer to Reading Text 1 only.]</p>\n\n<p>On Wednesdays the shortest class is Abdominal strengthening.</p>\n\n<p>The class on Mondays which is open to private members only is held in the Indoor Sports Hall.</p>\n\n<p>Only one of the Tuesday classes is held outside.</p>\n\n<p>The Aerobics and Tae Kwon Do classes are of the same duration.</p>\n\n<p>There is only one class held on each weekday before midday.</p>\n\n<p>No experience is required to attend the Yoga class held on Fridays.</p>\n\n<p>There are fewer classes available during university holidays.</p>",
-            "tags": []
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
         },
         {
-            "text_id": 1,
-            "title": "Reading Text 2",
-            "content": "<h4><strong>Rules and Regulations for Members of Brightwood Leisure Centre</strong></h4>\n\n<p>Membership allows individuals to use facilities subject to availability and centre rules.<br>\nPrices may change without notice.</p>\n\n<p>The owners reserve the right to terminate membership for breaches of rules or offensive behaviour.</p>\n\n<p>Members must inform staff of any illness or disability before using facilities.</p>\n\n<p>Facilities are used at the member’s own risk.</p>\n\n<p>The centre accepts no responsibility for loss or damage to personal property unless caused by staff negligence.</p>\n\n<p>Cars must be parked correctly. The centre accepts no liability for loss or damage to vehicles.</p>\n\n<p>Unclaimed property will be donated to charity after 28 days.</p>\n\n<h4><strong>Questions 8–10</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: Multiple choice (single answer).<br>\nThere are 3 questions (8–10).<br>\nEach question has four options (A–D).<br>\nOnly ONE answer is correct.]</p>\n\n<p>Members who upset other users of the leisure centre<br>\nA. will be reported to the Club Manager<br>\nB. will be given a warning<br>\nC. will have their membership cancelled<br>\nD. will be reported to the Membership Secretary</p>\n\n<p>Membership may be put on hold<br>\nA. within fourteen days of joining<br>\nB. through arrangement with the manager<br>\nC. if the Membership Secretary agrees<br>\nD. in cases of injury only</p>\n\n<p>Damage to members’ vehicles<br>\nA. is unlikely due to secure parking<br>\nB. will be paid for by the centre if it is their fault<br>\nC. is not the responsibility of the centre<br>\nD. may result from staff negligence</p>",
-            "tags": []
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
         },
         {
-            "text_id": 2,
-            "title": "Reading Text 3",
-            "content": "<h4><strong>Salary Negotiation and Workplace Development</strong></h4>\n\n<p>Successful salary negotiations require preparation. Many employees accept the first offer without researching what others in similar roles earn.</p>\n\n<p>Negotiations should not focus solely on salary. Other benefits such as flexible hours or additional leave may also be discussed.</p>\n\n<p>It is important not to take rejection personally. If negotiations fail, remain professional and move on gracefully, as maintaining positive relationships is essential and you never want to burn bridges.</p>\n\n<h4><strong>Questions 15–20</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 6 questions (15–20).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.]</p>\n\n<p>A mistake equally common across all types of employee is the premature acceptance of the first salary offer.</p>\n\n<p>Employees can become demoralised despite receiving a pay rise.</p>\n\n<p>Many people are unsuccessful in salary negotiations because of poor research.</p>\n\n<p>It is important to clearly state the expected pay rise at the beginning of negotiations.</p>\n\n<p>A negotiation could include discussion of benefits other than salary.</p>\n\n<p>You should avoid salary negotiations when the employment market is weak.</p>\n\n<h4><strong>Questions 21–27</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 7 questions (21–27).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.<br>\nAll questions refer to Reading Text 4 only.]</p>\n\n<p>Training and development programmes are usually created after weaknesses are identified.</p>\n\n<p>Staff training always leads directly to promotion.</p>\n\n<p>Companies prefer to recruit new employees rather than train existing staff.</p>\n\n<p>Staff morale may improve as a result of training.</p>\n\n<p>Customer service training is often overlooked.</p>\n\n<p>Training employees to work with people from different cultural backgrounds benefits organisations more than many realise.</p>\n\n<p>Employees should avoid maintaining contact with employers after unsuccessful negotiations.</p>",
-            "tags": []
-        },
-        {
-            "title": "Reading Text 5",
-            "content": "DWARF PLANET<br />\r\n<br />\r\nThe Discovery, Classification and Exploration of Pluto<br />\r\n<br />\r\n<strong>A: </strong><span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">On the 14th of July, 2015, a NASA deep space probe called New Horizons flew through <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">the Pluto system in the Kuiper belt</span>, located almost 6 billion kilometres from our sun</span>, gathering high resolution photographs of the dwarf planet and its moons. Scientifically, the aims of the New Horizons mission were to provide experts on Earth with greater detail regarding the geomorphology, atmosphere, magnetosphere and surface composition of Pluto. As well as cameras for high resolution imagery, the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator.<br />\r\n<br />\r\n<strong>B: </strong>Pluto was discovered in February, 1930, by the American Charles Tombaugh, a young self-taught astronomer working at the Lowell Observatory in Arizona. Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope. His discovery soon made worldwide news headlines, and on the 25th of May, 1930, the members of the Lowell Observatory chose the name of Pluto for the ninth planet in the Solar System by unanimous vote. The name itself comes from that of the Roman god of the underworld, and was suggested by a schoolgirl living in England, whose uncle, a retired university librarian, had passed on her suggestion through academic acquaintances. <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character of the same name</span>. There is, however, no question surrounding the naming of the element plutonium, which was named after the planet following the creation of the former by a team of scientists at the University of California in the early 1940s.<br />\r\n<br />\r\n<strong>C: </strong>The estimated mass of Pluto was steadily revised downwards in the decades following its discovery, and was not accurately calculated until 1978, the same year in which Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy. While the original estimate of Pluto's mass had been seven times that of Earth, Christy and his colleague, Robert Harrington, compared Charon's orbital period and size with those of Pluto, estimating the planet's mass to be approximately 0.2 per cent that of the earth. A pair of smaller satellites, Nix and Hydra, was subsequently identified in 2005, with <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively</span>.<br />\r\n<br />\r\n<strong>D: </strong>However, in spite of having been regarded as the ninth planet in the solar system for more than fifty years, Pluto's status and classification began to come into question towards the close of the twentieth century. Initially, this was due to the fact that during the nineties a number of objects, made of rock and ice and of a similar size to Pluto, were discovered lying within the Kuiper belt, a circumstellar disc, in many ways resembling a gigantic asteroid belt, at the edge of the Solar System beyond Neptune. The first of these new Kuiper Belt Objects (KBOs) was identified in 1992 by a pair of astronomers, David Jewitt and Jane Luu, working out of the Mauna Kea Observatory in Hawaii. Many more Kuiper Belt Objects were found in the years that followed, making Pluto's official status as a planet increasingly controversial among many in the scientific community. While Pluto remains, at present, the largest of the known trans-Neptunian objects located in the Kuiper belt, the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as the scattered disc, prompted the International Astronomical Union (IAU) to create a formal definition of the term \"planet\" that excluded Pluto.<br />\r\n<br />\r\n<strong>E: </strong>When the New Horizons interplanetary space probe was launched from Cape Canaveral in January, 2006, its primary mission was to voyage to Pluto, at that time the only remaining unexplored planet in the Solar System. However, in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic, Pluto was reclassified as a dwarf planet on account of the fact that it did not meet one of the three formal conditions required to be classed as a planet. According to the official definition of the IAU, a planet must be in orbit around the sun and have sufficient mass both for its own gravity to make it spherical in shape and <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">to have cleared the area around its orbit of smaller objects. Failing to meet the third of these criteria, Pluto was classified as a \"dwarf planet\"</span>. While the decision of the IAU to reduce the number of planets in the Solar System from nine to eight has received its fair share of both praise and criticism, the definition of Pluto as a dwarf planet, while controversial, remains in use. Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris. At the same time, it has been estimated that there may be hundreds more as yet undiscovered and unclassified dwarf planets throughout the Solar System.<br />\r\n<br />\r\n<strong>F: </strong>The high resolution images of Pluto made during the New Horizons close flyby of the planet and beamed back to Earth from across the Solar System have revealed a unique terrain. Far from being a flat, dead world, the rocky dwarf planet's surface contains a multitude of varied, complex landscapes, ranging from oddly-textured ridges with the appearance of tree bark or dragon scales, ice cliffs, valleys and mountains and frozen lakes and oceans to heavily cratered and pitted plains. Experts theorise that, <span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces</span>. While still awaiting official approval from the International Astronomical Union, names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft.<br />\r\n<br />\r\n<strong>G: </strong>Irrespective of its official present classification as a dwarf planet, the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe. While the planet, spacecraft and New Horizons team may be comparatively small, the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration at the edge of the Solar System and beyond.",
-            "text_id": 4
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
         }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "general_training",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Only one of the Tuesday classes is held outside.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The Aerobics and Tae Kwon Do classes are of the same duration.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "There is only one class held on each weekday before midday.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "No experience is required to attend the Yoga class held on Fridays.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "There are fewer classes available during university holidays.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 8\u201310\n\nChoose the correct letter, A, B, C, or D.",
+      "question": "Members who upset other users of the leisure centre",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice",
+      "mc_options": [
+        {
+          "text": "A. will be reported to the Club Manager",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "B. will be given a warning",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "C. will have their membership cancelled",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "D. will be reported to the Membership Secretary",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "A. will be reported to the Club Manager\nB. will be given a warning\nC. will have their membership cancelled\nD. will be reported to the Membership Secretary",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Membership may be put on hold",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice",
+      "mc_options": [
+        {
+          "text": "A. within fourteen days of joining",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "B. through arrangement with the manager",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "C. if the Membership Secretary agrees",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "D. in cases of injury only",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "A. within fourteen days of joining\nB. through arrangement with the manager\nC. if the Membership Secretary agrees\nD. in cases of injury only",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Damage to members\u2019 vehicles",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice",
+      "mc_options": [
+        {
+          "text": "A. is unlikely due to secure parking",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "B. will be paid for by the centre if it is their fault",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "C. is not the responsibility of the centre",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "D. may result from staff negligence",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "A. is unlikely due to secure parking\nB. will be paid for by the centre if it is their fault\nC. is not the responsibility of the centre\nD. may result from staff negligence",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11\u201314\n\nAnswer the questions below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
+      "question": "During what should you start looking at the dress code employees seem to be following?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What might men want to think about wearing or not wearing on the second day?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Apart from being in the same office, what makes a colleague a useful guide for what to wear?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What type of company is introducing management uniforms?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 15\u201320\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+      "question": "A mistake equally common across all types of employee is the premature acceptance of the first salary offer.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Employees can become demoralised despite receiving a pay rise.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Many people are unsuccessful in salary negotiations because of poor research.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "It is important to clearly state the expected pay rise at the beginning of negotiations.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "A negotiation could include discussion of benefits other than salary.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "You should avoid salary negotiations when the employment market is weak.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 21\u201327\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
+      "question": "Training and development programmes are usually created after weaknesses are identified.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Staff training always leads directly to promotion.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Companies prefer to recruit new employees rather than train existing staff.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Staff morale may improve as a result of training.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Customer service training is often overlooked.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Training employees to work with people from different cultural backgrounds benefits organisations more than many realise.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Employees should avoid maintaining contact with employers after unsuccessful negotiations.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\nIn boxes 27 \u2013 32 on your answer sheet, write\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this\r\nYou should spend about 20 minutes on Questions 27 \u2013 40 which are based on Reading Passage 3.",
+      "question": "The majority of Pluto\u2019s terrain was formed by collisions with other space bodies. ",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE. Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions. Always take a guess\u2014there's no penalty for wrong answers in IELTS.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. Paragraph F states: 'in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces'. The majority was NOT formed by collisions."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Walt Disney named the planet Pluto after one of his cartoon characters.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet. Always take a guess\u2014there's no penalty for wrong answers in IELTS.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B mentions: 'It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character' but does not say Disney named the planet."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The New Horizons space probe has travelled beyond the Solar System.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System. Always take a guess\u2014there's no penalty for wrong answers in IELTS.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage states New Horizons flew through the Pluto system in the Kuiper belt but does not explicitly state whether it has travelled beyond the Solar System."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Styx was discovered in 2011.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE. Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'. Always take a guess\u2014there's no penalty for wrong answers in IELTS.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. Paragraph C states Styx was discovered in 2012, not 2011: 'the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Pluto lies within the Kuiper belt.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'. Always take a guess\u2014there's no penalty for wrong answers in IELTS.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage states that Pluto is located in the Kuiper belt multiple times, including in paragraph A: 'flew through the Pluto system in the Kuiper belt'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Eris has insufficient mass to clear its orbit of smaller objects.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. Paragraph D explains that Eris, like Pluto, fails to clear its orbit, which is why it is not classified as a planet. Always take a guess\u2014there's no penalty for wrong answers in IELTS.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D explains that Eris, like Pluto, fails to clear its orbit, which is why it is classified as a dwarf planet rather than a full planet."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. Paragraph D explains that Eris, like Pluto, fails to meet the criteria of clearing its orbit of smaller objects, which is why both are classified as dwarf planets."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. Paragraph D specifically addresses this, explaining that dwarf planets like Eris do not have sufficient mass to clear their orbits."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 \u2013 37 on your answer sheet.",
+      "question": "Charles Tombaugh used a piece of specialist equipment called a .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "blink microscope",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.",
+          "no_answer": "The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'. Remember to review the passage carefully for specific details."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 \u2013 37 on your answer sheet.",
+      "question": "Pluto's largest satellite was discovered by .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "James Christy",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.",
+          "no_answer": "The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'. Remember to review the passage carefully for specific details."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 \u2013 37 on your answer sheet.",
+      "question": "Eris is located in an area of the Kuiper belt called the .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "scattered disc",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'.",
+          "no_answer": "The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'. Remember to review the passage carefully for specific details."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 \u2013 37 on your answer sheet.",
+      "question": "The International Astronomical Union came up with a formal definition for planets at a meeting held in the .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "Czech Republic",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'.",
+          "no_answer": "The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'. Remember to review the passage carefully for specific details."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below.\r\nChoose TWO WORDS from the passage for each answer.\r\nWrite your answers in boxes 33 \u2013 37 on your answer sheet.",
+      "question": "The name of one area on the surface of Pluto, called , was inspired by the creation of a particular writer.",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "Cthulhu Regio",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.",
+          "no_answer": "The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'. Remember to review the passage carefully for specific details."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 3 has seven paragraphs, A \u2013 G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A \u2013 G in boxes 38 \u2013 40 on your answer sheet.",
+      "question": "The significance of the New Horizons mission.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_information",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is G. Paragraph A describes the mission and equipment, but Paragraph G discusses the significance of the mission to space exploration."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is G. Paragraph B discusses Pluto's discovery and naming, not the significance of New Horizons."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is G. Paragraph C discusses Pluto's moons, not the New Horizons mission's significance."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is G. Paragraph D discusses Pluto's reclassification, not the New Horizons mission's significance."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is G. Paragraph E discusses the IAU definition of planets, not the New Horizons mission's significance."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is G. Paragraph F describes Pluto's terrain, not the significance of the New Horizons mission."
+        },
+        {
+          "text": "G",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G discusses how the mission represents 'the culmination of more than a decade's worth of preparation' and 'the beginning of a new chapter in space exploration'."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF\nG",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 3 has seven paragraphs, A \u2013 G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A \u2013 G in boxes 38 \u2013 40 on your answer sheet.",
+      "question": "The technological equipment on board New Horizons.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_information",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph A lists the technological equipment on board New Horizons: 'cameras for high resolution imagery', 'remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator'."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A. Paragraph B discusses Pluto's discovery, not New Horizons equipment."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A. Paragraph C discusses Pluto's moons, not New Horizons equipment."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A. Paragraph D discusses Pluto's reclassification, not New Horizons equipment."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A. Paragraph E discusses the IAU planet definition, not New Horizons equipment."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A. Paragraph F describes Pluto's terrain from New Horizons images, but Paragraph A specifically lists the technological equipment on board."
+        },
+        {
+          "text": "G",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A. Paragraph G discusses the mission's significance, not the equipment details."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF\nG",
+      "correct_answer_count": 1,
+      "show_option_letters": false
     }
+  ],
+  "reading_texts": [
+    {
+      "text_id": 0,
+      "title": "Reading Text 1",
+      "content": "<h4><strong>City University Gym \u2013 Term-time Weekday Schedule (Semesters 1 & 2)</strong></h4>\n\n<p>Mondays & Wednesdays<br>\nAbdominal strengthening \u2013 07:45\u201308:15 \u2013 Main Gym \u2013 Joanna<br>\nGym Circuit \u2013 12:00\u201313:00 \u2013 Main Gym \u2013 Steve<br>\nFive-a-side football \u2013 12:00\u201313:00 \u2013 Outdoor pitch \u2013 Mark<br>\nAerobics \u2013 17:30\u201318:30 \u2013 Dance studio \u2013 Claire<br>\nTae Kwon Do \u2013 18:30\u201319:30 \u2013 Indoor sports hall \u2013 Kim</p>\n\n<p>Tuesdays<br>\nYoga \u2013 08:00\u201309:00 \u2013 Indoor sports hall \u2013 Priya<br>\nJogging club \u2013 12:30\u201313:15 \u2013 Outdoor track \u2013 Staff<br>\nBasketball \u2013 18:00\u201319:00 \u2013 Indoor sports hall \u2013 Alex</p>\n\n<p>Thursdays<br>\nPilates \u2013 09:00\u201310:00 \u2013 Main Gym \u2013 Joanna<br>\nGym Circuit \u2013 12:00\u201313:00 \u2013 Main Gym \u2013 Steve<br>\nBadminton \u2013 17:00\u201318:00 \u2013 Indoor sports hall \u2013 Staff</p>\n\n<p>Fridays<br>\nYoga \u2013 10:00\u201311:00 \u2013 Indoor sports hall \u2013 Priya<br>\nSwimming \u2013 16:00\u201317:00 \u2013 University pool \u2013 Staff</p>\n\n<p>During university holidays, only selected classes operate.</p>\n\n<h4><strong>Questions 1\u20137</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 7 questions (1\u20137).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.<br>\nAll questions refer to Reading Text 1 only.]</p>\n\n<p>On Wednesdays the shortest class is Abdominal strengthening.</p>\n\n<p>The class on Mondays which is open to private members only is held in the Indoor Sports Hall.</p>\n\n<p>Only one of the Tuesday classes is held outside.</p>\n\n<p>The Aerobics and Tae Kwon Do classes are of the same duration.</p>\n\n<p>There is only one class held on each weekday before midday.</p>\n\n<p>No experience is required to attend the Yoga class held on Fridays.</p>\n\n<p>There are fewer classes available during university holidays.</p>",
+      "tags": []
+    },
+    {
+      "text_id": 1,
+      "title": "Reading Text 2",
+      "content": "<h4><strong>Rules and Regulations for Members of Brightwood Leisure Centre</strong></h4>\n\n<p>Membership allows individuals to use facilities subject to availability and centre rules.<br>\nPrices may change without notice.</p>\n\n<p>The owners reserve the right to terminate membership for breaches of rules or offensive behaviour.</p>\n\n<p>Members must inform staff of any illness or disability before using facilities.</p>\n\n<p>Facilities are used at the member\u2019s own risk.</p>\n\n<p>The centre accepts no responsibility for loss or damage to personal property unless caused by staff negligence.</p>\n\n<p>Cars must be parked correctly. The centre accepts no liability for loss or damage to vehicles.</p>\n\n<p>Unclaimed property will be donated to charity after 28 days.</p>\n\n<h4><strong>Questions 8\u201310</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: Multiple choice (single answer).<br>\nThere are 3 questions (8\u201310).<br>\nEach question has four options (A\u2013D).<br>\nOnly ONE answer is correct.]</p>\n\n<p>Members who upset other users of the leisure centre<br>\nA. will be reported to the Club Manager<br>\nB. will be given a warning<br>\nC. will have their membership cancelled<br>\nD. will be reported to the Membership Secretary</p>\n\n<p>Membership may be put on hold<br>\nA. within fourteen days of joining<br>\nB. through arrangement with the manager<br>\nC. if the Membership Secretary agrees<br>\nD. in cases of injury only</p>\n\n<p>Damage to members\u2019 vehicles<br>\nA. is unlikely due to secure parking<br>\nB. will be paid for by the centre if it is their fault<br>\nC. is not the responsibility of the centre<br>\nD. may result from staff negligence</p>",
+      "tags": []
+    },
+    {
+      "title": "Reading Text 3",
+      "content": "<h4><strong>Dressed for Work</strong></h4>\n\n<p>Choosing what to wear at work can be difficult, particularly when starting a new job. Dressing too casually may give the impression that you are not taking your role seriously, while dressing too formally can make colleagues think you are unapproachable.</p>\n\n<p>If possible, check the dress code after being offered a position. When attending interviews, observe what other employees are wearing.</p>\n\n<p>For men, dark trousers, shoes and a simple shirt are generally acceptable. Wearing a tie on the first day is fine, but it may be unnecessary if no one else is wearing one.</p>\n\n<p>For women, expectations vary widely, so observing colleagues in similar roles is often the best guide.</p>\n\n<p>In many countries, especially in large corporations, there has been a move towards stricter dress codes, including uniforms for management.</p>\n\n<p>Additional advice includes choosing conservative colours, avoiding large jewellery, maintaining good hygiene, and avoiding clothing with obvious designer logos.</p>"
+    },
+    {
+      "text_id": 2,
+      "title": "Reading Text 4",
+      "content": "<h4><strong>Salary Negotiation and Workplace Development</strong></h4>\n\n<p>Successful salary negotiations require preparation. Many employees accept the first offer without researching what others in similar roles earn.</p>\n\n<p>Negotiations should not focus solely on salary. Other benefits such as flexible hours or additional leave may also be discussed.</p>\n\n<p>It is important not to take rejection personally. If negotiations fail, remain professional and move on gracefully, as maintaining positive relationships is essential and you never want to burn bridges.</p>\n\n<h4><strong>Questions 15\u201320</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 6 questions (15\u201320).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.]</p>\n\n<p>A mistake equally common across all types of employee is the premature acceptance of the first salary offer.</p>\n\n<p>Employees can become demoralised despite receiving a pay rise.</p>\n\n<p>Many people are unsuccessful in salary negotiations because of poor research.</p>\n\n<p>It is important to clearly state the expected pay rise at the beginning of negotiations.</p>\n\n<p>A negotiation could include discussion of benefits other than salary.</p>\n\n<p>You should avoid salary negotiations when the employment market is weak.</p>\n\n<h4><strong>Questions 21\u201327</strong></h4>\n\n<p>[This is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 7 questions (21\u201327).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.<br>\nAll questions refer to Reading Text 4 only.]</p>\n\n<p>Training and development programmes are usually created after weaknesses are identified.</p>\n\n<p>Staff training always leads directly to promotion.</p>\n\n<p>Companies prefer to recruit new employees rather than train existing staff.</p>\n\n<p>Staff morale may improve as a result of training.</p>\n\n<p>Customer service training is often overlooked.</p>\n\n<p>Training employees to work with people from different cultural backgrounds benefits organisations more than many realise.</p>\n\n<p>Employees should avoid maintaining contact with employers after unsuccessful negotiations.</p>",
+      "tags": []
+    },
+    {
+      "title": "Reading Text 5",
+      "content": "DWARF PLANET<br />\r\n<br />\r\nThe Discovery, Classification and Exploration of Pluto<br />\r\n<br />\r\n<strong>A: </strong><span id=\"passage-q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">On the 14th of July, 2015, a NASA deep space probe called New Horizons flew through <span id=\"passage-q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">the Pluto system in the Kuiper belt</span>, located almost 6 billion kilometres from our sun</span>, gathering high resolution photographs of the dwarf planet and its moons. Scientifically, the aims of the New Horizons mission were to provide experts on Earth with greater detail regarding the geomorphology, atmosphere, magnetosphere and surface composition of Pluto. As well as cameras for high resolution imagery, the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator.<br />\r\n<br />\r\n<strong>B: </strong>Pluto was discovered in February, 1930, by the American Charles Tombaugh, a young self-taught astronomer working at the Lowell Observatory in Arizona. Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope. His discovery soon made worldwide news headlines, and on the 25th of May, 1930, the members of the Lowell Observatory chose the name of Pluto for the ninth planet in the Solar System by unanimous vote. The name itself comes from that of the Roman god of the underworld, and was suggested by a schoolgirl living in England, whose uncle, a retired university librarian, had passed on her suggestion through academic acquaintances. <span id=\"passage-q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character of the same name</span>. There is, however, no question surrounding the naming of the element plutonium, which was named after the planet following the creation of the former by a team of scientists at the University of California in the early 1940s.<br />\r\n<br />\r\n<strong>C: </strong>The estimated mass of Pluto was steadily revised downwards in the decades following its discovery, and was not accurately calculated until 1978, the same year in which Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy. While the original estimate of Pluto's mass had been seven times that of Earth, Christy and his colleague, Robert Harrington, compared Charon's orbital period and size with those of Pluto, estimating the planet's mass to be approximately 0.2 per cent that of the earth. A pair of smaller satellites, Nix and Hydra, was subsequently identified in 2005, with <span id=\"passage-q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively</span>.<br />\r\n<br />\r\n<strong>D: </strong>However, in spite of having been regarded as the ninth planet in the solar system for more than fifty years, Pluto's status and classification began to come into question towards the close of the twentieth century. Initially, this was due to the fact that during the nineties a number of objects, made of rock and ice and of a similar size to Pluto, were discovered lying within the Kuiper belt, a circumstellar disc, in many ways resembling a gigantic asteroid belt, at the edge of the Solar System beyond Neptune. The first of these new Kuiper Belt Objects (KBOs) was identified in 1992 by a pair of astronomers, David Jewitt and Jane Luu, working out of the Mauna Kea Observatory in Hawaii. Many more Kuiper Belt Objects were found in the years that followed, making Pluto's official status as a planet increasingly controversial among many in the scientific community. While Pluto remains, at present, the largest of the known trans-Neptunian objects located in the Kuiper belt, the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as the scattered disc, prompted the International Astronomical Union (IAU) to create a formal definition of the term \"planet\" that excluded Pluto.<br />\r\n<br />\r\n<strong>E: </strong>When the New Horizons interplanetary space probe was launched from Cape Canaveral in January, 2006, its primary mission was to voyage to Pluto, at that time the only remaining unexplored planet in the Solar System. However, in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic, Pluto was reclassified as a dwarf planet on account of the fact that it did not meet one of the three formal conditions required to be classed as a planet. According to the official definition of the IAU, a planet must be in orbit around the sun and have sufficient mass both for its own gravity to make it spherical in shape and <span id=\"passage-q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">to have cleared the area around its orbit of smaller objects. Failing to meet the third of these criteria, Pluto was classified as a \"dwarf planet\"</span>. While the decision of the IAU to reduce the number of planets in the Solar System from nine to eight has received its fair share of both praise and criticism, the definition of Pluto as a dwarf planet, while controversial, remains in use. Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris. At the same time, it has been estimated that there may be hundreds more as yet undiscovered and unclassified dwarf planets throughout the Solar System.<br />\r\n<br />\r\n<strong>F: </strong>The high resolution images of Pluto made during the New Horizons close flyby of the planet and beamed back to Earth from across the Solar System have revealed a unique terrain. Far from being a flat, dead world, the rocky dwarf planet's surface contains a multitude of varied, complex landscapes, ranging from oddly-textured ridges with the appearance of tree bark or dragon scales, ice cliffs, valleys and mountains and frozen lakes and oceans to heavily cratered and pitted plains. Experts theorise that, <span id=\"passage-q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces</span>. While still awaiting official approval from the International Astronomical Union, names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft.<br />\r\n<br />\r\n<strong>G: </strong>Irrespective of its official present classification as a dwarf planet, the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe. While the planet, spacecraft and New Horizons team may be comparatively small, the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration at the edge of the Solar System and beyond.",
+      "text_id": 4
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "general_training",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_general_training_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  }
 }

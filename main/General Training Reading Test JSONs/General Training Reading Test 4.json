@@ -4,10 +4,10 @@
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Questions 1–7\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
-            "question": "On Wednesdays, Abdominal Strengthening is the shortest class.",
+            "instructions": "You should spend about 20 minutes on Questions 1 – 14 which are based on Section 1 below.\n\nQuestions 1 – 7\n\nDo the following statements agree with the information given in Section 1 – Part A?\n\nIn boxes 1 – 7 on your answer sheet write\n\nTRUE if the statement agrees with the information\n\nFALSE if the statement contradicts the information\n\nNOT GIVEN if there is no information on this in the passage",
+            "question": "1. Passengers can travel from City Harbour to Taylor Peninsula every day.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. Correct! The timetable shows ferries marked with * sail via Taylor Peninsula on Monday-Friday, Saturday, and Sunday/Public Holidays.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -18,18 +18,18 @@
             "mc_options": [
                 {
                     "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! The timetable shows ferries marked with * sail via Taylor Peninsula on Monday-Friday, Saturday, and Sunday/Public Holidays."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is TRUE. The timetable shows ferries marked with * sail via Taylor Peninsula every day of the week."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is TRUE. The timetable shows ferries marked with * sail via Taylor Peninsula every day of the week."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -39,9 +39,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "The Monday class held in the Indoor Sports Hall is only open to private members.",
+            "question": "2. Ferries finish earliest on Saturdays.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Correct! Ferries finish at 11:45 on both Monday-Friday and Saturday, while Sunday/Public Holidays finish at 10:15 (earliest).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -53,17 +53,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Correct! Ferries finish at 11:45 on both Monday-Friday and Saturday, while Sunday/Public Holidays finish at 10:15 (earliest)."
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! Ferries finish at 11:45 on both Monday-Friday and Saturday, while Sunday/Public Holidays finish at 10:15 (earliest)."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is FALSE. Sunday/Public Holidays have the earliest finish time at 10:15."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -73,9 +73,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Only one Tuesday class takes place outdoors.",
+            "question": "3. A ferry leaves Taylor Peninsula for City Harbour at about 10:15 on Wednesday morning.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. Correct! On Monday-Friday, the 10:00* ferry from Marine Island sails via Taylor Peninsula, leaving there approx. 15 minutes after (10:15).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -86,18 +86,18 @@
             "mc_options": [
                 {
                     "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! On Monday-Friday, the 10:00* ferry from Marine Island sails via Taylor Peninsula, leaving there approx. 15 minutes after (10:15)."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is TRUE. The 10:00* ferry from Marine Island on weekdays stops at Taylor Peninsula approximately 15 minutes later."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is TRUE. The 10:00* ferry from Marine Island on weekdays stops at Taylor Peninsula approximately 15 minutes later."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -107,9 +107,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Aerobics and Tae Kwon Do last for the same length of time.",
+            "question": "4. A one-way adult ticket costs less than a child's return ticket.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Correct! A one-way adult ticket costs $14.50, while a child's return ticket costs $14.25.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -121,17 +121,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Correct! A one-way adult ticket costs $14.50, while a child's return ticket costs $14.25."
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! A one-way adult ticket costs $14.50, while a child's return ticket costs $14.25."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is FALSE. A one-way adult ticket ($14.50) costs more than a child's return ticket ($14.25)."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -141,9 +141,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "There is only one class held before midday on each weekday.",
+            "question": "5. Senior citizens pay the least for ferry travel.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is FALSE. Correct! Children (under 14) pay less than senior citizens. For example, a one-way child ticket is $8.50 vs $8.90 for seniors.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -155,17 +155,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Correct! Children (under 14) pay less than senior citizens. For example, a one-way child ticket is $8.50 vs $8.90 for seniors."
                 },
                 {
                     "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! Children (under 14) pay less than senior citizens. For example, a one-way child ticket is $8.50 vs $8.90 for seniors."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is FALSE. Children under 14 pay less than senior citizens for both return and one-way tickets."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -175,9 +175,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "No previous experience is required to attend the Friday Yoga class.",
+            "question": "6. The direct route is 15 minutes faster than the route via the peninsula.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. Correct! The direct route takes approximately 45 minutes while the route via Taylor Peninsula takes 60 minutes (15 minutes longer).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -188,18 +188,18 @@
             "mc_options": [
                 {
                     "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! The direct route takes approximately 45 minutes while the route via Taylor Peninsula takes 60 minutes (15 minutes longer)."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is TRUE. The service information states: Direct route approx. 45 minutes; Via Taylor Peninsula approx. 60 minutes."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is TRUE. The service information states: Direct route approx. 45 minutes; Via Taylor Peninsula approx. 60 minutes."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -209,9 +209,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Fewer classes are available during university holidays.",
+            "question": "7. Tickets can be purchased on the ferry.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. Correct! The passage only states 'Payment by cash or credit card only' but does not specify where tickets can be purchased.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -223,17 +223,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Correct! The passage only states 'Payment by cash or credit card only' but does not specify where tickets can be purchased."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage does not mention where tickets can be purchased."
                 },
                 {
                     "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! The passage only states 'Payment by cash or credit card only' but does not specify where tickets can be purchased."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -242,211 +242,537 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 8–10\n\nChoose the correct letter, A, B, C, or D.",
-            "question": "Members who upset other users of the leisure centre",
+            "instructions": "Questions 8 – 10\n\nThe map below shows different locations on Marine Island.\n\nLabel the map below.\n\nChoose THREE answers from the list A–F and write the correct letters in boxes 8 – 10 on your answer sheet.\n\nA: Location near northern coast\nB: Location in central western area\nC: Location in southern area\nD: Central location\nE: Eastern coastal location\nF: Location in southeast area",
+            "question": "8. Marine Island Hotel",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is F. The Marine Island Hotel is located at position F on the map.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
+            "ielts_question_category": "labelling_diagram",
             "mc_options": [
                 {
-                    "text": "A. will be reported to the Club Manager",
+                    "text": "A",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Island Hotel is located at position F on the map."
                 },
                 {
-                    "text": "B. will be given a warning",
+                    "text": "B",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Island Hotel is located at position F on the map."
                 },
                 {
-                    "text": "C. will have their membership cancelled",
+                    "text": "C",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Island Hotel is located at position F on the map."
                 },
                 {
-                    "text": "D. will be reported to the Membership Secretary",
+                    "text": "D",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Island Hotel is located at position F on the map."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Marine Island Hotel is located at position F on the map."
+                },
+                {
+                    "text": "F",
+                    "is_correct": true,
+                    "feedback": "The Marine Island Hotel is located at position F on the map."
                 }
             ],
-            "options": "A. will be reported to the Club Manager\nB. will be given a warning\nC. will have their membership cancelled\nD. will be reported to the Membership Secretary",
+            "options": "A\nB\nC\nD\nE\nF",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Membership may be put on hold",
+            "question": "9. Ocean View Camping Resort",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is A. The Ocean View Camping Resort is located at position A on the map.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
+            "ielts_question_category": "labelling_diagram",
             "mc_options": [
                 {
-                    "text": "A. within fourteen days of joining",
-                    "is_correct": false,
-                    "feedback": ""
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "The Ocean View Camping Resort is located at position A on the map."
                 },
                 {
-                    "text": "B. through arrangement with the manager",
+                    "text": "B",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Ocean View Camping Resort is located at position A on the map."
                 },
                 {
-                    "text": "C. if the Membership Secretary agrees",
+                    "text": "C",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Ocean View Camping Resort is located at position A on the map."
                 },
                 {
-                    "text": "D. in cases of injury only",
+                    "text": "D",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Ocean View Camping Resort is located at position A on the map."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Ocean View Camping Resort is located at position A on the map."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Ocean View Camping Resort is located at position A on the map."
                 }
             ],
-            "options": "A. within fourteen days of joining\nB. through arrangement with the manager\nC. if the Membership Secretary agrees\nD. in cases of injury only",
+            "options": "A\nB\nC\nD\nE\nF",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Damage to members’ vehicles",
+            "question": "10. Marine Paradise Bed & Breakfast",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is D. The Marine Paradise Bed & Breakfast is located at position D on the map.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "multiple_choice",
+            "ielts_question_category": "labelling_diagram",
             "mc_options": [
                 {
-                    "text": "A. is unlikely due to secure parking",
+                    "text": "A",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Paradise Bed & Breakfast is located at position D on the map."
                 },
                 {
-                    "text": "B. will be paid for by the centre if it is their fault",
+                    "text": "B",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Paradise Bed & Breakfast is located at position D on the map."
                 },
                 {
-                    "text": "C. is not the responsibility of the centre",
+                    "text": "C",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Paradise Bed & Breakfast is located at position D on the map."
                 },
                 {
-                    "text": "D. may result from staff negligence",
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "The Marine Paradise Bed & Breakfast is located at position D on the map."
+                },
+                {
+                    "text": "E",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Marine Paradise Bed & Breakfast is located at position D on the map."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Marine Paradise Bed & Breakfast is located at position D on the map."
                 }
             ],
-            "options": "A. is unlikely due to secure parking\nB. will be paid for by the centre if it is their fault\nC. is not the responsibility of the centre\nD. may result from staff negligence",
+            "options": "A\nB\nC\nD\nE\nF",
             "correct_answer_count": 1,
             "show_option_letters": false
         },
         {
             "type": "open_question",
-            "instructions": "Questions 11–16\n\nAnswer the questions below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
-            "question": "When should new employees begin observing how others dress?",
+            "instructions": "Questions 11 – 14\n\nAnswer the questions below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 11 – 14 on your answer sheet.",
+            "question": "11. What has Ocean View Camping Resort won more than once?",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: Eco-friendly Tourism Award. Ocean View Camping Resort is described as 'Repeat winners of the Eco-friendly Tourism Award.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer",
+            "accepted_answers": [
+                {
+                    "text": "Eco-friendly Tourism Award",
+                    "feedback": "Correct! The passage states the resort is 'Repeat winners of the Eco-friendly Tourism Award.'"
+                },
+                {
+                    "text": "Eco-friendly Tourism Award",
+                    "feedback": "Correct! The passage states the resort is 'Repeat winners of the Eco-friendly Tourism Award.'"
+                },
+                {
+                    "text": "Award",
+                    "feedback": "Correct! The passage states the resort is 'Repeat winners of the Eco-friendly Tourism Award.'"
+                }
+            ],
+            "word_limit": 3
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "12. What is the shortest booking period to get a discount at Marine Island Village Park?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: one week. The passage mentions 'Discounts for bookings of one week or more.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer",
+            "accepted_answers": [
+                {
+                    "text": "one week",
+                    "feedback": "Correct! The passage states 'Discounts for bookings of one week or more.'"
+                },
+                {
+                    "text": "one week",
+                    "feedback": "Correct! The passage states 'Discounts for bookings of one week or more.'"
+                },
+                {
+                    "text": "week",
+                    "feedback": "Correct! The passage states 'Discounts for bookings of one week or more.'"
+                }
+            ],
+            "word_limit": 3
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "13. What free entertainment is available on Friday evenings?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: BBQ party. Backpacker Haven provides 'Free BBQ party on Friday evenings.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer",
+            "accepted_answers": [
+                {
+                    "text": "BBQ party",
+                    "feedback": "Correct! Backpacker Haven offers 'Free BBQ party on Friday evenings.'"
+                },
+                {
+                    "text": "BBQ party",
+                    "feedback": "Correct! Backpacker Haven offers 'Free BBQ party on Friday evenings.'"
+                },
+                {
+                    "text": "BBQ",
+                    "feedback": "Correct! Backpacker Haven offers 'Free BBQ party on Friday evenings.'"
+                }
+            ],
+            "word_limit": 3
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "14. What is the walking time to the beach from the most expensive accommodation?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 2 minutes. Marine Island Hotel is the most expensive option with 'Private beach access 2 minutes' walk away.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer",
+            "accepted_answers": [
+                {
+                    "text": "2 minutes",
+                    "feedback": "Correct! Marine Island Hotel (the most expensive option) has 'Private beach access 2 minutes' walk away.'"
+                },
+                {
+                    "text": "2 minutes",
+                    "feedback": "Correct! Marine Island Hotel (the most expensive option) has 'Private beach access 2 minutes' walk away.'"
+                },
+                {
+                    "text": "2",
+                    "feedback": "Correct! Marine Island Hotel (the most expensive option) has 'Private beach access 2 minutes' walk away.'"
+                }
+            ],
+            "word_limit": 3
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 15 – 20 which are based on Section 2 below.\n\nQuestions 15 – 20\n\nThe passage describes five different career fields represented at the conference.\n\nWhich field (A–E) does each statement below refer to?\n\nWrite the correct letter A–E in boxes 15 – 20 on your answer sheet.\n\nNB: You may use any letter more than once.\n\nA. Business & Commerce\nB. Health & Social Work\nC. Teaching\nD. Computing & IT\nE. Post-Graduate Studies",
+            "question": "15. Government sponsorship may be available.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Health & Social Work. Correct! The passage states that in Health & Social Work, 'Government sponsorship programs may be available for certain positions.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Business & Commerce",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! The passage states that in Health & Social Work, 'Government sponsorship programs may be available for certain positions.'"
+                },
+                {
+                    "text": "B: Health & Social Work",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states that in Health & Social Work, 'Government sponsorship programs may be available for certain positions.'"
+                },
+                {
+                    "text": "C: Teaching",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! The passage states that in Health & Social Work, 'Government sponsorship programs may be available for certain positions.'"
+                },
+                {
+                    "text": "D: Computing & IT",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! The passage states that in Health & Social Work, 'Government sponsorship programs may be available for certain positions.'"
+                },
+                {
+                    "text": "E: Post-Graduate Studies",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! The passage states that in Health & Social Work, 'Government sponsorship programs may be available for certain positions.'"
+                }
+            ],
+            "options": "A: Business & Commerce\nB: Health & Social Work\nC: Teaching\nD: Computing & IT\nE: Post-Graduate Studies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "What item of clothing might men choose not to wear after their first day?",
+            "question": "16. Highest employment success rate within six months.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is D: Computing & IT. Correct! Computing & IT has 'the highest employment success rate, with over 90% of graduates finding positions within six months.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Business & Commerce",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT has 'the highest employment success rate, with over 90% of graduates finding positions within six months.'"
+                },
+                {
+                    "text": "B: Health & Social Work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT has 'the highest employment success rate, with over 90% of graduates finding positions within six months.'"
+                },
+                {
+                    "text": "C: Teaching",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT has 'the highest employment success rate, with over 90% of graduates finding positions within six months.'"
+                },
+                {
+                    "text": "D: Computing & IT",
+                    "is_correct": true,
+                    "feedback": "Correct! Computing & IT has 'the highest employment success rate, with over 90% of graduates finding positions within six months.'"
+                },
+                {
+                    "text": "E: Post-Graduate Studies",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT has 'the highest employment success rate, with over 90% of graduates finding positions within six months.'"
+                }
+            ],
+            "options": "A: Business & Commerce\nB: Health & Social Work\nC: Teaching\nD: Computing & IT\nE: Post-Graduate Studies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "What type of colleague provides the best guide to appropriate dress?",
+            "question": "17. Job details found in a university publication.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is A: Business & Commerce. Correct! For Business & Commerce, 'Job details and application deadlines can be found in the university's Careers Bulletin.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Business & Commerce",
+                    "is_correct": true,
+                    "feedback": "Correct! For Business & Commerce, 'Job details and application deadlines can be found in the university's Careers Bulletin.'"
+                },
+                {
+                    "text": "B: Health & Social Work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! For Business & Commerce, 'Job details and application deadlines can be found in the university's Careers Bulletin.'"
+                },
+                {
+                    "text": "C: Teaching",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! For Business & Commerce, 'Job details and application deadlines can be found in the university's Careers Bulletin.'"
+                },
+                {
+                    "text": "D: Computing & IT",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! For Business & Commerce, 'Job details and application deadlines can be found in the university's Careers Bulletin.'"
+                },
+                {
+                    "text": "E: Post-Graduate Studies",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! For Business & Commerce, 'Job details and application deadlines can be found in the university's Careers Bulletin.'"
+                }
+            ],
+            "options": "A: Business & Commerce\nB: Health & Social Work\nC: Teaching\nD: Computing & IT\nE: Post-Graduate Studies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "What type of company is introducing management uniforms?",
+            "question": "18. Limited information at conference; more available elsewhere.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is E: Post-Graduate Studies. Correct! Post-Graduate Studies states 'only limited information will be available at the conference' with more details available at their office/website.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Business & Commerce",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Post-Graduate Studies states 'only limited information will be available at the conference' with more details available at their office/website."
+                },
+                {
+                    "text": "B: Health & Social Work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Post-Graduate Studies states 'only limited information will be available at the conference' with more details available at their office/website."
+                },
+                {
+                    "text": "C: Teaching",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Post-Graduate Studies states 'only limited information will be available at the conference' with more details available at their office/website."
+                },
+                {
+                    "text": "D: Computing & IT",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Post-Graduate Studies states 'only limited information will be available at the conference' with more details available at their office/website."
+                },
+                {
+                    "text": "E: Post-Graduate Studies",
+                    "is_correct": true,
+                    "feedback": "Correct! Post-Graduate Studies states 'only limited information will be available at the conference' with more details available at their office/website."
+                }
+            ],
+            "options": "A: Business & Commerce\nB: Health & Social Work\nC: Teaching\nD: Computing & IT\nE: Post-Graduate Studies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "What might bright colours attract in the workplace?",
+            "question": "19. Temporary and permanent jobs discussed.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is C: Teaching. Correct! Teaching mentions 'both temporary (relief/substitute) and permanent teaching positions.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Business & Commerce",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Teaching mentions 'both temporary (relief/substitute) and permanent teaching positions.'"
+                },
+                {
+                    "text": "B: Health & Social Work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Teaching mentions 'both temporary (relief/substitute) and permanent teaching positions.'"
+                },
+                {
+                    "text": "C: Teaching",
+                    "is_correct": true,
+                    "feedback": "Correct! Teaching mentions 'both temporary (relief/substitute) and permanent teaching positions.'"
+                },
+                {
+                    "text": "D: Computing & IT",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Teaching mentions 'both temporary (relief/substitute) and permanent teaching positions.'"
+                },
+                {
+                    "text": "E: Post-Graduate Studies",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Teaching mentions 'both temporary (relief/substitute) and permanent teaching positions.'"
+                }
+            ],
+            "options": "A: Business & Commerce\nB: Health & Social Work\nC: Teaching\nD: Computing & IT\nE: Post-Graduate Studies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "What must not be obvious on acceptable designer clothing?",
+            "question": "20. Over half of exhibitors offer overseas opportunities.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is D: Computing & IT. Correct! Computing & IT states 'More than half of the exhibitors in this field offer international placement opportunities.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Business & Commerce",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT states 'More than half of the exhibitors in this field offer international placement opportunities.'"
+                },
+                {
+                    "text": "B: Health & Social Work",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT states 'More than half of the exhibitors in this field offer international placement opportunities.'"
+                },
+                {
+                    "text": "C: Teaching",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT states 'More than half of the exhibitors in this field offer international placement opportunities.'"
+                },
+                {
+                    "text": "D: Computing & IT",
+                    "is_correct": true,
+                    "feedback": "Correct! Computing & IT states 'More than half of the exhibitors in this field offer international placement opportunities.'"
+                },
+                {
+                    "text": "E: Post-Graduate Studies",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Correct! Computing & IT states 'More than half of the exhibitors in this field offer international placement opportunities.'"
+                }
+            ],
+            "options": "A: Business & Commerce\nB: Health & Social Work\nC: Teaching\nD: Computing & IT\nE: Post-Graduate Studies",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 17–23\n\nDo the following statements agree with the information given in the reading passage?\n\nWrite TRUE if the statement agrees with the information, FALSE if the statement contradicts the information, or NOT GIVEN if there is no information on this.",
-            "question": "Training highlights areas where employees need improvement.",
+            "instructions": "You should spend about 20 minutes on Questions 21 – 26 which are based on Section 3 below.\n\nQuestions 21 – 23\n\nDo the following statements agree with the information given in Section 3?\n\nIn boxes 21 – 23 on your answer sheet write\n\nTRUE if the statement agrees with the information\n\nFALSE if the statement contradicts the information\n\nNOT GIVEN if there is no information on this in the passage",
+            "question": "21. Universities deliberately avoid teaching social skills.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage mentions soft skills development is 'sometimes overlooked' but doesn't indicate this is deliberate.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
@@ -458,17 +784,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage mentions soft skills development is 'sometimes overlooked' but doesn't indicate this is deliberate."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage mentions soft skills development is 'sometimes overlooked' but doesn't indicate this is deliberate."
                 },
                 {
                     "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states soft skills are 'sometimes overlooked' but doesn't say universities deliberately avoid teaching them."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -478,9 +804,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Employees usually seek promotion immediately after training.",
+            "question": "22. Employers may hesitate to hire graduates without work experience.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. The passage clearly states 'Many employers are reluctant to hire graduates who have no previous workplace exposure.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
@@ -491,18 +817,18 @@
             "mc_options": [
                 {
                     "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Many employers are reluctant to hire graduates who have no previous workplace exposure.'"
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage clearly states 'Many employers are reluctant to hire graduates who have no previous workplace exposure.'"
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage clearly states 'Many employers are reluctant to hire graduates who have no previous workplace exposure.'"
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -512,9 +838,9 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Companies often ignore existing staff when expanding their workforce.",
+            "question": "23. Students at this university have advantages others may not.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'This university recognizes that our students benefit from unique opportunities not available at all institutions.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
@@ -525,154 +851,18 @@
             "mc_options": [
                 {
                     "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions 'our students benefit from unique opportunities not available at all institutions.'"
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage states 'This university recognizes that our students benefit from unique opportunities not available at all institutions.'"
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The main purpose of staff training is learning to use office equipment.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Customer service training is rarely prioritised.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Cultural awareness training benefits companies.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Health and safety training is becoming less important.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The passage states 'This university recognizes that our students benefit from unique opportunities not available at all institutions.'"
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -681,76 +871,689 @@
         },
         {
             "type": "open_question",
-            "instructions": "Questions 24–26\n\nComplete the summary below.\n\nWrite NO MORE THAN ONE WORD OR A NUMBER from the passage from the passage for each answer.",
-            "question": "Complete the summary below.",
+            "instructions": "Questions 24 – 26\n\nComplete the summary below.\n\nWrite ONE WORD OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 24 – 26 on your answer sheet.\n\nThe Careers Service workshop aims to improve graduates' employability through practical skill development. The two-day program is free for current students, but costs £ (24) ____ for those who have recently graduated. Topics covered include presenting yourself effectively at an (25) ____ and developing the ability to think and reason in a (26) ____ manner.",
+            "question": "24. Cost for non-enrolled students: £____",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: 25. The workshop costs £25 for recent graduates who are not currently enrolled.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "summary_completion"
+            "ielts_question_category": "summary_completion",
+            "accepted_answers": [
+                {
+                    "text": "25",
+                    "feedback": "Correct! The workshop costs '£25 for recent graduates (graduated within the past year).'"
+                },
+                {
+                    "text": "25",
+                    "feedback": "Correct! The workshop costs '£25 for recent graduates (graduated within the past year).'"
+                }
+            ],
+            "word_limit": 1
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Staff training programmes can improve 24. ______, reduce staff turnover, and enhance a company’s public image.",
+            "question": "25. Presenting yourself well at an ____",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: interview. The workshop covers 'Interview techniques and self-presentation.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "summary_completion"
+            "ielts_question_category": "summary_completion",
+            "accepted_answers": [
+                {
+                    "text": "interview",
+                    "feedback": "Correct! One of the workshop topics is 'Interview techniques and self-presentation.'"
+                },
+                {
+                    "text": "Interview",
+                    "feedback": "Correct! One of the workshop topics is 'Interview techniques and self-presentation.'"
+                }
+            ],
+            "word_limit": 1
         },
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Organisations that invest in training benefit from higher levels of 25. ______ and innovation.",
+            "question": "26. Reasoning in a ____ manner",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "The correct answer is: logical. One of the workshop topics is 'Critical thinking and logical reasoning.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "summary_completion"
+            "ielts_question_category": "summary_completion",
+            "accepted_answers": [
+                {
+                    "text": "logical",
+                    "feedback": "Correct! The workshop includes 'Critical thinking and logical reasoning.'"
+                },
+                {
+                    "text": "Logical",
+                    "feedback": "Correct! The workshop includes 'Critical thinking and logical reasoning.'"
+                }
+            ],
+            "word_limit": 1
+        },
+        {
+            "type": "closed_question",
+            "instructions": "You should spend about 20 minutes on Questions 27 – 40 which are based on <strong>Reading Passage 3.</strong>\r\n\r\nQuestions 27 – 31\r\n\r\nComplete each sentence with the correct ending, A – I, below.\r\n\r\nWrite the correct letter, A – I, in boxes 27 – 31 on your answer sheet.\r\n\r\nA: have been determined by the International Maritime Organisation.\r\nB: must be capped at 5,000 ppm by 2020 in certain areas.\r\nC: are 600 times more dangerous than other fuels.\r\nD: suffer from high levels of sulphur.\r\nE: has been as high as 1,000 ppm.\r\nF: were not recognised by the Exclusive Economic Zones.\r\nG: impact severely on large port cities.\r\nH: accounts for 90% of all vessels in international waters.\r\nI: relies heavily on HFO.",
+            "question": "27. Populous port cities, such as Hong Kong,",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (suffer from high levels of sulphur). Para 1 mentions that port cities like Hong Kong suffer from sulphur dioxide emissions from the shipping industry.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to guidelines, not port cities."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content regulations, not port cities."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not port cities."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 1 states that densely-populated port cities like Hong Kong suffer from high sulphur dioxide emissions from shipping."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content levels, not port cities."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not relate to port cities."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this is related, the port cities are the subject being impacted, not doing the impacting."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the merchant fleet, not port cities."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the shipping industry, not port cities."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "28. Particulate matter emissions",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is G (impact severely on large port cities). Para 1 states that PM emissions have contributed to premature deaths and large port cities have borne the brunt of health issues.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The IMO determines guidelines, not PM emissions."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content, not PM emissions."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not PM emissions."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not PM emissions."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content in fuel, not PM emissions."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not relate to PM emissions."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 1 states that PM emissions contributed to 87,000 premature deaths and large port cities have borne the brunt of health issues."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the merchant fleet, not PM emissions."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the shipping industry, not PM emissions."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "29. The global merchant marine fleet",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is I (relies heavily on HFO). Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements for the global merchant fleet.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The IMO determines guidelines, not the merchant fleet."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emission regulations, not the merchant fleet."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not the merchant fleet."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not the merchant fleet."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content, not the merchant fleet."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not relate to the merchant fleet."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emissions, not the merchant fleet as a subject."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states the fleet handles 90% of international trade, not that it accounts for 90% of vessels."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 2 states that heavy fuel oil has been the mainstay of energy and propulsion requirements."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "30. Guidelines to set safe standards of emissions",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (have been determined by the International Maritime Organisation). Para 3 states the IMO began formulating guidelines to determine and control safe standards for emissions.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 3 states the International Maritime Organisation began formulating guidelines to determine and control safe standards for emissions."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content regulations, not guidelines themselves."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to fuel comparison, not guidelines."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not guidelines."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to sulphur content, not guidelines."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. ECAs implement guidelines, they don't fail to recognize them."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emissions, not guidelines."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to trade statistics, not guidelines."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to the shipping industry, not guidelines."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "31. The sulphur content of bunker fuels",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B (must be capped at 5,000 ppm by 2020 in certain areas). Para 3 states that from 2020, all vessels sailing outside any ECA must cap their emissions at 5,000 ppm.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "have been determined by the International Maritime Organisation.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While the IMO sets regulations, this doesn't complete the sentence about sulphur content."
+                },
+                {
+                    "text": "must be capped at 5,000 ppm by 2020 in certain areas.",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 3 states that from 2020, the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm."
+                },
+                {
+                    "text": "are 600 times more dangerous than other fuels.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This comparison relates to ocean fuel versus land transport diesel, not bunker fuels specifically."
+                },
+                {
+                    "text": "suffer from high levels of sulphur.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to port cities, not bunker fuels."
+                },
+                {
+                    "text": "has been as high as 1,000 ppm.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states bunker fuels ranged as high as 35,000 ppm, not 1,000 ppm."
+                },
+                {
+                    "text": "were not recognised by the Exclusive Economic Zones.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This does not make sense with bunker fuels."
+                },
+                {
+                    "text": "impact severely on large port cities.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to emissions from fuels, not the fuels themselves."
+                },
+                {
+                    "text": "accounts for 90% of all vessels in international waters.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This relates to trade statistics, not bunker fuels."
+                },
+                {
+                    "text": "relies heavily on HFO.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Bunker fuels are HFO, so they don't rely on themselves."
+                }
+            ],
+            "options": "have been determined by the International Maritime Organisation.\nmust be capped at 5,000 ppm by 2020 in certain areas.\nare 600 times more dangerous than other fuels.\nsuffer from high levels of sulphur.\nhas been as high as 1,000 ppm.\nwere not recognised by the Exclusive Economic Zones.\nimpact severely on large port cities.\naccounts for 90% of all vessels in international waters.\nrelies heavily on HFO.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 32 – 38\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 32 – 38 on your answer sheet write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this in the passage",
+            "question": "32. The costs involved with 'cleaning up' the heavy fuel oil will be met by only the shipping lines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para 4 states the economic cost comes to 'not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Multiple parties will bear the costs, not only shipping lines."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the costs will be borne by multiple parties, not only shipping lines."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Para 4 clearly states multiple parties will bear the costs."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "33. The easiest approach to reduce emissions is to drop the sulphur content of fuel.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. While Para 4 mentions dropping sulphur content as one approach, there is no statement about which approach is easiest.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state which approach is easiest."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While approaches are mentioned, no comparison of difficulty is made."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions approaches but doesn't state which is easiest."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "34. One alternative fuel source would mean returning to a previous method of power.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 5 mentions wind as an alternative fuel and describes it as 'an ironic twist on where shipping originally began', indicating a return to a previous method.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 5 mentions wind power as 'an ironic twist on where shipping originally began', indicating a return to a previous method."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Wind power is mentioned as returning to where shipping originally began."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 5 clearly refers to wind as an 'ironic twist on where shipping originally began'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "35. Nuclear energy is used mostly in naval fleets of many countries.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. Para 5 states nuclear energy is 'used in many naval fleets' but doesn't say it is used 'mostly' in naval fleets or provide comparison with other uses.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage doesn't state nuclear energy is used 'mostly' in naval fleets."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While nuclear use in naval fleets is mentioned, no comparison is made."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage mentions nuclear energy is used in naval fleets but doesn't state this is its primary use."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "36. With 90% of international trade being carried on ships, the shipping industry is experiencing huge growth and profit levels.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Para 6 states that the shipping trade is experiencing a serious down-turn in profits, with daily revenue dropping from US$34,000 in 2007 to US$9,800 in 2017.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The shipping industry is experiencing a down-turn in profits, not growth."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states the shipping industry is experiencing a serious down-turn in profits, not growth."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. Para 6 clearly describes a serious down-turn in profits."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "37. One factor that is slowing down the move to cleaner fuels is that there are no significant direct economic benefits to the parties concerned.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 6 states 'there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 6 states parties are reluctant to contribute to a scheme that sees little direct economic return."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 states there is reluctance due to little direct economic return."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 6 clearly states the scheme sees little direct economic return."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "38. The 2008 financial crisis helped introduce cost-saving measures for shipping lines.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Para 7 states 'during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Para 7 describes how the 2008 financial crisis led to reduced sailing speeds and massive fuel savings."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 describes cost-saving measures introduced during the 2008 crisis."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. Para 7 clearly states cost-saving measures were introduced during the 2008 crisis."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 39 – 40\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
+            "question": "<p>Complete the following sentences:</p>\r\n<p>39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing [field 1] to clean emissions.</p>\r\n<p>40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that [field 2] will still be the shipping industry's main source of energy in the future.</p>\r\n",
+            "points": 2,
+            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion",
+            "field_count": 2,
+            "field_answers": {
+                "1": "scrubbers",
+                "2": "heavy fuel oil|HFO|heavy fuel oils|HFOs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! You answered both questions correctly.",
+                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
+                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                },
+                "2": {
+                    "correct": "Excellent! You answered both questions correctly.",
+                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
+                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                }
+            }
         }
     ],
     "reading_texts": [
         {
-            "text_id": 0,
-            "title": "Reading Text 1",
-            "content": "<h4><strong>City University Gym – Term-time Weekday Schedule (Semesters 1 & 2)</strong></h4>\n\n<p>Mondays & Wednesdays<br>\nAbdominal Strengthening – 07:45–08:15 – Main Gym – Joanna<br>\nGym Circuit – 12:00–13:00 – Main Gym – Steve<br>\nFive-a-side Football – 12:00–13:00 – Outdoor Pitch – Mark<br>\nAerobics – 17:30–18:30 – Dance Studio – Claire<br>\nTae Kwon Do – 18:30–19:30 – Indoor Sports Hall – Kim</p>\n\n<p>Tuesdays<br>\nYoga – 08:00–09:00 – Indoor Sports Hall – Priya<br>\nJogging Club – 12:30–13:15 – Outdoor Track – Staff<br>\nBasketball – 18:00–19:00 – Indoor Sports Hall – Alex</p>\n\n<p>Thursdays<br>\nPilates – 09:00–10:00 – Main Gym – Joanna<br>\nGym Circuit – 12:00–13:00 – Main Gym – Steve<br>\nBadminton – 17:00–18:00 – Indoor Sports Hall – Staff</p>\n\n<p>Fridays<br>\nYoga – 10:00–11:00 – Indoor Sports Hall – Priya<br>\nSwimming – 16:00–17:00 – University Pool – Staff</p>\n\n<p>During university holidays, only selected classes operate.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[Section 1 Part A – Reading Text 1<br>\nThis is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 7 questions (1–7).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.<br>\nAll questions refer to Reading Text 1 only.]</p>\n\n<p>On Wednesdays, Abdominal Strengthening is the shortest class.</p>\n\n<p>The Monday class held in the Indoor Sports Hall is only open to private members.</p>\n\n<p>Only one Tuesday class takes place outdoors.</p>\n\n<p>Aerobics and Tae Kwon Do last for the same length of time.</p>\n\n<p>There is only one class held before midday on each weekday.</p>\n\n<p>No previous experience is required to attend the Friday Yoga class.</p>\n\n<p>Fewer classes are available during university holidays.</p>\n\n<h4><strong>SECTION 1 – PART B</strong></h4>",
-            "tags": []
+            "title": "Section 1 – Part A",
+            "content": "<h3>Passenger Ferry Timetable</h3>\n\n<h4>City Harbour Ferry Terminal → Marine Island Resort</h4>\n<p>Ferry Terminal: 102 Wharf Street</p>\n\n<p>(* = sails via Taylor Peninsula; leaves Taylor Peninsula approx. 10 minutes after City Harbour departure)</p>\n\n<p><strong>Monday–Friday:</strong> 05:20*, 05:50, 06:30, 07:15, 08:15, 09:00*, 10:00, 11:00*, 12:00, 1:00*, 2:00, 3:00*, 4:00, 5:00, 5:30, 6:30, 7:15, 8:45, 10:15, 11:45</p>\n\n<p><strong>Saturday:</strong> 06:30, 07:00, 08:15, 09:00*, 10:00, 11:00*, 12:00, 1:00*, 2:00, 3:00*, 4:00, 5:00*, 6:00, 7:30, 9:30, 11:45</p>\n\n<p><strong>Sunday/Public Holidays:</strong> 07:00, 08:15, 09:00*, 10:00, 11:00*, 12:00, 1:00*, 2:00, 3:00*, 4:00, 5:00*, 6:00, 7:30, 9:30</p>\n\n<h4>Marine Island Resort → City Harbour Ferry Terminal</h4>\n<p>Island Wharf: 12 Quay Road</p>\n\n<p>(* = sails via Taylor Peninsula; leaves Taylor Peninsula approx. 15 minutes after Marine Island departure)</p>\n\n<p><strong>Monday–Friday:</strong> 06:05*, 06:40, 07:20, 08:00, 09:00, 10:00*, 11:00, 12:00*, 1:00, 2:00*, 3:00, 4:00*, 4:45, 5:35, 6:15, 7:15, 8:00, 9:30, 11:00, 12:30</p>\n\n<p><strong>Saturday:</strong> 07:20, 08:00, 09:00, 10:00*, 11:00, 12:00*, 1:00, 2:00*, 3:00, 4:00*, 5:00, 6:00*, 6:45, 8:15, 10:15, 12:30</p>\n\n<p><strong>Sunday/Public Holidays:</strong> 08:00, 09:00, 10:00*, 11:00, 12:00*, 1:00, 2:00*, 3:00, 4:00*, 5:00, 6:00*, 6:45, 8:15, 10:15</p>\n\n<h4>Ferry Prices</h4>\n\n<table border=\"1\">\n<tr><th></th><th>Return</th><th>One Way</th></tr>\n<tr><td>Adult</td><td>$25.50</td><td>$14.50</td></tr>\n<tr><td>Senior Citizen</td><td>$15.20</td><td>$8.90</td></tr>\n<tr><td>Child (under 14)</td><td>$14.25</td><td>$8.50</td></tr>\n</table>\n\n<h4>Service Information</h4>\n<ul>\n<li>Direct route: approx. 45 minutes</li>\n<li>Via Taylor Peninsula: approx. 60 minutes</li>\n<li>Payment by cash or credit card only</li>\n</ul>"
         },
         {
-            "text_id": 1,
-            "title": "Reading Text 2",
-            "content": "<h4><strong>Rules and Regulations for Members of Brightwood Leisure Centre</strong></h4>\n\n<p>Membership allows individuals to use facilities subject to availability and centre regulations.<br>\nThe owners reserve the right to terminate membership in cases of rule breaches or offensive behaviour.<br>\nMembers must inform staff of any illness or disability before using facilities.<br>\nAll facilities are used at the member’s own risk.<br>\nThe centre accepts no responsibility for loss or damage to personal property unless caused by staff negligence.<br>\nCars must be parked correctly; no liability is accepted for loss or damage to vehicles.<br>\nUnclaimed property will be donated to charity after 28 days.</p>\n\n<h4><strong>Questions 8–10</strong></h4>\n\n<p>[Section 1 Part B – Reading Text 2<br>\nThis is a closed question set.<br>\nQuestion type: Multiple choice (single answer).<br>\nThere are 3 questions (8–10).<br>\nEach question has four options labelled A–D.<br>\nOnly one option is correct.]</p>\n\n<p>Members who upset other users of the leisure centre<br>\nA. will be reported to the Club Manager<br>\nB. will be given a warning<br>\nC. will have their membership cancelled<br>\nD. will be reported to the Membership Secretary</p>\n\n<p>Membership may be put on hold<br>\nA. within fourteen days of joining<br>\nB. through arrangement with the manager<br>\nC. if the Membership Secretary agrees<br>\nD. in cases of injury only</p>\n\n<p>Damage to members’ vehicles<br>\nA. is unlikely due to secure parking<br>\nB. will be paid for by the centre if it is their fault<br>\nC. is not the responsibility of the centre<br>\nD. may result from staff negligence</p>\n\n<h4><strong>SECTION 2 – PART A</strong></h4>",
-            "tags": []
+            "title": "Section 1 – Part B",
+            "content": "<h3>Accommodation Guide for Marine Island</h3>\n\n<h4>Budget Accommodation</h4>\n\n<p><strong>Ocean View Camping Resort</strong><br>\nRepeat winners of the Eco-friendly Tourism Award.<br>\nTent pitches only: $12 per night ($10 for bookings over 4 nights).</p>\n\n<p><strong>Marine Island Village Park</strong><br>\nClosest campsite to ferry terminal (5–10 minute walk).<br>\nDiscounts for bookings of one week or more.</p>\n\n<p><strong>Backpacker Haven</strong><br>\nFree BBQ party on Friday evenings.<br>\nDormitory and private twin rooms available.</p>\n\n<h4>Mid-Range Accommodation</h4>\n\n<p><strong>Marine Paradise Bed & Breakfast</strong><br>\nCentral location; continental breakfast included.</p>\n\n<p><strong>Value Inn</strong><br>\nBest value award winner; 5 minutes from the beach.</p>\n\n<h4>Top-End Accommodation</h4>\n\n<p><strong>Marine Island Hotel</strong><br>\nMost expensive option.<br>\nPrivate beach access 2 minutes' walk away.</p>"
         },
         {
-            "text_id": 2,
-            "title": "Reading Text 3",
-            "content": "<h4><strong>Dressed for Work</strong></h4>\n\n<p>Choosing what to wear at work can be difficult, particularly when starting a new job. Dressing too casually may give the impression that you are not taking your role seriously, while dressing too formally can make colleagues think you are unapproachable.</p>\n\n<p>If possible, check the dress code after being offered a position. When attending interviews, observe what other employees are wearing.</p>\n\n<p>For men, dark trousers, shoes and a simple shirt are generally acceptable. Wearing a tie on the first day is fine, but it may be unnecessary if no one else is wearing one.</p>\n\n<p>For women, expectations vary widely, so observing colleagues in similar roles is often the best guide.</p>\n\n<p>In many countries, especially in large corporations, there has been a move towards stricter dress codes, including uniforms for management.</p>\n\n<p>Other useful advice includes choosing conservative colours, avoiding large jewellery, maintaining good hygiene, and avoiding clothing with obvious designer logos.</p>\n\n<h4><strong>Questions 11–16</strong></h4>\n\n<p>[Section 2 Part A – Reading Text 3<br>\nThis is an open question set.<br>\nQuestion type: Short answer.<br>\nThere are 6 questions (11–16).<br>\nAnswers must use NO MORE THAN THREE WORDS AND/OR A NUMBER.]</p>\n\n<h4><strong>When should new employees begin observing how others dress?</strong></h4>\n\n<h4><strong>What item of clothing might men choose not to wear after their first day?</strong></h4>\n\n<h4><strong>What type of colleague provides the best guide to appropriate dress?</strong></h4>\n\n<h4><strong>What type of company is introducing management uniforms?</strong></h4>\n\n<h4><strong>What might bright colours attract in the workplace?</strong></h4>\n\n<h4><strong>What must not be obvious on acceptable designer clothing?</strong></h4>\n\n<h4><strong>SECTION 2 – PART B</strong></h4>",
-            "tags": []
+            "title": "Section 2",
+            "content": "<h3>University Graduates' Careers Conference</h3>\n\n<p>Welcome to the annual Graduates' Careers Conference! This event brings together employers from various sectors to help you explore career opportunities after graduation.</p>\n\n<h4>Fields Represented:</h4>\n\n<p><strong>A. Business & Commerce</strong><br>\nRepresentatives from major corporations, banks, and accounting firms will be available to discuss opportunities in finance, marketing, and business management. Job details and application deadlines can be found in the university's Careers Bulletin.</p>\n\n<p><strong>B. Health & Social Work</strong><br>\nHealth authorities and social service organizations will showcase careers in nursing, social work, and public health. Government sponsorship programs may be available for certain positions, particularly in rural and remote areas.</p>\n\n<p><strong>C. Teaching</strong><br>\nEducation departments and private schools will present both temporary (relief/substitute) and permanent teaching positions. Opportunities range from primary to secondary education across various subjects.</p>\n\n<p><strong>D. Computing & IT</strong><br>\nTechnology companies will be recruiting for software development, cybersecurity, and IT support roles. This sector boasts the highest employment success rate, with over 90% of graduates finding positions within six months. More than half of the exhibitors in this field offer international placement opportunities.</p>\n\n<p><strong>E. Post-Graduate Studies</strong><br>\nUniversities will provide information about Master's and PhD programs. Due to time constraints, only limited information will be available at the conference. For comprehensive details about courses, scholarships, and application procedures, please visit the Post-Graduate Studies Office or check their website.</p>"
         },
         {
-            "text_id": 3,
-            "title": "Reading Text 4",
-            "content": "<p>Modern workplaces require continuous staff training. In the past, basic skills were often sufficient for an entire career, but today technology and work practices change rapidly.</p>\n\n<p>Training commonly focuses on technology, customer service, working in diverse environments, and health and safety. These programmes improve efficiency, staff morale, retention, and company image.</p>\n\n<p>Companies that invest in staff development benefit from increased motivation, innovation, and employee loyalty.</p>\n\n<h4><strong>Questions 17–23</strong></h4>\n\n<p>[Section 2 Part B – Reading Text 4<br>\nThis is a closed question set.<br>\nQuestion type: TRUE / FALSE / NOT GIVEN.<br>\nThere are 7 questions (17–23).<br>\nAnswer options must be displayed as: TRUE, FALSE, NOT GIVEN.]</p>\n\n<p>Training highlights areas where employees need improvement.</p>\n\n<p>Employees usually seek promotion immediately after training.</p>\n\n<p>Companies often ignore existing staff when expanding their workforce.</p>\n\n<p>The main purpose of staff training is learning to use office equipment.</p>\n\n<p>Customer service training is rarely prioritised.</p>\n\n<p>Cultural awareness training benefits companies.</p>\n\n<p>Health and safety training is becoming less important.</p>\n\n<h4><strong>Questions 24–26</strong></h4>\n\n<p>[Section 2 Part B – Reading Text 4<br>\nThis is an open question set.<br>\nQuestion type: Summary completion (short answer).<br>\nThere are 3 questions (24–26).<br>\nAnswers must use NO MORE THAN ONE WORD OR A NUMBER from the passage.]</p>\n\n<p>Complete the summary below.</p>\n\n<p>Staff training programmes can improve 24. ______, reduce staff turnover, and enhance a company’s public image.<br>\nOrganisations that invest in training benefit from higher levels of 25. ______ and innovation.<br>\nLong-term advantages of training include increased employee 26. ______.</p>",
-            "tags": []
+            "title": "Section 3",
+            "content": "<h3>Graduates' Newsletter – Edition 204</h3>\n\n<h4>Bridging the Gap: From University to Employment</h4>\n\n<p>Recent graduates often face challenges when entering the job market. While universities excel at teaching academic and technical skills, the development of soft skills—such as communication, teamwork, and problem-solving—is sometimes overlooked. These interpersonal abilities are increasingly valued by employers who seek well-rounded candidates.</p>\n\n<p>Another significant hurdle is the lack of practical work experience. Many employers are reluctant to hire graduates who have no previous workplace exposure, creating a difficult catch-22 situation: you need experience to get a job, but you need a job to gain experience. This university recognizes that our students benefit from unique opportunities not available at all institutions, including industry partnerships and internship programs that provide valuable real-world experience.</p>\n\n<h4>Employability Skills Workshop</h4>\n\n<p>To address these challenges, the Careers Service is offering a comprehensive two-day workshop designed to enhance your employability. The workshop covers essential skills that employers look for:</p>\n\n<ul>\n<li>Effective communication in professional settings</li>\n<li>Interview techniques and self-presentation</li>\n<li>Critical thinking and logical reasoning</li>\n<li>Time management and organizational skills</li>\n<li>Networking and professional relationship building</li>\n</ul>\n\n<p><strong>Workshop Details:</strong></p>\n<ul>\n<li>Duration: Two full days (9:00 AM – 5:00 PM)</li>\n<li>Cost: Free for currently enrolled students; £25 for recent graduates (graduated within the past year)</li>\n<li>Spaces are limited—register early to secure your place</li>\n</ul>\n\n<p>This workshop provides practical strategies to help you stand out in the competitive job market and successfully transition from student life to professional career.</p>"
         },
         {
-            "title": "Reading Text 5",
-            "content": "Maritime Shipping's Heavy Fuel Oil Debate\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><span id=\"passage-q28\" data-question=\"28\"></span>In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world's shipping industry. <span class=\"reading-answer-marker\">In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide (SO2) emissions</span> as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that <span class=\"reading-answer-marker\">PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues</span> created by the growing volume of heavy emissions from the maritime industry.\r\n\r\n<span id=\"passage-q29\" data-question=\"29\"></span>Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. <span class=\"reading-answer-marker\">Heavy fuel oil has been the mainstay of energy and propulsion requirements</span> through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devastating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.\r\n\r\n<span id=\"passage-q30\" data-question=\"30\"></span>Once it was recognised that there was a strong causal relationship between pollutant emissions and health issues, <span class=\"reading-answer-marker\">the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions</span>. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. <span id=\"passage-q31\" data-question=\"31\"></span>This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, <span class=\"reading-answer-marker\">the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm</span>.\r\n\r\n<span id=\"passage-q32\" data-question=\"32\"></span><span id=\"passage-q39\" data-question=\"39\"></span>But all this comes at a huge economic cost, <span class=\"reading-answer-marker\">not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved</span>. As a result, much research has gone into determining the best approach to 'clean up', or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%</span>, which would achieve the required emissions levels, or <span class=\"reading-answer-marker\">vessels would have to be fitted with what are known as 'scrubbers', technology that can clean the emissions</span>. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.\r\n\r\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>In addition, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, <span class=\"reading-answer-marker\">wind (an ironic twist on where shipping originally began)</span> and the controversial <span class=\"reading-answer-marker\">nuclear energy, used in many naval fleets</span>. However, apart from the view that HFO is the cheapest alternative and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.\r\n\r\n<span id=\"passage-q36\" data-question=\"36\"></span><span id=\"passage-q37\" data-question=\"37\"></span>At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. <span class=\"reading-answer-marker\">All this means there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.</span>\r\n\r\n<span id=\"passage-q38\" data-question=\"38\"></span>But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the \"fifth fuel\", that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved in shipping, there have always been innovative energy-saving approaches. One example is that <span class=\"reading-answer-marker\">during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings</span>. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.\r\n\r\n<span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future.</span> If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. <span class=\"reading-answer-marker\">Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030</span>, albeit with the agreed-upon restrictions set out.",
-            "text_id": 4
+            "title": "Reading Passage 3",
+            "content": "Maritime Shipping's Heavy Fuel Oil Debate\r\n\r\n<span id=\"passage-q27\" data-question=\"27\"></span><span id=\"passage-q28\" data-question=\"28\"></span>In a world growing more and more concerned with pollution and the accompanying health issues, attention has turned to the heavy fuel oil (HFO) used by the world's shipping industry. <span class=\"reading-answer-marker\">In a densely-populated port city such as Hong Kong, the shipping industry, from local tugs to ocean-going container and bulk cargo vessels, accounts for the largest amount of sulphur dioxide (SO2) emissions</span> as well as the emission of particulate matter (PM), the mixture of minute particles and liquid droplets suspended in air. One estimate put forward is that <span class=\"reading-answer-marker\">PM emissions contributed to 87,000 global premature deaths in 2012 and these large port cities like Hong Kong and Busan in Asia, Rotterdam and Antwerp in Europe and Los Angeles/Long Beach in the Americas have borne the brunt of the health issues</span> created by the growing volume of heavy emissions from the maritime industry.\r\n\r\n<span id=\"passage-q29\" data-question=\"29\"></span>Globally, there are more than 90,000 vessels in the international marine fleet, handling over 90% of international trade. <span class=\"reading-answer-marker\">Heavy fuel oil has been the mainstay of energy and propulsion requirements</span> through the second half of the 20th century as global trade has become the lifeblood of economic growth, but it is acknowledged that this same shipping now accounts for nearly 10% of the total emissions of SO2, which has been responsible for the environmentally devastating acid rain, and is a heavy contributor to respiratory problems and other illnesses in humans. In the United States alone, the Environmental Protection Agency estimates that there are 14,000 premature deaths annually owing to toxic emissions, and it is noted that the fuel used by ocean-plying vessels is 600 times dirtier than land transport diesel fuel.\r\n\r\n<span id=\"passage-q30\" data-question=\"30\"></span>Once it was recognised that there was a strong causal relationship between pollutant emissions and health issues, <span class=\"reading-answer-marker\">the International Maritime Organisation, or IMO, a UN agency that sets and regulates industry standards for safety and the environment, began formulating guidelines to determine and control safe standards for emissions</span>. Beginning in 2015, the IMO ruled that the first areas to be designated as Emission Control Areas, or ECAs, would be the Exclusive Economic Zones of North America and Northern Europe, where Marine Gas Oil with a permitted sulphur content of only 1,000 ppm (parts per million) would be allowed. <span id=\"passage-q31\" data-question=\"31\"></span>This was a dramatic proposal, as the then-current sulphur content of what are called bunker fuels ranged as high as 35,000 ppm. Further, from the year 2020, <span class=\"reading-answer-marker\">the regulation is that all vessels sailing outside any ECA must cap their emissions at 5,000 ppm</span>.\r\n\r\n<span id=\"passage-q32\" data-question=\"32\"></span><span id=\"passage-q39\" data-question=\"39\"></span>But all this comes at a huge economic cost, <span class=\"reading-answer-marker\">not only for the commercial enterprises, but also the shipping companies and, by extension, their shippers, and the national economies of the countries involved</span>. As a result, much research has gone into determining the best approach to 'clean up', or even change, the fuel, and ultimately there seems to be two main approaches to comply with the requirements. Firstly, <span id=\"passage-q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">the oil industry would have to drop the sulphur content of the fuel from 3.5% to 0.5%</span>, which would achieve the required emissions levels, or <span class=\"reading-answer-marker\">vessels would have to be fitted with what are known as 'scrubbers', technology that can clean the emissions</span>. However, it is recognised that the refining industry is not yet moving towards complying with the regulations regarding sulphur content, and as far as scrubbing is concerned, at an estimated US$4 million per engine fit out, the cost is often too high for many shipping countries.\r\n\r\n<span id=\"passage-q34\" data-question=\"34\"></span><span id=\"passage-q35\" data-question=\"35\"></span>In addition, along with other industries such as land transport and airline companies, much research is being conducted into looking at alternative fuels. For shipping, this revolves around investigating alternative sources such as Liquid (or Liquefied) Natural Gas, solar fuel cells, <span class=\"reading-answer-marker\">wind (an ironic twist on where shipping originally began)</span> and the controversial <span class=\"reading-answer-marker\">nuclear energy, used in many naval fleets</span>. However, apart from the view that HFO is the cheapest alternative and that the merchant fleet is geared towards the continuing use of HFO, each alternative also presents some challenges. Natural gas takes up a large amount of storage on a vessel, thus reducing cargo-carrying capacity. Likewise, solar fuel cells, although effective, require huge amount of space and wind is not considered reliable enough. Nuclear energy remains a contentious issue, and many ports will restrict or deny entry to nuclear-powered vessels.\r\n\r\n<span id=\"passage-q36\" data-question=\"36\"></span><span id=\"passage-q37\" data-question=\"37\"></span>At the same time, the international shipping trade is experiencing a serious down-turn in profits. In 2007, the average daily revenue of a merchant vessel was US$34,000 but in 2017 that same figure was just US$9800, according to Clarkson Research, a global shipping consultancy firm. Part of this decline in profits is due to an excess of shipping vessels, but it also relates to the 2008 global financial crisis, and changes in the oil and export markets. <span class=\"reading-answer-marker\">All this means there will be a reluctance on the part of ship-owners, national state carriers and major shippers to contribute towards a scheme that, while benefiting the global environment and national health interests, sees little direct economic return.</span>\r\n\r\n<span id=\"passage-q38\" data-question=\"38\"></span>But the way forward is appearing. Gas-powered vessels are now operating, with its cleaner and more efficient fuel. Which, interestingly, has given rise to what is known as the \"fifth fuel\", that is energy efficiency. Because fuel traditionally accounts for up to half of all costs involved in shipping, there have always been innovative energy-saving approaches. One example is that <span class=\"reading-answer-marker\">during the 2008 global crisis in finance and costs, sailing speeds on ocean vessels were reduced by oftentimes up to half, which resulted in massive fuel savings</span>. This has given rise to what is known as the Energy Efficiency Design Index, a compulsory outline of regulations that means that all new ships will be required to adhere to it from 2015.\r\n\r\n<span id=\"passage-q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Heavy Fuel Oil, however, will be the backbone of energy for the foreseeable future.</span> If engine scrubbers are deployed, and are as effective as engineered, they can capture more than 90% of exhaust sulphur and they will continue to be the main force in energy requirements. <span class=\"reading-answer-marker\">Lloyds Registry, the industry classification organisation, believes that HFO will still make up nearly half of all fuels used in the maritime industry in 2030</span>, albeit with the agreed-upon restrictions set out."
         }
     ],
     "settings": {

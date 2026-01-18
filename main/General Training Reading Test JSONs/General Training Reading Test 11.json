@@ -365,6 +365,400 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "short_answer"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27-33 on your answer sheet, write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
+            "question": "Poe's father died of tuberculosis.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poe's first book of poems was published under a false name.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poe moved to Maryland immediately following his dismissal from West Point.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Graham's Magazine was a Philadelphia-based publication.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Poe parted ways with Graham's Magazine in 1842.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Following publication of The Raven, Poe still struggled financially.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "During his lifetime, Poe was predominantly known as a poet in America.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false,
+            "ielts_question_type": "True/False/Not Given"
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the notes below.\n\nUse NO MORE THAN TWO WORDS OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 34-38 on your answer sheet.",
+            "question": "Poe's sibling [field 1] was the first born.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is HENRY. The passage states 'his older brother Henry'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'his older brother Henry'.",
+            "incorrect_feedback": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "HENRY|Henry|henry"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'his older brother Henry'.",
+                    "incorrect": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
+                    "no_answer": "The correct answer is HENRY. The passage states 'his older brother Henry'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Poe left the Southern Literary Messenger because he had little autonomy and a poor [field 1]",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
+            "incorrect_feedback": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "SALARY|salary"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
+                    "incorrect": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
+                    "no_answer": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Poe married in [field 1] to a much younger woman.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+            "incorrect_feedback": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "1836"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+                    "incorrect": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+                    "no_answer": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "Publication of [field 1] helped Poe to become a household name in America.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+            "incorrect_feedback": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "THE RAVEN|The Raven|the raven"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+                    "incorrect": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+                    "no_answer": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "As an author, Poe was a pioneering figure in the [field 1] genre.",
+            "points": 1.0,
+            "no_answer_feedback": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'. Review the passage carefully to find the exact words.",
+            "correct_feedback": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
+            "incorrect_feedback": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "note_completion",
+            "field_count": 1,
+            "field_answers": {
+                "1": "GOTHIC FICTION|gothic fiction"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
+                    "incorrect": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
+                    "no_answer": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'."
+                }
+            },
+            "ielts_question_type": "Note Completion"
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose TWO letters, A-E.\n\nWhich TWO of the following are mentioned as being publications Poe worked for?\n\nA. The Gold Bug\nB. Broadway Journal\nC. Tales of the Grotesque and Arabesque\nD. Southern Literary Messenger\nE. The Raven",
+            "question": "Select two correct answers:",
+            "points": 2.0,
+            "no_answer_feedback": "The correct answers are B and D. The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+            "correct_feedback": "Excellent! You've correctly identified the two publications Poe worked for as an editor.",
+            "incorrect_feedback": "Some of your selections are incorrect. The correct answers are B (Broadway Journal) and D (Southern Literary Messenger). The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Options A, C, and E are titles of Poe's works, not publications he worked for.",
+            "reading_text_id": 4,
+            "audio_section_id": 0,
+            "ielts_question_category": "multiple_choice_multiple_answers",
+            "mc_options": [
+                {
+                    "text": "The Gold Bug",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Gold Bug is a story Poe wrote, not a publication he worked for."
+                },
+                {
+                    "text": "Broadway Journal",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe held editorial positions 'including the Broadway Journal'."
+                },
+                {
+                    "text": "Tales of the Grotesque and Arabesque",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is Poe's first volume of short stories, not a publication he worked for."
+                },
+                {
+                    "text": "Southern Literary Messenger",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states Poe was 'editor of the Southern Literary Messenger'."
+                },
+                {
+                    "text": "The Raven",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The Raven is Poe's famous poem, not a publication he worked for."
+                }
+            ],
+            "options": "The Gold Bug\nBroadway Journal\nTales of the Grotesque and Arabesque\nSouthern Literary Messenger\nThe Raven",
+            "correct_answer_count": 2,
+            "show_option_letters": true,
+            "ielts_question_type": "Multiple Choice (Multiple Answers)"
         }
     ],
     "reading_texts": [
