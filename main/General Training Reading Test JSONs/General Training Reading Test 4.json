@@ -1532,6 +1532,37 @@
                     "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
                 }
             }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 39 – 40\r\n\r\nComplete the following sentences, using NO MORE THAN THREE WORDS from the passage.\r\n\r\nWrite your answers in boxes 39 – 40 on your answer sheet.",
+            "question": "<p>Complete the following sentences:</p>\r\n<p>39. In order to comply with regulations regarding lowering emissions, shipping companies have the option of installing [field 1] to clean emissions.</p>\r\n<p>40. Even with all the restrictions and guidelines, most industry analysts, such as Lloyds Registry, feel that [field 2] will still be the shipping industry's main source of energy in the future.</p>\r\n",
+            "points": 2,
+            "no_answer_feedback": "39: scrubbers, 40: heavy fuel oil|HFO",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 2,
+            "field_answers": {
+                "1": "scrubbers",
+                "2": "heavy fuel oil|HFO|heavy fuel oils|HFOs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! You answered both questions correctly.",
+                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
+                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                },
+                "2": {
+                    "correct": "Excellent! You answered both questions correctly.",
+                    "incorrect": "Review the passage and try again. Question 39 is found in Para 4, and Question 40 is in Para 8.",
+                    "no_answer": "39: scrubbers, 40: heavy fuel oil|HFO"
+                }
+            }
         }
     ],
     "reading_texts": [
