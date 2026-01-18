@@ -462,6 +462,14 @@ body.ielts-course-archive .content-area {
 
 .ielts-single-quiz .option-label input[type="radio"] {
     margin: 0;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.ielts-single-quiz .option-label > span {
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
 }
 
 .ielts-single-quiz .answer-input {
@@ -1034,6 +1042,14 @@ body.ielts-course-archive .content-area {
 
 .ielts-computer-based-quiz .option-label input[type="radio"] {
     margin-right: 10px;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.ielts-computer-based-quiz .option-label > span {
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
 }
 
 .ielts-computer-based-quiz .question-answer {
@@ -2551,6 +2567,15 @@ p.transcript-highlight {
 .ielts-listening-practice-quiz .option-label input[type="checkbox"],
 .ielts-listening-exercise-quiz .option-label input[type="checkbox"] {
     margin-right: 10px;
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.ielts-listening-practice-quiz .option-label > span,
+.ielts-listening-exercise-quiz .option-label > span {
+    flex: 1;
+    min-width: 0;
+    word-wrap: break-word;
 }
 
 .ielts-listening-practice-quiz .question-answer,
