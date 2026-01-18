@@ -1,419 +1,901 @@
 {
-    "title": "General Training Reading Test 6",
-    "content": "",
-    "questions": [
+  "title": "General Training Reading Test 6",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1\u201327",
+      "question": "How many different lengths of route are available?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Where was the money raised last year donated?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "How much money do organisers expect to raise this year?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What refreshments are provided along the route?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What item of clothing must all runners wear?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Where can participants park if they do not park at the school?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What prize is offered for the best costume?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour B",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour C",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour D",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour E",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour G",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour H",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Tour I",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Applicants must attend interviews directly with families.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Childcare Solutions pays for flights overseas.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Visa costs depend on the country of employment.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The organisation was founded by experienced childcare workers.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "All contracts last for at least six months.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Two references must come from previous employers.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph A",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph B",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph C",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph D",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph E",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph F",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Paragraph G",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Choose the most suitable headings for Paragraphs A-E from the list below. Use each heading once only.\r\n",
+      "question": "Paragraph A",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_headings",
+      "mc_options": [
         {
-            "type": "open_question",
-            "instructions": "Questions 1–27",
-            "question": "How many different lengths of route are available?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "I. Effect on modern industry",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Where was the money raised last year donated?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "II. New payment procedures",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "How much money do organisers expect to raise this year?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "III. Labour problems",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What refreshments are provided along the route?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "IV. The Model-T",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What item of clothing must all runners wear?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "V. Creating a market",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Where can participants park if they do not park at the school?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "VI. Revolutionary production techniques",
+          "is_correct": true,
+          "feedback": "Correct!"
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What prize is offered for the best costume?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "VII. The Ford family today",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour B",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "VIII. Impact on the global economy",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour C",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour D",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour E",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour G",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour H",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Tour I",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Applicants must attend interviews directly with families.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Childcare Solutions pays for flights overseas.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Visa costs depend on the country of employment.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "The organisation was founded by experienced childcare workers.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "All contracts last for at least six months.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Two references must come from previous employers.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph A",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph B",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph C",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph D",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph E",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph F",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Paragraph G",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "IX. Overseas competition",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph A describes Ford's revolutionary manufacturing methods and assembly line techniques."
         }
-    ],
-    "reading_texts": [
+      ],
+      "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph B",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_headings",
+      "mc_options": [
         {
-            "text_id": 0,
-            "title": "Reading Text 1",
-            "content": "<h4><strong>Charity Fun Run – Moorfields School</strong></h4>\n\n<p>Dear Supporter,</p>\n\n<p>I am writing to invite you to join us for our Annual Fun Run which will be held this year on Sunday 18th August. The run starts from the school grounds and participants are able to choose to take part in a 2, 5 or 10 kilometre run.</p>\n\n<p>Last year we raised a total of $15,450, which was donated to the children’s hospital, and this year we expect to raise $16,000. This year, the money raised will be used to develop the village recreational centre.</p>\n\n<p>To confirm your registration, email funrunsuccess@edu.com<br>\n or telephone 01784 5337841. As soon as you are registered, you simply start collecting your sponsors and come along on the day.</p>\n\n<h4><strong>Moorfields School Fun Run – Event Information</strong></h4>\n\n<p>Start times<br>\n10 kilometre run – 8:00 am<br>\n5 kilometre run – 8:30 am<br>\n2 kilometre run – 9:00 am</p>\n\n<p>Route maps<br>\nDetails are available on our website www.moorfieldsschool.com<br>\n and will also be available on the day from school reception. All routes will be signposted and there will be marshals stationed along the routes providing cold drinks for runners. If you feel ill or need assistance during the run, please inform a marshal.</p>\n\n<p>What to wear<br>\nShorts and tee-shirts are suitable; however, runners are advised to bring a light raincoat in case of bad weather. Comfortable running shoes are essential. Please avoid wearing new trainers on the day.</p>\n\n<p>Parking<br>\nThe school car park behind C-block (language department) will be open. Drive in through the main gates and turn right. Westhill Leisure Centre, across the road from the school, will also allow runners to park there.</p>\n\n<p>After the run<br>\nThere will be entertainers including face-painting and the school band. Food and drink stalls will be available. A prize-giving event will take place for runners who finish 1st and 2nd in each race. Two cinema tickets are available for the best fancy-dress costume.</p>\n\n<p>The event is expected to finish at around 4:00 pm.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<h4><strong>[Short answer questions – NO MORE THAN THREE WORDS AND/OR A NUMBER]</strong></h4>\n\n<h4><strong>How many different lengths of route are available?\nAnswer: 3</strong></h4>\n\n<h4><strong>Where was the money raised last year donated?\nAnswer: children’s hospital</strong></h4>\n\n<h4><strong>How much money do organisers expect to raise this year?\nAnswer: $16,000</strong></h4>\n\n<h4><strong>What refreshments are provided along the route?\nAnswer: cold drinks</strong></h4>\n\n<h4><strong>What item of clothing must all runners wear?\nAnswer: running shoes</strong></h4>\n\n<p>Where can participants park if they do not park at the school?<br>\nAnswer: Westhill Leisure Centre</p>\n\n<h4><strong>What prize is offered for the best costume?\nAnswer: two cinema tickets</strong></h4>",
-            "tags": []
+          "text": "I. Effect on modern industry",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
         },
         {
-            "text_id": 1,
-            "title": "Reading Text 2",
-            "content": "<h4><strong>Childcare Solutions – Nannying Positions Worldwide</strong></h4>\n\n<p>Childcare Solutions assists qualified nannies with at least one year’s post-qualification experience to find work in 16 countries worldwide. No registration fee applies.</p>\n\n<p>Services include interviews arranged by the agency, return flights paid by employers, medical insurance for many positions, contracts arranged in advance, and visa assistance (additional costs apply).</p>\n\n<p>Applicants must be aged 18 or over, provide a clear criminal record, supply two references (at least one from a former position), and demonstrate flexibility.</p>\n\n<p>The organisation was established in 1985 by three qualified nannies.</p>\n\n<h4><strong>Questions 15–20</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>Applicants must attend interviews directly with families.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Childcare Solutions pays for flights overseas.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Visa costs depend on the country of employment.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>The organisation was founded by experienced childcare workers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All contracts last for at least six months.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Two references must come from previous employers.\nAnswer: FALSE</strong></h4>",
-            "tags": []
+          "text": "II. New payment procedures",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
         },
         {
-            "text_id": 2,
-            "title": "Reading Text 3",
-            "content": "<h4><strong>Language Express Student Prospectus</strong></h4>\n\n<p>Paragraphs A–G describe facilities, student services, course structures, assessment, and international partnerships.</p>\n\n<h4><strong>Questions 21–27</strong></h4>\n\n<h4><strong>[Matching headings to paragraphs]</strong></h4>\n\n<h4><strong>Paragraph A\nAnswer: VIII (Additional Academic Support)</strong></h4>\n\n<h4><strong>Paragraph B\nAnswer: XII (The Student Council)</strong></h4>\n\n<h4><strong>Paragraph C\nAnswer: VI (Unique Opportunities)</strong></h4>\n\n<h4><strong>Paragraph D\nAnswer: VII (International Links)</strong></h4>\n\n<h4><strong>Paragraph E\nAnswer: V (Orientation for New Students)</strong></h4>\n\n<h4><strong>Paragraph F\nAnswer: X (Examinations and Graduation)</strong></h4>\n\n<h4><strong>Paragraph G\nAnswer: IV (Course Commencement)</strong></h4>",
-            "tags": []
+          "text": "III. Labour problems",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
         },
         {
-            "title": "Reading Text 5",
-            "content": "A: In 1913 an American industrialist named Henry Ford employed an innovative system in his factory that changed the nature of American industry forever – the production line. Instead of a group of workers constructing a complete product, Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt, passing each employee who had a single task to perform before the component moved down the line. This saved time in that employees were not required to move around, collect materials or change tools; they simply stood in one place and repeated the same procedure over and over again until the end of their shift. In this way, Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs.<br />\r\n<br />\r\nB: Working on a production line was monotonous work, undoubtedly, but it was not in the production line alone that Ford was something of a pioneer. In 1913 the average hourly rate for unskilled labour was under $2.50 and for such low wages and repetitive work, the labour turnover in Ford's factory was high, with many employees lasting less than a month. In order to combat this problem, he took a step that was condemned by other industrialists of the time, fearful that they would lose their own workforce – he raised wages to $5 an hour. The benefits were twofold. Not only did Ford now have a stable and eager workforce, he also had potential customers. It was his intention 'to build a motorcar for the great multitude', and the Model-T car was one of the cheapest cars on the market at the time. At $5 an hour, many of his employees now found themselves in a position to feasibly afford a car of their own. Ford's production practices meant that production time was reduced from 14 hours to a mere 93 minutes. In 1914 company profits were $30 million, yet just two years later this figure had doubled. Until 1927 when the last Model-T rolled off the production line, the company produced and sold about 15 million cars.<br />\r\n<br />\r\nC: Although Ford was without doubt successful, times changed and the company began losing its edge. One problem came from the labour force. Ford was a demanding employer who insisted that the majority of his staff remained on their feet during their shift. One error meant that the whole production line was often kept waiting, and Ford felt that workers were more attentive standing than sitting. Yet the 1930s saw some radical changes in the relationships between employer and employee, as an increasing number of industries were forming Labour Unions. Ford flatly refused to get involved, employing spies in the workplace to sabotage any plans for a union within his factories. Eventually a strike in the early 1940s forced Ford to deal with unions. Another example of Ford being unable to adapt came from his unwillingness to branch out. Ford's competitors began operating the same systems and practices, but also introduced the variety Ford was lacking. The Model-T had remained essentially the same, even down to the colour, and by the time he realised his error, he had already lost his pre-eminence in the industry. Subsequent involvement in aeroplane manufacturing, politics and publishing was a failure. Leaving the company to his grandson in 1945, he died two years later leaving an inheritance estimated at $700 million.<br />\r\n<br />\r\nD: Yet the legacy of Fordism lives on. The development of mass production transformed the organisation of work in a number of important ways. Tasks were minutely subdivided and performed by unskilled workers, or at least semiskilled workers, since much of the skill was built into the machine. Second, manufacturing concerns grew to such a size that a large hierarchy of supervisors and managers became necessary. Third, the increasing complexity of operations required employment of a large management staff of accountants, engineers, chemists, and, later, social psychologists, in addition to a large distribution and sales force. Mass production also heightened the trend towards an international division of labour. The huge new factories often needed raw materials from abroad, while saturation of national markets led to a search for customers overseas. Thus, some countries became exporters of raw materials and importers of finished goods, while others did the reverse.<br />\r\n<br />\r\nE: In the 1970s and '80s some countries, particularly in Asia and South America, that had hitherto been largely agricultural and that had imported manufactured goods, began industrialising. The skills needed by workers on assembly-line tasks required little training, and standards of living in these developing countries were so low that wages could be kept below those of the already industrialised nations. Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' – that is, having parts made or whole products assembled in developing nations. Consequently, those countries are rapidly becoming integrated into the world economic community.",
-            "text_id": 4
+          "text": "IV. The Model-T",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
+        },
+        {
+          "text": "V. Creating a market",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "VI. Revolutionary production techniques",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
+        },
+        {
+          "text": "VII. The Ford family today",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
+        },
+        {
+          "text": "VIII. Impact on the global economy",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
+        },
+        {
+          "text": "IX. Overseas competition",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B explains how Ford developed and expanded the market for automobiles."
         }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "general_training",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph C",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_headings",
+      "mc_options": [
+        {
+          "text": "I. Effect on modern industry",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "II. New payment procedures",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "III. Labour problems",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "IV. The Model-T",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "V. Creating a market",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "VI. Revolutionary production techniques",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "VII. The Ford family today",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "VIII. Impact on the global economy",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        },
+        {
+          "text": "IX. Overseas competition",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C addresses the labor issues and workforce challenges Ford faced."
+        }
+      ],
+      "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph D",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_headings",
+      "mc_options": [
+        {
+          "text": "I. Effect on modern industry",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "II. New payment procedures",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "III. Labour problems",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "IV. The Model-T",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "V. Creating a market",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "VI. Revolutionary production techniques",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "VII. The Ford family today",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "VIII. Impact on the global economy",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        },
+        {
+          "text": "IX. Overseas competition",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses Ford's lasting impact on modern manufacturing and industry."
+        }
+      ],
+      "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph E",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_headings",
+      "mc_options": [
+        {
+          "text": "I. Effect on modern industry",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "II. New payment procedures",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "III. Labour problems",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "IV. The Model-T",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "V. Creating a market",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "VI. Revolutionary production techniques",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "VII. The Ford family today",
+          "is_correct": false,
+          "feedback": ""
+        },
+        {
+          "text": "VIII. Impact on the global economy",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "IX. Overseas competition",
+          "is_correct": false,
+          "feedback": ""
+        }
+      ],
+      "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 33 -37\r\n\r\nAnswer the following questions using NO MORE THAN TWO WORDS.",
+      "question": "What was used to move parts around the factory under Ford's production techniques? ",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "conveyor belt"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What did Ford reduce by 90% compared with more traditional methods of the time? ",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "labour costs|labor costs"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "When was the last Model-T Ford produced?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "1927"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What did Ford unsuccessfully oppose the organisation of? ",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "Labour Unions|labor unions|unions"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What is the name given to the principles of mass production and associated practices?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "Fordism"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 38 \u2013 40\r\n\r\nComplete the following summary using NO MORE THAN THREE WORDS FROM THE TEXT.",
+      "question": "One of the long-term effects of Ford\u2019s business practices was that many developing countries became industrialised as a result of (38)[field 1]. For those working in the factory, the skills for (39)[field 2] were easily acquired and (40)[field 3] was minimal.",
+      "points": 3,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "summary_completion_r",
+      "field_count": 3,
+      "field_answers": {
+        "1": "outsourcing",
+        "2": "assembly-line tasks",
+        "3": "training"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        },
+        "2": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        },
+        "3": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
     }
+  ],
+  "reading_texts": [
+    {
+      "text_id": 0,
+      "title": "Reading Text 1",
+      "content": "<h4><strong>Charity Fun Run \u2013 Moorfields School</strong></h4>\n\n<p>Dear Supporter,</p>\n\n<p>I am writing to invite you to join us for our Annual Fun Run which will be held this year on Sunday 18th August. The run starts from the school grounds and participants are able to choose to take part in a 2, 5 or 10 kilometre run.</p>\n\n<p>Last year we raised a total of $15,450, which was donated to the children\u2019s hospital, and this year we expect to raise $16,000. This year, the money raised will be used to develop the village recreational centre.</p>\n\n<p>To confirm your registration, email funrunsuccess@edu.com<br>\n or telephone 01784 5337841. As soon as you are registered, you simply start collecting your sponsors and come along on the day.</p>\n\n<h4><strong>Moorfields School Fun Run \u2013 Event Information</strong></h4>\n\n<p>Start times<br>\n10 kilometre run \u2013 8:00 am<br>\n5 kilometre run \u2013 8:30 am<br>\n2 kilometre run \u2013 9:00 am</p>\n\n<p>Route maps<br>\nDetails are available on our website www.moorfieldsschool.com<br>\n and will also be available on the day from school reception. All routes will be signposted and there will be marshals stationed along the routes providing cold drinks for runners. If you feel ill or need assistance during the run, please inform a marshal.</p>\n\n<p>What to wear<br>\nShorts and tee-shirts are suitable; however, runners are advised to bring a light raincoat in case of bad weather. Comfortable running shoes are essential. Please avoid wearing new trainers on the day.</p>\n\n<p>Parking<br>\nThe school car park behind C-block (language department) will be open. Drive in through the main gates and turn right. Westhill Leisure Centre, across the road from the school, will also allow runners to park there.</p>\n\n<p>After the run<br>\nThere will be entertainers including face-painting and the school band. Food and drink stalls will be available. A prize-giving event will take place for runners who finish 1st and 2nd in each race. Two cinema tickets are available for the best fancy-dress costume.</p>\n\n<p>The event is expected to finish at around 4:00 pm.</p>\n\n<h4><strong>Questions 1\u20137</strong></h4>\n\n<h4><strong>[Short answer questions \u2013 NO MORE THAN THREE WORDS AND/OR A NUMBER]</strong></h4>\n\n<h4><strong>How many different lengths of route are available?\nAnswer: 3</strong></h4>\n\n<h4><strong>Where was the money raised last year donated?\nAnswer: children\u2019s hospital</strong></h4>\n\n<h4><strong>How much money do organisers expect to raise this year?\nAnswer: $16,000</strong></h4>\n\n<h4><strong>What refreshments are provided along the route?\nAnswer: cold drinks</strong></h4>\n\n<h4><strong>What item of clothing must all runners wear?\nAnswer: running shoes</strong></h4>\n\n<p>Where can participants park if they do not park at the school?<br>\nAnswer: Westhill Leisure Centre</p>\n\n<h4><strong>What prize is offered for the best costume?\nAnswer: two cinema tickets</strong></h4>",
+      "tags": []
+    },
+    {
+      "text_id": 1,
+      "title": "Reading Text 2",
+      "content": "<h4><strong>Childcare Solutions \u2013 Nannying Positions Worldwide</strong></h4>\n\n<p>Childcare Solutions assists qualified nannies with at least one year\u2019s post-qualification experience to find work in 16 countries worldwide. No registration fee applies.</p>\n\n<p>Services include interviews arranged by the agency, return flights paid by employers, medical insurance for many positions, contracts arranged in advance, and visa assistance (additional costs apply).</p>\n\n<p>Applicants must be aged 18 or over, provide a clear criminal record, supply two references (at least one from a former position), and demonstrate flexibility.</p>\n\n<p>The organisation was established in 1985 by three qualified nannies.</p>\n\n<h4><strong>Questions 15\u201320</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>Applicants must attend interviews directly with families.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Childcare Solutions pays for flights overseas.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Visa costs depend on the country of employment.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>The organisation was founded by experienced childcare workers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All contracts last for at least six months.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Two references must come from previous employers.\nAnswer: FALSE</strong></h4>",
+      "tags": []
+    },
+    {
+      "text_id": 2,
+      "title": "Reading Text 3",
+      "content": "<h4><strong>Language Express Student Prospectus</strong></h4>\n\n<p>Paragraphs A\u2013G describe facilities, student services, course structures, assessment, and international partnerships.</p>\n\n<h4><strong>Questions 21\u201327</strong></h4>\n\n<h4><strong>[Matching headings to paragraphs]</strong></h4>\n\n<h4><strong>Paragraph A\nAnswer: VIII (Additional Academic Support)</strong></h4>\n\n<h4><strong>Paragraph B\nAnswer: XII (The Student Council)</strong></h4>\n\n<h4><strong>Paragraph C\nAnswer: VI (Unique Opportunities)</strong></h4>\n\n<h4><strong>Paragraph D\nAnswer: VII (International Links)</strong></h4>\n\n<h4><strong>Paragraph E\nAnswer: V (Orientation for New Students)</strong></h4>\n\n<h4><strong>Paragraph F\nAnswer: X (Examinations and Graduation)</strong></h4>\n\n<h4><strong>Paragraph G\nAnswer: IV (Course Commencement)</strong></h4>",
+      "tags": []
+    },
+    {
+      "title": "Reading Text 5",
+      "content": "A: In 1913 an American industrialist named Henry Ford employed an innovative system in his factory that changed the nature of American industry forever \u2013 the production line. Instead of a group of workers constructing a complete product, Ford's production-line techniques relied on machine parts being moved around the factory on a conveyor belt, passing each employee who had a single task to perform before the component moved down the line. This saved time in that employees were not required to move around, collect materials or change tools; they simply stood in one place and repeated the same procedure over and over again until the end of their shift. In this way, Ford was able to mass produce the now famous Model-T car for only 10% of traditional labour costs.<br />\r\n<br />\r\nB: Working on a production line was monotonous work, undoubtedly, but it was not in the production line alone that Ford was something of a pioneer. In 1913 the average hourly rate for unskilled labour was under $2.50 and for such low wages and repetitive work, the labour turnover in Ford's factory was high, with many employees lasting less than a month. In order to combat this problem, he took a step that was condemned by other industrialists of the time, fearful that they would lose their own workforce \u2013 he raised wages to $5 an hour. The benefits were twofold. Not only did Ford now have a stable and eager workforce, he also had potential customers. It was his intention 'to build a motorcar for the great multitude', and the Model-T car was one of the cheapest cars on the market at the time. At $5 an hour, many of his employees now found themselves in a position to feasibly afford a car of their own. Ford's production practices meant that production time was reduced from 14 hours to a mere 93 minutes. In 1914 company profits were $30 million, yet just two years later this figure had doubled. Until 1927 when the last Model-T rolled off the production line, the company produced and sold about 15 million cars.<br />\r\n<br />\r\nC: Although Ford was without doubt successful, times changed and the company began losing its edge. One problem came from the labour force. Ford was a demanding employer who insisted that the majority of his staff remained on their feet during their shift. One error meant that the whole production line was often kept waiting, and Ford felt that workers were more attentive standing than sitting. Yet the 1930s saw some radical changes in the relationships between employer and employee, as an increasing number of industries were forming Labour Unions. Ford flatly refused to get involved, employing spies in the workplace to sabotage any plans for a union within his factories. Eventually a strike in the early 1940s forced Ford to deal with unions. Another example of Ford being unable to adapt came from his unwillingness to branch out. Ford's competitors began operating the same systems and practices, but also introduced the variety Ford was lacking. The Model-T had remained essentially the same, even down to the colour, and by the time he realised his error, he had already lost his pre-eminence in the industry. Subsequent involvement in aeroplane manufacturing, politics and publishing was a failure. Leaving the company to his grandson in 1945, he died two years later leaving an inheritance estimated at $700 million.<br />\r\n<br />\r\nD: Yet the legacy of Fordism lives on. The development of mass production transformed the organisation of work in a number of important ways. Tasks were minutely subdivided and performed by unskilled workers, or at least semiskilled workers, since much of the skill was built into the machine. Second, manufacturing concerns grew to such a size that a large hierarchy of supervisors and managers became necessary. Third, the increasing complexity of operations required employment of a large management staff of accountants, engineers, chemists, and, later, social psychologists, in addition to a large distribution and sales force. Mass production also heightened the trend towards an international division of labour. The huge new factories often needed raw materials from abroad, while saturation of national markets led to a search for customers overseas. Thus, some countries became exporters of raw materials and importers of finished goods, while others did the reverse.<br />\r\n<br />\r\nE: In the 1970s and '80s some countries, particularly in Asia and South America, that had hitherto been largely agricultural and that had imported manufactured goods, began industrialising. The skills needed by workers on assembly-line tasks required little training, and standards of living in these developing countries were so low that wages could be kept below those of the already industrialised nations. Many large manufacturers in the United States and elsewhere therefore began 'outsourcing' \u2013 that is, having parts made or whole products assembled in developing nations. Consequently, those countries are rapidly becoming integrated into the world economic community.",
+      "text_id": 4
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "general_training",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_general_training_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  }
 }
