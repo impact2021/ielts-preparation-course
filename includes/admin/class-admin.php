@@ -3638,8 +3638,9 @@ class IELTS_CM_Admin {
                                     'is_correct' => false,
                                     'feedback' => ''
                                 );
-                                $options_text[] = '';
-                                $option_feedback[] = '';
+                                // For legacy arrays, also preserve indices for dropdown questions
+                                $options_text[$idx] = '';
+                                $option_feedback[$idx] = '';
                                 continue;
                             }
                             
@@ -3650,21 +3651,25 @@ class IELTS_CM_Admin {
                                     'is_correct' => !empty($option['is_correct']),
                                     'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
                                 );
+                                // Also preserve indices in legacy arrays for dropdown questions
+                                $options_text[$idx] = sanitize_text_field($option['text']);
+                                $option_feedback[$idx] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
                             } else {
                                 $mc_options[] = array(
                                     'text' => sanitize_text_field($option['text']),
                                     'is_correct' => !empty($option['is_correct']),
                                     'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
                                 );
+                                // Also create legacy format for backward compatibility
+                                $options_text[] = sanitize_text_field($option['text']);
+                                $option_feedback[] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
                             }
-                            
-                            // Also create legacy format for backward compatibility
-                            $options_text[] = sanitize_text_field($option['text']);
-                            $option_feedback[] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
                             
                             // Track first correct answer for legacy format (for multiple_choice)
                             if (!empty($option['is_correct']) && $correct_answer === null) {
-                                $correct_answer = count($options_text) - 1;
+                                // For dropdown, correct_answer will be overridden later, so use actual index
+                                // For others, use sequential count
+                                $correct_answer = $is_dropdown ? $idx : count($options_text) - 1;
                             }
                         }
                         
