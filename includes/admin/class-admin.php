@@ -3102,6 +3102,11 @@ class IELTS_CM_Admin {
             <input type="hidden" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>">
             <?php endif; ?>
             
+            <?php if (isset($question['type']) && $question['type'] === 'closed_question_dropdown'): ?>
+            <!-- Auto-calculated points for closed question dropdown -->
+            <input type="hidden" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>">
+            <?php endif; ?>
+            
             <!-- Closed Question Settings -->
             <?php if (isset($question['type']) && $question['type'] === 'closed_question'): ?>
             <div class="closed-question-help" style="padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107; margin-bottom: 15px;">
@@ -3777,18 +3782,20 @@ class IELTS_CM_Admin {
                         $question_data['show_option_letters'] = !empty($question['show_option_letters']);
                     } elseif ($question['type'] === 'closed_question_dropdown') {
                         // Handle closed_question_dropdown - save correct_answer_count and generate correct_answer
-                        // This question type was already processed above in the mc_options section
+                        // This question type was already processed above in the mc_options section for saving mc_options
                         // Now we need to add the dropdown-specific fields
                         
                         // Save correct_answer_count from the admin UI
                         $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
                         $question_data['correct_answer_count'] = max(1, $correct_answer_count);
                         
-                        // Auto-calculate points based on correct_answer_count
+                        // Auto-calculate points based on correct_answer_count (overrides default from line 3600)
+                        // This matches the behavior of closed_question (see line 3772)
                         $question_data['points'] = $question_data['correct_answer_count'];
                         
-                        // Generate correct_answer in format "field_1:X|field_2:Y|..."
+                        // Generate correct_answer in format "field_1:X|field_2:Y|..." (overrides simple index from line 3645)
                         // where X, Y are indices of correct options from mc_options
+                        // This special format is required for dropdown validation (see class-quiz-handler.php line 428)
                         $correct_answer_parts = array();
                         if (isset($question_data['mc_options']) && is_array($question_data['mc_options'])) {
                             // Find the correct option indices
