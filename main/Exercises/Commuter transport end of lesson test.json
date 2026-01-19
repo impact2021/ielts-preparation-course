@@ -1,0 +1,283 @@
+{
+  "title": "Commuter transport end of lesson test",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below. Write <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> for each answer.<br><br><strong>COMMUTER TRANSPORT</strong>",
+      "question": "According to the research [field 1] of commuters use private vehicles to travel to work.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "72%|seventy two %|seventy-two %|72 percent|seventy two percent|seventy-two percent"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. 72% of commuters use private vehicles according to the research.",
+          "incorrect": "Incorrect. Listen for the percentage mentioned in the research findings.",
+          "no_answer": "Please provide an answer. Listen for the percentage of people who use private vehicles."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "9% of people surveyed told interviewers that they [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "walked to work|walked|walk|walk to work"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. 9% of respondents said they walked to work.",
+          "incorrect": "Incorrect. Listen for what 9% of people said they did.",
+          "no_answer": "Please provide an answer. Listen for the mode of transport used by 9% of people."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Approximately 35% of people travel to work by public transport in the [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "capital city|capital"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. In the capital city, 35% of people use public transport.",
+          "incorrect": "Incorrect. Listen for which city has 35% public transport usage.",
+          "no_answer": "Please provide an answer. Listen for the location mentioned with 35% usage."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "In the city surveyed, traffic jams are less of a problem and [field 1] are more readily available than in larger urban areas.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "parking spaces"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Parking spaces are more readily available in this city.",
+          "incorrect": "Incorrect. Listen for what is more available compared to larger cities.",
+          "no_answer": "Please provide an answer. Listen for what is more readily available."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The council has a plan to increase use of public transport by [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "10%|ten percent|10 percent|ten %|10 %"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The council aims to increase public transport use by 10%.",
+          "incorrect": "Incorrect. Listen for the target percentage increase.",
+          "no_answer": "Please provide an answer. Listen for the council's target increase."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the table below. Write <strong>NO MORE THAN THREE WORDS</strong> for each answer.",
+      "question": "Industry concerned may affect ability to attract [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "suitable employees"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Industry is concerned about attracting suitable employees.",
+          "incorrect": "Incorrect. Listen for what industry is concerned about attracting.",
+          "no_answer": "Please provide an answer. Listen for industry's concern about attracting something."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Increase government [field 1] so costs for travel can be kept to a minimum.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "subsidies"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Government subsidies would help keep travel costs low.",
+          "incorrect": "Incorrect. Listen for what the government should increase.",
+          "no_answer": "Please provide an answer. Listen for the type of government support mentioned."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Ordinary people prefer money is spent on schools, crime prevention and [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "medical care"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. People prefer spending on schools, crime prevention and medical care.",
+          "incorrect": "Incorrect. Listen for the third area where people want money spent.",
+          "no_answer": "Please provide an answer. Listen for what is mentioned alongside schools and crime prevention."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "[field 1] study.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "market research|research|a market research|a research|A market research"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The council is conducting a market research study.",
+          "incorrect": "Incorrect. Listen for the type of study being conducted.",
+          "no_answer": "Please provide an answer. Listen for what kind of study is mentioned."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Findings show people want expansion of routes to more places with increased [field 1] of services.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "frequency"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. People want increased frequency of services.",
+          "incorrect": "Incorrect. Listen for what people want increased.",
+          "no_answer": "Please provide an answer. Listen for what aspect of services people want increased."
+        }
+      }
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Commuter Transport",
+      "content": "More information coming soon"
+    }
+  ],
+  "settings": {
+    "pass_percentage": "60",
+    "layout_type": "two_column_listening",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "",
+    "starting_question_number": "31"
+  },
+  "audio": {
+    "url": "",
+    "transcript": "<p>Our group project focused on use of public and private transport by commuters in the city centre. I will now present the findings of that research and I will also discuss the council's perspective and ways in which individuals are being encouraged to use their own vehicles less frequently.</p>\n\n<p>Of the 500 people surveyed, (Q31) 72% said that they travelled to work by car. While we assumed that a high proportion of people would say that they still drive their own vehicles to work, we were concerned that the percentage remained so high, despite the council's attempts to encourage more people to leave their cars at home. When we take into account the fact that 9% of respondents said they (Q32) walked to work, this means that only 19% of the people surveyed actually used public transport as a means of getting to their place of employment.</p>\n\n<p>These percentages for use of public transport are much lower than in many other cities in the country. In the (Q33) capital city, for example, recent figures indicate that around 35% of commuters travel to work by either bus or the underground. We believe that more people in our city still choose to use their cars because while traffic congestion is annoying, it is less of a problem than in other larger cities. People, therefore, have less motivation to use a means other than their car to get to work. Our city, unlike many other urban centres, also has a high availability of (Q34) parking spaces, so again people have no real reason to find an alternative mode of travel if they are able to park relatively easily and not too far from their place of work.</p>\n\n<p>However, whilst there may be no real social motivation to encourage people to become less reliant on their own private vehicles, as we know, the environmental implications are more compelling, as private vehicles make a significant contribution to pollution in the atmosphere. The council aims to increase use of public transport by (Q35) 10% over the next two years and is currently considering several initiatives in order to reach this aim.</p>\n\n<p>A controversial move suggested by council members has been to suggest a substantial increase in parking fees within the central business district as a means of discouraging people from driving their cars into work. However, industry heads are opposed to this move as they say it may affect their success in attracting (Q36) suitable employees and that increased costs would most likely need to be covered by the companies themselves, rather than the individual employees. They are also concerned that such measures may affect the productivity of their businesses in that it may affect their staff's punctuality if they have difficulty finding affordable places to park.</p>\n\n<p>A second suggestion has been to increase government (Q37) subsidies of public transport, so that travel costs can be minimized in order to encourage greater use. Cheaper tickets, as opposed to the increased costs of fuel for running one's own vehicle, are likely to be a successful tactic in encouraging more people to use their own vehicles less frequently. There has, however, been an element of opposition to this suggestion from the general public who say that they believe government funding would be better spent in areas of education, fighting crime and (Q38) medical care.</p>\n\n<p>The council is also currently involved in conducting (Q39) a market research survey in order to establish reasons why such a large proportion of people are not electing to use public transport and how they can be encouraged to do so. Early findings suggest expansion of bus routes to a wider range of locations and increasing (Q40) frequency of services would encourage more people to seriously consider public transport as a convenient alternative to their own vehicles.</p>\n\n<p>It is clear that many people in the area are unwilling to make the transition from use of private cars to more environmentally friendly alternatives; it will be interesting to see whether the council meets its goals over the coming months.</p>",
+    "sections": []
+  },
+  "_metadata": {
+    "exported_at": "2026-01-19 05:25:50",
+    "exported_by": "copilot",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}

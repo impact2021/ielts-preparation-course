@@ -7090,14 +7090,16 @@ class IELTS_CM_Admin {
                     $question['field_answers'] = $this->reindex_field_answers_to_one_based($question['field_answers']);
                 }
                 
-                // Create per-field feedback from question-level feedback
-                $question['field_feedback'] = array();
-                for ($i = 1; $i <= $field_count; $i++) {
-                    $question['field_feedback'][$i] = array(
-                        'correct' => isset($question['correct_feedback']) ? $question['correct_feedback'] : '',
-                        'incorrect' => isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : '',
-                        'no_answer' => isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''
-                    );
+                // Create per-field feedback from question-level feedback only if not already present
+                if (!isset($question['field_feedback']) || !is_array($question['field_feedback']) || empty($question['field_feedback'])) {
+                    $question['field_feedback'] = array();
+                    for ($i = 1; $i <= $field_count; $i++) {
+                        $question['field_feedback'][$i] = array(
+                            'correct' => isset($question['correct_feedback']) ? $question['correct_feedback'] : '',
+                            'incorrect' => isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : '',
+                            'no_answer' => isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''
+                        );
+                    }
                 }
                 
                 // Remove field_labels as it's now incorporated into question text
@@ -7154,14 +7156,16 @@ class IELTS_CM_Admin {
                     }
                 }
                 
-                // Create per-field feedback from question-level feedback
-                $question['field_feedback'] = array();
-                for ($i = 1; $i <= $field_count; $i++) {
-                    $question['field_feedback'][$i] = array(
-                        'correct' => isset($question['correct_feedback']) ? $question['correct_feedback'] : '',
-                        'incorrect' => isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : '',
-                        'no_answer' => isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''
-                    );
+                // Create per-field feedback from question-level feedback only if not already present
+                if (!isset($question['field_feedback']) || !is_array($question['field_feedback']) || empty($question['field_feedback'])) {
+                    $question['field_feedback'] = array();
+                    for ($i = 1; $i <= $field_count; $i++) {
+                        $question['field_feedback'][$i] = array(
+                            'correct' => isset($question['correct_feedback']) ? $question['correct_feedback'] : '',
+                            'incorrect' => isset($question['incorrect_feedback']) ? $question['incorrect_feedback'] : '',
+                            'no_answer' => isset($question['no_answer_feedback']) ? $question['no_answer_feedback'] : ''
+                        );
+                    }
                 }
             } elseif ($type === 'closed_question') {
                 // Transform closed_question format
