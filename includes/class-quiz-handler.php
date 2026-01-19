@@ -62,8 +62,14 @@ class IELTS_CM_Quiz_Handler {
         $question_results = array();
         
         // Calculate display question numbers for feedback (same logic as in template)
+        // Get starting question number (default is 1)
+        $starting_question_number = get_post_meta($quiz_id, '_ielts_cm_starting_question_number', true);
+        if (!$starting_question_number) {
+            $starting_question_number = 1;
+        }
+        
         $question_display_numbers = array();
-        $display_question_number = 1;
+        $display_question_number = intval($starting_question_number);
         foreach ($questions as $idx => $q) {
             $start_num = $display_question_number;
             $question_count = 1;
