@@ -1879,6 +1879,41 @@ class IELTS_CM_Admin {
                     }
                     container.find('.closed-question-settings').show();
                     container.find('.closed-question-help').show();
+                } else if (type === 'closed_question_dropdown') {
+                    // Closed Question Dropdown - same as closed_question but renders as inline dropdowns
+                    // Uses [dropdown] placeholder in question text instead of showing radio buttons/checkboxes
+                    container.find('.mc-options-field').show();
+                    container.find('.multi-select-settings').hide();
+                    container.find('.no-answer-feedback-field').show();
+                    container.find('.dropdown-paragraph-field').hide();
+                    container.find('.summary-completion-field').hide();
+                    correctAnswerField.hide();
+                    
+                    // Add help text after question editor if not exists
+                    if (container.find('.closed-question-dropdown-help').length === 0) {
+                        container.find('div:has(> .wp-editor-wrap)').after(
+                            '<div class="closed-question-dropdown-help" style="padding: 10px; background: #e7f3ff; border-left: 4px solid #2196F3; margin-bottom: 15px;">' +
+                            '<strong><?php _e('Closed Question Dropdown Instructions:', 'ielts-course-manager'); ?></strong><br>' +
+                            '<small><?php _e('Use [dropdown] placeholders in your question text where you want dropdown menus to appear. Example: "The student [dropdown] to the library yesterday."', 'ielts-course-manager'); ?></small><br>' +
+                            '<small><?php _e('The options you define below will appear in the dropdown menu(s). All dropdowns show the same options.', 'ielts-course-manager'); ?></small>' +
+                            '</div>'
+                        );
+                    }
+                    
+                    // Add correct answer count field if not exists
+                    if (container.find('.closed-question-dropdown-settings').length === 0) {
+                        container.find('.mc-options-field').before(
+                            '<div class="closed-question-dropdown-settings" style="padding: 10px; background: #f0f0f1; margin-bottom: 15px; border-left: 4px solid #72aee6;">' +
+                            '<p>' +
+                            '<label><?php _e('Number of Dropdowns', 'ielts-course-manager'); ?></label><br>' +
+                            '<input type="number" name="questions[QUESTION_INDEX][correct_answer_count]" value="1" min="1" style="width: 100px;"><br>' +
+                            '<small><?php _e('How many [dropdown] placeholders you have in your question text. This equals the number of question numbers it covers.', 'ielts-course-manager'); ?></small>' +
+                            '</p>' +
+                            '</div>'
+                        );
+                    }
+                    container.find('.closed-question-dropdown-settings').show();
+                    container.find('.closed-question-dropdown-help').show();
                 } else if (type === 'open_question') {
                     // Open Question - hide options, show field count
                     // See CRITICAL-FEEDBACK-RULES.md: per-field feedback (correct, incorrect, no_answer)
@@ -1976,6 +2011,10 @@ class IELTS_CM_Admin {
                 if (type !== 'closed_question') {
                     container.find('.closed-question-settings').hide();
                     container.find('.closed-question-help').hide();
+                }
+                if (type !== 'closed_question_dropdown') {
+                    container.find('.closed-question-dropdown-settings').hide();
+                    container.find('.closed-question-dropdown-help').hide();
                 }
                 if (type !== 'open_question') {
                     container.find('.open-question-settings').hide();

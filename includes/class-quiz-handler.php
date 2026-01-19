@@ -1163,6 +1163,7 @@ class IELTS_CM_Quiz_Handler {
     public static function get_quiz_types() {
         return array(
             'closed_question' => __('Closed Question (Multiple Choice with configurable answers)', 'ielts-course-manager'),
+            'closed_question_dropdown' => __('Closed Question Dropdown (Inline dropdown menus)', 'ielts-course-manager'),
             'open_question' => __('Open Question (Text input with configurable fields)', 'ielts-course-manager')
         );
     }
