@@ -1,0 +1,265 @@
+{
+    "title": "Identifying Keywords",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "ielts_question_type": "Multiple Choice (Multiple Answers)",
+            "instructions": "Read the essay title and the direct question below. Select the keywords from the list below (there are 6).",
+            "question": "<p>Tourism is having a negative effect on the culture of visited countries. To what extent do you agree?</p><p>Direct question: <b>Is tourism having a negative effect on the culture of visited countries?</b></p>",
+            "correct_answer_count": 6,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "IS",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a helping verb that doesn't carry significant meaning."
+                },
+                {
+                    "text": "TOURISM",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies the main topic."
+                },
+                {
+                    "text": "HAVING",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a helping verb that doesn't carry significant meaning."
+                },
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's an article that doesn't carry significant meaning."
+                },
+                {
+                    "text": "NEGATIVE",
+                    "is_correct": true,
+                    "feedback": "Correct! This adjective describes the type of effect and is a key part of the argument."
+                },
+                {
+                    "text": "EFFECT",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that indicates the impact or consequence."
+                },
+                {
+                    "text": "ON",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "THE",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's an article that doesn't carry significant meaning."
+                },
+                {
+                    "text": "CULTURE",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies what is being affected."
+                },
+                {
+                    "text": "OF",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "VISITED",
+                    "is_correct": true,
+                    "feedback": "Correct! This adjective specifies which countries are being discussed."
+                },
+                {
+                    "text": "COUNTRIES",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies the location or context."
+                }
+            ],
+            "correct_answer": "1|4|5|8|10|11",
+            "no_answer_feedback": "You did not select any answers. The correct keywords are: TOURISM, NEGATIVE, EFFECT, CULTURE, VISITED, COUNTRIES.",
+            "points": 6
+        },
+        {
+            "type": "closed_question",
+            "ielts_question_type": "Multiple Choice (Multiple Answers)",
+            "instructions": "Read the essay title and the direct question below. Select the keywords from the list below (there are 10).",
+            "question": "<p>Good students sometimes fail because they do poorly in examinations. What solutions are there to this?</p><p>Direct question: <b>What are the solutions to good students sometimes failing because they do poorly in examinations?</b></p>",
+            "correct_answer_count": 10,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "WHAT",
+                    "is_correct": true,
+                    "feedback": "Correct! This question word indicates we need to identify solutions."
+                },
+                {
+                    "text": "ARE",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a helping verb that doesn't carry significant meaning."
+                },
+                {
+                    "text": "THE",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's an article that doesn't carry significant meaning."
+                },
+                {
+                    "text": "SOLUTIONS",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that tells us what type of answer is required."
+                },
+                {
+                    "text": "TO",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "GOOD",
+                    "is_correct": true,
+                    "feedback": "Correct! This adjective specifies the type of students being discussed."
+                },
+                {
+                    "text": "STUDENTS",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies who the topic is about."
+                },
+                {
+                    "text": "SOMETIMES",
+                    "is_correct": true,
+                    "feedback": "Correct! This adverb indicates the frequency and is important to the context."
+                },
+                {
+                    "text": "FAILING",
+                    "is_correct": true,
+                    "feedback": "Correct! This verb describes the problem being addressed."
+                },
+                {
+                    "text": "BECAUSE",
+                    "is_correct": true,
+                    "feedback": "Correct! This conjunction indicates a cause-and-effect relationship."
+                },
+                {
+                    "text": "THEY",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a pronoun that doesn't carry significant meaning in this context."
+                },
+                {
+                    "text": "DO",
+                    "is_correct": true,
+                    "feedback": "Correct! This verb is part of the action being described."
+                },
+                {
+                    "text": "POORLY",
+                    "is_correct": true,
+                    "feedback": "Correct! This adverb describes how students perform and is crucial to understanding the problem."
+                },
+                {
+                    "text": "IN",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "EXAMINATIONS",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that specifies where the problem occurs."
+                }
+            ],
+            "correct_answer": "0|3|5|6|7|8|9|11|12|14",
+            "no_answer_feedback": "You did not select any answers. The correct keywords are: WHAT, SOLUTIONS, GOOD, STUDENTS, SOMETIMES, FAILING, BECAUSE, DO, POORLY, EXAMINATIONS.",
+            "points": 10
+        },
+        {
+            "type": "closed_question",
+            "ielts_question_type": "Multiple Choice (Multiple Answers)",
+            "instructions": "Read the essay title and the direct question below. Select the keywords from the list below (there are 10).",
+            "question": "<p>People who suffer from health consequences due to addictions should not be entitled to healthcare. Do you agree?</p><p>Direct question: <b>Should people who suffer from health consequences due to addictions not be entitled to healthcare?</b></p>",
+            "correct_answer_count": 10,
+            "show_option_letters": false,
+            "mc_options": [
+                {
+                    "text": "SHOULD",
+                    "is_correct": true,
+                    "feedback": "Correct! This modal verb indicates obligation and is key to the question being asked."
+                },
+                {
+                    "text": "PEOPLE",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies who the topic is about."
+                },
+                {
+                    "text": "WHO",
+                    "is_correct": true,
+                    "feedback": "Correct! This relative pronoun is important for specifying which people are being discussed."
+                },
+                {
+                    "text": "SUFFER",
+                    "is_correct": true,
+                    "feedback": "Correct! This verb describes the condition of the people being discussed."
+                },
+                {
+                    "text": "FROM",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "HEALTH",
+                    "is_correct": true,
+                    "feedback": "Correct! This adjective specifies the type of consequences."
+                },
+                {
+                    "text": "CONSEQUENCES",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that describes the effects being discussed."
+                },
+                {
+                    "text": "DUE",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's part of a phrase that doesn't carry significant meaning on its own."
+                },
+                {
+                    "text": "TO",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "ADDICTIONS",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies the cause of the health consequences."
+                },
+                {
+                    "text": "NOT BE",
+                    "is_correct": true,
+                    "feedback": "Correct! This negation is crucial to understanding the position being debated."
+                },
+                {
+                    "text": "ENTITLED",
+                    "is_correct": true,
+                    "feedback": "Correct! This verb describes the right or privilege being discussed."
+                },
+                {
+                    "text": "TO",
+                    "is_correct": false,
+                    "feedback": "This is not a keyword. It's a preposition that doesn't carry significant meaning."
+                },
+                {
+                    "text": "HEALTHCARE",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a key noun that identifies what people may or may not be entitled to."
+                }
+            ],
+            "correct_answer": "0|1|2|3|5|6|9|10|11|13",
+            "no_answer_feedback": "You did not select any answers. The correct keywords are: SHOULD, PEOPLE, WHO, SUFFER, HEALTH, CONSEQUENCES, ADDICTIONS, NOT BE, ENTITLED, HEALTHCARE.",
+            "points": 10
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": 70,
+        "layout_type": "two_column_exercise",
+        "exercise_label": "exercise",
+        "scoring_type": "percentage",
+        "timer_minutes": 10,
+        "starting_question_number": 1
+    },
+    "_metadata": {
+        "exported_at": "2026-01-19 09:11:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
