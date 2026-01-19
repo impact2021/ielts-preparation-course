@@ -3102,6 +3102,11 @@ class IELTS_CM_Admin {
             <input type="hidden" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>">
             <?php endif; ?>
             
+            <?php if (isset($question['type']) && $question['type'] === 'closed_question_dropdown'): ?>
+            <!-- Auto-calculated points for closed question dropdown -->
+            <input type="hidden" name="questions[<?php echo $index; ?>][points]" value="<?php echo esc_attr(isset($question['correct_answer_count']) ? $question['correct_answer_count'] : 1); ?>">
+            <?php endif; ?>
+            
             <!-- Closed Question Settings -->
             <?php if (isset($question['type']) && $question['type'] === 'closed_question'): ?>
             <div class="closed-question-help" style="padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107; margin-bottom: 15px;">
@@ -3609,8 +3614,8 @@ class IELTS_CM_Admin {
                     );
                     
                     // Handle multiple choice and multi-select with new structured format
-                    // Also handle headings, matching_classifying, matching, and locating_information which use the same mc_options format
-                    if (in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information')) && isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    // Also handle headings, matching_classifying, matching, locating_information, and closed_question_dropdown which use the same mc_options format
+                    if (in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information', 'closed_question_dropdown')) && isset($question['mc_options']) && is_array($question['mc_options'])) {
                         $mc_options = array();
                         $options_text = array();
                         $option_feedback = array();
@@ -3775,6 +3780,50 @@ class IELTS_CM_Admin {
                         // When checkbox is checked, value is '1', when unchecked, field won't be in POST
                         // Always save explicit true/false, never leave unset
                         $question_data['show_option_letters'] = !empty($question['show_option_letters']);
+                    } elseif ($question['type'] === 'closed_question_dropdown') {
+                        // Handle closed_question_dropdown - save correct_answer_count and generate correct_answer
+                        // This question type was already processed above in the mc_options section for saving mc_options
+                        // Now we need to add the dropdown-specific fields
+                        
+                        // Save correct_answer_count from the admin UI
+                        $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                        $question_data['correct_answer_count'] = max(1, $correct_answer_count);
+                        
+                        // Auto-calculate points based on correct_answer_count (overrides default from line 3600)
+                        // This matches the behavior of closed_question (see line 3772)
+                        $question_data['points'] = $question_data['correct_answer_count'];
+                        
+                        // Generate correct_answer in format "field_1:X|field_2:Y|..." (overrides simple index from line 3645)
+                        // where X, Y are indices of correct options from mc_options
+                        // This special format is required for dropdown validation (see class-quiz-handler.php line 428)
+                        $correct_answer_parts = array();
+                        if (isset($question_data['mc_options']) && is_array($question_data['mc_options'])) {
+                            // Find the correct option indices
+                            $correct_option_indices = array();
+                            foreach ($question_data['mc_options'] as $idx => $option) {
+                                if (!empty($option['is_correct'])) {
+                                    $correct_option_indices[] = $idx;
+                                }
+                            }
+                            
+                            // Build the correct_answer string for each dropdown field
+                            // Only process if there are correct options marked
+                            if (!empty($correct_option_indices)) {
+                                for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
+                                    // For each field, use the corresponding correct option index
+                                    // If there are multiple correct options, distribute them across fields
+                                    // If there are fewer correct options than fields, reuse the first correct option
+                                    $option_idx = isset($correct_option_indices[$field_num - 1]) 
+                                        ? $correct_option_indices[$field_num - 1] 
+                                        : $correct_option_indices[0]; // Safe because $correct_option_indices is not empty
+                                    $correct_answer_parts[] = 'field_' . $field_num . ':' . $option_idx;
+                                }
+                            }
+                        }
+                        
+                        if (!empty($correct_answer_parts)) {
+                            $question_data['correct_answer'] = implode('|', $correct_answer_parts);
+                        }
                     } elseif ($question['type'] === 'open_question') {
                         // Handle open_question - save field_count, field_answers, and field_feedback
                         $question_data['field_count'] = isset($question['field_count']) ? intval($question['field_count']) : 1;
