@@ -1,0 +1,1260 @@
+{
+  "title": "Describing people",
+  "content": "",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the sentence below and select a synonym (a word with the same or similar meaning) from the dropdown to replace the word in <strong>bold</strong>. Be careful of spelling!",
+      "question": "My little sister is a lot of fun most of the time, but sometimes she can be quite <strong>annoying</strong>. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": true,
+          "feedback": "Correct! 'Infuriating' is a synonym for 'annoying' (both mean causing irritation)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'annoying' is 'infuriating' (causing irritation)."
+        }
+      ],
+      "correct_answer": "field_1:18",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "My brother has recently graduated from university. He is very <strong>ambitious</strong> and I think he has a very good career ahead of him. Nobody thought he would be able to achieve so much, but when he decides to do something, he's very <strong>focused</strong> on doing it! SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "determined",
+          "is_correct": true,
+          "feedback": "Correct! 'Determined' is a synonym for 'focused' (both mean having firm purpose/resolve)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'focused' is 'determined' (having firm purpose/resolve)."
+        }
+      ],
+      "correct_answer": "field_1:10",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "My brother used to be quite <strong>argumentative</strong> when we were younger, but we get on quite well now we are both grown up. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": true,
+          "feedback": "Correct! 'Confrontational' is a synonym for 'argumentative' (both mean tending to argue/challenge)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'argumentative' is 'confrontational' (tending to argue/challenge)."
+        }
+      ],
+      "correct_answer": "field_1:12",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "My best friend is a lot of fun to be around. She is really <strong>carefree</strong>. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": true,
+          "feedback": "Correct! 'Light-hearted' is a synonym for 'carefree' (both mean cheerful and free from worry)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'carefree' is 'light-hearted' (cheerful and free from worry)."
+        }
+      ],
+      "correct_answer": "field_1:13",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "I love spending time with my grandfather. He is such a <strong>cheerful</strong> man who loves to laugh. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": true,
+          "feedback": "Correct! 'Jovial' is a synonym for 'cheerful' (both mean happy and jolly)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'cheerful' is 'jovial' (happy and jolly)."
+        }
+      ],
+      "correct_answer": "field_1:14",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "My parents are quite <strong>conventional</strong>; they worry about me living overseas sometimes. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": true,
+          "feedback": "Correct! 'Conservative' is a synonym for 'conventional' (both mean traditional in style)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'conventional' is 'conservative' (traditional in style)."
+        }
+      ],
+      "correct_answer": "field_1:5",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "My grandmother is very <strong>kind</strong>. She would help anyone who had a problem. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": true,
+          "feedback": "Correct! 'Compassionate' is a synonym for 'kind' (both mean showing care and empathy)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'kind' is 'compassionate' (showing care and empathy)."
+        }
+      ],
+      "correct_answer": "field_1:6",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "I have known my best friend since I was 8 years old. I can trust him completely – he's very <strong>loyal</strong>. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": true,
+          "feedback": "Correct! 'Dependable' is a synonym for 'loyal' (both mean reliable and trustworthy)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'loyal' is 'dependable' (reliable and trustworthy)."
+        }
+      ],
+      "correct_answer": "field_1:7",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "I think my parents are quite <strong>open-minded</strong>. They think that different cultures can learn a lot from each other. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": true,
+          "feedback": "Correct! 'Tolerant' is a synonym for 'open-minded' (both mean accepting of different views)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'open-minded' is 'tolerant' (accepting of different views)."
+        }
+      ],
+      "correct_answer": "field_1:8",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "I have a good relationship with my brother, but he can be a little <strong>selfish</strong> at times. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": true,
+          "feedback": "Correct! 'Self centred' is a synonym for 'selfish' (both mean concerned only with oneself)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'selfish' is 'self centred' (concerned only with oneself)."
+        }
+      ],
+      "correct_answer": "field_1:9",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "My friend is very <strong>sensible</strong>. I am glad we are studying overseas together as I feel quite safe. SYNONYM: [dropdown]",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "giving",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "reserved",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "outgoing",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "relaxed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "conceited",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "conservative",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "compassionate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "dependable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "tolerant",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "self centred",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "determined",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "industrious",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "confrontational",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "light-hearted",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "jovial",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "level headed",
+          "is_correct": true,
+          "feedback": "Correct! 'Level headed' is a synonym for 'sensible' (both mean calm and having good judgment)."
+        },
+        {
+          "text": "firm",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "obstinate",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "infuriating",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        },
+        {
+          "text": "lazy",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct synonym for 'sensible' is 'level headed' (calm and having good judgment)."
+        }
+      ],
+      "correct_answer": "field_1:15",
+      "no_answer_feedback": "Please select a synonym for gap 1.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Vocabulary Word Bank",
+      "content": "<strong>Word Bank:</strong> giving, reserved, outgoing, relaxed, conceited, conservative, compassionate, dependable, tolerant, self centred, determined, industrious, confrontational, light-hearted, jovial, level headed, firm, obstinate, infuriating, lazy"
+    }
+  ],
+  "settings": {
+    "pass_percentage": "60",
+    "layout_type": "computer_based",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "15",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-19 18:59:23",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}

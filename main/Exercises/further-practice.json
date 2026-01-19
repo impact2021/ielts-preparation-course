@@ -1,0 +1,90 @@
+{
+  "title": "Further practice",
+  "content": "<p>This exercise will help you practice using comparative and superlative forms in context. Read the text about ramen and select the correct form for each gap.</p>",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the text about ramen by selecting the correct comparative or superlative form from each dropdown menu.",
+      "question": "Although most foreigners associate sushi with Japan, there is actually a wide variety of excellent food. One of [dropdown] is called ramen. There are many shops and restaurants which specialise in ramen and they are convenient places to go after work. [dropdown] way to describe it is as a soup with noodles and other ingredients. [dropdown] thing about ramen is that it is served differently. I mean it has different flavours depending on which part of Japan you eat it in, so you never really get bored with it.\n\nIt's very simple to prepare and so a lot of people make it at home, it's a lot [dropdown] to make than some other Japanese food. The ingredients are very easy to buy if you want to make it at home as they are sold in most supermarkets and convenience stores and you can cook it [dropdown] a lot of other dishes. So to make ramen you simmer kelp, mushrooms and onions in a chicken or pork based stock, add meat and noodles and season with pepper, garlic and sesame seeds. That's the way I make it, but as I said before recipes vary.\n\nOne of my favourite ramen recipes is from Sapporo which is the capital of Hokkaido. Sapporo is probably [dropdown] city for its ramen and the flavour is much [dropdown] in other places because it is made from a base of miso soup. Hokkaido has one of [dropdown] winters in the whole of the country and ramen is very popular there in wintertime. Sapporo ramen usually contains sweet corn, butter, bean sprouts, pork and sometimes local seafood.\n\nAlthough ramen is especially popular in winter, it is really a food that is eaten year round. Ramen shops in big cities are open 24 hours a day and almost always have [dropdown] customers no matter what time of day or night it is. I think there are [dropdown] Japanese people who never eat ramen! It's popular because it is far [dropdown] other types of Japanese cuisine, it's tasty, and it's very convenient.",
+      "correct_answer_count": 11,
+      "mc_options": [
+        {
+          "text": "a few",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "few",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "less complicated",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "less expensive than",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "more quickly than",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "richer than",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "the best",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "the coldest",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "the most famous",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "the most interesting",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        },
+        {
+          "text": "the most popular",
+          "is_correct": false,
+          "feedback": "Please check your answer."
+        }
+      ],
+      "no_answer_feedback": "Please complete all dropdowns before submitting.",
+      "points": 11,
+      "correct_answer": "field_1:10|field_2:6|field_3:9|field_4:2|field_5:4|field_6:8|field_7:5|field_8:7|field_9:0|field_10:1|field_11:3"
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "60",
+    "layout_type": "computer_based",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "15",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-19 19:00:00",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}
