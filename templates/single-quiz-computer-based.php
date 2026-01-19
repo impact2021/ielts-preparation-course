@@ -595,6 +595,11 @@ if ($lesson_id) {
                                     }
                                 }
                                 
+                                // For closed_question_dropdown, always skip since it renders inline dropdowns
+                                if ($question['type'] === 'closed_question_dropdown') {
+                                    $skip_question_text[] = 'closed_question_dropdown';
+                                }
+                                
                                 if (!in_array($question['type'], $skip_question_text)):
                                 ?>
                                 <div class="question-text"><?php echo wp_kses_post(wpautop($question['question'])); ?></div>
@@ -1052,6 +1057,76 @@ if ($lesson_id) {
                                             </div>
                                             <?php
                                             endif;
+                                        }
+                                        break;
+                                        
+                                    case 'closed_question_dropdown':
+                                        // Closed Question Dropdown - Multiple choice rendered as inline dropdowns
+                                        // Uses [dropdown] placeholder in question text, similar to open_question's [blank]
+                                        // Supports single or multiple dropdowns based on correct_answer_count
+                                        
+                                        $options = array();
+                                        if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                                            $options = $question['mc_options'];
+                                        } elseif (isset($question['options']) && !empty($question['options'])) {
+                                            $option_lines = array_filter(explode("\n", $question['options']));
+                                            foreach ($option_lines as $opt_text) {
+                                                $options[] = array('text' => trim($opt_text));
+                                            }
+                                        }
+                                        
+                                        $correct_answer_count = isset($question['correct_answer_count']) ? intval($question['correct_answer_count']) : 1;
+                                        $question_text = isset($question['question']) ? $question['question'] : '';
+                                        
+                                        if (!empty($options) && !empty($question_text)) {
+                                            // Process question text to replace [dropdown] placeholders
+                                            $allowed_html = wp_kses_allowed_html('post');
+                                            $allowed_html['select'] = array(
+                                                'name' => true,
+                                                'class' => true,
+                                                'data-field-num' => true,
+                                            );
+                                            $allowed_html['option'] = array(
+                                                'value' => true,
+                                                'selected' => true,
+                                            );
+                                            
+                                            $processed_text = $question_text;
+                                            $dropdown_num = 1;
+                                            
+                                            // Replace each [dropdown] placeholder with a select element
+                                            while ($dropdown_num <= $correct_answer_count) {
+                                                // Check if placeholder exists before attempting replacement
+                                                if (stripos($processed_text, '[dropdown]') === false) {
+                                                    break; // No more placeholders to replace
+                                                }
+                                                
+                                                // Build the select dropdown
+                                                $select_field = '<select name="answer_' . esc_attr($index) . '_field_' . esc_attr($dropdown_num) . '" class="answer-select-inline closed-question-dropdown" data-field-num="' . esc_attr($dropdown_num) . '">';
+                                                $select_field .= '<option value="">-</option>'; // Empty default option
+                                                
+                                                // Add all options to the dropdown
+                                                foreach ($options as $opt_index => $option) {
+                                                    $option_text = isset($option['text']) ? $option['text'] : $option;
+                                                    $select_field .= '<option value="' . esc_attr($opt_index) . '">' . esc_html($option_text) . '</option>';
+                                                }
+                                                
+                                                $select_field .= '</select>';
+                                                
+                                                // Replace the first occurrence of [dropdown] and verify replacement happened
+                                                $new_text = preg_replace('/\[dropdown\]/i', $select_field, $processed_text, 1);
+                                                if ($new_text === $processed_text) {
+                                                    // No replacement occurred, break to prevent infinite loop
+                                                    break;
+                                                }
+                                                $processed_text = $new_text;
+                                                $dropdown_num++;
+                                            }
+                                            
+                                            echo '<div class="closed-question-dropdown-text">' . wp_kses(wpautop($processed_text), $allowed_html) . '</div>';
+                                        } else {
+                                            // Fallback: show question text as-is if no options or text
+                                            echo '<div class="closed-question-dropdown-text">' . wp_kses_post(wpautop($question_text)) . '</div>';
                                         }
                                         break;
                                         
