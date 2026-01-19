@@ -2804,7 +2804,7 @@ class IELTS_CM_Admin {
             </div>
             
             <!-- New structured options for multiple choice -->
-            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information', 'closed_question'))) ? 'display:none;' : ''; ?>">
+            <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information', 'closed_question', 'closed_question_dropdown'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
                 <div class="mc-options-container" data-question-index="<?php echo $index; ?>">
                     <?php
