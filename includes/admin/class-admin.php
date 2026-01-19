@@ -3073,7 +3073,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion', 'open_question', 'closed_question'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion', 'open_question', 'closed_question', 'closed_question_dropdown'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -3621,16 +3621,42 @@ class IELTS_CM_Admin {
                         $option_feedback = array();
                         $correct_answer = null;
                         
+                        // For closed_question_dropdown, we need to preserve original indices
+                        // because the frontend uses them for validation
+                        $is_dropdown = ($question['type'] === 'closed_question_dropdown');
+                        
                         foreach ($question['mc_options'] as $idx => $option) {
                             if (empty($option['text'])) {
-                                continue; // Skip empty options
+                                // For dropdown questions, we MUST preserve indices, so add empty placeholder
+                                // For other question types, skip empty options to maintain legacy behavior
+                                if (!$is_dropdown) {
+                                    continue; // Skip empty options
+                                }
+                                // Add empty option to preserve index for dropdown
+                                $mc_options[$idx] = array(
+                                    'text' => '',
+                                    'is_correct' => false,
+                                    'feedback' => ''
+                                );
+                                $options_text[] = '';
+                                $option_feedback[] = '';
+                                continue;
                             }
                             
-                            $mc_options[] = array(
-                                'text' => sanitize_text_field($option['text']),
-                                'is_correct' => !empty($option['is_correct']),
-                                'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
-                            );
+                            // Use explicit index assignment for dropdowns to preserve original indices
+                            if ($is_dropdown) {
+                                $mc_options[$idx] = array(
+                                    'text' => sanitize_text_field($option['text']),
+                                    'is_correct' => !empty($option['is_correct']),
+                                    'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
+                                );
+                            } else {
+                                $mc_options[] = array(
+                                    'text' => sanitize_text_field($option['text']),
+                                    'is_correct' => !empty($option['is_correct']),
+                                    'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
+                                );
+                            }
                             
                             // Also create legacy format for backward compatibility
                             $options_text[] = sanitize_text_field($option['text']);
