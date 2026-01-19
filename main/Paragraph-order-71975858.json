@@ -43,7 +43,7 @@
                 }
             ],
             "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E",
-            "correct_answer": "2",
+            "correct_answer": "field_1:2",
             "option_feedback": [
                 "",
                 "",
@@ -93,7 +93,7 @@
                 }
             ],
             "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E",
-            "correct_answer": "4",
+            "correct_answer": "field_1:4",
             "option_feedback": [
                 "",
                 "",
@@ -143,7 +143,7 @@
                 }
             ],
             "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E",
-            "correct_answer": "0",
+            "correct_answer": "field_1:0",
             "option_feedback": [
                 "",
                 "",
@@ -193,7 +193,7 @@
                 }
             ],
             "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E",
-            "correct_answer": "1",
+            "correct_answer": "field_1:1",
             "option_feedback": [
                 "",
                 "",
@@ -243,7 +243,7 @@
                 }
             ],
             "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E",
-            "correct_answer": "3",
+            "correct_answer": "field_1:3",
             "option_feedback": [
                 "",
                 "",
