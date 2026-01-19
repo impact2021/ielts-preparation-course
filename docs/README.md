@@ -11,11 +11,18 @@ Complete guide for embedding videos (YouTube, Vimeo, etc.) in Sub Lesson pages, 
 - Frontend display behavior
 - Troubleshooting tips
 
+### [Dropdown Question Type FAQ](../DROPDOWN-QUESTION-FAQ.md)
+Quick reference for using dropdown questions in exercises:
+- Where to put dropdown options
+- Complete working examples
+- Common mistakes to avoid
+
 ## Quick Links
 
 ### For Content Creators
 - **Adding Videos**: See [VIDEO-FIELD-GUIDE.md](VIDEO-FIELD-GUIDE.md)
 - **Creating Exercises**: See main TEMPLATES directory
+- **Dropdown Questions**: See [DROPDOWN-QUESTION-FAQ.md](../DROPDOWN-QUESTION-FAQ.md)
 
 ### For Developers
 - **Template Files**: See `/TEMPLATES` directory
