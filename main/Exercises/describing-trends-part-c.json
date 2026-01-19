@@ -1,0 +1,110 @@
+{
+    "title": "Describing Trends - Part C",
+    "content": "<p>Is this a good plan for the Task 1 graph below? Select the correct answer for each planning scenario.</p>\n\n<p>When planning your IELTS Writing Task 1 response, it's important to organize your paragraphs coherently. A good plan should:</p>\n<ul>\n<li>Use a consistent organizational approach (e.g., by time periods or by categories)</li>\n<li>Avoid mixing different presentation styles within the same essay</li>\n<li>Ensure each paragraph has a clear focus</li>\n<li>Present information in a logical sequence</li>\n</ul>",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Read the plan below and decide if it is a good plan for describing the Task 1 graph.",
+            "question": "Is this a good plan for the Task 1 graph below?\n\nParagraph 1:\n• From 1980 to 1985 tourism income declining, raw materials increasing, exported goods stable.\n• From 1985 to 1990, exported goods = highest increase\n• Tourism increases to above 1980 level\n• Raw material income declines slightly\n\nParagraph 2:\n• From 1985, tourism increased\n• This increase slowed slightly in 2000.\n• Reached about $1,500,000 by 2005\n\nParagraph 3:\n• From 1990 to 2005, raw materials increased despite slight decline from 1995 to 2000.\n• Exported goods remained about the same in 2005 as it was in 1990",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. This is NOT a good plan because it mixes different presentation styles, which reduces cohesion and coherence.",
+            "correct_feedback": "Correct! This is not a good plan because the first paragraph divides the graph into different years, the second paragraph focuses only on tourism, and the third paragraph returns to presenting information from 1990 to 2005. Mixing presentation styles like this will mean that your essay will suffer from a lack of cohesion and coherence.",
+            "incorrect_feedback": "Incorrect. This is NOT a good plan. The first paragraph divides the graph into different years, the second paragraph focuses only on tourism, and the third paragraph returns to presenting information from 1990 to 2005. Mixing presentation styles like this will mean that your essay will suffer from a lack of cohesion and coherence.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Yes, this is a good plan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is NOT a good plan because the first paragraph divides the graph into different years, the second paragraph focuses only on tourism, and the third paragraph returns to presenting information from 1990 to 2005. Mixing presentation styles like this will mean that your essay will suffer from a lack of cohesion and coherence."
+                },
+                {
+                    "text": "No, this is NOT a good plan",
+                    "is_correct": true,
+                    "feedback": "Correct! This is not a good plan because the first paragraph divides the graph into different years, the second paragraph focuses only on tourism, and the third paragraph returns to presenting information from 1990 to 2005. Mixing presentation styles like this will mean that your essay will suffer from a lack of cohesion and coherence."
+                }
+            ],
+            "options": "Yes, this is a good plan\nNo, this is NOT a good plan",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Read the plan below and decide if it is a good plan for describing the Task 1 graph.",
+            "question": "Is this a good plan for the Task 1 graph below?\n\nParagraph 1:\n• From 1980 to 1985 tourism income declining, raw materials increasing, exported goods stable.\n• Exported goods remain level\n• Raw material income increases slightly\n• Tourism falls\n\nParagraph 2:\n• From 1985 to 1990, tourism and exported goods increased (sharply for exported goods, moderately for tourism).\n• Raw materials had a slight decline.\n• Tourism rises above 1980 level\n\nParagraph 3:\n• From 1990 to 2005, raw materials increased despite slight decline from 1995 to 2000.\n• Exported goods remained about the same in 2005 as it was in 1990\n• Tourism continued to increase – rise became slightly less dramatic from 2000.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. This IS a good plan because it consistently organizes the information by time periods.",
+            "correct_feedback": "Correct! This is a good plan. In this plan, the candidate has broken the paragraphs into three date ranges (1980 to 1985 for paragraph 1, 1985 to 1990 in paragraph 2 and 1990 to 2005 in the final paragraph). This consistent approach by time period creates good cohesion and coherence.",
+            "incorrect_feedback": "Incorrect. This IS a good plan. In this plan, the candidate has broken the paragraphs into three date ranges (1980 to 1985 for paragraph 1, 1985 to 1990 in paragraph 2 and 1990 to 2005 in the final paragraph). This consistent approach by time period creates good cohesion and coherence.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Yes, this is a good plan",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a good plan. In this plan, the candidate has broken the paragraphs into three date ranges (1980 to 1985 for paragraph 1, 1985 to 1990 in paragraph 2 and 1990 to 2005 in the final paragraph). This consistent approach by time period creates good cohesion and coherence."
+                },
+                {
+                    "text": "No, this is NOT a good plan",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This IS a good plan. In this plan, the candidate has broken the paragraphs into three date ranges (1980 to 1985 for paragraph 1, 1985 to 1990 in paragraph 2 and 1990 to 2005 in the final paragraph). This consistent approach by time period creates good cohesion and coherence."
+                }
+            ],
+            "options": "Yes, this is a good plan\nNo, this is NOT a good plan",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Read the plan below and decide if it is a good plan for describing the Task 1 graph.",
+            "question": "Is this a good plan for the Task 1 graph below?\n\nParagraph 1:\n• Exported goods showed no movement for the first five years.\n• A slight increase was followed by a marginal decline until 1995\n• From 1995 to 2000 increased again (not as sharply as 1985 to 1990).\n• Finished by levelling off at a higher level than 1980 to 1985.\n\nParagraph 2:\n• Tourism started by decreasing from 1980 to 1985.\n• From 1985, tourism increased\n• This increase slowed slightly in 2000.\n• Reached about $1,500,000 by 2005\n\nParagraph 3:\n• From 1980 to 1985, raw material increased (the only one of the three on the graph that increased)\n• A slight decline followed by significant increase from 1990 to 1995.\n• 1995 – decrease but improved slightly 2000 to 2005.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. This IS a good plan because it consistently organizes the information by category (each paragraph focuses on one data series).",
+            "correct_feedback": "Correct! This is a good plan. The candidate has organized the response by category, with each paragraph describing one of the three data series (exported goods, tourism, and raw materials) across the entire time period. This consistent approach creates good cohesion and coherence.",
+            "incorrect_feedback": "Incorrect. This IS a good plan. The candidate has organized the response by category, with each paragraph describing one of the three data series (exported goods, tourism, and raw materials) across the entire time period. This consistent approach creates good cohesion and coherence.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Yes, this is a good plan.",
+                    "is_correct": true,
+                    "feedback": "Correct! This is a good plan. The candidate has organized the response by category, with each paragraph describing one of the three data series (exported goods, tourism, and raw materials) across the entire time period. This consistent approach creates good cohesion and coherence."
+                },
+                {
+                    "text": "No, this is NOT a good plan.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This IS a good plan. The candidate has organized the response by category, with each paragraph describing one of the three data series (exported goods, tourism, and raw materials) across the entire time period. This consistent approach creates good cohesion and coherence."
+                }
+            ],
+            "options": "Yes, this is a good plan.\nNo, this is NOT a good plan.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "10",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-19 02:27:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}

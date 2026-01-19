@@ -1,0 +1,96 @@
+{
+    "title": "Describing Trends - Part A",
+    "content": "<p>Look again at the line graph we used in the lesson. Read the body paragraphs and complete the text using a verb, noun, adverb or adjective to describe the trends. Use past simple verbs for this exercise. The first letter of the missing words have been given for you. Type your answers in to the spaces given.</p>",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Complete the text below by filling in the blanks with the appropriate word type (verb, noun, adverb, or adjective). The first letter of each word is provided.",
+            "question": "The UK started at the lowest point, but increased m[field 1] (adverb) up to 1950; followed by the most d[field 2] (adjective) rise of all the countries from 1950 to 1960. In 1970 the UK p[field 3] (verb) at about 40%; slightly higher than New Zealand. From 1970, the UK f[field 4] (verb) to be the lowest of all the countries. Both Australia and New Zealand c[field 5] (verb) for the first ten years but New Zealand then d[field 6] (verb) to under 40%. From 1960 onwards, New Zealand and Australia remained relatively close, with New Zealand finishing at approximately the same level at which it started. For the first 20 years, the USA s[field 7] (verb), reaching a p[field 8] (noun) of approximately 50%. Despite a brief recovery in 1970, the USA fell to below 40% then s[field 9] (verb) to show a similar trend to the UK.",
+            "points": 9,
+            "no_answer_feedback": "Please complete all the blanks. Review the lesson on describing trends and remember to use the correct word types (verbs should be in past simple).",
+            "correct_feedback": "Excellent! You have correctly identified all the words to describe trends.",
+            "incorrect_feedback": "Not quite right. Review the feedback for each field and try again.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 9,
+            "field_answers": {
+                "1": "moderately|oderately",
+                "2": "dramatic|ramatic",
+                "3": "peaked|eaked",
+                "4": "fell|ell",
+                "5": "climbed|limbed",
+                "6": "dropped|declined|decreased|deteriorated|ropped|eclined|ecreased|eteriorated",
+                "7": "soared|oared",
+                "8": "peak|eak",
+                "9": "stabilised|stabilized|tabilised|tabilized"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! 'Moderately' is an adverb that describes how the UK increased.",
+                    "incorrect": "Incorrect. The correct answer is 'moderately' (adverb). It describes how the increase happened.",
+                    "no_answer": "The correct answer is: moderately (adverb). This describes the manner of the increase."
+                },
+                "2": {
+                    "correct": "Correct! 'Dramatic' is an adjective that describes the rise.",
+                    "incorrect": "Incorrect. The correct answer is 'dramatic' (adjective). It describes the type of rise.",
+                    "no_answer": "The correct answer is: dramatic (adjective). This describes the nature of the rise."
+                },
+                "3": {
+                    "correct": "Correct! 'Peaked' is a verb (past simple) meaning reached the highest point.",
+                    "incorrect": "Incorrect. The correct answer is 'peaked' (verb). It means reached the highest point.",
+                    "no_answer": "The correct answer is: peaked (verb, past simple). This means reached the highest point."
+                },
+                "4": {
+                    "correct": "Correct! 'Fell' is a verb (past simple) meaning decreased or dropped.",
+                    "incorrect": "Incorrect. The correct answer is 'fell' (verb). It means decreased or dropped.",
+                    "no_answer": "The correct answer is: fell (verb, past simple). This means decreased or dropped."
+                },
+                "5": {
+                    "correct": "Correct! 'Climbed' is a verb (past simple) meaning increased or rose.",
+                    "incorrect": "Incorrect. The correct answer is 'climbed' (verb). It means increased or rose.",
+                    "no_answer": "The correct answer is: climbed (verb, past simple). This means increased or rose."
+                },
+                "6": {
+                    "correct": "Correct! You used a verb (past simple) that means decreased or fell.",
+                    "incorrect": "Incorrect. The correct answer is one of: dropped/declined/decreased/deteriorated (verb). These mean fell or reduced.",
+                    "no_answer": "The correct answer is one of: dropped/declined/decreased/deteriorated (verb, past simple). These mean fell or reduced."
+                },
+                "7": {
+                    "correct": "Correct! 'Soared' is a verb (past simple) meaning increased rapidly.",
+                    "incorrect": "Incorrect. The correct answer is 'soared' (verb). It means increased rapidly or dramatically.",
+                    "no_answer": "The correct answer is: soared (verb, past simple). This means increased rapidly or dramatically."
+                },
+                "8": {
+                    "correct": "Correct! 'Peak' is a noun meaning the highest point.",
+                    "incorrect": "Incorrect. The correct answer is 'peak' (noun). It means the highest point.",
+                    "no_answer": "The correct answer is: peak (noun). This means the highest point."
+                },
+                "9": {
+                    "correct": "Correct! 'Stabilised/stabilized' is a verb (past simple) meaning became steady.",
+                    "incorrect": "Incorrect. The correct answer is 'stabilised' or 'stabilized' (verb). It means became steady.",
+                    "no_answer": "The correct answer is: stabilised/stabilized (verb, past simple). This means became steady."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "15",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-19 02:27:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
