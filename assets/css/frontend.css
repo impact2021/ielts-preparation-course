@@ -483,11 +483,11 @@ body.ielts-course-archive .content-area {
 .ielts-single-quiz .answer-input-inline {
     display: inline-block;
     width: 200px;
-    padding: 8px;
+    padding: 0 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    margin: 0 5px;
+    margin: 2px 5px;
     vertical-align: middle;
 }
 
@@ -513,11 +513,11 @@ body.ielts-course-archive .content-area {
     display: inline-block;
     width: auto;
     min-width: 150px;
-    padding: 8px;
+    padding: 0 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    margin: 0 5px;
+    margin: 2px 5px;
     vertical-align: middle;
     background-color: #fff;
     cursor: pointer;
@@ -1068,11 +1068,11 @@ body.ielts-course-archive .content-area {
 .ielts-computer-based-quiz .answer-input-inline {
     display: inline-block;
     width: 200px;
-    padding: 8px;
+    padding: 0 8px;
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    margin: 0 5px;
+    margin: 2px 5px;
     vertical-align: middle;
     transition: border-color 0.2s ease;
 }
@@ -1099,11 +1099,11 @@ body.ielts-course-archive .content-area {
     display: inline-block;
     width: auto;
     min-width: 150px;
-    padding: 8px;
+    padding: 0 8px;
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-    margin: 0 5px;
+    margin: 2px 5px;
     vertical-align: middle;
     background-color: #fff;
     cursor: pointer;
@@ -2602,7 +2602,8 @@ p.transcript-highlight {
 
 .ielts-listening-practice-quiz .answer-input-inline,
 .ielts-listening-exercise-quiz .answer-input-inline {
-    padding: 6px 10px;
+    padding: 0 10px;
+    margin: 2px 0;
     font-size: 1em;
     border: 2px solid #ddd;
     border-radius: 4px;
@@ -2619,7 +2620,8 @@ p.transcript-highlight {
 
 .ielts-listening-practice-quiz .answer-select-inline,
 .ielts-listening-exercise-quiz .answer-select-inline {
-    padding: 6px 10px;
+    padding: 0 10px;
+    margin: 2px 0;
     font-size: 1em;
     border: 2px solid #ddd;
     border-radius: 4px;
