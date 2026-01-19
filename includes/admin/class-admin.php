@@ -3073,7 +3073,7 @@ class IELTS_CM_Admin {
                 <textarea name="questions[<?php echo $index; ?>][options]" rows="4" style="width: 100%;"><?php echo esc_textarea(isset($question['options']) ? $question['options'] : ''); ?></textarea>
             </p>
             
-            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion', 'open_question', 'closed_question'))) ? 'display:none;' : ''; ?>">
+            <p class="correct-answer-field" style="<?php echo (isset($question['type']) && in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'dropdown_paragraph', 'summary_completion', 'table_completion', 'open_question', 'closed_question', 'closed_question_dropdown'))) ? 'display:none;' : ''; ?>">
                 <label><?php _e('Correct Answer', 'ielts-course-manager'); ?></label><br>
                 <?php if (isset($question['type']) && $question['type'] === 'true_false'): ?>
                     <select name="questions[<?php echo $index; ?>][correct_answer]" style="width: 100%;">
@@ -3621,24 +3621,56 @@ class IELTS_CM_Admin {
                         $option_feedback = array();
                         $correct_answer = null;
                         
+                        // For closed_question_dropdown, we need to preserve original indices
+                        // because the frontend uses them for validation
+                        $is_dropdown = ($question['type'] === 'closed_question_dropdown');
+                        
                         foreach ($question['mc_options'] as $idx => $option) {
                             if (empty($option['text'])) {
-                                continue; // Skip empty options
+                                if ($is_dropdown) {
+                                    // For dropdown questions, we MUST preserve indices, so add empty placeholder
+                                    $mc_options[$idx] = array(
+                                        'text' => '',
+                                        'is_correct' => false,
+                                        'feedback' => ''
+                                    );
+                                    // For legacy arrays, also preserve indices for dropdown questions
+                                    $options_text[$idx] = '';
+                                    $option_feedback[$idx] = '';
+                                    continue;
+                                } else {
+                                    // For other question types, skip empty options to maintain legacy behavior
+                                    continue;
+                                }
                             }
                             
-                            $mc_options[] = array(
-                                'text' => sanitize_text_field($option['text']),
-                                'is_correct' => !empty($option['is_correct']),
-                                'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
-                            );
+                            // Use explicit index assignment for dropdowns to preserve original indices
+                            if ($is_dropdown) {
+                                $mc_options[$idx] = array(
+                                    'text' => sanitize_text_field($option['text']),
+                                    'is_correct' => !empty($option['is_correct']),
+                                    'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
+                                );
+                                // Also preserve indices in legacy arrays for dropdown questions
+                                $options_text[$idx] = sanitize_text_field($option['text']);
+                                $option_feedback[$idx] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
+                            } else {
+                                $mc_options[] = array(
+                                    'text' => sanitize_text_field($option['text']),
+                                    'is_correct' => !empty($option['is_correct']),
+                                    'feedback' => isset($option['feedback']) ? wp_kses_post($option['feedback']) : ''
+                                );
+                                // Also create legacy format for backward compatibility
+                                $options_text[] = sanitize_text_field($option['text']);
+                                $option_feedback[] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
+                            }
                             
-                            // Also create legacy format for backward compatibility
-                            $options_text[] = sanitize_text_field($option['text']);
-                            $option_feedback[] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
-                            
-                            // Track first correct answer for legacy format (for multiple_choice)
+                            // Track first correct answer for legacy format
+                            // Note: For dropdown questions, this value is not actually used - the proper
+                            // correct_answer is generated in field_X:Y format in the dedicated dropdown section below
                             if (!empty($option['is_correct']) && $correct_answer === null) {
-                                $correct_answer = count($options_text) - 1;
+                                // For dropdown, use actual index; for others, use sequential count
+                                $correct_answer = $is_dropdown ? $idx : count($options_text) - 1;
                             }
                         }
                         

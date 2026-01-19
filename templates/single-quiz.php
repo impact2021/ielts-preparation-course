@@ -726,6 +726,10 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         // Add all options to the dropdown
                                         foreach ($options as $opt_index => $option) {
                                             $option_text = isset($option['text']) ? $option['text'] : $option;
+                                            // Skip empty options (they were preserved to maintain indices, but shouldn't be shown)
+                                            if (empty($option_text)) {
+                                                continue;
+                                            }
                                             $select_field .= '<option value="' . esc_attr($opt_index) . '">' . esc_html($option_text) . '</option>';
                                         }
                                         
