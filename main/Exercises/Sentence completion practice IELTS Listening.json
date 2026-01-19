@@ -1,0 +1,283 @@
+{
+  "title": "Sentence completion practice IELTS Listening",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Complete the sentences below. Write <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> for each answer.",
+      "question": "Although New Zealand is relatively young and small in [field 1], it is able to demonstrate its presence in an international sporting context.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "population"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The speaker says New Zealand has a small population.",
+          "incorrect": "Incorrect. The transcript refers to population size, not geography.",
+          "no_answer": "Please provide an answer. Consider what New Zealand is small in."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "In the [field 1] Charles Munro introduced rugby to New Zealand from the UK.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "late 1860s"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Rugby was introduced in the late 1860s.",
+          "incorrect": "Incorrect. Listen for the time period mentioned.",
+          "no_answer": "Please provide an answer. Look for when rugby was introduced."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The Haka is performed by the All Blacks at the beginning of a game in the [field 1] spirit of Maori tribes.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "traditional"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The haka is performed in the traditional spirit of Maori tribes.",
+          "incorrect": "Incorrect. The transcript uses the word 'traditional'.",
+          "no_answer": "Please provide an answer. Think about the cultural meaning of the haka."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Rugby was played by New Zealand troops during the 2nd World War to develop team work, willpower, fitness and [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "strength"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Rugby helped develop strength.",
+          "incorrect": "Incorrect. Strength is named alongside fitness and teamwork.",
+          "no_answer": "Please provide an answer. Listen for the physical quality mentioned."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The All Blacks first played internationally in [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "1884"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The All Blacks first played internationally in 1884.",
+          "incorrect": "Incorrect. A specific year is given in the transcript.",
+          "no_answer": "Please provide an answer. Listen for the year."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "In New Zealand, playing sports and spending time in the open air is [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "highly valued"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Outdoor sport is described as highly valued.",
+          "incorrect": "Incorrect. The speaker emphasises the importance of outdoor activity.",
+          "no_answer": "Please provide an answer. Consider how sport is viewed."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Membership of the Golden Oldies facilitates participation in sports until [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "late in life"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Golden Oldies allow participation late in life.",
+          "incorrect": "Incorrect. The transcript explains how long participation continues.",
+          "no_answer": "Please provide an answer. Listen for the time reference."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Rugby quickly became popular in New Zealand because it suited the country's [field 1] lifestyle.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "physical"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Rugby suited New Zealand's physical lifestyle.",
+          "incorrect": "Incorrect. The word used is 'physical'.",
+          "no_answer": "Please provide an answer. Listen for how the lifestyle is described."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Rugby helped to create a strong sense of national [field 1] in New Zealand.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "identity"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Rugby helped form a national identity.",
+          "incorrect": "Incorrect. The transcript links rugby with identity.",
+          "no_answer": "Please provide an answer. Listen for what rugby helped create."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The success of the All Blacks has helped New Zealand gain international [field 1].",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "recognition"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. Sporting success brought international recognition.",
+          "incorrect": "Incorrect. The transcript mentions recognition.",
+          "no_answer": "Please provide an answer. Listen for how New Zealand is seen internationally."
+        }
+      }
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Rugby in New Zealand",
+      "content": "More information coming soon"
+    }
+  ],
+  "settings": {
+    "pass_percentage": "60",
+    "layout_type": "two_column_listening",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "",
+    "starting_question_number": "1"
+  },
+  "audio": {
+    "url": "https://www.ieltstestonline.com/2026/wp-content/uploads/2018/11/Rugby.mp3",
+    "transcript": "In this seminar we are going to think about the impact that sport has on the New Zealand identity of today and how the nation's commitment to sport has impacted throughout history.\r\n\r\nNow, New Zealand, as we know, is a relatively young country, is (Q31) geographically isolated and has a small population. Despite these factors, however, it manages to compete on an international sporting platform – in rugby in particular – against much larger, longer established and more powerful nations. The game of rugby was first introduced to New Zealand by Charles Munro in (Q32) the late 1860s, after he discovered the sport while studying at Christ's College in the UK . Today, the New Zealand team, 'the All Blacks' are an internationally renowned rugby team, not only for their sporting prowess but also the infamous performance – the haka – done at the beginning of international rugby competitions. The haka is performed in the (Q33) traditional spirit of Maori tribes as a means of intimidating the enemy prior to combat.\r\n\r\nThe significance of rugby in history was highlighted during the 2nd World War when New Zealand forces decided to hold a rugby competition, with the intention of building (Q34) strength, fitness, determination and team work amongst the soldiers. The 2nd World War was the first time that Maori troops were engaged in international warfare.\r\n\r\nMaori soldiers went to battle as part of the newly established 28th Battalion, which was an all-Maori troop. They quickly established a reputation for being formidable and well disciplined soldiers and it was once said of them that command of the Maori Battalion would facilitate the conquering of the world. Today, the All Black Rugby team have a similar reputation of being an invincible and highly skilled opposition. The team has competed internationally since (Q35) 1884 when they played against a visiting Australian team from New South Wales . Since the early days, rugby facilitated cohesion between different social groups, while many aspects of life were not necessarily open to all.\r\n\r\nTo this day, while in many parts of the world life is becoming more sedentary, for a vast number of New Zealand families, participation in sporting activities and time spent outdoors is (Q36) highly valued. Children are commonly encouraged to join a sporting group by parents and schools alike. It's common for children to participate in a team from as early as 5 years old, and membership opportunities extend to (Q37) late in life through clubs such as the 'Golden Oldies'. Undoubtedly the continued success of the All Blacks continues to keep the national interest, some might say obsession with the sport, alive.\r\n\r\nI would now like to hear the thoughts of each of the groups on how attitudes to sports in New Zealand compare or contrast with the country you have selected for research.",
+    "sections": []
+  },
+  "_metadata": {
+    "exported_at": "2026-01-19 18:07:57",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}
