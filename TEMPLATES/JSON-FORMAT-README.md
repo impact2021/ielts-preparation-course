@@ -22,6 +22,9 @@ JSON import is now the **recommended** way to import exercises into the IELTS Co
 
 ## Quick Start
 
+**❓ Common Questions:**
+- "Where do I put dropdown options?" → See **[DROPDOWN-QUESTION-FAQ.md](../DROPDOWN-QUESTION-FAQ.md)**
+
 1. Download `example-exercise.json` as a template
 2. Edit the JSON file with your content
 3. In WordPress admin: Quizzes → Edit Quiz → Import from JSON section
@@ -210,6 +213,8 @@ Covers multiple question numbers based on `correct_answer_count`.
 ### Closed Question Dropdown (Multiple Choice with Inline Dropdowns)
 
 This is a variant of closed_question that displays options as inline dropdown menus within the question text. Use `[dropdown]` placeholders in your question text to specify where dropdowns should appear.
+
+> **💡 Quick Question?** "Where do I put the dropdown options?" → See **[DROPDOWN-QUESTION-FAQ.md](../DROPDOWN-QUESTION-FAQ.md)** for a focused answer with examples!
 
 **Single Dropdown:**
 ```json
