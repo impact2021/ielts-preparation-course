@@ -1,10 +1,25 @@
 # Dropdown Question Type - FAQ
 
+## ⚠️ IMPORTANT: JSON Import Only
+
+**The `closed_question_dropdown` type is ONLY available through JSON import.** It is NOT available in the WordPress admin interface when creating exercises manually.
+
+### How to Create Dropdown Questions
+
+You have two options:
+
+1. **JSON Import** (Recommended for dropdown questions) - Use the `closed_question_dropdown` type as documented below
+2. **WordPress Admin UI** - Only supports standard `closed_question` (traditional multiple choice) and `open_question` (text input) types
+
+---
+
 ## Question: Where do I put the dropdown options?
 
-### Quick Answer
+### Quick Answer (For JSON Import)
 
 For the `[dropdown]` question type (technically called `closed_question_dropdown`), you put the dropdown options in the **`mc_options`** array, just like a regular multiple choice question. The `[dropdown]` placeholder in your question text is where the dropdown menu will appear.
+
+**Note:** This question type must be created via JSON import - it cannot be created directly in the WordPress admin interface.
 
 ---
 
@@ -146,6 +161,13 @@ See the full documentation:
 
 ## Common Mistakes
 
+### ❌ Wrong: Trying to create in WordPress Admin UI
+The `closed_question_dropdown` type is **not available** in the WordPress admin interface. You will only see:
+- **Closed Question** (traditional multiple choice with radio buttons/checkboxes)
+- **Open Question** (text input fields)
+
+To use inline dropdown questions, you **must use JSON import**.
+
 ### ❌ Wrong: Creating a separate dropdown_options field
 ```json
 {
@@ -155,7 +177,7 @@ See the full documentation:
 }
 ```
 
-### ✅ Correct: Use mc_options array
+### ✅ Correct: Use mc_options array (via JSON import)
 ```json
 {
   "type": "closed_question_dropdown",
@@ -168,6 +190,21 @@ See the full documentation:
   "correct_answer": "field_1:1"
 }
 ```
+
+---
+
+## If You're Using the WordPress Admin Interface...
+
+If you're seeing the WordPress admin interface (like in the screenshot with many dropdown option fields), you're using the standard **Closed Question** type, not `closed_question_dropdown`.
+
+**What you're seeing is the UI for traditional multiple choice questions** with radio buttons or checkboxes - not inline dropdown questions.
+
+### To create inline dropdown questions:
+1. Create a JSON file with your exercise (see examples above)
+2. Go to WordPress Admin → Quizzes → Edit Quiz
+3. Find the "Import from JSON" section
+4. Upload your JSON file
+5. The `closed_question_dropdown` type will be imported and work correctly
 
 ---
 
