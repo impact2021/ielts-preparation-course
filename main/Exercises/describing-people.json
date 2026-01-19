@@ -1243,7 +1243,7 @@
   ],
   "settings": {
     "pass_percentage": "60",
-    "layout_type": "computer_based",
+    "layout_type": "one_column_exercise",
     "cbt_test_type": "",
     "exercise_label": "exercise",
     "open_as_popup": "",
