@@ -3627,21 +3627,21 @@ class IELTS_CM_Admin {
                         
                         foreach ($question['mc_options'] as $idx => $option) {
                             if (empty($option['text'])) {
-                                // For dropdown questions, we MUST preserve indices, so add empty placeholder
-                                // For other question types, skip empty options to maintain legacy behavior
-                                if (!$is_dropdown) {
-                                    continue; // Skip empty options
+                                if ($is_dropdown) {
+                                    // For dropdown questions, we MUST preserve indices, so add empty placeholder
+                                    $mc_options[$idx] = array(
+                                        'text' => '',
+                                        'is_correct' => false,
+                                        'feedback' => ''
+                                    );
+                                    // For legacy arrays, also preserve indices for dropdown questions
+                                    $options_text[$idx] = '';
+                                    $option_feedback[$idx] = '';
+                                    continue;
+                                } else {
+                                    // For other question types, skip empty options to maintain legacy behavior
+                                    continue;
                                 }
-                                // Add empty option to preserve index for dropdown
-                                $mc_options[$idx] = array(
-                                    'text' => '',
-                                    'is_correct' => false,
-                                    'feedback' => ''
-                                );
-                                // For legacy arrays, also preserve indices for dropdown questions
-                                $options_text[$idx] = '';
-                                $option_feedback[$idx] = '';
-                                continue;
                             }
                             
                             // Use explicit index assignment for dropdowns to preserve original indices
@@ -3665,10 +3665,11 @@ class IELTS_CM_Admin {
                                 $option_feedback[] = isset($option['feedback']) ? wp_kses_post($option['feedback']) : '';
                             }
                             
-                            // Track first correct answer for legacy format (for multiple_choice)
+                            // Track first correct answer for legacy format
+                            // Note: For dropdown questions, this value is not actually used - the proper
+                            // correct_answer is generated in field_X:Y format in the dedicated dropdown section below
                             if (!empty($option['is_correct']) && $correct_answer === null) {
-                                // For dropdown, correct_answer will be overridden later, so use actual index
-                                // For others, use sequential count
+                                // For dropdown, use actual index; for others, use sequential count
                                 $correct_answer = $is_dropdown ? $idx : count($options_text) - 1;
                             }
                         }
