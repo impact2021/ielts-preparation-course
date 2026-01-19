@@ -1,0 +1,382 @@
+{
+    "title": "Paraphrasing trends in different ways",
+    "content": "<p>In IELTS Writing Task 1, you need to describe trends and changes. The same information can be expressed in different ways by changing the sentence structure. This exercise will help you practice three common ways to describe trends.</p>\n\n<p><strong>The Three Ways:</strong></p>\n<ol>\n<li><strong>Noun phrase as subject:</strong> \"There was a dramatic increase in sales from January to March.\"</li>\n<li><strong>Data as subject:</strong> \"Sales increased dramatically from January to March.\"</li>\n<li><strong>Time phrase first:</strong> \"From January to March, sales increased dramatically.\"</li>\n</ol>\n\n<p>Notice that:</p>\n<ul>\n<li>When we use a noun (increase, decrease, rise, fall), we need an adjective (dramatic, significant, slight)</li>\n<li>When we use a verb (increase, decrease, rise, fall), we need an adverb (dramatically, significantly, slightly)</li>\n<li>The meaning stays the same, but the structure changes</li>\n</ul>",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Read the three sentences below and answer the question.",
+            "question": "Which of these sentences are grammatically correct ways to describe the same trend?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. All three sentences are correct ways to express the same information. They show a dramatic increase in sales from January to March, but use different sentence structures.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Only sentence 1 is correct",
+                    "is_correct": false,
+                    "feedback": "Incorrect. All three sentences are correct. They express the same information using different grammatical structures."
+                },
+                {
+                    "text": "Only sentences 1 and 2 are correct",
+                    "is_correct": false,
+                    "feedback": "Incorrect. All three sentences are correct. They express the same information using different grammatical structures."
+                },
+                {
+                    "text": "All three sentences are correct",
+                    "is_correct": true,
+                    "feedback": "Correct! All three sentences express the same information. They all show a dramatic increase in sales from January to March, but use different sentence structures."
+                },
+                {
+                    "text": "Only sentence 3 is correct",
+                    "is_correct": false,
+                    "feedback": "Incorrect. All three sentences are correct. They express the same information using different grammatical structures."
+                }
+            ],
+            "options": "Only sentence 1 is correct\nOnly sentences 1 and 2 are correct\nAll three sentences are correct\nOnly sentence 3 is correct",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "In sentence 1 (\"There was a dramatic increase in sales...\"), what type of word is \"dramatic\"?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. \"Dramatic\" is an adjective. It describes the noun \"increase\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Noun",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Dramatic\" is an adjective. It describes the noun \"increase\". The noun in this sentence is \"increase\"."
+                },
+                {
+                    "text": "Verb",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Dramatic\" is an adjective. It describes the noun \"increase\"."
+                },
+                {
+                    "text": "Adjective",
+                    "is_correct": true,
+                    "feedback": "Correct! \"Dramatic\" is an adjective. When we use a noun form (like \"increase\"), we describe it with an adjective (dramatic, significant, slight, etc.)."
+                },
+                {
+                    "text": "Adverb",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Dramatic\" is an adjective. It describes the noun \"increase\". An adverb would end in -ly (like \"dramatically\")."
+                }
+            ],
+            "options": "Noun\nVerb\nAdjective\nAdverb",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "In sentence 2 (\"Sales increased dramatically...\"), what type of word is \"dramatically\"?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. \"Dramatically\" is an adverb. It describes the verb \"increased\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Noun",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Dramatically\" is an adverb. It describes the verb \"increased\"."
+                },
+                {
+                    "text": "Verb",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Dramatically\" is an adverb. It describes the verb \"increased\". The verb in this sentence is \"increased\"."
+                },
+                {
+                    "text": "Adjective",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Dramatically\" is an adverb. It describes the verb \"increased\". Adjectives describe nouns, not verbs."
+                },
+                {
+                    "text": "Adverb",
+                    "is_correct": true,
+                    "feedback": "Correct! \"Dramatically\" is an adverb. When we use a verb form (like \"increased\"), we describe it with an adverb (dramatically, significantly, slightly, etc.)."
+                }
+            ],
+            "options": "Noun\nVerb\nAdjective\nAdverb",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Which sentence structure starts with the time period?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. Sentence 3 starts with the time period: \"From January to March, sales increased dramatically.\"",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Sentence 1: There was a dramatic increase in sales from January to March.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Sentence 1 starts with \"There was\". Sentence 3 starts with the time period: \"From January to March\"."
+                },
+                {
+                    "text": "Sentence 2: Sales increased dramatically from January to March.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Sentence 2 starts with \"Sales\" (the data). Sentence 3 starts with the time period: \"From January to March\"."
+                },
+                {
+                    "text": "Sentence 3: From January to March, sales increased dramatically.",
+                    "is_correct": true,
+                    "feedback": "Correct! Sentence 3 starts with the time period \"From January to March\". This structure puts the time information first, followed by a comma."
+                },
+                {
+                    "text": "None of the sentences",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Sentence 3 starts with the time period: \"From January to March, sales increased dramatically.\""
+                }
+            ],
+            "options": "Sentence 1: There was a dramatic increase in sales from January to March.\nSentence 2: Sales increased dramatically from January to March.\nSentence 3: From January to March, sales increased dramatically.\nNone of the sentences",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentence using the correct form of the word in brackets.",
+            "question": "Profits rose [field 1] in the second quarter. (sharp)",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: sharply. When using a verb (rose), we need an adverb (sharply).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "sharply"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! \"Sharply\" is an adverb. When we use a verb (rose), we describe it with an adverb (sharply).",
+                    "incorrect": "Incorrect. The correct answer is \"sharply\". When using a verb (rose), we need an adverb (sharply), not an adjective (sharp).",
+                    "no_answer": "The correct answer is: sharply. When using a verb (rose), we need an adverb (sharply)."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentence using the correct form of the word in brackets.",
+            "question": "There was a [field 1] rise in profits in the second quarter. (sharp)",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: sharp. When using a noun (rise), we need an adjective (sharp).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "sharp"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! \"Sharp\" is an adjective. When we use a noun (rise), we describe it with an adjective (sharp).",
+                    "incorrect": "Incorrect. The correct answer is \"sharp\". When using a noun (rise), we need an adjective (sharp), not an adverb (sharply).",
+                    "no_answer": "The correct answer is: sharp. When using a noun (rise), we need an adjective (sharp)."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Rewrite this sentence starting with the time period. Use the same words but change the structure.",
+            "question": "Original: Unemployment fell gradually between 2010 and 2015.\n\nRewritten: [field 1], unemployment fell gradually.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: Between 2010 and 2015. When we start with the time period, we put it at the beginning followed by a comma.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "Between 2010 and 2015|between 2010 and 2015"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Starting with the time period (Between 2010 and 2015) gives you a different sentence structure with the same meaning.",
+                    "incorrect": "Incorrect. The correct answer is: Between 2010 and 2015. Move the time period from the end to the beginning of the sentence.",
+                    "no_answer": "The correct answer is: Between 2010 and 2015. When we start with the time period, we put it at the beginning followed by a comma."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Rewrite this sentence using the verb form instead of the noun form.",
+            "question": "Original: There was a significant decrease in temperature overnight.\n\nRewritten: Temperature [field 1] significantly overnight.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: decreased. Change the noun \"decrease\" to the verb \"decreased\", and the adjective \"significant\" to the adverb \"significantly\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "decreased"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Changing the noun \"decrease\" to the verb \"decreased\" creates a different sentence structure. Note that the adjective \"significant\" becomes the adverb \"significantly\".",
+                    "incorrect": "Incorrect. The correct answer is: decreased. Change the noun form (decrease) to the verb form (decreased).",
+                    "no_answer": "The correct answer is: decreased. Change the noun \"decrease\" to the verb \"decreased\", and the adjective \"significant\" to the adverb \"significantly\"."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Rewrite this sentence using the noun form instead of the verb form.",
+            "question": "Original: House prices increased steadily during the 1990s.\n\nRewritten: There was a [field 1] increase in house prices during the 1990s.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: steady. Change the adverb \"steadily\" to the adjective \"steady\" when using the noun form \"increase\".",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "steady"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! When using the noun form \"increase\", we need the adjective \"steady\" instead of the adverb \"steadily\".",
+                    "incorrect": "Incorrect. The correct answer is: steady. Change the adverb \"steadily\" to the adjective \"steady\" to describe the noun \"increase\".",
+                    "no_answer": "The correct answer is: steady. Change the adverb \"steadily\" to the adjective \"steady\" when using the noun form \"increase\"."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the best way to complete this sentence.",
+            "question": "The number of visitors to the museum ___ between May and September.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is \"doubled\". This is the verb form that describes what happened to the number of visitors.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "was a doubling",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Was a doubling\" is awkward. The correct answer is \"doubled\" - this is the simple verb form that works with the subject \"The number of visitors\"."
+                },
+                {
+                    "text": "doubled",
+                    "is_correct": true,
+                    "feedback": "Correct! \"Doubled\" is the verb form. The sentence \"The number of visitors doubled\" uses the data as the subject with a verb."
+                },
+                {
+                    "text": "double",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Double\" is the wrong tense. The correct answer is \"doubled\" (past tense) to describe what happened between May and September."
+                },
+                {
+                    "text": "doubling",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Doubling\" doesn't work in this sentence structure. The correct answer is \"doubled\" - the past tense verb form."
+                }
+            ],
+            "options": "was a doubling\ndoubled\ndouble\ndoubling",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Which sentence correctly describes the same trend as \"Exports declined slightly in Quarter 3\"?",
+            "question": "Select the equivalent sentence.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is \"There was a slight decline in exports in Quarter 3.\" This changes the verb form (declined) to the noun form (decline) and the adverb (slightly) to the adjective (slight).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "There was a slight decline in exports in Quarter 3.",
+                    "is_correct": true,
+                    "feedback": "Correct! This sentence expresses the same information as the original. The verb \"declined\" becomes the noun \"decline\", and the adverb \"slightly\" becomes the adjective \"slight\"."
+                },
+                {
+                    "text": "There was a slightly decline in exports in Quarter 3.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. \"Slightly decline\" is grammatically wrong - we need the adjective \"slight\" to describe the noun \"decline\". The correct answer is \"There was a slight decline in exports in Quarter 3.\""
+                },
+                {
+                    "text": "Exports slightly declined in Quarter 3.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While this is grammatically correct, it's not an equivalent structure. The correct answer uses the noun form: \"There was a slight decline in exports in Quarter 3.\""
+                },
+                {
+                    "text": "In Quarter 3 was a slight decline in exports.",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This word order is wrong. The correct answer is \"There was a slight decline in exports in Quarter 3.\""
+                }
+            ],
+            "options": "There was a slight decline in exports in Quarter 3.\nThere was a slightly decline in exports in Quarter 3.\nExports slightly declined in Quarter 3.\nIn Quarter 3 was a slight decline in exports.",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "15",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-19 01:48:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
