@@ -381,6 +381,21 @@
                                         var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
                                         navButton.addClass('nav-correct').removeClass('answered');
                                     });
+                                } else if (questionResult.question_type === 'closed_question_dropdown') {
+                                    // For closed_question_dropdown with multiple fields, mark each nav button individually
+                                    var fieldResults = questionResult.correct_answer && questionResult.correct_answer.field_results 
+                                        ? questionResult.correct_answer.field_results 
+                                        : {};
+                                    
+                                    // Get display start number for this question
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
+                                    
+                                    // Mark each field's nav button as correct
+                                    $.each(fieldResults, function(fieldNum, fieldResult) {
+                                        var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;
+                                        var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
+                                        navButton.addClass('nav-correct').removeClass('answered');
+                                    });
                                 } else {
                                     navButtons.addClass('nav-correct').removeClass('answered');
                                 }
@@ -403,6 +418,9 @@
                                 } else if (questionResult.question_type === 'dropdown_paragraph') {
                                     // For dropdown paragraph, all dropdowns are correct - mark them all with green borders
                                     questionElement.find('select.answer-select-inline').addClass('answer-correct');
+                                } else if (questionResult.question_type === 'closed_question_dropdown') {
+                                    // For closed_question_dropdown with multiple fields, all fields are correct - mark them all with green borders
+                                    questionElement.find('select.answer-select-inline.closed-question-dropdown').addClass('answer-correct');
                                 } else if (questionResult.question_type === 'summary_completion' || questionResult.question_type === 'table_completion') {
                                     // For summary/table completion with multiple fields, all fields are correct - mark them all with green borders
                                     questionElement.find('input[type="text"].answer-input-inline').addClass('answer-correct');
@@ -626,6 +644,33 @@
                                             navButton.removeClass('answered').addClass('nav-incorrect');
                                         } else {
                                             // No answer provided - just red nav button, no fill color
+                                            navButton.removeClass('answered').addClass('nav-incorrect');
+                                        }
+                                    });
+                                } else if (questionResult.question_type === 'closed_question_dropdown') {
+                                    // For closed_question_dropdown with multiple fields, mark each dropdown and nav button individually
+                                    var fieldResults = questionResult.correct_answer && questionResult.correct_answer.field_results 
+                                        ? questionResult.correct_answer.field_results 
+                                        : {};
+                                    
+                                    // Get display start number for this question
+                                    var displayStart = parseInt(questionElement.data('display-start'), 10);
+                                    
+                                    // Check each dropdown and mark it and its nav button
+                                    $.each(fieldResults, function(fieldNum, fieldResult) {
+                                        var dropdown = questionElement.find('select[name="answer_' + index + '_field_' + fieldNum + '"]');
+                                        
+                                        // Calculate which nav button this corresponds to
+                                        var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;
+                                        var navButton = $('.question-nav-btn[data-question="' + index + '"][data-display-number="' + displayNumber + '"]');
+                                        
+                                        if (fieldResult.correct) {
+                                            // Correct answer - green border and background
+                                            dropdown.addClass('answer-correct');
+                                            navButton.removeClass('answered').addClass('nav-correct');
+                                        } else {
+                                            // Incorrect or not answered - red border and background
+                                            dropdown.addClass('answer-incorrect');
                                             navButton.removeClass('answered').addClass('nav-incorrect');
                                         }
                                     });
