@@ -74,12 +74,62 @@ class IELTS_CM_Quiz_Handler {
             $start_num = $display_question_number;
             $question_count = 1;
             
-            if ($q['type'] === 'closed_question') {
-                // Closed question - question count is the number of correct answers
+            // Calculate question count based on question type (matching template logic)
+            if ($q['type'] === 'multi_select' && isset($q['mc_options']) && is_array($q['mc_options'])) {
+                // For multi-select, count number of correct answers
+                $correct_count = 0;
+                foreach ($q['mc_options'] as $opt) {
+                    if (!empty($opt['is_correct'])) {
+                        $correct_count++;
+                    }
+                }
+                $question_count = max(1, $correct_count);
+            } elseif ($q['type'] === 'summary_completion') {
+                // For summary completion, count number of fields
+                $field_count = 0;
+                if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
+                    $field_count = count($q['summary_fields']);
+                } else {
+                    // Parse from question text
+                    $question_text = isset($q['question']) ? $q['question'] : '';
+                    preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                    preg_match_all('/\[ANSWER\s+(\d+)\]/i', $question_text, $answer_matches);
+                    if (!empty($field_matches[1])) {
+                        $field_count = count(array_unique($field_matches[1]));
+                    } elseif (!empty($answer_matches[1])) {
+                        $field_count = count(array_unique($answer_matches[1]));
+                    }
+                }
+                $question_count = max(1, $field_count);
+            } elseif ($q['type'] === 'dropdown_paragraph') {
+                // For dropdown paragraph, count number of dropdowns
+                $dropdown_count = 0;
+                $paragraph_text = isset($q['question']) ? $q['question'] : '';
+                preg_match_all('/(\d+)\.\[([^\]]+)\]/i', $paragraph_text, $dropdown_matches);
+                if (!empty($dropdown_matches[0])) {
+                    $dropdown_count = count($dropdown_matches[0]);
+                }
+                $question_count = max(1, $dropdown_count);
+            } elseif ($q['type'] === 'table_completion') {
+                // For table completion, count number of fields
+                $field_count = 0;
+                if (isset($q['summary_fields']) && is_array($q['summary_fields'])) {
+                    $field_count = count($q['summary_fields']);
+                } else {
+                    // Parse from question text
+                    $question_text = isset($q['question']) ? $q['question'] : '';
+                    preg_match_all('/\[field\s+(\d+)\]/i', $question_text, $field_matches);
+                    if (!empty($field_matches[1])) {
+                        $field_count = count(array_unique($field_matches[1]));
+                    }
+                }
+                $question_count = max(1, $field_count);
+            } elseif ($q['type'] === 'closed_question' || $q['type'] === 'closed_question_dropdown') {
+                // For closed question (including dropdown variant), count number of correct answers
                 $correct_answer_count = isset($q['correct_answer_count']) ? intval($q['correct_answer_count']) : 1;
                 $question_count = max(1, $correct_answer_count);
             } elseif ($q['type'] === 'open_question') {
-                // Open question - question count is the number of fields
+                // For open question, count number of fields
                 $field_count = isset($q['field_count']) ? intval($q['field_count']) : 1;
                 $question_count = max(1, $field_count);
             }
