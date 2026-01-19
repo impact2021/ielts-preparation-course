@@ -1,0 +1,139 @@
+{
+    "title": "Describing Trends - Part B",
+    "content": "<p>Which description matches the graph? Select the correct answer for each question.</p>",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Look at the graph and select the description that matches it.",
+            "question": "Which description matches the graph?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct description is: A significant increase – a dramatic rise – a slight decrease.",
+            "correct_feedback": "Correct! This description accurately matches the trend shown in the graph.",
+            "incorrect_feedback": "Incorrect. Look carefully at the graph. The correct description is: A significant increase – a dramatic rise – a slight decrease.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A slight increase – a significant rise – a slight decrease",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The initial increase is significant, not slight. The correct answer is: A significant increase – a dramatic rise – a slight decrease."
+                },
+                {
+                    "text": "A significant increase – a dramatic rise – a slight decrease",
+                    "is_correct": true,
+                    "feedback": "Correct! This description accurately matches the trend shown in the graph."
+                }
+            ],
+            "options": "A slight increase – a significant rise – a slight decrease\nA significant increase – a dramatic rise – a slight decrease",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Look at the graph and select the description that matches it.",
+            "question": "Which description matches the graph?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct description is: A steady rise – a peak – a significant decrease.",
+            "correct_feedback": "Correct! This description accurately matches the trend shown in the graph.",
+            "incorrect_feedback": "Incorrect. Look carefully at the graph. The correct description is: A steady rise – a peak – a significant decrease.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A steady rise – a peak – a significant decrease",
+                    "is_correct": true,
+                    "feedback": "Correct! This description accurately matches the trend shown in the graph."
+                },
+                {
+                    "text": "To level off – a dramatic rise – a slight decrease",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The graph shows a steady rise, not leveling off. The correct answer is: A steady rise – a peak – a significant decrease."
+                }
+            ],
+            "options": "A steady rise – a peak – a significant decrease\nTo level off – a dramatic rise – a slight decrease",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Look at the graph and select the description that matches it.",
+            "question": "Which description matches the graph?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct description is: An upward trend – a peak – a rapid decline.",
+            "correct_feedback": "Correct! This description accurately matches the trend shown in the graph.",
+            "incorrect_feedback": "Incorrect. Look carefully at the graph. The correct description is: An upward trend – a peak – a rapid decline.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "An upward trend – a peak – a rapid decline",
+                    "is_correct": true,
+                    "feedback": "Correct! This description accurately matches the trend shown in the graph."
+                },
+                {
+                    "text": "An increase – a peak – a slight fall – level off",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The decline is rapid, not slight, and there is no leveling off. The correct answer is: An upward trend – a peak – a rapid decline."
+                }
+            ],
+            "options": "An upward trend – a peak – a rapid decline\nAn increase – a peak – a slight fall – level off",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Look at the graph and select the description that matches it.",
+            "question": "Which description matches the graph?",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct description is: Constant trend – an abrupt rise – a moderate decline – a steady recovery – a dramatic increase – a plateau – a sharp fall – a dramatic rise – a moderate increase.",
+            "correct_feedback": "Correct! This description accurately matches the complex trend shown in the graph.",
+            "incorrect_feedback": "Incorrect. Look carefully at all the stages in the graph. The correct description is: Constant trend – an abrupt rise – a moderate decline – a steady recovery – a dramatic increase – a plateau – a sharp fall – a dramatic rise – a moderate increase.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Constant trend – an abrupt rise – a moderate decline – a steady recovery – a dramatic increase – a plateau – a sharp fall – a dramatic rise – a moderate increase",
+                    "is_correct": true,
+                    "feedback": "Correct! This description accurately matches the complex trend shown in the graph."
+                },
+                {
+                    "text": "Constant trend – a sharp increase – a slight decrease – a moderate rise – level off – a significant increase – a dramatic decline – a significant rise – a moderate increase",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Some of the trends are described inaccurately. The correct answer is: Constant trend – an abrupt rise – a moderate decline – a steady recovery – a dramatic increase – a plateau – a sharp fall – a dramatic rise – a moderate increase."
+                }
+            ],
+            "options": "Constant trend – an abrupt rise – a moderate decline – a steady recovery – a dramatic increase – a plateau – a sharp fall – a dramatic rise – a moderate increase\nConstant trend – a sharp increase – a slight decrease – a moderate rise – level off – a significant increase – a dramatic decline – a significant rise – a moderate increase",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "10",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-19 02:27:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
