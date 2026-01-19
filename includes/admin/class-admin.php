@@ -3807,14 +3807,15 @@ class IELTS_CM_Admin {
                             }
                             
                             // Build the correct_answer string for each dropdown field
-                            for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
-                                // For each field, use the corresponding correct option index
-                                // If there are multiple correct options, distribute them across fields
-                                // If there's only one correct option, use it for all fields
-                                if (!empty($correct_option_indices)) {
+                            // Only process if there are correct options marked
+                            if (!empty($correct_option_indices)) {
+                                for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
+                                    // For each field, use the corresponding correct option index
+                                    // If there are multiple correct options, distribute them across fields
+                                    // If there are fewer correct options than fields, reuse the first correct option
                                     $option_idx = isset($correct_option_indices[$field_num - 1]) 
                                         ? $correct_option_indices[$field_num - 1] 
-                                        : $correct_option_indices[0]; // Fallback to first correct option
+                                        : $correct_option_indices[0]; // Safe because $correct_option_indices is not empty
                                     $correct_answer_parts[] = 'field_' . $field_num . ':' . $option_idx;
                                 }
                             }
