@@ -79,6 +79,6 @@ See [TEMPLATES/JSON-FORMAT-README.md](TEMPLATES/JSON-FORMAT-README.md) for full 
 
 ---
 
-**Plugin Version**: 11.x  
+**Plugin Version**: 12.3  
 **WordPress Version Required**: 5.8+  
 **PHP Version Required**: 7.2+
