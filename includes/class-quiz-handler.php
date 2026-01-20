@@ -51,6 +51,14 @@ class IELTS_CM_Quiz_Handler {
         $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : null;
         $answers = isset($_POST['answers']) ? json_decode(stripslashes($_POST['answers']), true) : array();
         
+        // Determine if this is a listening exercise for feedback link text
+        $is_listening_exercise = get_post_meta($quiz_id, '_ielts_cm_is_listening_exercise', true);
+        $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
+        // Backward compatibility
+        if ($layout_type === 'two_column_listening') {
+            $is_listening_exercise = '1';
+        }
+        
         // Get quiz questions and calculate score
         $questions = get_post_meta($quiz_id, '_ielts_cm_questions', true);
         if (!$questions) {
@@ -324,7 +332,7 @@ class IELTS_CM_Quiz_Handler {
                                 // Add "Show in transcript" link if audio_section_id is available (listening tests)
                                 // Add "Show me the section of the reading passage" link if reading_text_id is available (reading tests)
                                 if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
-                                    $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                    $feedback_text .= ' <a href="#transcript-q' . esc_attr($field_question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
                                     
                                     // Add "Listen to this answer" button if field has audio timing
                                     $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;
@@ -346,7 +354,7 @@ class IELTS_CM_Quiz_Handler {
                                 // Add "Show in transcript" link if audio_section_id is available (listening tests)
                                 // Add "Show me the section of the reading passage" link if reading_text_id is available (reading tests)
                                 if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
-                                    $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                    $feedback_text .= ' <a href="#transcript-q' . esc_attr($field_question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
                                     
                                     // Add "Listen to this answer" button if field has audio timing
                                     $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;
@@ -369,7 +377,7 @@ class IELTS_CM_Quiz_Handler {
                             // Add "Show in transcript" link if audio_section_id is available (listening tests)
                             // Add "Show me the section of the reading passage" link if reading_text_id is available (reading tests)
                             if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
-                                $feedback_text .= ' <a href="#" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
+                                $feedback_text .= ' <a href="#transcript-q' . esc_attr($field_question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($field_question_num) . '">' . __('Show in transcript', 'ielts-course-manager') . '</a>';
                                 
                                 // Add "Listen to this answer" button if field has audio timing
                                 $field_audio_times = isset($question['field_audio_times'][$field_num]) ? $question['field_audio_times'][$field_num] : null;

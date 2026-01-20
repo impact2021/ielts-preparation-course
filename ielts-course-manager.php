@@ -3,7 +3,7 @@
  * Plugin Name: IELTS Course Manager
  * Plugin URI: https://www.ieltstestonline.com/
  * Description: A flexible Learning Management System for IELTS preparation courses with lessons, resources, quizzes, and progress tracking.
- * Version: 12.6
+ * Version: 12.7
  * Author: IELTStestONLINE
  * Author URI: https://www.ieltstestonline.com/
  * Text Domain: ielts-course-manager
