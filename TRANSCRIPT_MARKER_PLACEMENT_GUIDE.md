@@ -1,7 +1,17 @@
-# Transcript Marker Placement Guide - Version 11.10
+# Transcript Marker Placement Guide - Version 12.5
 
 ## Overview
-This guide explains how to properly place `[Q#]` markers in listening test transcripts to ensure the question badges and answer highlighting appear in the correct locations.
+This guide explains how to properly place transcript markers in listening test transcripts using the HTML span format to ensure the question badges and answer highlighting appear in the correct locations.
+
+## Important: HTML Span Format Required
+
+**Listening transcripts MUST use the HTML span format:**
+
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">answer text here</span>
+```
+
+**Do NOT use the `[Q#]` format in listening transcripts.** The `[Q#]` format is only for reading passages, which are automatically converted to `passage-q#` format.
 
 ## The Problem (Fixed in Version 11.9)
 
@@ -12,51 +22,65 @@ Previously, Q markers were often placed at the beginning of sentences, causing:
 
 ## The Solution
 
-**Place `[Q#]` markers immediately before the actual answer text, not at the beginning of sentences.**
+**Place transcript markers immediately before the actual answer text using the proper HTML format.**
+
+### Correct Format for Listening Transcripts:
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">answer text</span>
+```
+
+### Format Components:
+1. **Outer span**: `<span id="transcript-q1" data-question="1">` - Container with unique ID and question number
+2. **Badge span**: `<span class="question-marker-badge">Q1</span>` - Yellow Q badge displayed to students
+3. **Answer marker span**: `<span class="transcript-answer-marker">answer text</span>` - Highlighted answer text
 
 ## Placement Rules
 
 ### Rule 1: Place Marker Immediately Before Answer
-The `[Q#]` marker should be positioned as close as possible to the actual answer text.
+The transcript marker should be positioned as close as possible to the actual answer text.
 
 **❌ WRONG:**
+```html
+Anne: <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Yes of course. It's Anne Hawberry.</span>
 ```
-Anne: [Q1]Yes of course. It's Anne Hawberry.
-```
-This highlights "Yes of course." instead of "Anne Hawberry"
+This highlights "Yes of course. It's Anne Hawberry." instead of just "Anne Hawberry"
 
 **✅ CORRECT:**
+```html
+Anne: Yes of course. It's <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>.
 ```
-Anne: Yes of course. It's [Q1]Anne Hawberry.
-```
-This correctly highlights "Anne Hawberry."
+This correctly highlights only "Anne Hawberry."
 
 ### Rule 2: For Short Answers (Single Words/Numbers)
 Place the marker directly before the answer word or number.
 
 **✅ Examples:**
-```
-The program runs for [Q2]three weeks.
-Each session lasts [Q5]one hour.
-The cost is [Q4]£7.95.
+```html
+The program runs for <span id="transcript-q2" data-question="2"><span class="question-marker-badge">Q2</span></span><span class="transcript-answer-marker">three weeks</span>.
+
+Each session lasts <span id="transcript-q5" data-question="5"><span class="question-marker-badge">Q5</span></span><span class="transcript-answer-marker">one hour</span>.
+
+The cost is <span id="transcript-q4" data-question="4"><span class="question-marker-badge">Q4</span></span><span class="transcript-answer-marker">£7.95</span>.
 ```
 
 ### Rule 3: For Multi-Word Answers
 Place the marker at the start of the answer phrase.
 
 **✅ Examples:**
-```
-I arrived [Q1]two months ago.
-My name is [Q1]Anne Hawberry.
-We're located on the [Q9]2nd floor.
+```html
+I arrived <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">two months ago</span>.
+
+My name is <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>.
+
+We're located on the <span id="transcript-q9" data-question="9"><span class="question-marker-badge">Q9</span></span><span class="transcript-answer-marker">2nd floor</span>.
 ```
 
 ### Rule 4: For Longer Answers or Sentences
 Place the marker at the beginning of the sentence that contains the answer.
 
 **✅ Example:**
-```
-Woman: I'm interested in the settlement support programme. [Q1]I arrived in the country two months ago.
+```html
+Woman: I'm interested in the settlement support programme. <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">I arrived in the country two months ago</span>.
 ```
 
 ### Rule 5: Within Table Cells
@@ -66,136 +90,119 @@ For table-formatted transcripts, place the marker within the appropriate cell wh
 ```html
 <tr>
     <td><strong>Anne:</strong></td>
-    <td>Yes of course. It's [Q1]Anne Hawberry.</td>
+    <td>Yes of course. It's <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>.</td>
 </tr>
 ```
 
-## How the Highlighting Works (Updated in Version 11.10)
+## How the Highlighting Works
 
-Once you place the marker correctly, the system automatically:
+The HTML span format ensures:
 
-1. **Displays the Q badge** with yellow background (#ffc107)
-2. **Wraps answer text** in light yellow background (#fff9c4)
-3. **Smart answer detection** - Stops highlighting at:
-   - First comma (`,`) - for embedded answers like "It's Anne Hawberry, and..."
-   - First semicolon (`;`)
-   - First period followed by space and capital letter (`. Next sentence`)
-   - First newline character
-   - First 50 characters (safety limit, reduced from 100 for better accuracy)
-4. **Word boundary trimming** - If over 50 characters, trims to last complete word
-
-This ensures that only the answer itself gets highlighted, not entire sentences or paragraphs.
-
-## Technical Implementation (Updated in Version 11.10)
-
-The pattern used is: `/\[Q(\d+)\]([^\[]*?)(?=\[Q|$)/is`
-
-This regex:
-- Matches `[Q1]`, `[Q2]`, etc.
-- Captures text after the marker
-- Stops at the next Q marker or end of string
-- Works across multiple lines
-
-The highlighting logic then applies smart boundary detection:
-```php
-// Stop at comma, semicolon, sentence boundary, or newline
-if (preg_match('/^([^,;]+?)(?:[,;]|\.\s+[A-Z]|\n|$)/s', $answer_text, $boundary_match)) {
-    $highlighted_text = $boundary_match[1];
-} else {
-    $highlighted_text = mb_substr($answer_text, 0, 50);
-}
-```
-
-This ensures precise answer highlighting without capturing extra context.
+1. **Displays the Q badge** - The `question-marker-badge` span shows a yellow badge with the question number (#ffc107)
+2. **Wraps answer text** - The `transcript-answer-marker` span highlights the answer with a light yellow background (#fff9c4)
+3. **Precise highlighting** - The answer text is explicitly enclosed within the `transcript-answer-marker` span, ensuring only the answer is highlighted
 
 ## Visual Result
 
 When placed correctly, students will see:
 
 - **Q1** ← Yellow badge with question number
-- **Anne Hawberry.** ← Light yellow background on answer text
+- **Anne Hawberry** ← Light yellow background on answer text
 
 Both elements appear together, making it crystal clear where the answer is located in the transcript.
 
 ## Common Mistakes to Avoid
 
-### ❌ Mistake 1: Marker at Sentence Start
+### ❌ Mistake 1: Using [Q#] Format Instead of HTML
 ```
 [Q1]Anne: Yes of course. It's Anne Hawberry.
 ```
-Problem: Badge appears before speaker name
+Problem: Wrong format for listening transcripts. Use HTML spans instead.
 
-### ❌ Mistake 2: Marker Too Early
+**✅ CORRECT:**
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>
 ```
-Anne: [Q1]Yes of course. It's Anne Hawberry.
-```
-Problem: Highlights wrong text
 
-### ❌ Mistake 3: Marker After Answer
+### ❌ Mistake 2: Marker Too Early in Sentence
+```html
+Anne: <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Yes of course. It's Anne Hawberry</span>.
 ```
-Anne: Yes of course. It's Anne Hawberry[Q1].
-```
-Problem: No text after marker to highlight
+Problem: Highlights wrong text - includes "Yes of course"
 
-### ❌ Mistake 4: No Space Before Answer
+**✅ CORRECT:**
+```html
+Anne: Yes of course. It's <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>.
 ```
-Anne: Yes of course. It's[Q1]Anne Hawberry.
+
+### ❌ Mistake 3: Missing Closing Span
+```html
+Anne: It's <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry.
 ```
-Problem: Badge touches preceding text (though it will still work)
+Problem: Unclosed span tag will break rendering
+
+**✅ CORRECT:**
+```html
+Anne: It's <span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>.
+```
+
+### ❌ Mistake 4: Incorrect ID Format
+```html
+<span id="question-1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>
+```
+Problem: ID must be `transcript-q1` not `question-1`
+
+**✅ CORRECT:**
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">Anne Hawberry</span>
+```
 
 ## Best Practices
 
 1. **Review the question** to understand what the answer is
 2. **Find the exact answer text** in the transcript
-3. **Place the marker** immediately before that text
-4. **Add a space** before the marker for readability
-5. **Test the result** by viewing the rendered transcript
+3. **Place the marker** immediately before that text using the HTML span format
+4. **Verify the closing span** is present after the answer text
 
-## Examples by Question Type
+## Examples from Real Tests
 
-### Name/Identification Questions
+### Example 1: Single Word Answer
+```html
+<p><strong>Barry:</strong> Yes, I've been working in corporate hospitality at a local hotel for the last <span id="transcript-q21" data-question="21"><span class="question-marker-badge">Q21</span></span><span class="transcript-answer-marker">three years</span>; we arrange functions and conferences for business clients.</p>
 ```
-Question: What is the applicant's name?
-Placement: It's [Q1]Anne Hawberry.
-```
+**Placement:** Marker before "three years" (the answer)
 
-### Numeric Answers
+### Example 2: Short Phrase Answer
+```html
+<p><strong>Barry:</strong> My employer will pay for the <span id="transcript-q22" data-question="22"><span class="question-marker-badge">Q22</span></span><span class="transcript-answer-marker">course fees and a proportion of my living costs</span>, but of course only if I work for them full-time as well.</p>
 ```
-Question: How long is the program?
-Placement: The program runs for [Q2]three weeks.
-```
+**Placement:** Marker before the complete answer phrase
 
-### Date Answers
+### Example 3: Number Answer
+```html
+<p><strong>Kathryn:</strong> There are <span id="transcript-q27" data-question="27"><span class="question-marker-badge">Q27</span></span><span class="transcript-answer-marker">24 modules</span> in total; whichever way you study you have to complete all of them.</p>
 ```
-Question: When was she born?
-Placement: My date of birth is [Q2]22 May 1981.
+**Placement:** Marker before the number and its unit
+
+### Example 4: Table Format
+```html
+<tr>
+    <td valign="top">Professor Ripley</td>
+    <td valign="top">Well, it is very difficult to measure it accurately. Figures range from 100 000, to as few as 30 000, but it is generally estimated that there are <span id="transcript-q25" data-question="25"><span class="question-marker-badge">Q25</span></span><span class="transcript-answer-marker">50 000</span>. In order to maintain the population and protect the species from poachers, many are moved to protected areas.</td>
+</tr>
 ```
+**Placement:** Marker within the table cell before the answer
 
-### Location Answers
-```
-Question: Which floor is the office on?
-Placement: We're on the [Q9]2nd floor.
-```
+## Important Note: Reading vs Listening Formats
 
-### Yes/No/True/False
-```
-Question: Is she a permanent resident?
-Placement: Woman: [Q1]Yes, I am.
-```
+- **Listening transcripts**: Use `<span id="transcript-q1">` format (as shown in this guide)
+- **Reading passages**: Use `[Q1]` format which is automatically converted to `<span id="passage-q1">` by the system
 
-## Checking Your Work
-
-After placing markers, ask yourself:
-
-1. ✓ Is the Q badge near the answer?
-2. ✓ Will the highlighted text contain the answer?
-3. ✓ Is the answer clearly visible to students?
-4. ✓ Would a student immediately understand which text answers the question?
-
-If you answer "no" to any of these, reposition the marker closer to the actual answer.
+Do not mix these formats. Always use the HTML span format for listening transcripts.
 
 ## Version History
 
+- **Version 12.5** - Updated documentation to reflect correct HTML span format for listening transcripts
 - **Version 11.10** - Improved smart answer boundary detection (stops at commas, semicolons, 50-char limit)
 - **Version 11.9** - Implemented automatic answer text highlighting with yellow background
 - **Version 11.8** - Documented intended behavior (not fully implemented)
@@ -203,6 +210,6 @@ If you answer "no" to any of these, reposition the marker closer to the actual a
 
 ## Summary
 
-**Golden Rule:** Place `[Q#]` markers immediately before the actual answer text, not at the beginning of sentences or speaker labels.
+**Golden Rule:** For listening transcripts, always use the HTML span format with `<span id="transcript-q#">` immediately before the actual answer text.
 
-When in doubt, ask: "If I highlight the text right after this marker, will students see the answer?" If yes, the placement is correct.
+When creating listening transcripts, place the marker so that the `transcript-answer-marker` span contains only the answer text that students need to identify.
