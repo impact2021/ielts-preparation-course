@@ -1814,7 +1814,6 @@ select.answer-select-inline.answer-incorrect {
 /* Show in transcript link for listening test feedback */
 .show-in-transcript-link {
     display: inline-block;
-    margin-top: 8px;
     padding: 5px 12px;
     background: #0073aa;
     color: #fff !important;
@@ -1837,7 +1836,6 @@ select.answer-select-inline.answer-incorrect {
 /* Show in reading passage link for reading test feedback */
 .show-in-reading-passage-link {
     display: inline-block;
-    margin-top: 8px;
     padding: 5px 12px;
     background: #0073aa;
     color: #fff !important;
@@ -1860,7 +1858,6 @@ select.answer-select-inline.answer-incorrect {
 /* Listen to this answer button for listening test feedback */
 .listen-to-answer-link {
     display: inline-block;
-    margin-top: 8px;
     padding: 5px 12px;
     background: #0073aa;
     color: #fff !important;

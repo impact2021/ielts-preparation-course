@@ -1032,8 +1032,8 @@
                                     feedbackDiv.addClass('open-question-feedback');
                                 }
                                 
-                                // Add "Show in transcript" link if audio_section_id is available (for listening tests)
-                                // Note: "Show me the section of the reading passage" links are added in a unified manner
+                                // Add "Show me" link if audio_section_id is available (for listening tests)
+                                // Note: "Show me" links for reading passages are added in a unified manner
                                 // after all question processing (see lines 1032+) to handle all question types consistently
                                 // Skip for open_question type since links are added per-field in PHP
                                 if (questionResult.question_type !== 'open_question') {
@@ -1044,9 +1044,10 @@
                                             .addClass('show-in-transcript-link')
                                             .attr('data-section', questionResult.audio_section_id)
                                             .attr('data-question', questionNum)
-                                            .text('Show in transcript');
+                                            .text('Show me')
+                                            .css('margin-left', '10px');
                                         
-                                        feedbackDiv.append('<br>').append(transcriptLink);
+                                        feedbackDiv.append(transcriptLink);
                                         
                                         // Add "Listen to this answer" button if audio timing is available
                                         if (questionResult.audio_start_time !== null && 
@@ -1078,7 +1079,7 @@
                             return marker.length > 0;
                         }
                         
-                        // Add "Show me the section of the reading passage" buttons for reading tests
+                        // Add "Show me" buttons for reading tests
                         // This applies to ALL question types that have a reading_text_id
                         $.each(result.question_results, function(index, questionResult) {
                             var questionNum = parseInt(index, 10) + 1;
@@ -1099,18 +1100,19 @@
                                         .addClass('show-in-reading-passage-link')
                                         .attr('data-reading-text', questionResult.reading_text_id)
                                         .attr('data-question', questionNum)
-                                        .text('Show me');
+                                        .text('Show me')
+                                        .css('margin-left', '10px');
                                     
-                                    // Append button to the feedback div (after feedback message)
+                                    // Append button to the feedback div (inline after feedback message)
                                     var feedbackDiv = questionElement.find('.question-feedback');
                                     if (feedbackDiv.length) {
-                                        feedbackDiv.append($('<br>')).append(readingLink);
+                                        feedbackDiv.append(readingLink);
                                     }
                                 }
                             }
                         });
                         
-                        // Clean up any "Show me the section of the reading passage" links that were added by PHP
+                        // Clean up any "Show me" links that were added by PHP
                         // but don't have a corresponding passage marker (e.g., for "Not Given" answers)
                         // This handles open_question types where links are added server-side
                         $('.show-in-reading-passage-link').each(function() {
@@ -1118,11 +1120,6 @@
                             
                             // Remove the link if no marker exists
                             if (!hasPassageMarker(questionNum)) {
-                                // Also remove the preceding <br> tag if it exists
-                                var prev = $(this).prev();
-                                if (prev.is('br')) {
-                                    prev.remove();
-                                }
                                 $(this).remove();
                             }
                         });
@@ -1584,6 +1581,13 @@
             var readingTextId = $(this).data('reading-text');
             var questionNumber = $(this).data('question');
             
+            // Update URL hash to match the anchor (fixes issue where URL doesn't update)
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, null, '#q' + questionNumber);
+            } else {
+                window.location.hash = 'q' + questionNumber;
+            }
+            
             // Hide all reading text sections
             $('.reading-text-section').hide();
             
@@ -1621,35 +1625,59 @@
                     
                     // Scroll to the first highlighted element
                     var $scrollTarget = $answerHighlights.first();
-                    var scrollContainer = $scrollTarget.closest('.reading-text-section, .cbt-passage-panel');
                     
-                    if (scrollContainer.length) {
-                        // Scroll within the container
-                        scrollContainer.animate({
-                            scrollTop: $scrollTarget.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
+                    // For CBT layout, scroll within the reading column
+                    var $readingColumn = $scrollTarget.closest('.reading-column');
+                    if ($readingColumn.length) {
+                        // CBT layout - scroll within the column to bring element to top
+                        var markerOffset = $scrollTarget.position().top;
+                        var columnScrollTop = $readingColumn.scrollTop();
+                        $readingColumn.animate({
+                            scrollTop: columnScrollTop + markerOffset - SCROLL_OFFSET_NON_CBT
                         }, SCROLL_ANIMATION_DURATION);
                     } else {
-                        // Fallback: scroll the window
-                        $('html, body').animate({
-                            scrollTop: $scrollTarget.offset().top - SCROLL_OFFSET_NON_CBT
-                        }, SCROLL_ANIMATION_DURATION);
+                        // Non-CBT layout: check for other scroll containers
+                        var scrollContainer = $scrollTarget.closest('.reading-text-section, .cbt-passage-panel');
+                        
+                        if (scrollContainer.length) {
+                            // Scroll within the container
+                            scrollContainer.animate({
+                                scrollTop: $scrollTarget.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
+                            }, SCROLL_ANIMATION_DURATION);
+                        } else {
+                            // Fallback: scroll the window
+                            $('html, body').animate({
+                                scrollTop: $scrollTarget.offset().top - SCROLL_OFFSET_NON_CBT
+                            }, SCROLL_ANIMATION_DURATION);
+                        }
                     }
                 } else {
                     var $paragraph = $questionMarker.closest('p');
                     if ($paragraph.length) {
                         $paragraph.addClass('reading-passage-highlight');
                         
-                        // Scroll to the paragraph
-                        var scrollContainer = $paragraph.closest('.reading-text-section, .cbt-passage-panel');
-                        
-                        if (scrollContainer.length) {
-                            scrollContainer.animate({
-                                scrollTop: $paragraph.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
+                        // For CBT layout, scroll within the reading column
+                        var $readingColumn = $paragraph.closest('.reading-column');
+                        if ($readingColumn.length) {
+                            // CBT layout - scroll within the column to bring element to top
+                            var markerOffset = $paragraph.position().top;
+                            var columnScrollTop = $readingColumn.scrollTop();
+                            $readingColumn.animate({
+                                scrollTop: columnScrollTop + markerOffset - SCROLL_OFFSET_NON_CBT
                             }, SCROLL_ANIMATION_DURATION);
                         } else {
-                            $('html, body').animate({
-                                scrollTop: $paragraph.offset().top - SCROLL_OFFSET_NON_CBT
-                            }, SCROLL_ANIMATION_DURATION);
+                            // Non-CBT layout: check for other scroll containers
+                            var scrollContainer = $paragraph.closest('.reading-text-section, .cbt-passage-panel');
+                            
+                            if (scrollContainer.length) {
+                                scrollContainer.animate({
+                                    scrollTop: $paragraph.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
+                                }, SCROLL_ANIMATION_DURATION);
+                            } else {
+                                $('html, body').animate({
+                                    scrollTop: $paragraph.offset().top - SCROLL_OFFSET_NON_CBT
+                                }, SCROLL_ANIMATION_DURATION);
+                            }
                         }
                     }
                 }
