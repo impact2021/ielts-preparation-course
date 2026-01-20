@@ -1947,17 +1947,14 @@ select.answer-select-inline.answer-incorrect {
 
 /* Hide answer marker highlighting initially (both listening and reading) */
 .transcript-answer-marker,
-.reading-answer-marker,
-.listening-answer-marker {
+.reading-answer-marker {
     background-color: transparent; /* No highlighting before submission */
 }
 
 /* Show answer marker highlighting after quiz submission (ONLY for listening tests - transcripts) */
 /* Reading tests should only show highlighting when clicking "Show me the section" button */
-/* Listening tests should auto-highlight after submission to match inline style behavior */
-.quiz-submitted[data-test-type="listening"] .reading-answer-marker,
-.quiz-submitted[data-test-type="listening"] .listening-answer-marker {
-    background-color: #fff9c4; /* Yellow highlight after submission for listening tests - matches inline style behavior */
+.quiz-submitted[data-test-type="listening"] .reading-answer-marker {
+    background-color: #fff9c4; /* Yellow highlight after submission for listening tests */
 }
 
 /* Legacy support for old transcript-answer-marker class */
