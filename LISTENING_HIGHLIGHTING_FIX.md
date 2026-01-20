@@ -1,51 +1,47 @@
 # Listening Test Answer Highlighting Fix
 
 ## Issue
-User reported: "Why does this keep disappearing?" and "The highlighting should be exactly the same as the reading?"
+User reported: "Why does this keep disappearing?" and requested using only the single standardized highlighting format.
 
 ## Problem Description
 
-In IELTS Listening Test 01, the answer highlighting was inconsistent across different sections:
+In IELTS Listening Test 01, Section 1 was using the wrong CSS class:
 
-- **Section 1** used: `<span class="listening-answer-marker">the answer section is here</span>`
-- **Sections 2-4** used: `<strong style="background-color: yellow">[Q#: answer]</strong>`
-
-The `.listening-answer-marker` class did not exist in the CSS file, causing the highlighted text in Section 1 to appear transparent/invisible (effectively "disappearing"), while sections 2-4 displayed yellow highlighting via inline styles.
+- **Section 1** incorrectly used: `<span class="listening-answer-marker">the answer section is here</span>`
+- This class is NOT the standard format and had no CSS support
 
 ## Root Cause
 
-The JSON data for Listening Test 01 Section 1 referenced a CSS class (`.listening-answer-marker`) that was never defined in the stylesheet (`assets/css/frontend.css`).
+The JSON data for Listening Test 01 Section 1 used a non-standard CSS class (`.listening-answer-marker`) instead of the documented standard format.
+
+## Standard Format (v12.6+)
+
+Per **TRANSCRIPT_MARKER_PLACEMENT_GUIDE.md**, the ONLY accepted format is:
+
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="reading-answer-marker">answer text here</span>
+```
+
+**Key requirement:** Use `class="reading-answer-marker"` for BOTH reading AND listening tests.
 
 ## Solution
 
-Added CSS rules for the `.listening-answer-marker` class to ensure consistent highlighting behavior:
-
-```css
-/* Hide answer marker highlighting initially (both listening and reading) */
-.transcript-answer-marker,
-.reading-answer-marker,
-.listening-answer-marker {
-    background-color: transparent; /* No highlighting before submission */
-}
-
-/* Show answer marker highlighting after quiz submission (ONLY for listening tests - transcripts) */
-.quiz-submitted[data-test-type="listening"] .reading-answer-marker,
-.quiz-submitted[data-test-type="listening"] .listening-answer-marker {
-    background-color: #fff9c4; /* Yellow highlight after submission for listening tests */
-}
-```
+1. **Reverted CSS changes** - Removed `.listening-answer-marker` support (it should never have been added)
+2. **Fixed JSON** - Changed `class="listening-answer-marker"` to `class="reading-answer-marker"` in Listening Test 01 Section 1
 
 ## Expected Behavior
 
 After this fix:
 
-1. **Before Quiz Submission**: All answer markers (`.listening-answer-marker`, `.reading-answer-marker`, `.transcript-answer-marker`) are transparent
-2. **After Quiz Submission (Listening Tests)**: All answer markers are highlighted with yellow background (#fff9c4)
-3. **Consistency**: Section 1 now matches the highlighting behavior of Sections 2-4
+1. **Before Quiz Submission**: All answer markers are transparent
+2. **After Quiz Submission (Listening Tests)**: Answer markers with `class="reading-answer-marker"` are highlighted with yellow background (#fff9c4)
+3. **After Quiz Submission (Reading Tests)**: Answer markers remain transparent until "Show me the section" button is clicked
+4. **Single Format**: All tests now use `class="reading-answer-marker"` exclusively
 
 ## Files Modified
 
-- `assets/css/frontend.css`: Added `.listening-answer-marker` class styling
+- `assets/css/frontend.css`: Reverted to original state (no `.listening-answer-marker` support)
+- `main/Listening Test JSONs/IELTS-Listening-Test-01.json`: Changed to use standard `class="reading-answer-marker"`
 
 ## Testing Recommendations
 
@@ -53,11 +49,12 @@ After this fix:
 2. Start the test and submit answers
 3. After submission, verify that:
    - Section 1 transcript shows yellow highlighting on answer markers
-   - All sections (1-4) have consistent yellow highlighting
-   - The highlighting matches the inline `style="background-color: yellow"` behavior in other sections
+   - The highlighting works consistently with other sections
+   - Uses the standard `reading-answer-marker` class format
 
 ## Impact
 
-- Only affects IELTS Listening Test 01 (only test using `.listening-answer-marker` class)
+- Only affects IELTS Listening Test 01 (only test that was using non-standard `.listening-answer-marker` class)
 - No breaking changes to other tests
-- Maintains backward compatibility with existing inline styles and `.transcript-answer-marker` class
+- Now fully compliant with documented standards in TRANSCRIPT_MARKER_PLACEMENT_GUIDE.md
+- Single standardized format for all highlighting across the entire system
