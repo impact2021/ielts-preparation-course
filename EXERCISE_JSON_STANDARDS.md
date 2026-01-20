@@ -52,35 +52,35 @@
 
 **Highlighting Rules:**
 1. **For heading questions:** 
-   - Place `<span id="passage-q#" data-question="#">` at the start of the paragraph
+   - Place `<span id="q#" data-question="#">` at the start of the paragraph
    - Do NOT use `<span class="reading-answer-marker">` wrapper
    - The entire paragraph will be highlighted
    
 2. **For all other questions (specific answers):**
-   - Place `<span id="passage-q#" data-question="#"></span>` before the answer
+   - Place `<span id="q#" data-question="#"></span>` before the answer
    - Wrap the answer text in `<span class="reading-answer-marker">text</span>`
    - Include surrounding context if it helps students understand why that's the answer
    - The highlighted text should support student learning
 
 ### Listening Tests
-**Format:** `<span id="transcript-q#" data-question="#"><span class="question-marker-badge">Q#</span></span><span class="reading-answer-marker">answer text</span>`
+**Format:** `<span id="q#" data-question="#"></span><span class="reading-answer-marker">answer text</span>`
 
 **Key Points:** 
-- Listening tests show the visible question number badge (Q1, Q2, etc.)
-- Both reading and listening now use `class="reading-answer-marker"` (v12.6+)
-- Old `transcript-answer-marker` class is deprecated
+- Uses the SAME unified format as reading (v12.9+)
+- No badge span needed
+- Both reading and listening use `class="reading-answer-marker"`
 
 ---
 
 ## General Rules
 
-### ID Format
-- Reading: `passage-q#` (e.g., `passage-q1`, `passage-q12`)
-- Listening: `transcript-q#` (e.g., `transcript-q1`, `transcript-q12`)
+### ID Format (v12.9+)
+- **All exercise types:** `q#` (e.g., `q1`, `q2`, `q12`)
+- Simplified from old `passage-q#` and `transcript-q#` formats
 
-### Class Names (v12.6+)
-- **Both reading and listening:** `reading-answer-marker` (standardized)
-- Question badge (listening only): `question-marker-badge`
+### Class Names
+- **All exercise types:** `reading-answer-marker` (standardized)
+- No badge spans needed
 
 ### No Classes on ID Spans
 - The ID span itself should NOT have any classes
