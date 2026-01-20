@@ -120,12 +120,13 @@ This exercise is ideal for:
 ```json
 {
   "pass_percentage": "70",
-  "layout_type": "two_column_exercise",
+  "layout_type": "two_column_reading",
   "scoring_type": "percentage",
   "timer_minutes": "15",
   "starting_question_number": "1"
 }
 ```
+**Note:** As of v12.6, use `two_column_reading` or `two_column_listening`. The old `two_column_exercise` template has been deprecated.
 
 ## Future Enhancements
 

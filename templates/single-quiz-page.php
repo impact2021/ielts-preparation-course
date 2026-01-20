@@ -126,7 +126,7 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
             // Get layout type
             $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
             if (!$layout_type) {
-                $layout_type = 'two_column_exercise';
+                $layout_type = 'two_column_reading';
             }
             
             // Determine which template to use
@@ -139,16 +139,18 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
                 } elseif ($old_cbt_test_type === 'reading') {
                     $layout_type = 'two_column_reading';
                 } else {
-                    $layout_type = 'two_column_exercise';
+                    $layout_type = 'two_column_reading';
                 }
-            } elseif ($layout_type === 'standard') {
-                $layout_type = 'one_column_exercise';
+            } elseif ($layout_type === 'standard' || $layout_type === 'one_column_exercise' || $layout_type === 'two_column_exercise') {
+                // Map deprecated templates to two_column_reading
+                $layout_type = 'two_column_reading';
             } elseif ($layout_type === 'listening_practice' || $layout_type === 'listening_exercise') {
                 $layout_type = 'two_column_listening';
             }
             
             // Include the appropriate template based on layout type
-            if (in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'))) {
+            // Both two_column_reading and two_column_listening use the same template
+            if (in_array($layout_type, array('two_column_reading', 'two_column_listening'))) {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
             } else {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';

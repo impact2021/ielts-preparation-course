@@ -1,9 +1,29 @@
 # Reading Passage Marker Guide
 
 ## Overview
-This guide explains how to add question markers to reading passages so that the "Show in the reading passage" button can highlight the correct text for students.
+This guide explains how to add question markers to reading passages and listening transcripts so that the "Show in passage" button can highlight the correct text for students.
 
-**⚠️ CRITICAL: Always use the NEW format with `passage-q#` IDs, NOT the old `reading-text-q#` format!**
+**⚠️ CRITICAL: Both reading passages and listening transcripts now use the same standardized format!**
+
+## Standardized Format (Version 12.6+)
+
+Both reading passages and listening transcripts now use the **same format** for answer highlighting:
+
+```html
+<span id="passage-q1" data-question="1"></span><span class="reading-answer-marker">this is the highlighted answer area</span>
+```
+
+For listening transcripts, use `transcript-q#` for the ID but the same `reading-answer-marker` class:
+
+```html
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="reading-answer-marker">this is the highlighted answer area</span>
+```
+
+**Key points:**
+- **Reading passages:** Use `id="passage-q#"` with `class="reading-answer-marker"`
+- **Listening transcripts:** Use `id="transcript-q#"` with `class="reading-answer-marker"` (NOT transcript-answer-marker)
+- **Both use the same class:** `reading-answer-marker` for consistency
+- **Question badge:** Listening shows visible Q# badge, reading does not
 
 ## Two Methods for Adding Markers
 
@@ -57,15 +77,17 @@ For precise control over what text gets highlighted, use manual HTML markers.
 ```
 When the student clicks "Show me the section of the reading passage" for Q1, **both** highlighted sections will be shown simultaneously.
 
-## Comparison: Listening vs Reading Markers
+## Comparison: Listening vs Reading Markers (UPDATED v12.6)
+
+Both now use the same `reading-answer-marker` class for consistency.
 
 ### Listening Transcript Format:
 ```html
-<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="transcript-answer-marker">It's Anne Hawberry.</span>
+<span id="transcript-q1" data-question="1"><span class="question-marker-badge">Q1</span></span><span class="reading-answer-marker">It's Anne Hawberry.</span>
 ```
 - Uses `transcript-q#` ID
 - Shows visible Q1 badge
-- Uses `transcript-answer-marker` class
+- Uses `reading-answer-marker` class (standardized in v12.6)
 
 ### Reading Passage Format:
 ```html
@@ -73,7 +95,7 @@ When the student clicks "Show me the section of the reading passage" for Q1, **b
 ```
 - Uses `passage-q#` ID
 - No visible badge
-- Uses `reading-answer-marker` class (different from listening for clarity)
+- Uses `reading-answer-marker` class
 
 ## When to Use Each Method
 
@@ -135,22 +157,21 @@ When a student clicks "Show in the reading passage":
 **OLD FORMATS - DO NOT USE:**
 - ❌ `id="reading-text-q#" data-question="#"><span class="question-marker-badge">Q#</span></span>` - DEPRECATED
 - ❌ `class="reading-text-answer-marker"` - DEPRECATED
+- ❌ `class="transcript-answer-marker"` - DEPRECATED (use reading-answer-marker)
 - ❌ `class="question-marker-badge"` in reading passages - DEPRECATED
 
-**NEW FORMAT - ALWAYS USE THIS:**
-- ✅ `id="passage-q#" data-question="#"></span>` - CORRECT
-- ✅ `class="reading-answer-marker"` - CORRECT
+**NEW FORMAT - ALWAYS USE THIS (v12.6+):**
+- ✅ `id="passage-q#" data-question="#"></span>` - CORRECT for reading
+- ✅ `id="transcript-q#" data-question="#"></span>` - CORRECT for listening
+- ✅ `class="reading-answer-marker"` - CORRECT for BOTH reading and listening
 
 **Migration Steps:**
-If you have existing reading passages using old formats, update them:
+If you have existing content using old formats, update them:
 1. Replace `<span id="reading-text-q#" data-question="#"><span class="question-marker-badge">Q#</span></span>` 
    with `<span id="passage-q#" data-question="#"></span>`
 2. Replace all `class="reading-text-answer-marker"` with `class="reading-answer-marker"`
-3. Remove any `<span class="question-marker-badge">` elements from reading passages
-
-**For Reference Only** (backward compatibility exists but should not be relied upon):
-- `id="transcript-q#"` - Old format from listening tests, works but use `passage-q#` for reading
-- `class="transcript-answer-marker"` - Old format from listening tests
+3. Replace all `class="transcript-answer-marker"` with `class="reading-answer-marker"`
+4. Remove any `<span class="question-marker-badge">` elements from reading passages (keep for listening)
 
 ## Visual Comparison
 
@@ -163,12 +184,12 @@ It's Anne Hawberry. ← Only highlighted text (no badge)
 ## Technical Notes
 
 - Reading passages use `passage-q#` IDs to distinguish from listening's `transcript-q#`
-- Reading passages use `reading-answer-marker` class (listening uses `transcript-answer-marker`)
-- Both classes share the same CSS styling (yellow highlight)
+- **Both reading and listening now use `reading-answer-marker` class (v12.6+)**
+- Both share the same CSS styling (yellow highlight)
 - The difference is controlled by the `$is_reading` parameter in `process_transcript_markers_cbt()`
 - Both methods generate the same output format internally
 - The `data-question` attribute is optional but recommended for better targeting
-- Backward compatibility maintained for old `transcript-q#` format
+- Backward compatibility maintained for old `transcript-answer-marker` format
 
 ## Summary
 
@@ -177,4 +198,8 @@ It's Anne Hawberry. ← Only highlighted text (no badge)
 - Use `<span id="passage-q#"></span><span class="reading-answer-marker">text</span>` for manual control
 - Both methods link to the "Show in the reading passage" button
 - No question badges are shown (unlike listening)
-- Use distinct `passage-q#` IDs and `reading-answer-marker` class (separate from listening)
+
+**For Listening Transcripts (v12.6+):**
+- Use `<span id="transcript-q#"><span class="question-marker-badge">Q#</span></span><span class="reading-answer-marker">text</span>`
+- Shows visible Q# badge
+- Uses the same `reading-answer-marker` class as reading passages for consistency

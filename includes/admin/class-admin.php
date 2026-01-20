@@ -1095,7 +1095,7 @@ class IELTS_CM_Admin {
         
         // Map old layout types to new ones for backward compatibility
         if (!$layout_type) {
-            $layout_type = 'two_column_exercise';
+            $layout_type = 'two_column_reading';
         } elseif ($layout_type === 'computer_based') {
             // Check old cbt_test_type for backward compatibility
             $old_cbt_test_type = get_post_meta($post->ID, '_ielts_cm_cbt_test_type', true);
@@ -1104,10 +1104,11 @@ class IELTS_CM_Admin {
             } elseif ($old_cbt_test_type === 'reading') {
                 $layout_type = 'two_column_reading';
             } else {
-                $layout_type = 'two_column_exercise';
+                $layout_type = 'two_column_reading';
             }
-        } elseif ($layout_type === 'standard') {
-            $layout_type = 'one_column_exercise';
+        } elseif ($layout_type === 'standard' || $layout_type === 'one_column_exercise' || $layout_type === 'two_column_exercise') {
+            // Map deprecated templates to two_column_reading
+            $layout_type = 'two_column_reading';
         } elseif ($layout_type === 'listening_practice' || $layout_type === 'listening_exercise') {
             $layout_type = 'two_column_listening';
         }
@@ -1254,10 +1255,8 @@ class IELTS_CM_Admin {
             <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
                 <option value="two_column_reading" <?php selected($layout_type, 'two_column_reading'); ?>><?php _e('2 Column Reading Test', 'ielts-course-manager'); ?></option>
                 <option value="two_column_listening" <?php selected($layout_type, 'two_column_listening'); ?>><?php _e('2 Column Listening Test', 'ielts-course-manager'); ?></option>
-                <option value="two_column_exercise" <?php selected($layout_type, 'two_column_exercise'); ?>><?php _e('2 Column Exercise', 'ielts-course-manager'); ?></option>
-                <option value="one_column_exercise" <?php selected($layout_type, 'one_column_exercise'); ?>><?php _e('1 Column Exercise', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Two column layouts display content on the left and questions on the right. One column shows questions only.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Two column layouts display content on the left and questions on the right.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
@@ -1268,7 +1267,7 @@ class IELTS_CM_Admin {
         }
         
         // Determine if we show two-column options based on layout type
-        $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening', 'two_column_exercise'));
+        $is_two_column = in_array($layout_type, array('two_column_reading', 'two_column_listening'));
         ?>
         <div id="two-column-options" style="<?php echo !$is_two_column ? 'display:none;' : ''; ?>">
             <!-- Popup option removed - all CBT exercises now auto-enable focus mode with header toggle -->
@@ -1347,27 +1346,6 @@ class IELTS_CM_Admin {
             <button type="button" class="button" id="add-reading-text"><?php _e('Add Reading Text', 'ielts-course-manager'); ?></button>
         </div>
         
-        <?php
-        $exercise_content = get_post_meta($post->ID, '_ielts_cm_exercise_content', true);
-        ?>
-        <div id="exercise-content-section" style="<?php echo ($layout_type !== 'two_column_exercise') ? 'display:none;' : ''; ?>">
-            <h3><?php _e('Left Pane Content', 'ielts-course-manager'); ?></h3>
-            <p><small><?php _e('Add content to display in the left pane of the two-column exercise. This can include instructions, images, or any other content you want to show alongside the questions.', 'ielts-course-manager'); ?></small></p>
-            
-            <?php
-            wp_editor($exercise_content, 'ielts_cm_exercise_content', array(
-                'textarea_name' => 'ielts_cm_exercise_content',
-                'textarea_rows' => 15,
-                'media_buttons' => true,
-                'teeny' => false,
-                'tinymce' => array(
-                    'toolbar1' => 'bold,italic,underline,strikethrough,bullist,numlist,blockquote,hr,alignleft,aligncenter,alignright,link,unlink,wp_more,spellchecker,fullscreen,wp_adv',
-                    'toolbar2' => 'formatselect,forecolor,pastetext,removeformat,charmap,outdent,indent,undo,redo,wp_help'
-                )
-            ));
-            ?>
-        </div>
-        
         <div id="ielts-cm-questions">
             <h3><?php _e('Questions', 'ielts-course-manager'); ?></h3>
             
@@ -1427,7 +1405,7 @@ class IELTS_CM_Admin {
             // Layout type change handler
             $('#ielts_cm_layout_type').on('change', function() {
                 var layoutType = $(this).val();
-                var isTwoColumn = ['two_column_reading', 'two_column_listening', 'two_column_exercise'].indexOf(layoutType) !== -1;
+                var isTwoColumn = ['two_column_reading', 'two_column_listening'].indexOf(layoutType) !== -1;
                 
                 if (isTwoColumn) {
                     $('#two-column-options').show();
@@ -1439,19 +1417,12 @@ class IELTS_CM_Admin {
                 if (layoutType === 'two_column_reading') {
                     $('#reading-texts-section').show();
                     $('#listening-audio-section').hide();
-                    $('#exercise-content-section').hide();
                 } else if (layoutType === 'two_column_listening') {
                     $('#reading-texts-section').hide();
                     $('#listening-audio-section').show();
-                    $('#exercise-content-section').hide();
-                } else if (layoutType === 'two_column_exercise') {
-                    $('#reading-texts-section').hide();
-                    $('#listening-audio-section').hide();
-                    $('#exercise-content-section').show();
                 } else {
                     $('#reading-texts-section').hide();
                     $('#listening-audio-section').hide();
-                    $('#exercise-content-section').hide();
                 }
             });
             
@@ -3506,7 +3477,7 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
             }
             
-            // Save exercise content (for two_column_exercise layout)
+            // Save exercise content (deprecated but kept for backward compatibility)
             if (isset($_POST['ielts_cm_exercise_content'])) {
                 update_post_meta($post_id, '_ielts_cm_exercise_content', wp_kses_post($_POST['ielts_cm_exercise_content']));
             }
@@ -6866,7 +6837,7 @@ class IELTS_CM_Admin {
             'reading_texts' => get_post_meta($post_id, '_ielts_cm_reading_texts', true) ?: array(),
             'settings' => array(
                 'pass_percentage' => get_post_meta($post_id, '_ielts_cm_pass_percentage', true) ?: 70,
-                'layout_type' => get_post_meta($post_id, '_ielts_cm_layout_type', true) ?: 'two_column_exercise',
+                'layout_type' => get_post_meta($post_id, '_ielts_cm_layout_type', true) ?: 'two_column_reading',
                 'cbt_test_type' => get_post_meta($post_id, '_ielts_cm_cbt_test_type', true),
                 'exercise_label' => get_post_meta($post_id, '_ielts_cm_exercise_label', true) ?: 'exercise',
                 'open_as_popup' => get_post_meta($post_id, '_ielts_cm_open_as_popup', true),

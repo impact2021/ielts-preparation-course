@@ -73,11 +73,10 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1, $is
             }
         }
         
-        // Build the output with appropriate ID prefix and class based on test type
-        // Listening: transcript-q# with transcript-answer-marker | Reading: passage-q# with reading-answer-marker
+        // Build the output with appropriate ID prefix based on test type
+        // Both reading and listening now use reading-answer-marker class for consistency
         $id_prefix = $is_reading ? 'passage-q' : 'transcript-q';
-        $answer_class = $is_reading ? 'reading-answer-marker' : 'transcript-answer-marker';
-        $output = '<span id="' . $id_prefix . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '" class="reading-passage-marker">';
+        $output = '<span id="' . $id_prefix . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '">';
         
         // For reading tests, don't show the question number badge (per requirements)
         if (!$is_reading) {
@@ -87,9 +86,10 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1, $is
         $output .= '</span>';
         
         // Wrap the highlighted answer text in a span for highlighting on click
+        // Both reading and listening now use 'reading-answer-marker' class
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
         if (!empty($highlighted_text)) {
-            $output .= '<span class="' . $answer_class . ' reading-answer-highlight" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
+            $output .= '<span class="reading-answer-marker" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
         }
         
         // Add any remaining text that wasn't highlighted
@@ -419,14 +419,7 @@ if ($lesson_id) {
                             <button type="button" class="clear-highlights-btn" style="display:none;">
                                 <?php _e('Clear', 'ielts-course-manager'); ?>
                             </button>
-                            <?php 
-                            // Check if this is a two_column_exercise layout and has exercise content
-                            $exercise_content = get_post_meta($quiz->ID, '_ielts_cm_exercise_content', true);
-                            if ($layout_type === 'two_column_exercise' && !empty($exercise_content)): ?>
-                                <div class="exercise-content-section">
-                                    <?php echo apply_filters('the_content', $exercise_content); ?>
-                                </div>
-                            <?php elseif (!empty($reading_texts)): ?>
+                            <?php if (!empty($reading_texts)): ?>
                                 <?php foreach ($reading_texts as $index => $text): ?>
                                     <div class="reading-text-section" id="reading-text-<?php echo $index; ?>" style="<?php echo $index > 0 ? 'display:none;' : ''; ?>">
                                         <?php if (!empty($text['title'])): ?>
