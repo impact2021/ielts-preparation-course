@@ -1253,10 +1253,25 @@ class IELTS_CM_Admin {
         <p>
             <label for="ielts_cm_layout_type"><?php _e('Layout Type', 'ielts-course-manager'); ?></label><br>
             <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
-                <option value="two_column_reading" <?php selected($layout_type, 'two_column_reading'); ?>><?php _e('2 Column Reading Test', 'ielts-course-manager'); ?></option>
-                <option value="two_column_listening" <?php selected($layout_type, 'two_column_listening'); ?>><?php _e('2 Column Listening Test', 'ielts-course-manager'); ?></option>
+                <option value="two_column_reading" <?php selected(in_array($layout_type, array('two_column_reading', 'two_column_listening'))); ?>><?php _e('2 Column Test (Reading or Listening)', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Two column layouts display content on the left and questions on the right.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Two column layout displays content on the left and questions on the right.', 'ielts-course-manager'); ?></small>
+        </p>
+        
+        <?php
+        // Get the "is listening" checkbox value
+        $is_listening_exercise = get_post_meta($post->ID, '_ielts_cm_is_listening_exercise', true);
+        // For backward compatibility, if layout_type is 'two_column_listening', check the box
+        if ($layout_type === 'two_column_listening') {
+            $is_listening_exercise = '1';
+        }
+        ?>
+        <p>
+            <label>
+                <input type="checkbox" id="ielts_cm_is_listening_exercise" name="ielts_cm_is_listening_exercise" value="1" <?php checked($is_listening_exercise, '1'); ?>>
+                <?php _e('This is for a listening exercise', 'ielts-course-manager'); ?>
+            </label>
+            <br><small><?php _e('Check this if this exercise includes audio and listening transcripts. Unchecked = reading test with passages.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
@@ -1281,7 +1296,7 @@ class IELTS_CM_Admin {
             $audio_sections = array();
         }
         ?>
-        <div id="listening-audio-section" style="<?php echo ($layout_type !== 'two_column_listening') ? 'display:none;' : ''; ?>">
+        <div id="listening-audio-section" style="<?php echo ($is_listening_exercise !== '1') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Listening Audio & Transcripts', 'ielts-course-manager'); ?></h3>
             
             <div style="margin-bottom: 20px; padding: 15px; background: #f0f7ff; border: 1px solid #0073aa; border-radius: 4px;">
@@ -1332,7 +1347,7 @@ class IELTS_CM_Admin {
             <small><?php _e('Set a time limit in minutes. The exercise will automatically submit when time expires, regardless of completion status. Leave empty for no timer.', 'ielts-course-manager'); ?></small>
         </p>
         
-        <div id="reading-texts-section" style="<?php echo ($layout_type !== 'two_column_reading') ? 'display:none;' : ''; ?>">
+        <div id="reading-texts-section" style="<?php echo ($is_listening_exercise === '1') ? 'display:none;' : ''; ?>">
             <h3><?php _e('Reading Texts', 'ielts-course-manager'); ?></h3>
             <p><small><?php _e('Add reading texts that will be displayed in the left column. You can link specific questions to each reading text.', 'ielts-course-manager'); ?></small></p>
             
@@ -1402,27 +1417,34 @@ class IELTS_CM_Admin {
                 removeReadingText: <?php echo json_encode(__('Remove Reading Text', 'ielts-course-manager')); ?>
             };
             
-            // Layout type change handler
+            // Checkbox change handler for "This is for a listening exercise"
+            function toggleListeningReadingSections() {
+                var isListening = $('#ielts_cm_is_listening_exercise').is(':checked');
+                
+                if (isListening) {
+                    $('#listening-audio-section').show();
+                    $('#reading-texts-section').hide();
+                } else {
+                    $('#listening-audio-section').hide();
+                    $('#reading-texts-section').show();
+                }
+            }
+            
+            // Trigger on checkbox change
+            $('#ielts_cm_is_listening_exercise').on('change', toggleListeningReadingSections);
+            
+            // Run on page load
+            toggleListeningReadingSections();
+            
+            // Layout type change handler (simplified - no longer needs to toggle sections)
             $('#ielts_cm_layout_type').on('change', function() {
                 var layoutType = $(this).val();
-                var isTwoColumn = ['two_column_reading', 'two_column_listening'].indexOf(layoutType) !== -1;
+                var isTwoColumn = layoutType === 'two_column_reading';
                 
                 if (isTwoColumn) {
                     $('#two-column-options').show();
                 } else {
                     $('#two-column-options').hide();
-                }
-                
-                // Show/hide sections based on layout type
-                if (layoutType === 'two_column_reading') {
-                    $('#reading-texts-section').show();
-                    $('#listening-audio-section').hide();
-                } else if (layoutType === 'two_column_listening') {
-                    $('#reading-texts-section').hide();
-                    $('#listening-audio-section').show();
-                } else {
-                    $('#reading-texts-section').hide();
-                    $('#listening-audio-section').hide();
                 }
             });
             
@@ -3475,6 +3497,13 @@ class IELTS_CM_Admin {
             // Save layout type
             if (isset($_POST['ielts_cm_layout_type'])) {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
+            }
+            
+            // Save "is listening exercise" checkbox
+            if (isset($_POST['ielts_cm_is_listening_exercise'])) {
+                update_post_meta($post_id, '_ielts_cm_is_listening_exercise', '1');
+            } else {
+                delete_post_meta($post_id, '_ielts_cm_is_listening_exercise');
             }
             
             // Save exercise content (deprecated but kept for backward compatibility)

@@ -104,13 +104,14 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1, $is
 }
 
 
-// Determine test type from layout_type
-$test_type = 'exercise'; // default
-if ($layout_type === 'two_column_reading') {
-    $test_type = 'reading';
-} elseif ($layout_type === 'two_column_listening') {
-    $test_type = 'listening';
+// Determine test type from checkbox (for backward compatibility, also check layout_type)
+$is_listening_exercise = get_post_meta($quiz->ID, '_ielts_cm_is_listening_exercise', true);
+// Backward compatibility: if layout_type is 'two_column_listening', treat as listening
+if ($layout_type === 'two_column_listening') {
+    $is_listening_exercise = '1';
 }
+
+$test_type = ($is_listening_exercise === '1') ? 'listening' : 'reading';
 
 $audio_url = get_post_meta($quiz->ID, '_ielts_cm_audio_url', true);
 $transcript = get_post_meta($quiz->ID, '_ielts_cm_transcript', true);
