@@ -1466,10 +1466,18 @@
                     // For table cells, highlight the cell containing the answer
                     $tableCell.addClass('transcript-highlight');
                 } else {
-                    // For non-table content, highlight the containing paragraph
-                    var $paragraph = $questionMarker.closest('p');
-                    if ($paragraph.length) {
-                        $paragraph.addClass('transcript-highlight');
+                    // For non-table content, highlight only the reading-answer-marker element
+                    // Find the next reading-answer-marker element after the question marker
+                    var $answerMarker = $questionMarker.nextAll('.reading-answer-marker').first();
+                    if ($answerMarker.length) {
+                        $answerMarker.addClass('transcript-highlight');
+                    } else {
+                        // Fallback: check if marker is within the same parent as the answer
+                        var $parent = $questionMarker.parent();
+                        var $answerInParent = $parent.find('.reading-answer-marker').first();
+                        if ($answerInParent.length) {
+                            $answerInParent.addClass('transcript-highlight');
+                        }
                     }
                 }
                 
