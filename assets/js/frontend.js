@@ -1578,8 +1578,9 @@
         });
         
         // Delegated event handler for "Show me the section of the reading passage" links (for reading tests)
-        // Simple anchor link behavior - just show the correct reading text section and let the browser scroll
         $(document).on('click', '.show-in-reading-passage-link', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            
             var readingTextId = $(this).data('reading-text');
             var questionNumber = $(this).data('question');
             
@@ -1619,16 +1620,42 @@
                 
                 if ($answerHighlights.length) {
                     $answerHighlights.addClass('reading-passage-highlight');
+                    
+                    // Scroll to the first highlighted element
+                    var $scrollTarget = $answerHighlights.first();
+                    var scrollContainer = $scrollTarget.closest('.reading-text-section, .cbt-passage-panel');
+                    
+                    if (scrollContainer.length) {
+                        // Scroll within the container
+                        scrollContainer.animate({
+                            scrollTop: $scrollTarget.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - 100
+                        }, SCROLL_ANIMATION_DURATION);
+                    } else {
+                        // Fallback: scroll the window
+                        $('html, body').animate({
+                            scrollTop: $scrollTarget.offset().top - SCROLL_OFFSET_NON_CBT
+                        }, SCROLL_ANIMATION_DURATION);
+                    }
                 } else {
                     var $paragraph = $questionMarker.closest('p');
                     if ($paragraph.length) {
                         $paragraph.addClass('reading-passage-highlight');
+                        
+                        // Scroll to the paragraph
+                        var scrollContainer = $paragraph.closest('.reading-text-section, .cbt-passage-panel');
+                        
+                        if (scrollContainer.length) {
+                            scrollContainer.animate({
+                                scrollTop: $paragraph.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - 100
+                            }, SCROLL_ANIMATION_DURATION);
+                        } else {
+                            $('html, body').animate({
+                                scrollTop: $paragraph.offset().top - SCROLL_OFFSET_NON_CBT
+                            }, SCROLL_ANIMATION_DURATION);
+                        }
                     }
                 }
             }
-            
-            // Let the browser handle scrolling via the anchor link (href="#passage-q1" etc.)
-            // No need for custom scroll logic!
         });
         
         // Track answered questions in computer-based layout using event delegation
