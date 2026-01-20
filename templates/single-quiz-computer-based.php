@@ -78,10 +78,8 @@ function process_transcript_markers_cbt($transcript, $starting_question = 1, $is
         $id_prefix = $is_reading ? 'passage-q' : 'transcript-q';
         $output = '<span id="' . $id_prefix . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '">';
         
-        // For reading tests, don't show the question number badge (per requirements)
-        if (!$is_reading) {
-            $output .= '<span class="question-marker-badge">Q' . esc_html($display_num) . '</span>';
-        }
+        // Always include the badge for both reading and listening (CSS controls visibility)
+        $output .= '<span class="question-marker-badge">Q' . esc_html($display_num) . '</span>';
         
         $output .= '</span>';
         

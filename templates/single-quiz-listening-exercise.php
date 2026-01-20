@@ -91,8 +91,9 @@ function process_transcript_markers($transcript, $starting_question = 1) {
         
         // Wrap the highlighted answer text in a yellow background span
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
+        // Use reading-answer-marker class for consistency (v12.6+)
         if (!empty($highlighted_text)) {
-            $output .= '<span class="transcript-answer-marker">' . $highlighted_text . '</span>';
+            $output .= '<span class="reading-answer-marker" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
         }
         
         // Add any remaining text that wasn't highlighted
