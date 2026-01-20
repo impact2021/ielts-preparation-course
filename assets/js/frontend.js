@@ -1463,11 +1463,21 @@
                     // For table cells, highlight the cell containing the answer
                     $tableCell.addClass('transcript-highlight');
                 } else {
-                    // For non-table content, highlight only the reading-answer-marker element
-                    // Find the next reading-answer-marker element after the question marker
-                    var $answerMarker = $questionMarker.nextAll('.reading-answer-marker').first();
-                    if ($answerMarker.length) {
-                        $answerMarker.addClass('transcript-highlight');
+                    // For non-table content, highlight ALL reading-answer-marker elements associated with this question
+                    // Find all markers with id="q{N}" for this question and highlight the reading-answer-marker that follows each
+                    var $container = $targetSection;
+                    var $answerMarkers = $();
+                    
+                    $('[id="q' + questionNumber + '"]', $container).each(function() {
+                        // Use nextAll to find the first .reading-answer-marker that follows this marker
+                        var $nextMarker = $(this).nextAll('.reading-answer-marker').first();
+                        if ($nextMarker.length) {
+                            $answerMarkers = $answerMarkers.add($nextMarker);
+                        }
+                    });
+                    
+                    if ($answerMarkers.length) {
+                        $answerMarkers.addClass('transcript-highlight');
                     } else {
                         // Fallback: check if marker is within the same parent as the answer
                         var $parent = $questionMarker.parent();
