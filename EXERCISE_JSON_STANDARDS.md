@@ -3,8 +3,9 @@
 **⚠️ CRITICAL: This document MUST be reviewed before making ANY changes to exercise JSON files.**
 
 ## Version Control
-- **Document Version:** 1.0
-- **Last Updated:** 2026-01-15
+- **Document Version:** 1.1
+- **Last Updated:** 2026-01-20
+- **Changes in v1.1:** Updated for v12.6 - standardized to use reading-answer-marker for both reading and listening
 
 ---
 
@@ -42,9 +43,9 @@
 
 ---
 
-## Answer Highlighting - Reading vs Listening
+## Answer Highlighting - Standardized Format (v12.6+)
 
-**CRITICAL: Only TWO types of answer highlighting are used:**
+**CRITICAL: Both reading and listening now use the SAME class for consistency**
 
 ### Reading Tests
 **Format:** `<span id="passage-q#" data-question="#"></span><span class="reading-answer-marker">text to highlight</span>`
@@ -62,9 +63,12 @@
    - The highlighted text should support student learning
 
 ### Listening Tests
-**Format:** `<span id="transcript-q#" data-question="#"><span class="question-marker-badge">Q#</span></span><span class="transcript-answer-marker">answer text</span>`
+**Format:** `<span id="transcript-q#" data-question="#"><span class="question-marker-badge">Q#</span></span><span class="reading-answer-marker">answer text</span>`
 
-**Key Difference:** Listening tests show the visible question number badge (Q1, Q2, etc.)
+**Key Points:** 
+- Listening tests show the visible question number badge (Q1, Q2, etc.)
+- Both reading and listening now use `class="reading-answer-marker"` (v12.6+)
+- Old `transcript-answer-marker` class is deprecated
 
 ---
 
@@ -74,9 +78,8 @@
 - Reading: `passage-q#` (e.g., `passage-q1`, `passage-q12`)
 - Listening: `transcript-q#` (e.g., `transcript-q1`, `transcript-q12`)
 
-### Class Names
-- Reading answer highlighting: `reading-answer-marker`
-- Listening answer highlighting: `transcript-answer-marker`
+### Class Names (v12.6+)
+- **Both reading and listening:** `reading-answer-marker` (standardized)
 - Question badge (listening only): `question-marker-badge`
 
 ### No Classes on ID Spans
@@ -91,12 +94,14 @@
 - Automatic `[Q#]` markers (legacy format, not for new/updated exercises)
 - `class="reading-passage-marker"` on ID spans
 - `class="reading-text-answer-marker"` (deprecated)
+- `class="transcript-answer-marker"` (deprecated - use reading-answer-marker)
 - Different formats for different question types within the same test type
 
 ✅ **DO USE:**
 - Manual HTML spans with explicit IDs
 - Consistent formatting across all questions in a test
-- Only the two approved formats (Reading vs Listening)
+- `class="reading-answer-marker"` for both reading and listening (v12.6+)
+- Only the two approved ID formats: `passage-q#` for reading, `transcript-q#` for listening
 
 ---
 
@@ -107,7 +112,7 @@
 - [ ] Do open questions have proper `[field n]` placeholders?
 - [ ] **For multi-field questions: Does `field_answers` have all fields matching `field_count`?**
 - [ ] **For multi-field questions: Does `field_feedback` have all fields with correct/incorrect/no_answer messages?**
-- [ ] Am I using the correct format for Reading vs Listening?
+- [ ] Am I using the correct format (reading-answer-marker for both reading and listening)?
 - [ ] For heading questions, does the highlight span cover the entire paragraph?
 - [ ] For specific answer questions, does the highlighted text include helpful context?
 - [ ] Have I avoided using prohibited legacy formats?
