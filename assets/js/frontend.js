@@ -1039,15 +1039,21 @@
                                 if (questionResult.question_type !== 'open_question') {
                                     if (questionResult.audio_section_id !== null && 
                                         questionResult.audio_section_id !== undefined) {
+                                        // Create a container div for the buttons to display them on a new line
+                                        var buttonContainer = $('<div>')
+                                            .css({
+                                                'margin-top': '10px',
+                                                'display': 'block'
+                                            });
+                                        
                                         var transcriptLink = $('<a>')
                                             .attr('href', '#')
                                             .addClass('show-in-transcript-link')
                                             .attr('data-section', questionResult.audio_section_id)
                                             .attr('data-question', questionNum)
-                                            .text('Show me')
-                                            .css('margin-left', '10px');
+                                            .text('Show me');
                                         
-                                        feedbackDiv.append(transcriptLink);
+                                        buttonContainer.append(transcriptLink);
                                         
                                         // Add "Listen to this answer" button if audio timing is available
                                         if (questionResult.audio_start_time !== null && 
@@ -1063,8 +1069,10 @@
                                                 .text('Listen to this answer')
                                                 .css('margin-left', '10px');
                                             
-                                            feedbackDiv.append(listenLink);
+                                            buttonContainer.append(listenLink);
                                         }
+                                        
+                                        feedbackDiv.append(buttonContainer);
                                     }
                                 }
                                 
@@ -1095,18 +1103,26 @@
                                 // Some answers (e.g., "Not Given") won't have a marker in the passage
                                 if (hasPassageMarker(questionNum) && 
                                     questionElement.find('.show-in-reading-passage-link').length === 0) {
+                                    // Create a container div for the button to display it on a new line
+                                    var buttonContainer = $('<div>')
+                                        .css({
+                                            'margin-top': '10px',
+                                            'display': 'block'
+                                        });
+                                    
                                     var readingLink = $('<a>')
                                         .attr('href', '#q' + questionNum)
                                         .addClass('show-in-reading-passage-link')
                                         .attr('data-reading-text', questionResult.reading_text_id)
                                         .attr('data-question', questionNum)
-                                        .text('Show me')
-                                        .css('margin-left', '10px');
+                                        .text('Show me');
                                     
-                                    // Append button to the feedback div (inline after feedback message)
-                                    var feedbackDiv = questionElement.find('.question-feedback');
+                                    buttonContainer.append(readingLink);
+                                    
+                                    // Append button container to the feedback div (on a new line below feedback message)
+                                    var feedbackDiv = questionElement.find('.question-feedback-message');
                                     if (feedbackDiv.length) {
-                                        feedbackDiv.append(readingLink);
+                                        feedbackDiv.append(buttonContainer);
                                     }
                                 }
                             }
