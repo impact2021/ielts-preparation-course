@@ -56,6 +56,10 @@ See `TEMPLATES/example-exercise.json` for a complete working example.
 }
 ```
 
+**Supported Layout Types (v12.6+):**
+- `two_column_reading` - Reading test with passage on left, questions on right (default)
+- `two_column_listening` - Listening test with transcript/audio on left, questions on right
+
 **Example Open Question (covers 5 question numbers):**
 ```json
 {
@@ -465,6 +469,11 @@ Create a custom PHP script using `TEMPLATES/generate-closed-open-xml.php` as a b
 
 ## Recent Updates
 
+**Version 12.6 (January 2026):**
+- ✅ **Removed deprecated templates** - Only two_column_reading and two_column_listening supported
+- ✅ **Standardized answer highlighting** - Both templates now use `reading-answer-marker` class
+- ✅ **Updated default template** - Changed from two_column_exercise to two_column_reading
+
 **Version 10.2 (January 2026):**
 - ✅ **Added JSON import/export** - Now the primary recommended method
 - ✅ Eliminates 90% of import bugs caused by XML serialization
@@ -479,6 +488,6 @@ Create a custom PHP script using `TEMPLATES/generate-closed-open-xml.php` as a b
 
 ---
 
-**Last Updated:** January 1, 2026  
-**Plugin Version:** 10.2  
+**Last Updated:** January 20, 2026  
+**Plugin Version:** 12.6  
 **Current Import Options:** JSON (recommended), XML (legacy), Manual UI, PHP Programmatic
