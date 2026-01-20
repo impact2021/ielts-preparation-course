@@ -1574,19 +1574,13 @@
             }
         });
         
-        // Delegated event handler for "Show me the section of the reading passage" links (for reading tests)
+        // Delegated event handler for "Show me" links (for reading tests)
         $(document).on('click', '.show-in-reading-passage-link', function(e) {
-            e.preventDefault(); // Prevent default anchor behavior
+            // Don't prevent default - let the browser handle the anchor navigation
+            // The href="#qN" will automatically scroll to the element with id="qN"
             
             var readingTextId = $(this).data('reading-text');
             var questionNumber = $(this).data('question');
-            
-            // Update URL hash to match the anchor (fixes issue where URL doesn't update)
-            if (window.history && window.history.replaceState) {
-                window.history.replaceState(null, null, '#q' + questionNumber);
-            } else {
-                window.location.hash = 'q' + questionNumber;
-            }
             
             // Hide all reading text sections
             $('.reading-text-section').hide();
@@ -1622,63 +1616,11 @@
                 
                 if ($answerHighlights.length) {
                     $answerHighlights.addClass('reading-passage-highlight');
-                    
-                    // Scroll to the first highlighted element
-                    var $scrollTarget = $answerHighlights.first();
-                    
-                    // For CBT layout, scroll within the reading column
-                    var $readingColumn = $scrollTarget.closest('.reading-column');
-                    if ($readingColumn.length) {
-                        // CBT layout - scroll within the column to bring element to top
-                        var markerOffset = $scrollTarget.position().top;
-                        var columnScrollTop = $readingColumn.scrollTop();
-                        $readingColumn.animate({
-                            scrollTop: columnScrollTop + markerOffset - SCROLL_OFFSET_NON_CBT
-                        }, SCROLL_ANIMATION_DURATION);
-                    } else {
-                        // Non-CBT layout: check for other scroll containers
-                        var scrollContainer = $scrollTarget.closest('.reading-text-section, .cbt-passage-panel');
-                        
-                        if (scrollContainer.length) {
-                            // Scroll within the container
-                            scrollContainer.animate({
-                                scrollTop: $scrollTarget.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
-                            }, SCROLL_ANIMATION_DURATION);
-                        } else {
-                            // Fallback: scroll the window
-                            $('html, body').animate({
-                                scrollTop: $scrollTarget.offset().top - SCROLL_OFFSET_NON_CBT
-                            }, SCROLL_ANIMATION_DURATION);
-                        }
-                    }
                 } else {
+                    // If no answer highlights found, highlight the paragraph containing the marker
                     var $paragraph = $questionMarker.closest('p');
                     if ($paragraph.length) {
                         $paragraph.addClass('reading-passage-highlight');
-                        
-                        // For CBT layout, scroll within the reading column
-                        var $readingColumn = $paragraph.closest('.reading-column');
-                        if ($readingColumn.length) {
-                            // CBT layout - scroll within the column to bring element to top
-                            var markerOffset = $paragraph.position().top;
-                            var columnScrollTop = $readingColumn.scrollTop();
-                            $readingColumn.animate({
-                                scrollTop: columnScrollTop + markerOffset - SCROLL_OFFSET_NON_CBT
-                            }, SCROLL_ANIMATION_DURATION);
-                        } else {
-                            // Non-CBT layout: check for other scroll containers
-                            var scrollContainer = $paragraph.closest('.reading-text-section, .cbt-passage-panel');
-                            
-                            if (scrollContainer.length) {
-                                scrollContainer.animate({
-                                    scrollTop: $paragraph.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
-                                }, SCROLL_ANIMATION_DURATION);
-                            } else {
-                                $('html, body').animate({
-                                    scrollTop: $paragraph.offset().top - SCROLL_OFFSET_NON_CBT
-                                }, SCROLL_ANIMATION_DURATION);
-                            }
-                        }
                     }
                 }
             }
