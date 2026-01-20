@@ -84,14 +84,12 @@ function process_transcript_markers_practice($transcript, $starting_question = 1
             }
         }
         
-        // Build the output: Q badge + highlighted answer text + remaining text
-        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '">';
-        $output .= '<span class="question-marker-badge">Q' . esc_html($display_num) . '</span>';
-        $output .= '</span>';
+        // Build the output: simplified format without badge (unified with reading)
+        // Use reading-answer-marker class for consistency (v12.6+)
+        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '"></span>';
         
         // Wrap the highlighted answer text in a yellow background span
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
-        // Use reading-answer-marker class for consistency (v12.6+)
         if (!empty($highlighted_text)) {
             $output .= '<span class="reading-answer-marker" data-question="' . esc_attr($display_num) . '">' . $highlighted_text . '</span>';
         }

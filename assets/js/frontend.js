@@ -1104,8 +1104,11 @@
                                         .attr('data-question', questionNum)
                                         .text('Show me the section of the reading passage');
                                     
-                                    // Append button to the question element
-                                    questionElement.append($('<br>')).append(readingLink);
+                                    // Append button to the feedback div (after feedback message)
+                                    var feedbackDiv = questionElement.find('.question-feedback');
+                                    if (feedbackDiv.length) {
+                                        feedbackDiv.append($('<br>')).append(readingLink);
+                                    }
                                 }
                             }
                         });
