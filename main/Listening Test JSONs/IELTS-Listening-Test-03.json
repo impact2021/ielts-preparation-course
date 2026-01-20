@@ -23,8 +23,7 @@
                     "incorrect": "Incorrect. Listen carefully to where the man did his introduction to driving course.",
                     "no_answer": "The correct answer is: high school. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
@@ -47,8 +46,7 @@
                     "incorrect": "Incorrect. Listen to how long ago the man completed his previous driving course.",
                     "no_answer": "The correct answer is: two years. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
@@ -71,8 +69,7 @@
                     "incorrect": "Incorrect. Listen to the details about the full-time course duration per day.",
                     "no_answer": "The correct answer is: three hours. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
@@ -95,15 +92,14 @@
                     "incorrect": "Incorrect. Listen to what is taught on one specific day of the course.",
                     "no_answer": "The correct answer is: road rules. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "Questions 5-10: Complete the form below using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
             "question": "Pacific Harbour Driving School - Course Information\r\n\r\n5. Weekend course duration: [field 1] Saturdays",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -119,15 +115,14 @@
                     "incorrect": "Incorrect. Listen for how many Saturdays the weekend course runs.",
                     "no_answer": "The correct answer is: three. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Form Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "6. Weekend course hours per day: [field 1] hours",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -143,15 +138,14 @@
                     "incorrect": "Incorrect. Listen for the daily hours of the weekend course.",
                     "no_answer": "The correct answer is: five. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Form Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "7. Weekend course start time: [field 1] a.m.",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -167,15 +161,14 @@
                     "incorrect": "Incorrect. Listen for what time the weekend course starts.",
                     "no_answer": "The correct answer is: nine. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Form Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "8. Weekend course cost: £[field 1]",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -191,15 +184,14 @@
                     "incorrect": "Incorrect. Listen for the cost of the weekend course.",
                     "no_answer": "The correct answer is: 295. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Form Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "9. Weekday course cost: £[field 1]",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -215,15 +207,14 @@
                     "incorrect": "Incorrect. Listen for the cost of the weekday course.",
                     "no_answer": "The correct answer is: 275. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Form Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "10. Available instructor name: [field 1]",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -239,15 +230,14 @@
                     "incorrect": "Incorrect. Listen for the name of the available instructor.",
                     "no_answer": "The correct answer is: John Thompson. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Form Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "Questions 11-15: Complete the table below USING NO MORE THAN ONE WORD OR A NUMBER.\r\n\r\nThings to do in Las Vegas",
             "question": "Gambling:\r\n- there are over [field 1] casinos in Las Vegas\r\n\r\nThe 'Mob Museum':\r\n- a self-guided tour\r\n- visitors can listen to recorded [field 2] between criminals\r\n\r\nThe Pinball Hall of Fame:\r\n- opened in 2006\r\n- over 200 machines\r\n- profits go to [field 3] in the local region\r\n\r\nThe High Roller:\r\n- 170 m high\r\n- Was the largest of its kind\r\n- each cabin on the wheel can fit up to [field 4] people\r\n\r\nThe Big Apple Roller Coaster:\r\n- 70 miles per hour\r\n- riders get on and off the roller coaster while in a [field 5]\r\n- is built around 2 buildings",
             "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -287,15 +277,14 @@
                     "incorrect": "Incorrect. Listen for where riders get on and off the roller coaster.",
                     "no_answer": "The correct answer is: HOTEL. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Table Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "Questions 16-20: Complete the summary below USING NO MORE THAN TWO WORDS AND/OR A NUMBER.",
             "question": "The dam was first discussed as an idea in [field 1] but construction did not begin until 1931. The project was completed in [field 2]. Before construction of the dam could begin, [field 3] of tunnels needed to be drilled to divert the river. The work was often dangerous, because of [field 4] and broken ropes, but this did lead to better safety standards on construction sites. Further dangers existed for workers, with deaths from heat and a lack of fresh air. The dam now provides power for around [field 5] people.",
             "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -335,15 +324,14 @@
                     "incorrect": "Incorrect. Listen for how many people the dam provides power for.",
                     "no_answer": "The correct answer is: 1.3 MILLION. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Summary Completion"
+            }
         },
         {
             "type": "closed_question",
             "instructions": "Questions 21-26: Match the following statements with a country. Write A-C in boxes 21-26 in your answer sheet.\r\n\r\nA. South Africa\r\nB. Australia\r\nC. New Zealand",
             "question": "21. Children start later",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is A. South Africa. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -368,15 +356,14 @@
             ],
             "options": "A. South Africa\nB. Australia\nC. New Zealand",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Matching"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "22. Has intermediate school",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is C. New Zealand. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -401,15 +388,14 @@
             ],
             "options": "A. South Africa\nB. Australia\nC. New Zealand",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Matching"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "23. Few religious private schools",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is A. South Africa. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -434,15 +420,14 @@
             ],
             "options": "A. South Africa\nB. Australia\nC. New Zealand",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Matching"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "24. Doesn't have correspondence education",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is A. South Africa. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -467,15 +452,14 @@
             ],
             "options": "A. South Africa\nB. Australia\nC. New Zealand",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Matching"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "25. Home schooling",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is C. New Zealand. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -500,15 +484,14 @@
             ],
             "options": "A. South Africa\nB. Australia\nC. New Zealand",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Matching"
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "26. Compulsory extracurricular activities",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is B. Australia. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -533,15 +516,14 @@
             ],
             "options": "A. South Africa\nB. Australia\nC. New Zealand",
             "correct_answer_count": 1,
-            "show_option_letters": true,
-            "ielts_question_type": "Matching"
+            "show_option_letters": true
         },
         {
             "type": "open_question",
             "instructions": "Questions 27-30: Complete the notes below using NO MORE THAN THREE WORDS from the recording.\r\n\r\nNew Zealand boarding school dress code",
             "question": "- Dress had to be one inch below the knee when [field 1]\r\n- Hat had to be worn at all times when [field 2]\r\n- Socks had to be [field 3]\r\n- School [field 4] had to be worn at all times",
             "points": 4,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -575,15 +557,14 @@
                     "incorrect": "Incorrect. Listen for what school item had to be worn at all times.",
                     "no_answer": "The correct answer is: BADGE. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Note Completion"
+            }
         },
         {
             "type": "open_question",
             "instructions": "Questions 31-35\r\n\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
             "question": "What causes RSI?",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -599,15 +580,14 @@
                     "incorrect": "Incorrect. Listen to the definition of RSI at the beginning of the lecture - the cause is clearly stated.",
                     "no_answer": "The correct answer is: repeated physical movement. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The use of what has caused an increase in RSI in the workplace?",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -623,15 +603,14 @@
                     "incorrect": "Incorrect. Listen to why RSI has increased in the last twenty years - a specific technology is mentioned.",
                     "no_answer": "The correct answer is: computers. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "RSI is made worse without break periods or if there is no thought given to what?",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -647,15 +626,14 @@
                     "incorrect": "Incorrect. Listen to what makes RSI worse besides not taking breaks - the speaker mentions something people should consider.",
                     "no_answer": "The correct answer is: body position. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "What should people who use a computer regularly be able to identify to avoid serious cases?",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -671,15 +649,14 @@
                     "incorrect": "Incorrect. Listen to how people can prevent serious RSI - they need to identify something early.",
                     "no_answer": "The correct answer is: warning signs. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Problems can also occur if the computer monitor is what?",
             "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -695,15 +672,14 @@
                     "incorrect": "Incorrect. Listen to the problem with monitor positioning - the speaker describes how people sit in relation to the monitor.",
                     "no_answer": "The correct answer is: too close. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Short Answer Questions"
+            }
         },
         {
             "type": "open_question",
             "instructions": "Questions 36-40\r\n\r\nComplete the notes below using NO MORE THAN THREE WORDS.\r\n\r\nErgonomic Setup Guidelines",
             "question": "Chair: Height should allow arms to be at 90 degrees to the keyboard; Feet should be on the floor or a [field 1]; Space should be allowed between the chair and back of the knees to maintain [field 2]\r\n\r\nMonitor: Screen should be just below eye level; Avoid light reflections by positioning at a [field 3]; [field 4] backgrounds are more comfortable to look at\r\n\r\nKeyboard: Wrists should remain straight; Elbows close to the body\r\n\r\nPosture: Sit up straight or [field 5] a little",
             "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": null,
@@ -743,8 +719,7 @@
                     "incorrect": "Incorrect. Listen to the alternative to sitting rigidly at 90 degrees - the speaker describes what users can do instead.",
                     "no_answer": "The correct answer is: lean back. Make sure to listen carefully for key information and take notes while listening."
                 }
-            },
-            "ielts_question_type": "Note Completion"
+            }
         }
     ],
     "reading_texts": [],
@@ -753,7 +728,7 @@
         "layout_type": "two_column_listening",
         "cbt_test_type": "listening",
         "exercise_label": "practice_test",
-        "open_as_popup": "1",
+        "open_as_popup": "",
         "scoring_type": "ielts_listening",
         "timer_minutes": "",
         "starting_question_number": "1"
@@ -781,9 +756,9 @@
         ]
     },
     "_metadata": {
-        "exported_at": "2026-01-04 09:47:26",
+        "exported_at": "2026-01-20 15:25:26",
         "exported_by": "impact",
-        "plugin_version": "10.16",
+        "plugin_version": "12.4",
         "format_version": "1.0"
     }
 }
