@@ -1071,14 +1071,11 @@
                             }
                         });
                         
-                        // Helper function to check if a passage marker exists for a question
+                        // Helper function to check if a marker exists for a question
                         function hasPassageMarker(questionNum) {
-                            var passageMarker = $('#passage-q' + questionNum);
-                            if (passageMarker.length === 0) {
-                                // Also check for transcript marker as fallback
-                                passageMarker = $('#transcript-q' + questionNum);
-                            }
-                            return passageMarker.length > 0;
+                            // Use unified 'q' prefix for all exercise types
+                            var marker = $('#q' + questionNum);
+                            return marker.length > 0;
                         }
                         
                         // Add "Show me the section of the reading passage" buttons for reading tests
@@ -1098,11 +1095,11 @@
                                 if (hasPassageMarker(questionNum) && 
                                     questionElement.find('.show-in-reading-passage-link').length === 0) {
                                     var readingLink = $('<a>')
-                                        .attr('href', '#passage-q' + questionNum)
+                                        .attr('href', '#q' + questionNum)
                                         .addClass('show-in-reading-passage-link')
                                         .attr('data-reading-text', questionResult.reading_text_id)
                                         .attr('data-question', questionNum)
-                                        .text('Show me the section of the reading passage');
+                                        .text('Show me');
                                     
                                     // Append button to the feedback div (after feedback message)
                                     var feedbackDiv = questionElement.find('.question-feedback');
@@ -1456,7 +1453,7 @@
             $('.transcript-section-tab[data-section="' + sectionId + '"]').addClass('active');
             
             // Find and highlight the question marker in the transcript
-            var $questionMarker = $('#transcript-q' + questionNumber);
+            var $questionMarker = $('#q' + questionNumber);
             
             // Remove any previous highlighting
             $('.transcript-content .transcript-highlight').removeClass('transcript-highlight');
@@ -1595,8 +1592,8 @@
             $targetText.fadeIn(300);
             
             // Find the question marker in the reading passage
-            // Note: Only look for passage-q markers for reading tests (not transcript-q)
-            var $questionMarker = $('#passage-q' + questionNumber);
+            // Use unified 'q' prefix for all exercise types
+            var $questionMarker = $('#q' + questionNumber);
             
             // Remove any previous highlighting
             $('.reading-text .reading-passage-highlight').removeClass('reading-passage-highlight');
@@ -1607,9 +1604,9 @@
                 var $answerHighlights = $container.find('.reading-answer-highlight[data-question="' + questionNumber + '"], .reading-answer-marker[data-question="' + questionNumber + '"]');
                 
                 if (!$answerHighlights.length) {
-                    // Fallback: find all markers with id="passage-q{N}" for this question
+                    // Fallback: find all markers with id="q{N}" for this question
                     // and highlight the immediately following .reading-answer-marker for each
-                    $('[id="passage-q' + questionNumber + '"]', $container).each(function() {
+                    $('[id="q' + questionNumber + '"]', $container).each(function() {
                         // Use nextAll to find the first .reading-answer-marker that follows this marker
                         // (even if not immediately adjacent - there may be text nodes or other elements in between)
                         var $nextMarker = $(this).nextAll('.reading-answer-marker').first();

@@ -84,9 +84,9 @@ function process_transcript_markers($transcript, $starting_question = 1) {
             }
         }
         
-        // Build the output: simplified format without badge (unified with reading)
-        // Use reading-answer-marker class for consistency (v12.6+)
-        $output = '<span id="transcript-q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '"></span>';
+        // Build the output: unified format for both reading and listening
+        // Simplified: use 'q' prefix (same for all exercise types)
+        $output = '<span id="q' . esc_attr($display_num) . '" data-question="' . esc_attr($display_num) . '"></span>';
         
         // Wrap the highlighted answer text in a yellow background span
         // Note: $highlighted_text may contain HTML tags from transcript (e.g., <strong>) which must be preserved
