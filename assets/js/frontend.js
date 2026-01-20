@@ -1628,7 +1628,7 @@
                     if (scrollContainer.length) {
                         // Scroll within the container
                         scrollContainer.animate({
-                            scrollTop: $scrollTarget.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - 100
+                            scrollTop: $scrollTarget.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
                         }, SCROLL_ANIMATION_DURATION);
                     } else {
                         // Fallback: scroll the window
@@ -1646,7 +1646,7 @@
                         
                         if (scrollContainer.length) {
                             scrollContainer.animate({
-                                scrollTop: $paragraph.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - 100
+                                scrollTop: $paragraph.offset().top - scrollContainer.offset().top + scrollContainer.scrollTop() - SCROLL_OFFSET_NON_CBT
                             }, SCROLL_ANIMATION_DURATION);
                         } else {
                             $('html, body').animate({
