@@ -220,9 +220,9 @@ class IELTS_CM_Quiz_Handler {
                         
                         // Add "Show me" link for both listening and reading tests
                         if (!empty($feedback)) {
-                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback .= ' <a href="#transcript-q' . esc_attr($question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
-                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
+                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                 $feedback .= ' <a href="#passage-q' . esc_attr($question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
                             }
                         }
@@ -232,9 +232,9 @@ class IELTS_CM_Quiz_Handler {
                             $feedback = wp_kses_post($question['no_answer_feedback']);
                             
                             // Add "Show me" link for both listening and reading tests
-                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback .= ' <a href="#transcript-q' . esc_attr($question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
-                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
+                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                 $feedback .= ' <a href="#passage-q' . esc_attr($question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
                             }
                         } else {
@@ -273,9 +273,9 @@ class IELTS_CM_Quiz_Handler {
                             $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
                             
                             // Add "Show me" link for both listening and reading tests
-                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback .= ' <a href="#transcript-q' . esc_attr($question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
-                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
+                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                 $feedback .= ' <a href="#passage-q' . esc_attr($question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
                             }
                         } else {
@@ -287,9 +287,9 @@ class IELTS_CM_Quiz_Handler {
                             $feedback = wp_kses_post($question['no_answer_feedback']);
                             
                             // Add "Show me" link for both listening and reading tests
-                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback .= ' <a href="#transcript-q' . esc_attr($question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
-                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
+                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                 $feedback .= ' <a href="#passage-q' . esc_attr($question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
                             }
                         } else {
@@ -301,9 +301,9 @@ class IELTS_CM_Quiz_Handler {
                             $feedback = wp_kses_post($mc_options[$user_answer]['feedback']);
                             
                             // Add "Show me" link for both listening and reading tests
-                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null && $question['audio_section_id'] !== '') {
+                            if (isset($question['audio_section_id']) && $question['audio_section_id'] !== null) {
                                 $feedback .= ' <a href="#transcript-q' . esc_attr($question_num) . '" class="show-in-transcript-link" data-section="' . esc_attr($question['audio_section_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
-                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null && $question['reading_text_id'] !== '') {
+                            } elseif (isset($question['reading_text_id']) && $question['reading_text_id'] !== null) {
                                 $feedback .= ' <a href="#passage-q' . esc_attr($question_num) . '" class="show-in-reading-passage-link" data-reading-text="' . esc_attr($question['reading_text_id']) . '" data-question="' . esc_attr($question_num) . '">' . __('Show me', 'ielts-course-manager') . '</a>';
                             }
                         } else {
