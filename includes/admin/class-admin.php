@@ -3477,7 +3477,7 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_layout_type', sanitize_text_field($_POST['ielts_cm_layout_type']));
             }
             
-            // Save exercise content (for two_column_exercise layout)
+            // Save exercise content (deprecated but kept for backward compatibility)
             if (isset($_POST['ielts_cm_exercise_content'])) {
                 update_post_meta($post_id, '_ielts_cm_exercise_content', wp_kses_post($_POST['ielts_cm_exercise_content']));
             }
