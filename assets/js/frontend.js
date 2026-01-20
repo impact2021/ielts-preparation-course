@@ -1584,13 +1584,6 @@
             var readingTextId = $(this).data('reading-text');
             var questionNumber = $(this).data('question');
             
-            // Update URL hash for anchor link functionality
-            if (window.history && window.history.pushState) {
-                window.history.pushState(null, null, '#q' + questionNumber);
-            } else {
-                window.location.hash = 'q' + questionNumber;
-            }
-            
             // Hide all reading text sections
             $('.reading-text-section').hide();
             
