@@ -1592,10 +1592,8 @@
             $targetText.fadeIn(300);
             
             // Find the question marker in the reading passage
+            // Note: Only look for passage-q markers for reading tests (not transcript-q)
             var $questionMarker = $('#passage-q' + questionNumber);
-            if (!$questionMarker.length) {
-                $questionMarker = $('#transcript-q' + questionNumber);
-            }
             
             // Remove any previous highlighting
             $('.reading-text .reading-passage-highlight').removeClass('reading-passage-highlight');

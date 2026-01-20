@@ -1,0 +1,128 @@
+{
+  "title": "Demo Reading Test - Show Me Button",
+  "content": "This is a simple demonstration of the 'Show me' button functionality for reading passages.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Read the passage and answer the following questions.",
+      "question": "1. According to the passage, what percentage of subway systems operate at a profit?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'Very few'. The passage states that 'most subway systems struggle to cover costs'. Make sure to read the passage carefully.",
+      "correct_feedback": "Correct! The passage clearly indicates that very few subway systems operate at a profit.",
+      "incorrect_feedback": "Not quite. Look for where the passage discusses subway profitability.",
+      "reading_text_id": 0,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "Most of them",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states the opposite - most subway systems struggle financially."
+        },
+        {
+          "text": "About half",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage indicates the proportion is much smaller than half."
+        },
+        {
+          "text": "Very few",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that 'most subway systems struggle to cover costs', implying very few operate at a profit."
+        },
+        {
+          "text": "None",
+          "is_correct": false,
+          "feedback": "Incorrect. While most struggle, the passage mentions at least one system that operates profitably."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "2. The Hong Kong MTR system has a fare recovery ratio of:",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 185%. Click 'Show me' to see where this is mentioned in the passage.",
+      "correct_feedback": "Excellent! You found the correct fare recovery ratio.",
+      "incorrect_feedback": "Not quite. Click 'Show me' to locate this information in the passage.",
+      "reading_text_id": 0,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "100%",
+          "is_correct": false,
+          "feedback": "Incorrect. The actual ratio is much higher than 100%."
+        },
+        {
+          "text": "125%",
+          "is_correct": false,
+          "feedback": "Incorrect. This is Singapore's fare recovery ratio, not Hong Kong's."
+        },
+        {
+          "text": "185%",
+          "is_correct": true,
+          "feedback": "Correct! Hong Kong's fare recovery ratio is 185%, the highest mentioned in the passage."
+        },
+        {
+          "text": "200%",
+          "is_correct": false,
+          "feedback": "Incorrect. The actual ratio is lower than this."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "3. Which city is mentioned as having the next highest fare recovery ratio after Hong Kong?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Singapore. Use the 'Show me' button to find this information.",
+      "correct_feedback": "Correct! Singapore has the second-highest fare recovery ratio mentioned.",
+      "incorrect_feedback": "Incorrect. Try using the 'Show me' button to find the answer.",
+      "reading_text_id": 0,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "New York",
+          "is_correct": false,
+          "feedback": "Incorrect. New York is mentioned as having a low fare recovery ratio."
+        },
+        {
+          "text": "London",
+          "is_correct": false,
+          "feedback": "Incorrect. London is not mentioned in this context."
+        },
+        {
+          "text": "Singapore",
+          "is_correct": true,
+          "feedback": "Correct! Singapore has a 125% fare recovery ratio, second only to Hong Kong."
+        },
+        {
+          "text": "Tokyo",
+          "is_correct": false,
+          "feedback": "Incorrect. Tokyo is not mentioned in this passage."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Subway Systems Around the World",
+      "content": "<p><span id=\"passage-q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Most subway systems struggle to cover costs</span>, requiring government subsidies to continue operating. However, one system stands out as an exceptional model of financial success.</p>\n\n<p><span id=\"passage-q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Hong Kong's fare recovery ratio – the percentage of operating costs covered by fares – is at an astonishingly high level of 185%</span>. This means the system not only covers all its operating costs but also generates significant profit. <span id=\"passage-q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">The next highest urban ratio, that of Singapore, is healthy at 125%</span>, but still far behind Hong Kong's remarkable achievement.</p>\n\n<p>In contrast, New York's subway system covers only 45% of operating costs through fares, requiring substantial government funding and often going into debt for maintenance and upgrades. This stark difference highlights the exceptional nature of Hong Kong's MTR system and raises important questions about what other cities can learn from its success.</p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "timer_minutes": 5,
+    "starting_question_number": 1
+  },
+  "_metadata": {
+    "test_purpose": "Demonstrate 'Show me' button functionality for reading passages",
+    "created_at": "2026-01-20",
+    "notes": "This demo uses proper passage-q markers to ensure the Show me button works correctly"
+  }
+}
