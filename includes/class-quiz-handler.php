@@ -350,7 +350,7 @@ class IELTS_CM_Quiz_Handler {
                                 $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['correct']) . '</span>';
                             } else {
                                 // No feedback text, but still create a feedback wrapper with question number
-                                $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> Correct!</span>';
+                                $feedback_text = '<span class="field-feedback field-feedback-correct"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . __('Correct!', 'ielts-course-manager') . '</span>';
                             }
                             
                             // Add "Show me" link for both listening and reading tests (always add if section ID exists)
@@ -374,7 +374,7 @@ class IELTS_CM_Quiz_Handler {
                                 $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['incorrect']) . '</span>';
                             } else {
                                 // No feedback text, but still create a feedback wrapper with question number
-                                $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> Incorrect.</span>';
+                                $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . __('Incorrect.', 'ielts-course-manager') . '</span>';
                             }
                             
                             // Add "Show me" link for both listening and reading tests (always add if section ID exists)
@@ -399,7 +399,7 @@ class IELTS_CM_Quiz_Handler {
                             $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . wp_kses_post($field_feedback_arr[$field_num]['no_answer']) . '</span>';
                         } else {
                             // No feedback text, but still create a feedback wrapper with question number
-                            $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> No answer provided.</span>';
+                            $feedback_text = '<span class="field-feedback field-feedback-incorrect"><strong>' . sprintf(__('Question %d:', 'ielts-course-manager'), $field_question_num) . '</strong> ' . __('No answer provided.', 'ielts-course-manager') . '</span>';
                         }
                         
                         // Add "Show me" link for both listening and reading tests (always add if section ID exists)
