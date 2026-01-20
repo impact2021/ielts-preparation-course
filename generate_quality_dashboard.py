@@ -46,6 +46,7 @@ def analyze_test(file_path):
     # Analyze quality metrics
     missing_feedback = []
     not_linked = []
+    linked_count = 0  # Count questions with reading_text_id
     grammar_issues = []
     
     for i, q in enumerate(questions, 1):
@@ -86,6 +87,8 @@ def analyze_test(file_path):
         reading_text_id = q.get('reading_text_id')
         if reading_text_id is None:
             not_linked.append(i)
+        else:
+            linked_count += 1
         
         # Check for double spacing
         question_text = q.get('question', '')
@@ -98,6 +101,7 @@ def analyze_test(file_path):
         'student_questions': student_questions,
         'missing_feedback': missing_feedback,
         'not_linked': not_linked,
+        'linked_count': linked_count,
         'grammar_issues': grammar_issues,
         'file_path': file_path
     }
@@ -115,8 +119,13 @@ def generate_gt_test_row(result):
     
     # Link status
     not_linked = len(result['not_linked'])
+    linked_count = result.get('linked_count', 0)
     link_status = '✓ Present' if not_linked == 0 else f'⚠ {not_linked} missing'
     link_class = 'yes' if not_linked == 0 else 'warning'
+    
+    # Questions linked count
+    questions_linked_text = f'{linked_count}/40'
+    questions_linked_class = 'yes' if linked_count == 40 else 'warning'
     
     # Overall status
     if questions == 40 and missing_fb == 0 and not_linked == 0:
@@ -136,6 +145,7 @@ def generate_gt_test_row(result):
                                     <td><span class="badge {'yes' if questions == 40 else 'warning'}">{complete}</span></td>
                                     <td><span class="badge {feedback_class}">{feedback_status}</span></td>
                                     <td><span class="badge {link_class}">{link_status}</span></td>
+                                    <td><span class="badge {questions_linked_class}">{questions_linked_text}</span></td>
                                     <td><span class="badge {status_class}">{status}</span></td>
                                 </tr>'''
 
@@ -478,6 +488,7 @@ def generate_html_dashboard(test_results, gt_test_results):
                                 <th>Questions</th>
                                 <th>Full Feedback</th>
                                 <th>Linked to Passage</th>
+                                <th>Questions Linked</th>
                                 <th>Grammar</th>
                                 <th>Status</th>
                             </tr>
@@ -491,6 +502,7 @@ def generate_html_dashboard(test_results, gt_test_results):
         student_q = result['student_questions']
         missing_fb = len(result['missing_feedback'])
         not_linked = len(result['not_linked'])
+        linked_count = result.get('linked_count', 0)
         grammar = len(result['grammar_issues'])
         
         # Determine badges
@@ -499,6 +511,11 @@ def generate_html_dashboard(test_results, gt_test_results):
         fb_text = '✓ Yes' if missing_fb == 0 else f'✗ No ({missing_fb})'
         link_badge = 'yes' if not_linked == 0 else 'no'
         link_text = '✓ Yes' if not_linked == 0 else f'✗ No ({not_linked})'
+        
+        # Questions linked column
+        questions_linked_text = f'{linked_count}/40'
+        questions_linked_badge = 'yes' if linked_count == 40 else 'warning'
+        
         grammar_badge = 'excellent' if grammar == 0 else 'warning'
         grammar_text = '✓ EXCELLENT' if grammar == 0 else f'⚠ Issues ({grammar})'
         
@@ -518,6 +535,7 @@ def generate_html_dashboard(test_results, gt_test_results):
                                 <td><span class="badge {q_badge}">{student_q}</span></td>
                                 <td><span class="badge {fb_badge}">{fb_text}</span></td>
                                 <td><span class="badge {link_badge}">{link_text}</span></td>
+                                <td><span class="badge {questions_linked_badge}">{questions_linked_text}</span></td>
                                 <td><span class="badge {grammar_badge}">{grammar_text}</span></td>
                                 <td><span class="badge {status_badge}">{status_text}</span></td>
                             </tr>
@@ -854,6 +872,7 @@ def generate_html_dashboard(test_results, gt_test_results):
                                     <th>Complete</th>
                                     <th>Feedback</th>
                                     <th>Linked</th>
+                                    <th>Questions Linked</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
