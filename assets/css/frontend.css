@@ -1961,6 +1961,9 @@ select.answer-select-inline.answer-incorrect {
 .transcript-highlight {
     background-color: #fff9c4 !important; /* Yellow highlight */
     animation: highlightFadeIn 0.5s ease-in-out;
+    padding: 2px 8px !important;
+    border-radius: 3px !important;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.3) !important;
 }
 
 /* For paragraphs, add additional styling */
