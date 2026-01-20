@@ -1250,14 +1250,6 @@ class IELTS_CM_Admin {
             <small><?php _e('Set the first question number for this exercise. For example, enter "21" if this exercise should start with Question 21. Default is 1.', 'ielts-course-manager'); ?></small>
         </p>
         
-        <p>
-            <label for="ielts_cm_layout_type"><?php _e('Layout Type', 'ielts-course-manager'); ?></label><br>
-            <select id="ielts_cm_layout_type" name="ielts_cm_layout_type" style="width: 100%;">
-                <option value="two_column_reading" <?php selected(in_array($layout_type, array('two_column_reading', 'two_column_listening'))); ?>><?php _e('2 Column Test (Reading or Listening)', 'ielts-course-manager'); ?></option>
-            </select>
-            <small><?php _e('Two column layout displays content on the left and questions on the right.', 'ielts-course-manager'); ?></small>
-        </p>
-        
         <?php
         // Get the "is listening" checkbox value
         $is_listening_exercise = get_post_meta($post->ID, '_ielts_cm_is_listening_exercise', true);
@@ -1266,12 +1258,16 @@ class IELTS_CM_Admin {
             $is_listening_exercise = '1';
         }
         ?>
+        
+        <!-- Hidden field to maintain layout_type value - always use two_column_reading since we use checkbox to toggle -->
+        <input type="hidden" id="ielts_cm_layout_type" name="ielts_cm_layout_type" value="two_column_reading">
+        
         <p>
             <label>
                 <input type="checkbox" id="ielts_cm_is_listening_exercise" name="ielts_cm_is_listening_exercise" value="1" <?php checked($is_listening_exercise, '1'); ?>>
                 <?php _e('This is for a listening exercise', 'ielts-course-manager'); ?>
             </label>
-            <br><small><?php _e('Check this if this exercise includes audio and listening transcripts. Unchecked = reading test with passages.', 'ielts-course-manager'); ?></small>
+            <br><small><?php _e('Check this box to enable audio player and transcripts. Leave unchecked for reading tests with passages.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php

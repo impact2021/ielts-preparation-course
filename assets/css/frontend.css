@@ -1951,19 +1951,9 @@ select.answer-select-inline.answer-incorrect {
     background-color: transparent; /* No highlighting before submission */
 }
 
-/* Show answer marker highlighting after quiz submission (ONLY for listening tests - transcripts) */
-/* Reading tests should only show highlighting when clicking "Show me the section" button */
-.quiz-submitted[data-test-type="listening"] .reading-answer-marker {
-    background-color: #fff9c4; /* Yellow highlight after submission for listening tests */
-}
-
-/* Legacy support for old transcript-answer-marker class */
-.quiz-submitted .transcript-answer-marker {
-    background-color: #fff9c4; /* Yellow highlight after submission for listening tests */
-}
-
-/* For reading tests, keep markers transparent even after submission */
-/* Highlighting only appears when .reading-passage-highlight class is added via button click */
+/* Keep answer markers transparent after submission for both reading and listening tests */
+/* Highlighting only appears when clicking the "Show me" button */
+.quiz-submitted[data-test-type="listening"] .reading-answer-marker,
 .quiz-submitted[data-test-type="reading"] .reading-answer-marker {
     background-color: transparent; /* Remains transparent - only highlighted on button click */
 }
