@@ -665,7 +665,7 @@
         "layout_type": "two_column_listening",
         "cbt_test_type": "listening",
         "exercise_label": "practice_test",
-        "open_as_popup": "1",
+        "open_as_popup": "",
         "scoring_type": "ielts_listening",
         "timer_minutes": "",
         "starting_question_number": "1"
@@ -693,9 +693,9 @@
         ]
     },
     "_metadata": {
-        "exported_at": "2026-01-05 17:46:19",
+        "exported_at": "2026-01-20 15:27:24",
         "exported_by": "impact",
-        "plugin_version": "11.4",
+        "plugin_version": "12.4",
         "format_version": "1.0"
     }
 }
