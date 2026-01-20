@@ -1,0 +1,231 @@
+{
+  "title": "Multiple Choice Practice Listening",
+  "content": "Practice exercise for IELTS Listening Section 3 - Questions 21-30",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Questions 21-23\n\nChoose the correct letter A, B or C",
+      "question": "21. How long has Barry worked at the hotel?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. three years. Barry states that he has been working at the hotel for the last three years. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "Correct! Barry mentions he has been working at the hotel for three years.",
+      "incorrect_feedback": "Not quite. Listen carefully when Barry explains his work experience - he mentions working at the hotel for the last three years.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "one year",
+          "is_correct": false,
+          "feedback": "Incorrect. One year is the time Barry spent working at the leisure centre on reception, not at the hotel. He has been at the hotel for three years."
+        },
+        {
+          "text": "three years",
+          "is_correct": true,
+          "feedback": "Correct! Barry clearly states he has been working in corporate hospitality at the hotel for the last three years."
+        },
+        {
+          "text": "four years",
+          "is_correct": false,
+          "feedback": "Incorrect. Four years is Barry's total work experience (three years at the hotel plus one year at the leisure centre), not just his time at the hotel."
+        }
+      ],
+      "options": "one year\nthree years\nfour years",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "22. What will Barry's employers pay for?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. his course fees and some of his living costs. Barry explains that his employer will pay for the course fees and a proportion of his living costs. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "Correct! Barry's employer will pay for his course fees and a proportion of his living costs.",
+      "incorrect_feedback": "Not quite. Listen carefully when Barry discusses what his employer will pay for - they will cover course fees and a proportion of living costs.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "his course fees only",
+          "is_correct": false,
+          "feedback": "Incorrect. The employer will pay for more than just the course fees - they will also pay a proportion of his living costs."
+        },
+        {
+          "text": "all of his course fees and all living costs",
+          "is_correct": false,
+          "feedback": "Incorrect. While the employer will pay all course fees, they will only pay a proportion of living costs, not all of them."
+        },
+        {
+          "text": "his course fees and some of his living costs",
+          "is_correct": true,
+          "feedback": "Correct! Barry states that his employer will pay for the course fees and a proportion of his living costs."
+        }
+      ],
+      "options": "his course fees only\nall of his course fees and all living costs\nhis course fees and some of his living costs",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "23. How long does the part-time course last?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. 5 years. Kathryn explains that the part-time course takes 5 years instead of the usual three years full-time. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "Correct! The part-time course takes 5 years to complete.",
+      "incorrect_feedback": "Not quite. Listen carefully when Kathryn describes the part-time course duration - it takes 5 years instead of the usual three years full-time.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "3 years",
+          "is_correct": false,
+          "feedback": "Incorrect. 3 years is the duration for the full-time course. The part-time course takes longer - 5 years."
+        },
+        {
+          "text": "4 years",
+          "is_correct": false,
+          "feedback": "Incorrect. 4 years is how long most people take to complete the online distance course, not the part-time course. The part-time course takes 5 years."
+        },
+        {
+          "text": "5 years",
+          "is_correct": true,
+          "feedback": "Correct! Kathryn clearly states that the part-time course takes 5 years instead of the usual three years full-time."
+        }
+      ],
+      "options": "3 years\n4 years\n5 years",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 24 and 25\n\nChoose TWO letters A-E. What TWO types of assessments are used for Management courses?",
+      "question": "24-25. What TWO types of assessments are used for Management courses?",
+      "points": 2,
+      "no_answer_feedback": "The correct answers are C (Reports) and E (Examinations). Kathryn explains that management modules involve written reports and a final exam. In the IELTS Listening test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "Correct! Management modules involve written reports and a final exam.",
+      "incorrect_feedback": "Not quite. Listen carefully when Kathryn describes the management modules - she mentions written reports and a final exam as the two types of assessments.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "mc_options": [
+        {
+          "text": "A study diary",
+          "is_correct": false,
+          "feedback": "Incorrect. Study diaries are used for communication courses, not management modules. Management modules use reports and examinations."
+        },
+        {
+          "text": "Essays",
+          "is_correct": false,
+          "feedback": "Incorrect. Essays are used for communication courses. Management modules involve written reports and a final exam."
+        },
+        {
+          "text": "Reports",
+          "is_correct": true,
+          "feedback": "Correct! Reports are one of the two types of assessments used in management modules, along with a final exam."
+        },
+        {
+          "text": "Presentations",
+          "is_correct": false,
+          "feedback": "Incorrect. Presentations are mentioned for marketing papers, not management modules. Management modules use reports and examinations."
+        },
+        {
+          "text": "Examinations",
+          "is_correct": true,
+          "feedback": "Correct! Examinations (a final exam) are one of the two types of assessments used in management modules, along with written reports."
+        }
+      ],
+      "options": "A study diary\nEssays\nReports\nPresentations\nExaminations",
+      "correct_answer_count": 2,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 26-30\n\nComplete the summary below\n\nWrite NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer",
+      "question": "The benefit of studying online is that there is no rigid 26. [field 1]. Students are required to study 27. [field 2] modules in total in order to complete their degree. While some of the modules are compulsory, students can pick the other 28. [field 3] modules from a selection of choices. 29. [field 4] students study eight modules per year. Online students generally study courses over a longer period than full-time students, though this depends on the individual students as they can 30. [field 5] how many modules to take.",
+      "points": 5,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Summary Completion",
+      "field_count": 5,
+      "field_answers": {
+        "1": "study plan",
+        "2": "24|twenty four|twenty-four",
+        "3": "10|ten",
+        "4": "full-time|full time",
+        "5": "decide"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is 'study plan'. Kathryn explains that the online course doesn't follow a fixed study plan, making it more flexible.",
+          "incorrect": "Incorrect. The correct answer is 'study plan'. Listen to when Kathryn discusses the advantage of the online course - it doesn't follow a fixed study plan.",
+          "no_answer": "The correct answer is 'study plan'. Kathryn mentions that the advantage of the online course is that it doesn't follow a fixed study plan. Listen carefully to understand the benefits of online study."
+        },
+        "2": {
+          "correct": "Correct! The answer is '24' (or 'twenty four'/'twenty-four'). Kathryn clearly states there are 24 modules in total in the whole degree.",
+          "incorrect": "Incorrect. The correct answer is '24' (or 'twenty four'/'twenty-four'). Listen carefully when Kathryn describes the total number of modules required for the degree.",
+          "no_answer": "The correct answer is '24' (or 'twenty four'/'twenty-four'). Kathryn states there are 24 modules in total that students must complete, whichever way they study. Pay attention to numbers in the listening."
+        },
+        "3": {
+          "correct": "Correct! The answer is '10' (or 'ten'). After 14 compulsory modules, students can choose the other 10 modules from various options.",
+          "incorrect": "Incorrect. The correct answer is '10' (or 'ten'). Listen when Kathryn explains the module structure - 14 are compulsory and the other 10 are chosen from options.",
+          "no_answer": "The correct answer is '10' (or 'ten'). Kathryn explains that 14 modules are compulsory and the other 10 modules are chosen from a variety of options. Listen for the breakdown of compulsory versus optional modules."
+        },
+        "4": {
+          "correct": "Correct! The answer is 'full-time' (or 'full time'). Kathryn mentions that full-time students complete 8 modules each year.",
+          "incorrect": "Incorrect. The correct answer is 'full-time' (or 'full time'). Listen carefully when Kathryn describes how many modules different types of students study per year.",
+          "no_answer": "The correct answer is 'full-time' (or 'full time'). Kathryn states that full-time students complete 8 modules each year, while part-time and online students study over a longer period. Pay attention to the different study modes mentioned."
+        },
+        "5": {
+          "correct": "Correct! The answer is 'decide'. Online students can decide their own workload and how many modules to take.",
+          "incorrect": "Incorrect. The correct answer is 'decide'. Listen to the end of Kathryn's explanation about online students - they can decide how many modules to take.",
+          "no_answer": "The correct answer is 'decide'. Kathryn explains that online students vary in their pace because they can decide their own workload. Listen for what flexibility online students have in choosing their study load."
+        }
+      }
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_listening",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening_band",
+    "timer_minutes": 0,
+    "starting_question_number": 21
+  },
+  "audio": {
+    "url": "https://www.ilsnz.com/wp-content/uploads/2018/11/hospitality-course.mp3",
+    "transcript": "",
+    "sections": [
+      {
+        "section_number": 3,
+        "transcript": "<p><strong>Barry:</strong> Excuse me. I'm not sure if I'm in the right place, but I'm trying to find out more about the Hospitality Degree courses?</p>\n\n<p><strong>Kathryn:</strong> Yes, you're in the right place. My name is Kathryn, I can hopefully answer any questions you might have.</p>\n\n<p><strong>Barry:</strong> Nice to meet you. My name is Barry. Barry McDonald.</p>\n\n<p><strong>Kathryn:</strong> So Barry, have you seen our new hospitality prospectus yet? It just came out last week.</p>\n\n<p><strong>Barry:</strong> Yes, I've already had a look at it. I thought it was really useful actually, but I need more information on the different ways you can study the course, you know, full-time, part-time, by distance etc. I didn't understand the different options completely.</p>\n\n<p><strong>Kathryn:</strong> Okay, well we offer the different choices to try to match the needs of different people's situations. There are advantages and disadvantages to each mode of study. It really depends on your own circumstances. Are you working at the moment?</p>\n\n<p><strong>Barry:</strong> Yes, I've been working in corporate hospitality at a local hotel for the last [Q21]three years; we arrange functions and conferences for business clients. Before that, I worked on reception at a leisure centre for one year, so I have about four years' work experience relevant to the industry. I'm hoping to study a degree so I have a better chance of being promoted to Hospitality Manager in the future.</p>\n\n<p><strong>Kathryn:</strong> Okay, that's good. And are you planning to leave your current job to study your course or are you thinking of taking a shorter period of time off or study as you work?</p>\n\n<p><strong>Barry:</strong> I would like to know what is possible really. I don't want to quit my job as I enjoy it and studying full-time would not be possible financially for me. My current employers are quite supportive of me studying for a higher qualification. They'll pay something towards my costs and I can arrange some time off if necessary, but obviously the less it interferes with my work commitments the better.</p>\n\n<p><strong>Kathryn:</strong> So the full time course is not really suitable for you then?</p>\n\n<p><strong>Barry:</strong> No, not really. My employer will pay for the [Q22]course fees and a proportion of my living costs, but of course only if I work for them full-time as well. They have agreed to give me extra unpaid leave when I need it at certain times of year – you know to revise for examinations and things like that. I wouldn't be able to study the course if I had to pay for the whole thing myself and support myself while I was studying.</p>\n\n<p><strong>Kathryn:</strong> Okay, well there are two other options for you to think about. You could do the part-time course which involves evening classes, that takes [Q23]5 years instead of the usual three years full-time. Or you could study for the degree on-line. There is more flexibility with how long it takes as you can choose to study different numbers of papers in different semesters to fit your free time. Most people complete the degree in 4 years when they study as a distance student online.</p>\n\n<p><strong>Barry:</strong> So how many hours does the part-time course involve?</p>\n\n<p><strong>Kathryn:</strong> You join an evening class and there are lectures three times a week. Part-time students also have to attend a seminar one weekend a month – our on-line students attend those too; for the courses they have enrolled in for that semester.</p>\n\n<p><strong>Barry:</strong> And can you tell me more about the kind of coursework I would have to do?</p>\n\n<p><strong>Kathryn:</strong> It depends on which courses you are enrolled in. Generally you have to write 2 assignments for each course you are enrolled in over a semester and some courses (though not all) also have an end of semester examination. For example, the accounting module is all coursework based. For communication courses you need to keep a study diary which counts towards some of your marks and assignments are in essay format but the management modules involve [Q24 and Q25]written reports and a final exam. Some of the marketing papers also involve giving presentations and completing reports.</p>\n\n<p><strong>Barry:</strong> That sounds like a lot of work, as well as working full-time I mean, do you think it is possible to study the course and work at the same time?</p>\n\n<p><strong>Kathryn:</strong> Yes, it is possible. A lot of people do it, but it can be quite tiring and you don't have a great deal of free time!</p>\n\n<hr>\n\n<p><strong>Barry:</strong> So which do you think would be better for me, the part-time evening course or the online course?</p>\n\n<p><strong>Kathryn:</strong> Well, the advantage of the online course is that it doesn't follow a fixed [Q26]study plan you can take on more modules in semesters when you have more free time, but fewer at times when you are busy doing other things. If you enrol in the part-time course, you have to follow the fixed programme. Some people prefer the online course because it is more flexible, whereas others prefer the part-time evening classes because they get more regular face to face contact with their lecturer.</p>\n\n<p><strong>Barry:</strong> I think I would be confident enough to study online, after all I have quite a bit of experience in the hospitality field already. How many modules are there in the whole degree?</p>\n\n<p><strong>Kathryn:</strong> There are [Q27]24 modules in total; whichever way you study you have to complete all of them. 14 are compulsory and then the other [Q28]10 modules are chosen from a variety of options. [Q29]Full-time students complete 8 modules each year, but obviously part-time and online students study them over a longer period of time. On average, online students tend to study 6 modules per year, but this varies as students can [Q30]decide their own workload.</p>\n\n<p><strong>Barry:</strong> Well that sounds really good. I need to think a little bit more about whether the part-time evening course or the online course will suit best. Thanks for your help and I'll be in touch again soon.</p>\n\n<p><strong>Kathryn:</strong> You're very welcome and I'm sure you will enjoy the course.</p>"
+      }
+    ]
+  },
+  "_metadata": {
+    "exported_at": "2026-01-20 01:21:44",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}

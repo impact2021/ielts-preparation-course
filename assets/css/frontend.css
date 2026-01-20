@@ -467,7 +467,7 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-single-quiz .option-label > span {
-    flex: 1;
+    flex-shrink: 1;
     min-width: 0;
     word-wrap: break-word;
 }
@@ -1047,7 +1047,7 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-computer-based-quiz .option-label > span {
-    flex: 1;
+    flex-shrink: 1;
     min-width: 0;
     word-wrap: break-word;
 }
@@ -2573,7 +2573,7 @@ p.transcript-highlight {
 
 .ielts-listening-practice-quiz .option-label > span,
 .ielts-listening-exercise-quiz .option-label > span {
-    flex: 1;
+    flex-shrink: 1;
     min-width: 0;
     word-wrap: break-word;
 }
