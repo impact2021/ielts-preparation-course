@@ -1,0 +1,127 @@
+{
+  "title": "Demo Listening Test - Show Me Button",
+  "content": "This is a simple demonstration of the 'Show in transcript' button functionality for listening exercises.",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1-3: Complete the notes below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.",
+      "question": "<p><strong>Community Centre Information</strong></p>\n<p>The woman is interested in the 1.[field 1].</p>\n<p>She arrived in the country 2.[field 2] ago.</p>\n<p>Each mentoring session lasts 3.[field 3].</p>",
+      "points": 3,
+      "no_answer_feedback": "Make sure to listen carefully and take notes while listening.",
+      "correct_feedback": "Excellent work! You captured the key details.",
+      "incorrect_feedback": "Not quite. Listen to the audio again and check the transcript using the 'Show in transcript' button.",
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "ielts_question_type": "Note Completion",
+      "field_count": 3,
+      "field_answers": {
+        "1": "settlement programme|settlement support programme|settlement program",
+        "2": "2 months|two months",
+        "3": "one hour|1 hour|an hour|60 minutes"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The woman states she is interested in the settlement support programme.",
+          "incorrect": "Incorrect. Listen carefully to what programme the woman is interested in.",
+          "no_answer": "The correct answer is 'settlement programme' (or 'settlement support programme'). Listen to the beginning of the conversation."
+        },
+        "2": {
+          "correct": "Correct! The woman mentions she arrived two months ago.",
+          "incorrect": "Incorrect. Listen for when the woman says she arrived in the country.",
+          "no_answer": "The correct answer is '2 months' (or 'two months'). Pay attention to time references."
+        },
+        "3": {
+          "correct": "Correct! Each mentoring session lasts one hour.",
+          "incorrect": "Incorrect. Listen for the duration of the mentoring sessions.",
+          "no_answer": "The correct answer is 'one hour'. Listen carefully for time durations mentioned."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 4-5: Choose the correct answer (A, B, or C).",
+      "question": "4. How many mentors are currently available?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. 15 mentors. Use the 'Show in transcript' button to find this information.",
+      "correct_feedback": "Correct! There are 15 mentors on the team.",
+      "incorrect_feedback": "Not quite. Click 'Show in transcript' to locate this information in the conversation.",
+      "audio_section_id": 0,
+      "ielts_question_category": "multiple_choice_l",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "4",
+          "is_correct": false,
+          "feedback": "Incorrect. 4 is the number of clients each mentor sees per week."
+        },
+        {
+          "text": "15",
+          "is_correct": true,
+          "feedback": "Correct! The receptionist states there are 15 mentors on the team."
+        },
+        {
+          "text": "20",
+          "is_correct": false,
+          "feedback": "Incorrect. This number is not mentioned in the conversation."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "5. When is the next available course?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. 3rd October. Although there's a course on 26th September, it's already full.",
+      "correct_feedback": "Correct! The next available course starts on 3rd October.",
+      "incorrect_feedback": "Not quite. Use 'Show in transcript' to find when the next available course is.",
+      "audio_section_id": 0,
+      "ielts_question_category": "multiple_choice_l",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "26th September",
+          "is_correct": false,
+          "feedback": "Incorrect. This course is mentioned but it's already fully booked."
+        },
+        {
+          "text": "3rd October",
+          "is_correct": true,
+          "feedback": "Correct! The next available course starts on 3rd October."
+        },
+        {
+          "text": "10th October",
+          "is_correct": false,
+          "feedback": "Incorrect. This date is not mentioned in the conversation."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_listening",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening_band",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  },
+  "audio": {
+    "url": "https://www.example.com/audio/demo-listening.mp3",
+    "transcript": "",
+    "sections": [
+      {
+        "section_number": 1,
+        "transcript": "<p><strong>Receptionist:</strong> Good morning, Eastville Community Centre. How can I help you?</p>\n\n<p><strong>Woman:</strong> Hello, I'm interested in <span id=\"transcript-q1\" data-question=\"1\"><span class=\"question-marker-badge\">Q1</span></span><span class=\"reading-answer-marker\">the settlement support programme</span>. Can you tell me more about it?</p>\n\n<p><strong>Receptionist:</strong> Of course! When did you arrive in the country?</p>\n\n<p><strong>Woman:</strong> I arrived <span id=\"transcript-q2\" data-question=\"2\"><span class=\"question-marker-badge\">Q2</span></span><span class=\"reading-answer-marker\">two months ago</span>, so I'm still getting settled in.</p>\n\n<p><strong>Receptionist:</strong> Perfect! Our settlement support programme runs for three weeks, and you'll need to attend four days a week. We also have a mentoring programme that might interest you. <span id=\"transcript-q4\" data-question=\"4\"><span class=\"question-marker-badge\">Q4</span></span><span class=\"reading-answer-marker\">We currently have 15 mentors on our team</span>, and each mentor sees four clients per week.</p>\n\n<p><strong>Woman:</strong> That sounds helpful. How long are the mentoring sessions?</p>\n\n<p><strong>Receptionist:</strong> Each session lasts for <span id=\"transcript-q3\" data-question=\"3\"><span class=\"question-marker-badge\">Q3</span></span><span class=\"reading-answer-marker\">one hour</span>. Now, regarding the settlement support programme, we have a course starting on the 26th of September, but unfortunately that one is already fully booked. <span id=\"transcript-q5\" data-question=\"5\"><span class=\"question-marker-badge\">Q5</span></span><span class=\"reading-answer-marker\">The next available course starts on the 3rd of October</span>.</p>\n\n<p><strong>Woman:</strong> The 3rd of October works perfectly for me. How do I enroll?</p>\n\n<p><strong>Receptionist:</strong> Excellent! I can help you with that right now...</p>"
+      }
+    ]
+  },
+  "_metadata": {
+    "test_purpose": "Demonstrate 'Show in transcript' button functionality for listening exercises",
+    "created_at": "2026-01-20",
+    "notes": "This demo uses proper transcript-q markers with reading-answer-marker class (v12.6 standard)"
+  }
+}
