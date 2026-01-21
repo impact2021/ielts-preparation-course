@@ -1,0 +1,520 @@
+{
+    "title": "END OF LESSON REVIEW (Unit 5: Multiple choice questions in reading)",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Read the text and answer the questions. Type your answers in the spaces provided.\r\n\r\nThe reading passage has seven paragraphs, A-G.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nSelect the correct letter A-G in boxes 1-4 on your answer sheet.",
+            "question": "1. Where what could be considered a character flaw can actually be advantageous.",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read the passage carefully to find where a character flaw is described as advantageous.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states: 'However, some argue that the latter, rather than being a negative attribute, is a necessity, in that an unbroken train of thought and unwavering dedication is necessary for geniuses to achieve the ground breaking work and research that they do.'"
+                },
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph E discusses how obsessive behaviour, which could be seen as a character flaw, is actually advantageous for geniuses to achieve groundbreaking work."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph E discusses how obsessive behaviour, which could be seen as a character flaw, is actually advantageous for geniuses to achieve groundbreaking work."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph E discusses how obsessive behaviour, which could be seen as a character flaw, is actually advantageous for geniuses to achieve groundbreaking work."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph E discusses how obsessive behaviour, which could be seen as a character flaw, is actually advantageous for geniuses to achieve groundbreaking work."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph E discusses how obsessive behaviour, which could be seen as a character flaw, is actually advantageous for geniuses to achieve groundbreaking work."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E. Paragraph E discusses how obsessive behaviour, which could be seen as a character flaw, is actually advantageous for geniuses to achieve groundbreaking work."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. Explanation of why people may choose to form alliances with specific individuals.",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read the passage carefully to find where the text explains why people form alliances with specific individuals.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states: 'it is the nature of human beings to be drawn to others and form friendships with people of similar intellectual ability.'"
+                },
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Paragraph D explains that people form alliances based on similar intellectual ability."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Paragraph D explains that people form alliances based on similar intellectual ability."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Paragraph D explains that people form alliances based on similar intellectual ability."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Paragraph D explains that people form alliances based on similar intellectual ability."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Paragraph D explains that people form alliances based on similar intellectual ability."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D. Paragraph D explains that people form alliances based on similar intellectual ability."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. How some people's senses may be different to others.",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read the passage carefully to find where the text discusses how some people's senses differ from others.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G mentions 'extreme sensitivity to stimuli such as sounds, tastes and smells' in relation to Asperger's syndrome."
+                },
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph G discusses extreme sensitivity to stimuli such as sounds, tastes and smells."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph G discusses extreme sensitivity to stimuli such as sounds, tastes and smells."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph G discusses extreme sensitivity to stimuli such as sounds, tastes and smells."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph G discusses extreme sensitivity to stimuli such as sounds, tastes and smells."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph G discusses extreme sensitivity to stimuli such as sounds, tastes and smells."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is G. Paragraph G discusses extreme sensitivity to stimuli such as sounds, tastes and smells."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. Examples of diverse types of genius.",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read the passage carefully to find where examples of diverse types of genius are provided.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph A provides examples of diverse types of genius: 'Albert Einstein… Beethoven in the sphere of music, for example, or even a high achiever in the world of football, such as Ronaldo.'"
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph A provides examples of diverse types of genius including Einstein, Beethoven, and Ronaldo."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph A provides examples of diverse types of genius including Einstein, Beethoven, and Ronaldo."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph A provides examples of diverse types of genius including Einstein, Beethoven, and Ronaldo."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph A provides examples of diverse types of genius including Einstein, Beethoven, and Ronaldo."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph A provides examples of diverse types of genius including Einstein, Beethoven, and Ronaldo."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph A provides examples of diverse types of genius including Einstein, Beethoven, and Ronaldo."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose TWO letters, A-E.\r\n\r\nType your answers in boxes 5 and 6.\r\n\r\nNB Your answers may be given in either order.\r\n\r\nWhich TWO of the following are true regarding the problems experienced by gifted children?\r\n\r\nA. have been observed to be more severe the larger the gap between their intelligence and their peers.\r\nB. are likely to become worse later in life\r\nC. occur as they have little in common with other children\r\nD. are most common from the age of four\r\nE. are less likely to occur if the child is musically gifted",
+            "question": "5. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read paragraph C carefully to identify which TWO statements are true.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'these issues have also been observed to exacerbate in direct relationship to the level of cognitive ability possessed.'"
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answers are A and C. Paragraph C discusses how problems exacerbate in relation to cognitive ability and occur because children have little in common with their peers."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'children of their age group are unlikely to share their interest…resulting…in the child becoming withdrawn and isolated on a social level.'"
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answers are A and C. Paragraph C discusses how problems exacerbate in relation to cognitive ability and occur because children have little in common with their peers."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answers are A and C. Paragraph C discusses how problems exacerbate in relation to cognitive ability and occur because children have little in common with their peers."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "6. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read paragraph C carefully to identify which TWO statements are true.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'these issues have also been observed to exacerbate in direct relationship to the level of cognitive ability possessed.'"
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answers are A and C. Paragraph C discusses how problems exacerbate in relation to cognitive ability and occur because children have little in common with their peers."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'children of their age group are unlikely to share their interest…resulting…in the child becoming withdrawn and isolated on a social level.'"
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answers are A and C. Paragraph C discusses how problems exacerbate in relation to cognitive ability and occur because children have little in common with their peers."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answers are A and C. Paragraph C discusses how problems exacerbate in relation to cognitive ability and occur because children have little in common with their peers."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the correct letter, A, B, C or D.\r\n\r\nWrite your answer in box 7 on your answer sheet.",
+            "question": "7. Groups such as MENSA International\r\n\r\nA. encourage membership by child prodigies\r\nB. are focused purely on academic research\r\nC. may ease feelings of isolation\r\nD. offer open membership access",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read paragraph D carefully to understand what groups like MENSA International do.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states: 'not only allows geniuses to form relationships with others for academic purposes, but also facilitates interaction with others with similar characteristics. MENSA International…is the oldest and perhaps most well known of such societies.'"
+                },
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Paragraph D explains that MENSA facilitates interaction with others of similar characteristics, which helps ease feelings of isolation."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Paragraph D explains that MENSA facilitates interaction with others of similar characteristics, which helps ease feelings of isolation."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C. Paragraph D explains that MENSA facilitates interaction with others of similar characteristics, which helps ease feelings of isolation."
+                }
+            ],
+            "options": "A\nB\nC\nD",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Choose the correct letter, A, B, C or D.\r\n\r\nWrite your answer in box 8 on your answer sheet.",
+            "question": "8. Geniuses are sometimes perceived by others as\r\n\r\nA. illogical\r\nB. easily distracted\r\nC. compassionate\r\nD. lacking commitment",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Read paragraph E carefully to understand how geniuses are perceived by others.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states: 'A stereotypical character weakness of a genius is that, while they are able to analyse and comprehend at a high level, they are said to often show a lack of common sense' (lack of common sense = illogical)."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph E states that geniuses often show a lack of common sense, which means they are perceived as illogical."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph E states that geniuses often show a lack of common sense, which means they are perceived as illogical."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A. Paragraph E states that geniuses often show a lack of common sense, which means they are perceived as illogical."
+                }
+            ],
+            "options": "A\nB\nC\nD",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the notes using NO MORE THAN TWO WORDS from the Reading Passage.\r\n\r\nType the correct words in boxes 9-14 on your answer sheet.\r\n\r\nImmanuel Kant and (9) _____ both hold that while ordinary people are able to learn concepts through education, geniuses are different because they can (10) _____ new ways of thinking. Schopenhauer has argued that another significant difference is that in geniuses the intellect is much more powerful than the (11) _____. Parallels have been drawn between many characteristics of a genius and those with (12) _____ as such individuals often show outstanding ability with memory and (13) _____ yet underdeveloped (14) _____ and communication skills.",
+            "question": "9. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Look for the name mentioned alongside Immanuel Kant in paragraph F.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "correct_answers": [
+                "Howard Caygill",
+                "Caygill",
+                "H Caygill",
+                "H. Caygill"
+            ]
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "10. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Look for what geniuses can do with new ways of thinking in paragraph F.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "correct_answers": [
+                "pioneer"
+            ]
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "11. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Look for what is less powerful than intellect according to Schopenhauer in paragraph F.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "correct_answers": [
+                "will"
+            ]
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "12. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Look for the syndrome mentioned in paragraph G that is compared to genius characteristics.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "correct_answers": [
+                "Asperger's syndrome",
+                "Aspergers syndrome",
+                "Asperger's",
+                "Aspergers"
+            ]
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "13. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Look for what skill is mentioned alongside memory in paragraph G.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "correct_answers": [
+                "mathematics",
+                "maths",
+                "math"
+            ]
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "14. ",
+            "points": 1,
+            "no_answer_feedback": "Please type an answer. Look for what type of skills are underdeveloped alongside communication in paragraph G.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "correct_answers": [
+                "social"
+            ]
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Genius Status",
+            "content": "<strong>A.</strong> The term genius, often applied to a person attributed with superior intelligence in a particular area, can also be used to describe a polymath: a person demonstrating a high level of skill in a multitude of areas. In the real sense of its definition, genius status denotes superior mental ability, Albert Einstein being the archetypal illustration of this, though in a more informal use it is often used to describe an individual with superior talent in an unconventionally defined academic area; Beethoven in the sphere of music, for example, or even a high achiever in the world of football, such as Ronaldo.\r\n\r\n<strong>B.</strong> Many geniuses, by the academic definition, are often identified at a young age, becoming recognised as child prodigies: that is, a minor who displays expertise or depth of thought at a young age which far out measures the usual thought processes and capabilities of their peers. In the same way, musical geniuses often exhibit their skills from childhood; the composer Mozart, for example, was said to have been writing music from the age of four. The cognitive explanation for excellence in this field is the individual's ability to be able to process a number of different melodies in their mind at once, whilst the average person is able to focus on only one.\r\n\r\n<strong>C.</strong> A child who displays outstanding intellectual ability, however, may also face a number of difficulties of a social or emotional nature; these issues have also been observed to exacerbate in direct relationship to the level of cognitive ability possessed. Child prodigies are often set apart from their contemporaries, in that children of their age group are unlikely to share their interest in advanced levels of thinking or analysis of problems; resulting, on occasion, in the child becoming withdrawn and isolated on a social level.\r\n\r\n<strong>D.</strong> Research studies suggest that in adulthood, similar difficulties in socialisation may occur. Since it is the nature of human beings to be drawn to others and form friendships with people of similar intellectual ability, it has been suggested that geniuses may find it more difficult to build social circles including others similar to themselves, as the number of people in their bracket is limited. Membership of high IQ societies, organisations which offer membership only to those of a given intelligence bracket, not only allows geniuses to form relationships with others for academic purposes, but also facilitates interaction with others with similar characteristics. MENSA International, formed in 1946 by Roland Berrill and Dr Lancelot Ware, is the oldest and perhaps most well known of such societies.\r\n\r\n<strong>E.</strong> A stereotypical character weakness of a genius is that, while they are able to analyse and comprehend at a high level, they are said to often show a lack of common sense and empathy with others. Their behaviour is also often thought to be obsessive by those around them, as they become entranced in their project while other concerns are forgotten. However, some argue that the latter, rather than being a negative attribute, is a necessity, in that an unbroken train of thought and unwavering dedication is necessary for geniuses to achieve the ground breaking work and research that they do.\r\n\r\n<strong>F.</strong> Various experts have offered definitions of genius and have identified what are, in their opinion, the outstanding traits. Arthur Schopenhauer, for example, holds that the behaviour of a genius differs most from an ordinary person in that their will is more highly dominated by their intellect than would be the norm; demonstrated in the way that such an individual may become lost in their work and overlook their own basic needs of sleep, sustenance and company. Immanuel Kant states that geniuses are set apart from the rest of society through their ability to philosophise and gain an insight into concepts that an ordinary person would only understand through being taught; for example, Einstein's Theory of Relativity may be understood by others through learning. However, development of the concept from scratch takes quite a different level of thought process and analysis. In agreement with Kant, Howard Caygill emphasises their ability to break new ground with their non-imitative original theories or offerings whereas others in society may copy ideas rather than pioneer them.\r\n\r\n<strong>G.</strong> Certain neurobiological disorders have been observed to, on occasion, come hand in hand with levels of intelligence beyond the norm. For instance, many individuals, though not all, with Asperger's syndrome, often marked by inability to communicate on a social level, have been known to have extraordinary skill in a particular area; such as memory or mathematics. Characteristics of the syndrome include: obsessive behaviour, low levels of ability to understand or empathise with the emotions of others, difficulty dealing with change and extreme sensitivity to stimuli such as sounds, tastes and smells. According to Professor Fitzgerald, author and diagnostician of Asperger's syndrome, sufferers have a tendency to be controlling of others, have a preference for their own company and are extremely persistent and focused. Some experts in the field draw similarities between individuals with Asperger's syndrome and those defined as having genius status, some going as far as suggesting that key figures known for their superior intelligence, including Albert Einstein, Thomas Edison and Wolfgang Amadeus Mozart all exhibited key behavioural traits typical of the syndrome."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "20",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-21 04:17:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
