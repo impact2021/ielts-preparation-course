@@ -521,24 +521,24 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that one can pursue a 'Postgraduate Diploma' (1 year) after a Bachelor's degree.",
+                    "incorrect": "Incorrect. The passage indicates that field 12 (left path, 1 year) is a 'Postgraduate Diploma'.",
+                    "no_answer": "The correct answer is: Postgraduate Diploma. The passage shows this as a 1-year option after a Bachelor's degree."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that one can pursue a 'Masters' or 'Masters degree' (1 to 2 years) after a Bachelor's degree.",
+                    "incorrect": "Incorrect. The passage indicates that field 13 (right path, 1 to 2 years) is a 'Masters' or 'Masters degree'.",
+                    "no_answer": "The correct answer is: Masters (or Masters degree). The passage shows this as a 1-2 year option after a Bachelor's degree."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that one can pursue a 'Doctorate' after a Masters degree.",
+                    "incorrect": "Incorrect. The passage indicates that field 14 (after Masters) is a 'Doctorate'.",
+                    "no_answer": "The correct answer is: Doctorate. The passage shows this comes after a Masters degree."
                 },
                 "4": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that a Doctorate leads to 'research positions' or 'research'.",
+                    "incorrect": "Incorrect. The passage indicates that field 15 (after Doctorate) is 'research positions' or 'research'.",
+                    "no_answer": "The correct answer is: research positions (or research). The passage shows this as the outcome after completing a Doctorate."
                 }
             }
         },
@@ -1498,47 +1498,47 @@
                 {
                     "text": "I. Effect on modern industry",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Paragraph E focuses on the global economic impact, not specifically on modern industry effects."
                 },
                 {
                     "text": "II. New payment procedures",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Paragraph E discusses global economic impact, not payment procedures."
                 },
                 {
                     "text": "III. Labour problems",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. While labour is mentioned in other paragraphs, Paragraph E focuses on global economic impact."
                 },
                 {
                     "text": "IV. The Model-T",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. The Model-T is discussed in other paragraphs, but Paragraph E focuses on global economic impact."
                 },
                 {
                     "text": "V. Creating a market",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Paragraph E discusses global economic impact and industrialization, not market creation."
                 },
                 {
                     "text": "VI. Revolutionary production techniques",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Production techniques are discussed in other paragraphs, but Paragraph E focuses on global economic impact."
                 },
                 {
                     "text": "VII. The Ford family today",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Paragraph E discusses historical economic impact, not the Ford family today."
                 },
                 {
                     "text": "VIII. Impact on the global economy",
                     "is_correct": true,
-                    "feedback": "Correct!"
+                    "feedback": "Correct! Paragraph E discusses how Ford's business practices led to industrialization in developing countries through outsourcing and the spread of assembly-line production methods globally."
                 },
                 {
                     "text": "IX. Overseas competition",
                     "is_correct": false,
-                    "feedback": ""
+                    "feedback": "Incorrect. Paragraph E focuses on global economic impact, not specifically on overseas competition."
                 }
             ],
             "options": "I. Effect on modern industry\nII. New payment procedures\nIII. Labour problems\nIV. The Model-T\nV. Creating a market\nVI. Revolutionary production techniques\nVII. The Ford family today\nVIII. Impact on the global economy\nIX. Overseas competition",
@@ -1564,9 +1564,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that Ford used a 'conveyor belt' to move parts around the factory.",
+                    "incorrect": "Incorrect. The passage mentions that Ford used a 'conveyor belt' to move parts around the factory as part of his revolutionary production techniques.",
+                    "no_answer": "The correct answer is: conveyor belt. The passage states that Ford used a 'conveyor belt' to move parts around the factory."
                 }
             }
         },
@@ -1589,9 +1589,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that Ford reduced 'labour costs' by 90% compared with more traditional methods.",
+                    "incorrect": "Incorrect. The passage mentions that Ford reduced 'labour costs' by 90% compared with more traditional methods of the time.",
+                    "no_answer": "The correct answer is: labour costs (or labor costs). The passage states that Ford reduced labour costs by 90% compared with more traditional methods."
                 }
             }
         },
@@ -1614,9 +1614,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that the last Model-T Ford was produced in 1927.",
+                    "incorrect": "Incorrect. The passage mentions that the last Model-T Ford was produced in 1927.",
+                    "no_answer": "The correct answer is: 1927. The passage states that the last Model-T Ford was produced in 1927."
                 }
             }
         },
@@ -1639,9 +1639,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that Ford unsuccessfully opposed the organisation of 'labour unions' (or unions).",
+                    "incorrect": "Incorrect. The passage mentions that Ford unsuccessfully opposed the organisation of 'labour unions'.",
+                    "no_answer": "The correct answer is: labour unions (or unions). The passage states that Ford unsuccessfully opposed the organisation of labour unions."
                 }
             }
         },
@@ -1664,9 +1664,9 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that 'Fordism' is the name given to the principles of mass production and associated practices.",
+                    "incorrect": "Incorrect. The passage mentions that 'Fordism' is the name given to the principles of mass production and associated practices.",
+                    "no_answer": "The correct answer is: Fordism. The passage states that 'Fordism' is the name given to the principles of mass production and associated practices."
                 }
             }
         },
@@ -1691,19 +1691,19 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that many developing countries became industrialised as a result of 'outsourcing'.",
+                    "incorrect": "Incorrect. The passage mentions that developing countries became industrialised as a result of 'outsourcing'.",
+                    "no_answer": "The correct answer is: outsourcing. The passage states that developing countries became industrialised as a result of outsourcing."
                 },
                 "2": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that the skills for 'assembly-line tasks' were easily acquired.",
+                    "incorrect": "Incorrect. The passage mentions that the skills for 'assembly-line tasks' were easily acquired.",
+                    "no_answer": "The correct answer is: assembly-line tasks. The passage states that the skills for assembly-line tasks were easily acquired."
                 },
                 "3": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
+                    "correct": "Correct! The passage states that 'training' was minimal.",
+                    "incorrect": "Incorrect. The passage mentions that 'training' was minimal.",
+                    "no_answer": "The correct answer is: training. The passage states that training was minimal."
                 }
             }
         }
