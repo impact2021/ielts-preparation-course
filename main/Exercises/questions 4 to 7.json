@@ -1,0 +1,154 @@
+{
+  "title": "Questions 4 to 7",
+  "content": "Reading comprehension practice for IELTS",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Read the paragraph below and answer the questions that follow. Select the correct answers from the choices given.\n\nQuestion 4 and 5: Which TWO of the following characteristics does AEL prioritise when recruiting new employees?",
+      "question": "4-5. Which TWO of the following characteristics does AEL prioritise when recruiting new employees?",
+      "points": 2,
+      "no_answer_feedback": "The correct answers are A (Social interaction) and D (Original thinkers). The passage states that candidates are assessed on their ability to work well alongside colleagues (interpersonal skills being highly regarded) and the company aims to recruit people with an innovative approach and open mind. In the IELTS Reading test, you should always attempt every question.",
+      "correct_feedback": "Correct! AEL prioritises social interaction (interpersonal skills being highly regarded) and original thinkers (people with an innovative approach and open mind).",
+      "incorrect_feedback": "Not quite. Read carefully when the passage discusses what AEL looks for in recruitment - interpersonal skills and an innovative approach are mentioned as priorities.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "mc_options": [
+        {
+          "text": "Social interaction",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that 'Potential candidates are assessed on their ability to work well alongside colleagues, interpersonal skills being highly regarded.'"
+        },
+        {
+          "text": "Familiarity with the industry",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'Experience is not crucial as training programmes are provided', so familiarity with the industry is not prioritised."
+        },
+        {
+          "text": "Those with an understanding of the importance of company structure",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage actually says the company does NOT want 'people committed to a strong hierarchical structure', so understanding of company structure is not prioritised."
+        },
+        {
+          "text": "Original thinkers",
+          "is_correct": true,
+          "feedback": "Correct! The passage states the company aims to recruit 'people with an innovative approach and open mind', which describes original thinkers."
+        },
+        {
+          "text": "People able to work well under supervision",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states they do not want people 'looking to have a direct boss overseeing their work', so this characteristic is not prioritised."
+        }
+      ],
+      "options": "Social interaction\nFamiliarity with the industry\nThose with an understanding of the importance of company structure\nOriginal thinkers\nPeople able to work well under supervision",
+      "correct_answer_count": 2,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "6. Which diagram does the paragraph above best describe?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A (Diagram A). The paragraph describes a stick figure with a semi-circle starting and ending at each hand arcing over the head, with legs spread wide. In the IELTS Reading test, you should always attempt every question.",
+      "correct_feedback": "Correct! Diagram A matches the description of The Indalo Man - a simple stick figure with a semi-circle arcing over the head from hand to hand, with legs spread wide.",
+      "incorrect_feedback": "Not quite. Read the description carefully: 'A simple stick figure, the image has a semi circle starting and ending at each hand arcing over the head. The legs are spread wide.' This matches Diagram A.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "Diagram A",
+          "is_correct": true,
+          "feedback": "Correct! Diagram A shows a stick figure with a semi-circle arcing from hand to hand over the head, with legs spread wide, matching the description of The Indalo Man."
+        },
+        {
+          "text": "Diagram B",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Diagram A. The paragraph describes a stick figure with a semi-circle starting and ending at each hand arcing over the head, and legs spread wide. This matches Diagram A."
+        },
+        {
+          "text": "Diagram C",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Diagram A. The paragraph describes a stick figure with a semi-circle starting and ending at each hand arcing over the head, and legs spread wide. This matches Diagram A."
+        }
+      ],
+      "options": "Diagram A\nDiagram B\nDiagram C",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Read the text below and answer the question that follows. Select the best title for this text from the options given.",
+      "question": "7. Which of the following is the most suitable title for the reading passage?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (Schooling essential companions). The text focuses on guide dogs, their importance and how they are trained. In the IELTS Reading test, you should always attempt every question.",
+      "correct_feedback": "Correct! 'Schooling essential companions' is the most suitable title as the passage focuses on the training and education of guide dogs, which are essential companions for blind people.",
+      "incorrect_feedback": "Not quite. The text focuses on guide dogs, their importance and how they are trained. 'Obedience and discipline in domestic animals' refers to domestic animals but is not specific about guide dogs. 'Problems faced by the blind' refers to problems faced by the blind, but this is not mentioned in the text. 'Impact of guide dogs on owners' lives', although relevant to some parts of the passage, does not give an overall title.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "Obedience and discipline in domestic animals",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'Schooling essential companions'. While the passage discusses training, it specifically focuses on guide dogs and their training, not domestic animals in general. 'Obedience and discipline in domestic animals' is too broad and not specific about guide dogs."
+        },
+        {
+          "text": "Schooling essential companions",
+          "is_correct": true,
+          "feedback": "Correct! This is the most suitable title. The passage focuses on the training (schooling) of guide dogs (essential companions) from puppyhood through to working life, covering all aspects of their education and development."
+        },
+        {
+          "text": "Problems faced by the blind",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'Schooling essential companions'. The passage focuses on guide dogs and their training, not on the problems faced by blind people. While it mentions how guide dogs help, this is not the main focus."
+        },
+        {
+          "text": "Impact of guide dogs on owners' lives",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'Schooling essential companions'. Although the passage does mention the impact of guide dogs on owners' lives (particularly in paragraph G), this does not capture the overall focus of the passage, which is about the training and development of guide dogs."
+        }
+      ],
+      "options": "Obedience and discipline in domestic animals\nSchooling essential companions\nProblems faced by the blind\nImpact of guide dogs on owners' lives",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Company Recruitment",
+      "content": "<p>The company's success is long overdue, as they have been at the forefront of professional development and employee support for many years. Even their interview techniques and questions are slightly unusual for such an industry. <span id=\"q4\" data-question=\"4\"></span><span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Potential candidates are assessed on their ability to work well alongside colleagues, interpersonal skills being highly regarded. Experience is not crucial as training programmes are provided. Rather, the company aims to recruit people with an innovative approach and open mind</span>, not people committed to a strong hierarchical structure and looking to have a direct boss overseeing their work.</p>"
+    },
+    {
+      "title": "The Indalo Man",
+      "content": "<p><span id=\"q6\" data-question=\"6\"></span>The oldest design was found in a cave in Almeria and has since earned the name 'The Indalo Man'. <span class=\"reading-answer-marker\">A simple stick figure, the image has a semi circle starting and ending at each hand arcing over the head. The legs are spread wide, suggesting the action of a victorious hunter brandishing a bow.</span></p>"
+    },
+    {
+      "title": "Guide Dogs",
+      "content": "<p><strong>A.</strong> Guide dogs for the blind are essential for facilitating independence and confidence for many who are unable to see and would otherwise be unable to achieve the mobility they need to lead an active and fulfilled life. Guide Dogs for the Blind Associations are generally non-profit organisations; their operations being funded by donations from the general public and grants from various foundations. The U.K. Guide Dog for the Blind Association is involved in supporting approximately 5,000 guide dog/owner partnerships at any one time and breeds over 1,000 guide dog puppies each year. In addition to facilitating guide dog partnerships, the organisation is also involved in investment in research related to dog health and well-being, and research projects investigating prevention and cure of eye disease. The association also funds training of staff working to support the blind and the partially-sighted in addition to its guide dog trainers.</p>\n\n<p><strong>B.</strong> Labrador Retrievers are the most commonly used breed of dog across the world, though Golden Retrievers and Alsatians are also used by many guide dog training associations. These three breeds have been observed to be particularly suitable due to their willingness to cooperate with their human owners, their trainability, their generally robust health and their stature; smaller dogs with similar personality characteristics being unsuitable due to their size. Usage of mixed breed dogs is uncommon as it is more difficult to predict the characteristics and personality such dogs will develop in adulthood.</p>\n\n<p><strong>C.</strong> Individual puppies selected to be trained as guide dogs are chosen carefully to try to ensure they will possess the necessary characteristics. A successful guide dog is required to have a number of positive attributes including intelligence, a gentle nature, confidence in crowded situations and ability to remain calm in the event of loud noises. Many guide dogs are from bloodlines with a long history of service due to the proven suitability of the nature of their parents and the consequent likelihood that they themselves will have inherited similar traits. However, genetics alone do not assure a successful guide dog; as with humans, both nature and nurture influence a dog's character and behaviour and professional training is essential.</p>\n\n<p><strong>D.</strong> <span id=\"q7\" data-question=\"7\"></span>A puppy's guide dog training usually begins when it is between 6 and 8 weeks old. Volunteers temporarily adopt the dogs and introduce them to the sights, sounds and smells of the world around them. They experience many aspects of life that a usual dog may never be introduced to, such as entering shops and travelling on buses and trains as they will need to do once they are fully trained and are accompanying their owners through their day to day life. Whilst most dogs are taught to 'heel' i.e. walk beside their owner while on a leash, <span class=\"reading-answer-marker\">guide dogs are trained to walk ahead without straining or creating tension on the lead; from between 6-8 weeks of age they are also taught the usual canine obedience skills of sitting, staying and coming to their trainer on command</span>. Usually at around 1 year of age, the young dog is returned to the Guide Dog association for the next and more intensive stage of its training.</p>\n\n<p><strong>E.</strong> Taking with it the basic skills it learned as a young puppy, in the second phase of its training the trainee guide dog is taught many skills vital to it being able to ensure the safety of its future owner. It is taught to always walk in a straight line in the middle of a pavement unless there is an obstacle such as maintenance work; it is taught not to turn corners unless told to do so, to stop at kerbs so that it will not lead its owners from the safety of the pavement into the path of road traffic and the most complex skill of all of being able to judge height and width so that its future owner will not bump their head or shoulder as the dog guides them from place to place. Not all dogs that enter this level of training are able to meet the rigorous requirements it involves and only those that can competently display all of the required skills will eventually become a guide dog.</p>\n\n<p><strong>F.</strong> At 2 years old, the dog will have completed its training; having been deemed suitable and safe for guiding a blind person, it is then matched with an owner, a process which requires careful consideration and experience as not all guide dogs will be suitable for all owners. The owner's physical characteristics – such as how tall they are and the length of their stride – impact on the type of dog that will serve them best; as does their lifestyle. Once a partnership has been matched, owner and guide then spend around 4 weeks in an intensive training programme together to ensure that they can successfully operate as a team and safely navigate the world. The intervention of the Guide Dog Association sponsoring the partnership does not end there and regular follow up visits are customary.</p>\n\n<p><strong>G.</strong> On average, a guide dog will work for around 7 years, retiring at about age 9. Guide Dog Associations arrange for replacement dogs when the existing companion is retired; quite often, although a new working dog will be required, the original guide may stay on as a pet in the household; if this is not feasible then the Guide Dog association will house it with a new family. For centuries humans have formed strong emotional bonds with their pets; dogs in particular. The relationship between a guide dog and an owner is often especially intense as the positive impact the animal can have on the quality of life of the person is immense.</p>\n\n<p><strong>H.</strong> Since guide dog associations are non-profit-making organisations, earning potential for employees is usually relatively low compared with other industries. Despite this, the work can be extremely rewarding as guide dog trainers can feel that they are making a significant contribution to the enhancement of the quality of life of other people and are often passionate about animals. Opportunities to become a guide dog trainer are often quite scarce and many people have most success securing a position by first entering the field in a slightly different capacity; such as kennel worker, puppy walker or carer; finding that they are eventually accepted on a training programme. Effective guide dog trainers need to have stamina, as the work can be demanding, involving long hours and a high level of personal commitment. Trainers also need to be realists as some of their charges may never become successful guide dogs regardless of their own dedication and skill. Most associations require their guide dog trainers to have a general background in animal training, possess a university degree and a proven ability to coach and teach. Strong interpersonal skills are also vital as trainers must not only have an affinity with the dogs but also the ability to work successfully with the owners during the partnership training phase.</p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_reading_band",
+    "timer_minutes": 0,
+    "starting_question_number": 4
+  },
+  "_metadata": {
+    "exported_at": "2026-01-21 04:12:00",
+    "exported_by": "impact",
+    "plugin_version": "12.9",
+    "format_version": "1.0"
+  }
+}
