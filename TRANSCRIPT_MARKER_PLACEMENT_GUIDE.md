@@ -217,3 +217,61 @@ Do not mix these formats. Always use the HTML span format for listening transcri
 **Golden Rule:** For listening transcripts, always use the HTML span format with `<span id="q#">` immediately before the actual answer text.
 
 When creating listening transcripts, place the marker so that the `reading-answer-marker` span contains only the answer text that students need to identify.
+
+## Common Issues and Troubleshooting
+
+### Issue: Transcript Not Showing in Admin UI
+
+**Symptom:** After importing a JSON file, the transcript doesn't appear in the WordPress admin interface or on the front-end.
+
+**Common Causes:**
+
+1. **Missing Answer Markers** (Most Common)
+   - The transcript text is incomplete or has answer text removed
+   - Look for incomplete sentences like "which involves ." or "need to pay for ,"
+   - **Solution:** Ensure transcript has complete sentences with proper answer markers
+
+2. **Wrong Layout Type**
+   - `layout_type` is set to `two_column_reading` instead of `two_column_listening`
+   - **Solution:** Set `"layout_type": "two_column_listening"` in settings
+
+3. **Empty Transcript Field**
+   - The `audio.transcript` field is empty or contains only whitespace
+   - **Solution:** Ensure transcript contains the full text with markers
+
+**How to Fix:**
+
+```json
+{
+  "settings": {
+    "layout_type": "two_column_listening",  // NOT two_column_reading
+    "scoring_type": "ielts_listening_band"  // For IELTS listening tests
+  },
+  "audio": {
+    "url": "https://example.com/audio.mp3",
+    "transcript": "<p>Full text here <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">answer text</span> continuing...</p>"
+  }
+}
+```
+
+**Validation Checklist:**
+- ✅ Transcript field is not empty
+- ✅ Transcript contains complete sentences (no "which involves ." patterns)
+- ✅ All answer markers are present (count should match number of questions)
+- ✅ Each marker uses format: `<span id="q#" data-question="#"></span><span class="reading-answer-marker">ANSWER</span>`
+- ✅ `layout_type` is `two_column_listening` (not `two_column_reading`)
+- ✅ `scoring_type` is `ielts_listening_band` (for listening tests)
+
+### Issue: Answer Markers Stripped Out After Export
+
+**Symptom:** When you export a quiz from WordPress and re-import it, the answer markers are missing.
+
+**Cause:** WordPress may process the transcript and remove the markers during export/import cycle.
+
+**Solution:** Always keep a clean copy of your JSON file with markers before importing. After exporting from WordPress, the transcript may need markers re-added manually or from your backup.
+
+**Prevention:**
+1. Keep original JSON files with markers in version control
+2. Don't rely on WordPress export as your source of truth
+3. Use the original JSON files as templates for new exercises
+
