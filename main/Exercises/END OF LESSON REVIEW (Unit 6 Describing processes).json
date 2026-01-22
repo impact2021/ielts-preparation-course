@@ -1,0 +1,78 @@
+{
+  "title": "END OF LESSON REVIEW (Unit 6 Describing processes)",
+  "content": "Complete the Task 1 report below using the correct passive form of the following verbs. Use each verb once only. You will need to use the present simple or present perfect passive. Type your answers in the spaces provided.<br><br><strong>COMPLETE CREATE DISCOVER DIVIDE FIND MAKE REPEAT RETURN</strong><br><br>The process illustrates the procedure of software creation for computers. There are 6 stages in the process; beginning at creation, moving through testing to release. Whether errors are found or not has an impact on the stages of the process.",
+  "questions": [
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the sentences using the correct passive form of the verbs provided.",
+      "question": "The process begins with the creation of the programme; once the programme [field 1], it is tested. At this point the process [field 2] dependent on whether there are problems with the software.<br><br>If the testing stage leads to errors being identified, solutions to the problem [field 3]. From this point, the software [field 4] to the testing stage where the process [field 5].<br><br>If no errors [field 6] during the testing stage, the evaluation stages [field 7] and the software [field 8] available to the public; this is the final stage of the process.<br><br>This brings to a close the description of the computer software testing and development process.",
+      "field_count": 8,
+      "field_answers": {
+        "1": "has been created",
+        "2": "is divided",
+        "3": "are found",
+        "4": "is returned",
+        "5": "is repeated",
+        "6": "are discovered",
+        "7": "are completed",
+        "8": "is made"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! 'has been created' is the present perfect passive form. The present perfect passive (has/have been + past participle) is used here because the action of creating the programme must be completed before it can be tested.",
+          "incorrect": "Incorrect. You need the present perfect passive form here (has/have been + past participle). The programme must be created before it can be tested, indicating a completed action with relevance to the present.",
+          "no_answer": "Please provide an answer. You need the present perfect passive form of 'create' (has/have been + past participle)."
+        },
+        "2": {
+          "correct": "Correct! 'is divided' is the present simple passive form. The present simple passive (is/are + past participle) is used to describe a general process or routine that happens regularly.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The sentence describes how the process regularly divides based on test results.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'divide' (is/are + past participle)."
+        },
+        "3": {
+          "correct": "Correct! 'are found' is the present simple passive form. The present simple passive (is/are + past participle) describes the regular action of finding solutions when errors are identified.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'solutions' is plural, so use 'are'. This describes what regularly happens when errors are identified.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'find' (is/are + past participle) with a plural subject."
+        },
+        "4": {
+          "correct": "Correct! 'is returned' is the present simple passive form. The present simple passive (is/are + past participle) describes the routine action of returning the software to testing.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'software' is singular, so use 'is'. This describes the regular process of sending software back to testing.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'return' (is/are + past participle)."
+        },
+        "5": {
+          "correct": "Correct! 'is repeated' is the present simple passive form. The present simple passive (is/are + past participle) describes how the process routinely repeats when errors are found.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'process' is singular, so use 'is'. This describes the cyclical nature of the testing process.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'repeat' (is/are + past participle)."
+        },
+        "6": {
+          "correct": "Correct! 'are discovered' is the present simple passive form. The present simple passive (is/are + past participle) describes the conditional situation where no errors are found during testing.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'errors' is plural, so use 'are'. This describes what might not happen during testing.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'discover' (is/are + past participle) with a plural subject."
+        },
+        "7": {
+          "correct": "Correct! 'are completed' is the present simple passive form. The present simple passive (is/are + past participle) describes the routine completion of evaluation stages when no errors are found.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'evaluation stages' is plural, so use 'are'. This describes what happens when testing is successful.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'complete' (is/are + past participle) with a plural subject."
+        },
+        "8": {
+          "correct": "Correct! 'is made' is the present simple passive form. The present simple passive (is/are + past participle) describes the final action of making the software available to the public.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'software' is singular, so use 'is'. This describes the final stage of the process.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'make' (is/are + past participle)."
+        }
+      },
+      "points": 8,
+      "correct_feedback": "Excellent! You have correctly identified all the passive forms.",
+      "incorrect_feedback": "Review your answers. Pay attention to whether you need present simple passive (is/are + past participle) or present perfect passive (has/have been + past participle).",
+      "no_answer_feedback": "Please complete all fields. Remember to use the correct passive form of the verbs provided."
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
