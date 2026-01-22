@@ -87,11 +87,13 @@ class IELTS_CM_Progress_Tracker {
         
         // Trigger award hooks if completed
         if ($result && $completed) {
+            // resource_id is set when tracking individual page/resource completion
+            // resource_id is null when tracking overall lesson completion
             if ($resource_id) {
-                // Page completion
+                // Page/resource completion
                 do_action('ielts_cm_page_completed', $user_id, $resource_id);
             } else {
-                // Lesson completion
+                // Lesson completion (when all resources in lesson are done)
                 do_action('ielts_cm_lesson_completed', $user_id, $lesson_id);
             }
         }

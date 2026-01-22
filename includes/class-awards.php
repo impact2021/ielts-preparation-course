@@ -115,16 +115,13 @@ class IELTS_CM_Awards {
             return false;
         }
         
-        // Insert award
-        $result = $wpdb->insert(
-            $this->awards_table,
-            array(
-                'user_id' => $user_id,
-                'award_id' => $award_id,
-                'earned_date' => current_time('mysql')
-            ),
-            array('%d', '%s', '%s')
-        );
+        // Insert award with ON DUPLICATE KEY to handle race conditions
+        $result = $wpdb->query($wpdb->prepare(
+            "INSERT INTO {$this->awards_table} (user_id, award_id, earned_date) 
+             VALUES (%d, %s, %s) 
+             ON DUPLICATE KEY UPDATE earned_date = earned_date",
+            $user_id, $award_id, current_time('mysql')
+        ));
         
         if ($result) {
             // Store for notification
@@ -190,6 +187,9 @@ class IELTS_CM_Awards {
         ));
         
         // Count completed courses
+        // Note: This counts distinct courses where the user has at least one completed item
+        // For more accurate course completion tracking, consider adding a dedicated course 
+        // completion hook when all lessons in a course are finished
         $courses_completed = $wpdb->get_var($wpdb->prepare(
             "SELECT COUNT(DISTINCT course_id) FROM $progress_table WHERE user_id = %d AND completed = 1",
             $user_id
@@ -327,6 +327,7 @@ class IELTS_CM_Awards {
         $user_id = get_current_user_id();
         if (!$user_id) {
             wp_send_json_error(array('message' => 'User not logged in'));
+            return;
         }
         
         $earned_awards = $this->get_user_awards($user_id);

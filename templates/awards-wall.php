@@ -44,8 +44,8 @@ $user_id = get_current_user_id();
 
 <script type="text/javascript">
 var ieltsAwardsConfig = {
-    ajaxUrl: '<?php echo admin_url('admin-ajax.php'); ?>',
-    nonce: '<?php echo wp_create_nonce('ielts_cm_nonce'); ?>',
-    userId: <?php echo $user_id; ?>
+    ajaxUrl: '<?php echo esc_js(admin_url('admin-ajax.php')); ?>',
+    nonce: '<?php echo esc_js(wp_create_nonce('ielts_cm_nonce')); ?>',
+    userId: <?php echo intval($user_id); ?>
 };
 </script>
