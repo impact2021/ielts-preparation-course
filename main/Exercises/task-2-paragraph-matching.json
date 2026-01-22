@@ -6,7 +6,7 @@
       "type": "closed_question",
       "ielts_question_type": "Multiple Choice (Single Answer)",
       "instructions": "Read the following paragraph and select which Task 2 title it most closely relates to:",
-      "question": "<p><strong>Paragraph 1:</strong></p><p>Although some courses do not link to obvious choices of employment, some arts-related fields of study can have wider benefits for the student. Literature is a good example of this; having no direct link to a specific career, it challenges students to think in less concrete terms than a more conventional career options such as business for some people.</p><p>Which Task 2 title does this paragraph most closely relate to?</p>",
+      "question": "<p><strong>Paragraph 1:</strong></p><p>Although some courses do not link to obvious choices of employment, some arts-related fields of study can have wider benefits for the student. Literature is a good example of this; having no direct link to a specific career, it challenges students to think in less concrete terms than more conventional career options such as business for some people.</p><p>Which Task 2 title does this paragraph most closely relate to?</p>",
       "correct_answer_count": 1,
       "show_option_letters": false,
       "mc_options": [
@@ -83,7 +83,7 @@
         }
       ],
       "correct_answer": "1",
-      "no_answer_feedback": "You did not select an answer. The correct answer is: 'An increasing number of mothers are choosing to return to work. There are advantages and disadvantages to this. Discuss the advantages and disadvantages then give an opinion.' - If this was the Task 2 title, then the paragraph has stayed on the topic. In this paragraph they are clearly explaining some disadvantages of mothers returning to work.",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'An increasing number of mothers are choosing to return to work. There are advantages and disadvantages to this. Discuss the advantages and disadvantages then give an opinion.' - If this was the Task 2 title, then the paragraph has stayed on the topic. In this paragraph they are clearly explaining some disadvantages of mothers returning to work (stress, losing patience, inadequate time, need for childcare).",
       "points": 1
     }
   ],
