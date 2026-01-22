@@ -1,0 +1,99 @@
+{
+  "title": "Task 2 Paragraph Matching Exercise",
+  "content": "<p>Read the paragraphs that follow. Which Task 2 titles do they most closely relate to? Select the correct answers.</p>",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the following paragraph and select which Task 2 title it most closely relates to:",
+      "question": "<p><strong>Paragraph 1:</strong></p><p>Although some courses do not link to obvious choices of employment, some arts-related fields of study can have wider benefits for the student. Literature is a good example of this; having no direct link to a specific career, it challenges students to think in less concrete terms than a more conventional career options such as business for some people.</p><p>Which Task 2 title does this paragraph most closely relate to?</p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "There is no purpose to a course that does not lead to a job. To what extent do you agree?",
+          "is_correct": true,
+          "feedback": "<strong>Correct answer:</strong> There is no purpose to a course that does not lead to a job. To what extent do you agree?<br><br>If this was the Task 2 title, then the paragraph has stayed on the topic as the paragraph argues that some arts courses, although they may not lead to a job, still have benefits."
+        },
+        {
+          "text": "More university students take courses directly related to employment. What are the reasons for this?",
+          "is_correct": false,
+          "feedback": "<strong>Incorrect answer:</strong> More university students take courses directly related to employment. What are the reasons for this?<br><br>If this was the Task 2 title, then the writer has gone off topic because no mention is made of courses that lead to employment."
+        },
+        {
+          "text": "There is a decreasing interest in the arts. Therefore the government should fund students who enrol in arts-related courses. Do you agree or disagree?",
+          "is_correct": false,
+          "feedback": "<strong>Also incorrect:</strong> There is a decreasing interest in the arts. Therefore the government should fund students who enrol in arts-related courses. Do you agree or disagree?<br><br>If this was the Task 2 title, then the paragraph has gone off the topic because no reference has been made to the financial aspect of studying."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'There is no purpose to a course that does not lead to a job. To what extent do you agree?' - If this was the Task 2 title, then the paragraph has stayed on the topic as the paragraph argues that some arts courses, although they may not lead to a job, still have benefits.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the following paragraph and select which Task 2 title it most closely relates to:",
+      "question": "<p><strong>Paragraph 2:</strong></p><p>There are a number of factors that detract from the effectiveness of studying overseas. Students can often find that they lack motivation, as they are less pressured to complete tasks once independent from their family. Moreover, language barriers can cause some pupils to feel that they are unable to complete their course. These issues begin to feel insurmountable and may end with the student becoming depressed and failing to complete their studies.</p><p>Which Task 2 title does this paragraph most closely relate to?</p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "It is more common for students to complete their studies in a foreign country. There are many employment advantages to an international education. Do you agree?",
+          "is_correct": false,
+          "feedback": "<strong>Incorrect:</strong> It is more common for students to complete their studies in a foreign country. There are many employment advantages to an international education. Do you agree?<br><br>If this was the Task 2 title, then the paragraph has gone off the topic. It does not refer to any of the employment advantages."
+        },
+        {
+          "text": "International students have difficulties studying because of differences in culture. Do you agree?",
+          "is_correct": false,
+          "feedback": "<strong>Also incorrect:</strong> International students have difficulties studying because of differences in culture. Do you agree?<br><br>If this was the Task 2 title, then the writer has gone off the topic. Differences in culture are not mentioned."
+        },
+        {
+          "text": "An increasing number of students are opting to study overseas, yet some students experience difficulties. What are the reasons for these problems?",
+          "is_correct": true,
+          "feedback": "<strong>Correct answer:</strong> An increasing number of students are opting to study overseas, yet some students experience difficulties. What are the reasons for these problems?<br><br>If this was the Task 2 title, then the paragraph has stayed on the topic. In this paragraph they are clearly explaining some problems and giving reasons (less pressure, language barriers etc)."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'An increasing number of students are opting to study overseas, yet some students experience difficulties. What are the reasons for these problems?' - If this was the Task 2 title, then the paragraph has stayed on the topic. In this paragraph they are clearly explaining some problems and giving reasons (less pressure, language barriers etc).",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the following paragraph and select which Task 2 title it most closely relates to:",
+      "question": "<p><strong>Paragraph 3:</strong></p><p>However, there are also disadvantages related to this issue; working and raising a family can be extremely stressful and the mother may find herself losing patience with her child; she may also have inadequate time to do the things she wants to do for her son or daughter, for example cook nutritious meals and have time available for play. A final point is that she would need assistance with childcare.</p><p>Which Task 2 title does this paragraph most closely relate to?</p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "An increasing number of mothers are working at the same time as raising a family. What are the reasons for this?",
+          "is_correct": false,
+          "feedback": "<strong>Incorrect:</strong> An increasing number of mothers are working at the same time as raising a family. What are the reasons for this?<br><br>If this was the Task 2 title, then the paragraph has gone off the topic. It does not refer to any reasons; it focuses only on the disadvantages of being a working mother."
+        },
+        {
+          "text": "An increasing number of mothers are choosing to return to work. There are advantages and disadvantages to this. Discuss the advantages and disadvantages then give an opinion.",
+          "is_correct": true,
+          "feedback": "<strong>Correct answer:</strong> An increasing number of mothers are choosing to return to work. There are advantages and disadvantages to this. Discuss the advantages and disadvantages then give an opinion.<br><br>If this was the Task 2 title, then the paragraph has stayed on the topic. In this paragraph they are clearly explaining some disadvantages of mothers returning to work (stress, losing patience, inadequate time, need for childcare)."
+        },
+        {
+          "text": "An increasing number of mothers are employed full time and spending less time with their children. What solutions are there to this?",
+          "is_correct": false,
+          "feedback": "<strong>Also incorrect:</strong> An increasing number of mothers are employed full time and spending less time with their children. What solutions are there to this?<br><br>If this was the Task 2 title, then the writer has gone off the topic. The paragraph focuses on the disadvantages and does not offer any solutions to the problems raised."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'An increasing number of mothers are choosing to return to work. There are advantages and disadvantages to this. Discuss the advantages and disadvantages then give an opinion.' - If this was the Task 2 title, then the paragraph has stayed on the topic. In this paragraph they are clearly explaining some disadvantages of mothers returning to work.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
