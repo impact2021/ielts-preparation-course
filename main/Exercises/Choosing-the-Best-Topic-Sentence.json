@@ -1,0 +1,132 @@
+{
+    "title": "Choosing the Best Topic Sentence",
+    "content": "Read each paragraph and select the best topic sentence. Feedback is provided for correct, incorrect, and unanswered responses.",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Choose the best topic sentence for the paragraph on the left.",
+            "points": 1,
+            "no_answer_feedback": "The best topic sentence is 'There are many potential advantages to learning a foreign language' because the paragraph only discusses benefits.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "Successful international business requires employees to learn a foreign language.",
+                    "is_correct": false,
+                    "feedback": "Although this covers the first aspect of the paragraph, the text then goes on to refer to learning a language as being a good way of understanding another culture. Although this may be useful for business, the paragraph does not refer to this as the aim of studying."
+                },
+                {
+                    "text": "There are a number of advantages and disadvantages to learning a foreign language.",
+                    "is_correct": false,
+                    "feedback": "The paragraph refers only to the positive aspects of learning a language. It does not refer to any disadvantages. Even though disadvantages may be discussed in subsequent paragraphs, the topic sentence should focus on what is being presented in the paragraph in which it is used."
+                },
+                {
+                    "text": "There are many potential advantages to learning a foreign language.",
+                    "is_correct": true,
+                    "feedback": "This is correct because the paragraph refers to the positive aspects of learning a language, not only in business but also to understand the culture of another country."
+                }
+            ],
+            "options": "Successful international business requires employees to learn a foreign language.\nThere are a number of advantages and disadvantages to learning a foreign language.\nThere are many potential advantages to learning a foreign language.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Choose the best topic sentence for the paragraph on the left.\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer highlights that some arts subjects offer broader benefits despite limited employment links.",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A course of study with no direct employment opportunities does not serve a useful purpose.",
+                    "is_correct": false,
+                    "feedback": "The paragraph gives literature as an example of a course of study which does not have a direct link to employment, yet does in fact serve a useful purpose (allowing a student 'to think in less concrete terms and be more flexible')."
+                },
+                {
+                    "text": "Although some courses do not link to obvious choices of employment, some arts-related fields of study can have wider benefits for the student.",
+                    "is_correct": true,
+                    "feedback": "The key phrase in this topic paragraph is 'some arts-related fields'. The writer offers literature as a good example of arts related course that allows students 'to think in less concrete terms and be more flexible', but balances this with music, stating that this offers benefits to only a select few."
+                },
+                {
+                    "text": "Some subjects are especially useful when studying for a particular path of employment.",
+                    "is_correct": false,
+                    "feedback": "This is incorrect because the paragraph refers to some aspects of literature that are generally useful, but does not mention any subject which is 'especially useful…for a particular path of employment'."
+                }
+            ],
+            "options": "A course of study with no direct employment opportunities does not serve a useful purpose.\nAlthough some courses do not link to obvious choices of employment, some arts-related fields of study can have wider benefits for the student.\nSome subjects are especially useful when studying for a particular path of employment.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Choose the best topic sentence for the paragraph on the left.\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct topic sentence focuses on problems that reduce the effectiveness of studying overseas.",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "There are a number of factors that detract from the effectiveness of studying overseas.",
+                    "is_correct": true,
+                    "feedback": "This is correct because the paragraph refers to students studying in another country who may feel less under pressure but at the same time may have language issues that can lead to depression and not completing the course."
+                },
+                {
+                    "text": "There are a number of reasons why students opt to pursue an international education.",
+                    "is_correct": false,
+                    "feedback": "The paragraph does not refer to why students decide to study overseas. It only comments on some of the problems that can be encountered by students."
+                },
+                {
+                    "text": "Studying overseas is not considered as worthwhile as more conventional studies.",
+                    "is_correct": false,
+                    "feedback": "Although the paragraph refers to some of the difficulties involved in studying overseas, it does not make any comment on whether the study is more or less valuable than conventional studies."
+                }
+            ],
+            "options": "There are a number of factors that detract from the effectiveness of studying overseas.\nThere are a number of reasons why students opt to pursue an international education.\nStudying overseas is not considered as worthwhile as more conventional studies.",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Question 1",
+            "content": "<strong>(choose the best topic sentence)_____________.</strong> Primarily, there is the fact that larger businesses often work in an international sphere, meaning that employees who have the ability to communicate with overseas clients will become increasingly valuable. In addition to commercial motives, there is also the personal benefit in that learning a foreign language can also improve a student's understanding of foreign cultures, as language and culture are often mutually dependent. In Japan, for example, the language has many levels of formality, which reflects the hierarchical structure of Japanese society."
+        },
+        {
+            "title": "Question 2",
+            "content": "<strong>(choose the best topic sentence)_____________.</strong> Literature is a good example of this; having no direct link to a specific career, it challenges students to think in less concrete terms and be more flexible than a more conventional career option such as business. However, it is more difficult to find the value of a course devoted to other arts subjects such as music, as this is specific in intention but again has limited application for employment for all but the most talented musicians."
+        },
+        {
+            "title": "Question 3",
+            "content": "<strong>(choose the best topic sentence)_____________.</strong> Students can often find that they lack motivation, as they are less pressured to complete tasks once independent from their family. Moreover, language barriers can cause some pupils to feel that they are unable to complete their course. These issues begin to feel insurmountable and may end with the student becoming depressed and failing to complete their studies."
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-22 16:37:59",
+        "exported_by": "impact",
+        "plugin_version": "12.11",
+        "format_version": "1.0"
+    }
+}
