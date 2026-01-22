@@ -3,241 +3,305 @@
   "content": "DNA testing\n\nA. Forensic science – the science related to the solving of a legal issue or a crime – has been glamorised of late due to the growing number of popular television series based around the subject. In fact, very few programmes or movies focusing on detective topics make no reference to genetic fingerprinting, DNA testing and profiling and its significance in fighting crime and convicting criminals. Such elements of science allow investigators to distinguish between individuals based on differences in their samples of DNA.\n\nB. DNA, or deoxyribonucleic acid, is one of two molecules found in living things that encodes genetic information, the other being RNA. Our genetic make up determines our characteristics and is hereditary, in that we inherit our DNA and consequently certain characteristics from our parents. Links between family members can therefore be identified by examination of DNA. An historic example of this application was illustrated by the case of Anna Anderson, who in the 1920s claimed she was Princess Anastasia of Russia; however, after her death in the 1980s, post-mortem testing of her DNA indicated that there was no genetic evidence that she was related to the royal Romanov dynasty. Examination of DNA has resulted in successful identification of numerous human remains where genetic links have been established with living relatives.\n\nC. The process of DNA testing was discovered by Sir Alec Jeffreys of the University of Leicester, UK in 1985. Whilst the majority of DNA in humans is the same, some unique differences are also apparent in each individual's genetic profile. Genetic fingerprinting works on the basis that matches between these differences within a person's genetic profile and a sample of DNA derived from trace evidence (such as saliva or hair found at a crime scene) which exhibits the same genetic differences link that person with the sample and therefore the situation in question. Genetic fingerprinting, however, cannot determine differences between identical twins as these individuals have genetic profiles identical to each other.\n\nD. Genetic fingerprinting is not infallible and it is unlikely that juries will convict a suspect based purely on DNA evidence if other factors in the case seem to prove innocence, or at least reasonable doubt that the suspect is guilty of the crime. Conversely, there have also been cases where criminals have planted fake DNA at crime scenes in order to bring their guilt into question. In a Canadian trial in 1992, a doctor accused of a crime went to the lengths of inserting a false blood sample into his body through the use of a medical drain, which resulted in blood samples being taken which showed no similarities to those from the crime scene samples. Three separate samples of blood, which never showed a match, were taken and analysed before the fraud was discovered in a final test which led to his conviction.\n\nE. 1987 was a significant year for highlighting the effectiveness of DNA evidence. In that year, the first arrest based upon genetic fingerprinting was made in Leicester, UK – the home of the procedure – and it was also the first year in which a conviction based on DNA evidence was achieved in the USA. However, DNA evidence and its statistical accuracy have been known to cause confusion for juries, particularly in the early period of its introduction. Experts acknowledge that there is a 1 in 5 million probability that a genetic match could occur by chance. Defence lawyers could translate this to mean that in a population of 60 million people for example, that 11 other people, and not just the person accused of the crime, would also be seen to match the profile of genetic evidence collected during investigation, showing reasonable doubt that the accused was guilty of the crime. Whilst the argument has some basis in fact, probabilities are dramatically altered when consideration is given to the truth of the situation, in that only 1 of those 12, i.e. the accused, had been arrested for the crime due to other factors including proximity, relationship with the victim, other non-genetic based evidence etc. In addition, whilst the risks of laboratory error during analysis are slim, awareness of such risks can also alter juries' perceptions of the validity of evidence shown.\n\nF. Despite occasional doubts, genetic fingerprinting and DNA testing procedures have evolved to significantly impact on criminal investigations. In addition to assisting with the conviction of criminals, DNA evidence over recent years has also resulted in the over-turning of past convictions and freedom for people now seen to have been wrongly accused of a crime. In 1989, a Chicago man was the first person to be freed and have a conviction overturned based on new evidence brought to light using DNA testing. By December 2005, over 160 people in the USA alone had been freed from prison due to post-conviction DNA evidence.\n\nG. Legislation regarding DNA testing varies from country to country and even state to state. Testing is usually voluntary, for example during a murder investigation in the 1990s in Perth, Australia, where the suspect was considered to be a taxi driver, police called for all taxi drivers in the area to volunteer to give DNA samples in order to rule them out of the investigation. Provision of DNA samples, however, can also be made compulsory by search warrant or court order if other evidence suggests an individual is likely to be guilty of a crime. Throughout the world, DNA databases have been established and are continuing to become more extensive; however, civil liberties groups object to the invasion of privacy and intrusion of human rights posed by such records, particularly when samples taken from suspects who are ultimately proven innocent are not deleted.\n\nH. In addition to its uses in forensic science, genetic fingerprinting has other equally significant applications. It has resulted in developments in paternity testing, where the identity of the father of a child comes into question, and matching of organ donors to those in need of a replacement liver, kidney or other organ. The procedure's importance and impact on modern society are unquestionable.",
   "questions": [
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "1. DNA testing has",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. successfully confirmed the true identity of Princess Anastasia",
+          "text": "successfully confirmed the true identity of Princess Anastasia",
           "is_correct": false,
           "feedback": "Not correct as it only confirmed Anna Anderson was NOT Princess Anastasia. It didn't confirm who Princess Anastasia was."
         },
         {
-          "text": "B. allowed investigators to confirm the identity of members of the Romanov dynasty",
+          "text": "allowed investigators to confirm the identity of members of the Romanov dynasty",
           "is_correct": false,
           "feedback": "We are not given any information about members of the Romanov dynasty."
         },
         {
-          "text": "C. removed the possibility that Anna Anderson was genetically linked to Russian royalty",
+          "text": "removed the possibility that Anna Anderson was genetically linked to Russian royalty",
           "is_correct": true,
           "feedback": "Correct – 'post-mortem testing of her DNA indicated that there was no genetic evidence that she was related to the royal Romanov dynasty'"
         },
         {
-          "text": "D. created new questions regarding the function of RNA",
+          "text": "created new questions regarding the function of RNA",
           "is_correct": false,
           "feedback": "The passage mentions RNA but it doesn't mention anything about 'new questions'."
         }
-      ]
+      ],
+      "correct_answer_count": 1
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "2. DNA testing is",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. possible as a large proportion of a persons DNA is individual to them",
+          "text": "possible as a large proportion of a persons DNA is individual to them",
           "is_correct": false,
           "feedback": "'Whilst the majority of DNA in humans is the same'"
         },
         {
-          "text": "B. viable as people display small but significant differences in DNA",
+          "text": "viable as people display small but significant differences in DNA",
           "is_correct": true,
           "feedback": "Correct – 'some unique differences are also apparent in each individual's genetic profile'."
         },
         {
-          "text": "C. able to differentiate between identical siblings",
+          "text": "able to differentiate between identical siblings",
           "is_correct": false,
           "feedback": "'Genetic fingerprinting, however, cannot determine differences between identical twins'"
         },
         {
-          "text": "D. not possible on hair left at a crime scene",
+          "text": "not possible on hair left at a crime scene",
           "is_correct": false,
           "feedback": "'DNA derived from trace evidence (such as saliva or hair) found at a crime scene'"
         }
-      ]
+      ],
+      "correct_answer_count": 1
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "type": "closed_question",
       "instructions": "Choose TWO letters, A-E. Which TWO of the following statements are true of the medical practitioner in Canada?",
       "question": "3-4. Which TWO of the following statements are true of the medical practitioner in Canada?",
-      "correct_answer_count": 2,
+      "points": 2,
+      "no_answer_feedback": "Please select two answers before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. He avoided detection by modifying his own DNA",
+          "text": "He avoided detection by modifying his own DNA",
           "is_correct": false,
           "feedback": "'Inserting a false blood sample into his body' (he didn't modify HIS OWN DNA)"
         },
         {
-          "text": "B. His conviction was overturned due to DNA evidence",
+          "text": "His conviction was overturned due to DNA evidence",
           "is_correct": false,
           "feedback": "His conviction was made, not overturned, because of DNA"
         },
         {
-          "text": "C. He used another person's blood in a DNA test",
+          "text": "He used another person's blood in a DNA test",
           "is_correct": true,
           "feedback": "Correct – 'Inserting a false blood sample into his body'"
         },
         {
-          "text": "D. He was eventually convicted because other evidence linked him to the crime",
+          "text": "He was eventually convicted because other evidence linked him to the crime",
           "is_correct": false,
           "feedback": "There is no mention of any other evidence"
         },
         {
-          "text": "E. The fourth DNA test revealed the deception",
+          "text": "The fourth DNA test revealed the deception",
           "is_correct": true,
           "feedback": "Correct – 'Three separate samples of blood, which never showed a match, were taken and analysed before the fraud was discovered in a final test which led to his conviction'."
         }
-      ]
+      ],
+      "correct_answer_count": 2
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "5. When was the first person found guilty in America based upon DNA evidence?",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. 1980",
+          "text": "1980",
           "is_correct": false,
           "feedback": "Incorrect. The passage states that 1987 was the first year in which a conviction based on DNA evidence was achieved in the USA."
         },
         {
-          "text": "B. 1985",
+          "text": "1985",
           "is_correct": false,
           "feedback": "Incorrect. 1985 is when Sir Alec Jeffreys discovered the process of DNA testing, not when the first conviction occurred in the USA."
         },
         {
-          "text": "C. 1987",
+          "text": "1987",
           "is_correct": true,
           "feedback": "Correct – '1987 was a significant year … the first year in which a conviction based on DNA evidence was achieved in the USA.'"
         },
         {
-          "text": "D. 1992",
+          "text": "1992",
           "is_correct": false,
           "feedback": "Incorrect. 1992 is when the Canadian trial mentioned in the passage took place, not when the first US conviction occurred."
         }
-      ]
+      ],
+      "correct_answer_count": 1
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "6. How has DNA improved the justice system?",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. Errors cannot be made in processing evidence",
+          "text": "Errors cannot be made in processing evidence",
           "is_correct": false,
           "feedback": "'the risks of laboratory error during analysis are slim' – mistakes can be made"
         },
         {
-          "text": "B. Because some wrongly accused have been proven innocent",
+          "text": "Because some wrongly accused have been proven innocent",
           "is_correct": true,
           "feedback": "Correct – 'DNA evidence over recent years has also resulted in the over-turning of past convictions and freedom for people now seen to have been wrongly accused of a crime'"
         },
         {
-          "text": "C. It has led to the development of DNA databases",
+          "text": "It has led to the development of DNA databases",
           "is_correct": false,
           "feedback": "This is not specifically connected in the passage to whether the justice system has been improved"
         },
         {
-          "text": "D. It can alter juries' perceptions",
+          "text": "It can alter juries' perceptions",
           "is_correct": false,
           "feedback": "DNA can alter juries' perspectives, but this is not an improvement"
         }
-      ]
+      ],
+      "correct_answer_count": 1
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "7. DNA samples, when requested by the police, are",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. compulsory under any circumstances",
+          "text": "compulsory under any circumstances",
           "is_correct": false,
           "feedback": "Incorrect. The passage states that testing is usually voluntary, though it can be made compulsory in certain circumstances."
         },
         {
-          "text": "B. no longer voluntary when suspicions are already raised",
+          "text": "no longer voluntary when suspicions are already raised",
           "is_correct": true,
           "feedback": "Correct – 'Provision of DNA samples, however, can also be made compulsory by search warrant or court order if other evidence suggests an individual is likely to be guilty of a crime.'"
         },
         {
-          "text": "C. only available post conviction",
+          "text": "only available post conviction",
           "is_correct": false,
           "feedback": "Incorrect. DNA samples can be taken during investigations, before conviction."
         },
         {
-          "text": "D. only available in some countries or states",
+          "text": "only available in some countries or states",
           "is_correct": false,
           "feedback": "Incorrect. While legislation varies, DNA testing is not limited to only some countries or states."
         }
-      ]
+      ],
+      "correct_answer_count": 1
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "8. DNA databases are controversial because",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. They are becoming more widely used",
+          "text": "They are becoming more widely used",
           "is_correct": false,
           "feedback": "Incorrect. While they are becoming more extensive, this is not stated as the reason for controversy."
         },
         {
-          "text": "B. Are likely to eventually store information for the entire population",
+          "text": "Are likely to eventually store information for the entire population",
           "is_correct": false,
           "feedback": "Incorrect. The passage does not mention storing information for the entire population."
         },
         {
-          "text": "C. Variations in collection exist",
+          "text": "Variations in collection exist",
           "is_correct": false,
           "feedback": "Incorrect. This is not mentioned as a reason for controversy in the passage."
         },
         {
-          "text": "D. Details of acquitted defendants are not removed",
+          "text": "Details of acquitted defendants are not removed",
           "is_correct": true,
           "feedback": "Correct – 'civil liberties groups object to the invasion of privacy and intrusion of human rights posed by such records, particularly when samples taken from suspects who are ultimately proven innocent are not deleted.'"
         }
-      ]
+      ],
+      "correct_answer_count": 1
     },
     {
-      "type": "closed_question_dropdown",
-      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "type": "closed_question",
       "instructions": "Choose the correct letter A – D.",
       "question": "9. Which of the following is the most suitable title for Reading Passage 1?",
-      "correct_answer_count": 1,
+      "points": 1,
+      "no_answer_feedback": "Please select an answer before submitting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "A. Genetics – fact or fiction?",
+          "text": "Genetics – fact or fiction?",
           "is_correct": false,
           "feedback": "The passage refers only to the facts of genetic fingerprinting"
         },
         {
-          "text": "B. The future of genetic fingerprinting",
+          "text": "The future of genetic fingerprinting",
           "is_correct": false,
           "feedback": "The passage talks more about the past and present, not the future"
         },
         {
-          "text": "C. Applications of genetic identification",
+          "text": "Applications of genetic identification",
           "is_correct": true,
           "feedback": "Correct – the passage refers to the applications of genetic fingerprinting in order to convict criminals, as well as a brief mention of how it can be used to check paternity of a child."
         },
         {
-          "text": "D. The ethics of genetic testing",
+          "text": "The ethics of genetic testing",
           "is_correct": false,
           "feedback": "Although a brief mention is made of civil liberties, the passage refers only to what genetic fingerprints can do, not the ethics of using it."
         }
-      ]
+      ],
+      "correct_answer_count": 1
     }
   ],
   "settings": {
