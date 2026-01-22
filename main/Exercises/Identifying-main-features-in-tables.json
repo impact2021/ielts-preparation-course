@@ -1,0 +1,83 @@
+{
+    "title": "Identifying main features in tables",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below. Type your answer in spaces provided.",
+            "question": "The highest income given in the table was $[field 1] per week earned by [field 2] in [field 3].\r\n\r\nThe lowest income given in the table was $[field 4] per week earned by [field 5] in [field 6].",
+            "points": 6,
+            "no_answer_feedback": "",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 6,
+            "field_answers": {
+                "1": "942",
+                "2": "Professionals",
+                "3": "2005",
+                "4": "322",
+                "5": "service and sales workers|service & sales workers",
+                "6": "1988"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! 942 is the highest income shown in the table.",
+                    "incorrect": "Incorrect. Look at all the income values in the table and find the highest one.",
+                    "no_answer": "The correct answer is '942'. Look at the 'Professionals' column in 2005 to find the highest income in the table."
+                },
+                "2": {
+                    "correct": "Correct! Professionals earned the highest income.",
+                    "incorrect": "Incorrect. Check which occupation category had the highest income of $942.",
+                    "no_answer": "The correct answer is 'Professionals'. This is the occupation type with the highest income in the table."
+                },
+                "3": {
+                    "correct": "Correct! The highest income was earned in 2005.",
+                    "incorrect": "Incorrect. Look at which year the highest income of $942 appears in the table.",
+                    "no_answer": "The correct answer is '2005'. This is the year when the highest income was recorded."
+                },
+                "4": {
+                    "correct": "Correct! 322 is the lowest income shown in the table.",
+                    "incorrect": "Incorrect. Look at all the income values in the table and find the lowest one.",
+                    "no_answer": "The correct answer is '322'. Look at the 'Service and sales workers' column in 1988 to find the lowest income in the table."
+                },
+                "5": {
+                    "correct": "Correct! Service and sales workers earned the lowest income.",
+                    "incorrect": "Incorrect. Check which occupation category had the lowest income of $322.",
+                    "no_answer": "The correct answer is 'service and sales workers' (or 'service & sales workers'). This is the occupation type with the lowest income in the table."
+                },
+                "6": {
+                    "correct": "Correct! The lowest income was earned in 1988.",
+                    "incorrect": "Incorrect. Look at which year the lowest income of $322 appears in the table.",
+                    "no_answer": "The correct answer is '1988'. This is the year when the lowest income was recorded."
+                }
+            }
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "",
+            "content": "<table style=\"width:100%;border-collapse:collapse;font-family:Arial, Helvetica, sans-serif;text-align:center\">\r\n  <thead>\r\n    <tr>\r\n      <th colspan=\"5\" style=\"background:#ff8f2b;color:#fff;padding:16px;font-size:22px\">\r\n        Average weekly income in New Zealand dollars\r\n      </th>\r\n    </tr>\r\n    <tr>\r\n      <th style=\"background:#ffae63;color:#fff;padding:14px;border-right:3px solid #fff\"></th>\r\n      <th style=\"background:#ffae63;color:#fff;padding:14px\">\r\n        Average weekly income (all occupation types)\r\n      </th>\r\n      <th style=\"background:#ffae63;color:#fff;padding:14px\">\r\n        <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Professionals</span>\r\n      </th>\r\n      <th style=\"background:#ffae63;color:#fff;padding:14px\">\r\n        <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Service and sales workers</span>\r\n      </th>\r\n      <th style=\"background:#ffae63;color:#fff;padding:14px\">\r\n        Trades people\r\n      </th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr style=\"background:#f68b2a;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\"><span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">1988</span></td>\r\n      <td>559</td><td>747</td><td><span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">322</span></td><td>622</td>\r\n    </tr>\r\n    <tr style=\"background:#f7a85f;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\">1999</td>\r\n      <td>569</td><td>757</td><td>344</td><td>622</td>\r\n    </tr>\r\n    <tr style=\"background:#f68b2a;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\">2000</td>\r\n      <td>581</td><td>747</td><td>340</td><td>647</td>\r\n    </tr>\r\n    <tr style=\"background:#f7a85f;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\">2001</td>\r\n      <td>607</td><td>784</td><td>363</td><td>662</td>\r\n    </tr>\r\n    <tr style=\"background:#e07a1f;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\">2002</td>\r\n      <td>617</td><td>816</td><td>346</td><td>681</td>\r\n    </tr>\r\n    <tr style=\"background:#f7a85f;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\">2003</td>\r\n      <td>650</td><td>880</td><td>358</td><td>703</td>\r\n    </tr>\r\n    <tr style=\"background:#e07a1f;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\">2004</td>\r\n      <td>674</td><td>911</td><td>384</td><td>714</td>\r\n    </tr>\r\n    <tr style=\"background:#d98c4c;color:#fff\">\r\n      <td style=\"padding:14px;font-weight:bold;border-right:3px solid #fff\"><span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">2005</span></td>\r\n      <td>714</td><td><span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">942</span></td><td>411</td><td>777</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-22 15:27:46",
+        "exported_by": "impact",
+        "plugin_version": "12.11",
+        "format_version": "1.0"
+    }
+}
