@@ -1,0 +1,178 @@
+{
+  "title": "Topic Sentences and Paragraph Structure",
+  "content": "This exercise focuses on understanding topic sentences and how well paragraphs are supported with evidence and examples.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the correct answer.",
+      "question": "Where is the topic sentence found in a paragraph?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "At the beginning",
+          "is_correct": true,
+          "feedback": "Correct answer. Topic sentences should be written at the beginning of the paragraph."
+        },
+        {
+          "text": "In the middle",
+          "is_correct": false,
+          "feedback": "Incorrect. Topic sentences should be written at the beginning of the paragraph."
+        },
+        {
+          "text": "At the end",
+          "is_correct": false,
+          "feedback": "Incorrect. Topic sentences should be written at the beginning of the paragraph."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'At the beginning'.",
+      "points": 1,
+      "reading_text_id": null
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the correct answer.",
+      "question": "What is the purpose of a topic sentence?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "It shows the reader that I enjoy this topic",
+          "is_correct": false,
+          "feedback": "Incorrect. Topic sentences show the reader what the paragraph that follows is about."
+        },
+        {
+          "text": "It shows the reader what the paragraph that follows is about",
+          "is_correct": true,
+          "feedback": "Correct answer. Topic sentences show the reader what the paragraph that follows is about."
+        },
+        {
+          "text": "It shows the reader that you are changing the topic",
+          "is_correct": false,
+          "feedback": "Incorrect. Topic sentences show the reader what the paragraph that follows is about."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'It shows the reader what the paragraph that follows is about'.",
+      "points": 1,
+      "reading_text_id": null
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the text below and decide which of the three comments best describe it. Select the correct answer.",
+      "question": "Which comment best describes the paragraph?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is a well supported opinion with a relevant example",
+          "is_correct": false,
+          "feedback": "Incorrect. The topic sentence of the paragraph refers to the advantages of the internet for students. However, no advantages are actually given, referring instead to who uses computers. There is also no clear example given."
+        },
+        {
+          "text": "This opinion is supported but the example is not relevant",
+          "is_correct": false,
+          "feedback": "Incorrect. The topic sentence of the paragraph refers to the advantages of the internet for students. However, no advantages are actually given, referring instead to who uses computers. There is also no clear example given."
+        },
+        {
+          "text": "This opinion is not well supported and has no relevant evidence or examples",
+          "is_correct": true,
+          "feedback": "Correct answer. The topic sentence of the paragraph refers to the advantages of the internet for students. However, no advantages are actually given, referring instead to who uses computers. There is also no clear example given."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'This opinion is not well supported and has no relevant evidence or examples'.",
+      "points": 1,
+      "reading_text_id": 0
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the text below and decide which of the three comments best describe it. Select the correct answer.",
+      "question": "Which comment best describes the paragraph?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is a well supported opinion with a relevant example",
+          "is_correct": true,
+          "feedback": "Correct answer. The main topic presented in the topic sentence refers to banning the private ownership of firearms. The support given is that the firearm could be used accidentally or in anger, and an example is given that children have been known to discharge the weapon when playing."
+        },
+        {
+          "text": "This opinion is supported but the example is not relevant",
+          "is_correct": false,
+          "feedback": "Incorrect. The main topic presented in the topic sentence refers to banning the private ownership of firearms. The support given is that the firearm could be used accidentally or in anger, and an example is given that children have been known to discharge the weapon when playing."
+        },
+        {
+          "text": "This opinion is not well supported and has no relevant evidence or examples",
+          "is_correct": false,
+          "feedback": "Incorrect. The main topic presented in the topic sentence refers to banning the private ownership of firearms. The support given is that the firearm could be used accidentally or in anger, and an example is given that children have been known to discharge the weapon when playing."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'This is a well supported opinion with a relevant example'.",
+      "points": 1,
+      "reading_text_id": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the text below and decide which of the three comments best describe it. Select the correct answer.",
+      "question": "Which comment best describes the paragraph?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is a well supported opinion with a relevant example",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph has a topic sentence which has been supported with comments about 'significant quantities of sugar, preservatives and artificial additives'. However, the topic of the paragraph (children's diets) does not connect with the example given, which refers to children being less active and spending more time playing computer games."
+        },
+        {
+          "text": "This opinion is supported but the example is not relevant",
+          "is_correct": true,
+          "feedback": "Correct answer. The paragraph has a topic sentence which has been supported with comments about 'significant quantities of sugar, preservatives and artificial additives'. However, the topic of the paragraph (children's diets) does not connect with the example given, which refers to children being less active and spending more time playing computer games."
+        },
+        {
+          "text": "This opinion is not well supported and has no relevant evidence or examples",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph has a topic sentence which has been supported with comments about 'significant quantities of sugar, preservatives and artificial additives'. However, the topic of the paragraph (children's diets) does not connect with the example given, which refers to children being less active and spending more time playing computer games."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'This opinion is supported but the example is not relevant'.",
+      "points": 1,
+      "reading_text_id": 2
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "<p>The internet has significant advantages for many students. It is very common to see people undertaking university courses spending a considerable amount of time in front of a computer either at home or in the library. Even before university age, younger students, often with parental encouragement, are using the internet at home.</p>"
+    },
+    {
+      "title": "Reading Passage 2",
+      "content": "<p>There is, of course, a clear argument to be made for advocating a complete ban on private ownership of firearms even if they are intended for protection. There is a significant risk of accidentally discharging the weapon, or using it in a moment of anger, resulting in injury or death that could not have occurred if the weapon had been banned. There are numerous cases where children, finding a weapon in the house, have used it with deadly consequence when only intending to use it as a toy.</p>"
+    },
+    {
+      "title": "Reading Passage 3",
+      "content": "<p>In recent years, concerns have arisen over the diet of younger children. Many products have significant quantities of sugar, preservatives and artificial additives, and the connection between the intake of such foods and subsequent behaviour is becoming increasingly apparent. A clear example can be seen in the number of hours children are allowed to stay indoors, forsaking more traditional activities for computer games and television programmes.</p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  },
+  "_metadata": {
+    "created_at": "2026-01-22",
+    "test_purpose": "Topic sentences and paragraph structure practice exercise",
+    "notes": "Exercise covers understanding topic sentence placement, purpose, and evaluating paragraph support and examples"
+  }
+}
