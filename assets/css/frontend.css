@@ -1713,8 +1713,9 @@ select.answer-select-inline.answer-incorrect {
 /* Question feedback message displayed during answer review */
 .question-feedback-message {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 10px;
+    padding-bottom: 15px;
     background: #f0f0f1;
     border-radius: 3px;
     font-size: 0.95em;
