@@ -54,7 +54,7 @@
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
-          "text": "possible as a large proportion of a persons DNA is individual to them",
+          "text": "possible as a large proportion of a person's DNA is individual to them",
           "is_correct": false,
           "feedback": "'Whilst the majority of DNA in humans is the same'"
         },
