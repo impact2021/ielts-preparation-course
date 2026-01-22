@@ -37,7 +37,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Choose the best topic sentence for the paragraph on the left.\r\n",
+            "question": "Choose the best topic sentence for the paragraph on the left.",
             "points": 1,
             "no_answer_feedback": "The correct answer highlights that some arts subjects offer broader benefits despite limited employment links.",
             "reading_text_id": 1,
@@ -69,7 +69,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "Choose the best topic sentence for the paragraph on the left.\r\n",
+            "question": "Choose the best topic sentence for the paragraph on the left.",
             "points": 1,
             "no_answer_feedback": "The correct topic sentence focuses on problems that reduce the effectiveness of studying overseas.",
             "reading_text_id": 2,
