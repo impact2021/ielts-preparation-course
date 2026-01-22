@@ -19,6 +19,8 @@ WordPress plugin for managing IELTS preparation exercises, quizzes, and tests.
 ### For Developers
 - **Plugin Documentation**: See [docs/](docs/) directory
 - **Template Files**: See `templates/` directory for PHP templates
+- **Gamification Ideas**: See [GAMIFICATION_RECOMMENDATIONS.md](GAMIFICATION_RECOMMENDATIONS.md) for enhancement suggestions
+- **Progress Rings & Skills Radar**: See [PROGRESS_RINGS_AND_SKILLS_RADAR_GUIDE.md](PROGRESS_RINGS_AND_SKILLS_RADAR_GUIDE.md) for using the new shortcodes
 
 ## 🎯 Common Questions
 

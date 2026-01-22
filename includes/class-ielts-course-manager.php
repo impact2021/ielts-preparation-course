@@ -21,6 +21,7 @@ class IELTS_Course_Manager {
     protected $sync_api;
     protected $sync_settings_page;
     protected $awards;
+    protected $gamification;
     
     public function __construct() {
         $this->load_dependencies();
@@ -44,6 +45,7 @@ class IELTS_Course_Manager {
         $this->sync_api = new IELTS_CM_Sync_API();
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
         $this->awards = new IELTS_CM_Awards();
+        $this->gamification = new IELTS_CM_Gamification();
     }
     
     public function run() {
