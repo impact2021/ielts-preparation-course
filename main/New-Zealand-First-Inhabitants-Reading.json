@@ -1,0 +1,130 @@
+{
+    "title": "Academic IELTS Reading Test - The First Inhabitants of New Zealand",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer Questions",
+            "instructions": "Answer the questions below using NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 1-5 on your answer sheet.",
+            "question": "1. How wide could the Haast's Eagle's wings spread?",
+            "points": 1,
+            "reading_text_id": 0,
+            "field_count": 1,
+            "field_answers": {
+                "1": "3 metres|three metres|3 meters|three meters"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph A states: 'It had enormous talons beneath its 13kg body and a wing span of three metres.'",
+                    "incorrect": "Incorrect. The correct answer is: three metres (or 3 metres). Paragraph A states: 'It had enormous talons beneath its 13kg body and a wing span of three metres.'",
+                    "no_answer": "The correct answer is: three metres (or 3 metres). Paragraph A states: 'It had enormous talons beneath its 13kg body and a wing span of three metres.'"
+                }
+            },
+            "correct_feedback": "Correct! Paragraph A states: 'It had enormous talons beneath its 13kg body and a wing span of three metres.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: three metres (or 3 metres). Paragraph A states: 'It had enormous talons beneath its 13kg body and a wing span of three metres.'",
+            "no_answer_feedback": "The correct answer is: three metres (or 3 metres). Paragraph A states: 'It had enormous talons beneath its 13kg body and a wing span of three metres.'"
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer Questions",
+            "instructions": "",
+            "question": "2. How did large prey of the Haast's Eagle die?",
+            "points": 1,
+            "reading_text_id": 0,
+            "field_count": 1,
+            "field_answers": {
+                "1": "blood loss|extensive blood loss|loss of blood"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B explains: '...it was not required to physically wrestle the life out of its prey, simply wait for death to occur due to extensive blood loss.'",
+                    "incorrect": "Incorrect. The correct answer is: blood loss (or extensive blood loss). Paragraph B explains: '...wait for death to occur due to extensive blood loss.'",
+                    "no_answer": "The correct answer is: blood loss (or extensive blood loss). Paragraph B explains: '...it was not required to physically wrestle the life out of its prey, simply wait for death to occur due to extensive blood loss.'"
+                }
+            },
+            "correct_feedback": "Correct! Paragraph B explains: '...it was not required to physically wrestle the life out of its prey, simply wait for death to occur due to extensive blood loss.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: blood loss (or extensive blood loss). Paragraph B explains: '...wait for death to occur due to extensive blood loss.'",
+            "no_answer_feedback": "The correct answer is: blood loss (or extensive blood loss). Paragraph B explains: '...it was not required to physically wrestle the life out of its prey, simply wait for death to occur due to extensive blood loss.'"
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer Questions",
+            "instructions": "",
+            "question": "3. Who were Maori trying to contact when flying kites?",
+            "points": 1,
+            "reading_text_id": 0,
+            "field_count": 1,
+            "field_answers": {
+                "1": "spirits|spirit world|the spirit world"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B states: '...birds of all types were perceived to be the communicators between humans and the spirit world; the philosophy being that kite flyers could connect with that world.'",
+                    "incorrect": "Incorrect. The correct answer is: spirit world (or spirits/the spirit world). Paragraph B states: '...birds were perceived to be the communicators between humans and the spirit world; the philosophy being that kite flyers could connect with that world.'",
+                    "no_answer": "The correct answer is: spirit world (or spirits/the spirit world). Paragraph B states: '...birds of all types were perceived to be the communicators between humans and the spirit world; the philosophy being that kite flyers could connect with that world.'"
+                }
+            },
+            "correct_feedback": "Correct! Paragraph B states: '...birds of all types were perceived to be the communicators between humans and the spirit world; the philosophy being that kite flyers could connect with that world.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: spirit world (or spirits/the spirit world). Paragraph B states: '...birds were perceived to be the communicators between humans and the spirit world; the philosophy being that kite flyers could connect with that world.'",
+            "no_answer_feedback": "The correct answer is: spirit world (or spirits/the spirit world). Paragraph B states: '...birds of all types were perceived to be the communicators between humans and the spirit world; the philosophy being that kite flyers could connect with that world.'"
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer Questions",
+            "instructions": "",
+            "question": "4. What problem for humans was caused by the extinction of the moa?",
+            "points": 1,
+            "reading_text_id": 0,
+            "field_count": 1,
+            "field_answers": {
+                "1": "extreme famine|famine|cases of famine"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph C states: 'It appears that extinction of the great bird resulted in extreme cases of famine.' Note that 'extreme cases of famine' exceeds the three-word limit.",
+                    "incorrect": "Incorrect. The correct answer is: famine (or extreme famine/cases of famine). Paragraph C states: 'It appears that extinction of the great bird resulted in extreme cases of famine.' Note that 'extreme cases of famine' exceeds the word limit.",
+                    "no_answer": "The correct answer is: famine (or extreme famine/cases of famine). Paragraph C states: 'It appears that extinction of the great bird resulted in extreme cases of famine.' Note that while 'extreme cases of famine' is mentioned, it exceeds the three-word limit."
+                }
+            },
+            "correct_feedback": "Correct! Paragraph C states: 'It appears that extinction of the great bird resulted in extreme cases of famine.' Note that 'extreme cases of famine' exceeds the three-word limit.",
+            "incorrect_feedback": "Incorrect. The correct answer is: famine (or extreme famine/cases of famine). Paragraph C states: 'It appears that extinction of the great bird resulted in extreme cases of famine.' Note that 'extreme cases of famine' exceeds the word limit.",
+            "no_answer_feedback": "The correct answer is: famine (or extreme famine/cases of famine). Paragraph C states: 'It appears that extinction of the great bird resulted in extreme cases of famine.' Note that while 'extreme cases of famine' is mentioned, it exceeds the three-word limit."
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Short Answer Questions",
+            "instructions": "",
+            "question": "5. Which natural phenomenon is thought to have reduced the number of birds in New Zealand?",
+            "points": 1,
+            "reading_text_id": 0,
+            "field_count": 1,
+            "field_answers": {
+                "1": "volcanic eruption|a volcanic eruption|eruption"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph D states: '...the volcanic eruption of Lake Taupo, for example, led to the extermination of a plethora of species.'",
+                    "incorrect": "Incorrect. The correct answer is: volcanic eruption (or eruption/a volcanic eruption). Paragraph D states: '...the volcanic eruption of Lake Taupo, for example, led to the extermination of a plethora of species.'",
+                    "no_answer": "The correct answer is: volcanic eruption (or eruption/a volcanic eruption). Paragraph D states: '...the volcanic eruption of Lake Taupo, for example, led to the extermination of a plethora of species.'"
+                }
+            },
+            "correct_feedback": "Correct! Paragraph D states: '...the volcanic eruption of Lake Taupo, for example, led to the extermination of a plethora of species.'",
+            "incorrect_feedback": "Incorrect. The correct answer is: volcanic eruption (or eruption/a volcanic eruption). Paragraph D states: '...the volcanic eruption of Lake Taupo, for example, led to the extermination of a plethora of species.'",
+            "no_answer_feedback": "The correct answer is: volcanic eruption (or eruption/a volcanic eruption). Paragraph D states: '...the volcanic eruption of Lake Taupo, for example, led to the extermination of a plethora of species.'"
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "The First Inhabitants of New Zealand",
+            "text": "<p><strong>A.</strong> New Zealand, also known by its Maori name, Aotearoa, which literally translates to 'The Land of the Long White Cloud', became a separate land mass in its own right approximately 80 million years ago. After the dinosaurs perished 15 million years later, apart from a few species of bat, no indigenous mammals existed. Species of birdlife were, however, abundant, one of the most notable being the Giant Moa; weighing up to 250kg, it was the largest bird to ever live. Whilst birds were unmolested by predators in the form of mammals, many of their own kind were vicious attackers. Despite its bulk, the Giant Moa was hunted by Haast's Eagle which was, in turn, the largest bird of prey ever known to exist. <span id=\"q1\" data-question=\"1\"></span>It had enormous talons beneath its 13kg body and <span class=\"reading-answer-marker\">a wing span of three metres</span>. The eagle's huge talons are said to have been able to penetrate deep into the flesh of its prey and even penetrate bone.</p>\n\n<p><strong>B.</strong> Haast's Eagle was unusual in that it was one of the few birds known to attack prey significantly larger than itself. It was able to do this for two main reasons; firstly, there was no need for it to carry its prey away and protect it from ground-dwelling predators, since none existed in its environment; it only needed to protect its food source from others of its kind. <span id=\"q2\" data-question=\"2\"></span>In addition, it was able to fell large victims such as the Moa due to the extensive damage its sharp talons would cause; it was not required to physically wrestle the life out of its prey, simply wait for death to occur due to <span class=\"reading-answer-marker\">extensive blood loss</span>. Early Maori named the eagle 'te hokioi' as it represented the call made by the bird. Much admired and later depicted in rock art, the bird was the inspiration for many Maori kites, which were created in its image. <span id=\"q3\" data-question=\"3\"></span>This practice is believed to have been followed as birds of all types were perceived to be the communicators between humans and <span class=\"reading-answer-marker\">the spirit world</span>; the philosophy being that kite flyers could connect with that world, as the kite flying high in the air was thought to act as an extension of the owner controlling it from the ground below.</p>\n\n<p><strong>C.</strong> Around 400-500 years ago, both the Giant Moa and Haast's Eagle became extinct. The former was a popular hunting prey for Maori tribes, its size making it an excellent food source; however, over-hunting led to its rapid decline as population reproduction could not match the rate at which numbers were lost to hunters. Haast's eagle is believed to have disappeared as a result of the loss of its prey, though additional changes in its habitat brought about by the appearance of man most likely also contributed. <span id=\"q4\" data-question=\"4\"></span>There is archaeological evidence to suggest that the ultimate loss of the Moa also had a significantly detrimental effect on the hunters and their dependents that had, until then, relied on it as a food source; it appears that extinction of the great bird resulted in <span class=\"reading-answer-marker\">extreme cases of famine</span>.</p>\n\n<p><strong>D.</strong> Scientists estimate that the number of birds in or around New Zealand, prior to settling by man, would have numbered in the billions. However, human activity has not been the only factor which has resulted in the loss of bird populations; <span id=\"q5\" data-question=\"5\"></span>loss of species also occurred as a result of natural forces; <span class=\"reading-answer-marker\">the volcanic eruption of Lake Taupo</span>, for example, led to the extermination of a plethora of species. The explosion from the Taupo crater is thought by many experts to have been the most powerful to have occurred on earth in the last 5,000 years.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": 70,
+        "layout_type": "one_column_reading",
+        "exercise_label": "practice_test",
+        "scoring_type": "ielts_reading_band",
+        "timer_minutes": 20,
+        "starting_question_number": 1
+    }
+}
