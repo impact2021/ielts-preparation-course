@@ -1305,7 +1305,14 @@ class IELTS_CM_Admin {
             </div>
             
             <h4><?php _e('Main Transcript', 'ielts-course-manager'); ?></h4>
-            <p><small><?php _e('Add the main transcript for the audio. This will be displayed after the student submits their answers. Use &lt;span id="q#" data-question="#"&gt;&lt;/span&gt;&lt;span class="reading-answer-marker"&gt;answer&lt;/span&gt; to mark answers in the transcript.', 'ielts-course-manager'); ?></small></p>
+            <p><small><?php 
+                printf(
+                    /* translators: 1: opening code tag, 2: closing code tag */
+                    __('Add the main transcript for the audio. This will be displayed after the student submits their answers. To mark answers in the transcript, use: %1$s&lt;span id="q#" data-question="#"&gt;&lt;/span&gt;&lt;span class="reading-answer-marker"&gt;answer text&lt;/span&gt;%2$s', 'ielts-course-manager'),
+                    '<code>',
+                    '</code>'
+                );
+            ?></small></p>
             
             <div style="margin-bottom: 20px;">
                 <?php
