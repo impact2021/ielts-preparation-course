@@ -921,8 +921,8 @@ class IELTS_CM_Shortcodes {
             return '<p>' . __('Please log in to view your awards.', 'ielts-course-manager') . '</p>';
         }
         
-        wp_enqueue_script('ielts-cm-awards-js', IELTS_CM_PLUGIN_URL . 'assets/js/awards.js', array('jquery'), IELTS_CM_VERSION, true);
-        wp_enqueue_style('ielts-cm-awards-css', IELTS_CM_PLUGIN_URL . 'assets/css/awards.css', array(), IELTS_CM_VERSION);
+        // Awards scripts and styles are now enqueued globally for logged-in users
+        // See class-ielts-course-manager.php enqueue_scripts() method
         
         ob_start();
         include IELTS_CM_PLUGIN_DIR . 'templates/awards-wall.php';

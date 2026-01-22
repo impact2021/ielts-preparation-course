@@ -592,6 +592,32 @@ class IELTS_CM_Quiz_Handler {
             // Trigger award check hook
             do_action('ielts_cm_quiz_submitted', $user_id, $quiz_id, $percentage, time());
             
+            // Get newly earned awards (these were added during the hook above)
+            $new_awards = get_user_meta($user_id, '_ielts_cm_new_awards', true);
+            $new_award_data = array();
+            
+            if (!empty($new_awards) && is_array($new_awards)) {
+                // Get award details for each newly earned award
+                $awards_instance = new IELTS_CM_Awards();
+                $all_awards = $awards_instance->get_all_awards();
+                
+                // Create an associative array for O(1) lookup
+                $awards_by_id = array();
+                foreach ($all_awards as $award) {
+                    $awards_by_id[$award['id']] = $award;
+                }
+                
+                // Build new award data array
+                foreach ($new_awards as $award_id) {
+                    if (isset($awards_by_id[$award_id])) {
+                        $new_award_data[] = $awards_by_id[$award_id];
+                    }
+                }
+                
+                // Clear new awards meta so they're not shown again
+                delete_user_meta($user_id, '_ielts_cm_new_awards');
+            }
+            
             // Get next item URL for navigation
             $next_url = $this->get_next_item_url($quiz_id, $course_id, $lesson_id);
             
@@ -628,7 +654,8 @@ class IELTS_CM_Quiz_Handler {
                 'question_results' => $question_results,
                 'next_url' => $next_url,
                 'course_url' => $course_url,
-                'exercise_label' => $exercise_label_display
+                'exercise_label' => $exercise_label_display,
+                'new_awards' => $new_award_data
             ));
         } else {
             wp_send_json_error(array('message' => 'Failed to save quiz result'));

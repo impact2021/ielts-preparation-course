@@ -155,4 +155,42 @@
         return div.innerHTML;
     }
     
+    // Expose function to show award notifications from award objects (not just IDs)
+    // This allows other scripts to trigger notifications after quiz completion
+    window.IELTSAwards = window.IELTSAwards || {};
+    window.IELTSAwards.showAwardNotifications = function(awards) {
+        if (!awards || !Array.isArray(awards) || awards.length === 0) {
+            return;
+        }
+        
+        var delay = 0;
+        awards.forEach(function(award) {
+            setTimeout(function() {
+                showAwardNotificationFromObject(award);
+            }, delay);
+            delay += 4000; // 4 seconds between notifications
+        });
+    };
+    
+    function showAwardNotificationFromObject(award) {
+        if (!award || !award.id) return;
+        
+        var notification = $('#ielts-award-notification');
+        var icon = createAwardIcon(award.type);
+        
+        notification.find('.award-notification-icon').html(icon);
+        notification.find('.award-notification-name').text(award.name);
+        notification.find('.award-notification-description').text(award.description);
+        
+        notification.removeClass('slide-out').show();
+        
+        // Auto hide after 3 seconds
+        setTimeout(function() {
+            notification.addClass('slide-out');
+            setTimeout(function() {
+                notification.hide();
+            }, 500);
+        }, 3000);
+    }
+    
 })(jQuery);

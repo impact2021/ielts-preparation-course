@@ -77,6 +77,9 @@ class IELTS_Course_Manager {
         // Enqueue scripts and styles
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
+        
+        // Add award notification element to footer for logged-in users
+        add_action('wp_footer', array($this, 'add_award_notification'));
     }
     
     /**
@@ -112,6 +115,18 @@ class IELTS_Course_Manager {
     public function enqueue_scripts() {
         wp_enqueue_style('ielts-cm-frontend', IELTS_CM_PLUGIN_URL . 'assets/css/frontend.css', array(), IELTS_CM_VERSION);
         wp_enqueue_script('ielts-cm-frontend', IELTS_CM_PLUGIN_URL . 'assets/js/frontend.js', array('jquery'), IELTS_CM_VERSION, true);
+        
+        // Enqueue awards scripts globally for all logged-in users
+        if (is_user_logged_in()) {
+            wp_enqueue_style('ielts-cm-awards-css', IELTS_CM_PLUGIN_URL . 'assets/css/awards.css', array(), IELTS_CM_VERSION);
+            wp_enqueue_script('ielts-cm-awards-js', IELTS_CM_PLUGIN_URL . 'assets/js/awards.js', array('jquery'), IELTS_CM_VERSION, true);
+            
+            wp_localize_script('ielts-cm-awards-js', 'ieltsAwardsConfig', array(
+                'ajaxUrl' => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('ielts_cm_nonce'),
+                'userId' => get_current_user_id()
+            ));
+        }
         
         wp_localize_script('ielts-cm-frontend', 'ieltsCM', array(
             'ajaxUrl' => admin_url('admin-ajax.php'),
@@ -237,5 +252,27 @@ class IELTS_Course_Manager {
         );
         
         return $fixed;
+    }
+    
+    /**
+     * Add award notification element to footer for logged-in users
+     */
+    public function add_award_notification() {
+        if (!is_user_logged_in()) {
+            return;
+        }
+        ?>
+        <!-- Award notification template -->
+        <div id="ielts-award-notification" class="ielts-award-notification" style="display: none;">
+            <div class="award-notification-content">
+                <div class="award-notification-icon"></div>
+                <div class="award-notification-text">
+                    <h3><?php _e('Award Earned!', 'ielts-course-manager'); ?></h3>
+                    <p class="award-notification-name"></p>
+                    <p class="award-notification-description"></p>
+                </div>
+            </div>
+        </div>
+        <?php
     }
 }
