@@ -1,0 +1,632 @@
+{
+  "title": "Equine Performers - Reading Passage",
+  "content": "",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "<strong>Questions 1 - 5</strong>\r\n\r\nThe reading passage has six paragraphs <strong>A – F</strong>.\r\n\r\n<em>Choose the correct heading for paragraphs A-B and D-F from the list of headings below.</em>\r\n\r\n<em>Type the correct number <strong>I-IX</strong> in boxes 1-5</em>\r\n\r\n<strong>List of Headings</strong>\r\n<ul>\r\n<li>I. Physical Robustness</li>\r\n<li>II. Adaptability of the breed</li>\r\n<li>III. Aims of an equine institution</li>\r\n<li>IV. Breeding and characteristics</li>\r\n<li>V. Equine ballet</li>\r\n<li>VI. An Impressive history</li>\r\n<li>VII. Dispelling a myth</li>\r\n<li>VIII. Equine art set to music</li>\r\n<li>IX. Preservation and threats</li>\r\n</ul>\r\n\r\n<strong>Example</strong> Paragraph C Answer <strong>V</strong>",
+      "question": "<strong>Q1 Paragraph A</strong>",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is IV: 'Breeding and characteristics.' Paragraph A gives background of who bred the horse and where the bloodline came from (Arab and Iberian). It also describes the traits (physical and behavioural characteristics).",
+      "correct_feedback": "Correct! Paragraph A gives background of who bred the horse and where the bloodline came from (Arab and Iberian). It also describes the traits (physical and behavioural characteristics).",
+      "incorrect_feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' Paragraph A gives background of who bred the horse and where the bloodline came from (Arab and Iberian). It also describes the traits (physical and behavioural characteristics).",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "I. Physical Robustness",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' The paragraph discusses breeding history and overall characteristics, not just physical robustness."
+        },
+        {
+          "text": "II. Adaptability of the breed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' While adaptability may be mentioned, the main focus is on breeding history and characteristics."
+        },
+        {
+          "text": "III. Aims of an equine institution",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' This paragraph focuses on the breed itself, not institutional aims."
+        },
+        {
+          "text": "IV. Breeding and characteristics",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph A gives background of who bred the horse and where the bloodline came from (Arab and Iberian). It also describes the traits (physical and behavioural characteristics)."
+        },
+        {
+          "text": "V. Equine ballet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' This paragraph describes breeding and characteristics, not dressage movements."
+        },
+        {
+          "text": "VI. An Impressive history",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' While history is mentioned, the focus is on breeding and characteristics."
+        },
+        {
+          "text": "VII. Dispelling a myth",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' This paragraph doesn't dispel myths; it describes breeding and characteristics."
+        },
+        {
+          "text": "VIII. Equine art set to music",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' Musical dressage is not the focus of this paragraph."
+        },
+        {
+          "text": "IX. Preservation and threats",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IV: 'Breeding and characteristics.' This paragraph doesn't discuss preservation or threats."
+        }
+      ],
+      "options": "I. Physical Robustness\nII. Adaptability of the breed\nIII. Aims of an equine institution\nIV. Breeding and characteristics\nV. Equine ballet\nVI. An Impressive history\nVII. Dispelling a myth\nVIII. Equine art set to music\nIX. Preservation and threats",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "<strong>Q2 Paragraph B</strong>",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is VII: 'Dispelling a myth.' Many people believe that the horses are white (a myth). They are actually darker coloured when they are born. Other colours exist in adulthood although white is the most common.",
+      "correct_feedback": "Correct! Many people believe that the horses are white (a myth). They are actually darker coloured when they are born. Other colours exist in adulthood although white is the most common.",
+      "incorrect_feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' Many people believe that the horses are white (a myth). They are actually darker coloured when they are born. Other colours exist in adulthood although white is the most common.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "I. Physical Robustness",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' This paragraph discusses the misconception about coat colour."
+        },
+        {
+          "text": "II. Adaptability of the breed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' The paragraph focuses on clarifying the colour myth, not adaptability."
+        },
+        {
+          "text": "III. Aims of an equine institution",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' This paragraph doesn't discuss institutional aims."
+        },
+        {
+          "text": "IV. Breeding and characteristics",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' While selective breeding is mentioned, the main purpose is to dispel the colour myth."
+        },
+        {
+          "text": "V. Equine ballet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' This paragraph doesn't discuss dressage movements."
+        },
+        {
+          "text": "VI. An Impressive history",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' The paragraph discusses colour, not history."
+        },
+        {
+          "text": "VII. Dispelling a myth",
+          "is_correct": true,
+          "feedback": "Correct! Many people believe that the horses are white (a myth). They are actually darker coloured when they are born. Other colours exist in adulthood although white is the most common."
+        },
+        {
+          "text": "VIII. Equine art set to music",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' Musical dressage is not discussed in this paragraph."
+        },
+        {
+          "text": "IX. Preservation and threats",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VII: 'Dispelling a myth.' This paragraph doesn't discuss preservation or threats."
+        }
+      ],
+      "options": "I. Physical Robustness\nII. Adaptability of the breed\nIII. Aims of an equine institution\nIV. Breeding and characteristics\nV. Equine ballet\nVI. An Impressive history\nVII. Dispelling a myth\nVIII. Equine art set to music\nIX. Preservation and threats",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "<strong>Q3 Paragraph D</strong>",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is VI: 'An Impressive history.' The paragraph talks about the history not only of the riding school but of the art of dressage itself and the hall used by the Spanish Riding School.",
+      "correct_feedback": "Correct! The paragraph talks about the history not only of the riding school but of the art of dressage itself and the hall used by the Spanish Riding School.",
+      "incorrect_feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' The paragraph talks about the history not only of the riding school but of the art of dressage itself and the hall used by the Spanish Riding School.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "I. Physical Robustness",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' This paragraph focuses on historical aspects, not physical attributes."
+        },
+        {
+          "text": "II. Adaptability of the breed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' The paragraph discusses history, not adaptability."
+        },
+        {
+          "text": "III. Aims of an equine institution",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' While aims are mentioned, the main focus is on the impressive history of the school and the art."
+        },
+        {
+          "text": "IV. Breeding and characteristics",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' This paragraph doesn't discuss breeding or characteristics."
+        },
+        {
+          "text": "V. Equine ballet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' The paragraph discusses history, not dressage movements."
+        },
+        {
+          "text": "VI. An Impressive history",
+          "is_correct": true,
+          "feedback": "Correct! The paragraph talks about the history not only of the riding school but of the art of dressage itself and the hall used by the Spanish Riding School."
+        },
+        {
+          "text": "VII. Dispelling a myth",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' This paragraph doesn't dispel myths."
+        },
+        {
+          "text": "VIII. Equine art set to music",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' While dressage is mentioned, the focus is on history."
+        },
+        {
+          "text": "IX. Preservation and threats",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is VI: 'An Impressive history.' While preservation is mentioned as an aim, the main focus is on history."
+        }
+      ],
+      "options": "I. Physical Robustness\nII. Adaptability of the breed\nIII. Aims of an equine institution\nIV. Breeding and characteristics\nV. Equine ballet\nVI. An Impressive history\nVII. Dispelling a myth\nVIII. Equine art set to music\nIX. Preservation and threats",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "<strong>Q4 Paragraph E</strong>",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is IX: 'Preservation and threats.' The paragraph talks about measures taken to protect the purity of the breed and how war affected breeding control.",
+      "correct_feedback": "Correct! The paragraph talks about measures taken to protect the purity of the breed and how war affected breeding control.",
+      "incorrect_feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' The paragraph talks about measures taken to protect the purity of the breed and how war affected breeding control.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "I. Physical Robustness",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' This paragraph discusses preservation efforts and threats to the breed."
+        },
+        {
+          "text": "II. Adaptability of the breed",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' The paragraph focuses on preservation and wartime threats, not adaptability."
+        },
+        {
+          "text": "III. Aims of an equine institution",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' This paragraph discusses preservation of the breed, not institutional aims."
+        },
+        {
+          "text": "IV. Breeding and characteristics",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' While breeding is mentioned, the focus is on preservation and threats."
+        },
+        {
+          "text": "V. Equine ballet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' This paragraph doesn't discuss dressage movements."
+        },
+        {
+          "text": "VI. An Impressive history",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' While historical events are mentioned, the focus is on preservation and threats."
+        },
+        {
+          "text": "VII. Dispelling a myth",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' This paragraph doesn't dispel myths."
+        },
+        {
+          "text": "VIII. Equine art set to music",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is IX: 'Preservation and threats.' This paragraph doesn't discuss musical dressage."
+        },
+        {
+          "text": "IX. Preservation and threats",
+          "is_correct": true,
+          "feedback": "Correct! The paragraph talks about measures taken to protect the purity of the breed and how war affected breeding control."
+        }
+      ],
+      "options": "I. Physical Robustness\nII. Adaptability of the breed\nIII. Aims of an equine institution\nIV. Breeding and characteristics\nV. Equine ballet\nVI. An Impressive history\nVII. Dispelling a myth\nVIII. Equine art set to music\nIX. Preservation and threats",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "<strong>Q5 Paragraph F</strong>",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is II: 'Adaptability of the breed.' The paragraph refers to the additional uses of the horse, and how the breed can adapt to usual dressage, 'driving' and pleasure riding.",
+      "correct_feedback": "Correct! The paragraph refers to the additional uses of the horse, and how the breed can adapt to usual dressage, 'driving' and pleasure riding.",
+      "incorrect_feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' The paragraph refers to the additional uses of the horse, and how the breed can adapt to usual dressage, 'driving' and pleasure riding.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "I. Physical Robustness",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' This paragraph discusses various uses, not just physical attributes."
+        },
+        {
+          "text": "II. Adaptability of the breed",
+          "is_correct": true,
+          "feedback": "Correct! The paragraph refers to the additional uses of the horse, and how the breed can adapt to usual dressage, 'driving' and pleasure riding."
+        },
+        {
+          "text": "III. Aims of an equine institution",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' This paragraph discusses the breed's versatility, not institutional aims."
+        },
+        {
+          "text": "IV. Breeding and characteristics",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' While characteristics are mentioned, the focus is on adaptability to various uses."
+        },
+        {
+          "text": "V. Equine ballet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' This paragraph discusses various uses beyond ballet/dressage."
+        },
+        {
+          "text": "VI. An Impressive history",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' This paragraph discusses modern uses, not history."
+        },
+        {
+          "text": "VII. Dispelling a myth",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' This paragraph doesn't dispel myths."
+        },
+        {
+          "text": "VIII. Equine art set to music",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' The paragraph discusses various uses, not just musical dressage."
+        },
+        {
+          "text": "IX. Preservation and threats",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is II: 'Adaptability of the breed.' This paragraph doesn't discuss preservation or threats."
+        }
+      ],
+      "options": "I. Physical Robustness\nII. Adaptability of the breed\nIII. Aims of an equine institution\nIV. Breeding and characteristics\nV. Equine ballet\nVI. An Impressive history\nVII. Dispelling a myth\nVIII. Equine art set to music\nIX. Preservation and threats",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "instructions": "<strong>Questions 6 – 15</strong>\r\n\r\nAnswer the questions below using <strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong> from the passage for each answer.\r\n\r\nType your answers in boxes 6 – 15 on your answer sheet.",
+      "question": "6. During which period was the Lipizzaner breed developed?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: the Renaissance (or Renaissance, during the Renaissance, during Renaissance). The breed was developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance.",
+      "correct_feedback": "Correct! The breed was developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance.",
+      "incorrect_feedback": "Incorrect. The correct answer is: the Renaissance (or Renaissance, during the Renaissance, during Renaissance). The breed was developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "the renaissance|renaissance|during the renaissance|during renaissance"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The breed was developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance.",
+          "incorrect": "Incorrect. The correct answer is: the Renaissance (or Renaissance, during the Renaissance, during Renaissance). The breed was developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance.",
+          "no_answer": "The correct answer is: the Renaissance (or Renaissance, during the Renaissance, during Renaissance). The breed was developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "7. What specific physical attribute allows the Lipizzaner to complete difficult routines successfully?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: powerful hindquarters (or its powerful hindquarters, hindquarters, its hindquarters, the powerful hindquarters, the hindquarters, powerful hind quarters, hind quarters, the powerful hind quarters, the hind quarters, possesses powerful hindquarters). It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines.",
+      "correct_feedback": "Correct! It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines.",
+      "incorrect_feedback": "Incorrect. The correct answer is: powerful hindquarters (or its powerful hindquarters, hindquarters, its hindquarters, the powerful hindquarters, the hindquarters, powerful hind quarters, hind quarters, the powerful hind quarters, the hind quarters, possesses powerful hindquarters). It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "its powerful hindquarters|possesses powerful hindquarters|its hindquarters|hindquarters|powerful hindquarters|powerful hind quarters|hind quarters|the powerful hindquarters|the hindquarters|the powerful hind quarters|the hind quarters"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines.",
+          "incorrect": "Incorrect. The correct answer is: powerful hindquarters (or its powerful hindquarters, hindquarters, its hindquarters, the powerful hindquarters, the hindquarters, powerful hind quarters, hind quarters, the powerful hind quarters, the hind quarters, possesses powerful hindquarters). It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines.",
+          "no_answer": "The correct answer is: powerful hindquarters (or its powerful hindquarters, hindquarters, its hindquarters, the powerful hindquarters, the hindquarters, powerful hind quarters, hind quarters, the powerful hind quarters, the hind quarters, possesses powerful hindquarters). It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "8. Why are the white-coated adult Lipizzaners now most common?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: selective breeding (or breeding). Due to selective breeding the gene which determines the white coat of adulthood is now dominant.",
+      "correct_feedback": "Correct! Due to selective breeding the gene which determines the white coat of adulthood is now dominant.",
+      "incorrect_feedback": "Incorrect. The correct answer is: selective breeding (or breeding). Due to selective breeding the gene which determines the white coat of adulthood is now dominant.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "selective breeding|breeding"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Due to selective breeding the gene which determines the white coat of adulthood is now dominant.",
+          "incorrect": "Incorrect. The correct answer is: selective breeding (or breeding). Due to selective breeding the gene which determines the white coat of adulthood is now dominant.",
+          "no_answer": "The correct answer is: selective breeding (or breeding). Due to selective breeding the gene which determines the white coat of adulthood is now dominant."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "9. What is vital for horse and rider to develop?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: a union (or union, essential union, an essential union). Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two.",
+      "correct_feedback": "Correct! Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two.",
+      "incorrect_feedback": "Incorrect. The correct answer is: a union (or union, essential union, an essential union). Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "a union|union|essential union|an essential union"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two.",
+          "incorrect": "Incorrect. The correct answer is: a union (or union, essential union, an essential union). Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two.",
+          "no_answer": "The correct answer is: a union (or union, essential union, an essential union). Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "10. Which manoeuvre requires the horse to demonstrate perfect timing?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: the capriole (or capriole). In the capriole, the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time.",
+      "correct_feedback": "Correct! In the capriole, the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time.",
+      "incorrect_feedback": "Incorrect. The correct answer is: the capriole (or capriole). In the capriole, the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "the capriole|capriole"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! In the capriole, the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time.",
+          "incorrect": "Incorrect. The correct answer is: the capriole (or capriole). In the capriole, the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time.",
+          "no_answer": "The correct answer is: the capriole (or capriole). In the capriole, the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "11. As what is Xenophon remembered?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: a European master (or European master, master, acclaimed European master, first acclaimed master, first European master). The first acclaimed European master Xenophon is still acclaimed today.",
+      "correct_feedback": "Correct! The first acclaimed European master Xenophon is still acclaimed today.",
+      "incorrect_feedback": "Incorrect. The correct answer is: a European master (or European master, master, acclaimed European master, first acclaimed master, first European master). The first acclaimed European master Xenophon is still acclaimed today.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "a european master|european master|master|acclaimed european master|first acclaimed master|first european master"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The first acclaimed European master Xenophon is still acclaimed today.",
+          "incorrect": "Incorrect. The correct answer is: a European master (or European master, master, acclaimed European master, first acclaimed master, first European master). The first acclaimed European master Xenophon is still acclaimed today.",
+          "no_answer": "The correct answer is: a European master (or European master, master, acclaimed European master, first acclaimed master, first European master). The first acclaimed European master Xenophon is still acclaimed today."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "12. Which year saw the control of the Hapsbergs weaken?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: 1916. Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed.",
+      "correct_feedback": "Correct! Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed.",
+      "incorrect_feedback": "Incorrect. The correct answer is: 1916. Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "1916"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed.",
+          "incorrect": "Incorrect. The correct answer is: 1916. Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed.",
+          "no_answer": "The correct answer is: 1916. Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "13. What were established without the consent of the Hapsburgs as a result of relocation of the horses?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: breeding farms (or Lipizzaner breeding farms). In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence.",
+      "correct_feedback": "Correct! In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence.",
+      "incorrect_feedback": "Incorrect. The correct answer is: breeding farms (or Lipizzaner breeding farms). In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "breeding farms|lipizzaner breeding farms"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence.",
+          "incorrect": "Incorrect. The correct answer is: breeding farms (or Lipizzaner breeding farms). In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence.",
+          "no_answer": "The correct answer is: breeding farms (or Lipizzaner breeding farms). In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "14. Who worked alongside the US Army to ensure the purity of the bloodline was preserved?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: Alois Podhajsky (or Podhajsky, Podhajsky Alois, A Podhajsky). The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility.",
+      "correct_feedback": "Correct! The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility.",
+      "incorrect_feedback": "Incorrect. The correct answer is: Alois Podhajsky (or Podhajsky, Podhajsky Alois, A Podhajsky). The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "alois podhajsky|podhajsky|podhajsky alois|a podhajsky"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility.",
+          "incorrect": "Incorrect. The correct answer is: Alois Podhajsky (or Podhajsky, Podhajsky Alois, A Podhajsky). The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility.",
+          "no_answer": "The correct answer is: Alois Podhajsky (or Podhajsky, Podhajsky Alois, A Podhajsky). The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "15. In what types of equine competition has the breed excelled?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: dressage and driving (or dressage driving, dressage, driving, driving dressage, driving and dressage, driving & dressage, dressage & driving). The Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving.",
+      "correct_feedback": "Correct! The Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving.",
+      "incorrect_feedback": "Incorrect. The correct answer is: dressage and driving (or dressage driving, dressage, driving, driving dressage, driving and dressage, driving & dressage, dressage & driving). The Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "field_count": 1,
+      "field_answers": {
+        "1": "dressage and driving|dressage driving|dressage, driving|driving, dressage|driving dressage|driving and dressage|driving & dressage|dressage & driving"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving.",
+          "incorrect": "Incorrect. The correct answer is: dressage and driving (or dressage driving, dressage, driving, driving dressage, driving and dressage, driving & dressage, dressage & driving). The Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving.",
+          "no_answer": "The correct answer is: dressage and driving (or dressage driving, dressage, driving, driving dressage, driving and dressage, driving & dressage, dressage & driving). The Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving."
+        }
+      }
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "Equine Performers\r\n\r\nA. The Lipizzan (otherwise known as the Lipizzaner) is one of the oldest breeds of horse. The Spanish Riding School in Vienna uses it exclusively to perform movements of dressage; best described as a shining example of equine grace. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">The breed, developed by the Hapsberg dynasty that controlled Spain and Austria during the Renaissance, is not only regal in ancestry but also in its characteristics.</span> The blood line of the Lipizzaner hails back to the crossing of Arab stallions with Iberian mares resulting in a breed of horse noted for its beauty, grace, intelligence and physical robustness. Whilst its body is strong, its stature is of average size, the breed rarely growing above 15.2 hands in height. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">It typically possesses powerful hindquarters and these in particular facilitate its success at completing the challenging routines the breed is used for in the Spanish Riding School.</span>\r\n\r\nB. Lipizzaners are thought by many who are familiar with the Spanish school to be white in colour, since this is the type used in performances. To some extent this is true, yet genetically the breed is actually a shade of grey. Foals are born brown or grey and it is not until the animal has reached an age of between 6 and 10 before its coat lightens to the shade for which it is famous. <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Due to selective breeding the gene which determines the white coat of adulthood is now dominant</span>; however, only as far back as 200 years ago a variety of colours including piebald (possessing a coat of black and white patches) and skewbald (a coat of brown and white patches) were not uncommon.\r\n\r\nC. Specifically, the type of dressage performed at the Spanish Riding School, which is set to classical music, is referred to as the 'Airs Above Ground'. As the name suggests, horses literally leap into the air; the high level dressage manoeuvres involved including the capriole, courbette, croupade and levade. <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Mastering the art form requires many years of training of horse and rider in order to develop an essential union between the two.</span> <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">In the capriole, which has the literal translation of 'leap of the goat' the horse is required to propel itself into the air, kick out with its hind legs then land on all fours at the same time.</span> Perhaps the most demanding of all of the airs is the levade which entails the horse rearing up on its haunches to a 35° angle then maintaining its balance for a number of seconds before returning its front feet to the floor and returning to a walking pace.\r\n\r\nD. The stated aim of the Spanish Riding School of Vienna is to preserve the art of classical horsemanship and to continue the principles taught by historical dressage masters. The school is the longest surviving establishment of its kind and the art itself has an awe-inspiring history given that <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">the first acclaimed European master Xenophon (427-355 BC), despite practising his art over 2000 years ago, is still acclaimed today.</span> The setting for the performances is no less impressive; heralded as the most beautiful equine hall in the world, the premises were originally designed by architect Joseph Emanuel Fischer in 1727 to provide the sons and daughters of aristocrats with riding school facilities.\r\n\r\nE. Today there are fewer than 3000 pure bred Lipizzaners in the world. Owners are encouraged to uphold the strict traditional goals and objectives involved in their breeding in order to maintain the purity of the blood line. <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Until 1916, the Lipizzaner line was under the absolute control of the Hapsberg dynasty; however, events of war throughout history brought about the consequent expansion of the breed.</span> Given the precious nature of the livestock, during the First World War the Hapsberg horses were moved to safer locations. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">In the course of their relocation, some horses were sold or given away which inevitably led to the emergence of Lipizzaner breeding farms beyond Hapsberg influence.</span> During World War II, the Lipizzaner stock was dispersed again when it was seized by the German High Command and horses from Austria, Italy, and Yugoslavia were transferred to Hostau in Czechoslovakia. <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">The endeavours of Alois Podhajsky, the director of the Spanish Riding School at that time, and the American army, which facilitated the return of the animals to Austrian soil, made the continuation of the breed in its purest form a possibility.</span>\r\n\r\nF. Over more recent years, <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">the Lipizzaner has demonstrated its superior abilities in several levels of equine competition including dressage and driving</span>; a form of competitive dressage involving the horse pulling a carriage. The kindly, responsive nature of the breed coupled with its intelligence also makes it an ideal mount for pleasure riding."
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_academic_reading",
+    "timer_minutes": "20",
+    "starting_question_number": "1"
+  }
+}
