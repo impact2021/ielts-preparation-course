@@ -1,0 +1,201 @@
+{
+  "title": "Paragraph Organization and Writing Practice",
+  "content": "This exercise helps you practice organizing information from tables and evaluating sentence quality for IELTS Writing Task 1.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Look again at the table from the lesson. Read the paragraph plans below and decide how the information has been organised. Select the correct answer.",
+      "question": "<p><strong>Paragraph 1:</strong> Highest overall. Double service and sales workers. Decline in 2000 otherwise always increasing. Nearly $200 more by the end. Significantly higher increase than the weekly average income.</p><p><strong>Paragraph 2:</strong> Didn't increase 98-99. Every other year showed increase (unlike other occupations listed). Increase overall of just under $200 (over $60 than the increase for service and sales workers over the period). Like professionals, always above average weekly income.</p><p><strong>Paragraph 3:</strong> Also had slight decline in 2000, and again in 2002 2003. Lowest increase of them all. Always less than average income. Overall less than $100 increase over the 8 years</p><p><strong>How have the paragraphs been organised?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "The paragraphs have been organised by year",
+          "is_correct": false,
+          "feedback": "Incorrect. If they were organised by year, each paragraph would focus on a specific year (e.g., Paragraph 1 about 1985, Paragraph 2 about 1990, etc.). However, the paragraphs discuss trends over multiple years for different groups."
+        },
+        {
+          "text": "The paragraphs have been organised by occupation",
+          "is_correct": true,
+          "feedback": "Correct! Each paragraph focuses on a different occupation group and describes the trends for that occupation across all the years shown in the table."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'The paragraphs have been organised by occupation'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Match the paragraph plan to the correct occupation. Read Paragraph 1 carefully and select which occupation it describes.",
+      "question": "<p><strong>Paragraph 1:</strong> Highest overall. Double service and sales workers. Decline in 2000 otherwise always increasing. Nearly $200 more by the end. Significantly higher increase than the weekly average income.</p><p><strong>Which occupation does Paragraph 1 describe?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Trades people",
+          "is_correct": false,
+          "feedback": "Incorrect. Trades people had increases but weren't consistently the highest overall, nor did they double the service and sales workers."
+        },
+        {
+          "text": "Sales and service workers",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph states the occupation is 'double service and sales workers', so it cannot be describing sales and service workers themselves."
+        },
+        {
+          "text": "Professionals",
+          "is_correct": true,
+          "feedback": "Correct! Professionals had the highest overall income, earned more than double what service and sales workers earned, showed a decline in 2000 but otherwise increased, and had nearly $200 increase by the end."
+        }
+      ],
+      "correct_answer": "2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'Professionals'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Match the paragraph plan to the correct occupation. Read Paragraph 2 carefully and select which occupation it describes.",
+      "question": "<p><strong>Paragraph 2:</strong> Didn't increase 98-99. Every other year showed increase (unlike other occupations listed). Increase overall of just over $150 (over a third more than the increase for service and sales workers over the period). Like professionals, always above average weekly income.</p><p><strong>Which occupation does Paragraph 2 describe?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Trades people",
+          "is_correct": true,
+          "feedback": "Correct! Trades people didn't increase in 98-99, showed increases in all other years, had an overall increase of just over $150, and were always above average weekly income like professionals."
+        },
+        {
+          "text": "Sales and service workers",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph mentions being 'over a third more than the increase for service and sales workers', so it cannot be describing sales and service workers themselves."
+        },
+        {
+          "text": "Professionals",
+          "is_correct": false,
+          "feedback": "Incorrect. While professionals were always above average income, the description doesn't match the specific pattern mentioned for Paragraph 2."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'Trades people'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Match the paragraph plan to the correct occupation. Read Paragraph 3 carefully and select which occupation it describes.",
+      "question": "<p><strong>Paragraph 3:</strong> Also had slight decline in 2000, and again in 2002-2003. Lowest increase of them all. Always less than average income. Overall less than $100 increase over the 8 years</p><p><strong>Which occupation does Paragraph 3 describe?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Trades people",
+          "is_correct": false,
+          "feedback": "Incorrect. Trades people were always above average income according to the data, but this paragraph describes an occupation that was always less than average income."
+        },
+        {
+          "text": "Sales and service workers",
+          "is_correct": true,
+          "feedback": "Correct! Sales and service workers had declines in 2000 and 2002-2003, the lowest overall increase (less than $100 over 8 years), and were always below the average income."
+        },
+        {
+          "text": "Professionals",
+          "is_correct": false,
+          "feedback": "Incorrect. Professionals had the highest overall income and the largest increase, which doesn't match this description of the lowest increase."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'Sales and service workers'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Look at the sentences we have made from our paragraph notes about professionals. Decide if the full sentence is good or not. Consider the accuracy of the information, the grammar, the language and the punctuation.",
+      "question": "<p><strong>THE NOTES SAID:</strong> Highest overall.</p><p><strong>Full sentence:</strong> One of the clear points to note is that professionals had the highest overall income when compared with all other data in the table.</p><p><strong>Is this sentence good?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This sentence is good",
+          "is_correct": true,
+          "feedback": "Correct! This sentence is grammatically correct, accurately represents the information from the notes, uses appropriate academic language, and is properly punctuated."
+        },
+        {
+          "text": "This sentence is NOT good",
+          "is_correct": false,
+          "feedback": "Incorrect. The sentence is actually well-written. It accurately conveys the information, has correct grammar, appropriate language for IELTS Writing Task 1, and proper punctuation."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'This sentence is good'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Look at the sentences we have made from our paragraph notes about professionals. Decide if the full sentence is good or not. Consider the accuracy of the information, the grammar, the language and the punctuation.",
+      "question": "<p><strong>THE NOTES SAID:</strong> Double service and sales workers.</p><p><strong>Full sentence:</strong> Average income for professional occupations, was more than double the income received by service and sales workers.</p><p><strong>Is this sentence good?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This sentence is good",
+          "is_correct": false,
+          "feedback": "Incorrect. There is a comma after the word 'occupations' which should not be there. The sentence should be: Average income for professional occupations was more than double the income received by service and sales workers."
+        },
+        {
+          "text": "This sentence is NOT good",
+          "is_correct": true,
+          "feedback": "Correct! There is a comma after the word 'occupations' which should not be there. The sentence should be: Average income for professional occupations was more than double the income received by service and sales workers."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'This sentence is NOT good'. There is a comma after the word 'occupations' which should not be there.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Look at the sentences we have made from our paragraph notes about professionals. Decide if the full sentence is good or not. Consider the accuracy of the information, the grammar, the language and the punctuation.",
+      "question": "<p><strong>THE NOTES SAID:</strong> Decline in 2000 otherwise always increasing.</p><p><strong>Full sentence:</strong> With the exception of a slight decline in 2000, income received by professionals increased every year.</p><p><strong>Is this sentence good?</strong></p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This sentence is good",
+          "is_correct": true,
+          "feedback": "Correct! This sentence is grammatically correct, accurately represents the information from the notes, uses appropriate academic language, and is properly punctuated."
+        },
+        {
+          "text": "This sentence is NOT good",
+          "is_correct": false,
+          "feedback": "Incorrect. The sentence is well-written. It accurately conveys the information from the notes, has correct grammar and punctuation, and uses appropriate language for IELTS Writing Task 1."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'This sentence is good'.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Income Data by Country (1985-2000)",
+      "content": "<div style='overflow-x:auto;'><table style='width:100%; border-collapse:collapse;'><thead><tr><th style='background:#0f6fc6; color:#fff; padding:12px; border:2px solid #1b5fa7; text-align:left;'>Country</th><th style='background:#0f6fc6; color:#fff; padding:12px; border:2px solid #1b5fa7;'>1985</th><th style='background:#0f6fc6; color:#fff; padding:12px; border:2px solid #1b5fa7;'>1990</th><th style='background:#0f6fc6; color:#fff; padding:12px; border:2px solid #1b5fa7;'>1995</th><th style='background:#0f6fc6; color:#fff; padding:12px; border:2px solid #1b5fa7;'>2000</th></tr></thead><tbody><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Australia</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>14</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>13</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>13</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>14</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Belgium</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Denmark</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>10</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>10</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Finland</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>France</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>13</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Germany</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>9</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>9</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>10</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Ireland</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>18</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>18</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>15</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>14</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Italy</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>13</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>10</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>9</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>10</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>Turkey</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>21</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>21</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>20</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>---</td></tr><tr><td style='border:2px solid #1b5fa7; padding:10px;'>United Kingdom</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>11</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>12</td><td style='border:2px solid #1b5fa7; padding:10px; text-align:center;'>13</td></tr></tbody></table></div>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "exercise_label": "practice_exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  },
+  "_metadata": {
+    "description": "IELTS Writing Task 1 practice - organizing data from tables and evaluating sentence quality",
+    "created_at": "2026-01-22",
+    "notes": "Converted drag-and-drop matching questions to multiple choice format as requested"
+  }
+}
