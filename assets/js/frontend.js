@@ -1145,7 +1145,8 @@
                         form.find('button[type="submit"]').hide();
                         
                         // Show award notifications if any awards were earned
-                        if (result.new_awards && result.new_awards.length > 0 && window.IELTSAwards) {
+                        if (result.new_awards && result.new_awards.length > 0 && 
+                            window.IELTSAwards && typeof window.IELTSAwards.showAwardNotifications === 'function') {
                             // Delay showing awards slightly so the result modal is fully visible first
                             setTimeout(function() {
                                 window.IELTSAwards.showAwardNotifications(result.new_awards);

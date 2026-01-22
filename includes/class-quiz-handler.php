@@ -601,13 +601,16 @@ class IELTS_CM_Quiz_Handler {
                 $awards_instance = new IELTS_CM_Awards();
                 $all_awards = $awards_instance->get_all_awards();
                 
+                // Create an associative array for O(1) lookup
+                $awards_by_id = array();
+                foreach ($all_awards as $award) {
+                    $awards_by_id[$award['id']] = $award;
+                }
+                
+                // Build new award data array
                 foreach ($new_awards as $award_id) {
-                    // Find the award details
-                    foreach ($all_awards as $award) {
-                        if ($award['id'] === $award_id) {
-                            $new_award_data[] = $award;
-                            break;
-                        }
+                    if (isset($awards_by_id[$award_id])) {
+                        $new_award_data[] = $awards_by_id[$award_id];
                     }
                 }
                 
