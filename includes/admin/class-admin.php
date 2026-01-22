@@ -7056,11 +7056,31 @@ class IELTS_CM_Admin {
                 if (isset($data['audio']['url'])) {
                     update_post_meta($post_id, '_ielts_cm_audio_url', esc_url_raw($data['audio']['url']));
                 }
-                if (isset($data['audio']['transcript'])) {
-                    update_post_meta($post_id, '_ielts_cm_transcript', wp_kses_post($data['audio']['transcript']));
+                
+                // Handle audio sections
+                $audio_sections = array();
+                if (isset($data['audio']['sections']) && is_array($data['audio']['sections']) && !empty($data['audio']['sections'])) {
+                    // Use sections from JSON if provided, with sanitization
+                    foreach ($data['audio']['sections'] as $index => $section) {
+                        if (is_array($section)) {
+                            $audio_sections[] = array(
+                                'section_number' => isset($section['section_number']) ? intval($section['section_number']) : ($index + 1),
+                                'transcript' => isset($section['transcript']) ? wp_kses_post($section['transcript']) : ''
+                            );
+                        }
+                    }
+                } elseif (isset($data['audio']['transcript']) && !empty($data['audio']['transcript'])) {
+                    // Convert single transcript to audio_sections format for admin UI
+                    $audio_sections = array(
+                        array(
+                            'section_number' => 1,
+                            'transcript' => wp_kses_post($data['audio']['transcript'])
+                        )
+                    );
                 }
-                if (isset($data['audio']['sections']) && is_array($data['audio']['sections'])) {
-                    update_post_meta($post_id, '_ielts_cm_audio_sections', $data['audio']['sections']);
+                
+                if (!empty($audio_sections)) {
+                    update_post_meta($post_id, '_ielts_cm_audio_sections', $audio_sections);
                 }
             }
             
