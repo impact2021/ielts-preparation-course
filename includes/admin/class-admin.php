@@ -7060,14 +7060,21 @@ class IELTS_CM_Admin {
                 // Handle audio sections
                 $audio_sections = array();
                 if (isset($data['audio']['sections']) && is_array($data['audio']['sections']) && !empty($data['audio']['sections'])) {
-                    // Use sections from JSON if provided
-                    $audio_sections = $data['audio']['sections'];
+                    // Use sections from JSON if provided, with sanitization
+                    foreach ($data['audio']['sections'] as $section) {
+                        if (is_array($section)) {
+                            $audio_sections[] = array(
+                                'section_number' => isset($section['section_number']) ? intval($section['section_number']) : 1,
+                                'transcript' => isset($section['transcript']) ? wp_kses_post($section['transcript']) : ''
+                            );
+                        }
+                    }
                 } elseif (isset($data['audio']['transcript']) && !empty($data['audio']['transcript'])) {
                     // Convert single transcript to audio_sections format for admin UI
                     $audio_sections = array(
                         array(
                             'section_number' => 1,
-                            'transcript' => $data['audio']['transcript']
+                            'transcript' => wp_kses_post($data['audio']['transcript'])
                         )
                     );
                 }
