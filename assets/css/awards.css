@@ -1,0 +1,329 @@
+/* Awards Wall Styles */
+
+.ielts-awards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.ielts-awards-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ielts-awards-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.awards-subtitle {
+    font-size: 16px;
+    color: #666;
+}
+
+.ielts-awards-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.awards-tab {
+    padding: 10px 20px;
+    border: 2px solid #0073aa;
+    background: white;
+    color: #0073aa;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.awards-tab:hover {
+    background: #f0f0f0;
+}
+
+.awards-tab.active {
+    background: #0073aa;
+    color: white;
+}
+
+.ielts-awards-wall {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.awards-loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+}
+
+.award-item {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.award-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.award-item.earned {
+    border-color: #46b450;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f9f1 100%);
+}
+
+.award-item.locked {
+    opacity: 0.5;
+    filter: grayscale(100%);
+}
+
+.award-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+/* Badge icon - circular */
+.award-icon.badge {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    position: relative;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+}
+
+.award-icon.badge::before {
+    content: '★';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: white;
+}
+
+.award-item.locked .award-icon.badge {
+    background: #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Shield icon - shield shape */
+.award-icon.shield {
+    display: inline-block;
+    width: 70px;
+    height: 80px;
+    background: linear-gradient(135deg, #1E90FF 0%, #4169E1 100%);
+    position: relative;
+    margin: 0 auto 15px;
+    clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
+    box-shadow: 0 4px 10px rgba(30, 144, 255, 0.4);
+}
+
+.award-icon.shield::before {
+    content: '⚡';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: white;
+}
+
+.award-item.locked .award-icon.shield {
+    background: #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Trophy icon - trophy shape */
+.award-icon.trophy {
+    display: inline-block;
+    width: 70px;
+    height: 80px;
+    position: relative;
+    margin: 0 auto 15px;
+}
+
+.award-icon.trophy::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 40px;
+    height: 45px;
+    background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+    border-radius: 0 0 20% 20%;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.4);
+}
+
+.award-icon.trophy::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 30px;
+    height: 20px;
+    background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+    border-radius: 0 0 5px 5px;
+}
+
+.award-item.locked .award-icon.trophy::before,
+.award-item.locked .award-icon.trophy::after {
+    background: #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.award-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.award-description {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.award-date {
+    font-size: 11px;
+    color: #999;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Award Notification */
+.ielts-award-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    animation: slideInRight 0.5s ease-out;
+}
+
+.ielts-award-notification.slide-out {
+    animation: slideOutRight 0.5s ease-out forwards;
+}
+
+.award-notification-content {
+    background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+    border: 2px solid #46b450;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.award-notification-icon {
+    font-size: 50px;
+    flex-shrink: 0;
+}
+
+.award-notification-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #46b450;
+}
+
+.award-notification-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.award-notification-name {
+    font-weight: bold;
+    margin-bottom: 3px !important;
+}
+
+.award-notification-description {
+    font-size: 12px !important;
+    color: #666;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ielts-awards-wall {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .award-item {
+        padding: 15px;
+    }
+    
+    .award-icon.badge {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .award-icon.badge::before {
+        font-size: 30px;
+    }
+    
+    .award-icon.shield {
+        width: 55px;
+        height: 65px;
+    }
+    
+    .award-icon.shield::before {
+        font-size: 28px;
+    }
+    
+    .award-icon.trophy {
+        width: 55px;
+        height: 65px;
+    }
+    
+    .ielts-award-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .award-notification-content {
+        min-width: auto;
+    }
+}

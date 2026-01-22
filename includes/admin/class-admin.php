@@ -4080,6 +4080,15 @@ class IELTS_CM_Admin {
             'ielts-settings',
             array($this, 'settings_page')
         );
+        
+        add_submenu_page(
+            'edit.php?post_type=ielts_course',
+            __('Awards', 'ielts-course-manager'),
+            __('Awards', 'ielts-course-manager'),
+            'manage_options',
+            'ielts-awards',
+            array($this, 'awards_page')
+        );
     }
     
     /**
@@ -4709,6 +4718,129 @@ class IELTS_CM_Admin {
                 
                 <?php submit_button(); ?>
             </form>
+        </div>
+        <?php
+    }
+    
+    /**
+     * Awards management page
+     */
+    public function awards_page() {
+        // Check user capability
+        if (!current_user_can('manage_options')) {
+            wp_die(__('You do not have sufficient permissions to access this page.', 'ielts-course-manager'));
+        }
+        
+        $awards = new IELTS_CM_Awards();
+        $all_awards = $awards->get_all_awards();
+        
+        // Get statistics
+        global $wpdb;
+        $user_awards_table = $wpdb->prefix . 'ielts_cm_user_awards';
+        
+        // Count users who earned each award
+        $award_stats = array();
+        foreach ($all_awards as $award) {
+            $count = $wpdb->get_var($wpdb->prepare(
+                "SELECT COUNT(DISTINCT user_id) FROM $user_awards_table WHERE award_id = %s",
+                $award['id']
+            ));
+            $award_stats[$award['id']] = intval($count);
+        }
+        
+        // Get total users with at least one award
+        $total_users_with_awards = $wpdb->get_var(
+            "SELECT COUNT(DISTINCT user_id) FROM $user_awards_table"
+        );
+        
+        // Group awards by type
+        $badges = array_filter($all_awards, function($a) { return $a['type'] === 'badge'; });
+        $shields = array_filter($all_awards, function($a) { return $a['type'] === 'shield'; });
+        $trophies = array_filter($all_awards, function($a) { return $a['type'] === 'trophy'; });
+        ?>
+        <div class="wrap">
+            <h1><?php _e('Awards Management', 'ielts-course-manager'); ?></h1>
+            
+            <div class="notice notice-info">
+                <p>
+                    <strong><?php _e('Total Awards:', 'ielts-course-manager'); ?></strong> <?php echo count($all_awards); ?> 
+                    (<?php echo count($badges); ?> badges, <?php echo count($shields); ?> shields, <?php echo count($trophies); ?> trophies)
+                    <br>
+                    <strong><?php _e('Students with awards:', 'ielts-course-manager'); ?></strong> <?php echo $total_users_with_awards; ?>
+                </p>
+            </div>
+            
+            <h2><?php _e('Badges', 'ielts-course-manager'); ?> (<?php echo count($badges); ?>)</h2>
+            <table class="wp-list-table widefat fixed striped">
+                <thead>
+                    <tr>
+                        <th><?php _e('Award ID', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Name', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Description', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Students Earned', 'ielts-course-manager'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($badges as $award): ?>
+                    <tr>
+                        <td><code><?php echo esc_html($award['id']); ?></code></td>
+                        <td><strong><?php echo esc_html($award['name']); ?></strong></td>
+                        <td><?php echo esc_html($award['description']); ?></td>
+                        <td><?php echo $award_stats[$award['id']]; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            
+            <h2><?php _e('Shields', 'ielts-course-manager'); ?> (<?php echo count($shields); ?>)</h2>
+            <table class="wp-list-table widefat fixed striped">
+                <thead>
+                    <tr>
+                        <th><?php _e('Award ID', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Name', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Description', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Students Earned', 'ielts-course-manager'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($shields as $award): ?>
+                    <tr>
+                        <td><code><?php echo esc_html($award['id']); ?></code></td>
+                        <td><strong><?php echo esc_html($award['name']); ?></strong></td>
+                        <td><?php echo esc_html($award['description']); ?></td>
+                        <td><?php echo $award_stats[$award['id']]; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            
+            <h2><?php _e('Trophies', 'ielts-course-manager'); ?> (<?php echo count($trophies); ?>)</h2>
+            <table class="wp-list-table widefat fixed striped">
+                <thead>
+                    <tr>
+                        <th><?php _e('Award ID', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Name', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Description', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Students Earned', 'ielts-course-manager'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($trophies as $award): ?>
+                    <tr>
+                        <td><code><?php echo esc_html($award['id']); ?></code></td>
+                        <td><strong><?php echo esc_html($award['name']); ?></strong></td>
+                        <td><?php echo esc_html($award['description']); ?></td>
+                        <td><?php echo $award_stats[$award['id']]; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            
+            <div style="margin-top: 30px;">
+                <h3><?php _e('Usage Instructions', 'ielts-course-manager'); ?></h3>
+                <p><?php _e('To display the awards wall on a page, use this shortcode:', 'ielts-course-manager'); ?></p>
+                <code style="padding: 10px; background: #f0f0f0; display: inline-block;">[ielts_awards]</code>
+            </div>
         </div>
         <?php
     }
