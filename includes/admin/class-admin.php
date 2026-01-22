@@ -7061,10 +7061,10 @@ class IELTS_CM_Admin {
                 $audio_sections = array();
                 if (isset($data['audio']['sections']) && is_array($data['audio']['sections']) && !empty($data['audio']['sections'])) {
                     // Use sections from JSON if provided, with sanitization
-                    foreach ($data['audio']['sections'] as $section) {
+                    foreach ($data['audio']['sections'] as $index => $section) {
                         if (is_array($section)) {
                             $audio_sections[] = array(
-                                'section_number' => isset($section['section_number']) ? intval($section['section_number']) : 1,
+                                'section_number' => isset($section['section_number']) ? intval($section['section_number']) : ($index + 1),
                                 'transcript' => isset($section['transcript']) ? wp_kses_post($section['transcript']) : ''
                             );
                         }
