@@ -1304,8 +1304,28 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             
-            <h4><?php _e('Transcripts', 'ielts-course-manager'); ?></h4>
-            <p><small><?php _e('Add one or more transcripts for the audio. If you add multiple transcripts, they will be displayed in separate tabs after the student submits their answers.', 'ielts-course-manager'); ?></small></p>
+            <h4><?php _e('Main Transcript', 'ielts-course-manager'); ?></h4>
+            <p><small><?php _e('Add the main transcript for the audio. This will be displayed after the student submits their answers. Use &lt;span id="q#" data-question="#"&gt;&lt;/span&gt;&lt;span class="reading-answer-marker"&gt;answer&lt;/span&gt; to mark answers in the transcript.', 'ielts-course-manager'); ?></small></p>
+            
+            <div style="margin-bottom: 20px;">
+                <?php
+                $editor_settings = array(
+                    'textarea_name' => 'ielts_cm_transcript',
+                    'textarea_rows' => 15,
+                    'media_buttons' => false,
+                    'teeny' => false,
+                    'quicktags' => true,
+                    'tinymce' => array(
+                        'toolbar1' => 'formatselect,bold,italic,underline,bullist,numlist,link,unlink,undo,redo',
+                        'toolbar2' => '',
+                    ),
+                );
+                wp_editor($transcript, 'ielts_cm_transcript', $editor_settings);
+                ?>
+            </div>
+            
+            <h4><?php _e('Additional Transcripts (Optional)', 'ielts-course-manager'); ?></h4>
+            <p><small><?php _e('Add additional transcripts that will be displayed in separate tabs. This is optional and only needed if you want multiple transcript sections.', 'ielts-course-manager'); ?></small></p>
             
             <div id="audio-sections-container">
                 <?php if (!empty($audio_sections)): ?>
