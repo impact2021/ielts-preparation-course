@@ -1144,6 +1144,14 @@
                         showCBTResultModal(html, result.next_url, result.course_url);
                         form.find('button[type="submit"]').hide();
                         
+                        // Show award notifications if any awards were earned
+                        if (result.new_awards && result.new_awards.length > 0 && window.IELTSAwards) {
+                            // Delay showing awards slightly so the result modal is fully visible first
+                            setTimeout(function() {
+                                window.IELTSAwards.showAwardNotifications(result.new_awards);
+                            }, 500);
+                        }
+                        
                         if (isCBT) {
                             // Update the fullscreen timer UI component (CBT-specific feature - standard layout doesn't have this element)
                             var timerElement = form.find('.quiz-timer-fullscreen');
