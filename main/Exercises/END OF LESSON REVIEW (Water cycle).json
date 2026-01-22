@@ -1,0 +1,48 @@
+{
+  "title": "END OF LESSON REVIEW (Water cycle)",
+  "content": "Complete the Task 1 report below using the correct passive form of the following verbs. Use each verb once only. You will need to use the present simple or present perfect passive. Type your answers in the spaces provided.<br><br><table border='1' cellpadding='5' cellspacing='0' style='margin: 10px 0; border-collapse: collapse;'><tr><th>Root Verb</th></tr><tr><td>FORM</td></tr><tr><td>LABEL</td></tr><tr><td>TRANSPORT</td></tr></table><br>The illustration represents the water cycle in which water goes through 6 stages in a cyclical process; these stages include sea, land, and air. The clearest point to begin the description would be where water evaporates into the atmosphere.",
+  "questions": [
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the sentences using the correct passive form of the verbs provided.",
+      "question": "First water from the sea evaporates, rising and condensing into rain clouds. Once the condensation [field 1], in the next step it [field 2] in the rain clouds which then travel over land. After that, the precipitation falls to the ground.<br><br>Next the water which has fallen to the ground can flow in two directions. Water which remains at the surface of the land [field 3] as run off water; this directly rejoins the sea, while other water sinks below the earth's surface where it becomes ground water. This moves under ground to the discharge point and also rejoins the sea. At this stage the process begins again when once more the water evaporates into the atmosphere.<br><br>This ends the description of the water cycle process.",
+      "field_count": 3,
+      "field_answers": {
+        "1": "has been formed",
+        "2": "is transported",
+        "3": "is labelled"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! 'has been formed' is the present perfect passive form. The present perfect passive (has/have been + past participle) is used here because the condensation must be formed before it can be transported, indicating a completed action with relevance to the next step.",
+          "incorrect": "Incorrect. You need the present perfect passive form here (has/have been + past participle). The condensation needs to be fully formed before the next stage can occur.",
+          "no_answer": "Please provide an answer. You need the present perfect passive form of 'form' (has/have been + past participle)."
+        },
+        "2": {
+          "correct": "Correct! 'is transported' is the present simple passive form. The present simple passive (is/are + past participle) is used to describe a general process that happens regularly in the water cycle.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'it' (referring to condensation) is singular, so use 'is'. This describes the regular movement of water vapor in clouds.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'transport' (is/are + past participle)."
+        },
+        "3": {
+          "correct": "Correct! 'is labelled' is the present simple passive form. The present simple passive (is/are + past participle) is used to describe how water at the surface is classified or named in the process.",
+          "incorrect": "Incorrect. You need the present simple passive form here (is/are + past participle). The subject 'Water' is singular in this context, so use 'is'. This describes how this type of water is identified or named.",
+          "no_answer": "Please provide an answer. You need the present simple passive form of 'label' (is/are + past participle)."
+        }
+      },
+      "points": 3,
+      "correct_feedback": "Excellent! You have correctly identified all the passive forms.",
+      "incorrect_feedback": "Review your answers. Pay attention to whether you need present simple passive (is/are + past participle) or present perfect passive (has/have been + past participle).",
+      "no_answer_feedback": "Please complete all fields. Remember to use the correct passive form of the verbs provided."
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
