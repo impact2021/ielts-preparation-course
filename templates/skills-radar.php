@@ -15,6 +15,21 @@ $height = isset($height) ? $height : 400;
 <div class="ielts-skills-radar-container">
     <div class="skills-radar-header">
         <h3 class="skills-radar-title"><?php _e('Your IELTS Skills Profile', 'ielts-course-manager'); ?></h3>
+        <?php if ($show_target): ?>
+        <div class="target-band-selector">
+            <label for="target-band-select"><?php _e('Target Band:', 'ielts-course-manager'); ?></label>
+            <select id="target-band-select" class="target-band-select">
+                <option value="5.5">5.5</option>
+                <option value="6.0">6.0</option>
+                <option value="6.5">6.5</option>
+                <option value="7.0" selected>7.0</option>
+                <option value="7.5">7.5</option>
+                <option value="8.0">8.0</option>
+                <option value="8.5">8.5</option>
+                <option value="9.0">9.0</option>
+            </select>
+        </div>
+        <?php endif; ?>
     </div>
     
     <div class="skills-radar-wrapper">
@@ -29,7 +44,7 @@ $height = isset($height) ? $height : 400;
         <?php if ($show_target): ?>
         <span class="legend-item">
             <span class="legend-line legend-dashed" style="background: #FFC107;"></span>
-            <?php _e('Band 7 Target', 'ielts-course-manager'); ?>
+            <span id="target-band-label"><?php _e('Band 7.0 Target', 'ielts-course-manager'); ?></span>
         </span>
         <?php endif; ?>
     </div>
@@ -52,9 +67,45 @@ $height = isset($height) ? $height : 400;
 }
 
 .skills-radar-title {
-    margin: 0;
+    margin: 0 0 10px 0;
     font-size: 20px;
     color: #333;
+}
+
+.target-band-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.target-band-selector label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+}
+
+.target-band-select {
+    padding: 6px 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    background: white;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.target-band-select:hover {
+    border-color: #FFC107;
+}
+
+.target-band-select:focus {
+    outline: none;
+    border-color: #FFC107;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
 }
 
 .skills-radar-wrapper {
@@ -111,38 +162,111 @@ $height = isset($height) ? $height : 400;
 jQuery(document).ready(function($) {
     var container = $('.ielts-skills-radar-container');
     var showTarget = <?php echo $show_target ? 'true' : 'false'; ?>;
+    var radarChart = null;
+    var currentTargetBand = 7.0;
     
     // Show loading
     container.find('.skills-radar-loading').show();
     container.find('.skills-radar-wrapper, .skills-radar-legend').hide();
     
-    $.ajax({
-        url: ieltsCM.ajaxUrl,
-        method: 'POST',
-        data: {
-            action: 'ielts_cm_get_skills_radar_data',
-            nonce: ieltsCM.nonce
-        },
-        success: function(response) {
-            if (response.success) {
-                var skillScores = response.data.skill_scores;
-                
-                // Hide loading, show chart
-                container.find('.skills-radar-loading').hide();
-                container.find('.skills-radar-wrapper, .skills-radar-legend').show();
-                
-                // Create radar chart
-                renderSkillsRadar(skillScores, showTarget);
-            }
-        },
-        error: function() {
-            container.find('.skills-radar-loading').html('<?php _e('Error loading skills data', 'ielts-course-manager'); ?>');
-        }
+    // Load initial data
+    loadSkillsData();
+    
+    // Handle target band change
+    $('#target-band-select').on('change', function() {
+        var newTargetBand = parseFloat($(this).val());
+        updateTargetBand(newTargetBand);
     });
     
-    function renderSkillsRadar(skillScores, showTarget) {
+    function loadSkillsData() {
+        $.ajax({
+            url: ieltsCM.ajaxUrl,
+            method: 'POST',
+            data: {
+                action: 'ielts_cm_get_skills_radar_data',
+                nonce: ieltsCM.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    var skillScores = response.data.skill_scores;
+                    currentTargetBand = response.data.target_band || 7.0;
+                    
+                    // Set the select value
+                    $('#target-band-select').val(currentTargetBand);
+                    
+                    // Update label
+                    updateTargetBandLabel(currentTargetBand);
+                    
+                    // Hide loading, show chart
+                    container.find('.skills-radar-loading').hide();
+                    container.find('.skills-radar-wrapper, .skills-radar-legend').show();
+                    
+                    // Create radar chart
+                    renderSkillsRadar(skillScores, showTarget, currentTargetBand);
+                }
+            },
+            error: function() {
+                container.find('.skills-radar-loading').html('<?php _e('Error loading skills data', 'ielts-course-manager'); ?>');
+            }
+        });
+    }
+    
+    function updateTargetBand(newTargetBand) {
+        $.ajax({
+            url: ieltsCM.ajaxUrl,
+            method: 'POST',
+            data: {
+                action: 'ielts_cm_update_target_band',
+                nonce: ieltsCM.nonce,
+                target_band: newTargetBand
+            },
+            success: function(response) {
+                if (response.success) {
+                    currentTargetBand = newTargetBand;
+                    updateTargetBandLabel(newTargetBand);
+                    updateChartTargetLine(newTargetBand);
+                }
+            }
+        });
+    }
+    
+    function updateTargetBandLabel(targetBand) {
+        $('#target-band-label').text('<?php _e('Band', 'ielts-course-manager'); ?> ' + targetBand.toFixed(1) + ' <?php _e('Target', 'ielts-course-manager'); ?>');
+    }
+    
+    function updateChartTargetLine(targetBand) {
+        if (!radarChart || !showTarget) return;
+        
+        // Convert band score to percentage (approximate mapping)
+        // Band 5.5 ≈ 60%, Band 6.0 ≈ 65%, Band 6.5 ≈ 70%, Band 7.0 ≈ 80%, etc.
+        var percentage = bandToPercentage(targetBand);
+        
+        // Update the target dataset
+        radarChart.data.datasets[1].data = [percentage, percentage, percentage, percentage, percentage, percentage];
+        radarChart.data.datasets[1].label = '<?php _e('Band', 'ielts-course-manager'); ?> ' + targetBand.toFixed(1) + ' <?php _e('Target', 'ielts-course-manager'); ?>';
+        radarChart.update();
+    }
+    
+    function bandToPercentage(band) {
+        // Approximate IELTS band to percentage mapping
+        var mapping = {
+            5.5: 60,
+            6.0: 65,
+            6.5: 70,
+            7.0: 80,
+            7.5: 85,
+            8.0: 90,
+            8.5: 95,
+            9.0: 100
+        };
+        return mapping[band] || 80;
+    }
+    
+    function renderSkillsRadar(skillScores, showTarget, targetBand) {
         var ctx = document.getElementById('skills-radar-chart');
         if (!ctx) return;
+        
+        var targetPercentage = bandToPercentage(targetBand);
         
         var datasets = [{
             label: '<?php _e('Your Proficiency', 'ielts-course-manager'); ?>',
@@ -167,8 +291,8 @@ jQuery(document).ready(function($) {
         
         if (showTarget) {
             datasets.push({
-                label: '<?php _e('Band 7 Target', 'ielts-course-manager'); ?>',
-                data: [80, 80, 80, 80, 80, 80],
+                label: '<?php _e('Band', 'ielts-course-manager'); ?> ' + targetBand.toFixed(1) + ' <?php _e('Target', 'ielts-course-manager'); ?>',
+                data: [targetPercentage, targetPercentage, targetPercentage, targetPercentage, targetPercentage, targetPercentage],
                 backgroundColor: 'rgba(255, 193, 7, 0.05)',
                 borderColor: 'rgba(255, 193, 7, 0.8)',
                 borderWidth: 2,
@@ -178,7 +302,7 @@ jQuery(document).ready(function($) {
             });
         }
         
-        new Chart(ctx, {
+        radarChart = new Chart(ctx, {
             type: 'radar',
             data: {
                 labels: [

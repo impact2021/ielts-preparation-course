@@ -4296,6 +4296,7 @@ class IELTS_CM_Admin {
      */
     public function quiz_columns($columns) {
         $columns['lesson'] = __('Lesson', 'ielts-course-manager');
+        $columns['skill_type'] = __('Category', 'ielts-course-manager');
         return $columns;
     }
     
@@ -4309,6 +4310,21 @@ class IELTS_CM_Admin {
     public function quiz_column_content($column, $post_id) {
         if ($column === 'lesson') {
             $this->display_parent_connections($post_id, '_ielts_cm_lesson_ids', '_ielts_cm_lesson_id');
+        } elseif ($column === 'skill_type') {
+            $skill_type = get_post_meta($post_id, '_ielts_cm_skill_type', true);
+            if ($skill_type) {
+                $skill_labels = array(
+                    'reading' => __('Reading', 'ielts-course-manager'),
+                    'writing' => __('Writing', 'ielts-course-manager'),
+                    'listening' => __('Listening', 'ielts-course-manager'),
+                    'speaking' => __('Speaking', 'ielts-course-manager'),
+                    'vocabulary' => __('Vocabulary', 'ielts-course-manager'),
+                    'grammar' => __('Grammar', 'ielts-course-manager'),
+                );
+                echo isset($skill_labels[$skill_type]) ? esc_html($skill_labels[$skill_type]) : esc_html(ucfirst($skill_type));
+            } else {
+                echo '<span style="color: #999;">' . esc_html__('Not set', 'ielts-course-manager') . '</span>';
+            }
         }
     }
     
