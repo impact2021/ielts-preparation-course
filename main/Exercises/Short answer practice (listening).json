@@ -59,14 +59,14 @@
       },
       "field_feedback": {
         "1": {
-          "correct": "Correct! The speaker mentions not to underestimate the significance of experience gained in summer jobs or voluntary work.",
-          "incorrect": "Incorrect. The correct answers are: SUMMER JOBS or VOLUNTARY WORK. Listen to the section about work experience.",
-          "no_answer": "The correct answers are: SUMMER JOBS or VOLUNTARY WORK. The speaker says 'don't underestimate the significance of experience that you may have gained in a summer job or voluntary work'."
+          "correct": "Correct! This is one of the two types of work experience mentioned.",
+          "incorrect": "Incorrect. The two types mentioned are: SUMMER JOBS and VOLUNTARY WORK (you can list them in either order). Listen to the section about work experience.",
+          "no_answer": "You need to provide TWO different types of work experience. The correct answers are: SUMMER JOBS and VOLUNTARY WORK (in either order). The speaker says 'don't underestimate the significance of experience that you may have gained in a summer job or voluntary work'."
         },
         "2": {
-          "correct": "Correct! The speaker mentions not to underestimate the significance of experience gained in summer jobs or voluntary work.",
-          "incorrect": "Incorrect. The correct answers are: SUMMER JOBS or VOLUNTARY WORK. Listen to the section about work experience.",
-          "no_answer": "The correct answers are: SUMMER JOBS or VOLUNTARY WORK. The speaker says 'don't underestimate the significance of experience that you may have gained in a summer job or voluntary work'."
+          "correct": "Correct! This is one of the two types of work experience mentioned.",
+          "incorrect": "Incorrect. The two types mentioned are: SUMMER JOBS and VOLUNTARY WORK (you can list them in either order). Listen to the section about work experience.",
+          "no_answer": "You need to provide TWO different types of work experience. The correct answers are: SUMMER JOBS and VOLUNTARY WORK (in either order). The speaker says 'don't underestimate the significance of experience that you may have gained in a summer job or voluntary work'."
         }
       },
       "points": 2,
