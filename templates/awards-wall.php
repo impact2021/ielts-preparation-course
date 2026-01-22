@@ -29,23 +29,3 @@ $user_id = get_current_user_id();
         </div>
     </div>
 </div>
-
-<!-- Award notification template -->
-<div id="ielts-award-notification" class="ielts-award-notification" style="display: none;">
-    <div class="award-notification-content">
-        <div class="award-notification-icon"></div>
-        <div class="award-notification-text">
-            <h3><?php _e('Award Earned!', 'ielts-course-manager'); ?></h3>
-            <p class="award-notification-name"></p>
-            <p class="award-notification-description"></p>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript">
-var ieltsAwardsConfig = {
-    ajaxUrl: '<?php echo esc_js(admin_url('admin-ajax.php')); ?>',
-    nonce: '<?php echo esc_js(wp_create_nonce('ielts_cm_nonce')); ?>',
-    userId: <?php echo intval($user_id); ?>
-};
-</script>
