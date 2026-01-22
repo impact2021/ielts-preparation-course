@@ -589,6 +589,9 @@ class IELTS_CM_Quiz_Handler {
         $result = $this->save_quiz_result($user_id, $quiz_id, $course_id, $lesson_id, $score, $max_score, $percentage, $answers);
         
         if ($result) {
+            // Trigger award check hook
+            do_action('ielts_cm_quiz_submitted', $user_id, $quiz_id, $percentage, time());
+            
             // Get next item URL for navigation
             $next_url = $this->get_next_item_url($quiz_id, $course_id, $lesson_id);
             

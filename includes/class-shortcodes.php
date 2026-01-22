@@ -18,6 +18,7 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_lesson', array($this, 'display_lesson'));
         add_shortcode('ielts_quiz', array($this, 'display_quiz'));
         add_shortcode('ielts_category_progress', array($this, 'display_category_progress'));
+        add_shortcode('ielts_awards', array($this, 'display_awards'));
     }
     
     /**
@@ -909,6 +910,22 @@ class IELTS_CM_Shortcodes {
         }
         </style>
         <?php
+        return ob_get_clean();
+    }
+    
+    /**
+     * Display awards wall
+     */
+    public function display_awards($atts) {
+        if (!is_user_logged_in()) {
+            return '<p>' . __('Please log in to view your awards.', 'ielts-course-manager') . '</p>';
+        }
+        
+        wp_enqueue_script('ielts-cm-awards-js', IELTS_CM_PLUGIN_URL . 'assets/js/awards.js', array('jquery'), IELTS_CM_VERSION, true);
+        wp_enqueue_style('ielts-cm-awards-css', IELTS_CM_PLUGIN_URL . 'assets/css/awards.css', array(), IELTS_CM_VERSION);
+        
+        ob_start();
+        include IELTS_CM_PLUGIN_DIR . 'templates/awards-wall.php';
         return ob_get_clean();
     }
 }

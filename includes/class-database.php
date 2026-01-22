@@ -14,6 +14,7 @@ class IELTS_CM_Database {
     private $enrollment_table;
     private $site_connections_table;
     private $content_sync_table;
+    private $user_awards_table;
     
     public function __construct() {
         global $wpdb;
@@ -22,6 +23,7 @@ class IELTS_CM_Database {
         $this->enrollment_table = $wpdb->prefix . 'ielts_cm_enrollment';
         $this->site_connections_table = $wpdb->prefix . 'ielts_cm_site_connections';
         $this->content_sync_table = $wpdb->prefix . 'ielts_cm_content_sync';
+        $this->user_awards_table = $wpdb->prefix . 'ielts_cm_user_awards';
     }
     
     /**
@@ -113,12 +115,26 @@ class IELTS_CM_Database {
             KEY content_type (content_type)
         ) $charset_collate;";
         
+        // User awards table
+        $user_awards_table = $wpdb->prefix . 'ielts_cm_user_awards';
+        $sql_user_awards = "CREATE TABLE IF NOT EXISTS $user_awards_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            user_id bigint(20) NOT NULL,
+            award_id varchar(100) NOT NULL,
+            earned_date datetime DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY user_id (user_id),
+            KEY award_id (award_id),
+            UNIQUE KEY user_award (user_id, award_id)
+        ) $charset_collate;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
         dbDelta($sql_enrollment);
         dbDelta($sql_site_connections);
         dbDelta($sql_content_sync);
+        dbDelta($sql_user_awards);
     }
     
     /**
@@ -132,7 +148,8 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_quiz_results',
             $wpdb->prefix . 'ielts_cm_enrollment',
             $wpdb->prefix . 'ielts_cm_site_connections',
-            $wpdb->prefix . 'ielts_cm_content_sync'
+            $wpdb->prefix . 'ielts_cm_content_sync',
+            $wpdb->prefix . 'ielts_cm_user_awards'
         );
         
         foreach ($tables as $table) {
@@ -161,5 +178,9 @@ class IELTS_CM_Database {
     
     public function get_content_sync_table() {
         return $this->content_sync_table;
+    }
+    
+    public function get_user_awards_table() {
+        return $this->user_awards_table;
     }
 }
