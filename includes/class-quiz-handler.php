@@ -329,7 +329,8 @@ class IELTS_CM_Quiz_Handler {
                     $field_question_num = $display_start + $field_num - 1;
                     
                     $field_correct = false;
-                    if (!empty($user_field_answer)) {
+                    // Check if answer is provided - use !== '' instead of !empty() to handle "0" correctly
+                    if ($user_field_answer !== '') {
                         $any_answered = true;
                         // Check against correct answers
                         $field_correct_answer = isset($question['field_answers'][$field_num]) ? $question['field_answers'][$field_num] : '';
