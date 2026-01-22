@@ -1304,35 +1304,8 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             
-            <h4><?php _e('Main Transcript', 'ielts-course-manager'); ?></h4>
-            <p><small><?php 
-                printf(
-                    /* translators: 1: opening code tag, 2: closing code tag */
-                    __('Add the main transcript for the audio. This will be displayed after the student submits their answers. To mark answers in the transcript, use: %1$s&lt;span id="q#" data-question="#"&gt;&lt;/span&gt;&lt;span class="reading-answer-marker"&gt;answer text&lt;/span&gt;%2$s', 'ielts-course-manager'),
-                    '<code>',
-                    '</code>'
-                );
-            ?></small></p>
-            
-            <div style="margin-bottom: 20px;">
-                <?php
-                $editor_settings = array(
-                    'textarea_name' => 'ielts_cm_transcript',
-                    'textarea_rows' => 15,
-                    'media_buttons' => false,
-                    'teeny' => false,
-                    'quicktags' => true,
-                    'tinymce' => array(
-                        'toolbar1' => 'formatselect,bold,italic,underline,bullist,numlist,link,unlink,undo,redo',
-                        'toolbar2' => '',
-                    ),
-                );
-                wp_editor($transcript, 'ielts_cm_transcript', $editor_settings);
-                ?>
-            </div>
-            
-            <h4><?php _e('Additional Transcripts (Optional)', 'ielts-course-manager'); ?></h4>
-            <p><small><?php _e('Add additional transcripts that will be displayed in separate tabs. This is optional and only needed if you want multiple transcript sections.', 'ielts-course-manager'); ?></small></p>
+            <h4><?php _e('Transcripts', 'ielts-course-manager'); ?></h4>
+            <p><small><?php _e('Add one or more transcripts for the audio. If you add multiple transcripts, they will be displayed in separate tabs after the student submits their answers.', 'ielts-course-manager'); ?></small></p>
             
             <div id="audio-sections-container">
                 <?php if (!empty($audio_sections)): ?>
@@ -7083,11 +7056,24 @@ class IELTS_CM_Admin {
                 if (isset($data['audio']['url'])) {
                     update_post_meta($post_id, '_ielts_cm_audio_url', esc_url_raw($data['audio']['url']));
                 }
-                if (isset($data['audio']['transcript'])) {
-                    update_post_meta($post_id, '_ielts_cm_transcript', wp_kses_post($data['audio']['transcript']));
+                
+                // Handle audio sections
+                $audio_sections = array();
+                if (isset($data['audio']['sections']) && is_array($data['audio']['sections']) && !empty($data['audio']['sections'])) {
+                    // Use sections from JSON if provided
+                    $audio_sections = $data['audio']['sections'];
+                } elseif (isset($data['audio']['transcript']) && !empty($data['audio']['transcript'])) {
+                    // Convert single transcript to audio_sections format for admin UI
+                    $audio_sections = array(
+                        array(
+                            'section_number' => 1,
+                            'transcript' => $data['audio']['transcript']
+                        )
+                    );
                 }
-                if (isset($data['audio']['sections']) && is_array($data['audio']['sections'])) {
-                    update_post_meta($post_id, '_ielts_cm_audio_sections', $data['audio']['sections']);
+                
+                if (!empty($audio_sections)) {
+                    update_post_meta($post_id, '_ielts_cm_audio_sections', $audio_sections);
                 }
             }
             
