@@ -1,0 +1,235 @@
+{
+  "title": "END OF LESSON REVIEW (Unit 6 Describing processes)",
+  "content": "Complete the Task 1 report below using the correct passive form of the following verbs. Use each verb once only. You will need to use the present simple or present perfect passive. Type your answers in the spaces provided.<br><br><strong>COMPLETE &nbsp;&nbsp;&nbsp; CREATE &nbsp;&nbsp;&nbsp; DISCOVER &nbsp;&nbsp;&nbsp; DIVIDE<br>FIND &nbsp;&nbsp;&nbsp; MAKE &nbsp;&nbsp;&nbsp; REPEAT &nbsp;&nbsp;&nbsp; RETURN</strong><br><br>The process illustrates the procedure of software creation for computers. There are 6 stages in the process; beginning at creation, moving through testing to release. Whether errors are found or not has an impact on the stages of the process.",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the correct passive form to complete each gap in the text.",
+      "question": "The process begins with the creation of the programme; once the programme [dropdown], it is tested.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "has been created",
+          "is_correct": true,
+          "feedback": "Correct! 'Has been created' is the present perfect passive form. We use present perfect passive here because the action of creating the programme must be completed before the next stage (testing) can begin. The structure is 'has/have been + past participle'."
+        },
+        {
+          "text": "is created",
+          "is_correct": false,
+          "feedback": "Incorrect. While 'is created' is a present simple passive form, the present perfect passive ('has been created') is needed here to show that the creation must be completed before testing can start."
+        },
+        {
+          "text": "was created",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Was created' is past simple passive, but the text describes a general process using present tenses, not a specific past event."
+        },
+        {
+          "text": "creates",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but we need passive voice here because the programme receives the action (it is being created, not creating something)."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'has been created'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "At this point the process [dropdown] dependent on whether there are problems with the software.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "is divided",
+          "is_correct": true,
+          "feedback": "Correct! 'Is divided' is the present simple passive form. We use present simple passive to describe a general process or regular action. The structure is 'is/are + past participle'. The process receives the action of being divided."
+        },
+        {
+          "text": "has been divided",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive would suggest a completed action, but here we're describing what happens at this stage of the process regularly, so present simple passive is needed."
+        },
+        {
+          "text": "divides",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but the process doesn't divide something else - it is divided into different paths. We need passive voice."
+        },
+        {
+          "text": "was divided",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Was divided' is past simple passive, but the text describes a general process using present tenses, not a specific past event."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'is divided'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "If the testing stage leads to errors being identified, solutions to the problem [dropdown].",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "are found",
+          "is_correct": true,
+          "feedback": "Correct! 'Are found' is the present simple passive form. We use present simple passive here to describe what happens regularly in the process. The plural subject 'solutions' requires 'are' (not 'is'). The structure is 'are + past participle'."
+        },
+        {
+          "text": "is found",
+          "is_correct": false,
+          "feedback": "Incorrect. While this is passive voice, the subject 'solutions' is plural, so we need 'are found', not 'is found'."
+        },
+        {
+          "text": "have been found",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive would suggest the solutions have already been found, but the text describes what happens at this stage of the process, so present simple passive is needed."
+        },
+        {
+          "text": "find",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but solutions don't find themselves - they are found. We need passive voice here."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'are found'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "From this point, the software [dropdown] to the testing stage where the process [dropdown].",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "is returned",
+          "is_correct": true,
+          "feedback": "Correct! 'Is returned' is the present simple passive form. We use present simple passive to describe what happens regularly in the process. The singular subject 'software' requires 'is'. The structure is 'is + past participle'."
+        },
+        {
+          "text": "returns",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but the software doesn't return itself - it is returned to the testing stage. We need passive voice."
+        },
+        {
+          "text": "has been returned",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive would suggest the action is already complete, but here we're describing what happens at this stage of the process, so present simple passive is needed."
+        },
+        {
+          "text": "was returned",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Was returned' is past simple passive, but the text describes a general process using present tenses, not a specific past event."
+        },
+        {
+          "text": "is repeated",
+          "is_correct": true,
+          "feedback": "Correct! 'Is repeated' is the present simple passive form. We use present simple passive to describe what happens regularly in the process. The singular subject 'process' requires 'is'. The structure is 'is + past participle'."
+        },
+        {
+          "text": "repeats",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but the process doesn't repeat something else - it is repeated. We need passive voice here."
+        },
+        {
+          "text": "has been repeated",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive would suggest the repetition has already occurred, but here we're describing what happens at this stage of the process, so present simple passive is needed."
+        },
+        {
+          "text": "was repeated",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Was repeated' is past simple passive, but the text describes a general process using present tenses, not a specific past event."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:4",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are 'is returned' and 'is repeated'.",
+      "points": 2
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "If no errors [dropdown] during the testing stage, the evaluation stages [dropdown] and the software [dropdown] available to the public; this is the final stage of the process.",
+      "correct_answer_count": 3,
+      "mc_options": [
+        {
+          "text": "are discovered",
+          "is_correct": true,
+          "feedback": "Correct! 'Are discovered' is the present simple passive form. We use present simple passive to describe what happens in conditional situations within a general process. The plural subject 'errors' requires 'are'. The structure is 'are + past participle'."
+        },
+        {
+          "text": "is discovered",
+          "is_correct": false,
+          "feedback": "Incorrect. While this is passive voice, the subject 'errors' is plural, so we need 'are discovered', not 'is discovered'."
+        },
+        {
+          "text": "discover",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but errors don't discover themselves - they are discovered. We need passive voice here."
+        },
+        {
+          "text": "have been discovered",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive doesn't fit this conditional context. Present simple passive is needed to describe the general process."
+        },
+        {
+          "text": "are completed",
+          "is_correct": true,
+          "feedback": "Correct! 'Are completed' is the present simple passive form. We use present simple passive to describe what happens regularly in the process. The plural subject 'stages' requires 'are'. The structure is 'are + past participle'."
+        },
+        {
+          "text": "is completed",
+          "is_correct": false,
+          "feedback": "Incorrect. While this is passive voice, the subject 'evaluation stages' is plural, so we need 'are completed', not 'is completed'."
+        },
+        {
+          "text": "complete",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but the stages don't complete themselves - they are completed. We need passive voice here."
+        },
+        {
+          "text": "have been completed",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive would suggest the stages have already been completed earlier, but here we're describing what happens at this stage of the process, so present simple passive is needed."
+        },
+        {
+          "text": "is made",
+          "is_correct": true,
+          "feedback": "Correct! 'Is made' is the present simple passive form. We use present simple passive to describe what happens regularly in the process. The singular subject 'software' requires 'is'. The structure is 'is + past participle'."
+        },
+        {
+          "text": "are made",
+          "is_correct": false,
+          "feedback": "Incorrect. While this is passive voice, the subject 'software' is singular (uncountable noun), so we need 'is made', not 'are made'."
+        },
+        {
+          "text": "makes",
+          "is_correct": false,
+          "feedback": "Incorrect. This is active voice, but the software doesn't make itself available - it is made available. We need passive voice here."
+        },
+        {
+          "text": "has been made",
+          "is_correct": false,
+          "feedback": "Incorrect. Present perfect passive would suggest the software has already been made available, but here we're describing what happens at this final stage of the process, so present simple passive is needed."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:4|field_3:8",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are 'are discovered', 'are completed', and 'is made'.",
+      "points": 3
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
