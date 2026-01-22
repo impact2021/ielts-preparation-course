@@ -19,6 +19,8 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_quiz', array($this, 'display_quiz'));
         add_shortcode('ielts_category_progress', array($this, 'display_category_progress'));
         add_shortcode('ielts_awards', array($this, 'display_awards'));
+        add_shortcode('ielts_progress_rings', array($this, 'display_progress_rings'));
+        add_shortcode('ielts_skills_radar', array($this, 'display_skills_radar'));
     }
     
     /**
@@ -926,6 +928,48 @@ class IELTS_CM_Shortcodes {
         
         ob_start();
         include IELTS_CM_PLUGIN_DIR . 'templates/awards-wall.php';
+        return ob_get_clean();
+    }
+    
+    /**
+     * Display progress rings
+     */
+    public function display_progress_rings($atts) {
+        if (!is_user_logged_in()) {
+            return '<p>' . __('Please log in to view your progress.', 'ielts-course-manager') . '</p>';
+        }
+        
+        $atts = shortcode_atts(array(
+            'view' => 'daily', // daily, weekly, or monthly
+        ), $atts);
+        
+        $view = in_array($atts['view'], array('daily', 'weekly', 'monthly')) ? $atts['view'] : 'daily';
+        
+        ob_start();
+        include IELTS_CM_PLUGIN_DIR . 'templates/progress-rings.php';
+        return ob_get_clean();
+    }
+    
+    /**
+     * Display skills radar chart
+     */
+    public function display_skills_radar($atts) {
+        if (!is_user_logged_in()) {
+            return '<p>' . __('Please log in to view your skills profile.', 'ielts-course-manager') . '</p>';
+        }
+        
+        $atts = shortcode_atts(array(
+            'show_target' => 'yes', // yes or no - show Band 7 target line
+            'height' => '400', // chart height in pixels
+        ), $atts);
+        
+        $show_target = $atts['show_target'] === 'yes';
+        $height = intval($atts['height']);
+        if ($height < 200) $height = 200;
+        if ($height > 800) $height = 800;
+        
+        ob_start();
+        include IELTS_CM_PLUGIN_DIR . 'templates/skills-radar.php';
         return ob_get_clean();
     }
 }

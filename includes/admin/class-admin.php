@@ -1271,6 +1271,28 @@ class IELTS_CM_Admin {
         </p>
         
         <?php
+        $skill_type = get_post_meta($post->ID, '_ielts_cm_skill_type', true);
+        // Auto-detect if listening
+        if ($is_listening_exercise === '1' && empty($skill_type)) {
+            $skill_type = 'listening';
+        }
+        ?>
+        
+        <p>
+            <label for="ielts_cm_skill_type"><?php _e('Skill Type', 'ielts-course-manager'); ?></label><br>
+            <select id="ielts_cm_skill_type" name="ielts_cm_skill_type" style="width: 250px;">
+                <option value=""><?php _e('-- Select Skill Type --', 'ielts-course-manager'); ?></option>
+                <option value="reading" <?php selected($skill_type, 'reading'); ?>><?php _e('Reading', 'ielts-course-manager'); ?></option>
+                <option value="writing" <?php selected($skill_type, 'writing'); ?>><?php _e('Writing', 'ielts-course-manager'); ?></option>
+                <option value="listening" <?php selected($skill_type, 'listening'); ?>><?php _e('Listening', 'ielts-course-manager'); ?></option>
+                <option value="speaking" <?php selected($skill_type, 'speaking'); ?>><?php _e('Speaking', 'ielts-course-manager'); ?></option>
+                <option value="vocabulary" <?php selected($skill_type, 'vocabulary'); ?>><?php _e('Vocabulary', 'ielts-course-manager'); ?></option>
+                <option value="grammar" <?php selected($skill_type, 'grammar'); ?>><?php _e('Grammar', 'ielts-course-manager'); ?></option>
+            </select>
+            <br><small><?php _e('Select the primary skill type for this exercise. This is used for the Skills Radar Chart.', 'ielts-course-manager'); ?></small>
+        </p>
+        
+        <?php
         $open_as_popup = get_post_meta($post->ID, '_ielts_cm_open_as_popup', true);
         // Default to checked (on) for new exercises
         if ($open_as_popup === '') {
@@ -1420,6 +1442,10 @@ class IELTS_CM_Admin {
                 if (isListening) {
                     $('#listening-audio-section').show();
                     $('#reading-texts-section').hide();
+                    // Auto-select listening as skill type
+                    if ($('#ielts_cm_skill_type').val() === '') {
+                        $('#ielts_cm_skill_type').val('listening');
+                    }
                 } else {
                     $('#listening-audio-section').hide();
                     $('#reading-texts-section').show();
@@ -3500,6 +3526,19 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_is_listening_exercise', '1');
             } else {
                 delete_post_meta($post_id, '_ielts_cm_is_listening_exercise');
+            }
+            
+            // Save skill type
+            if (isset($_POST['ielts_cm_skill_type'])) {
+                $skill_type = sanitize_text_field($_POST['ielts_cm_skill_type']);
+                $allowed_skills = array('reading', 'writing', 'listening', 'speaking', 'vocabulary', 'grammar');
+                if (in_array($skill_type, $allowed_skills)) {
+                    update_post_meta($post_id, '_ielts_cm_skill_type', $skill_type);
+                } else {
+                    delete_post_meta($post_id, '_ielts_cm_skill_type');
+                }
+            } else {
+                delete_post_meta($post_id, '_ielts_cm_skill_type');
             }
             
             // Save exercise content (deprecated but kept for backward compatibility)
