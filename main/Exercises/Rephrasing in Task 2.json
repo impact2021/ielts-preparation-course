@@ -46,7 +46,7 @@
                 "Your answer:"
             ],
             "field_answers": [
-                "there is a school of thought which believes|There is a school of thought which believes|there is a school of thought which believes that|There is a school of thought which believes that"
+                "there is a school of thought which believes that|There is a school of thought which believes that"
             ],
             "correct_feedback": "Correct! 'There is a school of thought which believes (that)' is the right way to make the sentence less dogmatic.",
             "incorrect_feedback": "Not quite. The correct answer is: 'There is a school of thought which believes that the death penalty would reduce crime since…'",
