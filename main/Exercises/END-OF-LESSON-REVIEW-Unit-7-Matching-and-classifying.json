@@ -1,0 +1,260 @@
+{
+    "title": "END OF LESSON REVIEW (Unit 7: Matching and classifying in listening)",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Listen to a conversation between a student and lecturer about a market research assignment. Answer questions 21-30.\r\n\r\nQuestions 21-25: Answer the questions below. Write NO MORE THAN THREE WORDS OR A NUMBER for each answer.",
+            "question": "<p><strong>21.</strong> What was the student's assignment marked out of? <strong>[field 1]</strong></p>\r\n<p><strong>22.</strong> For which area of the assignment did the student get the best marks? <strong>[field 2]</strong></p>\r\n<p><strong>23.</strong> In addition to the internet, what was the only other reference source used by the student? <strong>[field 3]</strong></p>\r\n<p><strong>24.</strong> Which orientation did the student not attend at the beginning of the course? <strong>[field 4]</strong></p>\r\n<p><strong>25.</strong> What should the student have included into their question about food and drink bought in cafes? <strong>[field 5]</strong></p>",
+            "points": 5,
+            "no_answer_feedback": "Make sure to listen carefully and take notes while listening.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "short_answer_l",
+            "field_count": 5,
+            "field_answers": {
+                "1": "50|fifty",
+                "2": "report format|the report format",
+                "3": "course textbook|course text book|the course textbook",
+                "4": "library orientation|the library orientation|library|the library",
+                "5": "(an) 'other' category|(an) additional category|'other' category|other category|additional category|an additional category"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The student states they got 21 out of 50 marks.",
+                    "incorrect": "Incorrect. Listen carefully to the total marks the assignment was marked out of.",
+                    "no_answer": "The correct answer is <strong>50</strong> (or 'fifty'). The student needed 25 to pass but only got 21 out of 50."
+                },
+                "2": {
+                    "correct": "Correct! The student's best marks were for the report format.",
+                    "incorrect": "Incorrect. Listen for which area the student got good marks in.",
+                    "no_answer": "The correct answer is <strong>report format</strong> (or 'the report format'). This was the only area where the student's marks were fine."
+                },
+                "3": {
+                    "correct": "Correct! The student only used the course textbook and internet sources.",
+                    "incorrect": "Incorrect. Listen carefully to what reference sources the student used besides the internet.",
+                    "no_answer": "The correct answer is <strong>course textbook</strong> (or 'the course textbook'). The lecturer points out the student only used the course textbook and one or two internet sources."
+                },
+                "4": {
+                    "correct": "Correct! The student didn't attend the library orientation.",
+                    "incorrect": "Incorrect. Listen for which orientation the student missed at the start of the course.",
+                    "no_answer": "The correct answer is <strong>library orientation</strong> (or 'the library orientation'). The student started a couple of days late and missed this."
+                },
+                "5": {
+                    "correct": "Correct! The student should have included an additional category.",
+                    "incorrect": "Incorrect. Listen to the lecturer's explanation about how to improve the questionnaire design.",
+                    "no_answer": "The correct answer is <strong>an additional category</strong> (or 'other category'). The lecturer explains that the student should include an 'other' category where respondents can write down anything not in the given choices."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 26-27: Complete the sentences below. Write NO MORE THAN THREE WORDS for each answer.",
+            "question": "<p><strong>26.</strong> When designing a questionnaire the writer should not assume a <strong>[field 1]</strong> or point of view exists without sufficient evidence.</p>\r\n<p><strong>27.</strong> The student's questionnaire would have required too much <strong>[field 2]</strong> to be effective for business use.</p>",
+            "points": 2,
+            "no_answer_feedback": "Make sure to listen carefully and take notes while listening.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "sentence_completion_l",
+            "field_count": 2,
+            "field_answers": {
+                "1": "preference",
+                "2": "time and labour|time, labour|time/labour|time & labour|labour and time|labour, time|labour/time|labour & time|time / labour|labour / time|time and labor|time, labor|time/labor|time & labor|labor and time|labor, time|labor/time|labor & time|time / labor|labor / time"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The lecturer warns about assuming a preference exists.",
+                    "incorrect": "Incorrect. Listen for what the writer shouldn't assume exists.",
+                    "no_answer": "The correct answer is <strong>preference</strong>. The lecturer explains this is a 'leading question' because it assumes the interviewee has a preference or point of view which may not actually exist."
+                },
+                "2": {
+                    "correct": "Correct! The questionnaire would require too much time and labour.",
+                    "incorrect": "Incorrect. Listen to the lecturer's critique about the practical effectiveness of the questionnaire.",
+                    "no_answer": "The correct answer is <strong>time and labour</strong> (or 'time and labor'). The lecturer explains that having so many open questions would take a long time to code and analyse, making it ineffective from a time and labour point of view."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 28-30: What does the lecturer tell the student about each book? Choose your answers from the list and select the correct letter A-F next to questions 28-30.",
+            "question": "<p><strong>28.</strong> Qualitative Analysis (Gaston)</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F (Realistic).",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_l",
+            "mc_options": [
+                {
+                    "text": "Needs updating",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lecturer says the book by Gaston has realistic examples, not that it needs updating."
+                },
+                {
+                    "text": "Up to date",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This characteristic is not mentioned for Gaston's book."
+                },
+                {
+                    "text": "Easy to understand",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lecturer actually says Gaston's book 'can be a little bit tricky to understand in parts'."
+                },
+                {
+                    "text": "Expensive",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The expensive book is by English &amp; Gatehill, not Gaston."
+                },
+                {
+                    "text": "Too simplistic",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lecturer doesn't describe Gaston's book as too simplistic."
+                },
+                {
+                    "text": "Realistic",
+                    "is_correct": true,
+                    "feedback": "Correct! The lecturer says Qualitative Analysis by Gaston 'has some realistic examples of questionnaires used in the business world'."
+                }
+            ],
+            "options": "Needs updating\nUp to date\nEasy to understand\nExpensive\nToo simplistic\nRealistic",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<p><strong>29.</strong> Effective Research Analysis (English &amp; Gatehill)</p>\r\n\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D (Expensive)",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_l",
+            "mc_options": [
+                {
+                    "text": "Needs updating",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The book that needs updating is Techniques that Work by Sandbrookes."
+                },
+                {
+                    "text": "Up to date",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This characteristic is not mentioned for English &amp; Gatehill's book."
+                },
+                {
+                    "text": "Easy to understand",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This characteristic is not mentioned for this book."
+                },
+                {
+                    "text": "Expensive",
+                    "is_correct": true,
+                    "feedback": "Correct! The lecturer says Effective Research Analysis is 'a little bit costly' if you were thinking of buying your own copy."
+                },
+                {
+                    "text": "Too simplistic",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lecturer doesn't describe this book as too simplistic."
+                },
+                {
+                    "text": "Realistic",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The book with realistic examples is Gaston's book, not English &amp; Gatehill's."
+                }
+            ],
+            "options": "Needs updating\nUp to date\nEasy to understand\nExpensive\nToo simplistic\nRealistic",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<p><strong>30.</strong> Techniques that Work (Sandbrookes)</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A (Needs updating)",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_l",
+            "mc_options": [
+                {
+                    "text": "Needs updating",
+                    "is_correct": true,
+                    "feedback": "Correct! The lecturer says Techniques that Work is 'quite an old text, so some of the newer analysis techniques are not actually included' - meaning it needs updating."
+                },
+                {
+                    "text": "Up to date",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lecturer says this book is old and doesn't include newer techniques."
+                },
+                {
+                    "text": "Easy to understand",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This characteristic is not mentioned for Sandbrookes' book."
+                },
+                {
+                    "text": "Expensive",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The expensive book is Effective Research Analysis, not Techniques that Work."
+                },
+                {
+                    "text": "Too simplistic",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The lecturer doesn't describe this book as too simplistic."
+                },
+                {
+                    "text": "Realistic",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The book with realistic examples is Qualitative Analysis by Gaston."
+                }
+            ],
+            "options": "Needs updating\nUp to date\nEasy to understand\nExpensive\nToo simplistic\nRealistic",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "21"
+    },
+    "audio": {
+        "url": "https://www.ilsnz.com/wp-content/uploads/2021/01/Matching_and_classifying-REVIEW.mp3",
+        "transcript": "",
+        "sections": [
+            {
+                "section_number": 3,
+                "transcript": "<h2>Section 3</h2>\r\n\r\n<p><strong>Student:</strong> Hello. I was wondering if you have a few minutes to talk with me? I just wanted to ask some questions about the last market research assignment.</p>\r\n\r\n<p><strong>Lecturer:</strong> Sure come in. How can I help?</p>\r\n\r\n<p><strong>Student:</strong> Well, I got really low marks for it, I needed to get 25 to pass, but I only got 21 out of <span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">50</span>, I am not really sure what I did wrong. I'm really worried, I need to do much better in assignment 2.</p>\r\n\r\n<p><strong>Lecturer:</strong> Okay, do you have the assignment with you? I have a few minutes we can go through it together.</p>\r\n\r\n<p><strong>Student:</strong> Yes here it is.</p>\r\n\r\n<p><strong>Lecturer:</strong> Okay, now the marking criteria guide shows there are four main areas on which the assignment was marked. First you needed to follow a report format and include your questionnaire and any other relevant information in the appendices, you know, at the back of the report. You also needed to show that you had researched the topic properly and include references. You were marked on the design of the questionnaire and finally for the content of the report, language used and the way you presented your ideas.</p>\r\n\r\n<p><strong>Student:</strong> Yes, my marks were fine for the <span id=\"q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">report format</span> but I didn't do very well in the other three areas.</p>\r\n\r\n<p><strong>Lecturer:</strong> Okay, well first of all, let's look at research and referencing. Now the main reason you lost marks here was that although you did reference correctly, you did not use enough sources. You only used <span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">the course textbook</span> and one or two internet sources. Remember, this is a university degree course, so you must show that you are researching properly. I suggest using at least, oh, 6 or 7 different journals or books for your information.</p>\r\n\r\n<p><strong>Student:</strong> Yes, I realise that now, but I find it difficult knowing where to look.</p>\r\n\r\n<p><strong>Lecturer:</strong> Well, I suggest that you arrange an appointment with one of the library staff and they can give you a tour of the library and show how to find both information in books and online. Did you go to <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">the library orientation</span> at the start of the course?</p>\r\n\r\n<p><strong>Student:</strong> No, I'm sorry I didn't – I started a couple of days late.</p>\r\n\r\n<p><strong>Lecturer:</strong> Okay, well make an appointment and they can help you.</p>\r\n\r\n<p><strong>Student:</strong> I will. Now, what did I do wrong regarding the design of the questionnaire?</p>\r\n\r\n<p><strong>Lecturer:</strong> Let me see… now remember we had two lectures about how to design questions properly and also about how to make sure that the way in which people would answer be related to a specific topic? Well here, there are some definite problems with the way in which you have structured your questions.</p>\r\n\r\n<p><strong>Student:</strong> Really? How?</p>\r\n\r\n<p><strong>Lecturer:</strong> Well for example, let's look at this question. You asked 'What type of food or drink do you buy when visiting a café?' Then you had a list of options. The problem was that there could be so many answers that people could give to that question, yet your options were very limited. What you need to do with a question like this is make the options, as you did, then also include <span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">an additional category for 'other'</span> in which the respondent can right down anything else they want to say that is not in the choices given. Otherwise, the information collected in the research survey would not present a realistic picture of customer habits.</p>\r\n\r\n<p><strong>Student:</strong> I see, yes I do remember us talking about that in the lecture.</p>\r\n\r\n<p><strong>Student:</strong> Are there any other problems with my question styles?</p>\r\n\r\n<p><strong>Lecturer:</strong> Yes, here is an example of another weakness in question design. Now you say \"Why do you think real coffee is better than instant varieties?' Because the question is phrased the way it is, you are leaving no option but for the interviewee to talk about the advantages of real coffee while they may not have any real preference or maybe even prefer instant coffee! This is what we call a \"leading question' because you are encouraging the interviewee to respond in a certain way, assuming that the interviewee does have a <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">preference</span> or point of view which, in fact, we do not actually know.</p>\r\n\r\n<p><strong>Student:</strong> Yes, I see.</p>\r\n\r\n<p><strong>Lecturer:</strong> Now one final point on question styles is that you have included a large number of 'open' questions in the questionnaire. Do you remember, an open question means that there is just a space and the interviewer writes down the response of the person being interviewed? I know you haven't actually done any interviews yet, but having so many of these question types in there is not a good idea as it takes a long time to code and analyse all of the responses later. See, look at this one \"How often in an average month do you go to a café or restaurant?'. This could very easily be made into a closed question by adding categories such as 'once a month', 'twice a month', 'once a week' etc. In the real world of market research your question style would not be effective from a <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">time and labour</span> point of view, do you see?</p>\r\n\r\n<p><strong>Student:</strong> Yes, I do. Can you recommend any books I should be looking at to help me with questionnaire design?</p>\r\n\r\n<p><strong>Lecturer:</strong> Yes, there are several. If you write these down, you can go and find them in the library after our meeting. Now for question style, I would look at Qualitative Analysis by Brenda Gaston, <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">it's really good as it has some realistic examples of questionnaires used in the business world</span>. It does go into a lot of detail though and can be a little bit tricky to understand in parts.</p>\r\n\r\n<p><strong>Student:</strong> Okay, Gaston you say?</p>\r\n\r\n<p><strong>Lecturer:</strong> Yes, now another one which has a really useful chapter on looking at different ways of statistical analysis of data is by James English and Jonathon Gatehill. It's called Effective Research Analysis. That one also gives very detailed information on how to minimise errors and problems related to market research. <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It's a little bit costly though</span> if you were thinking of buying your own copy.</p>\r\n\r\n<p><strong>Student:</strong> Okay, yes I think I've seen that one before.</p>\r\n\r\n<p><strong>Lecturer:</strong> There is also Anthony Sandbrookes' Techniques that Work – it gives an overview of the whole market research process, but is <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">quite an old text, so some of the newer analysis techniques are not actually included</span>.</p>\r\n\r\n<p><strong>Student:</strong> Okay, well thanks very much for you help, that's really useful.</p>\r\n\r\n<p><strong>Lecturer:</strong> We're out for time now I'm afraid, but if you'd like to come back we can go through some tips for improving presentation of ideas later in the week</p>\r\n\r\n<p><strong>Student:</strong> Great, thanks again.</p>"
+            }
+        ]
+    },
+    "_metadata": {
+        "exported_at": "2026-01-24 08:11:51",
+        "exported_by": "impact",
+        "plugin_version": "13.2",
+        "format_version": "1.0"
+    }
+}
