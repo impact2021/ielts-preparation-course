@@ -20,18 +20,18 @@
         "9. Another way of saying <em><strong>diagram</strong></em> used in the text is ________",
         "10. Another way of saying <em><strong>description</strong></em> used in the text is ________"
       ],
-      "field_answers": [
-        "common",
-        "dwelling",
-        "extra",
-        "entrance way",
-        "access",
-        "slope",
-        "elevated",
-        "sizeable",
-        "illustration",
-        "depiction"
-      ],
+      "field_answers": {
+        "1": "common",
+        "2": "dwelling",
+        "3": "extra",
+        "4": "entrance way",
+        "5": "access",
+        "6": "slope",
+        "7": "elevated",
+        "8": "sizeable",
+        "9": "illustration",
+        "10": "depiction"
+      },
       "correct_feedback": "Correct! Well done.",
       "incorrect_feedback": "Not quite. Review the text and look for the synonym.",
       "no_answer_feedback": "The correct answer is shown above. Look carefully at the vocabulary used in the essay.",
@@ -51,14 +51,14 @@
         "5. <strong>places</strong> to ________",
         "6. <strong>length</strong> to ________"
       ],
-      "field_answers": [
-        "international",
-        "vacations|vacation",
-        "tourists",
-        "british tourists|british holidaymakers",
-        "regions",
-        "duration"
-      ],
+      "field_answers": {
+        "1": "international",
+        "2": "vacations|vacation",
+        "3": "tourists",
+        "4": "british tourists|british holidaymakers",
+        "5": "regions",
+        "6": "duration"
+      },
       "correct_feedback": "Correct! Good paraphrasing.",
       "incorrect_feedback": "Not quite. Review the candidate's sentence and the original vocabulary.",
       "no_answer_feedback": "The correct answer is shown above. Compare the original vocabulary with the paraphrased version.",
@@ -100,9 +100,9 @@
       "field_labels": [
         "There is no reference to the ________"
       ],
-      "field_answers": [
-        "support wires"
-      ],
+      "field_answers": {
+        "1": "support wires"
+      },
       "correct_feedback": "Correct! The support wires were not mentioned in the description.",
       "incorrect_feedback": "Not quite. Read through the description again and check which labelled part is missing.",
       "no_answer_feedback": "The correct answer is: support wires. This is the only labelled part not mentioned in the description.",
