@@ -459,17 +459,28 @@ class IELTS_CM_Quiz_Handler {
                 
                 // Parse correct_answer to get which option is correct for each dropdown
                 // Expected format: "field_1:0|field_2:1|field_3:2" (field_num:option_index)
-                if (isset($question['correct_answer']) && !empty($question['correct_answer'])) {
-                    $correct_parts = explode('|', $question['correct_answer']);
-                    foreach ($correct_parts as $part) {
-                        $part_split = explode(':', $part, 2);
-                        if (count($part_split) === 2) {
-                            $field_num_str = trim($part_split[0]);
-                            // Extract field number from "field_1" format
-                            if (preg_match('/field_(\d+)/', $field_num_str, $matches)) {
-                                $field_num = intval($matches[1]);
-                                $correct_idx = intval(trim($part_split[1]));
-                                $correct_indices_by_position[$field_num] = $correct_idx;
+                // Also support legacy format: "0" (for single dropdown, option index only)
+                // Note: Use !== '' instead of !empty() because empty("0") returns true in PHP
+                if (isset($question['correct_answer']) && $question['correct_answer'] !== '') {
+                    $correct_answer_str = trim($question['correct_answer']);
+                    
+                    // Check if this is the legacy format (just a number for single dropdown)
+                    if (is_numeric($correct_answer_str) && $correct_answer_count === 1) {
+                        // Legacy format: just the option index for a single dropdown
+                        $correct_indices_by_position[1] = intval($correct_answer_str);
+                    } else {
+                        // New format: "field_1:0|field_2:1|field_3:2"
+                        $correct_parts = explode('|', $correct_answer_str);
+                        foreach ($correct_parts as $part) {
+                            $part_split = explode(':', $part, 2);
+                            if (count($part_split) === 2) {
+                                $field_num_str = trim($part_split[0]);
+                                // Extract field number from "field_1" format
+                                if (preg_match('/field_(\d+)/', $field_num_str, $matches)) {
+                                    $field_num = intval($matches[1]);
+                                    $correct_idx = intval(trim($part_split[1]));
+                                    $correct_indices_by_position[$field_num] = $correct_idx;
+                                }
                             }
                         }
                     }
