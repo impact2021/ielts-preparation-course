@@ -465,9 +465,14 @@ class IELTS_CM_Quiz_Handler {
                     $correct_answer_str = trim($question['correct_answer']);
                     
                     // Check if this is the legacy format (just a number for single dropdown)
-                    if (is_numeric($correct_answer_str) && $correct_answer_count === 1) {
+                    // Use ctype_digit to ensure only non-negative integers (no negative numbers or decimals)
+                    if (ctype_digit($correct_answer_str) && $correct_answer_count === 1) {
                         // Legacy format: just the option index for a single dropdown
-                        $correct_indices_by_position[1] = intval($correct_answer_str);
+                        $option_idx = intval($correct_answer_str);
+                        // Validate that the option index is within valid range
+                        if ($option_idx >= 0 && $option_idx < count($mc_options)) {
+                            $correct_indices_by_position[1] = $option_idx;
+                        }
                     } else {
                         // New format: "field_1:0|field_2:1|field_3:2"
                         $correct_parts = explode('|', $correct_answer_str);
