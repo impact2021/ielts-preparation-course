@@ -17,22 +17,22 @@
             "ielts_question_category": "classification",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A …guide dogs are under 1 year old",
                     "is_correct": false,
                     "feedback": "Incorrect. Under 1 year old, puppies experience many places but formal obstacle training happens later. The correct answer is B - between 1 and 2 years old."
                 },
                 {
-                    "text": "B",
+                    "text": "B …guide dogs are between 1 and 2 years old",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph E states that in the second phase of training (between 1 and 2 years), dogs are taught about obstacles, stopping at kerbs, and avoiding road traffic."
                 },
                 {
-                    "text": "C",
+                    "text": "C …guide dogs are between 2 and 9 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. Between 2 and 9 years old, the dog is already working with an owner. The correct answer is B - between 1 and 2 years old."
                 }
             ],
-            "options": "A\nB\nC",
+            "options": "A …guide dogs are under 1 year old\nB …guide dogs are between 1 and 2 years old\nC …guide dogs are between 2 and 9 years old",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -51,22 +51,22 @@
             "ielts_question_category": "classification",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A …guide dogs are under 1 year old",
                     "is_correct": false,
                     "feedback": "Incorrect. Under 1 year old, dogs are still in basic training. The correct answer is C - between 2 and 9 years old."
                 },
                 {
-                    "text": "B",
+                    "text": "B …guide dogs are between 1 and 2 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. Between 1 and 2 years old, dogs are in intensive training. The correct answer is C - between 2 and 9 years old."
                 },
                 {
-                    "text": "C",
+                    "text": "C …guide dogs are between 2 and 9 years old",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F states that at 2 years old, when training is complete, dogs are matched with owners based on physical characteristics such as height."
                 }
             ],
-            "options": "A\nB\nC",
+            "options": "A …guide dogs are under 1 year old\nB …guide dogs are between 1 and 2 years old\nC …guide dogs are between 2 and 9 years old",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -85,22 +85,22 @@
             "ielts_question_category": "classification",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A …guide dogs are under 1 year old",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph D describes how puppies under 1 year old 'experience many aspects of life that a usual dog may never be introduced to, such as entering shops and travelling on buses and trains.'"
                 },
                 {
-                    "text": "B",
+                    "text": "B …guide dogs are between 1 and 2 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. Between 1 and 2 years old, dogs learn specific skills. The correct answer is A - under 1 year old."
                 },
                 {
-                    "text": "C",
+                    "text": "C …guide dogs are between 2 and 9 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. Between 2 and 9 years old, dogs are working with owners. The correct answer is A - under 1 year old."
                 }
             ],
-            "options": "A\nB\nC",
+            "options": "A …guide dogs are under 1 year old\nB …guide dogs are between 1 and 2 years old\nC …guide dogs are between 2 and 9 years old",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -119,22 +119,22 @@
             "ielts_question_category": "classification",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A …guide dogs are under 1 year old",
                     "is_correct": false,
                     "feedback": "Incorrect. Under 1 year old, dogs are in basic training. The correct answer is C - between 2 and 9 years old."
                 },
                 {
-                    "text": "B",
+                    "text": "B …guide dogs are between 1 and 2 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. Between 1 and 2 years old, dogs are learning skills. The correct answer is C - between 2 and 9 years old."
                 },
                 {
-                    "text": "C",
+                    "text": "C …guide dogs are between 2 and 9 years old",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F states that at 2 years old, when matching with owners, the 'length of their stride' is considered, which determines walking speed compatibility."
                 }
             ],
-            "options": "A\nB\nC",
+            "options": "A …guide dogs are under 1 year old\nB …guide dogs are between 1 and 2 years old\nC …guide dogs are between 2 and 9 years old",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -153,22 +153,22 @@
             "ielts_question_category": "classification",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A …guide dogs are under 1 year old",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph D states that 'guide dogs are trained to walk ahead without straining or creating tension on the lead' during the first phase (under 1 year old)."
                 },
                 {
-                    "text": "B",
+                    "text": "B …guide dogs are between 1 and 2 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. This is a basic skill taught earlier. The correct answer is A - under 1 year old."
                 },
                 {
-                    "text": "C",
+                    "text": "C …guide dogs are between 2 and 9 years old",
                     "is_correct": false,
                     "feedback": "Incorrect. Between 2 and 9 years old, dogs are working. The correct answer is A - under 1 year old."
                 }
             ],
-            "options": "A\nB\nC",
+            "options": "A …guide dogs are under 1 year old\nB …guide dogs are between 1 and 2 years old\nC …guide dogs are between 2 and 9 years old",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -187,47 +187,47 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "Paragraph A",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph A discusses guide dog associations and funding, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph A discusses guide dog associations and funding, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "B",
+                    "text": "Paragraph B",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B discusses breeds of guide dogs, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph B discusses breeds of guide dogs, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "C",
+                    "text": "Paragraph C",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses puppy selection criteria, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph C discusses puppy selection criteria, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "D",
+                    "text": "Paragraph D",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses early puppy training, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph D discusses early puppy training, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "E",
+                    "text": "Paragraph E",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph E discusses the second phase of dog training, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph E discusses the second phase of dog training, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "F",
+                    "text": "Paragraph F",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses matching dogs with owners, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph F discusses matching dogs with owners, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "G",
+                    "text": "Paragraph G",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses guide dog retirement and working life, not trainer prerequisites. The correct answer is H."
+                    "feedback": "Incorrect. Paragraph G discusses guide dog retirement and working life, not trainer prerequisites. The correct answer is Paragraph H."
                 },
                 {
-                    "text": "H",
+                    "text": "Paragraph H",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph H states: 'Most associations require their guide dog trainers to have a general background in animal training, possess a university degree and a proven ability to coach and teach.'"
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -246,47 +246,47 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "Paragraph A",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph A is about associations and funding, not genetics. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph A is about associations and funding, not genetics. The correct answer is Paragraph C."
                 },
                 {
-                    "text": "B",
+                    "text": "Paragraph B",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B discusses breeds generally, not genetic selection. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph B discusses breeds generally, not genetic selection. The correct answer is Paragraph C."
                 },
                 {
-                    "text": "C",
+                    "text": "Paragraph C",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph C states: 'Many guide dogs are from bloodlines with a long history of service due to the proven suitability of the nature of their parents and the consequent likelihood that they themselves will have inherited similar traits.'"
                 },
                 {
-                    "text": "D",
+                    "text": "Paragraph D",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses early training, not genetics. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph D discusses early training, not genetics. The correct answer is Paragraph C."
                 },
                 {
-                    "text": "E",
+                    "text": "Paragraph E",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph E discusses intensive training, not genetics. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph E discusses intensive training, not genetics. The correct answer is Paragraph C."
                 },
                 {
-                    "text": "F",
+                    "text": "Paragraph F",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses matching dogs with owners, not genetics. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph F discusses matching dogs with owners, not genetics. The correct answer is Paragraph C."
                 },
                 {
-                    "text": "G",
+                    "text": "Paragraph G",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses retirement, not genetics. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph G discusses retirement, not genetics. The correct answer is Paragraph C."
                 },
                 {
-                    "text": "H",
+                    "text": "Paragraph H",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications, not genetics. The correct answer is C."
+                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications, not genetics. The correct answer is Paragraph C."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -305,47 +305,47 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "Paragraph A",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph A discusses associations, not training stages. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph A discusses associations, not training stages. The correct answer is Paragraph E."
                 },
                 {
-                    "text": "B",
+                    "text": "Paragraph B",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B discusses breeds, not training stages. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph B discusses breeds, not training stages. The correct answer is Paragraph E."
                 },
                 {
-                    "text": "C",
+                    "text": "Paragraph C",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses puppy selection, not training failure. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph C discusses puppy selection, not training failure. The correct answer is Paragraph E."
                 },
                 {
-                    "text": "D",
+                    "text": "Paragraph D",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses early training, not dogs being found unsuitable. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph D discusses early training, not dogs being found unsuitable. The correct answer is Paragraph E."
                 },
                 {
-                    "text": "E",
+                    "text": "Paragraph E",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph E states: 'Not all dogs entering this level of training are able to meet the rigorous requirements it involves and only those that can competently display all of the required skills will eventually become a guide dog.'"
                 },
                 {
-                    "text": "F",
+                    "text": "Paragraph F",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses matching with owners, meaning training is complete. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph F discusses matching with owners, meaning training is complete. The correct answer is Paragraph E."
                 },
                 {
-                    "text": "G",
+                    "text": "Paragraph G",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses working life and retirement. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph G discusses working life and retirement. The correct answer is Paragraph E."
                 },
                 {
-                    "text": "H",
+                    "text": "Paragraph H",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph H discusses trainer requirements. The correct answer is E."
+                    "feedback": "Incorrect. Paragraph H discusses trainer requirements. The correct answer is Paragraph E."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -364,47 +364,47 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "Paragraph A",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph A discusses initial funding and support, not post-placement. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph A discusses initial funding and support, not post-placement. The correct answer is Paragraph F."
                 },
                 {
-                    "text": "B",
+                    "text": "Paragraph B",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B discusses breeds, not post-placement support. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph B discusses breeds, not post-placement support. The correct answer is Paragraph F."
                 },
                 {
-                    "text": "C",
+                    "text": "Paragraph C",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses puppy selection, not post-placement support. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph C discusses puppy selection, not post-placement support. The correct answer is Paragraph F."
                 },
                 {
-                    "text": "D",
+                    "text": "Paragraph D",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses early training, not post-placement support. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph D discusses early training, not post-placement support. The correct answer is Paragraph F."
                 },
                 {
-                    "text": "E",
+                    "text": "Paragraph E",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph E discusses intensive training, not post-placement support. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph E discusses intensive training, not post-placement support. The correct answer is Paragraph F."
                 },
                 {
-                    "text": "F",
+                    "text": "Paragraph F",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph F states: 'The intervention of the Guide Dog Association sponsoring the partnership does not end there and regular follow up visits are customary.'"
                 },
                 {
-                    "text": "G",
+                    "text": "Paragraph G",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses retirement, not ongoing support during working life. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph G discusses retirement, not ongoing support during working life. The correct answer is Paragraph F."
                 },
                 {
-                    "text": "H",
+                    "text": "Paragraph H",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications, not post-placement support. The correct answer is F."
+                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications, not post-placement support. The correct answer is Paragraph F."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
@@ -423,47 +423,47 @@
             "ielts_question_category": "matching_information",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "Paragraph A",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph A discusses associations and funding, not dog types. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph A discusses associations and funding, not dog types. The correct answer is Paragraph B."
                 },
                 {
-                    "text": "B",
+                    "text": "Paragraph B",
                     "is_correct": true,
                     "feedback": "Correct! Paragraph B states: 'smaller dogs with similar personality characteristics being unsuitable due to their size. Usage of mixed breed dogs is uncommon as it is more difficult to predict the characteristics and personality such dogs will develop in adulthood.'"
                 },
                 {
-                    "text": "C",
+                    "text": "Paragraph C",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses genetic selection, not which types are excluded. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph C discusses genetic selection, not which types are excluded. The correct answer is Paragraph B."
                 },
                 {
-                    "text": "D",
+                    "text": "Paragraph D",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses early training, not dog type selection. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph D discusses early training, not dog type selection. The correct answer is Paragraph B."
                 },
                 {
-                    "text": "E",
+                    "text": "Paragraph E",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph E discusses intensive training, not dog type selection. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph E discusses intensive training, not dog type selection. The correct answer is Paragraph B."
                 },
                 {
-                    "text": "F",
+                    "text": "Paragraph F",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses matching with owners, not breed selection. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph F discusses matching with owners, not breed selection. The correct answer is Paragraph B."
                 },
                 {
-                    "text": "G",
+                    "text": "Paragraph G",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses retirement and working life. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph G discusses retirement and working life. The correct answer is Paragraph B."
                 },
                 {
-                    "text": "H",
+                    "text": "Paragraph H",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications. The correct answer is B."
+                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications. The correct answer is Paragraph B."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H",
             "correct_answer_count": 1,
             "show_option_letters": true
         },
