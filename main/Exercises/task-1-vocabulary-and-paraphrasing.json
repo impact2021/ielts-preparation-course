@@ -1,0 +1,121 @@
+{
+  "title": "Task 1 Vocabulary and Paraphrasing",
+  "content": "<p>Remember that using a range of vocabulary and rephrasing words from the question or labels is important where possible.</p>",
+  "questions": [
+    {
+      "type": "open_question",
+      "ielts_question_type": "Vocabulary Building",
+      "instructions": "Read the Task 1 essay below and find words in the text which have the same meaning as those in the list. Type your answers in the space provided.",
+      "question": "<p><img loading=\"lazy\" decoding=\"async\" class=\"aligncenter size-full wp-image-28085\" src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/diagrams-2.png\" alt=\"\" width=\"671\" height=\"328\">The diagram shows the common design of a house in North America, the home is quite large and there are 8 labelled parts to the diagram.</p>\n<p>The house can be divided into three clear parts; the garage area, the nested storey above the garage and to the right of these is the ground floor section. The nested storey, which is elevated above the garage, has a low gradient roof.</p>\n<p>The dwelling has a sizeable double garage which also includes an extra entrance way . Access to the house is at the rear of the building. A ventilation window can be seen above the double garage door.</p>\n<p>The building has four separate roofs, three of which are low gradient. The ground floor section roof is different in that it has a sharp slope . Five sets of windows can be seen in the illustration ; the largest are located at the front of the nested storey, on the side of the garage at the front of the ground floor section.</p>\n<p>This ends the depiction of the diagram.</p>",
+      "field_count": 10,
+      "field_labels": [
+        "1. Another way of saying <em><strong>typical</strong></em> used in the text is ________",
+        "2. Another way of saying <em><strong>house</strong></em> or <em><strong>home</strong></em> used in the text is ________",
+        "3. Another way of saying <em><strong>additional</strong></em> used in the text is ________",
+        "4. Another way of saying <em><strong>door</strong></em> or <em><strong>doorway</strong></em> used in the text is (2 words) ________",
+        "5. Another way of saying <em><strong>entry</strong></em> used in the text is ________",
+        "6. Another way of saying <em><strong>gradient</strong></em> used in the text is ________",
+        "7. Another way of saying <em><strong>high</strong></em> used in the text is ________",
+        "8. Another way of saying <em><strong>large</strong></em> used in the text is ________",
+        "9. Another way of saying <em><strong>diagram</strong></em> used in the text is ________",
+        "10. Another way of saying <em><strong>description</strong></em> used in the text is ________"
+      ],
+      "field_answers": [
+        "common",
+        "dwelling",
+        "extra",
+        "entrance way",
+        "access",
+        "slope",
+        "elevated",
+        "sizeable",
+        "illustration",
+        "depiction"
+      ],
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Not quite. Review the text and look for the synonym.",
+      "no_answer_feedback": "The correct answer is shown above. Look carefully at the vocabulary used in the essay.",
+      "points": 10
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Paraphrasing",
+      "instructions": "The candidate has written the following introductory sentence for the Task 1 shown above: \"The data shows the duration of international vacations and regions visited by British tourists in 1950 and 1990.\" Which words has the candidate used to replace the following vocabulary given in the question? Type your answers in the spaces provided.",
+      "question": "<p><img loading=\"lazy\" decoding=\"async\" class=\"aligncenter size-full wp-image-25673\" src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/line-graphs-and-pie-charts.png\" alt=\"\" width=\"793\" height=\"698\"></p>\n<p>The candidate has changed…</p>",
+      "field_count": 6,
+      "field_labels": [
+        "1. <strong>overseas</strong> to ________",
+        "2. <strong>holidays</strong> to ________",
+        "3. <strong>holidaymakers</strong> to ________",
+        "4. <strong>from the UK</strong> to ________",
+        "5. <strong>places</strong> to ________",
+        "6. <strong>length</strong> to ________"
+      ],
+      "field_answers": [
+        "international",
+        "vacations|vacation",
+        "tourists",
+        "british tourists|british holidaymakers",
+        "regions",
+        "duration"
+      ],
+      "correct_feedback": "Correct! Good paraphrasing.",
+      "incorrect_feedback": "Not quite. Review the candidate's sentence and the original vocabulary.",
+      "no_answer_feedback": "The correct answer is shown above. Compare the original vocabulary with the paraphrased version.",
+      "points": 6
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Look at the plan for the Task 1 essay about the diagram of the light bulb. How have the ideas been planned? Select the correct answer.",
+      "question": "<p align=\"center\"><img loading=\"lazy\" decoding=\"async\" class=\"aligncenter  wp-image-28079\" src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/diagrams-1.png\" alt=\"\" width=\"484\" height=\"355\"></p>\n<p><strong>Paragraph 1:</strong></p>\n<ul>\n<li>cap</li>\n<li>electric contact</li>\n<li>glass bulb</li>\n</ul>\n<p><strong>Paragraph 2:</strong></p>\n<ul>\n<li>stem</li>\n<li>low pressure</li>\n<li>inert gas</li>\n</ul>\n<p><strong>Paragraph 3:</strong></p>\n<ul>\n<li>contact wire (in)</li>\n<li>contact wire (out)</li>\n<li>support wires</li>\n<li>tungsten filament</li>\n</ul>",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "1st paragraph the biggest features in the light bulb, 2nd paragraph the centre of the light bulb, 3rd paragraph the remaining internal and external features of the light bulb.",
+          "is_correct": false,
+          "feedback": "Incorrect. This doesn't accurately describe the organizational structure. The correct answer is: 1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts."
+        },
+        {
+          "text": "1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts",
+          "is_correct": true,
+          "feedback": "Correct! The essay is organized by describing external parts first, then internal parts, and finally the remaining internal components."
+        },
+        {
+          "text": "1st paragraph the base of the light bulb, 2nd paragraph the middle of the light bulb, 3rd paragraph the wires of the light bulb",
+          "is_correct": false,
+          "feedback": "Incorrect. This doesn't accurately describe the organizational structure. The correct answer is: 1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts.",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Reading Comprehension",
+      "instructions": "Read the report below. One of the labelled parts of the diagram has been accidentally missed out by the writer. Which part has not been described? Type your answer in the space provided.",
+      "question": "<p><img loading=\"lazy\" decoding=\"async\" class=\"aligncenter wp-image-28079\" src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/diagrams-1.png\" alt=\"\" width=\"330\" height=\"242\"></p>\n<table width=\"100%\">\n<tbody>\n<tr>\n<td width=\"100%\">The illustration portrays an electric light bulb for home use; it shows the outer and inner structure of the light bulb, and there are 9 labelled parts to the diagram.<p></p>\n<p>A globular glass bulb surrounds all other parts; on the outside of the light bulb there is an electrical contact point at the base and a metal cap just above this contact; the bulb, cap and electrical contact are the only external parts of the light bulb.</p>\n<p>Inside, the light bulb is filled with low pressure inert gas; there is a broad stem in the middle of the product which rises up from the cap.</p>\n<p>Two contact wires; contact wire in, which is green and contact wire out which is blue, run up each side of the stem. The tungsten filament, which is spiral in shape, lies parallel across the two contact wires.</p>\n<p>This ends the description of the light bulb and its components which are seen in the diagram.</p></td>\n</tr>\n</tbody>\n</table>",
+      "field_count": 1,
+      "field_labels": [
+        "There is no reference to the ________"
+      ],
+      "field_answers": [
+        "support wires"
+      ],
+      "correct_feedback": "Correct! The support wires were not mentioned in the description.",
+      "incorrect_feedback": "Not quite. Read through the description again and check which labelled part is missing.",
+      "no_answer_feedback": "The correct answer is: support wires. This is the only labelled part not mentioned in the description.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
