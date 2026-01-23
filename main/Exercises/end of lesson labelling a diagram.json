@@ -1,0 +1,278 @@
+{
+  "title": "End of lesson labelling a diagram",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Answer the questions below. Write <strong>NO MORE THAN THREE WORDS</strong> for each answer.",
+      "question": "11. What form of transport takes approximately two hours to get there? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "fast ferry|a fast ferry"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The fast ferry takes approximately two hours.",
+          "incorrect": "Incorrect. Listen for the form of transport that takes two hours.",
+          "no_answer": "Please provide an answer. Listen for the transport method mentioned."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "12. What type of weather does the island protect the Hauraki Gulf from? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "storms|from storms|stormy|from stormy weather|stormy weather"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The island protects the Gulf from storms.",
+          "incorrect": "Incorrect. Listen for the type of weather mentioned.",
+          "no_answer": "Please provide an answer. Listen for what the island protects from."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "13. What is not available on the island from a central source? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "electricity|centralised electricity|centralized electricity"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. There is no centralised electricity on the island.",
+          "incorrect": "Incorrect. Listen for what is not centrally available.",
+          "no_answer": "Please provide an answer. Listen for what is not available centrally."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "14. What are the two main occupations of the inhabitants of the island? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "farming tourism|farming and tourism|farming & tourism|farming/tourism|farming, tourism|tourism farming|tourism and farming|tourism & farming|tourism/farming|tourism, farming"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. The main occupations are farming and tourism.",
+          "incorrect": "Incorrect. Listen for the two main occupations mentioned.",
+          "no_answer": "Please provide an answer. Listen for what people do on the island."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "List THREE water based activities for which Great Barrier Island is popular. Write <strong>NO MORE THAN ONE WORD</strong> for each answer.",
+      "question": "15. [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "surfing|diving|fishing"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. This is one of the three water-based activities.",
+          "incorrect": "Incorrect. Listen for water sports mentioned in the audio.",
+          "no_answer": "Please provide an answer. Choose from surfing, diving, or fishing."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "16. [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "surfing|diving|fishing"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. This is one of the three water-based activities.",
+          "incorrect": "Incorrect. Listen for water sports mentioned in the audio.",
+          "no_answer": "Please provide an answer. Choose from surfing, diving, or fishing."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "17. [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "incorrect_feedback": "",
+      "correct_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "surfing|diving|fishing"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. This is one of the three water-based activities.",
+          "incorrect": "Incorrect. Listen for water sports mentioned in the audio.",
+          "no_answer": "Please provide an answer. Choose from surfing, diving, or fishing."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Label the map below. Write the correct letter A-F next to questions 18-20.",
+      "question": "18. [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "e|E"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. E is the water tank.",
+          "incorrect": "Incorrect. Listen carefully to the description of the property layout.",
+          "no_answer": "Please provide an answer. Listen for the location of the water tank."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "19. [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "b|B"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. B is where the pear trees are located.",
+          "incorrect": "Incorrect. Listen carefully to where the pear trees are described.",
+          "no_answer": "Please provide an answer. Listen for the location of the pear trees."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "20. [field 1]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "d|D"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct. D is the tourist accommodation.",
+          "incorrect": "Incorrect. Listen carefully to the description of the accommodation locations.",
+          "no_answer": "Please provide an answer. Listen for the location of tourist accommodation."
+        }
+      }
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_listening",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "",
+    "starting_question_number": "11"
+  },
+  "audio": {
+    "url": "",
+    "transcript": "<p>Today, I would like to give you some information on Great Barrier Island and some of the eco-friendly projects which are in operation there.</p>\n\n<p>For those of you who are unfamiliar with the island, Great Barrier Island is situated 90 kilometres off the north-east coast of Auckland, New Zealand, in the Hauraki Gulf. It takes around 30 minutes to fly from Auckland and during the summer, and over long public holiday weekends it is possible to travel to the island via a <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">fast ferry</span>, which takes around two hours. At all other times of the year, visitors wishing to travel by sea are restricted to using the slower passenger, vehicle and freight ferry which operates year round.</p>\n\n<p>The island earned it name \"Great Barrier\" as it literally acts as a barrier between the waters of the Hauraki Gulf and the Pacific Ocean, protecting the Gulf from <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">storms</span> emanating from the larger body of water. The eastern side of the island, which is exposed to the Pacific Ocean, has quite different characteristics to the western coast. On the east, there are windswept sand dunes and powerful surf, whereas the west coast is comprised of a multitude of sheltered, calm and secluded bays.</p>\n\n<p>With an area of 282 square kilometres, Great Barrier is the largest offshore island of New Zealand. There is no centralised <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">electricity</span> on the island, and all properties there are powered by individual generators.</p>\n\n<p>Today, the island is home to just over 1100 people who are mainly involved in <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">farming and tourism</span>. During the summer, it is a popular destination for those who are interested in escaping from the hustle and bustle of city life. However, although tourism has increased over recent years, the island remains less crowded than other destinations such as Waiheke island for example which is closer to Auckland and more developed, due to its relative remoteness and undeveloped nature.</p>\n\n<p>—————————————————————————————————–</p>\n\n<p>The surrounding waters of Great Barrier Island are a popular haven for water sports enthusiasts interested in, amongst other activities, <span id=\"q15\" data-question=\"15\"></span><span id=\"q16\" data-question=\"16\"></span><span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">surfing, diving and fishing</span>. The former pursued on the east coast and the latter two, which require calmer waters, on the west.</p>\n\n<p>The rustic nature of the island attracts individuals seeking a specific way of life. Many visitors describe the atmosphere there as 'like stepping back in time'. Many of the islands inhabitants are committed to eco-friendly activities and conservation of the environment. For example, the Land's End Eco-village, operated by husband and wide Jerry and Katie Landscombe, is a farm and retreat that during the summer period welcomes visitors who wish to interact with nature in peaceful surroundings. The couple carry out most of the work involved in the running of the property themselves; however, they also employ seasonal workers who work on a variety of projects in exchange for accommodation and food.</p>\n\n<p>The Landscombes moved to Great Barrier 5 years ago from Auckland and have since been dedicated to developing their farm and welcoming others to experience a completely different type of lifestyle. When the couple first bought their land, it was a barren area; however, they have developed both property and fertile growing areas over the years. Land's End is situated in the north-west of the island and covers an area of 10 acres.</p>\n\n<p>Just to the right of the main road is the <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">water tank</span>, on which the property's residents are reliant for their source of water. Preservation of the rainwater water supply is vital, particularly during extended dry periods.</p>\n\n<p>Growing throughout the orchard is a large number of apple trees, alongside a smaller number of <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">pear trees</span> which are situated in the top-right hand corner of the orchard itself. Separating the orchard from the accommodation is a small private road. The housing is split into three blocks, first the family home, to the right of that is the workers' accommodation and further way from both of these properties is the paid <span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">tourist accommodation</span>. The latter has views of a crystal clear lake and an olive grove which was established when the owners first moved into the property. A variety of vegetables are also grown on the land, and the couple also keep a small number of animals.</p>\n\n<p>Like most of their neighbours, the Landscombes are more or less self-sufficient and produce adequate food to meet their needs, exchanging their produce with other growers on the island as and when necessary.</p>",
+    "sections": []
+  },
+  "_metadata": {
+    "exported_at": "2026-01-23 06:13:36",
+    "exported_by": "copilot",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}
