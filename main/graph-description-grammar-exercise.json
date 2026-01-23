@@ -1,0 +1,204 @@
+{
+  "title": "Graph Description - Sentence Completion",
+  "content": "Select the option or options which can complete the sentence. Select ALL the possible answers.\n\nNB: There are no graphs or charts for this exercise.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Select ALL the options which can complete the sentence correctly.",
+      "question": "The graph illustrates…",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'illustrates', you need either a noun phrase (option C) or 'that' + clause (option B). You cannot use a clause without 'that' after 'illustrates'."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'Illustrates that' + clause is grammatically correct. The conjunction 'that' introduces the subordinate clause."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": true,
+          "feedback": "Correct! 'Illustrates' can be followed by a noun phrase. Here, 'the typical number of years...' is a noun phrase describing what the graph shows."
+        }
+      ],
+      "correct_answer": "1|2",
+      "no_answer_feedback": "You did not select any answers. The correct answers are B and C.",
+      "points": 2
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the option which can complete the sentence correctly.",
+      "question": "It is clear from the graph…",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. 'It is clear from the graph' requires 'that' + clause. You need option B with the conjunction 'that'."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'It is clear from the graph that' + clause is the only grammatically correct completion. The conjunction 'that' is required after 'it is clear'."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'it is clear from the graph', you must use 'that' + a complete clause (option B), not just a noun phrase."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is B.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Select ALL the options which can complete the sentence correctly.",
+      "question": "The graph shows…",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'shows', you can use either 'that' + clause (option B) or a noun phrase (option C), but not a bare clause without 'that'."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'Shows that' + clause is grammatically correct. The verb 'shows' can take a 'that'-clause as its object."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": true,
+          "feedback": "Correct! 'Shows' can be followed by a noun phrase. Here, the noun phrase describes what the graph displays."
+        }
+      ],
+      "correct_answer": "1|2",
+      "no_answer_feedback": "You did not select any answers. The correct answers are B and C.",
+      "points": 2
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the option which can complete the sentence correctly.",
+      "question": "As is shown by the graph,…",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'As is shown by the graph' is a subordinate clause, so the main clause can follow directly without 'that'. This structure uses the passive voice effectively."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'as is shown by the graph,' you don't need 'that'. The comma indicates the subordinate clause is complete, and the main clause should follow directly (option A)."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is an incomplete sentence. After 'as is shown by the graph,', you need a complete main clause with a verb (option A shows the decline)."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is A.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the option which can complete the sentence correctly.",
+      "question": "From the graph it is clear…",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'it is clear', you must use 'that' + clause. Option B is correct with the conjunction 'that'."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'It is clear that' + clause is the only grammatically correct structure. The conjunction 'that' is required after the predicate adjective 'clear'."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'it is clear', you need 'that' + a complete clause (option B), not a noun phrase without 'that'."
+        }
+      ],
+      "correct_answer": "1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is B.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the option which can complete the sentence correctly.",
+      "question": "As is illustrated by the graph,…",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'As is illustrated by the graph' is a subordinate clause, so the main clause follows directly without 'that'. The comma signals the transition from the subordinate to the main clause."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'as is illustrated by the graph,', you don't need 'that'. The subordinate clause is complete, and the main clause should follow directly (option A)."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is incomplete. After the introductory subordinate clause, you need a complete main clause with a finite verb showing what happened (option A includes 'declined')."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is A.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Select the option which can complete the sentence correctly.",
+      "question": "As the graph shows,…",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "A. …the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": true,
+          "feedback": "Correct! 'As the graph shows' is a subordinate clause, so the main clause can follow directly. No conjunction is needed after the comma."
+        },
+        {
+          "text": "B. …that the typical number of years people in the UK stayed in one position of employment declined.",
+          "is_correct": false,
+          "feedback": "Incorrect. After 'as the graph shows,', you don't use 'that'. The subordinate clause is complete, and the main clause should follow directly (option A)."
+        },
+        {
+          "text": "C. …the typical number of years people in the UK stayed in one position of employment.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is an incomplete sentence. You need a complete main clause with a finite verb (option A includes 'declined') after the introductory subordinate clause."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is A.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
