@@ -1,0 +1,175 @@
+{
+  "title": "The Populating of England - End of Lesson Review (Reading Passage 2 of 2)",
+  "content": "",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Classification",
+      "instructions": "According to the information in the passage, classify the following events as occurring:\n\nA. prior to 400 A.D.\nB. 400 to 1066\nC. 1066 onwards\n\nWrite the correct letters A-C in boxes 7-11 of your answer sheet",
+      "question": "7. Invasion by two German groups",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (400 to 1066). Paragraphs B and C state: 'By 400 A.D….the Saxons from modern-day Germany' and 'The Angles, also from Germany'.",
+      "correct_feedback": "Correct! The Saxons and Angles, both from Germany, invaded after 400 A.D.",
+      "incorrect_feedback": "Incorrect. Look at Paragraphs B and C which describe the invasion of the Saxons and Angles from Germany after 400 A.D.",
+      "reading_text_id": 0,
+      "ielts_question_category": "classification",
+      "mc_options": [
+        {
+          "text": "A. prior to 400 A.D.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that 'By 400 A.D....new invaders arrived – the Saxons from modern-day Germany,' indicating this occurred at or after 400 A.D., not before."
+        },
+        {
+          "text": "B. 400 to 1066",
+          "is_correct": true,
+          "feedback": "Correct! Paragraphs B and C state: 'By 400 A.D....new invaders arrived – the Saxons from modern-day Germany' and 'The Angles, also from Germany, added their forces to those of the Saxons.'"
+        },
+        {
+          "text": "C. 1066 onwards",
+          "is_correct": false,
+          "feedback": "Incorrect. The invasion by the Saxons and Angles occurred much earlier, around and after 400 A.D., not in 1066 or later."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Classification",
+      "instructions": "",
+      "question": "8. First indications of unity in Britain seen",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (1066 onwards). Paragraph D states: '1066…The Dark Ages were then replaced by the Middle Ages …signal the beginning of a unified country.'",
+      "correct_feedback": "Correct! After the Norman invasion in 1066, Britain began to show signs of unity as a country.",
+      "incorrect_feedback": "Incorrect. Look at Paragraph D which discusses how the Middle Ages after 1066 signaled the beginning of a unified country.",
+      "reading_text_id": 0,
+      "ielts_question_category": "classification",
+      "mc_options": [
+        {
+          "text": "A. prior to 400 A.D.",
+          "is_correct": false,
+          "feedback": "Incorrect. Before 400 A.D., Britain was under Roman control with ongoing conflicts. Unity came much later."
+        },
+        {
+          "text": "B. 400 to 1066",
+          "is_correct": false,
+          "feedback": "Incorrect. This period was characterized by multiple invasions and ongoing fighting, not unity. The passage describes civil war, invasions by Saxons, Angles, Visigoths, and Vikings."
+        },
+        {
+          "text": "C. 1066 onwards",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D states: 'In 1066, another invasion and subsequent population by the Normans...The Dark Ages were then replaced by the Middle Ages, and while this did not mean an end to war, it did signal the beginning of a unified country.'"
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Classification",
+      "instructions": "",
+      "question": "9. Collapse of the Roman Empire",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (400 to 1066). Paragraph B states: 'By 400 A.D., with the Roman Empire collapsing due to rebellions' (the grammar tells us it was happening at the time, so the final collapse must be after 400 A.D.)",
+      "correct_feedback": "Correct! The Roman Empire was collapsing around 400 A.D., with the final collapse occurring after that date.",
+      "incorrect_feedback": "Incorrect. Look at Paragraph B which states the Roman Empire was collapsing around 400 A.D., indicating the final collapse was after this date.",
+      "reading_text_id": 0,
+      "ielts_question_category": "classification",
+      "mc_options": [
+        {
+          "text": "A. prior to 400 A.D.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'By 400 A.D., with the Roman Empire collapsing,' using the present continuous tense to indicate it was happening at that time, not before."
+        },
+        {
+          "text": "B. 400 to 1066",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B states: 'By 400 A.D., with the Roman Empire collapsing due to rebellions in Europe.' The use of 'collapsing' (present continuous) indicates it was happening at the time, meaning the final collapse occurred after 400 A.D."
+        },
+        {
+          "text": "C. 1066 onwards",
+          "is_correct": false,
+          "feedback": "Incorrect. The Roman Empire had long since collapsed by 1066. The passage places the collapse around and after 400 A.D."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Classification",
+      "instructions": "",
+      "question": "10. Visigoths invaded Britain after lack of success in the south",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (400 to 1066). Paragraphs C and D state: 'By 400 A.D….Having failed to conquer Rome, the Visigoths had headed north and marched into Britain,…the fighting continued…but in 793'",
+      "correct_feedback": "Correct! The Visigoths invaded Britain after failing to conquer Rome, which occurred after 400 A.D. but before 1066.",
+      "incorrect_feedback": "Incorrect. Look at Paragraphs C and D which describe the Visigoths arriving after 400 A.D., following their failed attempt to conquer Rome.",
+      "reading_text_id": 0,
+      "ielts_question_category": "classification",
+      "mc_options": [
+        {
+          "text": "A. prior to 400 A.D.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage places the Visigoth invasion after 400 A.D., when the Roman Empire was collapsing and new invaders were arriving."
+        },
+        {
+          "text": "B. 400 to 1066",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C states: 'Having failed to conquer Rome, the Visigoths had headed north and marched into Britain, overwhelming the Britons.' This occurred after 400 A.D. as mentioned in the context of Paragraph B."
+        },
+        {
+          "text": "C. 1066 onwards",
+          "is_correct": false,
+          "feedback": "Incorrect. The Visigoth invasion occurred much earlier, after 400 A.D. but well before 1066. By 1066, the Normans were invading."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Classification",
+      "instructions": "",
+      "question": "11. English as used today first became identifiable",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (1066 onwards). Paragraph D states: 'In 1066 culture and language that is easily identifiable in modern English'.",
+      "correct_feedback": "Correct! The Norman invasion in 1066 brought French culture and language, creating the English that is identifiable today.",
+      "incorrect_feedback": "Incorrect. Look at Paragraph D which states that in 1066 the Normans brought culture and language easily identifiable in modern English.",
+      "reading_text_id": 0,
+      "ielts_question_category": "classification",
+      "mc_options": [
+        {
+          "text": "A. prior to 400 A.D.",
+          "is_correct": false,
+          "feedback": "Incorrect. Before 400 A.D., Britain was under Roman influence and the language was very different from modern English."
+        },
+        {
+          "text": "B. 400 to 1066",
+          "is_correct": false,
+          "feedback": "Incorrect. While Anglo-Saxon culture and Viking influence contributed to the language during this period, modern English became identifiable after the Norman invasion."
+        },
+        {
+          "text": "C. 1066 onwards",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D states: 'In 1066, another invasion and subsequent population by the Normans brought a new culture to the mix, adding the French component of culture and language that is easily identifiable in modern English.'"
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 2",
+      "content": "<h3>The populating of England</h3>\n\n<p><strong>A.</strong> The United Kingdom, and its cities in particular, represent a cosmopolitan mix of ethnicities and nationalities. Its multicultural characteristics have developed extensively over recent time as a result of international connections, such as those developed during the time of the British Empire and the European Union; however, the UK has had a mixture of cultures and nationalities since its early beginnings.</p>\n\n<p><strong>B.</strong> To compress thousands of years of history in a few paragraphs is a difficult task, and as with almost any historical point a millennia old, even 'facts' are disputable. What is generally accepted is that the first notable new arrivals to Britain came over 2000 years ago in the form of an army of Romans. Conflicts ensued with the tribal populations of Britain, but the organised martial might of the Romans proved superior, and for the following century, Roman influence spread throughout what is now known as England. Yet this was not a true invasion, as it was not until nearly 100 years later that Rome decided it wanted Britain to be part of the Roman Empire. Consequently, in 43 A.D., the first full scale invasion took place in the South East of England. Some thirty years later, Roman control had spread throughout England and Wales, although Scotland had remained defiant. Frequent incursions into England from tribes in Scotland led to the creation of one of Britain's most impressive constructions – Hadrian's Wall. The wall was built right across the border of Scotland and designed to protect 'Brittania', the Roman name given to England and Wales. Yet for 300 years, invasions from the Picts and the Scots (both tribes from Scotland) continued to harass the Romans. <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">By 400 A.D., with the Roman Empire collapsing due to rebellions in Europe, the Roman army in Britannia was seriously weakened.</span> <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Invasions by the Picts and Scots pressed deeper into what was Roman control, and new invaders arrived – the Saxons from modern-day Germany.</span></p>\n\n<p><strong>C.</strong> With no support from the Empire and new invaders to fight, the country soon fell into civil war, a situation exacerbated by a ravaging plague. Saxon influence in South West England soon became apparent, with those opposing them either being defeated or fleeing to France. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">The Angles, also from Germany, added their forces to those of the Saxons, and the Anglo-Saxon alliance proved extremely powerful</span>, soon taking over most of South West England. <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">But the series of invasions was not over yet, as the Visigoths arrived on the shores of Britain. Having failed to conquer Rome, the Visigoths had headed north and marched into Britain, overwhelming the Britons (the name taken by a combination of Roman invaders and original settlers).</span></p>\n\n<p><strong>D.</strong> The fighting continued, although to a lesser extent, between the Visigoths and the Anglo-Saxons, but in 793 Britain was once again being invaded, this time by the Vikings. Coming from Denmark, the Vikings were a fierce tribe that swept across the east of England, creating what was called the 'Danelaw', an area running from the south east to the north west of England which was under Viking influence. Anglo-Saxon and Viking culture mixed, creating a new, 'British' culture, and adding to the vocabulary of the language, a legacy of the Roman occupation. <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">In 1066, another invasion and subsequent population by the Normans brought a new culture to the mix, adding the French component of culture and language that is easily identifiable in modern English.</span> <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">The Dark Ages were then replaced by the Middle Ages, and while this did not mean an end to war, it did signal the beginning of a unified country. From this point on, historians refer to international wars between England and France, England and Spain, even England and Wales, but the creation of England, the mix of over one thousand years of different culture and language, was finally formalised.</span></p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "exercise_label": "practice_test",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 7
+  }
+}
