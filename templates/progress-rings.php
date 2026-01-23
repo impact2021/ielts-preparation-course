@@ -34,7 +34,7 @@ $view = isset($view) ? $view : 'daily';
             <circle cx="100" cy="100" r="45" fill="none" stroke="#e0e0e0" stroke-width="14"/>
             
             <!-- Outer ring: Exercises (green) -->
-            <circle id="exercises-ring" cx="100" cy="100" r="85" 
+            <circle class="exercises-ring" cx="100" cy="100" r="85" 
                     fill="none" 
                     stroke="#4CAF50" 
                     stroke-width="14"
@@ -45,7 +45,7 @@ $view = isset($view) ? $view : 'daily';
                     style="filter: drop-shadow(0 0 3px #4CAF50); transition: stroke-dashoffset 1s ease-in-out;"/>
             
             <!-- Middle ring: Study time (blue) -->
-            <circle id="time-ring" cx="100" cy="100" r="65" 
+            <circle class="time-ring" cx="100" cy="100" r="65" 
                     fill="none" 
                     stroke="#2196F3" 
                     stroke-width="14"
@@ -56,7 +56,7 @@ $view = isset($view) ? $view : 'daily';
                     style="filter: drop-shadow(0 0 3px #2196F3); transition: stroke-dashoffset 1s ease-in-out;"/>
             
             <!-- Inner ring: Perfect scores (orange) -->
-            <circle id="perfect-ring" cx="100" cy="100" r="45" 
+            <circle class="perfect-ring" cx="100" cy="100" r="45" 
                     fill="none" 
                     stroke="#FF9800" 
                     stroke-width="14"
@@ -73,22 +73,22 @@ $view = isset($view) ? $view : 'daily';
         <div class="ring-stat">
             <span class="ring-color" style="background: #4CAF50;"></span>
             <span class="ring-label"><?php _e('Exercises', 'ielts-course-manager'); ?></span>
-            <span class="ring-value" id="exercises-value">-/-</span>
+            <span class="ring-value exercises-value">-/-</span>
         </div>
         <div class="ring-stat">
             <span class="ring-color" style="background: #2196F3;"></span>
             <span class="ring-label"><?php _e('Study Time', 'ielts-course-manager'); ?></span>
-            <span class="ring-value" id="time-value">- min</span>
+            <span class="ring-value time-value">- min</span>
         </div>
         <div class="ring-stat">
             <span class="ring-color" style="background: #FF9800;"></span>
             <span class="ring-label"><?php _e('Perfect', 'ielts-course-manager'); ?></span>
-            <span class="ring-value" id="perfect-value">-/-</span>
+            <span class="ring-value perfect-value">-/-</span>
         </div>
     </div>
     
     <div class="progress-rings-streak">
-        <strong id="streak-value">🔥 - Day Streak!</strong>
+        <strong class="streak-value">🔥 - Day Streak!</strong>
         <div><?php _e("Don't break the chain!", 'ielts-course-manager'); ?></div>
     </div>
     
@@ -207,67 +207,70 @@ $view = isset($view) ? $view : 'daily';
 
 <script>
 jQuery(document).ready(function($) {
-    var container = $('.ielts-progress-rings-container');
-    var view = container.data('view');
-    
-    // Show loading
-    container.find('.progress-rings-loading').show();
-    container.find('.progress-rings-wrapper, .progress-rings-stats, .progress-rings-streak').hide();
-    
-    $.ajax({
-        url: ieltsCM.ajaxUrl,
-        method: 'POST',
-        data: {
-            action: 'ielts_cm_get_progress_rings_data',
-            nonce: ieltsCM.nonce,
-            view: view
-        },
-        success: function(response) {
-            if (response.success) {
-                var data = response.data;
-                
-                // Hide loading, show content
-                container.find('.progress-rings-loading').hide();
-                container.find('.progress-rings-wrapper, .progress-rings-stats, .progress-rings-streak').show();
-                
-                // Update rings based on view
-                if (view === 'daily') {
-                    updateRing('exercises-ring', data.exercises_today, data.daily_exercise_goal);
-                    updateRing('time-ring', data.study_time_today, data.daily_time_goal);
-                    updateRing('perfect-ring', data.perfect_scores_today, data.daily_perfect_goal);
+    // Handle each progress rings container separately
+    $('.ielts-progress-rings-container').each(function() {
+        var container = $(this);
+        var view = container.data('view');
+        
+        // Show loading
+        container.find('.progress-rings-loading').show();
+        container.find('.progress-rings-wrapper, .progress-rings-stats, .progress-rings-streak').hide();
+        
+        $.ajax({
+            url: ieltsCM.ajaxUrl,
+            method: 'POST',
+            data: {
+                action: 'ielts_cm_get_progress_rings_data',
+                nonce: ieltsCM.nonce,
+                view: view
+            },
+            success: function(response) {
+                if (response.success) {
+                    var data = response.data;
                     
-                    $('#exercises-value').text(data.exercises_today + '/' + data.daily_exercise_goal);
-                    $('#time-value').text(data.study_time_today + '/' + data.daily_time_goal + ' min');
-                    $('#perfect-value').text(data.perfect_scores_today + '/' + data.daily_perfect_goal);
-                    $('#streak-value').text('🔥 ' + data.streak_days + ' Day Streak!');
-                } else if (view === 'weekly') {
-                    updateRing('exercises-ring', data.exercises_week, data.weekly_exercise_goal);
-                    updateRing('time-ring', data.study_time_week, data.weekly_time_goal);
-                    updateRing('perfect-ring', data.perfect_scores_week, data.weekly_perfect_goal);
+                    // Hide loading, show content
+                    container.find('.progress-rings-loading').hide();
+                    container.find('.progress-rings-wrapper, .progress-rings-stats, .progress-rings-streak').show();
                     
-                    $('#exercises-value').text(data.exercises_week + '/' + data.weekly_exercise_goal);
-                    $('#time-value').text(data.study_time_week + '/' + data.weekly_time_goal + ' min');
-                    $('#perfect-value').text(data.perfect_scores_week + '/' + data.weekly_perfect_goal);
-                    container.find('.progress-rings-streak').hide();
-                } else {
-                    updateRing('exercises-ring', data.exercises_month, data.monthly_exercise_goal);
-                    updateRing('time-ring', data.study_time_month, data.monthly_time_goal);
-                    updateRing('perfect-ring', data.perfect_scores_month, data.monthly_perfect_goal);
-                    
-                    $('#exercises-value').text(data.exercises_month + '/' + data.monthly_exercise_goal);
-                    $('#time-value').text(data.study_time_month + '/' + data.monthly_time_goal + ' min');
-                    $('#perfect-value').text(data.perfect_scores_month + '/' + data.monthly_perfect_goal);
-                    container.find('.progress-rings-streak').hide();
+                    // Update rings based on view
+                    if (view === 'daily') {
+                        updateRing(container, 'exercises-ring', data.exercises_today, data.daily_exercise_goal);
+                        updateRing(container, 'time-ring', data.study_time_today, data.daily_time_goal);
+                        updateRing(container, 'perfect-ring', data.perfect_scores_today, data.daily_perfect_goal);
+                        
+                        container.find('.exercises-value').text(data.exercises_today + '/' + data.daily_exercise_goal);
+                        container.find('.time-value').text(data.study_time_today + '/' + data.daily_time_goal + ' min');
+                        container.find('.perfect-value').text(data.perfect_scores_today + '/' + data.daily_perfect_goal);
+                        container.find('.streak-value').text('🔥 ' + data.streak_days + ' Day Streak!');
+                    } else if (view === 'weekly') {
+                        updateRing(container, 'exercises-ring', data.exercises_week, data.weekly_exercise_goal);
+                        updateRing(container, 'time-ring', data.study_time_week, data.weekly_time_goal);
+                        updateRing(container, 'perfect-ring', data.perfect_scores_week, data.weekly_perfect_goal);
+                        
+                        container.find('.exercises-value').text(data.exercises_week + '/' + data.weekly_exercise_goal);
+                        container.find('.time-value').text(data.study_time_week + '/' + data.weekly_time_goal + ' min');
+                        container.find('.perfect-value').text(data.perfect_scores_week + '/' + data.weekly_perfect_goal);
+                        container.find('.progress-rings-streak').hide();
+                    } else {
+                        updateRing(container, 'exercises-ring', data.exercises_month, data.monthly_exercise_goal);
+                        updateRing(container, 'time-ring', data.study_time_month, data.monthly_time_goal);
+                        updateRing(container, 'perfect-ring', data.perfect_scores_month, data.monthly_perfect_goal);
+                        
+                        container.find('.exercises-value').text(data.exercises_month + '/' + data.monthly_exercise_goal);
+                        container.find('.time-value').text(data.study_time_month + '/' + data.monthly_time_goal + ' min');
+                        container.find('.perfect-value').text(data.perfect_scores_month + '/' + data.monthly_perfect_goal);
+                        container.find('.progress-rings-streak').hide();
+                    }
                 }
+            },
+            error: function() {
+                container.find('.progress-rings-loading').html('<?php _e('Error loading progress data', 'ielts-course-manager'); ?>');
             }
-        },
-        error: function() {
-            container.find('.progress-rings-loading').html('<?php _e('Error loading progress data', 'ielts-course-manager'); ?>');
-        }
+        });
     });
     
-    function updateRing(ringId, current, goal) {
-        var ring = document.getElementById(ringId);
+    function updateRing(container, ringClass, current, goal) {
+        var ring = container.find('.' + ringClass)[0];
         if (!ring) return;
         
         var radius = parseFloat(ring.getAttribute('r'));
