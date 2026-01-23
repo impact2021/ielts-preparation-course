@@ -1,0 +1,319 @@
+{
+    "title": "Identifying Sentence Types in Writing",
+    "content": "In this exercise, you will practice identifying different types of sentences used in academic writing. Understanding the difference between facts, opinions, examples, and dogmatic statements is crucial for IELTS Writing Task 2.",
+    "questions": [
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "<p><strong>The paragraphs below each have 4 sentences. The sentences are highlighted in 4 different colours. Match each sentence with the correct description in the table below.</strong></p><p><span style=\"color: #339966;\">A higher proportion of women today are in full time employment compared with previous generations, yet some women still view the workplace as a male dominated world.</span> <span style=\"color: #ff0000;\">There is a school of thought that believes it is not possible for a working mother to successfully manage the demands of a full time job and look after a family as the pressure is extremely high.</span> <span style=\"color: #800080;\">To illustrate, when children are sick, it is not possible for a mother to take care of a child and be at work at the same time.</span> <span style=\"color: #000000;\">Since men are obviously more committed to their professional life, they should be paid higher salaries than their female counterparts.</span></p>",
+            "question": "Which sentence of the paragraph shows a <b>fact</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in green. A fact is a statement that can be verified or proven. The green sentence presents verifiable information about employment trends.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": true,
+                    "feedback": "Correct! The green sentence presents a fact - verifiable information about employment trends that can be supported by statistics."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The red sentence presents an opinion introduced with 'There is a school of thought that believes...'. The correct answer is the sentence in green, which presents a verifiable fact."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The purple sentence is an example, introduced by 'To illustrate'. The correct answer is the sentence in green, which presents a verifiable fact."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The black sentence is a dogmatic opinion using absolute language like 'obviously'. The correct answer is the sentence in green, which presents a verifiable fact."
+                }
+            ],
+            "correct_answer": "field_1:0"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "",
+            "question": "Which sentence of the paragraph is <b>dogmatic and too directly presented</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in black. Dogmatic statements use absolute language and present opinions as if they were undeniable facts. Words like 'obviously' and 'should' without qualification make this too direct.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The green sentence presents a balanced fact. The correct answer is the sentence in black, which uses absolute language like 'obviously' making it dogmatic."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The red sentence is actually a well-presented opinion that acknowledges it's a viewpoint ('There is a school of thought'). The correct answer is the sentence in black, which is dogmatic."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The purple sentence is an example, not a dogmatic statement. The correct answer is the sentence in black, which uses absolute language."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": true,
+                    "feedback": "Correct! The black sentence is dogmatic because it uses absolute language ('obviously', 'should') and presents a controversial opinion as if it were an undeniable fact, which is too direct for academic writing."
+                }
+            ],
+            "correct_answer": "field_1:3"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "",
+            "question": "Which sentence of the paragraph is <b>a sensitive but well presented opinion</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in red. This opinion is well-presented because it uses hedging language ('There is a school of thought that believes') to indicate it's one perspective, not an absolute truth.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The green sentence is a fact, not an opinion. The correct answer is the sentence in red, which presents an opinion using appropriate hedging language."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": true,
+                    "feedback": "Correct! The red sentence is a well-presented opinion because it uses hedging language ('There is a school of thought that believes...') to acknowledge it's one viewpoint rather than absolute truth. This is appropriate for discussing sensitive topics."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The purple sentence is an example, not an opinion. The correct answer is the sentence in red, which presents a sensitive opinion appropriately."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The black sentence is dogmatic, not well-presented. The correct answer is the sentence in red, which uses hedging to present the opinion sensitively."
+                }
+            ],
+            "correct_answer": "field_1:1"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "",
+            "question": "Which sentence of the paragraph is <b>an example</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in purple. Examples are introduced with phrases like 'To illustrate', 'For instance', or 'For example' and provide specific instances to support a point.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The green sentence is a fact, not an example. The correct answer is the sentence in purple, which is introduced by 'To illustrate'."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The red sentence presents an opinion, not an example. The correct answer is the sentence in purple, which illustrates the previous point."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": true,
+                    "feedback": "Correct! The purple sentence is an example, clearly signaled by the phrase 'To illustrate'. It provides a specific instance to support the opinion in the previous sentence."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The black sentence is a dogmatic conclusion, not an example. The correct answer is the sentence in purple, introduced by 'To illustrate'."
+                }
+            ],
+            "correct_answer": "field_1:2"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "<p><strong>The paragraph below has 4 sentences. The sentences are highlighted in 4 different colours. Match each sentence with the correct description.</strong></p><p><span style=\"color: #339966;\">An increasing number of British children are spending more time in the home rather than playing outside.</span> <span style=\"color: #000000;\">Children are becoming lazier, watching television and playing games rather than pursuing other activities.</span> <span style=\"color: #ff0000;\">It is not unreasonable to argue that parents should encourage their children to be more active, as they are influential in their children's lives.</span> <span style=\"color: #800080;\">For instance, such encouragement could take the form of taking part in outdoor sports with the family.</span></p>",
+            "question": "Which sentence of the paragraph is <b>a fact</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in green. This sentence presents verifiable information about a trend that can be supported by data or statistics.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": true,
+                    "feedback": "Correct! The green sentence presents a fact - a verifiable trend about British children's behavior that can be supported by research or statistics."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The black sentence is a dogmatic opinion using judgmental language like 'lazier'. The correct answer is the sentence in green, which presents a verifiable fact."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The red sentence is an opinion, though well-presented with hedging ('It is not unreasonable to argue'). The correct answer is the sentence in green."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The purple sentence is an example, introduced by 'For instance'. The correct answer is the sentence in green, which presents a fact."
+                }
+            ],
+            "correct_answer": "field_1:0"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "",
+            "question": "Which sentence of the paragraph is <b>dogmatic and too directly presented</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in black. This sentence makes a sweeping generalization using judgmental language ('lazier') without any hedging or qualification.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The green sentence presents a neutral fact. The correct answer is the sentence in black, which makes a dogmatic judgment."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": true,
+                    "feedback": "Correct! The black sentence is dogmatic because it makes a sweeping generalization ('Children are becoming lazier') without qualification or evidence. This judgmental language is too direct for academic writing."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The red sentence uses appropriate hedging language ('It is not unreasonable to argue'). The correct answer is the sentence in black, which is dogmatic."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The purple sentence is an example. The correct answer is the sentence in black, which makes an unqualified judgment."
+                }
+            ],
+            "correct_answer": "field_1:1"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "",
+            "question": "Which sentence of the paragraph is <b>a sensitive but well presented opinion</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in red. This opinion uses hedging language ('It is not unreasonable to argue') to present the viewpoint in a balanced, academic way.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The green sentence is a fact, not an opinion. The correct answer is the sentence in red, which presents an opinion with appropriate hedging."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The black sentence is dogmatic, not well-presented. The correct answer is the sentence in red, which uses hedging effectively."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": true,
+                    "feedback": "Correct! The red sentence is a well-presented opinion because it uses hedging language ('It is not unreasonable to argue that...') to acknowledge it's a viewpoint rather than absolute truth. This is appropriate for academic writing."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The purple sentence is an example. The correct answer is the sentence in red, which presents a balanced opinion."
+                }
+            ],
+            "correct_answer": "field_1:2"
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "",
+            "question": "Which sentence of the paragraph is <b>an example</b>? [dropdown]",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: The sentence in purple. Examples provide specific instances to support a point and are often introduced with phrases like 'For instance', 'For example', or 'To illustrate'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "The sentence in green",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The green sentence is a fact presenting a trend. The correct answer is the sentence in purple, introduced by 'For instance'."
+                },
+                {
+                    "text": "The sentence in black",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The black sentence is a dogmatic opinion. The correct answer is the sentence in purple, which provides a specific example."
+                },
+                {
+                    "text": "The sentence in red",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The red sentence is an opinion. The correct answer is the sentence in purple, which illustrates how the suggestion could be implemented."
+                },
+                {
+                    "text": "The sentence in purple",
+                    "is_correct": true,
+                    "feedback": "Correct! The purple sentence is an example, clearly signaled by 'For instance'. It provides a specific way that parents could encourage their children to be more active."
+                }
+            ],
+            "correct_answer": "field_1:3"
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "one_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-23 05:13:00",
+        "exported_by": "impact",
+        "plugin_version": "12.4",
+        "format_version": "1.0"
+    }
+}
