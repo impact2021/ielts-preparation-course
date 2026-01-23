@@ -1,0 +1,544 @@
+{
+    "title": "Guide Dogs Reading Test",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Read the text and answer the questions. Type your answers in the spaces provided.\n\nAccording to the information in the reading passage, classify the following events as occurring when\n\nA …guide dogs are under 1 year old\nB …guide dogs are between 1 and 2 years old\nC …guide dogs are between 2 and 9 years old\n\nType the correct letter A – C in boxes 1-5.",
+            "question": "1. become familiar with dangers and obstacles outside",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. Paragraph E: 'It is taught to always walk in a straight line in the middle of a pavement unless there is an obstacle such as maintenance work; it is taught not to turn corners unless told to do so, to stop at kerbs so that it will not lead its owners from the safety of the pavement into the path of road traffic'",
+            "correct_feedback": "Correct! This training occurs between 1 and 2 years old during the intensive second phase.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Paragraph E describes the second phase of training (between 1 and 2 years old) where dogs learn about dangers and obstacles.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Under 1 year old, puppies experience many places but formal obstacle training happens later. The correct answer is B - between 1 and 2 years old."
+                },
+                {
+                    "text": "B",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states that in the second phase of training (between 1 and 2 years), dogs are taught about obstacles, stopping at kerbs, and avoiding road traffic."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Between 2 and 9 years old, the dog is already working with an owner. The correct answer is B - between 1 and 2 years old."
+                }
+            ],
+            "options": "A\nB\nC",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. will be matched for height",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. Paragraph F: 'The owner's physical characteristics – such as how tall they are'",
+            "correct_feedback": "Correct! At 2 years old, completed training dogs are matched with owners based on height.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. Paragraph F describes matching at 2 years old based on owner's physical characteristics including height.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Under 1 year old, dogs are still in basic training. The correct answer is C - between 2 and 9 years old."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Between 1 and 2 years old, dogs are in intensive training. The correct answer is C - between 2 and 9 years old."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states that at 2 years old, when training is complete, dogs are matched with owners based on physical characteristics such as height."
+                }
+            ],
+            "options": "A\nB\nC",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. become familiar with places or events unfamiliar to most dogs",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A. Paragraph D: 'They experience many aspects of life that a usual dog may never be introduced to, such as entering shops and travelling on buses and trains'",
+            "correct_feedback": "Correct! This occurs during the first phase of training when puppies are under 1 year old.",
+            "incorrect_feedback": "Incorrect. The correct answer is A. Paragraph D describes how puppies under 1 year old are introduced to shops, buses and trains.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D describes how puppies under 1 year old 'experience many aspects of life that a usual dog may never be introduced to, such as entering shops and travelling on buses and trains.'"
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Between 1 and 2 years old, dogs learn specific skills. The correct answer is A - under 1 year old."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Between 2 and 9 years old, dogs are working with owners. The correct answer is A - under 1 year old."
+                }
+            ],
+            "options": "A\nB\nC",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. compatible walking speeds are considered",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. Paragraph F: 'The owner's physical characteristics – such as …the length of their stride'",
+            "correct_feedback": "Correct! At 2 years old, stride length (which affects walking speed) is considered when matching.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. Paragraph F describes matching at 2 years old based on stride length which determines walking speed.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Under 1 year old, dogs are in basic training. The correct answer is C - between 2 and 9 years old."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Between 1 and 2 years old, dogs are learning skills. The correct answer is C - between 2 and 9 years old."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states that at 2 years old, when matching with owners, the 'length of their stride' is considered, which determines walking speed compatibility."
+                }
+            ],
+            "options": "A\nB\nC",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. are taught how to walk on a lead without pulling",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A. Paragraph D: 'guide dogs are trained to walk ahead without straining or creating tension on the lead'",
+            "correct_feedback": "Correct! This basic skill is taught during the first phase when puppies are under 1 year old.",
+            "incorrect_feedback": "Incorrect. The correct answer is A. Paragraph D describes this training for puppies between 6-8 weeks and under 1 year old.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "classification",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states that 'guide dogs are trained to walk ahead without straining or creating tension on the lead' during the first phase (under 1 year old)."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is a basic skill taught earlier. The correct answer is A - under 1 year old."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Between 2 and 9 years old, dogs are working. The correct answer is A - under 1 year old."
+                }
+            ],
+            "options": "A\nB\nC",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 6 – 10\n\nThe reading passage has eight paragraphs, A-H.\n\nWhich paragraph contains the following information?\n\nType the correct letter A-H in boxes 6-10.",
+            "question": "6. Prerequisites for entering the guide dog training profession.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is H. 'Most associations require their guide dog trainers to have a general background in animal training, possess a university degree and a proven ability to coach and teach.'",
+            "correct_feedback": "Correct! Paragraph H discusses the prerequisites for becoming a guide dog trainer.",
+            "incorrect_feedback": "Incorrect. The correct answer is H. Paragraph H lists requirements including animal training background, university degree, and teaching ability.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A discusses guide dog associations and funding, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses breeds of guide dogs, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C discusses puppy selection criteria, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses early puppy training, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses the second phase of dog training, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses matching dogs with owners, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses guide dog retirement and working life, not trainer prerequisites. The correct answer is H."
+                },
+                {
+                    "text": "H",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph H states: 'Most associations require their guide dog trainers to have a general background in animal training, possess a university degree and a proven ability to coach and teach.'"
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "7. Attempts to ensure suitability due to genetic make up.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C. 'Many guide dogs are from bloodlines with a long history of service due to the proven suitability of the nature of their parents and the consequent likelihood that they themselves will have inherited similar traits.'",
+            "correct_feedback": "Correct! Paragraph C discusses genetic selection and bloodlines.",
+            "incorrect_feedback": "Incorrect. The correct answer is C. Paragraph C explains how bloodlines are used to predict suitability based on genetics.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A is about associations and funding, not genetics. The correct answer is C."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses breeds generally, not genetic selection. The correct answer is C."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states: 'Many guide dogs are from bloodlines with a long history of service due to the proven suitability of the nature of their parents and the consequent likelihood that they themselves will have inherited similar traits.'"
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses early training, not genetics. The correct answer is C."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses intensive training, not genetics. The correct answer is C."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses matching dogs with owners, not genetics. The correct answer is C."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses retirement, not genetics. The correct answer is C."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications, not genetics. The correct answer is C."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "8. Stage of training where some dogs may be found unsuitable.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E. 'Not all dogs that enter this level of training are able to meet the rigorous requirements it involves and only those that can competently display all of the required skills will eventually become a guide dog.'",
+            "correct_feedback": "Correct! Paragraph E describes the intensive training phase where some dogs fail to meet requirements.",
+            "incorrect_feedback": "Incorrect. The correct answer is E. Paragraph E states that not all dogs entering this training level meet the requirements.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A discusses associations, not training stages. The correct answer is E."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses breeds, not training stages. The correct answer is E."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C discusses puppy selection, not training failure. The correct answer is E."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses early training, not dogs being found unsuitable. The correct answer is E."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states: 'Not all dogs entering this level of training are able to meet the rigorous requirements it involves and only those that can competently display all of the required skills will eventually become a guide dog.'"
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses matching with owners, meaning training is complete. The correct answer is E."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses working life and retirement. The correct answer is E."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H discusses trainer requirements. The correct answer is E."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "9. Details of post-placement involvement of the guide dog association during a dog's working life.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F. 'The intervention of the Guide Dog Association sponsoring the partnership does not end there and regular follow up visits are customary.'",
+            "correct_feedback": "Correct! Paragraph F describes the ongoing support after dogs are placed with owners.",
+            "incorrect_feedback": "Incorrect. The correct answer is F. Paragraph F states that follow-up visits continue after placement.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A discusses initial funding and support, not post-placement. The correct answer is F."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B discusses breeds, not post-placement support. The correct answer is F."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C discusses puppy selection, not post-placement support. The correct answer is F."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses early training, not post-placement support. The correct answer is F."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses intensive training, not post-placement support. The correct answer is F."
+                },
+                {
+                    "text": "F",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F states: 'The intervention of the Guide Dog Association sponsoring the partnership does not end there and regular follow up visits are customary.'"
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses retirement, not ongoing support during working life. The correct answer is F."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications, not post-placement support. The correct answer is F."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "10. Rationale for not using certain types of dog.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B. 'smaller dogs with similar personality characteristics being unsuitable due to their size. Usage of mixed breed dogs is uncommon as it is more difficult to predict the characteristics and personality such dogs will develop in adulthood.'",
+            "correct_feedback": "Correct! Paragraph B explains why smaller and mixed breed dogs are not used.",
+            "incorrect_feedback": "Incorrect. The correct answer is B. Paragraph B explains that smaller dogs and mixed breeds are unsuitable.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph A discusses associations and funding, not dog types. The correct answer is B."
+                },
+                {
+                    "text": "B",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states: 'smaller dogs with similar personality characteristics being unsuitable due to their size. Usage of mixed breed dogs is uncommon as it is more difficult to predict the characteristics and personality such dogs will develop in adulthood.'"
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C discusses genetic selection, not which types are excluded. The correct answer is B."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D discusses early training, not dog type selection. The correct answer is B."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E discusses intensive training, not dog type selection. The correct answer is B."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F discusses matching with owners, not breed selection. The correct answer is B."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G discusses retirement and working life. The correct answer is B."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph H discusses trainer qualifications. The correct answer is B."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Sentence Completion",
+            "instructions": "Questions 11 – 15\n\nComplete the sentences below using NO MORE THAN TWO WORDS from the passage for each answer.\n\nType your answer in boxes 11 – 15 on your answer sheet.",
+            "question": "Complete the sentences:",
+            "field_count": 5,
+            "field_labels": [
+                "11. Certain breeds are considered more suited to guiding due to their high levels of cooperation, trainability, size and ________",
+                "12. Whilst bloodlines are important, a guide dog must also receive ________ in order to assure its success.",
+                "13. A trained guide dog will not ________ of its own accord, only doing so when instructed.",
+                "14. Despite uncompetitive salaries, positions as guide dog trainers are quite ________",
+                "15. It is important that trainers are ________ as skill does not guarantee consistent success."
+            ],
+            "field_answers": [
+                "robust health|health",
+                "professional training|training",
+                "turn corners",
+                "scarce",
+                "realists"
+            ],
+            "points": 5,
+            "no_answer_feedback": "Please check the answers above. Make sure to use NO MORE THAN TWO WORDS from the passage.",
+            "correct_feedback": "Excellent work! You've correctly completed all the sentences.",
+            "incorrect_feedback": "Some answers are incorrect. Review the passage carefully and use exact words from the text.",
+            "summary_fields": [
+                {
+                    "answer": "robust health|health",
+                    "correct_feedback": "Correct! Paragraph B mentions 'robust health' as a key characteristic.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 'robust health' or 'health'. Paragraph B: 'their generally robust health and their stature'",
+                    "no_answer_feedback": "The correct answer is 'robust health' or 'health'. Paragraph B states: 'These three breeds have been observed to be particularly suitable due to their willingness to cooperate with their human owners, their trainability, their generally robust health and their stature'"
+                },
+                {
+                    "answer": "professional training|training",
+                    "correct_feedback": "Correct! Paragraph C emphasizes the importance of professional training.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 'professional training' or 'training'. Paragraph C: 'professional training is essential.'",
+                    "no_answer_feedback": "The correct answer is 'professional training' or 'training'. Paragraph C states: 'However, genetics alone do not assure a successful guide dog; as with humans, both nature and nurture influence a dog's character and behaviour and professional training is essential.'"
+                },
+                {
+                    "answer": "turn corners",
+                    "correct_feedback": "Correct! Paragraph E describes this specific training requirement.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 'turn corners'. Paragraph E: 'it is taught not to turn corners unless told to do so'",
+                    "no_answer_feedback": "The correct answer is 'turn corners'. Paragraph E states: 'it is taught not to turn corners unless told to do so'"
+                },
+                {
+                    "answer": "scarce",
+                    "correct_feedback": "Correct! Paragraph H mentions that opportunities are scarce.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 'scarce'. Paragraph H: 'opportunities to become a guide dog trainer are often quite scarce'",
+                    "no_answer_feedback": "The correct answer is 'scarce'. Paragraph H states: 'Opportunities to become a guide dog trainer are often quite scarce'"
+                },
+                {
+                    "answer": "realists",
+                    "correct_feedback": "Correct! Paragraph H states trainers need to be realists.",
+                    "incorrect_feedback": "Incorrect. The correct answer is 'realists'. Paragraph H: 'Trainers also need to be realists as some of their charges may never become successful guide dogs'",
+                    "no_answer_feedback": "The correct answer is 'realists'. Paragraph H states: 'Trainers also need to be realists as some of their charges may never become successful guide dogs regardless of their own dedication and skill'"
+                }
+            ],
+            "reading_text_id": 0,
+            "audio_section_id": null
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage",
+            "content": "<h3>Guide dogs</h3>\n\n<p><strong>A.</strong> Guide dogs for the blind are essential for facilitating independence and confidence for many who are unable to see and would otherwise be unable to achieve the mobility they need to lead an active and fulfilled life. Guide dog sponsorship associations are generally non-profit organisations, their operations being funded by donations from the general public and grants from various foundations. The U.K. Guide Dog for the Blind Association is involved in supporting approximately 5,000 guide dog/owner partnerships at any one time and trains over 1,000 guide dog puppies each year. In addition to facilitating guide dog partnerships, the organisation is also involved in investment in research related to dog health and well-being, and research projects investigating prevention and cure of eye disease. The association also funds training of staff working to support the blind and the partially-sighted in addition to its guide dog trainers.</p>\n\n<p><strong>B.</strong> Labrador Retrievers are the most commonly used breed of dog across the world, though Golden Retrievers and Alsatians are also used by many guide dog training associations. <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">These three breeds have been observed to be particularly suitable due to their willingness to cooperate with their human owners, their trainability, their generally robust health and their stature</span>; <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">smaller dogs with similar personality characteristics being unsuitable due to their size. Usage of mixed breed dogs is uncommon as it is more difficult to predict the characteristics and personality such dogs will develop in adulthood</span>.</p>\n\n<p><strong>C.</strong> Individual puppies selected to be trained as guide dogs are chosen carefully to try to ensure they will possess the necessary characteristics. A successful guide dog is required to have a number of positive attributes including intelligence, a gentle nature, confidence in crowded situations and ability to remain calm in the event of loud noises. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Many guide dogs are from bloodlines with a long history of service due to the proven suitability of the nature of their parents and the consequent likelihood that they themselves will have inherited similar traits</span>. However, genetics alone do not assure a successful guide dog; as with humans, both nature and nurture influence a dog's character and behaviour, and <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">professional training is essential</span>.</p>\n\n<p><strong>D.</strong> A puppy's guide dog training usually begins when it is between 6 and 8 weeks old. Volunteers temporarily adopt the dogs and introduce them to the sights, sounds and smells of the world around them. <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">They experience many aspects of life that a usual dog may never be introduced to, such as entering shops and travelling on buses and trains as they will need to do once they are fully trained and are accompanying their owners through their day to day life</span>. Whilst most dogs are taught to 'heel' i.e. walk beside their owner while on a leash, <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">guide dogs are trained to walk ahead without straining or creating tension on the lead</span>; from between 6-8 weeks of age they are also taught the usual canine obedience skills of sitting, staying and coming to their trainer on command. Usually at around 1 year of age, the young dog is returned to the Guide Dog association for the next and more intensive stage of its training.</p>\n\n<p><strong>E.</strong> Taking with it the basic skills it learned as a young puppy, in the second phase of its training the trainee guide dog is taught many skills vital to it being able to ensure the safety of its future owner. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">It is taught to always walk in a straight line in the middle of a pavement unless there is an obstacle such as maintenance work; it is taught not to turn corners unless told to do so, to stop at kerbs so that it will not lead its owners from the safety of the pavement into the path of road traffic</span>, and the most complex skill of all of being able to judge height and width so that its future owner will not bump their head or shoulder as the dog guides them from place to place. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">it is taught not to turn corners unless told to do so</span>. <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Not all dogs entering this level of training are able to meet the rigorous requirements it involves and only those that can competently display all of the required skills will eventually become a guide dog</span>.</p>\n\n<p><strong>F.</strong> At 2 years old, the dog will have completed its training; having been deemed suitable and safe for guiding a blind person, it is then matched with an owner, a process which requires careful consideration and experience as not all guide dogs will be suitable for all owners. <span id=\"q2\" data-question=\"2\"></span><span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">The owner's physical characteristics – such as how tall they are and the length of their stride – impact on the type of dog that will serve them best</span>; as does their lifestyle. Once a partnership has been matched, owner and guide then spend around 4 weeks in an intensive training programme together to ensure that they can successfully operate as a team and safely navigate the world. <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">The intervention of the Guide Dog Association sponsoring the partnership does not end there and regular follow up visits are customary</span>.</p>\n\n<p><strong>G.</strong> On average, a guide dog will work for around 7 years, retiring at about age 9. Guide Dog Associations arrange for replacement dogs when the existing companion is retired; quite often, although a new working dog will be required, the original guide may stay on as a pet in the household. For centuries humans have formed strong emotional bonds with their pets; dogs in particular. The relationship between a guide dog and an owner is often especially intense as the positive impact the animal can have on the quality of life of the person is immense.</p>\n\n<p><strong>H.</strong> Since guide dog associations are non-profit-making organisations, earning potential for employees is usually relatively low compared with other industries. Despite this, the work can be extremely rewarding as guide dog trainers can feel that they are making a significant contribution to the enhancement of the quality of life of other people and are often passionate about animals. <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Opportunities to become a guide dog trainer are often quite scarce</span> and many people have most success securing a position by first entering the field in a slightly different capacity; such as kennel worker, puppy walker or carer; finding that they are eventually accepted on a training programme. Effective guide dog trainers need to have stamina, as the work can be demanding, involving long hours and a high level of personal commitment. <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Trainers also need to be realists as some of their charges may never become successful guide dogs regardless of their own dedication and skill</span>. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Most associations require their guide dog trainers to have a general background in animal training, possess a university degree and a proven ability to coach and teach</span>. Strong interpersonal skills are also vital as trainers must not only have an affinity with the dogs but also the ability to work successfully with the owners during the partnership training phase.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": 70,
+        "layout_type": "two_column_reading",
+        "exercise_label": "practice_test",
+        "scoring_type": "ielts_reading_band",
+        "timer_minutes": 20,
+        "starting_question_number": 1
+    }
+}
