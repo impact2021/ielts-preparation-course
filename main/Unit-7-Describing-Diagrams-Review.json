@@ -1,0 +1,231 @@
+{
+    "title": "END OF LESSON REVIEW (Unit 7: Describing diagrams in Task 1)",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Read the Task 1 essay below and find words in the text which have the same meaning as those in the list. Type your answers in the space provided.",
+            "question": "<p>The diagram shows the common design of a house in North America, the home is quite large and there are 8 labelled parts to the diagram.</p>\r\n<p>The house can be divided into three clear parts; the garage area, the nested storey above the garage and to the right of these is the ground floor section. The nested storey, which is elevated above the garage, has a low gradient roof.</p>\r\n<p>The dwelling has a sizeable double garage which also includes an extra entrance way . Access to the house is at the rear of the building. A ventilation window can be seen above the double garage door.</p>\r\n<p>The building has four separate roofs, three of which are low gradient. The ground floor section roof is different in that it has a sharp slope . Five sets of windows can be seen in the illustration ; the largest are located at the front of the nested storey, on the side of the garage at the front of the ground floor section.</p>\r\n<p>This ends the depiction of the diagram.</p>\r\n<p>1. Another way of saying <em><strong>typical</strong></em> used in the text is [field 1]</p>\r\n<p>2. Another way of saying <em><strong>house</strong></em> or <em><strong>home</strong></em> used in the text is [field 2]</p>\r\n<p>3. Another way of saying <em><strong>additional</strong></em> used in the text is [field 3]</p>\r\n<p>4. Another way of saying <em><strong>door</strong></em> or <em><strong>doorway</strong></em> used in the text is (2 words) [field 4]</p>\r\n<p>5. Another way of saying <em><strong>entry</strong></em> used in the text is [field 5]</p>\r\n<p>6. Another way of saying <em><strong>gradient</strong></em> used in the text is [field 6]</p>\r\n<p>7. Another way of saying <em><strong>high</strong></em> used in the text is [field 7]</p>\r\n<p>8. Another way of saying <em><strong>large</strong></em> used in the text is [field 8]</p>\r\n<p>9. Another way of saying <em><strong>diagram</strong></em> used in the text is [field 9]</p>\r\n<p>10. Another way of saying <em><strong>description</strong></em> used in the text is [field 10]</p>\r\n",
+            "points": 10,
+            "no_answer_feedback": "Remember to scan the entire text systematically. Try reading paragraph by paragraph to find synonyms.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 10,
+            "field_answers": {
+                "1": "common",
+                "2": "dwelling|building",
+                "3": "extra",
+                "4": "entrance way",
+                "5": "access",
+                "6": "slope",
+                "7": "elevated",
+                "8": "sizeable",
+                "9": "illustration",
+                "10": "depiction"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! 'Common' is indeed a synonym for 'typical' when describing standard designs.",
+                    "incorrect": "The correct answer is 'common'. Look at the very first sentence where it describes 'the common design of a house'. In academic writing, 'common' and 'typical' both mean 'usual' or 'standard'.",
+                    "no_answer": "The correct answer is 'common'. Tip: Start by reading the first sentence - it often contains key vocabulary. Here, 'common design' means the same as 'typical design'."
+                },
+                "2": {
+                    "correct": "Perfect! You correctly identified a more formal synonym for 'house' or 'home'.",
+                    "incorrect": "The correct answer is 'dwelling' (or 'building'). Look in paragraph 3 where it says 'The dwelling has a sizeable double garage'. In formal IELTS writing, 'dwelling' is a sophisticated alternative to 'house' or 'home'. 'Building' also appears in the text.",
+                    "no_answer": "The correct answer is 'dwelling' (or 'building'). Tip: Academic texts use formal vocabulary. Instead of repeating 'house', writers use words like 'dwelling', 'building', or 'property'. Find where these appear in paragraphs 3 and 4."
+                },
+                "3": {
+                    "correct": "Well done! 'Extra' is a simpler synonym for 'additional'.",
+                    "incorrect": "The correct answer is 'extra'. Look in paragraph 3: 'which also includes an extra entrance way'. Both 'extra' and 'additional' mean 'more than usual' or 'supplementary'.",
+                    "no_answer": "The correct answer is 'extra'. Tip: When you see words like 'also includes', they often introduce something additional. Check paragraph 3 where it mentions what the garage 'also includes'."
+                },
+                "4": {
+                    "correct": "Excellent! 'Entrance way' is a two-word phrase meaning door/doorway.",
+                    "incorrect": "The correct answer is 'entrance way' (2 words). This appears in paragraph 3: 'an extra entrance way'. Note the question specified you need TWO words. An entrance way is essentially a doorway or passage.",
+                    "no_answer": "The correct answer is 'entrance way' (2 words). Tip: The question tells you it's a 2-word phrase. Look for compound terms in the text. In paragraph 3, you'll find 'entrance way' which means the same as doorway."
+                },
+                "5": {
+                    "correct": "Correct! 'Access' is a formal way of saying 'entry'.",
+                    "incorrect": "The correct answer is 'access'. Look at paragraph 3: 'Access to the house is at the rear of the building'. In formal writing, 'access' is used instead of 'entry' to describe how you enter a place.",
+                    "no_answer": "The correct answer is 'access'. Tip: 'Entry' and 'access' both relate to how you get into a building. Look for sentences that describe where or how you can enter. Check paragraph 3."
+                },
+                "6": {
+                    "correct": "Perfect! You identified 'slope' as a synonym for 'gradient'.",
+                    "incorrect": "The correct answer is 'slope'. Look in paragraph 4: 'it has a sharp slope'. Both 'gradient' and 'slope' refer to the angle or steepness of a surface, particularly roofs in this context.",
+                    "no_answer": "The correct answer is 'slope'. Tip: Both words describe the angle of an incline. The text contrasts 'low gradient' roofs with one that has a 'sharp slope' in paragraph 4 - these describe the same feature using different words."
+                },
+                "7": {
+                    "correct": "Excellent work! 'Elevated' means 'high' or 'raised up'.",
+                    "incorrect": "The correct answer is 'elevated'. Look in paragraph 2: 'The nested storey, which is elevated above the garage'. 'Elevated' means 'raised' or 'positioned high', making it a formal synonym for 'high'.",
+                    "no_answer": "The correct answer is 'elevated'. Tip: This word describes position or height. When something is 'elevated', it's positioned higher than something else. Look for descriptions of what's above the garage in paragraph 2."
+                },
+                "8": {
+                    "correct": "Great! 'Sizeable' is an excellent synonym for 'large'.",
+                    "incorrect": "The correct answer is 'sizeable'. See paragraph 3: 'a sizeable double garage'. In academic writing, 'sizeable' (meaning 'fairly large' or 'considerable in size') is preferred over the simple word 'large'.",
+                    "no_answer": "The correct answer is 'sizeable'. Tip: Look for adjectives that describe the size of objects. In paragraph 3, when describing the garage, the writer uses 'sizeable' instead of just saying 'large'."
+                },
+                "9": {
+                    "correct": "Perfect! 'Illustration' is another word for 'diagram'.",
+                    "incorrect": "The correct answer is 'illustration'. Look in paragraph 4: 'Five sets of windows can be seen in the illustration'. Both 'diagram' and 'illustration' refer to the visual representation being described. Writers vary their vocabulary to avoid repetition.",
+                    "no_answer": "The correct answer is 'illustration'. Tip: Notice how the writer avoids repeating 'diagram' throughout the text. In paragraph 4, 'illustration' is used to refer to the same visual. These synonyms help make writing more sophisticated."
+                },
+                "10": {
+                    "correct": "Excellent! 'Depiction' is a formal synonym for 'description'.",
+                    "incorrect": "The correct answer is 'depiction'. Look at the final paragraph: 'This ends the depiction of the diagram'. A 'depiction' is a formal way of saying 'description' or 'representation'. Both mean showing or describing something in detail.",
+                    "no_answer": "The correct answer is 'depiction'. Tip: This is in the concluding sentence. 'Depiction' is a sophisticated, formal word meaning 'description' or 'portrayal'. Good IELTS writing uses varied vocabulary like this."
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "",
+            "question": "The candidate has written the following introductory sentence for the Task 1 shown above: \"The data shows the duration of international vacations and regions visited by British tourists in 1950 and 1990.\" Which words has the candidate used to replace the following vocabulary given in the question? Type your answers in the spaces provided.\r\n\r\n<p>The candidate has changed…</p>\r\n<p>1. <strong>overseas</strong> to [field 1]</p>\r\n<p>2. <strong>holidays</strong> to [field 2]</p>\r\n<p>3. <strong>holidaymakers</strong> to [field 3]</p>\r\n<p>4. <strong>from the UK</strong> to [field 4]</p>\r\n<p>5. <strong>places</strong> to [field 5]</p>\r\n<p>6. <strong>length</strong> to [field 6]</p>\r\n",
+            "points": 6,
+            "no_answer_feedback": "Compare the original vocabulary with the paraphrased sentence word by word to identify the changes.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 6,
+            "field_answers": {
+                "1": "international",
+                "2": "vacations|vacation",
+                "3": "tourists",
+                "4": "british|british tourists|british holidaymakers",
+                "5": "regions",
+                "6": "duration"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Excellent! 'International' is a perfect paraphrase of 'overseas'.",
+                    "incorrect": "The correct answer is 'international'. Both 'overseas' and 'international' mean 'foreign' or 'abroad'. Look for the word that describes the type of vacations in the sentence.",
+                    "no_answer": "The correct answer is 'international'. Paraphrasing tip: 'Overseas' (literally across the sea) = 'international' (between nations). Both describe foreign travel. Find where this appears before 'vacations'."
+                },
+                "2": {
+                    "correct": "Well done! 'Vacations' is an excellent paraphrase of 'holidays'.",
+                    "incorrect": "The correct answer is 'vacations'. 'Holidays' and 'vacations' are synonyms - both mean time away from work for leisure. Note: 'vacations' is more common in American English, while 'holidays' is British English.",
+                    "no_answer": "The correct answer is 'vacations'. Paraphrasing tip: These are regional variants of the same concept. British: 'holidays', American: 'vacations'. Good paraphrasing uses synonyms like this."
+                },
+                "3": {
+                    "correct": "Perfect! 'Tourists' successfully paraphrases 'holidaymakers'.",
+                    "incorrect": "The correct answer is 'tourists'. Think about what 'holidaymakers' means - people who go on holiday. What's another word for these people? They're 'tourists'! Both refer to people traveling for leisure.",
+                    "no_answer": "The correct answer is 'tourists'. Paraphrasing tip: 'Holidaymakers' = people who make/take holidays = 'tourists'. Break down compound words to understand them, then find simpler synonyms."
+                },
+                "4": {
+                    "correct": "Excellent paraphrasing! You correctly identified how to rewrite 'from the UK'.",
+                    "incorrect": "The correct answer is 'British'. Instead of saying 'tourists from the UK', the candidate used an adjective: 'British tourists'. This is efficient paraphrasing - converting a prepositional phrase into an adjective.",
+                    "no_answer": "The correct answer is 'British'. Paraphrasing tip: 'from the UK' (prepositional phrase) → 'British' (adjective). This makes the sentence more concise. Compare 'tourists from the UK' with 'British tourists'."
+                },
+                "5": {
+                    "correct": "Great work! 'Regions' is a more formal synonym for 'places'.",
+                    "incorrect": "The correct answer is 'regions'. Look for a word that means 'places' or 'areas'. 'Regions' is more specific and academic than the general word 'places', making it better for IELTS Task 1.",
+                    "no_answer": "The correct answer is 'regions'. Paraphrasing tip: Choose more precise vocabulary. 'Places' is general, while 'regions' is more specific and formal, referring to geographical areas. This improves academic tone."
+                },
+                "6": {
+                    "correct": "Excellent! 'Duration' is a formal synonym for 'length'.",
+                    "incorrect": "The correct answer is 'duration'. When talking about time, 'length' and 'duration' both mean 'how long something lasts'. Look at the beginning of the sentence for this time-related word.",
+                    "no_answer": "The correct answer is 'duration'. Paraphrasing tip: For time periods, 'length' (informal) = 'duration' (formal). Academic writing prefers 'duration'. Find this word at the start of the paraphrased sentence."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Look at the plan for the Task 1 essay about the diagram of the light bulb. How have the ideas been planned? Select the correct answer.",
+            "question": "<p><strong>Paragraph 1:</strong></p>\r\n<ul>\r\n<li>cap</li>\r\n<li>electric contact</li>\r\n<li>glass bulb</li>\r\n</ul>\r\n<p><strong>Paragraph 2:</strong></p>\r\n<ul>\r\n<li>stem</li>\r\n<li>low pressure</li>\r\n<li>inert gas</li>\r\n</ul>\r\n<p><strong>Paragraph 3:</strong></p>\r\n<ul>\r\n<li>contact wire (in)</li>\r\n<li>contact wire (out)</li>\r\n<li>support wires</li>\r\n<li>tungsten filament</li>\r\n</ul>",
+            "points": 1,
+            "no_answer_feedback": "To answer this, analyze which parts would be visible from outside (external) versus inside (internal) the light bulb. The correct answer is: 1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "1st paragraph the biggest features in the light bulb, 2nd paragraph the centre of the light bulb, 3rd paragraph the remaining internal and external features of the light bulb.",
+                    "is_correct": false,
+                    "feedback": "Not quite. This focuses on SIZE and POSITION rather than the actual organizing principle. Look again: Paragraph 1 has cap, electric contact, glass bulb (all EXTERNAL/visible from outside). Paragraph 2 has stem, low pressure, inert gas (INTERNAL/inside the bulb). Paragraph 3 has wires and filament (also INTERNAL). The organization is external vs internal, not biggest vs center vs remaining."
+                },
+                {
+                    "text": "1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts",
+                    "is_correct": true,
+                    "feedback": "Correct! This is excellent essay organization. Paragraph 1 describes external/visible parts (cap, contact, glass bulb). Paragraph 2 starts describing internal parts (stem, gas). Paragraph 3 continues with remaining internal components (wires, filament). This external-to-internal structure is logical and easy to follow - a great strategy for describing diagrams in IELTS Task 1."
+                },
+                {
+                    "text": "1st paragraph the base of the light bulb, 2nd paragraph the middle of the light bulb, 3rd paragraph the wires of the light bulb",
+                    "is_correct": false,
+                    "feedback": "This isn't accurate. While it's true the base is in paragraph 1, the organization isn't simply base→middle→wires. Look more carefully: Paragraph 1 (cap, contact, glass bulb) = external parts you can see. Paragraph 2 (stem, gas) = internal parts you can't see. Paragraph 3 (wires, filament) = more internal parts. The pattern is external vs internal, not base vs middle vs wires."
+                }
+            ],
+            "options": "1st paragraph the biggest features in the light bulb, 2nd paragraph the centre of the light bulb, 3rd paragraph the remaining internal and external features of the light bulb.\n1st paragraph external parts, 2nd paragraph internal parts, 3rd paragraph, remaining internal parts\n1st paragraph the base of the light bulb, 2nd paragraph the middle of the light bulb, 3rd paragraph the wires of the light bulb",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Read the report below. One of the labelled parts of the diagram has been accidentally missed out by the writer. Which part has not been described? Type your answer in the space provided.",
+            "question": "<table width=\"100%\">\r\n<tbody>\r\n<tr>\r\n<td width=\"100%\">The illustration portrays an electric light bulb for home use; it shows the outer and inner structure of the light bulb, and there are 9 labelled parts to the diagram.</p>\r\n<p>A globular glass bulb surrounds all other parts; on the outside of the light bulb there is an electrical contact point at the base and a metal cap just above this contact; the bulb, cap and electrical contact are the only external parts of the light bulb.</p>\r\n<p>Inside, the light bulb is filled with low pressure inert gas; there is a broad stem in the middle of the product which rises up from the cap.</p>\r\n<p>Two contact wires; contact wire in, which is green and contact wire out which is blue, run up each side of the stem. The tungsten filament, which is spiral in shape, lies parallel across the two contact wires.</p>\r\n<p>This ends the description of the light bulb and its components which are seen in the diagram.</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>There is no reference to the [field 1]</p>\r\n",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'support wires'. Strategy: Create a checklist of all 9 labelled parts, then tick off each one as you find it mentioned in the text. The one not ticked is your answer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": {
+                "1": "support wires"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The support wires were not mentioned in the description. This is an important proofreading skill - checking that all labelled parts in a diagram are described in your Task 1 response.",
+                    "incorrect": "The correct answer is 'support wires'. Check systematically: glass bulb ✓, electrical contact ✓, metal cap ✓, stem ✓, low pressure inert gas ✓, contact wire in ✓, contact wire out ✓, tungsten filament ✓, but support wires ✗ (not mentioned). Learning point: Always verify you've described every labelled part.",
+                    "no_answer": "The correct answer is 'support wires'. IELTS Task 1 strategy: Count the labelled parts (9 here), then systematically check each one is mentioned in your description. Support wires hold the filament but weren't described in this text - a crucial omission that would lose marks."
+                }
+            }
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Questions 1 - 10",
+            "content": "<img src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/diagrams-2.png\" />"
+        },
+        {
+            "title": "Questions 11 - 16",
+            "content": "<img src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/line-graphs-and-pie-charts.png\" />"
+        },
+        {
+            "title": "Questions 17 - 18",
+            "content": "<img src=\"https://www.ilsnz.com/wp-content/uploads/2018/11/diagrams-1.png\" />"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-23 23:08:21",
+        "exported_by": "impact",
+        "plugin_version": "13.2",
+        "format_version": "1.0",
+        "feedback_improved": "2026-01-23",
+        "improvement_notes": "Enhanced all feedback to be pedagogically sound with specific learning guidance, location hints, and vocabulary explanations"
+    }
+}
