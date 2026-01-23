@@ -1,0 +1,137 @@
+{
+  "title": "Writing Task 2: Conclusions - Full Feedback",
+  "content": "<p>This exercise will help you identify effective conclusions in IELTS Writing Task 2 essays. You will practice distinguishing between different conclusion types and selecting appropriate academic style.</p>",
+  "questions": [
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Read the essay below and the two conclusions that follow. Which conclusion speculates and which one recommends? Select the correct answers.",
+      "question": "<p><strong>Essay Topic:</strong> Issues relating to the environment are a cause for concern. Therefore the Government should be responsible for its protection. To what extent do you agree?</p><p><strong>Essay:</strong></p><p>To a large degree, there is a clear argument to suggest the government should ensure that environmental damage is kept to a minimum; however, the actions of individuals also impact on a daily basis and ordinary people are also accountable as I shall now explain.</p><p>Primarily, the government can directly impact on the environment in a number of ways, for example with policies related to regulation of pollution caused by industry, legislation which discourages the use of vehicles causing potential damage, such as older cars, and provision of proper recycling facilities for rubbish. This type of government intervention, particularly if practised on a global level, can have an enormous and positive impact on our world.</p><p>An additional reason to support the government having responsibility is protection of wildlife, forest areas and the natural world; many of our resources are finite and regulation at government level is necessary.</p><p>On the other hand, our day to day lives also affect the environment and for this reason it is also the responsibility of the individual. Furthermore it is not possible for the government to ensure that every household recycles properly, for example, or does not waste water or power. We, as a society, therefore need to endeavour to make sure that our actions are not damaging in any major way. The government can however provide educational programmes increasing society's awareness of the issues.</p><p><strong>Conclusion 1:</strong> To conclude, while a great deal of responsibility does indeed lie with the Government, ordinary people also need to do their best to minimise any negative effects on our world that their own actions may have.</p><p><strong>Conclusion 2:</strong> In brief, while a great deal of responsibility does indeed lie with the Government, if ordinary people do not do their best to minimise the impact their own actions have, any government efforts would be in vain.</p>",
+      "correct_answer_count": 2,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Conclusion 1 is a speculation",
+          "is_correct": false,
+          "feedback": "Incorrect. Conclusion 1 is a recommendation. It recommends that 'ordinary people also need to do their best to minimise any negative effects'. This is a direct suggestion for action."
+        },
+        {
+          "text": "Conclusion 1 is a recommendation",
+          "is_correct": true,
+          "feedback": "Correct! Conclusion 1 is a recommendation. It recommends that 'ordinary people also need to do their best to minimise any negative effects'. This is a direct suggestion for action."
+        },
+        {
+          "text": "Conclusion 2 is a recommendation",
+          "is_correct": false,
+          "feedback": "Incorrect. Conclusion 2 is a speculation. It speculates about what 'would' happen 'if' ordinary people do not do their best - suggesting that government efforts 'would be in vain'. This is a hypothetical prediction, not a recommendation."
+        },
+        {
+          "text": "Conclusion 2 is a speculation",
+          "is_correct": true,
+          "feedback": "Correct! Conclusion 2 is a speculation. It speculates about what 'would' happen 'if' ordinary people do not do their best - suggesting that government efforts 'would be in vain'. This is a hypothetical prediction, not a recommendation."
+        }
+      ],
+      "correct_answer": "1|3",
+      "no_answer_feedback": "You did not select any answers. The correct answers are: Conclusion 1 is a recommendation, and Conclusion 2 is a speculation.",
+      "points": 2
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the essay below and select the best conclusion from the choices given. Look for appropriate academic style.",
+      "question": "<p><strong>Essay Topic:</strong> Some prefer to donate money to the local community, while others like to give money to international organisations. Argue both opinions and give your view.</p><p><strong>Essay:</strong></p><p>When supporting charities, some people favour local organisations whereas others choose to contribute to causes overseas. There are valid reasons for both, as will now be considered.</p><p>Many people believe that local charities are more worthy for several reasons. Firstly, some individuals prefer to be able to see where their money is being spent; they may read reports in local newspapers or be able to witness the impact that a new community hall, for instance, is having on the quality of life of local underprivileged children. Moreover, they may feel that sponsoring improvements in the local area could have an indirect benefit for everyone in the community, themselves included; to illustrate, the works of charities focussed on assisting local troubled teenagers may actually succeed in lowering local crime rates.</p><p>Conversely, others donate to international organisations, perhaps because the need of famine or tsunami victims, for example, is far greater. Indeed, such causes often deal with critical situations and aid can literally save lives. The advertising used by international charity organisations is usually highly emotive; for example, vivid pictures of starving children in Africa are effective in getting people thinking about the fortune of their own situation.</p><p>In my opinion, both local and international charities are equally important, if people donated to only one cause, the problems in the other area would quickly become much worse. There is, therefore, a clear argument for individuals making donations to both if possible.</p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "In brief, there are valid reasons for donating to the different types of welfare organisations as they both lead to positive improvements in the recipient's life.",
+          "is_correct": true,
+          "feedback": "Correct! This conclusion is appropriate because it summarises the main points of the essay in an academic style. It paraphrases the key ideas that both local and international charities have valid reasons for support and both lead to positive outcomes."
+        },
+        {
+          "text": "To summarise, how can any of us believe that one charity is more worthy than the other when the suffering of many is prevented by our contribution?",
+          "is_correct": false,
+          "feedback": "Incorrect. You should avoid writing questions in any part of your Task 2 essay. Questions are not appropriate for academic writing, especially in conclusions where you should be summarising your points."
+        },
+        {
+          "text": "Overall, it is with great remorse we witness the plights of others both close to home and overseas when the opportunities in this world are so vast for the majority of us.",
+          "is_correct": false,
+          "feedback": "Incorrect. This conclusion uses language which is too dramatic. Phrases like 'it is with great remorse' and 'when the opportunities in this world are so vast for the majority of us' are not suitable for an academic essay. The tone should be more measured and objective."
+        },
+        {
+          "text": "Therefore, the essay is now complete.",
+          "is_correct": false,
+          "feedback": "Incorrect. You should aim to briefly paraphrase your points in a conclusion. Simply stating that the essay is finished is not enough. A conclusion should summarise the main arguments and restate your position on the topic."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'In brief, there are valid reasons for donating to the different types of welfare organisations as they both lead to positive improvements in the recipient's life.'",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the essay below and select the best conclusion from the choices given. Look for appropriate academic style.",
+      "question": "<p><strong>Essay Topic:</strong> In some countries men are required to spend some time in military service. What are your opinions on this?</p><p><strong>Essay:</strong></p><p>In some places, it is compulsory for males to join the armed forces. There are a number of people who agree with this, although I personally see more disadvantages than advantages, as I will now explain.</p><p>Firstly, having to spend time completing military service may interfere with an individual's career or education plans, particularly if attaining their professional goal involves a lengthy period of study. For example, if someone is planning to become a doctor, they may find it impossible to follow their ambitions if they are required to participate in an extended period of service in the army.</p><p>Secondly, being forced into military service is contrary to an individual's right to make personal choices in their life. Political and moral decisions, such as deciding to participate in activities which support war, should be the choice of the individual and not be made compulsory. To illustrate, a person with strong religious beliefs may be morally opposed to war yet placed in a position where they were forced to become involved.</p><p>Admittedly, a period of military service could also bring benefits. Being in the army requires high levels of self discipline and an army environment is very strict; however, some personalities would not benefit at all from such a regime. Often the military offers high quality and free training to recruits but not all career paths would be available and therefore not all people would benefit to the same extent.</p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "In brief, the negative aspects of conscription, including interference in an individual's ability to pursue their career and infringement of freedom of choice, outweigh the benefits it can bring, so should not be compulsory.",
+          "is_correct": true,
+          "feedback": "Correct! This conclusion accurately summarises the writer's point of view as expressed in the essay. The writer stated they see 'more disadvantages than advantages' and this conclusion reflects that position by stating the negatives 'outweigh the benefits' and concluding it 'should not be compulsory'."
+        },
+        {
+          "text": "In brief, there are both benefits and negative aspects to conscription as the essay above has explained.",
+          "is_correct": false,
+          "feedback": "Incorrect. This conclusion does not summarise the writer's point of view. While it's true that both benefits and negatives were discussed, the writer clearly stated their opinion that there are 'more disadvantages than advantages'. A good conclusion must reflect the writer's position, not just acknowledge that both sides were discussed."
+        },
+        {
+          "text": "In brief, the negative aspects of conscription including interference in an individual's ability to pursue their career and infringement on freedom of choice are outweighed by the benefits it can bring, so should be compulsory.",
+          "is_correct": false,
+          "feedback": "Incorrect. This conclusion does not accurately summarise the writer's point of view. It offers the opposite opinion to the one argued in the body of the essay. The writer stated they see 'more disadvantages than advantages', but this conclusion suggests the benefits outweigh the negatives and that conscription should be compulsory."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'In brief, the negative aspects of conscription, including interference in an individual's ability to pursue their career and infringement of freedom of choice, outweigh the benefits it can bring, so should not be compulsory.'",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Read the essay below and match it to a title. Select the correct answer.",
+      "question": "<p><strong>Essay:</strong></p><p>There are a number of factors which have resulted in a decline in the number of people who currently read, as I will now illustrate.</p><p>First of all, we seem to be leading increasingly busy lives. Particularly parents who are raising children and also work full-time find it difficult to sit down and relax while reading a book as there are so many demands on their time. This has also impacted on the number of children who read books for pleasure, many are not being taught the enjoyment of reading as a hobby. It used to be common for parents to read with their children, for example bedtime stories, however this practice seems to be becoming less usual.</p><p>Secondly, as technology has developed there is a wider range of alternatives for how we spend our free time. As a result many people have developed hobbies in different areas, for example, playing computer games and watching DVDs.</p><p>Finally, people now seem to expect to be entertained rather than entertain themselves. Many books have been turned into movies; the latter often proving more popular than the original work. Reading requires us to use our own interpretation of events whereas movie special effects mean that we do not have to really use our imagination. To illustrate, it is likely that the Lord of Rings movie was watched by a much higher proportion of viewers than people who have actually sat down and read the book.</p><p>To summarise, the essay has discussed a number of explanations why interest in reading has fallen. Igniting an interest in books in our children may help to cause a reversal in this trend.</p>",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Fewer people are reading books these days. Suggest possible reasons why.",
+          "is_correct": true,
+          "feedback": "Correct! This title matches the essay perfectly. The essay focuses on explaining reasons why fewer people read books, discussing factors such as busy lives, technology alternatives, and changing entertainment preferences. The conclusion also confirms this focus by stating 'the essay has discussed a number of explanations why interest in reading has fallen'."
+        },
+        {
+          "text": "Many people's lives are becoming increasingly busy, leaving less time for relaxation. Some people believe that this has resulted in fewer people reading books. Do you agree or disagree?",
+          "is_correct": false,
+          "feedback": "Incorrect. The essay focuses on reasons, and the paraphrasing of the main ideas in the conclusion makes no reference to whether the writer agrees or disagrees with the statement. While busy lives are mentioned as one reason, the essay discusses multiple factors, not just this one. This title suggests an opinion essay, but the essay provided is a reasons essay."
+        },
+        {
+          "text": "Fewer people are reading books these days. How can people be encouraged to read more regularly?",
+          "is_correct": false,
+          "feedback": "Incorrect. The writer gives reasons, not solutions. The conclusion includes a speculation about how to get more people reading ('Igniting an interest in books in our children may help'), but this is not the main focus of the rest of the essay. The essay is primarily about explaining why people read less, not about providing solutions."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is: 'Fewer people are reading books these days. Suggest possible reasons why.'",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
