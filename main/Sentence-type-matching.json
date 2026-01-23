@@ -301,14 +301,14 @@
     ],
     "reading_texts": [],
     "settings": {
-        "pass_percentage": "70",
+        "pass_percentage": 70,
         "layout_type": "one_column_exercise",
         "cbt_test_type": "",
         "exercise_label": "exercise",
         "open_as_popup": "",
         "scoring_type": "percentage",
         "timer_minutes": "",
-        "starting_question_number": "1"
+        "starting_question_number": 1
     },
     "_metadata": {
         "exported_at": "2026-01-23 05:13:00",
