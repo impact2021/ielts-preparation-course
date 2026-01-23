@@ -1,0 +1,89 @@
+{
+    "title": "Rephrasing in Task 2",
+    "content": "<p>Rephrase these sentences to make them sound less dogmatic. Type your answers in the spaces provided.</p>\n\n<p><strong>Example:</strong></p>\n<p><strong>DOGMATIC:</strong> Women should get higher salaries than men.</p>\n<p><strong>REPHRASE WITH:</strong> arguments / made / stating</p>\n<p><strong>REPHRASED SENTENCE:</strong> (9 words) There are arguments to be made for stating that women should get higher salaries than men.</p>",
+    "questions": [
+        {
+            "type": "open_question",
+            "ielts_question_type": "Writing Task 2 - Rephrasing",
+            "instructions": "Type your rephrased sentence in the space provided below.",
+            "question": "<p><strong>DOGMATIC:</strong> Smokers should not be entitled to medical treatment due to…</p>\n<p><strong>REPHRASE WITH:</strong> could / argued</p>\n<p><strong>REPHRASED SENTENCE:</strong> (5 words) __________ smokers should not be entitled to medical treatment due to…</p>",
+            "field_count": 1,
+            "field_labels": [
+                "Your answer:"
+            ],
+            "field_answers": [
+                "it could be argued that|It could be argued that"
+            ],
+            "correct_feedback": "Correct! 'It could be argued that' is the right way to make the sentence less dogmatic.",
+            "incorrect_feedback": "Not quite. The correct answer is: 'It could be argued that smokers should not be entitled to medical treatment due to…'",
+            "no_answer_feedback": "The correct answer is: 'It could be argued that' (5 words). This phrase makes the statement less dogmatic by presenting it as one possible argument rather than an absolute fact.",
+            "points": 1
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Writing Task 2 - Rephrasing",
+            "instructions": "Type your rephrased sentence in the space provided below.",
+            "question": "<p><strong>DOGMATIC:</strong> There is no value in teaching the arts in schools because …</p>\n<p><strong>REPHRASE WITH:</strong> people / believe</p>\n<p><strong>REPHRASED SENTENCE:</strong> (4 words) __________ there is no value in teaching the arts in schools because …</p>",
+            "field_count": 1,
+            "field_labels": [
+                "Your answer:"
+            ],
+            "field_answers": [
+                "some people believe that|Some people believe that|some people believe|Some people believe"
+            ],
+            "correct_feedback": "Correct! 'Some people believe that' is the right way to make the sentence less dogmatic.",
+            "incorrect_feedback": "Not quite. The correct answer is: 'Some people believe that there is no value in teaching the arts in schools because…'",
+            "no_answer_feedback": "The correct answer is: 'Some people believe that' (4 words). This phrase makes the statement less dogmatic by attributing the view to some people rather than stating it as a fact.",
+            "points": 1
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Writing Task 2 - Rephrasing",
+            "instructions": "Type your rephrased sentence in the space provided below.",
+            "question": "<p><strong>DOGMATIC:</strong> The death penalty would reduce crime since…</p>\n<p><strong>REPHRASE WITH:</strong> school / thought / which / believes</p>\n<p><strong>REPHRASED SENTENCE:</strong> (9 words) __________ the death penalty would reduce crime since…</p>",
+            "field_count": 1,
+            "field_labels": [
+                "Your answer:"
+            ],
+            "field_answers": [
+                "there is a school of thought which believes|There is a school of thought which believes|there is a school of thought which believes that|There is a school of thought which believes that"
+            ],
+            "correct_feedback": "Correct! 'There is a school of thought which believes (that)' is the right way to make the sentence less dogmatic.",
+            "incorrect_feedback": "Not quite. The correct answer is: 'There is a school of thought which believes that the death penalty would reduce crime since…'",
+            "no_answer_feedback": "The correct answer is: 'There is a school of thought which believes that' (9 words). This phrase makes the statement less dogmatic by presenting it as one perspective among many.",
+            "points": 1
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Writing Task 2 - Rephrasing",
+            "instructions": "Type your rephrased sentence in the space provided below.",
+            "question": "<p><strong>DOGMATIC:</strong> It is better to live in a developed country. This is because…</p>\n<p><strong>REPHRASE WITH:</strong> reasons / suggest</p>\n<p><strong>REPHRASED SENTENCE:</strong> (5 words) __________ it is better to live in a developed country. This is because…</p>",
+            "field_count": 1,
+            "field_labels": [
+                "Your answer:"
+            ],
+            "field_answers": [
+                "there are reasons to suggest|There are reasons to suggest|there are reasons to suggest that|There are reasons to suggest that"
+            ],
+            "correct_feedback": "Correct! 'There are reasons to suggest (that)' is the right way to make the sentence less dogmatic.",
+            "incorrect_feedback": "Not quite. The correct answer is: 'There are reasons to suggest that it is better to live in a developed country. This is because…'",
+            "no_answer_feedback": "The correct answer is: 'There are reasons to suggest that' (5 words). This phrase makes the statement less dogmatic by presenting it as a suggestion based on reasoning rather than an absolute truth.",
+            "points": 1
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": 70,
+        "layout_type": "one_column_exercise",
+        "exercise_label": "exercise",
+        "scoring_type": "percentage",
+        "timer_minutes": 0,
+        "starting_question_number": 1
+    },
+    "_metadata": {
+        "exported_at": "2026-01-23 04:58:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
