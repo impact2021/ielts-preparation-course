@@ -317,6 +317,20 @@
                         html += '</div>';
                         html += '</div>';
                         
+                        // Helper function to check if question needs "Show me" button container
+                        function needsShowMeContainer(questionResult) {
+                            return (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
+                                   (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
+                        }
+                        
+                        // Helper function to create empty feedback div for "Show me" button container
+                        function createShowMeContainer(questionElement, questionResult) {
+                            var feedbackDiv = $('<div>')
+                                .addClass('question-feedback-message')
+                                .addClass(questionResult.correct ? 'feedback-correct' : 'feedback-incorrect');
+                            questionElement.append(feedbackDiv);
+                        }
+                        
                         // Add visual feedback for correct/wrong answers in the form
                         $.each(result.question_results, function(index, questionResult) {
                             var questionNum = parseInt(index) + 1;
@@ -855,14 +869,10 @@
                                         .addClass('feedback-incorrect')
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
-                                } else if ((questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
-                                           (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined)) {
+                                } else if (needsShowMeContainer(questionResult)) {
                                     // Create an empty question-level feedback div for "Show me" button
                                     // even when feedback is shown per-option (for correct/incorrect answers)
-                                    var feedbackDiv = $('<div>')
-                                        .addClass('question-feedback-message')
-                                        .addClass(questionResult.correct ? 'feedback-correct' : 'feedback-incorrect');
-                                    questionElement.append(feedbackDiv);
+                                    createShowMeContainer(questionElement, questionResult);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
                                 // For closed_question, show feedback only for selected options (both multi-select and single-select)
@@ -911,14 +921,10 @@
                                             .addClass('feedback-incorrect')
                                             .html(questionResult.feedback);
                                         questionElement.append(feedbackDiv);
-                                    } else if ((questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
-                                               (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined)) {
+                                    } else if (needsShowMeContainer(questionResult)) {
                                         // Create an empty question-level feedback div for "Show me" button
                                         // even when feedback is shown per-option (for correct/incorrect answers)
-                                        var feedbackDiv = $('<div>')
-                                            .addClass('question-feedback-message')
-                                            .addClass(questionResult.correct ? 'feedback-correct' : 'feedback-incorrect');
-                                        questionElement.append(feedbackDiv);
+                                        createShowMeContainer(questionElement, questionResult);
                                     }
                                 } else if (questionResult.feedback) {
                                     // Fallback: show feedback at question level if option_feedback not available
