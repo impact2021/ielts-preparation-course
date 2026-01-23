@@ -1,0 +1,183 @@
+{
+    "title": "Are these statements accurate?",
+    "content": "Complete the sentences below with the correct answer. Each question includes detailed feedback explaining why the option is correct or incorrect.",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "You should select YES/TRUE if…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 'the statement and the passage agree'. YES/TRUE means the information matches exactly.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "the statement and the passage agree",
+                    "is_correct": true,
+                    "feedback": "Correct! YES/TRUE means the information in the statement matches exactly with what is stated in the passage."
+                },
+                {
+                    "text": "the statement is not fully supported in the passage",
+                    "is_correct": false,
+                    "feedback": "This describes NOT GIVEN, not YES/TRUE."
+                },
+                {
+                    "text": "the statement and the passage contradict",
+                    "is_correct": false,
+                    "feedback": "This describes FALSE/NO, not YES/TRUE."
+                }
+            ],
+            "options": "the statement and the passage agree\nthe statement is not fully supported in the passage\nthe statement and the passage contradict",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "You should select FALSE/NO if…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 'the statement and the passage contradict'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "the statement and the passage agree",
+                    "is_correct": false,
+                    "feedback": "Agreement means YES/TRUE."
+                },
+                {
+                    "text": "the statement and the passage contradict",
+                    "is_correct": true,
+                    "feedback": "Correct! FALSE/NO means the statement directly contradicts or opposes what is stated in the passage."
+                },
+                {
+                    "text": "the statement is not fully supported in the passage",
+                    "is_correct": false,
+                    "feedback": "This situation requires NOT GIVEN."
+                }
+            ],
+            "options": "the statement and the passage agree\nthe statement and the passage contradict\nthe statement is not fully supported in the passage",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "You should select NOT GIVEN if…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 'the statement is not fully supported in the passage'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "the statement and the passage agree",
+                    "is_correct": false,
+                    "feedback": "Agreement requires YES/TRUE."
+                },
+                {
+                    "text": "the statement and the passage contradict",
+                    "is_correct": false,
+                    "feedback": "Contradiction requires FALSE/NO."
+                },
+                {
+                    "text": "the statement is not fully supported in the passage",
+                    "is_correct": true,
+                    "feedback": "Correct! NOT GIVEN means the passage does not contain enough information to confirm or deny the statement."
+                }
+            ],
+            "options": "the statement and the passage agree\nthe statement and the passage contradict\nthe statement is not fully supported in the passage",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "YES / NO / NOT GIVEN questions ask about…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 'the views/claims of the writer'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "the views/claims of the writer",
+                    "is_correct": true,
+                    "feedback": "Correct! YES/NO/NOT GIVEN questions focus on the writer's opinions, views, and claims expressed in the passage."
+                },
+                {
+                    "text": "factual information in the passage",
+                    "is_correct": false,
+                    "feedback": "Factual information is tested in TRUE/FALSE/NOT GIVEN questions."
+                }
+            ],
+            "options": "the views/claims of the writer\nfactual information in the passage",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "TRUE / FALSE / NOT GIVEN questions ask about…",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: 'factual information in the passage'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "the views/claims of the writer",
+                    "is_correct": false,
+                    "feedback": "Writer opinions are tested in YES/NO/NOT GIVEN questions."
+                },
+                {
+                    "text": "factual information in the passage",
+                    "is_correct": true,
+                    "feedback": "Correct! TRUE/FALSE/NOT GIVEN questions focus on objective facts and information presented in the passage."
+                }
+            ],
+            "options": "the views/claims of the writer\nfactual information in the passage",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-23 20:26:04",
+        "exported_by": "impact",
+        "plugin_version": "13.2",
+        "format_version": "1.0"
+    }
+}
