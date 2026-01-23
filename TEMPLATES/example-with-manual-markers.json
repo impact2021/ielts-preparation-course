@@ -1,0 +1,89 @@
+{
+    "title": "Simple Example - Manual HTML Markers",
+    "content": "This example demonstrates using manual HTML markers for precise control over highlighting.",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "What is the capital of France?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paris. Click 'Show me' to see where this is stated in the passage.",
+            "correct_feedback": "Correct! Paris is the capital of France.",
+            "incorrect_feedback": "Incorrect. Try clicking 'Show me' to find the answer in the passage.",
+            "reading_text_id": 0,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "London",
+                    "is_correct": false,
+                    "feedback": "London is the capital of the United Kingdom, not France."
+                },
+                {
+                    "text": "Paris",
+                    "is_correct": true,
+                    "feedback": "Correct! Paris is indeed the capital of France."
+                },
+                {
+                    "text": "Berlin",
+                    "is_correct": false,
+                    "feedback": "Berlin is the capital of Germany, not France."
+                },
+                {
+                    "text": "Madrid",
+                    "is_correct": false,
+                    "feedback": "Madrid is the capital of Spain, not France."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "When was the Eiffel Tower completed?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 1889. Click 'Show me' to see this date in the passage.",
+            "correct_feedback": "Correct! The Eiffel Tower was completed in 1889.",
+            "incorrect_feedback": "Incorrect. Click 'Show me' to find the correct date.",
+            "reading_text_id": 0,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "1789",
+                    "is_correct": false,
+                    "feedback": "This is the year of the French Revolution, not when the tower was built."
+                },
+                {
+                    "text": "1889",
+                    "is_correct": true,
+                    "feedback": "Correct! The Eiffel Tower was completed in 1889."
+                },
+                {
+                    "text": "1989",
+                    "is_correct": false,
+                    "feedback": "This date is too recent - the tower is much older."
+                }
+            ],
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Paris and the Eiffel Tower",
+            "content": "<p>France is a beautiful country in Western Europe with a rich history and culture. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Paris, the capital of France</span>, is known for its art, fashion, and cuisine. The city attracts millions of tourists every year who come to see its famous landmarks.</p><p>One of the most iconic landmarks in Paris is the Eiffel Tower. This iron lattice tower was designed by Gustave Eiffel and <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">completed in 1889</span> for the World's Fair. At the time of its construction, it was the tallest structure in the world, standing at 300 meters tall.</p><p>Today, the Eiffel Tower remains one of the most visited paid monuments in the world, with nearly 7 million visitors annually. It has become a global cultural icon of France and one of the most recognizable structures in the world.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "note": "This example uses manual HTML markers: <span id=\"q#\" data-question=\"#\"></span><span class=\"reading-answer-marker\">text</span>"
+    }
+}

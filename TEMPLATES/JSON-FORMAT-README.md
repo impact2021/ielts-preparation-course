@@ -351,12 +351,39 @@ This is a variant of closed_question that displays options as inline dropdown me
 ```json
 "reading_texts": [
   {
-    "title": "Passage Title",
-    "text": "<p>Full passage text...</p>",
-    "source": "Optional source citation"
+    "title": "Passage 1",
+    "content": "<p>Full passage text with [Q1]reading markers...</p>"
   }
 ]
 ```
+
+### ⚠️ IMPORTANT: Reading Passage Markers Required!
+
+For the "Show me" buttons to work properly in reading tests, you **MUST** include question markers in your reading passage content. Without these markers, students won't be able to see where answers are located.
+
+**Two Methods:**
+
+**Method 1: Automatic Markers (Easy)**
+```json
+"content": "Some text here. Then [Q1]Scott Bradley warns that some industries are less receptive to gap years."
+```
+- Place `[Q#]` right before the text containing the answer
+- System automatically highlights relevant text when students click "Show me"
+
+**Method 2: Manual HTML Markers (Precise Control)**
+```json
+"content": "<p>Some text. Then <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Scott Bradley warns that some industries are less receptive to gap years</span>.</p>"
+```
+- Full control over exactly what text gets highlighted
+- Can highlight multiple sections for one question
+
+**Complete Examples:**
+- `example-with-reading-markers.json` - Shows automatic [Q#] markers
+- `example-with-manual-markers.json` - Shows manual HTML markers
+
+**For Full Documentation:**
+- See `../HOW_TO_ADD_READING_PASSAGE_MARKERS.md` for step-by-step guide
+- See `../READING_PASSAGE_MARKER_GUIDE.md` for complete technical documentation
 
 ## Multiple Acceptable Answers
 
