@@ -1,0 +1,567 @@
+{
+    "title": "Signpost words test",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "[dropdown], I'd like to thank you all again for coming to this meeting, and to say that I have received apologies from Mrs Brownlow, who won't be able to attend today.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'First of all'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": true,
+                    "feedback": "Correct! 'First of all' is the appropriate opening signpost word because it introduces the very beginning of a meeting or presentation. It signals to the audience that this is the initial point or action, establishing the opening sequence of topics. This phrase is commonly used to start formal meetings and presentations."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Now' is typically used to transition between topics rather than to open a meeting. The correct answer is 'First of all', which is the standard signpost for beginning a formal presentation or meeting."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' refers back to something previously mentioned, but there is no prior context here. The correct answer is 'First of all', which properly introduces the opening of the meeting."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' is used to rephrase or clarify a point already made. The correct answer is 'First of all', which is appropriate for starting a meeting."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' is typically used to conclude or transition after discussion. The correct answer is 'First of all', which is the proper opening signpost for a formal meeting."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' references something previously stated, but nothing has been said yet at the start of the meeting. The correct answer is 'First of all', which appropriately opens the meeting."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' is used to acknowledge exceptions or limitations to a statement, but there's no prior statement to contrast. The correct answer is 'First of all', which introduces the beginning of the meeting."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Moving on' signals a transition from one topic to another, but there's no previous topic here. The correct answer is 'First of all', which properly starts the meeting."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "0",
+            "option_feedback": [
+                "Correct! 'First of all' is the appropriate opening signpost word because it introduces the very beginning of a meeting or presentation. It signals to the audience that this is the initial point or action, establishing the opening sequence of topics. This phrase is commonly used to start formal meetings and presentations.",
+                "Incorrect. 'Now' is typically used to transition between topics rather than to open a meeting. The correct answer is 'First of all', which is the standard signpost for beginning a formal presentation or meeting.",
+                "Incorrect. 'Talking about that' refers back to something previously mentioned, but there is no prior context here. The correct answer is 'First of all', which properly introduces the opening of the meeting.",
+                "Incorrect. 'To put it another way' is used to rephrase or clarify a point already made. The correct answer is 'First of all', which is appropriate for starting a meeting.",
+                "Incorrect. 'Right' is typically used to conclude or transition after discussion. The correct answer is 'First of all', which is the proper opening signpost for a formal meeting.",
+                "Incorrect. 'As I said' references something previously stated, but nothing has been said yet at the start of the meeting. The correct answer is 'First of all', which appropriately opens the meeting.",
+                "Incorrect. 'This isn't always so' is used to acknowledge exceptions or limitations to a statement, but there's no prior statement to contrast. The correct answer is 'First of all', which introduces the beginning of the meeting.",
+                "Incorrect. 'Moving on' signals a transition from one topic to another, but there's no previous topic here. The correct answer is 'First of all', which properly starts the meeting."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "[dropdown], I'd like to give you a little more information regarding the additional courses we are running over the summer holiday.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'Now'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' is used to introduce the very first topic, but this is a transition to the next topic. The correct answer is 'Now', which signals moving to a new point in the presentation."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": true,
+                    "feedback": "Correct! 'Now' is the perfect signpost word here because it signals a smooth transition from the opening remarks to the next topic. It indicates that the speaker is moving forward to discuss a new subject (the summer courses) while maintaining the flow of the meeting. 'Now' is commonly used to introduce subsequent points in presentations."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' refers to a specific topic just mentioned, but summer courses haven't been discussed yet. The correct answer is 'Now', which transitions to this new topic."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' is used to rephrase something already said. The correct answer is 'Now', which introduces a new topic (summer courses)."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' is more informal and often used for conclusions or quick transitions. The correct answer is 'Now', which provides a clearer, more formal transition to the next topic."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' references a previous statement about the same topic, but summer courses haven't been mentioned before. The correct answer is 'Now', which introduces this new topic."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' acknowledges limitations or exceptions to a claim, but there's no claim being qualified here. The correct answer is 'Now', which transitions to a new topic."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While 'Moving on' could work for transitions, 'Now' is more appropriate here as it provides a smoother, less abrupt transition to the new topic of summer courses."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "1",
+            "option_feedback": [
+                "Incorrect. 'First of all' is used to introduce the very first topic, but this is a transition to the next topic. The correct answer is 'Now', which signals moving to a new point in the presentation.",
+                "Correct! 'Now' is the perfect signpost word here because it signals a smooth transition from the opening remarks to the next topic. It indicates that the speaker is moving forward to discuss a new subject (the summer courses) while maintaining the flow of the meeting. 'Now' is commonly used to introduce subsequent points in presentations.",
+                "Incorrect. 'Talking about that' refers to a specific topic just mentioned, but summer courses haven't been discussed yet. The correct answer is 'Now', which transitions to this new topic.",
+                "Incorrect. 'To put it another way' is used to rephrase something already said. The correct answer is 'Now', which introduces a new topic (summer courses).",
+                "Incorrect. 'Right' is more informal and often used for conclusions or quick transitions. The correct answer is 'Now', which provides a clearer, more formal transition to the next topic.",
+                "Incorrect. 'As I said' references a previous statement about the same topic, but summer courses haven't been mentioned before. The correct answer is 'Now', which introduces this new topic.",
+                "Incorrect. 'This isn't always so' acknowledges limitations or exceptions to a claim, but there's no claim being qualified here. The correct answer is 'Now', which transitions to a new topic.",
+                "Incorrect. While 'Moving on' could work for transitions, 'Now' is more appropriate here as it provides a smoother, less abrupt transition to the new topic of summer courses."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "[dropdown] in the last meeting, we are looking for some of you to act as mentors for our international students arriving over the coming weeks.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'As I said'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' introduces the first point, but this sentence references information from a previous meeting. The correct answer is 'As I said', which refers back to a prior statement."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Now' transitions to a new topic but doesn't indicate that this was previously mentioned. The correct answer is 'As I said', which explicitly references the last meeting."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' refers to something just mentioned in the current conversation. The correct answer is 'As I said', which specifically references what was stated 'in the last meeting'."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' rephrases a current point. The correct answer is 'As I said', which indicates the speaker is repeating information from a previous meeting."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' doesn't establish a connection to previous statements. The correct answer is 'As I said', which explicitly links to what was mentioned 'in the last meeting'."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": true,
+                    "feedback": "Correct! 'As I said' is the appropriate signpost because it explicitly refers back to information that was previously stated—in this case, 'in the last meeting'. This phrase helps remind the audience of earlier information and shows continuity between meetings. It's a clear reference marker that connects current discussion to past statements."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' introduces a contrast or exception, but there's no claim being qualified here. The correct answer is 'As I said', which refers to a previous statement."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Moving on' signals a transition to a new topic without referencing past information. The correct answer is 'As I said', which specifically recalls what was mentioned 'in the last meeting'."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "5",
+            "option_feedback": [
+                "Incorrect. 'First of all' introduces the first point, but this sentence references information from a previous meeting. The correct answer is 'As I said', which refers back to a prior statement.",
+                "Incorrect. 'Now' transitions to a new topic but doesn't indicate that this was previously mentioned. The correct answer is 'As I said', which explicitly references the last meeting.",
+                "Incorrect. 'Talking about that' refers to something just mentioned in the current conversation. The correct answer is 'As I said', which specifically references what was stated 'in the last meeting'.",
+                "Incorrect. 'To put it another way' rephrases a current point. The correct answer is 'As I said', which indicates the speaker is repeating information from a previous meeting.",
+                "Incorrect. 'Right' doesn't establish a connection to previous statements. The correct answer is 'As I said', which explicitly links to what was mentioned 'in the last meeting'.",
+                "Correct! 'As I said' is the appropriate signpost because it explicitly refers back to information that was previously stated—in this case, 'in the last meeting'. This phrase helps remind the audience of earlier information and shows continuity between meetings. It's a clear reference marker that connects current discussion to past statements.",
+                "Incorrect. 'This isn't always so' introduces a contrast or exception, but there's no claim being qualified here. The correct answer is 'As I said', which refers to a previous statement.",
+                "Incorrect. 'Moving on' signals a transition to a new topic without referencing past information. The correct answer is 'As I said', which specifically recalls what was mentioned 'in the last meeting'."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "Although our college prides itself on being a welcoming environment in which international students can study and feel at home from the very first day, we now [dropdown].",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'this isn't always so'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' introduces an opening point, but this sentence needs a phrase that acknowledges a limitation. The correct answer is 'this isn't always so', which contrasts with the positive claim made."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Now' signals a transition but doesn't create the necessary contrast with the positive statement about the college. The correct answer is 'this isn't always so', which acknowledges reality differs from the ideal."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' continues a related topic but doesn't provide the contrasting acknowledgment needed. The correct answer is 'this isn't always so', which admits the limitation."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' rephrases an idea, but we need to acknowledge an exception. The correct answer is 'this isn't always so', which contrasts with the ideal described."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' doesn't create the necessary contrast or acknowledgment. The correct answer is 'this isn't always so', which recognizes that reality doesn't always match the college's pride."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' refers to a previous statement but doesn't acknowledge the limitation needed here. The correct answer is 'this isn't always so', which provides the necessary contrast."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": true,
+                    "feedback": "Correct! 'This isn't always so' is the right choice because it acknowledges a limitation or exception to the positive claim just made about the college. The sentence structure with 'Although' sets up a contrast: while the college prides itself on being welcoming, the reality is that this ideal isn't always achieved. This signpost phrase is essential for introducing honest acknowledgment of challenges, which then leads logically to the proposed solution (the mentoring program)."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Moving on' transitions to a new topic rather than acknowledging a limitation of the current topic. The correct answer is 'this isn't always so', which provides the necessary contrast."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "6",
+            "option_feedback": [
+                "Incorrect. 'First of all' introduces an opening point, but this sentence needs a phrase that acknowledges a limitation. The correct answer is 'this isn't always so', which contrasts with the positive claim made.",
+                "Incorrect. 'Now' signals a transition but doesn't create the necessary contrast with the positive statement about the college. The correct answer is 'this isn't always so', which acknowledges reality differs from the ideal.",
+                "Incorrect. 'Talking about that' continues a related topic but doesn't provide the contrasting acknowledgment needed. The correct answer is 'this isn't always so', which admits the limitation.",
+                "Incorrect. 'To put it another way' rephrases an idea, but we need to acknowledge an exception. The correct answer is 'this isn't always so', which contrasts with the ideal described.",
+                "Incorrect. 'Right' doesn't create the necessary contrast or acknowledgment. The correct answer is 'this isn't always so', which recognizes that reality doesn't always match the college's pride.",
+                "Incorrect. 'As I said' refers to a previous statement but doesn't acknowledge the limitation needed here. The correct answer is 'this isn't always so', which provides the necessary contrast.",
+                "Correct! 'This isn't always so' is the right choice because it acknowledges a limitation or exception to the positive claim just made about the college. The sentence structure with 'Although' sets up a contrast: while the college prides itself on being welcoming, the reality is that this ideal isn't always achieved. This signpost phrase is essential for introducing honest acknowledgment of challenges, which then leads logically to the proposed solution (the mentoring program).",
+                "Incorrect. 'Moving on' transitions to a new topic rather than acknowledging a limitation of the current topic. The correct answer is 'this isn't always so', which provides the necessary contrast."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "Feelings of homesickness, isolation and loneliness are somewhat unavoidable, but I would like, as much as possible, to reduce these factors by teaming new students with existing students who have been here some time. [dropdown], I am looking for volunteers to show the new students around, introduce the place to them and generally ease them into their studies, so if any of you are willing to help, then please come to my office anytime during the week and let me know.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'To put it another way'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' introduces an opening point, but here we need to rephrase what was just said. The correct answer is 'To put it another way', which clarifies the previous statement."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Now' transitions to a new topic, but this sentence restates the same idea in clearer terms. The correct answer is 'To put it another way', which signals a rephrasing."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' refers to a related topic but doesn't indicate rephrasing. The correct answer is 'To put it another way', which explicitly restates the mentoring idea in practical terms."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": true,
+                    "feedback": "Correct! 'To put it another way' is the perfect signpost here because the speaker is rephrasing or clarifying what they just said. The previous sentence discussed 'teaming new students with existing students' in general terms, and now the speaker is restating this same idea more concretely as 'looking for volunteers to show the new students around'. This signpost word helps make the abstract concept more practical and actionable for the audience."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' is informal and doesn't signal that the speaker is rephrasing their point. The correct answer is 'To put it another way', which clearly indicates a restatement."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' references a previous statement from earlier in the discussion, not an immediate rephrasing. The correct answer is 'To put it another way', which restates the just-mentioned idea."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' acknowledges limitations, but the speaker is clarifying, not contrasting. The correct answer is 'To put it another way', which rephrases the mentoring concept."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Moving on' signals a transition to a new topic, but the speaker is still discussing the same mentoring idea. The correct answer is 'To put it another way', which restates the concept."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "3",
+            "option_feedback": [
+                "Incorrect. 'First of all' introduces an opening point, but here we need to rephrase what was just said. The correct answer is 'To put it another way', which clarifies the previous statement.",
+                "Incorrect. 'Now' transitions to a new topic, but this sentence restates the same idea in clearer terms. The correct answer is 'To put it another way', which signals a rephrasing.",
+                "Incorrect. 'Talking about that' refers to a related topic but doesn't indicate rephrasing. The correct answer is 'To put it another way', which explicitly restates the mentoring idea in practical terms.",
+                "Correct! 'To put it another way' is the perfect signpost here because the speaker is rephrasing or clarifying what they just said. The previous sentence discussed 'teaming new students with existing students' in general terms, and now the speaker is restating this same idea more concretely as 'looking for volunteers to show the new students around'. This signpost word helps make the abstract concept more practical and actionable for the audience.",
+                "Incorrect. 'Right' is informal and doesn't signal that the speaker is rephrasing their point. The correct answer is 'To put it another way', which clearly indicates a restatement.",
+                "Incorrect. 'As I said' references a previous statement from earlier in the discussion, not an immediate rephrasing. The correct answer is 'To put it another way', which restates the just-mentioned idea.",
+                "Incorrect. 'This isn't always so' acknowledges limitations, but the speaker is clarifying, not contrasting. The correct answer is 'To put it another way', which rephrases the mentoring concept.",
+                "Incorrect. 'Moving on' signals a transition to a new topic, but the speaker is still discussing the same mentoring idea. The correct answer is 'To put it another way', which restates the concept."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "[dropdown], I'd also like to talk to you about a temporary teacher who will be joining us for the next week or so. He will be teaching history and sociology, and substituting for Miss Kinsale until her recovery.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'Moving on'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' is for opening points, not transitioning to a new topic midway through. The correct answer is 'Moving on', which signals a shift to a different subject."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While 'Now' can signal transitions, 'Moving on' is more explicit and appropriate when clearly shifting from one distinct topic (mentoring) to another (the temporary teacher)."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' suggests a connection to the previous topic, but the temporary teacher is a completely different subject. The correct answer is 'Moving on', which indicates a clear topic change."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' rephrases the same idea, but we're introducing a new topic here. The correct answer is 'Moving on', which transitions to discussing the temporary teacher."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' is too informal and abrupt for this formal transition. The correct answer is 'Moving on', which provides a clear, professional signal of changing topics."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' refers back to previous statements, but the temporary teacher hasn't been mentioned before. The correct answer is 'Moving on', which introduces this new topic."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' acknowledges limitations, but we're transitioning to a new topic, not qualifying the previous one. The correct answer is 'Moving on'."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": true,
+                    "feedback": "Correct! 'Moving on' is the ideal signpost here because it explicitly signals a transition from one topic (the mentoring program) to a completely different topic (the temporary teacher). This phrase clearly tells the audience that the speaker has finished discussing one subject and is now shifting attention to another. It's particularly useful in meetings and presentations to maintain clear structure and help the audience follow along as different items are addressed."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "7",
+            "option_feedback": [
+                "Incorrect. 'First of all' is for opening points, not transitioning to a new topic midway through. The correct answer is 'Moving on', which signals a shift to a different subject.",
+                "Incorrect. While 'Now' can signal transitions, 'Moving on' is more explicit and appropriate when clearly shifting from one distinct topic (mentoring) to another (the temporary teacher).",
+                "Incorrect. 'Talking about that' suggests a connection to the previous topic, but the temporary teacher is a completely different subject. The correct answer is 'Moving on', which indicates a clear topic change.",
+                "Incorrect. 'To put it another way' rephrases the same idea, but we're introducing a new topic here. The correct answer is 'Moving on', which transitions to discussing the temporary teacher.",
+                "Incorrect. 'Right' is too informal and abrupt for this formal transition. The correct answer is 'Moving on', which provides a clear, professional signal of changing topics.",
+                "Incorrect. 'As I said' refers back to previous statements, but the temporary teacher hasn't been mentioned before. The correct answer is 'Moving on', which introduces this new topic.",
+                "Incorrect. 'This isn't always so' acknowledges limitations, but we're transitioning to a new topic, not qualifying the previous one. The correct answer is 'Moving on'.",
+                "Correct! 'Moving on' is the ideal signpost here because it explicitly signals a transition from one topic (the mentoring program) to a completely different topic (the temporary teacher). This phrase clearly tells the audience that the speaker has finished discussing one subject and is now shifting attention to another. It's particularly useful in meetings and presentations to maintain clear structure and help the audience follow along as different items are addressed."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "[dropdown], if anyone wants to send her a card then just let me know by the end of the day as I will be going to the hospital this evening to visit her.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'Talking about that'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' introduces the opening point, but this continues discussing Miss Kinsale who was just mentioned. The correct answer is 'Talking about that', which links to the previous sentence."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Now' signals a new topic, but this sentence is still about Miss Kinsale from the previous sentence. The correct answer is 'Talking about that', which maintains the connection."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": true,
+                    "feedback": "Correct! 'Talking about that' is the right signpost because it directly refers back to Miss Kinsale and her recovery, which were just mentioned in the previous sentence. This phrase creates a natural connection, showing that the speaker is adding related information about the same topic. It's perfect for adding supplementary details about something recently discussed, in this case offering to bring cards to Miss Kinsale in hospital."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' rephrases an idea, but this adds new information rather than rephrasing. The correct answer is 'Talking about that', which connects to Miss Kinsale just mentioned."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Right' doesn't establish the clear connection to the previous mention of Miss Kinsale. The correct answer is 'Talking about that', which explicitly links to her."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' refers to something stated earlier, but the cards weren't mentioned before. The correct answer is 'Talking about that', which refers to Miss Kinsale from the previous sentence."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' introduces a contrast, but we're adding related information, not contradicting. The correct answer is 'Talking about that', which connects to Miss Kinsale."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Moving on' signals changing topics, but this continues discussing Miss Kinsale. The correct answer is 'Talking about that', which shows the connection to the previous sentence."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "2",
+            "option_feedback": [
+                "Incorrect. 'First of all' introduces the opening point, but this continues discussing Miss Kinsale who was just mentioned. The correct answer is 'Talking about that', which links to the previous sentence.",
+                "Incorrect. 'Now' signals a new topic, but this sentence is still about Miss Kinsale from the previous sentence. The correct answer is 'Talking about that', which maintains the connection.",
+                "Correct! 'Talking about that' is the right signpost because it directly refers back to Miss Kinsale and her recovery, which were just mentioned in the previous sentence. This phrase creates a natural connection, showing that the speaker is adding related information about the same topic. It's perfect for adding supplementary details about something recently discussed, in this case offering to bring cards to Miss Kinsale in hospital.",
+                "Incorrect. 'To put it another way' rephrases an idea, but this adds new information rather than rephrasing. The correct answer is 'Talking about that', which connects to Miss Kinsale just mentioned.",
+                "Incorrect. 'Right' doesn't establish the clear connection to the previous mention of Miss Kinsale. The correct answer is 'Talking about that', which explicitly links to her.",
+                "Incorrect. 'As I said' refers to something stated earlier, but the cards weren't mentioned before. The correct answer is 'Talking about that', which refers to Miss Kinsale from the previous sentence.",
+                "Incorrect. 'This isn't always so' introduces a contrast, but we're adding related information, not contradicting. The correct answer is 'Talking about that', which connects to Miss Kinsale.",
+                "Incorrect. 'Moving on' signals changing topics, but this continues discussing Miss Kinsale. The correct answer is 'Talking about that', which shows the connection to the previous sentence."
+            ]
+        },
+        {
+            "type": "closed_question_dropdown",
+            "instructions": "Complete this transcript by selecting the appropriate signpost word.",
+            "question": "[dropdown], unless there is anything else you want to add, we'll close the meeting. I hope to see some of you during the week.",
+            "points": 1,
+            "no_answer_feedback": "You did not select an answer. The correct answer is 'Right'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "First of all",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'First of all' opens a presentation, but this is the closing statement. The correct answer is 'Right', which signals wrapping up the meeting."
+                },
+                {
+                    "text": "Now",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Now' transitions between topics, but 'Right' is more appropriate for signaling the conclusion of a meeting. The correct answer is 'Right'."
+                },
+                {
+                    "text": "Talking about that",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Talking about that' refers to a previous topic, but we're closing the meeting. The correct answer is 'Right', which signals the conclusion."
+                },
+                {
+                    "text": "To put it another way",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'To put it another way' rephrases ideas, but we need to conclude the meeting. The correct answer is 'Right', which wraps things up."
+                },
+                {
+                    "text": "Right",
+                    "is_correct": true,
+                    "feedback": "Correct! 'Right' is the perfect closing signpost for this meeting because it signals that the speaker has covered all the agenda items and is ready to conclude. It's commonly used in British English to wrap up discussions and transition to closure. The word conveys a sense of 'okay, we're done now' and invites any final comments before ending. It's informal yet professional, making it ideal for concluding a staff meeting in an educational setting."
+                },
+                {
+                    "text": "As I said",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'As I said' refers back to earlier statements, but we're concluding the meeting. The correct answer is 'Right', which signals the ending."
+                },
+                {
+                    "text": "this isn't always so",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'This isn't always so' acknowledges limitations, but we need a closing signpost. The correct answer is 'Right', which wraps up the meeting."
+                },
+                {
+                    "text": "Moving on",
+                    "is_correct": false,
+                    "feedback": "Incorrect. 'Moving on' transitions to another topic, but the speaker is ending the meeting, not moving to a new topic. The correct answer is 'Right', which signals closure."
+                }
+            ],
+            "options": "First of all\nNow\nTalking about that\nTo put it another way\nRight\nAs I said\nthis isn't always so\nMoving on",
+            "correct_answer": "4",
+            "option_feedback": [
+                "Incorrect. 'First of all' opens a presentation, but this is the closing statement. The correct answer is 'Right', which signals wrapping up the meeting.",
+                "Incorrect. 'Now' transitions between topics, but 'Right' is more appropriate for signaling the conclusion of a meeting. The correct answer is 'Right'.",
+                "Incorrect. 'Talking about that' refers to a previous topic, but we're closing the meeting. The correct answer is 'Right', which signals the conclusion.",
+                "Incorrect. 'To put it another way' rephrases ideas, but we need to conclude the meeting. The correct answer is 'Right', which wraps things up.",
+                "Correct! 'Right' is the perfect closing signpost for this meeting because it signals that the speaker has covered all the agenda items and is ready to conclude. It's commonly used in British English to wrap up discussions and transition to closure. The word conveys a sense of 'okay, we're done now' and invites any final comments before ending. It's informal yet professional, making it ideal for concluding a staff meeting in an educational setting.",
+                "Incorrect. 'As I said' refers back to earlier statements, but we're concluding the meeting. The correct answer is 'Right', which signals the ending.",
+                "Incorrect. 'This isn't always so' acknowledges limitations, but we need a closing signpost. The correct answer is 'Right', which wraps up the meeting.",
+                "Incorrect. 'Moving on' transitions to another topic, but the speaker is ending the meeting, not moving to a new topic. The correct answer is 'Right', which signals closure."
+            ]
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-24 09:55:21",
+        "exported_by": "impact",
+        "plugin_version": "13.4",
+        "format_version": "1.0"
+    }
+}
