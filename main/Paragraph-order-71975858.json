@@ -50,7 +50,8 @@
                 "",
                 "",
                 ""
-            ]
+            ],
+            "correct_answer_count": 1
         },
         {
             "type": "closed_question_dropdown",
@@ -100,7 +101,8 @@
                 "",
                 "",
                 ""
-            ]
+            ],
+            "correct_answer_count": 1
         },
         {
             "type": "closed_question_dropdown",
@@ -150,7 +152,8 @@
                 "",
                 "",
                 ""
-            ]
+            ],
+            "correct_answer_count": 1
         },
         {
             "type": "closed_question_dropdown",
@@ -200,7 +203,8 @@
                 "",
                 "",
                 ""
-            ]
+            ],
+            "correct_answer_count": 1
         },
         {
             "type": "closed_question_dropdown",
@@ -250,13 +254,14 @@
                 "",
                 "",
                 ""
-            ]
+            ],
+            "correct_answer_count": 1
         }
     ],
     "reading_texts": [
         {
             "title": "",
-            "content": "<strong>Paragraph A: </strong>Students also learn information from an international perspective and will be able to utilize their studies on their return home, their knowledge adding benefit to the company they work for and the country itself. For example, many families wish to send their children to America to study as it has a world-leading economy.\r\n\r\n<strong>Paragraph B: </strong>However, disadvantages need to be considered. Firstly it can be expensive for families to finance their child’s studies overseas. In addition, some individuals may find it difficult to remain motivated in their studies as it is often the first time they will have been away from their parents. Nevertheless, for a dedicated student, these are not overwhelming obstacles.\r\n\r\n<strong>Paragraph C: </strong>There is a rising number of people opting to further their education in another country, and although there certainly can be complications with this, the positive effects are more significant than the negatives, as will now be explained.\r\n\r\n<strong>Paragraph D: </strong>To summarise, with careful research, adequate financial support and the correct approach to study, international education has the potential to provide enormous benefits, consequently enhance employment opportunities and in some cases benefit the native country itself when graduates return.\r\n\r\n<strong>Paragraph E: </strong>Primarily, the experience of living in a different country, while challenging, can help individuals to mature quickly. Students who study overseas are often more worldly than their counterparts and future employers are likely to see this as an advantage. Moreover, studying in a different country often involves a second language and being bi-lingual has enormous advantages. For example, Chinese students who have studied in an English speaking country often find that their employment opportunities are vastly improved.\r\n\r\n"
+            "content": "<strong>Paragraph A: </strong>Students also learn information from an international perspective and will be able to utilize their studies on their return home, their knowledge adding benefit to the company they work for and the country itself. For example, many families wish to send their children to America to study as it has a world-leading economy.\r\n\r\n<strong>Paragraph B: </strong>However, disadvantages need to be considered. Firstly it can be expensive for families to finance their child\u2019s studies overseas. In addition, some individuals may find it difficult to remain motivated in their studies as it is often the first time they will have been away from their parents. Nevertheless, for a dedicated student, these are not overwhelming obstacles.\r\n\r\n<strong>Paragraph C: </strong>There is a rising number of people opting to further their education in another country, and although there certainly can be complications with this, the positive effects are more significant than the negatives, as will now be explained.\r\n\r\n<strong>Paragraph D: </strong>To summarise, with careful research, adequate financial support and the correct approach to study, international education has the potential to provide enormous benefits, consequently enhance employment opportunities and in some cases benefit the native country itself when graduates return.\r\n\r\n<strong>Paragraph E: </strong>Primarily, the experience of living in a different country, while challenging, can help individuals to mature quickly. Students who study overseas are often more worldly than their counterparts and future employers are likely to see this as an advantage. Moreover, studying in a different country often involves a second language and being bi-lingual has enormous advantages. For example, Chinese students who have studied in an English speaking country often find that their employment opportunities are vastly improved.\r\n\r\n"
         }
     ],
     "settings": {
