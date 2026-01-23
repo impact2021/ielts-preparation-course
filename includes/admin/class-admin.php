@@ -7508,6 +7508,80 @@ class IELTS_CM_Admin {
                     }
                     unset($option); // Break the reference
                 }
+            } elseif ($type === 'closed_question_dropdown') {
+                // Transform closed_question_dropdown format
+                // This question type needs correct_answer in format "field_1:X|field_2:Y|..." for validation
+                // See CRITICAL-FEEDBACK-RULES.md: dropdown questions have per-option feedback + single no_answer_feedback
+                
+                // Remove generic correct/incorrect feedback (should be per-option only)
+                unset($question['correct_feedback']);
+                unset($question['incorrect_feedback']);
+                // Keep no_answer_feedback - it's the single field for when nothing is selected
+                
+                // Ensure mc_options exists and each option has feedback
+                if (isset($question['mc_options']) && is_array($question['mc_options'])) {
+                    foreach ($question['mc_options'] as $idx => &$option) {
+                        // Ensure feedback field exists (can be empty string)
+                        if (!isset($option['feedback'])) {
+                            $option['feedback'] = '';
+                        }
+                    }
+                    unset($option); // Break the reference
+                }
+                
+                // Transform correct_answer from simple format to field format
+                // This handles imported JSON that has "correct_answer": "0" instead of "field_1:0"
+                // Note: We use !== '' instead of !empty() because "0" is a valid value but empty() treats it as false
+                if (isset($question['correct_answer']) && $question['correct_answer'] !== '') {
+                    $correct_answer = $question['correct_answer'];
+                    
+                    // Check if already in field format (contains "field_")
+                    if (strpos($correct_answer, 'field_') === false) {
+                        // Simple format detected - need to transform
+                        // Count how many dropdowns by checking for [dropdown] markers
+                        $dropdown_count = 1;
+                        if (isset($question['question'])) {
+                            preg_match_all('/\[dropdown\]/i', $question['question'], $dropdown_matches);
+                            if (!empty($dropdown_matches[0])) {
+                                $dropdown_count = count($dropdown_matches[0]);
+                            }
+                        }
+                        
+                        // Also check correct_answer_count if set
+                        if (isset($question['correct_answer_count'])) {
+                            $dropdown_count = max($dropdown_count, intval($question['correct_answer_count']));
+                        }
+                        
+                        // Build correct_answer in field format
+                        $correct_answer_parts = array();
+                        
+                        if (strpos($correct_answer, '|') !== false) {
+                            // Multi-dropdown with pipe separator: "0|1|2"
+                            $indices = explode('|', $correct_answer);
+                            for ($i = 0; $i < count($indices); $i++) {
+                                $field_num = $i + 1;
+                                $option_idx = intval(trim($indices[$i]));
+                                $correct_answer_parts[] = 'field_' . $field_num . ':' . $option_idx;
+                            }
+                        } else {
+                            // Single dropdown or simple index: "0"
+                            $option_idx = intval(trim($correct_answer));
+                            
+                            // If there are multiple dropdowns but only one correct answer,
+                            // use the same answer for all dropdowns
+                            for ($field_num = 1; $field_num <= $dropdown_count; $field_num++) {
+                                $correct_answer_parts[] = 'field_' . $field_num . ':' . $option_idx;
+                            }
+                        }
+                        
+                        if (!empty($correct_answer_parts)) {
+                            $question['correct_answer'] = implode('|', $correct_answer_parts);
+                        }
+                        
+                        // Set correct_answer_count to match number of dropdowns
+                        $question['correct_answer_count'] = $dropdown_count;
+                    }
+                }
             }
             
             $transformed[] = $question;
