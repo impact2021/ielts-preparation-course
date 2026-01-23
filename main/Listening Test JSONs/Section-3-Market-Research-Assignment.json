@@ -43,9 +43,9 @@
           "no_answer": "The correct answer is <strong>library orientation</strong> (or 'the library orientation'). The student started a couple of days late and missed this."
         },
         "5": {
-          "correct": "Correct! The student should have included an additional/other category.",
+          "correct": "Correct! The student should have included an additional category.",
           "incorrect": "Incorrect. Listen to the lecturer's explanation about how to improve the questionnaire design.",
-          "no_answer": "The correct answer is <strong>an additional/other category</strong>. The lecturer explains that the student should include an 'other' category where respondents can write down anything not in the given choices."
+          "no_answer": "The correct answer is <strong>an additional category</strong> (or 'other category'). The lecturer explains that the student should include an 'other' category where respondents can write down anything not in the given choices."
         }
       }
     },
