@@ -1,0 +1,178 @@
+{
+  "title": "DEMO: Dropdown Fix Verification - Option Index 0",
+  "content": "This exercise demonstrates that the dropdown question type now correctly accepts option index 0 as a valid answer. Previously, selecting option 0 would always be marked as incorrect due to PHP's empty() function treating the string '0' as empty.",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct option from the dropdown menu. The correct answer is the FIRST option (index 0).",
+      "question": "I know that [dropdown] this might be difficult.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "completing",
+          "is_correct": true,
+          "feedback": "✅ CORRECT! 'Completing' is the right verb form here. This is option index 0, which was previously broken."
+        },
+        {
+          "text": "complete",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. The sentence requires a gerund (verb+ing form) after 'that', not the base form of the verb."
+        },
+        {
+          "text": "completed",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. The past tense doesn't fit the context of this sentence. You need a gerund (verb+ing form)."
+        },
+        {
+          "text": "to complete",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. An infinitive doesn't work here. The sentence needs a gerund (verb+ing form) after 'that'."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'completing' (option index 0).",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the paragraph by selecting the correct options from the dropdown menus. BOTH correct answers are at index 0.",
+      "question": "The student [dropdown] to the library yesterday and [dropdown] three books on history.",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "went",
+          "is_correct": true,
+          "feedback": "✅ CORRECT! 'Went' is the past tense of 'go', which matches with 'yesterday'. This is option index 0."
+        },
+        {
+          "text": "go",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. This is present tense, but the word 'yesterday' indicates that the sentence needs past tense."
+        },
+        {
+          "text": "going",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. The gerund form doesn't fit this sentence structure. You need a simple past tense verb."
+        },
+        {
+          "text": "will go",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. This is future tense, but 'yesterday' indicates the action happened in the past."
+        },
+        {
+          "text": "borrowed",
+          "is_correct": true,
+          "feedback": "✅ CORRECT! 'Borrowed' is the past tense and matches with 'yesterday'. This would be index 4 if second dropdown."
+        },
+        {
+          "text": "borrow",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. This is present tense, but the sentence needs past tense to match with 'yesterday'."
+        },
+        {
+          "text": "borrowing",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. The gerund form doesn't work here. You need a simple past tense verb."
+        },
+        {
+          "text": "will borrow",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. This is future tense, but the action happened 'yesterday' (in the past)."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:0",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are both at index 0 (which was previously broken).",
+      "points": 2
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the sentences by selecting the correct prepositions. Mix of indices including 0.",
+      "question": "She has been working [dropdown] this company [dropdown] five years, and she is responsible [dropdown] managing the sales team.",
+      "correct_answer_count": 3,
+      "mc_options": [
+        {
+          "text": "at",
+          "is_correct": true,
+          "feedback": "✅ CORRECT! 'At' is used with companies/organizations when referring to working at a place. This is index 0."
+        },
+        {
+          "text": "in",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. 'In' is not typically used with companies in this context. We say 'work at a company', not 'work in a company'."
+        },
+        {
+          "text": "on",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. 'On' is not the right preposition for companies. We use 'at' to indicate working at a specific place."
+        },
+        {
+          "text": "for (duration)",
+          "is_correct": true,
+          "feedback": "✅ CORRECT! 'For' is used to indicate a duration of time (five years). This is index 3."
+        },
+        {
+          "text": "since",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. 'Since' is used with a specific point in time (e.g., 'since 2019'), not a duration like 'five years'."
+        },
+        {
+          "text": "during",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. 'During' is used with specific periods (e.g., 'during the summer'), not durations measured in years."
+        },
+        {
+          "text": "of",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. 'Responsible of' is not correct English. The correct phrase is 'responsible for'."
+        },
+        {
+          "text": "to",
+          "is_correct": false,
+          "feedback": "❌ Incorrect. 'Responsible to' means accountable to someone, not in charge of something. We say 'responsible for managing', not 'responsible to managing'."
+        },
+        {
+          "text": "for (responsibility)",
+          "is_correct": true,
+          "feedback": "✅ CORRECT! 'Responsible for' means in charge of or having the duty to manage something. This is index 8."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:3|field_3:8",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are 'at' (index 0), 'for (duration)' (index 3), and 'for (responsibility)' (index 8).",
+      "points": 3
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Final verification: Select the first option (index 0) to pass.",
+      "question": "This is a [dropdown] test to verify that option index 0 works correctly.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "WORKING",
+          "is_correct": true,
+          "feedback": "✅ SUCCESS! Option index 0 is now working correctly! The bug is fixed!"
+        },
+        {
+          "text": "BROKEN",
+          "is_correct": false,
+          "feedback": "❌ This means the fix didn't work. Option 0 should be correct."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "Please select an option. The correct answer is 'WORKING' (index 0).",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
