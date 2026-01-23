@@ -476,9 +476,22 @@ class IELTS_CM_Quiz_Handler {
                 }
                 
                 // Get user answers - handle nested format from JavaScript
+                // Note: JSON decoding may convert numeric keys to strings, so we need to check both
                 $user_answers = array();
-                if (isset($answers[$index]) && is_array($answers[$index])) {
-                    $user_answers = $answers[$index];
+                
+                // Try nested format first (e.g., answers[0][1], answers[0][2])
+                $nested_answer = null;
+                if (isset($answers[$index])) {
+                    $nested_answer = $answers[$index];
+                } elseif (isset($answers[strval($index)])) {
+                    $nested_answer = $answers[strval($index)];
+                }
+                
+                if ($nested_answer && is_array($nested_answer)) {
+                    // Normalize keys to integers for consistent access
+                    foreach ($nested_answer as $key => $value) {
+                        $user_answers[intval($key)] = $value;
+                    }
                 } else {
                     // Flat format: try new format first (answer_0_1), then old format (answer_0_field_1)
                     for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
