@@ -317,6 +317,12 @@
                         html += '</div>';
                         html += '</div>';
                         
+                        // Helper function to check if a question has "Show me" button capability
+                        function questionHasShowMeButton(questionResult) {
+                            return (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
+                                   (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
+                        }
+                        
                         // Add visual feedback for correct/wrong answers in the form
                         $.each(result.question_results, function(index, questionResult) {
                             var questionNum = parseInt(index) + 1;
@@ -1011,10 +1017,7 @@
                                 questionElement.find('.question-feedback-message').remove();
                                 
                                 // Create feedback div if there's feedback OR if there are "Show me" buttons to display
-                                var hasShowMeButton = (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
-                                                     (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
-                                
-                                if (questionResult.feedback || hasShowMeButton) {
+                                if (questionResult.feedback || questionHasShowMeButton(questionResult)) {
                                     // Create feedback element with proper CSS classes
                                     var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
                                     var feedbackDiv = $('<div>')
@@ -1028,10 +1031,7 @@
                             } else {
                                 // For other question types (text input, etc.), show feedback or "Show me" buttons
                                 // Create feedback div if there's feedback OR if there are "Show me" buttons to display
-                                var hasShowMeButton = (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
-                                                     (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
-                                
-                                if (questionResult.feedback || hasShowMeButton) {
+                                if (questionResult.feedback || questionHasShowMeButton(questionResult)) {
                                     // For other question types (text input, etc.), show general feedback
                                     // Remove any existing feedback first
                                     questionElement.find('.question-feedback-message').remove();
@@ -1051,7 +1051,8 @@
                                     
                                     // Add "Show me" link if audio_section_id is available (for listening tests)
                                     // Note: "Show me" links for reading passages are added in a unified manner
-                                    // after all question processing (see lines 1032+) to handle all question types consistently
+                                    // after all question processing (see "Add Show me buttons for reading tests" section below)
+                                    // to handle all question types consistently
                                     // Skip for open_question type since links are added per-field in PHP
                                     if (questionResult.question_type !== 'open_question') {
                                         if (questionResult.audio_section_id !== null && 
