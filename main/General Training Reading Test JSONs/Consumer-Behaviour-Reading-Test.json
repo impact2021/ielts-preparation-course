@@ -1,0 +1,356 @@
+{
+    "title": "Consumer Behaviour Reading Test",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "Questions 1 – 5\n\nDo the following statements agree with the information given in Reading Passage 1?\n\nWrite TRUE, FALSE or NOT GIVEN.",
+            "question": "1. Economic risk as perceived by the customer is more significant than social risk they may attach to purchase.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. Paragraph B refers to both types of risk but does not say which is more influential.",
+            "correct_feedback": "Correct! Paragraph B refers to both types of risk but does not say which is more influential.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph B refers to both types of risk but does not say which is more influential.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_r",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: NOT GIVEN. Paragraph B refers to both types of risk but does not say which is more influential."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: NOT GIVEN. Paragraph B refers to both types of risk but does not say which is more influential."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B refers to both types of risk but does not say which is more influential."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "2. Companies invest a great deal of money into advertising persuading customers to remain loyal to their products.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: NOT GIVEN. Paragraph C refers to loyalty of customers, but there is no mention of companies paying for advertising.",
+            "correct_feedback": "Correct! Paragraph C refers to loyalty of customers, but there is no mention of companies paying for advertising.",
+            "incorrect_feedback": "Incorrect. The correct answer is NOT GIVEN. Paragraph C refers to loyalty of customers, but there is no mention of companies paying for advertising.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: NOT GIVEN. Paragraph C refers to loyalty of customers, but there is no mention of companies paying for advertising."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: NOT GIVEN. Paragraph C refers to loyalty of customers, but there is no mention of companies paying for advertising."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C refers to loyalty of customers, but there is no mention of companies paying for advertising."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "3. All purchases involve some level of contemplation prior to embarking on a shopping trip.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: FALSE. Paragraph D refers to 'impulse' purchases, where goods are bought with no planning.",
+            "correct_feedback": "Correct! Paragraph D refers to 'impulse' purchases, where goods are bought with no planning.",
+            "incorrect_feedback": "Incorrect. The correct answer is FALSE. Paragraph D refers to 'impulse' purchases, where goods are bought with no planning.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: FALSE. Paragraph D refers to 'impulse' purchases, where goods are bought with no planning."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D refers to 'impulse' purchases, where goods are bought with no planning."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: FALSE. Paragraph D refers to 'impulse' purchases, where goods are bought with no planning."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "4. Positioning of products in a store can influence a customer's usual behaviour.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Paragraph F talks about the importance of 'positioning'.",
+            "correct_feedback": "Correct! Paragraph F talks about the importance of 'positioning'.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph F talks about the importance of 'positioning'.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph F talks about the importance of 'positioning'."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Paragraph F talks about the importance of 'positioning'."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Paragraph F talks about the importance of 'positioning'."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "5. Pricing can have both a positive and negative impact on consumer perceptions.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is: TRUE. Paragraph G refers to how low prices can sometimes be detrimental (e.g. perfume) but that discounts and bargains can encourage consumers to buy.",
+            "correct_feedback": "Correct! Paragraph G refers to how low prices can sometimes be detrimental (e.g. perfume) but that discounts and bargains can encourage consumers to buy.",
+            "incorrect_feedback": "Incorrect. The correct answer is TRUE. Paragraph G refers to how low prices can sometimes be detrimental (e.g. perfume) but that discounts and bargains can encourage consumers to buy.",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G refers to how low prices can sometimes be detrimental (e.g. perfume) but that discounts and bargains can encourage consumers to buy."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Paragraph G refers to how low prices can sometimes be detrimental (e.g. perfume) but that discounts and bargains can encourage consumers to buy."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is: TRUE. Paragraph G refers to how low prices can sometimes be detrimental (e.g. perfume) but that discounts and bargains can encourage consumers to buy."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "open_question",
+            "ielts_question_type": "Table Completion",
+            "instructions": "Questions 6 - 11\n\nComplete the table below.\n\nChoose NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Complete the table:",
+            "field_count": 6,
+            "field_labels": [
+                "6. Minimal decision making (often [field 1] behaviour)",
+                "7. Familiarity from observing [field 2]",
+                "8. Clothes for a [field 3]",
+                "9. For example: vehicles, houses and [field 4]",
+                "10. [field 5]",
+                "11. Consultation and [field 6]"
+            ],
+            "field_answers": [
+                "routine|becomes routine",
+                "parents|their parents",
+                "special occasion",
+                "expensive technical equipment|technical equipment",
+                "extensive decision making|extensive decision-making",
+                "research|research of alternatives"
+            ],
+            "correct_feedback": "Excellent! You got it right.",
+            "incorrect_feedback": "Not quite. Review the passage and try again.",
+            "no_answer_feedback": "The correct answer is shown above. Make sure to read the passage carefully.",
+            "points": 6,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null
+        },
+        {
+            "type": "closed_question",
+            "ielts_question_type": "Multiple Choice (Multiple Answers)",
+            "instructions": "Questions 12 and 13\n\nChoose TWO letters, A-E.\n\nWhich TWO of the following are effective ways of encouraging customers to buy?",
+            "question": "Select the TWO correct answers:",
+            "correct_answer_count": 2,
+            "show_option_letters": true,
+            "mc_options": [
+                {
+                    "text": "discouraging customers to linger in store",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E states '…take their time. After all, the longer a shopper stays in the store, the more they are likely to buy.'"
+                },
+                {
+                    "text": "strategic placement of products",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E mentions 'A great deal of research and consideration is devoted to the layout of the local supermarket'."
+                },
+                {
+                    "text": "considering the needs of the customer",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not make any reference to considering what the needs of the customer are."
+                },
+                {
+                    "text": "stimulation by sight, smell and taste",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not refer to taste."
+                },
+                {
+                    "text": "encouraging customers to unwind",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E states '… many supermarkets play relaxing background music to lift the mood of their customers and to encourage them to relax.'"
+                },
+                {
+                    "text": "making purchase awkward for customers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F mentions that products should not be 'hidden from view or unnecessarily inaccessible'."
+                }
+            ],
+            "no_answer_feedback": "You did not select any answers. The correct answers are B (strategic placement of products) and E (encouraging customers to unwind).",
+            "correct_feedback": "Excellent! You selected the correct answers.",
+            "incorrect_feedback": "Not quite. The correct answers are B (strategic placement of products) and E (encouraging customers to unwind).",
+            "points": 2,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": ""
+        },
+        {
+            "type": "closed_question",
+            "ielts_question_type": "Multiple Choice (Single Answer)",
+            "instructions": "Question 14\n\nChoose the correct letter, A-D.",
+            "question": "14. Research findings regarding price bargains and creating a sense of urgency to buy",
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "mc_options": [
+                {
+                    "text": "are inconclusive as to which tactic is more effective",
+                    "is_correct": true,
+                    "feedback": "Correct! The passage states 'an individual's sensitivity to perceived limitation may actually be at least as influential over their buying behaviour as being able to acquire a bargain. Further research will provide more concrete evidence.'"
+                },
+                {
+                    "text": "confirm that perceived limitation is more motivating to shoppers than price",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'similar trends in increased levels of purchase were still observed', suggesting inconclusive results."
+                },
+                {
+                    "text": "indicate that urgency is more likely to inspire purchase then discounts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'similar trends in increased levels of purchase were still observed', suggesting inconclusive results."
+                },
+                {
+                    "text": "raise doubt that either method is particularly effective",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage states 'Triggers to encourage consumers to buy in larger quantities have proven to be very successful'."
+                }
+            ],
+            "no_answer_feedback": "The correct answer is A. The passage states 'an individual's sensitivity to perceived limitation may actually be at least as influential over their buying behaviour as being able to acquire a bargain. Further research will provide more concrete evidence.'",
+            "correct_feedback": "Correct! The passage indicates that further research is needed to determine which tactic is more effective.",
+            "incorrect_feedback": "Incorrect. The correct answer is A. The research findings are inconclusive as to which tactic is more effective.",
+            "points": 1,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": ""
+        },
+        {
+            "type": "closed_question",
+            "ielts_question_type": "Multiple Choice (Single Answer)",
+            "instructions": "Question 15\n\nChoose the correct letter, A-D.\n\nWhich of the following is the most suitable title for the passage?",
+            "question": "15. Which of the following is the most suitable title for the passage?",
+            "correct_answer_count": 1,
+            "show_option_letters": true,
+            "mc_options": [
+                {
+                    "text": "Differing thought processes for different purchases",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Although this title covers some of the information in the reading passage, it does not refer to all of the information."
+                },
+                {
+                    "text": "How shoppers make decisions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This covers only part of the information in the passage."
+                },
+                {
+                    "text": "Understanding and provoking shopping activity",
+                    "is_correct": true,
+                    "feedback": "Correct! This title encompasses both the analysis of consumer behaviour and the strategies used to influence it."
+                },
+                {
+                    "text": "Psychology used in supermarkets",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The reading passage discusses more than just supermarkets."
+                }
+            ],
+            "no_answer_feedback": "The correct answer is C. This title best captures the overall content of the passage, which covers both understanding consumer behaviour and the strategies used to influence shopping activity.",
+            "correct_feedback": "Correct! This title best captures the overall content of the passage.",
+            "incorrect_feedback": "Incorrect. The correct answer is C (Understanding and provoking shopping activity).",
+            "points": 1,
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": ""
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "Reading Passage 1",
+            "content": "<h3>Consumer Behaviour</h3>\n\n<p><strong>A.</strong> <span id=\"q1\" data-question=\"1\"></span>Consumer Behaviour principles are used to establish what, why, how and when customers buy products; information collected via such studies is utilised by marketing managers to assist them in developing the most effective strategies to sell their products. Consumer behaviour analysis is, in essence, a combination of knowledge from a business, economic, sociological and psychological perspective. Different industry types apply various strategies related to consumer behaviour as they know that we, the customers, generally act and think differently depending on what type of product we are purchasing.</p>\n\n<p><strong>B.</strong> The decision making process we go through when we are buying something new is classified by experts as ranging from 'high' to 'low' involvement. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">High involvement consumer behaviour is characterised by including a significant level of risk from the buyer's perspective; this risk can relate to personal or social risk, i.e. we may feel that the type of product or service we buy will affect our status; or economic risk, meaning that the product or service is expensive.</span> These tend to be commodities that we do not buy on a regular basis. <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">For example, purchases such as cars, houses and expensive technical equipment can be classified as high involvement.</span> <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Typically, for these kinds of goods, buyers will not make decisions quickly but go through an extensive decision-making process</span>, <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">often consult others for advice or recommendation and are highly likely to research a number of alternatives before making a final decision.</span></p>\n\n<p><strong>C.</strong> In contrast, low involvement consumer behaviour involves far lower levels of perceived risk and the consumer typically spending minimal time and effort making the decision; products which involve low involvement being fast moving consumer goods (FMCGs) such as bread, milk and washing powder. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Purchase of these types of products often becomes routine behaviour</span>, in that a certain brand may routinely be purchased and little or no consideration is given to alternatives on offer. <span id=\"q2\" data-question=\"2\"></span>For household goods, many consumers may even buy the same brand throughout their entire life; <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">the initial decision being influenced by products they were already familiar with because their parents had traditionally purchased them while they were growing up.</span></p>\n\n<p><strong>D.</strong> Many products may fall somewhere between these two categories and are categorised as involving limited decision-making and having medium levels of risk. <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">To illustrate, we may not typically spend as long deciding on a new and expensive outfit to wear for a special occasion as we would buying a car</span>; nevertheless, we would generally give such a purchase more consideration than buying a soft drink at the local store. <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Some purchases may be classified as impulse purchases, in that we decide without premeditation that we will buy them</span>; going shopping for a new outfit and also returning from our shopping spree with an unplanned pair of shoes would be an example of this.</p>\n\n<p><strong>E.</strong> <span id=\"q12\" data-question=\"12\"></span><span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">The design and environment of the outlets in which we shop are often carefully planned around consumer behaviour principles, encouraging shoppers to spend at optimum levels. A great deal of research and consideration is devoted to the layout of the local supermarket, for example.</span> Encouraging positive sensory perceptions from customers is of great importance; therefore, <span class=\"reading-answer-marker\">many supermarkets play relaxing background music to lift the mood of their customers and to encourage them to relax and take their time.</span> After all, the longer a shopper stays in the store, the more they are likely to buy. Stimulation of a customer's sense of smell has also been observed to improve sales; most supermarkets have bakery outlets, for example, and many choose to bake steadily throughout the working day; not only to meet demand but also because marketers are aware that the pleasant aroma of baking bread is very successful in inspiring purchase.</p>\n\n<p><strong>F.</strong> <span id=\"q4\" data-question=\"4\"></span>Since, as previously discussed, many shoppers will routinely purchase the same brand with little consideration, constant availability is vital from the manufacturer's perspective, and sound distribution and delivery channels are necessary to ensure that their products are always available in store. For the same reasons, <span class=\"reading-answer-marker\">manufacturers vie for shelf positioning, always wanting their product to be easily seen by potential customers</span>; if shoppers cannot find a product because it is unavailable, hidden from view or unnecessarily inaccessible – on a top shelf for example – they may be easily persuaded to simply pick up an alternative. <span class=\"reading-answer-marker\">Research has shown that end of aisle locations, or positioning in isolated island displays can significantly increase sales of FMCG products</span> and as a consequence many manufacturers of well-known and powerful brands negotiate such positions in supermarket stores for their products. Such positioning is likely to stimulate customers new to the brand to purchase impulsively. In the same way, inviting aromas are geared towards encouraging shoppers to decide to buy products they had no intention of buying.</p>\n\n<p><strong>G.</strong> <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Pricing and promotional strategies also have a dramatic influence on consumer behaviour and resultant sales. Cheaper-end pricing of certain types of products can, in fact, be detrimental to success. Perfume, for example, is considered by many shoppers to be a luxury item and therefore a higher price can actually reinforce perceived quality.</span> Research studies have shown that when respondents are asked to choose between two fragrances which are, in fact, exactly the same but carry a different price tag, approximately two thirds of people state their preference for the more expensive sample. <span class=\"reading-answer-marker\">On the other hand, special offers and discounts, when used with brand names we are familiar with and have less romantic perceptions about, can generate a huge increase in sales</span>, many consumers purchasing in greater quantities than would be their usual habit.</p>\n\n<p><strong>H.</strong> <span id=\"q14\" data-question=\"14\"></span>Marketers are also very aware of the way in which people are generally eager to amass supplies for later need and our sensitivity to short supply. They use their knowledge of this aspect of human nature to stimulate purchase. <span class=\"reading-answer-marker\">Triggers to encourage consumers to buy in larger quantities have proven to be very successful when limitations are placed on the number of items available for sale.</span> For example, when signs are placed on items such as 'special offer $***…no more than 5 available to individual customers' , tendencies to purchase maybe 3 or 4 of the items in question, rather than the routine 1 or 2, have been observed. In order to analyse the impact of 'short supply' separately from the discounted price, market research trials have placed restrictions on quantity without an accompanying price reduction, yet <span class=\"reading-answer-marker\">similar trends in increased levels of purchase were still observed, indicating that an individual's sensitivity to perceived limitation may actually be at least as influential over their buying behaviour as being able to acquire a bargain. Further research will provide more concrete evidence.</span></p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "practice_test",
+        "open_as_popup": "",
+        "scoring_type": "ielts_academic_reading",
+        "timer_minutes": "20",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-23 07:30:00",
+        "exported_by": "copilot",
+        "plugin_version": "12.10",
+        "format_version": "1.0"
+    }
+}
