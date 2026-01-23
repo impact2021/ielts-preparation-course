@@ -649,6 +649,8 @@
                                     });
                                 } else if (questionResult.question_type === 'closed_question_dropdown') {
                                     // For closed_question_dropdown with multiple fields, mark each dropdown and nav button individually
+                                    // Note: closed_question_dropdown uses the standard dropdown format (answer_X_Y) not the field format (answer_X_field_Y)
+                                    // This is different from summary_completion/table_completion/open_question which use the _field_ format
                                     var fieldResults = questionResult.correct_answer && questionResult.correct_answer.field_results 
                                         ? questionResult.correct_answer.field_results 
                                         : {};
@@ -658,7 +660,12 @@
                                     
                                     // Check each dropdown and mark it and its nav button
                                     $.each(fieldResults, function(fieldNum, fieldResult) {
-                                        var dropdown = questionElement.find('select[name="answer_' + index + '_field_' + fieldNum + '"]');
+                                        // Try new format first (without _field_), then old format (with _field_)
+                                        var dropdown = questionElement.find('select[name="answer_' + index + '_' + fieldNum + '"]');
+                                        if (dropdown.length === 0) {
+                                            // Fallback to old format for backwards compatibility with cached pages
+                                            dropdown = questionElement.find('select[name="answer_' + index + '_field_' + fieldNum + '"]');
+                                        }
                                         
                                         // Calculate which nav button this corresponds to
                                         var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;
