@@ -598,7 +598,7 @@ if ($lesson_id) {
                                             $allowed_html['select'] = array(
                                                 'name' => true,
                                                 'class' => true,
-                                                'data-field-num' => true,
+                                                'data-dropdown-num' => true,
                                             );
                                             $allowed_html['option'] = array(
                                                 'value' => true,
@@ -616,7 +616,7 @@ if ($lesson_id) {
                                                 }
                                                 
                                                 // Build the select dropdown
-                                                $select_field = '<select name="answer_' . esc_attr($index) . '_field_' . esc_attr($dropdown_num) . '" class="answer-select-inline closed-question-dropdown" data-field-num="' . esc_attr($dropdown_num) . '">';
+                                                $select_field = '<select name="answer_' . esc_attr($index) . '_' . esc_attr($dropdown_num) . '" class="answer-select-inline closed-question-dropdown" data-dropdown-num="' . esc_attr($dropdown_num) . '">';
                                                 $select_field .= '<option value="">-</option>'; // Empty default option
                                                 
                                                 // Add all options to the dropdown

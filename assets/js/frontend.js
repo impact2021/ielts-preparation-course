@@ -658,7 +658,12 @@
                                     
                                     // Check each dropdown and mark it and its nav button
                                     $.each(fieldResults, function(fieldNum, fieldResult) {
-                                        var dropdown = questionElement.find('select[name="answer_' + index + '_field_' + fieldNum + '"]');
+                                        // Try new format first (without _field_), then old format (with _field_)
+                                        var dropdown = questionElement.find('select[name="answer_' + index + '_' + fieldNum + '"]');
+                                        if (dropdown.length === 0) {
+                                            // Fallback to old format for backwards compatibility
+                                            dropdown = questionElement.find('select[name="answer_' + index + '_field_' + fieldNum + '"]');
+                                        }
                                         
                                         // Calculate which nav button this corresponds to
                                         var displayNumber = displayStart + parseInt(fieldNum, 10) - 1;

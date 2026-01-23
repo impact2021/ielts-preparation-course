@@ -480,11 +480,18 @@ class IELTS_CM_Quiz_Handler {
                 if (isset($answers[$index]) && is_array($answers[$index])) {
                     $user_answers = $answers[$index];
                 } else {
-                    // Flat format: answers['answer_0_field_1'], answers['answer_0_field_2']
+                    // Flat format: try new format first (answer_0_1), then old format (answer_0_field_1)
                     for ($field_num = 1; $field_num <= $correct_answer_count; $field_num++) {
-                        $field_answer_key = 'answer_' . $index . '_field_' . $field_num;
-                        if (isset($answers[$field_answer_key])) {
-                            $user_answers[$field_num] = $answers[$field_answer_key];
+                        // Try new format without _field_
+                        $new_format_key = 'answer_' . $index . '_' . $field_num;
+                        if (isset($answers[$new_format_key])) {
+                            $user_answers[$field_num] = $answers[$new_format_key];
+                        } else {
+                            // Try old format with _field_ for backwards compatibility
+                            $old_format_key = 'answer_' . $index . '_field_' . $field_num;
+                            if (isset($answers[$old_format_key])) {
+                                $user_answers[$field_num] = $answers[$old_format_key];
+                            }
                         }
                     }
                 }
