@@ -328,14 +328,9 @@ class IELTS_CM_Gamification {
         $target_band = isset($_POST['target_band']) ? floatval($_POST['target_band']) : 7.0;
         
         // Validate target band (must be between 5.5 and 9.0 in 0.5 increments)
-        if ($target_band < 5.5 || $target_band > 9.0) {
-            wp_send_json_error(array('message' => 'Target band must be between 5.5 and 9.0'));
-        }
-        
-        // Check if it's a valid half-band increment
-        $decimal_part = ($target_band * 10) % 10;
-        if ($decimal_part != 0 && $decimal_part != 5) {
-            wp_send_json_error(array('message' => 'Target band must be in 0.5 increments'));
+        $valid_bands = array(5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0);
+        if (!in_array($target_band, $valid_bands, true)) {
+            wp_send_json_error(array('message' => 'Target band must be between 5.5 and 9.0 in 0.5 increments'));
         }
         
         update_user_meta($user_id, '_ielts_cm_target_band', $target_band);

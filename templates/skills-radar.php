@@ -248,7 +248,12 @@ jQuery(document).ready(function($) {
     }
     
     function bandToPercentage(band) {
-        // Approximate IELTS band to percentage mapping
+        // IELTS band to percentage mapping
+        // Based on approximate skill level requirements:
+        // Band 5.5-6.0: Basic competence (60-65%)
+        // Band 6.5-7.0: Good competence (70-80%)
+        // Band 7.5-8.0: Very good competence (85-90%)
+        // Band 8.5-9.0: Expert competence (95-100%)
         var mapping = {
             5.5: 60,
             6.0: 65,
