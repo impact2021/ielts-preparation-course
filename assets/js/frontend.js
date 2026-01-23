@@ -317,12 +317,6 @@
                         html += '</div>';
                         html += '</div>';
                         
-                        // Helper function to check if a question has "Show me" button capability
-                        function questionHasShowMeButton(questionResult) {
-                            return (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
-                                   (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
-                        }
-                        
                         // Add visual feedback for correct/wrong answers in the form
                         $.each(result.question_results, function(index, questionResult) {
                             var questionNum = parseInt(index) + 1;
@@ -861,6 +855,14 @@
                                         .addClass('feedback-incorrect')
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
+                                } else if ((questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
+                                           (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined)) {
+                                    // Create an empty question-level feedback div for "Show me" button
+                                    // even when feedback is shown per-option (for correct/incorrect answers)
+                                    var feedbackDiv = $('<div>')
+                                        .addClass('question-feedback-message')
+                                        .addClass(questionResult.correct ? 'feedback-correct' : 'feedback-incorrect');
+                                    questionElement.append(feedbackDiv);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
                                 // For closed_question, show feedback only for selected options (both multi-select and single-select)
@@ -908,6 +910,14 @@
                                             .addClass('question-feedback-message')
                                             .addClass('feedback-incorrect')
                                             .html(questionResult.feedback);
+                                        questionElement.append(feedbackDiv);
+                                    } else if ((questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
+                                               (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined)) {
+                                        // Create an empty question-level feedback div for "Show me" button
+                                        // even when feedback is shown per-option (for correct/incorrect answers)
+                                        var feedbackDiv = $('<div>')
+                                            .addClass('question-feedback-message')
+                                            .addClass(questionResult.correct ? 'feedback-correct' : 'feedback-incorrect');
                                         questionElement.append(feedbackDiv);
                                     }
                                 } else if (questionResult.feedback) {
@@ -1016,86 +1026,80 @@
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
-                                // Create feedback div if there's feedback OR if there are "Show me" buttons to display
-                                if (questionResult.feedback || questionHasShowMeButton(questionResult)) {
+                                if (questionResult.feedback) {
                                     // Create feedback element with proper CSS classes
                                     var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
                                     var feedbackDiv = $('<div>')
                                         .addClass('question-feedback-message')
                                         .addClass(feedbackClass)
-                                        .html(questionResult.feedback || ''); // Using .html() because feedback explicitly supports HTML formatting
-                                                                               // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                        .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                         // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
                                     
                                     questionElement.append(feedbackDiv);
                                 }
-                            } else {
-                                // For other question types (text input, etc.), show feedback or "Show me" buttons
-                                // Create feedback div if there's feedback OR if there are "Show me" buttons to display
-                                if (questionResult.feedback || questionHasShowMeButton(questionResult)) {
-                                    // For other question types (text input, etc.), show general feedback
-                                    // Remove any existing feedback first
-                                    questionElement.find('.question-feedback-message').remove();
-                                    
-                                    // Create feedback element with proper CSS classes
-                                    var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
-                                    var feedbackDiv = $('<div>')
-                                        .addClass('question-feedback-message')
-                                        .addClass(feedbackClass)
-                                        .html(questionResult.feedback || ''); // Using .html() because feedback explicitly supports HTML formatting
-                                                                               // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
-                                    
-                                    // Add special class for open questions to show icon beside feedback
-                                    if (questionResult.question_type === 'open_question') {
-                                        feedbackDiv.addClass('open-question-feedback');
-                                    }
-                                    
-                                    // Add "Show me" link if audio_section_id is available (for listening tests)
-                                    // Note: "Show me" links for reading passages are added in a unified manner
-                                    // after all question processing (see "Add Show me buttons for reading tests" section below)
-                                    // to handle all question types consistently
-                                    // Skip for open_question type since links are added per-field in PHP
-                                    if (questionResult.question_type !== 'open_question') {
-                                        if (questionResult.audio_section_id !== null && 
-                                            questionResult.audio_section_id !== undefined) {
-                                            // Create a container div for the buttons to display them on a new line
-                                            var buttonContainer = $('<div>')
-                                                .css({
-                                                    'margin-top': '10px',
-                                                    'display': 'block'
-                                                });
-                                            
-                                            var transcriptLink = $('<a>')
+                            } else if (questionResult.feedback) {
+                                // For other question types (text input, etc.), show general feedback
+                                // Remove any existing feedback first
+                                questionElement.find('.question-feedback-message').remove();
+                                
+                                // Create feedback element with proper CSS classes
+                                var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                var feedbackDiv = $('<div>')
+                                    .addClass('question-feedback-message')
+                                    .addClass(feedbackClass)
+                                    .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                     // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                
+                                // Add special class for open questions to show icon beside feedback
+                                if (questionResult.question_type === 'open_question') {
+                                    feedbackDiv.addClass('open-question-feedback');
+                                }
+                                
+                                // Add "Show me" link if audio_section_id is available (for listening tests)
+                                // Note: "Show me" links for reading passages are added in a unified manner
+                                // after all question processing (see lines 1032+) to handle all question types consistently
+                                // Skip for open_question type since links are added per-field in PHP
+                                if (questionResult.question_type !== 'open_question') {
+                                    if (questionResult.audio_section_id !== null && 
+                                        questionResult.audio_section_id !== undefined) {
+                                        // Create a container div for the buttons to display them on a new line
+                                        var buttonContainer = $('<div>')
+                                            .css({
+                                                'margin-top': '10px',
+                                                'display': 'block'
+                                            });
+                                        
+                                        var transcriptLink = $('<a>')
+                                            .attr('href', '#')
+                                            .addClass('show-in-transcript-link')
+                                            .attr('data-section', questionResult.audio_section_id)
+                                            .attr('data-question', questionNum)
+                                            .text('Show me');
+                                        
+                                        buttonContainer.append(transcriptLink);
+                                        
+                                        // Add "Listen to this answer" button if audio timing is available
+                                        if (questionResult.audio_start_time !== null && 
+                                            questionResult.audio_start_time !== undefined &&
+                                            questionResult.audio_end_time !== null && 
+                                            questionResult.audio_end_time !== undefined) {
+                                            var listenLink = $('<a>')
                                                 .attr('href', '#')
-                                                .addClass('show-in-transcript-link')
-                                                .attr('data-section', questionResult.audio_section_id)
+                                                .addClass('listen-to-answer-link')
+                                                .attr('data-start-time', questionResult.audio_start_time)
+                                                .attr('data-end-time', questionResult.audio_end_time)
                                                 .attr('data-question', questionNum)
-                                                .text('Show me');
+                                                .text('Listen to this answer')
+                                                .css('margin-left', '10px');
                                             
-                                            buttonContainer.append(transcriptLink);
-                                            
-                                            // Add "Listen to this answer" button if audio timing is available
-                                            if (questionResult.audio_start_time !== null && 
-                                                questionResult.audio_start_time !== undefined &&
-                                                questionResult.audio_end_time !== null && 
-                                                questionResult.audio_end_time !== undefined) {
-                                                var listenLink = $('<a>')
-                                                    .attr('href', '#')
-                                                    .addClass('listen-to-answer-link')
-                                                    .attr('data-start-time', questionResult.audio_start_time)
-                                                    .attr('data-end-time', questionResult.audio_end_time)
-                                                    .attr('data-question', questionNum)
-                                                    .text('Listen to this answer')
-                                                    .css('margin-left', '10px');
-                                                
-                                                buttonContainer.append(listenLink);
-                                            }
-                                            
-                                            feedbackDiv.append(buttonContainer);
+                                            buttonContainer.append(listenLink);
                                         }
+                                        
+                                        feedbackDiv.append(buttonContainer);
                                     }
-                                    
-                                    questionElement.append(feedbackDiv);
                                 }
+                                
+                                questionElement.append(feedbackDiv);
                             }
                         });
                         
