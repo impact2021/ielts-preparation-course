@@ -1010,80 +1010,91 @@
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
-                                if (questionResult.feedback) {
+                                // Create feedback div if there's feedback OR if there are "Show me" buttons to display
+                                var hasShowMeButton = (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
+                                                     (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
+                                
+                                if (questionResult.feedback || hasShowMeButton) {
                                     // Create feedback element with proper CSS classes
                                     var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
                                     var feedbackDiv = $('<div>')
                                         .addClass('question-feedback-message')
                                         .addClass(feedbackClass)
-                                        .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
-                                                                         // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                        .html(questionResult.feedback || ''); // Using .html() because feedback explicitly supports HTML formatting
+                                                                               // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
                                     
                                     questionElement.append(feedbackDiv);
                                 }
-                            } else if (questionResult.feedback) {
-                                // For other question types (text input, etc.), show general feedback
-                                // Remove any existing feedback first
-                                questionElement.find('.question-feedback-message').remove();
+                            } else {
+                                // For other question types (text input, etc.), show feedback or "Show me" buttons
+                                // Create feedback div if there's feedback OR if there are "Show me" buttons to display
+                                var hasShowMeButton = (questionResult.audio_section_id !== null && questionResult.audio_section_id !== undefined) ||
+                                                     (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
                                 
-                                // Create feedback element with proper CSS classes
-                                var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
-                                var feedbackDiv = $('<div>')
-                                    .addClass('question-feedback-message')
-                                    .addClass(feedbackClass)
-                                    .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
-                                                                     // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
-                                
-                                // Add special class for open questions to show icon beside feedback
-                                if (questionResult.question_type === 'open_question') {
-                                    feedbackDiv.addClass('open-question-feedback');
-                                }
-                                
-                                // Add "Show me" link if audio_section_id is available (for listening tests)
-                                // Note: "Show me" links for reading passages are added in a unified manner
-                                // after all question processing (see lines 1032+) to handle all question types consistently
-                                // Skip for open_question type since links are added per-field in PHP
-                                if (questionResult.question_type !== 'open_question') {
-                                    if (questionResult.audio_section_id !== null && 
-                                        questionResult.audio_section_id !== undefined) {
-                                        // Create a container div for the buttons to display them on a new line
-                                        var buttonContainer = $('<div>')
-                                            .css({
-                                                'margin-top': '10px',
-                                                'display': 'block'
-                                            });
-                                        
-                                        var transcriptLink = $('<a>')
-                                            .attr('href', '#')
-                                            .addClass('show-in-transcript-link')
-                                            .attr('data-section', questionResult.audio_section_id)
-                                            .attr('data-question', questionNum)
-                                            .text('Show me');
-                                        
-                                        buttonContainer.append(transcriptLink);
-                                        
-                                        // Add "Listen to this answer" button if audio timing is available
-                                        if (questionResult.audio_start_time !== null && 
-                                            questionResult.audio_start_time !== undefined &&
-                                            questionResult.audio_end_time !== null && 
-                                            questionResult.audio_end_time !== undefined) {
-                                            var listenLink = $('<a>')
-                                                .attr('href', '#')
-                                                .addClass('listen-to-answer-link')
-                                                .attr('data-start-time', questionResult.audio_start_time)
-                                                .attr('data-end-time', questionResult.audio_end_time)
-                                                .attr('data-question', questionNum)
-                                                .text('Listen to this answer')
-                                                .css('margin-left', '10px');
-                                            
-                                            buttonContainer.append(listenLink);
-                                        }
-                                        
-                                        feedbackDiv.append(buttonContainer);
+                                if (questionResult.feedback || hasShowMeButton) {
+                                    // For other question types (text input, etc.), show general feedback
+                                    // Remove any existing feedback first
+                                    questionElement.find('.question-feedback-message').remove();
+                                    
+                                    // Create feedback element with proper CSS classes
+                                    var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
+                                    var feedbackDiv = $('<div>')
+                                        .addClass('question-feedback-message')
+                                        .addClass(feedbackClass)
+                                        .html(questionResult.feedback || ''); // Using .html() because feedback explicitly supports HTML formatting
+                                                                               // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                    
+                                    // Add special class for open questions to show icon beside feedback
+                                    if (questionResult.question_type === 'open_question') {
+                                        feedbackDiv.addClass('open-question-feedback');
                                     }
+                                    
+                                    // Add "Show me" link if audio_section_id is available (for listening tests)
+                                    // Note: "Show me" links for reading passages are added in a unified manner
+                                    // after all question processing (see lines 1032+) to handle all question types consistently
+                                    // Skip for open_question type since links are added per-field in PHP
+                                    if (questionResult.question_type !== 'open_question') {
+                                        if (questionResult.audio_section_id !== null && 
+                                            questionResult.audio_section_id !== undefined) {
+                                            // Create a container div for the buttons to display them on a new line
+                                            var buttonContainer = $('<div>')
+                                                .css({
+                                                    'margin-top': '10px',
+                                                    'display': 'block'
+                                                });
+                                            
+                                            var transcriptLink = $('<a>')
+                                                .attr('href', '#')
+                                                .addClass('show-in-transcript-link')
+                                                .attr('data-section', questionResult.audio_section_id)
+                                                .attr('data-question', questionNum)
+                                                .text('Show me');
+                                            
+                                            buttonContainer.append(transcriptLink);
+                                            
+                                            // Add "Listen to this answer" button if audio timing is available
+                                            if (questionResult.audio_start_time !== null && 
+                                                questionResult.audio_start_time !== undefined &&
+                                                questionResult.audio_end_time !== null && 
+                                                questionResult.audio_end_time !== undefined) {
+                                                var listenLink = $('<a>')
+                                                    .attr('href', '#')
+                                                    .addClass('listen-to-answer-link')
+                                                    .attr('data-start-time', questionResult.audio_start_time)
+                                                    .attr('data-end-time', questionResult.audio_end_time)
+                                                    .attr('data-question', questionNum)
+                                                    .text('Listen to this answer')
+                                                    .css('margin-left', '10px');
+                                                
+                                                buttonContainer.append(listenLink);
+                                            }
+                                            
+                                            feedbackDiv.append(buttonContainer);
+                                        }
+                                    }
+                                    
+                                    questionElement.append(feedbackDiv);
                                 }
-                                
-                                questionElement.append(feedbackDiv);
                             }
                         });
                         
