@@ -5,7 +5,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #1:</p>\r\n<p><span style=\"color: red\">(1) Some people believe that</span> the internet has diminished the value of libraries, however as the argument below explains, they still provide an important service in a number of ways.</p>",
+            "question": "<p><strong>Select the correct answers.</strong></p>\r\n<p>Usage #1:</p>\r\n<p><span style=\"color: red\">(1) Some people believe that</span> the internet has diminished the value of libraries, however as the argument below explains, they still provide an important service in a number of ways.</p>",
             "points": 1,
             "no_answer_feedback": "Some people believe that – This is correct usage as it is followed by an opinion\r\n",
             "correct_feedback": "",
@@ -34,7 +34,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #2:</p>\r\n<p>Firstly, <span style=\"color: red\">(2) there is a school of thought that believes</span> libraries provide free access to a number of resources that are unavailable on the internet unless payment is made. Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web.</p>",
+            "question": "<p><strong>Select the correct answers.</strong></p>\r\n<p>Usage #2:</p>\r\n<p>Firstly, <span style=\"color: red\">(2) there is a school of thought that believes</span> libraries provide free access to a number of resources that are unavailable on the internet unless payment is made. Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web.</p>",
             "points": 1,
             "no_answer_feedback": "There is a school of thought that believes – This is incorrectly used as it is followed by a fact",
             "correct_feedback": "",
@@ -63,7 +63,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #3:</p>\r\n<p>Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web. Journals, for instance, <span style=\"color: red\">(3) it could be argued</span> are often not found in their full form unless a subscription is paid.</p>",
+            "question": "<p><strong>Select the correct answers.</strong></p>\r\n<p>Usage #3:</p>\r\n<p>Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web. Journals, for instance, <span style=\"color: red\">(3) it could be argued</span> are often not found in their full form unless a subscription is paid.</p>",
             "points": 1,
             "no_answer_feedback": "It could be argued – This is incorrectly used as it is followed by a fact",
             "correct_feedback": "",
@@ -92,7 +92,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #4:</p>\r\n<p>In addition, many people enjoy reading traditional books. Whilst E-books are now available on the internet, <span style=\"color: red\">(4) there are reasons to suggest</span> many enjoy the convenience of being able to read anywhere at any time. To illustrate, libraries allow the general public access to a range of books which they might not be able to afford to buy and that they can take away and enjoy without needing to sit in front of a computer screen.</p>",
+            "question": "<p><strong>Select the correct answers.</strong></p>\r\n<p>Usage #4:</p>\r\n<p>In addition, many people enjoy reading traditional books. Whilst E-books are now available on the internet, <span style=\"color: red\">(4) there are reasons to suggest</span> many enjoy the convenience of being able to read anywhere at any time. To illustrate, libraries allow the general public access to a range of books which they might not be able to afford to buy and that they can take away and enjoy without needing to sit in front of a computer screen.</p>",
             "points": 1,
             "no_answer_feedback": "There are reasons to suggest – This is correct usage as it is followed by an opinion",
             "correct_feedback": "",
@@ -121,7 +121,7 @@
         {
             "type": "closed_question",
             "instructions": "",
-            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #5:</p>\r\n<p>On the other hand, if individuals have a home computer, <span style=\"color: red\">(5) there are arguments to be made for stating that</span> it is much more convenient to access information than having to visit a library; indeed some members of society, rural dwellers for example, may find it difficult to get to a library. However, many offer mobile services whereby their books can be accessed from other locations, not just the main library building itself.</p>",
+            "question": "<p><strong>Select the correct answers.</strong></p>\r\n<p>Usage #5:</p>\r\n<p>On the other hand, if individuals have a home computer, <span style=\"color: red\">(5) there are arguments to be made for stating that</span> it is much more convenient to access information than having to visit a library; indeed some members of society, rural dwellers for example, may find it difficult to get to a library. However, many offer mobile services whereby their books can be accessed from other locations, not just the main library building itself.</p>",
             "points": 1,
             "no_answer_feedback": "There are arguments to be made for stating that – This is incorrectly used as it is followed by a fact",
             "correct_feedback": "",
@@ -296,7 +296,7 @@
     ],
     "settings": {
         "pass_percentage": "70",
-        "layout_type": "two_column_reading",
+        "layout_type": "two_column_exercise",
         "cbt_test_type": "",
         "exercise_label": "exercise",
         "open_as_popup": "",
