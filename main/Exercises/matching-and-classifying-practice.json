@@ -1,0 +1,271 @@
+{
+    "title": "Matching &amp; classifying practice",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "11. Over 30% of the population was under 15.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is B. 1851–1899. More than a third of England's population was under 15 by 1895.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This statistic is linked to the <strong>late 19th century</strong>, not the 20th. The passage states that \"more than a third of England's population was under the age of 15 by 1895.\""
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": true,
+                    "feedback": "Correct! By <strong>1895</strong>, more than a third of England's population was under 15. This date falls within the 1851–1899 period."
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage does not associate this figure with the early 19th century. The specific date mentioned is <strong>1895</strong>, which is outside this period."
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "12. Half a million middle-class women worked in charitable roles.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is A. 1900–1944. By 1901, around 500,000 women were involved in voluntary work.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": true,
+                    "feedback": "Correct! By <strong>1901</strong>, around 500,000 women were involved in voluntary work. This date falls at the very beginning of the 1900–1944 period."
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This number is not given for the 19th century. The passage specifically states \"by <strong>1901</strong>\", which is just after this period ended."
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": false,
+                    "feedback": "Incorrect. There is no mention of this figure in the early 1800s. The passage refers to the year <strong>1901</strong>, which is much later than this period."
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "13. 50% of babies in poor families died before the age of 1.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is C. 1801–1850. This statistic refers to London around 1830.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Infant mortality rates were improving by this time. The passage mentions this statistic for the year <strong>1830</strong>, which is much earlier."
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The passage places this figure earlier than this period. It specifically refers to <strong>1830</strong>, before 1851."
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": true,
+                    "feedback": "Correct! This statistic refers to London around <strong>1830</strong>. The passage states \"In 1830, children under 10 accounted for almost 50% of deaths in London. At that time half of the babies born to poor families in London died before their first birthday.\""
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "14. A hospital for sick children was established.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is B. 1851–1899. Great Ormond Street Hospital was founded in 1852.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The hospital was founded before the 20th century. The passage states it was founded in <strong>1852</strong>, which is in the previous period."
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": true,
+                    "feedback": "Correct! <strong>Great Ormond Street Hospital</strong> for sick children was founded in <strong>1852</strong>, which falls within this period."
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The founding date falls just after this period ended. The hospital was established in <strong>1852</strong>, two years after 1850."
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "15. All children twelve and under were given access to education.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is B. 1851–1899. Universal access was introduced in 1899.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This change occurred before the 20th century. The passage states that in <strong>1899</strong>, all children up to the age of 12 had access to school, just before this period began."
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": true,
+                    "feedback": "Correct! Universal access to education was introduced in <strong>1899</strong>. The passage states: \"In 1899, due to Government intervention, for the first time all children up to the age of 12 had the opportunity to go to school.\""
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Education was not universally available in this period. The passage indicates this change occurred in <strong>1899</strong>, which is much later."
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "16. A charity was established which supported working children and encouraged attendance at school.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is C. 1801–1850. The London Shoe-Black Brigade was founded in 1849.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This charity predates the 20th century. The passage mentions it was founded in <strong>1849</strong>, which is in the mid-19th century."
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The founding date is earlier than this period. The <strong>London Shoe-Black Brigade</strong> was founded in <strong>1849</strong>, just before this period began."
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": true,
+                    "feedback": "Correct! The <strong>London Shoe-Black Brigade</strong> was founded in <strong>1849</strong>. This charity \"offered fair employment terms to children employed as shoe cleaners and also encouraged attendance at evening school.\""
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "17. An appeal was set up as a result of a major disaster.",
+            "points": 1,
+            "no_answer_feedback": "You need to select an answer. The correct answer is A. 1900–1944. The Titanic disaster occurred in 1912.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 2,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "A. 1900–1944",
+                    "is_correct": true,
+                    "feedback": "Correct! The <strong>Titanic disaster</strong> occurred in <strong>1912</strong>, which falls within this period. The passage states: \"One of the earliest disaster fund charities in the UK was established in response to the sinking of the Titanic in 1912.\""
+                },
+                {
+                    "text": "B. 1851–1899",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This period predates the Titanic disaster. The Titanic sank in <strong>1912</strong>, which is after this period ended."
+                },
+                {
+                    "text": "C. 1801–1850",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The disaster happened much later than this period. The <strong>Titanic disaster</strong> occurred in <strong>1912</strong>, more than 60 years after this period ended."
+                }
+            ],
+            "options": "A. 1900–1944\nB. 1851–1899\nC. 1801–1850",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "11"
+    },
+    "audio": {
+        "url": "https://www.ilsnz.com/wp-content/uploads/2018/11/matching-and-classifying.mp3",
+        "transcript": "",
+        "sections": [
+            {
+                "section_number": 2,
+                "transcript": "<p>Welcome to our programme. Today I am going to talk about the history of charities in the UK. Nowadays, many of the prominent charity organisations that most people are familiar with are devoted to problems in the third world or funding research for various diseases; however, prior to the end of the Second World War and the establishment of the Welfare State in 1945, charities were mainly responsible for caring for poor individuals and families living in poverty here in the UK. Since there was no government provision for those who were unable to fend for themselves, charity organisations were involved in the care of hundreds of thousands of children.</p><p>In the 19th century, there were enormous divides in the lifestyle of a wealthy child and one born into poverty. <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">More than a third of England's population was under the age of 15 by 1895</span> and a high proportion of these were from poorer backgrounds. Children from privileged backgrounds were often taught that it was their duty to help the poor, and by that time members of many richer families were involved in charity work of some description. <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">These institutions also provided a rare opportunity for middle-class women to become involved in a form of useful and stimulating work outside of the home. It is estimated that by 1901, 500,000 such women were involved in some sort of regular voluntary work.</span></p><p>The growing younger population and the shocking conditions in which many of them lived brought children to the attention of both the government and charity organisations. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">In 1830, children under 10 accounted for almost 50% of deaths in London. At that time half of the babies born to poor families in London died before their first birthday.</span> <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">The Great Ormond Street Hospital for sick children was founded in 1852</span>, however many of the city's young continued to be cared for in dirty conditions hazardous to health.</p><p>It was soon recognised that children often needed protection, not only from squalid conditions and disease, but also from violence and physical harm. Consequently, the charity organisation the NSPCC – the National Society for the Prevention of Cruelty to Children was founded in 1889. <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">In 1899, due to Government intervention, for the first time all children up to the age of 12 had the opportunity to go to school.</span> Prior to this, many young children from poor backgrounds had no access to education and had been working in dangerous conditions from an extremely young age. For over 30 years before this change in education legislation, charity organisations had been working to support poor children in finding safe work opportunities. One example was the Watercress and Flower Girls Mission, established in 1866 with the aim of providing a home and work for young and disabled flower sellers. In a similar way, <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">the London Shoe-Black Brigade, founded in 1849, offered fair employment terms to children employed as shoe cleaners and also encouraged attendance at evening school.</span></p><p><span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">One of the earliest disaster fund charities in the UK was established in response to the sinking of the Titanic in 1912.</span> The Titanic Fund raised the equivalent of what would be US$10 million today to help widows of those lost in the shipping tragedy. When looking back at charitable contributions in history it can be very difficult to find out actual numbers of people who were helped, partly because there were so many different organisations and also because so many records have been destroyed. Undoubtedly though, the assistance given was enormous.</p>"
+            }
+        ]
+    },
+    "_metadata": {
+        "exported_at": "2026-01-24 08:25:23",
+        "exported_by": "impact",
+        "plugin_version": "13.2",
+        "format_version": "1.0"
+    }
+}
