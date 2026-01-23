@@ -1,0 +1,313 @@
+{
+    "title": "END OF LESSON REVIEW (Unit 6: Presenting and supporting opinions in Task 2)",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #1:</p>\r\n<p><span style=\"color: red\">(1) Some people believe that</span> the internet has diminished the value of libraries, however as the argument below explains, they still provide an important service in a number of ways.</p>",
+            "points": 1,
+            "no_answer_feedback": "Some people believe that – This is correct usage as it is followed by an opinion\r\n",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "This is well written.",
+                    "is_correct": true,
+                    "feedback": "Correct! Some people believe that – This is correct usage as it is followed by an opinion\r\n"
+                },
+                {
+                    "text": "This is NOT well written",
+                    "is_correct": false,
+                    "feedback": "Some people believe that – This is correct usage as it is followed by an opinion\r\n"
+                }
+            ],
+            "options": "This is well written.\nThis is NOT well written",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #2:</p>\r\n<p>Firstly, <span style=\"color: red\">(2) there is a school of thought that believes</span> libraries provide free access to a number of resources that are unavailable on the internet unless payment is made. Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web.</p>",
+            "points": 1,
+            "no_answer_feedback": "There is a school of thought that believes – This is incorrectly used as it is followed by a fact",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "This is well written.",
+                    "is_correct": false,
+                    "feedback": "There is a school of thought that believes – This is incorrectly used as it is followed by a fact"
+                },
+                {
+                    "text": "This is NOT well written",
+                    "is_correct": true,
+                    "feedback": "Correct! There is a school of thought that believes – This is incorrectly used as it is followed by a fact"
+                }
+            ],
+            "options": "This is well written.\nThis is NOT well written",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #3:</p>\r\n<p>Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web. Journals, for instance, <span style=\"color: red\">(3) it could be argued</span> are often not found in their full form unless a subscription is paid.</p>",
+            "points": 1,
+            "no_answer_feedback": "It could be argued – This is incorrectly used as it is followed by a fact",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "This is well written.",
+                    "is_correct": false,
+                    "feedback": "It could be argued – This is incorrectly used as it is followed by a fact"
+                },
+                {
+                    "text": "This is NOT well written",
+                    "is_correct": true,
+                    "feedback": "Correct! It could be argued – This is incorrectly used as it is followed by a fact"
+                }
+            ],
+            "options": "This is well written.\nThis is NOT well written",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #4:</p>\r\n<p>In addition, many people enjoy reading traditional books. Whilst E-books are now available on the internet, <span style=\"color: red\">(4) there are reasons to suggest</span> many enjoy the convenience of being able to read anywhere at any time. To illustrate, libraries allow the general public access to a range of books which they might not be able to afford to buy and that they can take away and enjoy without needing to sit in front of a computer screen.</p>",
+            "points": 1,
+            "no_answer_feedback": "There are reasons to suggest – This is correct usage as it is followed by an opinion",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "This is well written.",
+                    "is_correct": true,
+                    "feedback": "Correct! There are reasons to suggest – This is correct usage as it is followed by an opinion"
+                },
+                {
+                    "text": "This is NOT well written",
+                    "is_correct": false,
+                    "feedback": "There are reasons to suggest – This is correct usage as it is followed by an opinion"
+                }
+            ],
+            "options": "This is well written.\nThis is NOT well written",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<strong>Select the correct answers.</strong></span></p>\r\n<p>Usage #5:</p>\r\n<p>On the other hand, if individuals have a home computer, <span style=\"color: red\">(5) there are arguments to be made for stating that</span> it is much more convenient to access information than having to visit a library; indeed some members of society, rural dwellers for example, may find it difficult to get to a library. However, many offer mobile services whereby their books can be accessed from other locations, not just the main library building itself.</p>",
+            "points": 1,
+            "no_answer_feedback": "There are arguments to be made for stating that – This is incorrectly used as it is followed by a fact",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "This is well written.",
+                    "is_correct": false,
+                    "feedback": "There are arguments to be made for stating that – This is incorrectly used as it is followed by a fact"
+                },
+                {
+                    "text": "This is NOT well written",
+                    "is_correct": true,
+                    "feedback": "Correct! There are arguments to be made for stating that – This is incorrectly used as it is followed by a fact"
+                }
+            ],
+            "options": "This is well written.\nThis is NOT well written",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "<strong>PART B:</strong></p>\r\n<p>Now look at sections of an essay that was written for the following question:</p>\r\n<p><em>More and more people are becoming classified as overweight, particularly in Western cultures. Obesity can be easily avoided by people making simple changes to their way of life. To what extent do you agree or disagree?</em></p>\r\n<p><strong>Select all of the phrases that are not too dogmatic to complete the sentence.</strong></p>",
+            "question": "<p>There is a school of thought that believes it is possible for most individuals to be slim if they live a healthy lifestyle. [WHICH PHRASE(S) FIT HERE?] as will now be explained.</p>",
+            "points": 1,
+            "no_answer_feedback": "There are arguments to support this – This is acceptable.\r\nThis is true – This is too dogmatic.\r\nThere are reasons to suggest this is true – This is acceptable.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "There are arguments to support this",
+                    "is_correct": true,
+                    "feedback": "Correct! There are arguments to support this – This is acceptable."
+                },
+                {
+                    "text": "This is true",
+                    "is_correct": false,
+                    "feedback": "This is true – This is too dogmatic."
+                },
+                {
+                    "text": "There are reasons to suggest this is true",
+                    "is_correct": true,
+                    "feedback": "Correct! There are reasons to suggest this is true – This is acceptable."
+                }
+            ],
+            "options": "There are arguments to support this\nThis is true\nThere are reasons to suggest this is true",
+            "correct_answer_count": 2,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<p>Firstly, diets, particularly in Western cultures are often very high in fat. This means that although people may think they are not eating too much, the food they consume is very high in calories. Traditional diets of other cultures are [WHICH PHRASE(S) FIT HERE?] and therefore people can eat a larger quantity of food without putting on weight; the Japanese diet is a good example of this.</p>",
+            "points": 1,
+            "no_answer_feedback": "often much healthier – this is acceptable.\r\nbetter – this is too judgemental without sufficient support\r\noften much lower in fat – this is acceptable.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "often much healthier",
+                    "is_correct": true,
+                    "feedback": "Correct! often much healthier – this is acceptable."
+                },
+                {
+                    "text": "better",
+                    "is_correct": false,
+                    "feedback": "better – this is too judgemental without sufficient support"
+                },
+                {
+                    "text": "often much lower in fat",
+                    "is_correct": true,
+                    "feedback": "Correct! often much lower in fat – this is acceptable."
+                }
+            ],
+            "options": "often much healthier\nbetter\noften much lower in fat",
+            "correct_answer_count": 2,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<p>In addition, [WHICH PHRASE(S) FIT HERE?]. If we are active we are able to raise our metabolism and use the calories we consume, reducing the likelihood of becoming obese. It may be advisable for people suffering with weight problems to participate in some kind of exercise programme, for example, aerobics or jogging, however some people are not motivated enough to participate in a regular training programme.</p>",
+            "points": 1,
+            "no_answer_feedback": "it could be argued that many people do not take adequate exercise – this is acceptable.\r\nit could be argued that many people are too idle – the words 'too idle' are too direct.\r\nit is clear that many people are too lazy – 'It is clear' and 'too lazy' makes this opinion too dogmatic and direct.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "it could be argued that many people do not take adequate exercise",
+                    "is_correct": true,
+                    "feedback": "Correct! it could be argued that many people do not take adequate exercise – this is acceptable."
+                },
+                {
+                    "text": "it could be argued that many people are too idle",
+                    "is_correct": false,
+                    "feedback": "it could be argued that many people are too idle – the words 'too idle' are too direct."
+                },
+                {
+                    "text": "it is clear that many people are too lazy",
+                    "is_correct": false,
+                    "feedback": "it is clear that many people are too lazy – 'It is clear' and 'too lazy' makes this opinion too dogmatic and direct."
+                }
+            ],
+            "options": "it could be argued that many people do not take adequate exercise\nit could be argued that many people are too idle\nit is clear that many people are too lazy",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "<p>Granted, some people find it difficult to maintain a healthy weight because of a physical condition. Some are genetically predisposed to be heavier than others and in addition there are many medical conditions which can slow down metabolism. However, under doctor's supervision even people in such situations should be able successfully to follow a weight loss programme.</p>\r\n<p>To conclude, [WHICH PHRASE(S) FIT HERE?]; however, it is likely that many people may not be willing to make necessary changes and that therefore the problem will continue.</p>",
+            "points": 1,
+            "no_answer_feedback": "it is inarguable that the only significant cause of weight problems is lifestyle choice – Vocabulary like 'inarguable' and 'only' make this opinion too dogmatic. The essay had already acknowledged medical reasons as another cause of obesity.\r\nthere are arguments to be made for stating that the main factor contributing to weight problems is lifestyle choice – this is acceptable.\r\nthe main factor contributing to weight problems appears to be lifestyle choice – this is acceptable.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "mc_options": [
+                {
+                    "text": "it is inarguable that the only significant cause of weight problems is lifestyle choice",
+                    "is_correct": false,
+                    "feedback": "it is inarguable that the only significant cause of weight problems is lifestyle choice – Vocabulary like 'inarguable' and 'only' make this opinion too dogmatic. The essay had already acknowledged medical reasons as another cause of obesity."
+                },
+                {
+                    "text": "there are arguments to be made for stating that the main factor contributing to weight problems is lifestyle choice",
+                    "is_correct": true,
+                    "feedback": "Correct! there are arguments to be made for stating that the main factor contributing to weight problems is lifestyle choice – this is acceptable."
+                },
+                {
+                    "text": "the main factor contributing to weight problems appears to be lifestyle choice",
+                    "is_correct": true,
+                    "feedback": "Correct! the main factor contributing to weight problems appears to be lifestyle choice – this is acceptable."
+                }
+            ],
+            "options": "it is inarguable that the only significant cause of weight problems is lifestyle choice\nthere are arguments to be made for stating that the main factor contributing to weight problems is lifestyle choice\nthe main factor contributing to weight problems appears to be lifestyle choice",
+            "correct_answer_count": 2,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [
+        {
+            "title": "",
+            "content": "<em>The internet provides efficient access to a wide range of information. As a result libraries have become less important. To what extent do you agree?</em></p>\r\n<p><span style=\"color: red\">(1) Some people believe that</span> the internet has diminished the value of libraries, however as the argument below explains, they still provide an important service in a number of ways.</p>\r\n<p>Firstly, <span style=\"color: red\">(2) there is a school of thought that believes</span> libraries provide free access to a number of resources that are unavailable on the internet unless payment is made. Many students still need to research using both sources as the information they need to complete an assignment may not be available free of charge on the web. Journals, for instance, <span style=\"color: red\">(3) it could be argued</span> are often not found in their full form unless a subscription is paid.</p>\r\n<p>In addition, many people enjoy reading traditional books. Whilst E-books are now available on the internet, <span style=\"color: red\">(4) there are reasons to suggest</span> many enjoy the convenience of being able to read anywhere at any time. To illustrate, libraries allow the general public access to a range of books which they might not be able to afford to buy and that they can take away and enjoy without needing to sit in front of a computer screen.</p>\r\n<p>On the other hand, if individuals have a home computer, <span style=\"color: red\">(5) there are arguments to be made for stating that</span> it is much more convenient to access information than having to visit a library; indeed some members of society, rural dwellers for example, may find it difficult to get to a library. However, many offer mobile services whereby their books can be accessed from other locations, not just the main library building itself.</p>\r\n<p>In summary, while the internet has provided an alternative way of accessing information, libraries still provide a useful service; it is likely, given the arguments above, that they will continue to play a significant role.</p>"
+        },
+        {
+            "title": "",
+            "content": "<p><strong>Essay Question:</strong></p>\r\n<p><em>More and more people are becoming classified as overweight, particularly in Western cultures. Obesity can be easily avoided by people making simple changes to their way of life. To what extent do you agree or disagree?</em></p>\r\n<p>There is a school of thought that believes it is possible for most individuals to be slim if they live a healthy lifestyle. [WHICH PHRASE(S) FIT HERE?] as will now be explained.</p>\r\n<p>Firstly, diets, particularly in Western cultures are often very high in fat. This means that although people may think they are not eating too much, the food they consume is very high in calories. Traditional diets of other cultures are [WHICH PHRASE(S) FIT HERE?] and therefore people can eat a larger quantity of food without putting on weight; the Japanese diet is a good example of this.</p>\r\n<p>In addition, [WHICH PHRASE(S) FIT HERE?]. If we are active we are able to raise our metabolism and use the calories we consume, reducing the likelihood of becoming obese. It may be advisable for people suffering with weight problems to participate in some kind of exercise programme, for example, aerobics or jogging, however some people are not motivated enough to participate in a regular training programme.</p>\r\n<p>Granted, some people find it difficult to maintain a healthy weight because of a physical condition. Some are genetically predisposed to be heavier than others and in addition there are many medical conditions which can slow down metabolism. However, under doctor's supervision even people in such situations should be able successfully to follow a weight loss programme.</p>\r\n<p>To conclude, [WHICH PHRASE(S) FIT HERE?]; however, it is likely that many people may not be willing to make necessary changes and that therefore the problem will continue.</p>"
+        }
+    ],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-23 18:17:39",
+        "exported_by": "impact",
+        "plugin_version": "13.1",
+        "format_version": "1.0"
+    }
+}
