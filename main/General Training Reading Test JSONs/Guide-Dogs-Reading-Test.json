@@ -491,38 +491,33 @@
             "no_answer_feedback": "Please check the answers above. Make sure to use NO MORE THAN TWO WORDS from the passage.",
             "correct_feedback": "Excellent work! You've correctly completed all the sentences.",
             "incorrect_feedback": "Some answers are incorrect. Review the passage carefully and use exact words from the text.",
-            "summary_fields": [
-                {
-                    "answer": "robust health|health",
-                    "correct_feedback": "Correct! Paragraph B mentions 'robust health' as a key characteristic.",
-                    "incorrect_feedback": "Incorrect. The correct answer is 'robust health' or 'health'. Paragraph B: 'their generally robust health and their stature'",
-                    "no_answer_feedback": "The correct answer is 'robust health' or 'health'. Paragraph B states: 'These three breeds have been observed to be particularly suitable due to their willingness to cooperate with their human owners, their trainability, their generally robust health and their stature'"
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Paragraph B mentions 'robust health' as a key characteristic.",
+                    "incorrect": "Incorrect. The correct answer is 'robust health' or 'health'. Paragraph B: 'their generally robust health and their stature'",
+                    "no_answer": "The correct answer is 'robust health' or 'health'. Paragraph B states: 'These three breeds have been observed to be particularly suitable due to their willingness to cooperate with their human owners, their trainability, their generally robust health and their stature'"
                 },
-                {
-                    "answer": "professional training|training",
-                    "correct_feedback": "Correct! Paragraph C emphasizes the importance of professional training.",
-                    "incorrect_feedback": "Incorrect. The correct answer is 'professional training' or 'training'. Paragraph C: 'professional training is essential.'",
-                    "no_answer_feedback": "The correct answer is 'professional training' or 'training'. Paragraph C states: 'However, genetics alone do not assure a successful guide dog; as with humans, both nature and nurture influence a dog's character and behaviour and professional training is essential.'"
+                "2": {
+                    "correct": "Correct! Paragraph C emphasizes the importance of professional training.",
+                    "incorrect": "Incorrect. The correct answer is 'professional training' or 'training'. Paragraph C: 'professional training is essential.'",
+                    "no_answer": "The correct answer is 'professional training' or 'training'. Paragraph C states: 'However, genetics alone do not assure a successful guide dog; as with humans, both nature and nurture influence a dog's character and behaviour and professional training is essential.'"
                 },
-                {
-                    "answer": "turn corners",
-                    "correct_feedback": "Correct! Paragraph E describes this specific training requirement.",
-                    "incorrect_feedback": "Incorrect. The correct answer is 'turn corners'. Paragraph E: 'it is taught not to turn corners unless told to do so'",
-                    "no_answer_feedback": "The correct answer is 'turn corners'. Paragraph E states: 'it is taught not to turn corners unless told to do so'"
+                "3": {
+                    "correct": "Correct! Paragraph E describes this specific training requirement.",
+                    "incorrect": "Incorrect. The correct answer is 'turn corners'. Paragraph E: 'it is taught not to turn corners unless told to do so'",
+                    "no_answer": "The correct answer is 'turn corners'. Paragraph E states: 'it is taught not to turn corners unless told to do so'"
                 },
-                {
-                    "answer": "scarce",
-                    "correct_feedback": "Correct! Paragraph H mentions that opportunities are scarce.",
-                    "incorrect_feedback": "Incorrect. The correct answer is 'scarce'. Paragraph H: 'opportunities to become a guide dog trainer are often quite scarce'",
-                    "no_answer_feedback": "The correct answer is 'scarce'. Paragraph H states: 'Opportunities to become a guide dog trainer are often quite scarce'"
+                "4": {
+                    "correct": "Correct! Paragraph H mentions that opportunities are scarce.",
+                    "incorrect": "Incorrect. The correct answer is 'scarce'. Paragraph H: 'opportunities to become a guide dog trainer are often quite scarce'",
+                    "no_answer": "The correct answer is 'scarce'. Paragraph H states: 'Opportunities to become a guide dog trainer are often quite scarce'"
                 },
-                {
-                    "answer": "realists",
-                    "correct_feedback": "Correct! Paragraph H states trainers need to be realists.",
-                    "incorrect_feedback": "Incorrect. The correct answer is 'realists'. Paragraph H: 'Trainers also need to be realists as some of their charges may never become successful guide dogs'",
-                    "no_answer_feedback": "The correct answer is 'realists'. Paragraph H states: 'Trainers also need to be realists as some of their charges may never become successful guide dogs regardless of their own dedication and skill'"
+                "5": {
+                    "correct": "Correct! Paragraph H states trainers need to be realists.",
+                    "incorrect": "Incorrect. The correct answer is 'realists'. Paragraph H: 'Trainers also need to be realists as some of their charges may never become successful guide dogs'",
+                    "no_answer": "The correct answer is 'realists'. Paragraph H states: 'Trainers also need to be realists as some of their charges may never become successful guide dogs regardless of their own dedication and skill'"
                 }
-            ],
+            },
             "reading_text_id": 0,
             "audio_section_id": null
         }
