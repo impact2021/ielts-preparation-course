@@ -17,6 +17,7 @@ class IELTS_CM_Gamification {
         // AJAX handlers
         add_action('wp_ajax_ielts_cm_get_progress_rings_data', array($this, 'get_progress_rings_data_ajax'));
         add_action('wp_ajax_ielts_cm_get_skills_radar_data', array($this, 'get_skills_radar_data_ajax'));
+        add_action('wp_ajax_ielts_cm_update_target_band', array($this, 'update_target_band_ajax'));
     }
     
     /**
@@ -301,8 +302,42 @@ class IELTS_CM_Gamification {
         
         $skill_scores = $this->get_user_skill_scores($user_id);
         
+        // Get user's target band (default to 7.0 if not set)
+        $target_band = get_user_meta($user_id, '_ielts_cm_target_band', true);
+        if (!$target_band) {
+            $target_band = 7.0;
+        }
+        
         wp_send_json_success(array(
-            'skill_scores' => $skill_scores
+            'skill_scores' => $skill_scores,
+            'target_band' => floatval($target_band)
+        ));
+    }
+    
+    /**
+     * AJAX handler for updating target band
+     */
+    public function update_target_band_ajax() {
+        check_ajax_referer('ielts_cm_nonce', 'nonce');
+        
+        $user_id = get_current_user_id();
+        if (!$user_id) {
+            wp_send_json_error(array('message' => 'User not logged in'));
+        }
+        
+        $target_band = isset($_POST['target_band']) ? floatval($_POST['target_band']) : 7.0;
+        
+        // Validate target band (must be between 5.5 and 9.0 in 0.5 increments)
+        $valid_bands = array(5.5, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0);
+        if (!in_array($target_band, $valid_bands, true)) {
+            wp_send_json_error(array('message' => 'Target band must be between 5.5 and 9.0 in 0.5 increments'));
+        }
+        
+        update_user_meta($user_id, '_ielts_cm_target_band', $target_band);
+        
+        wp_send_json_success(array(
+            'target_band' => $target_band,
+            'message' => 'Target band updated successfully'
         ));
     }
 }
