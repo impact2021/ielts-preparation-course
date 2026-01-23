@@ -1,0 +1,100 @@
+{
+  "title": "Matching and classifying example",
+  "content": "Read each text carefully and select the correct answer based on the information given.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "According to the text, who believes that a gap year may not necessarily enhance employment opportunities?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. Scott Bradley questions the employment value of a gap year for some students.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "Melissa Hedges",
+          "is_correct": false,
+          "feedback": "Melissa Hedges emphasises the personal and developmental benefits of gap year programmes."
+        },
+        {
+          "text": "Lucy Clarke",
+          "is_correct": false,
+          "feedback": "Lucy Clarke believes gap year experience adds value to CVs and improves interview success."
+        },
+        {
+          "text": "Scott Bradley",
+          "is_correct": true,
+          "feedback": "Correct. Scott Bradley warns that some industries may be less receptive to gap year experience."
+        }
+      ],
+      "options": "Melissa Hedges\nLucy Clarke\nScott Bradley",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "When did the construction of Hadrian's Wall take place, according to the passage?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. The wall was built after Roman expansion into Britain.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "before 43 A.D.",
+          "is_correct": false,
+          "feedback": "This period refers to events before the Roman invasion, which is earlier than the wall."
+        },
+        {
+          "text": "between 43 A.D. and 343 A.D.",
+          "is_correct": true,
+          "feedback": "Correct. The wall was built during the period of Roman control in Britain."
+        },
+        {
+          "text": "after 343 A.D.",
+          "is_correct": false,
+          "feedback": "By this time Roman power was weakening, and the wall had already been constructed."
+        }
+      ],
+      "options": "before 43 A.D.\nbetween 43 A.D. and 343 A.D.\nafter 343 A.D.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Question 1",
+      "content": "The majority of gap year programmes involve working in regions requiring external assistance with their development; Melissa Hedges, Director of GYOME (Gap Year Organisation Made Easy) says work placements may involve teaching English to local children, farm work or infrastructure development projects. Since participants in the programmes are helping to bring genuine benefit to impoverished areas, such an experience can be not only personally rewarding, but helpful with future employment searches, employers often holding the view that travel and in particular voluntary work overseas help to develop maturity, independence and team-building skills in potential graduate employees. Employment Agency Consultant Lucy Clarke says such experience can add tremendous value to applicants' resumes and positively impact on their success at reaching interview stage. She adds that it is helpful for students to plan a gap year placement which will involve functions and responsibilities somehow related to their chosen future career if at all possible, though <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Scott Bradley warns that some students from some particular study disciplines may find that their own industry is less receptive to the advantages of a gap year than others</span>. For example, graduates of a technology-related degree could find themselves at a disadvantage on their return as knowledge and applications within the industry are so dynamic."
+    },
+    {
+      "title": "Question 2",
+      "content": "To compress thousands of years of history in a few paragraphs is a difficult task, and as with almost any historical point a millennia old, even 'facts' are disputable. What is generally accepted is that the first notable new arrivals to Britain came over 2000 years ago in the form of an army of Romans. Conflicts ensued with the tribal populations of Britain, but the organised martial might of the Romans proved superior, and for the following century, Roman influence spread throughout what is now known as England. Yet this was not a true invasion, as it was not until nearly 100 years later that Rome decided it wanted Britain to be part of the Roman Empire. Consequently, in 43 A.D., the first full scale invasion took place in the South East of England. <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Some thirty years later, Roman control had spread throughout England and Wales, although Scotland had remained defiant. Frequent incursions into England from tribes in Scotland led to the creation of one of Britain's most impressive constructions – Hadrian's Wall. The wall was built right across the border of Scotland and designed to protect 'Brittania', the Roman name given to England and Wales. Yet for 300 years, invasions from the Picts and the Scots (both tribes from Scotland) continued to harass the Romans.</span> By 400 A.D., with the Roman Empire collapsing due to rebellions in Europe, the Roman army in Britannia was seriously weakened. Invasions by the Picts and Scots pressed deeper into what was Roman control, and new invaders arrived – the Saxons from modern-day Germany."
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-24 08:39:09",
+    "exported_by": "impact",
+    "plugin_version": "13.2",
+    "format_version": "1.0"
+  }
+}
