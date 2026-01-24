@@ -11,57 +11,57 @@
       "mc_options": [
         {
           "text": "a few",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "few",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "less complicated",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "less expensive than",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "more quickly than",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "richer than",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "the best",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "the coldest",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "the most famous",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "the most interesting",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         },
         {
           "text": "the most popular",
-          "is_correct": false,
+          "is_correct": true,
           "feedback": "Please check your answer."
         }
       ],
