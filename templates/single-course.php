@@ -85,15 +85,35 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                     <?php foreach ($lessons as $lesson): ?>
                         <?php
                         $is_completed = $is_enrolled && $progress_tracker->is_lesson_completed($user_id, $lesson->ID);
+                        
+                        // Get lesson content counts
+                        $resource_count = $progress_tracker->get_lesson_resource_count($lesson->ID);
+                        $video_count = $progress_tracker->get_lesson_video_count($lesson->ID);
+                        $quiz_count = $progress_tracker->get_lesson_quiz_count($lesson->ID);
+                        
+                        // Get lesson completion percentage for enrolled users
+                        $lesson_completion = 0;
+                        if ($is_enrolled && $user_id) {
+                            $lesson_completion = $progress_tracker->get_lesson_completion_percentage($user_id, $lesson->ID);
+                        }
                         ?>
                         <tr class="lesson-row <?php echo $is_completed ? 'completed' : ''; ?>">
                             <?php if ($is_enrolled): ?>
                                 <td class="lesson-status">
-                                    <?php if ($is_completed): ?>
-                                        <span class="dashicons dashicons-yes-alt" style="color: #46b450;"></span>
-                                    <?php else: ?>
-                                        <span class="dashicons dashicons-marker" style="color: #999;"></span>
-                                    <?php endif; ?>
+                                    <div class="lesson-progress-circle" data-progress="<?php echo round($lesson_completion); ?>">
+                                        <svg width="40" height="40" viewBox="0 0 40 40">
+                                            <circle class="progress-circle-bg" cx="20" cy="20" r="16" fill="none" stroke="#e0e0e0" stroke-width="3"></circle>
+                                            <circle class="progress-circle-fill" cx="20" cy="20" r="16" fill="none" stroke="#46b450" stroke-width="3" 
+                                                    stroke-dasharray="<?php echo round($lesson_completion * 100.53 / 100, 2); ?> 100.53" 
+                                                    stroke-dashoffset="0" 
+                                                    transform="rotate(-90 20 20)"></circle>
+                                            <?php if ($is_completed): ?>
+                                                <text x="20" y="20" text-anchor="middle" dy="0.3em" font-size="16" fill="#46b450">✓</text>
+                                            <?php else: ?>
+                                                <text x="20" y="20" text-anchor="middle" dy="0.3em" font-size="9" fill="#666"><?php echo round($lesson_completion); ?>%</text>
+                                            <?php endif; ?>
+                                        </svg>
+                                    </div>
                                 </td>
                             <?php endif; ?>
                             <td class="lesson-title">
@@ -102,6 +122,23 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                                         <?php echo esc_html($lesson->post_title); ?>
                                     </a>
                                 </strong>
+                                <div class="lesson-content-counts">
+                                    <?php
+                                    $counts_parts = array();
+                                    if ($resource_count > 0) {
+                                        $counts_parts[] = sprintf(_n('%d sublesson', '%d sublessons', $resource_count, 'ielts-course-manager'), $resource_count);
+                                    }
+                                    if ($video_count > 0) {
+                                        $counts_parts[] = sprintf(_n('%d video', '%d videos', $video_count, 'ielts-course-manager'), $video_count);
+                                    }
+                                    if ($quiz_count > 0) {
+                                        $counts_parts[] = sprintf(_n('%d exercise', '%d exercises', $quiz_count, 'ielts-course-manager'), $quiz_count);
+                                    }
+                                    if (!empty($counts_parts)) {
+                                        echo esc_html(implode(' • ', $counts_parts));
+                                    }
+                                    ?>
+                                </div>
                             </td>
                             <?php if ($is_enrolled): ?>
                                 <td class="lesson-action">
@@ -218,6 +255,27 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         }
         .ielts-lessons-table .completed {
             background-color: #f0f9f0;
+        }
+        
+        /* Lesson content counts styling */
+        .lesson-content-counts {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+        
+        /* Circular progress indicator styling */
+        .lesson-progress-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lesson-progress-circle svg {
+            display: block;
+        }
+        .progress-circle-fill {
+            transition: stroke-dasharray 0.3s ease;
         }
         </style>
     <?php endif; ?>

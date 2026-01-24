@@ -661,4 +661,99 @@ class IELTS_CM_Progress_Tracker {
             'quiz_count' => $count
         );
     }
+    
+    /**
+     * Get the number of resources (sublessons) in a lesson
+     * 
+     * @param int $lesson_id The lesson ID
+     * @return int Number of resources
+     */
+    public function get_lesson_resource_count($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        $resource_count = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT pm.post_id) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        return intval($resource_count);
+    }
+    
+    /**
+     * Get the number of resources with videos in a lesson
+     * 
+     * @param int $lesson_id The lesson ID
+     * @return int Number of resources with videos
+     */
+    public function get_lesson_video_count($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        // Get resource IDs for this lesson
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        if (empty($resource_ids)) {
+            return 0;
+        }
+        
+        // Count resources with non-empty video URLs
+        $resource_ids = array_map('intval', $resource_ids);
+        $resource_placeholders = implode(',', array_fill(0, count($resource_ids), '%d'));
+        
+        $video_count = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT post_id)
+            FROM {$wpdb->postmeta}
+            WHERE post_id IN ($resource_placeholders)
+              AND meta_key = '_ielts_cm_video_url'
+              AND meta_value != ''
+        ", $resource_ids));
+        
+        return intval($video_count);
+    }
+    
+    /**
+     * Get the number of quizzes (exercises) in a lesson
+     * 
+     * @param int $lesson_id The lesson ID
+     * @return int Number of quizzes
+     */
+    public function get_lesson_quiz_count($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        $quiz_count = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT pm.post_id) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        return intval($quiz_count);
+    }
 }
