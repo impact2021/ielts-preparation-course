@@ -1,0 +1,90 @@
+{
+    "title": "Comparative and Superlative Adjectives",
+    "content": "<p>Read the sentences below and use the correct comparative or superlative form of the adjectives given in the box. Type your answers in the spaces provided. Use each word only once.</p><p><strong>intelligent, traditional, happy, bad, competitive, active, thin, historic</strong></p>",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Read the sentences below and use the correct comparative or superlative form of the adjectives given in the box. Type your answers in the spaces provided. Use each word only once.",
+            "question": "1. I think that children in general were [field 1] in the past; nowadays many youngsters spend a lot of time indoors in front of their computers.\n\n2. My hometown is [field 2] city in the country. It was the place where the first King lived, and there are more protected sites there than anywhere else.\n\n3. In truth, I think my best friend is naturally [field 3] me; however, I think I study harder so we usually get similar results.\n\n4. In the future in my country I think that the job market will become [field 4]. There are more and more people going to university now and I think that having a degree will mean less and less over time.\n\n5. My grandfather is [field 5] my grandmother. He believes that it is important for us to uphold our culture and teaches us many things about the past.\n\n6. I suppose that a lot of girls are [field 6] in the past because of pressure from media images.\n\n7. I am [field 7] when I first arrived here because I have made a number of really good friends.\n\n8. Losing my passport when I was overseas was [field 8] travel experience I have had – it was incredibly stressful.",
+            "points": 8,
+            "no_answer_feedback": "Please complete all the blanks. Review the lesson on comparative and superlative adjectives.",
+            "correct_feedback": "Excellent! You have correctly used all the comparative and superlative forms of the adjectives.",
+            "incorrect_feedback": "Not quite right. Review the feedback for each field and try again. Remember to use the correct comparative or superlative form.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 8,
+            "field_answers": {
+                "1": "more active",
+                "2": "the most historic",
+                "3": "more intelligent than",
+                "4": "more competitive",
+                "5": "more traditional than",
+                "6": "thinner than",
+                "7": "happier than",
+                "8": "the worst"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! 'More active' is the comparative form of 'active', indicating children were more physically engaged in the past.",
+                    "incorrect": "Incorrect. The correct answer is 'more active' (comparative form). This compares children's activity levels in the past versus today.",
+                    "no_answer": "The correct answer is: more active. This is the comparative form comparing past and present activity levels."
+                },
+                "2": {
+                    "correct": "Correct! 'The most historic' is the superlative form of 'historic', indicating it has the greatest historical significance.",
+                    "incorrect": "Incorrect. The correct answer is 'the most historic' (superlative form). This indicates the city has the greatest historical importance.",
+                    "no_answer": "The correct answer is: the most historic. This is the superlative form showing it has the most historical significance."
+                },
+                "3": {
+                    "correct": "Correct! 'More intelligent than' is the comparative form comparing the speaker's intelligence to their friend's.",
+                    "incorrect": "Incorrect. The correct answer is 'more intelligent than' (comparative form). This compares two people's intelligence levels.",
+                    "no_answer": "The correct answer is: more intelligent than. This comparative form is used to compare two people."
+                },
+                "4": {
+                    "correct": "Correct! 'More competitive' is the comparative form of 'competitive', indicating an increasing level of competition.",
+                    "incorrect": "Incorrect. The correct answer is 'more competitive' (comparative form). This indicates the job market will become increasingly competitive.",
+                    "no_answer": "The correct answer is: more competitive. This comparative form shows increasing competition in the job market."
+                },
+                "5": {
+                    "correct": "Correct! 'More traditional than' is the comparative form comparing the grandfather's and grandmother's attitudes.",
+                    "incorrect": "Incorrect. The correct answer is 'more traditional than' (comparative form). This compares the traditional values of two people.",
+                    "no_answer": "The correct answer is: more traditional than. This comparative form is used to compare two people's attitudes."
+                },
+                "6": {
+                    "correct": "Correct! 'Thinner than' is the comparative form of 'thin', comparing girls' body types to the past.",
+                    "incorrect": "Incorrect. The correct answer is 'thinner than' (comparative form). This compares girls' body sizes to those in the past.",
+                    "no_answer": "The correct answer is: thinner than. This comparative form compares present to past."
+                },
+                "7": {
+                    "correct": "Correct! 'Happier than' is the comparative form of 'happy', comparing current happiness to past happiness.",
+                    "incorrect": "Incorrect. The correct answer is 'happier than' (comparative form). This compares the speaker's current happiness to when they first arrived.",
+                    "no_answer": "The correct answer is: happier than. This comparative form compares present to past emotional state."
+                },
+                "8": {
+                    "correct": "Correct! 'The worst' is the superlative form of 'bad', indicating this was the most negative travel experience.",
+                    "incorrect": "Incorrect. The correct answer is 'the worst' (superlative form). This indicates it was the most negative experience of all.",
+                    "no_answer": "The correct answer is: the worst. This is the superlative form of 'bad', meaning the most negative experience."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "one_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "15",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-24 19:21:14",
+        "exported_by": "copilot",
+        "plugin_version": "12.2",
+        "format_version": "1.0"
+    }
+}
