@@ -153,13 +153,14 @@ class IELTS_Course_Manager {
                 $post_type = $post->post_type;
             }
             
+            // Only process our custom post types
             if ($post_type === 'ielts_course') {
                 wp_localize_script('ielts-cm-admin', 'ieltsCMAdmin', array(
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'lessonOrderNonce' => wp_create_nonce('ielts_cm_lesson_order'),
                     'courseLessonsNonce' => wp_create_nonce('ielts_cm_course_lessons'),
                     'courseMetaNonce' => wp_create_nonce('ielts_cm_course_meta'),
-                    'courseId' => ($post ? $post->ID : 0),
+                    'courseId' => $post->ID ?? 0,
                     'i18n' => array(
                         'orderUpdated' => __('Lesson order updated successfully!', 'ielts-course-manager'),
                         'orderFailed' => __('Failed to update lesson order. Please try again.', 'ielts-course-manager'),
@@ -173,7 +174,7 @@ class IELTS_Course_Manager {
                     'pageOrderNonce' => wp_create_nonce('ielts_cm_page_order'),
                     'contentOrderNonce' => wp_create_nonce('ielts_cm_content_order'),
                     'lessonContentNonce' => wp_create_nonce('ielts_cm_lesson_content'),
-                    'lessonId' => ($post ? $post->ID : 0),
+                    'lessonId' => $post->ID ?? 0,
                     'i18n' => array(
                         'pageOrderUpdated' => __('Lesson page order updated successfully!', 'ielts-course-manager'),
                         'pageOrderFailed' => __('Failed to update lesson page order. Please try again.', 'ielts-course-manager'),
