@@ -69,6 +69,12 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         <div class="course-lessons">
             <h3><?php _e('Course Lessons', 'ielts-course-manager'); ?></h3>
             
+            <?php
+            // Batch fetch content counts for all lessons to avoid N+1 queries
+            $lesson_ids = array_map(function($lesson) { return $lesson->ID; }, $lessons);
+            $all_lesson_counts = $progress_tracker->get_lessons_content_counts_batch($lesson_ids);
+            ?>
+            
             <table class="ielts-lessons-table">
                 <thead>
                     <tr>
@@ -86,16 +92,24 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                         <?php
                         $is_completed = $is_enrolled && $progress_tracker->is_lesson_completed($user_id, $lesson->ID);
                         
-                        // Get lesson content counts
-                        $resource_count = $progress_tracker->get_lesson_resource_count($lesson->ID);
-                        $video_count = $progress_tracker->get_lesson_video_count($lesson->ID);
-                        $quiz_count = $progress_tracker->get_lesson_quiz_count($lesson->ID);
+                        // Get lesson content counts from batch results
+                        $lesson_counts = isset($all_lesson_counts[$lesson->ID]) ? $all_lesson_counts[$lesson->ID] : array(
+                            'resource_count' => 0,
+                            'video_count' => 0,
+                            'quiz_count' => 0
+                        );
+                        $resource_count = $lesson_counts['resource_count'];
+                        $video_count = $lesson_counts['video_count'];
+                        $quiz_count = $lesson_counts['quiz_count'];
                         
                         // Get lesson completion percentage for enrolled users
                         $lesson_completion = 0;
                         if ($is_enrolled && $user_id) {
                             $lesson_completion = $progress_tracker->get_lesson_completion_percentage($user_id, $lesson->ID);
                         }
+                        
+                        // Define circle circumference constant for SVG
+                        $circle_circumference = 100.53; // 2 * PI * radius (radius = 16)
                         ?>
                         <tr class="lesson-row <?php echo $is_completed ? 'completed' : ''; ?>">
                             <?php if ($is_enrolled): ?>
@@ -104,7 +118,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                                         <svg width="40" height="40" viewBox="0 0 40 40">
                                             <circle class="progress-circle-bg" cx="20" cy="20" r="16" fill="none" stroke="#e0e0e0" stroke-width="3"></circle>
                                             <circle class="progress-circle-fill" cx="20" cy="20" r="16" fill="none" stroke="#46b450" stroke-width="3" 
-                                                    stroke-dasharray="<?php echo round($lesson_completion * 100.53 / 100, 2); ?> 100.53" 
+                                                    stroke-dasharray="<?php echo round($lesson_completion * $circle_circumference / 100, 2); ?> <?php echo $circle_circumference; ?>" 
                                                     stroke-dashoffset="0" 
                                                     transform="rotate(-90 20 20)"></circle>
                                             <?php if ($is_completed): ?>
