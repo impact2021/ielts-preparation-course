@@ -1,0 +1,78 @@
+{
+  "title": "Quantity exercises",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "<p>Read the extract from a Part Three speaking test and complete the gaps using one of the words below. Type your answers in the spaces provided.</p>\r\n\r\n<table style=\"width:100%;border-collapse:collapse;background:linear-gradient(135deg,#f9f9f9,#ffffff)\">\r\n  <tr>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">a little</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">fewer</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">a few</td>\r\n\r\n  </tr>\r\n  <tr>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">less</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">little</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">few</td>\r\n  </tr>\r\n \r\n</table>\r\n\r\n\r\nComplete the text using words from the word bank provided above.",
+      "question": "<p>How do you think technology has affected the way in which we entertain ourselves?</p>\r\n<p>Well, I think it has had an enormous impact on hobbies such as listening to music and to a lesser extent watching movies, especially for the younger generation. I think it must have affected the number of people who buy CDs for example. I think that 1. [field 1] people must buy them now as so much music is available on the internet.</p>\r\n<p>Amongst younger people, there is 2. [field 2] enthusiasm for accumulating a CD collection; most of us today just stream music directly online.</p>\r\n<p>I suppose there is 3. [field 3] more interest in traditional CDs amongst older people though!</p>\r\n<p>Regarding watching movies, although 4. [field 4] of my friends are still interested in going to the cinema, I think more and more of us are starting to watch more online.</p>\r\n<p>I suppose the concept of sitting in front of a computer to watch a movie doesn't appeal to everyone though and I suppose relatively 5. [field 5] people in my parent's age group would do that, they still prefer the comfort of a cinema.</p>\r\n<p>I like going to the cinema to watch a blockbuster movie, especially if it has special effects as they are so much more impressive on the big screen. I am 6. [field 6] interested in going to watch ordinary films though as it is so expensive in comparison to buying a cinema ticket.</p>\r\n",
+      "points": 6,
+      "no_answer_feedback": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 6,
+      "field_answers": {
+        "1": "little",
+        "2": "a little",
+        "3": "a few",
+        "4": "few",
+        "5": "less",
+        "6": "fewer"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! You have correctly identified the appropriate quantifier.",
+          "incorrect": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+          "no_answer": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns."
+        },
+        "2": {
+          "correct": "Excellent! You have correctly identified the appropriate quantifier.",
+          "incorrect": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+          "no_answer": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns."
+        },
+        "3": {
+          "correct": "Excellent! You have correctly identified the appropriate quantifier.",
+          "incorrect": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+          "no_answer": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns."
+        },
+        "4": {
+          "correct": "Excellent! You have correctly identified the appropriate quantifier.",
+          "incorrect": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+          "no_answer": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns."
+        },
+        "5": {
+          "correct": "Excellent! You have correctly identified the appropriate quantifier.",
+          "incorrect": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+          "no_answer": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns."
+        },
+        "6": {
+          "correct": "Excellent! You have correctly identified the appropriate quantifier.",
+          "incorrect": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+          "no_answer": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns."
+        }
+      }
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "10",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-25 08:53:04",
+    "exported_by": "impact",
+    "plugin_version": "13.5",
+    "format_version": "1.0"
+  }
+}
