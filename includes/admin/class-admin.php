@@ -208,7 +208,7 @@ class IELTS_CM_Admin {
      */
     public function course_lessons_meta_box($post) {
         // Check if this is a new post that hasn't been saved yet
-        if (empty($post->ID) || $post->ID === 0) {
+        if (empty($post->ID)) {
             ?>
             <div id="ielts-cm-course-lessons">
                 <div class="notice notice-info inline">
@@ -446,7 +446,7 @@ class IELTS_CM_Admin {
      */
     public function lesson_content_meta_box($post) {
         // Check if this is a new post that hasn't been saved yet
-        if (empty($post->ID) || $post->ID === 0) {
+        if (empty($post->ID)) {
             ?>
             <div id="ielts-cm-lesson-content">
                 <div class="notice notice-info inline">
