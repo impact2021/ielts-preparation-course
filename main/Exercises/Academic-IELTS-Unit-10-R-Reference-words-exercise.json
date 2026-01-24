@@ -1,13 +1,14 @@
 {
   "title": "Academic IELTS Unit 10 R: Advanced reading skills Reference words exercise",
-  "content": "Read the paragraph below and decide what the numbered reference words refer to. Select the correct answer from the dropdown menu for each reference word.",
+  "content": "<p>Read the paragraph below and decide what the numbered reference words refer to.</p><p><strong>Paragraph:</strong></p><p>For most of us, one common yet barely recognised part of our daily routine is stress. This can be caused by pressure from work, from home life – even from the daily commute in traffic jams. These factors have become so integrated into our daily lives that few people stop to consider the potential risks. It is important that we begin to recognise stress and the impact it has on our health. Dr Owen Glendale of the Victoria Institute has recently published research which claims that stress is a significant factor in up to 40% of heart related illnesses; a statistic <strong>(1) he</strong> has compiled from many years of research. However, other opinions are being voiced, arguing that <strong>(2) this</strong> does not take into account environmental factors such as pollution and diet. Dr Keith Johnson claims that the findings are unsubstantiated, and Dr Anne Smith has also added that <strong>(3) it</strong> is important to note that certain stresses are not only a negative reaction to events; <strong>(4) they</strong> can also be a useful tool. Motivation, passion and excitement are all forms of eustress, or positive stress, and can be beneficial to the body. <strong>(5) It</strong> can be experienced when buying a new home, going on a rollercoaster or getting a promotion.</p>",
   "questions": [
     {
-      "type": "closed_question_dropdown",
+      "type": "closed_question",
       "ielts_question_type": "Reference Words",
-      "instructions": "Read the paragraph and select what each numbered reference word refers to.",
-      "question": "For most of us, one common yet barely recognised part of our daily routine is stress. This can be caused by pressure from work, from home life – even from the daily commute in traffic jams. These factors have become so integrated into our daily lives that few people stop to consider the potential risks. It is important that we begin to recognise stress and the impact it has on our health. Dr Owen Glendale of the Victoria Institute has recently published research which claims that stress is a significant factor in up to 40% of heart related illnesses; a statistic (1)[dropdown] has compiled from many years of research. However, other opinions are being voiced, arguing that (2)[dropdown] does not take into account environmental factors such as pollution and diet. Dr Keith Johnson claims that the findings are unsubstantiated, and Dr Anne Smith has also added that (3)[dropdown] is important to note that certain stresses are not only a negative reaction to events; (4)[dropdown] can also be a useful tool. Motivation, passion and excitement are all forms of eustress, or positive stress, and can be beneficial to the body. (5)[dropdown] can be experienced when buying a new home, going on a rollercoaster or getting a promotion.",
-      "correct_answer_count": 5,
+      "instructions": "",
+      "question": "What does the pronoun 'he' (1) refer to?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
       "mc_options": [
         {
           "text": "Dr Owen Glendale",
@@ -38,7 +39,20 @@
           "text": "Heart related disease",
           "is_correct": false,
           "feedback": "Incorrect. 'He' is a personal pronoun that refers to a male person, not to a disease or medical condition. The correct answer is Dr Owen Glendale, who is the researcher mentioned in the previous part of the sentence."
-        },
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'Dr Owen Glendale'. The pronoun 'he' refers back to Dr Owen Glendale, who is mentioned in the previous part of the sentence.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Reference Words",
+      "instructions": "",
+      "question": "What does the demonstrative pronoun 'this' (2) refer to?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
         {
           "text": "Stress is a significant factor in heart disease",
           "is_correct": true,
@@ -47,28 +61,41 @@
         {
           "text": "Environmental factors",
           "is_correct": false,
-          "feedback": "Incorrect. Environmental factors are mentioned after 'this' as something that the research does NOT take into account. The pronoun 'this' refers to what comes before it - the research claim about stress being a significant factor in heart disease."
+          "feedback": "Incorrect. Environmental factors are mentioned after 'this' as something that the research does NOT take into account. The pronoun 'this' refers to what comes before it - the research claim about stress being a significant factor in heart disease. The correct answer is 'stress is a significant factor in heart disease'."
         },
         {
           "text": "Dr Owen Glendale",
           "is_correct": false,
-          "feedback": "Incorrect. While Dr Owen Glendale is mentioned earlier, the pronoun 'this' typically refers to an idea, situation, or statement, not to a person. In this context, 'this' refers to the research finding about stress and heart disease."
+          "feedback": "Incorrect. While Dr Owen Glendale is mentioned earlier, the pronoun 'this' typically refers to an idea, situation, or statement, not to a person. In this context, 'this' refers to the research finding about stress and heart disease. The correct answer is 'stress is a significant factor in heart disease'."
         },
         {
           "text": "Research",
           "is_correct": false,
-          "feedback": "Incorrect. While the word 'research' is mentioned, 'this' more specifically refers to the claim or finding of the research (that stress is a significant factor in heart disease), not to the research itself."
+          "feedback": "Incorrect. While the word 'research' is mentioned, 'this' more specifically refers to the claim or finding of the research (that stress is a significant factor in heart disease), not to the research itself. The correct answer is 'stress is a significant factor in heart disease'."
         },
         {
           "text": "Certain stresses",
           "is_correct": false,
-          "feedback": "Incorrect. 'Certain stresses' is mentioned later in the paragraph, after the reference word (2). Reference words refer back to ideas that come before them. The correct answer is the claim that 'stress is a significant factor in heart disease'."
+          "feedback": "Incorrect. 'Certain stresses' is mentioned later in the paragraph, after the reference word (2). Reference words refer back to ideas that come before them. The correct answer is 'stress is a significant factor in heart disease'."
         },
         {
           "text": "eustress",
           "is_correct": false,
-          "feedback": "Incorrect. 'Eustress' is mentioned later in the paragraph, well after the reference word (2). The pronoun 'this' refers to the research claim mentioned earlier: 'stress is a significant factor in heart disease'."
-        },
+          "feedback": "Incorrect. 'Eustress' is mentioned later in the paragraph, well after the reference word (2). The pronoun 'this' refers to the research claim mentioned earlier. The correct answer is 'stress is a significant factor in heart disease'."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'stress is a significant factor in heart disease'. The pronoun 'this' refers to the research finding stated in the previous sentence.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Reference Words",
+      "instructions": "",
+      "question": "What does the pronoun 'it' (3) refer to?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
         {
           "text": "A 'dummy' subject",
           "is_correct": true,
@@ -77,28 +104,41 @@
         {
           "text": "Stress",
           "is_correct": false,
-          "feedback": "Incorrect. While stress is mentioned throughout the paragraph, the pronoun 'it' in '(3)it is important to note' is not referring to stress. It is a dummy subject - a grammatical placeholder that doesn't refer to anything specific. The sentence could be rewritten as 'To note that certain stresses are not only a negative reaction is important'."
+          "feedback": "Incorrect. While stress is mentioned throughout the paragraph, the pronoun 'it' in '(3)it is important to note' is not referring to stress. It is a dummy subject - a grammatical placeholder that doesn't refer to anything specific. The sentence could be rewritten as 'To note that certain stresses are not only a negative reaction is important'. The correct answer is 'a dummy subject'."
         },
         {
           "text": "Research",
           "is_correct": false,
-          "feedback": "Incorrect. The pronoun 'it' in '(3)it is important to note' is a dummy subject, which means it doesn't actually refer to any specific noun. It's a grammatical placeholder. The real subject of the sentence comes later: 'that certain stresses are not only a negative reaction to events'."
+          "feedback": "Incorrect. The pronoun 'it' in '(3)it is important to note' is a dummy subject, which means it doesn't actually refer to any specific noun. It's a grammatical placeholder. The real subject of the sentence comes later: 'that certain stresses are not only a negative reaction to events'. The correct answer is 'a dummy subject'."
         },
         {
           "text": "Certain stresses",
           "is_correct": false,
-          "feedback": "Incorrect. Although 'certain stresses' appears in the same sentence, the pronoun 'it' in '(3)it is important to note' is a dummy subject that doesn't refer to any specific noun. It's a grammatical structure commonly used in English to begin sentences with phrases like 'it is important/necessary/clear that...'."
+          "feedback": "Incorrect. Although 'certain stresses' appears in the same sentence, the pronoun 'it' in '(3)it is important to note' is a dummy subject that doesn't refer to any specific noun. It's a grammatical structure commonly used in English to begin sentences with phrases like 'it is important/necessary/clear that...'. The correct answer is 'a dummy subject'."
         },
         {
           "text": "Dr Anne Smith",
           "is_correct": false,
-          "feedback": "Incorrect. The pronoun 'it' in '(3)it is important to note' is a dummy subject - a grammatical placeholder that doesn't refer to any person or thing. It has no referent; it's simply part of the grammatical structure 'it is [adjective] that...'."
+          "feedback": "Incorrect. The pronoun 'it' in '(3)it is important to note' is a dummy subject - a grammatical placeholder that doesn't refer to any person or thing. It has no referent; it's simply part of the grammatical structure 'it is [adjective] that...'. The correct answer is 'a dummy subject'."
         },
         {
           "text": "Negative reaction",
           "is_correct": false,
-          "feedback": "Incorrect. 'Negative reaction' is mentioned later in the same sentence, but 'it' in '(3)it is important to note' is a dummy subject that doesn't refer to anything. It's a grammatical placeholder used in constructions like 'it is important/necessary/clear that...'."
-        },
+          "feedback": "Incorrect. 'Negative reaction' is mentioned later in the same sentence, but 'it' in '(3)it is important to note' is a dummy subject that doesn't refer to anything. It's a grammatical placeholder used in constructions like 'it is important/necessary/clear that...'. The correct answer is 'a dummy subject'."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'a dummy subject'. The pronoun 'it' in this context is a grammatical placeholder and doesn't refer to any specific noun.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Reference Words",
+      "instructions": "",
+      "question": "What does the pronoun 'they' (4) refer to?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
         {
           "text": "Certain stresses",
           "is_correct": true,
@@ -107,28 +147,41 @@
         {
           "text": "Motivation, passion and excitement",
           "is_correct": false,
-          "feedback": "Incorrect. While 'motivation, passion and excitement' are mentioned in the next sentence as examples of positive stress, the pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses' mentioned earlier in the same sentence. The examples come after to explain what types of stresses can be useful."
+          "feedback": "Incorrect. While 'motivation, passion and excitement' are mentioned in the next sentence as examples of positive stress, the pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses' mentioned earlier in the same sentence. The examples come after to explain what types of stresses can be useful. The correct answer is 'certain stresses'."
         },
         {
           "text": "Environmental factors",
           "is_correct": false,
-          "feedback": "Incorrect. Environmental factors are mentioned earlier in the paragraph in a different context (things the research doesn't account for). The pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses', which is the subject mentioned just before in the same sentence."
+          "feedback": "Incorrect. Environmental factors are mentioned earlier in the paragraph in a different context (things the research doesn't account for). The pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses', which is the subject mentioned just before in the same sentence. The correct answer is 'certain stresses'."
         },
         {
           "text": "Dr Owen Glendale",
           "is_correct": false,
-          "feedback": "Incorrect. 'They' is a plural pronoun, while Dr Owen Glendale is a single person. The pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses' (plural), mentioned in the same sentence."
+          "feedback": "Incorrect. 'They' is a plural pronoun, while Dr Owen Glendale is a single person. The pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses' (plural), mentioned in the same sentence. The correct answer is 'certain stresses'."
         },
         {
           "text": "eustress",
           "is_correct": false,
-          "feedback": "Incorrect. While 'eustress' is mentioned in the next sentence as a term for positive stress, the pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses' from earlier in the same sentence. Eustress is introduced afterward as a synonym."
+          "feedback": "Incorrect. While 'eustress' is mentioned in the next sentence as a term for positive stress, the pronoun 'they' in '(4)they can also be a useful tool' refers to 'certain stresses' from earlier in the same sentence. Eustress is introduced afterward as a synonym. The correct answer is 'certain stresses'."
         },
         {
           "text": "Negative reaction",
           "is_correct": false,
-          "feedback": "Incorrect. The sentence states that certain stresses are 'not only a negative reaction', meaning they can be more than just negative. The pronoun 'they' refers to 'certain stresses', not to the negative reaction itself."
-        },
+          "feedback": "Incorrect. The sentence states that certain stresses are 'not only a negative reaction', meaning they can be more than just negative. The pronoun 'they' refers to 'certain stresses', not to the negative reaction itself. The correct answer is 'certain stresses'."
+        }
+      ],
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'certain stresses'. The pronoun 'they' refers back to 'certain stresses' mentioned in the same sentence.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Reference Words",
+      "instructions": "",
+      "question": "What does the pronoun 'It' (5) refer to?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
         {
           "text": "eustress",
           "is_correct": true,
@@ -137,32 +190,32 @@
         {
           "text": "Motivation, passion and excitement",
           "is_correct": false,
-          "feedback": "Incorrect. While 'motivation, passion and excitement' are mentioned in the previous sentence, they are described as examples or forms of eustress, not eustress itself. The pronoun 'It' in '(5)It can be experienced' refers to eustress (positive stress), which these emotions are examples of."
+          "feedback": "Incorrect. While 'motivation, passion and excitement' are mentioned in the previous sentence, they are described as examples or forms of eustress, not eustress itself. The pronoun 'It' in '(5)It can be experienced' refers to eustress (positive stress), which these emotions are examples of. The correct answer is 'eustress'."
         },
         {
           "text": "Certain stresses",
           "is_correct": false,
-          "feedback": "Incorrect. While 'certain stresses' are mentioned earlier, the pronoun 'It' in '(5)It can be experienced' specifically refers to 'eustress' (positive stress), which is the type of stress being discussed in the sentence immediately before. Certain stresses is a broader category that includes both positive and negative stress."
+          "feedback": "Incorrect. While 'certain stresses' are mentioned earlier, the pronoun 'It' in '(5)It can be experienced' specifically refers to 'eustress' (positive stress), which is the type of stress being discussed in the sentence immediately before. Certain stresses is a broader category that includes both positive and negative stress. The correct answer is 'eustress'."
         },
         {
           "text": "Excitement",
           "is_correct": false,
-          "feedback": "Incorrect. Excitement is one of three examples of eustress mentioned (along with motivation and passion), but 'It' in '(5)It can be experienced' refers to the overarching concept of eustress (positive stress), not just to excitement alone."
+          "feedback": "Incorrect. Excitement is one of three examples of eustress mentioned (along with motivation and passion), but 'It' in '(5)It can be experienced' refers to the overarching concept of eustress (positive stress), not just to excitement alone. The correct answer is 'eustress'."
         },
         {
           "text": "Stress",
           "is_correct": false,
-          "feedback": "Incorrect. While stress in general is the topic of the paragraph, the pronoun 'It' in '(5)It can be experienced' specifically refers to 'eustress' (positive stress), which is the specific type of stress discussed in the sentence immediately before. The context makes it clear that 'It' refers to positive stress, not stress in general."
+          "feedback": "Incorrect. While stress in general is the topic of the paragraph, the pronoun 'It' in '(5)It can be experienced' specifically refers to 'eustress' (positive stress), which is the specific type of stress discussed in the sentence immediately before. The context makes it clear that 'It' refers to positive stress, not stress in general. The correct answer is 'eustress'."
         },
         {
           "text": "A 'dummy' subject",
           "is_correct": false,
-          "feedback": "Incorrect. The 'It' in '(5)It can be experienced' is not a dummy subject. Unlike the 'it' in reference (3), this 'It' actually refers to something specific: eustress (positive stress) mentioned in the previous sentence. You can tell it's not a dummy subject because it has a clear referent."
+          "feedback": "Incorrect. The 'It' in '(5)It can be experienced' is not a dummy subject. Unlike the 'it' in reference (3), this 'It' actually refers to something specific: eustress (positive stress) mentioned in the previous sentence. You can tell it's not a dummy subject because it has a clear referent. The correct answer is 'eustress'."
         }
       ],
-      "correct_answer": "field_1:0|field_2:6|field_3:12|field_4:18|field_5:24",
-      "no_answer_feedback": "You did not complete all the answers. The correct answers are: (1) Dr Owen Glendale, (2) Stress is a significant factor in heart disease, (3) A 'dummy' subject, (4) Certain stresses, (5) eustress.",
-      "points": 5
+      "correct_answer": "0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'eustress'. The pronoun 'It' refers to eustress (positive stress) mentioned in the previous sentence.",
+      "points": 1
     }
   ],
   "reading_texts": [],
