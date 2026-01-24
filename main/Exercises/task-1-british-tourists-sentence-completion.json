@@ -55,8 +55,8 @@
         },
         "6": {
           "correct": "Correct! There was a ten percent fall in holidays of one to two weeks.",
-          "incorrect": "Incorrect. The answer is TEN - there was a ten percent fall in holidays of one to two weeks.",
-          "no_answer": "The correct answer is TEN. In 1990, there was a ten percent fall in holidays of one to two weeks."
+          "incorrect": "Incorrect. The answer is TEN - there was a ten percent fall in holidays of one to two weeks between 1950 and 1990.",
+          "no_answer": "The correct answer is TEN. Between 1950 and 1990, there was a ten percent fall in holidays of one to two weeks."
         },
         "7": {
           "correct": "Correct! Holidays longer than two weeks accounted for one fifth in 1990.",
