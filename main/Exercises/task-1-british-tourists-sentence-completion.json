@@ -30,48 +30,48 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! Just under one third of holidays were one to two weeks.",
-          "incorrect": "Incorrect. The answer should be THIRD.",
-          "no_answer": "Please provide an answer. Look at the data for the proportion of 1-2 week holidays."
+          "incorrect": "Incorrect. The answer is THIRD - just under one third of holidays were one to two weeks in 1950.",
+          "no_answer": "The correct answer is THIRD. In 1950, just under one third of holidays were one to two weeks."
         },
         "2": {
           "correct": "Correct! Holidays over 4 weeks were at two percent.",
-          "incorrect": "Incorrect. The answer should be TWO.",
-          "no_answer": "Please provide an answer. Look at the data for holidays over 4 weeks."
+          "incorrect": "Incorrect. The answer is TWO - holidays over 4 weeks were at two percent in 1950.",
+          "no_answer": "The correct answer is TWO. Holidays over 4 weeks were in the minority at two percent in 1950."
         },
         "3": {
           "correct": "Correct! Almost three quarters of holidays were taken in Europe.",
-          "incorrect": "Incorrect. The answer should be THREE.",
-          "no_answer": "Please provide an answer. Look at the data for European holidays in 1950."
+          "incorrect": "Incorrect. The answer is THREE - almost three quarters of holidays were taken in Europe in 1950.",
+          "no_answer": "The correct answer is THREE. In 1950, almost three quarters of holidays were taken in Europe."
         },
         "4": {
           "correct": "Correct! Less than one tenth were in South America and Asia combined.",
-          "incorrect": "Incorrect. The answer should be ONE.",
-          "no_answer": "Please provide an answer. Look at the data for South America and Asia combined."
+          "incorrect": "Incorrect. The answer is ONE - less than one tenth were in South America and Asia combined in 1950.",
+          "no_answer": "The correct answer is ONE. In 1950, less than one tenth of holidays were in South America and Asia combined."
         },
         "5": {
           "correct": "Correct! There was just a one percent decrease in holidays less than one week.",
-          "incorrect": "Incorrect. The answer should be ONE.",
-          "no_answer": "Please provide an answer. Look at the change in short holidays between 1950 and 1990."
+          "incorrect": "Incorrect. The answer is ONE - there was just a one percent decrease in holidays less than one week.",
+          "no_answer": "The correct answer is ONE. Between 1950 and 1990, holidays less than one week decreased by just one percent."
         },
         "6": {
           "correct": "Correct! There was a ten percent fall in holidays of one to two weeks.",
-          "incorrect": "Incorrect. The answer should be TEN.",
-          "no_answer": "Please provide an answer. Look at the change in 1-2 week holidays between 1950 and 1990."
+          "incorrect": "Incorrect. The answer is TEN - there was a ten percent fall in holidays of one to two weeks.",
+          "no_answer": "The correct answer is TEN. In 1990, there was a ten percent fall in holidays of one to two weeks."
         },
         "7": {
           "correct": "Correct! Holidays longer than two weeks accounted for one fifth in 1990.",
-          "incorrect": "Incorrect. The answer should be FIFTH.",
-          "no_answer": "Please provide an answer. Look at the proportion of longer holidays in 1990."
+          "incorrect": "Incorrect. The answer is FIFTH - holidays longer than two weeks accounted for one fifth in 1990.",
+          "no_answer": "The correct answer is FIFTH. In 1990, holidays longer than two weeks accounted for one fifth."
         },
         "8": {
           "correct": "Correct! This was less than a tenth in 1950.",
-          "incorrect": "Incorrect. The answer should be TENTH.",
-          "no_answer": "Please provide an answer. Look at the proportion of longer holidays in 1950."
+          "incorrect": "Incorrect. The answer is TENTH - this was less than a tenth in 1950.",
+          "no_answer": "The correct answer is TENTH. In 1950, holidays longer than two weeks were less than a tenth."
         },
         "9": {
           "correct": "Correct! The number is twenty (as in twenty five percent).",
-          "incorrect": "Incorrect. The answer should be TWENTY (as in twenty five percent).",
-          "no_answer": "Please provide an answer. Look at the overall percentage change in European visitors."
+          "incorrect": "Incorrect. The answer is TWENTY - visitors to Europe declined by twenty five percent.",
+          "no_answer": "The correct answer is TWENTY (as in twenty five percent). Overall, European visitors declined by twenty five percent."
         }
       }
     }
