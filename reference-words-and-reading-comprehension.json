@@ -1,0 +1,349 @@
+{
+  "title": "Reference Words and Reading Comprehension Practice",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "ielts_question_type": "Summary Completion",
+      "instructions": "Complete the paragraph below by typing the correct reference word (IT, THEY, THESE or THIS) in the spaces. Use each word ONCE only.",
+      "question": "Many students experiencing difficulties in their course of study do not seek help at an early stage. (1)__________ often try to fix the problem themselves or ignore the fact that there are any problems at all. (2)__________ responses to the situation undoubtedly exacerbate the problem. In many cases, (3)__________ can lead to the student dropping out of the course or simply being unable to complete assignments or examinations. Inevitably, (4)__________ belief creates a feeling of low self esteem and the creation of a vicious circle in which the student feels that he does not have the academic ability required, and therefore the original issue is magnified.",
+      "field_count": 4,
+      "field_labels": [
+        "1. __________",
+        "2. __________",
+        "3. __________",
+        "4. __________"
+      ],
+      "field_answers": [
+        "they|They|THEY",
+        "these|These|THESE",
+        "it|It|IT",
+        "this|This|THIS"
+      ],
+      "correct_feedback": "Excellent! You've correctly identified the reference word and understand what it refers to in the context.",
+      "incorrect_feedback": "Not quite. Consider what or who the reference word is replacing in the sentence. Look at the sentence before to identify the noun or concept being referred to.",
+      "no_answer_feedback": "Reference words like IT, THEY, THESE, and THIS replace nouns or concepts mentioned earlier in the text. IT refers to singular things/ideas, THEY refers to plural people/things, THESE refers to plural items just mentioned, and THIS refers to a singular idea or situation just mentioned. Review the context carefully to determine which reference word fits.",
+      "points": 4
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "Read the paragraphs below and decide if the statements that follow are true or false. Select the correct answers.\n\nEmails, internal telephone systems, text messaging – regardless of the efforts made by the majority of companies, miscommunication between departments is causing a not insignificant loss of productivity for some companies. Psychologist Dr David Barnett believes that technology, far from enhancing working relationships, is actually having a detrimental effect. He believes that some people are under the misconception that information can be exchanged efficiently by writing an email and sending it to all their colleagues. However, states Dr Barnett, the written word accounts for less than 50% of the message we are giving than when we talk face to face. Body language, attitude and tone of voice actually compose more of the message than the words themselves, and it is these cues that are getting lost by our over reliance on technology.\n\nIBL Logistics, a company based in Germany, has taken Barnett's research into consideration. Internal emails are strictly limited, and regular face to face meetings are held in all departments. In many respects, the company operation is not dissimilar to the way companies traditionally ran some thirty years ago, yet this is not to say that they are not at the cutting edge of their field. In the last year alone, they have generated sales almost equal to their $80 million profit from the previous three years from hardware and software logistics packages.",
+      "question": "1. Communication problems are an important problem for a certain number of companies.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that 'miscommunication between departments is causing a not insignificant loss of productivity for some companies,' which confirms that communication problems are indeed important for a certain number of companies."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states that miscommunication is causing 'a not insignificant loss of productivity for some companies.' The phrase 'not insignificant' means it IS significant, and 'some companies' means 'a certain number of companies.' Therefore, the statement is TRUE."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is TRUE. The passage states that miscommunication causes 'a not insignificant loss of productivity for some companies.' Understanding double negatives like 'not insignificant' is important in IELTS - it means the loss IS significant.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "2. Breakdowns in communication are responsible for a minimal loss of productivity.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that miscommunication is causing 'a not insignificant loss of productivity.' The double negative 'not insignificant' means the loss is actually significant or substantial, not minimal. Therefore, the statement is FALSE."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage says miscommunication causes 'a not insignificant loss of productivity,' which means the loss is significant, not minimal. This is a good example of how IELTS tests understanding of double negatives and nuanced language."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is FALSE. The passage uses the phrase 'not insignificant loss,' which is a double negative meaning the loss is actually significant. This contradicts 'minimal,' so the statement is false.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "3. Barnett believes that technology can improve working relationships.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that Dr Barnett believes technology is 'far from enhancing working relationships' and is 'actually having a detrimental effect.' This means he believes technology harms rather than improves working relationships. The statement is FALSE."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": true,
+          "feedback": "Correct! Dr Barnett believes technology is 'far from enhancing working relationships' and is 'actually having a detrimental effect' on them. The phrase 'far from enhancing' indicates the opposite of improvement, confirming the statement is false."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is FALSE. Dr Barnett believes technology is 'far from enhancing working relationships' and has a 'detrimental effect.' The phrase 'far from' indicates the opposite of what follows, so he believes technology does NOT improve relationships.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "4. Information can be shared effectively by using email.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that 'some people are under the misconception that information can be exchanged efficiently by writing an email.' The word 'misconception' means this is a false belief - email is NOT an effective way to share all information. The statement is FALSE."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage indicates this is a 'misconception' and explains that the written word accounts for 'less than 50%' of a message. Body language, attitude, and tone of voice - which are lost in email - compose more of the message than words alone."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is FALSE. The passage calls it a 'misconception' that information can be exchanged efficiently by email, and explains that written words account for less than 50% of communication. The key word 'misconception' signals a false belief.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "5. Direct communication can give more information than simply writing.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Dr Barnett states that 'the written word accounts for less than 50% of the message we are giving when we talk face to face.' He explains that body language, attitude, and tone of voice compose more of the message than words alone, confirming direct communication provides more information."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states that the written word is 'less than 50%' of a face-to-face message. Body language, attitude, and tone add to communication, making direct communication richer than writing alone. The statement is TRUE."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is TRUE. According to Dr Barnett, written words account for less than 50% of face-to-face communication. Body language, attitude, and tone of voice add significantly more information, making direct communication more informative than writing.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "6. IBL Logistics operates in a totally new way.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that IBL Logistics' operation is 'not dissimilar to the way companies traditionally ran some thirty years ago.' This means they operate in a way similar to traditional methods, not in a totally new way. The statement is FALSE."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage explicitly states that IBL Logistics' company operation is 'not dissimilar to the way companies traditionally ran some thirty years ago.' This means their approach resembles traditional methods rather than being totally new."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is FALSE. The passage states IBL Logistics operates in a way 'not dissimilar to the way companies traditionally ran some thirty years ago.' Another double negative: 'not dissimilar' means similar, so they use traditional methods, not totally new ones.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "7. They are no longer leading the market in their field.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that IBL Logistics is 'at the cutting edge of their field,' which means they are at the forefront or leading position. The statement that they are 'no longer leading' contradicts this. The answer is FALSE."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage clearly states that IBL Logistics is 'at the cutting edge of their field.' This phrase means they are leading or at the forefront, directly contradicting the statement that they are 'no longer leading.'"
+        }
+      ],
+      "no_answer_feedback": "The correct answer is FALSE. The passage states IBL Logistics is 'at the cutting edge of their field,' meaning they are leading innovators. The idiom 'cutting edge' means the most advanced or leading position in a field.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "True/False/Not Given",
+      "instructions": "",
+      "question": "8. IBL has made the same profit this year as in the previous three years combined.",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "This is TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states they 'have generated sales almost equal to their $80 million profit from the previous three years.' Notice it says 'sales,' not profit. Sales and profit are different financial measures - sales is revenue, while profit is what remains after expenses. The statement is FALSE."
+        },
+        {
+          "text": "This is FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states they generated 'sales almost equal to their $80 million profit from the previous three years.' The key distinction here is that this year's figure is SALES, while the comparison is to previous PROFIT. These are different financial metrics, so the statement is false."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is FALSE. The passage says this year's SALES are almost equal to the previous three years' PROFIT. Sales (total revenue) and profit (revenue minus expenses) are different metrics. This is a common IELTS trap - pay attention to specific terminology!",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Which of the following sentences is the odd one out? Select the sentence that has a different meaning to the other two sentences.",
+      "question": "Question 1:\nA. Some people have difficulty remembering information under conditions of stress.\nB. Some people cannot easily recall information in stressful situations.\nC. Some people forget information when they are stressed.\n\nWhich sentence is the odd one out?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Sentence A",
+          "is_correct": false,
+          "feedback": "Sentence A talks about having difficulty remembering, which implies the ability is still there but impaired. This is similar to sentence B, which also describes difficulty (cannot easily recall). The odd one out is sentence C, which states people 'forget' - a more absolute term."
+        },
+        {
+          "text": "Sentence B",
+          "is_correct": false,
+          "feedback": "Sentence B says 'cannot easily recall,' meaning they have difficulty but can still potentially remember. This is similar to sentence A's 'have difficulty remembering.' The odd one out is sentence C, which uses 'forget' - suggesting complete loss rather than difficulty."
+        },
+        {
+          "text": "Sentence C",
+          "is_correct": true,
+          "feedback": "Correct! Sentence C is the odd one out because sentences A and B both refer to difficulty with remembering or recalling information (implying partial ability), whereas sentence C uses 'forget,' which suggests a complete loss of information. The key distinction is between impaired memory (A, B) versus lost memory (C)."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is Sentence C. Sentences A and B describe difficulty with memory (which implies the information might still be accessible with effort), while sentence C says people 'forget' (suggesting complete loss). Understanding these subtle distinctions is crucial for IELTS paraphrasing questions.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "Question 2:\nA. It is rare for test takers to achieve a high IELTS result without preparation.\nB. It is not possible for people sitting the IELTS test to get a good score without preparation.\nC. It is not common for candidates to get a high IELTS results unless they prepare.\n\nWhich sentence is the odd one out?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Sentence A",
+          "is_correct": false,
+          "feedback": "Sentence A states it is 'rare,' meaning uncommon but possible. This is similar to sentence C, which says 'not common.' The odd one out is sentence B, which states it is 'not possible' - an absolute statement that eliminates any possibility."
+        },
+        {
+          "text": "Sentence B",
+          "is_correct": true,
+          "feedback": "Correct! Sentence B is the odd one out because sentences A and C talk about a high result being rare or uncommon (suggesting it can happen but is unlikely), whereas sentence B states it is 'not possible' (suggesting it cannot happen at all). The difference is between unlikely and impossible."
+        },
+        {
+          "text": "Sentence C",
+          "is_correct": false,
+          "feedback": "Sentence C states it is 'not common,' meaning rare but possible. This is similar to sentence A's 'rare.' The odd one out is sentence B, which uses 'not possible' - an absolute statement that means it cannot happen, unlike rare occurrences which can happen."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is Sentence B. Sentences A and C both indicate that achieving high results without preparation is rare/uncommon (but possible), while sentence B states it is 'not possible' (impossible). This tests your ability to distinguish between improbable and impossible - a key IELTS skill.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "Question 3:\nA. In some cultures, it is considered polite to remove your shoes before entering a house.\nB. The etiquette of most cultures is that shoes must be removed within the home.\nC. It can be considered rude to keep your shoes on inside a house in certain cultures.\n\nWhich sentence is the odd one out?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Sentence A",
+          "is_correct": false,
+          "feedback": "Sentence A talks about 'some cultures,' meaning a limited number. This is similar to sentence C's 'certain cultures.' The odd one out is sentence B, which refers to 'most cultures' - indicating a majority rather than just some."
+        },
+        {
+          "text": "Sentence B",
+          "is_correct": true,
+          "feedback": "Correct! Sentence B is the odd one out because sentences A and C talk about some or certain cultures (indicating a minority or specific subset), but sentence B states that this is the situation in 'most cultures' (indicating a majority). The key distinction is between 'some/certain' and 'most.'"
+        },
+        {
+          "text": "Sentence C",
+          "is_correct": false,
+          "feedback": "Sentence C mentions 'certain cultures,' meaning specific but limited cultures. This is similar to sentence A's 'some cultures.' The odd one out is sentence B, which claims this applies to 'most cultures' - a much broader generalization."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is Sentence B. Sentences A and C both refer to 'some' or 'certain' cultures (a limited number), while sentence B claims this applies to 'most cultures' (a majority). Recognizing quantifiers like 'some,' 'most,' and 'certain' is essential for IELTS accuracy.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "Question 4:\nA. If there is no clear evidence, suspects should be allowed free regardless of an admission.\nB. Without a confession of guilt, anyone suspected of a crime should not be detained if there is no firm evidence.\nC. Unless a suspect admits he committed the crime, in the absence of clear evidence he should be released.\n\nWhich sentence is the odd one out?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Sentence A",
+          "is_correct": true,
+          "feedback": "Correct! Sentence A is the odd one out because sentences B and C both say that an admission (confession) IS enough reason to detain a person even without evidence ('Without a confession' and 'Unless a suspect admits' both imply confession alone could justify detention). Sentence A says suspects should be freed 'regardless of an admission,' meaning evidence is required even if they confess."
+        },
+        {
+          "text": "Sentence B",
+          "is_correct": false,
+          "feedback": "Sentence B states 'Without a confession...if there is no firm evidence' should not be detained. This implies that WITH a confession, detention is justified even without evidence. This is similar to sentence C. The odd one out is sentence A, which says release should happen 'regardless of an admission.'"
+        },
+        {
+          "text": "Sentence C",
+          "is_correct": false,
+          "feedback": "Sentence C says 'Unless a suspect admits...in the absence of clear evidence he should be released.' This implies that if the suspect DOES admit, they can be detained even without evidence. This is similar to sentence B. The odd one out is sentence A, which requires evidence 'regardless of an admission.'"
+        }
+      ],
+      "no_answer_feedback": "The correct answer is Sentence A. Sentences B and C both suggest that a confession alone (without evidence) can justify detention ('Without a confession' and 'Unless a suspect admits' imply confession is sufficient). Sentence A requires evidence 'regardless of an admission,' meaning confession alone is not enough. This tests conditional logic and paraphrasing.",
+      "points": 1
+    },
+    {
+      "type": "closed_question",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "",
+      "question": "Question 5:\nA. Smoking in public areas is no longer allowed in most European countries.\nB. Only a few European countries still allow smoking in public areas.\nC. Smoking in public areas is now prohibited in a few European countries.\n\nWhich sentence is the odd one out?",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "mc_options": [
+        {
+          "text": "Sentence A",
+          "is_correct": false,
+          "feedback": "Sentence A states smoking is not allowed in 'most European countries,' meaning the majority have banned it. This is logically equivalent to sentence B's statement that only 'a few' still allow it (if most ban it, few allow it). The odd one out is sentence C."
+        },
+        {
+          "text": "Sentence B",
+          "is_correct": false,
+          "feedback": "Sentence B says 'only a few' countries still allow smoking, which means most countries prohibit it. This is the same as sentence A's statement that 'most' countries don't allow it. The odd one out is sentence C, which says only a few prohibit it."
+        },
+        {
+          "text": "Sentence C",
+          "is_correct": true,
+          "feedback": "Correct! Sentence C is the odd one out because sentences A and B both say smoking in public places is not allowed in MOST European countries (A says 'most' don't allow it, B says 'few' still allow it - same meaning). Sentence C states that smoking in public places is prohibited in only 'a few' European countries, meaning most still allow it - the opposite situation."
+        }
+      ],
+      "no_answer_feedback": "The correct answer is Sentence C. Sentences A and B both indicate most European countries ban public smoking (A: 'most' don't allow it; B: 'only a few' still allow it - these are equivalent). Sentence C states 'a few' prohibit it, meaning most still allow it - the opposite. This tests logical equivalence and negation.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "practice_test",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
