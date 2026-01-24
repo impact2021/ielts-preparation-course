@@ -669,12 +669,17 @@ class IELTS_CM_Shortcodes {
         
         // Get resources for this lesson - check both old and new meta keys
         global $wpdb;
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $resources = array();
         if (!empty($resource_ids)) {
@@ -690,8 +695,8 @@ class IELTS_CM_Shortcodes {
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $quizzes = array();
         if (!empty($quiz_ids)) {
