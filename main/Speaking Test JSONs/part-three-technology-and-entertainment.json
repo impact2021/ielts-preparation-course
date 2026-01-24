@@ -32,11 +32,11 @@
     ],
     "reading_texts": [],
     "settings": {
-        "pass_percentage": 70,
+        "pass_percentage": "70",
         "layout_type": "one_column_exercise",
         "exercise_label": "exercise",
         "scoring_type": "percentage",
-        "timer_minutes": 10,
-        "starting_question_number": 1
+        "timer_minutes": "10",
+        "starting_question_number": "1"
     }
 }
