@@ -262,6 +262,11 @@ class IELTS_CM_Progress_Tracker {
         global $wpdb;
         
         // Get all resources (sublesson pages) for this lesson
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
             FROM {$wpdb->postmeta} pm
@@ -269,8 +274,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_resource'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         // Get all quizzes for this lesson
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
@@ -280,8 +285,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_quiz'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $total_resources = count($resource_ids);
         $total_quizzes = count($quiz_ids);
@@ -380,6 +385,11 @@ class IELTS_CM_Progress_Tracker {
     public function get_lesson_completion_percentage($user_id, $lesson_id) {
         global $wpdb;
         
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         // Get all resources (sub lessons) for this lesson
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
@@ -388,8 +398,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_resource'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $total_resources = count($resource_ids);
         
@@ -401,8 +411,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_quiz'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $total_quizzes = count($quiz_ids);
         
@@ -451,6 +461,11 @@ class IELTS_CM_Progress_Tracker {
     public function get_lesson_average_score($user_id, $lesson_id) {
         global $wpdb;
         
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         // Get all quizzes for this lesson
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
@@ -459,8 +474,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_quiz'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         if (empty($quiz_ids)) {
             return array(
@@ -516,6 +531,11 @@ class IELTS_CM_Progress_Tracker {
     public function get_lesson_average_band_score($user_id, $lesson_id) {
         global $wpdb;
         
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         // Get all quizzes for this lesson
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT pm.post_id 
@@ -524,8 +544,8 @@ class IELTS_CM_Progress_Tracker {
             WHERE p.post_type = 'ielts_quiz'
               AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         if (empty($quiz_ids)) {
             return array(

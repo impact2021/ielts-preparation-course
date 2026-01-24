@@ -853,21 +853,26 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     if ($lesson_id) {
         global $wpdb;
         
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         // Get all resources (sublessons) for this lesson
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         // Get all quizzes (exercises) for this lesson
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         // Combine all content items (resources and quizzes)
         $all_content_items = array();
