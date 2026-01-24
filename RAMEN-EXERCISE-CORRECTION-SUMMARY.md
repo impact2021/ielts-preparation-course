@@ -10,10 +10,16 @@ The "Further practice" exercise about ramen had incomplete field configuration a
 - **After**: `field_count: 11`
 - The question text contained 11 fields ([field 1] through [field 11]), but field_count was incorrectly set to 1.
 
+### 1.1 Instructions Clarification
+- **Before**: "...selecting the correct comparative or superlative form from each dropdown menu"
+- **After**: "...filling in each field with the correct comparative or superlative form from the options provided"
+- Changed to match the `open_question` type which renders text input fields, not dropdown menus.
+
 ### 2. Empty Field Answers
 - **Before**: `field_answers: []` (empty array)
 - **After**: `field_answers: { "1": "the best", "2": "The most interesting", ... }` (object with all 11 answers)
-- Changed from empty array to properly structured object with keys "1" through "11"
+- Changed from empty array to properly structured object with string keys "1" through "11"
+- Note: For open questions with `[field N]` markers in the question text, the field_answers format is an object with string keys. This is different from open questions using `field_labels` which use an array format.
 
 ### 3. Incomplete Field Feedback
 - **Before**: Only field "1" had feedback entries (all empty strings)
