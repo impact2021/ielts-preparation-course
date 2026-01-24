@@ -6,7 +6,7 @@
       "type": "closed_question_dropdown",
       "ielts_question_type": "Reference Words",
       "instructions": "Read the paragraph and select what each numbered reference word refers to.",
-      "question": "For most of us, one common yet barely recognised part of our daily routine is stress. This can be caused by pressure from work, from home life – even from the daily commute in traffic jams. These factors have become so integrated into our daily lives that few people stop to consider the potential risks. It is important that we begin to recognise stress and the impact it has on our health. Dr Owen Glendale of the Victoria Institute has recently published research which claims that stress is a significant factor in up to 40% heart related illnesses; a statistic (1)[dropdown] has compiled from many years of research. However, other opinions are being voiced, arguing that (2)[dropdown] does not take into account environmental factors such as pollution and diet. Dr Keith Johnson claims that the findings are unsubstantiated, and Dr Anne Smith has also added that (3)[dropdown] is important to note that certain stresses are not only a negative reaction to events; (4)[dropdown] can also be a useful tool. Motivation, passion and excitement are all forms of eustress, or positive stress, and can be beneficial to the body. (5)[dropdown] can be experienced when buying a new home, going on a rollercoaster or getting a promotion.",
+      "question": "For most of us, one common yet barely recognised part of our daily routine is stress. This can be caused by pressure from work, from home life – even from the daily commute in traffic jams. These factors have become so integrated into our daily lives that few people stop to consider the potential risks. It is important that we begin to recognise stress and the impact it has on our health. Dr Owen Glendale of the Victoria Institute has recently published research which claims that stress is a significant factor in up to 40% of heart related illnesses; a statistic (1)[dropdown] has compiled from many years of research. However, other opinions are being voiced, arguing that (2)[dropdown] does not take into account environmental factors such as pollution and diet. Dr Keith Johnson claims that the findings are unsubstantiated, and Dr Anne Smith has also added that (3)[dropdown] is important to note that certain stresses are not only a negative reaction to events; (4)[dropdown] can also be a useful tool. Motivation, passion and excitement are all forms of eustress, or positive stress, and can be beneficial to the body. (5)[dropdown] can be experienced when buying a new home, going on a rollercoaster or getting a promotion.",
       "correct_answer_count": 5,
       "mc_options": [
         {
@@ -42,7 +42,7 @@
         {
           "text": "Stress is a significant factor in heart disease",
           "is_correct": true,
-          "feedback": "Correct! The demonstrative pronoun 'this' in '(2)this does not take into account' refers to the entire claim that 'stress is a significant factor in up to 40% heart related illnesses'. The word 'this' is used to reference the research findings stated in the previous sentence."
+          "feedback": "Correct! The demonstrative pronoun 'this' in '(2)this does not take into account' refers to the entire claim that 'stress is a significant factor in up to 40% of heart related illnesses'. The word 'this' is used to reference the research findings stated in the previous sentence."
         },
         {
           "text": "Environmental factors",
