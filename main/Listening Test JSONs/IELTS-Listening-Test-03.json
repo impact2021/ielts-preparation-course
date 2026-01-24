@@ -1,764 +1,764 @@
 {
-    "title": "IELTS Listening Test 03",
-    "content": "Complete IELTS Listening Test 3 with all 4 sections (40 questions)",
-    "questions": [
-        {
-            "type": "open_question",
-            "instructions": "Questions 1-4: Answer the following questions using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
-            "question": "Where did the man do his introduction to driving course?",
-            "points": 1,
-            "no_answer_feedback": "You should answer. The location is clearly stated in the conversation.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "high school|school"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The man mentions he did a short introduction to driving course at high school.",
-                    "incorrect": "Incorrect. Listen carefully to where the man did his introduction to driving course.",
-                    "no_answer": "The correct answer is: high school. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "How long ago did the man do the driving course?",
-            "points": 1,
-            "no_answer_feedback": "Always attempt an answer. The timeframe is clearly mentioned.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "two years|2 years"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Well done! The man says \"that was two years ago\" when asked about the driving course.",
-                    "incorrect": "Incorrect. Listen to how long ago the man completed his previous driving course.",
-                    "no_answer": "The correct answer is: two years. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "How many hours per day is the full-time course?",
-            "points": 1,
-            "no_answer_feedback": "You need to answer. The daily hours are clearly stated.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "three hours|3 hours|three|3"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! The receptionist states the full-time course has lessons for three hours each day.",
-                    "incorrect": "Incorrect. Listen to the details about the full-time course duration per day.",
-                    "no_answer": "The correct answer is: three hours. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What are students taught on one of the days?",
-            "points": 1,
-            "no_answer_feedback": "You should answer. The topic is clearly explained in the course description.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "road rules|rules"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Perfect! The receptionist mentions \"there is one day for learning all the road rules and regulations.\"",
-                    "incorrect": "Incorrect. Listen to what is taught on one specific day of the course.",
-                    "no_answer": "The correct answer is: road rules. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 5-10: Complete the form below using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
-            "question": "Pacific Harbour Driving School - Course Information\r\n\r\n5. Weekend course duration: [field 1] Saturdays",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "three|3"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The weekend course runs for three Saturdays.",
-                    "incorrect": "Incorrect. Listen for how many Saturdays the weekend course runs.",
-                    "no_answer": "The correct answer is: three. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "6. Weekend course hours per day: [field 1] hours",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "five|5"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The weekend course is five hours per day.",
-                    "incorrect": "Incorrect. Listen for the daily hours of the weekend course.",
-                    "no_answer": "The correct answer is: five. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "7. Weekend course start time: [field 1] a.m.",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "nine|9"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The weekend course starts at 9 a.m.",
-                    "incorrect": "Incorrect. Listen for what time the weekend course starts.",
-                    "no_answer": "The correct answer is: nine. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "8. Weekend course cost: £[field 1]",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "295|two hundred and ninety five"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The weekend course costs £295.",
-                    "incorrect": "Incorrect. Listen for the cost of the weekend course.",
-                    "no_answer": "The correct answer is: 295. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "9. Weekday course cost: £[field 1]",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "275|two hundred and seventy five"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The weekday course costs £275.",
-                    "incorrect": "Incorrect. Listen for the cost of the weekday course.",
-                    "no_answer": "The correct answer is: 275. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "10. Available instructor name: [field 1]",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "john thompson|thompson"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! John Thompson is the available instructor.",
-                    "incorrect": "Incorrect. Listen for the name of the available instructor.",
-                    "no_answer": "The correct answer is: John Thompson. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11-15: Complete the table below USING NO MORE THAN ONE WORD OR A NUMBER.\r\n\r\nThings to do in Las Vegas",
-            "question": "Gambling:\r\n- there are over [field 1] casinos in Las Vegas\r\n\r\nThe 'Mob Museum':\r\n- a self-guided tour\r\n- visitors can listen to recorded [field 2] between criminals\r\n\r\nThe Pinball Hall of Fame:\r\n- opened in 2006\r\n- over 200 machines\r\n- profits go to [field 3] in the local region\r\n\r\nThe High Roller:\r\n- 170 m high\r\n- Was the largest of its kind\r\n- each cabin on the wheel can fit up to [field 4] people\r\n\r\nThe Big Apple Roller Coaster:\r\n- 70 miles per hour\r\n- riders get on and off the roller coaster while in a [field 5]\r\n- is built around 2 buildings",
-            "points": 5,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "",
-            "field_count": 5,
-            "field_answers": {
-                "1": "100|ONE HUNDRED|A HUNDRED|1 HUNDRED|one hundred|a hundred",
-                "2": "CONVERSATIONS|conversations|Conversations",
-                "3": "CHARITIES|charities|Charities",
-                "4": "40|FORTY|forty|Forty",
-                "5": "HOTEL|hotel|Hotel"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! There are over 100 casinos in Las Vegas.",
-                    "incorrect": "Incorrect. Listen for how many casinos are in Las Vegas.",
-                    "no_answer": "The correct answer is: 100. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! Visitors can listen to recorded conversations between criminals.",
-                    "incorrect": "Incorrect. Listen for what visitors can listen to at the Mob Museum.",
-                    "no_answer": "The correct answer is: CONVERSATIONS. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! Profits go to charities in the local region.",
-                    "incorrect": "Incorrect. Listen for where the profits from the Pinball Hall of Fame go.",
-                    "no_answer": "The correct answer is: CHARITIES. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! Each cabin can fit up to 40 people.",
-                    "incorrect": "Incorrect. Listen for how many people can fit in each cabin.",
-                    "no_answer": "The correct answer is: 40. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! Riders get on and off the roller coaster while in a hotel.",
-                    "incorrect": "Incorrect. Listen for where riders get on and off the roller coaster.",
-                    "no_answer": "The correct answer is: HOTEL. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 16-20: Complete the summary below USING NO MORE THAN TWO WORDS AND/OR A NUMBER.",
-            "question": "The dam was first discussed as an idea in [field 1] but construction did not begin until 1931. The project was completed in [field 2]. Before construction of the dam could begin, [field 3] of tunnels needed to be drilled to divert the river. The work was often dangerous, because of [field 4] and broken ropes, but this did lead to better safety standards on construction sites. Further dangers existed for workers, with deaths from heat and a lack of fresh air. The dam now provides power for around [field 5] people.",
-            "points": 5,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "",
-            "field_count": 5,
-            "field_answers": {
-                "1": "1900",
-                "2": "1936",
-                "3": "5 KILOMETRES|5 KILOMETERS|FIVE KILOMETRES|FIVE KILOMETERS|5 KM|5 KMS|5KM|5KMS|FIVE KM|FIVE KMS|5 kilometres|5 kilometers|five kilometres|five kilometers",
-                "4": "FALLING ROCKS|ROCKS|falling rocks|rocks|Falling rocks|Rocks",
-                "5": "1.3 MILLION|1.3 million"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The dam was first discussed in 1900.",
-                    "incorrect": "Incorrect. Listen for when the idea of the dam was first discussed.",
-                    "no_answer": "The correct answer is: 1900. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The project was completed in 1936.",
-                    "incorrect": "Incorrect. Listen for when the dam was completed.",
-                    "no_answer": "The correct answer is: 1936. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! 5 kilometres of tunnels needed to be drilled.",
-                    "incorrect": "Incorrect. Listen for the length of tunnels that needed to be drilled.",
-                    "no_answer": "The correct answer is: 5 KILOMETRES. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The work was dangerous because of falling rocks.",
-                    "incorrect": "Incorrect. Listen for what made the work dangerous.",
-                    "no_answer": "The correct answer is: FALLING ROCKS. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! The dam provides power for around 1.3 million people.",
-                    "incorrect": "Incorrect. Listen for how many people the dam provides power for.",
-                    "no_answer": "The correct answer is: 1.3 MILLION. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 21-26: Match the following statements with a country. Write A-C in boxes 21-26 in your answer sheet.\r\n\r\nA. South Africa\r\nB. Australia\r\nC. New Zealand",
-            "question": "21. Children start later",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "A. South Africa",
-                    "is_correct": true,
-                    "feedback": "Correct! Children start later in South Africa (Q21)."
-                },
-                {
-                    "text": "B. Australia",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has children starting school at age 7."
-                },
-                {
-                    "text": "C. New Zealand",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has children starting school at age 7."
-                }
-            ],
-            "options": "A. South Africa\nB. Australia\nC. New Zealand",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "22. Has intermediate school",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "A. South Africa",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has intermediate school."
-                },
-                {
-                    "text": "B. Australia",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has intermediate school."
-                },
-                {
-                    "text": "C. New Zealand",
-                    "is_correct": true,
-                    "feedback": "Correct! New Zealand has intermediate school (Q22)."
-                }
-            ],
-            "options": "A. South Africa\nB. Australia\nC. New Zealand",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "23. Few religious private schools",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "A. South Africa",
-                    "is_correct": true,
-                    "feedback": "Correct! South Africa has few religious private schools (Q23)."
-                },
-                {
-                    "text": "B. Australia",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has only a few religious schools."
-                },
-                {
-                    "text": "C. New Zealand",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has only a few religious schools."
-                }
-            ],
-            "options": "A. South Africa\nB. Australia\nC. New Zealand",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "24. Doesn't have correspondence education",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "A. South Africa",
-                    "is_correct": true,
-                    "feedback": "Correct! South Africa doesn't have correspondence education (Q24)."
-                },
-                {
-                    "text": "B. Australia",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country doesn't have correspondence education."
-                },
-                {
-                    "text": "C. New Zealand",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country doesn't have correspondence education."
-                }
-            ],
-            "options": "A. South Africa\nB. Australia\nC. New Zealand",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "25. Home schooling",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "A. South Africa",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has home schooling."
-                },
-                {
-                    "text": "B. Australia",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has home schooling."
-                },
-                {
-                    "text": "C. New Zealand",
-                    "is_correct": true,
-                    "feedback": "Correct! New Zealand has home schooling (Q25)."
-                }
-            ],
-            "options": "A. South Africa\nB. Australia\nC. New Zealand",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "26. Compulsory extracurricular activities",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "A. South Africa",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has compulsory extracurricular activities."
-                },
-                {
-                    "text": "B. Australia",
-                    "is_correct": true,
-                    "feedback": "Correct! Australia has compulsory extracurricular activities (Q26)."
-                },
-                {
-                    "text": "C. New Zealand",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Listen for which country has compulsory extracurricular activities."
-                }
-            ],
-            "options": "A. South Africa\nB. Australia\nC. New Zealand",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 27-30: Complete the notes below using NO MORE THAN THREE WORDS from the recording.\r\n\r\nNew Zealand boarding school dress code",
-            "question": "- Dress had to be one inch below the knee when [field 1]\r\n- Hat had to be worn at all times when [field 2]\r\n- Socks had to be [field 3]\r\n- School [field 4] had to be worn at all times",
-            "points": 4,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "",
-            "field_count": 4,
-            "field_answers": {
-                "1": "KNEELING|KNEELING DOWN|kneeling|kneeling down|Kneeling|Kneeling down",
-                "2": "OUTSIDE THE SCHOOL|OUTSIDE SCHOOL|outside the school|outside school|Outside the school|Outside school",
-                "3": "PULLED UP|PULLED-UP|pulled up|pulled-up|Pulled up|Pulled-up",
-                "4": "BADGE|badge|Badge"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The dress had to be one inch below the knee when kneeling.",
-                    "incorrect": "Incorrect. Listen for when the dress length was measured.",
-                    "no_answer": "The correct answer is: KNEELING. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The hat had to be worn when outside the school.",
-                    "incorrect": "Incorrect. Listen for when the hat had to be worn.",
-                    "no_answer": "The correct answer is: OUTSIDE THE SCHOOL. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! Socks had to be pulled up.",
-                    "incorrect": "Incorrect. Listen for how the socks had to be.",
-                    "no_answer": "The correct answer is: PULLED UP. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The school badge had to be worn at all times.",
-                    "incorrect": "Incorrect. Listen for what school item had to be worn at all times.",
-                    "no_answer": "The correct answer is: BADGE. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 31-35\r\n\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "What causes RSI?",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "repeated physical movement|repeated physical movements"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! The speaker states that RSI results from repeated physical movements which damage tendons, nerves, and muscles.",
-                    "incorrect": "Incorrect. Listen to the definition of RSI at the beginning of the lecture - the cause is clearly stated.",
-                    "no_answer": "The correct answer is: repeated physical movement. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "The use of what has caused an increase in RSI in the workplace?",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "computers"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The speaker mentions that RSI has become particularly noticeable due to the increasing importance of computers in the workplace.",
-                    "incorrect": "Incorrect. Listen to why RSI has increased in the last twenty years - a specific technology is mentioned.",
-                    "no_answer": "The correct answer is: computers. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "RSI is made worse without break periods or if there is no thought given to what?",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "body position"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Well done! The speaker says the situation is intensified if people don't take regular breaks or spend time considering their body position.",
-                    "incorrect": "Incorrect. Listen to what makes RSI worse besides not taking breaks - the speaker mentions something people should consider.",
-                    "no_answer": "The correct answer is: body position. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What should people who use a computer regularly be able to identify to avoid serious cases?",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "warning signs"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Perfect! The speaker states that one way to prevent serious RSI is to recognise the warning signs.",
-                    "incorrect": "Incorrect. Listen to how people can prevent serious RSI - they need to identify something early.",
-                    "no_answer": "The correct answer is: warning signs. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Problems can also occur if the computer monitor is what?",
-            "points": 1,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "too close"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! The speaker mentions that many people sit too close to their monitor, leading to symptoms like headaches and blurred vision.",
-                    "incorrect": "Incorrect. Listen to the problem with monitor positioning - the speaker describes how people sit in relation to the monitor.",
-                    "no_answer": "The correct answer is: too close. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 36-40\r\n\r\nComplete the notes below using NO MORE THAN THREE WORDS.\r\n\r\nErgonomic Setup Guidelines",
-            "question": "Chair: Height should allow arms to be at 90 degrees to the keyboard; Feet should be on the floor or a [field 1]; Space should be allowed between the chair and back of the knees to maintain [field 2]\r\n\r\nMonitor: Screen should be just below eye level; Avoid light reflections by positioning at a [field 3]; [field 4] backgrounds are more comfortable to look at\r\n\r\nKeyboard: Wrists should remain straight; Elbows close to the body\r\n\r\nPosture: Sit up straight or [field 5] a little",
-            "points": 5,
-            "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "",
-            "field_count": 5,
-            "field_answers": {
-                "1": "foot stool|stool",
-                "2": "proper circulation|circulation|proper blood circulation",
-                "3": "right angle|right-angle",
-                "4": "light grey|light gray",
-                "5": "lean back"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The speaker says feet should be flat on the ground, or if not practical, on a foot stool.",
-                    "incorrect": "Incorrect. Listen to the alternative if feet can't be flat on the ground - the speaker mentions a specific item.",
-                    "no_answer": "The correct answer is: foot stool. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Well done! The speaker mentions maintaining proper circulation in the legs by having space between the knees and chair.",
-                    "incorrect": "Incorrect. Listen to why space should be left between the knees and chair seat - the speaker mentions what needs to be maintained.",
-                    "no_answer": "The correct answer is: proper circulation. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Excellent! The speaker states the monitor should be positioned at a right angle to light sources or windows to avoid glare.",
-                    "incorrect": "Incorrect. Listen to how to position the monitor to avoid glare - a specific angle is mentioned.",
-                    "no_answer": "The correct answer is: right angle. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Perfect! The speaker explains that a light grey background has been proven to be easier on the eyes than bright white.",
-                    "incorrect": "Incorrect. Listen to the recommended background colour alternative to bright white - the speaker gives a specific colour.",
-                    "no_answer": "The correct answer is: light grey. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Excellent! The speaker mentions that some people find sitting at 90 degrees too rigid, so they can lean slightly back.",
-                    "incorrect": "Incorrect. Listen to the alternative to sitting rigidly at 90 degrees - the speaker describes what users can do instead.",
-                    "no_answer": "The correct answer is: lean back. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
+  "title": "IELTS Listening Test 03",
+  "content": "Complete IELTS Listening Test 3 with all 4 sections (40 questions)",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1-4: Answer the following questions using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+      "question": "Where did the man do his introduction to driving course?",
+      "points": 1,
+      "no_answer_feedback": "You should answer. The location is clearly stated in the conversation.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "high school|school"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The man mentions he did a short introduction to driving course at high school.",
+          "incorrect": "Incorrect. Listen carefully to where the man did his introduction to driving course.",
+          "no_answer": "The correct answer is: high school. Make sure to listen carefully for key information and take notes while listening."
         }
-    ],
-    "reading_texts": [],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_listening",
-        "cbt_test_type": "listening",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_listening",
-        "timer_minutes": "",
-        "starting_question_number": "1"
+      }
     },
-    "audio": {
-        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-3.mp3",
-        "transcript": "",
-        "sections": [
-            {
-                "section_number": 1,
-                "transcript": "<table class=\"style1\" border=\"1px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Hello. Welcome to Pacific Harbour Driving school. How can I help?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Good afternoon. I have a driving test booked for next month, and I want to take some driving lessons.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">We can help you there. Have you taken any driving lessons before, or is this your first time?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">I did do a short introduction to driving course at <strong style=\"background-color: yellow\">[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Of course – that's no problem.  How long ago did you do the driving course?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">That was last year – no, sorry, that was <strong style=\"background-color: yellow\">[Q2: two years]</strong> ago. I have a certificate for that course here with me now. Do you need to see it?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">No, that's OK – I'll just make a note about it here though.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">OK, great. When do you think I will be able to start the driving lessons?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes five days, from Monday to Friday, and the lessons are for <strong style=\"background-color: yellow\">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Can you tell me a little more about the five-day course? How much does it cost and what will I learn?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Ok, with the five-day course, that's 10 a.m. to 1 p.m. from Monday to Friday. You drive in the city for four days, and will learn about parking, driving in traffic and all the essentials… and then there is one day for learning all the <strong style=\"background-color: yellow\">[Q4: road rules]</strong> and regulations.  You do the theory on the second day, so that you understand everything while you're learning to drive.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">That sounds like a lot.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Well, it's not really that hard, it's over five days so the instructor really takes his time, and you can go at your own speed.  We will also give you a copy of the book you will need to study from with all the rules about driving so you can do some study in your own time. The book's called <em>Road Rules</em> and is included in the price of the course.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Ok, sounds good.  What about the weekend course?  Is it much different?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">You will cover the same information, it's just that you do it at different times.  As I said, it's 9 a.m. to two p.m., and you have an introductory session here at our driving school to get the basics of handling a car, then a couple of hours for theory and the road rules. Over the next 2 Saturdays, you will be driving in traffic, parallel parking and learning proper behaviour on busy city streets.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">I think having more time to study between lessons might be good for me, so the weekend course will be better. Yes, I think I'll sign up for the weekend course.  How much is that?  And when does the next course start?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Well, the weekend course is £295, and the weekday course is £275.  There's a slight difference in cost because the weekend class is on a Saturday, not our regular hours.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Alright, well, I think I'll sign up for the weekend course.  Can I start this weekend?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Let me see if we have any instructors available….  Yes, we do.  John Thompson is available.</td>\r\n</tr>\r\n</tbody>\r\n</table>"
-            },
-            {
-                "section_number": 2,
-                "transcript": "<strong>Section 2</strong><strong> </strong>\r\n\r\nHello everyone and thank you for inviting me here to talk about places to visit the in the USA. For my presentation today, I’d like to focus on Las Vegas, which as many of you will know is in Nevada.\r\n\r\nWhen talking about Las Vegas, the first thing that comes to mind for most people is gambling. Now of course it’s true that gambling is a major aspect of the city – there are over <strong style=\"background-color: yellow\">[Q1: 100]</strong> casinos. However, there is actually a whole lot more that you can do there, and that’s what I’d like to talk to you about today.\r\n\r\nWithout even needing to travel out of the city, there are plenty of different and exciting things to do. We’ll start by talking about the museums in the area. One of the most well known is the National Museum of Organized Crime and Law Enforcement, or the ‘Mob Museum’ as it is more commonly known. This is a self-guided tour where you can find out about the history of organised crime in the area and the people that were involved. Visitors can listen to <strong style=\"background-color: yellow\">[Q2: conversations]</strong> between criminals that were recorded by the police nearly 100 years ago, and you can even sit in a real electric chair.\r\n\r\nFor something a little more lighthearted, you can also visit the Pinball Hall of Fame - a museum for pinball machines that opened January 2006. Containing over 200 different pinball machines, the museum also has some classic video games, and is funded purely from donations. In fact, this museum is not run to make a profit, and any excess revenue is passed on to <strong style=\"background-color: yellow\">[Q3: charities]</strong> in the area.\r\n\r\nThere are also museums for car lovers, a waxwork museum with images of famous people moulded in wax, an aviation museum with full sized aeroplanes and much more.\r\n\r\nBut for those of you who are looking for a little more of a thrill than a museum, there are plenty of more exciting options. Take, for example, the <em>High Roller</em> – at nearly 170 metres high, it was the world’s largest Ferris wheel when it was built in 2014. There are 32 cabins on the wheel, each of which can accommodate up to <strong style=\"background-color: yellow\">[Q4: 40]</strong> people, and it takes about 30 minutes for the wheel to turn all the way around.\r\n\r\nThere is also the <em>Big Apple Roller Coaster</em>, which reaches speeds of nearly 70 miles per hour and has two loops, as well as a terrifying 50 metre drop. In total, the track is over 1.<strong style=\"background-color: yellow\">[Q8: 5 kilometres]</strong> long, but the ride itself takes less than 3 minutes, and perhaps one of the most interesting aspects of this ride is that it actually begins and ends inside a <strong style=\"background-color: yellow\">[Q5: hotel]</strong>, with the track snaking its way around the outside of 2 buildings, before ending back in the hotel to finish.\r\n\r\nAnother place that is extremely popular for day trippers is the Hoover Dam, and that’s what I would like to talk about now.\r\n\r\nFirst, let’s talk about some important dates. The idea of building a dam was first discussed as far back as <strong style=\"background-color: yellow\">[Q6: 1900]</strong>, but it was not until 1928 that the project was authorised by the government. In 1931, a group of companies finally began construction, with a completion date of 1938. However,  the dam was actually finished and in operation 2 years ahead of schedule, in <strong style=\"background-color: yellow\">[Q7: 1936]</strong>.\r\n\r\nConstruction of the dam faced some massive challenges. The first was to divert the Colorado River, and this was done by drilling 4 tunnels into the canyon walls, and these tunnels had a combined length of over 5 kilometres. Next came the beginning of the dam itself. Rising to a height of 221 metres, the dam was a massive undertaking. The people who worked at those heights, supported only by ropes, were called ‘high scalers’, and this was arguably the most dangerous job of them all. <strong style=\"background-color: yellow\">[Q9: Falling rocks]</strong> and broken ropes caused many deaths and injuries, but this was also the time when safety equipment started to become used in construction. Initially, to protect their heads from falling rocks, the high scalers dipped pieces of cloth into tar and waited for the tar to harden before strapping them to their heads. When the company saw how effective this simple measure was, they ordered thousands of what were initially called ‘hard boiled hats’, which later became known as hard hats which are still in use – although of course in an updated version – on construction sites today.\r\n\r\nHowever, falling rock was not the only danger the workers faced. The heat alone – which regularly reached over 45 degrees – was responsible for the death of 16 workers. Others died from carbon monoxide poisoning from the use of petrol powered generators and vehicles in tunnels without enough fresh air, and in total, 112 people died during the dam’s construction.\r\n\r\nDespite this heavy cost, the dam has performed without any major incident since the time of its construction and provides power for approximately <strong style=\"background-color: yellow\">[Q10: 1.3 million]</strong> people."
-            },
-            {
-                "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\r\n\r\n \r\n<table class=\"style1\" border=\"1px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">So what was it like in your school then, Lyn?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Well, South African schools are very different from schools in Australia. For a start, children don't start their schooling until they are seven quite a bit later than schools in Australia. What about New Zealand, Gail?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">We're more like Australia. can't believe children don't go to school until they are seven! When do the parents get any free time?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Well, there's still the availability of kindergartens or playschools, it's just that formal education doesn't start until later. don't think it's such a good idea for children to have to be too academic at such a young age. They should be able to just enjoy themselves</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Well, yes, but the first school children go to isn't very academic. It's Just an really opportunity for children to learn a few basic social skills by playing and learning with other children.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Yes, I'd agree with that.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">I guess being so close, Australian and New Zealand schools must be similar then?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Well, I suppose they do share a lot of similarities, but there're also some differences. For example, children in New Zealand go through intermediate school, but in Australia there's only high school. That's right, isn't it Pat?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Yes, I think so. What about South Africa, Lyn? Do you have intermediate or high school?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Oh, high school.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Another difference between Australian and New Zealand education is that although both countries have state schools and private schools, our private schools are very often run by religious groups, whereas New Zealand schools are secular.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">That's not true there are quite a few religious schools in New Zealand</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Oh, OK. Maybe we are similar. we're different</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Lyn Only a few South African schools have any religious connection, so I guess country don't Most people go to state schools. Pat, is it true that some people from your have to go to school at all?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Well, that's partly true. Because of the geography of Australia, there are a lot of children who do not have access to schools, at least on a regular basis. Instead they have a form of correspondence education, where the lessons are actually on the radio and the students send their work in by post. That way they get a lot of what they would if they were in the classroom apart from the interaction</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">In New Zealand, not all students have to go to school either some parents have opted for home schooling</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Oh, is that like correspondence teaching? We don't really have that</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Well, we do have correspondence schools but home schooling is different. With home schooling the parents teach the children and set them homework. They have to present a syllabus to their local education authority before they can do that, but it is becoming a more popular choice for some parents. I suppose it also suits parents' own commitments. mean they don't have to worry about collecting their children from school, and they can always teach over the weekend or in the evening if they want to</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">ls the school day normally quite long then?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Not in New Zealand, but I think it can be in Australia</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Yes, that's right. I think Australia is unusual in that there are extracurricular activities which you have to go to. These are normally sport activities, but there are a few other options.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">We have activities after school for any student that is interested, but they aren't compulsory. What about in New Zealand, Gail?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">I had to do some sport every week. didn't really like it, but it was part of the school day so guess that's not so bad. Anyway, I spent two years at boarding school so things were a little different.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Boarding school? What was that like?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">well, the thing I remember most about it was the strict dress code. There were restrictions on everything You had to wear a school uniform almost all of the time, and it had to be cleaned and ironed. The length of your skirt had to be no less than one inch above your knees when <strong style=\"background-color: yellow\">[Q1: kneeling]</strong> down. Sometimes we used to go out on school trips or just at weekends with a few friends, but whenever we were <strong style=\"background-color: yellow\">[Q2: outside the school]</strong> we had to wear a hat. There was one teacher who used to give me extra homework because my socks weren't <strong style=\"background-color: yellow\">[Q3: pulled up]</strong>, and that was in the school late in the evening! U suppose it wasn’t that bad, but forgot it felt like a prison! I kept getting into trouble for something. Most of the time I forgot something, normally my school <strong style=\"background-color: yellow\">[Q4: badge]</strong>. We had to wear that all the time, in the school, and out, because it had our house colours on it.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Wow! That doesn't sound like much fun!</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">No, but it was a good education. suppose... (fade out)</td>\r\n</tr>\r\n</tbody>\r\n</table>"
-            },
-            {
-                "section_number": 4,
-                "transcript": "<table class=\"style1\" border=\"1px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Good morning, everyone. Today I'll be talking about RSI, or Repetitive Strain Injury, which has become an increasingly important health issue in modern workplaces.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">So, what exactly is RSI? RSI is a condition that results from <strong style=\"background-color: yellow\">[Q31: repeated physical movements]</strong> that damage tendons, nerves, and muscles. The problem has become particularly noticeable over the last twenty years due to the increasing importance of <strong style=\"background-color: yellow\">[Q32: computers]</strong> in the workplace. When people spend hour after hour typing at keyboards and using computer mice, they're putting their hands, wrists, arms, and shoulders at risk.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">The situation is intensified if people don't take regular breaks or spend time considering their <strong style=\"background-color: yellow\">[Q33: body position]</strong>. Without proper attention to these factors, RSI can develop and worsen over time. However, many cases can be prevented if people who use a computer regularly are able to recognise the <strong style=\"background-color: yellow\">[Q34: warning signs]</strong> early on. Common symptoms include tingling sensations, numbness, pain in the hands, wrists, arms, or shoulders, and a general feeling of weakness.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Another common problem occurs when people sit <strong style=\"background-color: yellow\">[Q35: too close]</strong> to their computer monitor. This can lead to eye strain, headaches, and blurred vision, which are all warning signs that shouldn't be ignored.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Now, let me give you some practical advice on setting up your workspace ergonomically to prevent these problems.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">First, let's talk about your chair. The height should be adjusted so that your arms can rest at 90 degrees to the keyboard. Your feet should be flat on the ground, or if that's not practical due to your height and the desk setup, they should rest on a <strong style=\"background-color: yellow\">[Q36: foot stool]</strong>. It's also important to leave some space between the chair seat and the back of your knees to maintain <strong style=\"background-color: yellow\">[Q37: proper circulation]</strong> in your legs.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Next, your monitor. The screen should be positioned just below eye level - this prevents neck strain. To avoid light reflections and glare on your screen, position it at a <strong style=\"background-color: yellow\">[Q38: right angle]</strong> to any windows or light sources. Research has shown that <strong style=\"background-color: yellow\">[Q39: light grey]</strong> backgrounds are actually much more comfortable to look at than bright white ones, so consider changing your default settings.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">For your keyboard positioning, make sure your wrists remain straight while typing - avoid bending them up or down. Keep your elbows close to your body rather than extending them outward.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Finally, regarding your overall posture - you should sit up straight. Some people find this position at 90 degrees too rigid, and if that's the case, you can <strong style=\"background-color: yellow\">[Q40: lean back]</strong> slightly in your chair to find a more comfortable position while still maintaining good support.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Remember, preventing RSI is far easier than treating it, so take these guidelines seriously and make adjustments to your workspace today. Thank you for your attention.</td>\r\n</tr>\r\n</tbody>\r\n</table>"
-            }
-        ]
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "How long ago did the man do the driving course?",
+      "points": 1,
+      "no_answer_feedback": "Always attempt an answer. The timeframe is clearly mentioned.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "two years|2 years"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Well done! The man says \"that was two years ago\" when asked about the driving course.",
+          "incorrect": "Incorrect. Listen to how long ago the man completed his previous driving course.",
+          "no_answer": "The correct answer is: two years. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
     },
-    "_metadata": {
-        "exported_at": "2026-01-20 15:25:26",
-        "exported_by": "impact",
-        "plugin_version": "12.4",
-        "format_version": "1.0"
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "How many hours per day is the full-time course?",
+      "points": 1,
+      "no_answer_feedback": "You need to answer. The daily hours are clearly stated.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "three hours|3 hours|three|3"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! The receptionist states the full-time course has lessons for three hours each day.",
+          "incorrect": "Incorrect. Listen to the details about the full-time course duration per day.",
+          "no_answer": "The correct answer is: three hours. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What are students taught on one of the days?",
+      "points": 1,
+      "no_answer_feedback": "You should answer. The topic is clearly explained in the course description.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "road rules|rules"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Perfect! The receptionist mentions \"there is one day for learning all the road rules and regulations.\"",
+          "incorrect": "Incorrect. Listen to what is taught on one specific day of the course.",
+          "no_answer": "The correct answer is: road rules. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 5-10: Complete the form below using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+      "question": "Pacific Harbour Driving School - Course Information\r\n\r\n5. Weekend course duration: [field 1] Saturdays",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "three|3"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The weekend course runs for three Saturdays.",
+          "incorrect": "Incorrect. Listen for how many Saturdays the weekend course runs.",
+          "no_answer": "The correct answer is: three. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "6. Weekend course hours per day: [field 1] hours",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "five|5"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The weekend course is five hours per day.",
+          "incorrect": "Incorrect. Listen for the daily hours of the weekend course.",
+          "no_answer": "The correct answer is: five. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "7. Weekend course start time: [field 1] a.m.",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "nine|9"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The weekend course starts at 9 a.m.",
+          "incorrect": "Incorrect. Listen for what time the weekend course starts.",
+          "no_answer": "The correct answer is: nine. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "8. Weekend course cost: £[field 1]",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "295|two hundred and ninety five"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The weekend course costs £295.",
+          "incorrect": "Incorrect. Listen for the cost of the weekend course.",
+          "no_answer": "The correct answer is: 295. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "9. Weekday course cost: £[field 1]",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "275|two hundred and seventy five"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The weekday course costs £275.",
+          "incorrect": "Incorrect. Listen for the cost of the weekday course.",
+          "no_answer": "The correct answer is: 275. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "10. Available instructor name: [field 1]",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "john thompson|thompson"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! John Thompson is the available instructor.",
+          "incorrect": "Incorrect. Listen for the name of the available instructor.",
+          "no_answer": "The correct answer is: John Thompson. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-15: Complete the table below USING NO MORE THAN ONE WORD OR A NUMBER.\r\n\r\nThings to do in Las Vegas",
+      "question": "Gambling:\r\n- there are over [field 1] casinos in Las Vegas\r\n\r\nThe 'Mob Museum':\r\n- a self-guided tour\r\n- visitors can listen to recorded [field 2] between criminals\r\n\r\nThe Pinball Hall of Fame:\r\n- opened in 2006\r\n- over 200 machines\r\n- profits go to [field 3] in the local region\r\n\r\nThe High Roller:\r\n- 170 m high\r\n- Was the largest of its kind\r\n- each cabin on the wheel can fit up to [field 4] people\r\n\r\nThe Big Apple Roller Coaster:\r\n- 70 miles per hour\r\n- riders get on and off the roller coaster while in a [field 5]\r\n- is built around 2 buildings",
+      "points": 5,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "",
+      "field_count": 5,
+      "field_answers": {
+        "1": "100|ONE HUNDRED|A HUNDRED|1 HUNDRED|one hundred|a hundred",
+        "2": "CONVERSATIONS|conversations|Conversations",
+        "3": "CHARITIES|charities|Charities",
+        "4": "40|FORTY|forty|Forty",
+        "5": "HOTEL|hotel|Hotel"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! There are over 100 casinos in Las Vegas.",
+          "incorrect": "Incorrect. Listen for how many casinos are in Las Vegas.",
+          "no_answer": "The correct answer is: 100. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! Visitors can listen to recorded conversations between criminals.",
+          "incorrect": "Incorrect. Listen for what visitors can listen to at the Mob Museum.",
+          "no_answer": "The correct answer is: CONVERSATIONS. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! Profits go to charities in the local region.",
+          "incorrect": "Incorrect. Listen for where the profits from the Pinball Hall of Fame go.",
+          "no_answer": "The correct answer is: CHARITIES. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! Each cabin can fit up to 40 people.",
+          "incorrect": "Incorrect. Listen for how many people can fit in each cabin.",
+          "no_answer": "The correct answer is: 40. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Correct! Riders get on and off the roller coaster while in a hotel.",
+          "incorrect": "Incorrect. Listen for where riders get on and off the roller coaster.",
+          "no_answer": "The correct answer is: HOTEL. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 16-20: Complete the summary below USING NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+      "question": "The dam was first discussed as an idea in [field 1] but construction did not begin until 1931. The project was completed in [field 2]. Before construction of the dam could begin, [field 3] of tunnels needed to be drilled to divert the river. The work was often dangerous, because of [field 4] and broken ropes, but this did lead to better safety standards on construction sites. Further dangers existed for workers, with deaths from heat and a lack of fresh air. The dam now provides power for around [field 5] people.",
+      "points": 5,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "",
+      "field_count": 5,
+      "field_answers": {
+        "1": "1900",
+        "2": "1936",
+        "3": "5 KILOMETRES|5 KILOMETERS|FIVE KILOMETRES|FIVE KILOMETERS|5 KM|5 KMS|5KM|5KMS|FIVE KM|FIVE KMS|5 kilometres|5 kilometers|five kilometres|five kilometers",
+        "4": "FALLING ROCKS|ROCKS|falling rocks|rocks|Falling rocks|Rocks",
+        "5": "1.3 MILLION|1.3 million"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The dam was first discussed in 1900.",
+          "incorrect": "Incorrect. Listen for when the idea of the dam was first discussed.",
+          "no_answer": "The correct answer is: 1900. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! The project was completed in 1936.",
+          "incorrect": "Incorrect. Listen for when the dam was completed.",
+          "no_answer": "The correct answer is: 1936. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! 5 kilometres of tunnels needed to be drilled.",
+          "incorrect": "Incorrect. Listen for the length of tunnels that needed to be drilled.",
+          "no_answer": "The correct answer is: 5 KILOMETRES. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! The work was dangerous because of falling rocks.",
+          "incorrect": "Incorrect. Listen for what made the work dangerous.",
+          "no_answer": "The correct answer is: FALLING ROCKS. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Correct! The dam provides power for around 1.3 million people.",
+          "incorrect": "Incorrect. Listen for how many people the dam provides power for.",
+          "no_answer": "The correct answer is: 1.3 MILLION. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 21-26: Match the following statements with a country. Write A-C in boxes 21-26 in your answer sheet.\r\n\r\nA. South Africa\r\nB. Australia\r\nC. New Zealand",
+      "question": "21. Children start later",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "A. South Africa",
+          "is_correct": true,
+          "feedback": "Correct! Children start later in South Africa (Q21)."
+        },
+        {
+          "text": "B. Australia",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has children starting school at age 7."
+        },
+        {
+          "text": "C. New Zealand",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has children starting school at age 7."
+        }
+      ],
+      "options": "A. South Africa\nB. Australia\nC. New Zealand",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "22. Has intermediate school",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "A. South Africa",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has intermediate school."
+        },
+        {
+          "text": "B. Australia",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has intermediate school."
+        },
+        {
+          "text": "C. New Zealand",
+          "is_correct": true,
+          "feedback": "Correct! New Zealand has intermediate school (Q22)."
+        }
+      ],
+      "options": "A. South Africa\nB. Australia\nC. New Zealand",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "23. Few religious private schools",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "A. South Africa",
+          "is_correct": true,
+          "feedback": "Correct! South Africa has few religious private schools (Q23)."
+        },
+        {
+          "text": "B. Australia",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has only a few religious schools."
+        },
+        {
+          "text": "C. New Zealand",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has only a few religious schools."
+        }
+      ],
+      "options": "A. South Africa\nB. Australia\nC. New Zealand",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "24. Doesn't have correspondence education",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "A. South Africa",
+          "is_correct": true,
+          "feedback": "Correct! South Africa doesn't have correspondence education (Q24)."
+        },
+        {
+          "text": "B. Australia",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country doesn't have correspondence education."
+        },
+        {
+          "text": "C. New Zealand",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country doesn't have correspondence education."
+        }
+      ],
+      "options": "A. South Africa\nB. Australia\nC. New Zealand",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "25. Home schooling",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "A. South Africa",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has home schooling."
+        },
+        {
+          "text": "B. Australia",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has home schooling."
+        },
+        {
+          "text": "C. New Zealand",
+          "is_correct": true,
+          "feedback": "Correct! New Zealand has home schooling (Q25)."
+        }
+      ],
+      "options": "A. South Africa\nB. Australia\nC. New Zealand",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "26. Compulsory extracurricular activities",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "A. South Africa",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has compulsory extracurricular activities."
+        },
+        {
+          "text": "B. Australia",
+          "is_correct": true,
+          "feedback": "Correct! Australia has compulsory extracurricular activities (Q26)."
+        },
+        {
+          "text": "C. New Zealand",
+          "is_correct": false,
+          "feedback": "Incorrect. Listen for which country has compulsory extracurricular activities."
+        }
+      ],
+      "options": "A. South Africa\nB. Australia\nC. New Zealand",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 27-30: Complete the notes below using NO MORE THAN THREE WORDS from the recording.\r\n\r\nNew Zealand boarding school dress code",
+      "question": "- Dress had to be one inch below the knee when [field 1]\r\n- Hat had to be worn at all times when [field 2]\r\n- Socks had to be [field 3]\r\n- School [field 4] had to be worn at all times",
+      "points": 4,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "",
+      "field_count": 4,
+      "field_answers": {
+        "1": "KNEELING|KNEELING DOWN|kneeling|kneeling down|Kneeling|Kneeling down",
+        "2": "OUTSIDE THE SCHOOL|OUTSIDE SCHOOL|outside the school|outside school|Outside the school|Outside school",
+        "3": "PULLED UP|PULLED-UP|pulled up|pulled-up|Pulled up|Pulled-up",
+        "4": "BADGE|badge|Badge"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The dress had to be one inch below the knee when kneeling.",
+          "incorrect": "Incorrect. Listen for when the dress length was measured.",
+          "no_answer": "The correct answer is: KNEELING. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! The hat had to be worn when outside the school.",
+          "incorrect": "Incorrect. Listen for when the hat had to be worn.",
+          "no_answer": "The correct answer is: OUTSIDE THE SCHOOL. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! Socks had to be pulled up.",
+          "incorrect": "Incorrect. Listen for how the socks had to be.",
+          "no_answer": "The correct answer is: PULLED UP. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! The school badge had to be worn at all times.",
+          "incorrect": "Incorrect. Listen for what school item had to be worn at all times.",
+          "no_answer": "The correct answer is: BADGE. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 31-35\r\n\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "What causes RSI?",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "repeated physical movement|repeated physical movements"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! The speaker states that RSI results from repeated physical movements which damage tendons, nerves, and muscles.",
+          "incorrect": "Incorrect. Listen to the definition of RSI at the beginning of the lecture - the cause is clearly stated.",
+          "no_answer": "The correct answer is: repeated physical movement. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The use of what has caused an increase in RSI in the workplace?",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "computers"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The speaker mentions that RSI has become particularly noticeable due to the increasing importance of computers in the workplace.",
+          "incorrect": "Incorrect. Listen to why RSI has increased in the last twenty years - a specific technology is mentioned.",
+          "no_answer": "The correct answer is: computers. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "RSI is made worse without break periods or if there is no thought given to what?",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "body position"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Well done! The speaker says the situation is intensified if people don't take regular breaks or spend time considering their body position.",
+          "incorrect": "Incorrect. Listen to what makes RSI worse besides not taking breaks - the speaker mentions something people should consider.",
+          "no_answer": "The correct answer is: body position. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What should people who use a computer regularly be able to identify to avoid serious cases?",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "warning signs"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Perfect! The speaker states that one way to prevent serious RSI is to recognise the warning signs.",
+          "incorrect": "Incorrect. Listen to how people can prevent serious RSI - they need to identify something early.",
+          "no_answer": "The correct answer is: warning signs. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Problems can also occur if the computer monitor is what?",
+      "points": 1,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "too close"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! The speaker mentions that many people sit too close to their monitor, leading to symptoms like headaches and blurred vision.",
+          "incorrect": "Incorrect. Listen to the problem with monitor positioning - the speaker describes how people sit in relation to the monitor.",
+          "no_answer": "The correct answer is: too close. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 36-40\r\n\r\nComplete the notes below using NO MORE THAN THREE WORDS.\r\n\r\nErgonomic Setup Guidelines",
+      "question": "Chair: Height should allow arms to be at 90 degrees to the keyboard; Feet should be on the floor or a [field 1]; Space should be allowed between the chair and back of the knees to maintain [field 2]\r\n\r\nMonitor: Screen should be just below eye level; Avoid light reflections by positioning at a [field 3]; [field 4] backgrounds are more comfortable to look at\r\n\r\nKeyboard: Wrists should remain straight; Elbows close to the body\r\n\r\nPosture: Sit up straight or [field 5] a little",
+      "points": 5,
+      "no_answer_feedback": "In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "",
+      "field_count": 5,
+      "field_answers": {
+        "1": "foot stool|stool",
+        "2": "proper circulation|circulation|proper blood circulation",
+        "3": "right angle|right-angle",
+        "4": "light grey|light gray",
+        "5": "lean back"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The speaker says feet should be flat on the ground, or if not practical, on a foot stool.",
+          "incorrect": "Incorrect. Listen to the alternative if feet can't be flat on the ground - the speaker mentions a specific item.",
+          "no_answer": "The correct answer is: foot stool. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Well done! The speaker mentions maintaining proper circulation in the legs by having space between the knees and chair.",
+          "incorrect": "Incorrect. Listen to why space should be left between the knees and chair seat - the speaker mentions what needs to be maintained.",
+          "no_answer": "The correct answer is: proper circulation. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Excellent! The speaker states the monitor should be positioned at a right angle to light sources or windows to avoid glare.",
+          "incorrect": "Incorrect. Listen to how to position the monitor to avoid glare - a specific angle is mentioned.",
+          "no_answer": "The correct answer is: right angle. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Perfect! The speaker explains that a light grey background has been proven to be easier on the eyes than bright white.",
+          "incorrect": "Incorrect. Listen to the recommended background colour alternative to bright white - the speaker gives a specific colour.",
+          "no_answer": "The correct answer is: light grey. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Excellent! The speaker mentions that some people find sitting at 90 degrees too rigid, so they can lean slightly back.",
+          "incorrect": "Incorrect. Listen to the alternative to sitting rigidly at 90 degrees - the speaker describes what users can do instead.",
+          "no_answer": "The correct answer is: lean back. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
     }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_listening",
+    "cbt_test_type": "listening",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_listening",
+    "timer_minutes": "",
+    "starting_question_number": "1"
+  },
+  "audio": {
+    "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-3.mp3",
+    "transcript": "",
+    "sections": [
+      {
+        "section_number": 1,
+        "transcript": "<table class=\"style1\" border=\"1px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Hello. Welcome to Pacific Harbour Driving school. How can I help?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Good afternoon. I have a driving test booked for next month, and I want to take some driving lessons.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">We can help you there. Have you taken any driving lessons before, or is this your first time?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">I did do a short introduction to driving course at <strong style=\"background-color: yellow\">[Q1: high school]</strong>, and I learned to drive with my father before that.  But I want to get my license, so I need to have some lessons from your school.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Of course – that's no problem.  How long ago did you do the driving course?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">That was last year – no, sorry, that was <strong style=\"background-color: yellow\">[Q2: two years]</strong> ago. I have a certificate for that course here with me now. Do you need to see it?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">No, that's OK – I'll just make a note about it here though.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">OK, great. When do you think I will be able to start the driving lessons?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Well, we have a range of different lessons and times, so let me show you the schedule.  You can do a full-time course – that takes five days, from Monday to Friday, and the lessons are for <strong style=\"background-color: yellow\">[Q3: three hours]</strong> each day. Or you can do three weekends - well, Saturdays actually - five hours each Saturday day, from 9 in the morning until 2 in the afternoon.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Can you tell me a little more about the five-day course? How much does it cost and what will I learn?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Ok, with the five-day course, that's 10 a.m. to 1 p.m. from Monday to Friday. You drive in the city for four days, and will learn about parking, driving in traffic and all the essentials… and then there is one day for learning all the <strong style=\"background-color: yellow\">[Q4: road rules]</strong> and regulations.  You do the theory on the second day, so that you understand everything while you're learning to drive.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">That sounds like a lot.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Well, it's not really that hard, it's over five days so the instructor really takes his time, and you can go at your own speed.  We will also give you a copy of the book you will need to study from with all the rules about driving so you can do some study in your own time. The book's called <em>Road Rules</em> and is included in the price of the course.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Ok, sounds good.  What about the weekend course?  Is it much different?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">You will cover the same information, it's just that you do it at different times.  As I said, it's 9 a.m. to two p.m., and you have an introductory session here at our driving school to get the basics of handling a car, then a couple of hours for theory and the road rules. Over the next 2 Saturdays, you will be driving in traffic, parallel parking and learning proper behaviour on busy city streets.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">I think having more time to study between lessons might be good for me, so the weekend course will be better. Yes, I think I'll sign up for the weekend course.  How much is that?  And when does the next course start?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Well, the weekend course is £295, and the weekday course is £275.  There's a slight difference in cost because the weekend class is on a Saturday, not our regular hours.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Man:</td>\r\n<td width=\"75%\">Alright, well, I think I'll sign up for the weekend course.  Can I start this weekend?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Receptionist:</td>\r\n<td width=\"75%\">Let me see if we have any instructors available….  Yes, we do.  John Thompson is available.</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+      },
+      {
+        "section_number": 2,
+        "transcript": "<strong>Section 2</strong><strong> </strong>\r\n\r\nHello everyone and thank you for inviting me here to talk about places to visit the in the USA. For my presentation today, I’d like to focus on Las Vegas, which as many of you will know is in Nevada.\r\n\r\nWhen talking about Las Vegas, the first thing that comes to mind for most people is gambling. Now of course it’s true that gambling is a major aspect of the city – there are over <strong style=\"background-color: yellow\">[Q1: 100]</strong> casinos. However, there is actually a whole lot more that you can do there, and that’s what I’d like to talk to you about today.\r\n\r\nWithout even needing to travel out of the city, there are plenty of different and exciting things to do. We’ll start by talking about the museums in the area. One of the most well known is the National Museum of Organized Crime and Law Enforcement, or the ‘Mob Museum’ as it is more commonly known. This is a self-guided tour where you can find out about the history of organised crime in the area and the people that were involved. Visitors can listen to <strong style=\"background-color: yellow\">[Q2: conversations]</strong> between criminals that were recorded by the police nearly 100 years ago, and you can even sit in a real electric chair.\r\n\r\nFor something a little more lighthearted, you can also visit the Pinball Hall of Fame - a museum for pinball machines that opened January 2006. Containing over 200 different pinball machines, the museum also has some classic video games, and is funded purely from donations. In fact, this museum is not run to make a profit, and any excess revenue is passed on to <strong style=\"background-color: yellow\">[Q3: charities]</strong> in the area.\r\n\r\nThere are also museums for car lovers, a waxwork museum with images of famous people moulded in wax, an aviation museum with full sized aeroplanes and much more.\r\n\r\nBut for those of you who are looking for a little more of a thrill than a museum, there are plenty of more exciting options. Take, for example, the <em>High Roller</em> – at nearly 170 metres high, it was the world’s largest Ferris wheel when it was built in 2014. There are 32 cabins on the wheel, each of which can accommodate up to <strong style=\"background-color: yellow\">[Q4: 40]</strong> people, and it takes about 30 minutes for the wheel to turn all the way around.\r\n\r\nThere is also the <em>Big Apple Roller Coaster</em>, which reaches speeds of nearly 70 miles per hour and has two loops, as well as a terrifying 50 metre drop. In total, the track is over 1.<strong style=\"background-color: yellow\">[Q8: 5 kilometres]</strong> long, but the ride itself takes less than 3 minutes, and perhaps one of the most interesting aspects of this ride is that it actually begins and ends inside a <strong style=\"background-color: yellow\">[Q5: hotel]</strong>, with the track snaking its way around the outside of 2 buildings, before ending back in the hotel to finish.\r\n\r\nAnother place that is extremely popular for day trippers is the Hoover Dam, and that’s what I would like to talk about now.\r\n\r\nFirst, let’s talk about some important dates. The idea of building a dam was first discussed as far back as <strong style=\"background-color: yellow\">[Q6: 1900]</strong>, but it was not until 1928 that the project was authorised by the government. In 1931, a group of companies finally began construction, with a completion date of 1938. However,  the dam was actually finished and in operation 2 years ahead of schedule, in <strong style=\"background-color: yellow\">[Q7: 1936]</strong>.\r\n\r\nConstruction of the dam faced some massive challenges. The first was to divert the Colorado River, and this was done by drilling 4 tunnels into the canyon walls, and these tunnels had a combined length of over 5 kilometres. Next came the beginning of the dam itself. Rising to a height of 221 metres, the dam was a massive undertaking. The people who worked at those heights, supported only by ropes, were called ‘high scalers’, and this was arguably the most dangerous job of them all. <strong style=\"background-color: yellow\">[Q9: Falling rocks]</strong> and broken ropes caused many deaths and injuries, but this was also the time when safety equipment started to become used in construction. Initially, to protect their heads from falling rocks, the high scalers dipped pieces of cloth into tar and waited for the tar to harden before strapping them to their heads. When the company saw how effective this simple measure was, they ordered thousands of what were initially called ‘hard boiled hats’, which later became known as hard hats which are still in use – although of course in an updated version – on construction sites today.\r\n\r\nHowever, falling rock was not the only danger the workers faced. The heat alone – which regularly reached over 45 degrees – was responsible for the death of 16 workers. Others died from carbon monoxide poisoning from the use of petrol powered generators and vehicles in tunnels without enough fresh air, and in total, 112 people died during the dam’s construction.\r\n\r\nDespite this heavy cost, the dam has performed without any major incident since the time of its construction and provides power for approximately <strong style=\"background-color: yellow\">[Q10: 1.3 million]</strong> people."
+      },
+      {
+        "section_number": 3,
+        "transcript": "<strong>Section 3</strong>\r\n\r\n \r\n<table class=\"style1\" border=\"1px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">So what was it like in your school then, Lyn?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Well, South African schools are very different from schools in Australia. For a start, children don't start their schooling until they are seven quite a bit later than schools in Australia. What about New Zealand, Gail?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">We're more like Australia. can't believe children don't go to school until they are seven! When do the parents get any free time?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Well, there's still the availability of kindergartens or playschools, it's just that formal education doesn't start until later. don't think it's such a good idea for children to have to be too academic at such a young age. They should be able to just enjoy themselves</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Well, yes, but the first school children go to isn't very academic. It's Just an really opportunity for children to learn a few basic social skills by playing and learning with other children.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Yes, I'd agree with that.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">I guess being so close, Australian and New Zealand schools must be similar then?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Well, I suppose they do share a lot of similarities, but there're also some differences. For example, children in New Zealand go through intermediate school, but in Australia there's only high school. That's right, isn't it Pat?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Yes, I think so. What about South Africa, Lyn? Do you have intermediate or high school?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Oh, high school.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Another difference between Australian and New Zealand education is that although both countries have state schools and private schools, our private schools are very often run by religious groups, whereas New Zealand schools are secular.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">That's not true there are quite a few religious schools in New Zealand</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Oh, OK. Maybe we are similar. we're different</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Lyn Only a few South African schools have any religious connection, so I guess country don't Most people go to state schools. Pat, is it true that some people from your have to go to school at all?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Well, that's partly true. Because of the geography of Australia, there are a lot of children who do not have access to schools, at least on a regular basis. Instead they have a form of correspondence education, where the lessons are actually on the radio and the students send their work in by post. That way they get a lot of what they would if they were in the classroom apart from the interaction</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">In New Zealand, not all students have to go to school either some parents have opted for home schooling</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Oh, is that like correspondence teaching? We don't really have that</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Well, we do have correspondence schools but home schooling is different. With home schooling the parents teach the children and set them homework. They have to present a syllabus to their local education authority before they can do that, but it is becoming a more popular choice for some parents. I suppose it also suits parents' own commitments. mean they don't have to worry about collecting their children from school, and they can always teach over the weekend or in the evening if they want to</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">ls the school day normally quite long then?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">Not in New Zealand, but I think it can be in Australia</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Yes, that's right. I think Australia is unusual in that there are extracurricular activities which you have to go to. These are normally sport activities, but there are a few other options.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">We have activities after school for any student that is interested, but they aren't compulsory. What about in New Zealand, Gail?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">I had to do some sport every week. didn't really like it, but it was part of the school day so guess that's not so bad. Anyway, I spent two years at boarding school so things were a little different.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lyn</td>\r\n<td width=\"75%\">Boarding school? What was that like?</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">well, the thing I remember most about it was the strict dress code. There were restrictions on everything You had to wear a school uniform almost all of the time, and it had to be cleaned and ironed. The length of your skirt had to be no less than one inch above your knees when <strong style=\"background-color: yellow\">[Q1: kneeling]</strong> down. Sometimes we used to go out on school trips or just at weekends with a few friends, but whenever we were <strong style=\"background-color: yellow\">[Q2: outside the school]</strong> we had to wear a hat. There was one teacher who used to give me extra homework because my socks weren't <strong style=\"background-color: yellow\">[Q3: pulled up]</strong>, and that was in the school late in the evening! U suppose it wasn’t that bad, but forgot it felt like a prison! I kept getting into trouble for something. Most of the time I forgot something, normally my school <strong style=\"background-color: yellow\">[Q4: badge]</strong>. We had to wear that all the time, in the school, and out, because it had our house colours on it.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Pat</td>\r\n<td width=\"75%\">Wow! That doesn't sound like much fun!</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Gail</td>\r\n<td width=\"75%\">No, but it was a good education. suppose... (fade out)</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+      },
+      {
+        "section_number": 4,
+        "transcript": "<table class=\"style1\" border=\"1px solid #333\">\r\n<tbody>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Good morning, everyone. Today I'll be talking about RSI, or Repetitive Strain Injury, which has become an increasingly important health issue in modern workplaces.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">So, what exactly is RSI? RSI is a condition that results from <strong style=\"background-color: yellow\">[Q31: repeated physical movements]</strong> that damage tendons, nerves, and muscles. The problem has become particularly noticeable over the last twenty years due to the increasing importance of <strong style=\"background-color: yellow\">[Q32: computers]</strong> in the workplace. When people spend hour after hour typing at keyboards and using computer mice, they're putting their hands, wrists, arms, and shoulders at risk.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">The situation is intensified if people don't take regular breaks or spend time considering their <strong style=\"background-color: yellow\">[Q33: body position]</strong>. Without proper attention to these factors, RSI can develop and worsen over time. However, many cases can be prevented if people who use a computer regularly are able to recognise the <strong style=\"background-color: yellow\">[Q34: warning signs]</strong> early on. Common symptoms include tingling sensations, numbness, pain in the hands, wrists, arms, or shoulders, and a general feeling of weakness.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Another common problem occurs when people sit <strong style=\"background-color: yellow\">[Q35: too close]</strong> to their computer monitor. This can lead to eye strain, headaches, and blurred vision, which are all warning signs that shouldn't be ignored.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Now, let me give you some practical advice on setting up your workspace ergonomically to prevent these problems.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">First, let's talk about your chair. The height should be adjusted so that your arms can rest at 90 degrees to the keyboard. Your feet should be flat on the ground, or if that's not practical due to your height and the desk setup, they should rest on a <strong style=\"background-color: yellow\">[Q36: foot stool]</strong>. It's also important to leave some space between the chair seat and the back of your knees to maintain <strong style=\"background-color: yellow\">[Q37: proper circulation]</strong> in your legs.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Next, your monitor. The screen should be positioned just below eye level - this prevents neck strain. To avoid light reflections and glare on your screen, position it at a <strong style=\"background-color: yellow\">[Q38: right angle]</strong> to any windows or light sources. Research has shown that <strong style=\"background-color: yellow\">[Q39: light grey]</strong> backgrounds are actually much more comfortable to look at than bright white ones, so consider changing your default settings.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">For your keyboard positioning, make sure your wrists remain straight while typing - avoid bending them up or down. Keep your elbows close to your body rather than extending them outward.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Finally, regarding your overall posture - you should sit up straight. Some people find this position at 90 degrees too rigid, and if that's the case, you can <strong style=\"background-color: yellow\">[Q40: lean back]</strong> slightly in your chair to find a more comfortable position while still maintaining good support.</td>\r\n</tr>\r\n<tr>\r\n<td width=\"25%\">Lecturer:</td>\r\n<td width=\"75%\">Remember, preventing RSI is far easier than treating it, so take these guidelines seriously and make adjustments to your workspace today. Thank you for your attention.</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+      }
+    ]
+  },
+  "_metadata": {
+    "exported_at": "2026-01-20 15:25:26",
+    "exported_by": "impact",
+    "plugin_version": "12.4",
+    "format_version": "1.0"
+  }
 }

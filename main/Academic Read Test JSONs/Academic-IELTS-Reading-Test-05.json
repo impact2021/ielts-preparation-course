@@ -527,12 +527,12 @@
         {
           "text": "VII. An old system inspires one man",
           "is_correct": true,
-          "feedback": ""
+          "feedback": "Correct! This is the right answer."
         },
         {
           "text": "VIII. Railways lead the way",
           "is_correct": false,
-          "feedback": ""
+          "feedback": "Incorrect. Review the passage to find the correct answer."
         },
         {
           "text": "IX. Theory becomes reality",
@@ -586,7 +586,7 @@
         {
           "text": "VI. Early setbacks",
           "is_correct": true,
-          "feedback": ""
+          "feedback": "Correct! This is the right answer."
         },
         {
           "text": "VII. An old system inspires one man",
@@ -747,7 +747,7 @@
         {
           "text": "I. The original concept sees many modern applications",
           "is_correct": true,
-          "feedback": ""
+          "feedback": "Correct! This is the right answer."
         },
         {
           "text": "II. Grocery stores worry about the costs",
@@ -816,7 +816,9 @@
           "incorrect": "Incorrect. The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'.",
           "no_answer": "The correct answer is: PUNCH CARDS. This answer is found in Paragraph A, which mentions 'punch cards being used in the 1890 U.S. census'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -840,7 +842,9 @@
           "incorrect": "Incorrect. The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'.",
           "no_answer": "The correct answer is: PRODUCT INFORMATION. This answer is found in Paragraph B, where it explains that grocery stores wanted 'an automated system to record product information during the checkout stage'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -864,7 +868,9 @@
           "incorrect": "Incorrect. The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'.",
           "no_answer": "The correct answer is: BULLS-EYE. This answer is found in Paragraph B, which describes: 'He then swept his fingers in a circle, creating a bulls-eye figure'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -888,7 +894,9 @@
           "incorrect": "Incorrect. The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'.",
           "no_answer": "The correct answer is: RAILWAY CARS. This answer is found in Paragraph D, which states: 'there was a big move in the American railroad industry for a system to identify railway cars'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -912,7 +920,9 @@
           "incorrect": "Incorrect. The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'.",
           "no_answer": "The correct answer is: LASER. This answer is found in Paragraph D, which mentions 'incorporating the new laser light system, one of the missing links'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -936,7 +946,9 @@
           "incorrect": "Incorrect. The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'.",
           "no_answer": "The correct answer is: 1974. This answer is found in Paragraph E, which states: 'In 1974, in Ohio, in the U.S., a package of chewing gum was scanned'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -960,7 +972,9 @@
           "incorrect": "Incorrect. The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'.",
           "no_answer": "The correct answer is: FRAUD. This answer is found in Paragraph F, which mentions bar codes are 'an important tool in the reduction in fraud'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "closed_question",
@@ -1188,7 +1202,9 @@
           "incorrect": "Incorrect. The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.",
           "no_answer": "The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'. Remember to review the passage carefully for specific details."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1212,7 +1228,9 @@
           "incorrect": "Incorrect. The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.",
           "no_answer": "The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'. Remember to review the passage carefully for specific details."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1236,7 +1254,9 @@
           "incorrect": "Incorrect. The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'.",
           "no_answer": "The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'. Remember to review the passage carefully for specific details."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1260,7 +1280,9 @@
           "incorrect": "Incorrect. The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'.",
           "no_answer": "The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'. Remember to review the passage carefully for specific details."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1284,7 +1306,9 @@
           "incorrect": "Incorrect. The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.",
           "no_answer": "The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'. Remember to review the passage carefully for specific details."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "closed_question",

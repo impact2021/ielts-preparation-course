@@ -524,7 +524,9 @@
           "incorrect": "Incorrect. The correct answer is: PRESCRIPTION DRUGS. This answer is found in Paragraph A: 'Americans alone now spend a staggering $200 billion a year on prescription drugs'.",
           "no_answer": "The correct answer is: PRESCRIPTION DRUGS. This answer is found in Paragraph A: 'Americans alone now spend a staggering $200 billion a year on prescription drugs, and that figure is growing at a rate of approximately 12 percent a year.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -548,7 +550,9 @@
           "incorrect": "Incorrect. The correct answer is: ROUTINELY. This answer is found in Paragraph A: 'the prices of the most heavily prescribed drugs are routinely increased by industry'.",
           "no_answer": "The correct answer is: ROUTINELY. This answer is found in Paragraph A: 'the prices of the most heavily prescribed drugs are routinely increased by industry, sometimes as often as several times a year.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -572,7 +576,9 @@
           "incorrect": "Incorrect. The correct answer is: PATENT. This answer is found in Paragraph B: 'Before its patent ran out... the price... was raised... for a cumulative increase of more than 50 percent'.",
           "no_answer": "The correct answer is: PATENT. This answer is found in Paragraph B: 'Before its patent ran out, for example, the price of Schering-Plough's top-selling allergy pill, Claritin, was raised thirteen times over five years, for a cumulative increase of more than 50 percent.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -596,7 +602,9 @@
           "incorrect": "Incorrect. The correct answer is: ECONOMIC RECESSION. This answer is found in Paragraph C: 'The shape of healthcare provision in America... has inevitably changed as a result of economic recession'.",
           "no_answer": "The correct answer is: ECONOMIC RECESSION (or RECESSION). This answer is found in Paragraph C: 'The shape of healthcare provision in America... has inevitably changed as a result of economic recession'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -620,7 +628,9 @@
           "incorrect": "Incorrect. The correct answer is: CORPORATE BUDGETS. This answer is found in Paragraph C: 'As one of the means of tightening overall corporate budgets... employers requiring their staff to pay more'.",
           "no_answer": "The correct answer is: CORPORATE BUDGETS (or BUDGETS). This answer is found in Paragraph C: 'As one of the means of tightening overall corporate budgets, Janet says that there has been a definite trend towards employers requiring their staff to pay more towards the costs of healthcare themselves.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "closed_question",
@@ -939,7 +949,9 @@
           "incorrect": "Incorrect. The correct answer is: 2.4 KILOMETRES. Paragraph B states: 'is located 2.4 km offshore from San Francisco'.",
           "no_answer": "The correct answer is: 2.4 KILOMETRES (or 2.4 KM). Paragraph B states: 'Alcatraz Island... is located 2.4 km offshore from San Francisco.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -963,7 +975,9 @@
           "incorrect": "Incorrect. The correct answer is: A LIGHTHOUSE. Paragraph B states: 'The small island early-on served initially as a lighthouse'.",
           "no_answer": "The correct answer is: A LIGHTHOUSE (or LIGHTHOUSE). Paragraph B states: 'The small island early-on served initially as a lighthouse'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -987,7 +1001,9 @@
           "incorrect": "Incorrect. The correct answer is: 11. Paragraph D states: 'Only eleven lives were lost during construction of the bridge'.",
           "no_answer": "The correct answer is: 11 (or ELEVEN). Paragraph D states: 'Only eleven lives were lost during construction of the bridge, a new safety record for the time.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1011,7 +1027,9 @@
           "incorrect": "Incorrect. The correct answer is: PASSING SHIPS. Paragraph E states: 'paint the bridge orange... whilst still being easy to see for passing ships'.",
           "no_answer": "The correct answer is: PASSING SHIPS (or SHIPS). Paragraph E states: 'Irving Morrow was hired by Strauss to paint the bridge orange... whilst still being easy to see for passing ships.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1035,7 +1053,9 @@
           "incorrect": "Incorrect. The correct answer is: TRANSPORTING WATER. Paragraph F states: 'The ferry service began for purposes of transporting water to San Francisco'.",
           "no_answer": "The correct answer is: TRANSPORTING WATER. Paragraph F states: 'The ferry service began for purposes of transporting water to San Francisco.' Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "closed_question",
@@ -1412,7 +1432,9 @@
           "incorrect": "Incorrect. The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'.",
           "no_answer": "The correct answer is: LOGS. The passage states: 'The imu is dug and lined with logs'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1436,7 +1458,9 @@
           "incorrect": "Incorrect. The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'.",
           "no_answer": "The correct answer is: FIRE. The passage states: 'A fire is lit in the pit'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1460,7 +1484,9 @@
           "incorrect": "Incorrect. The correct answer is: HEATED. The passage states: 'the rocks are heated'.",
           "no_answer": "The correct answer is: HEATED. The passage states: 'the rocks are heated'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "open_question",
@@ -1484,7 +1510,9 @@
           "incorrect": "Incorrect. The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'.",
           "no_answer": "The correct answer is: WOOD. The passage states: 'The heat turns the wood to coal'. Always try to answer even if unsure—there's no penalty in IELTS."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
     },
     {
       "type": "closed_question",

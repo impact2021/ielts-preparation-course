@@ -1,701 +1,701 @@
 {
-    "title": "IELTS Listening Test 05",
-    "content": "Complete IELTS Listening Test 5 with all 4 sections (40 questions)",
-    "questions": [
-        {
-            "type": "open_question",
-            "instructions": "Questions 1-5\r\n\r\nComplete the form below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
-            "question": "<table border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\">\r\n<tbody>\r\n<tr>\r\n<td class=\"style1\" colspan=\"2\"><b>Applicant Details</b></td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\" colspan=\"2\">Example: Answer:</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">First Name</td>\r\n<td class=\"style1\">Sharon</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Surname</td>\r\n<td class=\"style1\">(1)[field 1]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Address</td>\r\n<td class=\"style1\">24a Rodney Road</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Town</td>\r\n<td class=\"style1\">Sandwell</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Postcode</td>\r\n<td class=\"style1\">SD7 (2)[field 2]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Telephone</td>\r\n<td class=\"style1\">9152334</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Available from</td>\r\n<td class=\"style1\">12th of (3)[field 3]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Length of experience</td>\r\n<td class=\"style1\"> (4)[field 4]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Availability</td>\r\n<td class=\"style1\">Not available to work (5)[field 5] until after 3rd Jan</td>\r\n</tr>\r\n</tbody>\r\n</table>",
-            "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 5,
-            "field_answers": {
-                "1": "haltwell",
-                "2": "12py",
-                "3": "november",
-                "4": "4 years|four years|4 years'|four years'|4years|4years'",
-                "5": "weekends|weekend|on weekends|at weekends|at the weekend|on the weekends"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The answer is HALTWELL.",
-                    "incorrect": "Incorrect. Listen to the surname.",
-                    "no_answer": "The correct answer is: HALTWELL. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The answer is 12PY.",
-                    "incorrect": "Incorrect. Listen to the postcode.",
-                    "no_answer": "The correct answer is: 12PY. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! The answer is NOVEMBER.",
-                    "incorrect": "Incorrect. Listen to the availability date.",
-                    "no_answer": "The correct answer is: NOVEMBER. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The answer is 4 YEARS.",
-                    "incorrect": "Incorrect. Listen to the length of experience.",
-                    "no_answer": "The correct answer is: 4 YEARS. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! The answer is WEEKENDS.",
-                    "incorrect": "Incorrect. Listen to the availability restrictions.",
-                    "no_answer": "The correct answer is: WEEKENDS. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
+  "title": "IELTS Listening Test 05",
+  "content": "Complete IELTS Listening Test 5 with all 4 sections (40 questions)",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1-5\r\n\r\nComplete the form below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+      "question": "<table border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\">\r\n<tbody>\r\n<tr>\r\n<td class=\"style1\" colspan=\"2\"><b>Applicant Details</b></td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\" colspan=\"2\">Example: Answer:</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">First Name</td>\r\n<td class=\"style1\">Sharon</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Surname</td>\r\n<td class=\"style1\">(1)[field 1]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Address</td>\r\n<td class=\"style1\">24a Rodney Road</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Town</td>\r\n<td class=\"style1\">Sandwell</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Postcode</td>\r\n<td class=\"style1\">SD7 (2)[field 2]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Telephone</td>\r\n<td class=\"style1\">9152334</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Available from</td>\r\n<td class=\"style1\">12th of (3)[field 3]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Length of experience</td>\r\n<td class=\"style1\"> (4)[field 4]</td>\r\n</tr>\r\n<tr>\r\n<td class=\"style1\">Availability</td>\r\n<td class=\"style1\">Not available to work (5)[field 5] until after 3rd Jan</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+      "points": 5,
+      "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "haltwell",
+        "2": "12py",
+        "3": "november",
+        "4": "4 years|four years|4 years'|four years'|4years|4years'",
+        "5": "weekends|weekend|on weekends|at weekends|at the weekend|on the weekends"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is HALTWELL.",
+          "incorrect": "Incorrect. Listen to the surname.",
+          "no_answer": "The correct answer is: HALTWELL. Make sure to listen carefully for key information and take notes while listening."
         },
-        {
-            "type": "open_question",
-            "instructions": "Questions 6-10\r\n\r\nComplete the flowchart below with words from the box. Write the corresponding letter A-J in the spaces provided.\r\n\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"display:flex;flex-wrap:wrap;gap:8px\">\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>A</strong><br>within 24 hours\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>B</strong><br>candidates\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>C</strong><br>employment contract\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>D</strong><br>by email\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>E</strong><br>immediately\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>F</strong><br>Administration\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>G</strong><br>temping agreement\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>H</strong><br>over the phone\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>I</strong><br>representatives\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>J</strong><br>Computing skills\r\n  </div>\r\n\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n",
-            "question": "<div style=\"display: flex;flex-direction: column;align-items: center\">\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        Candidate completes 6.[field 1] test (45 minutes) (results immediate)\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        References checked 7.[field 2]\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        8.[field 3] contact client companies\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        Candidate telephoned about assignment opportunity\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        Candidate should confirm 9.[field 4]\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        10.[field 5] to be signed and returned\r\n    </div>\r\n</div>",
-            "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 5,
-            "field_answers": {
-                "1": "j",
-                "2": "h",
-                "3": "i",
-                "4": "a",
-                "5": "c"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The answer is J (Computing skills).",
-                    "incorrect": "Incorrect. Review the registration sequence.",
-                    "no_answer": "The correct answer is: J. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The answer is H (Over the phone).",
-                    "incorrect": "Incorrect. Review the registration sequence.",
-                    "no_answer": "The correct answer is: H. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! The answer is I (Representatives).",
-                    "incorrect": "Incorrect. Review the registration sequence.",
-                    "no_answer": "The correct answer is: I. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The answer is A (Within 24 hours).",
-                    "incorrect": "Incorrect. Review the registration sequence.",
-                    "no_answer": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! The answer is C (Employment contract).",
-                    "incorrect": "Incorrect. Review the registration sequence.",
-                    "no_answer": "The correct answer is: C. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
+        "2": {
+          "correct": "Correct! The answer is 12PY.",
+          "incorrect": "Incorrect. Listen to the postcode.",
+          "no_answer": "The correct answer is: 12PY. Make sure to listen carefully for key information and take notes while listening."
         },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 11-15\r\n\r\nChoose the correct answer A-C.",
-            "question": "Records…",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is C. are catching up with CD sales.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "make more money than CDs.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
-                },
-                {
-                    "text": "sell more units than CDs.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
-                },
-                {
-                    "text": "are catching up with CD sales.",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is C."
-                }
-            ],
-            "options": "make more money than CDs.\nsell more units than CDs.\nare catching up with CD sales.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "3": {
+          "correct": "Correct! The answer is NOVEMBER.",
+          "incorrect": "Incorrect. Listen to the availability date.",
+          "no_answer": "The correct answer is: NOVEMBER. Make sure to listen carefully for key information and take notes while listening."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The first records…",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is C. were not long lasting.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "were sold by Thomas Edison.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
-                },
-                {
-                    "text": "were only made of firm rubber.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
-                },
-                {
-                    "text": "were not long lasting.",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is C."
-                }
-            ],
-            "options": "were sold by Thomas Edison.\nwere only made of firm rubber.\nwere not long lasting.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "4": {
+          "correct": "Correct! The answer is 4 YEARS.",
+          "incorrect": "Incorrect. Listen to the length of experience.",
+          "no_answer": "The correct answer is: 4 YEARS. Make sure to listen carefully for key information and take notes while listening."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Shellac records…",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is C. were produced for over half a century.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "could not be played many times.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
-                },
-                {
-                    "text": "were not popular with the public.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is C."
-                },
-                {
-                    "text": "were produced for over half a century.",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is C."
-                }
-            ],
-            "options": "could not be played many times.\nwere not popular with the public.\nwere produced for over half a century.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "'Unbreakable' records…",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is B. were made of plastic.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "were made from shellac.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is B."
-                },
-                {
-                    "text": "were made of plastic.",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is B."
-                },
-                {
-                    "text": "had a high quality sound.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is B."
-                }
-            ],
-            "options": "were made from shellac.\nwere made of plastic.\nhad a high quality sound.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Vinyl records…",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is A. offered a wider choice in appearance.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "offered a wider choice in appearance.",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is A."
-                },
-                {
-                    "text": "could not be damaged.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is A."
-                },
-                {
-                    "text": "dropped in popularity in the 1950s.",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is A."
-                }
-            ],
-            "options": "offered a wider choice in appearance.\ncould not be damaged.\ndropped in popularity in the 1950s.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 16-20\r\n\r\nLabel the diagram below. Use NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
-            "question": " <img src=\"https://www.ieltstestonline.com/2026/wp-content/uploads/2025/10/TEST-5-RECORD.png\" alt=\"\" style=\"max-width:400px\" width=\"100%\" height=\"auto\" />\r\n\r\n  <p>16. [field 1]</p>\r\n  <p>17. [field 2]</p>\r\n  <p>18. [field 3]</p>\r\n  <p>19. [field 4]</p>\r\n  <p>20. [field 5]</p>\r\n",
-            "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "plan_map_diagram_l",
-            "field_count": 5,
-            "field_answers": {
-                "1": "the record plate|the plate|record plate|plate",
-                "2": "the power light|power light|power|the power",
-                "3": "thirty three|33|thirty-three",
-                "4": "forty five|45|forty-five",
-                "5": "tone arm"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The answer is THE RECORD PLATE.",
-                    "incorrect": "Incorrect. Listen to the description of the record player parts.",
-                    "no_answer": "The correct answer is: THE RECORD PLATE. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The answer is THE POWER LIGHT.",
-                    "incorrect": "Incorrect. Listen to the description of the record player parts.",
-                    "no_answer": "The correct answer is: THE POWER LIGHT. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! The answer is 33.",
-                    "incorrect": "Incorrect. Listen to the description of the record player parts.",
-                    "no_answer": "The correct answer is: 33. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The answer is 45.",
-                    "incorrect": "Incorrect. Listen to the description of the record player parts.",
-                    "no_answer": "The correct answer is: 45. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! The answer is TONE ARM.",
-                    "incorrect": "Incorrect. Listen to the description of the record player parts.",
-                    "no_answer": "The correct answer is: TONE ARM. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 21-30\r\n\r\nComplete the table below\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer",
-            "question": " <table border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"1\">\r\n        <tbody>\r\n            <tr>\r\n                <td colspan=\"3\" style=\"text-align: center\">Life and Leisure Survey</td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Aspect</td>\r\n                <td style=\"text-align: center\">John</td>\r\n                <td style=\"text-align: center\">Connie</td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Feelings before the survey</td>\r\n                <td>\r\n                    He felt fairly 21.[field 1] before beginning the interviews but people were sociable and welcoming.\r\n                </td>\r\n                <td>\r\n                    Was worried that people might be 22.[field 2] but people were friendly and polite.\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Usefulness</td>\r\n                <td>—</td>\r\n                <td>\r\n                    Her group 23.[field 3] the conversations which helped their understanding. It gave an insight into differences in 24.[field 4]\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Interview details</td>\r\n                <td>\r\n                    Survey about sports, hobbies, and interests. Interviewed an 25.[field 5] of men and women.\r\n                </td>\r\n                <td>\r\n                    Survey about people's attitude to food and drink. Frequency with which people drank coffee and 26.[field 6].\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Survey Findings</td>\r\n                <td>\r\n                    Women less involved in teams than men – more focus on 27.[field 7] (e.g., going to the gym). Hobbies mentioned by over 18s included 28.[field 8], craftwork, playing chess, and watching sports.\r\n                </td>\r\n                <td>\r\n                    18–35s ate more 29.[field 9] than older age groups. Many people preferred 30.[field 10] coffee.\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>",
-            "points": 10,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 10,
-            "field_answers": {
-                "1": "quite nervous|nervous",
-                "2": "rude",
-                "3": "recorded",
-                "4": "culture|cultures",
-                "5": "equal number",
-                "6": "alcohol",
-                "7": "individual exercise",
-                "8": "reading",
-                "9": "junk food",
-                "10": "real"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The answer is QUITE NERVOUS.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: QUITE NERVOUS. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The answer is RUDE.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: RUDE. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! The answer is RECORDED.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: RECORDED. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The answer is CULTURE.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: CULTURE. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! The answer is EQUAL NUMBER.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: EQUAL NUMBER. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "6": {
-                    "correct": "Correct! The answer is ALCOHOL.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: ALCOHOL. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "7": {
-                    "correct": "Correct! The answer is INDIVIDUAL EXERCISE.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: INDIVIDUAL EXERCISE. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "8": {
-                    "correct": "Correct! The answer is READING.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: READING. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "9": {
-                    "correct": "Correct! The answer is JUNK FOOD.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: JUNK FOOD. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "10": {
-                    "correct": "Correct! The answer is REAL.",
-                    "incorrect": "Incorrect. Review the life and leisure survey discussion.",
-                    "no_answer": "The correct answer is: REAL. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Question 31\r\n\r\nComplete the sentence using NO MORE THAN TWO WORDS",
-            "question": "The term 'the Goldilocks Effect' is being used to describe a situation where everything is [field 1].",
-            "points": 1,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "just right"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The answer is JUST RIGHT.",
-                    "incorrect": "Incorrect. Listen for the definition of the Goldilocks Effect.",
-                    "no_answer": "The correct answer is: JUST RIGHT. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 32-36\r\n\r\nComplete the summary below using words in the box below. Write the correct letter A-J in the answer sheet.\r\n\r\n<table width=\"100%\" cellspacing=\"4\" cellpadding=\"6\">\r\n<tbody>\r\n<tr>\r\n\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">A. shrimps</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">B. earth scientists</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">C. predators</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">D. greenhouse gases</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">E. cats</td>\r\n\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">F. carbon dioxide</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">G. botanists</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">H. streams</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">I. food webs</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">J. bears</td>\r\n\r\n</tr>\r\n</tbody>\r\n</table>\r\n",
-            "question": "Ecologists have used the term to describe how 32.[field 2] select which other creatures to eat, as well as why 33.[field 3] that have a changeable water flow support more plant life.\r\nIt has been used by 34.[field 4] to explain what constitutes a liveable planet.\r\nIt has been found that the role of 35.[field 5] plays a significant role in regulating the earth’s temperature.\r\nHowever, some people believe that such optimism about the Earth’s ability to self-regulate will not prevent us from continuing to release too many 36.[field 6] into the air.",
-            "points": 5,
-            "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 5,
-            "field_answers": {
-                "1": "c",
-                "2": "H",
-                "3": "B",
-                "4": "F",
-                "5": "D"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The answer is C - predators.",
-                    "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
-                    "no_answer": "The correct answer is: C. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "2": {
-                    "correct": "Correct! The answer is H - streams.",
-                    "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
-                    "no_answer": "The correct answer is: H. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "3": {
-                    "correct": "Correct! The answer is B - earth scientists.",
-                    "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
-                    "no_answer": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "4": {
-                    "correct": "Correct! The answer is F - carbon dioxide.",
-                    "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
-                    "no_answer": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                },
-                "5": {
-                    "correct": "Correct! The answer is D - greenhouse gases.",
-                    "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
-                    "no_answer": "The correct answer is: D. Make sure to listen carefully for key information and take notes while listening."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 37-40\r\n\r\nComplete each sentence with the correct ending A-G below",
-            "question": "Astrobiologists use the concept of Goldilocks planets to _______",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "...applied to other learning situations.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...become overused and not theoretically robust.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...note that some planets are poisonous gas giants.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...added to learning materials.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...search for inhabitable planets.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...describe the right conditions to support life.",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "...become debated.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
-                }
-            ],
-            "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "One of the key roles of the Kepler space mission is to _______",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "...applied to other learning situations.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...become overused and not theoretically robust.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...note that some planets are poisonous gas giants.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...added to learning materials.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...search for inhabitable planets.",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "...describe the right conditions to support life.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...become debated.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
-                }
-            ],
-            "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Psychologists think the Goldilocks effect of children’s attention could be _______",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "...applied to other learning situations.",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "...become overused and not theoretically robust.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...note that some planets are poisonous gas giants.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...added to learning materials.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...search for inhabitable planets.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...describe the right conditions to support life.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...become debated.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
-                }
-            ],
-            "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The speaker says that phrase may have _______",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "matching_l",
-            "mc_options": [
-                {
-                    "text": "...applied to other learning situations.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...become overused and not theoretically robust.",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "...note that some planets are poisonous gas giants.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...added to learning materials.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...search for inhabitable planets.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...describe the right conditions to support life.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                },
-                {
-                    "text": "...become debated.",
-                    "is_correct": false,
-                    "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
-                }
-            ],
-            "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "5": {
+          "correct": "Correct! The answer is WEEKENDS.",
+          "incorrect": "Incorrect. Listen to the availability restrictions.",
+          "no_answer": "The correct answer is: WEEKENDS. Make sure to listen carefully for key information and take notes while listening."
         }
-    ],
-    "reading_texts": [],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_listening",
-        "cbt_test_type": "listening",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_listening",
-        "timer_minutes": "",
-        "starting_question_number": "1"
+      }
     },
-    "audio": {
-        "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-5.mp3",
-        "transcript": "",
-        "sections": [
-            {
-                "section_number": 1,
-                "transcript": "<strong>Section 1</strong>\r\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"1\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Hello, nice to meet you after talking on the phone. So you’re interested in signing up with our employment agency for some temporary work?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes <strong style=\"background-color: yellow\">[Q8: I]</strong> am. I am going overseas in about 6 months, but I am available for work until then.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay, that’s great. Well, I’ll just write down some of your details as we talk. <u>So what’s your full name, I know your first name is Sharon.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\"><u>Yes, that’s correct Sharon (Q1) <strong style=\"background-color: yellow\">[Q1: Haltwell]</strong>.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Is that Altwell with an <strong style=\"background-color: yellow\">[Q9: A]</strong>?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">No actually it beings with <strong style=\"background-color: yellow\">[Q7: H]</strong> – so its H-A-L-T-W-E-L-L</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay. And your address please?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">It’s 24a Rodney Road. R-O-D-N-E-Y.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">And which area is it?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Sandwell. <u>Do you need the postcode?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, please. If you know it.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\"><u>Its SD7 (Q2) <strong style=\"background-color: yellow\">[Q2: 12PY]</strong></u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Alright, and I have your phone number here from when I returned your call the other day, 915 2334, isn’t it?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Now are you looking to start work immediately, I mean,<u> when is the first day you would be available for work?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Oh, not this week actually, as I already have some commitments. What’s today’s date… the 6th , okay so that means <u>I would be free from the (Q3) 12th of <strong style=\"background-color: yellow\">[Q3: November]</strong></u>.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">That’s no problem. Now you are looking for customer service work aren’t you?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes I am. That’s what I’ve been doing for the last few years.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\"><u>So how many years’ experience do you have in that area?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Let me think… 3. No, <u>(Q4) </u><u><strong style=\"background-color: yellow\">[Q4: 4 years]</strong>' experience</u> – it’s what I’ve done since I left college.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">And are you looking for full-time work?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes I am, but I would also consider part-time too, I mean if that was the only thing available.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">We have quite a few full-time positions actually, but most of them involve working shifts – you know evenings and <strong style=\"background-color: yellow\">[Q5: weekends]</strong> – would that fit your schedule?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Evenings are no problem, but <u>I wouldn’t be able to work (Q5)weekends until after January 3rd</u> – I already have a job at a department store you see and I am contracted until then, after that I’m completely flexible.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay, I’ll just make a note of that.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Now do you have your education certificates with you? We need to make copies and put them in your file?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes, I do they’re here.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay thanks…. So you have completed high school and also have a Diploma in Administration?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes that’s right. It was a two year course and I studied at Calstone College</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Good. <u>(Q6) Now here is how the process works. I am now going to ask you to complete a short computing skills test, it takes around 45 minutes.</u> You know most customer service jobs involve having to have good keyboard skills. Do you have time for that today?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes, no problem - I can do that now.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Good, so we will be able to give you your results immediately, as it is all computerised. If you pass, we will put your details into our database as an available employee from the dates you specified, but before we can activate your details on our database, <u>(Q7) we need to check references. I have some details here, so is it okay if I telephone these people today?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes that’s fine</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Once we’ve done that, if all is okay, your details will be activated in the database and <u>(Q8) one of our representatives will contact our client companies to see if any of them would be interested in taking you on.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">That sounds fine.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\"><u>(Q9) We will telephone you to inform you of an assignment and would normally expect you to confirm whether you are willing to take on the position within 24 hours of the confirmation phone call.</u><u>(Q10) We will then email you an employment contract which you must sign and return as soon as possible</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">That sounds fine.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay, well let’s go and start the test.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<hr />\r\n\r\n&nbsp;"
-            },
-            {
-                "section_number": 2,
-                "transcript": "<strong>Section 2</strong>\r\n\r\nGood afternoon, and thank you very much for inviting me to the community hall for this brief presentation on music – or to be more specific, vinyl records and record players. Now, as I am sure many of you are aware, records have once again become very popular in many countries, and record sales are nearly at the point of overtaking CD sales – that figure is not the units sold, but the overall amount spent on this format. Of course, digital music from streaming services are still the major format most people use to listen to music, but the gap between digital music and records is closing.\r\n\r\nI’d like to start by talking about the history of records and recorded music. Some of you may be familiar with the name Thomas Edison. He is credited as having created the light bulb and other inventions, and is also recognised as the first person to have recorded music on to a disc.  These early music records were made from a range of materials, including hard rubber. However, there were some issues with the number of times a record could be played before it simply wore out, and the variable quality of manufacture meant that reproductions were not always very good copies of the original music.\r\n\r\nOver the years, styles of manufacture changed, as did the materials used. The first to replace the original rubber records used a substance known as shellac, mixed with wax and paper. It was found that this combination meant that the sound quality was better and the records themselves could be played many more times without a reduction in the sound quality. The public reaction to these new records was overwhelmingly positive, with sales increasing significantly in just a matter of months.\r\n\r\nMass production of this new shellac record first began in 1898 in Hanover, Germany, and the same formula was used to create records for over 50 years. However, despite their popularity, there was a drawback – the records needed to be handled carefully, as the shellac that was used meant that the record could easily break if it was dropped or bent. There was actually an alternative which was advertised and sold as ‘unbreakable’, but these records, usually made of celluloid - an early form of plastic – suffered from an exceptionally high level of background noise and were never as popular.\r\n\r\nHowever, in the late 1940s, there were radical changes in the production process as vinyl records became the new music standard. Vinyl records did not shatter when dropped and were available in a range of different colours, a new development from records that had previously been only black or brown. These new vinyl records become wildly popular, but this is not to say that they did not have their drawbacks. They could be damaged by incorrect storage, heat or even exposure to sunlight, but nonetheless, by the 1950s and beyond, the number of people who had a record player and spent money on records increased dramatically.\r\n\r\n<hr />\r\n\r\nNow I’m going to tell you a little about a common record player from around the 1970s. The example you can see here is actually from 1976, so has no digital displays or anything overly technical, although it was a very popular record player at the time.\r\n\r\nThe largest section of a record player is the plate – here you can see that that’s the large, circular section on which the record sits. Normally you will see a slip mat on <strong style=\"background-color: yellow\">[Q16: the record plate]</strong>, designed to hold the record in place. Right in the middle of the plate is the spindle, which keeps the record in the middle of the plate as it revolves. In the bottom left corner, you can see <strong style=\"background-color: yellow\">[Q17: the power light]</strong>, which in this example has a slightly raised, circular shape. This light simply indicates whether the turntable is plugged in.\r\n\r\nJust beside the power light are three buttons, the largest of which is to start or stop the player. The two smaller buttons to the right control the speed at which the record will spin. In older record players like this, the buttons have numbers which indicate the speed at which the record will turn. This is measured in revolutions, or ‘spins’, per minute, referred to as RPMs. The first of these buttons – the one closest to the large button – is for playing <strong style=\"background-color: yellow\">[Q18: 33]</strong> RPM records and the other one is for <strong style=\"background-color: yellow\">[Q19: 45]</strong> RPM records.\r\n\r\nNow moving over to the other side, we can see the volume slider, which of course controls how loud the record will sound. On the same side at the back you will also see one of the of the most important piece of the record player. Starting right at the back corner, you can see a larger weight – this is the counterweight, and this can be moved to balance the whole arm. Now that arm, technically referred to as the <strong style=\"background-color: yellow\">[Q20: tone arm]</strong>, ends with the cartridge. In a typical record player – even some of the more modern versions – this is the part that needs the most care and attention, and often needs to be replaced. The cartridge is where the needle is, and it is from this section (fade)"
-            },
-            {
-                "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\r\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"1\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">Well, I would first of all like to congratulate everyone on going out and completing your interviews for our survey last week. I know it must have been difficult practicing your English in the <strong style=\"background-color: yellow\">[Q30: real]</strong> world and interviewing native speakers of English, who you have never met before, must have been a challenge. I hope you enjoyed the exercise and found some interesting information on lifestyles here in this country. I’d now like the leaders for each of the groups to give me some feedback. First, let’s hear from you John.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Well…as English is not our first language I expected it would be quite difficult talking to people we had never met before. <u> I was (Q21) <strong style=\"background-color: yellow\">[Q21: quite nervous]</strong> about having to go out and interview strangers; but once we started I enjoyed it and we met some very friendly and interesting people.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And how about your group Connie? What did you find to be most challenging about the exercise?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">Well, I think it was when we eventually went over to people to ask if they would take part in the survey, it was fine once we had started the conversation, but <u>approaching people was quite nerve-wrecking as we could never be sure that they would be friendly and happy to help, or whether they would be (Q22) <strong style=\"background-color: yellow\">[Q22: rude]</strong> to us.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And so were many people rude to you?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">No they weren’t. Some people would not answer questions because they were on their lunch break from work and were in a hurry, everybody else was happy to help – and even the people who didn’t complete the survey because they didn’t have time were still friendly and polite. <u>We found it particularly useful as we (Q23) <strong style=\"background-color: yellow\">[Q23: recorded]</strong> the interviews on audio tape, so we could listen again when we had finished. We realised afterwards that we had misunderstood quite few things people were saying at the time.</u> <u>it was interesting to find out about the different (Q24) <strong style=\"background-color: yellow\">[Q24: culture]</strong> </u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">So John, how did your group decide who to interview?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Well, our questions were asking about how frequently people took exercise and what sorts of hobbies and interests they pursued in their spare time. <u>We decided that we should try to interview a variation of different age groups and an (Q25) <strong style=\"background-color: yellow\">[Q25: equal number]</strong> of men and women. </u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And how did you split them by age group?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Two members of the team were told to interview teenagers – people who looked like they were 18 or under. Then two people focused on people who looked to be between 18-35. Two more were stopping people who seemed to be between the 35-50 age group and than I interviewed people who looked to be over 50.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And what was the topic for your survey Connie ?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">We asked our interviewees about attitudes to healthy eating - you know, whether they ate <strong style=\"background-color: yellow\">[Q29: junk food]</strong> such as burgers and fries or more wholesome food. <u>We also asked them about how often they drank things like (Q26) coffee and <strong style=\"background-color: yellow\">[Q26: alcohol]</strong></u>.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And how many interviews did your group complete John?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">We interviewed 18 people in total and had an additional 4 who would not stop to answer questions. Our original target was 20 so we did pretty well I think.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">So Connie, how many people did your group talk to?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">We managed to complete all 20 interviews and three people were too busy to stop and help us.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">Well, I think that’s very good, well done to both groups.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">So, John, what did you group find out about exercise habits and hobbies?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Well we found that the males who were under 35 were more likely to be a member of a sports team, such as cricket, soccer or rugby than either the older age groups or women. <u>Women were more involved in (Q27) <strong style=\"background-color: yellow\">[Q27: individual exercise]</strong> such as yoga, aerobics or going to the gym, rather than being members of an actual team.</u> Sailing was the most popular sport for the over 35s followed by hiking and then golf.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">Okay, so that covers sports, what about other ways of relaxing and enjoying leisure time?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">As you’d expect, the under 18s were the more frequent users of the internet, but the most popular pastime in that category was socializing with friends. <u>There were a wide variety of hobbies and interests mentioned in the other age groups including (Q28) <strong style=\"background-color: yellow\">[Q28: reading]</strong>, attending sports games as a spectator, playing chess and craftwork.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">That’s interesting. And Connie, what did your group discover about eating and drinking habits?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\"><u>It seemed that the older groups (those over 35) were more concerned about healthy eating. They ate (Q29) junk food less often than the 18-35s</u>, on average once every two weeks as opposed to once or twice a week. All age categories said that they believed they ate enough fruit, interestingly, more 18-35s than people in older categories said they thought that they didn’t eat vegetables often enough.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And what about drinking habits?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">Drinking coffee was popular for all age categories and <u>there was a trend towards preferring (Q30) real coffee as opposed to instant varieties. </u>The 18-35s said that they would regularly buy coffee to take away from well known outlets. Most people said that they drank only safe amounts of alcohol and the most popular alcoholic drinks were wine and beer.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">That’s great, once again well done. We will have our next class in the computer lab and we’ll look at ways of analysing information from market research surveys.</td>\r\n</tr>\r\n</tbody>\r\n</table>"
-            },
-            {
-                "section_number": 4,
-                "transcript": "<strong>Section 4</strong>\r\n\r\nGood morning everyone. Welcome to our third lecture in this series on contemporary concepts in science. Today we are going to examine some relatively new ideas which have entered the scientific lexicon. To begin with we’ll look at what has become known as the Goldilocks Effect or Principle.\r\n\r\nMost of you will be familiar with the fairy-tale of “Goldilocks and the Three Bears” where <strong style=\"background-color: yellow\">[Q39: a]</strong> little girl strays into the bears’ house and samples their food and furniture. She tests each of the bear’s porridge, chairs and beds to find the one that suits her best, the one that is “<strong style=\"background-color: yellow\">[Q31: just right]</strong>”. Well the concept of things being ‘just right’, of falling within certain optimal limits, neither too extreme nor too simple has been termed the Goldilocks effect  and it has crept into scientific language in a wide range of fields.\r\n\r\nOne of the earlier uses of the term was by ecologists seeking to explain a number of different phenomena. In 2008, Eric Berlow and his colleagues entitled a paper, <em>The “<strong>Goldilocks factor</strong>” in food webs</em>. In this work they use the concept to explain how stable food chains in natural environments come into being, in other words what determines who eats who. It was found that body size is strongly linked to this question, so that predators eat creatures which are smaller than them but not too small. Thus a shark would eat a seal but probably not bother with shrimp.  Another group led by Gabrielle Katz used the expression to explain why streams in Arizona which had variable water flows supported more species of plant life than those that were consistently wet or dry.\r\n\r\nEarth scientists have also been employing the phrase to describe the conditions that create a liveable planet. It has been theorised that the Earth hasn’t become an unendurably hot planet like Venus, nor a freezing cold one like Mars is partially due to the role of the greenhouse gas, carbon dioxide, in the geological cycle. It has been known for some time that CO2 is absorbed by mountain ranges and other large land masses and that volcanoes emit CO2. More recently it has been discovered that new rock which is pushed up in the process of geological upheaval releases a large amount of CO2 also. Due to the Earth’s self-regulating cycle, it has been dubbed the Goldilocks planet. This has received some condemnation for ignoring the facts of current climate change, and by making it seem we can continue to pump out greenhouse gases into the atmosphere.\r\n\r\nAstrobiologists have extended the concept into their search for other inhabitable planets, and other intelligent life forms. Planets that would qualify as Goldilocks planets would be not too big nor too small, they’<strong style=\"background-color: yellow\">[Q36: d]</strong> be the right distance from their star for life to exist and they’d have water. That is, they would be “just right” to sustain life.  It should be noted though that some planets which fall into this category could also be ‘gas giants’ like Jupiter and would be uninhabitable due to their toxic gassy environments. NASA’s Kepler space observatory has the task of exploring our galaxy in order to discover other Goldilocks planets. Possibly 40 billion such planets could exist according to estimations based on the data received from Kepler.\r\n\r\nRecently psychologists at the University of Rochester have applied the term to observations of very young children’s attention behaviour. By measuring the eye movements of a group of 7 and 8 month old babies watching video animations of increasing complexity the researchers were able to gauge when the infants would stop watching a video.  The children would lose interest if the video was too simple, or too complex or surprising. Thus videos that captured the children’s attention were ‘just right’, the right mixture of <u>novelty</u> ( not boring or frightening) and <u>challenge</u> (not too familiar or too confusing). Steven Piantoadosi, one of the researchers, states that their findings have wider implications for other types of learning, where the ideal materials for learning should be ‘just right’, stimulating but not too difficult.\r\n\r\nNow whether the Goldilocks principle is truly a scientific law, or a description of a certain state or just a buzz word is still open to debate. However, it is becoming an increasing popular expression. Medical science has adopted it to refer to the optimal dose of a medication. Economics has jumped on the bandwagon with Goldilocks economies, Goldilocks markets, Goldilocks pricing and Goldilocks marketing, all of which set out the perfect factors for economic wellbeing. It has been used in TED talks by cultural commentators to describe the best balance of independence and closeness in personal relationships. Goldilocks theory is becoming ubiquitous, just google it, but for all that it may merely be post-hoc theorising. That is, tailoring a theory after the fact, where things are explained in a way that can’t be tested, particularly in the field of human behaviour. Using such a theory a researcher could interpret observed patterns of behaviour as they choose, and state that the desired behavioural outcome is the result of a perfect balance of conditions. Or as one commentator has put it, when you see Goldilocks, <u>look out</u>.\r\n\r\nNow, I want to look at the Higgs Boson, the so-called god particle…\r\n\r\n&nbsp;"
-            }
-        ]
+    {
+      "type": "open_question",
+      "instructions": "Questions 6-10\r\n\r\nComplete the flowchart below with words from the box. Write the corresponding letter A-J in the spaces provided.\r\n\r\n\r\n<table width=\"100%\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"display:flex;flex-wrap:wrap;gap:8px\">\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>A</strong><br>within 24 hours\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>B</strong><br>candidates\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>C</strong><br>employment contract\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>D</strong><br>by email\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>E</strong><br>immediately\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>F</strong><br>Administration\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>G</strong><br>temping agreement\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>H</strong><br>over the phone\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>I</strong><br>representatives\r\n  </div>\r\n\r\n  <div style=\"border:1px solid #ccc;padding:8px;min-width:140px;text-align:center;flex:1\">\r\n    <strong>J</strong><br>Computing skills\r\n  </div>\r\n\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n",
+      "question": "<div style=\"display: flex;flex-direction: column;align-items: center\">\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        Candidate completes 6.[field 1] test (45 minutes) (results immediate)\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        References checked 7.[field 2]\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        8.[field 3] contact client companies\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        Candidate telephoned about assignment opportunity\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        Candidate should confirm 9.[field 4]\r\n    </div>\r\n    <div style=\"color: #555\">↓</div>\r\n    <div style=\"width: 100%;max-width: 500px;background-color: #007ACC;color: white;padding: 15px;margin: 10px 0;text-align: center;border-radius: 5px\">\r\n        10.[field 5] to be signed and returned\r\n    </div>\r\n</div>",
+      "points": 5,
+      "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "j",
+        "2": "h",
+        "3": "i",
+        "4": "a",
+        "5": "c"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is J (Computing skills).",
+          "incorrect": "Incorrect. Review the registration sequence.",
+          "no_answer": "The correct answer is: J. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! The answer is H (Over the phone).",
+          "incorrect": "Incorrect. Review the registration sequence.",
+          "no_answer": "The correct answer is: H. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! The answer is I (Representatives).",
+          "incorrect": "Incorrect. Review the registration sequence.",
+          "no_answer": "The correct answer is: I. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! The answer is A (Within 24 hours).",
+          "incorrect": "Incorrect. Review the registration sequence.",
+          "no_answer": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Correct! The answer is C (Employment contract).",
+          "incorrect": "Incorrect. Review the registration sequence.",
+          "no_answer": "The correct answer is: C. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
     },
-    "_metadata": {
-        "exported_at": "2026-01-20 15:27:24",
-        "exported_by": "impact",
-        "plugin_version": "12.4",
-        "format_version": "1.0"
+    {
+      "type": "closed_question",
+      "instructions": "Questions 11-15\r\n\r\nChoose the correct answer A-C.",
+      "question": "Records…",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is C. are catching up with CD sales.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "make more money than CDs.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C."
+        },
+        {
+          "text": "sell more units than CDs.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C."
+        },
+        {
+          "text": "are catching up with CD sales.",
+          "is_correct": true,
+          "feedback": "Correct! The answer is C."
+        }
+      ],
+      "options": "make more money than CDs.\nsell more units than CDs.\nare catching up with CD sales.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The first records…",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is C. were not long lasting.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "were sold by Thomas Edison.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C."
+        },
+        {
+          "text": "were only made of firm rubber.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C."
+        },
+        {
+          "text": "were not long lasting.",
+          "is_correct": true,
+          "feedback": "Correct! The answer is C."
+        }
+      ],
+      "options": "were sold by Thomas Edison.\nwere only made of firm rubber.\nwere not long lasting.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Shellac records…",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is C. were produced for over half a century.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "could not be played many times.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C."
+        },
+        {
+          "text": "were not popular with the public.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is C."
+        },
+        {
+          "text": "were produced for over half a century.",
+          "is_correct": true,
+          "feedback": "Correct! The answer is C."
+        }
+      ],
+      "options": "could not be played many times.\nwere not popular with the public.\nwere produced for over half a century.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "'Unbreakable' records…",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is B. were made of plastic.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "were made from shellac.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is B."
+        },
+        {
+          "text": "were made of plastic.",
+          "is_correct": true,
+          "feedback": "Correct! The answer is B."
+        },
+        {
+          "text": "had a high quality sound.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is B."
+        }
+      ],
+      "options": "were made from shellac.\nwere made of plastic.\nhad a high quality sound.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Vinyl records…",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is A. offered a wider choice in appearance.. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "offered a wider choice in appearance.",
+          "is_correct": true,
+          "feedback": "Correct! The answer is A."
+        },
+        {
+          "text": "could not be damaged.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A."
+        },
+        {
+          "text": "dropped in popularity in the 1950s.",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is A."
+        }
+      ],
+      "options": "offered a wider choice in appearance.\ncould not be damaged.\ndropped in popularity in the 1950s.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 16-20\r\n\r\nLabel the diagram below. Use NO MORE THAN TWO WORDS OR A NUMBER for each answer.",
+      "question": " <img src=\"https://www.ieltstestonline.com/2026/wp-content/uploads/2025/10/TEST-5-RECORD.png\" alt=\"\" style=\"max-width:400px\" width=\"100%\" height=\"auto\" />\r\n\r\n  <p>16. [field 1]</p>\r\n  <p>17. [field 2]</p>\r\n  <p>18. [field 3]</p>\r\n  <p>19. [field 4]</p>\r\n  <p>20. [field 5]</p>\r\n",
+      "points": 5,
+      "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "plan_map_diagram_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "the record plate|the plate|record plate|plate",
+        "2": "the power light|power light|power|the power",
+        "3": "thirty three|33|thirty-three",
+        "4": "forty five|45|forty-five",
+        "5": "tone arm"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is THE RECORD PLATE.",
+          "incorrect": "Incorrect. Listen to the description of the record player parts.",
+          "no_answer": "The correct answer is: THE RECORD PLATE. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! The answer is THE POWER LIGHT.",
+          "incorrect": "Incorrect. Listen to the description of the record player parts.",
+          "no_answer": "The correct answer is: THE POWER LIGHT. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! The answer is 33.",
+          "incorrect": "Incorrect. Listen to the description of the record player parts.",
+          "no_answer": "The correct answer is: 33. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! The answer is 45.",
+          "incorrect": "Incorrect. Listen to the description of the record player parts.",
+          "no_answer": "The correct answer is: 45. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Correct! The answer is TONE ARM.",
+          "incorrect": "Incorrect. Listen to the description of the record player parts.",
+          "no_answer": "The correct answer is: TONE ARM. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 21-30\r\n\r\nComplete the table below\r\n\r\nWrite NO MORE THAN THREE WORDS for each answer",
+      "question": " <table border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"1\">\r\n        <tbody>\r\n            <tr>\r\n                <td colspan=\"3\" style=\"text-align: center\">Life and Leisure Survey</td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Aspect</td>\r\n                <td style=\"text-align: center\">John</td>\r\n                <td style=\"text-align: center\">Connie</td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Feelings before the survey</td>\r\n                <td>\r\n                    He felt fairly 21.[field 1] before beginning the interviews but people were sociable and welcoming.\r\n                </td>\r\n                <td>\r\n                    Was worried that people might be 22.[field 2] but people were friendly and polite.\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Usefulness</td>\r\n                <td>—</td>\r\n                <td>\r\n                    Her group 23.[field 3] the conversations which helped their understanding. It gave an insight into differences in 24.[field 4]\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Interview details</td>\r\n                <td>\r\n                    Survey about sports, hobbies, and interests. Interviewed an 25.[field 5] of men and women.\r\n                </td>\r\n                <td>\r\n                    Survey about people's attitude to food and drink. Frequency with which people drank coffee and 26.[field 6].\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td style=\"text-align: center\">Survey Findings</td>\r\n                <td>\r\n                    Women less involved in teams than men – more focus on 27.[field 7] (e.g., going to the gym). Hobbies mentioned by over 18s included 28.[field 8], craftwork, playing chess, and watching sports.\r\n                </td>\r\n                <td>\r\n                    18–35s ate more 29.[field 9] than older age groups. Many people preferred 30.[field 10] coffee.\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>",
+      "points": 10,
+      "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 10,
+      "field_answers": {
+        "1": "quite nervous|nervous",
+        "2": "rude",
+        "3": "recorded",
+        "4": "culture|cultures",
+        "5": "equal number",
+        "6": "alcohol",
+        "7": "individual exercise",
+        "8": "reading",
+        "9": "junk food",
+        "10": "real"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is QUITE NERVOUS.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: QUITE NERVOUS. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! The answer is RUDE.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: RUDE. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! The answer is RECORDED.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: RECORDED. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! The answer is CULTURE.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: CULTURE. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Correct! The answer is EQUAL NUMBER.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: EQUAL NUMBER. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "6": {
+          "correct": "Correct! The answer is ALCOHOL.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: ALCOHOL. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "7": {
+          "correct": "Correct! The answer is INDIVIDUAL EXERCISE.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: INDIVIDUAL EXERCISE. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "8": {
+          "correct": "Correct! The answer is READING.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: READING. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "9": {
+          "correct": "Correct! The answer is JUNK FOOD.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: JUNK FOOD. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "10": {
+          "correct": "Correct! The answer is REAL.",
+          "incorrect": "Incorrect. Review the life and leisure survey discussion.",
+          "no_answer": "The correct answer is: REAL. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Question 31\r\n\r\nComplete the sentence using NO MORE THAN TWO WORDS",
+      "question": "The term 'the Goldilocks Effect' is being used to describe a situation where everything is [field 1].",
+      "points": 1,
+      "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "just right"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is JUST RIGHT.",
+          "incorrect": "Incorrect. Listen for the definition of the Goldilocks Effect.",
+          "no_answer": "The correct answer is: JUST RIGHT. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 32-36\r\n\r\nComplete the summary below using words in the box below. Write the correct letter A-J in the answer sheet.\r\n\r\n<table width=\"100%\" cellspacing=\"4\" cellpadding=\"6\">\r\n<tbody>\r\n<tr>\r\n\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">A. shrimps</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">B. earth scientists</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">C. predators</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">D. greenhouse gases</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">E. cats</td>\r\n\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">F. carbon dioxide</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">G. botanists</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">H. streams</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">I. food webs</td>\r\n<td style=\"display:inline-block;width:180px;border:1px solid #ccc;text-align:center\">J. bears</td>\r\n\r\n</tr>\r\n</tbody>\r\n</table>\r\n",
+      "question": "Ecologists have used the term to describe how 32.[field 2] select which other creatures to eat, as well as why 33.[field 3] that have a changeable water flow support more plant life.\r\nIt has been used by 34.[field 4] to explain what constitutes a liveable planet.\r\nIt has been found that the role of 35.[field 5] plays a significant role in regulating the earth’s temperature.\r\nHowever, some people believe that such optimism about the Earth’s ability to self-regulate will not prevent us from continuing to release too many 36.[field 6] into the air.",
+      "points": 5,
+      "no_answer_feedback": "No answer provided. In the IELTS test, you should always attempt every question - there's no penalty for wrong answers. Listen to the audio and review the transcript to understand where this information appears and how it's presented. Take notes while listening to help you remember key details.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "c",
+        "2": "H",
+        "3": "B",
+        "4": "F",
+        "5": "D"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is C - predators.",
+          "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
+          "no_answer": "The correct answer is: C. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "2": {
+          "correct": "Correct! The answer is H - streams.",
+          "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
+          "no_answer": "The correct answer is: H. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "3": {
+          "correct": "Correct! The answer is B - earth scientists.",
+          "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
+          "no_answer": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "4": {
+          "correct": "Correct! The answer is F - carbon dioxide.",
+          "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
+          "no_answer": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        },
+        "5": {
+          "correct": "Correct! The answer is D - greenhouse gases.",
+          "incorrect": "Incorrect. Review the Goldilocks Effect examples.",
+          "no_answer": "The correct answer is: D. Make sure to listen carefully for key information and take notes while listening."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 37-40\r\n\r\nComplete each sentence with the correct ending A-G below",
+      "question": "Astrobiologists use the concept of Goldilocks planets to _______",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "...applied to other learning situations.",
+          "is_correct": false,
+          "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...become overused and not theoretically robust.",
+          "is_correct": false,
+          "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...note that some planets are poisonous gas giants.",
+          "is_correct": false,
+          "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...added to learning materials.",
+          "is_correct": false,
+          "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...search for inhabitable planets.",
+          "is_correct": false,
+          "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...describe the right conditions to support life.",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "...become debated.",
+          "is_correct": false,
+          "feedback": "The correct answer is: F. Make sure to listen carefully for key information and take notes while listening."
+        }
+      ],
+      "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "One of the key roles of the Kepler space mission is to _______",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "...applied to other learning situations.",
+          "is_correct": false,
+          "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...become overused and not theoretically robust.",
+          "is_correct": false,
+          "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...note that some planets are poisonous gas giants.",
+          "is_correct": false,
+          "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...added to learning materials.",
+          "is_correct": false,
+          "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...search for inhabitable planets.",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "...describe the right conditions to support life.",
+          "is_correct": false,
+          "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...become debated.",
+          "is_correct": false,
+          "feedback": "The correct answer is: E. Make sure to listen carefully for key information and take notes while listening."
+        }
+      ],
+      "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Psychologists think the Goldilocks effect of children’s attention could be _______",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "...applied to other learning situations.",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "...become overused and not theoretically robust.",
+          "is_correct": false,
+          "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...note that some planets are poisonous gas giants.",
+          "is_correct": false,
+          "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...added to learning materials.",
+          "is_correct": false,
+          "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...search for inhabitable planets.",
+          "is_correct": false,
+          "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...describe the right conditions to support life.",
+          "is_correct": false,
+          "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...become debated.",
+          "is_correct": false,
+          "feedback": "The correct answer is: A. Make sure to listen carefully for key information and take notes while listening."
+        }
+      ],
+      "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The speaker says that phrase may have _______",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "matching_l",
+      "mc_options": [
+        {
+          "text": "...applied to other learning situations.",
+          "is_correct": false,
+          "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...become overused and not theoretically robust.",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "...note that some planets are poisonous gas giants.",
+          "is_correct": false,
+          "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...added to learning materials.",
+          "is_correct": false,
+          "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...search for inhabitable planets.",
+          "is_correct": false,
+          "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...describe the right conditions to support life.",
+          "is_correct": false,
+          "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        },
+        {
+          "text": "...become debated.",
+          "is_correct": false,
+          "feedback": "The correct answer is: B. Make sure to listen carefully for key information and take notes while listening."
+        }
+      ],
+      "options": "...applied to other learning situations.\n...become overused and not theoretically robust.\n...note that some planets are poisonous gas giants.\n...added to learning materials.\n...search for inhabitable planets.\n...describe the right conditions to support life.\n...become debated.",
+      "correct_answer_count": 1,
+      "show_option_letters": true
     }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_listening",
+    "cbt_test_type": "listening",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_listening",
+    "timer_minutes": "",
+    "starting_question_number": "1"
+  },
+  "audio": {
+    "url": "https://www.ieltstestonline.com/wp-content/uploads/2018/12/listening-test-5.mp3",
+    "transcript": "",
+    "sections": [
+      {
+        "section_number": 1,
+        "transcript": "<strong>Section 1</strong>\r\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"1\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Hello, nice to meet you after talking on the phone. So you’re interested in signing up with our employment agency for some temporary work?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes <strong style=\"background-color: yellow\">[Q8: I]</strong> am. I am going overseas in about 6 months, but I am available for work until then.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay, that’s great. Well, I’ll just write down some of your details as we talk. <u>So what’s your full name, I know your first name is Sharon.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\"><u>Yes, that’s correct Sharon (Q1) <strong style=\"background-color: yellow\">[Q1: Haltwell]</strong>.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Is that Altwell with an <strong style=\"background-color: yellow\">[Q9: A]</strong>?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">No actually it beings with <strong style=\"background-color: yellow\">[Q7: H]</strong> – so its H-A-L-T-W-E-L-L</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay. And your address please?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">It’s 24a Rodney Road. R-O-D-N-E-Y.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">And which area is it?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Sandwell. <u>Do you need the postcode?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, please. If you know it.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\"><u>Its SD7 (Q2) <strong style=\"background-color: yellow\">[Q2: 12PY]</strong></u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Alright, and I have your phone number here from when I returned your call the other day, 915 2334, isn’t it?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Now are you looking to start work immediately, I mean,<u> when is the first day you would be available for work?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Oh, not this week actually, as I already have some commitments. What’s today’s date… the 6th , okay so that means <u>I would be free from the (Q3) 12th of <strong style=\"background-color: yellow\">[Q3: November]</strong></u>.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">That’s no problem. Now you are looking for customer service work aren’t you?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes I am. That’s what I’ve been doing for the last few years.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\"><u>So how many years’ experience do you have in that area?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Let me think… 3. No, <u>(Q4) </u><u><strong style=\"background-color: yellow\">[Q4: 4 years]</strong>' experience</u> – it’s what I’ve done since I left college.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">And are you looking for full-time work?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes I am, but I would also consider part-time too, I mean if that was the only thing available.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">We have quite a few full-time positions actually, but most of them involve working shifts – you know evenings and <strong style=\"background-color: yellow\">[Q5: weekends]</strong> – would that fit your schedule?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Evenings are no problem, but <u>I wouldn’t be able to work (Q5)weekends until after January 3rd</u> – I already have a job at a department store you see and I am contracted until then, after that I’m completely flexible.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay, I’ll just make a note of that.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Now do you have your education certificates with you? We need to make copies and put them in your file?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes, I do they’re here.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay thanks…. So you have completed high school and also have a Diploma in Administration?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes that’s right. It was a two year course and I studied at Calstone College</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Good. <u>(Q6) Now here is how the process works. I am now going to ask you to complete a short computing skills test, it takes around 45 minutes.</u> You know most customer service jobs involve having to have good keyboard skills. Do you have time for that today?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes, no problem - I can do that now.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Good, so we will be able to give you your results immediately, as it is all computerised. If you pass, we will put your details into our database as an available employee from the dates you specified, but before we can activate your details on our database, <u>(Q7) we need to check references. I have some details here, so is it okay if I telephone these people today?</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">Yes that’s fine</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Once we’ve done that, if all is okay, your details will be activated in the database and <u>(Q8) one of our representatives will contact our client companies to see if any of them would be interested in taking you on.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">That sounds fine.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\"><u>(Q9) We will telephone you to inform you of an assignment and would normally expect you to confirm whether you are willing to take on the position within 24 hours of the confirmation phone call.</u><u>(Q10) We will then email you an employment contract which you must sign and return as soon as possible</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Candidate</td>\r\n<td valign=\"top\" width=\"75%\">That sounds fine.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Interviewer</td>\r\n<td valign=\"top\" width=\"75%\">Okay, well let’s go and start the test.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<hr />\r\n\r\n&nbsp;"
+      },
+      {
+        "section_number": 2,
+        "transcript": "<strong>Section 2</strong>\r\n\r\nGood afternoon, and thank you very much for inviting me to the community hall for this brief presentation on music – or to be more specific, vinyl records and record players. Now, as I am sure many of you are aware, records have once again become very popular in many countries, and record sales are nearly at the point of overtaking CD sales – that figure is not the units sold, but the overall amount spent on this format. Of course, digital music from streaming services are still the major format most people use to listen to music, but the gap between digital music and records is closing.\r\n\r\nI’d like to start by talking about the history of records and recorded music. Some of you may be familiar with the name Thomas Edison. He is credited as having created the light bulb and other inventions, and is also recognised as the first person to have recorded music on to a disc.  These early music records were made from a range of materials, including hard rubber. However, there were some issues with the number of times a record could be played before it simply wore out, and the variable quality of manufacture meant that reproductions were not always very good copies of the original music.\r\n\r\nOver the years, styles of manufacture changed, as did the materials used. The first to replace the original rubber records used a substance known as shellac, mixed with wax and paper. It was found that this combination meant that the sound quality was better and the records themselves could be played many more times without a reduction in the sound quality. The public reaction to these new records was overwhelmingly positive, with sales increasing significantly in just a matter of months.\r\n\r\nMass production of this new shellac record first began in 1898 in Hanover, Germany, and the same formula was used to create records for over 50 years. However, despite their popularity, there was a drawback – the records needed to be handled carefully, as the shellac that was used meant that the record could easily break if it was dropped or bent. There was actually an alternative which was advertised and sold as ‘unbreakable’, but these records, usually made of celluloid - an early form of plastic – suffered from an exceptionally high level of background noise and were never as popular.\r\n\r\nHowever, in the late 1940s, there were radical changes in the production process as vinyl records became the new music standard. Vinyl records did not shatter when dropped and were available in a range of different colours, a new development from records that had previously been only black or brown. These new vinyl records become wildly popular, but this is not to say that they did not have their drawbacks. They could be damaged by incorrect storage, heat or even exposure to sunlight, but nonetheless, by the 1950s and beyond, the number of people who had a record player and spent money on records increased dramatically.\r\n\r\n<hr />\r\n\r\nNow I’m going to tell you a little about a common record player from around the 1970s. The example you can see here is actually from 1976, so has no digital displays or anything overly technical, although it was a very popular record player at the time.\r\n\r\nThe largest section of a record player is the plate – here you can see that that’s the large, circular section on which the record sits. Normally you will see a slip mat on <strong style=\"background-color: yellow\">[Q16: the record plate]</strong>, designed to hold the record in place. Right in the middle of the plate is the spindle, which keeps the record in the middle of the plate as it revolves. In the bottom left corner, you can see <strong style=\"background-color: yellow\">[Q17: the power light]</strong>, which in this example has a slightly raised, circular shape. This light simply indicates whether the turntable is plugged in.\r\n\r\nJust beside the power light are three buttons, the largest of which is to start or stop the player. The two smaller buttons to the right control the speed at which the record will spin. In older record players like this, the buttons have numbers which indicate the speed at which the record will turn. This is measured in revolutions, or ‘spins’, per minute, referred to as RPMs. The first of these buttons – the one closest to the large button – is for playing <strong style=\"background-color: yellow\">[Q18: 33]</strong> RPM records and the other one is for <strong style=\"background-color: yellow\">[Q19: 45]</strong> RPM records.\r\n\r\nNow moving over to the other side, we can see the volume slider, which of course controls how loud the record will sound. On the same side at the back you will also see one of the of the most important piece of the record player. Starting right at the back corner, you can see a larger weight – this is the counterweight, and this can be moved to balance the whole arm. Now that arm, technically referred to as the <strong style=\"background-color: yellow\">[Q20: tone arm]</strong>, ends with the cartridge. In a typical record player – even some of the more modern versions – this is the part that needs the most care and attention, and often needs to be replaced. The cartridge is where the needle is, and it is from this section (fade)"
+      },
+      {
+        "section_number": 3,
+        "transcript": "<strong>Section 3</strong>\r\n<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"1\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">Well, I would first of all like to congratulate everyone on going out and completing your interviews for our survey last week. I know it must have been difficult practicing your English in the <strong style=\"background-color: yellow\">[Q30: real]</strong> world and interviewing native speakers of English, who you have never met before, must have been a challenge. I hope you enjoyed the exercise and found some interesting information on lifestyles here in this country. I’d now like the leaders for each of the groups to give me some feedback. First, let’s hear from you John.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Well…as English is not our first language I expected it would be quite difficult talking to people we had never met before. <u> I was (Q21) <strong style=\"background-color: yellow\">[Q21: quite nervous]</strong> about having to go out and interview strangers; but once we started I enjoyed it and we met some very friendly and interesting people.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And how about your group Connie? What did you find to be most challenging about the exercise?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">Well, I think it was when we eventually went over to people to ask if they would take part in the survey, it was fine once we had started the conversation, but <u>approaching people was quite nerve-wrecking as we could never be sure that they would be friendly and happy to help, or whether they would be (Q22) <strong style=\"background-color: yellow\">[Q22: rude]</strong> to us.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And so were many people rude to you?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">No they weren’t. Some people would not answer questions because they were on their lunch break from work and were in a hurry, everybody else was happy to help – and even the people who didn’t complete the survey because they didn’t have time were still friendly and polite. <u>We found it particularly useful as we (Q23) <strong style=\"background-color: yellow\">[Q23: recorded]</strong> the interviews on audio tape, so we could listen again when we had finished. We realised afterwards that we had misunderstood quite few things people were saying at the time.</u> <u>it was interesting to find out about the different (Q24) <strong style=\"background-color: yellow\">[Q24: culture]</strong> </u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">So John, how did your group decide who to interview?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Well, our questions were asking about how frequently people took exercise and what sorts of hobbies and interests they pursued in their spare time. <u>We decided that we should try to interview a variation of different age groups and an (Q25) <strong style=\"background-color: yellow\">[Q25: equal number]</strong> of men and women. </u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And how did you split them by age group?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Two members of the team were told to interview teenagers – people who looked like they were 18 or under. Then two people focused on people who looked to be between 18-35. Two more were stopping people who seemed to be between the 35-50 age group and than I interviewed people who looked to be over 50.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And what was the topic for your survey Connie ?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">We asked our interviewees about attitudes to healthy eating - you know, whether they ate <strong style=\"background-color: yellow\">[Q29: junk food]</strong> such as burgers and fries or more wholesome food. <u>We also asked them about how often they drank things like (Q26) coffee and <strong style=\"background-color: yellow\">[Q26: alcohol]</strong></u>.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And how many interviews did your group complete John?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">We interviewed 18 people in total and had an additional 4 who would not stop to answer questions. Our original target was 20 so we did pretty well I think.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">So Connie, how many people did your group talk to?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">We managed to complete all 20 interviews and three people were too busy to stop and help us.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">Well, I think that’s very good, well done to both groups.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">So, John, what did you group find out about exercise habits and hobbies?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">Well we found that the males who were under 35 were more likely to be a member of a sports team, such as cricket, soccer or rugby than either the older age groups or women. <u>Women were more involved in (Q27) <strong style=\"background-color: yellow\">[Q27: individual exercise]</strong> such as yoga, aerobics or going to the gym, rather than being members of an actual team.</u> Sailing was the most popular sport for the over 35s followed by hiking and then golf.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">Okay, so that covers sports, what about other ways of relaxing and enjoying leisure time?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">John</td>\r\n<td valign=\"top\" width=\"75%\">As you’d expect, the under 18s were the more frequent users of the internet, but the most popular pastime in that category was socializing with friends. <u>There were a wide variety of hobbies and interests mentioned in the other age groups including (Q28) <strong style=\"background-color: yellow\">[Q28: reading]</strong>, attending sports games as a spectator, playing chess and craftwork.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">That’s interesting. And Connie, what did your group discover about eating and drinking habits?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\"><u>It seemed that the older groups (those over 35) were more concerned about healthy eating. They ate (Q29) junk food less often than the 18-35s</u>, on average once every two weeks as opposed to once or twice a week. All age categories said that they believed they ate enough fruit, interestingly, more 18-35s than people in older categories said they thought that they didn’t eat vegetables often enough.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">And what about drinking habits?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Connie</td>\r\n<td valign=\"top\" width=\"75%\">Drinking coffee was popular for all age categories and <u>there was a trend towards preferring (Q30) real coffee as opposed to instant varieties. </u>The 18-35s said that they would regularly buy coffee to take away from well known outlets. Most people said that they drank only safe amounts of alcohol and the most popular alcoholic drinks were wine and beer.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Teacher</td>\r\n<td valign=\"top\" width=\"75%\">That’s great, once again well done. We will have our next class in the computer lab and we’ll look at ways of analysing information from market research surveys.</td>\r\n</tr>\r\n</tbody>\r\n</table>"
+      },
+      {
+        "section_number": 4,
+        "transcript": "<strong>Section 4</strong>\r\n\r\nGood morning everyone. Welcome to our third lecture in this series on contemporary concepts in science. Today we are going to examine some relatively new ideas which have entered the scientific lexicon. To begin with we’ll look at what has become known as the Goldilocks Effect or Principle.\r\n\r\nMost of you will be familiar with the fairy-tale of “Goldilocks and the Three Bears” where <strong style=\"background-color: yellow\">[Q39: a]</strong> little girl strays into the bears’ house and samples their food and furniture. She tests each of the bear’s porridge, chairs and beds to find the one that suits her best, the one that is “<strong style=\"background-color: yellow\">[Q31: just right]</strong>”. Well the concept of things being ‘just right’, of falling within certain optimal limits, neither too extreme nor too simple has been termed the Goldilocks effect  and it has crept into scientific language in a wide range of fields.\r\n\r\nOne of the earlier uses of the term was by ecologists seeking to explain a number of different phenomena. In 2008, Eric Berlow and his colleagues entitled a paper, <em>The “<strong>Goldilocks factor</strong>” in food webs</em>. In this work they use the concept to explain how stable food chains in natural environments come into being, in other words what determines who eats who. It was found that body size is strongly linked to this question, so that predators eat creatures which are smaller than them but not too small. Thus a shark would eat a seal but probably not bother with shrimp.  Another group led by Gabrielle Katz used the expression to explain why streams in Arizona which had variable water flows supported more species of plant life than those that were consistently wet or dry.\r\n\r\nEarth scientists have also been employing the phrase to describe the conditions that create a liveable planet. It has been theorised that the Earth hasn’t become an unendurably hot planet like Venus, nor a freezing cold one like Mars is partially due to the role of the greenhouse gas, carbon dioxide, in the geological cycle. It has been known for some time that CO2 is absorbed by mountain ranges and other large land masses and that volcanoes emit CO2. More recently it has been discovered that new rock which is pushed up in the process of geological upheaval releases a large amount of CO2 also. Due to the Earth’s self-regulating cycle, it has been dubbed the Goldilocks planet. This has received some condemnation for ignoring the facts of current climate change, and by making it seem we can continue to pump out greenhouse gases into the atmosphere.\r\n\r\nAstrobiologists have extended the concept into their search for other inhabitable planets, and other intelligent life forms. Planets that would qualify as Goldilocks planets would be not too big nor too small, they’<strong style=\"background-color: yellow\">[Q36: d]</strong> be the right distance from their star for life to exist and they’d have water. That is, they would be “just right” to sustain life.  It should be noted though that some planets which fall into this category could also be ‘gas giants’ like Jupiter and would be uninhabitable due to their toxic gassy environments. NASA’s Kepler space observatory has the task of exploring our galaxy in order to discover other Goldilocks planets. Possibly 40 billion such planets could exist according to estimations based on the data received from Kepler.\r\n\r\nRecently psychologists at the University of Rochester have applied the term to observations of very young children’s attention behaviour. By measuring the eye movements of a group of 7 and 8 month old babies watching video animations of increasing complexity the researchers were able to gauge when the infants would stop watching a video.  The children would lose interest if the video was too simple, or too complex or surprising. Thus videos that captured the children’s attention were ‘just right’, the right mixture of <u>novelty</u> ( not boring or frightening) and <u>challenge</u> (not too familiar or too confusing). Steven Piantoadosi, one of the researchers, states that their findings have wider implications for other types of learning, where the ideal materials for learning should be ‘just right’, stimulating but not too difficult.\r\n\r\nNow whether the Goldilocks principle is truly a scientific law, or a description of a certain state or just a buzz word is still open to debate. However, it is becoming an increasing popular expression. Medical science has adopted it to refer to the optimal dose of a medication. Economics has jumped on the bandwagon with Goldilocks economies, Goldilocks markets, Goldilocks pricing and Goldilocks marketing, all of which set out the perfect factors for economic wellbeing. It has been used in TED talks by cultural commentators to describe the best balance of independence and closeness in personal relationships. Goldilocks theory is becoming ubiquitous, just google it, but for all that it may merely be post-hoc theorising. That is, tailoring a theory after the fact, where things are explained in a way that can’t be tested, particularly in the field of human behaviour. Using such a theory a researcher could interpret observed patterns of behaviour as they choose, and state that the desired behavioural outcome is the result of a perfect balance of conditions. Or as one commentator has put it, when you see Goldilocks, <u>look out</u>.\r\n\r\nNow, I want to look at the Higgs Boson, the so-called god particle…\r\n\r\n&nbsp;"
+      }
+    ]
+  },
+  "_metadata": {
+    "exported_at": "2026-01-20 15:27:24",
+    "exported_by": "impact",
+    "plugin_version": "12.4",
+    "format_version": "1.0"
+  }
 }

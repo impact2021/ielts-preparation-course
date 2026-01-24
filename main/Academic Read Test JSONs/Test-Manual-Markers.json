@@ -1,68 +1,76 @@
 {
-    "title": "Reading Passage Marker Test",
-    "content": "This is a test to verify manual reading passage markers work correctly.",
-    "questions": [
+  "title": "Reading Passage Marker Test",
+  "content": "This is a test to verify manual reading passage markers work correctly.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Choose TRUE, FALSE or NOT GIVEN.",
+      "question": "1. Manual markers work in reading passages.",
+      "points": 1,
+      "reading_text_id": 0,
+      "mc_options": [
         {
-            "type": "closed_question",
-            "instructions": "Choose TRUE, FALSE or NOT GIVEN.",
-            "question": "1. Manual markers work in reading passages.",
-            "points": 1,
-            "reading_text_id": 0,
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! This is the right answer."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "2. The system highlights the correct text.",
-            "points": 1,
-            "reading_text_id": 0,
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        }
-    ],
-    "reading_texts": [
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the passage to find the correct answer."
+        },
         {
-            "title": "Test Reading Passage",
-            "content": "This is a test reading passage to demonstrate manual markers.\n\n<p>Using the automatic marker format is simple. For example, [Q1]manual markers work perfectly in reading passages just like they do in listening transcripts. This is very convenient.</p>\n\n<p>You can also use the manual HTML format for more control. For instance, <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">the system highlights the correct text when you click the show button</span> which helps students find answers quickly.</p>\n\n<p>Both methods are now fully supported and work seamlessly with the \"Show in the reading passage\" button.</p>"
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the passage to find the correct answer."
         }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "timer_minutes": "10",
-        "starting_question_number": "1"
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
-    "_metadata": {
-        "test_purpose": "Verify manual reading passage markers with passage-q# IDs and reading-answer-marker class",
-        "created_at": "2026-01-12"
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "2. The system highlights the correct text.",
+      "points": 1,
+      "reading_text_id": 0,
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! This is the right answer."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the passage to find the correct answer."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the passage to find the correct answer."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     }
+  ],
+  "reading_texts": [
+    {
+      "title": "Test Reading Passage",
+      "content": "This is a test reading passage to demonstrate manual markers.\n\n<p>Using the automatic marker format is simple. For example, [Q1]manual markers work perfectly in reading passages just like they do in listening transcripts. This is very convenient.</p>\n\n<p>You can also use the manual HTML format for more control. For instance, <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">the system highlights the correct text when you click the show button</span> which helps students find answers quickly.</p>\n\n<p>Both methods are now fully supported and work seamlessly with the \"Show in the reading passage\" button.</p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "timer_minutes": "10",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "test_purpose": "Verify manual reading passage markers with passage-q# IDs and reading-answer-marker class",
+    "created_at": "2026-01-12"
+  }
 }

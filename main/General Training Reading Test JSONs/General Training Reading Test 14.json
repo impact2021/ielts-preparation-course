@@ -1,944 +1,947 @@
 {
-    "title": "General Training Reading Test 14",
-    "content": "",
-    "questions": [
+  "title": "General Training Reading Test 14",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1–6",
+      "question": "A professional couple who do not own a car but enjoy the arts",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A young couple moving into their first home who have no furniture",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A brother and sister with two friends, one of whom owns a cat",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A couple with a young child and a limited budget",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A couple with two teenage children and the wife’s mother, who wants nearby but separate accommodation",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A recently retired couple with a dog looking for a rural setting",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 7–11",
+      "question": "Recyclable waste will not be collected on the 14th or 15th.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "The train station will definitely remain open permanently.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Only local stallholders are allowed to apply for the festival.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Live music will be performed by an overseas band.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Free hot drinks will be given to anyone in the community.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 12–17",
+      "question": "Annual leave entitlement is stated in the",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Approved leave may be cancelled depending on",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Leave taken in the first year of employment will be",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Sick leave paperwork must be submitted to the",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Early maternity leave may be authorised by a manager or a",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "________ are allowed building access during most of the holiday period",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 18–22",
+      "question": "Applications for company credit cards",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A. are handled by the National Bank",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "B. must be made in writing",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "C. can be used for supplier payments",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Issued cards",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
+      "question": "27. People from all around the world are united by the way they think about culture",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
         {
-            "type": "open_question",
-            "instructions": "Questions 1–6",
-            "question": "A professional couple who do not own a car but enjoy the arts",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A young couple moving into their first home who have no furniture",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct!"
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A brother and sister with two friends, one of whom owns a cat",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A couple with a young child and a limited budget",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A couple with two teenage children and the wife’s mother, who wants nearby but separate accommodation",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A recently retired couple with a dog looking for a rural setting",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 7–11",
-            "question": "Recyclable waste will not be collected on the 14th or 15th.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "The train station will definitely remain open permanently.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Only local stallholders are allowed to apply for the festival.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Live music will be performed by an overseas band.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Free hot drinks will be given to anyone in the community.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 12–17",
-            "question": "Annual leave entitlement is stated in the",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Approved leave may be cancelled depending on",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Leave taken in the first year of employment will be",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Sick leave paperwork must be submitted to the",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Early maternity leave may be authorised by a manager or a",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "________ are allowed building access during most of the holiday period",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 18–22",
-            "question": "Applications for company credit cards",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A. are handled by the National Bank",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "B. must be made in writing",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "C. can be used for supplier payments",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Issued cards",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
-            "question": "27. People from all around the world are united by the way they think about culture",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. Our 'values' are the most important aspect of ideology",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. Secularism is the most widely accepted system of beliefs, values and ideals",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "30. Shamans act as intermediaries between spirits and the living",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. Agricultural societies benefited from religion",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "32. All the people from the Aztec civilisation were rich",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "33. In the seventeenth and eighteenth centuries, European people began turning towards science",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
-            "question": "34. Fill in blank 30",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "35. Fill in blank 31",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "36. Fill in blank 32",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "37. Fill in blank 33",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "38. Fill in blank 34",
-            "points": 1,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
-            "question": "Answer the questions (Questions 35-40):",
-            "field_count": 6,
-            "field_labels": [
-                "35. What are beliefs, values and ideals specific categories of?",
-                "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
-                "37. In Europe, what title was given to the advance of science and logic?",
-                "38. In addition to religion, what else influenced the development of capitalism?",
-                "39. Before modern advances in technology, what did anthropologists consider societies to be?",
-                "40. What theory is symbolic of the tensions between religion and science?"
-            ],
-            "field_answers": [
-                "ideology",
-                "human sacrifice|human blood",
-                "age of enlightenment|enlightenment",
-                "science",
-                "fully independent systems|independent systems|independent",
-                "natural evolution|evolution"
-            ],
-            "points": 6,
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "2": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "3": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "4": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "5": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "6": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                }
-            }
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
         }
-    ],
-    "reading_texts": [
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "28. Our 'values' are the most important aspect of ideology",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
         {
-            "text_id": 0,
-            "title": "Reading Text 1",
-            "content": "<h4><strong>Waitakere Township Newsletter</strong></h4>\n\n<p>Rubbish collection<br>\nDue to a public holiday on the 15th, domestic rubbish normally collected on the 14th and 15th will instead be collected on the 17th or 18th. Plastic and glass recycling will continue as normal.</p>\n\n<p>Closure of Waitakere train station<br>\nPlans to permanently close the station have been reconsidered. The station will remain open for six months while usage is reviewed.</p>\n\n<p>Waitakere festival<br>\nStallholder applications are open. Preference will be given to local crafts and products, although all applications are considered. Live music will be performed by local acts and a touring guest artist.</p>\n\n<p>Community clean-up<br>\nA clean-up will take place on Sunday the 8th at 10am in Schofield Park. Volunteers will receive a complimentary tea or coffee afterward.</p>\n\n<h4><strong>Questions 7–11</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>Recyclable waste will not be collected on the 14th or 15th.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>The train station will definitely remain open permanently.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Only local stallholders are allowed to apply for the festival.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Live music will be performed by an overseas band.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Free hot drinks will be given to anyone in the community.\nAnswer: FALSE</strong></h4>",
-            "tags": []
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
         },
         {
-            "title": "Reading Text 5",
-            "content": "The dawn of culture\n\n<span id=\"q23\" data-question=\"23\"></span>In every society, culturally unique ways of thinking about the world unite people in their behaviour. <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Anthropologists often refer to the body of ideas that people share as ideology. Ideology can be broken down into at least three specific categories: beliefs, values and ideals.</span> People's beliefs give them an understanding of how the world works and how they should respond to the actions of others and their environments. Particular beliefs often tie in closely with the daily concerns of domestic life, such as making a living, health and sickness, happiness and sadness, interpersonal relationships, and death. People's values tell them the differences between right and wrong or good and bad. Ideals serve as models for what people hope to achieve in life.\n\n<span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">There are two accepted systems of belief.</span> Some rely on religion, even the supernatural (things beyond the natural world), to shape their values and ideals and to influence their behaviour. Others base their beliefs on observations of the natural world, a practice anthropologists commonly refer to as secularism.\n\n<span id=\"q31\" data-question=\"31\"></span>Religion in its more extreme form allows people to know about and 'communicate' with supernatural beings, such as animal spirits, gods, and spirits of the dead. Small tribal societies believe that plants and animals, as well as people, can have souls or spirits that can take on different forms to help or harm people. Anthropologists refer to this kind of religious belief as animism, with believers often led by shamans. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">As religious specialists, shamans have special access to the spirit world, and are said to be able to receive stories from supernatural beings and later recite them to others or act them out in dramatic rituals.</span>\n\nIn larger, agricultural societies, religion has long been a means of asking for bountiful harvests, a source of power for rulers, or an inspiration to go to war. In early civilised societies, religious visionaries became leaders because people believed those leaders could communicate with the supernatural to control the fate of a civilization. This became their greatest source of power, and people often regarded leaders as actual gods. <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">For example, in the great civilisation of the Aztec, which flourished in what is now Mexico in the fifteenth and sixteenth centuries, rulers claimed privileged association with a powerful god that was said to require human blood to ensure that the sun would rise and set each day.</span> <span id=\"q28\" data-question=\"28\"></span>Aztec rulers thus inspired great awe by regularly conducting human sacrifices. They also conspicuously displayed their vast power as wealth in luxury goods, such as fine jewels, clothing and palaces. <span class=\"reading-answer-marker\">Rulers obtained their wealth from the great numbers of craftspeople, traders and warriors under their control, often leaving them with very little in the way of material possessions.</span>\n\n<span id=\"q29\" data-question=\"29\"></span><span id=\"q37\" data-question=\"37\"></span><span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">During the period in seventeenth- and eighteenth-century Europe known as the Age of Enlightenment, science and logic became new sources of belief for many people living in civilised societies. Scientific studies of the natural world and rational philosophies led people to believe that they could explain natural and social phenomena without believing in gods or spirits. Religion remained an influential system of belief, and together both religion and science drove the development of capitalism</span>, the economic system of commerce-driven market exchange. <span id=\"q32\" data-question=\"32\"></span>Capitalism itself influences people's beliefs, values and ideals in many present-day, large, civilised societies. In these societies, such as in the United States, many people view the world and shape their behaviour based on a belief that they can understand and control their environment and that work, commerce and the accumulation of wealth serve an ultimate good. The governments of most large societies today also assert that human well-being derives from the growth of economies and the development of technology.\n\nRapid changes in technology in the last several decades have changed the nature of culture and cultural exchange. People around the world can make economic transactions and transmit information to each other almost instantaneously through the use of computers and satellite communications. Governments and corporations have gained vast amounts of political power through military might and economic influence. Corporations have also created a form of global culture based on worldwide commercial markets. As a result, local culture and social structure are now shaped by large and powerful commercial interests in ways that earlier anthropologists could not have imagined. <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Early anthropologists thought of societies and their cultures as fully independent systems</span>, but today, many nations are multicultural societies, composed of numerous smaller subcultures. Cultures also cross national boundaries. For instance, people around the world now know a variety of English words and have contact with American cultural exports such as brand-name clothing and technological products, films and music, and mass-produced foods.\n\nIn addition, many people have come to believe in the fundamental nature of human rights and free will. These beliefs grew out of people's increasing ability to control the natural world through science and rationalism, and though religious beliefs continue to change to affirm or accommodate these other dominant beliefs, sometimes the two are at odds with each other. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">For instance, many religious people have difficulty reconciling their belief in a supreme spiritual force with the theory of natural evolution, which requires no belief in the supernatural.</span> <span id=\"q33\" data-question=\"33\"></span><span id=\"q34\" data-question=\"34\"></span>As a result, societies in which many people do not practice any religion, such as China, may be known as secular societies. However, no society is entirely secular.",
-            "text_id": 4
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
         }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "general_training",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "29. Secularism is the most widely accepted system of beliefs, values and ideals",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "30. Shamans act as intermediaries between spirits and the living",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "31. Agricultural societies benefited from religion",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "32. All the people from the Aztec civilisation were rich",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "33. In the seventeenth and eighteenth centuries, European people began turning towards science",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
+      "question": "34. Fill in blank 30",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "35. Fill in blank 31",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "36. Fill in blank 32",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "37. Fill in blank 33",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "38. Fill in blank 34",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
+      "question": "Answer the questions (Questions 35-40):",
+      "field_count": 6,
+      "field_labels": [
+        "35. What are beliefs, values and ideals specific categories of?",
+        "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
+        "37. In Europe, what title was given to the advance of science and logic?",
+        "38. In addition to religion, what else influenced the development of capitalism?",
+        "39. Before modern advances in technology, what did anthropologists consider societies to be?",
+        "40. What theory is symbolic of the tensions between religion and science?"
+      ],
+      "field_answers": [
+        "ideology",
+        "human sacrifice|human blood",
+        "age of enlightenment|enlightenment",
+        "science",
+        "fully independent systems|independent systems|independent",
+        "natural evolution|evolution"
+      ],
+      "points": 6,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "2": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "3": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "4": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "5": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "6": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     }
+  ],
+  "reading_texts": [
+    {
+      "text_id": 0,
+      "title": "Reading Text 1",
+      "content": "<h4><strong>Waitakere Township Newsletter</strong></h4>\n\n<p>Rubbish collection<br>\nDue to a public holiday on the 15th, domestic rubbish normally collected on the 14th and 15th will instead be collected on the 17th or 18th. Plastic and glass recycling will continue as normal.</p>\n\n<p>Closure of Waitakere train station<br>\nPlans to permanently close the station have been reconsidered. The station will remain open for six months while usage is reviewed.</p>\n\n<p>Waitakere festival<br>\nStallholder applications are open. Preference will be given to local crafts and products, although all applications are considered. Live music will be performed by local acts and a touring guest artist.</p>\n\n<p>Community clean-up<br>\nA clean-up will take place on Sunday the 8th at 10am in Schofield Park. Volunteers will receive a complimentary tea or coffee afterward.</p>\n\n<h4><strong>Questions 7–11</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>Recyclable waste will not be collected on the 14th or 15th.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>The train station will definitely remain open permanently.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Only local stallholders are allowed to apply for the festival.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Live music will be performed by an overseas band.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Free hot drinks will be given to anyone in the community.\nAnswer: FALSE</strong></h4>",
+      "tags": []
+    },
+    {
+      "title": "Reading Text 5",
+      "content": "The dawn of culture\n\n<span id=\"q23\" data-question=\"23\"></span>In every society, culturally unique ways of thinking about the world unite people in their behaviour. <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Anthropologists often refer to the body of ideas that people share as ideology. Ideology can be broken down into at least three specific categories: beliefs, values and ideals.</span> People's beliefs give them an understanding of how the world works and how they should respond to the actions of others and their environments. Particular beliefs often tie in closely with the daily concerns of domestic life, such as making a living, health and sickness, happiness and sadness, interpersonal relationships, and death. People's values tell them the differences between right and wrong or good and bad. Ideals serve as models for what people hope to achieve in life.\n\n<span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">There are two accepted systems of belief.</span> Some rely on religion, even the supernatural (things beyond the natural world), to shape their values and ideals and to influence their behaviour. Others base their beliefs on observations of the natural world, a practice anthropologists commonly refer to as secularism.\n\n<span id=\"q31\" data-question=\"31\"></span>Religion in its more extreme form allows people to know about and 'communicate' with supernatural beings, such as animal spirits, gods, and spirits of the dead. Small tribal societies believe that plants and animals, as well as people, can have souls or spirits that can take on different forms to help or harm people. Anthropologists refer to this kind of religious belief as animism, with believers often led by shamans. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">As religious specialists, shamans have special access to the spirit world, and are said to be able to receive stories from supernatural beings and later recite them to others or act them out in dramatic rituals.</span>\n\nIn larger, agricultural societies, religion has long been a means of asking for bountiful harvests, a source of power for rulers, or an inspiration to go to war. In early civilised societies, religious visionaries became leaders because people believed those leaders could communicate with the supernatural to control the fate of a civilization. This became their greatest source of power, and people often regarded leaders as actual gods. <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">For example, in the great civilisation of the Aztec, which flourished in what is now Mexico in the fifteenth and sixteenth centuries, rulers claimed privileged association with a powerful god that was said to require human blood to ensure that the sun would rise and set each day.</span> <span id=\"q28\" data-question=\"28\"></span>Aztec rulers thus inspired great awe by regularly conducting human sacrifices. They also conspicuously displayed their vast power as wealth in luxury goods, such as fine jewels, clothing and palaces. <span class=\"reading-answer-marker\">Rulers obtained their wealth from the great numbers of craftspeople, traders and warriors under their control, often leaving them with very little in the way of material possessions.</span>\n\n<span id=\"q29\" data-question=\"29\"></span><span id=\"q37\" data-question=\"37\"></span><span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">During the period in seventeenth- and eighteenth-century Europe known as the Age of Enlightenment, science and logic became new sources of belief for many people living in civilised societies. Scientific studies of the natural world and rational philosophies led people to believe that they could explain natural and social phenomena without believing in gods or spirits. Religion remained an influential system of belief, and together both religion and science drove the development of capitalism</span>, the economic system of commerce-driven market exchange. <span id=\"q32\" data-question=\"32\"></span>Capitalism itself influences people's beliefs, values and ideals in many present-day, large, civilised societies. In these societies, such as in the United States, many people view the world and shape their behaviour based on a belief that they can understand and control their environment and that work, commerce and the accumulation of wealth serve an ultimate good. The governments of most large societies today also assert that human well-being derives from the growth of economies and the development of technology.\n\nRapid changes in technology in the last several decades have changed the nature of culture and cultural exchange. People around the world can make economic transactions and transmit information to each other almost instantaneously through the use of computers and satellite communications. Governments and corporations have gained vast amounts of political power through military might and economic influence. Corporations have also created a form of global culture based on worldwide commercial markets. As a result, local culture and social structure are now shaped by large and powerful commercial interests in ways that earlier anthropologists could not have imagined. <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Early anthropologists thought of societies and their cultures as fully independent systems</span>, but today, many nations are multicultural societies, composed of numerous smaller subcultures. Cultures also cross national boundaries. For instance, people around the world now know a variety of English words and have contact with American cultural exports such as brand-name clothing and technological products, films and music, and mass-produced foods.\n\nIn addition, many people have come to believe in the fundamental nature of human rights and free will. These beliefs grew out of people's increasing ability to control the natural world through science and rationalism, and though religious beliefs continue to change to affirm or accommodate these other dominant beliefs, sometimes the two are at odds with each other. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">For instance, many religious people have difficulty reconciling their belief in a supreme spiritual force with the theory of natural evolution, which requires no belief in the supernatural.</span> <span id=\"q33\" data-question=\"33\"></span><span id=\"q34\" data-question=\"34\"></span>As a result, societies in which many people do not practice any religion, such as China, may be known as secular societies. However, no society is entirely secular.",
+      "text_id": 4
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "general_training",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_general_training_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  }
 }

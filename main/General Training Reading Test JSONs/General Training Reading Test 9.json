@@ -1,690 +1,690 @@
 {
-    "title": "General Training Reading Test 9",
-    "content": "",
-    "questions": [
-        {
-            "type": "open_question",
-            "instructions": "Questions 1\u20137\n\nComplete the summary below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
-            "question": "<p>Travels to the [field 1] to see wildlife and forest before stopping close to [field 2].</p>\n<p>The journey has views across [field 3].</p>\n<p>Costs \u00a35.00 for children and senior citizens, and [field 4] for passengers up to 5 years old.</p>\n<p>A [field 5] is required for group bookings and is refunded only if cancelled more than [field 6] before departure.</p>\n<p>People with certain phobias are advised that the train passes through [field 7].</p>\n<p>[field 1]</p>\n<p>[field 2]</p>\n<p>[field 3]</p>\n<p>[field 4]</p>\n<p>[field 5]</p>\n<p>[field 6]</p>\n<p>[field 7]</p>",
-            "points": 7,
-            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: Whean Ranges, Field 2: Huia Dam, Field 3: Corille Harbour, Field 4: free, Field 5: deposit, Field 6: 8 days, Field 7: tunnels.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "summary_completion_r",
-            "field_count": 7,
-            "field_answers": {
-                "1": "WHEAN RANGES",
-                "2": "HUIA DAM",
-                "3": "CORILLE HARBOUR",
-                "4": "FREE",
-                "5": "DEPOSIT",
-                "6": "8 DAYS|EIGHT DAYS",
-                "7": "TUNNELS"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "2": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "3": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "4": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "5": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "6": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "7": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
-                }
-            }
+  "title": "General Training Reading Test 9",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1–7\n\nComplete the summary below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question": "<p>Travels to the [field 1] to see wildlife and forest before stopping close to [field 2].</p>\n<p>The journey has views across [field 3].</p>\n<p>Costs £5.00 for children and senior citizens, and [field 4] for passengers up to 5 years old.</p>\n<p>A [field 5] is required for group bookings and is refunded only if cancelled more than [field 6] before departure.</p>\n<p>People with certain phobias are advised that the train passes through [field 7].</p>\n<p>[field 1]</p>\n<p>[field 2]</p>\n<p>[field 3]</p>\n<p>[field 4]</p>\n<p>[field 5]</p>\n<p>[field 6]</p>\n<p>[field 7]</p>",
+      "points": 7,
+      "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: Whean Ranges, Field 2: Huia Dam, Field 3: Corille Harbour, Field 4: free, Field 5: deposit, Field 6: 8 days, Field 7: tunnels.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "summary_completion_r",
+      "field_count": 7,
+      "field_answers": {
+        "1": "WHEAN RANGES",
+        "2": "HUIA DAM",
+        "3": "CORILLE HARBOUR",
+        "4": "FREE",
+        "5": "DEPOSIT",
+        "6": "8 DAYS|EIGHT DAYS",
+        "7": "TUNNELS"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 8\u201314\n\nDo the following statements agree with the information given in Reading Passage 2?\n\nWrite\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
-            "question": "This is the first sale the Appliance Store has held.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states this is 'its third annual clearance sale'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states this is 'its third annual clearance sale'."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states this is 'its third annual clearance sale', so this is not the first sale."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states this is 'its third annual clearance sale'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "2": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Extra discounts are available to a limited number of customers.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'The first 100 customers receive an additional 20% discount'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'The first 100 customers receive an additional 20% discount', which is a limited number."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'The first 100 customers receive an additional 20% discount'."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'The first 100 customers receive an additional 20% discount'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "3": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "All computers are discounted by exactly 50%.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states 'Desktop computers are reduced by up to 50%', not exactly 50%.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Desktop computers are reduced by up to 50%', which means some may be discounted less."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'Desktop computers are reduced by up to 50%', not exactly 50%."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Desktop computers are reduced by up to 50%'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "4": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Computer accessories receive larger discounts than laptops.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage mentions both are discounted but doesn't compare the discount amounts.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions both are discounted but doesn't compare the discount amounts."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions both are discounted but doesn't compare the discount amounts."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage mentions both are discounted but doesn't compare the discount amounts."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "5": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Every computer has a one-year guarantee.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states some models over \u00a31000 have 24 months guarantee.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the guarantee is 'extended to 24 months for models over \u00a31000'."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states the guarantee is 'extended to 24 months for models over \u00a31000', so not every computer has only a one-year guarantee."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly states the guarantee is 'extended to 24 months for models over \u00a31000'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+        "6": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Buying multiple kitchen items results in bigger discounts.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'Combination packages provide greater savings'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'Combination packages provide greater savings'."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Combination packages provide greater savings'."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Combination packages provide greater savings'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Plasma televisions are discounted more than LCD televisions.",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage states both are reduced by up to 30% but doesn't specify if one is discounted more.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'LCD and plasma televisions are reduced by up to 30%' without specifying different discount amounts."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'LCD and plasma televisions are reduced by up to 30%' without specifying different discount amounts."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states both are reduced by up to 30% but doesn't specify if one is discounted more than the other."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15\u201320\n\nMatch each statement to the correct job position.\n\nA. Fruit pickers / packers\nB. Labourer\nC. Relief teacher\nD. Web designer\nE. Accountant\nF. Care giver",
-            "question": "Only limited travel required",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is D (Web designer). The passage states 'occasional office attendance' for the web designer role.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching",
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The fruit pickers / packers role requires 'transport required', suggesting regular travel."
-                },
-                {
-                    "text": "B",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The labourer role does not mention limited travel."
-                },
-                {
-                    "text": "C",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The relief teacher role does not mention limited travel."
-                },
-                {
-                    "text": "D",
-                    "is_correct": true,
-                    "feedback": "Correct! The web designer role mentions 'occasional office attendance', meaning only limited travel is required."
-                },
-                {
-                    "text": "E",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The accountant must 'work across two branches', suggesting more travel."
-                },
-                {
-                    "text": "F",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The care giver is a 'live-in role', not about limited travel."
-                }
-            ],
-            "options": "A\nB\nC\nD\nE\nF",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Will not work in the same place each day",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is E (Accountant). The passage states the accountant will 'work across two branches'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching",
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "B",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "C",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "D",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "E",
-                    "is_correct": true,
-                    "feedback": "Correct! The accountant will 'work across two branches', meaning they will not work in the same place each day."
-                },
-                {
-                    "text": "F",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                }
-            ],
-            "options": "A\nB\nC\nD\nE\nF",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Must be able to operate specialised machinery",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is B (Labourer). The passage states 'forklift licence essential'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching",
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "B",
-                    "is_correct": true,
-                    "feedback": "Correct! The labourer role requires a 'forklift licence essential', which is specialised machinery."
-                },
-                {
-                    "text": "C",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "D",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "E",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "F",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                }
-            ],
-            "options": "A\nB\nC\nD\nE\nF",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Requires living at the workplace",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is F (Care giver). The passage states it is a 'live-in role'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching",
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "B",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "C",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "D",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "E",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "F",
-                    "is_correct": true,
-                    "feedback": "Correct! The care giver is a 'live-in role', meaning living at the workplace is required."
-                }
-            ],
-            "options": "A\nB\nC\nD\nE\nF",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Temporarily replaces existing staff",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is C (Relief teacher). The passage states 'Temporary cover for sick leave'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching",
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "B",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "C",
-                    "is_correct": true,
-                    "feedback": "Correct! The relief teacher role is 'Temporary cover for sick leave', meaning they replace existing staff temporarily."
-                },
-                {
-                    "text": "D",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "E",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "F",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                }
-            ],
-            "options": "A\nB\nC\nD\nE\nF",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Earnings depend on how fast the person works",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is A (Fruit pickers / packers). The passage states 'earnings depend on speed'.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching",
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": true,
-                    "feedback": "Correct! The fruit pickers / packers role states 'earnings depend on speed', which means how fast the person works."
-                },
-                {
-                    "text": "B",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "C",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "D",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "E",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                },
-                {
-                    "text": "F",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Review the job descriptions carefully."
-                }
-            ],
-            "options": "A\nB\nC\nD\nE\nF",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 21\u201326\n\nAnswer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
-            "question": "<p>How many days' holiday does a full-time employee receive? [field 1]</p>\n<p>How much notice is required to request holiday leave? [field 2]</p>\n<p>What is the maximum holiday entitlement that can be carried over? [field 3]</p>\n<p>What may be started if compassionate leave is abused? [field 4]</p>\n<p>For how many weeks is maternity pay provided? [field 5]</p>\n<p>What must be completed within 56 days after the baby is born? [field 6]</p>\n<p>[field 1]</p>\n<p>[field 2]</p>\n<p>[field 3]</p>\n<p>[field 4]</p>\n<p>[field 5]</p>\n<p>[field 6]</p>",
-            "points": 6,
-            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: 28 days, Field 2: 6 weeks / six weeks, Field 3: 8 weeks / eight weeks, Field 4: an investigation / investigation, Field 5: 38 weeks, Field 6: paternity leave.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer",
-            "field_count": 6,
-            "field_answers": {
-                "1": "28 DAYS|28|TWENTY-EIGHT DAYS",
-                "2": "6 WEEKS|SIX WEEKS",
-                "3": "8 WEEKS|EIGHT WEEKS",
-                "4": "AN INVESTIGATION|INVESTIGATION",
-                "5": "38 WEEKS|38|THIRTY-EIGHT WEEKS",
-                "6": "PATERNITY LEAVE"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "2": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "3": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "4": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "5": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "6": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                }
-            }
+        "7": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+          "no_answer": "Please provide an answer for all fields."
         }
-    ],
-    "reading_texts": [
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 8–14\n\nDo the following statements agree with the information given in Reading Passage 2?\n\nWrite\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
+      "question": "This is the first sale the Appliance Store has held.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states this is 'its third annual clearance sale'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
         {
-            "text_id": 0,
-            "title": "Reading Text 1",
-            "content": "<h4><strong>Thorn Brook Rain Forest Express</strong></h4>\n\n<p>Jump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the Whean Ranges, where you can see glow worms and rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over Corille Harbour.</p>\n\n<p>Prices<br>\nAdults: \u00a310.00<br>\nChildren (6\u201315 years): \u00a35.00<br>\nInfants (0\u20135 years): Free<br>\nSenior citizens: \u00a35.00<br>\nGroup bookings (whole train): Contact for pricing</p>\n\n<p>Prices include one return ride. Prices and timetable may change without notice.</p>\n\n<p>Group booking conditions<br>\nMinimum group size is seven people. A deposit is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than eight days before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.</p>\n\n<p>General information<br>\nPayment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.</p>\n\n<p>Important note<br>\nThe train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.</p>\n\n<h4><strong>Questions 1\u20137</strong></h4>\n\n<p>[This is a summary completion question.<br>\nThere are 7 questions.<br>\nUse NO MORE THAN TWO WORDS from the passage.]</p>\n\n<p>Travels to the (1) ________ to see wildlife and forest before stopping close to (2) ________.<br>\nThe journey has views across (3) ________.<br>\nCosts \u00a35.00 for children and senior citizens, and (4) ________ for passengers up to 5 years old.<br>\nA (5) ________ is required for group bookings and is refunded only if cancelled more than (6) ________ before departure.<br>\nPeople with certain phobias are advised that the train passes through (7) ________.</p>\n\n<h4><strong>Answer: Whean Ranges</strong></h4>\n\n<h4><strong>Answer: Huia Dam</strong></h4>\n\n<h4><strong>Answer: Corille Harbour</strong></h4>\n\n<h4><strong>Answer: free</strong></h4>\n\n<h4><strong>Answer: deposit</strong></h4>\n\n<h4><strong>Answer: 8 days</strong></h4>\n\n<h4><strong>Answer: tunnels</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
-            "tags": []
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states this is 'its third annual clearance sale'."
         },
         {
-            "text_id": 1,
-            "title": "Reading Text 2",
-            "content": "<h4><strong>The Appliance Store Sale</strong></h4>\n\n<p>From March 1st to March 8th, The Appliance Store will hold its third annual clearance sale. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The first 100 customers receive an additional 20% discount.</p>\n\n<p>Computers<br>\nDesktop computers are reduced by up to 50%. Laptops are available for under \u00a3200, including accessories. Computer accessories are also discounted. All computers include a 12-month guarantee, extended to 24 months for models over \u00a31000.</p>\n\n<p>Kitchen appliances<br>\nFridges, freezers, microwaves and toasters are discounted. Combination packages provide greater savings.</p>\n\n<p>Televisions<br>\nLCD and plasma televisions are reduced by up to 30%. Stock is limited.</p>\n\n<h4><strong>Questions 8\u201314</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>This is the first sale the Appliance Store has held.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Extra discounts are available to a limited number of customers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All computers are discounted by exactly 50%.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Computer accessories receive larger discounts than laptops.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Every computer has a one-year guarantee.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Buying multiple kitchen items results in bigger discounts.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>Plasma televisions are discounted more than LCD televisions.\nAnswer: NOT GIVEN</strong></h4>",
-            "tags": []
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states this is 'its third annual clearance sale', so this is not the first sale."
         },
         {
-            "text_id": 2,
-            "title": "Reading Text 3",
-            "content": "<h4><strong>SECTION 2</strong></h4>\n<h4><strong>Reading Passage 3</strong></h4>\n\n<h4><strong>Rainbow Recruitment</strong></h4>\n\n<p>Rainbow Recruitment provides temporary employment opportunities across various industries.</p>\n\n<h4><strong>Current positions</strong></h4>\n\n<p><strong>Fruit pickers / packers</strong> \u2013 Weekly contracts; earnings depend on speed; transport required</p>\n\n<p><strong>Labourer</strong> \u2013 Six-week contract; forklift licence essential</p>\n\n<p><strong>Relief teacher</strong> \u2013 Temporary cover for sick leave</p>\n\n<p><strong>Web designer</strong> \u2013 One-month contract; occasional office attendance</p>\n\n<p><strong>Accountant</strong> \u2013 Three-month contract; work across two branches</p>\n\n<p><strong>Care giver</strong> \u2013 Live-in role caring for an elderly woman</p>\n\n<h4><strong>Questions 15\u201320</strong></h4>\n\n<p>[This is a matching question.<br>\nThere are 6 questions.]</p>\n\n<p>A. Fruit pickers / packers<br>\nB. Labourer<br>\nC. Relief teacher<br>\nD. Web designer<br>\nE. Accountant<br>\nF. Care giver</p>\n\n<p>Only limited travel required<br>\n<strong>Answer: D</strong></p>\n\n<p>Will not work in the same place each day<br>\n<strong>Answer: E</strong></p>\n\n<p>Must be able to operate specialised machinery<br>\n<strong>Answer: B</strong></p>\n\n<p>Requires living at the workplace<br>\n<strong>Answer: F</strong></p>\n\n<p>Temporarily replaces existing staff<br>\n<strong>Answer: C</strong></p>\n\n<p>Earnings depend on how fast the person works<br>\n<strong>Answer: A</strong></p>",
-            "tags": []
-        },
-        {
-            "text_id": 3,
-            "title": "Reading Text 4",
-            "content": "<h4><strong>SECTION 3</strong></h4>\n<h4><strong>Reading Passage 4</strong></h4>\n\n<h4><strong>Holiday and Leave Entitlements</strong></h4>\n\n<p>Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff). Holiday requests require six weeks' written notice. Holidays may be accumulated up to a maximum of eight weeks.</p>\n\n<p>Compassionate leave is available for emergencies involving dependants. Abuse of leave may result in an investigation.</p>\n\n<p>Maternity leave lasts 52 weeks, with pay for the first 38 weeks. Paternity leave must be taken within 56 days of the birth.</p>\n\n<h4><strong>Questions 21\u201326</strong></h4>\n\n<p>[Short answer questions.<br>\nUse NO MORE THAN THREE WORDS AND/OR A NUMBER.]</p>\n\n<p>How many days' holiday does a full-time employee receive?<br>\n<strong>Answer: 28 days</strong></p>\n\n<p>How much notice is required to request holiday leave?<br>\n<strong>Answer: 6 weeks</strong></p>\n\n<p>What is the maximum holiday entitlement that can be carried over?<br>\n<strong>Answer: 8 weeks</strong></p>\n\n<p>What may be started if compassionate leave is abused?<br>\n<strong>Answer: an investigation</strong></p>\n\n<p>For how many weeks is maternity pay provided?<br>\n<strong>Answer: 38 weeks</strong></p>\n\n<p>What must be completed within 56 days after the baby is born?<br>\n<strong>Answer: paternity leave</strong></p>",
-            "tags": []
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states this is 'its third annual clearance sale'."
         }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "general_training",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Extra discounts are available to a limited number of customers.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'The first 100 customers receive an additional 20% discount'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'The first 100 customers receive an additional 20% discount', which is a limited number."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'The first 100 customers receive an additional 20% discount'."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'The first 100 customers receive an additional 20% discount'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "All computers are discounted by exactly 50%.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states 'Desktop computers are reduced by up to 50%', not exactly 50%.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'Desktop computers are reduced by up to 50%', which means some may be discounted less."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'Desktop computers are reduced by up to 50%', not exactly 50%."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'Desktop computers are reduced by up to 50%'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Computer accessories receive larger discounts than laptops.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage mentions both are discounted but doesn't compare the discount amounts.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions both are discounted but doesn't compare the discount amounts."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions both are discounted but doesn't compare the discount amounts."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage mentions both are discounted but doesn't compare the discount amounts."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Every computer has a one-year guarantee.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states some models over £1000 have 24 months guarantee.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states the guarantee is 'extended to 24 months for models over £1000'."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states the guarantee is 'extended to 24 months for models over £1000', so not every computer has only a one-year guarantee."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states the guarantee is 'extended to 24 months for models over £1000'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Buying multiple kitchen items results in bigger discounts.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'Combination packages provide greater savings'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'Combination packages provide greater savings'."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'Combination packages provide greater savings'."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'Combination packages provide greater savings'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Plasma televisions are discounted more than LCD televisions.",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage states both are reduced by up to 30% but doesn't specify if one is discounted more.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'LCD and plasma televisions are reduced by up to 30%' without specifying different discount amounts."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'LCD and plasma televisions are reduced by up to 30%' without specifying different discount amounts."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage states both are reduced by up to 30% but doesn't specify if one is discounted more than the other."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 15–20\n\nMatch each statement to the correct job position.\n\nA. Fruit pickers / packers\nB. Labourer\nC. Relief teacher\nD. Web designer\nE. Accountant\nF. Care giver",
+      "question": "Only limited travel required",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is D (Web designer). The passage states 'occasional office attendance' for the web designer role.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. The fruit pickers / packers role requires 'transport required', suggesting regular travel."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. The labourer role does not mention limited travel."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. The relief teacher role does not mention limited travel."
+        },
+        {
+          "text": "D",
+          "is_correct": true,
+          "feedback": "Correct! The web designer role mentions 'occasional office attendance', meaning only limited travel is required."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. The accountant must 'work across two branches', suggesting more travel."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. The care giver is a 'live-in role', not about limited travel."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Will not work in the same place each day",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is E (Accountant). The passage states the accountant will 'work across two branches'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "E",
+          "is_correct": true,
+          "feedback": "Correct! The accountant will 'work across two branches', meaning they will not work in the same place each day."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Must be able to operate specialised machinery",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is B (Labourer). The passage states 'forklift licence essential'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "B",
+          "is_correct": true,
+          "feedback": "Correct! The labourer role requires a 'forklift licence essential', which is specialised machinery."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Requires living at the workplace",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is F (Care giver). The passage states it is a 'live-in role'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "F",
+          "is_correct": true,
+          "feedback": "Correct! The care giver is a 'live-in role', meaning living at the workplace is required."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Temporarily replaces existing staff",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is C (Relief teacher). The passage states 'Temporary cover for sick leave'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "C",
+          "is_correct": true,
+          "feedback": "Correct! The relief teacher role is 'Temporary cover for sick leave', meaning they replace existing staff temporarily."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Earnings depend on how fast the person works",
+      "points": 1,
+      "no_answer_feedback": "Please select an answer. The correct answer is A (Fruit pickers / packers). The passage states 'earnings depend on speed'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching",
+      "mc_options": [
+        {
+          "text": "A",
+          "is_correct": true,
+          "feedback": "Correct! The fruit pickers / packers role states 'earnings depend on speed', which means how fast the person works."
+        },
+        {
+          "text": "B",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "C",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "D",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "E",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        },
+        {
+          "text": "F",
+          "is_correct": false,
+          "feedback": "Incorrect. Review the job descriptions carefully."
+        }
+      ],
+      "options": "A\nB\nC\nD\nE\nF",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 21–26\n\nAnswer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
+      "question": "<p>How many days' holiday does a full-time employee receive? [field 1]</p>\n<p>How much notice is required to request holiday leave? [field 2]</p>\n<p>What is the maximum holiday entitlement that can be carried over? [field 3]</p>\n<p>What may be started if compassionate leave is abused? [field 4]</p>\n<p>For how many weeks is maternity pay provided? [field 5]</p>\n<p>What must be completed within 56 days after the baby is born? [field 6]</p>\n<p>[field 1]</p>\n<p>[field 2]</p>\n<p>[field 3]</p>\n<p>[field 4]</p>\n<p>[field 5]</p>\n<p>[field 6]</p>",
+      "points": 6,
+      "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: 28 days, Field 2: 6 weeks / six weeks, Field 3: 8 weeks / eight weeks, Field 4: an investigation / investigation, Field 5: 38 weeks, Field 6: paternity leave.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer",
+      "field_count": 6,
+      "field_answers": {
+        "1": "28 DAYS|28|TWENTY-EIGHT DAYS",
+        "2": "6 WEEKS|SIX WEEKS",
+        "3": "8 WEEKS|EIGHT WEEKS",
+        "4": "AN INVESTIGATION|INVESTIGATION",
+        "5": "38 WEEKS|38|THIRTY-EIGHT WEEKS",
+        "6": "PATERNITY LEAVE"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+          "no_answer": "Please provide an answer for all fields."
+        },
+        "2": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+          "no_answer": "Please provide an answer for all fields."
+        },
+        "3": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+          "no_answer": "Please provide an answer for all fields."
+        },
+        "4": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+          "no_answer": "Please provide an answer for all fields."
+        },
+        "5": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+          "no_answer": "Please provide an answer for all fields."
+        },
+        "6": {
+          "correct": "Correct! All answers can be found directly in the reading passage.",
+          "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+          "no_answer": "Please provide an answer for all fields."
+        }
+      }
     }
+  ],
+  "reading_texts": [
+    {
+      "text_id": 0,
+      "title": "Reading Text 1",
+      "content": "<h4><strong>Thorn Brook Rain Forest Express</strong></h4>\n\n<p>Jump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the Whean Ranges, where you can see glow worms and rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over Corille Harbour.</p>\n\n<p>Prices<br>\nAdults: £10.00<br>\nChildren (6–15 years): £5.00<br>\nInfants (0–5 years): Free<br>\nSenior citizens: £5.00<br>\nGroup bookings (whole train): Contact for pricing</p>\n\n<p>Prices include one return ride. Prices and timetable may change without notice.</p>\n\n<p>Group booking conditions<br>\nMinimum group size is seven people. A deposit is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than eight days before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.</p>\n\n<p>General information<br>\nPayment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.</p>\n\n<p>Important note<br>\nThe train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a summary completion question.<br>\nThere are 7 questions.<br>\nUse NO MORE THAN TWO WORDS from the passage.]</p>\n\n<p>Travels to the (1) ________ to see wildlife and forest before stopping close to (2) ________.<br>\nThe journey has views across (3) ________.<br>\nCosts £5.00 for children and senior citizens, and (4) ________ for passengers up to 5 years old.<br>\nA (5) ________ is required for group bookings and is refunded only if cancelled more than (6) ________ before departure.<br>\nPeople with certain phobias are advised that the train passes through (7) ________.</p>\n\n<h4><strong>Answer: Whean Ranges</strong></h4>\n\n<h4><strong>Answer: Huia Dam</strong></h4>\n\n<h4><strong>Answer: Corille Harbour</strong></h4>\n\n<h4><strong>Answer: free</strong></h4>\n\n<h4><strong>Answer: deposit</strong></h4>\n\n<h4><strong>Answer: 8 days</strong></h4>\n\n<h4><strong>Answer: tunnels</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
+      "tags": []
+    },
+    {
+      "text_id": 1,
+      "title": "Reading Text 2",
+      "content": "<h4><strong>The Appliance Store Sale</strong></h4>\n\n<p>From March 1st to March 8th, The Appliance Store will hold its third annual clearance sale. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The first 100 customers receive an additional 20% discount.</p>\n\n<p>Computers<br>\nDesktop computers are reduced by up to 50%. Laptops are available for under £200, including accessories. Computer accessories are also discounted. All computers include a 12-month guarantee, extended to 24 months for models over £1000.</p>\n\n<p>Kitchen appliances<br>\nFridges, freezers, microwaves and toasters are discounted. Combination packages provide greater savings.</p>\n\n<p>Televisions<br>\nLCD and plasma televisions are reduced by up to 30%. Stock is limited.</p>\n\n<h4><strong>Questions 8–14</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>This is the first sale the Appliance Store has held.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Extra discounts are available to a limited number of customers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All computers are discounted by exactly 50%.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Computer accessories receive larger discounts than laptops.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Every computer has a one-year guarantee.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Buying multiple kitchen items results in bigger discounts.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>Plasma televisions are discounted more than LCD televisions.\nAnswer: NOT GIVEN</strong></h4>",
+      "tags": []
+    },
+    {
+      "text_id": 2,
+      "title": "Reading Text 3",
+      "content": "<h4><strong>SECTION 2</strong></h4>\n<h4><strong>Reading Passage 3</strong></h4>\n\n<h4><strong>Rainbow Recruitment</strong></h4>\n\n<p>Rainbow Recruitment provides temporary employment opportunities across various industries.</p>\n\n<h4><strong>Current positions</strong></h4>\n\n<p><strong>Fruit pickers / packers</strong> – Weekly contracts; earnings depend on speed; transport required</p>\n\n<p><strong>Labourer</strong> – Six-week contract; forklift licence essential</p>\n\n<p><strong>Relief teacher</strong> – Temporary cover for sick leave</p>\n\n<p><strong>Web designer</strong> – One-month contract; occasional office attendance</p>\n\n<p><strong>Accountant</strong> – Three-month contract; work across two branches</p>\n\n<p><strong>Care giver</strong> – Live-in role caring for an elderly woman</p>\n\n<h4><strong>Questions 15–20</strong></h4>\n\n<p>[This is a matching question.<br>\nThere are 6 questions.]</p>\n\n<p>A. Fruit pickers / packers<br>\nB. Labourer<br>\nC. Relief teacher<br>\nD. Web designer<br>\nE. Accountant<br>\nF. Care giver</p>\n\n<p>Only limited travel required<br>\n<strong>Answer: D</strong></p>\n\n<p>Will not work in the same place each day<br>\n<strong>Answer: E</strong></p>\n\n<p>Must be able to operate specialised machinery<br>\n<strong>Answer: B</strong></p>\n\n<p>Requires living at the workplace<br>\n<strong>Answer: F</strong></p>\n\n<p>Temporarily replaces existing staff<br>\n<strong>Answer: C</strong></p>\n\n<p>Earnings depend on how fast the person works<br>\n<strong>Answer: A</strong></p>",
+      "tags": []
+    },
+    {
+      "text_id": 3,
+      "title": "Reading Text 4",
+      "content": "<h4><strong>SECTION 3</strong></h4>\n<h4><strong>Reading Passage 4</strong></h4>\n\n<h4><strong>Holiday and Leave Entitlements</strong></h4>\n\n<p>Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff). Holiday requests require six weeks' written notice. Holidays may be accumulated up to a maximum of eight weeks.</p>\n\n<p>Compassionate leave is available for emergencies involving dependants. Abuse of leave may result in an investigation.</p>\n\n<p>Maternity leave lasts 52 weeks, with pay for the first 38 weeks. Paternity leave must be taken within 56 days of the birth.</p>\n\n<h4><strong>Questions 21–26</strong></h4>\n\n<p>[Short answer questions.<br>\nUse NO MORE THAN THREE WORDS AND/OR A NUMBER.]</p>\n\n<p>How many days' holiday does a full-time employee receive?<br>\n<strong>Answer: 28 days</strong></p>\n\n<p>How much notice is required to request holiday leave?<br>\n<strong>Answer: 6 weeks</strong></p>\n\n<p>What is the maximum holiday entitlement that can be carried over?<br>\n<strong>Answer: 8 weeks</strong></p>\n\n<p>What may be started if compassionate leave is abused?<br>\n<strong>Answer: an investigation</strong></p>\n\n<p>For how many weeks is maternity pay provided?<br>\n<strong>Answer: 38 weeks</strong></p>\n\n<p>What must be completed within 56 days after the baby is born?<br>\n<strong>Answer: paternity leave</strong></p>",
+      "tags": []
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "general_training",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_general_training_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  }
 }

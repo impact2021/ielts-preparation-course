@@ -1,1361 +1,1361 @@
 {
-    "title": "Academic IELTS Reading Test 08",
-    "content": "Complete IELTS Academic Reading Test 8 with three passages and 40 questions",
-    "questions": [
+  "title": "Academic IELTS Reading Test 08",
+  "content": "Complete IELTS Academic Reading Test 8 with three passages and 40 questions",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "<p><strong>Reading Passage 1</strong></p>\r\n<p><em>You should spend about 20 minutes on <strong>Questions 1 – 17</strong> which are based on Reading Passage 1.</em></p>\r\n\r\n<p><strong><em>Questions 1 – 17</em></strong></p>\r\n\r\nQuestions 1 – 11\r\nDo the following statements agree with the views of the writer?\r\n\r\nWrite\r\n\r\nYES if the statement agrees with the writer\r\nNO if the statement does not agree with the writer\r\nNOT GIVEN if the information is not given in the passage.",
+      "question": "Medical courses are as difficult as any other postgraduate course.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning medical courses are MORE difficult than other postgraduate courses.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
         {
-            "type": "closed_question",
-            "instructions": "<p><strong>Reading Passage 1</strong></p>\r\n<p><em>You should spend about 20 minutes on <strong>Questions 1 – 17</strong> which are based on Reading Passage 1.</em></p>\r\n\r\n<p><strong><em>Questions 1 – 17</em></strong></p>\r\n\r\nQuestions 1 – 11\r\nDo the following statements agree with the views of the writer?\r\n\r\nWrite\r\n\r\nYES if the statement agrees with the writer\r\nNO if the statement does not agree with the writer\r\nNOT GIVEN if the information is not given in the passage.",
-            "question": "Medical courses are as difficult as any other postgraduate course.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning medical courses are MORE difficult than other postgraduate courses.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, indicating they are MORE difficult."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The first paragraph states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning they are more difficult."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does provide information about this. Review the first paragraph which discusses how medical courses compare to other postgraduate studies."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, indicating they are MORE difficult."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "For student doctors, the course becomes easier the more you learn.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'the more you learn, the more you realise what you still need to study' making it increasingly difficult, not easier.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the opposite - 'the more you learn, the more you realise what you still need to study' making it increasingly difficult."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'the more you learn, the more you realise what you still need to study' making it increasingly difficult, not easier."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly indicates the course becomes more complex and difficult, not easier. Review the first paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The first paragraph states that the life of a student doctor is 'considerably more challenging' than other postgraduate students, meaning they are more difficult."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "A number of students do not complete the course.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is YES. The first paragraph clearly mentions 'it is not unusual for students to drop out.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct! The first paragraph clearly mentions 'it is not unusual for students to drop out.'"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The first paragraph clearly states that students dropping out is not unusual, meaning it does happen."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage specifically mentions students dropping out. Review the first paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Better teachers know how to simplify the course.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage describes teachers who simplify as 'misguided' because it results in incomplete understanding, indicating they are not better teachers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage describes teachers who simplify as 'misguided' rather than better teachers."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage describes teachers who simplify as 'misguided' because it results in incomplete understanding, indicating they are not better teachers."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does discuss this by referring to teachers who simplify as 'misguided'. Review the first paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Once qualified, the situation for junior doctors slightly improves.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is YES. The second paragraph states 'The situation is little better in the year or two years after qualifying,' indicating a slight improvement.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct! The second paragraph states 'The situation is little better in the year or two years after qualifying,' indicating a slight improvement."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the situation is 'little better' after qualifying, which means it does slightly improve. Review the second paragraph."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The second paragraph specifically discusses the situation after qualifying. Review that section carefully."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Junior doctors are poor.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the passage mentions 'poorly paid,' it does not explicitly state whether they are poor or provide enough information to determine this.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the passage mentions they are 'poorly paid,' it does not provide enough information to determine if they are actually poor."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage doesn't say they are NOT poor, it simply doesn't provide enough information to make this determination."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! While the passage mentions 'poorly paid,' it does not explicitly state whether they are poor or provide enough information to determine this."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Disillusioned doctors often move to another hospital to work.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the profession entirely, not just move to another hospital.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the medical profession entirely, not just move to another hospital."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the profession entirely, not just move to another hospital."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does provide information about what disillusioned doctors do. Review the second paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The majority of students had nothing positive to say about their mentors.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'slightly less than 60%' had positive feedback, meaning the majority did have something positive to say about their mentors.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'slightly less than 60%' had positive feedback, so the majority (nearly 60%) DID have something positive to say."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'slightly less than 60%' had positive feedback, meaning the majority did have something positive to say about their mentors."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The fourth paragraph provides specific statistics about student feedback on mentors. Review this section."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The root of the problem in New Zealand and Britain is essentially the same.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The sixth paragraph states the situations in New Zealand and Britain have 'essentially the same effect' but 'different causes,' meaning different root problems.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the situations have 'essentially the same effect' but 'different causes,' meaning different root problems."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The sixth paragraph states the situations in New Zealand and Britain have 'essentially the same effect' but 'different causes,' meaning different root problems."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage explicitly discusses the causes in both countries. Review the sixth paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Many junior doctors are unable to repay their student loans.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the sixth paragraph mentions student loans, it does not state whether doctors are able or unable to repay them.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While student loans are mentioned, the passage does not state whether doctors are unable to repay them."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage doesn't state they CAN repay them either. It simply doesn't provide this information."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! While the sixth paragraph mentions student loans, it does not state whether doctors are able or unable to repay them."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The NZMSA has found a balance between expectation and reality.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The final paragraph states the NZMSA 'aims to find a balance,' indicating it is a goal, not an achievement they have already accomplished.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states the NZMSA 'aims to find a balance,' indicating it is a goal they are working toward, not an achievement."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The final paragraph states the NZMSA 'aims to find a balance,' indicating it is a goal, not an achievement they have already accomplished."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides information about the NZMSA's goals. Review the final paragraph carefully."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Complete the following text using NO MORE THAN TWO WORDS from the text.",
-            "question": "<p>A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with [field 1], student loan repayments and increasingly long [field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only [field 3] solutions.</p>\r\n<p>12. [field 1]</p>\r\n<p>13. [field 2]</p>\r\n<p>14. [field 3]</p>\r\n",
-            "points": 3,
-            "no_answer_feedback": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 3,
-            "field_answers": {
-                "1": "MENTORS|mentors",
-                "2": "HOURS|hours|WORKING HOURS|working hours",
-                "3": "SHORT-TERM|short-term|SHORT TERM|short term"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
-                    "incorrect": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
-                    "no_answer": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms."
-                },
-                "2": {
-                    "correct": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
-                    "incorrect": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
-                    "no_answer": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms."
-                },
-                "3": {
-                    "correct": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
-                    "incorrect": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
-                    "no_answer": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Answer the following questions using NO MORE THAN TWO WORDS OR A NUMBER.",
-            "question": "<p>In which year did over 50% of newly qualified doctors from a medical school in New Zealand leave the country?</p>\r\n<p>15. Year:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 1998. The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "1998|IN 1998|in 1998"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'",
-                    "incorrect": "Incorrect. Look for the year mentioned when discussing New Zealand medical school graduates leaving the country. Review the third paragraph.",
-                    "no_answer": "The correct answer is 1998. The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'"
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>How are members of the NZMSA chosen?</p>\r\n<p>16. Method:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is ELECTED. The final paragraph states that NZMSA members are 'elected from the Otago and Auckland Medical Schools.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "ELECTED|elected|ELECTIONS|elections|BY ELECTIONS|by elections|BY ELECTION|by election"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The final paragraph states NZMSA members are 'elected from the Otago and Auckland Medical Schools.'",
-                    "incorrect": "Incorrect. Review the final paragraph which describes how NZMSA members are chosen.",
-                    "no_answer": "The correct answer is ELECTED. The final paragraph states that NZMSA members are 'elected from the Otago and Auckland Medical Schools.'"
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Where are two-day shifts not uncommon?</p>\r\n<p>17. Location:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is AUCKLAND. The passage mentions 'Certain hospitals in Auckland' where doctors work 48-hour (two-day) shifts.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "AUCKLAND|Auckland|IN AUCKLAND|in Auckland"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The third paragraph mentions 'Certain hospitals in Auckland' where doctors work 48-hour shifts.",
-                    "incorrect": "Incorrect. Look for the specific location mentioned where newly qualified doctors work extremely long shifts. Review the third paragraph.",
-                    "no_answer": "The correct answer is AUCKLAND. The passage mentions 'Certain hospitals in Auckland' where doctors work 48-hour (two-day) shifts."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Choose the correct answer A-D.",
-            "question": "The main reason birds migrate is",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is A. The second paragraph states the primary cause is 'the search for food, particularly for their chicks.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A. the demands of their new-born",
-                    "is_correct": true,
-                    "feedback": "Correct! The second paragraph states the primary cause is 'the search for food, particularly for their chicks.'"
-                },
-                {
-                    "text": "B. to escape extreme weather conditions",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the passage mentions temperature as a factor, it states the PRIMARY cause is the search for food for their chicks. Review the second paragraph."
-                },
-                {
-                    "text": "C. to follow ancient instinctive patterns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is mentioned as a suggested theory but not identified as the main reason. The primary cause is the search for food for chicks. Review the second paragraph."
-                },
-                {
-                    "text": "D. to find new breeding grounds",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The main reason is to find food, particularly for their chicks, not to find new breeding grounds. Review the second paragraph."
-                }
-            ],
-            "options": "A. the demands of their new-born\nB. to escape extreme weather conditions\nC. to follow ancient instinctive patterns\nD. to find new breeding grounds",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The primary behavioral change birds undergo to prepare for migration is",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is C. The third paragraph emphasizes that chemical changes make birds 'considerably more active at night,' which is the primary behavioral adaptation for migration.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A. eating more during the day",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While birds do eat more (up to 40% increase), the question asks HOW they prepare. The passage emphasizes becoming more nocturnal. Review the third paragraph."
-                },
-                {
-                    "text": "B. storing energy in fat deposits",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While storing energy in fat deposits is part of preparation, it's a physiological change resulting from increased appetite. The question asks about the primary behavioral change, which is becoming more active at night. Review the third paragraph."
-                },
-                {
-                    "text": "C. becoming more nocturnal",
-                    "is_correct": true,
-                    "feedback": "Correct! The third paragraph emphasizes that birds undergo chemical changes that make them 'considerably more active at night,' which is the key behavioral adaptation for migration."
-                },
-                {
-                    "text": "D. reducing their body temperature",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions that migration generates heat that needs to dissipate at night, but doesn't say birds reduce their body temperature. Review the third paragraph."
-                }
-            ],
-            "options": "A. eating more during the day\nB. storing energy in fat deposits\nC. becoming more nocturnal\nD. reducing their body temperature",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Birds that die during migration",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is B. The sixth paragraph states mortality is 'covered by the increased production of offspring.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A. prove migration is too dangerous",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage doesn't suggest migration is too dangerous. Instead, it explains that mortality is balanced by increased reproduction. Review the sixth paragraph."
-                },
-                {
-                    "text": "B. balance the number of new-born birds",
-                    "is_correct": true,
-                    "feedback": "Correct! The sixth paragraph states mortality is 'covered by the increased production of offspring.'"
-                },
-                {
-                    "text": "C. are mostly large birds with more fat",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage actually states that smaller birds are at greater risk due to less energy reserves. Review the sixth paragraph."
-                },
-                {
-                    "text": "D. are unable to navigate properly",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Navigation issues are not cited as the main cause of death. Deaths are from storms, predators, exhaustion, and obstacles. Review the sixth paragraph."
-                }
-            ],
-            "options": "A. prove migration is too dangerous\nB. balance the number of new-born birds\nC. are mostly large birds with more fat\nD. are unable to navigate properly",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Do the following statements agree with the views of the writer?\r\n\r\nWrite\r\n\r\nYES if the statement agrees with the writer\r\nNO if the statement does not agree with the writer\r\nNOT GIVEN if the information is not given in the passage.",
-            "question": "Migratory habits vary between species.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is YES. The passage discusses various differences between species throughout, including migration speed, patterns, and timing in the fourth paragraph.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage discusses various differences between species throughout, including migration speed, patterns, and timing in the fourth paragraph."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Multiple paragraphs describe how different species have different migratory behaviors, speeds, and patterns. Review the fourth paragraph especially."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage provides extensive information about variations between species. Review the fourth paragraph particularly."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "There are a number of complete theories to explain the navigational abilities of migrating birds.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NO. The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, indicating theories are incomplete.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, meaning they are incomplete."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct! The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, indicating theories are incomplete."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The fifth paragraph discusses theories and explicitly states they don't fully explain navigation abilities. Review this section."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The female of the species often flies slower than the male.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. The fourth paragraph mentions males migrating first but does not compare the flying speeds of males and females.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage doesn't provide information comparing flying speeds between males and females."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage doesn't state this either way. It mentions males migrating first but not about speed differences."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The fourth paragraph mentions males migrating first but does not compare the flying speeds of males and females."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Smaller birds are at greater risk than bigger birds.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is YES. The sixth paragraph states 'smaller birds' face dangers from 'storms and attacks by predators' and have 'less energy reserves.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct! The sixth paragraph states 'smaller birds' face dangers from 'storms and attacks by predators' and have 'less energy reserves.'"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The sixth paragraph specifically discusses the vulnerabilities of smaller birds including less energy reserves and greater susceptibility to predators and storms."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage explicitly discusses the greater risks faced by smaller birds. Review the sixth paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Human activities represent the most recent challenge to migrating birds.",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is YES. The final paragraph states 'The most recent challenge to migration is, however, man.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct! The final paragraph explicitly states 'The most recent challenge to migration is, however, man,' and describes various human activities threatening bird migration."
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The final paragraph clearly identifies human activities as 'the most recent challenge to migration.' Review the seventh paragraph."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage explicitly states that 'The most recent challenge to migration is, however, man.' This information is given in the final paragraph."
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Complete the following summary using NO MORE THAN TWO WORDS FROM THE TEXT.",
-            "question": "<p>Not only are cities becoming larger, new housing is being built on areas reclaimed from [field 1]. In addition, migrating birds are also at risk from a number of different [field 2] which cannot be seen in the dark. Smaller birds are particularly vulnerable as they are at risk from external factors such as [field 3] and [field 4].</p>\r\n<p>26. [field 1]</p>\r\n<p>27. [field 2]</p>\r\n<p>28. [field 3]</p>\r\n<p>29. [field 4]</p>\r\n",
-            "points": 4,
-            "no_answer_feedback": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 4,
-            "field_answers": {
-                "1": "WETLANDS|wetlands",
-                "2": "AERIAL OBSTRUCTIONS|aerial obstructions",
-                "3": "PREDATORS|predators|STORMS|storms",
-                "4": "STORMS|storms|PREDATORS|predators"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
-                    "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
-                    "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
-                },
-                "2": {
-                    "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
-                    "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
-                    "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
-                },
-                "3": {
-                    "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
-                    "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
-                    "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
-                },
-                "4": {
-                    "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
-                    "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
-                    "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
-            "question": "Paragraph B",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph C",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph D",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph E",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph F",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Paragraph G",
-            "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
-                }
-            ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
-            "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
-                    "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
-                    "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "INTERNATIONAL TRAVEL|international travel"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
-                    "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
-                    "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "LANDLESS|landless"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
-                    "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
-                    "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
-                    "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
-                    "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
-                    "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
-                    "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
-                }
-            }
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does provide information about this. Review the first paragraph which discusses how medical courses compare to other postgraduate studies."
         }
-    ],
-    "reading_texts": [
-        {
-            "title": "Reading Passage 1",
-            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
-        },
-        {
-            "title": "Reading Passage 2",
-            "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
-        },
-        {
-            "title": "Reading Passage 3",
-            "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<h4><span id=\"q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or nature study activities. <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, Ghana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil against erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent of rural households are <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversal of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologically sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of their products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>"
-        }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "reading",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "percentage",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
     },
-    "_metadata": {
-        "exported_at": "2026-01-16 14:00:58",
-        "exported_by": "impact",
-        "plugin_version": "11.27",
-        "format_version": "1.0"
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "For student doctors, the course becomes easier the more you learn.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'the more you learn, the more you realise what you still need to study' making it increasingly difficult, not easier.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states the opposite - 'the more you learn, the more you realise what you still need to study' making it increasingly difficult."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'the more you learn, the more you realise what you still need to study' making it increasingly difficult, not easier."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly indicates the course becomes more complex and difficult, not easier. Review the first paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "A number of students do not complete the course.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The first paragraph clearly mentions 'it is not unusual for students to drop out.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct! The first paragraph clearly mentions 'it is not unusual for students to drop out.'"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The first paragraph clearly states that students dropping out is not unusual, meaning it does happen."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage specifically mentions students dropping out. Review the first paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Better teachers know how to simplify the course.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage describes teachers who simplify as 'misguided' because it results in incomplete understanding, indicating they are not better teachers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage describes teachers who simplify as 'misguided' rather than better teachers."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The passage describes teachers who simplify as 'misguided' because it results in incomplete understanding, indicating they are not better teachers."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does discuss this by referring to teachers who simplify as 'misguided'. Review the first paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Once qualified, the situation for junior doctors slightly improves.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The second paragraph states 'The situation is little better in the year or two years after qualifying,' indicating a slight improvement.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct! The second paragraph states 'The situation is little better in the year or two years after qualifying,' indicating a slight improvement."
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states the situation is 'little better' after qualifying, which means it does slightly improve. Review the second paragraph."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The second paragraph specifically discusses the situation after qualifying. Review that section carefully."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Junior doctors are poor.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the passage mentions 'poorly paid,' it does not explicitly state whether they are poor or provide enough information to determine this.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. While the passage mentions they are 'poorly paid,' it does not provide enough information to determine if they are actually poor."
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage doesn't say they are NOT poor, it simply doesn't provide enough information to make this determination."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While the passage mentions 'poorly paid,' it does not explicitly state whether they are poor or provide enough information to determine this."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Disillusioned doctors often move to another hospital to work.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the profession entirely, not just move to another hospital.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the medical profession entirely, not just move to another hospital."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The passage states disillusioned doctors 'look elsewhere for a career,' meaning they leave the profession entirely, not just move to another hospital."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does provide information about what disillusioned doctors do. Review the second paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The majority of students had nothing positive to say about their mentors.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The passage states 'slightly less than 60%' had positive feedback, meaning the majority did have something positive to say about their mentors.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states 'slightly less than 60%' had positive feedback, so the majority (nearly 60%) DID have something positive to say."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'slightly less than 60%' had positive feedback, meaning the majority did have something positive to say about their mentors."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The fourth paragraph provides specific statistics about student feedback on mentors. Review this section."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The root of the problem in New Zealand and Britain is essentially the same.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The sixth paragraph states the situations in New Zealand and Britain have 'essentially the same effect' but 'different causes,' meaning different root problems.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states the situations have 'essentially the same effect' but 'different causes,' meaning different root problems."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The sixth paragraph states the situations in New Zealand and Britain have 'essentially the same effect' but 'different causes,' meaning different root problems."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage explicitly discusses the causes in both countries. Review the sixth paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Many junior doctors are unable to repay their student loans.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. While the sixth paragraph mentions student loans, it does not state whether doctors are able or unable to repay them.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. While student loans are mentioned, the passage does not state whether doctors are unable to repay them."
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage doesn't state they CAN repay them either. It simply doesn't provide this information."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While the sixth paragraph mentions student loans, it does not state whether doctors are able or unable to repay them."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The NZMSA has found a balance between expectation and reality.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The final paragraph states the NZMSA 'aims to find a balance,' indicating it is a goal, not an achievement they have already accomplished.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states the NZMSA 'aims to find a balance,' indicating it is a goal they are working toward, not an achievement."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The final paragraph states the NZMSA 'aims to find a balance,' indicating it is a goal, not an achievement they have already accomplished."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides information about the NZMSA's goals. Review the final paragraph carefully."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the following text using NO MORE THAN TWO WORDS from the text.",
+      "question": "<p>A significant number of graduates from New Zealand and Britain are not remaining in the medical field. Poor relationships with [field 1], student loan repayments and increasingly long [field 2] are all contributory factors. The NZMSA is attempting to find an answer to the problem, but is wary of supporting ideas it perceives to be only [field 3] solutions.</p>\r\n<p>12. [field 1]</p>\r\n<p>13. [field 2]</p>\r\n<p>14. [field 3]</p>\r\n",
+      "points": 3,
+      "no_answer_feedback": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 3,
+      "field_answers": {
+        "1": "MENTORS|mentors",
+        "2": "HOURS|hours|WORKING HOURS|working hours",
+        "3": "SHORT-TERM|short-term|SHORT TERM|short term"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
+          "incorrect": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
+          "no_answer": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms."
+        },
+        "2": {
+          "correct": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
+          "incorrect": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
+          "no_answer": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms."
+        },
+        "3": {
+          "correct": "Correct! All answers can be found in the fourth paragraph (mentors) and the sixth and final paragraphs (working hours and short-term solutions).",
+          "incorrect": "Incorrect. Review the fourth paragraph which discusses mentors, and the sixth and final paragraphs which discuss working hours and the NZMSA's concerns about short-term solutions.",
+          "no_answer": "The correct answers are: 12: MENTORS, 13: HOURS (or WORKING HOURS), 14: SHORT-TERM. Review the fourth, sixth, and final paragraphs for these key terms."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Answer the following questions using NO MORE THAN TWO WORDS OR A NUMBER.",
+      "question": "<p>In which year did over 50% of newly qualified doctors from a medical school in New Zealand leave the country?</p>\r\n<p>15. Year:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 1998. The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "1998|IN 1998|in 1998"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'",
+          "incorrect": "Incorrect. Look for the year mentioned when discussing New Zealand medical school graduates leaving the country. Review the third paragraph.",
+          "no_answer": "The correct answer is 1998. The third paragraph states 'In statistics from 1998 over half the graduates from one medical school in New Zealand left the country.'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>How are members of the NZMSA chosen?</p>\r\n<p>16. Method:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is ELECTED. The final paragraph states that NZMSA members are 'elected from the Otago and Auckland Medical Schools.'",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "ELECTED|elected|ELECTIONS|elections|BY ELECTIONS|by elections|BY ELECTION|by election"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The final paragraph states NZMSA members are 'elected from the Otago and Auckland Medical Schools.'",
+          "incorrect": "Incorrect. Review the final paragraph which describes how NZMSA members are chosen.",
+          "no_answer": "The correct answer is ELECTED. The final paragraph states that NZMSA members are 'elected from the Otago and Auckland Medical Schools.'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>Where are two-day shifts not uncommon?</p>\r\n<p>17. Location:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is AUCKLAND. The passage mentions 'Certain hospitals in Auckland' where doctors work 48-hour (two-day) shifts.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "AUCKLAND|Auckland|IN AUCKLAND|in Auckland"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The third paragraph mentions 'Certain hospitals in Auckland' where doctors work 48-hour shifts.",
+          "incorrect": "Incorrect. Look for the specific location mentioned where newly qualified doctors work extremely long shifts. Review the third paragraph.",
+          "no_answer": "The correct answer is AUCKLAND. The passage mentions 'Certain hospitals in Auckland' where doctors work 48-hour (two-day) shifts."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Choose the correct answer A-D.",
+      "question": "The main reason birds migrate is",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is A. The second paragraph states the primary cause is 'the search for food, particularly for their chicks.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A. the demands of their new-born",
+          "is_correct": true,
+          "feedback": "Correct! The second paragraph states the primary cause is 'the search for food, particularly for their chicks.'"
+        },
+        {
+          "text": "B. to escape extreme weather conditions",
+          "is_correct": false,
+          "feedback": "Incorrect. While the passage mentions temperature as a factor, it states the PRIMARY cause is the search for food for their chicks. Review the second paragraph."
+        },
+        {
+          "text": "C. to follow ancient instinctive patterns",
+          "is_correct": false,
+          "feedback": "Incorrect. This is mentioned as a suggested theory but not identified as the main reason. The primary cause is the search for food for chicks. Review the second paragraph."
+        },
+        {
+          "text": "D. to find new breeding grounds",
+          "is_correct": false,
+          "feedback": "Incorrect. The main reason is to find food, particularly for their chicks, not to find new breeding grounds. Review the second paragraph."
+        }
+      ],
+      "options": "A. the demands of their new-born\nB. to escape extreme weather conditions\nC. to follow ancient instinctive patterns\nD. to find new breeding grounds",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The primary behavioral change birds undergo to prepare for migration is",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is C. The third paragraph emphasizes that chemical changes make birds 'considerably more active at night,' which is the primary behavioral adaptation for migration.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A. eating more during the day",
+          "is_correct": false,
+          "feedback": "Incorrect. While birds do eat more (up to 40% increase), the question asks HOW they prepare. The passage emphasizes becoming more nocturnal. Review the third paragraph."
+        },
+        {
+          "text": "B. storing energy in fat deposits",
+          "is_correct": false,
+          "feedback": "Incorrect. While storing energy in fat deposits is part of preparation, it's a physiological change resulting from increased appetite. The question asks about the primary behavioral change, which is becoming more active at night. Review the third paragraph."
+        },
+        {
+          "text": "C. becoming more nocturnal",
+          "is_correct": true,
+          "feedback": "Correct! The third paragraph emphasizes that birds undergo chemical changes that make them 'considerably more active at night,' which is the key behavioral adaptation for migration."
+        },
+        {
+          "text": "D. reducing their body temperature",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions that migration generates heat that needs to dissipate at night, but doesn't say birds reduce their body temperature. Review the third paragraph."
+        }
+      ],
+      "options": "A. eating more during the day\nB. storing energy in fat deposits\nC. becoming more nocturnal\nD. reducing their body temperature",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Birds that die during migration",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is B. The sixth paragraph states mortality is 'covered by the increased production of offspring.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A. prove migration is too dangerous",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage doesn't suggest migration is too dangerous. Instead, it explains that mortality is balanced by increased reproduction. Review the sixth paragraph."
+        },
+        {
+          "text": "B. balance the number of new-born birds",
+          "is_correct": true,
+          "feedback": "Correct! The sixth paragraph states mortality is 'covered by the increased production of offspring.'"
+        },
+        {
+          "text": "C. are mostly large birds with more fat",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage actually states that smaller birds are at greater risk due to less energy reserves. Review the sixth paragraph."
+        },
+        {
+          "text": "D. are unable to navigate properly",
+          "is_correct": false,
+          "feedback": "Incorrect. Navigation issues are not cited as the main cause of death. Deaths are from storms, predators, exhaustion, and obstacles. Review the sixth paragraph."
+        }
+      ],
+      "options": "A. prove migration is too dangerous\nB. balance the number of new-born birds\nC. are mostly large birds with more fat\nD. are unable to navigate properly",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Do the following statements agree with the views of the writer?\r\n\r\nWrite\r\n\r\nYES if the statement agrees with the writer\r\nNO if the statement does not agree with the writer\r\nNOT GIVEN if the information is not given in the passage.",
+      "question": "Migratory habits vary between species.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The passage discusses various differences between species throughout, including migration speed, patterns, and timing in the fourth paragraph.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct! The passage discusses various differences between species throughout, including migration speed, patterns, and timing in the fourth paragraph."
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. Multiple paragraphs describe how different species have different migratory behaviors, speeds, and patterns. Review the fourth paragraph especially."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides extensive information about variations between species. Review the fourth paragraph particularly."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "There are a number of complete theories to explain the navigational abilities of migrating birds.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NO. The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, indicating theories are incomplete.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, meaning they are incomplete."
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct! The fifth paragraph states theories exist but notes 'these theories do not explain' certain navigation abilities, indicating theories are incomplete."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The fifth paragraph discusses theories and explicitly states they don't fully explain navigation abilities. Review this section."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The female of the species often flies slower than the male.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is NOT GIVEN. The fourth paragraph mentions males migrating first but does not compare the flying speeds of males and females.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage doesn't provide information comparing flying speeds between males and females."
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage doesn't state this either way. It mentions males migrating first but not about speed differences."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The fourth paragraph mentions males migrating first but does not compare the flying speeds of males and females."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Smaller birds are at greater risk than bigger birds.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The sixth paragraph states 'smaller birds' face dangers from 'storms and attacks by predators' and have 'less energy reserves.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct! The sixth paragraph states 'smaller birds' face dangers from 'storms and attacks by predators' and have 'less energy reserves.'"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The sixth paragraph specifically discusses the vulnerabilities of smaller birds including less energy reserves and greater susceptibility to predators and storms."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage explicitly discusses the greater risks faced by smaller birds. Review the sixth paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Human activities represent the most recent challenge to migrating birds.",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is YES. The final paragraph states 'The most recent challenge to migration is, however, man.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct! The final paragraph explicitly states 'The most recent challenge to migration is, however, man,' and describes various human activities threatening bird migration."
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Incorrect. The final paragraph clearly identifies human activities as 'the most recent challenge to migration.' Review the seventh paragraph."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage explicitly states that 'The most recent challenge to migration is, however, man.' This information is given in the final paragraph."
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the following summary using NO MORE THAN TWO WORDS FROM THE TEXT.",
+      "question": "<p>Not only are cities becoming larger, new housing is being built on areas reclaimed from [field 1]. In addition, migrating birds are also at risk from a number of different [field 2] which cannot be seen in the dark. Smaller birds are particularly vulnerable as they are at risk from external factors such as [field 3] and [field 4].</p>\r\n<p>26. [field 1]</p>\r\n<p>27. [field 2]</p>\r\n<p>28. [field 3]</p>\r\n<p>29. [field 4]</p>\r\n",
+      "points": 4,
+      "no_answer_feedback": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 4,
+      "field_answers": {
+        "1": "WETLANDS|wetlands",
+        "2": "AERIAL OBSTRUCTIONS|aerial obstructions",
+        "3": "PREDATORS|predators|STORMS|storms",
+        "4": "STORMS|storms|PREDATORS|predators"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
+          "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
+          "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
+        },
+        "2": {
+          "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
+          "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
+          "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
+        },
+        "3": {
+          "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
+          "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
+          "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
+        },
+        "4": {
+          "correct": "Correct! All answers can be found in the final paragraph which discusses the dangers faced by migrating birds.",
+          "incorrect": "Incorrect. Review the final paragraph which discusses various dangers to migrating birds including habitat loss and obstacles they encounter. Remember questions 28 and 29 can be in either order.",
+          "no_answer": "The correct answers are: 26: WETLANDS, 27: AERIAL OBSTRUCTIONS, 28 and 29: PREDATORS and STORMS (in either order). Review the final paragraph for these terms."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
+      "question": "Paragraph B",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph C",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph D",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph E",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph F",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Paragraph G",
+      "points": 1,
+      "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "i. Government profiteering at the expense of citizens",
+          "is_correct": false,
+          "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
+        },
+        {
+          "text": "ii. A balance provides the best options",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
+        },
+        {
+          "text": "iii. Resistance to a change in attitudes",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
+        },
+        {
+          "text": "iv. Landowners the driving force for positive political change",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
+        },
+        {
+          "text": "v. Renewable forests unable to get public support",
+          "is_correct": false,
+          "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
+        },
+        {
+          "text": "vi. The risks of an unequal share of land",
+          "is_correct": false,
+          "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
+        },
+        {
+          "text": "vii. Temporary gain outweighing long term concerns",
+          "is_correct": false,
+          "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
+        },
+        {
+          "text": "viii. Options for alternative income generation",
+          "is_correct": false,
+          "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
+        },
+        {
+          "text": "ix. The impact personal decisions can have",
+          "is_correct": false,
+          "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
+        }
+      ],
+      "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
+      "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
+          "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
+          "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "INTERNATIONAL TRAVEL|international travel"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
+          "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
+          "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "LANDLESS|landless"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
+          "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
+          "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
+          "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
+          "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "field_count": 1,
+      "field_answers": {
+        "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
+          "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
+          "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
+        }
+      }
     }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
+    },
+    {
+      "title": "Reading Passage 2",
+      "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
+    },
+    {
+      "title": "Reading Passage 3",
+      "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<h4><span id=\"q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or nature study activities. <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, Ghana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil against erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent of rural households are <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversal of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologically sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of their products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>"
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "reading",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-16 14:00:58",
+    "exported_by": "impact",
+    "plugin_version": "11.27",
+    "format_version": "1.0"
+  }
 }

@@ -1,901 +1,901 @@
 {
-    "title": "IELTS Listening Test 15",
-    "content": "Complete IELTS Listening Test 15 with all 4 sections (40 questions)",
-    "questions": [
-        {
-            "type": "open_question",
-            "instructions": "Questions 1-5. Complete the form below with the applicant's personal details using NO MORE THAN THREE WORDS OR A NUMBER.",
-            "question": "<table>\r\n<tbody>\r\n<tr>\r\n<td><strong>Applicant information form:</strong>\r\nName: Anne [field 1]\r\nD.O.B.: 22nd of [field 2], 1981\r\nAddress: [field 3] Simon Place, Brighton\r\nContact number: (01903) [field 4]\r\nMobile: [field 5]</td>\r\n</tr>\r\n</tbody>\r\n</table>",
-            "points": 5,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "form_completion_l",
-            "field_count": 5,
-            "field_answers": {
-                "1": "hawberry",
-                "2": "may",
-                "3": "26|twenty six|twenty-six",
-                "4": "714721|714 721",
-                "5": "no mobile phone|no mobile|none"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! HAWBERRY is the applicant's surname. The admissions officer confirms the spelling: 'H-A-W-B-E-R-R-Y'.",
-                    "incorrect": "✗ Incorrect. The correct answer is HAWBERRY. Listen for when Anne states 'It's Anne Hawberry' and the officer confirms the spelling.",
-                    "no_answer": "No answer provided. The correct answer is HAWBERRY. Listen carefully when the applicant introduces herself at the beginning of the conversation."
-                },
-                "2": {
-                    "correct": "✓ Correct! MAY is the month of birth. Anne states her date of birth is '22 May 1981'.",
-                    "incorrect": "✗ Incorrect. The correct answer is MAY. Listen for when Anne gives her complete date of birth.",
-                    "no_answer": "No answer provided. The correct answer is MAY. The applicant provides her full date of birth during the personal details section."
-                },
-                "3": {
-                    "correct": "✓ Correct! The address is 26 Simon Place. Anne clearly states this when providing her contact details.",
-                    "incorrect": "✗ Incorrect. The correct answer is 26. Listen carefully when Anne provides her full address.",
-                    "no_answer": "No answer provided. The correct answer is 26. Pay attention to the address details given by the applicant."
-                },
-                "4": {
-                    "correct": "✓ Correct! 714721 is the phone number (after 01903). Anne repeats this number when asked to confirm.",
-                    "incorrect": "✗ Incorrect. The correct answer is 714721 (or 534 345 based on one mention, but she corrects to 714 721). Note: If your answer was marked wrong but you have 714721, please let us know!",
-                    "no_answer": "No answer provided. The correct answer is 714721. Listen when Anne provides and then repeats her contact number."
-                },
-                "5": {
-                    "correct": "✓ Correct! Anne does not have a mobile phone. She explicitly states 'No, I don't' when asked.",
-                    "incorrect": "✗ Incorrect. The correct answer is NO MOBILE PHONE (or similar). Anne clearly states she doesn't have one.",
-                    "no_answer": "No answer provided. The correct answer is NO MOBILE PHONE. Listen when the admissions officer asks about mobile phone details."
-                }
-            }
+  "title": "IELTS Listening Test 15",
+  "content": "Complete IELTS Listening Test 15 with all 4 sections (40 questions)",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1-5. Complete the form below with the applicant's personal details using NO MORE THAN THREE WORDS OR A NUMBER.",
+      "question": "<table>\r\n<tbody>\r\n<tr>\r\n<td><strong>Applicant information form:</strong>\r\nName: Anne [field 1]\r\nD.O.B.: 22nd of [field 2], 1981\r\nAddress: [field 3] Simon Place, Brighton\r\nContact number: (01903) [field 4]\r\nMobile: [field 5]</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+      "points": 5,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "hawberry",
+        "2": "may",
+        "3": "26|twenty six|twenty-six",
+        "4": "714721|714 721",
+        "5": "no mobile phone|no mobile|none"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! HAWBERRY is the applicant's surname. The admissions officer confirms the spelling: 'H-A-W-B-E-R-R-Y'.",
+          "incorrect": "✗ Incorrect. The correct answer is HAWBERRY. Listen for when Anne states 'It's Anne Hawberry' and the officer confirms the spelling.",
+          "no_answer": "No answer provided. The correct answer is HAWBERRY. Listen carefully when the applicant introduces herself at the beginning of the conversation."
         },
-        {
-            "type": "open_question",
-            "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "6. What is the applicant's current job?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "secretary"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Anne works as a SECRETARY. She states 'I am working for Lloyd Enterprises in the city as a secretary'.",
-                    "incorrect": "✗ Incorrect. The correct answer is SECRETARY. Listen when Anne describes her current employment.",
-                    "no_answer": "No answer provided. The correct answer is SECRETARY. Anne mentions her current job when discussing her work experience."
-                }
-            }
+        "2": {
+          "correct": "✓ Correct! MAY is the month of birth. Anne states her date of birth is '22 May 1981'.",
+          "incorrect": "✗ Incorrect. The correct answer is MAY. Listen for when Anne gives her complete date of birth.",
+          "no_answer": "No answer provided. The correct answer is MAY. The applicant provides her full date of birth during the personal details section."
         },
-        {
-            "type": "open_question",
-            "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "7. What university course has she already completed?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "business|business degree|a business degree|a business"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Anne completed a BUSINESS DEGREE. She mentions 'I completed a degree in Business degree a year ago'.",
-                    "incorrect": "✗ Incorrect. The correct answer is BUSINESS (DEGREE). Listen when Anne discusses her educational background.",
-                    "no_answer": "No answer provided. The correct answer is BUSINESS (DEGREE). Pay attention when Anne talks about her qualifications."
-                }
-            }
+        "3": {
+          "correct": "✓ Correct! The address is 26 Simon Place. Anne clearly states this when providing her contact details.",
+          "incorrect": "✗ Incorrect. The correct answer is 26. Listen carefully when Anne provides her full address.",
+          "no_answer": "No answer provided. The correct answer is 26. Pay attention to the address details given by the applicant."
         },
-        {
-            "type": "open_question",
-            "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "8. Why does the MBA course get full quickly?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "it's extremely popular|extremely popular|it is extremely popular"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! The MBA is EXTREMELY POPULAR. The admissions officer warns: 'our MBA programme is extremely popular and gets full quickly'.",
-                    "incorrect": "✗ Incorrect. The correct answer is IT'S EXTREMELY POPULAR. Listen to the admissions officer's warning about the MBA programme.",
-                    "no_answer": "No answer provided. The correct answer is IT'S EXTREMELY POPULAR. The officer explains why she should consider alternatives."
-                }
-            }
+        "4": {
+          "correct": "✓ Correct! 714721 is the phone number (after 01903). Anne repeats this number when asked to confirm.",
+          "incorrect": "✗ Incorrect. The correct answer is 714721 (or 534 345 based on one mention, but she corrects to 714 721). Note: If your answer was marked wrong but you have 714721, please let us know!",
+          "no_answer": "No answer provided. The correct answer is 714721. Listen when Anne provides and then repeats her contact number."
         },
-        {
-            "type": "open_question",
-            "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "9. What is her second choice?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "international marketing|international marketing course|ma in international marketing"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Her second choice is INTERNATIONAL MARKETING. Anne says 'I would also be interested in the MA in International Marketing'.",
-                    "incorrect": "✗ Incorrect. The correct answer is INTERNATIONAL MARKETING (COURSE). Listen when Anne discusses alternative courses.",
-                    "no_answer": "No answer provided. The correct answer is INTERNATIONAL MARKETING. Anne mentions this as her backup option."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "10. Which department will contact the applicant?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "admissions|admissions department|the admissions department"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! The ADMISSIONS DEPARTMENT will contact her. The officer states 'I will pass your details on to our admissions department'.",
-                    "incorrect": "✗ Incorrect. The correct answer is ADMISSIONS DEPARTMENT. Listen at the end when the officer explains the next steps.",
-                    "no_answer": "No answer provided. The correct answer is ADMISSIONS DEPARTMENT. Pay attention to the officer's closing remarks about the application process."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
-            "question": "11. Specific lifestyle changes for whom is the speaker talking about?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "women|changes for women|changes for women|for women"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! The speaker discusses lifestyle CHANGES FOR WOMEN (or just WOMEN). The transcript references changes in women's roles and lifestyles.",
-                    "incorrect": "✗ Incorrect. The correct answer is WOMEN or CHANGES FOR WOMEN. Listen for references to who has experienced lifestyle changes.",
-                    "no_answer": "No answer provided. The correct answer is WOMEN or CHANGES FOR WOMEN. The speaker discusses demographic-specific lifestyle shifts."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
-            "question": "12. Name ONE example of a good which has now become thought of as a necessity.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "dishwasher|dishwashers|microwave|microwaves"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! DISHWASHER(S) or MICROWAVE(S) are examples mentioned. These appliances have become viewed as necessities rather than luxuries.",
-                    "incorrect": "✗ Incorrect. The correct answer is DISHWASHER(S) or MICROWAVE(S). Listen for examples of goods that were once luxuries.",
-                    "no_answer": "No answer provided. The correct answer is DISHWASHER(S) or MICROWAVE(S). The speaker gives examples of modern 'necessities'."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
-            "question": "13. In addition to work, what have these goods given us more time for?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "leisure|leisure pursuits|leisure activities"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! LEISURE PURSUITS (or LEISURE). Modern appliances have freed up time for leisure activities.",
-                    "incorrect": "✗ Incorrect. The correct answer is LEISURE PURSUITS or LEISURE. Listen for what people can do with the time saved by modern conveniences.",
-                    "no_answer": "No answer provided. The correct answer is LEISURE PURSUITS. The speaker discusses the benefits of time-saving devices."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
-            "question": "14. What do richer societies become?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "more demanding"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Richer societies become MORE DEMANDING. The speaker discusses how wealth affects consumer behavior.",
-                    "incorrect": "✗ Incorrect. The correct answer is MORE DEMANDING. Listen for how the speaker characterizes wealthier societies.",
-                    "no_answer": "No answer provided. The correct answer is MORE DEMANDING. Pay attention to the discussion about societal wealth and expectations."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
-            "question": "15. What does the 'race of acquisition' encourage us to buy?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "unnecessary goods|unnecessary items"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! The race of acquisition encourages buying UNNECESSARY GOODS. The speaker criticizes consumer culture.",
-                    "incorrect": "✗ Incorrect. The correct answer is UNNECESSARY GOODS. Listen for the speaker's critique of modern consumerism.",
-                    "no_answer": "No answer provided. The correct answer is UNNECESSARY GOODS. The speaker discusses negative aspects of consumer culture."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
-            "question": "16. Who is mostly responsible for creating the demand for new products?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "Wealthy, older people",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While wealth plays a role, this isn't the specific group identified."
-                },
-                {
-                    "text": "Professionals",
-                    "is_correct": false,
-                    "feedback": "✓ Correct! Professionals are identified as a key driver of demand for new products."
-                },
-                {
-                    "text": "Models",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Models may influence trends but aren't identified as the primary demand creators."
-                }
-            ],
-            "options": "Wealthy, older people\nProfessionals\nModels",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
-            "question": "17. Why should we be concerned with the increasing number of unnecessary appliances?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "The cost",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While cost is a factor, the main concern is different."
-                },
-                {
-                    "text": "The environment",
-                    "is_correct": false,
-                    "feedback": "✓ Correct! Environmental concerns are the primary reason for worry about unnecessary appliances."
-                },
-                {
-                    "text": "The pace of technology",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Technology pace isn't the main environmental concern."
-                }
-            ],
-            "options": "The cost\nThe environment\nThe pace of technology",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
-            "question": "18. What other risk does the speaker refer to?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "A loss of traditional skills",
-                    "is_correct": false,
-                    "feedback": "✓ Correct! The speaker mentions the risk of losing traditional skills as a concern."
-                },
-                {
-                    "text": "Health factors of pre-packaged food",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While health may be mentioned, the focus is on traditional skills."
-                },
-                {
-                    "text": "A negative impact on careers",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Career impacts aren't the risk being emphasized."
-                }
-            ],
-            "options": "A loss of traditional skills\nHealth factors of pre-packaged food\nA negative impact on careers",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
-            "question": "19. Active buying behaviour will",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "cause an increase in manufactured goods",
-                    "is_correct": false,
-                    "feedback": "✓ Correct! Active buying leads to increased demand for manufactured goods."
-                },
-                {
-                    "text": "causes stress within families",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This isn't the primary consequence discussed."
-                },
-                {
-                    "text": "is a purely positive aspect of consumer behaviour",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The speaker presents a more nuanced view with concerns."
-                }
-            ],
-            "options": "cause an increase in manufactured goods\ncauses stress within families\nis a purely positive aspect of consumer behaviour",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
-            "question": "20. What does the speaker recommend for the future?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 1,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "Buy what is available",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This isn't the recommendation."
-                },
-                {
-                    "text": "Educating companies about sustainable production",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While sustainability is important, this isn't the specific recommendation."
-                },
-                {
-                    "text": "Purchase in moderation",
-                    "is_correct": false,
-                    "feedback": "✓ Correct! The speaker recommends purchasing in moderation as a solution."
-                }
-            ],
-            "options": "Buy what is available\nEducating companies about sustainable production\nPurchase in moderation",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Question 21. Choose the correct letter A–C.",
-            "question": "21. Helen became a vegetarian",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "sixteen years ago",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While a timeframe may be mentioned, this isn't why she became vegetarian."
-                },
-                {
-                    "text": "because of family influences",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Family influence isn't given as the reason."
-                },
-                {
-                    "text": "for personal reasons",
-                    "is_correct": true,
-                    "feedback": "✓ Correct! Helen became vegetarian for personal reasons."
-                }
-            ],
-            "options": "sixteen years ago\nbecause of family influences\nfor personal reasons",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "22. According to Helen, what is the most important food source for vegetarians?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "soya|soya bean|soyabean|soy"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! SOYA (or SOYA BEAN) is identified as the most important food source for vegetarians.",
-                    "incorrect": "✗ Incorrect. The correct answer is SOYA. Listen when Helen discusses essential vegetarian protein sources.",
-                    "no_answer": "No answer provided. The correct answer is SOYA. Helen emphasizes this as a key vegetarian food source."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "23. According to Helen, what do most countries do to vegetables?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "overcook|overcook them"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Most countries OVERCOOK vegetables. Helen mentions this as a common problem.",
-                    "incorrect": "✗ Incorrect. The correct answer is OVERCOOK THEM. Listen for Helen's criticism of cooking methods.",
-                    "no_answer": "No answer provided. The correct answer is OVERCOOK THEM. Helen discusses common vegetable preparation mistakes."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
-            "question": "24. According to Helen, it is a misconception people have that vegetarians are what?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "unhealthy"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! The misconception is that vegetarians are UNHEALTHY. Helen addresses this false belief.",
-                    "incorrect": "✗ Incorrect. The correct answer is UNHEALTHY. Listen when Helen discusses common misconceptions about vegetarianism.",
-                    "no_answer": "No answer provided. The correct answer is UNHEALTHY. Helen challenges stereotypes about vegetarian diets."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 25 and 26\r\nComplete the table using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
-            "question": "<table>\r\n<tbody>\r\n<tr>\r\n<td><strong>Food Group</strong></td>\r\n<td><strong>Recommended % of diet</strong></td>\r\n</tr>\r\n<tr>\r\n<td>Fruit and Vegetables</td>\r\n<td>[field 1] %</td>\r\n</tr>\r\n<tr>\r\n<td>Carbohydrates</td>\r\n<td>[field 2] %</td>\r\n</tr>\r\n</tbody>\r\n</table>",
-            "points": 2,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "",
-            "field_count": 2,
-            "field_answers": {
-                "1": "21|twenty one|twenty-one",
-                "2": "44|forty four|forty-four"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Fruit and vegetables should comprise 21% of the diet according to the table.",
-                    "incorrect": "✗ Incorrect. The correct answer is 21. Listen for the percentage recommendations for each food group.",
-                    "no_answer": "No answer provided. The correct answer is 21. Pay attention to the nutritional breakdown discussed."
-                },
-                "2": {
-                    "correct": "✓ Correct! Carbohydrates should be 44% of the diet - the largest portion.",
-                    "incorrect": "✗ Incorrect. The correct answer is 44. Listen for the carbohydrate percentage in the recommended diet.",
-                    "no_answer": "No answer provided. The correct answer is 44. This is the largest food group percentage mentioned."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 27 to 30\r\nLabel the following diagram using NO MORE THAN TWO WORDS.",
-            "question": "<img class=\"alignnone size-medium wp-image-71976518\" src=\"https://www.ieltstestonline.com/2026/wp-content/uploads/2018/12/TEST15-2.jpg\" alt=\"\" width=\"100%\" height=\"2auto\" />\r\n\r\nLabel the food pyramid diagram with the correct food groups:\r\n\r\n<p>27. [field 1] (12%)</p>\r\n<p>28. [field 2] (15%)</p>\r\n<p>29. [field 3] (8%)</p>\r\n<p>30. [field 4] (8%)</p>",
-            "points": 4,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 2,
-            "ielts_question_category": "",
-            "field_count": 4,
-            "field_answers": {
-                "1": "cereals",
-                "2": "dairy",
-                "3": "white meat",
-                "4": "red meat"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! CEREALS comprise 12% of the recommended diet.",
-                    "incorrect": "✗ Incorrect. The correct answer is CEREALS. Listen for which food group accounts for 12%.",
-                    "no_answer": "No answer provided. The correct answer is CEREALS. This food group is at 12% of the diet."
-                },
-                "2": {
-                    "correct": "✓ Correct! DAIRY products make up 15% of the recommended diet.",
-                    "incorrect": "✗ Incorrect. The correct answer is DAIRY. Listen for the 15% food category.",
-                    "no_answer": "No answer provided. The correct answer is DAIRY. This accounts for 15% in the nutritional breakdown."
-                },
-                "3": {
-                    "correct": "✓ Correct! WHITE MEAT should be 8% of the diet.",
-                    "incorrect": "✗ Incorrect. The correct answer is WHITE MEAT. Listen for the protein sources and their percentages.",
-                    "no_answer": "No answer provided. The correct answer is WHITE MEAT. One of the 8% categories in the table."
-                },
-                "4": {
-                    "correct": "✓ Correct! RED MEAT should also be 8% of the diet.",
-                    "incorrect": "✗ Incorrect. The correct answer is RED MEAT. This is the other 8% protein category.",
-                    "no_answer": "No answer provided. The correct answer is RED MEAT. The final 8% category mentioned."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 31 and 32. Complete the following sentence using ONE WORD.",
-            "question": "31. East feels [field 1] therapy is a better word than 'alternative'.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "sentence_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "natural"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! East prefers the term NATURAL. He explicitly states 'I prefer the term \"natural\"'.",
-                    "incorrect": "✗ Incorrect. The correct answer is NATURAL. Listen at the beginning when East discusses terminology.",
-                    "no_answer": "No answer provided. The correct answer is NATURAL. East clarifies his preferred terminology early in the discussion."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 31 and 32. Complete the following sentence using ONE WORD.",
-            "question": "32. Osteopathy involves the manipulation of [field 1] in order to remove stresses and strains.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "sentence_completion_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "muscles"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Osteopathy manipulates MUSCLES. East defines it as 'the manipulation of muscles in order to alleviate stresses and tensions'.",
-                    "incorrect": "✗ Incorrect. The correct answer is MUSCLES. Listen to East's definition of osteopathy.",
-                    "no_answer": "No answer provided. The correct answer is MUSCLES. East provides a clear definition of what osteopathy involves."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "33. According to Matthew East, what must be considered when treating a patient?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "the whole body|whole body"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! THE WHOLE BODY must be considered. East emphasizes 'The whole body must be considered before a course of treatment can be decided upon'.",
-                    "incorrect": "✗ Incorrect. The correct answer is THE WHOLE BODY. Listen when East explains the holistic approach of osteopathy.",
-                    "no_answer": "No answer provided. The correct answer is THE WHOLE BODY. East stresses this as a key principle of natural remedies."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "34. According to Matthew East, what was the original cause of the baby's discomfort?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "a difficult birth|difficult birth"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! A DIFFICULT BIRTH caused the problem. East explains 'the real problem stemmed from a difficult birth which had put pressure on their baby's neck'.",
-                    "incorrect": "✗ Incorrect. The correct answer is A DIFFICULT BIRTH. Listen to East's case study about treating a baby.",
-                    "no_answer": "No answer provided. The correct answer is A DIFFICULT BIRTH. East uses this as an example of finding root causes."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "35. How does East describe the use of drugs and operations?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "invasive"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! East describes them as INVASIVE. He states 'Avoiding such invasive methods of treatment highlights another of the differences'.",
-                    "incorrect": "✗ Incorrect. The correct answer is INVASIVE. Listen when East contrasts natural remedies with conventional medicine.",
-                    "no_answer": "No answer provided. The correct answer is INVASIVE. East uses this term to describe traditional medical interventions."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "36. According to East, what is the percentage cost of natural remedies compared to western treatment?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "10|10%|10 percent|ten|ten percent"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! Natural remedies cost 10% (or less than ten percent) of western treatment. East states 'Natural remedies actually amount to less than ten percent of the cost'.",
-                    "incorrect": "✗ Incorrect. The correct answer is 10 (%). Listen when East discusses the financial benefits of natural remedies.",
-                    "no_answer": "No answer provided. The correct answer is 10 (%). East mentions the significant cost savings."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 37 and 38. Choose the correct letter A–C.",
-            "question": "37. East cites the example of a baby to illustrate that natural remedies",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "have no side effects",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While this may be true, it's not the main point of the baby example."
-                },
-                {
-                    "text": "work on children",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The point is more specific than just working on children."
-                },
-                {
-                    "text": "have benefits that are not just psychological",
-                    "is_correct": true,
-                    "feedback": "✓ Correct! The baby example demonstrates real physiological benefits, not just psychological effects."
-                }
-            ],
-            "options": "have no side effects\nwork on children\nhave benefits that are not just psychological",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 37 and 38. Choose the correct letter A–C.",
-            "question": "38. East feels the best approach for the future is",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "to reject western medicine",
-                    "is_correct": false,
-                    "feedback": "Incorrect. East doesn't advocate completely rejecting western medicine."
-                },
-                {
-                    "text": "a combination of natural and western medicine",
-                    "is_correct": true,
-                    "feedback": "✓ Correct! East recommends 'an open-minded combination of the two forms'."
-                },
-                {
-                    "text": "more research into natural remedies",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While research may be valuable, this isn't East's stated recommendation."
-                }
-            ],
-            "options": "to reject western medicine\na combination of natural and western medicine\nmore research into natural remedies",
-            "correct_answer_count": 1,
-            "show_option_letters": true
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 39 and 40. Answer using NO MORE THAN TWO WORDS.",
-            "question": "39. In which situation does East feel western medicine is the best option?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "emergency surgery|emergency|emergencies"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! EMERGENCY SURGERY is when western medicine is best. East states 'Take emergency surgery, for example. Obviously more natural remedies do not provide the speed required'.",
-                    "incorrect": "✗ Incorrect. The correct answer is EMERGENCY SURGERY. Listen when East acknowledges situations where western medicine is superior.",
-                    "no_answer": "No answer provided. The correct answer is EMERGENCY SURGERY. East gives this as a clear example of when western medicine is needed."
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 39 and 40. Answer using NO MORE THAN TWO WORDS.",
-            "question": "40. Who will be invited to argue the opposing view next week?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 3,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 1,
-            "field_answers": {
-                "1": "dr moore|doctor moore"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "✓ Correct! DR MOORE will present the opposing view. The host says 'Next week we'll be inviting Dr Moore onto the programme to argue his case as a doctor'.",
-                    "incorrect": "✗ Incorrect. The correct answer is DR MOORE. Listen to the closing remarks about next week's guest.",
-                    "no_answer": "No answer provided. The correct answer is DR MOORE. The host announces the next week's programme at the end."
-                }
-            }
+        "5": {
+          "correct": "✓ Correct! Anne does not have a mobile phone. She explicitly states 'No, I don't' when asked.",
+          "incorrect": "✗ Incorrect. The correct answer is NO MOBILE PHONE (or similar). Anne clearly states she doesn't have one.",
+          "no_answer": "No answer provided. The correct answer is NO MOBILE PHONE. Listen when the admissions officer asks about mobile phone details."
         }
-    ],
-    "reading_texts": [],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_listening",
-        "cbt_test_type": "listening",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_listening",
-        "timer_minutes": "",
-        "starting_question_number": "1"
+      }
     },
-    "audio": {
-        "url": "https://www.ieltstestonline.com/2026/wp-content/plugins/audio-files/Listening-Test-15.mp3",
-        "transcript": "",
-        "sections": [
-            {
-                "section_number": 1,
-                "transcript": "<strong>Section 1</strong>\r\n\r\nAnne: Hello I wonder if you could help me. I am interested in enrolling on your M.B.A programme. Could you give me some information please?\r\n\r\nAdmissions officer: Yes of course. I'll take a few details first of all and I'll give you a copy of our prospectus.\r\n\r\nAnne: Oh that's okay. I already have one here. I've been researching the MBA courses in the local area, so I already have lots of course information!\r\n\r\nAdmissions officer: That's great. Okay so first of all, can you tell me your name please?\r\n\r\n<p>Anne: Yes of course. <span id=\"q1\" data-question=\"1\"><span class=\"question-marker-badge\">Q1</span></span><span class=\"transcript-answer-marker\">It's Anne Hawberry.</span></p>\r\n\r\nAdmissions officer: Hawberry. Is that H-A-W-B-E-R-R-Y?\r\n\r\nAnne: Yes that's right.\r\n\r\nAdmissions officer: Okay and what's your date of birth?\r\n\r\n<p>Anne: 22nd of <span id=\"q2\" data-question=\"2\"><span class=\"question-marker-badge\">Q2</span></span><span class=\"transcript-answer-marker\">May</span> 1981.</p>\r\n\r\nAdmissions officer: That's great. And were you born in the UK?\r\n\r\nAnne: Yes I was.\r\n\r\nAdmissions officer: Alright, can you give me some contact details please?\r\n\r\n<p>Anne: Sure. My address is <span id=\"q3\" data-question=\"3\"><span class=\"question-marker-badge\">Q3</span></span><span class=\"transcript-answer-marker\">26</span> Simon Place in Brighton and my telephone number is 01903 714 721.</p>\r\n\r\nAdmissions officer: Sorry, can you tell me your contact number once again?\r\n\r\n<p>Anne: Yes, it's 01903, <span id=\"q4\" data-question=\"4\"><span class=\"question-marker-badge\">Q4</span></span><span class=\"transcript-answer-marker\">714 721.</span></p>\r\n\r\nAdmissions officer: Okay. Great. And do you have a mobile phone number?\r\n\r\n<p>Anne: <span id=\"q5\" data-question=\"5\"><span class=\"question-marker-badge\">Q5</span></span><span class=\"transcript-answer-marker\">No, I don't</span> – is it important?</p>\r\n\r\nAdmissions officer: No that's OK, I'll just write it on your form –no…. mobile …..phone. Now just a few additional questions. Are you working or studying anywhere else at the moment?\r\n\r\n<p>Anne: Yes. I am working for Lloyd Enterprises in the city as a <span id=\"q6\" data-question=\"6\"><span class=\"question-marker-badge\">Q6</span></span><span class=\"transcript-answer-marker\">secretary</span> and I am also studying a computer course part time in the evenings.</p>\r\n\r\nAdmissions officer: Great. So can you give me some details about your educational back ground? We need to make sure that your qualifications match the entry requirements.\r\n\r\n<p>Anne: Yes I completed a degree in <span id=\"q7\" data-question=\"7\"><span class=\"question-marker-badge\">Q7</span></span><span class=\"transcript-answer-marker\">Business</span> degree a year ago and I graduated with a 2:1. I've been working since my graduation, but the job market is very competitive these days, so I'd like to do some post-graduate study now.</p>\r\n\r\n<p>Admissions officer: Okay that sounds fine. Your degree is relevant and it is good that you have some work experience too. I do need to warn you though that our MBA programme is <span id=\"q8\" data-question=\"8\"><span class=\"question-marker-badge\">Q8</span></span><span class=\"transcript-answer-marker\">extremely popular</span> and gets full quickly, so would you be interested in applying for any alternative courses if you application is not successful this time?</p>\r\n\r\n<p>Anne: Well….. My first choice would of course be the MBA, but yes, I've had a good look through your prospectus and I would also be interested in the <span id=\"q9\" data-question=\"9\"><span class=\"question-marker-badge\">Q9</span></span><span class=\"transcript-answer-marker\">MA in International Marketing.</span></p>\r\n\r\nAdmissions officer: That's great, it's always a good idea to keep your options open just in case.\r\n\r\nAdmissions officer: Well, just a few more questions. Can you tell me how you plan to fund your tuition throughout the course?\r\n\r\nAnne: Yes, personal means. I have savings and my parents have also promised to contribute. I don't think I'll need any bank loans at this stage.\r\n\r\nAdmissions officer: Well finally, can you tell me how you learned about or courses here?\r\n\r\nAnne: Actually my cousin studied on the MBA course two years ago and she recommended it to me.\r\n\r\n<p>Admissions officer: Okay, well thank you for coming in today. I will pass your details on to our <span id=\"q10\" data-question=\"10\"><span class=\"question-marker-badge\">Q10</span></span><span class=\"transcript-answer-marker\">admissions department.</span> They will contact you this week with a formal application form and they usually invite MBA candidates for interview.</p>\r\n\r\nAnne: Okay, well thanks for you time.\r\n\r\nAdmissions officer: No problem. Good luck with your application."
-            },
-            {
-                "section_number": 2,
-                "transcript": "<strong>Section 2</strong>\r\n\r\n(A) I'd like to introduce our guest speaker Professor Louise Phillips from AIL International. She is responsible for researching changes in lifestyle and the consequent impact on buyer behaviour. Today she is going to talk about the impact of changes in attitudes to leisure time on sales of labour-saving equipment such as microwaves and \"white goods\" which are products such as washing machines, refrigerators and dish washers.\r\n\r\n<p>(B) Thank you very much. Thank you for coming today. I'll start by talking about lifestyle changes over recent years <span id=\"q11\" data-question=\"11\"><span class=\"question-marker-badge\">Q11</span></span><span class=\"transcript-answer-marker\">for women.</span></p> As we all know, the wife and mother of the family has traditionally been responsible for organising and completing household tasks for the family. However, particularly over the last decade or so, we have seen a greater number of women continuing to work after marriage and returning to work after having children. This has significantly reduced the amount of time available for household chores. <p>The result is that nowadays, the majority of people own and regularly use products such as <span id=\"q12\" data-question=\"12\"><span class=\"question-marker-badge\">Q12</span></span><span class=\"transcript-answer-marker\">dishwashers or microwaves.</span></p> The modern family often considers hours spent on cleaning and cooking as a waste of valuable time and generally we are all interested in finding ways of reducing the number of hours we need to devote to such tasks.\r\n\r\nWhile washing machines have long been thought of as necessities by families, nowadays, so too are microwaves and dishwashers. <p>These goods can drastically reduce the amount of time we need to spend running our home and increase the amount of time available not only to go to work, but to also spend on <span id=\"q13\" data-question=\"13\"><span class=\"question-marker-badge\">Q13</span></span><span class=\"transcript-answer-marker\">leisure pursuits.</span></p>\r\n\r\n<p>As society develops and we become richer, we put more value on our leisure time and our possessions. The richer a society, <span id=\"q14\" data-question=\"14\"><span class=\"question-marker-badge\">Q14</span></span><span class=\"transcript-answer-marker\">the more demanding</span> it becomes.</p> People are no longer happy to work long hours for little return. Expensive holidays, expensive clothes and cars all become more important the more materialistic the society we live in. <p>Acquiring \"things\" and joining the \"race of acquisition\" means that modern society spends a lot of time and money purchasing <span id=\"q15\" data-question=\"15\"><span class=\"question-marker-badge\">Q15</span></span><span class=\"transcript-answer-marker\">unnecessary goods.</span></p> <p><span id=\"q16\" data-question=\"16\"><span class=\"question-marker-badge\">Q16</span></span><span class=\"transcript-answer-marker\">Although expensive and persuasive marketing techniques are partly responsible, the demand for such goods often comes from young professionals,</span> those with the money to endlessly upgrade things simply because a better model is made available.</p>\r\n\r\n<p><span id=\"q17\" data-question=\"17\"><span class=\"question-marker-badge\">Q17</span></span><span class=\"transcript-answer-marker\">Our obsession with the newest and best products available, while good for the economy, can also have a negative impact on the environment.</span></p> It is not appropriate to over-produce appliances and over-use electricity to keep these unnecessary appliances operating in our homes. We often forget about the damage we have done to and continue to do to the environment.\r\n\r\n<p><span id=\"q18\" data-question=\"18\"><span class=\"question-marker-badge\">Q18</span></span><span class=\"transcript-answer-marker\">Others opposed to the overuse of appliances and technology also argue that from a social point of view, over-reliance on gadgets means that people are losing the ability to be creative.</span></p> Traditionally it was considered an enviable skill to prepare meals night after night for our families. Nowadays, women are more likely to gain approval from others for their success in their careers than their ability in the kitchen. Along with microwaves have come ready-cooked meals, pre-washed vegetables and our reliance on take-away food when we are too busy to cook it ourselves.\r\n\r\n<p><span id=\"q19\" data-question=\"19\"><span class=\"question-marker-badge\">Q19</span></span><span id=\"q20\" data-question=\"20\"><span class=\"question-marker-badge\">Q20</span></span><span class=\"transcript-answer-marker\">While there are obvious advantages and disadvantages to our increasingly active buying behaviour and changing wants and desires, it is likely that our desire to purchase labour saving items will continue , so it is therefore inevitable that production of such goods will increase.</span></p> We can only hope to educate ourselves and our children to buy goods we need, not just goods that are available, and always maintain an awareness of their environmental impact. In short, moderation is the most important word for the future.\r\n\r\nI thank you very much for coming today and listening to what I have to say. That concludes my talk. I hope you have found it both interesting and informative. If you have any questions, I would be very glad to answer them……."
-            },
-            {
-                "section_number": 3,
-                "transcript": "<strong>Section 3</strong>\r\n\r\nInterviewer: I'm here with today with Helen Warner, who has been a vegetarian for many years and is going to talk a little about vegetarianism. Helen, the concept of vegetarianism seems to have interested a number of our listeners, who have sent in some questions. To begin, what made you want to become a vegetarian?\r\n\r\n<p>Helen: <span id=\"q21\" data-question=\"21\"><span class=\"question-marker-badge\">Q21</span></span><span class=\"transcript-answer-marker\">Well, when I was sixteen, I had friends that were vegetarian and they introduced me to the idea.</span></p> My parents were typical of their generation, and ate meat at least three or four times a week, so I didn't really think about it too much until a few years later. It was while I was at university that I really thought about, and decided that it was unfair to eat meat when there are so many alternatives available.\r\n\r\nInterviewer: Is there anything you miss about not eating meat?\r\n\r\n<p>Helen: Ummm. No, not really. As I said, there are so many substitutes available these days, perhaps the most important of which comes from the <span id=\"q22\" data-question=\"22\"><span class=\"question-marker-badge\">Q22</span></span><span class=\"transcript-answer-marker\">soya bean.</span></p> Soya is so versatile, and is the staple substitute for most vegetarians.\r\n\r\nInterviewer: So what about the nutritional value of vegetarian food? Isn't it true that there are some vitamins that you can't get from soya or vegetables alone. Surely people need these vitamins?\r\n\r\n<p>Helen: Yes, that's correct. But actually there is only one vital vitamin that is only present in meat – that's vitamin B12. Most vegetarians are aware of the implication of this and actually take B12 supplement in the form of tablets. Of course the way you cook vegetables is also very important in preserving vitamins. Many countries, particularly the UK, have a reputation for <span id=\"q23\" data-question=\"23\"><span class=\"question-marker-badge\">Q23</span></span><span class=\"transcript-answer-marker\">overcooking</span> vegetables.</p> Water soluble vitamins - you know, where the vitamins are dissolved into the water - are often lost. Vitamin C is a common example. However, this loss of vitamins can be avoided by micro waving or steaming vegetables, which is what I do whenever I cook. Some people don't want to change their cooking habits too much, so if you do boil them simply cut down on the cooking time.\r\n\r\nInterviewer: So a vegetarian diet is fairly healthy then?\r\n\r\n<p>Helen: Oh yes. A lot of people believe that vegetarianism is <span id=\"q24\" data-question=\"24\"><span class=\"question-marker-badge\">Q24</span></span><span class=\"transcript-answer-marker\">unhealthy,</span> but that's not actually the case.</p> Vegetarians are actually considerably healthier than many meat eaters. Consider for a minute the health aspects of the incredible amount of meat this country and others like it consume. The statistics for beef eating, for example, are quite frightening. The world figure for beef consumption is slightly less than 11kg per person each year. <p>Yet in Europe, the average consumption is nearly double that at <span id=\"q25\" data-question=\"25\"><span class=\"question-marker-badge\">Q25</span></span><span class=\"transcript-answer-marker\">21 kilos</span> per person, and in the USA it is even worse, with the average person eating <span id=\"q26\" data-question=\"26\"><span class=\"question-marker-badge\">Q26</span></span><span class=\"transcript-answer-marker\">44kg</span> of beef every year.</p>\r\n\r\nInterviewer: So are you suggesting that people stop eating meat altogether and everyone adopts a vegetarian lifestyle?\r\n\r\n<p>Helen: No, not at all. Even in the healthiest diets there is still a place for meat, but it should be eaten in moderation. Many nutritionalists think of foods in terms of a pyramid, with the foods we can eat relatively freely at the bottom and the foods we should carefully restrict at the top. The majority of our diet should be composed of <span id=\"q27\" data-question=\"27\"><span class=\"question-marker-badge\">Q27</span></span><span class=\"transcript-answer-marker\">cereals,</span> which would go on the bottom row of the pyramid. In this category could also be included such things as rice and pasta. Next, a good diet is followed by a roughly equal amount of vegetables and fruit. I try to have at least two servings a day of fruit and vegetable whenever possible. In decreasing quantities, you can then eat <span id=\"q28\" data-question=\"28\"><span class=\"question-marker-badge\">Q28</span></span><span class=\"transcript-answer-marker\">dairy</span> foods – eggs, cheese etc. Almost at the top of the food pyramid comes fish - carefully prepared of course, not dripping in oil or batter! – and <span id=\"q29\" data-question=\"29\"><span class=\"question-marker-badge\">Q29</span></span><span class=\"transcript-answer-marker\">white meat.</span> Chicken, for example, is a comparatively healthy meat, but again, a lot of this comes down to preparation methods. Right at the top of the pyramid come the ingredients of far too many western meals – <span id=\"q30\" data-question=\"30\"><span class=\"question-marker-badge\">Q30</span></span><span class=\"transcript-answer-marker\">red meat</span> and potatoes.</p> It is particularly in this area that I would suggest moderation.\r\n\r\nInterviewer: Well, thank you very much Helen. I'm sure that a lot of listeners are interested in your views. How could they find out more about the health benefits of vegetarian options?\r\n\r\nHelen: Well there are lots of websites and books on healthy eating and vegetarianism, but it is always important to remember to consult your doctor before making any radical changes to your diet or lifestyle."
-            },
-            {
-                "section_number": 4,
-                "transcript": "<strong>Section 4</strong>\r\n\r\nOver the past 50 years, there have been some radical changes in the medicine as it is known in the West. This is largely the result of vast improvements in technology, but also in the rising importance of 'alternative' treatments. I have with me today Matthew East, a registered osteopath and a supporter of alternative techniques in healthcare. Matthew, can you tell us more about osteopathy?\r\n\r\n<p>Well, perhaps the first thing I should say is that the term 'alternative' is actually a little misleading, as I am referring to approaches and attitudes to health that were in common use long before western medicine was established. I prefer the term <span id=\"q31\" data-question=\"31\"><span class=\"question-marker-badge\">Q31</span></span><span class=\"transcript-answer-marker\">'natural'.</span></p> <p>Anyway, I'll begin by telling you a little about osteopathy. Basically, osteopathy is the manipulation of <span id=\"q32\" data-question=\"32\"><span class=\"question-marker-badge\">Q32</span></span><span class=\"transcript-answer-marker\">muscles</span> in order to alleviate stresses and tensions that lead to pain.</p> <p>Now unlike western medicine, osteopathy considers <span id=\"q33\" data-question=\"33\"><span class=\"question-marker-badge\">Q33</span></span><span class=\"transcript-answer-marker\">the whole body,</span> not just the affected area, and this is a very important principle of natural remedies. The whole body must be considered before a course of treatment can be decided upon.</p> You see, the aim of therapies like osteopathy is not only to repair the body, but also to get the body treating itself, and this does not come from treating the symptoms. <p>To give an example, I recently treated a two-month-old baby who was screaming all day and was even worse at night. The couple had taken the baby to their doctor, but the only advice they were given was that the baby 'would grow out of it'. However, the real problem stemmed from <span id=\"q34\" data-question=\"34\"><span class=\"question-marker-badge\">Q34</span></span><span class=\"transcript-answer-marker\">a difficult birth</span> which had put pressure on their baby's neck.</p> After ten minutes of gentle manipulation the pressure was released and within 20 minutes, the baby was quiet and calm for the first time. <p>This was achieved without drugs or operations. Avoiding such <span id=\"q35\" data-question=\"35\"><span class=\"question-marker-badge\">Q35</span></span><span class=\"transcript-answer-marker\">invasive</span> methods of treatment highlights another of the differences between western medicine and a more natural approach.</p> You see, western medicine often uses surgery in order to find a solution to problems that could have been addressed with simple remedies. A medical approach that looks closely at how essential an operation is before it is performed would offer patients a considerably less stressful method of treatment, not to mention the financial savings. <p>Natural remedies actually amount to less than <span id=\"q36\" data-question=\"36\"><span class=\"question-marker-badge\">Q36</span></span><span class=\"transcript-answer-marker\">ten percent</span> of the cost of a western course of treatment.</p>\r\n\r\n<p><span id=\"q37\" data-question=\"37\"><span class=\"question-marker-badge\">Q37</span></span><span class=\"transcript-answer-marker\">I'd like to mention the subject of surgery again a little later, but I would like to say at this point that there are those that claim that the benefits of osteopathy and herbal therapies are largely psychological, that they have not undergone the clinical trials that pharmaceuticals have. To answer that, you only need to look at the example I gave earlier, of the baby that stopped crying less than an hour after treatment but was obviously far too young to react because of purely psychological factors.</span></p> Another example can be seen in the successful use of acupuncture in the treatment of animals. In response to criticism regarding clinical trials, it is worth noting that the power of pharmaceutical companies is such that although some drugs fail the standards required of them, they are sometimes still prescribed by doctors.\r\n\r\nMoving on to another point, it should be stressed that natural remedies, in addition to having no side effects, can also be applied to any patient. Now I'm not suggesting that the same treatments are used indiscriminately. I'm referring to the fact that treatment is the same with natural therapies regardless of age, but very specific to the person. By this I mean that not only the general health of the patient needs to be considered, but also their habits, diet and lifestyle in order to build a complete picture.\r\n\r\n<p><span id=\"q38\" data-question=\"38\"><span class=\"question-marker-badge\">Q38</span></span><span class=\"transcript-answer-marker\">However, I am not suggesting that we should reject western medicine entirely. In fact, there have been occasions when I have referred patients to their doctor as I felt that in those cases it was the most suitable course of action. There are many situations in which it is by far the best option.</span></p> <p>Take <span id=\"q39\" data-question=\"39\"><span class=\"question-marker-badge\">Q39</span></span><span class=\"transcript-answer-marker\">emergency surgery,</span> for example. Obviously more natural remedies do not provide the speed required in such cases. The best solution would therefore be an open-minded combination of the two forms.</p>\r\n\r\n<p>Well, thank you very much Matthew. That was a very interesting insight into alternative, sorry natural, treatments. Next week we'll be inviting <span id=\"q40\" data-question=\"40\"><span class=\"question-marker-badge\">Q40</span></span><span class=\"transcript-answer-marker\">Dr Moore</span> onto the programme to argue his case as a doctor.</p> Until next week, then, goodbye."
-            }
-        ]
+    {
+      "type": "open_question",
+      "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "6. What is the applicant's current job?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "secretary"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Anne works as a SECRETARY. She states 'I am working for Lloyd Enterprises in the city as a secretary'.",
+          "incorrect": "✗ Incorrect. The correct answer is SECRETARY. Listen when Anne describes her current employment.",
+          "no_answer": "No answer provided. The correct answer is SECRETARY. Anne mentions her current job when discussing her work experience."
+        }
+      }
     },
-    "_metadata": {
-        "exported_at": "2026-01-12 07:26:11",
-        "exported_by": "impact",
-        "plugin_version": "11.10",
-        "format_version": "1.0"
+    {
+      "type": "open_question",
+      "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "7. What university course has she already completed?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "business|business degree|a business degree|a business"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Anne completed a BUSINESS DEGREE. She mentions 'I completed a degree in Business degree a year ago'.",
+          "incorrect": "✗ Incorrect. The correct answer is BUSINESS (DEGREE). Listen when Anne discusses her educational background.",
+          "no_answer": "No answer provided. The correct answer is BUSINESS (DEGREE). Pay attention when Anne talks about her qualifications."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "8. Why does the MBA course get full quickly?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "it's extremely popular|extremely popular|it is extremely popular"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! The MBA is EXTREMELY POPULAR. The admissions officer warns: 'our MBA programme is extremely popular and gets full quickly'.",
+          "incorrect": "✗ Incorrect. The correct answer is IT'S EXTREMELY POPULAR. Listen to the admissions officer's warning about the MBA programme.",
+          "no_answer": "No answer provided. The correct answer is IT'S EXTREMELY POPULAR. The officer explains why she should consider alternatives."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "9. What is her second choice?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "international marketing|international marketing course|ma in international marketing"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Her second choice is INTERNATIONAL MARKETING. Anne says 'I would also be interested in the MA in International Marketing'.",
+          "incorrect": "✗ Incorrect. The correct answer is INTERNATIONAL MARKETING (COURSE). Listen when Anne discusses alternative courses.",
+          "no_answer": "No answer provided. The correct answer is INTERNATIONAL MARKETING. Anne mentions this as her backup option."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 6 to 10\r\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "10. Which department will contact the applicant?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "admissions|admissions department|the admissions department"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! The ADMISSIONS DEPARTMENT will contact her. The officer states 'I will pass your details on to our admissions department'.",
+          "incorrect": "✗ Incorrect. The correct answer is ADMISSIONS DEPARTMENT. Listen at the end when the officer explains the next steps.",
+          "no_answer": "No answer provided. The correct answer is ADMISSIONS DEPARTMENT. Pay attention to the officer's closing remarks about the application process."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+      "question": "11. Specific lifestyle changes for whom is the speaker talking about?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "women|changes for women|changes for women|for women"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! The speaker discusses lifestyle CHANGES FOR WOMEN (or just WOMEN). The transcript references changes in women's roles and lifestyles.",
+          "incorrect": "✗ Incorrect. The correct answer is WOMEN or CHANGES FOR WOMEN. Listen for references to who has experienced lifestyle changes.",
+          "no_answer": "No answer provided. The correct answer is WOMEN or CHANGES FOR WOMEN. The speaker discusses demographic-specific lifestyle shifts."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+      "question": "12. Name ONE example of a good which has now become thought of as a necessity.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "dishwasher|dishwashers|microwave|microwaves"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! DISHWASHER(S) or MICROWAVE(S) are examples mentioned. These appliances have become viewed as necessities rather than luxuries.",
+          "incorrect": "✗ Incorrect. The correct answer is DISHWASHER(S) or MICROWAVE(S). Listen for examples of goods that were once luxuries.",
+          "no_answer": "No answer provided. The correct answer is DISHWASHER(S) or MICROWAVE(S). The speaker gives examples of modern 'necessities'."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+      "question": "13. In addition to work, what have these goods given us more time for?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "leisure|leisure pursuits|leisure activities"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! LEISURE PURSUITS (or LEISURE). Modern appliances have freed up time for leisure activities.",
+          "incorrect": "✗ Incorrect. The correct answer is LEISURE PURSUITS or LEISURE. Listen for what people can do with the time saved by modern conveniences.",
+          "no_answer": "No answer provided. The correct answer is LEISURE PURSUITS. The speaker discusses the benefits of time-saving devices."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+      "question": "14. What do richer societies become?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "more demanding"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Richer societies become MORE DEMANDING. The speaker discusses how wealth affects consumer behavior.",
+          "incorrect": "✗ Incorrect. The correct answer is MORE DEMANDING. Listen for how the speaker characterizes wealthier societies.",
+          "no_answer": "No answer provided. The correct answer is MORE DEMANDING. Pay attention to the discussion about societal wealth and expectations."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 11-15. Answer the questions using NO MORE THAN THREE WORDS.",
+      "question": "15. What does the 'race of acquisition' encourage us to buy?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "unnecessary goods|unnecessary items"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! The race of acquisition encourages buying UNNECESSARY GOODS. The speaker criticizes consumer culture.",
+          "incorrect": "✗ Incorrect. The correct answer is UNNECESSARY GOODS. Listen for the speaker's critique of modern consumerism.",
+          "no_answer": "No answer provided. The correct answer is UNNECESSARY GOODS. The speaker discusses negative aspects of consumer culture."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
+      "question": "16. Who is mostly responsible for creating the demand for new products?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "Wealthy, older people",
+          "is_correct": false,
+          "feedback": "Incorrect. While wealth plays a role, this isn't the specific group identified."
+        },
+        {
+          "text": "Professionals",
+          "is_correct": false,
+          "feedback": "✓ Correct! Professionals are identified as a key driver of demand for new products."
+        },
+        {
+          "text": "Models",
+          "is_correct": false,
+          "feedback": "Incorrect. Models may influence trends but aren't identified as the primary demand creators."
+        }
+      ],
+      "options": "Wealthy, older people\nProfessionals\nModels",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
+      "question": "17. Why should we be concerned with the increasing number of unnecessary appliances?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "The cost",
+          "is_correct": false,
+          "feedback": "Incorrect. While cost is a factor, the main concern is different."
+        },
+        {
+          "text": "The environment",
+          "is_correct": false,
+          "feedback": "✓ Correct! Environmental concerns are the primary reason for worry about unnecessary appliances."
+        },
+        {
+          "text": "The pace of technology",
+          "is_correct": false,
+          "feedback": "Incorrect. Technology pace isn't the main environmental concern."
+        }
+      ],
+      "options": "The cost\nThe environment\nThe pace of technology",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
+      "question": "18. What other risk does the speaker refer to?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "A loss of traditional skills",
+          "is_correct": false,
+          "feedback": "✓ Correct! The speaker mentions the risk of losing traditional skills as a concern."
+        },
+        {
+          "text": "Health factors of pre-packaged food",
+          "is_correct": false,
+          "feedback": "Incorrect. While health may be mentioned, the focus is on traditional skills."
+        },
+        {
+          "text": "A negative impact on careers",
+          "is_correct": false,
+          "feedback": "Incorrect. Career impacts aren't the risk being emphasized."
+        }
+      ],
+      "options": "A loss of traditional skills\nHealth factors of pre-packaged food\nA negative impact on careers",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
+      "question": "19. Active buying behaviour will",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "cause an increase in manufactured goods",
+          "is_correct": false,
+          "feedback": "✓ Correct! Active buying leads to increased demand for manufactured goods."
+        },
+        {
+          "text": "causes stress within families",
+          "is_correct": false,
+          "feedback": "Incorrect. This isn't the primary consequence discussed."
+        },
+        {
+          "text": "is a purely positive aspect of consumer behaviour",
+          "is_correct": false,
+          "feedback": "Incorrect. The speaker presents a more nuanced view with concerns."
+        }
+      ],
+      "options": "cause an increase in manufactured goods\ncauses stress within families\nis a purely positive aspect of consumer behaviour",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 16 to 20\r\nSelect the correct answer A-C.",
+      "question": "20. What does the speaker recommend for the future?",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 1,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "Buy what is available",
+          "is_correct": false,
+          "feedback": "Incorrect. This isn't the recommendation."
+        },
+        {
+          "text": "Educating companies about sustainable production",
+          "is_correct": false,
+          "feedback": "Incorrect. While sustainability is important, this isn't the specific recommendation."
+        },
+        {
+          "text": "Purchase in moderation",
+          "is_correct": false,
+          "feedback": "✓ Correct! The speaker recommends purchasing in moderation as a solution."
+        }
+      ],
+      "options": "Buy what is available\nEducating companies about sustainable production\nPurchase in moderation",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Question 21. Choose the correct letter A–C.",
+      "question": "21. Helen became a vegetarian",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "sixteen years ago",
+          "is_correct": false,
+          "feedback": "Incorrect. While a timeframe may be mentioned, this isn't why she became vegetarian."
+        },
+        {
+          "text": "because of family influences",
+          "is_correct": false,
+          "feedback": "Incorrect. Family influence isn't given as the reason."
+        },
+        {
+          "text": "for personal reasons",
+          "is_correct": true,
+          "feedback": "✓ Correct! Helen became vegetarian for personal reasons."
+        }
+      ],
+      "options": "sixteen years ago\nbecause of family influences\nfor personal reasons",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
+      "question": "22. According to Helen, what is the most important food source for vegetarians?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "soya|soya bean|soyabean|soy"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! SOYA (or SOYA BEAN) is identified as the most important food source for vegetarians.",
+          "incorrect": "✗ Incorrect. The correct answer is SOYA. Listen when Helen discusses essential vegetarian protein sources.",
+          "no_answer": "No answer provided. The correct answer is SOYA. Helen emphasizes this as a key vegetarian food source."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
+      "question": "23. According to Helen, what do most countries do to vegetables?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "overcook|overcook them"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Most countries OVERCOOK vegetables. Helen mentions this as a common problem.",
+          "incorrect": "✗ Incorrect. The correct answer is OVERCOOK THEM. Listen for Helen's criticism of cooking methods.",
+          "no_answer": "No answer provided. The correct answer is OVERCOOK THEM. Helen discusses common vegetable preparation mistakes."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 22-24. Answer the following questions using NO MORE THAN TWO WORDS.",
+      "question": "24. According to Helen, it is a misconception people have that vegetarians are what?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "unhealthy"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! The misconception is that vegetarians are UNHEALTHY. Helen addresses this false belief.",
+          "incorrect": "✗ Incorrect. The correct answer is UNHEALTHY. Listen when Helen discusses common misconceptions about vegetarianism.",
+          "no_answer": "No answer provided. The correct answer is UNHEALTHY. Helen challenges stereotypes about vegetarian diets."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 25 and 26\r\nComplete the table using NO MORE THAN TWO WORDS AND/OR A NUMBER.",
+      "question": "<table>\r\n<tbody>\r\n<tr>\r\n<td><strong>Food Group</strong></td>\r\n<td><strong>Recommended % of diet</strong></td>\r\n</tr>\r\n<tr>\r\n<td>Fruit and Vegetables</td>\r\n<td>[field 1] %</td>\r\n</tr>\r\n<tr>\r\n<td>Carbohydrates</td>\r\n<td>[field 2] %</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+      "points": 2,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "",
+      "field_count": 2,
+      "field_answers": {
+        "1": "21|twenty one|twenty-one",
+        "2": "44|forty four|forty-four"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Fruit and vegetables should comprise 21% of the diet according to the table.",
+          "incorrect": "✗ Incorrect. The correct answer is 21. Listen for the percentage recommendations for each food group.",
+          "no_answer": "No answer provided. The correct answer is 21. Pay attention to the nutritional breakdown discussed."
+        },
+        "2": {
+          "correct": "✓ Correct! Carbohydrates should be 44% of the diet - the largest portion.",
+          "incorrect": "✗ Incorrect. The correct answer is 44. Listen for the carbohydrate percentage in the recommended diet.",
+          "no_answer": "No answer provided. The correct answer is 44. This is the largest food group percentage mentioned."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 27 to 30\r\nLabel the following diagram using NO MORE THAN TWO WORDS.",
+      "question": "<img class=\"alignnone size-medium wp-image-71976518\" src=\"https://www.ieltstestonline.com/2026/wp-content/uploads/2018/12/TEST15-2.jpg\" alt=\"\" width=\"100%\" height=\"2auto\" />\r\n\r\nLabel the food pyramid diagram with the correct food groups:\r\n\r\n<p>27. [field 1] (12%)</p>\r\n<p>28. [field 2] (15%)</p>\r\n<p>29. [field 3] (8%)</p>\r\n<p>30. [field 4] (8%)</p>",
+      "points": 4,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 2,
+      "ielts_question_category": "",
+      "field_count": 4,
+      "field_answers": {
+        "1": "cereals",
+        "2": "dairy",
+        "3": "white meat",
+        "4": "red meat"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! CEREALS comprise 12% of the recommended diet.",
+          "incorrect": "✗ Incorrect. The correct answer is CEREALS. Listen for which food group accounts for 12%.",
+          "no_answer": "No answer provided. The correct answer is CEREALS. This food group is at 12% of the diet."
+        },
+        "2": {
+          "correct": "✓ Correct! DAIRY products make up 15% of the recommended diet.",
+          "incorrect": "✗ Incorrect. The correct answer is DAIRY. Listen for the 15% food category.",
+          "no_answer": "No answer provided. The correct answer is DAIRY. This accounts for 15% in the nutritional breakdown."
+        },
+        "3": {
+          "correct": "✓ Correct! WHITE MEAT should be 8% of the diet.",
+          "incorrect": "✗ Incorrect. The correct answer is WHITE MEAT. Listen for the protein sources and their percentages.",
+          "no_answer": "No answer provided. The correct answer is WHITE MEAT. One of the 8% categories in the table."
+        },
+        "4": {
+          "correct": "✓ Correct! RED MEAT should also be 8% of the diet.",
+          "incorrect": "✗ Incorrect. The correct answer is RED MEAT. This is the other 8% protein category.",
+          "no_answer": "No answer provided. The correct answer is RED MEAT. The final 8% category mentioned."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 31 and 32. Complete the following sentence using ONE WORD.",
+      "question": "31. East feels [field 1] therapy is a better word than 'alternative'.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "sentence_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "natural"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! East prefers the term NATURAL. He explicitly states 'I prefer the term \"natural\"'.",
+          "incorrect": "✗ Incorrect. The correct answer is NATURAL. Listen at the beginning when East discusses terminology.",
+          "no_answer": "No answer provided. The correct answer is NATURAL. East clarifies his preferred terminology early in the discussion."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 31 and 32. Complete the following sentence using ONE WORD.",
+      "question": "32. Osteopathy involves the manipulation of [field 1] in order to remove stresses and strains.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "sentence_completion_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "muscles"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Osteopathy manipulates MUSCLES. East defines it as 'the manipulation of muscles in order to alleviate stresses and tensions'.",
+          "incorrect": "✗ Incorrect. The correct answer is MUSCLES. Listen to East's definition of osteopathy.",
+          "no_answer": "No answer provided. The correct answer is MUSCLES. East provides a clear definition of what osteopathy involves."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "33. According to Matthew East, what must be considered when treating a patient?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "the whole body|whole body"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! THE WHOLE BODY must be considered. East emphasizes 'The whole body must be considered before a course of treatment can be decided upon'.",
+          "incorrect": "✗ Incorrect. The correct answer is THE WHOLE BODY. Listen when East explains the holistic approach of osteopathy.",
+          "no_answer": "No answer provided. The correct answer is THE WHOLE BODY. East stresses this as a key principle of natural remedies."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "34. According to Matthew East, what was the original cause of the baby's discomfort?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "a difficult birth|difficult birth"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! A DIFFICULT BIRTH caused the problem. East explains 'the real problem stemmed from a difficult birth which had put pressure on their baby's neck'.",
+          "incorrect": "✗ Incorrect. The correct answer is A DIFFICULT BIRTH. Listen to East's case study about treating a baby.",
+          "no_answer": "No answer provided. The correct answer is A DIFFICULT BIRTH. East uses this as an example of finding root causes."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "35. How does East describe the use of drugs and operations?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "invasive"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! East describes them as INVASIVE. He states 'Avoiding such invasive methods of treatment highlights another of the differences'.",
+          "incorrect": "✗ Incorrect. The correct answer is INVASIVE. Listen when East contrasts natural remedies with conventional medicine.",
+          "no_answer": "No answer provided. The correct answer is INVASIVE. East uses this term to describe traditional medical interventions."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 33-36. Answer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "36. According to East, what is the percentage cost of natural remedies compared to western treatment?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "10|10%|10 percent|ten|ten percent"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! Natural remedies cost 10% (or less than ten percent) of western treatment. East states 'Natural remedies actually amount to less than ten percent of the cost'.",
+          "incorrect": "✗ Incorrect. The correct answer is 10 (%). Listen when East discusses the financial benefits of natural remedies.",
+          "no_answer": "No answer provided. The correct answer is 10 (%). East mentions the significant cost savings."
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 37 and 38. Choose the correct letter A–C.",
+      "question": "37. East cites the example of a baby to illustrate that natural remedies",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "have no side effects",
+          "is_correct": false,
+          "feedback": "Incorrect. While this may be true, it's not the main point of the baby example."
+        },
+        {
+          "text": "work on children",
+          "is_correct": false,
+          "feedback": "Incorrect. The point is more specific than just working on children."
+        },
+        {
+          "text": "have benefits that are not just psychological",
+          "is_correct": true,
+          "feedback": "✓ Correct! The baby example demonstrates real physiological benefits, not just psychological effects."
+        }
+      ],
+      "options": "have no side effects\nwork on children\nhave benefits that are not just psychological",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 37 and 38. Choose the correct letter A–C.",
+      "question": "38. East feels the best approach for the future is",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "to reject western medicine",
+          "is_correct": false,
+          "feedback": "Incorrect. East doesn't advocate completely rejecting western medicine."
+        },
+        {
+          "text": "a combination of natural and western medicine",
+          "is_correct": true,
+          "feedback": "✓ Correct! East recommends 'an open-minded combination of the two forms'."
+        },
+        {
+          "text": "more research into natural remedies",
+          "is_correct": false,
+          "feedback": "Incorrect. While research may be valuable, this isn't East's stated recommendation."
+        }
+      ],
+      "options": "to reject western medicine\na combination of natural and western medicine\nmore research into natural remedies",
+      "correct_answer_count": 1,
+      "show_option_letters": true
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 39 and 40. Answer using NO MORE THAN TWO WORDS.",
+      "question": "39. In which situation does East feel western medicine is the best option?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "emergency surgery|emergency|emergencies"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! EMERGENCY SURGERY is when western medicine is best. East states 'Take emergency surgery, for example. Obviously more natural remedies do not provide the speed required'.",
+          "incorrect": "✗ Incorrect. The correct answer is EMERGENCY SURGERY. Listen when East acknowledges situations where western medicine is superior.",
+          "no_answer": "No answer provided. The correct answer is EMERGENCY SURGERY. East gives this as a clear example of when western medicine is needed."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 39 and 40. Answer using NO MORE THAN TWO WORDS.",
+      "question": "40. Who will be invited to argue the opposing view next week?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 3,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 1,
+      "field_answers": {
+        "1": "dr moore|doctor moore"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "✓ Correct! DR MOORE will present the opposing view. The host says 'Next week we'll be inviting Dr Moore onto the programme to argue his case as a doctor'.",
+          "incorrect": "✗ Incorrect. The correct answer is DR MOORE. Listen to the closing remarks about next week's guest.",
+          "no_answer": "No answer provided. The correct answer is DR MOORE. The host announces the next week's programme at the end."
+        }
+      }
     }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_listening",
+    "cbt_test_type": "listening",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_listening",
+    "timer_minutes": "",
+    "starting_question_number": "1"
+  },
+  "audio": {
+    "url": "https://www.ieltstestonline.com/2026/wp-content/plugins/audio-files/Listening-Test-15.mp3",
+    "transcript": "",
+    "sections": [
+      {
+        "section_number": 1,
+        "transcript": "<strong>Section 1</strong>\r\n\r\nAnne: Hello I wonder if you could help me. I am interested in enrolling on your M.B.A programme. Could you give me some information please?\r\n\r\nAdmissions officer: Yes of course. I'll take a few details first of all and I'll give you a copy of our prospectus.\r\n\r\nAnne: Oh that's okay. I already have one here. I've been researching the MBA courses in the local area, so I already have lots of course information!\r\n\r\nAdmissions officer: That's great. Okay so first of all, can you tell me your name please?\r\n\r\n<p>Anne: Yes of course. <span id=\"q1\" data-question=\"1\"><span class=\"question-marker-badge\">Q1</span></span><span class=\"transcript-answer-marker\">It's Anne Hawberry.</span></p>\r\n\r\nAdmissions officer: Hawberry. Is that H-A-W-B-E-R-R-Y?\r\n\r\nAnne: Yes that's right.\r\n\r\nAdmissions officer: Okay and what's your date of birth?\r\n\r\n<p>Anne: 22nd of <span id=\"q2\" data-question=\"2\"><span class=\"question-marker-badge\">Q2</span></span><span class=\"transcript-answer-marker\">May</span> 1981.</p>\r\n\r\nAdmissions officer: That's great. And were you born in the UK?\r\n\r\nAnne: Yes I was.\r\n\r\nAdmissions officer: Alright, can you give me some contact details please?\r\n\r\n<p>Anne: Sure. My address is <span id=\"q3\" data-question=\"3\"><span class=\"question-marker-badge\">Q3</span></span><span class=\"transcript-answer-marker\">26</span> Simon Place in Brighton and my telephone number is 01903 714 721.</p>\r\n\r\nAdmissions officer: Sorry, can you tell me your contact number once again?\r\n\r\n<p>Anne: Yes, it's 01903, <span id=\"q4\" data-question=\"4\"><span class=\"question-marker-badge\">Q4</span></span><span class=\"transcript-answer-marker\">714 721.</span></p>\r\n\r\nAdmissions officer: Okay. Great. And do you have a mobile phone number?\r\n\r\n<p>Anne: <span id=\"q5\" data-question=\"5\"><span class=\"question-marker-badge\">Q5</span></span><span class=\"transcript-answer-marker\">No, I don't</span> – is it important?</p>\r\n\r\nAdmissions officer: No that's OK, I'll just write it on your form –no…. mobile …..phone. Now just a few additional questions. Are you working or studying anywhere else at the moment?\r\n\r\n<p>Anne: Yes. I am working for Lloyd Enterprises in the city as a <span id=\"q6\" data-question=\"6\"><span class=\"question-marker-badge\">Q6</span></span><span class=\"transcript-answer-marker\">secretary</span> and I am also studying a computer course part time in the evenings.</p>\r\n\r\nAdmissions officer: Great. So can you give me some details about your educational back ground? We need to make sure that your qualifications match the entry requirements.\r\n\r\n<p>Anne: Yes I completed a degree in <span id=\"q7\" data-question=\"7\"><span class=\"question-marker-badge\">Q7</span></span><span class=\"transcript-answer-marker\">Business</span> degree a year ago and I graduated with a 2:1. I've been working since my graduation, but the job market is very competitive these days, so I'd like to do some post-graduate study now.</p>\r\n\r\n<p>Admissions officer: Okay that sounds fine. Your degree is relevant and it is good that you have some work experience too. I do need to warn you though that our MBA programme is <span id=\"q8\" data-question=\"8\"><span class=\"question-marker-badge\">Q8</span></span><span class=\"transcript-answer-marker\">extremely popular</span> and gets full quickly, so would you be interested in applying for any alternative courses if you application is not successful this time?</p>\r\n\r\n<p>Anne: Well….. My first choice would of course be the MBA, but yes, I've had a good look through your prospectus and I would also be interested in the <span id=\"q9\" data-question=\"9\"><span class=\"question-marker-badge\">Q9</span></span><span class=\"transcript-answer-marker\">MA in International Marketing.</span></p>\r\n\r\nAdmissions officer: That's great, it's always a good idea to keep your options open just in case.\r\n\r\nAdmissions officer: Well, just a few more questions. Can you tell me how you plan to fund your tuition throughout the course?\r\n\r\nAnne: Yes, personal means. I have savings and my parents have also promised to contribute. I don't think I'll need any bank loans at this stage.\r\n\r\nAdmissions officer: Well finally, can you tell me how you learned about or courses here?\r\n\r\nAnne: Actually my cousin studied on the MBA course two years ago and she recommended it to me.\r\n\r\n<p>Admissions officer: Okay, well thank you for coming in today. I will pass your details on to our <span id=\"q10\" data-question=\"10\"><span class=\"question-marker-badge\">Q10</span></span><span class=\"transcript-answer-marker\">admissions department.</span> They will contact you this week with a formal application form and they usually invite MBA candidates for interview.</p>\r\n\r\nAnne: Okay, well thanks for you time.\r\n\r\nAdmissions officer: No problem. Good luck with your application."
+      },
+      {
+        "section_number": 2,
+        "transcript": "<strong>Section 2</strong>\r\n\r\n(A) I'd like to introduce our guest speaker Professor Louise Phillips from AIL International. She is responsible for researching changes in lifestyle and the consequent impact on buyer behaviour. Today she is going to talk about the impact of changes in attitudes to leisure time on sales of labour-saving equipment such as microwaves and \"white goods\" which are products such as washing machines, refrigerators and dish washers.\r\n\r\n<p>(B) Thank you very much. Thank you for coming today. I'll start by talking about lifestyle changes over recent years <span id=\"q11\" data-question=\"11\"><span class=\"question-marker-badge\">Q11</span></span><span class=\"transcript-answer-marker\">for women.</span></p> As we all know, the wife and mother of the family has traditionally been responsible for organising and completing household tasks for the family. However, particularly over the last decade or so, we have seen a greater number of women continuing to work after marriage and returning to work after having children. This has significantly reduced the amount of time available for household chores. <p>The result is that nowadays, the majority of people own and regularly use products such as <span id=\"q12\" data-question=\"12\"><span class=\"question-marker-badge\">Q12</span></span><span class=\"transcript-answer-marker\">dishwashers or microwaves.</span></p> The modern family often considers hours spent on cleaning and cooking as a waste of valuable time and generally we are all interested in finding ways of reducing the number of hours we need to devote to such tasks.\r\n\r\nWhile washing machines have long been thought of as necessities by families, nowadays, so too are microwaves and dishwashers. <p>These goods can drastically reduce the amount of time we need to spend running our home and increase the amount of time available not only to go to work, but to also spend on <span id=\"q13\" data-question=\"13\"><span class=\"question-marker-badge\">Q13</span></span><span class=\"transcript-answer-marker\">leisure pursuits.</span></p>\r\n\r\n<p>As society develops and we become richer, we put more value on our leisure time and our possessions. The richer a society, <span id=\"q14\" data-question=\"14\"><span class=\"question-marker-badge\">Q14</span></span><span class=\"transcript-answer-marker\">the more demanding</span> it becomes.</p> People are no longer happy to work long hours for little return. Expensive holidays, expensive clothes and cars all become more important the more materialistic the society we live in. <p>Acquiring \"things\" and joining the \"race of acquisition\" means that modern society spends a lot of time and money purchasing <span id=\"q15\" data-question=\"15\"><span class=\"question-marker-badge\">Q15</span></span><span class=\"transcript-answer-marker\">unnecessary goods.</span></p> <p><span id=\"q16\" data-question=\"16\"><span class=\"question-marker-badge\">Q16</span></span><span class=\"transcript-answer-marker\">Although expensive and persuasive marketing techniques are partly responsible, the demand for such goods often comes from young professionals,</span> those with the money to endlessly upgrade things simply because a better model is made available.</p>\r\n\r\n<p><span id=\"q17\" data-question=\"17\"><span class=\"question-marker-badge\">Q17</span></span><span class=\"transcript-answer-marker\">Our obsession with the newest and best products available, while good for the economy, can also have a negative impact on the environment.</span></p> It is not appropriate to over-produce appliances and over-use electricity to keep these unnecessary appliances operating in our homes. We often forget about the damage we have done to and continue to do to the environment.\r\n\r\n<p><span id=\"q18\" data-question=\"18\"><span class=\"question-marker-badge\">Q18</span></span><span class=\"transcript-answer-marker\">Others opposed to the overuse of appliances and technology also argue that from a social point of view, over-reliance on gadgets means that people are losing the ability to be creative.</span></p> Traditionally it was considered an enviable skill to prepare meals night after night for our families. Nowadays, women are more likely to gain approval from others for their success in their careers than their ability in the kitchen. Along with microwaves have come ready-cooked meals, pre-washed vegetables and our reliance on take-away food when we are too busy to cook it ourselves.\r\n\r\n<p><span id=\"q19\" data-question=\"19\"><span class=\"question-marker-badge\">Q19</span></span><span id=\"q20\" data-question=\"20\"><span class=\"question-marker-badge\">Q20</span></span><span class=\"transcript-answer-marker\">While there are obvious advantages and disadvantages to our increasingly active buying behaviour and changing wants and desires, it is likely that our desire to purchase labour saving items will continue , so it is therefore inevitable that production of such goods will increase.</span></p> We can only hope to educate ourselves and our children to buy goods we need, not just goods that are available, and always maintain an awareness of their environmental impact. In short, moderation is the most important word for the future.\r\n\r\nI thank you very much for coming today and listening to what I have to say. That concludes my talk. I hope you have found it both interesting and informative. If you have any questions, I would be very glad to answer them……."
+      },
+      {
+        "section_number": 3,
+        "transcript": "<strong>Section 3</strong>\r\n\r\nInterviewer: I'm here with today with Helen Warner, who has been a vegetarian for many years and is going to talk a little about vegetarianism. Helen, the concept of vegetarianism seems to have interested a number of our listeners, who have sent in some questions. To begin, what made you want to become a vegetarian?\r\n\r\n<p>Helen: <span id=\"q21\" data-question=\"21\"><span class=\"question-marker-badge\">Q21</span></span><span class=\"transcript-answer-marker\">Well, when I was sixteen, I had friends that were vegetarian and they introduced me to the idea.</span></p> My parents were typical of their generation, and ate meat at least three or four times a week, so I didn't really think about it too much until a few years later. It was while I was at university that I really thought about, and decided that it was unfair to eat meat when there are so many alternatives available.\r\n\r\nInterviewer: Is there anything you miss about not eating meat?\r\n\r\n<p>Helen: Ummm. No, not really. As I said, there are so many substitutes available these days, perhaps the most important of which comes from the <span id=\"q22\" data-question=\"22\"><span class=\"question-marker-badge\">Q22</span></span><span class=\"transcript-answer-marker\">soya bean.</span></p> Soya is so versatile, and is the staple substitute for most vegetarians.\r\n\r\nInterviewer: So what about the nutritional value of vegetarian food? Isn't it true that there are some vitamins that you can't get from soya or vegetables alone. Surely people need these vitamins?\r\n\r\n<p>Helen: Yes, that's correct. But actually there is only one vital vitamin that is only present in meat – that's vitamin B12. Most vegetarians are aware of the implication of this and actually take B12 supplement in the form of tablets. Of course the way you cook vegetables is also very important in preserving vitamins. Many countries, particularly the UK, have a reputation for <span id=\"q23\" data-question=\"23\"><span class=\"question-marker-badge\">Q23</span></span><span class=\"transcript-answer-marker\">overcooking</span> vegetables.</p> Water soluble vitamins - you know, where the vitamins are dissolved into the water - are often lost. Vitamin C is a common example. However, this loss of vitamins can be avoided by micro waving or steaming vegetables, which is what I do whenever I cook. Some people don't want to change their cooking habits too much, so if you do boil them simply cut down on the cooking time.\r\n\r\nInterviewer: So a vegetarian diet is fairly healthy then?\r\n\r\n<p>Helen: Oh yes. A lot of people believe that vegetarianism is <span id=\"q24\" data-question=\"24\"><span class=\"question-marker-badge\">Q24</span></span><span class=\"transcript-answer-marker\">unhealthy,</span> but that's not actually the case.</p> Vegetarians are actually considerably healthier than many meat eaters. Consider for a minute the health aspects of the incredible amount of meat this country and others like it consume. The statistics for beef eating, for example, are quite frightening. The world figure for beef consumption is slightly less than 11kg per person each year. <p>Yet in Europe, the average consumption is nearly double that at <span id=\"q25\" data-question=\"25\"><span class=\"question-marker-badge\">Q25</span></span><span class=\"transcript-answer-marker\">21 kilos</span> per person, and in the USA it is even worse, with the average person eating <span id=\"q26\" data-question=\"26\"><span class=\"question-marker-badge\">Q26</span></span><span class=\"transcript-answer-marker\">44kg</span> of beef every year.</p>\r\n\r\nInterviewer: So are you suggesting that people stop eating meat altogether and everyone adopts a vegetarian lifestyle?\r\n\r\n<p>Helen: No, not at all. Even in the healthiest diets there is still a place for meat, but it should be eaten in moderation. Many nutritionalists think of foods in terms of a pyramid, with the foods we can eat relatively freely at the bottom and the foods we should carefully restrict at the top. The majority of our diet should be composed of <span id=\"q27\" data-question=\"27\"><span class=\"question-marker-badge\">Q27</span></span><span class=\"transcript-answer-marker\">cereals,</span> which would go on the bottom row of the pyramid. In this category could also be included such things as rice and pasta. Next, a good diet is followed by a roughly equal amount of vegetables and fruit. I try to have at least two servings a day of fruit and vegetable whenever possible. In decreasing quantities, you can then eat <span id=\"q28\" data-question=\"28\"><span class=\"question-marker-badge\">Q28</span></span><span class=\"transcript-answer-marker\">dairy</span> foods – eggs, cheese etc. Almost at the top of the food pyramid comes fish - carefully prepared of course, not dripping in oil or batter! – and <span id=\"q29\" data-question=\"29\"><span class=\"question-marker-badge\">Q29</span></span><span class=\"transcript-answer-marker\">white meat.</span> Chicken, for example, is a comparatively healthy meat, but again, a lot of this comes down to preparation methods. Right at the top of the pyramid come the ingredients of far too many western meals – <span id=\"q30\" data-question=\"30\"><span class=\"question-marker-badge\">Q30</span></span><span class=\"transcript-answer-marker\">red meat</span> and potatoes.</p> It is particularly in this area that I would suggest moderation.\r\n\r\nInterviewer: Well, thank you very much Helen. I'm sure that a lot of listeners are interested in your views. How could they find out more about the health benefits of vegetarian options?\r\n\r\nHelen: Well there are lots of websites and books on healthy eating and vegetarianism, but it is always important to remember to consult your doctor before making any radical changes to your diet or lifestyle."
+      },
+      {
+        "section_number": 4,
+        "transcript": "<strong>Section 4</strong>\r\n\r\nOver the past 50 years, there have been some radical changes in the medicine as it is known in the West. This is largely the result of vast improvements in technology, but also in the rising importance of 'alternative' treatments. I have with me today Matthew East, a registered osteopath and a supporter of alternative techniques in healthcare. Matthew, can you tell us more about osteopathy?\r\n\r\n<p>Well, perhaps the first thing I should say is that the term 'alternative' is actually a little misleading, as I am referring to approaches and attitudes to health that were in common use long before western medicine was established. I prefer the term <span id=\"q31\" data-question=\"31\"><span class=\"question-marker-badge\">Q31</span></span><span class=\"transcript-answer-marker\">'natural'.</span></p> <p>Anyway, I'll begin by telling you a little about osteopathy. Basically, osteopathy is the manipulation of <span id=\"q32\" data-question=\"32\"><span class=\"question-marker-badge\">Q32</span></span><span class=\"transcript-answer-marker\">muscles</span> in order to alleviate stresses and tensions that lead to pain.</p> <p>Now unlike western medicine, osteopathy considers <span id=\"q33\" data-question=\"33\"><span class=\"question-marker-badge\">Q33</span></span><span class=\"transcript-answer-marker\">the whole body,</span> not just the affected area, and this is a very important principle of natural remedies. The whole body must be considered before a course of treatment can be decided upon.</p> You see, the aim of therapies like osteopathy is not only to repair the body, but also to get the body treating itself, and this does not come from treating the symptoms. <p>To give an example, I recently treated a two-month-old baby who was screaming all day and was even worse at night. The couple had taken the baby to their doctor, but the only advice they were given was that the baby 'would grow out of it'. However, the real problem stemmed from <span id=\"q34\" data-question=\"34\"><span class=\"question-marker-badge\">Q34</span></span><span class=\"transcript-answer-marker\">a difficult birth</span> which had put pressure on their baby's neck.</p> After ten minutes of gentle manipulation the pressure was released and within 20 minutes, the baby was quiet and calm for the first time. <p>This was achieved without drugs or operations. Avoiding such <span id=\"q35\" data-question=\"35\"><span class=\"question-marker-badge\">Q35</span></span><span class=\"transcript-answer-marker\">invasive</span> methods of treatment highlights another of the differences between western medicine and a more natural approach.</p> You see, western medicine often uses surgery in order to find a solution to problems that could have been addressed with simple remedies. A medical approach that looks closely at how essential an operation is before it is performed would offer patients a considerably less stressful method of treatment, not to mention the financial savings. <p>Natural remedies actually amount to less than <span id=\"q36\" data-question=\"36\"><span class=\"question-marker-badge\">Q36</span></span><span class=\"transcript-answer-marker\">ten percent</span> of the cost of a western course of treatment.</p>\r\n\r\n<p><span id=\"q37\" data-question=\"37\"><span class=\"question-marker-badge\">Q37</span></span><span class=\"transcript-answer-marker\">I'd like to mention the subject of surgery again a little later, but I would like to say at this point that there are those that claim that the benefits of osteopathy and herbal therapies are largely psychological, that they have not undergone the clinical trials that pharmaceuticals have. To answer that, you only need to look at the example I gave earlier, of the baby that stopped crying less than an hour after treatment but was obviously far too young to react because of purely psychological factors.</span></p> Another example can be seen in the successful use of acupuncture in the treatment of animals. In response to criticism regarding clinical trials, it is worth noting that the power of pharmaceutical companies is such that although some drugs fail the standards required of them, they are sometimes still prescribed by doctors.\r\n\r\nMoving on to another point, it should be stressed that natural remedies, in addition to having no side effects, can also be applied to any patient. Now I'm not suggesting that the same treatments are used indiscriminately. I'm referring to the fact that treatment is the same with natural therapies regardless of age, but very specific to the person. By this I mean that not only the general health of the patient needs to be considered, but also their habits, diet and lifestyle in order to build a complete picture.\r\n\r\n<p><span id=\"q38\" data-question=\"38\"><span class=\"question-marker-badge\">Q38</span></span><span class=\"transcript-answer-marker\">However, I am not suggesting that we should reject western medicine entirely. In fact, there have been occasions when I have referred patients to their doctor as I felt that in those cases it was the most suitable course of action. There are many situations in which it is by far the best option.</span></p> <p>Take <span id=\"q39\" data-question=\"39\"><span class=\"question-marker-badge\">Q39</span></span><span class=\"transcript-answer-marker\">emergency surgery,</span> for example. Obviously more natural remedies do not provide the speed required in such cases. The best solution would therefore be an open-minded combination of the two forms.</p>\r\n\r\n<p>Well, thank you very much Matthew. That was a very interesting insight into alternative, sorry natural, treatments. Next week we'll be inviting <span id=\"q40\" data-question=\"40\"><span class=\"question-marker-badge\">Q40</span></span><span class=\"transcript-answer-marker\">Dr Moore</span> onto the programme to argue his case as a doctor.</p> Until next week, then, goodbye."
+      }
+    ]
+  },
+  "_metadata": {
+    "exported_at": "2026-01-12 07:26:11",
+    "exported_by": "impact",
+    "plugin_version": "11.10",
+    "format_version": "1.0"
+  }
 }

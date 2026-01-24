@@ -1,1473 +1,1473 @@
 {
-    "title": "General Training Reading Test 1",
-    "content": "",
-    "questions": [
+  "title": "General Training Reading Test 1",
+  "content": "",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Questions 1-6: Match each feature to the correct transport pass (A, B, C, or D). Write the correct letter A, B, C, or D.",
+      "question": "Offers reductions for older people",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A (Travel Rider pass offers £30 for students and pensioners, compared to £42 for adults).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
         {
-            "type": "closed_question",
-            "instructions": "Questions 1-6: Match each feature to the correct transport pass (A, B, C, or D). Write the correct letter A, B, C, or D.",
-            "question": "Offers reductions for older people",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (Travel Rider pass offers £30 for students and pensioners, compared to £42 for adults).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Travel Rider pass",
-                    "is_correct": true,
-                    "feedback": "Correct! The Travel Rider pass offers prices of £42 for adults, £30 for students and pensioners."
-                },
-                {
-                    "text": "B: Flexi-Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Flexi-Pass has no concessions available on tickets. The correct answer is A (Travel Rider pass)."
-                },
-                {
-                    "text": "C: Destination Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Destination Pass mentions student and group discounts but not pensioner discounts. The correct answer is A (Travel Rider pass)."
-                },
-                {
-                    "text": "D: None of the above",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass does offer reductions for older people (pensioners). The correct answer is A (Travel Rider pass)."
-                }
-            ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "A: Travel Rider pass",
+          "is_correct": true,
+          "feedback": "Correct! The Travel Rider pass offers prices of £42 for adults, £30 for students and pensioners."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Can be bought online",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C (The Destination Pass is available through travel agents worldwide or can be purchased through our website).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Travel Rider pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass can be purchased from any branch but online purchase is not mentioned. The correct answer is C (Destination Pass)."
-                },
-                {
-                    "text": "B: Flexi-Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Flexi-Pass can be purchased from any branch office but online purchase is not mentioned. The correct answer is C (Destination Pass)."
-                },
-                {
-                    "text": "C: Destination Pass",
-                    "is_correct": true,
-                    "feedback": "Correct! The Destination Pass is available through travel agents worldwide or can be purchased through our website."
-                },
-                {
-                    "text": "D: None of the above",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Destination Pass can be purchased through the website. The correct answer is C (Destination Pass)."
-                }
-            ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "B: Flexi-Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Flexi-Pass has no concessions available on tickets. The correct answer is A (Travel Rider pass)."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Allows travel by train",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D (None of the above). None of the three transport passes explicitly mention train travel.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Travel Rider pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass allows travel on NorWest and Metro Link bus within the city, not train. The correct answer is D (None of the above)."
-                },
-                {
-                    "text": "B: Flexi-Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Flexi-Pass allows travel on InterCity Coachlines and cross-channel ferry, not train. The correct answer is D (None of the above)."
-                },
-                {
-                    "text": "C: Destination Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Destination Pass includes coach and ferry travel, but not train. The correct answer is D (None of the above)."
-                },
-                {
-                    "text": "D: None of the above",
-                    "is_correct": true,
-                    "feedback": "Correct! None of the three transport passes explicitly mention train travel."
-                }
-            ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
-            "correct_answer_count": 1,
-            "show_option_letters": false
+          "text": "C: Destination Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Destination Pass mentions student and group discounts but not pensioner discounts. The correct answer is A (Travel Rider pass)."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Has the option to take a cruise",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C (The Destination Pass includes additional options to sail on Brentwood Lake).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Travel Rider pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass is for bus travel within the city only. The correct answer is C (Destination Pass)."
-                },
-                {
-                    "text": "B: Flexi-Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the Flexi-Pass can be used on the cross-channel ferry, it doesn't mention lake cruises. The correct answer is C (Destination Pass)."
-                },
-                {
-                    "text": "C: Destination Pass",
-                    "is_correct": true,
-                    "feedback": "Correct! The Destination Pass includes the additional options to sail on Brentwood Lake."
-                },
-                {
-                    "text": "D: None of the above",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Destination Pass does include the option to sail on Brentwood Lake. The correct answer is C (Destination Pass)."
-                }
-            ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Can be added to for more travel if required",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B (The Flexi-Pass can be topped up just like a pre paid phone card).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Travel Rider pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass is valid for one month with no mention of topping up. The correct answer is B (Flexi-Pass)."
-                },
-                {
-                    "text": "B: Flexi-Pass",
-                    "is_correct": true,
-                    "feedback": "Correct! The Flexi-Pass can be topped up just like a pre paid phone card."
-                },
-                {
-                    "text": "C: Destination Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Destination Pass is a fixed itinerary pass with no mention of topping up. The correct answer is B (Flexi-Pass)."
-                },
-                {
-                    "text": "D: None of the above",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Flexi-Pass can be topped up for more travel. The correct answer is B (Flexi-Pass)."
-                }
-            ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Is designed for urban transport",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A (The Travel Rider pass allows travel on any NorWest and Metro Link bus within the city).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "A: Travel Rider pass",
-                    "is_correct": true,
-                    "feedback": "Correct! The Travel Rider pass allows travel on any NorWest and Metro Link bus within the city."
-                },
-                {
-                    "text": "B: Flexi-Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Flexi-Pass is for travel between cities, not within the city. The correct answer is A (Travel Rider pass)."
-                },
-                {
-                    "text": "C: Destination Pass",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Destination Pass is for touring routes throughout the country, not urban transport. The correct answer is A (Travel Rider pass)."
-                },
-                {
-                    "text": "D: None of the above",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Travel Rider pass is designed for urban transport (bus travel within the city). The correct answer is A (Travel Rider pass)."
-                }
-            ],
-            "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 7-12: Answer the questions below using NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
-            "question": "Which class is the cheapest? [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'Beginners guitar' (£20). Look at the fees for all classes in the Gaston Community College evening classes section.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "beginners guitar|beginner's guitar|guitar for beginners|guitar for beginner's"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which class has been designed for new migrants? [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'English for beginners'. This class helps new arrivals to the country learn better English.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "english for beginners|english for beginner's|beginners english|beginner's english"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "How long is each computing class? [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is '45 minutes'. Find the 'Using your computer' class and calculate the duration from the times given: 6.30 p.m. to 7.15 p.m.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "45 minutes|forty five minutes|forty-five minutes|fortyfive minutes|45 mins|forty five mins|forty-five mins"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What is the maximum number of students allowed in the Spanish class? [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is '18'. Find the 'Intermediate Spanish' class and look at the maximum class size listed (5-18).",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "18|eighteen|18 students|eighteen students"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which class will help you use a modern camera better? [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'Digital photos'. This class teaches how to use the main functions of your digital camera.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "Digital photos"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
-                }
-            }
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which local painter will teach students how to use watercolours? [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'Ted Heath'. Find the 'Beginners watercolour painting' class description to see which local artist teaches it.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_r",
-            "field_count": 1,
-            "field_answers": {
-                "1": "ted heath|heath|t heath|t. heath"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "",
-                    "incorrect": "",
-                    "no_answer": ""
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Long hair must be [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'tied back'. The ESITO dress code states that long hair is acceptable if it is tied back.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Facial hair should be [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'neatly trimmed'. The dress code states that moustaches and beards should be neatly trimmed.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Employees should use little or no perfume or cologne because other staff may be [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'allergic'. The dress code mentions that some people are allergic to various scents.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "A more relaxed approach to clothing is acceptable on [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'Friday' or 'Casual Friday'. The Company has designated Fridays as casual days.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Seasonal changes only affect the appearance of people working [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'in the yard'. Bad weather days only impact employees working in the yard.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Ripped jeans and t-shirts with lettering are considered [field 1]",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'inappropriate dress' or 'inappropriate'. These items are listed as examples of inappropriate dress at all times.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "If in doubt, the decision about appropriate dress is made by a [field 1].",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'supervisor'. The supervisor is responsible for evaluating the dress and appearance of employees.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "If an employee is considered to be improperly dressed on a second occasion, they are required to be [field 1] without delay.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is 'sent home'. On the second occasion, the employee must be sent home to change clothes immediately.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [],
-            "options": "",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 20-26: Do the following statements agree with the information given in Reading Passage 2?\r\n\r\nWrite:\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this",
-            "question": "All employees must belong to the company’s pension plan.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. false",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is FALSE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "No pension scheme payments need to be made after 20 years of employment.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. not given",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is NOT GIVEN."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Employees can now have their families covered under the company insurance for cheaper than doing so privately.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. true",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is TRUE."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "All staff must request to use a company car 48 hours before required.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. false",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is FALSE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Laptops must only be used for company business only.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. not given",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The answer is NOT GIVEN."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The working from home option is not a success.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is FALSE. false",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The statement is FALSE."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.\r\n\r\nQuestions 27-33\r\n\r\nReading Passage 3 has ten paragraphs, A-J.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-J, in boxes 27-32 on our answer sheet.\r\n\r\nNB    You may use any letter more than once.",
-            "question": "Drone technology for use in farming",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is Paragraph C. Paragraph C explicitly states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "Correct per the answer key. The primary reference is Paragraph C which explicitly mentions agricultural applications."
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Potential drawbacks of non-military drones",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is  Paragraph I. Paragraph I explicitly discusses drawbacks including 'comparatively short flight times' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_information",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I discusses several drawbacks including 'comparatively short flight times,' 'safety risks,' and 'adverse effects on the natural environment.'"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The sale of housing",
-            "points": 1,
-            "no_answer_feedback": "The correct answers are Paragraph E and Paragraph I (as per the answer key). Paragraph E explicitly mentions drones 'taking promotional photos and videos for commercial and residential properties on the market.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph E explicitly mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": false,
-                    "feedback": "The primary reference is Paragraph E which mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The preservation of plants and animals",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is Paragraph H. It states: 'scientists and researchers are turning to drones... to monitor, document and assess changes in the health, movement and distribution of flora and fauna' and mentions 'wildlife conservation efforts.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_information",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph H discusses monitoring 'flora and fauna' and 'wildlife conservation efforts.'"
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Using drones at night",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is Paragraph F. It states: 'With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph F mentions drones with infrared cameras 'can also carry out search and rescue missions after dark.'"
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Employment opportunities related to UAVs",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is Paragraph C. It states: 'the economic value of the commercial drone market will... create as many as 150,000 new jobs by 2035.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph C mentions the drone market will 'create as many as 150,000 new jobs by 2035.'"
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The use of drones in monitoring automobiles",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is Paragraph G. It states: 'Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "Paragraph A",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph B",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph C",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph D",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph E",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph F",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph G",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph G mentions transport agencies use UAVs 'for monitoring traffic flow and reporting accidents and hazards.'"
-                },
-                {
-                    "text": "Paragraph H",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph I",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                },
-                {
-                    "text": "Paragraph J",
-                    "is_correct": false,
-                    "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
-                }
-            ],
-            "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 34-38\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 38-40 on your answer sheet, write\r\n\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this",
-            "question": "Drones are often cheaper to use than manned aircraft.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly states drones are 'more cost-effective to operate and maintain' than piloted aircraft."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does provide this information in Paragraph A."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "In the future, the majority of private sector drones are likely to be used in farming.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly states agricultural applications will account for approximately 80 percent of commercial drone use."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does provide this information in Paragraph C."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Amazon is presently using drones to deliver items purchased online.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage states that Amazon Prime Air's drone-based delivery system is now operational."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does provide information about Amazon's drone delivery system being operational in Paragraph D."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Drone technology is used to help rescue people lost at sea.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is TRUE. Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly states drones are used for search and rescue in marine environments (at sea)."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does provide this information in Paragraph F."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Drones contribute to air pollution.",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While Paragraph I mentions noise pollution, air pollution is not mentioned in the passage."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The passage does not contradict this statement; it simply does not provide information about air pollution."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 39-40\r\n\r\nChoose TWO letters, A-E.",
-            "question": "Which TWO of the following are mentioned as being risks or drawbacks associated with drone technology?",
-            "points": 2,
-            "no_answer_feedback": "The correct answers are B: 'Duration of flights' and D: 'Mid-air collisions.' Paragraph I explicitly mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "",
-            "mc_options": [
-                {
-                    "text": "A: The cost of fighting fires",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The cost of fighting fires is not mentioned as a drawback. The passage states fire departments use UAVs to 'reduce risks and costs.'"
-                },
-                {
-                    "text": "B: Duration of flights",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' as a limitation."
-                },
-                {
-                    "text": "C: Criminal activity",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Criminal activity is not mentioned as a drawback; rather, drones are used to help detect criminal activity."
-                },
-                {
-                    "text": "D: Mid-air collisions",
-                    "is_correct": true,
-                    "feedback": "Correct! Paragraph I mentions 'safety risks, in the potential for collisions across increasingly crowded airspace.'"
-                },
-                {
-                    "text": "E: The inevitable rise of drones",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The 'inexorable rise of drones' is described as a trend, not a specific risk or drawback."
-                }
-            ],
-            "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
-            "correct_answer_count": 2,
-            "show_option_letters": false
+          "text": "D: None of the above",
+          "is_correct": false,
+          "feedback": "Incorrect. The Travel Rider pass does offer reductions for older people (pensioners). The correct answer is A (Travel Rider pass)."
         }
-    ],
-    "reading_texts": [
-        {
-            "title": "Reading Passage 1",
-            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\r\n<h5>Travel Rider pass</h5>\r\nThe Travel Rider pass is valid for one month from the day it is purchased and <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">allows travel on any NorWest and Metro Link bus within the city.</span> Photo identification is required to purchase a Travel Rider pass. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Prices are £42 for adults, £30 for students and pensioners.</span> Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\r\n<hr>\r\n<h5>Flexi-Pass</h5>\r\n<span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Flexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card.</span> With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don’t have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\r\nPrices:\r\n<ul>\r\n  <li>Up to 15 hours – £52</li>\r\n  <li>16 to 20 hours – £64</li>\r\n  <li>21 to 25 hours – £72</li>\r\n</ul>\r\nNOTE: No concessions are available on tickets.\r\n<hr>\r\n<h5>Destination Pass</h5>\r\nThe Destination Pass offers a range of 12 “hop on and off” fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">as well as the additional options to sail on Brentwood Lake</span>, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you’re ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\r\nPrices:\r\n<ul>\r\n  <li>4 trips – £115</li>\r\n  <li>8 trips – £215</li>\r\n  <li>12 trips – £390</li>\r\n</ul>\r\nStudent and group (5 people or more) discounts are available. Contact us for more details.\r\n<hr>"
-        },
-        {
-            "title": "Reading Passage 2",
-            "content": "<h3>Gaston Community College evening classes</h3>\r\nThis semester, the following classes will be available.\r\n\r\n\r\n\r\n<strong>Class</strong>: English for beginners\r\n\r\n<span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\"><strong>Description</strong>: An English language class to help new arrivals to the country</span> learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\r\n\r\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\r\n\r\n<strong>Duration:</strong> 6 weeks\r\n\r\n<strong>Fee:</strong> £45\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Intermediate Spanish\r\n\r\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner’s Spanish class held last semester\r\n\r\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\"><strong>Minimum-maximum class sizes:</strong> 5-18</span>\r\n\r\n<strong>Duration:</strong> 8 weeks\r\n\r\n<strong>Fee:</strong> £55\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Using your computer\r\n\r\n<strong>Description</strong>: No idea how to use a computer? Then this class is for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\r\n\r\n<strong>Times and days:</strong> <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Wednesdays at 6.30 p.m. to 7.15 p.m.</span>\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 2-8\r\n\r\n<strong>Duration:</strong> 4 weeks\r\n\r\n<strong>Fee:</strong> £25\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Beginners watercolour painting\r\n\r\n<strong>Description</strong>: <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Back by popular demand and once again run by local artist Ted Heath</span>, this class gives you an opportunity to show your more creative side.\r\nNB: you will need to provide your own paper, paint and brushes\r\n\r\nThursdays from 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-12\r\n\r\n<strong>Duration:</strong> 8 weeks\r\n\r\n<strong>Fee:</strong> £40\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Better public speaking\r\n\r\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\r\n\r\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 2-8\r\n\r\n<strong>Duration:</strong> 4 weeks\r\n\r\n<strong>Fee:</strong> £30\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Successful interview techniques\r\n\r\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\r\n\r\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-10\r\n\r\n<strong>Duration:</strong> 5 weeks\r\n\r\n<strong>Fee:</strong> £35\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Authentic Thai cooking\r\n\r\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\r\n\r\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-10\r\n\r\n<strong>Duration:</strong> 8 weeks\r\n\r\n<strong>Fee:</strong> £35 + £55 food costs\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Beginners guitar\r\n\r\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you’ve never played a note before, you should be able to play a tune by the end of the course.\r\n\r\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 2-6\r\n\r\n<strong>Duration:</strong> 5 weeks\r\n\r\n<span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\"><strong>Fee:</strong> £20</span>\r\n\r\n<hr>\r\n\r\n<span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\"><strong>Class</strong>: Digital photos</span>\r\n\r\n<strong>Description</strong>: A fun &amp; practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes &amp; landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black &amp; white.\r\n\r\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-10\r\n\r\n<strong>Duration:</strong> 6 weeks\r\n\r\n<strong>Fee:</strong> £40"
-        },
-        {
-            "title": "Reading Passage 3",
-            "content": "<h3>ESITO dress code</h3>\r\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\r\n<ul>\r\n \t<li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\r\n \t<li>Hair should be clean, combed and neatly arranged. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Long hair is acceptable if it is tied back.</span></li>\r\n \t<li><span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Moustaches and beards should be neatly trimmed.</span></li>\r\n \t<li>Good personal hygiene must be maintained.</li>\r\n \t<li><span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</span></li>\r\n</ul>\r\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">The following are some examples of inappropriate dress at all times:</span>\r\n<ul>\r\n \t<li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\r\n \t<li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\r\n \t<li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\r\n</ul>\r\n<span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">Casual Fridays: The Company has designated Fridays as casual days.</span> Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\r\n\r\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. <span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">NOTE: This only impacts on employees working in the yard.</span>\r\n\r\n<span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">The supervisor is responsible for evaluating the dress and appearance of employees</span> under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\r\n\r\nOn the first occasion, a documented verbal warning should be given to the employee, and the department’s dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\r\n\r\nOn the second occasion, <span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">the employee must be sent home to change clothes immediately</span> as well as given a written warning. Further violations may result in discipline up to and including discharge."
-        },
-        {
-            "title": "Reading Passage 4",
-            "content": "<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\r\n<h4>Pension scheme</h4>\r\n<span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">All employees are automatically included in our pension scheme, although there is an ‘opt out’ policy</span> for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. <span id=\"q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">Employees need to pay into the pension scheme for a minimum of 20 years.</span> Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\r\n<h4>Medical insurance</h4>\r\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. <span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.</span>\r\n<h4>Access to company vehicles</h4>\r\nAll staff with a legitimate need to travel will have access to one of the company vehicles. <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before</span> the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\r\n<h4>Communication</h4>\r\n<span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">All members of staff have a laptop which is issued on the first day of employment.</span> This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\r\n<h4>Working from home</h4>\r\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Despite some earlier difficulties, the scheme has proven successful</span> and will now be offered as an option for all staff (although final approval must be given by your manager)."
-        },
-        {
-            "title": "Reading Passage 5",
-            "content": "THE NON-MILITARY USES OF UNMANNED AERIAL VEHICLES\r\n\r\nA) The use of unmanned aerial vehicles has grown dramatically over the past decade or so, in no small part due to the fact that some of these machines are able to remain airborne for longer periods of time than more conventional manned aircraft. At the same time, <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">unmanned aerial vehicles (UAVs), also known as unmanned aircraft systems (UASs), and remotely piloted aircraft (RPAs), nowadays commonly referred to as drones, are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.</span> The term drone may also refer to small electric helicopters fitted with two or more rotors which are flown by remote control.\r\n\r\nB) Today, drones are being used with increasing frequency for military operations by a number of countries in combat, surveillance and reconnaissance roles. These machines tend to be larger than non-military drones and are, in the main, powered by jet or gas engines. Perhaps unsurprisingly, the use of drone technology has gained a measure of notoriety as a result of their growing prominence in military roles, which have been widely publicised in television, online and print media during the last decade and a half, leading to criticism of their application in this arena on both ethical and legal grounds.\r\n\r\n<span id=\"q27\" data-question=\"27\"></span>C) While originally and currently still primarily used for military purposes, the rapid growth and development in drone technology during the early twenty-first century has led some experts to predict that, by 2030, there will be approximately 30,000 licensed drones operating in the skies above the United States alone. It has also been estimated that the economic value of the commercial drone market will rise in value to around $90 billion globally during the next five years, <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">as well as create as many as 150,000 new jobs by 2035.</span> <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.</span>\r\n\r\nD) One development related to the commercial use of drones which has perhaps received the greatest amount of news and media coverage in recent years is the establishment of Amazon Prime Air in the early 2020s by the US-based online retail giant, Amazon.com. <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions</span>, although the company has been granted permission by the US Federal Aviation Authority (FAA) to begin testing its current prototypes under certain restrictions.\r\n\r\n<span id=\"q29\" data-question=\"29\"></span>E) As far as aerial filming and photography are concerned, commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market, filming breaking-news stories and live sports events, producing footage from unique perspectives for movies and carrying out security and surveillance functions in the detection of criminal activity and identification of criminals.\r\n\r\n<span id=\"q31\" data-question=\"31\"></span>F) In addition to the delivery of consumer products and other commercial applications, non-military drones are gaining popularity for use in search and rescue operations. <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons and victims of natural disasters across a variety of otherwise inaccessible terrain types, including marine environments.</span> With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example.\r\n\r\n<span id=\"q33\" data-question=\"33\"></span>G) These days, drones are increasingly being used by national government agencies and local authorities for a variety of purposes outside of the private sector. Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work. Fire departments in some jurisdictions now rely on UAVs to help them reduce risks and costs when fighting fires in both urban and rural areas, while customs and law enforcement agencies also employ drone technology in protecting citizens and borders through monitoring and surveillance.\r\n\r\n<span id=\"q30\" data-question=\"30\"></span>H) In terms of the natural world, scientists and researchers are turning to drones with greater frequency to monitor, document and assess changes in the health, movement and distribution of flora and fauna, as well as pollution, weather and the climate, both conveniently and cost-effectively. Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts. In the latter capacity, drone technology is now being used by both governmental agencies and non-governmental organisations in the surveillance and prevention of illegal hunting and poaching of a number of endangered species.\r\n\r\n<span id=\"q28\" data-question=\"28\"></span>I) While advocates of drones are quick to point out all of the many benefits that the machines can bring to society and the planet, the technology is not without its critics. Those opposed to the growing use of unmanned aerial vehicles cite a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives. <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">These include logistical concerns such as the comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes) and their operational limitations in terms of spatial mobility. Other perceived disadvantages are safety risks, in the potential for collisions across increasingly crowded airspace</span>, <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">and even the adverse effects drones may have on the natural environment, particularly as contributors to noise pollution.</span>\r\n\r\nJ) Whether for commercial or recreational applications or being used as tools to assist those working in the public sector, it would appear that the numerical proliferation of unmanned aerial vehicles, as well as their numerous potential uses, means that the impact of drone technology in our lives is only set to increase. While there are undoubtedly issues yet to be resolved regarding the use of drones, particularly in relation to regulatory oversight and legal restrictions on the part of relevant authorities, the futuristic technology afforded us in the form of these robotic vehicles indicates that not the sky, but rather the solar system and beyond, may be the limit."
-        }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_academic_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
+      "correct_answer_count": 1,
+      "show_option_letters": false
     },
-    "_metadata": {
-        "exported_at": "2026-01-18 14:17:19",
-        "exported_by": "impact",
-        "plugin_version": "12.1",
-        "format_version": "1.0"
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Can be bought online",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (The Destination Pass is available through travel agents worldwide or can be purchased through our website).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Travel Rider pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Travel Rider pass can be purchased from any branch but online purchase is not mentioned. The correct answer is C (Destination Pass)."
+        },
+        {
+          "text": "B: Flexi-Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Flexi-Pass can be purchased from any branch office but online purchase is not mentioned. The correct answer is C (Destination Pass)."
+        },
+        {
+          "text": "C: Destination Pass",
+          "is_correct": true,
+          "feedback": "Correct! The Destination Pass is available through travel agents worldwide or can be purchased through our website."
+        },
+        {
+          "text": "D: None of the above",
+          "is_correct": false,
+          "feedback": "Incorrect. The Destination Pass can be purchased through the website. The correct answer is C (Destination Pass)."
+        }
+      ],
+      "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Allows travel by train",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is D (None of the above). None of the three transport passes explicitly mention train travel.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Travel Rider pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Travel Rider pass allows travel on NorWest and Metro Link bus within the city, not train. The correct answer is D (None of the above)."
+        },
+        {
+          "text": "B: Flexi-Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Flexi-Pass allows travel on InterCity Coachlines and cross-channel ferry, not train. The correct answer is D (None of the above)."
+        },
+        {
+          "text": "C: Destination Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Destination Pass includes coach and ferry travel, but not train. The correct answer is D (None of the above)."
+        },
+        {
+          "text": "D: None of the above",
+          "is_correct": true,
+          "feedback": "Correct! None of the three transport passes explicitly mention train travel."
+        }
+      ],
+      "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Has the option to take a cruise",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C (The Destination Pass includes additional options to sail on Brentwood Lake).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Travel Rider pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Travel Rider pass is for bus travel within the city only. The correct answer is C (Destination Pass)."
+        },
+        {
+          "text": "B: Flexi-Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. While the Flexi-Pass can be used on the cross-channel ferry, it doesn't mention lake cruises. The correct answer is C (Destination Pass)."
+        },
+        {
+          "text": "C: Destination Pass",
+          "is_correct": true,
+          "feedback": "Correct! The Destination Pass includes the additional options to sail on Brentwood Lake."
+        },
+        {
+          "text": "D: None of the above",
+          "is_correct": false,
+          "feedback": "Incorrect. The Destination Pass does include the option to sail on Brentwood Lake. The correct answer is C (Destination Pass)."
+        }
+      ],
+      "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Can be added to for more travel if required",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B (The Flexi-Pass can be topped up just like a pre paid phone card).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Travel Rider pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Travel Rider pass is valid for one month with no mention of topping up. The correct answer is B (Flexi-Pass)."
+        },
+        {
+          "text": "B: Flexi-Pass",
+          "is_correct": true,
+          "feedback": "Correct! The Flexi-Pass can be topped up just like a pre paid phone card."
+        },
+        {
+          "text": "C: Destination Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Destination Pass is a fixed itinerary pass with no mention of topping up. The correct answer is B (Flexi-Pass)."
+        },
+        {
+          "text": "D: None of the above",
+          "is_correct": false,
+          "feedback": "Incorrect. The Flexi-Pass can be topped up for more travel. The correct answer is B (Flexi-Pass)."
+        }
+      ],
+      "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Is designed for urban transport",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A (The Travel Rider pass allows travel on any NorWest and Metro Link bus within the city).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "A: Travel Rider pass",
+          "is_correct": true,
+          "feedback": "Correct! The Travel Rider pass allows travel on any NorWest and Metro Link bus within the city."
+        },
+        {
+          "text": "B: Flexi-Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Flexi-Pass is for travel between cities, not within the city. The correct answer is A (Travel Rider pass)."
+        },
+        {
+          "text": "C: Destination Pass",
+          "is_correct": false,
+          "feedback": "Incorrect. The Destination Pass is for touring routes throughout the country, not urban transport. The correct answer is A (Travel Rider pass)."
+        },
+        {
+          "text": "D: None of the above",
+          "is_correct": false,
+          "feedback": "Incorrect. The Travel Rider pass is designed for urban transport (bus travel within the city). The correct answer is A (Travel Rider pass)."
+        }
+      ],
+      "options": "A: Travel Rider pass\nB: Flexi-Pass\nC: Destination Pass\nD: None of the above",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 7-12: Answer the questions below using NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
+      "question": "Which class is the cheapest? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'Beginners guitar' (£20). Look at the fees for all classes in the Gaston Community College evening classes section.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "beginners guitar|beginner's guitar|guitar for beginners|guitar for beginner's"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Which class has been designed for new migrants? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'English for beginners'. This class helps new arrivals to the country learn better English.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "english for beginners|english for beginner's|beginners english|beginner's english"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "How long is each computing class? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is '45 minutes'. Find the 'Using your computer' class and calculate the duration from the times given: 6.30 p.m. to 7.15 p.m.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "45 minutes|forty five minutes|forty-five minutes|fortyfive minutes|45 mins|forty five mins|forty-five mins"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "What is the maximum number of students allowed in the Spanish class? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is '18'. Find the 'Intermediate Spanish' class and look at the maximum class size listed (5-18).",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "18|eighteen|18 students|eighteen students"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Which class will help you use a modern camera better? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'Digital photos'. This class teaches how to use the main functions of your digital camera.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "Digital photos"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Which local painter will teach students how to use watercolours? [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'Ted Heath'. Find the 'Beginners watercolour painting' class description to see which local artist teaches it.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "ted heath|heath|t heath|t. heath"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": ""
+        }
+      }
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Long hair must be [field 1].",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'tied back'. The ESITO dress code states that long hair is acceptable if it is tied back.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Facial hair should be [field 1].",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'neatly trimmed'. The dress code states that moustaches and beards should be neatly trimmed.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Employees should use little or no perfume or cologne because other staff may be [field 1].",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'allergic'. The dress code mentions that some people are allergic to various scents.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "A more relaxed approach to clothing is acceptable on [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'Friday' or 'Casual Friday'. The Company has designated Fridays as casual days.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Seasonal changes only affect the appearance of people working [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'in the yard'. Bad weather days only impact employees working in the yard.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Ripped jeans and t-shirts with lettering are considered [field 1]",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'inappropriate dress' or 'inappropriate'. These items are listed as examples of inappropriate dress at all times.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "If in doubt, the decision about appropriate dress is made by a [field 1].",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'supervisor'. The supervisor is responsible for evaluating the dress and appearance of employees.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "If an employee is considered to be improperly dressed on a second occasion, they are required to be [field 1] without delay.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'sent home'. On the second occasion, the employee must be sent home to change clothes immediately.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 20-26: Do the following statements agree with the information given in Reading Passage 2?\r\n\r\nWrite:\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this",
+      "question": "All employees must belong to the company’s pension plan.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE. false",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is FALSE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "No pension scheme payments need to be made after 20 years of employment.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. not given",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The answer is NOT GIVEN."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Employees can now have their families covered under the company insurance for cheaper than doing so privately.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. true",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is TRUE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "All staff must request to use a company car 48 hours before required.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE. false",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is FALSE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Laptops must only be used for company business only.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. not given",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The answer is NOT GIVEN."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The working from home option is not a success.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE. false",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The statement is FALSE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 3\r\n\r\nYou should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.\r\n\r\nQuestions 27-33\r\n\r\nReading Passage 3 has ten paragraphs, A-J.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-J, in boxes 27-32 on our answer sheet.\r\n\r\nNB    You may use any letter more than once.",
+      "question": "Drone technology for use in farming",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Paragraph C. Paragraph C explicitly states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "Correct per the answer key. The primary reference is Paragraph C which explicitly mentions agricultural applications."
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "C Paragraph C states: “A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.”"
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Potential drawbacks of non-military drones",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is  Paragraph I. Paragraph I explicitly discusses drawbacks including 'comparatively short flight times' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_information",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph I discusses several drawbacks including 'comparatively short flight times,' 'safety risks,' and 'adverse effects on the natural environment.'"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "I Paragraph I details “a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives."
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The sale of housing",
+      "points": 1,
+      "no_answer_feedback": "The correct answers are Paragraph E and Paragraph I (as per the answer key). Paragraph E explicitly mentions drones 'taking promotional photos and videos for commercial and residential properties on the market.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_features",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph E explicitly mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": false,
+          "feedback": "The primary reference is Paragraph E which mentions 'taking promotional photos and videos for commercial and residential properties on the market.'"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "E Paragraph E reads: “commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market…”"
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The preservation of plants and animals",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Paragraph H. It states: 'scientists and researchers are turning to drones... to monitor, document and assess changes in the health, movement and distribution of flora and fauna' and mentions 'wildlife conservation efforts.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "matching_information",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph H discusses monitoring 'flora and fauna' and 'wildlife conservation efforts.'"
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "H Paragraph H states: “Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts”"
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Using drones at night",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Paragraph F. It states: 'With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F mentions drones with infrared cameras 'can also carry out search and rescue missions after dark.'"
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "F Paragraph F states: “With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example”"
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Employment opportunities related to UAVs",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Paragraph C. It states: 'the economic value of the commercial drone market will... create as many as 150,000 new jobs by 2035.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C mentions the drone market will 'create as many as 150,000 new jobs by 2035.'"
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "C Paragraph C reads: “It has also been estimated that the economic value of the commercial drone market will rise in value to be worth around $90 billion globally during the next five years, as well as create as many as 150,000 new jobs by 2035.”"
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The use of drones in monitoring automobiles",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Paragraph G. It states: 'Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "Paragraph A",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph B",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph C",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph D",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph E",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph F",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph G",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph G mentions transport agencies use UAVs 'for monitoring traffic flow and reporting accidents and hazards.'"
+        },
+        {
+          "text": "Paragraph H",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph I",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        },
+        {
+          "text": "Paragraph J",
+          "is_correct": false,
+          "feedback": "G Paragraph G states: “Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work.”"
+        }
+      ],
+      "options": "Paragraph A\nParagraph B\nParagraph C\nParagraph D\nParagraph E\nParagraph F\nParagraph G\nParagraph H\nParagraph I\nParagraph J",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 34-38\r\n\r\nDo the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 38-40 on your answer sheet, write\r\n\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this",
+      "question": "Drones are often cheaper to use than manned aircraft.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph A states drones 'are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states drones are 'more cost-effective to operate and maintain' than piloted aircraft."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does provide this information in Paragraph A."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "In the future, the majority of private sector drones are likely to be used in farming.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph C states: 'agricultural applications will one day account for approximately 80 percent of commercial drone use.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states agricultural applications will account for approximately 80 percent of commercial drone use."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does provide this information in Paragraph C."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Amazon is presently using drones to deliver items purchased online.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph D states: 'Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that Amazon Prime Air's drone-based delivery system is now operational."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does provide information about Amazon's drone delivery system being operational in Paragraph D."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Drone technology is used to help rescue people lost at sea.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE. Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph F states: 'Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons... across a variety of otherwise inaccessible terrain types, including marine environments.'"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states drones are used for search and rescue in marine environments (at sea)."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does provide this information in Paragraph F."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Drones contribute to air pollution.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. While Paragraph I mentions noise pollution, air pollution is not mentioned in the passage."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does not contradict this statement; it simply does not provide information about air pollution."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While Paragraph I mentions 'adverse effects drones may have on the natural environment, particularly as contributors to noise pollution,' air pollution is not mentioned."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 39-40\r\n\r\nChoose TWO letters, A-E.",
+      "question": "Which TWO of the following are mentioned as being risks or drawbacks associated with drone technology?",
+      "points": 2,
+      "no_answer_feedback": "The correct answers are B: 'Duration of flights' and D: 'Mid-air collisions.' Paragraph I explicitly mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' and 'safety risks, in the potential for collisions across increasingly crowded airspace.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "mc_options": [
+        {
+          "text": "A: The cost of fighting fires",
+          "is_correct": false,
+          "feedback": "Incorrect. The cost of fighting fires is not mentioned as a drawback. The passage states fire departments use UAVs to 'reduce risks and costs.'"
+        },
+        {
+          "text": "B: Duration of flights",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph I mentions 'comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes)' as a limitation."
+        },
+        {
+          "text": "C: Criminal activity",
+          "is_correct": false,
+          "feedback": "Incorrect. Criminal activity is not mentioned as a drawback; rather, drones are used to help detect criminal activity."
+        },
+        {
+          "text": "D: Mid-air collisions",
+          "is_correct": true,
+          "feedback": "Correct! Paragraph I mentions 'safety risks, in the potential for collisions across increasingly crowded airspace.'"
+        },
+        {
+          "text": "E: The inevitable rise of drones",
+          "is_correct": false,
+          "feedback": "Incorrect. The 'inexorable rise of drones' is described as a trend, not a specific risk or drawback."
+        }
+      ],
+      "options": "A: The cost of fighting fires\nB: Duration of flights\nC: Criminal activity\nD: Mid-air collisions\nE: The inevitable rise of drones",
+      "correct_answer_count": 2,
+      "show_option_letters": false
     }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\r\n<h5>Travel Rider pass</h5>\r\nThe Travel Rider pass is valid for one month from the day it is purchased and <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">allows travel on any NorWest and Metro Link bus within the city.</span> Photo identification is required to purchase a Travel Rider pass. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Prices are £42 for adults, £30 for students and pensioners.</span> Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\r\n<hr>\r\n<h5>Flexi-Pass</h5>\r\n<span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Flexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card.</span> With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don’t have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\r\nPrices:\r\n<ul>\r\n  <li>Up to 15 hours – £52</li>\r\n  <li>16 to 20 hours – £64</li>\r\n  <li>21 to 25 hours – £72</li>\r\n</ul>\r\nNOTE: No concessions are available on tickets.\r\n<hr>\r\n<h5>Destination Pass</h5>\r\nThe Destination Pass offers a range of 12 “hop on and off” fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">as well as the additional options to sail on Brentwood Lake</span>, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you’re ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\r\nPrices:\r\n<ul>\r\n  <li>4 trips – £115</li>\r\n  <li>8 trips – £215</li>\r\n  <li>12 trips – £390</li>\r\n</ul>\r\nStudent and group (5 people or more) discounts are available. Contact us for more details.\r\n<hr>"
+    },
+    {
+      "title": "Reading Passage 2",
+      "content": "<h3>Gaston Community College evening classes</h3>\r\nThis semester, the following classes will be available.\r\n\r\n\r\n\r\n<strong>Class</strong>: English for beginners\r\n\r\n<span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\"><strong>Description</strong>: An English language class to help new arrivals to the country</span> learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\r\n\r\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\r\n\r\n<strong>Duration:</strong> 6 weeks\r\n\r\n<strong>Fee:</strong> £45\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Intermediate Spanish\r\n\r\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner’s Spanish class held last semester\r\n\r\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\"><strong>Minimum-maximum class sizes:</strong> 5-18</span>\r\n\r\n<strong>Duration:</strong> 8 weeks\r\n\r\n<strong>Fee:</strong> £55\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Using your computer\r\n\r\n<strong>Description</strong>: No idea how to use a computer? Then this class is for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\r\n\r\n<strong>Times and days:</strong> <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Wednesdays at 6.30 p.m. to 7.15 p.m.</span>\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 2-8\r\n\r\n<strong>Duration:</strong> 4 weeks\r\n\r\n<strong>Fee:</strong> £25\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Beginners watercolour painting\r\n\r\n<strong>Description</strong>: <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Back by popular demand and once again run by local artist Ted Heath</span>, this class gives you an opportunity to show your more creative side.\r\nNB: you will need to provide your own paper, paint and brushes\r\n\r\nThursdays from 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-12\r\n\r\n<strong>Duration:</strong> 8 weeks\r\n\r\n<strong>Fee:</strong> £40\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Better public speaking\r\n\r\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\r\n\r\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 2-8\r\n\r\n<strong>Duration:</strong> 4 weeks\r\n\r\n<strong>Fee:</strong> £30\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Successful interview techniques\r\n\r\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\r\n\r\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-10\r\n\r\n<strong>Duration:</strong> 5 weeks\r\n\r\n<strong>Fee:</strong> £35\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Authentic Thai cooking\r\n\r\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\r\n\r\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-10\r\n\r\n<strong>Duration:</strong> 8 weeks\r\n\r\n<strong>Fee:</strong> £35 + £55 food costs\r\n\r\n<hr>\r\n\r\n<strong>Class</strong>: Beginners guitar\r\n\r\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you’ve never played a note before, you should be able to play a tune by the end of the course.\r\n\r\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 2-6\r\n\r\n<strong>Duration:</strong> 5 weeks\r\n\r\n<span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\"><strong>Fee:</strong> £20</span>\r\n\r\n<hr>\r\n\r\n<span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\"><strong>Class</strong>: Digital photos</span>\r\n\r\n<strong>Description</strong>: A fun &amp; practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes &amp; landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black &amp; white.\r\n\r\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\r\n\r\n<strong>Minimum-maximum class sizes:</strong> 4-10\r\n\r\n<strong>Duration:</strong> 6 weeks\r\n\r\n<strong>Fee:</strong> £40"
+    },
+    {
+      "title": "Reading Passage 3",
+      "content": "<h3>ESITO dress code</h3>\r\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\r\n<ul>\r\n \t<li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\r\n \t<li>Hair should be clean, combed and neatly arranged. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Long hair is acceptable if it is tied back.</span></li>\r\n \t<li><span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">Moustaches and beards should be neatly trimmed.</span></li>\r\n \t<li>Good personal hygiene must be maintained.</li>\r\n \t<li><span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</span></li>\r\n</ul>\r\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">The following are some examples of inappropriate dress at all times:</span>\r\n<ul>\r\n \t<li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\r\n \t<li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\r\n \t<li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\r\n</ul>\r\n<span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">Casual Fridays: The Company has designated Fridays as casual days.</span> Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\r\n\r\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. <span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">NOTE: This only impacts on employees working in the yard.</span>\r\n\r\n<span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">The supervisor is responsible for evaluating the dress and appearance of employees</span> under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\r\n\r\nOn the first occasion, a documented verbal warning should be given to the employee, and the department’s dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\r\n\r\nOn the second occasion, <span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">the employee must be sent home to change clothes immediately</span> as well as given a written warning. Further violations may result in discipline up to and including discharge."
+    },
+    {
+      "title": "Reading Passage 4",
+      "content": "<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\r\n<h4>Pension scheme</h4>\r\n<span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">All employees are automatically included in our pension scheme, although there is an ‘opt out’ policy</span> for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. <span id=\"q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">Employees need to pay into the pension scheme for a minimum of 20 years.</span> Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\r\n<h4>Medical insurance</h4>\r\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. <span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.</span>\r\n<h4>Access to company vehicles</h4>\r\nAll staff with a legitimate need to travel will have access to one of the company vehicles. <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before</span> the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\r\n<h4>Communication</h4>\r\n<span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">All members of staff have a laptop which is issued on the first day of employment.</span> This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\r\n<h4>Working from home</h4>\r\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Despite some earlier difficulties, the scheme has proven successful</span> and will now be offered as an option for all staff (although final approval must be given by your manager)."
+    },
+    {
+      "title": "Reading Passage 5",
+      "content": "THE NON-MILITARY USES OF UNMANNED AERIAL VEHICLES\r\n\r\nA) The use of unmanned aerial vehicles has grown dramatically over the past decade or so, in no small part due to the fact that some of these machines are able to remain airborne for longer periods of time than more conventional manned aircraft. At the same time, <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">unmanned aerial vehicles (UAVs), also known as unmanned aircraft systems (UASs), and remotely piloted aircraft (RPAs), nowadays commonly referred to as drones, are generally credited with being both more cost-effective to operate and maintain, as well as safer to use, than piloted aircraft.</span> The term drone may also refer to small electric helicopters fitted with two or more rotors which are flown by remote control.\r\n\r\nB) Today, drones are being used with increasing frequency for military operations by a number of countries in combat, surveillance and reconnaissance roles. These machines tend to be larger than non-military drones and are, in the main, powered by jet or gas engines. Perhaps unsurprisingly, the use of drone technology has gained a measure of notoriety as a result of their growing prominence in military roles, which have been widely publicised in television, online and print media during the last decade and a half, leading to criticism of their application in this arena on both ethical and legal grounds.\r\n\r\n<span id=\"q27\" data-question=\"27\"></span>C) While originally and currently still primarily used for military purposes, the rapid growth and development in drone technology during the early twenty-first century has led some experts to predict that, by 2030, there will be approximately 30,000 licensed drones operating in the skies above the United States alone. It has also been estimated that the economic value of the commercial drone market will rise in value to around $90 billion globally during the next five years, <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">as well as create as many as 150,000 new jobs by 2035.</span> <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">A projection by the Association for Unmanned Vehicle Systems International estimates that agricultural applications will one day account for approximately 80 percent of commercial drone use.</span>\r\n\r\nD) One development related to the commercial use of drones which has perhaps received the greatest amount of news and media coverage in recent years is the establishment of Amazon Prime Air in the early 2020s by the US-based online retail giant, Amazon.com. <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">Amazon Prime Air's drone-based delivery system for its customers' purchases is now operational, though it's still growing and faces regulatory considerations. Deliveries occur during daylight hours and in good weather conditions</span>, although the company has been granted permission by the US Federal Aviation Authority (FAA) to begin testing its current prototypes under certain restrictions.\r\n\r\n<span id=\"q29\" data-question=\"29\"></span>E) As far as aerial filming and photography are concerned, commercial drones have a number of applications in industries ranging from those of movie production and the news media, to real estate, telecommunications and security. More specific uses in these fields include, though are by no means limited to, taking promotional photos and videos for commercial and residential properties on the market, filming breaking-news stories and live sports events, producing footage from unique perspectives for movies and carrying out security and surveillance functions in the detection of criminal activity and identification of criminals.\r\n\r\n<span id=\"q31\" data-question=\"31\"></span>F) In addition to the delivery of consumer products and other commercial applications, non-military drones are gaining popularity for use in search and rescue operations. <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">Drone-mounted cameras enable unmanned aerial vehicles to follow pre-programmed search patterns when looking for missing persons and victims of natural disasters across a variety of otherwise inaccessible terrain types, including marine environments.</span> With the addition of infrared thermal imaging camera technology, drones can also carry out search and rescue missions after dark, with much greater manoeuvrability and at less cost than using a helicopter, for example.\r\n\r\n<span id=\"q33\" data-question=\"33\"></span>G) These days, drones are increasingly being used by national government agencies and local authorities for a variety of purposes outside of the private sector. Transport agencies, both road and rail, make use of unmanned aerial vehicles for monitoring traffic flow and reporting accidents and hazards, while civil planners utilise the technology to assist with mapping and surveying work. Fire departments in some jurisdictions now rely on UAVs to help them reduce risks and costs when fighting fires in both urban and rural areas, while customs and law enforcement agencies also employ drone technology in protecting citizens and borders through monitoring and surveillance.\r\n\r\n<span id=\"q30\" data-question=\"30\"></span>H) In terms of the natural world, scientists and researchers are turning to drones with greater frequency to monitor, document and assess changes in the health, movement and distribution of flora and fauna, as well as pollution, weather and the climate, both conveniently and cost-effectively. Unmanned aircraft are today being used not only in environmental and ecological research, but also as cutting-edge tools to assist in wildlife conservation efforts. In the latter capacity, drone technology is now being used by both governmental agencies and non-governmental organisations in the surveillance and prevention of illegal hunting and poaching of a number of endangered species.\r\n\r\n<span id=\"q28\" data-question=\"28\"></span>I) While advocates of drones are quick to point out all of the many benefits that the machines can bring to society and the planet, the technology is not without its critics. Those opposed to the growing use of unmanned aerial vehicles cite a number of negative aspects related to the seemingly inexorable rise of drones and their myriad possible applications in our lives. <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">These include logistical concerns such as the comparatively short flight times of smaller UAVs (presently between 30 and 45 minutes) and their operational limitations in terms of spatial mobility. Other perceived disadvantages are safety risks, in the potential for collisions across increasingly crowded airspace</span>, <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">and even the adverse effects drones may have on the natural environment, particularly as contributors to noise pollution.</span>\r\n\r\nJ) Whether for commercial or recreational applications or being used as tools to assist those working in the public sector, it would appear that the numerical proliferation of unmanned aerial vehicles, as well as their numerous potential uses, means that the impact of drone technology in our lives is only set to increase. While there are undoubtedly issues yet to be resolved regarding the use of drones, particularly in relation to regulatory oversight and legal restrictions on the part of relevant authorities, the futuristic technology afforded us in the form of these robotic vehicles indicates that not the sky, but rather the solar system and beyond, may be the limit."
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_academic_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-18 14:17:19",
+    "exported_by": "impact",
+    "plugin_version": "12.1",
+    "format_version": "1.0"
+  }
 }

@@ -1,1093 +1,1108 @@
 {
-    "title": "Academic IELTS Reading Test 14",
-    "content": "",
-    "questions": [
-        {
-            "type": "open_question",
-            "ielts_question_type": "Diagram Label Completion",
-            "instructions": "You should spend about 20 minutes on Questions 1 – 10 which are based on Reading Passage 1.\n\nQuestions 1 – 4\n\nLabel the diagram below using NO MORE THAN TWO WORDS.",
-            "question": "Complete the diagram labeling (Questions 1-4):",
-            "field_count": 4,
-            "field_labels": [
-                "1. Fill in the blank 1 of 10 (stimulant)",
-                "2. Fill in the blank 2 of 10 (build body strength)",
-                "3. Fill in the blank 3 of 10 (cope with stress/boost confidence)",
-                "4. Fill in the blank 4 of 10 (purpose)"
-            ],
-            "field_answers": [
-                "cocaine",
-                "anabolic steroids|anabolic steriods",
-                "relaxants",
-                "mask pain"
-            ],
-            "points": 4,
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
-                    "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
-                    "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
-                },
-                "2": {
-                    "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
-                    "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
-                    "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
-                },
-                "3": {
-                    "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
-                    "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
-                    "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
-                },
-                "4": {
-                    "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
-                    "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
-                    "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
-                }
-            }
+  "title": "Academic IELTS Reading Test 14",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "ielts_question_type": "Diagram Label Completion",
+      "instructions": "You should spend about 20 minutes on Questions 1 – 10 which are based on Reading Passage 1.\n\nQuestions 1 – 4\n\nLabel the diagram below using NO MORE THAN TWO WORDS.",
+      "question": "Complete the diagram labeling (Questions 1-4):",
+      "field_count": 4,
+      "field_labels": [
+        "1. Fill in the blank 1 of 10 (stimulant)",
+        "2. Fill in the blank 2 of 10 (build body strength)",
+        "3. Fill in the blank 3 of 10 (cope with stress/boost confidence)",
+        "4. Fill in the blank 4 of 10 (purpose)"
+      ],
+      "field_answers": [
+        "cocaine",
+        "anabolic steroids|anabolic steriods",
+        "relaxants",
+        "mask pain"
+      ],
+      "points": 4,
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 5 – 8\n\nAnswer the following questions using NO MORE THAN THREE WORDS.",
-            "question": "Answer the questions (Questions 5-8):",
-            "field_count": 4,
-            "field_labels": [
-                "5. Why are sportspeople under such pressure to succeed quickly?",
-                "6. What has subsequently become necessary in a number of sports?",
-                "7. What does Ron Clarke claim drugs can balance?",
-                "8. What are drug companies becoming more able to do?"
-            ],
-            "field_answers": [
-                "short careers|short career",
-                "drug testing|testing for drugs|drugs test|drugs testing|drug tests",
-                "natural advantages|natural advantage",
-                "evade detection|avoid detection"
-            ],
-            "points": 4,
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Well done! You found all the key information in the passage.",
-                    "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
-                    "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
-                },
-                "2": {
-                    "correct": "Well done! You found all the key information in the passage.",
-                    "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
-                    "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
-                },
-                "3": {
-                    "correct": "Well done! You found all the key information in the passage.",
-                    "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
-                    "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
-                },
-                "4": {
-                    "correct": "Well done! You found all the key information in the passage.",
-                    "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
-                    "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
-                }
-            }
+        "2": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Summary Completion",
-            "instructions": "Questions 9 and 10\n\nComplete the summary using words from the text. USE NO MORE THAN ONE WORD.",
-            "question": "Complete the summary (Questions 9-10):",
-            "field_count": 2,
-            "field_labels": [
-                "9. The main failure of drug testing is its increasing (9) _____",
-                "10. (10) _____ of drug use have serious side effects on sportspeople even if they are subsequently proved wrong."
-            ],
-            "field_answers": [
-                "inaccuracy",
-                "allegations"
-            ],
-            "points": 2,
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! You've accurately completed the summary about drug testing problems.",
-                    "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
-                    "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
-                },
-                "2": {
-                    "correct": "Correct! You've accurately completed the summary about drug testing problems.",
-                    "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
-                    "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
-                }
-            }
+        "3": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 2\n\nYou should spend about 20 minutes on Questions 11 – 22 which are based on Reading Passage 2.\n\nQuestions 11 – 14\n\nChoose the correct answer A–D",
-            "question": "11. The earliest magazines",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is D. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "had a number of similarities with modern magazines",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "were intended for women",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "focused on hobbies",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "were very different from magazines today",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "had a number of similarities with modern magazines\nwere intended for women\nfocused on hobbies\nwere very different from magazines today",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "12. Magazines became a highly profitable business when",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "they were exported around Europe",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "they began including illustrations",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "advertisers began paying more for space",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "they included short stories",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "they were exported around Europe\nthey began including illustrations\nadvertisers began paying more for space\nthey included short stories",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "13. How have magazines retained their popularity despite increased competition?",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "By influencing popular opinion",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "By specialising",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "Because of the war",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "Through cooperation with television",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "By influencing popular opinion\nBy specialising\nBecause of the war\nThrough cooperation with television",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "14. McClure's magazine",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
-            "correct_feedback": "Correct!",
-            "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "was a respected political and social publication",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "was the first publication to specialise in invasive journalism",
-                    "is_correct": true,
-                    "feedback": "Correct! See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "was the most popular American publication of 1900",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                },
-                {
-                    "text": "had the highest circulation of any magazine",
-                    "is_correct": false,
-                    "feedback": "Incorrect. See Reading Passage 2 for the answer."
-                }
-            ],
-            "options": "was a respected political and social publication\nwas the first publication to specialise in invasive journalism\nwas the most popular American publication of 1900\nhad the highest circulation of any magazine",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 15 – 18\n\nLook at the following statements and decide if they are right or wrong according to the information given.\n\nWrite TRUE if the statement is true\nFALSE if the statement is false\nNOT GIVEN if there is no information about this in the passage.",
-            "question": "15. Lady's Book was written by women",
-            "points": 1,
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "16. After the Industrial Revolution, magazines sold more copies than newspapers",
-            "points": 1,
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "17. Better education supported the rise of magazines",
-            "points": 1,
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "18. Magazines began to influence popular opinion",
-            "points": 1,
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 19 – 22\n\nAnswer the following questions using NO MORE THAN TWO WORDS",
-            "question": "Answer the questions (Questions 19-22):",
-            "field_count": 4,
-            "field_labels": [
-                "19. With what form of journalism did Samuel McClure guarantee more sales of his magazine?",
-                "20. What allowed the exploitation of new markets in the late 1800s?",
-                "21. Whose picture was in many magazines during World War I?",
-                "22. What stopped the increasing rise of magazines?"
-            ],
-            "field_answers": [
-                "muckraking journalism|muckraking",
-                "better transportation",
-                "kitchener",
-                "television"
-            ],
-            "points": 4,
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Well done! You found all the key information.",
-                    "incorrect": "Review Reading Passage 2 carefully to find these answers.",
-                    "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
-                },
-                "2": {
-                    "correct": "Well done! You found all the key information.",
-                    "incorrect": "Review Reading Passage 2 carefully to find these answers.",
-                    "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
-                },
-                "3": {
-                    "correct": "Well done! You found all the key information.",
-                    "incorrect": "Review Reading Passage 2 carefully to find these answers.",
-                    "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
-                },
-                "4": {
-                    "correct": "Well done! You found all the key information.",
-                    "incorrect": "Review Reading Passage 2 carefully to find these answers.",
-                    "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
-                }
-            }
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
-            "question": "23. People from all around the world are united by the way they think about culture",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "24. Our 'values' are the most important aspect of ideology",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "25. Secularism is the most widely accepted system of beliefs, values and ideals",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "26. Shamans act as intermediaries between spirits and the living",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "27. Agricultural societies benefited from religion",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "28. All the people from the Aztec civilisation were rich",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "29. In the seventeenth and eighteenth centuries, European people began turning towards science",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "yes_no_not_given",
-            "mc_options": [
-                {
-                    "text": "YES",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NO",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "YES\nNO\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
-            "question": "30. Fill in blank 30",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "31. Fill in blank 31",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "32. Fill in blank 32",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "33. Fill in blank 33",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "34. Fill in blank 34",
-            "points": 1,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_r",
-            "mc_options": [
-                {
-                    "text": "belief",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "latter",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "religion",
-                    "is_correct": true,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "faith",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "ascendancy",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "former",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "rational",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "decline",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "animism",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                },
-                {
-                    "text": "shaman",
-                    "is_correct": false,
-                    "feedback": "Correct!"
-                }
-            ],
-            "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
-            "correct_answer_count": 1,
-            "show_option_letters": false
-        },
-        {
-            "type": "open_question",
-            "ielts_question_type": "Short Answer",
-            "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
-            "question": "Answer the questions (Questions 35-40):",
-            "field_count": 6,
-            "field_labels": [
-                "35. What are beliefs, values and ideals specific categories of?",
-                "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
-                "37. In Europe, what title was given to the advance of science and logic?",
-                "38. In addition to religion, what else influenced the development of capitalism?",
-                "39. Before modern advances in technology, what did anthropologists consider societies to be?",
-                "40. What theory is symbolic of the tensions between religion and science?"
-            ],
-            "field_answers": [
-                "ideology",
-                "human sacrifice|human blood",
-                "age of enlightenment|enlightenment",
-                "science",
-                "fully independent systems|independent systems|independent",
-                "natural evolution|evolution"
-            ],
-            "points": 6,
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "field_feedback": {
-                "1": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "2": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "3": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "4": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "5": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                },
-                "6": {
-                    "correct": "Excellent! You found all the answers.",
-                    "incorrect": "Review Reading Passage 3 to find these answers.",
-                    "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
-                }
-            }
+        "4": {
+          "correct": "Excellent! You correctly identified all the categories of performance-enhancing drugs and their purposes.",
+          "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
+          "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         }
-    ],
-    "reading_texts": [
-        {
-            "title": "Reading Passage 1",
-            "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
-        },
-        {
-            "title": "Reading Passage 2",
-            "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
-        },
-        {
-            "title": "Reading Passage 3",
-            "content": "The dawn of culture\n\n<span id=\"q23\" data-question=\"23\"></span>In every society, culturally unique ways of thinking about the world unite people in their behaviour. <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Anthropologists often refer to the body of ideas that people share as ideology. Ideology can be broken down into at least three specific categories: beliefs, values and ideals.</span> People's beliefs give them an understanding of how the world works and how they should respond to the actions of others and their environments. Particular beliefs often tie in closely with the daily concerns of domestic life, such as making a living, health and sickness, happiness and sadness, interpersonal relationships, and death. People's values tell them the differences between right and wrong or good and bad. Ideals serve as models for what people hope to achieve in life.\n\n<span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">There are two accepted systems of belief.</span> Some rely on religion, even the supernatural (things beyond the natural world), to shape their values and ideals and to influence their behaviour. Others base their beliefs on observations of the natural world, a practice anthropologists commonly refer to as secularism.\n\n<span id=\"q31\" data-question=\"31\"></span>Religion in its more extreme form allows people to know about and 'communicate' with supernatural beings, such as animal spirits, gods, and spirits of the dead. Small tribal societies believe that plants and animals, as well as people, can have souls or spirits that can take on different forms to help or harm people. Anthropologists refer to this kind of religious belief as animism, with believers often led by shamans. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">As religious specialists, shamans have special access to the spirit world, and are said to be able to receive stories from supernatural beings and later recite them to others or act them out in dramatic rituals.</span>\n\nIn larger, agricultural societies, religion has long been a means of asking for bountiful harvests, a source of power for rulers, or an inspiration to go to war. In early civilised societies, religious visionaries became leaders because people believed those leaders could communicate with the supernatural to control the fate of a civilization. This became their greatest source of power, and people often regarded leaders as actual gods. <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">For example, in the great civilisation of the Aztec, which flourished in what is now Mexico in the fifteenth and sixteenth centuries, rulers claimed privileged association with a powerful god that was said to require human blood to ensure that the sun would rise and set each day.</span> <span id=\"q28\" data-question=\"28\"></span>Aztec rulers thus inspired great awe by regularly conducting human sacrifices. They also conspicuously displayed their vast power as wealth in luxury goods, such as fine jewels, clothing and palaces. <span class=\"reading-answer-marker\">Rulers obtained their wealth from the great numbers of craftspeople, traders and warriors under their control, often leaving them with very little in the way of material possessions.</span>\n\n<span id=\"q29\" data-question=\"29\"></span><span id=\"q37\" data-question=\"37\"></span><span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">During the period in seventeenth- and eighteenth-century Europe known as the Age of Enlightenment, science and logic became new sources of belief for many people living in civilised societies. Scientific studies of the natural world and rational philosophies led people to believe that they could explain natural and social phenomena without believing in gods or spirits. Religion remained an influential system of belief, and together both religion and science drove the development of capitalism</span>, the economic system of commerce-driven market exchange. <span id=\"q32\" data-question=\"32\"></span>Capitalism itself influences people's beliefs, values and ideals in many present-day, large, civilised societies. In these societies, such as in the United States, many people view the world and shape their behaviour based on a belief that they can understand and control their environment and that work, commerce and the accumulation of wealth serve an ultimate good. The governments of most large societies today also assert that human well-being derives from the growth of economies and the development of technology.\n\nRapid changes in technology in the last several decades have changed the nature of culture and cultural exchange. People around the world can make economic transactions and transmit information to each other almost instantaneously through the use of computers and satellite communications. Governments and corporations have gained vast amounts of political power through military might and economic influence. Corporations have also created a form of global culture based on worldwide commercial markets. As a result, local culture and social structure are now shaped by large and powerful commercial interests in ways that earlier anthropologists could not have imagined. <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Early anthropologists thought of societies and their cultures as fully independent systems</span>, but today, many nations are multicultural societies, composed of numerous smaller subcultures. Cultures also cross national boundaries. For instance, people around the world now know a variety of English words and have contact with American cultural exports such as brand-name clothing and technological products, films and music, and mass-produced foods.\n\nIn addition, many people have come to believe in the fundamental nature of human rights and free will. These beliefs grew out of people's increasing ability to control the natural world through science and rationalism, and though religious beliefs continue to change to affirm or accommodate these other dominant beliefs, sometimes the two are at odds with each other. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">For instance, many religious people have difficulty reconciling their belief in a supreme spiritual force with the theory of natural evolution, which requires no belief in the supernatural.</span> <span id=\"q33\" data-question=\"33\"></span><span id=\"q34\" data-question=\"34\"></span>As a result, societies in which many people do not practice any religion, such as China, may be known as secular societies. However, no society is entirely secular."
-        }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_academic_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
-    "_metadata": {
-        "exported_at": "2026-01-14 06:45:00",
-        "exported_by": "copilot",
-        "plugin_version": "11.19",
-        "format_version": "1.0"
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 5 – 8\n\nAnswer the following questions using NO MORE THAN THREE WORDS.",
+      "question": "Answer the questions (Questions 5-8):",
+      "field_count": 4,
+      "field_labels": [
+        "5. Why are sportspeople under such pressure to succeed quickly?",
+        "6. What has subsequently become necessary in a number of sports?",
+        "7. What does Ron Clarke claim drugs can balance?",
+        "8. What are drug companies becoming more able to do?"
+      ],
+      "field_answers": [
+        "short careers|short career",
+        "drug testing|testing for drugs|drugs test|drugs testing|drug tests",
+        "natural advantages|natural advantage",
+        "evade detection|avoid detection"
+      ],
+      "points": 4,
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        },
+        "2": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        },
+        "3": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        },
+        "4": {
+          "correct": "Well done! You found all the key information in the passage.",
+          "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
+          "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
+        }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Summary Completion",
+      "instructions": "Questions 9 and 10\n\nComplete the summary using words from the text. USE NO MORE THAN ONE WORD.",
+      "question": "Complete the summary (Questions 9-10):",
+      "field_count": 2,
+      "field_labels": [
+        "9. The main failure of drug testing is its increasing (9) _____",
+        "10. (10) _____ of drug use have serious side effects on sportspeople even if they are subsequently proved wrong."
+      ],
+      "field_answers": [
+        "inaccuracy",
+        "allegations"
+      ],
+      "points": 2,
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! You've accurately completed the summary about drug testing problems.",
+          "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
+          "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
+        },
+        "2": {
+          "correct": "Correct! You've accurately completed the summary about drug testing problems.",
+          "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
+          "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
+        }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 2\n\nYou should spend about 20 minutes on Questions 11 – 22 which are based on Reading Passage 2.\n\nQuestions 11 – 14\n\nChoose the correct answer A–D",
+      "question": "11. The earliest magazines",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is D. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "had a number of similarities with modern magazines",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "were intended for women",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "focused on hobbies",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "were very different from magazines today",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "had a number of similarities with modern magazines\nwere intended for women\nfocused on hobbies\nwere very different from magazines today",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "12. Magazines became a highly profitable business when",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "they were exported around Europe",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "they began including illustrations",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "advertisers began paying more for space",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "they included short stories",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "they were exported around Europe\nthey began including illustrations\nadvertisers began paying more for space\nthey included short stories",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "13. How have magazines retained their popularity despite increased competition?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "By influencing popular opinion",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "By specialising",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "Because of the war",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "Through cooperation with television",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "By influencing popular opinion\nBy specialising\nBecause of the war\nThrough cooperation with television",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "14. McClure's magazine",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. Review Reading Passage 2 carefully.",
+      "correct_feedback": "Correct!",
+      "incorrect_feedback": "Incorrect. Review Reading Passage 2 to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "was a respected political and social publication",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "was the first publication to specialise in invasive journalism",
+          "is_correct": true,
+          "feedback": "Correct! See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "was the most popular American publication of 1900",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        },
+        {
+          "text": "had the highest circulation of any magazine",
+          "is_correct": false,
+          "feedback": "Incorrect. See Reading Passage 2 for the answer."
+        }
+      ],
+      "options": "was a respected political and social publication\nwas the first publication to specialise in invasive journalism\nwas the most popular American publication of 1900\nhad the highest circulation of any magazine",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 15 – 18\n\nLook at the following statements and decide if they are right or wrong according to the information given.\n\nWrite TRUE if the statement is true\nFALSE if the statement is false\nNOT GIVEN if there is no information about this in the passage.",
+      "question": "15. Lady's Book was written by women",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "16. After the Industrial Revolution, magazines sold more copies than newspapers",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "17. Better education supported the rise of magazines",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "18. Magazines began to influence popular opinion",
+      "points": 1,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 19 – 22\n\nAnswer the following questions using NO MORE THAN TWO WORDS",
+      "question": "Answer the questions (Questions 19-22):",
+      "field_count": 4,
+      "field_labels": [
+        "19. With what form of journalism did Samuel McClure guarantee more sales of his magazine?",
+        "20. What allowed the exploitation of new markets in the late 1800s?",
+        "21. Whose picture was in many magazines during World War I?",
+        "22. What stopped the increasing rise of magazines?"
+      ],
+      "field_answers": [
+        "muckraking journalism|muckraking",
+        "better transportation",
+        "kitchener",
+        "television"
+      ],
+      "points": 4,
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        },
+        "2": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        },
+        "3": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        },
+        "4": {
+          "correct": "Well done! You found all the key information.",
+          "incorrect": "Review Reading Passage 2 carefully to find these answers.",
+          "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
+        }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Reading Passage 3\n\nYou should spend about 20 minutes on Questions 23 – 40 which are based on Reading Passage 3.\n\nQuestions 23 – 29\n\nDo the following statements agree with the opinion of the writer?\n\nWrite YES if the statement agrees with the writer\nNO if the statement does not agree with the writer\nNOT GIVEN if there is no information about this in the passage.",
+      "question": "23. People from all around the world are united by the way they think about culture",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "24. Our 'values' are the most important aspect of ideology",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "25. Secularism is the most widely accepted system of beliefs, values and ideals",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "26. Shamans act as intermediaries between spirits and the living",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "27. Agricultural societies benefited from religion",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "28. All the people from the Aztec civilisation were rich",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "29. In the seventeenth and eighteenth centuries, European people began turning towards science",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "yes_no_not_given",
+      "mc_options": [
+        {
+          "text": "YES",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NO",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "YES\nNO\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Questions 30 – 34\n\nComplete the summary of the reading text using words from the box.\n\nA: belief  B: latter  C: religion  D: faith  E: ascendancy\nF: former  G: rational  H: decline  I: animism  J: shaman",
+      "question": "30. Fill in blank 30",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "31. Fill in blank 31",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "32. Fill in blank 32",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "33. Fill in blank 33",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "34. Fill in blank 34",
+      "points": 1,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "belief",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "latter",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "religion",
+          "is_correct": true,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "faith",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "ascendancy",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "former",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "rational",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "decline",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "animism",
+          "is_correct": false,
+          "feedback": "Correct!"
+        },
+        {
+          "text": "shaman",
+          "is_correct": false,
+          "feedback": "Correct!"
+        }
+      ],
+      "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Short Answer",
+      "instructions": "Questions 35 – 40\n\nAnswer the questions below using NO MORE THAN THREE WORDS.",
+      "question": "Answer the questions (Questions 35-40):",
+      "field_count": 6,
+      "field_labels": [
+        "35. What are beliefs, values and ideals specific categories of?",
+        "36. What was said to be necessary for the continuation of sunrise and sunset in ancient Mexico?",
+        "37. In Europe, what title was given to the advance of science and logic?",
+        "38. In addition to religion, what else influenced the development of capitalism?",
+        "39. Before modern advances in technology, what did anthropologists consider societies to be?",
+        "40. What theory is symbolic of the tensions between religion and science?"
+      ],
+      "field_answers": [
+        "ideology",
+        "human sacrifice|human blood",
+        "age of enlightenment|enlightenment",
+        "science",
+        "fully independent systems|independent systems|independent",
+        "natural evolution|evolution"
+      ],
+      "points": 6,
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "field_feedback": {
+        "1": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "2": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "3": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "4": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "5": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        },
+        "6": {
+          "correct": "Excellent! You found all the answers.",
+          "incorrect": "Review Reading Passage 3 to find these answers.",
+          "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
+        }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     }
+  ],
+  "reading_texts": [
+    {
+      "title": "Reading Passage 1",
+      "content": "<h4><strong>Travelling around the country with bus passes</strong></h4>\n<h5>Travel Rider pass</h5>\nThe Travel Rider pass is valid for one month from the day it is purchased and allows travel on any NorWest and Metro Link bus within the city. Photo identification is required to purchase a Travel Rider pass. Prices are £42 for adults, £30 for students and pensioners. Passes can be purchased from any of our branches. Please note that replacement passes can only be issued from the main office in Queen Street.\n<hr>\n<h5>Flexi-Pass</h5>\nFlexi-Pass allows travel between cities with an hours-based pass that can be topped up just like a pre paid phone card. With freedom to explore the national network of InterCity Coachlines, you can set your own itinerary and travel around the country, when and where you want. The more hours you buy, the cheaper each trip becomes and you can even use Flexi-Pass on the cross-channel ferry. You have three months to use the hours you purchase, so you don't have to pack too much travelling into a short time frame. The flexi-pass can be purchased from any of our branch offices.\nPrices:\n<ul>\n  <li>Up to 15 hours – £52</li>\n  <li>16 to 20 hours – £64</li>\n  <li>21 to 25 hours – £72</li>\n</ul>\nNOTE: No concessions are available on tickets.\n<hr>\n<h5>Destination Pass</h5>\nThe Destination Pass offers a range of 12 \"hop on and off\" fixed itinerary passes, based on the most popular touring routes throughout the country. The Destination Pass includes coach and ferry travel, as well as the additional options to sail on Brentwood Lake, all in the one pass. The destination Pass is available through travel agents worldwide or can be purchased through our website. When you're ready to travel, simply call us or log in online to book one of the 12 individual journeys. You can amend your travel plans up to two hours prior to departure without penalty. All trips must be taken within 6 months.\nPrices:\n<ul>\n  <li>4 trips – £115</li>\n  <li>8 trips – £215</li>\n  <li>12 trips – £390</li>\n</ul>\nStudent and group (5 people or more) discounts are available. Contact us for more details."
+    },
+    {
+      "title": "Reading Passage 2",
+      "content": "<h3>Gaston Community College evening classes</h3>\nThis semester, the following classes will be available.\n\n<strong>Class</strong>: English for beginners\n\n<strong>Description</strong>: An English language class to help new arrivals to the country learn better English. The course looks at using English in everyday situations, such as shopping, going to the doctors or getting a haircut.\n\n<strong>Times and days:</strong> Mondays and Thursdays at 7 p.m. to 8 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5 – 12\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £45\n\n<hr>\n\n<strong>Class</strong>: Intermediate Spanish\n\n<strong>Description</strong>: This class is ideally suited for students who have a basic knowledge of Spanish or who completed the Beginner's Spanish class held last semester\n\n<strong>Times and days:</strong> Tuesdays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 5-18\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £55\n\n<hr>\n\n<strong>Class</strong>: Using your computer\n\n<strong>Description</strong>: No idea how to use a computer? Then this class if for you! It covers the basics of surfing the internet, sending and receiving emails, typing and understanding files and folders.\n\n<strong>Times and days:</strong> Wednesdays at 6.30 p.m. to 7.15 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £25\n\n<hr>\n\n<strong>Class</strong>: Beginners watercolour painting\n\n<strong>Description</strong>: Back by popular demand and once again run by local artist Ted Heath, this class gives you an opportunity to show your more creative side.\nNB: you will need to provide your own paper, paint and brushes\n\nThursdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-12\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<strong>Class</strong>: Better public speaking\n\n<strong>Description</strong>: For all those who have completed public speaking or presentation skills courses, or who have some experience and wish to brush up on their skills. Practise connecting with your audience and communicating your message with full effectiveness.\n\n<strong>Times and days:</strong> Tuesdays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-8\n\n<strong>Duration:</strong> 4 weeks\n\n<strong>Fee:</strong> £30\n\n<hr>\n\n<strong>Class</strong>: Successful interview techniques\n\n<strong>Description</strong>: Many courses focus on presenting yourself well at an interview, but this course will help you become a better interviewer – ideal for those perhaps run a small business and would like to be sure they are recruiting the right person. We will cover preparation, body language and good interview questions.\n\n<strong>Times and days:</strong> Mondays and Fridays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £35\n\n<hr>\n\n<strong>Class</strong>: Authentic Thai cooking\n\n<strong>Description</strong>: Learn to cook Thai food the fun way with a native, experienced chef. A hands-on and demonstration course covering exciting dishes from all regions of Thailand. Aspects of Thai culture will be covered and all recipes and ingredients supplied.\n\n<strong>Times and days:</strong> Tuesdays from 7.00 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 8 weeks\n\n<strong>Fee:</strong> £35 + £55 food costs\n\n<hr>\n\n<strong>Class</strong>: Beginners guitar\n\n<strong>Description</strong>: Learn to play both classical and popular techniques. Please bring your own guitar, and a music stand and floor step if you have one. You will need to buy a textbook. Even if you've never played a note before, you should be able to play a tune by the end of the course.\n\n<strong>Times and days:</strong> Wednesdays from 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 2-6\n\n<strong>Duration:</strong> 5 weeks\n\n<strong>Fee:</strong> £20\n\n<hr>\n\n<strong>Class</strong>: Digital photos\n\n<strong>Description</strong>: A fun & practical workshop just for digital camera users. Learn how to use the main functions of your camera. Lots of practice with portraits, action shots, night scenes & landscapes. Learn different ways to transfer your photos on to the computer – emailing, printing, resizing photos, changing colour or contrast, convert colour to black & white.\n\n<strong>Times and days:</strong> Mondays 7 p.m. to 8 p.m. and Wednesdays at 7.30 p.m. to 8.30 p.m.\n\n<strong>Minimum-maximum class sizes:</strong> 4-10\n\n<strong>Duration:</strong> 6 weeks\n\n<strong>Fee:</strong> £40\n\n<hr>\n\n<h3>ESITO dress code</h3>\nThe personal appearance of office workers and employees who have regular contact with the public is laid out in the company dress code. In brief, the code requires all employees to observe the following:\n<ul>\n  <li>Clean, pressed, properly fitting business casual attire is appropriate.</li>\n  <li>Hair should be clean, combed and neatly arranged. Long hair is acceptable if it is tied back.</li>\n  <li>Moustaches and beards should be neatly trimmed.</li>\n  <li>Good personal hygiene must be maintained.</li>\n  <li>Use perfume or cologne in small quantities or not at all (some people are allergic to various scents).</li>\n</ul>\nThe personal appearance of employees who do not regularly meet the public is to be decided by the requirements of safety, comfort and supervisor approval. Even so, because all employees are a representative of the company, they should be as neat and business-like as working conditions permit. The following are some examples of inappropriate dress at all times:\n<ul>\n  <li>Faded and/or tattered/torn jeans; t-shirts displaying advertising or writing</li>\n  <li>Faded overalls, cotton/fleece pants and jogging suits, shorts, tank tops or recreational attire</li>\n  <li>Clothing revealing bare backs, midriffs or shoulders; or any revealing clothing.</li>\n</ul>\nCasual Fridays: The Company has designated Fridays as casual days. Some clothing is still considered inappropriate even on casual days. Employees are requested to use good sense in this regard.\n\nBad weather days: The Company understands that inclement weather conditions can require different attire for the day. Use good judgment when dressing for weather conditions. NOTE: This only impacts on employees working in the yard.\n\nThe supervisor is responsible for evaluating the dress and appearance of employees under his or her supervision. If an employee is not dressed appropriately, the supervisor should take the following steps:\n\nOn the first occasion, a documented verbal warning should be given to the employee, and the department's dress and appearance standards should be reviewed. If the supervisor deems it necessary, the employee may be sent home to change into appropriate clothing.\n\nOn the second occasion, the employee must be sent home to change clothes immediately as well as given a written warning. Further violations may result in discipline up to and including discharge.\n\n<hr>\n\n<h4>Benefits and amendment to benefits for Glyph Interactive employees</h4>\n<h4>Pension scheme</h4>\nAll employees are automatically included in our pension scheme, although there is an 'opt out' policy for employees with private pension plans. The pension scheme is no longer non-contributory, with employees now being asked to pay 25% of the annual payment. Government contributions will amount to an additional 25%, with Glyph Interactive continuing to support employees by covering the remaining 50%. Employees need to pay into the pension scheme for a minimum of 20 years. Once an employee reaches the age of 65, the pension payments begin. Employees who do not reach the twenty year mark will be paid pro rata (that is, an employee who has worked only ten years will receive only 50% of that received by an employee with twenty years experience).\n<h4>Medical insurance</h4>\nDue to rising costs, we can no longer support offering medical insurance to retiring employees. Standard cover still applies to all active employees, with one important addition. The immediate family (spouse and children) of the employee can also be covered for the same benefits and services. This will attract an additional payment depending on the current health of those wishing to be covered, but will be well below the cost of seeking insurance with a private company.\n<h4>Access to company vehicles</h4>\nAll staff with a legitimate need to travel will have access to one of the company vehicles. Please note that this is to be used for company purposes only, and must be applied for in writing at least two days before the vehicle is needed. For urgent and unexpected requirements, please consult your manager. The only exception to this is for sales staff, who have already been issued their own vehicles.\n<h4>Communication</h4>\nAll members of staff have a laptop which is issued on the first day of employment. This will now be supplemented by the addition of a Smartphone. Please note, however, that all calls and communications using the Smartphone should be for company purposes only unless in an emergency. Training events will be posted in the next few weeks to help you get to grips with the new phone.\n<h4>Working from home</h4>\nWe are now in the second year of the trial of some employees working from home for at least a part of the week. Despite some earlier difficulties, the scheme has proven successful and will now be offered as an option for all staff (although final approval must be given by your manager)."
+    },
+    {
+      "title": "Reading Passage 3",
+      "content": "The dawn of culture\n\n<span id=\"q23\" data-question=\"23\"></span>In every society, culturally unique ways of thinking about the world unite people in their behaviour. <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Anthropologists often refer to the body of ideas that people share as ideology. Ideology can be broken down into at least three specific categories: beliefs, values and ideals.</span> People's beliefs give them an understanding of how the world works and how they should respond to the actions of others and their environments. Particular beliefs often tie in closely with the daily concerns of domestic life, such as making a living, health and sickness, happiness and sadness, interpersonal relationships, and death. People's values tell them the differences between right and wrong or good and bad. Ideals serve as models for what people hope to achieve in life.\n\n<span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">There are two accepted systems of belief.</span> Some rely on religion, even the supernatural (things beyond the natural world), to shape their values and ideals and to influence their behaviour. Others base their beliefs on observations of the natural world, a practice anthropologists commonly refer to as secularism.\n\n<span id=\"q31\" data-question=\"31\"></span>Religion in its more extreme form allows people to know about and 'communicate' with supernatural beings, such as animal spirits, gods, and spirits of the dead. Small tribal societies believe that plants and animals, as well as people, can have souls or spirits that can take on different forms to help or harm people. Anthropologists refer to this kind of religious belief as animism, with believers often led by shamans. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">As religious specialists, shamans have special access to the spirit world, and are said to be able to receive stories from supernatural beings and later recite them to others or act them out in dramatic rituals.</span>\n\nIn larger, agricultural societies, religion has long been a means of asking for bountiful harvests, a source of power for rulers, or an inspiration to go to war. In early civilised societies, religious visionaries became leaders because people believed those leaders could communicate with the supernatural to control the fate of a civilization. This became their greatest source of power, and people often regarded leaders as actual gods. <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">For example, in the great civilisation of the Aztec, which flourished in what is now Mexico in the fifteenth and sixteenth centuries, rulers claimed privileged association with a powerful god that was said to require human blood to ensure that the sun would rise and set each day.</span> <span id=\"q28\" data-question=\"28\"></span>Aztec rulers thus inspired great awe by regularly conducting human sacrifices. They also conspicuously displayed their vast power as wealth in luxury goods, such as fine jewels, clothing and palaces. <span class=\"reading-answer-marker\">Rulers obtained their wealth from the great numbers of craftspeople, traders and warriors under their control, often leaving them with very little in the way of material possessions.</span>\n\n<span id=\"q29\" data-question=\"29\"></span><span id=\"q37\" data-question=\"37\"></span><span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">During the period in seventeenth- and eighteenth-century Europe known as the Age of Enlightenment, science and logic became new sources of belief for many people living in civilised societies. Scientific studies of the natural world and rational philosophies led people to believe that they could explain natural and social phenomena without believing in gods or spirits. Religion remained an influential system of belief, and together both religion and science drove the development of capitalism</span>, the economic system of commerce-driven market exchange. <span id=\"q32\" data-question=\"32\"></span>Capitalism itself influences people's beliefs, values and ideals in many present-day, large, civilised societies. In these societies, such as in the United States, many people view the world and shape their behaviour based on a belief that they can understand and control their environment and that work, commerce and the accumulation of wealth serve an ultimate good. The governments of most large societies today also assert that human well-being derives from the growth of economies and the development of technology.\n\nRapid changes in technology in the last several decades have changed the nature of culture and cultural exchange. People around the world can make economic transactions and transmit information to each other almost instantaneously through the use of computers and satellite communications. Governments and corporations have gained vast amounts of political power through military might and economic influence. Corporations have also created a form of global culture based on worldwide commercial markets. As a result, local culture and social structure are now shaped by large and powerful commercial interests in ways that earlier anthropologists could not have imagined. <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Early anthropologists thought of societies and their cultures as fully independent systems</span>, but today, many nations are multicultural societies, composed of numerous smaller subcultures. Cultures also cross national boundaries. For instance, people around the world now know a variety of English words and have contact with American cultural exports such as brand-name clothing and technological products, films and music, and mass-produced foods.\n\nIn addition, many people have come to believe in the fundamental nature of human rights and free will. These beliefs grew out of people's increasing ability to control the natural world through science and rationalism, and though religious beliefs continue to change to affirm or accommodate these other dominant beliefs, sometimes the two are at odds with each other. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">For instance, many religious people have difficulty reconciling their belief in a supreme spiritual force with the theory of natural evolution, which requires no belief in the supernatural.</span> <span id=\"q33\" data-question=\"33\"></span><span id=\"q34\" data-question=\"34\"></span>As a result, societies in which many people do not practice any religion, such as China, may be known as secular societies. However, no society is entirely secular."
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_academic_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-01-14 06:45:00",
+    "exported_by": "copilot",
+    "plugin_version": "11.19",
+    "format_version": "1.0"
+  }
 }

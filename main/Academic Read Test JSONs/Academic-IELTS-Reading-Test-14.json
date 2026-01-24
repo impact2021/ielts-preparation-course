@@ -46,7 +46,10 @@
           "incorrect": "Review paragraph 3 of Reading Passage 1 carefully. Look for sections describing different types of performance-enhancing drugs: stimulants (cocaine), body-building drugs (anabolic steroids), relaxants, and pain maskers.",
           "no_answer": "The correct answers are: 1. cocaine (stimulant), 2. anabolic steroids (for building body strength), 3. relaxants (to cope with stress/boost confidence), 4. mask pain (purpose of narcotics). These are all found in paragraph 3."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -92,7 +95,10 @@
           "incorrect": "Not quite. Check these sections: paragraph 2 for pressure on sportspeople, paragraph 5 for what became necessary, paragraph 6 for Ron Clarke's view, and paragraph 5 for drug companies' abilities.",
           "no_answer": "The correct answers are: 5. short careers (paragraph 2: 'sportspeople have short careers'), 6. drug testing (paragraph 5: 'Drug testing has become an accepted feature'), 7. natural advantages (paragraph 6: Ron Clarke said drugs 'level the playing field'), 8. evade detection (paragraph 5: creating drugs 'which evades detection')."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -124,7 +130,10 @@
           "incorrect": "Review paragraph 6 which discusses the failures and consequences of drug testing.",
           "no_answer": "The correct answers are: 9. inaccuracy (paragraph 6: 'the inaccuracy of drug tests'), 10. allegations (paragraph 7: 'Careers can be prematurely ended by false allegations'). Both words appear in the final paragraphs discussing drug testing issues."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "closed_question",
@@ -450,7 +459,10 @@
           "incorrect": "Review Reading Passage 2 carefully to find these answers.",
           "no_answer": "The correct answers are: 19. muckraking journalism, 20. better transportation, 21. Kitchener, 22. television. All are found in Reading Passage 2."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "closed_question",
@@ -1057,7 +1069,10 @@
           "incorrect": "Review Reading Passage 3 to find these answers.",
           "no_answer": "The correct answers are: 35. ideology, 36. human sacrifice/human blood, 37. age of enlightenment, 38. science, 39. fully independent systems, 40. natural evolution. All found in Reading Passage 3."
         }
-      }
+      },
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     }
   ],
   "reading_texts": [

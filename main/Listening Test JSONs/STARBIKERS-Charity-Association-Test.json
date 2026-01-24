@@ -1,247 +1,247 @@
 {
-    "title": "END OF LESSON REVIEW (Unit 5: Short answer questions in listening)",
-    "content": "IELTS Listening Practice - Section 2 Questions 11-20",
-    "questions": [
+  "title": "END OF LESSON REVIEW (Unit 5: Short answer questions in listening)",
+  "content": "IELTS Listening Practice - Section 2 Questions 11-20",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Questions 11-15: Choose the correct letter A, B or C\r\n\r\nSTARBIKERS CHARITY ASSOCIATION",
+      "question": "Motorbikers taking part in the Charity Toy Run",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. The motorbikers gather toys which will be given to children. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
         {
-            "type": "closed_question",
-            "instructions": "Questions 11-15: Choose the correct letter A, B or C\r\n\r\nSTARBIKERS CHARITY ASSOCIATION",
-            "question": "Motorbikers taking part in the Charity Toy Run",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C. The motorbikers gather toys which will be given to children. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "deliver toys to children's hospitals",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the toys do end up at children's hospitals, the bikers themselves don't deliver them during the parade."
-                },
-                {
-                    "text": "take part in a parade on Christmas Day",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The event is held two weeks before Christmas Day, not on Christmas Day itself."
-                },
-                {
-                    "text": "gather toys which will be given to children",
-                    "is_correct": true,
-                    "feedback": "Correct! The motorbikers collect toys during the parade which are later distributed to children."
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": true,
-            "options": "deliver toys to children's hospitals\ntake part in a parade on Christmas Day\ngather toys which will be given to children"
+          "text": "deliver toys to children's hospitals",
+          "is_correct": false,
+          "feedback": "Incorrect. While the toys do end up at children's hospitals, the bikers themselves don't deliver them during the parade."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Non-participants attending the post-run event",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B. Non-participants pay £1.50. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "pay £1",
-                    "is_correct": false,
-                    "feedback": "Incorrect. £1 is the entry fee for participants in the run, not non-participants at the post-run event."
-                },
-                {
-                    "text": "pay £1.50",
-                    "is_correct": true,
-                    "feedback": "Correct! Non-participants pay £1.50 to attend the post-run event at the town hall."
-                },
-                {
-                    "text": "are required to bring a toy",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While toy donations are welcome, non-participants are not required to bring a toy to attend the event."
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": true,
-            "options": "pay £1\npay £1.50\nare required to bring a toy"
+          "text": "take part in a parade on Christmas Day",
+          "is_correct": false,
+          "feedback": "Incorrect. The event is held two weeks before Christmas Day, not on Christmas Day itself."
         },
         {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Gifts should be donated",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is C. Gifts should be donated unwrapped. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "to match a specific age group",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The speaker says they do NOT specify what age group to donate for."
-                },
-                {
-                    "text": "wrapped in wrapping paper",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The speaker specifically asks that gifts should NOT be wrapped."
-                },
-                {
-                    "text": "unwrapped",
-                    "is_correct": true,
-                    "feedback": "Correct! Gifts should be donated unwrapped so administrators can match gifts appropriately with children."
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": true,
-            "options": "to match a specific age group\nwrapped in wrapping paper\nunwrapped"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Music played at the event",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is B. The music is varied to suit a range of tastes. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "appeals most to rock fans",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While the event was originally geared towards rock music followers, it has changed to appeal to a wider audience."
-                },
-                {
-                    "text": "is varied to suit a range of tastes",
-                    "is_correct": true,
-                    "feedback": "Correct! The music is now more varied to attract a wider audience, unlike the early days when it was mostly rock music."
-                },
-                {
-                    "text": "can be quite noisy",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The speaker mentions the music is quieter than it was in the early days."
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": true,
-            "options": "appeals most to rock fans\nis varied to suit a range of tastes\ncan be quite noisy"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "The event has always included",
-            "points": 1,
-            "no_answer_feedback": "The correct answer is A. The event has always included a best motorbike competition. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "multiple_choice_l",
-            "mc_options": [
-                {
-                    "text": "a best motorbike competition",
-                    "is_correct": true,
-                    "feedback": "Correct! The 'best motorbike' competition has been a fixture from the very beginning of the event."
-                },
-                {
-                    "text": "food and drink stalls",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Food and drink stalls are mentioned as additions 'these days', not as something that has always been there."
-                },
-                {
-                    "text": "face painting",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Face painting is mentioned as one of the new attractions, not something that has always been included."
-                }
-            ],
-            "correct_answer_count": 1,
-            "show_option_letters": true,
-            "options": "a best motorbike competition\nfood and drink stalls\nface painting"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 16-20: Answer the questions below. Write NO MORE THAN TWO WORDS for each answer.",
-            "question": "<p>16. What are bikers not required to do before the event? [field 1]</p>\r\n<p>17. Whose services does the charity sometimes need to pay for? [field 2]</p>\r\n<p>18. What are riders reminded that the parade is NOT? [field 3]</p>\r\n<p>19. What might change depending on weather conditions? [field 4]</p>\r\n<p>20. What clothing do riders need to wear? [field 5]</p>",
-            "points": 5,
-            "no_answer_feedback": "Make sure to listen carefully for key information and take notes while listening.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": null,
-            "audio_section_id": 0,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer_l",
-            "field_count": 5,
-            "field_answers": {
-                "1": "register|to register|registration",
-                "2": "performers",
-                "3": "a race|race",
-                "4": "the route|route|routes|route taken|routes taken|the route taken",
-                "5": "protective clothing|appropriate clothing|appropriately protective clothing|protective|appropriate"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Bikers do not need to register in advance.",
-                    "incorrect": "Incorrect. Listen for what bikers do NOT need to do before the event (Q16).",
-                    "no_answer": "The correct answer is: register. Bikers do not need to register in advance."
-                },
-                "2": {
-                    "correct": "Correct! The charity sometimes needs to pay for performers.",
-                    "incorrect": "Incorrect. Listen for whose services the charity sometimes needs to pay for (Q17).",
-                    "no_answer": "The correct answer is: performers. The charity sometimes needs to pay for performers' services."
-                },
-                "3": {
-                    "correct": "Correct! Riders are reminded that the parade is not a race.",
-                    "incorrect": "Incorrect. Listen for what riders are reminded the parade is NOT (Q18).",
-                    "no_answer": "The correct answer is: a race (or race). Riders are reminded that the event is not a race but a slow parade."
-                },
-                "4": {
-                    "correct": "Correct! The route might change depending on weather conditions.",
-                    "incorrect": "Incorrect. Listen for what might change depending on weather conditions (Q19).",
-                    "no_answer": "The correct answer is: the route (or route taken). The route may change if road conditions are deemed dangerous."
-                },
-                "5": {
-                    "correct": "Correct! Riders need to wear protective clothing or appropriate clothing.",
-                    "incorrect": "Incorrect. Listen for what clothing riders need to wear (Q20).",
-                    "no_answer": "The correct answer is: protective clothing (or appropriate clothing). All participants are required to ride in appropriately protective clothing."
-                }
-            }
+          "text": "gather toys which will be given to children",
+          "is_correct": true,
+          "feedback": "Correct! The motorbikers collect toys during the parade which are later distributed to children."
         }
-    ],
-    "reading_texts": [],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_listening",
-        "exercise_label": "practice_test",
-        "scoring_type": "ielts_listening_band",
-        "timer_minutes": "",
-        "starting_question_number": "11",
-        "cbt_test_type": "",
-        "open_as_popup": ""
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true,
+      "options": "deliver toys to children's hospitals\ntake part in a parade on Christmas Day\ngather toys which will be given to children"
     },
-    "audio": {
-        "url": "https://www.ilsnz.com/wp-content/uploads/2018/11/Short_answer_questions.mp3",
-        "transcript": "<h3>SECTION 2</h3>\n\n<p>Hello, my name is Ian Mathews and I'm here to talk about the Starbikers Charity Toy Run and the benefits it brings to sick and underprivileged children.</p>\n\n<p>For those of you who are not familiar with the Charity Toy Run, it is an annual event held two weeks before Christmas Day which involves a parade of motorbike riders who ride across the city, <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">collecting toys which are later distributed to children's wards in hospitals and institutions focused on helping under-privileged children</span>. The day is concluded with a fund-raising event dedicated to children's charities which is held in the town hall.</p>\n\n<p>The event benefits the children in a number of ways. Each participant in the run is required to pay 1 pound entry fee which is collected to cover administration costs of the day and the remainder is donated to charity. Participants are also required to donate a toy, and further toys are collected from spectators who gather to watch the procession of bikes as it makes it way around the city (all toys collected are later distributed in time for Christmas as mentioned before). After the parade is finished, non-participants in the run are welcome to join the bikers at the town hall charity event, which involves <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">an entry fee of £1.50 to non-riders</span>. Even those who cannot actually attend at any point of the day can still make a donation via the internet or mail.</p>\n\n<p>We ask that bikers and other people who decide to donate toys <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">do not wrap their toys in wrapping paper</span>. We do not specify what type of toy or what age group of child to donate a gift for as we try to provide gifts for many different types of children. If gifts are wrapped it makes is more difficult for our administrators to match an appropriate gift with each child.</p>\n\n<p>There are now many Charity Toy Runs organized in various cities throughout the world -all with similar aims though slightly different formats. The first in the UK was organized by our association, the Starbikers Charity Association and was held on December 18th 1978. Over the years, the atmosphere and formula of the event have changed quite dramatically. The original concept was geared very much towards motorbike enthusiasts and followers of rock music; however, in order to attract a wider audience and consequently increase the level of donations and support received, quite early on, several changes were made to improve the appeal of the event to a wider audience.</p>\n\n<p>These days, the music played at the charity event <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">is more varied and quieter than it was in the early days</span>, a variety of food and drink stalls and corporate displays are present and activities such as face painting and entertainers mean that there is something to appeal to even younger members of the family. Although there are several new attractions, we continue to include <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">the 'best motorbike' competition which has been a fixture of the day from the very beginning</span>. All awards and prizes are donated on stage by the Lord Mayor and at the end of the evening we make an announcement as to how much money and how many toys the day has resulted in.</p>\n\n<hr />\n\n<p>Anyone with a motorbike is able to participate in the run and anyone at all is able to attend the post-run event. Bikers <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">do not need to register in advance</span>, they simply need to be at the correct meeting point by the given time of day (these details are confirmed one month prior to the event) bringing their registration fee and toy donation with them. All of the people involved in the organization and administration of the day are volunteers and none of the money collected goes towards paying for organiser's wages. We do sometimes need to pay for <span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">performers</span>, though increasingly over the years more and more are providing their services free of charge.</p>\n\n<p>In order to keep the event safe, we have the full support of the police and we station our own traffic marshalls along the roads the parade will travel along. The police control major road junctions on the day so that the parade can stay together and does not need to constantly stop at traffic lights. We also strongly remind riders that <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">the event is not a race</span> but a slow parade of a group of motorbikes. On average around 2,000 motorbikes are involved in each toy run every year, so as you can imagine it is very important that all participants act responsibly on the day – which they do. We are very pleased with and proud of the attitudes, behaviour and support shown by our participants each year.</p>\n\n<p>We have never cancelled a Toy Run due to bad weather, but <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">may make changes to the route taken</span> if road conditions are deemed dangerous on the day of the event due to ice or fog, using alternative roads to those originally planned. We advise all participants to dress in warm, waterproof clothing as the weather in December can be quite uncomfortable for motorbike riding and <span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">all participants are required to ride in appropriately protective clothing</span>. The police advise us on any necessary changes to the parade arrangements and we keep the general public informed of such changes via local radio stations in case they are planning to watch the bikes go by.</p>\n\n<p>Starbikers Charity Association is also responsible for the organization of the 'Egg Run' which is held two weeks before Easter and collects and delivers Easter eggs for distribution to children.</p>",
-        "sections": []
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Non-participants attending the post-run event",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. Non-participants pay £1.50. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "pay £1",
+          "is_correct": false,
+          "feedback": "Incorrect. £1 is the entry fee for participants in the run, not non-participants at the post-run event."
+        },
+        {
+          "text": "pay £1.50",
+          "is_correct": true,
+          "feedback": "Correct! Non-participants pay £1.50 to attend the post-run event at the town hall."
+        },
+        {
+          "text": "are required to bring a toy",
+          "is_correct": false,
+          "feedback": "Incorrect. While toy donations are welcome, non-participants are not required to bring a toy to attend the event."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true,
+      "options": "pay £1\npay £1.50\nare required to bring a toy"
     },
-    "_metadata": {
-        "exported_at": "2026-01-22 20:47:07",
-        "exported_by": "impact",
-        "plugin_version": "12.11",
-        "format_version": "1.0"
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Gifts should be donated",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is C. Gifts should be donated unwrapped. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "to match a specific age group",
+          "is_correct": false,
+          "feedback": "Incorrect. The speaker says they do NOT specify what age group to donate for."
+        },
+        {
+          "text": "wrapped in wrapping paper",
+          "is_correct": false,
+          "feedback": "Incorrect. The speaker specifically asks that gifts should NOT be wrapped."
+        },
+        {
+          "text": "unwrapped",
+          "is_correct": true,
+          "feedback": "Correct! Gifts should be donated unwrapped so administrators can match gifts appropriately with children."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true,
+      "options": "to match a specific age group\nwrapped in wrapping paper\nunwrapped"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Music played at the event",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is B. The music is varied to suit a range of tastes. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "appeals most to rock fans",
+          "is_correct": false,
+          "feedback": "Incorrect. While the event was originally geared towards rock music followers, it has changed to appeal to a wider audience."
+        },
+        {
+          "text": "is varied to suit a range of tastes",
+          "is_correct": true,
+          "feedback": "Correct! The music is now more varied to attract a wider audience, unlike the early days when it was mostly rock music."
+        },
+        {
+          "text": "can be quite noisy",
+          "is_correct": false,
+          "feedback": "Incorrect. The speaker mentions the music is quieter than it was in the early days."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true,
+      "options": "appeals most to rock fans\nis varied to suit a range of tastes\ncan be quite noisy"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The event has always included",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is A. The event has always included a best motorbike competition. In the IELTS test, you should always take a guess. You don't lose points for a wrong answer.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "multiple_choice_l",
+      "mc_options": [
+        {
+          "text": "a best motorbike competition",
+          "is_correct": true,
+          "feedback": "Correct! The 'best motorbike' competition has been a fixture from the very beginning of the event."
+        },
+        {
+          "text": "food and drink stalls",
+          "is_correct": false,
+          "feedback": "Incorrect. Food and drink stalls are mentioned as additions 'these days', not as something that has always been there."
+        },
+        {
+          "text": "face painting",
+          "is_correct": false,
+          "feedback": "Incorrect. Face painting is mentioned as one of the new attractions, not something that has always been included."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": true,
+      "options": "a best motorbike competition\nfood and drink stalls\nface painting"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 16-20: Answer the questions below. Write NO MORE THAN TWO WORDS for each answer.",
+      "question": "<p>16. What are bikers not required to do before the event? [field 1]</p>\r\n<p>17. Whose services does the charity sometimes need to pay for? [field 2]</p>\r\n<p>18. What are riders reminded that the parade is NOT? [field 3]</p>\r\n<p>19. What might change depending on weather conditions? [field 4]</p>\r\n<p>20. What clothing do riders need to wear? [field 5]</p>",
+      "points": 5,
+      "no_answer_feedback": "Make sure to listen carefully for key information and take notes while listening.",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Listen to the audio again and check the transcript.",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "register|to register|registration",
+        "2": "performers",
+        "3": "a race|race",
+        "4": "the route|route|routes|route taken|routes taken|the route taken",
+        "5": "protective clothing|appropriate clothing|appropriately protective clothing|protective|appropriate"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Bikers do not need to register in advance.",
+          "incorrect": "Incorrect. Listen for what bikers do NOT need to do before the event (Q16).",
+          "no_answer": "The correct answer is: register. Bikers do not need to register in advance."
+        },
+        "2": {
+          "correct": "Correct! The charity sometimes needs to pay for performers.",
+          "incorrect": "Incorrect. Listen for whose services the charity sometimes needs to pay for (Q17).",
+          "no_answer": "The correct answer is: performers. The charity sometimes needs to pay for performers' services."
+        },
+        "3": {
+          "correct": "Correct! Riders are reminded that the parade is not a race.",
+          "incorrect": "Incorrect. Listen for what riders are reminded the parade is NOT (Q18).",
+          "no_answer": "The correct answer is: a race (or race). Riders are reminded that the event is not a race but a slow parade."
+        },
+        "4": {
+          "correct": "Correct! The route might change depending on weather conditions.",
+          "incorrect": "Incorrect. Listen for what might change depending on weather conditions (Q19).",
+          "no_answer": "The correct answer is: the route (or route taken). The route may change if road conditions are deemed dangerous."
+        },
+        "5": {
+          "correct": "Correct! Riders need to wear protective clothing or appropriate clothing.",
+          "incorrect": "Incorrect. Listen for what clothing riders need to wear (Q20).",
+          "no_answer": "The correct answer is: protective clothing (or appropriate clothing). All participants are required to ride in appropriately protective clothing."
+        }
+      }
     }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_listening",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening_band",
+    "timer_minutes": "",
+    "starting_question_number": "11",
+    "cbt_test_type": "",
+    "open_as_popup": ""
+  },
+  "audio": {
+    "url": "https://www.ilsnz.com/wp-content/uploads/2018/11/Short_answer_questions.mp3",
+    "transcript": "<h3>SECTION 2</h3>\n\n<p>Hello, my name is Ian Mathews and I'm here to talk about the Starbikers Charity Toy Run and the benefits it brings to sick and underprivileged children.</p>\n\n<p>For those of you who are not familiar with the Charity Toy Run, it is an annual event held two weeks before Christmas Day which involves a parade of motorbike riders who ride across the city, <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">collecting toys which are later distributed to children's wards in hospitals and institutions focused on helping under-privileged children</span>. The day is concluded with a fund-raising event dedicated to children's charities which is held in the town hall.</p>\n\n<p>The event benefits the children in a number of ways. Each participant in the run is required to pay 1 pound entry fee which is collected to cover administration costs of the day and the remainder is donated to charity. Participants are also required to donate a toy, and further toys are collected from spectators who gather to watch the procession of bikes as it makes it way around the city (all toys collected are later distributed in time for Christmas as mentioned before). After the parade is finished, non-participants in the run are welcome to join the bikers at the town hall charity event, which involves <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">an entry fee of £1.50 to non-riders</span>. Even those who cannot actually attend at any point of the day can still make a donation via the internet or mail.</p>\n\n<p>We ask that bikers and other people who decide to donate toys <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">do not wrap their toys in wrapping paper</span>. We do not specify what type of toy or what age group of child to donate a gift for as we try to provide gifts for many different types of children. If gifts are wrapped it makes is more difficult for our administrators to match an appropriate gift with each child.</p>\n\n<p>There are now many Charity Toy Runs organized in various cities throughout the world -all with similar aims though slightly different formats. The first in the UK was organized by our association, the Starbikers Charity Association and was held on December 18th 1978. Over the years, the atmosphere and formula of the event have changed quite dramatically. The original concept was geared very much towards motorbike enthusiasts and followers of rock music; however, in order to attract a wider audience and consequently increase the level of donations and support received, quite early on, several changes were made to improve the appeal of the event to a wider audience.</p>\n\n<p>These days, the music played at the charity event <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">is more varied and quieter than it was in the early days</span>, a variety of food and drink stalls and corporate displays are present and activities such as face painting and entertainers mean that there is something to appeal to even younger members of the family. Although there are several new attractions, we continue to include <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">the 'best motorbike' competition which has been a fixture of the day from the very beginning</span>. All awards and prizes are donated on stage by the Lord Mayor and at the end of the evening we make an announcement as to how much money and how many toys the day has resulted in.</p>\n\n<hr />\n\n<p>Anyone with a motorbike is able to participate in the run and anyone at all is able to attend the post-run event. Bikers <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">do not need to register in advance</span>, they simply need to be at the correct meeting point by the given time of day (these details are confirmed one month prior to the event) bringing their registration fee and toy donation with them. All of the people involved in the organization and administration of the day are volunteers and none of the money collected goes towards paying for organiser's wages. We do sometimes need to pay for <span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">performers</span>, though increasingly over the years more and more are providing their services free of charge.</p>\n\n<p>In order to keep the event safe, we have the full support of the police and we station our own traffic marshalls along the roads the parade will travel along. The police control major road junctions on the day so that the parade can stay together and does not need to constantly stop at traffic lights. We also strongly remind riders that <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">the event is not a race</span> but a slow parade of a group of motorbikes. On average around 2,000 motorbikes are involved in each toy run every year, so as you can imagine it is very important that all participants act responsibly on the day – which they do. We are very pleased with and proud of the attitudes, behaviour and support shown by our participants each year.</p>\n\n<p>We have never cancelled a Toy Run due to bad weather, but <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">may make changes to the route taken</span> if road conditions are deemed dangerous on the day of the event due to ice or fog, using alternative roads to those originally planned. We advise all participants to dress in warm, waterproof clothing as the weather in December can be quite uncomfortable for motorbike riding and <span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">all participants are required to ride in appropriately protective clothing</span>. The police advise us on any necessary changes to the parade arrangements and we keep the general public informed of such changes via local radio stations in case they are planning to watch the bikes go by.</p>\n\n<p>Starbikers Charity Association is also responsible for the organization of the 'Egg Run' which is held two weeks before Easter and collects and delivers Easter eggs for distribution to children.</p>",
+    "sections": []
+  },
+  "_metadata": {
+    "exported_at": "2026-01-22 20:47:07",
+    "exported_by": "impact",
+    "plugin_version": "12.11",
+    "format_version": "1.0"
+  }
 }

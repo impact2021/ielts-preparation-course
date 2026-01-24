@@ -1,793 +1,793 @@
 {
-    "title": "General Training Reading Test 11",
-    "content": "",
-    "questions": [
+  "title": "General Training Reading Test 11",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1–7",
+      "question": "Sentence endings",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A. For a period of at least two years",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "B. For only one individual",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "C. Is cheaper than business prices",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "D. When moving abroad",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "E. For family members with the same name",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "F. Cannot be used by businesses",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 0,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 8–13",
+      "question": "A. Seabridge Resort",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "B. Townhall",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "C. Maritime Building",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "D. Cruza Bar",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "E. The Sailor’s Arms",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "F. Scenic Falls Resort",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 1,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 14–15",
+      "question": "If errors occur in the workplace, it is recommended to",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A. meet the person responsible",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 16–19",
+      "question": "Acknowledging ________ such as birthdays and successes helps build rapport.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Making an ________ that work has been completed successfully is recommended.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "This ________ helps demonstrate leadership ability.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Causing ________ instead of harmony can harm promotion prospects.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 2,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 20–26",
+      "question": "Choose the correct letter A–E.",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Letters may be used more than once.]",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "A. Personal interests",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "B. Existing skills",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "C. Work-related values",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "D. Personality",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "E. Lifestyle preferences",
+      "points": 1,
+      "no_answer_feedback": "",
+      "correct_feedback": "Correct! Well done.",
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "short_answer"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Do the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27-33 on your answer sheet, write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
+      "question": "Poe's father died of tuberculosis.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
         {
-            "type": "open_question",
-            "instructions": "Questions 1–7",
-            "question": "Sentence endings",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A. For a period of at least two years",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "B. For only one individual",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "C. Is cheaper than business prices",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "D. When moving abroad",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "E. For family members with the same name",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "F. Cannot be used by businesses",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 8–13",
-            "question": "A. Seabridge Resort",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "B. Townhall",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "C. Maritime Building",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "D. Cruza Bar",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "E. The Sailor’s Arms",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "F. Scenic Falls Resort",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 14–15",
-            "question": "If errors occur in the workplace, it is recommended to",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A. meet the person responsible",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 16–19",
-            "question": "Acknowledging ________ such as birthdays and successes helps build rapport.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Making an ________ that work has been completed successfully is recommended.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "This ________ helps demonstrate leadership ability.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Causing ________ instead of harmony can harm promotion prospects.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 20–26",
-            "question": "Choose the correct letter A–E.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Letters may be used more than once.]",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A. Personal interests",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "B. Existing skills",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "C. Work-related values",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "D. Personality",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "E. Lifestyle preferences",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\n\nIn boxes 27-33 on your answer sheet, write\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
-            "question": "Poe's father died of tuberculosis.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Poe's first book of poems was published under a false name.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Poe moved to Maryland immediately following his dismissal from West Point.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Graham's Magazine was a Philadelphia-based publication.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": true,
-                    "feedback": "Correct! While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Poe parted ways with Graham's Magazine in 1842.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "Following publication of The Raven, Poe still struggled financially.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
-            "question": "During his lifetime, Poe was predominantly known as a poet in America.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "true_false_not_given",
-            "mc_options": [
-                {
-                    "text": "TRUE",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
-                },
-                {
-                    "text": "FALSE",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
-                },
-                {
-                    "text": "NOT GIVEN",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
-                }
-            ],
-            "options": "TRUE\nFALSE\nNOT GIVEN",
-            "correct_answer_count": 1,
-            "show_option_letters": false,
-            "ielts_question_type": "True/False/Not Given"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Complete the notes below.\n\nUse NO MORE THAN TWO WORDS OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 34-38 on your answer sheet.",
-            "question": "Poe's sibling [field 1] was the first born.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is HENRY. The passage states 'his older brother Henry'. Review the passage carefully to find the exact words.",
-            "correct_feedback": "Correct! The passage states 'his older brother Henry'.",
-            "incorrect_feedback": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "note_completion",
-            "field_count": 1,
-            "field_answers": {
-                "1": "HENRY|Henry|henry"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The passage states 'his older brother Henry'.",
-                    "incorrect": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
-                    "no_answer": "The correct answer is HENRY. The passage states 'his older brother Henry'."
-                }
-            },
-            "ielts_question_type": "Note Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Poe left the Southern Literary Messenger because he had little autonomy and a poor [field 1]",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'. Review the passage carefully to find the exact words.",
-            "correct_feedback": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
-            "incorrect_feedback": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "note_completion",
-            "field_count": 1,
-            "field_answers": {
-                "1": "SALARY|salary"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
-                    "incorrect": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
-                    "no_answer": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'."
-                }
-            },
-            "ielts_question_type": "Note Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Poe married in [field 1] to a much younger woman.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'. Review the passage carefully to find the exact words.",
-            "correct_feedback": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
-            "incorrect_feedback": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "note_completion",
-            "field_count": 1,
-            "field_answers": {
-                "1": "1836"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
-                    "incorrect": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
-                    "no_answer": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'."
-                }
-            },
-            "ielts_question_type": "Note Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Publication of [field 1] helped Poe to become a household name in America.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'. Review the passage carefully to find the exact words.",
-            "correct_feedback": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
-            "incorrect_feedback": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "note_completion",
-            "field_count": 1,
-            "field_answers": {
-                "1": "THE RAVEN|The Raven|the raven"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
-                    "incorrect": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
-                    "no_answer": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'."
-                }
-            },
-            "ielts_question_type": "Note Completion"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "As an author, Poe was a pioneering figure in the [field 1] genre.",
-            "points": 1.0,
-            "no_answer_feedback": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'. Review the passage carefully to find the exact words.",
-            "correct_feedback": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
-            "incorrect_feedback": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "note_completion",
-            "field_count": 1,
-            "field_answers": {
-                "1": "GOTHIC FICTION|gothic fiction"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
-                    "incorrect": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
-                    "no_answer": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'."
-                }
-            },
-            "ielts_question_type": "Note Completion"
-        },
-        {
-            "type": "closed_question",
-            "instructions": "Choose TWO letters, A-E.\n\nWhich TWO of the following are mentioned as being publications Poe worked for?\n\nA. The Gold Bug\nB. Broadway Journal\nC. Tales of the Grotesque and Arabesque\nD. Southern Literary Messenger\nE. The Raven",
-            "question": "Select two correct answers:",
-            "points": 2.0,
-            "no_answer_feedback": "The correct answers are B and D. The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
-            "correct_feedback": "Excellent! You've correctly identified the two publications Poe worked for as an editor.",
-            "incorrect_feedback": "Some of your selections are incorrect. The correct answers are B (Broadway Journal) and D (Southern Literary Messenger). The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Options A, C, and E are titles of Poe's works, not publications he worked for.",
-            "reading_text_id": 4,
-            "audio_section_id": 0,
-            "ielts_question_category": "multiple_choice_multiple_answers",
-            "mc_options": [
-                {
-                    "text": "The Gold Bug",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Gold Bug is a story Poe wrote, not a publication he worked for."
-                },
-                {
-                    "text": "Broadway Journal",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states Poe held editorial positions 'including the Broadway Journal'."
-                },
-                {
-                    "text": "Tales of the Grotesque and Arabesque",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is Poe's first volume of short stories, not a publication he worked for."
-                },
-                {
-                    "text": "Southern Literary Messenger",
-                    "is_correct": true,
-                    "feedback": "Correct! The passage states Poe was 'editor of the Southern Literary Messenger'."
-                },
-                {
-                    "text": "The Raven",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The Raven is Poe's famous poem, not a publication he worked for."
-                }
-            ],
-            "options": "The Gold Bug\nBroadway Journal\nTales of the Grotesque and Arabesque\nSouthern Literary Messenger\nThe Raven",
-            "correct_answer_count": 2,
-            "show_option_letters": true,
-            "ielts_question_type": "Multiple Choice (Multiple Answers)"
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage states Poe's mother died from tuberculosis and the family had been abandoned by Poe's father, but doesn't state how the father died."
         }
-    ],
-    "reading_texts": [
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Poe's first book of poems was published under a false name.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
         {
-            "text_id": 0,
-            "title": "Reading Text 1",
-            "content": "<h4><strong>Post Office Information Leaflet for Home Owners</strong></h4>\n\n<p>Moving house or relocating your business? Need to redirect your mail to your new address? Read the important information below.</p>\n\n<p>How does mail redirection work?<br>\nRedirection is a cost-effective way of ensuring that you continue receiving your mail when you move home or business. Redirection is flexible and can be arranged for temporary moves or when relocating overseas.</p>\n\n<h4><strong>Service available for periods of 1, 3, 6 or 12 months</strong></h4>\n\n<h4><strong>The service can be renewed up to a maximum of two years</strong></h4>\n\n<h4><strong>Mail can be redirected to any UK or overseas address</strong></h4>\n\n<p>Preventing identity fraud<br>\nThe Home Office Identity Fraud Steering Committee recommends using Royal Mail’s redirection service for at least one year when you move, to reduce the risk of identity fraud.</p>\n\n<p>How can I arrange for my mail to be redirected?<br>\nThere are four ways to apply and pay:</p>\n\n<h4><strong>By post</strong></h4>\n\n<h4><strong>By phone</strong></h4>\n\n<h4><strong>In person at the Post Office</strong></h4>\n\n<h4><strong>Online</strong></h4>\n\n<p>Householders can arrange redirection online if their debit or credit card is registered at the address they are moving from. This process takes about five minutes. Redirection usually begins within five working days.<br>\nBusiness redirection cannot be arranged online.</p>\n\n<h4><strong>Costs</strong></h4>\n\n<p>Length\tPersonal (per surname)\tBusiness\tOverseas (Airmail)<br>\n12 months\t£38.99\t£77.99\t£110.00<br>\n6 months\t£25.96\t£51.97\t£73.45<br>\n3 months\t£16.82\t£25.96\t£47.75<br>\n1 month\t£7.64\t£15.47\t£21.85</p>\n\n<h4><strong>Mail that cannot be redirected</strong></h4>\n\n<h4><strong>Mail for people or organisations not previously at the address</strong></h4>\n\n<h4><strong>Mail to boarding houses, hotels, colleges or other multi-occupied premises</strong></h4>\n\n<h4><strong>Personal mail sent from a business address to a private address</strong></h4>\n\n<h4><strong>Mail between PO Boxes in the same delivery office</strong></h4>\n\n<h4><strong>International mail containing goods over standard letter size</strong></h4>\n\n<h4><strong>Mail sent from overseas to a UK address</strong></h4>\n\n<h4><strong>Carrier mail (private parcel delivery services)</strong></h4>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a matching sentence endings question.<br>\nThere are 7 questions.<br>\nChoose the correct ending A–L.]</p>\n\n<h4><strong>Sentence endings</strong></h4>\n\n<p>A. For a period of at least two years<br>\nB. For only one individual<br>\nC. Is cheaper than business prices<br>\nD. When moving abroad<br>\nE. For family members with the same name<br>\nF. Cannot be used by businesses<br>\nG. Is the most costly arrangement to set up<br>\nH. Cannot be arranged to overseas addresses<br>\nI. As it may help prevent criminal activity<br>\nJ. Online by private householders and business owners<br>\nK. One of three ways in which to arrange redirection of mail<br>\nL. Must indicate the new address</p>\n\n<h4><strong>Redirection of post can be arranged\nAnswer: D</strong></h4>\n\n<h4><strong>Arranging redirection of mail is advised\nAnswer: I</strong></h4>\n\n<h4><strong>Businesses may choose\nAnswer: K</strong></h4>\n\n<h4><strong>Debit or credit cards for online application\nAnswer: F</strong></h4>\n\n<h4><strong>Published fees for householders apply\nAnswer: E</strong></h4>\n\n<h4><strong>Redirection to an international address\nAnswer: G</strong></h4>\n\n<h4><strong>The redirection service for larger and heavier items of mail\nAnswer: H</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
-            "tags": []
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
         },
         {
-            "text_id": 1,
-            "title": "Reading Text 2",
-            "content": "<h4><strong>Seabridge Classical Music Festival</strong></h4>\n\n<p>Dates: Friday 2nd, Saturday 3rd and Sunday 4th September<br>\nTheme: 40 performers for $40</p>\n\n<p>Six venues are used across Seabridge, Scenic Falls and neighbouring Newton. Performers from the USA, Canada, Australia and the UK rotate between venues. Special guest performers, the String Trio Osmond from New York City, perform at the Townhall and The Sailor’s Arms only.</p>\n\n<p>Festival badges provide discounted ferries between Seabridge and Newton and unlimited use of a free shuttle bus between Scenic Falls and Seabridge.</p>\n\n<h4><strong>Shuttle bus operating times</strong></h4>\n\n<h4><strong>Friday: 6pm – 1am</strong></h4>\n\n<h4><strong>Saturday: 12 noon – 1am</strong></h4>\n\n<h4><strong>Sunday: 12 noon – midnight</strong></h4>\n\n<p>The shuttle runs hourly, stopping at venues on the hour and half-hour.</p>\n\n<p>Newton village is accessible only by ferry. Ferry return fares are discounted to $10 for badge holders.</p>\n\n<h4><strong>Venue summaries</strong></h4>\n\n<p>Seabridge Resort – seafront location; accommodation; restaurant; pool; festival events in conference facility</p>\n\n<p>Townhall – largest venue; central location; special guest performers appear here</p>\n\n<p>Maritime Building – built in the 1800s; formerly a shipping office; now events only</p>\n\n<p>Cruza Bar – normally night-time venue; daytime performances added during festival</p>\n\n<p>Scenic Falls Resort – 10 minutes’ drive; performances in bar/restaurant; outdoor scenery</p>\n\n<p>The Sailor’s Arms – historic hotel in Newton; events held in a marquee in the grounds</p>\n\n<h4><strong>Questions 8–13</strong></h4>\n\n<p>[This is a matching venues question.<br>\nEach letter A–F may be used more than once.]</p>\n\n<p>A. Seabridge Resort<br>\nB. Townhall<br>\nC. Maritime Building<br>\nD. Cruza Bar<br>\nE. The Sailor’s Arms<br>\nF. Scenic Falls Resort</p>\n\n<h4><strong>This venue cannot be reached by shuttle bus\nAnswer: E</strong></h4>\n\n<p>Visitors wanting to see special guests perform in Seabridge must go here<br>\nAnswer: B</p>\n\n<h4><strong>This venue has changed its usual operating times\nAnswer: D</strong></h4>\n\n<h4><strong>Festival events are held outside\nAnswer: E</strong></h4>\n\n<p>Visitors leaving here by free transport must depart on the hour or half-hour<br>\nAnswer: A</p>\n\n<h4><strong>The function of this venue has changed over time\nAnswer: C</strong></h4>",
-            "tags": []
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
         },
         {
-            "title": "Reading Text 5",
-            "content": "<h3>Reading Passage 3</h3>\n<h4>You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.</h4>\n\n<h2>The Life and Work of Edgar Allan Poe</h2>\n\n<p>Edgar Allan Poe, one of the first prominent American authors, is perhaps best known today for his contribution to the short story form as well as his most famous poem, The Raven. Born in Boston, Massachusetts, on January 19, 1809, Poe was the second child of two professional actors. In the second year of his life, 1811, the young Poe, <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">his older brother Henry</span> and younger sister Rosalie, found themselves orphaned following the death of their mother from tuberculosis, the family having been abandoned by <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">Poe's father a year earlier</span>.</p>\n\n<p>In 1811, Poe was adopted by the Allan family of Richmond, Virginia. Mainly as a result of financial pressures, Poe's relationship with Frances and John Allan, his foster parents, was often tense. After completing secondary school, Poe attended the University of Virginia in 1826 at the age of seventeen. Despite excelling academically, notably in French and Latin, Poe quit university before completing his first year, after falling out with John Allan over the cost of his education and debts that he had accrued. In 1827 Poe moved to Boston and enlisted in the United States Army using a false name, <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">publishing an anonymous collection of poetry entitled Tamerlane and Other Poems</span> in the same year.</p>\n\n<p>After two years of military service, during which time Poe rose to the rank of Sergeant Major, he was granted a discharge to enter the United States Military Academy at West Point as a cadet and further his education. During this time Poe clashed again with his foster father regarding financial support for his studies, and it is said that the young writer deliberately broke rules and neglected his duties while at West Point so that he would be dismissed. <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">In 1831, Poe was court-martialed for disobedience, afterwards moving to New York City for a brief period</span>. He had resolved to devote himself to his writing on a fulltime basis, publishing more poetry but having all of the short stories that he submitted to magazines rejected.</p>\n\n<p>Towards the end of 1831, Poe left New York City and moved into the house of his aunt, Maria Clemm, in Baltimore, Maryland. He stayed in Baltimore for the best part of four years, writing and selling a number of both poems and short stories during this period. However, the young writer still struggled financially, in no small part as a result of the lack of international copyright laws at the time, meaning that the editors of literary magazines preferred to reprint British works rather than publish those of new American authors. One of the short stories that Poe wrote while living under his Aunt's roof, The Manuscript Found in a Bottle, won a magazine contest, helping him to secure a position as editor of the Southern Literary Messenger in 1835.</p>\n\n<p>As editor of the Southern Literary Messenger in Richmond, Virginia, Poe was instrumental in lifting the publication's readership, raising circulation from fewer than 1000 to 3500 copies. During this time, Poe established his reputation as a literary critic and began to focus on writing prose, rather than poetry. He quit the paper in <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">1836</span>, however, citing the <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">low salary</span> and lack of editorial control as the primary reasons. In the same <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">year, Poe married</span> a woman many years his junior, before returning to New York in 1837. Over the following decade, the writer held a number of editorial positions with various leading literary journals of the day in both <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine</span>.</p>\n\n<p>The year 1839 saw the publication of Poe's first volume of short stories, Tales of the Grotesque and Arabesque, although he received no payment for the work, and supplemented his income from editing jobs by giving lectures and public readings. Continuing to write in different forms throughout this period of his life and career, in 1841 the author published what is generally considered to be the first story in the genre of detective fiction, entitled The Murders in the Rue Morgue. The following year, Poe quit his editing job with Graham's Magazine, planning to start his own publication, Stylus. Unfortunately, this venture was not successful. Poe attained further literary recognition in 1843, however, winning first prize in a competition for his story The Gold Bug, a tale heavily influenced by his interest in cryptography.</p>\n\n<p>In spite of winning one hundred dollars in prize money for The Gold Bug, Poe was still struggling to support his family financially. However, in 1845 the publication of his poem <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">The Raven</span>, arguably the author's single most widely recognized work, won him lasting fame. <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Poe became an almost overnight literary sensation in his home country, and The Raven played a significant role in securing his international reputation as a writer</span>. The poem explores a number of the gothic themes common to Poe's writing, including those of love, beauty, death and loss. While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet, and was overcome by grief and sorrow following the death of his wife, Virginia, from tuberculosis in 1847.</p>\n\n<p>After the loss of his wife, it is said that Poe's behaviour became more erratic, and that his lifelong battle with depression worsened. He left the Bronx, in New York, where he and Virginia had been living and stayed in Rhode Island for a brief period, before returning to Richmond. The precise details surrounding Poe's death and his final days are a matter of considerable debate. It has been reported that the author left Richmond by train on September 27, 1849, supposedly with the intention of travelling to Philadelphia for an editing job. However, for reasons unknown, Poe ended up in Baltimore, where he was found in the street on October 3, semiconscious and in a state of delirium. He was taken to the Washington Medical College and died four days later, on October 7, 1849.</p>\n\n<p>While he was alive, <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor. At the same time, he was known as both a fiction writer and poet</span>, and one of the first nineteenth century American authors to attain greater popularity in Europe than in the United States. Today, Poe is one of America's most enduring writers, as well as being among the first to become a major figure in world literature. He is considered to be the originator of <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">gothic fiction</span>, as well as being a contributor to the development of science fiction and the modern short story form. The works of Edgar Allan Poe have inspired and influenced a host of other notable artists, writers and film directors, the likes of Salvador Dali, Charles Baudelaire and Alfred Hitchcock, to name but a few.</p>",
-            "text_id": 4
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage states it was published 'anonymously', not under a false name. Anonymously means no name at all, while a false name would be a pseudonym."
         }
-    ],
-    "settings": {
-        "pass_percentage": "70",
-        "layout_type": "two_column_reading",
-        "cbt_test_type": "general_training",
-        "exercise_label": "practice_test",
-        "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
-        "timer_minutes": "60",
-        "starting_question_number": "1"
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Poe moved to Maryland immediately following his dismissal from West Point.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage states Poe moved to New York City for a brief period after West Point, then 'towards the end of 1831' moved to Baltimore, Maryland."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Graham's Magazine was a Philadelphia-based publication.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is NOT GIVEN. While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! While the passage mentions Poe worked for publications in 'New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine', it doesn't specifically state which city each publication was based in."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Poe parted ways with Graham's Magazine in 1842.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage states 'The following year' after 1841, 'Poe quit his editing job with Graham's Magazine', which means 1842."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Following publication of The Raven, Poe still struggled financially.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is TRUE. The passage states 'While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet'."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "During his lifetime, Poe was predominantly known as a poet in America.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is FALSE. The passage states 'Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor', not as a poet."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "True/False/Not Given"
+    },
+    {
+      "type": "open_question",
+      "instructions": "Complete the notes below.\n\nUse NO MORE THAN TWO WORDS OR A NUMBER from the passage for each answer.\n\nWrite your answers in boxes 34-38 on your answer sheet.",
+      "question": "Poe's sibling [field 1] was the first born.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is HENRY. The passage states 'his older brother Henry'. Review the passage carefully to find the exact words.",
+      "correct_feedback": "Correct! The passage states 'his older brother Henry'.",
+      "incorrect_feedback": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "note_completion",
+      "field_count": 1,
+      "field_answers": {
+        "1": "HENRY|Henry|henry"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The passage states 'his older brother Henry'.",
+          "incorrect": "Incorrect. The correct answer is HENRY. The passage states 'his older brother Henry'.",
+          "no_answer": "The correct answer is HENRY. The passage states 'his older brother Henry'."
+        }
+      },
+      "ielts_question_type": "Note Completion"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Poe left the Southern Literary Messenger because he had little autonomy and a poor [field 1]",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'. Review the passage carefully to find the exact words.",
+      "correct_feedback": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
+      "incorrect_feedback": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "note_completion",
+      "field_count": 1,
+      "field_answers": {
+        "1": "SALARY|salary"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The passage states he quit citing 'the low salary and lack of editorial control'.",
+          "incorrect": "Incorrect. The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'.",
+          "no_answer": "The correct answer is SALARY. The passage states he quit citing 'the low salary and lack of editorial control'."
+        }
+      },
+      "ielts_question_type": "Note Completion"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Poe married in [field 1] to a much younger woman.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'. Review the passage carefully to find the exact words.",
+      "correct_feedback": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+      "incorrect_feedback": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "note_completion",
+      "field_count": 1,
+      "field_answers": {
+        "1": "1836"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+          "incorrect": "Incorrect. The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'.",
+          "no_answer": "The correct answer is 1836. The passage states 'He quit the paper in 1836' and 'In the same year, Poe married'."
+        }
+      },
+      "ielts_question_type": "Note Completion"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "Publication of [field 1] helped Poe to become a household name in America.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'. Review the passage carefully to find the exact words.",
+      "correct_feedback": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+      "incorrect_feedback": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "note_completion",
+      "field_count": 1,
+      "field_answers": {
+        "1": "THE RAVEN|The Raven|the raven"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+          "incorrect": "Incorrect. The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'.",
+          "no_answer": "The correct answer is THE RAVEN. The passage states 'the publication of his poem The Raven' made him 'a household name'."
+        }
+      },
+      "ielts_question_type": "Note Completion"
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "As an author, Poe was a pioneering figure in the [field 1] genre.",
+      "points": 1.0,
+      "no_answer_feedback": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'. Review the passage carefully to find the exact words.",
+      "correct_feedback": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
+      "incorrect_feedback": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "note_completion",
+      "field_count": 1,
+      "field_answers": {
+        "1": "GOTHIC FICTION|gothic fiction"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The passage states 'He is considered to be the originator of gothic fiction'.",
+          "incorrect": "Incorrect. The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'.",
+          "no_answer": "The correct answer is GOTHIC FICTION. The passage states 'He is considered to be the originator of gothic fiction'."
+        }
+      },
+      "ielts_question_type": "Note Completion"
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Choose TWO letters, A-E.\n\nWhich TWO of the following are mentioned as being publications Poe worked for?\n\nA. The Gold Bug\nB. Broadway Journal\nC. Tales of the Grotesque and Arabesque\nD. Southern Literary Messenger\nE. The Raven",
+      "question": "Select two correct answers:",
+      "points": 2.0,
+      "no_answer_feedback": "The correct answers are B and D. The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Remember to always make a guess in IELTS—there's no penalty for wrong answers.",
+      "correct_feedback": "Excellent! You've correctly identified the two publications Poe worked for as an editor.",
+      "incorrect_feedback": "Some of your selections are incorrect. The correct answers are B (Broadway Journal) and D (Southern Literary Messenger). The passage states Poe 'held a number of editorial positions with various leading literary journals of the day in both New York and Philadelphia, including the Broadway Journal' and earlier mentions he was 'editor of the Southern Literary Messenger'. Options A, C, and E are titles of Poe's works, not publications he worked for.",
+      "reading_text_id": 4,
+      "audio_section_id": 0,
+      "ielts_question_category": "multiple_choice_multiple_answers",
+      "mc_options": [
+        {
+          "text": "The Gold Bug",
+          "is_correct": false,
+          "feedback": "Incorrect. The Gold Bug is a story Poe wrote, not a publication he worked for."
+        },
+        {
+          "text": "Broadway Journal",
+          "is_correct": true,
+          "feedback": "Correct! The passage states Poe held editorial positions 'including the Broadway Journal'."
+        },
+        {
+          "text": "Tales of the Grotesque and Arabesque",
+          "is_correct": false,
+          "feedback": "Incorrect. This is Poe's first volume of short stories, not a publication he worked for."
+        },
+        {
+          "text": "Southern Literary Messenger",
+          "is_correct": true,
+          "feedback": "Correct! The passage states Poe was 'editor of the Southern Literary Messenger'."
+        },
+        {
+          "text": "The Raven",
+          "is_correct": false,
+          "feedback": "Incorrect. The Raven is Poe's famous poem, not a publication he worked for."
+        }
+      ],
+      "options": "The Gold Bug\nBroadway Journal\nTales of the Grotesque and Arabesque\nSouthern Literary Messenger\nThe Raven",
+      "correct_answer_count": 2,
+      "show_option_letters": true,
+      "ielts_question_type": "Multiple Choice (Multiple Answers)"
     }
+  ],
+  "reading_texts": [
+    {
+      "text_id": 0,
+      "title": "Reading Text 1",
+      "content": "<h4><strong>Post Office Information Leaflet for Home Owners</strong></h4>\n\n<p>Moving house or relocating your business? Need to redirect your mail to your new address? Read the important information below.</p>\n\n<p>How does mail redirection work?<br>\nRedirection is a cost-effective way of ensuring that you continue receiving your mail when you move home or business. Redirection is flexible and can be arranged for temporary moves or when relocating overseas.</p>\n\n<h4><strong>Service available for periods of 1, 3, 6 or 12 months</strong></h4>\n\n<h4><strong>The service can be renewed up to a maximum of two years</strong></h4>\n\n<h4><strong>Mail can be redirected to any UK or overseas address</strong></h4>\n\n<p>Preventing identity fraud<br>\nThe Home Office Identity Fraud Steering Committee recommends using Royal Mail’s redirection service for at least one year when you move, to reduce the risk of identity fraud.</p>\n\n<p>How can I arrange for my mail to be redirected?<br>\nThere are four ways to apply and pay:</p>\n\n<h4><strong>By post</strong></h4>\n\n<h4><strong>By phone</strong></h4>\n\n<h4><strong>In person at the Post Office</strong></h4>\n\n<h4><strong>Online</strong></h4>\n\n<p>Householders can arrange redirection online if their debit or credit card is registered at the address they are moving from. This process takes about five minutes. Redirection usually begins within five working days.<br>\nBusiness redirection cannot be arranged online.</p>\n\n<h4><strong>Costs</strong></h4>\n\n<p>Length\tPersonal (per surname)\tBusiness\tOverseas (Airmail)<br>\n12 months\t£38.99\t£77.99\t£110.00<br>\n6 months\t£25.96\t£51.97\t£73.45<br>\n3 months\t£16.82\t£25.96\t£47.75<br>\n1 month\t£7.64\t£15.47\t£21.85</p>\n\n<h4><strong>Mail that cannot be redirected</strong></h4>\n\n<h4><strong>Mail for people or organisations not previously at the address</strong></h4>\n\n<h4><strong>Mail to boarding houses, hotels, colleges or other multi-occupied premises</strong></h4>\n\n<h4><strong>Personal mail sent from a business address to a private address</strong></h4>\n\n<h4><strong>Mail between PO Boxes in the same delivery office</strong></h4>\n\n<h4><strong>International mail containing goods over standard letter size</strong></h4>\n\n<h4><strong>Mail sent from overseas to a UK address</strong></h4>\n\n<h4><strong>Carrier mail (private parcel delivery services)</strong></h4>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a matching sentence endings question.<br>\nThere are 7 questions.<br>\nChoose the correct ending A–L.]</p>\n\n<h4><strong>Sentence endings</strong></h4>\n\n<p>A. For a period of at least two years<br>\nB. For only one individual<br>\nC. Is cheaper than business prices<br>\nD. When moving abroad<br>\nE. For family members with the same name<br>\nF. Cannot be used by businesses<br>\nG. Is the most costly arrangement to set up<br>\nH. Cannot be arranged to overseas addresses<br>\nI. As it may help prevent criminal activity<br>\nJ. Online by private householders and business owners<br>\nK. One of three ways in which to arrange redirection of mail<br>\nL. Must indicate the new address</p>\n\n<h4><strong>Redirection of post can be arranged\nAnswer: D</strong></h4>\n\n<h4><strong>Arranging redirection of mail is advised\nAnswer: I</strong></h4>\n\n<h4><strong>Businesses may choose\nAnswer: K</strong></h4>\n\n<h4><strong>Debit or credit cards for online application\nAnswer: F</strong></h4>\n\n<h4><strong>Published fees for householders apply\nAnswer: E</strong></h4>\n\n<h4><strong>Redirection to an international address\nAnswer: G</strong></h4>\n\n<h4><strong>The redirection service for larger and heavier items of mail\nAnswer: H</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
+      "tags": []
+    },
+    {
+      "text_id": 1,
+      "title": "Reading Text 2",
+      "content": "<h4><strong>Seabridge Classical Music Festival</strong></h4>\n\n<p>Dates: Friday 2nd, Saturday 3rd and Sunday 4th September<br>\nTheme: 40 performers for $40</p>\n\n<p>Six venues are used across Seabridge, Scenic Falls and neighbouring Newton. Performers from the USA, Canada, Australia and the UK rotate between venues. Special guest performers, the String Trio Osmond from New York City, perform at the Townhall and The Sailor’s Arms only.</p>\n\n<p>Festival badges provide discounted ferries between Seabridge and Newton and unlimited use of a free shuttle bus between Scenic Falls and Seabridge.</p>\n\n<h4><strong>Shuttle bus operating times</strong></h4>\n\n<h4><strong>Friday: 6pm – 1am</strong></h4>\n\n<h4><strong>Saturday: 12 noon – 1am</strong></h4>\n\n<h4><strong>Sunday: 12 noon – midnight</strong></h4>\n\n<p>The shuttle runs hourly, stopping at venues on the hour and half-hour.</p>\n\n<p>Newton village is accessible only by ferry. Ferry return fares are discounted to $10 for badge holders.</p>\n\n<h4><strong>Venue summaries</strong></h4>\n\n<p>Seabridge Resort – seafront location; accommodation; restaurant; pool; festival events in conference facility</p>\n\n<p>Townhall – largest venue; central location; special guest performers appear here</p>\n\n<p>Maritime Building – built in the 1800s; formerly a shipping office; now events only</p>\n\n<p>Cruza Bar – normally night-time venue; daytime performances added during festival</p>\n\n<p>Scenic Falls Resort – 10 minutes’ drive; performances in bar/restaurant; outdoor scenery</p>\n\n<p>The Sailor’s Arms – historic hotel in Newton; events held in a marquee in the grounds</p>\n\n<h4><strong>Questions 8–13</strong></h4>\n\n<p>[This is a matching venues question.<br>\nEach letter A–F may be used more than once.]</p>\n\n<p>A. Seabridge Resort<br>\nB. Townhall<br>\nC. Maritime Building<br>\nD. Cruza Bar<br>\nE. The Sailor’s Arms<br>\nF. Scenic Falls Resort</p>\n\n<h4><strong>This venue cannot be reached by shuttle bus\nAnswer: E</strong></h4>\n\n<p>Visitors wanting to see special guests perform in Seabridge must go here<br>\nAnswer: B</p>\n\n<h4><strong>This venue has changed its usual operating times\nAnswer: D</strong></h4>\n\n<h4><strong>Festival events are held outside\nAnswer: E</strong></h4>\n\n<p>Visitors leaving here by free transport must depart on the hour or half-hour<br>\nAnswer: A</p>\n\n<h4><strong>The function of this venue has changed over time\nAnswer: C</strong></h4>",
+      "tags": []
+    },
+    {
+      "title": "Reading Text 5",
+      "content": "<h3>Reading Passage 3</h3>\n<h4>You should spend about 20 minutes on Questions 27 – 40 which are based on Reading Passage 3.</h4>\n\n<h2>The Life and Work of Edgar Allan Poe</h2>\n\n<p>Edgar Allan Poe, one of the first prominent American authors, is perhaps best known today for his contribution to the short story form as well as his most famous poem, The Raven. Born in Boston, Massachusetts, on January 19, 1809, Poe was the second child of two professional actors. In the second year of his life, 1811, the young Poe, <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">his older brother Henry</span> and younger sister Rosalie, found themselves orphaned following the death of their mother from tuberculosis, the family having been abandoned by <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">Poe's father a year earlier</span>.</p>\n\n<p>In 1811, Poe was adopted by the Allan family of Richmond, Virginia. Mainly as a result of financial pressures, Poe's relationship with Frances and John Allan, his foster parents, was often tense. After completing secondary school, Poe attended the University of Virginia in 1826 at the age of seventeen. Despite excelling academically, notably in French and Latin, Poe quit university before completing his first year, after falling out with John Allan over the cost of his education and debts that he had accrued. In 1827 Poe moved to Boston and enlisted in the United States Army using a false name, <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">publishing an anonymous collection of poetry entitled Tamerlane and Other Poems</span> in the same year.</p>\n\n<p>After two years of military service, during which time Poe rose to the rank of Sergeant Major, he was granted a discharge to enter the United States Military Academy at West Point as a cadet and further his education. During this time Poe clashed again with his foster father regarding financial support for his studies, and it is said that the young writer deliberately broke rules and neglected his duties while at West Point so that he would be dismissed. <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">In 1831, Poe was court-martialed for disobedience, afterwards moving to New York City for a brief period</span>. He had resolved to devote himself to his writing on a fulltime basis, publishing more poetry but having all of the short stories that he submitted to magazines rejected.</p>\n\n<p>Towards the end of 1831, Poe left New York City and moved into the house of his aunt, Maria Clemm, in Baltimore, Maryland. He stayed in Baltimore for the best part of four years, writing and selling a number of both poems and short stories during this period. However, the young writer still struggled financially, in no small part as a result of the lack of international copyright laws at the time, meaning that the editors of literary magazines preferred to reprint British works rather than publish those of new American authors. One of the short stories that Poe wrote while living under his Aunt's roof, The Manuscript Found in a Bottle, won a magazine contest, helping him to secure a position as editor of the Southern Literary Messenger in 1835.</p>\n\n<p>As editor of the Southern Literary Messenger in Richmond, Virginia, Poe was instrumental in lifting the publication's readership, raising circulation from fewer than 1000 to 3500 copies. During this time, Poe established his reputation as a literary critic and began to focus on writing prose, rather than poetry. He quit the paper in <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">1836</span>, however, citing the <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">low salary</span> and lack of editorial control as the primary reasons. In the same <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">year, Poe married</span> a woman many years his junior, before returning to New York in 1837. Over the following decade, the writer held a number of editorial positions with various leading literary journals of the day in both <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">New York and Philadelphia, including the Broadway Journal, Burton's Gentleman's Magazine and Graham's Magazine</span>.</p>\n\n<p>The year 1839 saw the publication of Poe's first volume of short stories, Tales of the Grotesque and Arabesque, although he received no payment for the work, and supplemented his income from editing jobs by giving lectures and public readings. Continuing to write in different forms throughout this period of his life and career, in 1841 the author published what is generally considered to be the first story in the genre of detective fiction, entitled The Murders in the Rue Morgue. The following year, Poe quit his editing job with Graham's Magazine, planning to start his own publication, Stylus. Unfortunately, this venture was not successful. Poe attained further literary recognition in 1843, however, winning first prize in a competition for his story The Gold Bug, a tale heavily influenced by his interest in cryptography.</p>\n\n<p>In spite of winning one hundred dollars in prize money for The Gold Bug, Poe was still struggling to support his family financially. However, in 1845 the publication of his poem <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">The Raven</span>, arguably the author's single most widely recognized work, won him lasting fame. <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Poe became an almost overnight literary sensation in his home country, and The Raven played a significant role in securing his international reputation as a writer</span>. The poem explores a number of the gothic themes common to Poe's writing, including those of love, beauty, death and loss. While he was now a household name in the country of his birth, Poe continued to have difficulty in making ends meet, and was overcome by grief and sorrow following the death of his wife, Virginia, from tuberculosis in 1847.</p>\n\n<p>After the loss of his wife, it is said that Poe's behaviour became more erratic, and that his lifelong battle with depression worsened. He left the Bronx, in New York, where he and Virginia had been living and stayed in Rhode Island for a brief period, before returning to Richmond. The precise details surrounding Poe's death and his final days are a matter of considerable debate. It has been reported that the author left Richmond by train on September 27, 1849, supposedly with the intention of travelling to Philadelphia for an editing job. However, for reasons unknown, Poe ended up in Baltimore, where he was found in the street on October 3, semiconscious and in a state of delirium. He was taken to the Washington Medical College and died four days later, on October 7, 1849.</p>\n\n<p>While he was alive, <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">Edgar Allan Poe was most widely recognized in the country of his birth as a literary critic and editor. At the same time, he was known as both a fiction writer and poet</span>, and one of the first nineteenth century American authors to attain greater popularity in Europe than in the United States. Today, Poe is one of America's most enduring writers, as well as being among the first to become a major figure in world literature. He is considered to be the originator of <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">gothic fiction</span>, as well as being a contributor to the development of science fiction and the modern short story form. The works of Edgar Allan Poe have inspired and influenced a host of other notable artists, writers and film directors, the likes of Salvador Dali, Charles Baudelaire and Alfred Hitchcock, to name but a few.</p>",
+      "text_id": 4
+    }
+  ],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_reading",
+    "cbt_test_type": "general_training",
+    "exercise_label": "practice_test",
+    "open_as_popup": "",
+    "scoring_type": "ielts_general_training_reading",
+    "timer_minutes": "60",
+    "starting_question_number": "1"
+  }
 }
