@@ -5596,6 +5596,11 @@ class IELTS_CM_Admin {
         if (!in_array($lesson_id, $lesson_ids)) {
             $lesson_ids[] = $lesson_id;
             update_post_meta($content_id, '_ielts_cm_lesson_ids', $lesson_ids);
+            
+            // Also update backward compatibility field
+            if (!empty($lesson_ids)) {
+                update_post_meta($content_id, '_ielts_cm_lesson_id', $lesson_ids[0]);
+            }
         }
         
         // Get content details
