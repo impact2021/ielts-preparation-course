@@ -207,6 +207,18 @@ class IELTS_CM_Admin {
      * Course lessons meta box - display and reorder lessons
      */
     public function course_lessons_meta_box($post) {
+        // Check if this is a new post that hasn't been saved yet
+        if (empty($post->ID) || $post->ID === 0) {
+            ?>
+            <div id="ielts-cm-course-lessons">
+                <div class="notice notice-info inline">
+                    <p><?php _e('Please save the course first before adding lessons.', 'ielts-course-manager'); ?></p>
+                </div>
+            </div>
+            <?php
+            return;
+        }
+        
         // Get lessons for this course
         global $wpdb;
         // Check for both integer and string serialization in course_ids array
@@ -433,6 +445,18 @@ class IELTS_CM_Admin {
      * Lesson content meta box - display and reorder lesson pages and exercises together
      */
     public function lesson_content_meta_box($post) {
+        // Check if this is a new post that hasn't been saved yet
+        if (empty($post->ID) || $post->ID === 0) {
+            ?>
+            <div id="ielts-cm-lesson-content">
+                <div class="notice notice-info inline">
+                    <p><?php _e('Please save the lesson first before adding content (sub-lessons and exercises).', 'ielts-course-manager'); ?></p>
+                </div>
+            </div>
+            <?php
+            return;
+        }
+        
         // Get lesson pages for this lesson
         global $wpdb;
         $resource_ids = $wpdb->get_col($wpdb->prepare("
