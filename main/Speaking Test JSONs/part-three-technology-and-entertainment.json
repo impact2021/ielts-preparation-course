@@ -1,0 +1,42 @@
+{
+    "title": "Speaking Part 3: Technology and Entertainment",
+    "content": "<p>Read the extract from a Part Three speaking test and complete the gaps using one of the words below. Type your answers in the spaces provided.</p><p><strong>Word bank:</strong> a little, fewer, a few, less, little, few</p>",
+    "questions": [
+        {
+            "type": "open_question",
+            "ielts_question_type": "Sentence Completion",
+            "instructions": "Complete the text using words from the word bank provided above.",
+            "question": "How do you think technology has affected the way in which we entertain ourselves?",
+            "field_count": 6,
+            "field_labels": [
+                "Well, I think it has had an enormous impact on hobbies such as listening to music and to a lesser extent watching movies, especially for the younger generation. I think it must have affected the number of people who buy CDs for example. I think that 1. ________ people must buy them now as so much music is available on the internet.",
+                "Amongst younger people, there is 2. ________ enthusiasm for accumulating a CD collection; most of us today just stream music directly online.",
+                "I suppose there is 3. ________ more interest in traditional CDs amongst older people though!",
+                "Regarding watching movies, although 4. ________ of my friends are still interested in going to the cinema, I think more and more of us are starting to watch more online.",
+                "I suppose the concept of sitting in front of a computer to watch a movie doesn't appeal to everyone though and I suppose relatively 5. ________ people in my parent's age group would do that, they still prefer the comfort of a cinema.",
+                "I like going to the cinema to watch a blockbuster movie, especially if it has special effects as they are so much more impressive on the big screen. I am 6. ________ interested in going to watch ordinary films though as it is so expensive in comparison to buying a cinema ticket."
+            ],
+            "field_answers": [
+                "fewer",
+                "little",
+                "a little",
+                "a few",
+                "few",
+                "less"
+            ],
+            "correct_feedback": "Excellent! You have correctly identified the appropriate quantifier.",
+            "incorrect_feedback": "Not quite right. Consider whether the noun is countable or uncountable, and whether the meaning is positive or negative.",
+            "no_answer_feedback": "The correct answer is shown above. Remember: 'few/fewer/a few' are used with countable nouns, while 'little/less/a little' are used with uncountable nouns.",
+            "points": 6
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": 70,
+        "layout_type": "one_column_exercise",
+        "exercise_label": "exercise",
+        "scoring_type": "percentage",
+        "timer_minutes": 10,
+        "starting_question_number": 1
+    }
+}
