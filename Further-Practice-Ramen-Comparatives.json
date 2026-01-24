@@ -1,0 +1,108 @@
+{
+    "title": "Further practice",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Complete the text about ramen by selecting the correct comparative or superlative form from each dropdown menu.\r\n\r\n<table style=\"width:100%;border-collapse:collapse;background:linear-gradient(135deg,#f9f9f9,#ffffff)\">\r\n  <tr>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">few</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">a few</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">the best</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">the coldest</td>\r\n  </tr>\r\n  <tr>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">richer than</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">the most popular</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">the most famous</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">less complicated</td>\r\n  </tr>\r\n  <tr>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">more quickly than</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">less expensive than</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\">the most interesting</td>\r\n    <td style=\"border:1px solid #ccc;padding:14px;text-align:center;border-radius:8px\"></td>\r\n  </tr>\r\n</table>\r\n",
+            "question": "Although most foreigners associate sushi with Japan, there is actually a wide variety of excellent food. One of [field 1] is called ramen. There are many shops and restaurants which specialise in ramen and they are convenient places to go after work. [field 2] way to describe it is as a soup with noodles and other ingredients. [field 3] thing about ramen is that it is served differently. I mean it has different flavours depending on which part of Japan you eat it in, so you never really get bored with it.\r\n\r\nIt's very simple to prepare and so a lot of people make it at home, it's a lot [field 4] to make than some other Japanese food. The ingredients are very easy to buy if you want to make it at home as they are sold in most supermarkets and convenience stores and you can cook it [field 5] a lot of other dishes. So to make ramen you simmer kelp, mushrooms and onions in a chicken or pork based stock, add meat and noodles and season with pepper, garlic and sesame seeds. That's the way I make it, but as I said before recipes vary.\r\n\r\nOne of my favourite ramen recipes is from Sapporo which is the capital of Hokkaido. Sapporo is probably [field 6] city for its ramen and the flavour is much [field 7] in other places because it is made from a base of miso soup. Hokkaido has one of [field 8] winters in the whole of the country and ramen is very popular there in wintertime. Sapporo ramen usually contains sweet corn, butter, bean sprouts, pork and sometimes local seafood.\r\n\r\nAlthough ramen is especially popular in winter, it is really a food that is eaten year round. Ramen shops in big cities are open 24 hours a day and almost always have [field 9] customers no matter what time of day or night it is. I think there are [field 10] Japanese people who never eat ramen! It's popular because it is far [field 11] other types of Japanese cuisine, it's tasty, and it's very convenient.",
+            "points": 11,
+            "no_answer_feedback": "Please complete all fields before submitting.",
+            "correct_feedback": "Excellent! You have completed all fields correctly.",
+            "incorrect_feedback": "Not all answers are correct. Review the feedback for each field.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 11,
+            "field_answers": {
+                "1": "the best",
+                "2": "The most interesting",
+                "3": "The most interesting",
+                "4": "less complicated",
+                "5": "more quickly than",
+                "6": "the most famous",
+                "7": "richer than",
+                "8": "the coldest",
+                "9": "a few",
+                "10": "few",
+                "11": "less expensive than"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! 'The best' is a superlative form used after 'one of'.",
+                    "incorrect": "Incorrect. The correct answer is 'the best'. We use superlatives after 'one of' to indicate something is among the top examples.",
+                    "no_answer": "The correct answer is: the best. After 'one of', we use superlative forms (the best, the most, etc.)."
+                },
+                "2": {
+                    "correct": "Correct! 'The most interesting' is the superlative form to describe the way.",
+                    "incorrect": "Incorrect. The correct answer is 'The most interesting'. We need a superlative to describe a single way among all possible ways.",
+                    "no_answer": "The correct answer is: The most interesting. Use superlatives to indicate the most notable or significant characteristic."
+                },
+                "3": {
+                    "correct": "Correct! 'The most interesting' perfectly describes this unique characteristic of ramen.",
+                    "incorrect": "Incorrect. The correct answer is 'The most interesting'. This highlights the most notable aspect of ramen.",
+                    "no_answer": "The correct answer is: The most interesting. This superlative emphasizes the most remarkable feature of ramen."
+                },
+                "4": {
+                    "correct": "Correct! 'Less complicated' is the comparative form showing ramen is easier to make.",
+                    "incorrect": "Incorrect. The correct answer is 'less complicated'. We use comparatives with 'than' to compare two things.",
+                    "no_answer": "The correct answer is: less complicated. Use 'less + adjective' for comparative forms showing something is easier or simpler."
+                },
+                "5": {
+                    "correct": "Correct! 'More quickly than' shows ramen cooks faster than other dishes.",
+                    "incorrect": "Incorrect. The correct answer is 'more quickly than'. Use 'more + adverb + than' for comparative adverbs.",
+                    "no_answer": "The correct answer is: more quickly than. This comparative adverb shows speed comparison with 'than'."
+                },
+                "6": {
+                    "correct": "Correct! 'The most famous' is the superlative showing Sapporo's reputation.",
+                    "incorrect": "Incorrect. The correct answer is 'the most famous'. Use superlatives to indicate the top ranking or most well-known.",
+                    "no_answer": "The correct answer is: the most famous. Superlatives show something has the highest degree of a quality."
+                },
+                "7": {
+                    "correct": "Correct! 'Richer than' compares the flavor with other places using a comparative.",
+                    "incorrect": "Incorrect. The correct answer is 'richer than'. We use comparatives to make direct comparisons between two things.",
+                    "no_answer": "The correct answer is: richer than. Use comparative adjectives followed by 'than' to compare qualities."
+                },
+                "8": {
+                    "correct": "Correct! 'The coldest' is the superlative showing the extreme winter temperatures.",
+                    "incorrect": "Incorrect. The correct answer is 'the coldest'. After 'one of', use superlatives to show the extreme degree.",
+                    "no_answer": "The correct answer is: the coldest. This superlative indicates Hokkaido has among the most extreme winters."
+                },
+                "9": {
+                    "correct": "Correct! 'A few' means some customers, indicating there are always some people there.",
+                    "incorrect": "Incorrect. The correct answer is 'a few'. 'A few' means 'some' and is positive, while 'few' means 'not many' and is negative.",
+                    "no_answer": "The correct answer is: a few. Use 'a few' (positive) to mean 'some', versus 'few' (negative) meaning 'not many'."
+                },
+                "10": {
+                    "correct": "Correct! 'Few' means very few or almost none, indicating ramen is extremely popular.",
+                    "incorrect": "Incorrect. The correct answer is 'few'. Use 'few' (without 'a') to mean 'not many' or 'almost none'.",
+                    "no_answer": "The correct answer is: few. 'Few' (negative) means 'not many', while 'a few' (positive) means 'some'."
+                },
+                "11": {
+                    "correct": "Correct! 'Less expensive than' compares the price of ramen with other cuisine.",
+                    "incorrect": "Incorrect. The correct answer is 'less expensive than'. Use 'less + adjective + than' for comparative forms.",
+                    "no_answer": "The correct answer is: less expensive than. This comparative shows ramen costs less compared to other types of cuisine."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-25 08:57:38",
+        "exported_by": "impact",
+        "plugin_version": "13.5",
+        "format_version": "1.0"
+    }
+}
