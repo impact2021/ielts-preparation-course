@@ -1,0 +1,436 @@
+{
+  "title": "Minimum Wage and Average Salaries Graph Exercise",
+  "content": "This exercise tests your ability to describe trends and comparisons in graph data. Read the sentences carefully and select the most appropriate word from the dropdown menu for each blank.",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentences by selecting the correct word from the dropdown menu for each blank.",
+      "question": "The graph illustrates the relationship between minimum wage and average [dropdown] in four locations over a 60 year period.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' is a comparative adjective used to describe rankings or levels, not a noun that represents what people earn. The sentence needs a noun that describes what minimum wage is compared to."
+        },
+        {
+          "text": "salaries",
+          "is_correct": true,
+          "feedback": "Correct! 'Salaries' is the right answer because the graph shows the relationship between minimum wage (the lowest legal pay) and average salaries (what people typically earn). This is a common IELTS topic comparing two economic measures."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' is an adverb that describes how something changes or happens, not a noun. The sentence requires a noun that represents something that can be measured alongside minimum wage."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' is an adjective describing something that doesn't change much. The sentence needs a noun (a thing) that can have a relationship with minimum wage, not a description of change."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' is a verb form that describes reaching a maximum point. The sentence needs a noun that identifies what is being compared to minimum wage, not a verb describing a trend."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lower' is a comparative adjective used to compare levels or positions. The sentence requires a noun that represents what minimum wage is being compared to in the graph."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Higher' is a comparative adjective. While graphs may show higher or lower values, the sentence needs a concrete noun (a measurable thing) to complete the phrase 'average ___'."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' is an adverb that modifies verbs or adjectives to indicate degree. The sentence needs a noun that represents what is being measured in the graph."
+        }
+      ],
+      "correct_answer": "field_1:1",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'salaries'. In IELTS Writing Task 1, you need to identify what data is being shown - in this case, the relationship between minimum wage and average salaries.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "The UK started as the [dropdown] of the 4 countries, minimum wage being only 20% of average earnings in 1940.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": true,
+          "feedback": "Correct! 'Lowest' is the right answer because the UK had only 20% - the smallest percentage of all four countries at the starting point. In IELTS, when comparing multiple items, use superlatives like 'lowest' for the minimum value."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun, but the sentence structure 'started as the ___' requires a superlative adjective to describe the UK's position relative to other countries."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' describes a medium or moderate amount of change, but 20% was the absolute minimum among all countries, not a middle position."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' describes something that remains constant over time. The sentence is describing the UK's position at a specific starting point (1940), not whether it changed or stayed the same."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' means reaching the highest point. The UK started at 20%, which was the lowest value, not the highest, so this is the opposite of what the data shows."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lower' is a comparative adjective for comparing two items. Since there are four countries being compared, you need a superlative ('lowest') not a comparative ('lower')."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Higher' means at a greater level than others. At 20%, the UK was at the smallest percentage, not the highest."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' is an adverb that describes the degree of change or difference. The sentence needs a superlative adjective to show the UK's ranking position."
+        }
+      ],
+      "correct_answer": "field_1:0",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'lowest'. In IELTS graph descriptions, when identifying the minimum value among several items, use the superlative form 'lowest'.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "However, it experienced the most dramatic increase of all countries from 1950 to 1960, [dropdown] in 1970 at just under 40%, and thereafter returning to the lowest position.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' describes a minimum position or level, not the action of reaching a maximum point in a trend. The sentence describes reaching the top of the increase before declining."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun referring to payments for work. The sentence needs a verb form that describes the action of reaching the highest point in a trend."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' indicates a medium or modest degree of change. The sentence states there was a 'dramatic increase', and reaching the top of this increase is not a moderate action."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' means unchanging or constant. The sentence describes reaching a maximum point before declining, which is the opposite of stability."
+        },
+        {
+          "text": "peaking",
+          "is_correct": true,
+          "feedback": "Correct! 'Peaking' is the right answer because it means reaching the highest point. The sentence describes the UK's value reaching its maximum (just under 40%) in 1970 before declining. In IELTS Task 1, 'peaking' is an essential verb for describing when data reaches its highest point."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lower' means at a decreased level compared to something else. The sentence describes reaching a high point ('just under 40%'), not moving to a lower position - that comes 'thereafter'."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. While 'higher' indicates an increased level, it doesn't specifically describe the action of reaching the maximum point of a trend. The sentence needs a verb that means 'reaching the peak'."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' is an adverb describing the degree of something. The sentence needs a verb (action word) that describes reaching the top of the trend, not an adverb."
+        }
+      ],
+      "correct_answer": "field_1:4",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'peaking'. In IELTS Writing Task 1, use 'peaking' (or 'peaked') to describe when a trend reaches its highest point before declining.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "Australia increased [dropdown] until 1970, after which New Zealand and Australia remained relatively close.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' is a superlative adjective describing the minimum position. The sentence needs an adverb to describe how Australia increased, not an adjective describing a position."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun. The sentence structure 'increased ___' requires an adverb that describes the manner or degree of the increase."
+        },
+        {
+          "text": "moderately",
+          "is_correct": true,
+          "feedback": "Correct! 'Moderately' is the right answer because it describes a steady, medium-paced increase - not dramatic like the UK's rise, but a gradual upward trend. In IELTS Task 1, use 'moderately' to describe changes that are neither dramatic nor minimal."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' means remaining constant without significant change. The sentence states Australia 'increased', which is the opposite of staying stable."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' specifically means reaching the highest point. While Australia increased, the sentence doesn't indicate it reached a peak in 1970 - it just stopped increasing as noticeably."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lower' indicates a decrease or reduced level. The sentence states Australia 'increased', which is the opposite direction from 'lower'."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. While 'higher' indicates upward movement, it's an adjective describing level, not an adverb describing how the increase occurred. We need a word that modifies the verb 'increased'."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' means by a large amount or to a great degree. The sentence suggests a more modest, steady increase rather than a dramatic one - the UK had the 'most dramatic increase', not Australia."
+        }
+      ],
+      "correct_answer": "field_1:2",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'moderately'. In IELTS graphs, use 'moderately' to describe steady, medium-level increases that are neither dramatic nor minimal.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "New Zealand remained fairly [dropdown] throughout, starting and finishing at approximately the same level of around 42%.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' refers to the minimum position in a ranking. While New Zealand may not have been the lowest, the sentence is describing whether values changed over time, not ranking position."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun referring to wages. The sentence structure 'remained fairly ___' requires an adjective that describes the characteristic of staying constant."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' describes the degree of change. The sentence indicates New Zealand 'starting and finishing at approximately the same level', meaning minimal change, not moderate change."
+        },
+        {
+          "text": "stable",
+          "is_correct": true,
+          "feedback": "Correct! 'Stable' is the right answer because it means remaining constant or unchanging. The sentence explicitly states New Zealand started and finished at around the same level (42%), which is the definition of stability. In IELTS Task 1, use 'stable' or 'remained stable' for trends that show little variation over time."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' means reaching the highest point before declining. New Zealand maintained approximately the same level throughout, so it didn't peak and decline."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lower' indicates a reduced level compared to something else. The sentence describes New Zealand maintaining the same level (around 42%), not being lower."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Higher' describes an elevated level compared to others. The sentence is about whether New Zealand's values changed over time, not whether they were higher than other countries."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' is an adverb describing degree or extent. The sentence needs an adjective to describe New Zealand's characteristic of not changing, and 'remained significantly' doesn't make grammatical sense."
+        }
+      ],
+      "correct_answer": "field_1:3",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'stable'. In IELTS Task 1, use 'stable' or 'remained stable' to describe data that shows little change over the time period.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "The USA was the highest for most of the period, peaking at about 50%, although it finished at a [dropdown] level than New Zealand.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' is a superlative comparing three or more items. The sentence uses 'than', which requires a comparative form for comparing just two items (USA and New Zealand)."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun. The sentence structure 'finished at a ___ level than' requires a comparative adjective to show how the USA's ending level compared to New Zealand's."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' is an adverb describing degree, but it can't be used with 'than' to make comparisons. The sentence needs a comparative adjective like 'lower' or 'higher'."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' means unchanging, but it's not a comparative form and can't be used with 'than'. The sentence is comparing the USA's final position to New Zealand's."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' describes reaching a maximum point. The sentence has already mentioned the USA 'peaking at 50%' earlier - this blank is about where it 'finished', which would be after the peak."
+        },
+        {
+          "text": "lower",
+          "is_correct": true,
+          "feedback": "Correct! 'Lower' is the right answer because it's the comparative form needed with 'than' to compare two items. Despite the USA being highest for most of the period and peaking at 50%, by the end it finished below New Zealand's level (around 42%). In IELTS Task 1, use comparative forms (lower/higher) when comparing two items."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Higher' would mean the USA finished above New Zealand. However, the sentence uses 'although', indicating a contrast - despite being highest earlier, it ended up below New Zealand."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' describes degree but can't be used with 'than' for comparisons. The sentence needs a comparative adjective (lower or higher) to compare the USA's level to New Zealand's."
+        }
+      ],
+      "correct_answer": "field_1:5",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'lower'. In IELTS comparisons, use 'lower than' or 'higher than' when comparing two items, and note the contrast word 'although' which indicates the USA ended below New Zealand despite being highest earlier.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "From 1980 onwards, the USA shared a similar trend with the UK, though at a [dropdown] level.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' is a superlative comparing three or more items and describes the minimum position. The sentence is comparing just the USA and UK, and needs a comparative form."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun. The sentence structure 'at a ___ level' requires an adjective that describes the level's position relative to another."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' describes degree of change. The sentence describes the USA and UK having similar trends (both declining), but the USA's trend was positioned differently on the graph."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' means unchanging. The sentence says both countries 'shared a similar trend', implying both were changing in the same direction, not remaining stable."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' means reaching the highest point. The phrase 'from 1980 onwards' suggests an ongoing trend, and the UK had already peaked in 1970 and was declining."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lower' would mean the USA's trend was below the UK's. Earlier in the text, we learned the UK returned to 'the lowest position' while the USA was previously the highest, so the USA's trend would be above the UK's."
+        },
+        {
+          "text": "higher",
+          "is_correct": true,
+          "feedback": "Correct! 'Higher' is the right answer because both countries followed similar downward trends from 1980 onwards, but the USA's values remained above (higher than) the UK's values. The UK had 'returned to the lowest position' while the USA, despite declining, maintained a higher level. In IELTS Task 1, use 'at a higher/lower level' to describe parallel trends at different positions on the graph."
+        },
+        {
+          "text": "significantly",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Significantly' is an adverb describing degree. While you could say 'significantly higher', the sentence uses 'at a ___ level' which requires an adjective alone, not an adverb."
+        }
+      ],
+      "correct_answer": "field_1:6",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'higher'. In IELTS Task 1, when describing parallel trends at different positions, use 'at a higher level' or 'at a lower level' to show the relative positions on the graph.",
+      "points": 1
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "instructions": "Complete the sentence by selecting the correct word from the dropdown menu.",
+      "question": "Overall, the UK remained [dropdown] lower than the other three countries, and by the end New Zealand, Australia and the USA were at a similar level.",
+      "correct_answer_count": 1,
+      "mc_options": [
+        {
+          "text": "lowest",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Lowest' is a superlative adjective that stands alone and doesn't need 'lower'. The sentence already uses 'lower', so we need an adverb to modify 'lower' and show the degree of difference."
+        },
+        {
+          "text": "salaries",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Salaries' is a noun. The sentence structure 'remained ___ lower' requires an adverb that modifies the adjective 'lower' to indicate how much lower the UK remained."
+        },
+        {
+          "text": "moderately",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Moderately' indicates a medium degree. Throughout the passage, the UK is described as having 'the lowest' position and dramatically different values (20% vs others at 40-50%), indicating a substantial difference, not a moderate one."
+        },
+        {
+          "text": "stable",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Stable' is an adjective meaning unchanging, and 'stable lower' doesn't make grammatical sense. You can say 'remained stable' or 'remained lower', but not 'remained stable lower'."
+        },
+        {
+          "text": "peaking",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Peaking' is a verb form meaning reaching the highest point. It cannot modify the adjective 'lower' and doesn't describe the degree of difference between the UK and other countries."
+        },
+        {
+          "text": "lower",
+          "is_correct": false,
+          "feedback": "Incorrect. The sentence already contains 'lower' - we need an adverb to modify 'lower' and show how much lower. 'Remained lower lower' is grammatically incorrect."
+        },
+        {
+          "text": "higher",
+          "is_correct": false,
+          "feedback": "Incorrect. 'Higher' contradicts 'lower' in the sentence. Also, throughout the passage, the UK is consistently described as having the lowest values, not higher ones."
+        },
+        {
+          "text": "significantly",
+          "is_correct": true,
+          "feedback": "Correct! 'Significantly' is the right answer because it's an adverb that modifies 'lower' to show the degree of difference. The UK remained substantially/considerably lower than the other countries (around 20-30% compared to 40-50%). In IELTS Task 1, use 'significantly' to emphasize notable differences or changes in data. This fits with the overall pattern where the UK was described as having 'the lowest' position and the 'most dramatic' changes."
+        }
+      ],
+      "correct_answer": "field_1:7",
+      "no_answer_feedback": "You did not select an answer. The correct answer is 'significantly'. In IELTS Task 1 overview statements, use 'significantly' to emphasize substantial differences between data sets, especially when one item consistently differs from others.",
+      "points": 1
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  },
+  "_metadata": {
+    "created_at": "2026-01-24",
+    "description": "IELTS Writing Task 1 vocabulary exercise focusing on describing trends and making comparisons in graph data about minimum wage as a percentage of average salaries",
+    "format_version": "1.0"
+  }
+}
