@@ -211,7 +211,7 @@
       "instructions": "According to the reading passage, which THREE of the following features are offered by modern gyms today?\r\n",
       "question": "Select THREE letters (A–G)",
       "points": 3,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "Please select an answer. You should always attempt every question.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 0,
@@ -667,7 +667,8 @@
       ],
       "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -728,7 +729,8 @@
       ],
       "options": "I. The original concept sees many modern applications\nII. Grocery stores worry about the costs\nIII. Early ideas lead to modern concepts\nIV. A different industry provides a new stimulus\nV. Different Technological Institutes compete\nVI. Early setbacks\nVII. An old system inspires one man\nVIII. Railways lead the way\nIX. Theory becomes reality",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -818,7 +820,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -844,7 +847,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -870,7 +874,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -896,7 +901,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -922,7 +928,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -948,7 +955,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -974,7 +982,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "closed_question",
@@ -1204,7 +1213,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1230,7 +1240,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1256,7 +1267,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1282,7 +1294,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1308,14 +1321,15 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "closed_question",
       "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
       "question": "The significance of the New Horizons mission.",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "Please select an answer. You should always attempt every question.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 2,
@@ -1369,7 +1383,7 @@
       "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
       "question": "The technological equipment on board New Horizons.",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "Please select an answer. You should always attempt every question.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 2,
@@ -1423,7 +1437,7 @@
       "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
       "question": "The number of dwarf planets.",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "Please select an answer. You should always attempt every question.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 2,

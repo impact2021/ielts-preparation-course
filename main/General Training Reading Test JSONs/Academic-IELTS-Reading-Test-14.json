@@ -320,7 +320,8 @@
       ],
       "options": "TRUE\nFALSE\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -351,7 +352,8 @@
       ],
       "options": "TRUE\nFALSE\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -382,7 +384,8 @@
       ],
       "options": "TRUE\nFALSE\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -413,7 +416,8 @@
       ],
       "options": "TRUE\nFALSE\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "open_question",
@@ -493,7 +497,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -524,7 +529,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -555,7 +561,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -586,7 +593,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -617,7 +625,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -648,7 +657,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -679,7 +689,8 @@
       ],
       "options": "YES\nNO\nNOT GIVEN",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -745,7 +756,8 @@
       ],
       "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -811,7 +823,8 @@
       ],
       "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -877,7 +890,8 @@
       ],
       "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -943,7 +957,8 @@
       ],
       "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "closed_question",
@@ -1009,7 +1024,8 @@
       ],
       "options": "belief\nlatter\nreligion\nfaith\nascendancy\nformer\nrational\ndecline\nanimism\nshaman",
       "correct_answer_count": 1,
-      "show_option_letters": false
+      "show_option_letters": false,
+      "no_answer_feedback": "Please select an answer. You should always attempt every question."
     },
     {
       "type": "open_question",

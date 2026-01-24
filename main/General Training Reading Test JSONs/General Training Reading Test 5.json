@@ -362,7 +362,7 @@
       "instructions": "Questions 11–14\n\nAnswer the questions below.\n\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
       "question": "During what should you start looking at the dress code employees seem to be following?",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
       "correct_feedback": "Correct! Well done.",
       "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
       "reading_text_id": 2,
@@ -376,7 +376,7 @@
       "instructions": "",
       "question": "What might men want to think about wearing or not wearing on the second day?",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
       "correct_feedback": "Correct! Well done.",
       "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
       "reading_text_id": 2,
@@ -390,7 +390,7 @@
       "instructions": "",
       "question": "Apart from being in the same office, what makes a colleague a useful guide for what to wear?",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
       "correct_feedback": "Correct! Well done.",
       "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
       "reading_text_id": 2,
@@ -404,7 +404,7 @@
       "instructions": "",
       "question": "What type of company is introducing management uniforms?",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions.",
       "correct_feedback": "Correct! Well done.",
       "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
       "reading_text_id": 2,
@@ -1083,7 +1083,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1109,7 +1110,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1135,7 +1137,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1161,7 +1164,8 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "open_question",
@@ -1187,14 +1191,15 @@
         }
       },
       "correct_feedback": "Correct! Well done.",
-      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer."
+      "incorrect_feedback": "Incorrect. Review the passage to find the correct answer.",
+      "no_answer_feedback": "The correct answer is shown above. Make sure to answer all questions."
     },
     {
       "type": "closed_question",
       "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
       "question": "The significance of the New Horizons mission.",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "Please select an answer. You should always attempt every question.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 4,
@@ -1248,7 +1253,7 @@
       "instructions": "Reading Passage 3 has seven paragraphs, A – G.\r\nWhich paragraph contains the following information?\r\nWrite the correct letter A – G in boxes 38 – 40 on your answer sheet.",
       "question": "The technological equipment on board New Horizons.",
       "points": 1,
-      "no_answer_feedback": "",
+      "no_answer_feedback": "Please select an answer. You should always attempt every question.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 4,
