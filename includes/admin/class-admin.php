@@ -459,12 +459,17 @@ class IELTS_CM_Admin {
         
         // Get lesson pages for this lesson
         global $wpdb;
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $post->ID . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%';
+        
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $post->ID, '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $post->ID, $int_pattern, $str_pattern));
         
         $resources = array();
         if (!empty($resource_ids)) {
@@ -482,8 +487,8 @@ class IELTS_CM_Admin {
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $post->ID, '%' . $wpdb->esc_like(serialize(strval($post->ID))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $post->ID, $int_pattern, $str_pattern));
         
         $quizzes = array();
         if (!empty($quiz_ids)) {
@@ -4239,6 +4244,11 @@ class IELTS_CM_Admin {
             }
         } elseif ($column === 'resources') {
             global $wpdb;
+            // Check for both integer and string serialization in lesson_ids array
+            // Integer: i:123; String: s:3:"123";
+            $int_pattern = '%' . $wpdb->esc_like('i:' . $post_id . ';') . '%';
+            $str_pattern = '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%';
+            
             $resource_ids = $wpdb->get_col($wpdb->prepare("
                 SELECT DISTINCT pm.post_id 
                 FROM {$wpdb->postmeta} pm
@@ -4246,8 +4256,8 @@ class IELTS_CM_Admin {
                 WHERE p.post_type = 'ielts_resource'
                   AND p.post_status = 'publish'
                   AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
-                    OR (pm.meta_key = '_ielts_cm_lesson_ids' AND pm.meta_value LIKE %s))
-            ", $post_id, '%' . $wpdb->esc_like(serialize(strval($post_id))) . '%'));
+                    OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+            ", $post_id, $int_pattern, $str_pattern));
             echo count($resource_ids);
         }
     }
@@ -5253,7 +5263,10 @@ class IELTS_CM_Admin {
             $prepare_args = array('_ielts_cm_course_ids');
             
             foreach ($course_ids as $course_id) {
-                $like_conditions[] = "meta_value LIKE %s";
+                // Check for both integer and string serialization
+                // Integer: i:123; String: s:3:"123";
+                $like_conditions[] = "(meta_value LIKE %s OR meta_value LIKE %s)";
+                $prepare_args[] = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
                 $prepare_args[] = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
             }
             
@@ -5455,12 +5468,17 @@ class IELTS_CM_Admin {
         
         // Get exercises not already in this lesson
         global $wpdb;
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         $quiz_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $args = array(
             'post_type' => 'ielts_quiz',
@@ -5509,12 +5527,17 @@ class IELTS_CM_Admin {
         
         // Get sublessons not already in this lesson
         global $wpdb;
+        // Check for both integer and string serialization in lesson_ids array
+        // Integer: i:123; String: s:3:"123";
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 
             WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND meta_value LIKE %s)
-        ", $lesson_id, '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%'));
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
         
         $args = array(
             'post_type' => 'ielts_resource',
@@ -5573,6 +5596,11 @@ class IELTS_CM_Admin {
         if (!in_array($lesson_id, $lesson_ids)) {
             $lesson_ids[] = $lesson_id;
             update_post_meta($content_id, '_ielts_cm_lesson_ids', $lesson_ids);
+            
+            // Also update backward compatibility field
+            if (!empty($lesson_ids)) {
+                update_post_meta($content_id, '_ielts_cm_lesson_id', $lesson_ids[0]);
+            }
         }
         
         // Get content details
