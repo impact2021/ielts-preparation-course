@@ -24,6 +24,186 @@ class IELTS_CM_Frontend {
         
         // Add feedback button to footer
         add_action('wp_footer', array($this, 'add_feedback_button'));
+        
+        // Add trial countdown widget to footer
+        add_action('wp_footer', array($this, 'add_trial_countdown_widget'));
+        
+        // Enqueue frontend styles and scripts
+        add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+    }
+    
+    /**
+     * Enqueue frontend scripts and styles
+     */
+    public function enqueue_scripts() {
+        // Register and enqueue styles for trial countdown widget
+        wp_register_style('ielts-cm-countdown', false);
+        wp_enqueue_style('ielts-cm-countdown');
+        wp_add_inline_style('ielts-cm-countdown', $this->get_countdown_widget_styles());
+    }
+    
+    /**
+     * Get CSS styles for countdown widget
+     */
+    private function get_countdown_widget_styles() {
+        return '
+        .ielts-trial-countdown {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            max-width: 300px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+        
+        .ielts-trial-countdown h4 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .ielts-trial-countdown-time {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .ielts-trial-countdown-upgrade {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        
+        .ielts-trial-countdown-upgrade:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .ielts-trial-countdown-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0.7;
+            padding: 0;
+            line-height: 1;
+        }
+        
+        .ielts-trial-countdown-close:hover {
+            opacity: 1;
+        }
+        ';
+    }
+    
+    /**
+     * Add trial countdown widget to footer
+     */
+    public function add_trial_countdown_widget() {
+        // Only show for logged-in users with trial memberships
+        if (!is_user_logged_in()) {
+            return;
+        }
+        
+        // Check if membership system is enabled
+        if (!get_option('ielts_cm_membership_enabled')) {
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+        
+        // Only show for trial memberships
+        if (empty($membership_type) || !IELTS_CM_Membership::is_trial_membership($membership_type)) {
+            return;
+        }
+        
+        $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        if (empty($expiry_date)) {
+            return;
+        }
+        
+        $expiry_timestamp = strtotime($expiry_date);
+        $now = current_time('timestamp');
+        
+        // Don't show if already expired
+        if ($expiry_timestamp <= $now) {
+            return;
+        }
+        
+        $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
+        
+        ?>
+        <div class="ielts-trial-countdown" id="ielts-trial-countdown">
+            <button class="ielts-trial-countdown-close" id="ielts-countdown-close-btn">&times;</button>
+            <h4><?php _e('Free Trial', 'ielts-course-manager'); ?></h4>
+            <div class="ielts-trial-countdown-time" id="ielts-countdown-timer"></div>
+            <?php if ($upgrade_url): ?>
+                <a href="<?php echo esc_url($upgrade_url); ?>" class="ielts-trial-countdown-upgrade">
+                    <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
+                </a>
+            <?php endif; ?>
+        </div>
+        
+        <script>
+        (function() {
+            var expiryTimestamp = <?php echo absint($expiry_timestamp); ?>;
+            var timerElement = document.getElementById('ielts-countdown-timer');
+            var closeBtn = document.getElementById('ielts-countdown-close-btn');
+            var countdownWidget = document.getElementById('ielts-trial-countdown');
+            
+            if (closeBtn && countdownWidget) {
+                closeBtn.addEventListener('click', function() {
+                    countdownWidget.style.display = 'none';
+                });
+            }
+            
+            function updateCountdown() {
+                var now = Math.floor(Date.now() / 1000);
+                var diff = expiryTimestamp - now;
+                
+                if (diff <= 0) {
+                    timerElement.textContent = '<?php _e('Expired', 'ielts-course-manager'); ?>';
+                    return;
+                }
+                
+                var days = Math.floor(diff / 86400);
+                var hours = Math.floor((diff % 86400) / 3600);
+                var minutes = Math.floor((diff % 3600) / 60);
+                var seconds = diff % 60;
+                
+                var parts = [];
+                if (days > 0) parts.push(days + 'd');
+                if (hours > 0 || days > 0) parts.push(hours + 'h');
+                if (minutes > 0 || hours > 0 || days > 0) parts.push(minutes + 'm');
+                parts.push(seconds + 's');
+                
+                timerElement.textContent = parts.join(' ');
+            }
+            
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        })();
+        </script>
+        <?php
     }
     
     /**
