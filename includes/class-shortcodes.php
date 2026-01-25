@@ -21,6 +21,7 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_awards', array($this, 'display_awards'));
         add_shortcode('ielts_progress_rings', array($this, 'display_progress_rings'));
         add_shortcode('ielts_skills_radar', array($this, 'display_skills_radar'));
+        add_shortcode('ielts_band_scores', array($this, 'display_band_scores'));
         
         // Membership shortcodes
         add_shortcode('ielts_login', array($this, 'display_login'));
@@ -1575,11 +1576,8 @@ class IELTS_CM_Shortcodes {
                     if (!in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
                         $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
                     }
-                    // SECURITY: Prevent paid memberships from being assigned during free registration
-                    // Only trial memberships can be assigned without payment
-                    if (!IELTS_CM_Membership::is_trial_membership($membership_type)) {
-                        $errors[] = __('Paid memberships require payment. Please select a free trial option or contact support for paid membership purchase.', 'ielts-course-manager');
-                    }
+                    // Note: Paid memberships can now be selected during registration
+                    // For paid memberships, users will be redirected to payment after registration
                 }
                 
                 // Create user if no errors
@@ -1596,12 +1594,13 @@ class IELTS_CM_Shortcodes {
                         ));
                         
                         // Set membership type if selected and membership system is enabled
+                        $redirect_to_payment = false;
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
                             // Validate membership type one more time before saving (defense in depth)
                             if (in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
-                                // SECURITY: Double-check that only trial memberships are assigned during free registration
-                                // This is a critical security control to prevent paid course access without payment
+                                
                                 if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                                    // Trial membership - activate immediately with expiry
                                     update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
                                     
                                     // Set expiry date based on membership duration settings
@@ -1612,12 +1611,10 @@ class IELTS_CM_Shortcodes {
                                     // Send enrollment email
                                     $membership->send_enrollment_email($user_id, $membership_type);
                                 } else {
-                                    // Log security violation attempt for paid membership without payment
-                                    error_log(sprintf(
-                                        'SECURITY: Attempted to assign paid membership "%s" to user %d without payment during registration',
-                                        $membership_type,
-                                        $user_id
-                                    ));
+                                    // Paid membership - store selection and redirect to payment
+                                    update_user_meta($user_id, '_ielts_cm_membership_type_pending', $membership_type);
+                                    update_user_meta($user_id, '_ielts_cm_membership_payment_pending', 1);
+                                    $redirect_to_payment = true;
                                 }
                             }
                         }
@@ -1628,11 +1625,21 @@ class IELTS_CM_Shortcodes {
                         $user_obj = get_userdata($user_id);
                         do_action('wp_login', $user_obj->user_login, $user_obj);
                         
-                        // Always redirect to ensure auth cookies are properly set
-                        // Validate redirect URL for security
-                        $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
-                        $redirect_to = wp_validate_redirect($redirect_to, home_url());
-                        wp_safe_redirect($redirect_to);
+                        // Redirect based on membership type
+                        if ($redirect_to_payment) {
+                            // Redirect to payment page for paid memberships
+                            $payment_url = get_option('ielts_cm_full_member_page_url', home_url());
+                            if (empty($payment_url)) {
+                                $payment_url = home_url();
+                            }
+                            wp_safe_redirect(wp_validate_redirect($payment_url, home_url()));
+                        } else {
+                            // Regular redirect for trial memberships
+                            // Validate redirect URL for security
+                            $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                            $redirect_to = wp_validate_redirect($redirect_to, home_url());
+                            wp_safe_redirect($redirect_to);
+                        }
                         exit;
                     }
                 }
@@ -1694,27 +1701,61 @@ class IELTS_CM_Shortcodes {
                     
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <p class="form-field form-field-full">
-                            <label for="ielts_membership_type"><?php _e('Select Trial Course', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <label for="ielts_membership_type"><?php _e('Select Membership', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                             <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
-                                <option value=""><?php _e('-- Select a trial course --', 'ielts-course-manager'); ?></option>
+                                <option value=""><?php _e('-- Select a membership option --', 'ielts-course-manager'); ?></option>
                                 <?php 
-                                // SECURITY: Only show trial memberships during registration
-                                // Paid memberships require separate payment processing
                                 $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                $pricing = get_option('ielts_cm_membership_pricing', array());
                                 $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
-                                foreach ($membership_levels as $key => $label): 
-                                    // Only display trial memberships (free registration)
-                                    if (IELTS_CM_Membership::is_trial_membership($key)):
+                                
+                                // Group memberships by type
+                                $trial_options = array();
+                                $paid_options = array();
+                                
+                                foreach ($membership_levels as $key => $label) {
+                                    $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
+                                    $option_label = $label;
+                                    
+                                    if (IELTS_CM_Membership::is_trial_membership($key)) {
+                                        $option_label .= ' (Free Trial)';
+                                        $trial_options[$key] = $option_label;
+                                    } else {
+                                        if ($price > 0) {
+                                            $option_label .= ' ($' . number_format($price, 2) . ')';
+                                        }
+                                        $paid_options[$key] = $option_label;
+                                    }
+                                }
+                                
+                                // Display trial options first
+                                if (!empty($trial_options)):
                                 ?>
-                                    <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
-                                        <?php echo esc_html($label); ?>
-                                    </option>
+                                    <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
+                                        <?php foreach ($trial_options as $key => $label): ?>
+                                            <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
+                                                <?php echo esc_html($label); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </optgroup>
                                 <?php 
-                                    endif;
-                                endforeach; 
+                                endif;
+                                
+                                // Display paid options
+                                if (!empty($paid_options)):
+                                ?>
+                                    <optgroup label="<?php _e('Full Membership (Payment Required)', 'ielts-course-manager'); ?>">
+                                        <?php foreach ($paid_options as $key => $label): ?>
+                                            <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
+                                                <?php echo esc_html($label); ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </optgroup>
+                                <?php 
+                                endif;
                                 ?>
                             </select>
-                            <small class="form-help"><?php _e('Start with a free trial. Upgrade to a full membership anytime for unlimited access.', 'ielts-course-manager'); ?></small>
+                            <small class="form-help"><?php _e('Choose a free trial to get started immediately, or select a full membership (payment required after registration).', 'ielts-course-manager'); ?></small>
                         </p>
                     <?php endif; ?>
                     
@@ -2423,5 +2464,246 @@ class IELTS_CM_Shortcodes {
         </script>
         <?php
         return ob_get_clean();
+    }
+    
+    /**
+     * Display user's IELTS band scores in a table
+     * Shows approximate band scores for Reading, Listening, Writing, Speaking based on quiz performance
+     */
+    public function display_band_scores($atts) {
+        if (!is_user_logged_in()) {
+            return '<p>' . __('Please log in to view your band scores.', 'ielts-course-manager') . '</p>';
+        }
+        
+        $atts = shortcode_atts(array(
+            'skills' => 'reading,listening,writing,speaking', // Which skills to show
+            'title' => __('Your Estimated IELTS Band Scores', 'ielts-course-manager')
+        ), $atts);
+        
+        $user_id = get_current_user_id();
+        
+        // Get skill scores using the gamification class
+        $gamification = new IELTS_CM_Gamification();
+        $skill_scores = $gamification->get_user_skill_scores($user_id);
+        
+        // Parse which skills to display
+        $skills_to_show = array_map('trim', explode(',', $atts['skills']));
+        
+        // Convert percentage scores to band scores
+        $band_scores = array();
+        foreach ($skills_to_show as $skill) {
+            $skill = strtolower($skill);
+            if (isset($skill_scores[$skill])) {
+                $percentage = $skill_scores[$skill];
+                $band_scores[$skill] = $this->convert_percentage_to_band($percentage);
+            }
+        }
+        
+        ob_start();
+        ?>
+        <div class="ielts-band-scores-container">
+            <?php if (!empty($atts['title'])): ?>
+                <h3 class="band-scores-title"><?php echo esc_html($atts['title']); ?></h3>
+            <?php endif; ?>
+            
+            <div class="band-scores-table-wrapper">
+                <table class="ielts-band-scores-table">
+                    <thead>
+                        <tr>
+                            <?php foreach ($skills_to_show as $skill): 
+                                $skill = strtolower($skill);
+                                $skill_label = ucfirst($skill);
+                            ?>
+                                <th><?php echo esc_html($skill_label); ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <?php foreach ($skills_to_show as $skill): 
+                                $skill = strtolower($skill);
+                                $band_score = isset($band_scores[$skill]) ? $band_scores[$skill] : 0;
+                                $has_data = isset($skill_scores[$skill]) && $skill_scores[$skill] > 0;
+                            ?>
+                                <td class="band-score-cell <?php echo $has_data ? 'has-data' : 'no-data'; ?>">
+                                    <span class="band-score-value">
+                                        <?php 
+                                        if ($has_data) {
+                                            echo esc_html(number_format($band_score, 1));
+                                        } else {
+                                            echo '—';
+                                        }
+                                        ?>
+                                    </span>
+                                    <?php if ($has_data): ?>
+                                        <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
+                                    <?php else: ?>
+                                        <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
+                                </td>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="band-scores-note">
+                <?php _e('Band scores are estimates based on your test performance. Complete more tests for more accurate results.', 'ielts-course-manager'); ?>
+            </p>
+        </div>
+        
+        <style>
+        .ielts-band-scores-container {
+            max-width: 100%;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .band-scores-title {
+            text-align: center;
+            margin: 0 0 20px 0;
+            font-size: 22px;
+            color: #333;
+        }
+        
+        .band-scores-table-wrapper {
+            overflow-x: auto;
+        }
+        
+        .ielts-band-scores-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        .ielts-band-scores-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .ielts-band-scores-table td {
+            padding: 25px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+        }
+        
+        .band-score-cell {
+            position: relative;
+        }
+        
+        .band-score-cell.has-data {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .band-score-value {
+            display: block;
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .band-score-cell.no-data .band-score-value {
+            font-size: 24px;
+            color: #999;
+        }
+        
+        .band-score-label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #666;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .no-data-label {
+            font-size: 11px;
+            color: #999;
+        }
+        
+        .band-scores-note {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+            margin: 10px 0 0 0;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .ielts-band-scores-table th,
+            .ielts-band-scores-table td {
+                padding: 12px 8px;
+                font-size: 14px;
+            }
+            
+            .band-score-value {
+                font-size: 28px;
+            }
+            
+            .band-scores-title {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .ielts-band-scores-container {
+                padding: 15px;
+            }
+            
+            .ielts-band-scores-table th,
+            .ielts-band-scores-table td {
+                padding: 10px 5px;
+                font-size: 12px;
+            }
+            
+            .band-score-value {
+                font-size: 24px;
+            }
+            
+            .band-score-label {
+                font-size: 10px;
+            }
+        }
+        </style>
+        <?php
+        return ob_get_clean();
+    }
+    
+    /**
+     * Convert percentage score to IELTS band score
+     * Based on approximate IELTS scoring guidelines
+     */
+    private function convert_percentage_to_band($percentage) {
+        // IELTS band score conversion based on percentage
+        // This is an approximation based on typical IELTS score distributions
+        if ($percentage >= 95) return 9.0;
+        if ($percentage >= 90) return 8.5;
+        if ($percentage >= 85) return 8.0;
+        if ($percentage >= 80) return 7.5;
+        if ($percentage >= 70) return 7.0;
+        if ($percentage >= 65) return 6.5;
+        if ($percentage >= 60) return 6.0;
+        if ($percentage >= 55) return 5.5;
+        if ($percentage >= 50) return 5.0;
+        if ($percentage >= 45) return 4.5;
+        if ($percentage >= 40) return 4.0;
+        if ($percentage >= 35) return 3.5;
+        if ($percentage >= 30) return 3.0;
+        if ($percentage >= 25) return 2.5;
+        if ($percentage >= 20) return 2.0;
+        if ($percentage >= 15) return 1.5;
+        if ($percentage >= 10) return 1.0;
+        return 0.5;
     }
 }
