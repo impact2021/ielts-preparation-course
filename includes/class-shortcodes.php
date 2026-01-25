@@ -1497,6 +1497,24 @@ class IELTS_CM_Shortcodes {
             'redirect' => ''
         ), $atts);
         
+        // Enqueue Stripe.js and payment handling scripts if membership system is enabled
+        if (get_option('ielts_cm_membership_enabled')) {
+            $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+            $pricing = get_option('ielts_cm_membership_pricing', array());
+            
+            if (!empty($stripe_publishable)) {
+                wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
+                wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
+                
+                wp_localize_script('ielts-registration-payment', 'ieltsPayment', array(
+                    'publishableKey' => $stripe_publishable,
+                    'ajaxUrl' => admin_url('admin-ajax.php'),
+                    'nonce' => wp_create_nonce('ielts_payment_intent'),
+                    'pricing' => $pricing,
+                ));
+            }
+        }
+        
         if (is_user_logged_in()) {
             return '<p>' . __('You are already registered and logged in.', 'ielts-course-manager') . '</p>';
         }
@@ -1758,10 +1776,21 @@ class IELTS_CM_Shortcodes {
                             </select>
                             <small class="form-help"><?php _e('Choose a free trial to get started immediately, or select a full membership (payment required after registration).', 'ielts-course-manager'); ?></small>
                         </p>
+                        
+                        <!-- Payment Section (Hidden by default, shown when paid membership selected) -->
+                        <div id="ielts-payment-section" style="display: none;">
+                            <p class="form-field form-field-full">
+                                <label><?php _e('Payment Information', 'ielts-course-manager'); ?></label>
+                                <div id="payment-element">
+                                    <!-- Stripe Payment Element will be inserted here -->
+                                </div>
+                                <div id="payment-message" class="ielts-message" style="display: none; margin-top: 10px;"></div>
+                            </p>
+                        </div>
                     <?php endif; ?>
                     
                     <p class="form-field form-field-full">
-                        <button type="submit" name="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
+                        <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
                             <?php _e('Create Account', 'ielts-course-manager'); ?>
                         </button>
                     </p>

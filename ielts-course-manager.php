@@ -38,6 +38,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-sync-api.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-awards.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-gamification.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-membership.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/class-stripe-payment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-settings-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
@@ -48,6 +49,10 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
 function ielts_cm_init() {
     $plugin = new IELTS_Course_Manager();
     $plugin->run();
+    
+    // Initialize Stripe payment handler
+    $stripe_payment = new IELTS_CM_Stripe_Payment();
+    $stripe_payment->init();
 }
 add_action('plugins_loaded', 'ielts_cm_init');
 

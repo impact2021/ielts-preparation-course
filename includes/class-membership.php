@@ -237,6 +237,7 @@ class IELTS_CM_Membership {
         register_setting('ielts_membership_payment', 'ielts_cm_stripe_enabled');
         register_setting('ielts_membership_payment', 'ielts_cm_stripe_publishable_key');
         register_setting('ielts_membership_payment', 'ielts_cm_stripe_secret_key');
+        register_setting('ielts_membership_payment', 'ielts_cm_stripe_webhook_secret');
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_enabled');
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_client_id');
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_secret');
@@ -546,6 +547,7 @@ class IELTS_CM_Membership {
             // Note: In production, consider using environment variables or WordPress Secrets API for API keys
             update_option('ielts_cm_stripe_publishable_key', sanitize_text_field($_POST['ielts_cm_stripe_publishable_key']));
             update_option('ielts_cm_stripe_secret_key', sanitize_text_field($_POST['ielts_cm_stripe_secret_key']));
+            update_option('ielts_cm_stripe_webhook_secret', sanitize_text_field($_POST['ielts_cm_stripe_webhook_secret']));
             update_option('ielts_cm_paypal_enabled', isset($_POST['ielts_cm_paypal_enabled']) ? 1 : 0);
             update_option('ielts_cm_paypal_client_id', sanitize_text_field($_POST['ielts_cm_paypal_client_id']));
             update_option('ielts_cm_paypal_secret', sanitize_text_field($_POST['ielts_cm_paypal_secret']));
@@ -564,6 +566,7 @@ class IELTS_CM_Membership {
         $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
         $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
         $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
+        $stripe_webhook_secret = get_option('ielts_cm_stripe_webhook_secret', '');
         $paypal_enabled = get_option('ielts_cm_paypal_enabled', false);
         $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
         $paypal_secret = get_option('ielts_cm_paypal_secret', '');
@@ -616,6 +619,18 @@ class IELTS_CM_Membership {
                             <input type="password" name="ielts_cm_stripe_secret_key" 
                                    value="<?php echo esc_attr($stripe_secret); ?>" 
                                    class="regular-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Stripe Webhook Secret', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="password" name="ielts_cm_stripe_webhook_secret" 
+                                   value="<?php echo esc_attr($stripe_webhook_secret); ?>" 
+                                   class="regular-text">
+                            <p class="description">
+                                <?php _e('Get this from Stripe Dashboard → Developers → Webhooks. Required for payment verification and automatic user creation.', 'ielts-course-manager'); ?><br>
+                                <?php _e('Webhook URL:', 'ielts-course-manager'); ?> <code><?php echo esc_html(rest_url('ielts-cm/v1/stripe-webhook')); ?></code>
+                            </p>
                         </td>
                     </tr>
                 </table>
