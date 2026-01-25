@@ -1047,6 +1047,7 @@ class IELTS_CM_Shortcodes {
                 $email = sanitize_email($_POST['ielts_email']);
                 $password = $_POST['ielts_password'];
                 $password_confirm = $_POST['ielts_password_confirm'];
+                $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
                 
                 // Validation
                 if (empty($username)) {
@@ -1071,12 +1072,34 @@ class IELTS_CM_Shortcodes {
                     $errors[] = __('Passwords do not match.', 'ielts-course-manager');
                 }
                 
+                // Validate membership type if provided
+                if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
+                    if (!in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
+                        $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
+                    }
+                }
+                
                 // Create user if no errors
                 if (empty($errors)) {
                     $user_id = wp_create_user($username, $password, $email);
                     if (is_wp_error($user_id)) {
                         $errors[] = $user_id->get_error_message();
                     } else {
+                        // Set membership type if selected and membership system is enabled
+                        if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
+                            // Validate membership type one more time before saving (defense in depth)
+                            if (in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
+                                update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                                
+                                // Set expiry date for trial memberships (using WordPress timezone)
+                                if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                                    $expiry_timestamp = current_time('timestamp') + (IELTS_CM_Membership::TRIAL_PERIOD_DAYS * DAY_IN_SECONDS);
+                                    $expiry_date = wp_date('Y-m-d', $expiry_timestamp);
+                                    update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                                }
+                            }
+                        }
+                        
                         $success = true;
                         // Auto login
                         wp_set_current_user($user_id);
@@ -1138,6 +1161,24 @@ class IELTS_CM_Shortcodes {
                         <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required>
                     </p>
                     
+                    <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                        <p>
+                            <label for="ielts_membership_type"><?php _e('Select Course', 'ielts-course-manager'); ?> *</label>
+                            <select name="ielts_membership_type" id="ielts_membership_type" required>
+                                <option value=""><?php _e('-- Select a course --', 'ielts-course-manager'); ?></option>
+                                <?php 
+                                $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
+                                foreach ($membership_levels as $key => $label): 
+                                ?>
+                                    <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
+                                        <?php echo esc_html($label); ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </p>
+                    <?php endif; ?>
+                    
                     <p>
                         <input type="submit" name="ielts_register_submit" value="<?php _e('Register', 'ielts-course-manager'); ?>" class="button">
                     </p>
@@ -1153,7 +1194,8 @@ class IELTS_CM_Shortcodes {
         }
         .ielts-registration-form input[type="text"],
         .ielts-registration-form input[type="email"],
-        .ielts-registration-form input[type="password"] {
+        .ielts-registration-form input[type="password"],
+        .ielts-registration-form select {
             width: 100%;
             padding: 8px;
             margin-bottom: 5px;
