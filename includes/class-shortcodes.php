@@ -1691,9 +1691,9 @@ class IELTS_CM_Shortcodes {
                     
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <p class="form-field form-field-full">
-                            <label for="ielts_membership_type"><?php _e('Select Free Trial', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <label for="ielts_membership_type"><?php _e('Select Trial Course', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                             <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
-                                <option value=""><?php _e('-- Select a free trial --', 'ielts-course-manager'); ?></option>
+                                <option value=""><?php _e('-- Select a trial course --', 'ielts-course-manager'); ?></option>
                                 <?php 
                                 // SECURITY: Only show trial memberships during registration
                                 // Paid memberships require separate payment processing
