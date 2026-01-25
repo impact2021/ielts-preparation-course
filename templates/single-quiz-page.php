@@ -123,6 +123,70 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
             $course_id = get_post_meta($quiz_id, '_ielts_cm_course_id', true);
             $lesson_id = get_post_meta($quiz_id, '_ielts_cm_lesson_id', true);
             
+            // Check if user has access to this quiz
+            $user_id = get_current_user_id();
+            $has_access = false;
+            
+            if ($user_id && $course_id) {
+                $enrollment = new IELTS_CM_Enrollment();
+                $has_access = $enrollment->is_enrolled($user_id, $course_id);
+            }
+            
+            if (!$has_access && $course_id):
+                // Show access restricted message
+                ?>
+                <div class="ielts-access-restricted">
+                    <div class="access-restricted-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 20a9 9 0 1 1 0-18 9 9 0 0 1 0 18z" fill="#666"/>
+                            <path d="M12 7a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1zm0 10a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="#666"/>
+                        </svg>
+                    </div>
+                    <h2><?php _e('Access Restricted', 'ielts-course-manager'); ?></h2>
+                    <p><?php _e('You need to be enrolled in this course to access this exercise.', 'ielts-course-manager'); ?></p>
+                    <?php if (!is_user_logged_in()): ?>
+                        <p>
+                            <a href="<?php echo wp_login_url(get_permalink()); ?>" class="button button-primary">
+                                <?php _e('Login', 'ielts-course-manager'); ?>
+                            </a>
+                        </p>
+                    <?php else: ?>
+                        <p>
+                            <a href="<?php echo get_permalink($course_id); ?>" class="button button-primary">
+                                <?php _e('View Course', 'ielts-course-manager'); ?>
+                            </a>
+                        </p>
+                    <?php endif; ?>
+                </div>
+                <style>
+                .ielts-access-restricted {
+                    text-align: center;
+                    padding: 60px 20px;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                .access-restricted-icon {
+                    margin-bottom: 20px;
+                }
+                .ielts-access-restricted h2 {
+                    font-size: 28px;
+                    margin-bottom: 15px;
+                    color: #333;
+                }
+                .ielts-access-restricted p {
+                    font-size: 16px;
+                    color: #666;
+                    margin-bottom: 20px;
+                }
+                .ielts-access-restricted .button {
+                    padding: 12px 30px;
+                    font-size: 16px;
+                }
+                </style>
+                <?php
+            else:
+                // User has access, show the quiz content
+            
             // Get layout type
             $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
             if (!$layout_type) {
@@ -159,6 +223,8 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
             if (file_exists($template)) {
                 include $template;
             }
+            
+            endif; // end has_access check
             
         endwhile;
         ?>

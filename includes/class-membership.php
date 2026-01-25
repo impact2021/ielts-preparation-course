@@ -926,7 +926,7 @@ The IELTS Team'
      * Calculate expiry date based on membership duration settings
      * 
      * @param string $membership_type The membership type key
-     * @return string Expiry date in 'Y-m-d H:i:s' format
+     * @return string Expiry date in 'Y-m-d H:i:s' format (UTC)
      */
     public function calculate_expiry_date($membership_type) {
         $durations = get_option('ielts_cm_membership_durations', array());
@@ -945,25 +945,27 @@ The IELTS Team'
             $unit = $durations[$membership_type]['unit'];
         }
         
-        // Use strtotime for more accurate date calculations
-        $base_time = current_time('mysql');
+        // Use UTC time consistently to avoid timezone issues
+        $current_utc = gmdate('Y-m-d H:i:s');
+        $current_timestamp = strtotime($current_utc);
+        
         switch ($unit) {
             case 'hours':
-                $expiry_timestamp = strtotime("+{$value} hours", strtotime($base_time));
+                $expiry_timestamp = strtotime("+{$value} hours", $current_timestamp);
                 break;
             case 'days':
-                $expiry_timestamp = strtotime("+{$value} days", strtotime($base_time));
+                $expiry_timestamp = strtotime("+{$value} days", $current_timestamp);
                 break;
             case 'weeks':
-                $expiry_timestamp = strtotime("+{$value} weeks", strtotime($base_time));
+                $expiry_timestamp = strtotime("+{$value} weeks", $current_timestamp);
                 break;
             case 'months':
-                $expiry_timestamp = strtotime("+{$value} months", strtotime($base_time));
+                $expiry_timestamp = strtotime("+{$value} months", $current_timestamp);
                 break;
             default:
-                $expiry_timestamp = strtotime("+30 days", strtotime($base_time));
+                $expiry_timestamp = strtotime("+30 days", $current_timestamp);
         }
         
-        return wp_date('Y-m-d H:i:s', $expiry_timestamp);
+        return gmdate('Y-m-d H:i:s', $expiry_timestamp);
     }
 }
