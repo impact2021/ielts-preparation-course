@@ -1,10 +1,12 @@
 # Membership System - Quick Start Guide
 
-## Version 14.0 - New Features
+## Version 14.1 - New Features
 
 This guide will help you get started with the new membership system.
 
 ## Step 1: Enable the Membership System
+
+The **Memberships** admin menu is always visible in the WordPress admin sidebar, even when the system is disabled. This allows you to easily enable or configure the system at any time.
 
 1. Log in to WordPress admin
 2. Navigate to **Memberships → Settings**
@@ -122,7 +124,7 @@ This guide will help you get started with the new membership system.
 ## FAQ
 
 **Q: How do I disable the membership system?**
-A: Go to Memberships → Settings and uncheck "Enable the membership system"
+A: Go to Memberships → Settings and uncheck "Enable the membership system". Note: The admin menu will remain visible so you can re-enable it anytime.
 
 **Q: What happens when a membership expires?**
 A: The user's membership status will show as "Expired" in red, and they will lose access to membership-restricted courses.
@@ -152,6 +154,6 @@ After setting up the membership system:
 
 ---
 
-**Version:** 14.0  
+**Version:** 14.1  
 **Last Updated:** January 2026  
 **Plugin:** IELTS Course Manager
