@@ -661,4 +661,218 @@ class IELTS_CM_Progress_Tracker {
             'quiz_count' => $count
         );
     }
+    
+    /**
+     * Get the number of resources (sublessons) in a lesson
+     * 
+     * @param int $lesson_id The lesson ID
+     * @return int Number of resources
+     */
+    public function get_lesson_resource_count($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        $resource_count = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT pm.post_id) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        return intval($resource_count);
+    }
+    
+    /**
+     * Get the number of resources with videos in a lesson
+     * 
+     * @param int $lesson_id The lesson ID
+     * @return int Number of resources with videos
+     */
+    public function get_lesson_video_count($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        // Get resource IDs for this lesson
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        if (empty($resource_ids)) {
+            return 0;
+        }
+        
+        // Count resources with non-empty video URLs
+        $resource_ids = array_map('intval', $resource_ids);
+        $resource_placeholders = implode(',', array_fill(0, count($resource_ids), '%d'));
+        
+        $video_count = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT post_id)
+            FROM {$wpdb->postmeta}
+            WHERE post_id IN ($resource_placeholders)
+              AND meta_key = '_ielts_cm_video_url'
+              AND meta_value != ''
+        ", $resource_ids));
+        
+        return intval($video_count);
+    }
+    
+    /**
+     * Get the number of quizzes (exercises) in a lesson
+     * 
+     * @param int $lesson_id The lesson ID
+     * @return int Number of quizzes
+     */
+    public function get_lesson_quiz_count($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        $quiz_count = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT pm.post_id) 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
+                OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        return intval($quiz_count);
+    }
+    
+    /**
+     * Get content counts for multiple lessons in a single batch query
+     * This is more efficient than calling individual count methods in a loop
+     * 
+     * @param array $lesson_ids Array of lesson IDs
+     * @return array Associative array with lesson_id as key and counts array as value
+     *               Each counts array contains: resource_count, video_count, quiz_count
+     */
+    public function get_lessons_content_counts_batch($lesson_ids) {
+        global $wpdb;
+        
+        if (empty($lesson_ids)) {
+            return array();
+        }
+        
+        // Sanitize lesson IDs
+        $lesson_ids = array_map('intval', $lesson_ids);
+        $lesson_placeholders = implode(',', array_fill(0, count($lesson_ids), '%d'));
+        
+        // Initialize result array
+        $counts = array();
+        foreach ($lesson_ids as $lesson_id) {
+            $counts[$lesson_id] = array(
+                'resource_count' => 0,
+                'video_count' => 0,
+                'quiz_count' => 0
+            );
+        }
+        
+        // Get resource counts for all lessons
+        $resource_counts = $wpdb->get_results($wpdb->prepare("
+            SELECT 
+                CASE 
+                    WHEN pm.meta_key = '_ielts_cm_lesson_id' THEN pm.meta_value
+                    ELSE NULL
+                END as lesson_id,
+                COUNT(DISTINCT pm.post_id) as count
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND pm.meta_key = '_ielts_cm_lesson_id'
+              AND pm.meta_value IN ($lesson_placeholders)
+            GROUP BY lesson_id
+        ", $lesson_ids), ARRAY_A);
+        
+        foreach ($resource_counts as $row) {
+            $lesson_id = intval($row['lesson_id']);
+            if (isset($counts[$lesson_id])) {
+                $counts[$lesson_id]['resource_count'] = intval($row['count']);
+            }
+        }
+        
+        // Get video counts for all lessons
+        // First get all resource IDs for these lessons
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT pm.post_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_resource'
+              AND p.post_status = 'publish'
+              AND pm.meta_key = '_ielts_cm_lesson_id'
+              AND pm.meta_value IN ($lesson_placeholders)
+        ", $lesson_ids));
+        
+        if (!empty($resource_ids)) {
+            $resource_ids = array_map('intval', $resource_ids);
+            $resource_placeholders = implode(',', array_fill(0, count($resource_ids), '%d'));
+            
+            // Get resources with videos and their lesson IDs
+            $video_counts = $wpdb->get_results($wpdb->prepare("
+                SELECT 
+                    pm_lesson.meta_value as lesson_id,
+                    COUNT(DISTINCT pm_video.post_id) as count
+                FROM {$wpdb->postmeta} pm_video
+                INNER JOIN {$wpdb->postmeta} pm_lesson ON pm_video.post_id = pm_lesson.post_id
+                WHERE pm_video.post_id IN ($resource_placeholders)
+                  AND pm_video.meta_key = '_ielts_cm_video_url'
+                  AND pm_video.meta_value != ''
+                  AND pm_lesson.meta_key = '_ielts_cm_lesson_id'
+                  AND pm_lesson.meta_value IN ($lesson_placeholders)
+                GROUP BY lesson_id
+            ", array_merge($resource_ids, $lesson_ids)), ARRAY_A);
+            
+            foreach ($video_counts as $row) {
+                $lesson_id = intval($row['lesson_id']);
+                if (isset($counts[$lesson_id])) {
+                    $counts[$lesson_id]['video_count'] = intval($row['count']);
+                }
+            }
+        }
+        
+        // Get quiz counts for all lessons
+        $quiz_counts = $wpdb->get_results($wpdb->prepare("
+            SELECT 
+                CASE 
+                    WHEN pm.meta_key = '_ielts_cm_lesson_id' THEN pm.meta_value
+                    ELSE NULL
+                END as lesson_id,
+                COUNT(DISTINCT pm.post_id) as count
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE p.post_type = 'ielts_quiz'
+              AND p.post_status = 'publish'
+              AND pm.meta_key = '_ielts_cm_lesson_id'
+              AND pm.meta_value IN ($lesson_placeholders)
+            GROUP BY lesson_id
+        ", $lesson_ids), ARRAY_A);
+        
+        foreach ($quiz_counts as $row) {
+            $lesson_id = intval($row['lesson_id']);
+            if (isset($counts[$lesson_id])) {
+                $counts[$lesson_id]['quiz_count'] = intval($row['count']);
+            }
+        }
+        
+        return $counts;
+    }
 }
