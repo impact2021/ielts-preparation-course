@@ -229,9 +229,7 @@ class IELTS_CM_Frontend {
                 if (diff <= 0) {
                     timerElement.textContent = '<?php _e('Expired', 'ielts-course-manager'); ?>';
                     // Clear the interval to stop updates
-                    if (countdownInterval) {
-                        clearInterval(countdownInterval);
-                    }
+                    clearInterval(countdownInterval);
                     // Reload the page after a short delay to trigger server-side access check
                     setTimeout(function() {
                         window.location.reload();
