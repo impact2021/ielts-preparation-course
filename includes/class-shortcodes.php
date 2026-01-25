@@ -1430,26 +1430,7 @@ class IELTS_CM_Shortcodes {
                 $password_confirm = $_POST['ielts_password_confirm'];
                 $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
                 
-                // Generate username from email (more user-friendly format)
-                $email_parts = explode('@', $email);
-                $base_username = sanitize_user($email_parts[0], true);
-                
-                // Ensure username is not empty
-                if (empty($base_username)) {
-                    $base_username = 'user';
-                }
-                
-                // If username exists, append timestamp for uniqueness
-                $username = $base_username;
-                if (username_exists($username)) {
-                    $username = $base_username . '_' . time();
-                    // If still exists (very unlikely), add random suffix
-                    if (username_exists($username)) {
-                        $username = $base_username . '_' . wp_generate_password(8, false);
-                    }
-                }
-                
-                // Validation
+                // Validate email first before using it for username generation
                 if (empty($email)) {
                     $errors[] = __('Email is required.', 'ielts-course-manager');
                 } elseif (!is_email($email)) {
@@ -1458,6 +1439,32 @@ class IELTS_CM_Shortcodes {
                     $errors[] = __('Email already exists.', 'ielts-course-manager');
                 }
                 
+                // Generate username from email (more user-friendly format)
+                // Only if email is valid
+                if (empty($errors) && is_email($email) && strpos($email, '@') !== false) {
+                    $email_parts = explode('@', $email);
+                    $base_username = sanitize_user($email_parts[0], true);
+                    
+                    // Ensure username is not empty
+                    if (empty($base_username)) {
+                        $base_username = 'user';
+                    }
+                    
+                    // If username exists, append timestamp for uniqueness
+                    $username = $base_username;
+                    if (username_exists($username)) {
+                        $username = $base_username . '_' . time();
+                        // If still exists (very unlikely), add random suffix
+                        if (username_exists($username)) {
+                            $username = $base_username . '_' . wp_generate_password(8, false);
+                        }
+                    }
+                } else {
+                    // Fallback username if email is invalid
+                    $username = 'user_' . time();
+                }
+                
+                // Validate password
                 if (empty($password)) {
                     $errors[] = __('Password is required.', 'ielts-course-manager');
                 } elseif (strlen($password) < 6) {

@@ -67,8 +67,9 @@ class IELTS_CM_Frontend {
             // If email doesn't exist, still call wp_authenticate_username_password
             // to maintain consistent timing and avoid user enumeration
             else {
-                // Call with a non-existent username to maintain timing consistency
-                wp_authenticate_username_password(null, 'nonexistent_user_' . wp_generate_password(12, false), $password);
+                // Use a random username to maintain timing consistency without revealing patterns
+                $random_username = 'user_' . wp_generate_password(12, false, false);
+                wp_authenticate_username_password(null, $random_username, $password);
             }
         }
         
