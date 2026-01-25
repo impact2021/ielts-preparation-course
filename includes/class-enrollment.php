@@ -116,7 +116,7 @@ class IELTS_CM_Enrollment {
         // If user has a membership, check status first (faster than date comparison)
         if (!empty($membership_type)) {
             $membership_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
-            if ($membership_status === 'expired') {
+            if ($membership_status === IELTS_CM_Membership::STATUS_EXPIRED) {
                 return false;
             }
             
@@ -129,8 +129,8 @@ class IELTS_CM_Enrollment {
                 // Return false if membership has expired
                 if ($expiry_timestamp <= $now_utc) {
                     // Update status to expired if not already set
-                    if ($membership_status !== 'expired') {
-                        update_user_meta($user_id, '_ielts_cm_membership_status', 'expired');
+                    if ($membership_status !== IELTS_CM_Membership::STATUS_EXPIRED) {
+                        update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_EXPIRED);
                     }
                     return false;
                 }

@@ -1620,7 +1620,7 @@ class IELTS_CM_Shortcodes {
                                 if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
                                     // Trial membership - activate immediately with expiry
                                     update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-                                    update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+                                    update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
                                     
                                     // Set expiry date based on membership duration settings
                                     $membership = new IELTS_CM_Membership();

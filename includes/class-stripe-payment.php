@@ -221,7 +221,7 @@ class IELTS_CM_Stripe_Payment {
         
         // Assign paid membership to user
         update_user_meta($payment->user_id, '_ielts_cm_membership_type', $payment->membership_type);
-        update_user_meta($payment->user_id, '_ielts_cm_membership_status', 'active');
+        update_user_meta($payment->user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
         
         // Set expiry date
         $expiry_date = IELTS_CM_Membership::calculate_expiry_date($payment->membership_type);
@@ -345,7 +345,7 @@ class IELTS_CM_Stripe_Payment {
         
         // Assign paid membership
         update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-        update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+        update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
         
         // Set expiry date
         $expiry_date = IELTS_CM_Membership::calculate_expiry_date($membership_type);

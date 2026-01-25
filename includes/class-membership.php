@@ -1093,7 +1093,14 @@ The IELTS Team'
             
             // Check if membership has expired
             if (!empty($expiry_date)) {
+                // Validate expiry date format before processing
                 $expiry_timestamp = strtotime($expiry_date . ' UTC');
+                
+                // Skip if invalid date format
+                if ($expiry_timestamp === false) {
+                    error_log("IELTS Course Manager: Invalid expiry date format for user {$user->ID}: {$expiry_date}");
+                    continue;
+                }
                 
                 if ($expiry_timestamp <= $now_utc) {
                     // Membership has expired, update status
@@ -1150,7 +1157,10 @@ The IELTS Team'
             $email_template['message']
         );
         
-        // Send email
-        wp_mail($user->user_email, $subject, $message);
+        // Send email and log failures
+        $sent = wp_mail($user->user_email, $subject, $message);
+        if (!$sent) {
+            error_log("IELTS Course Manager: Failed to send {$type} expiry email to user {$user_id}");
+        }
     }
 }
