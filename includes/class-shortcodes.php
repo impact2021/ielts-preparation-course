@@ -1091,12 +1091,13 @@ class IELTS_CM_Shortcodes {
                             if (in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
                                 update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
                                 
-                                // Set expiry date for trial memberships (using WordPress timezone)
-                                if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
-                                    $expiry_timestamp = current_time('timestamp') + (IELTS_CM_Membership::TRIAL_PERIOD_DAYS * DAY_IN_SECONDS);
-                                    $expiry_date = wp_date('Y-m-d', $expiry_timestamp);
-                                    update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-                                }
+                                // Set expiry date based on membership duration settings
+                                $membership = new IELTS_CM_Membership();
+                                $expiry_date = $membership->calculate_expiry_date($membership_type);
+                                update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                                
+                                // Send enrollment email
+                                $membership->send_enrollment_email($user_id, $membership_type);
                             }
                         }
                         

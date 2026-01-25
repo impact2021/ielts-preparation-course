@@ -211,6 +211,16 @@ class IELTS_CM_Membership {
             'ielts-membership-payment',
             array($this, 'payment_settings_page')
         );
+        
+        // Email Templates submenu
+        add_submenu_page(
+            'ielts-memberships',
+            __('Email Templates', 'ielts-course-manager'),
+            __('Emails', 'ielts-course-manager'),
+            'manage_options',
+            'ielts-membership-emails',
+            array($this, 'emails_page')
+        );
     }
     
     /**
@@ -220,6 +230,8 @@ class IELTS_CM_Membership {
         // Register membership settings
         register_setting('ielts_membership_settings', 'ielts_cm_membership_enabled');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_course_mapping');
+        register_setting('ielts_membership_settings', 'ielts_cm_membership_durations');
+        register_setting('ielts_membership_settings', 'ielts_cm_full_member_page_url');
         
         // Register payment settings
         register_setting('ielts_membership_payment', 'ielts_cm_stripe_enabled');
@@ -229,6 +241,12 @@ class IELTS_CM_Membership {
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_client_id');
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_secret');
         register_setting('ielts_membership_payment', 'ielts_cm_membership_pricing');
+        
+        // Register email templates
+        register_setting('ielts_membership_emails', 'ielts_cm_email_trial_enrollment');
+        register_setting('ielts_membership_emails', 'ielts_cm_email_full_enrollment');
+        register_setting('ielts_membership_emails', 'ielts_cm_email_trial_expired');
+        register_setting('ielts_membership_emails', 'ielts_cm_email_full_expired');
     }
     
     /**
@@ -349,10 +367,42 @@ class IELTS_CM_Membership {
     public function settings_page() {
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
             update_option('ielts_cm_membership_enabled', isset($_POST['ielts_cm_membership_enabled']) ? 1 : 0);
+            update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
+            
+            // Save duration settings
+            $durations = array();
+            foreach (self::MEMBERSHIP_LEVELS as $key => $label) {
+                if (isset($_POST['duration_value_' . $key]) && isset($_POST['duration_unit_' . $key])) {
+                    $durations[$key] = array(
+                        'value' => absint($_POST['duration_value_' . $key]),
+                        'unit' => sanitize_text_field($_POST['duration_unit_' . $key])
+                    );
+                }
+            }
+            update_option('ielts_cm_membership_durations', $durations);
+            
             echo '<div class="notice notice-success"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
         
         $enabled = get_option('ielts_cm_membership_enabled', false);
+        $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
+        $durations = get_option('ielts_cm_membership_durations', array());
+        
+        // Set default durations
+        $default_durations = array(
+            'academic_trial' => array('value' => 6, 'unit' => 'hours'),
+            'general_trial' => array('value' => 6, 'unit' => 'hours'),
+            'academic_full' => array('value' => 30, 'unit' => 'days'),
+            'general_full' => array('value' => 30, 'unit' => 'days')
+        );
+        
+        // Merge with defaults
+        foreach ($default_durations as $key => $default) {
+            if (!isset($durations[$key])) {
+                $durations[$key] = $default;
+            }
+        }
+        
         ?>
         <div class="wrap">
             <h1><?php _e('Membership Settings', 'ielts-course-manager'); ?></h1>
@@ -373,6 +423,48 @@ class IELTS_CM_Membership {
                             </p>
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Become a Full Member Page', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="url" name="ielts_cm_full_member_page_url" 
+                                   value="<?php echo esc_attr($full_member_page_url); ?>" 
+                                   class="regular-text" 
+                                   placeholder="https://www.ieltstestonline.com/become-a-member">
+                            <p class="description">
+                                <?php _e('URL for users to upgrade to full membership (shown in trial countdown widget)', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                
+                <h2><?php _e('Membership Durations', 'ielts-course-manager'); ?></h2>
+                <p><?php _e('Set the duration for each membership type.', 'ielts-course-manager'); ?></p>
+                <table class="form-table">
+                    <?php foreach (self::MEMBERSHIP_LEVELS as $key => $label): ?>
+                        <tr>
+                            <th scope="row"><?php echo esc_html($label); ?></th>
+                            <td>
+                                <input type="number" min="1" step="1" 
+                                       name="duration_value_<?php echo esc_attr($key); ?>" 
+                                       value="<?php echo isset($durations[$key]['value']) ? esc_attr($durations[$key]['value']) : ''; ?>" 
+                                       style="width: 80px;">
+                                <select name="duration_unit_<?php echo esc_attr($key); ?>">
+                                    <option value="hours" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'hours'); ?>>
+                                        <?php _e('Hours', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="days" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'days'); ?>>
+                                        <?php _e('Days', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="weeks" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'weeks'); ?>>
+                                        <?php _e('Weeks', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="months" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'months'); ?>>
+                                        <?php _e('Months', 'ielts-course-manager'); ?>
+                                    </option>
+                                </select>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </table>
                 
                 <?php submit_button(); ?>
@@ -608,5 +700,260 @@ class IELTS_CM_Membership {
         }
         
         return false;
+    }
+    
+    /**
+     * Display email templates page
+     */
+    public function emails_page() {
+        if (isset($_POST['submit']) && check_admin_referer('ielts_membership_emails')) {
+            // Save email templates
+            $email_fields = array(
+                'trial_enrollment' => array('subject', 'message'),
+                'full_enrollment' => array('subject', 'message'),
+                'trial_expired' => array('subject', 'message'),
+                'full_expired' => array('subject', 'message')
+            );
+            
+            foreach ($email_fields as $type => $fields) {
+                $email_data = array();
+                foreach ($fields as $field) {
+                    $post_key = 'ielts_cm_email_' . $type . '_' . $field;
+                    if (isset($_POST[$post_key])) {
+                        $email_data[$field] = $field === 'message' ? wp_kses_post($_POST[$post_key]) : sanitize_text_field($_POST[$post_key]);
+                    }
+                }
+                update_option('ielts_cm_email_' . $type, $email_data);
+            }
+            
+            echo '<div class="notice notice-success"><p>' . __('Email templates saved.', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        // Get saved email templates or set defaults
+        $trial_enrollment = get_option('ielts_cm_email_trial_enrollment', array(
+            'subject' => 'Welcome to Your Free Trial!',
+            'message' => 'Hi {username},
+
+Welcome to your free trial of {membership_name}!
+
+Your trial will expire on {expiry_date}.
+
+To continue accessing all our courses after your trial ends, please upgrade to a full membership.
+
+Best regards,
+The IELTS Team'
+        ));
+        
+        $full_enrollment = get_option('ielts_cm_email_full_enrollment', array(
+            'subject' => 'Welcome to Your Full Membership!',
+            'message' => 'Hi {username},
+
+Welcome to {membership_name}!
+
+You now have full access to all courses and features.
+
+Your membership will expire on {expiry_date}.
+
+Best regards,
+The IELTS Team'
+        ));
+        
+        $trial_expired = get_option('ielts_cm_email_trial_expired', array(
+            'subject' => 'Your Trial Has Expired',
+            'message' => 'Hi {username},
+
+Your trial membership has expired.
+
+To continue accessing our courses, please upgrade to a full membership.
+
+Visit: {upgrade_url}
+
+Best regards,
+The IELTS Team'
+        ));
+        
+        $full_expired = get_option('ielts_cm_email_full_expired', array(
+            'subject' => 'Your Membership Has Expired',
+            'message' => 'Hi {username},
+
+Your membership has expired.
+
+To renew your membership and continue accessing our courses, please visit your account page.
+
+Visit: {renewal_url}
+
+Best regards,
+The IELTS Team'
+        ));
+        
+        ?>
+        <div class="wrap">
+            <h1><?php _e('Email Templates', 'ielts-course-manager'); ?></h1>
+            <p><?php _e('Configure the default emails sent to users for different membership events.', 'ielts-course-manager'); ?></p>
+            <p><?php _e('Available placeholders: {username}, {email}, {membership_name}, {expiry_date}, {upgrade_url}, {renewal_url}', 'ielts-course-manager'); ?></p>
+            
+            <form method="post" action="">
+                <?php wp_nonce_field('ielts_membership_emails'); ?>
+                
+                <h2><?php _e('New Trial Enrollment', 'ielts-course-manager'); ?></h2>
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('Subject', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="text" name="ielts_cm_email_trial_enrollment_subject" 
+                                   value="<?php echo esc_attr($trial_enrollment['subject']); ?>" 
+                                   class="large-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Message', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <textarea name="ielts_cm_email_trial_enrollment_message" 
+                                      rows="8" class="large-text"><?php echo esc_textarea($trial_enrollment['message']); ?></textarea>
+                        </td>
+                    </tr>
+                </table>
+                
+                <h2><?php _e('Full Membership Enrollment', 'ielts-course-manager'); ?></h2>
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('Subject', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="text" name="ielts_cm_email_full_enrollment_subject" 
+                                   value="<?php echo esc_attr($full_enrollment['subject']); ?>" 
+                                   class="large-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Message', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <textarea name="ielts_cm_email_full_enrollment_message" 
+                                      rows="8" class="large-text"><?php echo esc_textarea($full_enrollment['message']); ?></textarea>
+                        </td>
+                    </tr>
+                </table>
+                
+                <h2><?php _e('Trial Course Expired', 'ielts-course-manager'); ?></h2>
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('Subject', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="text" name="ielts_cm_email_trial_expired_subject" 
+                                   value="<?php echo esc_attr($trial_expired['subject']); ?>" 
+                                   class="large-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Message', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <textarea name="ielts_cm_email_trial_expired_message" 
+                                      rows="8" class="large-text"><?php echo esc_textarea($trial_expired['message']); ?></textarea>
+                        </td>
+                    </tr>
+                </table>
+                
+                <h2><?php _e('Full Membership Expired', 'ielts-course-manager'); ?></h2>
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('Subject', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="text" name="ielts_cm_email_full_expired_subject" 
+                                   value="<?php echo esc_attr($full_expired['subject']); ?>" 
+                                   class="large-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Message', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <textarea name="ielts_cm_email_full_expired_message" 
+                                      rows="8" class="large-text"><?php echo esc_textarea($full_expired['message']); ?></textarea>
+                        </td>
+                    </tr>
+                </table>
+                
+                <?php submit_button(); ?>
+            </form>
+        </div>
+        <?php
+    }
+    
+    /**
+     * Send enrollment email
+     */
+    public function send_enrollment_email($user_id, $membership_type) {
+        $user = get_userdata($user_id);
+        if (!$user) {
+            return;
+        }
+        
+        $is_trial = self::is_trial_membership($membership_type);
+        $template_key = $is_trial ? 'trial_enrollment' : 'full_enrollment';
+        $template = get_option('ielts_cm_email_' . $template_key);
+        
+        if (empty($template) || empty($template['subject']) || empty($template['message'])) {
+            return;
+        }
+        
+        $membership_name = isset(self::MEMBERSHIP_LEVELS[$membership_type]) 
+            ? self::MEMBERSHIP_LEVELS[$membership_type] 
+            : $membership_type;
+        
+        $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
+        
+        // Replace placeholders
+        $placeholders = array(
+            '{username}' => $user->display_name,
+            '{email}' => $user->user_email,
+            '{membership_name}' => $membership_name,
+            '{expiry_date}' => $expiry_date ? $expiry_date : 'N/A',
+            '{upgrade_url}' => $upgrade_url,
+            '{renewal_url}' => $upgrade_url
+        );
+        
+        $subject = str_replace(array_keys($placeholders), array_values($placeholders), $template['subject']);
+        $message = str_replace(array_keys($placeholders), array_values($placeholders), $template['message']);
+        
+        wp_mail($user->user_email, $subject, $message);
+    }
+    
+    /**
+     * Calculate expiry date based on membership duration settings
+     */
+    public function calculate_expiry_date($membership_type) {
+        $durations = get_option('ielts_cm_membership_durations', array());
+        
+        if (!isset($durations[$membership_type])) {
+            // Fallback to defaults
+            if (self::is_trial_membership($membership_type)) {
+                $value = 6;
+                $unit = 'hours';
+            } else {
+                $value = 30;
+                $unit = 'days';
+            }
+        } else {
+            $value = $durations[$membership_type]['value'];
+            $unit = $durations[$membership_type]['unit'];
+        }
+        
+        $seconds = 0;
+        switch ($unit) {
+            case 'hours':
+                $seconds = $value * HOUR_IN_SECONDS;
+                break;
+            case 'days':
+                $seconds = $value * DAY_IN_SECONDS;
+                break;
+            case 'weeks':
+                $seconds = $value * WEEK_IN_SECONDS;
+                break;
+            case 'months':
+                $seconds = $value * 30 * DAY_IN_SECONDS; // Approximate month as 30 days
+                break;
+        }
+        
+        $expiry_timestamp = current_time('timestamp') + $seconds;
+        return wp_date('Y-m-d H:i:s', $expiry_timestamp);
     }
 }
