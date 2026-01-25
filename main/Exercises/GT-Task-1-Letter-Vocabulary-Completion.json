@@ -1,0 +1,102 @@
+{
+    "title": "General Training Writing Task 1 - Letter Vocabulary Completion",
+    "content": "<p>Read the Task 1 letter below. Some of the vocabulary is incomplete. Use the first few letters given to help you complete the full words. Type your answers in the spaces provided.</p>\n\n<p>You recently went for dinner at a new restaurant in town and you were very impressed by the quality of food and service. You have decided to write a letter to the local newspaper talking about your experience.</p>\n\n<p><strong>Write a letter to the newspaper editor. In your letter</strong></p>\n<ul>\n<li>introduce the restaurant and its location</li>\n<li>say why you were so happy with the meal and service</li>\n<li>recommend that the newspaper's readers try it for themselves</li>\n</ul>",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Complete the vocabulary in the letter by typing the full words in the spaces provided. The first few letters are given to help you.",
+            "question": "<p>Dear Sir,</p>\n\n<p>I am wri[field 1] this letter as I would like to make a rec[field 2] for a visit to Peaches restaurant in King Street. It is one of the newer add[field 3] to our cuisine options and I have to say I found it to be exc[field 4] and far superior to many of the other restaurants in town.</p>\n\n<p>Firstly, I was extremely imp[field 5] by the level of service provided. The waiting staff was efficient, polite and obviously well-trained in cus[field 6] service. The meal itself was equally outstanding and I und[field 7] that the current head chef is extremely well known in culinary circles. The menu is extensive and varied and, in my opinion, it would be diff[field 8] for even regular visitors to tire of the menu.</p>\n\n<p>I would urge anyone int[field 9] in experiencing a quality dining experience to try Peaches, though be aware bookings in adv[field 10] are required due to the restaurant's growing popularity.</p>\n\n<p>Cordially,</p>\n\n<p>J P Hanson</p>",
+            "points": 10,
+            "no_answer_feedback": "Please complete all the vocabulary blanks. The correct answers are shown above. Review the letter and pay attention to the context to help you complete the words correctly.",
+            "correct_feedback": "Excellent! You have correctly completed all the vocabulary in the letter. You demonstrated good understanding of word forms and spelling in context.",
+            "incorrect_feedback": "Not quite right. Review the feedback for each field to see which words need correction. Pay attention to the context and the word type required (noun, verb, adjective, etc.).",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "Vocabulary Completion",
+            "field_count": 10,
+            "field_answers": {
+                "1": "ting|writing",
+                "2": "ommendation|recommendation",
+                "3": "itions|additions",
+                "4": "ellent|excellent",
+                "5": "ressed|impressed",
+                "6": "tomer|customer",
+                "7": "erstand|understand",
+                "8": "icult|difficult",
+                "9": "erested|interested",
+                "10": "ance|advance"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! 'Writing' is the present participle form of the verb 'write', used here with 'am' to form the present continuous tense.",
+                    "incorrect": "Incorrect. The correct answer is 'writing' (or just 'ting' to complete the word). This is the present participle form of 'write', forming the present continuous tense 'I am writing'.",
+                    "no_answer": "The correct answer is: writing (or 'ting' to complete wri___). This verb form is used with 'am' to create the present continuous tense."
+                },
+                "2": {
+                    "correct": "Correct! 'Recommendation' is a noun meaning a suggestion or endorsement of something.",
+                    "incorrect": "Incorrect. The correct answer is 'recommendation' (or 'ommendation' to complete the word). This is a noun meaning a suggestion or endorsement.",
+                    "no_answer": "The correct answer is: recommendation (or 'ommendation' to complete rec___). This noun means a suggestion or endorsement of something."
+                },
+                "3": {
+                    "correct": "Correct! 'Additions' is the plural form of 'addition', meaning new things that have been added.",
+                    "incorrect": "Incorrect. The correct answer is 'additions' (or 'itions' to complete the word). This is the plural noun meaning new things that have been added.",
+                    "no_answer": "The correct answer is: additions (or 'itions' to complete add___). This plural noun refers to new things that have been added."
+                },
+                "4": {
+                    "correct": "Correct! 'Excellent' is an adjective meaning extremely good or outstanding.",
+                    "incorrect": "Incorrect. The correct answer is 'excellent' (or 'ellent' to complete the word). This adjective means extremely good or outstanding.",
+                    "no_answer": "The correct answer is: excellent (or 'ellent' to complete exc___). This adjective describes something as extremely good or outstanding."
+                },
+                "5": {
+                    "correct": "Correct! 'Impressed' is the past participle of 'impress', used here to describe a positive reaction to something.",
+                    "incorrect": "Incorrect. The correct answer is 'impressed' (or 'ressed' to complete the word). This is the past participle form used to show a positive reaction.",
+                    "no_answer": "The correct answer is: impressed (or 'ressed' to complete imp___). This past participle describes having a positive, admiring reaction to something."
+                },
+                "6": {
+                    "correct": "Correct! 'Customer' is a noun referring to a person who buys goods or services.",
+                    "incorrect": "Incorrect. The correct answer is 'customer' (or 'tomer' to complete the word). This noun refers to a person who buys goods or services.",
+                    "no_answer": "The correct answer is: customer (or 'tomer' to complete cus___). This noun means a person who buys goods or services from a business."
+                },
+                "7": {
+                    "correct": "Correct! 'Understand' is a verb meaning to know or comprehend information.",
+                    "incorrect": "Incorrect. The correct answer is 'understand' (or 'erstand' to complete the word). This verb means to know or comprehend information.",
+                    "no_answer": "The correct answer is: understand (or 'erstand' to complete und___). This verb means to know, comprehend, or have information about something."
+                },
+                "8": {
+                    "correct": "Correct! 'Difficult' is an adjective meaning hard or challenging.",
+                    "incorrect": "Incorrect. The correct answer is 'difficult' (or 'icult' to complete the word). This adjective means hard or challenging.",
+                    "no_answer": "The correct answer is: difficult (or 'icult' to complete diff___). This adjective means hard, challenging, or not easy to do."
+                },
+                "9": {
+                    "correct": "Correct! 'Interested' is an adjective (past participle form) meaning showing curiosity or wanting to know more about something.",
+                    "incorrect": "Incorrect. The correct answer is 'interested' (or 'erested' to complete the word). This adjective means showing curiosity or wanting to experience something.",
+                    "no_answer": "The correct answer is: interested (or 'erested' to complete int___). This adjective means showing curiosity, attention, or desire to be involved in something."
+                },
+                "10": {
+                    "correct": "Correct! 'Advance' is a noun used in the phrase 'in advance', meaning beforehand or ahead of time.",
+                    "incorrect": "Incorrect. The correct answer is 'advance' (or 'ance' to complete the word). This is used in the phrase 'in advance', meaning beforehand.",
+                    "no_answer": "The correct answer is: advance (or 'ance' to complete adv___). Used in the phrase 'in advance', it means beforehand or ahead of time."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "one_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "15",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-25 04:36:00",
+        "exported_by": "copilot",
+        "plugin_version": "14.2",
+        "format_version": "1.0"
+    }
+}
