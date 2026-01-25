@@ -2,285 +2,580 @@
 
 ## Overview
 
-This document explains how we successfully integrated Stripe's inline payment form on the same page as the registration form, allowing users to complete account creation and payment in a single, seamless flow without being redirected to an external checkout page.
+This guide explains how to implement **inline Stripe payment** on the registration page, allowing users to create an account AND pay for their membership in a single, seamless flow.
 
-## The Challenge
+## Current vs. Desired Flow
 
-The traditional approach to payment processing involves creating a user account first, then redirecting them to a separate payment page (either Stripe Checkout or PayPal). This creates friction in the user experience and can lead to abandoned registrations. Users expect a modern, streamlined experience where they can enter their information and payment details all at once.
+### Current Flow (Two Steps)
+1. User registers with email/password → Gets free trial
+2. User must separately upgrade to paid membership
 
-## The Solution: Stripe Payment Elements with Payment Intents
+### Desired Flow (One Step) ✓
+1. User fills registration form
+2. User selects membership level (free trial OR paid)
+3. If paid selected → Stripe Payment Element appears inline
+4. User enters payment details
+5. On successful payment → Account created + Paid membership assigned
+6. On failed payment → Account NOT created, user can retry
 
-We implemented Stripe's Payment Elements API in combination with Payment Intents to create an inline payment experience. Here's how it works:
+## Architecture
 
-### Key Components
+### Components Needed
 
-**1. Frontend Payment Element Initialization (JavaScript)**
+1. **Frontend (JavaScript)**
+   - Stripe.js library
+   - Payment Element UI
+   - Form state management
+   - Client-side validation
 
-The critical breakthrough was initializing Stripe Elements immediately when the page loads, not after form submission. We created a dedicated function `initializeRegistrationStripeElements()` that:
+2. **Backend (PHP)**
+   - Stripe PHP SDK
+   - Payment Intent creation endpoint
+   - Webhook handler for payment confirmation
+   - User creation after payment success
 
-- Validates that Stripe.js is loaded and a valid publishable key is available
-- Retrieves the membership amount from the form
-- Creates a Stripe Elements instance in "payment" mode with the amount preset
-- Mounts the Payment Element to a div on the registration form
-- Uses automatic payment methods to support cards, digital wallets, and regional payment options
+3. **Security**
+   - Nonce verification
+   - Server-side price validation
+   - Webhook signature verification
+   - Idempotency keys
 
-```javascript
-function initializeRegistrationStripeElements() {
-    // Get the membership amount from the hidden form field
-    const membershipAmount = $('input[name="membership_amount"]').val();
+## Implementation Steps
+
+### Step 1: Install Stripe PHP SDK
+
+Add Stripe PHP library to your plugin. You can either:
+
+**Option A: Use Composer** (Recommended)
+```bash
+cd /path/to/plugin
+composer require stripe/stripe-php
+```
+
+**Option B: Manual installation**
+Download from: https://github.com/stripe/stripe-php/releases
+Place in: `includes/vendor/stripe-php/`
+
+### Step 2: Create Payment Intent Endpoint
+
+Create a new file: `includes/class-stripe-payment.php`
+
+```php
+<?php
+/**
+ * Stripe Payment Processing
+ */
+
+if (!defined('ABSPATH')) {
+    exit;
+}
+
+require_once IELTS_CM_PLUGIN_DIR . 'vendor/autoload.php';
+
+class IELTS_CM_Stripe_Payment {
     
-    if (!membershipAmount || parseFloat(membershipAmount) <= 0) {
-        // Show error if amount is invalid
-        return;
+    public function init() {
+        // AJAX endpoint for creating payment intent
+        add_action('wp_ajax_nopriv_ielts_create_payment_intent', array($this, 'create_payment_intent'));
+        add_action('wp_ajax_ielts_create_payment_intent', array($this, 'create_payment_intent'));
+        
+        // Webhook handler for payment confirmation
+        add_action('rest_api_init', array($this, 'register_webhook_endpoint'));
     }
     
-    // Create Stripe Elements with payment mode
-    elements = stripe.elements({
-        mode: 'payment',
-        amount: Math.round(parseFloat(membershipAmount) * 100), // Amount in cents
-        currency: 'usd',
-        appearance: {
-            theme: 'stripe',
-            variables: { colorPrimary: '#0073aa' }
+    /**
+     * Create Payment Intent for registration
+     */
+    public function create_payment_intent() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+            wp_send_json_error('Security check failed', 403);
+        }
+        
+        $membership_type = sanitize_text_field($_POST['membership_type']);
+        
+        // SECURITY: Validate membership type exists and get server-side price
+        $pricing = get_option('ielts_cm_membership_pricing', array());
+        if (!isset($pricing[$membership_type])) {
+            wp_send_json_error('Invalid membership type', 400);
+        }
+        
+        $price = floatval($pricing[$membership_type]);
+        
+        // Don't create payment intent for free memberships
+        if ($price <= 0) {
+            wp_send_json_error('This membership is free', 400);
+        }
+        
+        // Get Stripe secret key
+        $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
+        if (empty($stripe_secret)) {
+            wp_send_json_error('Payment system not configured', 500);
+        }
+        
+        \Stripe\Stripe::setApiKey($stripe_secret);
+        
+        try {
+            // Create Payment Intent
+            $payment_intent = \Stripe\PaymentIntent::create([
+                'amount' => intval($price * 100), // Convert to cents
+                'currency' => 'usd',
+                'automatic_payment_methods' => [
+                    'enabled' => true,
+                ],
+                'metadata' => [
+                    'membership_type' => $membership_type,
+                    'email' => sanitize_email($_POST['email']),
+                    'first_name' => sanitize_text_field($_POST['first_name']),
+                    'last_name' => sanitize_text_field($_POST['last_name']),
+                ],
+            ]);
+            
+            wp_send_json_success([
+                'clientSecret' => $payment_intent->client_secret,
+            ]);
+            
+        } catch (\Exception $e) {
+            error_log('Stripe Payment Intent Error: ' . $e->getMessage());
+            wp_send_json_error('Payment system error', 500);
+        }
+    }
+    
+    /**
+     * Register Stripe webhook endpoint
+     */
+    public function register_webhook_endpoint() {
+        register_rest_route('ielts-cm/v1', '/stripe-webhook', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'handle_webhook'),
+            'permission_callback' => '__return_true', // Webhook has signature verification
+        ));
+    }
+    
+    /**
+     * Handle Stripe webhook events
+     */
+    public function handle_webhook($request) {
+        $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
+        \Stripe\Stripe::setApiKey($stripe_secret);
+        
+        $payload = $request->get_body();
+        $sig_header = $request->get_header('stripe_signature');
+        
+        // Get webhook signing secret from settings
+        $webhook_secret = get_option('ielts_cm_stripe_webhook_secret', '');
+        
+        try {
+            $event = \Stripe\Webhook::constructEvent(
+                $payload,
+                $sig_header,
+                $webhook_secret
+            );
+        } catch (\Exception $e) {
+            error_log('Webhook signature verification failed: ' . $e->getMessage());
+            return new WP_Error('invalid_signature', 'Invalid signature', array('status' => 400));
+        }
+        
+        // Handle the event
+        if ($event->type === 'payment_intent.succeeded') {
+            $payment_intent = $event->data->object;
+            $this->handle_successful_payment($payment_intent);
+        }
+        
+        return new WP_REST_Response(['status' => 'success'], 200);
+    }
+    
+    /**
+     * Create user and assign membership after successful payment
+     */
+    private function handle_successful_payment($payment_intent) {
+        $metadata = $payment_intent->metadata;
+        
+        // Extract user data from metadata
+        $email = $metadata->email;
+        $first_name = $metadata->first_name;
+        $last_name = $metadata->last_name;
+        $membership_type = $metadata->membership_type;
+        
+        // Check if user already exists (idempotency)
+        if (email_exists($email)) {
+            error_log("User already exists for email: $email");
+            return;
+        }
+        
+        // Generate username from email
+        $email_parts = explode('@', $email);
+        $base_username = sanitize_user($email_parts[0], true);
+        $username = $base_username;
+        $counter = 1;
+        while (username_exists($username)) {
+            $username = $base_username . $counter;
+            $counter++;
+        }
+        
+        // Create user account
+        $user_id = wp_create_user($username, wp_generate_password(), $email);
+        
+        if (is_wp_error($user_id)) {
+            error_log('Failed to create user: ' . $user_id->get_error_message());
+            return;
+        }
+        
+        // Update user meta
+        wp_update_user(array(
+            'ID' => $user_id,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'display_name' => $first_name . ' ' . $last_name,
+        ));
+        
+        // Assign paid membership
+        update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+        
+        // Set expiry date
+        $expiry_date = IELTS_CM_Membership::calculate_expiry_date($membership_type);
+        update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+        
+        // Store payment info
+        update_user_meta($user_id, '_ielts_cm_payment_intent_id', $payment_intent->id);
+        update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
+        update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
+        
+        // Send welcome email
+        wp_new_user_notification($user_id, null, 'user');
+        
+        error_log("Successfully created user $user_id with membership $membership_type after payment");
+    }
+}
+```
+
+### Step 3: Modify Registration Form
+
+Update `includes/class-shortcodes.php` in the `display_registration()` function:
+
+**Add to the form HTML** (after membership selection dropdown):
+
+```php
+<!-- Payment Section (Hidden by default) -->
+<div id="ielts-payment-section" style="display: none;">
+    <p>
+        <label><?php _e('Payment Information', 'ielts-course-manager'); ?></label>
+        <div id="payment-element">
+            <!-- Stripe Payment Element will be inserted here -->
+        </div>
+        <div id="payment-message" class="error"></div>
+    </p>
+</div>
+```
+
+**Enqueue Stripe.js and custom script:**
+
+```php
+// In the display_registration() function, add:
+$stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+$pricing = get_option('ielts_cm_membership_pricing', array());
+
+wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
+wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
+
+wp_localize_script('ielts-registration-payment', 'ieltsPayment', array(
+    'publishableKey' => $stripe_publishable,
+    'ajaxUrl' => admin_url('admin-ajax.php'),
+    'nonce' => wp_create_nonce('ielts_payment_intent'),
+    'pricing' => $pricing,
+));
+```
+
+### Step 4: Create Frontend JavaScript
+
+Create file: `assets/js/registration-payment.js`
+
+```javascript
+(function($) {
+    'use strict';
+    
+    let stripe;
+    let elements;
+    let paymentElement;
+    
+    // Initialize Stripe
+    if (typeof Stripe !== 'undefined' && ieltsPayment.publishableKey) {
+        stripe = Stripe(ieltsPayment.publishableKey);
+    }
+    
+    // Listen for membership type selection
+    $('#ielts_membership_type').on('change', function() {
+        const membershipType = $(this).val();
+        const price = ieltsPayment.pricing[membershipType] || 0;
+        
+        // Show/hide payment section based on price
+        if (price > 0) {
+            showPaymentSection(membershipType, price);
+        } else {
+            hidePaymentSection();
         }
     });
     
-    // Create and mount the payment element
-    paymentElement = elements.create('payment');
-    paymentElement.mount('#payment-element');
-}
-```
-
-This function is called immediately on page load if Stripe is selected, making the card input fields visible right away. Users can see and interact with all form fields (account info + payment info) simultaneously.
-
-**2. Server-Side Payment Intent Creation (PHP)**
-
-When the user submits the registration form, we use AJAX to create a Payment Intent on the server before processing the payment. The Payment Intent is Stripe's way of tracking a payment from creation through completion. Our implementation:
-
-- Creates the user account first (so we have a user_id to associate with the payment)
-- Sends an AJAX request to `create_payment_intent` action
-- The server creates a Payment Intent with Stripe's API, passing the amount, currency, and metadata
-- Returns a `clientSecret` to the frontend
-- Uses `automatic_payment_methods` instead of explicit payment method types to support all configured payment options
-
-```php
-// In class IELTS_MS_Stripe_Gateway (extends IELTS_MS_Payment_Gateway)
-public function create_payment_intent() {
-    // Verify AJAX nonce for security
-    check_ajax_referer('ielts_ms_nonce', 'nonce');
-    
-    // Get and validate input parameters from POST
-    $user_id = isset($_POST['user_id']) ? intval($_POST['user_id']) : 0;
-    $amount = floatval($_POST['amount']);
-    $duration_days = intval($_POST['duration_days']);
-    $payment_type = sanitize_text_field($_POST['payment_type']);
-    $plan_key = sanitize_text_field($_POST['plan_key']);
-    
-    // Get Stripe secret key from WordPress options
-    $secret_key = get_option('ielts_ms_stripe_secret_key', '');
-    
-    // Create pending payment record in database
-    $payment_id = $this->record_payment($user_id, $amount, $duration_days, null, 'pending', $payment_type);
-    
-    // Create Payment Intent with Stripe API
-    $stripe_data = array(
-        'amount' => intval($amount * 100), // Convert to cents
-        'currency' => 'usd',
-        'automatic_payment_methods' => array('enabled' => true),
-        'metadata' => array(
-            'user_id' => $user_id,
-            'duration_days' => $duration_days,
-            'payment_id' => $payment_id,
-            'is_registration' => 'true'
-        )
-    );
-    
-    // Make API request to Stripe
-    $response = wp_remote_post('https://api.stripe.com/v1/payment_intents', array(
-        'headers' => array(
-            'Authorization' => 'Bearer ' . $secret_key,
-            'Content-Type' => 'application/x-www-form-urlencoded'
-        ),
-        'body' => $this->build_stripe_query($stripe_data)
-    ));
-    
-    $body = json_decode(wp_remote_retrieve_body($response), true);
-    
-    // API call returns clientSecret
-    wp_send_json_success(array(
-        'clientSecret' => $body['client_secret'],
-        'payment_id' => $payment_id
-    ));
-}
-```
-
-**3. Payment Confirmation Flow**
-
-Once we have the Payment Intent client secret, we immediately confirm the payment using the card details already entered by the user. This is the magic that makes it "inline" – there's no redirect, no second page, just a single form submission:
-
-```javascript
-// Confirm the payment using already-entered card details
-stripe.confirmPayment({
-    elements: elements,
-    clientSecret: response.data.clientSecret,
-    confirmParams: {
-        return_url: window.location.origin + window.location.pathname
-    },
-    redirect: 'if_required'
-}).then(function(result) {
-    if (result.error) {
-        // Handle error
-    } else if (result.paymentIntent.status === 'succeeded') {
-        // Payment successful - confirm on server
-        confirmPaymentOnServer(result.paymentIntent.id, paymentId);
+    function showPaymentSection(membershipType, price) {
+        const $paymentSection = $('#ielts-payment-section');
+        
+        // Show the section
+        $paymentSection.slideDown();
+        
+        // Create Payment Intent
+        $.ajax({
+            url: ieltsPayment.ajaxUrl,
+            method: 'POST',
+            data: {
+                action: 'ielts_create_payment_intent',
+                nonce: ieltsPayment.nonce,
+                membership_type: membershipType,
+                email: $('#ielts_email').val(),
+                first_name: $('#ielts_first_name').val(),
+                last_name: $('#ielts_last_name').val(),
+            },
+            success: function(response) {
+                if (response.success) {
+                    initializePaymentElement(response.data.clientSecret);
+                } else {
+                    showError(response.data || 'Failed to initialize payment');
+                }
+            },
+            error: function() {
+                showError('Network error. Please try again.');
+            }
+        });
     }
-});
+    
+    function hidePaymentSection() {
+        $('#ielts-payment-section').slideUp();
+        if (elements) {
+            elements = null;
+            paymentElement = null;
+        }
+    }
+    
+    function initializePaymentElement(clientSecret) {
+        // Create Elements instance
+        elements = stripe.elements({ clientSecret });
+        
+        // Create and mount Payment Element
+        paymentElement = elements.create('payment');
+        paymentElement.mount('#payment-element');
+    }
+    
+    // Intercept form submission
+    $('form[name="ielts_registration_form"]').on('submit', function(e) {
+        const membershipType = $('#ielts_membership_type').val();
+        const price = ieltsPayment.pricing[membershipType] || 0;
+        
+        // If it's a paid membership, handle payment first
+        if (price > 0 && stripe && elements) {
+            e.preventDefault();
+            handlePaymentSubmission();
+        }
+        // Otherwise, allow normal form submission for free registrations
+    });
+    
+    async function handlePaymentSubmission() {
+        setLoading(true);
+        
+        // Confirm payment with Stripe
+        const {error} = await stripe.confirmPayment({
+            elements,
+            confirmParams: {
+                // Return URL after successful payment
+                return_url: window.location.href + '?payment=success',
+            },
+            redirect: 'if_required',
+        });
+        
+        if (error) {
+            // Payment failed
+            showError(error.message);
+            setLoading(false);
+        } else {
+            // Payment succeeded
+            // The webhook will create the user account
+            showSuccess('Payment successful! Your account is being created...');
+            
+            // Redirect to success page
+            setTimeout(function() {
+                window.location.href = window.location.href + '?registration=success';
+            }, 2000);
+        }
+    }
+    
+    function showError(message) {
+        $('#payment-message').text(message).show();
+    }
+    
+    function showSuccess(message) {
+        $('#payment-message').removeClass('error').addClass('success').text(message).show();
+    }
+    
+    function setLoading(isLoading) {
+        if (isLoading) {
+            $('#ielts_register_submit').prop('disabled', true).val('Processing...');
+        } else {
+            $('#ielts_register_submit').prop('disabled', false).val('Register');
+        }
+    }
+    
+})(jQuery);
 ```
 
-The `redirect: 'if_required'` parameter is crucial – it only redirects if required for 3D Secure authentication, otherwise the payment completes inline.
+### Step 5: Update Registration Form Processing
 
-**4. Final Confirmation and Membership Activation**
-
-After Stripe confirms the payment succeeded, we send one final AJAX request to our server to:
-
-- Update the payment record in the database
-- Create/activate the membership
-- Send welcome email
-- Redirect user to login or account page
+Modify `includes/class-shortcodes.php` registration processing to handle two paths:
 
 ```php
-// In class IELTS_MS_Stripe_Gateway (extends IELTS_MS_Payment_Gateway)
-public function confirm_payment() {
-    // Verify AJAX nonce for security
-    check_ajax_referer('ielts_ms_nonce', 'nonce');
+// In display_registration() function, modify the form processing:
+
+if (isset($_POST['ielts_register_submit'])) {
+    // ... existing nonce and validation ...
     
-    // Get parameters from AJAX request
-    $payment_intent_id = sanitize_text_field($_POST['payment_intent_id']);
-    $payment_id = intval($_POST['payment_id']);
+    $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
     
-    // Get payment details from database
-    global $wpdb;
-    $table = IELTS_MS_Database::get_payments_table();
-    $payment = $wpdb->get_row($wpdb->prepare(
-        "SELECT * FROM {$table} WHERE id = %d",
-        $payment_id
-    ));
+    // Get pricing
+    $pricing = get_option('ielts_cm_membership_pricing', array());
+    $price = isset($pricing[$membership_type]) ? floatval($pricing[$membership_type]) : 0;
     
-    // Update payment status in database
-    $wpdb->update($table, array(
-        'payment_status' => 'completed',
-        'transaction_id' => $payment_intent_id
-    ), array('id' => $payment_id));
-    
-    // Get user's enrollment type preference
-    $enrollment_type = get_user_meta($payment->user_id, 'ielts_ms_enrollment_type', true);
-    
-    // Create membership for the user
-    $membership = new IELTS_MS_Membership();
-    $membership->create_membership($payment->user_id, $payment->duration_days, $payment_id, $enrollment_type, false);
-    
-    // Clean up registration pending flags
-    delete_user_meta($payment->user_id, 'ielts_ms_registration_pending');
-    delete_user_meta($payment->user_id, 'ielts_ms_registration_timestamp');
-    
-    // Send welcome email to new user
-    wp_new_user_notification($payment->user_id, null, 'user');
-    
-    // Return success with redirect URL
-    wp_send_json_success(array(
-        'redirect' => get_permalink(get_option('ielts_ms_login_page_id'))
-    ));
+    // PATH 1: Free registration (trials and free memberships)
+    if ($price <= 0) {
+        // Existing registration logic
+        // ... create user, assign membership, etc.
+    }
+    // PATH 2: Paid registration
+    else {
+        // For paid memberships, registration is handled by webhook after payment
+        // This form submission shouldn't happen because JavaScript handles it
+        // But add this as a fallback
+        $errors[] = __('Please complete payment to create your account.', 'ielts-course-manager');
+    }
 }
 ```
 
-## Critical Implementation Details
+### Step 6: Configure Stripe Webhook
 
-### 1. Using Payment Mode vs Setup Mode
+1. In your Stripe Dashboard:
+   - Go to Developers → Webhooks
+   - Click "Add endpoint"
+   - URL: `https://yoursite.com/wp-json/ielts-cm/v1/stripe-webhook`
+   - Events to send: `payment_intent.succeeded`
+   - Copy the "Signing secret"
 
-We use `mode: 'payment'` when initializing Elements because we're collecting a one-time payment, not setting up a subscription. This tells Stripe to configure the Payment Element for immediate charge.
+2. In WordPress Admin:
+   - Go to Memberships → Payment Settings
+   - Add new field for "Stripe Webhook Secret"
+   - Paste the signing secret from Stripe
 
-### 2. Automatic Payment Methods
+### Step 7: Update Payment Settings Page
 
-Instead of explicitly defining payment methods with `payment_method_types: ['card']`, we use `automatic_payment_methods: array('enabled' => true)`. This is essential because:
-
-- It matches how Payment Elements works in payment mode
-- It automatically supports all payment methods enabled in your Stripe account
-- It includes Stripe Link, Apple Pay, Google Pay, and regional payment methods
-- It prevents the "cannot be confirmed through the API" error
-
-### 3. Registration Flow Order
-
-The order of operations is crucial for inline payment:
-
-1. User fills out registration form (account info + payment info both visible)
-2. JavaScript validates card details using `elements.submit()`
-3. AJAX creates user account on server
-4. AJAX creates Payment Intent with user's ID
-5. JavaScript immediately confirms payment with Stripe
-6. AJAX confirms payment on server and activates membership
-7. User redirected to success page
-
-This ensures we have a user_id before creating the Payment Intent (important for tracking) while still maintaining the inline experience.
-
-### 4. Variable Separation
-
-To avoid conflicts, we maintain separate Stripe Elements instances for different pages:
-
-- Registration page: `elements`, `paymentElement`
-- Account page: `accountElements`, `accountPaymentElement`
-
-Each instance is only initialized when needed and never mixed.
-
-### 5. Error Handling
-
-We display user-friendly error messages at multiple points:
-
-- If Stripe.js fails to load
-- If Elements fails to initialize
-- If card validation fails
-- If payment confirmation fails
-
-Error messages are shown directly in the UI, not just in the console.
-
-## Template Structure
-
-The registration form template (`templates/register-form.php`) includes:
+Add webhook secret field to `includes/class-membership.php`:
 
 ```php
-<!-- Stripe Payment Element Container (for inline payment) -->
-<?php if (get_option('ielts_ms_stripe_enabled', true)): ?>
-<div id="stripe-payment-section" class="stripe-payment-section">
-    <div class="ielts-ms-form-group">
-        <label><?php _e('Card Details', 'ielts-membership-system'); ?></label>
-        <div id="payment-element" class="stripe-payment-element">
-            <!-- Stripe Elements will be inserted here -->
-        </div>
-        <div id="payment-errors" class="ielts-ms-message" style="display: none;"></div>
-    </div>
-</div>
-<?php endif; ?>
+// In display_payment_settings() function, add:
+
+register_setting('ielts_membership_payment', 'ielts_cm_stripe_webhook_secret');
+
+// Add this field in the HTML:
+<tr>
+    <th scope="row"><?php _e('Stripe Webhook Secret', 'ielts-course-manager'); ?></th>
+    <td>
+        <input type="password" name="ielts_cm_stripe_webhook_secret" 
+               value="<?php echo esc_attr(get_option('ielts_cm_stripe_webhook_secret', '')); ?>" 
+               class="regular-text">
+        <p class="description">
+            <?php _e('Get this from Stripe Dashboard → Developers → Webhooks. Required for payment verification.', 'ielts-course-manager'); ?>
+        </p>
+    </td>
+</tr>
 ```
 
-The `#payment-element` div is where Stripe injects the secure payment form. This div is part of the registration form HTML, making it truly "inline" with the account creation fields.
+## Testing
 
-## Benefits of This Approach
+### Test Mode
 
-1. **Single-Page Experience**: Users complete registration and payment in one flow without redirects
-2. **Better Conversion**: Fewer steps mean less abandonment
-3. **PCI Compliance**: Stripe handles all sensitive card data; it never touches our server
-4. **Modern UX**: Supports digital wallets, autofill, and Stripe Link
-5. **Flexibility**: Easy to toggle between inline and redirect payment modes
-6. **Security**: 3D Secure authentication automatically triggered when needed
+1. Use Stripe test keys (starts with `pk_test_` and `sk_test_`)
+2. Test card numbers:
+   - Success: `4242 4242 4242 4242`
+   - Requires authentication: `4000 0027 6000 3184`
+   - Declined: `4000 0000 0000 0002`
+3. Use any future expiry date
+4. Use any 3-digit CVC
+5. Use any 5-digit ZIP code
 
-## What Makes This Work
+### Test Flow
 
-The key insight is that Stripe's Payment Elements API is designed for exactly this use case. By using:
+1. Go to registration page
+2. Fill in name and email
+3. Select a PAID membership type
+4. Payment section should appear
+5. Enter test card `4242 4242 4242 4242`
+6. Submit form
+7. Check webhook was received in Stripe Dashboard
+8. Verify user account was created
+9. Verify membership was assigned
+10. Verify payment recorded in user meta
 
-- **Payment Elements** (not legacy Elements or Checkout)
-- **Payment Intents** (not Charges API)
-- **Payment mode** (not setup mode)
-- **Automatic payment methods** (not explicit payment method types)
+## Security Considerations
 
-We get a modern, secure, inline payment experience that integrates seamlessly with our registration form.
+✅ **Implemented:**
+- Nonce verification for AJAX requests
+- Server-side price validation (never trust client)
+- Webhook signature verification
+- Sanitization of all inputs
+- Idempotency (check if user exists before creating)
 
-The payment fields appear directly on our page, users enter their card details alongside their account information, and everything is submitted together without leaving the page (except for optional 3D Secure authentication if required by the card).
+⚠️ **Additional Recommendations:**
+- Use HTTPS only
+- Implement rate limiting on payment endpoints
+- Log all payment attempts for audit
+- Add CAPTCHA to prevent bot abuse
+- Implement email verification before membership activation
+
+## Error Handling
+
+1. **Payment fails**: Show error, allow retry
+2. **Webhook fails**: Payment succeeded but account not created
+   - Add admin page to manually process "orphaned" payments
+   - Check Stripe for successful payments without matching users
+3. **Network issues**: Show user-friendly message, save form data
+4. **Duplicate email**: Check before creating payment intent
+
+## Future Enhancements
+
+1. **Support for other currencies**
+2. **Proration for upgrades**
+3. **Subscription model** (recurring payments)
+4. **Coupons and discounts**
+5. **Split payment** (pay in installments)
+6. **Refund handling**
+7. **Admin dashboard** for payment history
+
+## Files Modified/Created
+
+### New Files:
+- `includes/class-stripe-payment.php` - Payment processing class
+- `assets/js/registration-payment.js` - Frontend payment handling
+- `main/STRIPE-INLINE-PAYMENT-INTEGRATION-GUIDE.md` - This guide
+
+### Modified Files:
+- `includes/class-shortcodes.php` - Updated registration form
+- `includes/class-membership.php` - Added webhook secret setting
+- `ielts-course-manager.php` - Include new payment class
+
+## Support
+
+For issues with this integration:
+1. Check Stripe logs in Dashboard → Developers → Logs
+2. Check WordPress error logs
+3. Test with Stripe test mode first
+4. Verify webhook endpoint is accessible (not blocked by firewall)
+
+---
+
+**Version:** 1.0  
+**Last Updated:** January 2026  
+**Author:** IELTS Course Manager Development Team
