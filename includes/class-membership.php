@@ -28,7 +28,11 @@ class IELTS_CM_Membership {
      * Initialize membership functionality
      */
     public function init() {
-        // Only initialize if membership system is enabled
+        // Always add admin menu and register settings so users can enable/disable the system
+        add_action('admin_menu', array($this, 'add_admin_menu'));
+        add_action('admin_init', array($this, 'register_settings'));
+        
+        // Only initialize other features if membership system is enabled
         if (!$this->is_enabled()) {
             return;
         }
@@ -42,12 +46,6 @@ class IELTS_CM_Membership {
         add_action('edit_user_profile', array($this, 'user_membership_fields'));
         add_action('personal_options_update', array($this, 'save_user_membership_fields'));
         add_action('edit_user_profile_update', array($this, 'save_user_membership_fields'));
-        
-        // Admin menu
-        add_action('admin_menu', array($this, 'add_admin_menu'));
-        
-        // Register settings
-        add_action('admin_init', array($this, 'register_settings'));
     }
     
     /**
