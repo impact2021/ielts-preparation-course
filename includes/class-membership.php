@@ -445,6 +445,7 @@ class IELTS_CM_Membership {
     public function payment_settings_page() {
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_payment')) {
             update_option('ielts_cm_stripe_enabled', isset($_POST['ielts_cm_stripe_enabled']) ? 1 : 0);
+            // Note: In production, consider using environment variables or WordPress Secrets API for API keys
             update_option('ielts_cm_stripe_publishable_key', sanitize_text_field($_POST['ielts_cm_stripe_publishable_key']));
             update_option('ielts_cm_stripe_secret_key', sanitize_text_field($_POST['ielts_cm_stripe_secret_key']));
             update_option('ielts_cm_paypal_enabled', isset($_POST['ielts_cm_paypal_enabled']) ? 1 : 0);

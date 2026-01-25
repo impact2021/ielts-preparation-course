@@ -1039,7 +1039,7 @@ class IELTS_CM_Shortcodes {
         $success = false;
         
         if (isset($_POST['ielts_register_submit'])) {
-            // Verify nonce
+            // Verify nonce first before processing any data
             if (!isset($_POST['ielts_register_nonce']) || !wp_verify_nonce($_POST['ielts_register_nonce'], 'ielts_register')) {
                 $errors[] = __('Security check failed.', 'ielts-course-manager');
             } else {
@@ -1198,8 +1198,7 @@ class IELTS_CM_Shortcodes {
         $membership_type = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
         $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
         
-        // Get membership levels
-        $membership_class = new IELTS_CM_Membership();
+        // Get membership levels directly from constant
         $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
         
         ob_start();
