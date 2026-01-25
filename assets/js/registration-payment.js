@@ -136,9 +136,9 @@
     
     function setLoading(isLoading) {
         if (isLoading) {
-            $('#ielts_register_submit').prop('disabled', true).val('Processing...');
+            $('#ielts_register_submit').prop('disabled', true).text('Processing...');
         } else {
-            $('#ielts_register_submit').prop('disabled', false).val('Register');
+            $('#ielts_register_submit').prop('disabled', false).text('Create Account');
         }
     }
     

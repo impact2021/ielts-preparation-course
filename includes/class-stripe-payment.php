@@ -107,7 +107,7 @@ class IELTS_CM_Stripe_Payment {
         \Stripe\Stripe::setApiKey($stripe_secret);
         
         $payload = $request->get_body();
-        $sig_header = $request->get_header('stripe_signature');
+        $sig_header = $request->get_header('stripe-signature');
         
         // Get webhook signing secret from settings
         $webhook_secret = get_option('ielts_cm_stripe_webhook_secret', '');
