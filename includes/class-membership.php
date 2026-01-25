@@ -580,6 +580,15 @@ class IELTS_CM_Membership {
     }
     
     /**
+     * Get array of valid membership type keys
+     * 
+     * @return array Array of valid membership type keys
+     */
+    public static function get_valid_membership_types() {
+        return array_keys(self::MEMBERSHIP_LEVELS);
+    }
+    
+    /**
      * Check if user has access to course
      */
     public function user_has_course_access($user_id, $course_id) {

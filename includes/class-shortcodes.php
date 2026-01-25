@@ -1074,8 +1074,7 @@ class IELTS_CM_Shortcodes {
                 
                 // Validate membership type if provided
                 if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
-                    $valid_memberships = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
-                    if (!in_array($membership_type, $valid_memberships)) {
+                    if (!in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
                         $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
                     }
                 }
@@ -1089,13 +1088,13 @@ class IELTS_CM_Shortcodes {
                         // Set membership type if selected and membership system is enabled
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
                             // Validate membership type one more time before saving (defense in depth)
-                            $valid_memberships = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
-                            if (in_array($membership_type, $valid_memberships)) {
+                            if (in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
                                 update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
                                 
-                                // Set expiry date for trial memberships
+                                // Set expiry date for trial memberships (using WordPress timezone)
                                 if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
-                                    $expiry_date = date('Y-m-d', strtotime('+' . IELTS_CM_Membership::TRIAL_PERIOD_DAYS . ' days'));
+                                    $expiry_timestamp = strtotime('+' . IELTS_CM_Membership::TRIAL_PERIOD_DAYS . ' days', current_time('timestamp'));
+                                    $expiry_date = date('Y-m-d', $expiry_timestamp);
                                     update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
                                 }
                             }
