@@ -1612,6 +1612,10 @@ class IELTS_CM_Shortcodes {
                                     $membership->send_enrollment_email($user_id, $membership_type);
                                 } else {
                                     // Paid membership - store selection and redirect to payment
+                                    // These meta fields are used to track pending payments:
+                                    // - _ielts_cm_membership_type_pending: stores the membership type user selected but hasn't paid for
+                                    // - _ielts_cm_membership_payment_pending: flag indicating payment is pending
+                                    // These should be cleared/processed by payment gateway webhook handlers
                                     update_user_meta($user_id, '_ielts_cm_membership_type_pending', $membership_type);
                                     update_user_meta($user_id, '_ielts_cm_membership_payment_pending', 1);
                                     $redirect_to_payment = true;
@@ -1629,9 +1633,6 @@ class IELTS_CM_Shortcodes {
                         if ($redirect_to_payment) {
                             // Redirect to payment page for paid memberships
                             $payment_url = get_option('ielts_cm_full_member_page_url', home_url());
-                            if (empty($payment_url)) {
-                                $payment_url = home_url();
-                            }
                             wp_safe_redirect(wp_validate_redirect($payment_url, home_url()));
                         } else {
                             // Regular redirect for trial memberships
