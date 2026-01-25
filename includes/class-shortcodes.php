@@ -123,8 +123,9 @@ class IELTS_CM_Shortcodes {
                     foreach ($courses as $course) {
                         $course_module = $this->get_module_from_course($course->ID);
                         
-                        // Include course if it matches user's module or has no specific module
-                        if (empty($course_module) || $course_module === $user_module) {
+                        // Only include course if it matches user's module
+                        // Exclude courses from opposite module (academic/general)
+                        if ($course_module === $user_module) {
                             $filtered_courses[] = $course;
                         }
                     }
@@ -531,11 +532,11 @@ class IELTS_CM_Shortcodes {
             
             <!-- Tabs Navigation -->
             <div class="ielts-account-tabs">
-                <button class="ielts-tab-button active" data-tab="personal-details">
-                    <?php _e('Personal Details', 'ielts-course-manager'); ?>
-                </button>
-                <button class="ielts-tab-button" data-tab="membership-info">
+                <button class="ielts-tab-button active" data-tab="membership-info">
                     <?php _e('Membership Information', 'ielts-course-manager'); ?>
+                </button>
+                <button class="ielts-tab-button" data-tab="personal-details">
+                    <?php _e('Personal Details', 'ielts-course-manager'); ?>
                 </button>
                 <?php if ($membership_type): ?>
                     <button class="ielts-tab-button" data-tab="membership-action">
@@ -544,41 +545,8 @@ class IELTS_CM_Shortcodes {
                 <?php endif; ?>
             </div>
             
-            <!-- Personal Details Tab -->
-            <div class="ielts-tab-content active" id="personal-details">
-                <div class="account-section">
-                    <h3><?php _e('Personal Information', 'ielts-course-manager'); ?></h3>
-                    <?php echo $email_update_message; ?>
-                    <table class="account-info-table">
-                        <tr>
-                            <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html($user->user_email); ?></td>
-                        </tr>
-                        <tr>
-                            <th><?php _e('Name:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name)); ?></td>
-                        </tr>
-                    </table>
-                    
-                    <h4><?php _e('Update Email Address', 'ielts-course-manager'); ?></h4>
-                    <form method="post" class="ielts-email-update-form">
-                        <?php wp_nonce_field('ielts_update_email', 'ielts_email_nonce'); ?>
-                        <p>
-                            <label for="ielts_new_email"><?php _e('New Email Address', 'ielts-course-manager'); ?></label>
-                            <input type="email" name="ielts_new_email" id="ielts_new_email" 
-                                   value="<?php echo esc_attr($user->user_email); ?>" required class="ielts-input">
-                        </p>
-                        <p>
-                            <button type="submit" name="ielts_update_email" class="ielts-button">
-                                <?php _e('Update Email', 'ielts-course-manager'); ?>
-                            </button>
-                        </p>
-                    </form>
-                </div>
-            </div>
-            
             <!-- Membership Information Tab -->
-            <div class="ielts-tab-content" id="membership-info">
+            <div class="ielts-tab-content active" id="membership-info">
                 <div class="account-section">
                     <h3><?php _e('Membership Status', 'ielts-course-manager'); ?></h3>
                     <?php if ($membership_type): 
@@ -693,6 +661,39 @@ class IELTS_CM_Shortcodes {
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
+                </div>
+            </div>
+            
+            <!-- Personal Details Tab -->
+            <div class="ielts-tab-content" id="personal-details">
+                <div class="account-section">
+                    <h3><?php _e('Personal Information', 'ielts-course-manager'); ?></h3>
+                    <?php echo $email_update_message; ?>
+                    <table class="account-info-table">
+                        <tr>
+                            <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->user_email); ?></td>
+                        </tr>
+                        <tr>
+                            <th><?php _e('Name:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name)); ?></td>
+                        </tr>
+                    </table>
+                    
+                    <h4><?php _e('Update Email Address', 'ielts-course-manager'); ?></h4>
+                    <form method="post" class="ielts-email-update-form">
+                        <?php wp_nonce_field('ielts_update_email', 'ielts_email_nonce'); ?>
+                        <p>
+                            <label for="ielts_new_email"><?php _e('New Email Address', 'ielts-course-manager'); ?></label>
+                            <input type="email" name="ielts_new_email" id="ielts_new_email" 
+                                   value="<?php echo esc_attr($user->user_email); ?>" required class="ielts-input">
+                        </p>
+                        <p>
+                            <button type="submit" name="ielts_update_email" class="ielts-button">
+                                <?php _e('Update Email', 'ielts-course-manager'); ?>
+                            </button>
+                        </p>
+                    </form>
                 </div>
             </div>
             
@@ -1508,10 +1509,20 @@ class IELTS_CM_Shortcodes {
             if (!isset($_POST['ielts_register_nonce']) || !wp_verify_nonce($_POST['ielts_register_nonce'], 'ielts_register')) {
                 $errors[] = __('Security check failed.', 'ielts-course-manager');
             } else {
+                $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
+                $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
                 $email = sanitize_email($_POST['ielts_email']);
                 $password = $_POST['ielts_password'];
                 $password_confirm = $_POST['ielts_password_confirm'];
                 $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
+                
+                // Validate name fields
+                if (empty($first_name)) {
+                    $errors[] = __('First name is required.', 'ielts-course-manager');
+                }
+                if (empty($last_name)) {
+                    $errors[] = __('Last name is required.', 'ielts-course-manager');
+                }
                 
                 // Validate email first before using it for username generation
                 if (empty($email)) {
@@ -1569,6 +1580,14 @@ class IELTS_CM_Shortcodes {
                     if (is_wp_error($user_id)) {
                         $errors[] = $user_id->get_error_message();
                     } else {
+                        // Save user name fields
+                        if (!empty($first_name)) {
+                            update_user_meta($user_id, 'first_name', $first_name);
+                        }
+                        if (!empty($last_name)) {
+                            update_user_meta($user_id, 'last_name', $last_name);
+                        }
+                        
                         // Set membership type if selected and membership system is enabled
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
                             // Validate membership type one more time before saving (defense in depth)
@@ -1622,29 +1641,41 @@ class IELTS_CM_Shortcodes {
             <?php endif; ?>
             
             <?php if (!$success): ?>
-                <form method="post" action="" class="ielts-form">
+                <form method="post" action="" class="ielts-form ielts-registration-form-grid">
                     <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
                     
-                    <p class="form-field">
+                    <p class="form-field form-field-half">
+                        <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
+                               value="<?php echo isset($_POST['ielts_first_name']) ? esc_attr($_POST['ielts_first_name']) : ''; ?>">
+                    </p>
+                    
+                    <p class="form-field form-field-half">
+                        <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="text" name="ielts_last_name" id="ielts_last_name" required class="ielts-form-input"
+                               value="<?php echo isset($_POST['ielts_last_name']) ? esc_attr($_POST['ielts_last_name']) : ''; ?>">
+                    </p>
+                    
+                    <p class="form-field form-field-full">
                         <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                         <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
                                value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>">
                         <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
                     </p>
                     
-                    <p class="form-field">
+                    <p class="form-field form-field-half">
                         <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                         <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input">
                         <small class="form-help"><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
                     </p>
                     
-                    <p class="form-field">
+                    <p class="form-field form-field-half">
                         <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                         <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
                     </p>
                     
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
-                        <p class="form-field">
+                        <p class="form-field form-field-full">
                             <label for="ielts_membership_type"><?php _e('Select Course', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                             <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
                                 <option value=""><?php _e('-- Select a course --', 'ielts-course-manager'); ?></option>
@@ -1661,7 +1692,7 @@ class IELTS_CM_Shortcodes {
                         </p>
                     <?php endif; ?>
                     
-                    <p class="form-field">
+                    <p class="form-field form-field-full">
                         <button type="submit" name="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
                             <?php _e('Create Account', 'ielts-course-manager'); ?>
                         </button>
@@ -1681,6 +1712,23 @@ class IELTS_CM_Shortcodes {
         }
         .ielts-registration-form .ielts-form {
             margin-top: 20px;
+        }
+        .ielts-registration-form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+        @media (min-width: 768px) {
+            .ielts-registration-form-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .ielts-registration-form-grid .form-field-full {
+                grid-column: 1 / -1;
+            }
+            .ielts-registration-form-grid .form-field-half {
+                grid-column: span 1;
+            }
         }
         .ielts-registration-form .form-field {
             margin-bottom: 20px;
@@ -1778,56 +1826,30 @@ class IELTS_CM_Shortcodes {
             
             <!-- Tab Navigation -->
             <div class="ielts-account-tabs">
-                <button class="ielts-tab-button active" data-tab="personal-details">
-                    <?php _e('Personal Details', 'ielts-course-manager'); ?>
-                </button>
                 <?php if (get_option('ielts_cm_membership_enabled')): ?>
-                    <button class="ielts-tab-button" data-tab="membership-info">
+                    <button class="ielts-tab-button active" data-tab="membership-info">
                         <?php _e('Membership Information', 'ielts-course-manager'); ?>
                     </button>
-                    <?php if (!empty($membership_type)): ?>
-                        <?php if ($is_trial): ?>
-                            <button class="ielts-tab-button" data-tab="become-full-member">
-                                <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
-                            </button>
-                        <?php else: ?>
-                            <button class="ielts-tab-button" data-tab="extend-course">
-                                <?php _e('Extend My Course', 'ielts-course-manager'); ?>
-                            </button>
-                        <?php endif; ?>
+                <?php endif; ?>
+                <button class="ielts-tab-button<?php echo !get_option('ielts_cm_membership_enabled') ? ' active' : ''; ?>" data-tab="personal-details">
+                    <?php _e('Personal Details', 'ielts-course-manager'); ?>
+                </button>
+                <?php if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)): ?>
+                    <?php if ($is_trial): ?>
+                        <button class="ielts-tab-button" data-tab="become-full-member">
+                            <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
+                        </button>
+                    <?php else: ?>
+                        <button class="ielts-tab-button" data-tab="extend-course">
+                            <?php _e('Extend My Course', 'ielts-course-manager'); ?>
+                        </button>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
             
             <!-- Tab Content -->
-            <div class="ielts-tab-content active" id="personal-details">
-                <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
-                <table class="ielts-account-table">
-                    <tr>
-                        <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->user_login); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->user_email); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Display Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->display_name); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('First Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->first_name); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Last Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->last_name); ?></td>
-                    </tr>
-                </table>
-            </div>
-            
             <?php if (get_option('ielts_cm_membership_enabled')): ?>
-                <div class="ielts-tab-content" id="membership-info">
+                <div class="ielts-tab-content active" id="membership-info">
                     <h3><?php _e('Membership Information', 'ielts-course-manager'); ?></h3>
                     <table class="ielts-account-table">
                         <tr>
@@ -1900,7 +1922,63 @@ class IELTS_CM_Shortcodes {
                         <?php endif; ?>
                     </table>
                 </div>
-                
+            <?php else: ?>
+                <!-- If membership system is disabled, show personal details as active -->
+                <div class="ielts-tab-content active" id="personal-details">
+                    <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
+                    <table class="ielts-account-table">
+                        <tr>
+                            <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->user_login); ?></td>
+                        </tr>
+                        <tr>
+                            <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->user_email); ?></td>
+                        </tr>
+                        <tr>
+                            <th><?php _e('Display Name:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->display_name); ?></td>
+                        </tr>
+                        <tr>
+                            <th><?php _e('First Name:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->first_name); ?></td>
+                        </tr>
+                        <tr>
+                            <th><?php _e('Last Name:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->last_name); ?></td>
+                        </tr>
+                    </table>
+                </div>
+            <?php endif; ?>
+            
+            <!-- Personal Details Tab (shows when membership is enabled) -->
+            <div class="ielts-tab-content<?php echo !get_option('ielts_cm_membership_enabled') ? '' : ''; ?>" id="personal-details">
+                <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
+                <table class="ielts-account-table">
+                    <tr>
+                        <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->user_login); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->user_email); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('Display Name:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->display_name); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('First Name:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->first_name); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('Last Name:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->last_name); ?></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <?php if (get_option('ielts_cm_membership_enabled')): ?>
                 <?php if (!empty($membership_type)): ?>
                     <?php if ($is_trial): ?>
                         <!-- Become a Full Member Tab -->
