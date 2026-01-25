@@ -20,6 +20,11 @@ class IELTS_CM_Membership {
     );
     
     /**
+     * Trial period in days
+     */
+    const TRIAL_PERIOD_DAYS = 30;
+    
+    /**
      * Initialize membership functionality
      */
     public function init() {
@@ -562,6 +567,16 @@ class IELTS_CM_Membership {
      */
     public function get_user_membership($user_id) {
         return get_user_meta($user_id, '_ielts_cm_membership_type', true);
+    }
+    
+    /**
+     * Check if a membership type is a trial membership
+     * 
+     * @param string $membership_type The membership type to check
+     * @return bool True if it's a trial membership, false otherwise
+     */
+    public static function is_trial_membership($membership_type) {
+        return substr($membership_type, -6) === '_trial';
     }
     
     /**

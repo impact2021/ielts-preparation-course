@@ -1093,9 +1093,9 @@ class IELTS_CM_Shortcodes {
                             if (in_array($membership_type, $valid_memberships)) {
                                 update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
                                 
-                                // Set expiry date for trial memberships (30 days)
-                                if ($membership_type === 'academic_trial' || $membership_type === 'general_trial') {
-                                    $expiry_date = date('Y-m-d', strtotime('+30 days'));
+                                // Set expiry date for trial memberships
+                                if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                                    $expiry_date = date('Y-m-d', strtotime('+' . IELTS_CM_Membership::TRIAL_PERIOD_DAYS . ' days'));
                                     update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
                                 }
                             }
