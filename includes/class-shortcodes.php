@@ -1580,13 +1580,12 @@ class IELTS_CM_Shortcodes {
                     if (is_wp_error($user_id)) {
                         $errors[] = $user_id->get_error_message();
                     } else {
-                        // Save user name fields
-                        if (!empty($first_name)) {
-                            update_user_meta($user_id, 'first_name', $first_name);
-                        }
-                        if (!empty($last_name)) {
-                            update_user_meta($user_id, 'last_name', $last_name);
-                        }
+                        // Save user name fields using wp_update_user
+                        wp_update_user(array(
+                            'ID' => $user_id,
+                            'first_name' => $first_name,
+                            'last_name' => $last_name
+                        ));
                         
                         // Set membership type if selected and membership system is enabled
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
@@ -1703,7 +1702,7 @@ class IELTS_CM_Shortcodes {
         
         <style>
         .ielts-registration-form {
-            max-width: 500px;
+            max-width: 700px;
             margin: 0 auto;
             padding: 30px;
             background: #fff;
