@@ -449,6 +449,9 @@ class IELTS_CM_Membership {
                                        value="<?php echo isset($durations[$key]['value']) ? esc_attr($durations[$key]['value']) : ''; ?>" 
                                        style="width: 80px;">
                                 <select name="duration_unit_<?php echo esc_attr($key); ?>">
+                                    <option value="minutes" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'minutes'); ?>>
+                                        <?php _e('Minutes', 'ielts-course-manager'); ?>
+                                    </option>
                                     <option value="hours" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'hours'); ?>>
                                         <?php _e('Hours', 'ielts-course-manager'); ?>
                                     </option>
@@ -957,6 +960,9 @@ The IELTS Team'
         $current_timestamp = strtotime($current_utc);
         
         switch ($unit) {
+            case 'minutes':
+                $expiry_timestamp = strtotime("+{$value} minutes", $current_timestamp);
+                break;
             case 'hours':
                 $expiry_timestamp = strtotime("+{$value} hours", $current_timestamp);
                 break;
