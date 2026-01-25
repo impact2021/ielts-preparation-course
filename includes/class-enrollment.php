@@ -113,15 +113,27 @@ class IELTS_CM_Enrollment {
         $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
         $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
         
-        // If user has a membership with expiry date, check if it's expired
-        if (!empty($membership_type) && !empty($expiry_date)) {
-            // Expiry date is stored in UTC format, convert properly
-            $expiry_timestamp = strtotime($expiry_date . ' UTC');
-            $now_utc = time(); // Current UTC timestamp
-            
-            // Return false if membership has expired
-            if ($expiry_timestamp <= $now_utc) {
+        // If user has a membership, check status first (faster than date comparison)
+        if (!empty($membership_type)) {
+            $membership_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
+            if ($membership_status === 'expired') {
                 return false;
+            }
+            
+            // If user has expiry date, check if it's expired (fallback for legacy data)
+            if (!empty($expiry_date)) {
+                // Expiry date is stored in UTC format, convert properly
+                $expiry_timestamp = strtotime($expiry_date . ' UTC');
+                $now_utc = time(); // Current UTC timestamp
+                
+                // Return false if membership has expired
+                if ($expiry_timestamp <= $now_utc) {
+                    // Update status to expired if not already set
+                    if ($membership_status !== 'expired') {
+                        update_user_meta($user_id, '_ielts_cm_membership_status', 'expired');
+                    }
+                    return false;
+                }
             }
         }
         

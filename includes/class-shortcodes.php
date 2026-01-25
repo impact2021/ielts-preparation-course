@@ -1620,6 +1620,7 @@ class IELTS_CM_Shortcodes {
                                 if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
                                     // Trial membership - activate immediately with expiry
                                     update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                                    update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
                                     
                                     // Set expiry date based on membership duration settings
                                     $membership = new IELTS_CM_Membership();
@@ -1906,12 +1907,17 @@ class IELTS_CM_Shortcodes {
         $user = wp_get_current_user();
         $membership_type = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
         $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
+        $membership_status = get_user_meta($user->ID, '_ielts_cm_membership_status', true);
         
         // Get membership levels directly from constant
         $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
         
-        // Determine if this is a trial membership
+        // Determine if this is a trial membership (or was a trial that expired)
         $is_trial = !empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type);
+        
+        // Check if membership is expired
+        $is_expired = ($membership_status === 'expired') || 
+                      (!empty($expiry_date) && strtotime($expiry_date) < time());
         
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
@@ -2000,12 +2006,12 @@ class IELTS_CM_Shortcodes {
                 <button class="ielts-tab-button<?php echo !get_option('ielts_cm_membership_enabled') ? ' active' : ''; ?>" data-tab="personal-details">
                     <?php _e('Personal Details', 'ielts-course-manager'); ?>
                 </button>
-                <?php if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)): ?>
+                <?php if (get_option('ielts_cm_membership_enabled')): ?>
                     <?php if ($is_trial): ?>
                         <button class="ielts-tab-button" data-tab="become-full-member">
                             <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
                         </button>
-                    <?php else: ?>
+                    <?php elseif (!empty($membership_type) && !$is_trial): ?>
                         <button class="ielts-tab-button" data-tab="extend-course">
                             <?php _e('Extend My Course', 'ielts-course-manager'); ?>
                         </button>
