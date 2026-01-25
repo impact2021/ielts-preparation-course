@@ -52,26 +52,80 @@ body.ielts-resource-single .content-area {
             $user_id = get_current_user_id();
             $progress_tracker = new IELTS_CM_Progress_Tracker();
             
-            // Cache enrollment and completion status to avoid redundant queries
-            $is_enrolled = false;
+            // Check if user has access to this resource
+            $has_access = false;
             $is_completed = false;
             
-            // Automatically mark resource as accessed when user views it
-            if ($user_id && $lesson_id && $course_id) {
+            if ($user_id && $course_id) {
                 $enrollment = new IELTS_CM_Enrollment();
-                $is_enrolled = $enrollment->is_enrolled($user_id, $course_id);
+                $has_access = $enrollment->is_enrolled($user_id, $course_id);
                 
-                if ($is_enrolled) {
+                if ($has_access && $lesson_id) {
                     // Check if already completed
                     $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
                     
                     // If not already completed, mark as complete automatically
                     if (!$is_completed) {
                         $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
-                        $is_completed = true; // Update cached status
+                        $is_completed = true;
                     }
                 }
             }
+            
+            if (!$has_access && $course_id):
+                // Show access restricted message
+                ?>
+                <div class="ielts-access-restricted">
+                    <div class="access-restricted-icon">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 20a9 9 0 1 1 0-18 9 9 0 0 1 0 18z" fill="#666"/>
+                            <path d="M12 7a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1zm0 10a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="#666"/>
+                        </svg>
+                    </div>
+                    <h2><?php _e('Access Restricted', 'ielts-course-manager'); ?></h2>
+                    <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
+                    <?php if (!is_user_logged_in()): ?>
+                        <p>
+                            <a href="<?php echo wp_login_url(get_permalink()); ?>" class="button button-primary">
+                                <?php _e('Login', 'ielts-course-manager'); ?>
+                            </a>
+                        </p>
+                    <?php else: ?>
+                        <p>
+                            <a href="<?php echo get_permalink($course_id); ?>" class="button button-primary">
+                                <?php _e('View Course', 'ielts-course-manager'); ?>
+                            </a>
+                        </p>
+                    <?php endif; ?>
+                </div>
+                <style>
+                .ielts-access-restricted {
+                    text-align: center;
+                    padding: 60px 20px;
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+                .access-restricted-icon {
+                    margin-bottom: 20px;
+                }
+                .ielts-access-restricted h2 {
+                    font-size: 28px;
+                    margin-bottom: 15px;
+                    color: #333;
+                }
+                .ielts-access-restricted p {
+                    font-size: 16px;
+                    color: #666;
+                    margin-bottom: 20px;
+                }
+                .ielts-access-restricted .button {
+                    padding: 12px 30px;
+                    font-size: 16px;
+                }
+                </style>
+                <?php
+            else:
+                // User has access, show the resource content
             ?>
             
             <div class="ielts-single-resource">
@@ -614,6 +668,8 @@ body.ielts-resource-single .content-area {
                     </style>
                 <?php endif; ?>
             <?php } ?>
+            
+            <?php endif; // end has_access check ?>
             
         <?php endwhile; ?>
     </main>

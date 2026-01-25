@@ -30,6 +30,50 @@ class IELTS_CM_Frontend {
         
         // Enqueue frontend styles and scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
+        
+        // Hide admin bar for students (non-admins)
+        add_action('after_setup_theme', array($this, 'hide_admin_bar_for_students'));
+        
+        // Allow email login
+        add_filter('authenticate', array($this, 'authenticate_with_email'), 20, 3);
+    }
+    
+    /**
+     * Hide admin bar for non-admin users
+     */
+    public function hide_admin_bar_for_students() {
+        if (!current_user_can('administrator') && !is_admin()) {
+            show_admin_bar(false);
+        }
+    }
+    
+    /**
+     * Allow users to login with email address
+     */
+    public function authenticate_with_email($user, $username, $password) {
+        // If user already authenticated or no credentials provided, return early
+        if ($user instanceof WP_User || empty($username) || empty($password)) {
+            return $user;
+        }
+        
+        // Check if username is an email - if so, get the user by email
+        if (is_email($username)) {
+            $user_obj = get_user_by('email', $username);
+            if ($user_obj) {
+                // Authenticate using the username instead of email
+                // This ensures consistent timing regardless of whether email exists
+                $user = wp_authenticate_username_password(null, $user_obj->user_login, $password);
+            }
+            // If email doesn't exist, still call wp_authenticate_username_password
+            // to maintain consistent timing and avoid user enumeration
+            else {
+                // Use a completely random username to maintain timing consistency
+                $random_username = wp_generate_password(16, false, false);
+                wp_authenticate_username_password(null, $random_username, $password);
+            }
+        }
+        
+        return $user;
     }
     
     /**
@@ -141,11 +185,12 @@ class IELTS_CM_Frontend {
             return;
         }
         
-        $expiry_timestamp = strtotime($expiry_date);
-        $now = current_time('timestamp');
+        // Expiry date is stored in UTC, convert to timestamp
+        $expiry_timestamp = strtotime($expiry_date . ' UTC');
+        $now_utc = time(); // Current UTC timestamp
         
         // Don't show if already expired
-        if ($expiry_timestamp <= $now) {
+        if ($expiry_timestamp <= $now_utc) {
             return;
         }
         

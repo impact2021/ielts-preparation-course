@@ -408,105 +408,261 @@ class IELTS_CM_Shortcodes {
         $enrollment = new IELTS_CM_Enrollment();
         $progress_tracker = new IELTS_CM_Progress_Tracker();
         
+        // Handle email update
+        $email_update_message = '';
+        if (isset($_POST['ielts_update_email']) && wp_verify_nonce($_POST['ielts_email_nonce'], 'ielts_update_email')) {
+            $new_email = sanitize_email($_POST['ielts_new_email']);
+            if (empty($new_email)) {
+                $email_update_message = '<div class="ielts-message ielts-error">' . __('Email is required.', 'ielts-course-manager') . '</div>';
+            } elseif (!is_email($new_email)) {
+                $email_update_message = '<div class="ielts-message ielts-error">' . __('Invalid email address.', 'ielts-course-manager') . '</div>';
+            } elseif ($new_email !== $user->user_email && email_exists($new_email)) {
+                $email_update_message = '<div class="ielts-message ielts-error">' . __('Email already exists.', 'ielts-course-manager') . '</div>';
+            } else {
+                $result = wp_update_user(array(
+                    'ID' => $user_id,
+                    'user_email' => $new_email
+                ));
+                if (is_wp_error($result)) {
+                    $email_update_message = '<div class="ielts-message ielts-error">' . $result->get_error_message() . '</div>';
+                } else {
+                    $email_update_message = '<div class="ielts-message ielts-success">' . __('Email updated successfully!', 'ielts-course-manager') . '</div>';
+                    $user = get_userdata($user_id); // Refresh user data
+                }
+            }
+        }
+        
         // Get all enrolled courses
         $enrolled_courses = $enrollment->get_user_courses($user_id);
+        
+        // Get membership information
+        $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+        $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        $is_trial = $membership_type && IELTS_CM_Membership::is_trial_membership($membership_type);
+        $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
         
         ob_start();
         ?>
         <div class="ielts-my-account">
             <h2><?php _e('My Account', 'ielts-course-manager'); ?></h2>
             
-            <div class="account-section user-details">
-                <h3><?php _e('User Information', 'ielts-course-manager'); ?></h3>
-                <table class="account-info-table">
-                    <tr>
-                        <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->user_login); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->user_email); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name)); ?></td>
-                    </tr>
-                </table>
-            </div>
-            
-            <div class="account-section course-enrollments">
-                <h3><?php _e('My Course Enrollments', 'ielts-course-manager'); ?></h3>
-                
-                <?php if (empty($enrolled_courses)): ?>
-                    <p><?php _e('You are not currently enrolled in any courses.', 'ielts-course-manager'); ?></p>
-                <?php else: ?>
-                    <div class="enrolled-courses-list">
-                        <?php foreach ($enrolled_courses as $enrollment_data): 
-                            $course = get_post($enrollment_data->course_id);
-                            if (!$course) continue;
-                            
-                            $completion = $progress_tracker->get_course_completion_percentage($user_id, $enrollment_data->course_id);
-                            $enrolled_date = date('F j, Y', strtotime($enrollment_data->enrolled_date));
-                            $end_date = $enrollment_data->course_end_date ? date('F j, Y', strtotime($enrollment_data->course_end_date)) : __('No end date set', 'ielts-course-manager');
-                            
-                            // Check if course access has expired
-                            $is_expired = false;
-                            if ($enrollment_data->course_end_date && strtotime($enrollment_data->course_end_date) < time()) {
-                                $is_expired = true;
-                            }
-                        ?>
-                            <div class="enrolled-course-item <?php echo $is_expired ? 'expired' : ''; ?>">
-                                <div class="course-header">
-                                    <h4>
-                                        <a href="<?php echo get_permalink($course->ID); ?>">
-                                            <?php echo esc_html($course->post_title); ?>
-                                        </a>
-                                        <?php if ($is_expired): ?>
-                                            <span class="expired-badge"><?php _e('Expired', 'ielts-course-manager'); ?></span>
-                                        <?php endif; ?>
-                                    </h4>
-                                </div>
-                                
-                                <div class="course-details">
-                                    <div class="course-detail-row">
-                                        <span class="detail-label"><?php _e('Enrolled:', 'ielts-course-manager'); ?></span>
-                                        <span class="detail-value"><?php echo esc_html($enrolled_date); ?></span>
-                                    </div>
-                                    <div class="course-detail-row">
-                                        <span class="detail-label"><?php _e('Access Until:', 'ielts-course-manager'); ?></span>
-                                        <span class="detail-value <?php echo $is_expired ? 'expired-date' : ''; ?>">
-                                            <?php echo esc_html($end_date); ?>
-                                        </span>
-                                    </div>
-                                    <div class="course-detail-row">
-                                        <span class="detail-label"><?php _e('Progress:', 'ielts-course-manager'); ?></span>
-                                        <span class="detail-value"><?php echo round($completion, 1); ?>%</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: <?php echo round($completion, 1); ?>%;">
-                                        <span class="progress-text"><?php echo round($completion, 1); ?>%</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="course-actions">
-                                    <?php if (!$is_expired): ?>
-                                        <a href="<?php echo get_permalink($course->ID); ?>" class="button">
-                                            <?php _e('Continue Learning', 'ielts-course-manager'); ?>
-                                        </a>
-                                    <?php else: ?>
-                                        <span class="expired-notice">
-                                            <?php _e('Your access to this course has expired. Please contact support to renew.', 'ielts-course-manager'); ?>
-                                        </span>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+            <!-- Tabs Navigation -->
+            <div class="ielts-account-tabs">
+                <button class="ielts-tab-button active" data-tab="personal-details">
+                    <?php _e('Personal Details', 'ielts-course-manager'); ?>
+                </button>
+                <button class="ielts-tab-button" data-tab="membership-info">
+                    <?php _e('Membership Information', 'ielts-course-manager'); ?>
+                </button>
+                <?php if ($membership_type): ?>
+                    <button class="ielts-tab-button" data-tab="membership-action">
+                        <?php echo $is_trial ? __('Become a Full Member', 'ielts-course-manager') : __('Extend My Course', 'ielts-course-manager'); ?>
+                    </button>
                 <?php endif; ?>
             </div>
+            
+            <!-- Personal Details Tab -->
+            <div class="ielts-tab-content active" id="personal-details">
+                <div class="account-section">
+                    <h3><?php _e('Personal Information', 'ielts-course-manager'); ?></h3>
+                    <?php echo $email_update_message; ?>
+                    <table class="account-info-table">
+                        <tr>
+                            <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html($user->user_email); ?></td>
+                        </tr>
+                        <tr>
+                            <th><?php _e('Name:', 'ielts-course-manager'); ?></th>
+                            <td><?php echo esc_html(trim($user->first_name . ' ' . $user->last_name)); ?></td>
+                        </tr>
+                    </table>
+                    
+                    <h4><?php _e('Update Email Address', 'ielts-course-manager'); ?></h4>
+                    <form method="post" class="ielts-email-update-form">
+                        <?php wp_nonce_field('ielts_update_email', 'ielts_email_nonce'); ?>
+                        <p>
+                            <label for="ielts_new_email"><?php _e('New Email Address', 'ielts-course-manager'); ?></label>
+                            <input type="email" name="ielts_new_email" id="ielts_new_email" 
+                                   value="<?php echo esc_attr($user->user_email); ?>" required class="ielts-input">
+                        </p>
+                        <p>
+                            <button type="submit" name="ielts_update_email" class="ielts-button">
+                                <?php _e('Update Email', 'ielts-course-manager'); ?>
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Membership Information Tab -->
+            <div class="ielts-tab-content" id="membership-info">
+                <div class="account-section">
+                    <h3><?php _e('Membership Status', 'ielts-course-manager'); ?></h3>
+                    <?php if ($membership_type): 
+                        $membership_name = isset(IELTS_CM_Membership::MEMBERSHIP_LEVELS[$membership_type]) 
+                            ? IELTS_CM_Membership::MEMBERSHIP_LEVELS[$membership_type] 
+                            : $membership_type;
+                        $is_expired = !empty($expiry_date) && strtotime($expiry_date) < time();
+                    ?>
+                        <table class="account-info-table">
+                            <tr>
+                                <th><?php _e('Membership Type:', 'ielts-course-manager'); ?></th>
+                                <td><?php echo esc_html($membership_name); ?></td>
+                            </tr>
+                            <tr>
+                                <th><?php _e('Expiry Date:', 'ielts-course-manager'); ?></th>
+                                <td>
+                                    <?php 
+                                    if (empty($expiry_date)) {
+                                        echo __('Lifetime', 'ielts-course-manager');
+                                    } else {
+                                        $expiry_timestamp = strtotime($expiry_date);
+                                        if ($is_expired) {
+                                            echo '<span class="expired-text">' . date('F j, Y g:i a', $expiry_timestamp) . ' (' . __('Expired', 'ielts-course-manager') . ')</span>';
+                                        } else {
+                                            echo '<span class="active-text">' . date('F j, Y g:i a', $expiry_timestamp) . '</span>';
+                                        }
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><?php _e('Status:', 'ielts-course-manager'); ?></th>
+                                <td>
+                                    <?php if ($is_expired): ?>
+                                        <span class="status-badge status-expired"><?php _e('Expired', 'ielts-course-manager'); ?></span>
+                                    <?php else: ?>
+                                        <span class="status-badge status-active"><?php _e('Active', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        </table>
+                    <?php else: ?>
+                        <p><?php _e('You do not have an active membership.', 'ielts-course-manager'); ?></p>
+                    <?php endif; ?>
+                    
+                    <h4><?php _e('My Courses', 'ielts-course-manager'); ?></h4>
+                    <?php if (empty($enrolled_courses)): ?>
+                        <p><?php _e('You are not currently enrolled in any courses.', 'ielts-course-manager'); ?></p>
+                    <?php else: ?>
+                        <div class="enrolled-courses-list">
+                            <?php foreach ($enrolled_courses as $enrollment_data): 
+                                $course = get_post($enrollment_data->course_id);
+                                if (!$course) continue;
+                                
+                                $completion = $progress_tracker->get_course_completion_percentage($user_id, $enrollment_data->course_id);
+                                $enrolled_date = date('F j, Y', strtotime($enrollment_data->enrolled_date));
+                                $end_date = $enrollment_data->course_end_date ? date('F j, Y', strtotime($enrollment_data->course_end_date)) : __('No end date set', 'ielts-course-manager');
+                                
+                                // Check if course access has expired
+                                $course_expired = false;
+                                if ($enrollment_data->course_end_date && strtotime($enrollment_data->course_end_date) < time()) {
+                                    $course_expired = true;
+                                }
+                            ?>
+                                <div class="enrolled-course-item <?php echo $course_expired ? 'expired' : ''; ?>">
+                                    <div class="course-header">
+                                        <h4>
+                                            <a href="<?php echo get_permalink($course->ID); ?>">
+                                                <?php echo esc_html($course->post_title); ?>
+                                            </a>
+                                            <?php if ($course_expired): ?>
+                                                <span class="expired-badge"><?php _e('Expired', 'ielts-course-manager'); ?></span>
+                                            <?php endif; ?>
+                                        </h4>
+                                    </div>
+                                    
+                                    <div class="course-details">
+                                        <div class="course-detail-row">
+                                            <span class="detail-label"><?php _e('Enrolled:', 'ielts-course-manager'); ?></span>
+                                            <span class="detail-value"><?php echo esc_html($enrolled_date); ?></span>
+                                        </div>
+                                        <div class="course-detail-row">
+                                            <span class="detail-label"><?php _e('Access Until:', 'ielts-course-manager'); ?></span>
+                                            <span class="detail-value <?php echo $course_expired ? 'expired-date' : ''; ?>">
+                                                <?php echo esc_html($end_date); ?>
+                                            </span>
+                                        </div>
+                                        <div class="course-detail-row">
+                                            <span class="detail-label"><?php _e('Progress:', 'ielts-course-manager'); ?></span>
+                                            <span class="detail-value"><?php echo round($completion, 1); ?>%</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: <?php echo round($completion, 1); ?>%;">
+                                            <span class="progress-text"><?php echo round($completion, 1); ?>%</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="course-actions">
+                                        <?php if (!$course_expired): ?>
+                                            <a href="<?php echo get_permalink($course->ID); ?>" class="button">
+                                                <?php _e('Continue Learning', 'ielts-course-manager'); ?>
+                                            </a>
+                                        <?php else: ?>
+                                            <span class="expired-notice">
+                                                <?php _e('Your access to this course has expired. Please contact support to renew.', 'ielts-course-manager'); ?>
+                                            </span>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+            
+            <!-- Membership Action Tab (Upgrade/Extend) -->
+            <?php if ($membership_type): ?>
+                <div class="ielts-tab-content" id="membership-action">
+                    <div class="account-section">
+                        <?php if ($is_trial): ?>
+                            <h3><?php _e('Become a Full Member', 'ielts-course-manager'); ?></h3>
+                            <p><?php _e('Upgrade to a full membership to get unlimited access to all courses and features.', 'ielts-course-manager'); ?></p>
+                            <div class="membership-cta">
+                                <a href="<?php echo esc_url($upgrade_url); ?>" class="ielts-button ielts-button-primary">
+                                    <?php _e('Upgrade Now', 'ielts-course-manager'); ?>
+                                </a>
+                            </div>
+                        <?php else: ?>
+                            <h3><?php _e('Extend My Course', 'ielts-course-manager'); ?></h3>
+                            <p><?php _e('Extend your course access to continue learning without interruption.', 'ielts-course-manager'); ?></p>
+                            <div class="membership-cta">
+                                <a href="<?php echo esc_url($upgrade_url); ?>" class="ielts-button ielts-button-primary">
+                                    <?php _e('Extend Course', 'ielts-course-manager'); ?>
+                                </a>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
         </div>
+        
+        <script>
+        (function() {
+            var tabButtons = document.querySelectorAll('.ielts-tab-button');
+            var tabContents = document.querySelectorAll('.ielts-tab-content');
+            
+            tabButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var tabId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs
+                    tabButtons.forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+                    tabContents.forEach(function(content) {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        })();
+        </script>
         
         <style>
         .ielts-my-account {
@@ -515,36 +671,179 @@ class IELTS_CM_Shortcodes {
             padding: 20px;
         }
         .ielts-my-account h2 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 2px solid #ddd;
         }
+        
+        /* Tabs Navigation */
+        .ielts-account-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            flex-wrap: wrap;
+        }
+        .ielts-tab-button {
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s;
+            margin-bottom: -2px;
+        }
+        .ielts-tab-button:hover {
+            color: #0073aa;
+            background: #f5f5f5;
+        }
+        .ielts-tab-button.active {
+            color: #0073aa;
+            border-bottom-color: #0073aa;
+            font-weight: 600;
+        }
+        
+        /* Tab Content */
+        .ielts-tab-content {
+            display: none;
+        }
+        .ielts-tab-content.active {
+            display: block;
+        }
+        
+        /* Messages */
+        .ielts-message {
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border-left: 4px solid;
+        }
+        .ielts-message.ielts-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        .ielts-message.ielts-error {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        
         .account-section {
             background: #f9f9f9;
-            padding: 20px;
-            margin-bottom: 30px;
+            padding: 25px;
+            margin-bottom: 20px;
             border-radius: 5px;
             border: 1px solid #ddd;
         }
         .account-section h3 {
             margin-top: 0;
             margin-bottom: 20px;
+            font-size: 22px;
+            color: #333;
+        }
+        .account-section h4 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #555;
         }
         .account-info-table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 20px;
         }
         .account-info-table th {
             text-align: left;
-            padding: 10px;
-            width: 150px;
+            padding: 12px 10px;
+            width: 180px;
             font-weight: 600;
             color: #555;
+            vertical-align: top;
         }
         .account-info-table td {
-            padding: 10px;
+            padding: 12px 10px;
             color: #333;
         }
+        
+        /* Email Update Form */
+        .ielts-email-update-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        .ielts-input {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .ielts-button {
+            background: #0073aa;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .ielts-button:hover {
+            background: #005177;
+        }
+        .ielts-button-primary {
+            background: #0073aa;
+            font-size: 16px;
+            padding: 12px 30px;
+        }
+        .ielts-button-primary:hover {
+            background: #005177;
+        }
+        
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .status-badge.status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status-badge.status-expired {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .expired-text {
+            color: #dc3232;
+            font-weight: 600;
+        }
+        .active-text {
+            color: #28a745;
+            font-weight: 600;
+        }
+        
+        /* Membership CTA */
+        .membership-cta {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        /* Course Enrollment List */
         .enrolled-courses-list {
             display: grid;
             gap: 20px;
@@ -995,26 +1294,109 @@ class IELTS_CM_Shortcodes {
             return '<p>' . __('You are already logged in.', 'ielts-course-manager') . ' <a href="' . wp_logout_url() . '">' . __('Logout', 'ielts-course-manager') . '</a></p>';
         }
         
-        $redirect_url = !empty($atts['redirect']) ? $atts['redirect'] : get_permalink();
+        // Validate and sanitize redirect URL
+        $redirect_url = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+        // Ensure redirect is to same site for security
+        $redirect_url = wp_validate_redirect($redirect_url, home_url());
         
         ob_start();
         ?>
-        <div class="ielts-login-form">
-            <?php
-            wp_login_form(array(
-                'redirect' => $redirect_url,
-                'form_id' => 'ielts-loginform',
-                'label_username' => __('Username or Email', 'ielts-course-manager'),
-                'label_password' => __('Password', 'ielts-course-manager'),
-                'label_remember' => __('Remember Me', 'ielts-course-manager'),
-                'label_log_in' => __('Log In', 'ielts-course-manager'),
-                'remember' => true
-            ));
-            ?>
-            <p class="ielts-login-links">
-                <a href="<?php echo wp_lostpassword_url($redirect_url); ?>"><?php _e('Lost your password?', 'ielts-course-manager'); ?></a>
-            </p>
+        <div class="ielts-login-form-wrapper">
+            <div class="ielts-login-form">
+                <?php
+                wp_login_form(array(
+                    'redirect' => $redirect_url,
+                    'form_id' => 'ielts-loginform',
+                    'label_username' => __('Email Address', 'ielts-course-manager'),
+                    'label_password' => __('Password', 'ielts-course-manager'),
+                    'label_remember' => __('Remember Me', 'ielts-course-manager'),
+                    'label_log_in' => __('Log In', 'ielts-course-manager'),
+                    'remember' => true,
+                    'value_remember' => true
+                ));
+                ?>
+                <p class="ielts-login-links">
+                    <a href="<?php echo wp_lostpassword_url($redirect_url); ?>"><?php _e('Lost your password?', 'ielts-course-manager'); ?></a>
+                </p>
+            </div>
         </div>
+        
+        <style>
+        .ielts-login-form-wrapper {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .ielts-login-form {
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .ielts-login-form form {
+            margin: 0;
+        }
+        .ielts-login-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        .ielts-login-form input[type="text"],
+        .ielts-login-form input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .ielts-login-form input[type="text"]:focus,
+        .ielts-login-form input[type="password"]:focus {
+            outline: none;
+            border-color: #0073aa;
+        }
+        .ielts-login-form .login-remember {
+            margin: 15px 0;
+        }
+        .ielts-login-form .login-remember label {
+            display: inline;
+            font-weight: normal;
+            font-size: 14px;
+        }
+        .ielts-login-form .login-remember input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .ielts-login-form input[type="submit"] {
+            width: 100%;
+            padding: 14px 20px;
+            background: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .ielts-login-form input[type="submit"]:hover {
+            background: #005177;
+        }
+        .ielts-login-links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .ielts-login-links a {
+            color: #0073aa;
+            text-decoration: none;
+        }
+        .ielts-login-links a:hover {
+            text-decoration: underline;
+        }
+        </style>
         <?php
         return ob_get_clean();
     }
@@ -1043,19 +1425,12 @@ class IELTS_CM_Shortcodes {
             if (!isset($_POST['ielts_register_nonce']) || !wp_verify_nonce($_POST['ielts_register_nonce'], 'ielts_register')) {
                 $errors[] = __('Security check failed.', 'ielts-course-manager');
             } else {
-                $username = sanitize_user($_POST['ielts_username']);
                 $email = sanitize_email($_POST['ielts_email']);
                 $password = $_POST['ielts_password'];
                 $password_confirm = $_POST['ielts_password_confirm'];
                 $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
                 
-                // Validation
-                if (empty($username)) {
-                    $errors[] = __('Username is required.', 'ielts-course-manager');
-                } elseif (username_exists($username)) {
-                    $errors[] = __('Username already exists.', 'ielts-course-manager');
-                }
-                
+                // Validate email first before using it for username generation
                 if (empty($email)) {
                     $errors[] = __('Email is required.', 'ielts-course-manager');
                 } elseif (!is_email($email)) {
@@ -1064,6 +1439,32 @@ class IELTS_CM_Shortcodes {
                     $errors[] = __('Email already exists.', 'ielts-course-manager');
                 }
                 
+                // Generate username from email (more user-friendly format)
+                // Only if email is valid
+                if (empty($errors) && is_email($email) && strpos($email, '@') !== false) {
+                    $email_parts = explode('@', $email);
+                    $base_username = sanitize_user($email_parts[0], true);
+                    
+                    // Ensure username is not empty
+                    if (empty($base_username)) {
+                        $base_username = 'user';
+                    }
+                    
+                    // If username exists, append timestamp for uniqueness
+                    $username = $base_username;
+                    if (username_exists($username)) {
+                        $username = $base_username . '_' . time();
+                        // If still exists (very unlikely), add random suffix
+                        if (username_exists($username)) {
+                            $username = $base_username . '_' . wp_generate_password(8, false);
+                        }
+                    }
+                } else {
+                    // Fallback username if email is invalid
+                    $username = 'user_' . time();
+                }
+                
+                // Validate password
                 if (empty($password)) {
                     $errors[] = __('Password is required.', 'ielts-course-manager');
                 } elseif (strlen($password) < 6) {
@@ -1101,16 +1502,18 @@ class IELTS_CM_Shortcodes {
                             }
                         }
                         
-                        $success = true;
-                        // Auto login
+                        // Auto login and do_action to ensure cookies are set
                         wp_set_current_user($user_id);
-                        wp_set_auth_cookie($user_id);
+                        wp_set_auth_cookie($user_id, true);
+                        $user_obj = get_userdata($user_id);
+                        do_action('wp_login', $user_obj->user_login, $user_obj);
                         
-                        // Redirect if specified
-                        if (!empty($atts['redirect'])) {
-                            wp_redirect($atts['redirect']);
-                            exit;
-                        }
+                        // Always redirect to ensure auth cookies are properly set
+                        // Validate redirect URL for security
+                        $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                        $redirect_to = wp_validate_redirect($redirect_to, home_url());
+                        wp_safe_redirect($redirect_to);
+                        exit;
                     }
                 }
             }
@@ -1136,36 +1539,31 @@ class IELTS_CM_Shortcodes {
             <?php endif; ?>
             
             <?php if (!$success): ?>
-                <form method="post" action="">
+                <form method="post" action="" class="ielts-form">
                     <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
                     
-                    <p>
-                        <label for="ielts_username"><?php _e('Username', 'ielts-course-manager'); ?> *</label>
-                        <input type="text" name="ielts_username" id="ielts_username" required 
-                               value="<?php echo isset($_POST['ielts_username']) ? esc_attr($_POST['ielts_username']) : ''; ?>">
-                    </p>
-                    
-                    <p>
-                        <label for="ielts_email"><?php _e('Email', 'ielts-course-manager'); ?> *</label>
-                        <input type="email" name="ielts_email" id="ielts_email" required 
+                    <p class="form-field">
+                        <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
                                value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>">
+                        <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
                     </p>
                     
-                    <p>
-                        <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> *</label>
-                        <input type="password" name="ielts_password" id="ielts_password" required>
-                        <small><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
+                    <p class="form-field">
+                        <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input">
+                        <small class="form-help"><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
                     </p>
                     
-                    <p>
-                        <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> *</label>
-                        <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required>
+                    <p class="form-field">
+                        <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
                     </p>
                     
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
-                        <p>
-                            <label for="ielts_membership_type"><?php _e('Select Course', 'ielts-course-manager'); ?> *</label>
-                            <select name="ielts_membership_type" id="ielts_membership_type" required>
+                        <p class="form-field">
+                            <label for="ielts_membership_type"><?php _e('Select Course', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
                                 <option value=""><?php _e('-- Select a course --', 'ielts-course-manager'); ?></option>
                                 <?php 
                                 $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
@@ -1180,49 +1578,89 @@ class IELTS_CM_Shortcodes {
                         </p>
                     <?php endif; ?>
                     
-                    <p>
-                        <input type="submit" name="ielts_register_submit" value="<?php _e('Register', 'ielts-course-manager'); ?>" class="button">
+                    <p class="form-field">
+                        <button type="submit" name="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
+                            <?php _e('Create Account', 'ielts-course-manager'); ?>
+                        </button>
                     </p>
                 </form>
             <?php endif; ?>
         </div>
         
         <style>
+        .ielts-registration-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .ielts-registration-form .ielts-form {
+            margin-top: 20px;
+        }
+        .ielts-registration-form .form-field {
+            margin-bottom: 20px;
+        }
         .ielts-registration-form label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
         }
-        .ielts-registration-form input[type="text"],
-        .ielts-registration-form input[type="email"],
-        .ielts-registration-form input[type="password"],
-        .ielts-registration-form select {
+        .ielts-registration-form .required {
+            color: #dc3545;
+        }
+        .ielts-registration-form .ielts-form-input {
             width: 100%;
-            padding: 8px;
+            padding: 12px 15px;
             margin-bottom: 5px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
         }
-        .ielts-registration-form small {
+        .ielts-registration-form .ielts-form-input:focus {
+            outline: none;
+            border-color: #0073aa;
+        }
+        .ielts-registration-form .form-help {
+            display: block;
             color: #666;
-            font-size: 12px;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .ielts-registration-form .ielts-button-block {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
         }
         .ielts-message {
-            padding: 10px 15px;
+            padding: 15px 20px;
             margin-bottom: 20px;
-            border-radius: 4px;
+            border-radius: 6px;
+            border-left: 4px solid;
         }
         .ielts-message.ielts-success {
             background: #d4edda;
-            border: 1px solid #c3e6cb;
+            border-color: #28a745;
             color: #155724;
         }
         .ielts-message.ielts-error {
             background: #f8d7da;
-            border: 1px solid #f5c6cb;
+            border-color: #dc3545;
             color: #721c24;
         }
         .ielts-message ul {
             margin: 0;
             padding-left: 20px;
+        }
+        .ielts-message ul li {
+            margin: 5px 0;
         }
         </style>
         <?php
