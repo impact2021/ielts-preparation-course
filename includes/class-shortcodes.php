@@ -97,11 +97,14 @@ class IELTS_CM_Shortcodes {
         );
         
         if (!empty($atts['category'])) {
+            // Support comma-separated categories (e.g., "academic,general")
+            $categories = array_map('trim', explode(',', $atts['category']));
+            
             $args['tax_query'] = array(
                 array(
                     'taxonomy' => 'ielts_course_category',
                     'field' => 'slug',
-                    'terms' => $atts['category']
+                    'terms' => $categories
                 )
             );
         }
@@ -1572,6 +1575,11 @@ class IELTS_CM_Shortcodes {
                     if (!in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
                         $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
                     }
+                    // SECURITY: Prevent paid memberships from being assigned during free registration
+                    // Only trial memberships can be assigned without payment
+                    if (!IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                        $errors[] = __('Paid memberships require payment. Please select a free trial option or contact support for paid membership purchase.', 'ielts-course-manager');
+                    }
                 }
                 
                 // Create user if no errors
@@ -1591,15 +1599,26 @@ class IELTS_CM_Shortcodes {
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
                             // Validate membership type one more time before saving (defense in depth)
                             if (in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
-                                update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-                                
-                                // Set expiry date based on membership duration settings
-                                $membership = new IELTS_CM_Membership();
-                                $expiry_date = $membership->calculate_expiry_date($membership_type);
-                                update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-                                
-                                // Send enrollment email
-                                $membership->send_enrollment_email($user_id, $membership_type);
+                                // SECURITY: Double-check that only trial memberships are assigned during free registration
+                                // This is a critical security control to prevent paid course access without payment
+                                if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                                    update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                                    
+                                    // Set expiry date based on membership duration settings
+                                    $membership = new IELTS_CM_Membership();
+                                    $expiry_date = $membership->calculate_expiry_date($membership_type);
+                                    update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                                    
+                                    // Send enrollment email
+                                    $membership->send_enrollment_email($user_id, $membership_type);
+                                } else {
+                                    // Log security violation attempt for paid membership without payment
+                                    error_log(sprintf(
+                                        'SECURITY: Attempted to assign paid membership "%s" to user %d without payment during registration',
+                                        $membership_type,
+                                        $user_id
+                                    ));
+                                }
                             }
                         }
                         
@@ -1675,19 +1694,27 @@ class IELTS_CM_Shortcodes {
                     
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <p class="form-field form-field-full">
-                            <label for="ielts_membership_type"><?php _e('Select Course', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <label for="ielts_membership_type"><?php _e('Select Trial Course', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                             <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
-                                <option value=""><?php _e('-- Select a course --', 'ielts-course-manager'); ?></option>
+                                <option value=""><?php _e('-- Select a trial course --', 'ielts-course-manager'); ?></option>
                                 <?php 
+                                // SECURITY: Only show trial memberships during registration
+                                // Paid memberships require separate payment processing
                                 $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
                                 $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                 foreach ($membership_levels as $key => $label): 
+                                    // Only display trial memberships (free registration)
+                                    if (IELTS_CM_Membership::is_trial_membership($key)):
                                 ?>
                                     <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
                                         <?php echo esc_html($label); ?>
                                     </option>
-                                <?php endforeach; ?>
+                                <?php 
+                                    endif;
+                                endforeach; 
+                                ?>
                             </select>
+                            <small class="form-help"><?php _e('Start with a free trial. Upgrade to a full membership anytime for unlimited access.', 'ielts-course-manager'); ?></small>
                         </p>
                     <?php endif; ?>
                     
