@@ -1294,7 +1294,10 @@ class IELTS_CM_Shortcodes {
             return '<p>' . __('You are already logged in.', 'ielts-course-manager') . ' <a href="' . wp_logout_url() . '">' . __('Logout', 'ielts-course-manager') . '</a></p>';
         }
         
-        $redirect_url = !empty($atts['redirect']) ? $atts['redirect'] : home_url();
+        // Validate and sanitize redirect URL
+        $redirect_url = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+        // Ensure redirect is to same site for security
+        $redirect_url = wp_validate_redirect($redirect_url, home_url());
         
         ob_start();
         ?>
@@ -1427,15 +1430,23 @@ class IELTS_CM_Shortcodes {
                 $password_confirm = $_POST['ielts_password_confirm'];
                 $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
                 
-                // Use email as username (remove special characters that aren't allowed in usernames)
-                $username = sanitize_user(current(explode('@', $email)), true);
+                // Generate username from email (more user-friendly format)
+                $email_parts = explode('@', $email);
+                $base_username = sanitize_user($email_parts[0], true);
                 
-                // If username exists, append a number
-                $base_username = $username;
-                $counter = 1;
-                while (username_exists($username)) {
-                    $username = $base_username . $counter;
-                    $counter++;
+                // Ensure username is not empty
+                if (empty($base_username)) {
+                    $base_username = 'user';
+                }
+                
+                // If username exists, append timestamp for uniqueness
+                $username = $base_username;
+                if (username_exists($username)) {
+                    $username = $base_username . '_' . time();
+                    // If still exists (very unlikely), add random suffix
+                    if (username_exists($username)) {
+                        $username = $base_username . '_' . wp_generate_password(8, false);
+                    }
                 }
                 
                 // Validation
@@ -1487,10 +1498,13 @@ class IELTS_CM_Shortcodes {
                         // Auto login and do_action to ensure cookies are set
                         wp_set_current_user($user_id);
                         wp_set_auth_cookie($user_id, true);
-                        do_action('wp_login', $user->user_login, $user);
+                        $user_obj = get_userdata($user_id);
+                        do_action('wp_login', $user_obj->user_login, $user_obj);
                         
                         // Always redirect to ensure auth cookies are properly set
-                        $redirect_to = !empty($atts['redirect']) ? $atts['redirect'] : home_url();
+                        // Validate redirect URL for security
+                        $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                        $redirect_to = wp_validate_redirect($redirect_to, home_url());
                         wp_safe_redirect($redirect_to);
                         exit;
                     }

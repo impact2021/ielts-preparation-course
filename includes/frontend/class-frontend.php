@@ -56,12 +56,19 @@ class IELTS_CM_Frontend {
             return $user;
         }
         
-        // Check if username is an email
+        // Check if username is an email - if so, get the user by email
         if (is_email($username)) {
             $user_obj = get_user_by('email', $username);
             if ($user_obj) {
-                $username = $user_obj->user_login;
-                $user = wp_authenticate_username_password(null, $username, $password);
+                // Authenticate using the username instead of email
+                // This ensures consistent timing regardless of whether email exists
+                $user = wp_authenticate_username_password(null, $user_obj->user_login, $password);
+            }
+            // If email doesn't exist, still call wp_authenticate_username_password
+            // to maintain consistent timing and avoid user enumeration
+            else {
+                // Call with a non-existent username to maintain timing consistency
+                wp_authenticate_username_password(null, 'nonexistent_user_' . wp_generate_password(12, false), $password);
             }
         }
         
