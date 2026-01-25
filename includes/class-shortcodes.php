@@ -146,6 +146,45 @@ class IELTS_CM_Shortcodes {
             return '<p>' . __('Course not found', 'ielts-course-manager') . '</p>';
         }
         
+        // Check module-based access if membership is enabled
+        if (get_option('ielts_cm_membership_enabled') && is_user_logged_in()) {
+            $user_id = get_current_user_id();
+            $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+            
+            if (!empty($membership_type)) {
+                // Determine the module type from membership (academic or general)
+                $user_module = '';
+                if (strpos($membership_type, 'academic') !== false) {
+                    $user_module = 'academic';
+                } elseif (strpos($membership_type, 'general') !== false) {
+                    $user_module = 'general';
+                }
+                
+                // Check if course belongs to a different module
+                if (!empty($user_module)) {
+                    $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+                    $course_module = '';
+                    
+                    foreach ($categories as $cat_slug) {
+                        if (strpos(strtolower($cat_slug), 'academic') !== false) {
+                            $course_module = 'academic';
+                            break;
+                        } elseif (strpos(strtolower($cat_slug), 'general') !== false) {
+                            $course_module = 'general';
+                            break;
+                        }
+                    }
+                    
+                    // Deny access if course is from a different module
+                    if (!empty($course_module) && $course_module !== $user_module) {
+                        return '<div class="ielts-access-denied"><p>' . 
+                               __('This course is not available with your current membership type.', 'ielts-course-manager') . 
+                               '</p></div>';
+                    }
+                }
+            }
+        }
+        
         // Get lessons for this course - check both old and new meta keys
         global $wpdb;
         // Check for both integer and string serialization in course_ids array
