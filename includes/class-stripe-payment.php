@@ -10,9 +10,17 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Stripe_Payment {
     
     public function init() {
+        // AJAX endpoint for creating user account
+        add_action('wp_ajax_nopriv_ielts_register_user', array($this, 'register_user'));
+        add_action('wp_ajax_ielts_register_user', array($this, 'register_user'));
+        
         // AJAX endpoint for creating payment intent
         add_action('wp_ajax_nopriv_ielts_create_payment_intent', array($this, 'create_payment_intent'));
         add_action('wp_ajax_ielts_create_payment_intent', array($this, 'create_payment_intent'));
+        
+        // AJAX endpoint for confirming payment
+        add_action('wp_ajax_nopriv_ielts_confirm_payment', array($this, 'confirm_payment'));
+        add_action('wp_ajax_ielts_confirm_payment', array($this, 'confirm_payment'));
         
         // Webhook handler for payment confirmation
         add_action('rest_api_init', array($this, 'register_webhook_endpoint'));
@@ -28,6 +36,68 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Register user account (called before payment)
+     */
+    public function register_user() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+            wp_send_json_error('Security check failed', 403);
+        }
+        
+        $first_name = sanitize_text_field($_POST['first_name']);
+        $last_name = sanitize_text_field($_POST['last_name']);
+        $email = sanitize_email($_POST['email']);
+        $password = $_POST['password'];
+        $membership_type = sanitize_text_field($_POST['membership_type']);
+        
+        // Validate inputs
+        if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
+            wp_send_json_error('All fields are required');
+        }
+        
+        if (!is_email($email)) {
+            wp_send_json_error('Invalid email address');
+        }
+        
+        if (email_exists($email)) {
+            wp_send_json_error('Email already exists');
+        }
+        
+        // Generate username from email
+        $email_parts = explode('@', $email);
+        $base_username = sanitize_user($email_parts[0], true);
+        $username = $base_username;
+        $counter = 1;
+        while (username_exists($username)) {
+            $username = $base_username . $counter;
+            $counter++;
+        }
+        
+        // Create user account
+        $user_id = wp_create_user($username, $password, $email);
+        
+        if (is_wp_error($user_id)) {
+            wp_send_json_error($user_id->get_error_message());
+        }
+        
+        // Update user meta
+        wp_update_user(array(
+            'ID' => $user_id,
+            'first_name' => $first_name,
+            'last_name' => $last_name,
+            'display_name' => $first_name . ' ' . $last_name,
+        ));
+        
+        // Store membership type temporarily (will be activated after payment)
+        update_user_meta($user_id, '_ielts_cm_pending_membership_type', $membership_type);
+        update_user_meta($user_id, '_ielts_cm_registration_pending', true);
+        
+        wp_send_json_success(array(
+            'user_id' => $user_id
+        ));
+    }
+    
+    /**
      * Create Payment Intent for registration
      */
     public function create_payment_intent() {
@@ -36,7 +106,15 @@ class IELTS_CM_Stripe_Payment {
             wp_send_json_error('Security check failed', 403);
         }
         
+        $user_id = intval($_POST['user_id']);
         $membership_type = sanitize_text_field($_POST['membership_type']);
+        $amount = floatval($_POST['amount']);
+        
+        // Validate user exists
+        $user = get_userdata($user_id);
+        if (!$user) {
+            wp_send_json_error('Invalid user', 400);
+        }
         
         // SECURITY: Validate membership type exists and get server-side price
         $pricing = get_option('ielts_cm_membership_pricing', array());
@@ -44,10 +122,15 @@ class IELTS_CM_Stripe_Payment {
             wp_send_json_error('Invalid membership type', 400);
         }
         
-        $price = floatval($pricing[$membership_type]);
+        $server_price = floatval($pricing[$membership_type]);
+        
+        // Verify amount matches server-side price
+        if (abs($amount - $server_price) > 0.01) {
+            wp_send_json_error('Amount mismatch', 400);
+        }
         
         // Don't create payment intent for free memberships
-        if ($price <= 0) {
+        if ($amount <= 0) {
             wp_send_json_error('This membership is free', 400);
         }
         
@@ -60,30 +143,113 @@ class IELTS_CM_Stripe_Payment {
         $this->load_stripe();
         \Stripe\Stripe::setApiKey($stripe_secret);
         
+        // Create payment record in database
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payments';
+        
+        $wpdb->insert($table_name, array(
+            'user_id' => $user_id,
+            'membership_type' => $membership_type,
+            'amount' => $amount,
+            'payment_status' => 'pending',
+            'created_at' => current_time('mysql')
+        ));
+        
+        $payment_id = $wpdb->insert_id;
+        
         try {
             // Create Payment Intent
             $payment_intent = \Stripe\PaymentIntent::create([
-                'amount' => intval($price * 100), // Convert to cents
+                'amount' => intval($amount * 100), // Convert to cents
                 'currency' => 'usd',
                 'automatic_payment_methods' => [
                     'enabled' => true,
                 ],
                 'metadata' => [
+                    'user_id' => $user_id,
                     'membership_type' => $membership_type,
-                    'email' => sanitize_email($_POST['email']),
-                    'first_name' => sanitize_text_field($_POST['first_name']),
-                    'last_name' => sanitize_text_field($_POST['last_name']),
+                    'payment_id' => $payment_id,
+                    'is_registration' => 'true',
                 ],
             ]);
             
             wp_send_json_success([
                 'clientSecret' => $payment_intent->client_secret,
+                'payment_id' => $payment_id,
             ]);
             
         } catch (\Exception $e) {
             error_log('Stripe Payment Intent Error: ' . $e->getMessage());
-            wp_send_json_error('Payment system error', 500);
+            wp_send_json_error('Payment system error: ' . $e->getMessage(), 500);
         }
+    }
+    
+    /**
+     * Confirm payment and activate membership
+     */
+    public function confirm_payment() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+            wp_send_json_error('Security check failed', 403);
+        }
+        
+        $payment_intent_id = sanitize_text_field($_POST['payment_intent_id']);
+        $payment_id = intval($_POST['payment_id']);
+        
+        // Get payment from database
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payments';
+        
+        $payment = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM {$table_name} WHERE id = %d",
+            $payment_id
+        ));
+        
+        if (!$payment) {
+            wp_send_json_error('Payment not found', 404);
+        }
+        
+        // Update payment status
+        $wpdb->update(
+            $table_name,
+            array(
+                'payment_status' => 'completed',
+                'transaction_id' => $payment_intent_id
+            ),
+            array('id' => $payment_id)
+        );
+        
+        // Assign paid membership to user
+        update_user_meta($payment->user_id, '_ielts_cm_membership_type', $payment->membership_type);
+        
+        // Set expiry date
+        $expiry_date = IELTS_CM_Membership::calculate_expiry_date($payment->membership_type);
+        update_user_meta($payment->user_id, '_ielts_cm_membership_expiry', $expiry_date);
+        
+        // Store payment info
+        update_user_meta($payment->user_id, '_ielts_cm_payment_intent_id', $payment_intent_id);
+        update_user_meta($payment->user_id, '_ielts_cm_payment_amount', $payment->amount);
+        update_user_meta($payment->user_id, '_ielts_cm_payment_date', current_time('mysql'));
+        
+        // Clean up registration pending flags
+        delete_user_meta($payment->user_id, '_ielts_cm_pending_membership_type');
+        delete_user_meta($payment->user_id, '_ielts_cm_registration_pending');
+        
+        // Send welcome email
+        wp_new_user_notification($payment->user_id, null, 'user');
+        
+        // Get login page URL for redirect
+        $login_url = wp_login_url();
+        if (get_option('ielts_cm_membership_enabled')) {
+            $login_page_id = get_option('ielts_cm_login_page_id');
+            if ($login_page_id) {
+                $login_url = get_permalink($login_page_id);
+            }
+        }
+        
+        wp_send_json_success(array(
+            'redirect' => $login_url
+        ));
     }
     
     /**
