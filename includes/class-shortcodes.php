@@ -1072,6 +1072,14 @@ class IELTS_CM_Shortcodes {
                     $errors[] = __('Passwords do not match.', 'ielts-course-manager');
                 }
                 
+                // Validate membership type if provided
+                if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
+                    $valid_memberships = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
+                    if (!in_array($membership_type, $valid_memberships)) {
+                        $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
+                    }
+                }
+                
                 // Create user if no errors
                 if (empty($errors)) {
                     $user_id = wp_create_user($username, $password, $email);
@@ -1080,12 +1088,16 @@ class IELTS_CM_Shortcodes {
                     } else {
                         // Set membership type if selected and membership system is enabled
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
-                            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-                            
-                            // Set expiry date for trial memberships (30 days)
-                            if (strpos($membership_type, 'trial') !== false) {
-                                $expiry_date = date('Y-m-d', strtotime('+30 days'));
-                                update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                            // Validate membership type one more time before saving (defense in depth)
+                            $valid_memberships = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
+                            if (in_array($membership_type, $valid_memberships)) {
+                                update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                                
+                                // Set expiry date for trial memberships (30 days)
+                                if ($membership_type === 'academic_trial' || $membership_type === 'general_trial') {
+                                    $expiry_date = date('Y-m-d', strtotime('+30 days'));
+                                    update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                                }
                             }
                         }
                         
