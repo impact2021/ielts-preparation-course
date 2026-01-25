@@ -73,6 +73,48 @@ class IELTS_CM_Shortcodes {
         
         $courses = get_posts($args);
         
+        // Filter courses based on membership if membership system is enabled
+        if (get_option('ielts_cm_membership_enabled') && is_user_logged_in()) {
+            $user_id = get_current_user_id();
+            $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+            
+            if (!empty($membership_type)) {
+                // Determine the module type from membership (academic or general)
+                $user_module = '';
+                if (strpos($membership_type, 'academic') !== false) {
+                    $user_module = 'academic';
+                } elseif (strpos($membership_type, 'general') !== false) {
+                    $user_module = 'general';
+                }
+                
+                // Filter courses by category if user has a specific module
+                if (!empty($user_module)) {
+                    $filtered_courses = array();
+                    foreach ($courses as $course) {
+                        $categories = wp_get_post_terms($course->ID, 'ielts_course_category', array('fields' => 'slugs'));
+                        
+                        // Check if course belongs to user's module or is uncategorized/shared
+                        $course_module = '';
+                        foreach ($categories as $cat_slug) {
+                            if (strpos(strtolower($cat_slug), 'academic') !== false) {
+                                $course_module = 'academic';
+                                break;
+                            } elseif (strpos(strtolower($cat_slug), 'general') !== false) {
+                                $course_module = 'general';
+                                break;
+                            }
+                        }
+                        
+                        // Include course if it matches user's module or has no specific module
+                        if (empty($course_module) || $course_module === $user_module) {
+                            $filtered_courses[] = $course;
+                        }
+                    }
+                    $courses = $filtered_courses;
+                }
+            }
+        }
+        
         // Pass columns setting to template
         $columns = intval($atts['columns']);
         if ($columns < 1) {
@@ -1682,12 +1724,51 @@ class IELTS_CM_Shortcodes {
         // Get membership levels directly from constant
         $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
         
+        // Determine if this is a trial membership
+        $is_trial = !empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type);
+        
+        // Get full member page URL
+        $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
+        
+        // Calculate time remaining for trial members
+        $hours_remaining = 0;
+        if ($is_trial && !empty($expiry_date)) {
+            $expiry_timestamp = strtotime($expiry_date);
+            $current_timestamp = time();
+            $seconds_remaining = max(0, $expiry_timestamp - $current_timestamp);
+            $hours_remaining = ceil($seconds_remaining / 3600); // Round up to nearest hour
+        }
+        
         ob_start();
         ?>
         <div class="ielts-account-page">
-            <h2><?php _e('Account Information', 'ielts-course-manager'); ?></h2>
+            <h2><?php _e('My Account', 'ielts-course-manager'); ?></h2>
             
-            <div class="ielts-account-section">
+            <!-- Tab Navigation -->
+            <div class="ielts-account-tabs">
+                <button class="ielts-tab-button active" data-tab="personal-details">
+                    <?php _e('Personal Details', 'ielts-course-manager'); ?>
+                </button>
+                <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                    <button class="ielts-tab-button" data-tab="membership-info">
+                        <?php _e('Membership Information', 'ielts-course-manager'); ?>
+                    </button>
+                    <?php if (!empty($membership_type)): ?>
+                        <?php if ($is_trial): ?>
+                            <button class="ielts-tab-button" data-tab="become-full-member">
+                                <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
+                            </button>
+                        <?php else: ?>
+                            <button class="ielts-tab-button" data-tab="extend-course">
+                                <?php _e('Extend My Course', 'ielts-course-manager'); ?>
+                            </button>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="ielts-tab-content active" id="personal-details">
                 <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
                 <table class="ielts-account-table">
                     <tr>
@@ -1702,11 +1783,19 @@ class IELTS_CM_Shortcodes {
                         <th><?php _e('Display Name:', 'ielts-course-manager'); ?></th>
                         <td><?php echo esc_html($user->display_name); ?></td>
                     </tr>
+                    <tr>
+                        <th><?php _e('First Name:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->first_name); ?></td>
+                    </tr>
+                    <tr>
+                        <th><?php _e('Last Name:', 'ielts-course-manager'); ?></th>
+                        <td><?php echo esc_html($user->last_name); ?></td>
+                    </tr>
                 </table>
             </div>
             
             <?php if (get_option('ielts_cm_membership_enabled')): ?>
-                <div class="ielts-account-section">
+                <div class="ielts-tab-content" id="membership-info">
                     <h3><?php _e('Membership Information', 'ielts-course-manager'); ?></h3>
                     <table class="ielts-account-table">
                         <tr>
@@ -1726,7 +1815,13 @@ class IELTS_CM_Shortcodes {
                         </tr>
                         <?php if (!empty($membership_type)): ?>
                             <tr>
-                                <th><?php _e('Expiry Date:', 'ielts-course-manager'); ?></th>
+                                <th><?php 
+                                    if ($is_trial) {
+                                        _e('Time Remaining:', 'ielts-course-manager');
+                                    } else {
+                                        _e('Expiry Date:', 'ielts-course-manager');
+                                    }
+                                ?></th>
                                 <td>
                                     <?php 
                                     if (empty($expiry_date)) {
@@ -1734,10 +1829,22 @@ class IELTS_CM_Shortcodes {
                                     } else {
                                         $expiry_timestamp = strtotime($expiry_date);
                                         $is_expired = $expiry_timestamp < time();
-                                        if ($is_expired) {
-                                            echo '<span class="ielts-expired">' . date('F j, Y', $expiry_timestamp) . ' (' . __('Expired', 'ielts-course-manager') . ')</span>';
+                                        
+                                        if ($is_trial) {
+                                            // Show hours remaining for trial members
+                                            if ($is_expired) {
+                                                echo '<span class="ielts-expired">' . __('Expired', 'ielts-course-manager') . '</span>';
+                                            } else {
+                                                $hours_text = sprintf(_n('%d hour', '%d hours', $hours_remaining, 'ielts-course-manager'), $hours_remaining);
+                                                echo '<span class="ielts-active">' . esc_html($hours_text) . '</span>';
+                                            }
                                         } else {
-                                            echo '<span class="ielts-active">' . date('F j, Y', $expiry_timestamp) . '</span>';
+                                            // Show date for full members
+                                            if ($is_expired) {
+                                                echo '<span class="ielts-expired">' . date('F j, Y', $expiry_timestamp) . ' (' . __('Expired', 'ielts-course-manager') . ')</span>';
+                                            } else {
+                                                echo '<span class="ielts-active">' . date('F j, Y', $expiry_timestamp) . '</span>';
+                                            }
                                         }
                                     }
                                     ?>
@@ -1758,46 +1865,138 @@ class IELTS_CM_Shortcodes {
                         <?php endif; ?>
                     </table>
                 </div>
+                
+                <?php if (!empty($membership_type)): ?>
+                    <?php if ($is_trial): ?>
+                        <!-- Become a Full Member Tab -->
+                        <div class="ielts-tab-content" id="become-full-member">
+                            <h3><?php _e('Become a Full Member', 'ielts-course-manager'); ?></h3>
+                            <p><?php _e('Your trial membership gives you limited access to our courses. Upgrade to a full membership to get:', 'ielts-course-manager'); ?></p>
+                            <ul>
+                                <li><?php _e('Extended access time (30 days or more)', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('Full access to all course materials', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('Complete all exercises and tests', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('Track your progress and earn awards', 'ielts-course-manager'); ?></li>
+                            </ul>
+                            <?php if (!empty($full_member_page_url)): ?>
+                                <p>
+                                    <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
+                                        <?php _e('Upgrade to Full Membership', 'ielts-course-manager'); ?>
+                                    </a>
+                                </p>
+                            <?php else: ?>
+                                <p><?php _e('Please contact us to upgrade your membership.', 'ielts-course-manager'); ?></p>
+                            <?php endif; ?>
+                        </div>
+                    <?php else: ?>
+                        <!-- Extend My Course Tab -->
+                        <div class="ielts-tab-content" id="extend-course">
+                            <h3><?php _e('Extend My Course', 'ielts-course-manager'); ?></h3>
+                            <p>
+                                <?php 
+                                $membership_name = isset($membership_levels[$membership_type]) 
+                                    ? $membership_levels[$membership_type] 
+                                    : $membership_type;
+                                printf(
+                                    __('You are currently enrolled in: %s', 'ielts-course-manager'), 
+                                    '<strong>' . esc_html($membership_name) . '</strong>'
+                                );
+                                ?>
+                            </p>
+                            <?php if (!empty($expiry_date)): ?>
+                                <p>
+                                    <?php 
+                                    printf(
+                                        __('Your membership will expire on: %s', 'ielts-course-manager'),
+                                        '<strong>' . date('F j, Y', strtotime($expiry_date)) . '</strong>'
+                                    );
+                                    ?>
+                                </p>
+                            <?php endif; ?>
+                            <p><?php _e('To extend your course access, please contact us or visit our membership page.', 'ielts-course-manager'); ?></p>
+                            <?php if (!empty($full_member_page_url)): ?>
+                                <p>
+                                    <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
+                                        <?php _e('Renew Membership', 'ielts-course-manager'); ?>
+                                    </a>
+                                </p>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                <?php endif; ?>
             <?php endif; ?>
-            
-            <div class="ielts-account-section">
-                <h3><?php _e('Account Actions', 'ielts-course-manager'); ?></h3>
-                <p>
-                    <a href="<?php echo wp_logout_url(get_permalink()); ?>" class="button">
-                        <?php _e('Logout', 'ielts-course-manager'); ?>
-                    </a>
-                </p>
-            </div>
         </div>
         
         <style>
         .ielts-account-page {
-            max-width: 800px;
+            max-width: 900px;
         }
-        .ielts-account-section {
-            background: #f9f9f9;
-            padding: 20px;
+        .ielts-account-tabs {
+            display: flex;
+            gap: 10px;
             margin-bottom: 20px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
+            border-bottom: 2px solid #ddd;
+            flex-wrap: wrap;
         }
-        .ielts-account-section h3 {
+        .ielts-tab-button {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-radius: 4px 4px 0 0;
+            margin-bottom: -2px;
+        }
+        .ielts-tab-button:hover {
+            background: #e9e9e9;
+        }
+        .ielts-tab-button.active {
+            background: white;
+            border-bottom: 2px solid white;
+            color: #2271b1;
+        }
+        .ielts-tab-content {
+            display: none;
+            background: white;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 0 4px 4px 4px;
+            min-height: 300px;
+        }
+        .ielts-tab-content.active {
+            display: block;
+        }
+        .ielts-tab-content h3 {
             margin-top: 0;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 2px solid #2271b1;
             padding-bottom: 10px;
+            color: #2271b1;
+        }
+        .ielts-tab-content ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        .ielts-tab-content ul li {
+            margin-bottom: 8px;
+            line-height: 1.6;
         }
         .ielts-account-table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 15px;
         }
         .ielts-account-table th {
             text-align: left;
-            padding: 10px;
+            padding: 12px;
             width: 200px;
             font-weight: bold;
+            background: #f5f5f5;
         }
         .ielts-account-table td {
-            padding: 10px;
+            padding: 12px;
         }
         .ielts-account-table tr {
             border-bottom: 1px solid #e0e0e0;
@@ -1811,14 +2010,16 @@ class IELTS_CM_Shortcodes {
         }
         .ielts-expired {
             color: #dc3232;
+            font-weight: bold;
         }
         .ielts-active {
             color: #46b450;
+            font-weight: bold;
         }
         .ielts-status-expired {
             background: #dc3232;
             color: white;
-            padding: 4px 8px;
+            padding: 4px 10px;
             border-radius: 3px;
             font-size: 12px;
             font-weight: bold;
@@ -1826,12 +2027,48 @@ class IELTS_CM_Shortcodes {
         .ielts-status-active {
             background: #46b450;
             color: white;
-            padding: 4px 8px;
+            padding: 4px 10px;
             border-radius: 3px;
             font-size: 12px;
             font-weight: bold;
         }
+        .button-primary {
+            background: #2271b1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        .button-primary:hover {
+            background: #135e96;
+            color: white;
+        }
         </style>
+        
+        <script>
+        (function() {
+            var tabs = document.querySelectorAll('.ielts-tab-button');
+            var contents = document.querySelectorAll('.ielts-tab-content');
+            
+            tabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    var targetId = this.getAttribute('data-tab');
+                    
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(function(t) { t.classList.remove('active'); });
+                    contents.forEach(function(c) { c.classList.remove('active'); });
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        })();
+        </script>
         <?php
         return ob_get_clean();
     }
