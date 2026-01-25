@@ -25,12 +25,25 @@ class IELTS_CM_Membership {
     const TRIAL_PERIOD_DAYS = 30;
     
     /**
+     * Membership status values
+     */
+    const STATUS_ACTIVE = 'active';
+    const STATUS_EXPIRED = 'expired';
+    const STATUS_NONE = 'none';
+    
+    /**
      * Initialize membership functionality
      */
     public function init() {
         // Always add admin menu and register settings so users can enable/disable the system
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
+        
+        // Schedule daily cron job to check for expired memberships
+        if (!wp_next_scheduled('ielts_cm_check_expired_memberships')) {
+            wp_schedule_event(time(), 'daily', 'ielts_cm_check_expired_memberships');
+        }
+        add_action('ielts_cm_check_expired_memberships', array($this, 'check_and_update_expired_memberships'));
         
         // Only initialize other features if membership system is enabled
         if (!$this->is_enabled()) {
@@ -70,6 +83,7 @@ class IELTS_CM_Membership {
         if ($column_name === 'membership') {
             $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
             $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+            $status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
             
             if (empty($membership_type)) {
                 return __('None', 'ielts-course-manager');
@@ -79,11 +93,16 @@ class IELTS_CM_Membership {
                 ? self::MEMBERSHIP_LEVELS[$membership_type] 
                 : $membership_type;
             
+            // Check status first, then fall back to date comparison for legacy data
+            $is_expired = ($status === self::STATUS_EXPIRED) || 
+                          (!empty($expiry_date) && strtotime($expiry_date) < time());
+            
+            if ($is_expired) {
+                return '<span style="color: #dc3232;">' . esc_html($membership_name) . ' (Expired)</span>';
+            }
+            
             if (!empty($expiry_date)) {
                 $expiry_timestamp = strtotime($expiry_date);
-                if ($expiry_timestamp < time()) {
-                    return '<span style="color: #dc3232;">' . esc_html($membership_name) . ' (Expired)</span>';
-                }
                 return esc_html($membership_name) . '<br><small>' . date('Y-m-d', $expiry_timestamp) . '</small>';
             }
             
@@ -139,7 +158,24 @@ class IELTS_CM_Membership {
         }
         
         if (isset($_POST['ielts_cm_membership_type'])) {
-            update_user_meta($user_id, '_ielts_cm_membership_type', sanitize_text_field($_POST['ielts_cm_membership_type']));
+            $membership_type = sanitize_text_field($_POST['ielts_cm_membership_type']);
+            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+            
+            // Set status based on whether membership type is set and expiry date
+            if (!empty($membership_type)) {
+                $expiry_date = isset($_POST['ielts_cm_membership_expiry']) ? sanitize_text_field($_POST['ielts_cm_membership_expiry']) : '';
+                
+                // If no expiry or expiry is in the future, set as active
+                if (empty($expiry_date) || strtotime($expiry_date) > time()) {
+                    update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_ACTIVE);
+                } else {
+                    // Expiry is in the past, set as expired
+                    update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_EXPIRED);
+                }
+            } else {
+                // No membership type, set status to none
+                update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_NONE);
+            }
         }
         
         if (isset($_POST['ielts_cm_membership_expiry'])) {
@@ -678,6 +714,28 @@ class IELTS_CM_Membership {
     }
     
     /**
+     * Get user membership status
+     * 
+     * @param int $user_id User ID
+     * @return string Status: 'active', 'expired', or 'none'
+     */
+    public function get_user_membership_status($user_id) {
+        return get_user_meta($user_id, '_ielts_cm_membership_status', true) ?: self::STATUS_NONE;
+    }
+    
+    /**
+     * Set user membership status
+     * 
+     * @param int $user_id User ID
+     * @param string $status Status to set: 'active', 'expired', or 'none'
+     */
+    public function set_user_membership_status($user_id, $status) {
+        if (in_array($status, array(self::STATUS_ACTIVE, self::STATUS_EXPIRED, self::STATUS_NONE))) {
+            update_user_meta($user_id, '_ielts_cm_membership_status', $status);
+        }
+    }
+    
+    /**
      * Check if a membership type is a trial membership
      * 
      * @param string $membership_type The membership type to check
@@ -705,7 +763,13 @@ class IELTS_CM_Membership {
             return false;
         }
         
-        // Check if membership is expired
+        // Check membership status - if expired, deny access immediately
+        $status = $this->get_user_membership_status($user_id);
+        if ($status === self::STATUS_EXPIRED) {
+            return false;
+        }
+        
+        // Check if membership is expired by date (fallback for legacy data)
         $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
         if (!empty($expiry_date)) {
             // Expiry date is stored in UTC format, convert properly
@@ -714,6 +778,10 @@ class IELTS_CM_Membership {
             
             // Return false if membership has expired
             if ($expiry_timestamp <= $now_utc) {
+                // Update status to expired if not already set
+                if ($status !== self::STATUS_EXPIRED) {
+                    $this->set_user_membership_status($user_id, self::STATUS_EXPIRED);
+                }
                 return false;
             }
         }
@@ -995,5 +1063,104 @@ The IELTS Team'
         }
         
         return gmdate('Y-m-d H:i:s', $expiry_timestamp);
+    }
+    
+    /**
+     * Check and update expired memberships
+     * This function is called by a daily cron job
+     */
+    public function check_and_update_expired_memberships() {
+        global $wpdb;
+        
+        // Get all users with memberships
+        $users = get_users(array(
+            'meta_key' => '_ielts_cm_membership_type',
+            'meta_compare' => 'EXISTS'
+        ));
+        
+        $now_utc = time();
+        $updated_count = 0;
+        
+        foreach ($users as $user) {
+            $membership_type = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
+            $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
+            $current_status = get_user_meta($user->ID, '_ielts_cm_membership_status', true);
+            
+            // Skip if no membership or already marked as expired
+            if (empty($membership_type) || $current_status === self::STATUS_EXPIRED) {
+                continue;
+            }
+            
+            // Check if membership has expired
+            if (!empty($expiry_date)) {
+                // Validate expiry date format before processing
+                $expiry_timestamp = strtotime($expiry_date . ' UTC');
+                
+                // Skip if invalid date format
+                if ($expiry_timestamp === false) {
+                    error_log("IELTS Course Manager: Invalid expiry date format for user {$user->ID}: {$expiry_date}");
+                    continue;
+                }
+                
+                if ($expiry_timestamp <= $now_utc) {
+                    // Membership has expired, update status
+                    $this->set_user_membership_status($user->ID, self::STATUS_EXPIRED);
+                    $updated_count++;
+                    
+                    // Send expiry notification email if it's a trial
+                    if (self::is_trial_membership($membership_type)) {
+                        $this->send_expiry_email($user->ID, $membership_type, 'trial');
+                    } else {
+                        $this->send_expiry_email($user->ID, $membership_type, 'full');
+                    }
+                }
+            }
+        }
+        
+        // Log the update if any memberships were expired
+        if ($updated_count > 0) {
+            error_log("IELTS Course Manager: Updated {$updated_count} expired memberships");
+        }
+    }
+    
+    /**
+     * Send expiry notification email
+     * 
+     * @param int $user_id User ID
+     * @param string $membership_type Membership type
+     * @param string $type 'trial' or 'full'
+     */
+    private function send_expiry_email($user_id, $membership_type, $type) {
+        $user = get_userdata($user_id);
+        if (!$user) {
+            return;
+        }
+        
+        $email_type = $type === 'trial' ? 'trial_expired' : 'full_expired';
+        $email_template = get_option('ielts_cm_email_' . $email_type, array());
+        
+        if (empty($email_template['subject']) || empty($email_template['message'])) {
+            return; // No email template configured
+        }
+        
+        // Replace placeholders
+        $membership_name = isset(self::MEMBERSHIP_LEVELS[$membership_type]) 
+            ? self::MEMBERSHIP_LEVELS[$membership_type] 
+            : $membership_type;
+        
+        $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
+        
+        $subject = $email_template['subject'];
+        $message = str_replace(
+            array('{username}', '{membership_name}', '{upgrade_url}'),
+            array($user->display_name, $membership_name, $upgrade_url),
+            $email_template['message']
+        );
+        
+        // Send email and log failures
+        $sent = wp_mail($user->user_email, $subject, $message);
+        if (!$sent) {
+            error_log("IELTS Course Manager: Failed to send {$type} expiry email to user {$user_id}");
+        }
     }
 }
