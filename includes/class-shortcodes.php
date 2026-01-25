@@ -1829,9 +1829,9 @@ class IELTS_CM_Shortcodes {
                 $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
                 $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
                 $email = isset($_POST['ielts_email']) ? sanitize_email($_POST['ielts_email']) : '';
-                $current_password = isset($_POST['ielts_current_password']) ? $_POST['ielts_current_password'] : '';
-                $new_password = isset($_POST['ielts_new_password']) ? $_POST['ielts_new_password'] : '';
-                $confirm_password = isset($_POST['ielts_confirm_password']) ? $_POST['ielts_confirm_password'] : '';
+                $current_password = isset($_POST['ielts_current_password']) ? wp_unslash($_POST['ielts_current_password']) : '';
+                $new_password = isset($_POST['ielts_new_password']) ? wp_unslash($_POST['ielts_new_password']) : '';
+                $confirm_password = isset($_POST['ielts_confirm_password']) ? wp_unslash($_POST['ielts_confirm_password']) : '';
                 
                 // Validate email
                 if (empty($email)) {
@@ -1842,8 +1842,11 @@ class IELTS_CM_Shortcodes {
                     $update_errors[] = __('Email already exists.', 'ielts-course-manager');
                 }
                 
+                // Check if user wants to change password
+                $wants_password_change = !empty($current_password) || !empty($new_password) || !empty($confirm_password);
+                
                 // If password change is requested, validate
-                if (!empty($new_password) || !empty($current_password) || !empty($confirm_password)) {
+                if ($wants_password_change) {
                     if (empty($current_password)) {
                         $update_errors[] = __('Current password is required to change your password.', 'ielts-course-manager');
                     } elseif (!wp_check_password($current_password, $user->user_pass, $user->ID)) {
@@ -1866,8 +1869,8 @@ class IELTS_CM_Shortcodes {
                         'user_email' => $email
                     );
                     
-                    // Add password if changing
-                    if (!empty($new_password) && !empty($current_password)) {
+                    // Add password if changing (validated above)
+                    if ($wants_password_change && !empty($new_password)) {
                         $user_data['user_pass'] = $new_password;
                     }
                     
