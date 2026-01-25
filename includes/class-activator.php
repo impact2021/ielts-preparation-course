@@ -28,5 +28,10 @@ class IELTS_CM_Activator {
         } elseif ($current_version !== IELTS_CM_VERSION) {
             update_option('ielts_cm_version', IELTS_CM_VERSION);
         }
+        
+        // Enable membership system by default if not already set
+        if (get_option('ielts_cm_membership_enabled') === false) {
+            add_option('ielts_cm_membership_enabled', 1);
+        }
     }
 }
