@@ -1922,37 +1922,10 @@ class IELTS_CM_Shortcodes {
                         <?php endif; ?>
                     </table>
                 </div>
-            <?php else: ?>
-                <!-- If membership system is disabled, show personal details as active -->
-                <div class="ielts-tab-content active" id="personal-details">
-                    <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
-                    <table class="ielts-account-table">
-                        <tr>
-                            <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html($user->user_login); ?></td>
-                        </tr>
-                        <tr>
-                            <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html($user->user_email); ?></td>
-                        </tr>
-                        <tr>
-                            <th><?php _e('Display Name:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html($user->display_name); ?></td>
-                        </tr>
-                        <tr>
-                            <th><?php _e('First Name:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html($user->first_name); ?></td>
-                        </tr>
-                        <tr>
-                            <th><?php _e('Last Name:', 'ielts-course-manager'); ?></th>
-                            <td><?php echo esc_html($user->last_name); ?></td>
-                        </tr>
-                    </table>
-                </div>
             <?php endif; ?>
             
-            <!-- Personal Details Tab (shows when membership is enabled) -->
-            <div class="ielts-tab-content<?php echo !get_option('ielts_cm_membership_enabled') ? '' : ''; ?>" id="personal-details">
+            <!-- Personal Details Tab -->
+            <div class="ielts-tab-content<?php echo !get_option('ielts_cm_membership_enabled') ? ' active' : ''; ?>" id="personal-details">
                 <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
                 <table class="ielts-account-table">
                     <tr>
