@@ -29,6 +29,41 @@ class IELTS_CM_Shortcodes {
     }
     
     /**
+     * Get module type from membership type
+     * 
+     * @param string $membership_type The membership type
+     * @return string The module type ('academic', 'general', or empty string)
+     */
+    private function get_module_from_membership($membership_type) {
+        if (strpos($membership_type, 'academic') !== false) {
+            return 'academic';
+        } elseif (strpos($membership_type, 'general') !== false) {
+            return 'general';
+        }
+        return '';
+    }
+    
+    /**
+     * Get module type from course categories
+     * 
+     * @param int $course_id The course ID
+     * @return string The module type ('academic', 'general', or empty string)
+     */
+    private function get_module_from_course($course_id) {
+        $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+        
+        foreach ($categories as $cat_slug) {
+            if (strpos(strtolower($cat_slug), 'academic') !== false) {
+                return 'academic';
+            } elseif (strpos(strtolower($cat_slug), 'general') !== false) {
+                return 'general';
+            }
+        }
+        
+        return '';
+    }
+    
+    /**
      * Display all courses
      */
     public function display_courses($atts) {
@@ -79,31 +114,14 @@ class IELTS_CM_Shortcodes {
             $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
             
             if (!empty($membership_type)) {
-                // Determine the module type from membership (academic or general)
-                $user_module = '';
-                if (strpos($membership_type, 'academic') !== false) {
-                    $user_module = 'academic';
-                } elseif (strpos($membership_type, 'general') !== false) {
-                    $user_module = 'general';
-                }
+                // Determine the module type from membership
+                $user_module = $this->get_module_from_membership($membership_type);
                 
                 // Filter courses by category if user has a specific module
                 if (!empty($user_module)) {
                     $filtered_courses = array();
                     foreach ($courses as $course) {
-                        $categories = wp_get_post_terms($course->ID, 'ielts_course_category', array('fields' => 'slugs'));
-                        
-                        // Check if course belongs to user's module or is uncategorized/shared
-                        $course_module = '';
-                        foreach ($categories as $cat_slug) {
-                            if (strpos(strtolower($cat_slug), 'academic') !== false) {
-                                $course_module = 'academic';
-                                break;
-                            } elseif (strpos(strtolower($cat_slug), 'general') !== false) {
-                                $course_module = 'general';
-                                break;
-                            }
-                        }
+                        $course_module = $this->get_module_from_course($course->ID);
                         
                         // Include course if it matches user's module or has no specific module
                         if (empty($course_module) || $course_module === $user_module) {
@@ -152,28 +170,12 @@ class IELTS_CM_Shortcodes {
             $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
             
             if (!empty($membership_type)) {
-                // Determine the module type from membership (academic or general)
-                $user_module = '';
-                if (strpos($membership_type, 'academic') !== false) {
-                    $user_module = 'academic';
-                } elseif (strpos($membership_type, 'general') !== false) {
-                    $user_module = 'general';
-                }
+                // Determine the module type from membership
+                $user_module = $this->get_module_from_membership($membership_type);
                 
                 // Check if course belongs to a different module
                 if (!empty($user_module)) {
-                    $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
-                    $course_module = '';
-                    
-                    foreach ($categories as $cat_slug) {
-                        if (strpos(strtolower($cat_slug), 'academic') !== false) {
-                            $course_module = 'academic';
-                            break;
-                        } elseif (strpos(strtolower($cat_slug), 'general') !== false) {
-                            $course_module = 'general';
-                            break;
-                        }
-                    }
+                    $course_module = $this->get_module_from_course($course_id);
                     
                     // Deny access if course is from a different module
                     if (!empty($course_module) && $course_module !== $user_module) {
@@ -1769,15 +1771,6 @@ class IELTS_CM_Shortcodes {
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         
-        // Calculate time remaining for trial members
-        $hours_remaining = 0;
-        if ($is_trial && !empty($expiry_date)) {
-            $expiry_timestamp = strtotime($expiry_date);
-            $current_timestamp = time();
-            $seconds_remaining = max(0, $expiry_timestamp - $current_timestamp);
-            $hours_remaining = ceil($seconds_remaining / 3600); // Round up to nearest hour
-        }
-        
         ob_start();
         ?>
         <div class="ielts-account-page">
@@ -1874,6 +1867,9 @@ class IELTS_CM_Shortcodes {
                                             if ($is_expired) {
                                                 echo '<span class="ielts-expired">' . __('Expired', 'ielts-course-manager') . '</span>';
                                             } else {
+                                                // Calculate hours remaining
+                                                $seconds_remaining = max(0, $expiry_timestamp - time());
+                                                $hours_remaining = ceil($seconds_remaining / 3600);
                                                 $hours_text = sprintf(_n('%d hour', '%d hours', $hours_remaining, 'ielts-course-manager'), $hours_remaining);
                                                 echo '<span class="ielts-active">' . esc_html($hours_text) . '</span>';
                                             }
@@ -2096,6 +2092,12 @@ class IELTS_CM_Shortcodes {
             tabs.forEach(function(tab) {
                 tab.addEventListener('click', function() {
                     var targetId = this.getAttribute('data-tab');
+                    var targetElement = document.getElementById(targetId);
+                    
+                    // Only proceed if target element exists
+                    if (!targetElement) {
+                        return;
+                    }
                     
                     // Remove active class from all tabs and contents
                     tabs.forEach(function(t) { t.classList.remove('active'); });
@@ -2103,7 +2105,7 @@ class IELTS_CM_Shortcodes {
                     
                     // Add active class to clicked tab and corresponding content
                     this.classList.add('active');
-                    document.getElementById(targetId).classList.add('active');
+                    targetElement.classList.add('active');
                 });
             });
         })();
