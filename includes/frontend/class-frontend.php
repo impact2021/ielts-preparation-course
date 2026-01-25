@@ -36,8 +36,10 @@ class IELTS_CM_Frontend {
      * Enqueue frontend scripts and styles
      */
     public function enqueue_scripts() {
-        // Enqueue styles for trial countdown widget
-        wp_add_inline_style('wp-block-library', $this->get_countdown_widget_styles());
+        // Register and enqueue styles for trial countdown widget
+        wp_register_style('ielts-cm-countdown', false);
+        wp_enqueue_style('ielts-cm-countdown');
+        wp_add_inline_style('ielts-cm-countdown', $this->get_countdown_widget_styles());
     }
     
     /**
@@ -151,7 +153,7 @@ class IELTS_CM_Frontend {
         
         ?>
         <div class="ielts-trial-countdown" id="ielts-trial-countdown">
-            <button class="ielts-trial-countdown-close" onclick="document.getElementById('ielts-trial-countdown').style.display='none';">&times;</button>
+            <button class="ielts-trial-countdown-close" id="ielts-countdown-close-btn">&times;</button>
             <h4><?php _e('Free Trial', 'ielts-course-manager'); ?></h4>
             <div class="ielts-trial-countdown-time" id="ielts-countdown-timer"></div>
             <?php if ($upgrade_url): ?>
@@ -163,8 +165,16 @@ class IELTS_CM_Frontend {
         
         <script>
         (function() {
-            var expiryTimestamp = <?php echo $expiry_timestamp; ?>;
+            var expiryTimestamp = <?php echo absint($expiry_timestamp); ?>;
             var timerElement = document.getElementById('ielts-countdown-timer');
+            var closeBtn = document.getElementById('ielts-countdown-close-btn');
+            var countdownWidget = document.getElementById('ielts-trial-countdown');
+            
+            if (closeBtn && countdownWidget) {
+                closeBtn.addEventListener('click', function() {
+                    countdownWidget.style.display = 'none';
+                });
+            }
             
             function updateCountdown() {
                 var now = Math.floor(Date.now() / 1000);

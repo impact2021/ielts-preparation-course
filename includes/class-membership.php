@@ -914,11 +914,19 @@ The IELTS Team'
         $subject = str_replace(array_keys($placeholders), array_values($placeholders), $template['subject']);
         $message = str_replace(array_keys($placeholders), array_values($placeholders), $template['message']);
         
-        wp_mail($user->user_email, $subject, $message);
+        // Send email and log failures
+        $result = wp_mail($user->user_email, $subject, $message);
+        if (!$result) {
+            error_log(sprintf('Failed to send enrollment email to user %d (%s) for membership type %s', 
+                $user_id, $user->user_email, $membership_type));
+        }
     }
     
     /**
      * Calculate expiry date based on membership duration settings
+     * 
+     * @param string $membership_type The membership type key
+     * @return string Expiry date in 'Y-m-d H:i:s' format
      */
     public function calculate_expiry_date($membership_type) {
         $durations = get_option('ielts_cm_membership_durations', array());
@@ -937,23 +945,25 @@ The IELTS Team'
             $unit = $durations[$membership_type]['unit'];
         }
         
-        $seconds = 0;
+        // Use strtotime for more accurate date calculations
+        $base_time = current_time('mysql');
         switch ($unit) {
             case 'hours':
-                $seconds = $value * HOUR_IN_SECONDS;
+                $expiry_timestamp = strtotime("+{$value} hours", strtotime($base_time));
                 break;
             case 'days':
-                $seconds = $value * DAY_IN_SECONDS;
+                $expiry_timestamp = strtotime("+{$value} days", strtotime($base_time));
                 break;
             case 'weeks':
-                $seconds = $value * WEEK_IN_SECONDS;
+                $expiry_timestamp = strtotime("+{$value} weeks", strtotime($base_time));
                 break;
             case 'months':
-                $seconds = $value * 30 * DAY_IN_SECONDS; // Approximate month as 30 days
+                $expiry_timestamp = strtotime("+{$value} months", strtotime($base_time));
                 break;
+            default:
+                $expiry_timestamp = strtotime("+30 days", strtotime($base_time));
         }
         
-        $expiry_timestamp = current_time('timestamp') + $seconds;
         return wp_date('Y-m-d H:i:s', $expiry_timestamp);
     }
 }
