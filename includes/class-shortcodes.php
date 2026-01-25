@@ -97,11 +97,14 @@ class IELTS_CM_Shortcodes {
         );
         
         if (!empty($atts['category'])) {
+            // Support comma-separated categories (e.g., "academic,general")
+            $categories = array_map('trim', explode(',', $atts['category']));
+            
             $args['tax_query'] = array(
                 array(
                     'taxonomy' => 'ielts_course_category',
                     'field' => 'slug',
-                    'terms' => $atts['category']
+                    'terms' => $categories
                 )
             );
         }
