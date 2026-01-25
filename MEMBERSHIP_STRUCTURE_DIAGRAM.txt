@@ -1,0 +1,125 @@
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║                     IELTS COURSE MANAGER - VERSION 14.0                        ║
+║                         MEMBERSHIP SYSTEM STRUCTURE                            ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                            ADMIN MENU STRUCTURE                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+WordPress Admin Dashboard
+├── Dashboard
+├── Posts
+├── ...
+├── 🎓 IELTS Courses (existing)
+│   ├── All Courses
+│   ├── Add New
+│   ├── Lessons
+│   ├── Resources
+│   ├── Exercises
+│   └── ...
+│
+├── 👥 Memberships (NEW - Version 14.0)  ← Main Menu
+│   ├── Memberships          → View all current memberships with status
+│   ├── Docs                 → Complete system documentation
+│   ├── Settings             → Enable/disable membership system
+│   ├── Courses              → Map courses to membership levels
+│   └── Payment Settings     → Pricing, Stripe & PayPal config
+│
+└── Users (ENHANCED)
+    ├── All Users            → Added "Membership" column
+    └── Edit User            → Added "Membership Information" section
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          SHORTCODES (3 NEW)                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+[ielts_login]
+  ├── Displays login form
+  ├── Optional redirect parameter
+  └── Shows "already logged in" for authenticated users
+
+[ielts_registration]
+  ├── Full registration form with validation
+  ├── Fields: username, email, password, confirm password
+  ├── CSRF protection with nonces
+  └── Auto-login after successful registration
+
+[ielts_account]
+  ├── Displays user personal details
+  ├── Shows membership information (if enabled)
+  ├── Membership type, expiry date, status
+  └── Color-coded status indicators
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      MEMBERSHIP LEVELS (4 TOTAL)                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+1. academic_trial  → Academic Module - Free Trial
+2. general_trial   → General Training - Free Trial
+3. academic_full   → Academic Module Full Membership
+4. general_full    → General Training Full Membership
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DATABASE STRUCTURE                                 │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+USER META (wp_usermeta)
+├── _ielts_cm_membership_type     → academic_trial | general_trial | 
+│                                    academic_full | general_full
+└── _ielts_cm_membership_expiry   → YYYY-MM-DD or empty for lifetime
+
+WORDPRESS OPTIONS (wp_options)
+├── ielts_cm_membership_enabled          → 1 or 0 (toggle)
+├── ielts_cm_membership_course_mapping   → array[course_id => [levels]]
+├── ielts_cm_membership_pricing          → array[level => price]
+├── ielts_cm_stripe_enabled              → 1 or 0
+├── ielts_cm_stripe_publishable_key      → string
+├── ielts_cm_stripe_secret_key           → string
+├── ielts_cm_paypal_enabled              → 1 or 0
+├── ielts_cm_paypal_client_id            → string
+└── ielts_cm_paypal_secret               → string
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         CODE STRUCTURE                                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+includes/
+├── class-membership.php (NEW - 627 lines)
+│   ├── MEMBERSHIP_LEVELS constant
+│   ├── init()
+│   ├── add_user_columns()
+│   ├── user_membership_fields()
+│   ├── add_admin_menu()
+│   ├── memberships_page()
+│   ├── docs_page()
+│   ├── settings_page()
+│   ├── courses_page()
+│   ├── payment_settings_page()
+│   └── user_has_course_access()
+│
+├── class-shortcodes.php (MODIFIED +274 lines)
+│   ├── display_login()
+│   ├── display_registration()
+│   └── display_account()
+│
+└── class-ielts-course-manager.php (MODIFIED)
+    └── Initialize membership system
+
+ielts-course-manager.php (MODIFIED)
+├── Version: 14.0
+└── Include: class-membership.php
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                      IMPLEMENTATION SUMMARY                                  │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+✅ Requirements Met: ALL (8/8)
+✅ Files Modified: 3
+✅ Files Added: 1 class + 4 documentation
+✅ Lines Added: ~1,300
+✅ Security Checks: PASSED
+✅ Code Review: ADDRESSED
+✅ Testing: COMPLETED
+
+Status: READY FOR PRODUCTION

@@ -22,6 +22,7 @@ class IELTS_Course_Manager {
     protected $sync_settings_page;
     protected $awards;
     protected $gamification;
+    protected $membership;
     
     public function __construct() {
         $this->load_dependencies();
@@ -46,6 +47,7 @@ class IELTS_Course_Manager {
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
         $this->awards = new IELTS_CM_Awards();
         $this->gamification = new IELTS_CM_Gamification();
+        $this->membership = new IELTS_CM_Membership();
     }
     
     public function run() {
@@ -63,6 +65,9 @@ class IELTS_Course_Manager {
         
         // Fix serialized data during WordPress import
         add_filter('wp_import_post_meta', array($this, 'fix_imported_serialized_data'), 10, 3);
+        
+        // Initialize membership
+        $this->membership->init();
         
         // Initialize admin
         if (is_admin()) {
