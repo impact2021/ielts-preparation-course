@@ -1094,7 +1094,7 @@ class IELTS_CM_Shortcodes {
                                 // Set expiry date for trial memberships (using WordPress timezone)
                                 if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
                                     $expiry_timestamp = strtotime('+' . IELTS_CM_Membership::TRIAL_PERIOD_DAYS . ' days', current_time('timestamp'));
-                                    $expiry_date = date('Y-m-d', $expiry_timestamp);
+                                    $expiry_date = wp_date('Y-m-d', $expiry_timestamp);
                                     update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
                                 }
                             }
