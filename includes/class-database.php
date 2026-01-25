@@ -15,6 +15,7 @@ class IELTS_CM_Database {
     private $site_connections_table;
     private $content_sync_table;
     private $user_awards_table;
+    private $payments_table;
     
     public function __construct() {
         global $wpdb;
@@ -24,6 +25,7 @@ class IELTS_CM_Database {
         $this->site_connections_table = $wpdb->prefix . 'ielts_cm_site_connections';
         $this->content_sync_table = $wpdb->prefix . 'ielts_cm_content_sync';
         $this->user_awards_table = $wpdb->prefix . 'ielts_cm_user_awards';
+        $this->payments_table = $wpdb->prefix . 'ielts_cm_payments';
     }
     
     /**
@@ -128,6 +130,23 @@ class IELTS_CM_Database {
             UNIQUE KEY user_award (user_id, award_id)
         ) $charset_collate;";
         
+        // Payments table
+        $payments_table = $wpdb->prefix . 'ielts_cm_payments';
+        $sql_payments = "CREATE TABLE IF NOT EXISTS $payments_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            user_id bigint(20) NOT NULL,
+            membership_type varchar(50) NOT NULL,
+            amount decimal(10,2) NOT NULL,
+            transaction_id varchar(255) DEFAULT NULL,
+            payment_status varchar(20) DEFAULT 'pending',
+            created_at datetime DEFAULT CURRENT_TIMESTAMP,
+            updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY user_id (user_id),
+            KEY payment_status (payment_status),
+            KEY transaction_id (transaction_id)
+        ) $charset_collate;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
@@ -135,6 +154,7 @@ class IELTS_CM_Database {
         dbDelta($sql_site_connections);
         dbDelta($sql_content_sync);
         dbDelta($sql_user_awards);
+        dbDelta($sql_payments);
     }
     
     /**
@@ -149,7 +169,8 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_enrollment',
             $wpdb->prefix . 'ielts_cm_site_connections',
             $wpdb->prefix . 'ielts_cm_content_sync',
-            $wpdb->prefix . 'ielts_cm_user_awards'
+            $wpdb->prefix . 'ielts_cm_user_awards',
+            $wpdb->prefix . 'ielts_cm_payments'
         );
         
         foreach ($tables as $table) {
@@ -182,5 +203,9 @@ class IELTS_CM_Database {
     
     public function get_user_awards_table() {
         return $this->user_awards_table;
+    }
+    
+    public function get_payments_table() {
+        return $this->payments_table;
     }
 }

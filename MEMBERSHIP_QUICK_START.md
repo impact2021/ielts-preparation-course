@@ -41,8 +41,38 @@ The **Memberships** admin menu is always visible in the WordPress admin sidebar,
    - General Training - Free Trial: 0.00
    - Academic Module Full Membership: 49.99
    - General Training Full Membership: 49.99
-3. Configure Stripe and/or PayPal if needed
+3. Configure Stripe payment gateway (see detailed instructions below)
 4. Click "Save Changes"
+
+### Configuring Stripe Payment Gateway
+
+To enable paid memberships with Stripe:
+
+1. **Get Stripe API Keys**
+   - Sign up at [stripe.com](https://stripe.com) if you don't have an account
+   - Go to Developers → API Keys in your Stripe Dashboard
+   - Copy your **Publishable key** (starts with `pk_`)
+   - Copy your **Secret key** (starts with `sk_`)
+
+2. **Configure Stripe in WordPress**
+   - Go to **Memberships → Payment Settings**
+   - Check "Enable Stripe"
+   - Paste your **Stripe Publishable Key**
+   - Paste your **Stripe Secret Key**
+
+3. **Set Up Webhook (for automatic user creation)**
+   - In Stripe Dashboard, go to Developers → Webhooks
+   - Click "Add endpoint"
+   - Enter webhook URL: `https://yoursite.com/wp-json/ielts-cm/v1/stripe-webhook`
+   - Select event: `payment_intent.succeeded`
+   - Copy the **Webhook signing secret** (starts with `whsec_`)
+   - Back in WordPress, paste it in the **Webhook Secret** field
+   - Click "Save Changes"
+
+4. **Test the Payment Flow**
+   - Use Stripe test keys for testing (starts with `pk_test_` and `sk_test_`)
+   - Test card: 4242 4242 4242 4242, any future expiry, any CVC
+   - After successful testing, replace with live keys
 
 ## Step 4: Map Courses to Memberships
 
@@ -135,8 +165,8 @@ A: Yes! When editing a user, leave the expiry date field empty.
 **Q: How do I know which courses are in which membership?**
 A: Go to Memberships → Courses to see and edit the course-membership mappings.
 
-**Q: Is payment processing automatic?**
-A: The payment settings (Stripe/PayPal) are configured in this version, but automatic payment processing will be added in a future update.
+**Q: How does payment processing work?**
+A: When you configure Stripe and set prices for membership levels, users can pay for memberships during registration. After successful payment, their account is automatically created with the appropriate membership level.
 
 ## Support
 
