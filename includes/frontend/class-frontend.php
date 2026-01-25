@@ -214,6 +214,7 @@ class IELTS_CM_Frontend {
             var timerElement = document.getElementById('ielts-countdown-timer');
             var closeBtn = document.getElementById('ielts-countdown-close-btn');
             var countdownWidget = document.getElementById('ielts-trial-countdown');
+            var countdownInterval;
             
             if (closeBtn && countdownWidget) {
                 closeBtn.addEventListener('click', function() {
@@ -227,6 +228,12 @@ class IELTS_CM_Frontend {
                 
                 if (diff <= 0) {
                     timerElement.textContent = '<?php _e('Expired', 'ielts-course-manager'); ?>';
+                    // Clear the interval to stop updates
+                    clearInterval(countdownInterval);
+                    // Reload the page after a short delay to trigger server-side access check
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 1000);
                     return;
                 }
                 
@@ -245,7 +252,7 @@ class IELTS_CM_Frontend {
             }
             
             updateCountdown();
-            setInterval(updateCountdown, 1000);
+            countdownInterval = setInterval(updateCountdown, 1000);
         })();
         </script>
         <?php
