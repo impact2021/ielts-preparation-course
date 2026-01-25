@@ -1818,6 +1818,75 @@ class IELTS_CM_Shortcodes {
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         
+        // Handle profile update form submission
+        $update_errors = array();
+        $update_success = false;
+        
+        if (isset($_POST['ielts_update_profile'])) {
+            if (!isset($_POST['ielts_update_profile_nonce']) || !wp_verify_nonce($_POST['ielts_update_profile_nonce'], 'ielts_update_profile')) {
+                $update_errors[] = __('Security check failed.', 'ielts-course-manager');
+            } else {
+                $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
+                $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
+                $email = isset($_POST['ielts_email']) ? sanitize_email($_POST['ielts_email']) : '';
+                $current_password = isset($_POST['ielts_current_password']) ? wp_unslash($_POST['ielts_current_password']) : '';
+                $new_password = isset($_POST['ielts_new_password']) ? wp_unslash($_POST['ielts_new_password']) : '';
+                $confirm_password = isset($_POST['ielts_confirm_password']) ? wp_unslash($_POST['ielts_confirm_password']) : '';
+                
+                // Validate email
+                if (empty($email)) {
+                    $update_errors[] = __('Email is required.', 'ielts-course-manager');
+                } elseif (!is_email($email)) {
+                    $update_errors[] = __('Invalid email address.', 'ielts-course-manager');
+                } elseif ($email !== $user->user_email && email_exists($email)) {
+                    $update_errors[] = __('Email already exists.', 'ielts-course-manager');
+                }
+                
+                // Check if user wants to change password
+                $wants_password_change = !empty($current_password) || !empty($new_password) || !empty($confirm_password);
+                
+                // If password change is requested, validate
+                if ($wants_password_change) {
+                    if (empty($current_password)) {
+                        $update_errors[] = __('Current password is required to change your password.', 'ielts-course-manager');
+                    } elseif (!wp_check_password($current_password, $user->user_pass, $user->ID)) {
+                        $update_errors[] = __('Current password is incorrect.', 'ielts-course-manager');
+                    } elseif (empty($new_password)) {
+                        $update_errors[] = __('New password is required.', 'ielts-course-manager');
+                    } elseif (strlen($new_password) < 6) {
+                        $update_errors[] = __('New password must be at least 6 characters.', 'ielts-course-manager');
+                    } elseif ($new_password !== $confirm_password) {
+                        $update_errors[] = __('New passwords do not match.', 'ielts-course-manager');
+                    }
+                }
+                
+                // Update user if no errors
+                if (empty($update_errors)) {
+                    $user_data = array(
+                        'ID' => $user->ID,
+                        'first_name' => $first_name,
+                        'last_name' => $last_name,
+                        'user_email' => $email
+                    );
+                    
+                    // Add password if changing (validated above)
+                    if ($wants_password_change && !empty($new_password)) {
+                        $user_data['user_pass'] = $new_password;
+                    }
+                    
+                    $result = wp_update_user($user_data);
+                    
+                    if (is_wp_error($result)) {
+                        $update_errors[] = $result->get_error_message();
+                    } else {
+                        $update_success = true;
+                        // Refresh user object to show updated data
+                        $user = wp_get_current_user();
+                    }
+                }
+            }
+        }
+        
         ob_start();
         ?>
         <div class="ielts-account-page">
@@ -1926,28 +1995,85 @@ class IELTS_CM_Shortcodes {
             <!-- Personal Details Tab -->
             <div class="ielts-tab-content<?php echo !get_option('ielts_cm_membership_enabled') ? ' active' : ''; ?>" id="personal-details">
                 <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
-                <table class="ielts-account-table">
-                    <tr>
-                        <th><?php _e('Username:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->user_login); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Email:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->user_email); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Display Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->display_name); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('First Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->first_name); ?></td>
-                    </tr>
-                    <tr>
-                        <th><?php _e('Last Name:', 'ielts-course-manager'); ?></th>
-                        <td><?php echo esc_html($user->last_name); ?></td>
-                    </tr>
-                </table>
+                
+                <?php if ($update_success): ?>
+                    <div class="ielts-message ielts-success">
+                        <p><?php _e('Your profile has been updated successfully!', 'ielts-course-manager'); ?></p>
+                    </div>
+                <?php endif; ?>
+                
+                <?php if (!empty($update_errors)): ?>
+                    <div class="ielts-message ielts-error">
+                        <ul>
+                            <?php foreach ($update_errors as $error): ?>
+                                <li><?php echo esc_html($error); ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="post" action="" class="ielts-profile-update-form">
+                    <?php wp_nonce_field('ielts_update_profile', 'ielts_update_profile_nonce'); ?>
+                    
+                    <div class="ielts-form-grid">
+                        <div class="ielts-form-group ielts-form-group-half">
+                            <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?></label>
+                            <input type="text" name="ielts_first_name" id="ielts_first_name" 
+                                   value="<?php echo esc_attr($user->first_name); ?>" 
+                                   class="ielts-form-input">
+                        </div>
+                        
+                        <div class="ielts-form-group ielts-form-group-half">
+                            <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?></label>
+                            <input type="text" name="ielts_last_name" id="ielts_last_name" 
+                                   value="<?php echo esc_attr($user->last_name); ?>" 
+                                   class="ielts-form-input">
+                        </div>
+                        
+                        <div class="ielts-form-group ielts-form-group-full">
+                            <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="email" name="ielts_email" id="ielts_email" required
+                                   value="<?php echo esc_attr($user->user_email); ?>" 
+                                   class="ielts-form-input">
+                        </div>
+                        
+                        <div class="ielts-form-group ielts-form-group-full">
+                            <label><?php _e('Username', 'ielts-course-manager'); ?></label>
+                            <input type="text" value="<?php echo esc_attr($user->user_login); ?>" 
+                                   class="ielts-form-input" disabled>
+                            <small class="form-help"><?php _e('Username cannot be changed', 'ielts-course-manager'); ?></small>
+                        </div>
+                    </div>
+                    
+                    <h4><?php _e('Change Password (Optional)', 'ielts-course-manager'); ?></h4>
+                    <p class="form-help"><?php _e('Leave blank to keep your current password', 'ielts-course-manager'); ?></p>
+                    
+                    <div class="ielts-form-grid">
+                        <div class="ielts-form-group ielts-form-group-full">
+                            <label for="ielts_current_password"><?php _e('Current Password', 'ielts-course-manager'); ?></label>
+                            <input type="password" name="ielts_current_password" id="ielts_current_password" 
+                                   class="ielts-form-input">
+                        </div>
+                        
+                        <div class="ielts-form-group ielts-form-group-half">
+                            <label for="ielts_new_password"><?php _e('New Password', 'ielts-course-manager'); ?></label>
+                            <input type="password" name="ielts_new_password" id="ielts_new_password" 
+                                   class="ielts-form-input">
+                        </div>
+                        
+                        <div class="ielts-form-group ielts-form-group-half">
+                            <label for="ielts_confirm_password"><?php _e('Confirm New Password', 'ielts-course-manager'); ?></label>
+                            <input type="password" name="ielts_confirm_password" id="ielts_confirm_password" 
+                                   class="ielts-form-input">
+                        </div>
+                    </div>
+                    
+                    <div class="ielts-form-actions">
+                        <button type="submit" name="ielts_update_profile" class="ielts-button ielts-button-primary">
+                            <?php _e('Update Profile', 'ielts-course-manager'); ?>
+                        </button>
+                    </div>
+                </form>
             </div>
             
             <?php if (get_option('ielts_cm_membership_enabled')): ?>
@@ -2131,6 +2257,114 @@ class IELTS_CM_Shortcodes {
         .button-primary:hover {
             background: #135e96;
             color: white;
+        }
+        /* Profile Update Form Styles */
+        .ielts-profile-update-form {
+            max-width: 800px;
+        }
+        .ielts-profile-update-form h4 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 16px;
+        }
+        .ielts-form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        @media (min-width: 768px) {
+            .ielts-form-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+            .ielts-form-group-full {
+                grid-column: 1 / -1;
+            }
+            .ielts-form-group-half {
+                grid-column: span 1;
+            }
+        }
+        .ielts-form-group {
+            margin-bottom: 5px;
+        }
+        .ielts-form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        .ielts-form-input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .ielts-form-input:focus {
+            outline: none;
+            border-color: #2271b1;
+            box-shadow: 0 0 0 1px #2271b1;
+        }
+        .ielts-form-input:disabled {
+            background: #f5f5f5;
+            cursor: not-allowed;
+        }
+        .ielts-form-actions {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .ielts-button {
+            padding: 12px 30px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .ielts-button-primary {
+            background: #2271b1;
+            color: white;
+        }
+        .ielts-button-primary:hover {
+            background: #135e96;
+        }
+        .form-help {
+            display: block;
+            color: #666;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .required {
+            color: #dc3545;
+        }
+        .ielts-message {
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border-left: 4px solid;
+        }
+        .ielts-message.ielts-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        .ielts-message.ielts-error {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        .ielts-message ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .ielts-message ul li {
+            margin: 5px 0;
         }
         </style>
         
