@@ -1,0 +1,102 @@
+{
+    "title": "Task 1 Letter - Correct Verb Forms",
+    "content": "<p>Complete the Task 1 letter below by using the correct form of the word in brackets. Type your answers in the spaces provided.</p>",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Complete the letter by filling in each blank with the correct form of the verb given in brackets.",
+            "question": "Dear Mr and Mrs Haynes.\n\nI (WRITE) [field 1] to you about the letter you sent recently about the problems our dog is creating because he keeps (MANAGE) [field 2] to get into your premises.\n\nI am so sorry about this situation and I really hope that he (NOT / CAUSE) [field 3] too much damage to your beautiful plants and lawn as I know you spend a great deal of time making your garden look so lovely.\n\nWe (DISCOVER) [field 4] that he (ABLE) [field 5] to get out because of a hole in the back of the fence. We (INTEND) [field 6] to fix it this weekend when we are not working.\n\nIn the meantime, we (MAKE) [field 7] sure he stays in the house or only goes into the garden while on a lead.\n\nCan you please let me know if he has completely ruined any of your plants? If he has, we would be more than happy (BUY) [field 8] some replacements from the garden centre.\n\nOnce again, I (APOLOGISE) [field 9] for what has happened and will make sure it (NOT / OCCUR) [field 10] again.\n\nBest wishes\nJohn Morris",
+            "points": 10,
+            "no_answer_feedback": "Please complete all the blanks. Review the explanations for each field to understand which verb form is appropriate in each context.",
+            "correct_feedback": "Excellent! You have correctly identified all the verb forms needed for this formal letter.",
+            "incorrect_feedback": "Not quite right. Review the feedback for each field to understand the correct verb tenses and forms.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "Grammar",
+            "field_count": 10,
+            "field_answers": {
+                "1": "am writing",
+                "2": "managing",
+                "3": "has not caused|did not cause|hasn't caused|didn't cause",
+                "4": "have discovered|discovered",
+                "5": "is able|has been able|was able",
+                "6": "intend",
+                "7": "will make|are going to make",
+                "8": "to buy",
+                "9": "apologise|apologize",
+                "10": "does not occur|doesn't occur"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! 'am writing' is the present continuous, used for an action currently in progress. This is the standard opening for a letter format.",
+                    "incorrect": "Incorrect. The correct answer is: am writing (present continuous). Present continuous is used for an action currently in progress. This is the standard opening for a letter format.",
+                    "no_answer": "The correct answer is: am writing (present continuous). Present continuous is used for an action currently in progress. This is the standard opening for a letter format."
+                },
+                "2": {
+                    "correct": "Correct! 'managing' is the present continuous, used to express a repeated, negative action.",
+                    "incorrect": "Incorrect. The correct answer is: managing (present continuous). Present continuous is used to express a repeated, negative action.",
+                    "no_answer": "The correct answer is: managing (present continuous). Present continuous is used to express a repeated, negative action."
+                },
+                "3": {
+                    "correct": "Correct! 'has not caused' or 'did not cause' are appropriate. Present perfect is commonly used for past actions with present effect (damage caused up to now).",
+                    "incorrect": "Incorrect. The correct answer is: has not caused (or did not cause). Present perfect is typically used for past actions with present effect (damage caused up to now).",
+                    "no_answer": "The correct answer is: has not caused (or did not cause). Present perfect is typically used for past actions with present effect (damage caused up to now)."
+                },
+                "4": {
+                    "correct": "Correct! 'have discovered' or 'discovered' are both acceptable. Present perfect is commonly used for past actions with present effect (they know where the hole is now).",
+                    "incorrect": "Incorrect. The correct answer is: have discovered (or discovered). Present perfect is commonly used for past actions with present effect (they know where the hole is now).",
+                    "no_answer": "The correct answer is: have discovered (or discovered). Present perfect is commonly used for past actions with present effect (they know where the hole is now)."
+                },
+                "5": {
+                    "correct": "Correct! 'is able', 'has been able', or 'was able' are all acceptable answers for this context.",
+                    "incorrect": "Incorrect. The correct answer is: is able (or has been able, or was able). Multiple tenses work here depending on the specific emphasis.",
+                    "no_answer": "The correct answer is: is able (or has been able, or was able). Multiple tenses work here depending on the specific emphasis."
+                },
+                "6": {
+                    "correct": "Correct! 'intend' is the present simple. The verb 'intend' shows a plan to do something in the future; therefore, 'will' is not used.",
+                    "incorrect": "Incorrect. The correct answer is: intend (present simple). The verb 'intend' shows a plan to do something in the future; therefore, 'will' is not used.",
+                    "no_answer": "The correct answer is: intend (present simple). The verb 'intend' shows a plan to do something in the future; therefore, 'will' is not used."
+                },
+                "7": {
+                    "correct": "Correct! 'will make' or 'are going to make' are both appropriate. 'In the meantime' means from now until a specific point in the future - 'will' shows a promise from the writer's point of view.",
+                    "incorrect": "Incorrect. The correct answer is: will make (or are going to make). 'In the meantime' means from now until a specific point in the future - 'will' shows a promise from the writer's point of view.",
+                    "no_answer": "The correct answer is: will make (or are going to make). 'In the meantime' means from now until a specific point in the future - 'will' shows a promise from the writer's point of view."
+                },
+                "8": {
+                    "correct": "Correct! 'to buy' is the infinitive. 'We would be more than happy' takes the infinitive, as do phrases with similar meanings (e.g., 'would like').",
+                    "incorrect": "Incorrect. The correct answer is: to buy (infinitive). 'We would be more than happy' takes the infinitive, as do phrases with similar meanings (e.g., 'would like').",
+                    "no_answer": "The correct answer is: to buy (infinitive). 'We would be more than happy' takes the infinitive, as do phrases with similar meanings (e.g., 'would like')."
+                },
+                "9": {
+                    "correct": "Correct! 'apologise' (or 'apologize') is the base verb. This is a standard phrase used for apology in a more formal situation. 'I apologise' is more formal than 'I am sorry'. In this situation 'apologise' is being used as a stative verb to express feeling, so it's not used in the continuous.",
+                    "incorrect": "Incorrect. The correct answer is: apologise (or apologize). This is a standard phrase used for apology in a more formal situation. 'I apologise' is more formal than 'I am sorry'. In this situation 'apologise' is being used as a stative verb to express feeling, so it's not used in the continuous.",
+                    "no_answer": "The correct answer is: apologise (or apologize). This is a standard phrase used for apology in a more formal situation. 'I apologise' is more formal than 'I am sorry'. In this situation 'apologise' is being used as a stative verb to express feeling, so it's not used in the continuous."
+                },
+                "10": {
+                    "correct": "Correct! 'does not occur' is the base verb (negative). The structure is: make sure + it + base verb.",
+                    "incorrect": "Incorrect. The correct answer is: does not occur (base verb, negative). The structure is: make sure + it + base verb.",
+                    "no_answer": "The correct answer is: does not occur (base verb, negative). The structure is: make sure + it + base verb."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_exercise",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "20",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-25 01:45:00",
+        "exported_by": "copilot",
+        "plugin_version": "13.0",
+        "format_version": "1.0"
+    }
+}
