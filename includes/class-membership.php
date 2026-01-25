@@ -689,8 +689,15 @@ class IELTS_CM_Membership {
         
         // Check if membership is expired
         $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
-        if (!empty($expiry_date) && strtotime($expiry_date) < time()) {
-            return false;
+        if (!empty($expiry_date)) {
+            // Expiry date is stored in UTC format, convert properly
+            $expiry_timestamp = strtotime($expiry_date . ' UTC');
+            $now_utc = time(); // Current UTC timestamp
+            
+            // Return false if membership has expired
+            if ($expiry_timestamp <= $now_utc) {
+                return false;
+            }
         }
         
         // Check course mapping
