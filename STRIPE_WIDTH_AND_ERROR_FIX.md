@@ -197,5 +197,5 @@ If these changes cause issues, revert by:
 
 ---
 
-**Author:** GitHub Copilot  
-**Reviewed By:** [Pending]
+**Fix Date:** January 2026  
+**Tested With:** WordPress 6.4+, PHP 7.4+

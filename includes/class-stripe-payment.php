@@ -54,7 +54,7 @@ class IELTS_CM_Stripe_Payment {
         $password = isset($_POST['password']) ? $_POST['password'] : '';
         $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
         
-        error_log("IELTS Payment: Received data - Email: $email, First: $first_name, Last: $last_name, Type: $membership_type");
+        error_log("IELTS Payment: Received data - User ID: (new registration), Type: $membership_type");
         
         // Validate inputs
         if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
@@ -122,7 +122,7 @@ class IELTS_CM_Stripe_Payment {
         $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
         $amount = isset($_POST['amount']) ? floatval($_POST['amount']) : 0;
         
-        error_log("IELTS Payment: create_payment_intent - User: $user_id, Type: $membership_type, Amount: $amount");
+        error_log("IELTS Payment: create_payment_intent - User: $user_id, Membership type selected");
         
         // Validate user exists
         $user = get_userdata($user_id);
@@ -142,7 +142,7 @@ class IELTS_CM_Stripe_Payment {
         
         // Verify amount matches server-side price
         if (abs($amount - $server_price) > 0.01) {
-            error_log("IELTS Payment: Amount mismatch - Client: $amount, Server: $server_price");
+            error_log("IELTS Payment: Amount mismatch detected");
             wp_send_json_error('Amount mismatch', 400);
         }
         
