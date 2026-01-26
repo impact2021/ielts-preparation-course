@@ -114,7 +114,7 @@ body.ielts-resource-single .content-area {
                     <?php elseif ($is_active_trial): ?>
                         <p><?php _e('You have an active trial membership, but you need to enroll in this course to access its resources.', 'ielts-course-manager'); ?></p>
                         <p>
-                            <a href="<?php echo get_permalink($course_id); ?>" class="button button-primary">
+                            <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button button-primary">
                                 <?php _e('Enroll in Course', 'ielts-course-manager'); ?>
                             </a>
                         </p>
@@ -128,7 +128,7 @@ body.ielts-resource-single .content-area {
                     <?php else: ?>
                         <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
                         <p>
-                            <a href="<?php echo get_permalink($course_id); ?>" class="button button-primary">
+                            <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button button-primary">
                                 <?php _e('View Course', 'ielts-course-manager'); ?>
                             </a>
                         </p>

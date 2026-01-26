@@ -5,6 +5,14 @@
     let elements;
     let paymentElement;
     
+    // Helper function to get price for membership type
+    function getPriceForMembershipType(membershipType) {
+        if (!ieltsPayment || !ieltsPayment.pricing || !membershipType) {
+            return 0;
+        }
+        return ieltsPayment.pricing[membershipType] || 0;
+    }
+    
     // Initialize Stripe
     if (typeof Stripe !== 'undefined' && ieltsPayment && ieltsPayment.publishableKey) {
         stripe = Stripe(ieltsPayment.publishableKey);
@@ -17,7 +25,7 @@
         // Listen for membership type selection
         $('#ielts_membership_type').on('change', function() {
             const membershipType = $(this).val();
-            const price = ieltsPayment.pricing[membershipType] || 0;
+            const price = getPriceForMembershipType(membershipType);
             
             console.log('IELTS Payment: Membership type selected:', membershipType, 'Price:', price);
             
@@ -90,7 +98,7 @@
     // Intercept form submission
     $('form[name="ielts_registration_form"]').on('submit', function(e) {
         const membershipType = $('#ielts_membership_type').val();
-        const price = ieltsPayment.pricing[membershipType] || 0;
+        const price = getPriceForMembershipType(membershipType);
         
         // If it's a paid membership, handle payment first
         if (price > 0 && stripe && elements) {
