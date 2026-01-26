@@ -3296,7 +3296,7 @@ body.ielts-quiz-focus-mode .listening-audio-column {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
+    color: var(--ielts-button-loading-color, #fff);
     animation: ellipsis 1.5s infinite;
 }
 
