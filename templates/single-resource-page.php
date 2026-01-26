@@ -74,6 +74,21 @@ body.ielts-resource-single .content-area {
             
             if (!$has_access && $course_id):
                 // Show access restricted message
+                
+                // Check if user has an expired trial membership
+                $is_expired_trial = false;
+                if ($user_id) {
+                    $membership = new IELTS_CM_Membership();
+                    $membership_type = $membership->get_user_membership($user_id);
+                    $membership_status = $membership->get_user_membership_status($user_id);
+                    
+                    if ($membership_type && 
+                        IELTS_CM_Membership::is_trial_membership($membership_type) && 
+                        $membership_status === IELTS_CM_Membership::STATUS_EXPIRED) {
+                        $is_expired_trial = true;
+                    }
+                }
+                
                 ?>
                 <div class="ielts-access-restricted">
                     <div class="access-restricted-icon">
@@ -83,14 +98,25 @@ body.ielts-resource-single .content-area {
                         </svg>
                     </div>
                     <h2><?php _e('Access Restricted', 'ielts-course-manager'); ?></h2>
-                    <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
-                    <?php if (!is_user_logged_in()): ?>
+                    <?php if ($is_expired_trial): ?>
+                        <p><?php _e('Your trial membership has expired.', 'ielts-course-manager'); ?></p>
+                        <p>
+                            <?php 
+                            $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
+                            ?>
+                            <a href="<?php echo esc_url($upgrade_url); ?>" class="button button-primary">
+                                <?php _e('Become a Member Now', 'ielts-course-manager'); ?>
+                            </a>
+                        </p>
+                    <?php elseif (!is_user_logged_in()): ?>
+                        <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
                         <p>
                             <a href="<?php echo wp_login_url(get_permalink()); ?>" class="button button-primary">
                                 <?php _e('Login', 'ielts-course-manager'); ?>
                             </a>
                         </p>
                     <?php else: ?>
+                        <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
                         <p>
                             <a href="<?php echo get_permalink($course_id); ?>" class="button button-primary">
                                 <?php _e('View Course', 'ielts-course-manager'); ?>

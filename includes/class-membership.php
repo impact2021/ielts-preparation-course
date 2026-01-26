@@ -168,6 +168,8 @@ class IELTS_CM_Membership {
                 // If no expiry or expiry is in the future, set as active
                 if (empty($expiry_date) || strtotime($expiry_date) > time()) {
                     update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_ACTIVE);
+                    // Clear expiry email tracking when setting to active
+                    delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
                 } else {
                     // Expiry is in the past, set as expired
                     update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_EXPIRED);
@@ -175,6 +177,8 @@ class IELTS_CM_Membership {
             } else {
                 // No membership type, set status to none
                 update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_NONE);
+                // Clear expiry email tracking when no membership
+                delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
             }
         }
         
@@ -1103,16 +1107,24 @@ The IELTS Team'
                 }
                 
                 if ($expiry_timestamp <= $now_utc) {
+                    // Send expiry notification email before updating status
+                    // Check if email has already been sent
+                    $email_sent = get_user_meta($user->ID, '_ielts_cm_expiry_email_sent', true);
+                    
+                    if (!$email_sent) {
+                        if (self::is_trial_membership($membership_type)) {
+                            $this->send_expiry_email($user->ID, $membership_type, 'trial');
+                        } else {
+                            $this->send_expiry_email($user->ID, $membership_type, 'full');
+                        }
+                        
+                        // Mark email as sent
+                        update_user_meta($user->ID, '_ielts_cm_expiry_email_sent', time());
+                    }
+                    
                     // Membership has expired, update status
                     $this->set_user_membership_status($user->ID, self::STATUS_EXPIRED);
                     $updated_count++;
-                    
-                    // Send expiry notification email if it's a trial
-                    if (self::is_trial_membership($membership_type)) {
-                        $this->send_expiry_email($user->ID, $membership_type, 'trial');
-                    } else {
-                        $this->send_expiry_email($user->ID, $membership_type, 'full');
-                    }
                 }
             }
         }

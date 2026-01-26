@@ -1622,6 +1622,9 @@ class IELTS_CM_Shortcodes {
                                     update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
                                     update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
                                     
+                                    // Clear expiry email tracking when activating new trial
+                                    delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
+                                    
                                     // Set expiry date based on membership duration settings
                                     $membership = new IELTS_CM_Membership();
                                     $expiry_date = $membership->calculate_expiry_date($membership_type);
