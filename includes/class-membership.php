@@ -39,6 +39,11 @@ class IELTS_CM_Membership {
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
         
+        // Add email filters to customize sender name and address
+        // Note: These filters apply to all WordPress emails for consistent branding
+        add_filter('wp_mail_from_name', array($this, 'custom_email_from_name'));
+        add_filter('wp_mail_from', array($this, 'custom_email_from_address'));
+        
         // Schedule daily cron job to check for expired memberships
         if (!wp_next_scheduled('ielts_cm_check_expired_memberships')) {
             wp_schedule_event(time(), 'daily', 'ielts_cm_check_expired_memberships');
@@ -66,6 +71,28 @@ class IELTS_CM_Membership {
      */
     public function is_enabled() {
         return get_option('ielts_cm_membership_enabled', false);
+    }
+    
+    /**
+     * Customize email from name
+     * 
+     * @param string $from_name Default from name
+     * @return string Custom from name or default if not set
+     */
+    public function custom_email_from_name($from_name) {
+        $custom_name = get_option('ielts_cm_email_from_name', '');
+        return !empty($custom_name) ? $custom_name : $from_name;
+    }
+    
+    /**
+     * Customize email from address
+     * 
+     * @param string $from_email Default from email address
+     * @return string Custom from email or default if not set
+     */
+    public function custom_email_from_address($from_email) {
+        $custom_email = get_option('ielts_cm_email_from_address', '');
+        return !empty($custom_email) ? $custom_email : $from_email;
     }
     
     /**
@@ -288,6 +315,10 @@ class IELTS_CM_Membership {
         register_setting('ielts_membership_emails', 'ielts_cm_email_full_enrollment');
         register_setting('ielts_membership_emails', 'ielts_cm_email_trial_expired');
         register_setting('ielts_membership_emails', 'ielts_cm_email_full_expired');
+        
+        // Register email sender settings
+        register_setting('ielts_membership_emails', 'ielts_cm_email_from_name');
+        register_setting('ielts_membership_emails', 'ielts_cm_email_from_address');
     }
     
     /**
@@ -804,6 +835,20 @@ class IELTS_CM_Membership {
      */
     public function emails_page() {
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_emails')) {
+            // Save email sender settings
+            if (isset($_POST['ielts_cm_email_from_name'])) {
+                update_option('ielts_cm_email_from_name', sanitize_text_field($_POST['ielts_cm_email_from_name']));
+            }
+            if (isset($_POST['ielts_cm_email_from_address'])) {
+                $email_address = sanitize_email($_POST['ielts_cm_email_from_address']);
+                // Validate email address and show error if invalid
+                if (!empty($_POST['ielts_cm_email_from_address']) && empty($email_address)) {
+                    echo '<div class="notice notice-error"><p>' . __('Invalid email address. Please enter a valid email address.', 'ielts-course-manager') . '</p></div>';
+                } else {
+                    update_option('ielts_cm_email_from_address', $email_address);
+                }
+            }
+            
             // Save email templates
             $email_fields = array(
                 'trial_enrollment' => array('subject', 'message'),
@@ -891,6 +936,28 @@ The IELTS Team'
             
             <form method="post" action="">
                 <?php wp_nonce_field('ielts_membership_emails'); ?>
+                
+                <h2><?php _e('Email Sender Settings', 'ielts-course-manager'); ?></h2>
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('From Name', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="text" name="ielts_cm_email_from_name" 
+                                   value="<?php echo esc_attr(get_option('ielts_cm_email_from_name', get_bloginfo('name'))); ?>" 
+                                   class="regular-text">
+                            <p class="description"><?php _e('The name that will appear in the "From" field of emails (e.g., "IELTS Team"). Leave blank to use your site name.', 'ielts-course-manager'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('From Email Address', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="email" name="ielts_cm_email_from_address" 
+                                   value="<?php echo esc_attr(get_option('ielts_cm_email_from_address', get_option('admin_email'))); ?>" 
+                                   class="regular-text">
+                            <p class="description"><?php _e('The email address that will appear in the "From" field of emails. Leave blank to use your WordPress admin email.', 'ielts-course-manager'); ?></p>
+                        </td>
+                    </tr>
+                </table>
                 
                 <h2><?php _e('New Trial Enrollment', 'ielts-course-manager'); ?></h2>
                 <table class="form-table">
@@ -989,7 +1056,7 @@ The IELTS Team'
         $template = get_option('ielts_cm_email_' . $template_key, array());
         
         // If no template exists, use default
-        if (empty($template['subject']) || empty($template['message'])) {
+        if (empty($template) || empty($template['subject']) || empty($template['message'])) {
             error_log("IELTS Course Manager: No email template configured for {$template_key}, using default");
             
             // Set default templates
@@ -1190,7 +1257,7 @@ The IELTS Team'
         $email_template = get_option('ielts_cm_email_' . $email_type, array());
         
         // If no template exists, use default
-        if (empty($email_template['subject']) || empty($email_template['message'])) {
+        if (empty($email_template) || empty($email_template['subject']) || empty($email_template['message'])) {
             error_log("IELTS Course Manager: No email template configured for {$email_type}, using default");
             
             // Set default templates
