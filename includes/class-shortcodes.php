@@ -1507,7 +1507,7 @@ class IELTS_CM_Shortcodes {
                 wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
                 
                 // Pass user information to JavaScript for logged-in users
-                $user_data = array();
+                $user_data = array('isLoggedIn' => false);
                 if (is_user_logged_in()) {
                     $current_user = wp_get_current_user();
                     $user_data = array(
@@ -1516,10 +1516,6 @@ class IELTS_CM_Shortcodes {
                         'firstName' => $current_user->first_name,
                         'lastName' => $current_user->last_name,
                         'email' => $current_user->user_email,
-                    );
-                } else {
-                    $user_data = array(
-                        'isLoggedIn' => false,
                     );
                 }
                 
