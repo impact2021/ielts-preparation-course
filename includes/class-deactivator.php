@@ -19,6 +19,12 @@ class IELTS_CM_Deactivator {
         // Flush rewrite rules to remove custom post type permalinks
         flush_rewrite_rules();
         
+        // Clear scheduled cron jobs
+        $timestamp = wp_next_scheduled('ielts_cm_check_expired_memberships');
+        if ($timestamp) {
+            wp_unschedule_event($timestamp, 'ielts_cm_check_expired_memberships');
+        }
+        
         // Note: We don't drop tables on deactivation to preserve data
         // Tables are only dropped on uninstall
     }
