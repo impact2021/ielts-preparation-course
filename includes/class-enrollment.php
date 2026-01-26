@@ -88,10 +88,18 @@ class IELTS_CM_Enrollment {
     /**
      * Check if user is enrolled in a course
      * Uses WordPress roles for access control instead of fragile meta fields
+     * Also checks membership-based access for trial and full members
      */
     public function is_enrolled($user_id, $course_id) {
         // Check if user has automatic access (admin only)
         if ($this->has_automatic_access($user_id)) {
+            return true;
+        }
+        
+        // Check if user has membership-based access (trial or full members)
+        // This allows trial users to access courses without explicit enrollment
+        $membership = new IELTS_CM_Membership();
+        if ($membership->user_has_course_access($user_id, $course_id)) {
             return true;
         }
         

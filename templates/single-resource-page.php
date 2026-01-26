@@ -112,10 +112,13 @@ body.ielts-resource-single .content-area {
                             </a>
                         </p>
                     <?php elseif ($is_active_trial): ?>
-                        <p><?php _e('You have an active trial membership, but you need to enroll in this course to access its resources.', 'ielts-course-manager'); ?></p>
+                        <p><?php _e('This course is not included in your trial membership.', 'ielts-course-manager'); ?></p>
                         <p>
-                            <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button button-primary">
-                                <?php _e('Enroll in Course', 'ielts-course-manager'); ?>
+                            <?php 
+                            $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
+                            ?>
+                            <a href="<?php echo esc_url($upgrade_url); ?>" class="button button-primary">
+                                <?php _e('Upgrade to Full Membership', 'ielts-course-manager'); ?>
                             </a>
                         </p>
                     <?php elseif (!is_user_logged_in()): ?>
