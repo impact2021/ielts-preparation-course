@@ -38,6 +38,9 @@ class IELTS_CM_Membership {
         // Register cron action hook early so it's available when cron fires
         // This must be registered before WordPress tries to execute the cron event
         add_action('ielts_cm_check_expired_memberships', array($this, 'check_and_update_expired_memberships'));
+        
+        // Also add a fallback check on init to catch any memberships that expired between cron runs
+        add_action('init', array($this, 'check_expired_on_access'), 20);
     }
     
     /**
@@ -674,12 +677,33 @@ class IELTS_CM_Membership {
             update_option('ielts_cm_paypal_secret', sanitize_text_field($_POST['ielts_cm_paypal_secret']));
             
             $pricing = array();
+            $errors = array();
             foreach (self::MEMBERSHIP_LEVELS as $key => $label) {
                 if (isset($_POST['pricing_' . $key])) {
-                    $pricing[$key] = floatval($_POST['pricing_' . $key]);
+                    $price = floatval($_POST['pricing_' . $key]);
+                    
+                    // Validate that paid (non-trial) memberships have a price > 0
+                    if (!self::is_trial_membership($key) && $price <= 0) {
+                        $errors[] = sprintf(
+                            __('%s must have a price greater than $0. Please set a price or users won\'t be able to purchase this membership.', 'ielts-course-manager'),
+                            $label
+                        );
+                        // Set a default minimum price of $1 to prevent $0 paid memberships
+                        $price = 1.00;
+                    }
+                    
+                    $pricing[$key] = $price;
                 }
             }
             update_option('ielts_cm_membership_pricing', $pricing);
+            
+            if (!empty($errors)) {
+                echo '<div class="notice notice-warning"><p><strong>' . __('Warning:', 'ielts-course-manager') . '</strong></p><ul>';
+                foreach ($errors as $error) {
+                    echo '<li>' . esc_html($error) . '</li>';
+                }
+                echo '</ul><p>' . __('Paid memberships have been set to minimum price of $1.00. Please update to the correct price.', 'ielts-course-manager') . '</p></div>';
+            }
             
             echo '<div class="notice notice-success"><p>' . __('Payment settings saved.', 'ielts-course-manager') . '</p></div>';
         }
@@ -1327,6 +1351,71 @@ The IELTS Team'
         // Log the update if any memberships were expired
         if ($updated_count > 0) {
             error_log("IELTS Course Manager: Updated {$updated_count} expired memberships");
+        }
+    }
+    
+    /**
+     * Fallback check for expired memberships on user access
+     * This catches memberships that expired between cron runs
+     * Only checks the current user to avoid performance issues
+     * Rate limited to once per hour per user
+     */
+    public function check_expired_on_access() {
+        // Only check for logged-in users
+        if (!is_user_logged_in()) {
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        
+        // Rate limiting: Only check once per hour per user to avoid excessive queries
+        $last_check = get_user_meta($user_id, '_ielts_cm_last_expiry_check', true);
+        if ($last_check && (time() - intval($last_check)) < HOUR_IN_SECONDS) {
+            return; // Already checked within the last hour
+        }
+        
+        // Update last check time
+        update_user_meta($user_id, '_ielts_cm_last_expiry_check', time());
+        
+        $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+        $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        $current_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
+        
+        // Skip if no membership or already marked as expired
+        if (empty($membership_type) || $current_status === self::STATUS_EXPIRED) {
+            return;
+        }
+        
+        // Check if membership has expired
+        if (!empty($expiry_date)) {
+            $expiry_timestamp = strtotime($expiry_date . ' UTC');
+            $now_utc = time();
+            
+            // Skip if invalid date format
+            if ($expiry_timestamp === false) {
+                return;
+            }
+            
+            if ($expiry_timestamp <= $now_utc) {
+                // Send expiry notification email before updating status
+                $email_sent = get_user_meta($user_id, '_ielts_cm_expiry_email_sent', true);
+                
+                if (!$email_sent) {
+                    if (self::is_trial_membership($membership_type)) {
+                        $this->send_expiry_email($user_id, $membership_type, 'trial');
+                    } else {
+                        $this->send_expiry_email($user_id, $membership_type, 'full');
+                    }
+                    
+                    // Mark email as sent
+                    update_user_meta($user_id, '_ielts_cm_expiry_email_sent', time());
+                    error_log("IELTS Course Manager: Sent expiry email to user {$user_id} via fallback check");
+                }
+                
+                // Membership has expired, update status
+                $this->set_user_membership_status($user_id, self::STATUS_EXPIRED);
+                error_log("IELTS Course Manager: Updated user {$user_id} to expired status via fallback check");
+            }
         }
     }
     
