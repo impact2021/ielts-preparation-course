@@ -334,15 +334,18 @@ class IELTS_Course_Manager {
             $current_time = current_time('timestamp');
             $session_duration = $current_time - $session_start;
             
-            // Only count if session is less than 1 hour (to avoid counting inactive sessions)
-            if ($session_duration < 3600) {
-                // Update total time logged in
+            // Define session timeout (1 hour)
+            $session_timeout = 3600;
+            
+            // Only count if session is less than timeout (to avoid counting inactive sessions)
+            if ($session_duration < $session_timeout) {
+                // Add the incremental time since last page load
                 $total_time = get_user_meta($user_id, '_ielts_cm_total_time_logged_in', true);
                 $total_time = $total_time ? intval($total_time) + $session_duration : $session_duration;
                 update_user_meta($user_id, '_ielts_cm_total_time_logged_in', $total_time);
             }
             
-            // Reset session start to current time
+            // Reset session start to current time for next page load
             update_user_meta($user_id, '_ielts_cm_session_start', $current_time);
         }
     }

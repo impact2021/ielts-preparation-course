@@ -2923,25 +2923,27 @@ class IELTS_CM_Shortcodes {
         
         $user_id = get_current_user_id();
         
-        // Get stats
+        // Get stats (use 0 as default for numeric values)
         $last_login = get_user_meta($user_id, '_ielts_cm_last_login', true);
         $login_count = get_user_meta($user_id, '_ielts_cm_login_count', true);
+        $login_count = $login_count ? intval($login_count) : 0;
         $total_time = get_user_meta($user_id, '_ielts_cm_total_time_logged_in', true);
+        $total_time = $total_time ? intval($total_time) : 0;
         
         ob_start();
         ?>
         <div class="ielts-login-stats">
-            <?php if ($atts['show_last_login'] === 'yes' && $last_login): ?>
+            <?php if ($atts['show_last_login'] === 'yes'): ?>
                 <div class="ielts-stat-item">
                     <div class="ielts-stat-icon">🕒</div>
                     <div class="ielts-stat-content">
                         <div class="ielts-stat-label"><?php _e('Last Login', 'ielts-course-manager'); ?></div>
-                        <div class="ielts-stat-value"><?php echo esc_html($this->format_time_ago($last_login)); ?></div>
+                        <div class="ielts-stat-value"><?php echo $last_login ? esc_html($this->format_time_ago($last_login)) : esc_html__('Never', 'ielts-course-manager'); ?></div>
                     </div>
                 </div>
             <?php endif; ?>
             
-            <?php if ($atts['show_login_count'] === 'yes' && $login_count): ?>
+            <?php if ($atts['show_login_count'] === 'yes'): ?>
                 <div class="ielts-stat-item">
                     <div class="ielts-stat-icon">📊</div>
                     <div class="ielts-stat-content">
@@ -2951,7 +2953,7 @@ class IELTS_CM_Shortcodes {
                 </div>
             <?php endif; ?>
             
-            <?php if ($atts['show_total_time'] === 'yes' && $total_time): ?>
+            <?php if ($atts['show_total_time'] === 'yes'): ?>
                 <div class="ielts-stat-item">
                     <div class="ielts-stat-icon">⏱️</div>
                     <div class="ielts-stat-content">
@@ -3058,6 +3060,10 @@ class IELTS_CM_Shortcodes {
      * @return string Formatted duration
      */
     private function format_duration($seconds) {
+        if ($seconds == 0) {
+            return __('0 minutes', 'ielts-course-manager');
+        }
+        
         if ($seconds < 60) {
             return sprintf(_n('%d second', '%d seconds', $seconds, 'ielts-course-manager'), $seconds);
         }
