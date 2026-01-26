@@ -32,6 +32,15 @@ class IELTS_CM_Membership {
     const STATUS_NONE = 'none';
     
     /**
+     * Constructor - Register cron action early
+     */
+    public function __construct() {
+        // Register cron action hook early so it's available when cron fires
+        // This must be registered before WordPress tries to execute the cron event
+        add_action('ielts_cm_check_expired_memberships', array($this, 'check_and_update_expired_memberships'));
+    }
+    
+    /**
      * Initialize membership functionality
      */
     public function init() {
@@ -48,7 +57,6 @@ class IELTS_CM_Membership {
         if (!wp_next_scheduled('ielts_cm_check_expired_memberships')) {
             wp_schedule_event(time(), 'daily', 'ielts_cm_check_expired_memberships');
         }
-        add_action('ielts_cm_check_expired_memberships', array($this, 'check_and_update_expired_memberships'));
         
         // Only initialize other features if membership system is enabled
         if (!$this->is_enabled()) {
