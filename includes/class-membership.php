@@ -168,6 +168,8 @@ class IELTS_CM_Membership {
                 // If no expiry or expiry is in the future, set as active
                 if (empty($expiry_date) || strtotime($expiry_date) > time()) {
                     update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_ACTIVE);
+                    // Clear expiry email tracking when setting to active
+                    delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
                 } else {
                     // Expiry is in the past, set as expired
                     update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_EXPIRED);
@@ -175,6 +177,8 @@ class IELTS_CM_Membership {
             } else {
                 // No membership type, set status to none
                 update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_NONE);
+                // Clear expiry email tracking when no membership
+                delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
             }
         }
         
@@ -976,15 +980,49 @@ The IELTS Team'
     public function send_enrollment_email($user_id, $membership_type) {
         $user = get_userdata($user_id);
         if (!$user) {
+            error_log("IELTS Course Manager: Cannot send enrollment email - user {$user_id} not found");
             return;
         }
         
         $is_trial = self::is_trial_membership($membership_type);
         $template_key = $is_trial ? 'trial_enrollment' : 'full_enrollment';
-        $template = get_option('ielts_cm_email_' . $template_key);
+        $template = get_option('ielts_cm_email_' . $template_key, array());
         
-        if (empty($template) || empty($template['subject']) || empty($template['message'])) {
-            return;
+        // If no template exists, use default
+        if (empty($template['subject']) || empty($template['message'])) {
+            error_log("IELTS Course Manager: No email template configured for {$template_key}, using default");
+            
+            // Set default templates
+            if ($is_trial) {
+                $template = array(
+                    'subject' => 'Welcome to Your Free Trial!',
+                    'message' => 'Hi {username},
+
+Welcome to your free trial of {membership_name}!
+
+Your trial will expire on {expiry_date}.
+
+To continue accessing all our courses after your trial ends, please upgrade to a full membership.
+
+Best regards,
+The IELTS Team'
+                );
+            } else {
+                $template = array(
+                    'subject' => 'Welcome to Your Full Membership!',
+                    'message' => 'Hi {username},
+
+Welcome to {membership_name}!
+
+You now have full access to all our courses.
+
+Best regards,
+The IELTS Team'
+                );
+            }
+            
+            // Save the default template for future use
+            update_option('ielts_cm_email_' . $template_key, $template);
         }
         
         $membership_name = isset(self::MEMBERSHIP_LEVELS[$membership_type]) 
@@ -1010,7 +1048,10 @@ The IELTS Team'
         // Send email and log failures
         $result = wp_mail($user->user_email, $subject, $message);
         if (!$result) {
-            error_log(sprintf('Failed to send enrollment email to user %d (%s) for membership type %s', 
+            error_log(sprintf('IELTS Course Manager: Failed to send enrollment email to user %d (%s) for membership type %s', 
+                $user_id, $user->user_email, $membership_type));
+        } else {
+            error_log(sprintf('IELTS Course Manager: Successfully sent enrollment email to user %d (%s) for membership type %s', 
                 $user_id, $user->user_email, $membership_type));
         }
     }
@@ -1103,16 +1144,24 @@ The IELTS Team'
                 }
                 
                 if ($expiry_timestamp <= $now_utc) {
+                    // Send expiry notification email before updating status
+                    // Check if email has already been sent
+                    $email_sent = get_user_meta($user->ID, '_ielts_cm_expiry_email_sent', true);
+                    
+                    if (!$email_sent) {
+                        if (self::is_trial_membership($membership_type)) {
+                            $this->send_expiry_email($user->ID, $membership_type, 'trial');
+                        } else {
+                            $this->send_expiry_email($user->ID, $membership_type, 'full');
+                        }
+                        
+                        // Mark email as sent
+                        update_user_meta($user->ID, '_ielts_cm_expiry_email_sent', time());
+                    }
+                    
                     // Membership has expired, update status
                     $this->set_user_membership_status($user->ID, self::STATUS_EXPIRED);
                     $updated_count++;
-                    
-                    // Send expiry notification email if it's a trial
-                    if (self::is_trial_membership($membership_type)) {
-                        $this->send_expiry_email($user->ID, $membership_type, 'trial');
-                    } else {
-                        $this->send_expiry_email($user->ID, $membership_type, 'full');
-                    }
                 }
             }
         }
