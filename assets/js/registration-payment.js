@@ -29,10 +29,18 @@
             
             console.log('IELTS Payment: Membership type selected:', membershipType, 'Price:', price);
             
+            // Check if this is a paid membership (not a trial)
+            const isPaidMembership = membershipType && !membershipType.endsWith('_trial');
+            
             // Show/hide payment section based on price
             if (price > 0) {
                 showPaymentSection(price);
+            } else if (isPaidMembership && price <= 0) {
+                // Paid membership with no price configured - show error
+                hidePaymentSection();
+                showError('This membership option is not properly configured. Please contact the site administrator or choose a different option.');
             } else {
+                // Free membership (trial or explicitly free)
                 hidePaymentSection();
             }
         });

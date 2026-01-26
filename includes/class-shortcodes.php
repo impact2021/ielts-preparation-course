@@ -1814,8 +1814,12 @@ class IELTS_CM_Shortcodes {
                                         $option_label .= ' (Free Trial)';
                                         $trial_options[$key] = $option_label;
                                     } else {
+                                        // Paid membership - always show price information
                                         if ($price > 0) {
                                             $option_label .= ' ($' . number_format($price, 2) . ')';
+                                        } else {
+                                            // Warning: price not configured
+                                            $option_label .= ' (Price Not Set - Contact Admin)';
                                         }
                                         $paid_options[$key] = $option_label;
                                     }
