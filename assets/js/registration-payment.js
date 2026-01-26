@@ -10,21 +10,22 @@
         stripe = Stripe(ieltsPayment.publishableKey);
     }
     
-    // Listen for membership type selection
-    $('#ielts_membership_type').on('change', function() {
-        const membershipType = $(this).val();
-        const price = ieltsPayment.pricing[membershipType] || 0;
-        
-        // Show/hide payment section based on price
-        if (price > 0) {
-            showPaymentSection(price);
-        } else {
-            hidePaymentSection();
-        }
-    });
-    
-    // Trigger change event on page load to show payment section if membership is pre-selected
+    // Initialize when DOM is ready
     $(document).ready(function() {
+        // Listen for membership type selection
+        $('#ielts_membership_type').on('change', function() {
+            const membershipType = $(this).val();
+            const price = ieltsPayment.pricing[membershipType] || 0;
+            
+            // Show/hide payment section based on price
+            if (price > 0) {
+                showPaymentSection(price);
+            } else {
+                hidePaymentSection();
+            }
+        });
+        
+        // Trigger change event on page load to show payment section if membership is pre-selected
         const $membershipSelect = $('#ielts_membership_type');
         if ($membershipSelect.val()) {
             $membershipSelect.trigger('change');
