@@ -1194,15 +1194,13 @@ The IELTS Team'
     /**
      * Check and update expired memberships
      * This function is called by a daily cron job
+     * 
+     * IMPORTANT: This runs even if membership system is disabled because
+     * the enrollment check enforces expiry dates regardless of system status.
+     * This ensures users get expiry emails and status updates.
      */
     public function check_and_update_expired_memberships() {
         global $wpdb;
-        
-        // Only process if membership system is enabled
-        if (!$this->is_enabled()) {
-            error_log("IELTS Course Manager: Skipping expired membership check - membership system is disabled");
-            return;
-        }
         
         error_log("IELTS Course Manager: Starting expired membership check");
         

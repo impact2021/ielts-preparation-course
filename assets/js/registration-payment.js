@@ -5,9 +5,19 @@
     let elements;
     let paymentElement;
     
+    // Helper function to get price for membership type
+    function getPriceForMembershipType(membershipType) {
+        if (!ieltsPayment || !ieltsPayment.pricing || !membershipType) {
+            return 0;
+        }
+        return ieltsPayment.pricing[membershipType] || 0;
+    }
+    
     // Initialize Stripe
-    if (typeof Stripe !== 'undefined' && ieltsPayment.publishableKey) {
+    if (typeof Stripe !== 'undefined' && ieltsPayment && ieltsPayment.publishableKey) {
         stripe = Stripe(ieltsPayment.publishableKey);
+    } else {
+        console.error('IELTS Payment: Stripe not initialized. Check if Stripe.js is loaded and publishable key is configured.');
     }
     
     // Initialize when DOM is ready
@@ -15,7 +25,9 @@
         // Listen for membership type selection
         $('#ielts_membership_type').on('change', function() {
             const membershipType = $(this).val();
-            const price = ieltsPayment.pricing[membershipType] || 0;
+            const price = getPriceForMembershipType(membershipType);
+            
+            console.log('IELTS Payment: Membership type selected:', membershipType, 'Price:', price);
             
             // Show/hide payment section based on price
             if (price > 0) {
@@ -53,29 +65,40 @@
     }
     
     function initializePaymentElement(price) {
+        if (!stripe) {
+            console.error('IELTS Payment: Cannot initialize payment element - Stripe not initialized');
+            showError('Payment system is not configured. Please contact the site administrator.');
+            return;
+        }
+        
         // Clear any existing payment element
         $('#payment-element').empty();
         
-        // Create Elements instance in payment mode with preset amount
-        elements = stripe.elements({
-            mode: 'payment',
-            amount: Math.round(parseFloat(price) * 100), // Amount in cents
-            currency: 'usd',
-            appearance: {
-                theme: 'stripe',
-                variables: { colorPrimary: '#0073aa' }
-            }
-        });
-        
-        // Create and mount Payment Element
-        paymentElement = elements.create('payment');
-        paymentElement.mount('#payment-element');
+        try {
+            // Create Elements instance in payment mode with preset amount
+            elements = stripe.elements({
+                mode: 'payment',
+                amount: Math.round(parseFloat(price) * 100), // Amount in cents
+                currency: 'usd',
+                appearance: {
+                    theme: 'stripe',
+                    variables: { colorPrimary: '#0073aa' }
+                }
+            });
+            
+            // Create and mount Payment Element
+            paymentElement = elements.create('payment');
+            paymentElement.mount('#payment-element');
+        } catch (error) {
+            console.error('IELTS Payment: Error initializing payment element:', error);
+            showError('Failed to initialize payment form. Please refresh the page and try again.');
+        }
     }
     
     // Intercept form submission
     $('form[name="ielts_registration_form"]').on('submit', function(e) {
         const membershipType = $('#ielts_membership_type').val();
-        const price = ieltsPayment.pricing[membershipType] || 0;
+        const price = getPriceForMembershipType(membershipType);
         
         // If it's a paid membership, handle payment first
         if (price > 0 && stripe && elements) {
