@@ -1506,11 +1506,29 @@ class IELTS_CM_Shortcodes {
                 wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
                 wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
                 
+                // Pass user information to JavaScript for logged-in users
+                $user_data = array();
+                if (is_user_logged_in()) {
+                    $current_user = wp_get_current_user();
+                    $user_data = array(
+                        'isLoggedIn' => true,
+                        'userId' => $current_user->ID,
+                        'firstName' => $current_user->first_name,
+                        'lastName' => $current_user->last_name,
+                        'email' => $current_user->user_email,
+                    );
+                } else {
+                    $user_data = array(
+                        'isLoggedIn' => false,
+                    );
+                }
+                
                 wp_localize_script('ielts-registration-payment', 'ieltsPayment', array(
                     'publishableKey' => $stripe_publishable,
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('ielts_payment_intent'),
                     'pricing' => $pricing,
+                    'user' => $user_data,
                 ));
             }
         }

@@ -1198,11 +1198,21 @@ The IELTS Team'
     public function check_and_update_expired_memberships() {
         global $wpdb;
         
+        // Only process if membership system is enabled
+        if (!$this->is_enabled()) {
+            error_log("IELTS Course Manager: Skipping expired membership check - membership system is disabled");
+            return;
+        }
+        
+        error_log("IELTS Course Manager: Starting expired membership check");
+        
         // Get all users with memberships
         $users = get_users(array(
             'meta_key' => '_ielts_cm_membership_type',
             'meta_compare' => 'EXISTS'
         ));
+        
+        error_log("IELTS Course Manager: Found " . count($users) . " users with memberships");
         
         $now_utc = time();
         $updated_count = 0;
