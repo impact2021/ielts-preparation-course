@@ -87,7 +87,7 @@ class IELTS_CM_Enrollment {
     
     /**
      * Check if user is enrolled in a course
-     * Only administrators have automatic access to all courses
+     * Uses WordPress roles for access control instead of fragile meta fields
      */
     public function is_enrolled($user_id, $course_id) {
         // Check if user has automatic access (admin only)
@@ -108,36 +108,27 @@ class IELTS_CM_Enrollment {
             return false;
         }
         
-        // SECURITY FIX: Always check membership expiry if user has an expiry date set
-        // This prevents expired trial users from accessing courses even if membership system is disabled
-        $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
-        $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        // ROLE-BASED ACCESS: Check if user has a valid membership role
+        $user = get_userdata($user_id);
+        if (!$user) {
+            return false;
+        }
         
-        // If user has a membership, check status first (faster than date comparison)
-        if (!empty($membership_type)) {
-            $membership_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
-            if ($membership_status === IELTS_CM_Membership::STATUS_EXPIRED) {
-                return false;
-            }
-            
-            // If user has expiry date, check if it's expired (fallback for legacy data)
-            if (!empty($expiry_date)) {
-                // Expiry date is stored in UTC format, convert properly
-                $expiry_timestamp = strtotime($expiry_date . ' UTC');
-                $now_utc = time(); // Current UTC timestamp
-                
-                // Return false if membership has expired
-                if ($expiry_timestamp <= $now_utc) {
-                    // Update status to expired if not already set
-                    if ($membership_status !== IELTS_CM_Membership::STATUS_EXPIRED) {
-                        update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_EXPIRED);
-                    }
-                    return false;
-                }
+        // Get valid membership role slugs
+        $valid_membership_roles = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
+        
+        // Check if user has any membership role (academic_trial, general_trial, academic_full, general_full)
+        $has_membership_role = false;
+        foreach ($user->roles as $role) {
+            if (in_array($role, $valid_membership_roles)) {
+                $has_membership_role = true;
+                break;
             }
         }
         
-        return true;
+        // If user has a membership role, they have access
+        // If not, they're just a subscriber (expired or never had membership)
+        return $has_membership_role;
     }
     
     /**

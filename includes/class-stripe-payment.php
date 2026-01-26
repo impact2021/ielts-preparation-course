@@ -221,7 +221,10 @@ class IELTS_CM_Stripe_Payment {
         
         // Assign paid membership to user
         update_user_meta($payment->user_id, '_ielts_cm_membership_type', $payment->membership_type);
-        update_user_meta($payment->user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
+        
+        // Set status to active (this also assigns the WordPress role)
+        $membership = new IELTS_CM_Membership();
+        $membership->set_user_membership_status($payment->user_id, IELTS_CM_Membership::STATUS_ACTIVE);
         
         // Clear expiry email tracking when activating new membership
         delete_user_meta($payment->user_id, '_ielts_cm_expiry_email_sent');
@@ -348,7 +351,10 @@ class IELTS_CM_Stripe_Payment {
         
         // Assign paid membership
         update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-        update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
+        
+        // Set status to active (this also assigns the WordPress role)
+        $membership = new IELTS_CM_Membership();
+        $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
         
         // Clear expiry email tracking when activating new membership
         delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');

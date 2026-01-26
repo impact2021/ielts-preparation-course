@@ -1673,13 +1673,15 @@ class IELTS_CM_Shortcodes {
                                 if (IELTS_CM_Membership::is_trial_membership($membership_type)) {
                                     // Trial membership - activate immediately with expiry
                                     update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-                                    update_user_meta($user_id, '_ielts_cm_membership_status', IELTS_CM_Membership::STATUS_ACTIVE);
+                                    
+                                    // Set status to active (this also assigns the WordPress role)
+                                    $membership = new IELTS_CM_Membership();
+                                    $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
                                     
                                     // Clear expiry email tracking when activating new trial
                                     delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
                                     
                                     // Set expiry date based on membership duration settings
-                                    $membership = new IELTS_CM_Membership();
                                     $expiry_date = $membership->calculate_expiry_date($membership_type);
                                     update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
                                     
@@ -1755,7 +1757,7 @@ class IELTS_CM_Shortcodes {
             <?php endif; ?>
             
             <?php if (!$success): ?>
-                <form method="post" action="" class="ielts-form ielts-registration-form-grid">
+                <form method="post" action="" name="ielts_registration_form" class="ielts-form ielts-registration-form-grid">
                     <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
                     
                     <?php if (!$is_logged_in): ?>

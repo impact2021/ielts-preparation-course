@@ -44,6 +44,9 @@ class IELTS_CM_Membership {
      * Initialize membership functionality
      */
     public function init() {
+        // Create custom roles for membership levels on init
+        $this->create_membership_roles();
+        
         // Always add admin menu and register settings so users can enable/disable the system
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
@@ -72,6 +75,27 @@ class IELTS_CM_Membership {
         add_action('edit_user_profile', array($this, 'user_membership_fields'));
         add_action('personal_options_update', array($this, 'save_user_membership_fields'));
         add_action('edit_user_profile_update', array($this, 'save_user_membership_fields'));
+    }
+    
+    /**
+     * Create custom WordPress roles for each membership level
+     * This ensures role-based access control instead of relying on fragile meta fields
+     */
+    public function create_membership_roles() {
+        // Get subscriber capabilities as base
+        $subscriber = get_role('subscriber');
+        if (!$subscriber) {
+            return;
+        }
+        
+        $base_caps = $subscriber->capabilities;
+        
+        // Create role for each membership level if it doesn't exist
+        foreach (self::MEMBERSHIP_LEVELS as $role_slug => $role_name) {
+            if (!get_role($role_slug)) {
+                add_role($role_slug, $role_name, $base_caps);
+            }
+        }
     }
     
     /**
@@ -202,16 +226,16 @@ class IELTS_CM_Membership {
                 
                 // If no expiry or expiry is in the future, set as active
                 if (empty($expiry_date) || strtotime($expiry_date) > time()) {
-                    update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_ACTIVE);
+                    $this->set_user_membership_status($user_id, self::STATUS_ACTIVE);
                     // Clear expiry email tracking when setting to active
                     delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
                 } else {
                     // Expiry is in the past, set as expired
-                    update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_EXPIRED);
+                    $this->set_user_membership_status($user_id, self::STATUS_EXPIRED);
                 }
             } else {
                 // No membership type, set status to none
-                update_user_meta($user_id, '_ielts_cm_membership_status', self::STATUS_NONE);
+                $this->set_user_membership_status($user_id, self::STATUS_NONE);
                 // Clear expiry email tracking when no membership
                 delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
             }
@@ -785,7 +809,7 @@ class IELTS_CM_Membership {
     }
     
     /**
-     * Set user membership status
+     * Set user membership status and sync WordPress role
      * 
      * @param int $user_id User ID
      * @param string $status Status to set: 'active', 'expired', or 'none'
@@ -793,6 +817,39 @@ class IELTS_CM_Membership {
     public function set_user_membership_status($user_id, $status) {
         if (in_array($status, array(self::STATUS_ACTIVE, self::STATUS_EXPIRED, self::STATUS_NONE))) {
             update_user_meta($user_id, '_ielts_cm_membership_status', $status);
+            
+            // Sync WordPress role based on status
+            $this->sync_user_role($user_id, $status);
+        }
+    }
+    
+    /**
+     * Sync WordPress role with membership status
+     * When active: assign membership role (e.g., academic_trial, general_full)
+     * When expired/none: demote to subscriber
+     * 
+     * @param int $user_id User ID
+     * @param string $status Current membership status
+     */
+    public function sync_user_role($user_id, $status) {
+        $user = get_userdata($user_id);
+        if (!$user) {
+            return;
+        }
+        
+        // Don't change admin roles
+        if (in_array('administrator', $user->roles)) {
+            return;
+        }
+        
+        $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+        
+        if ($status === self::STATUS_ACTIVE && !empty($membership_type)) {
+            // Active membership: assign the membership role
+            $user->set_role($membership_type);
+        } else {
+            // Expired or no membership: demote to subscriber
+            $user->set_role('subscriber');
         }
     }
     
