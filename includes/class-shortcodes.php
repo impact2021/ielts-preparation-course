@@ -1991,6 +1991,33 @@ class IELTS_CM_Shortcodes {
         .ielts-message ul li {
             margin: 5px 0;
         }
+        /* Stripe payment section styling */
+        #ielts-payment-section {
+            width: 100%;
+        }
+        #payment-element {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #payment-message {
+            margin-top: 10px;
+        }
+        #payment-message.error {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+            padding: 12px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #dc3545;
+        }
+        #payment-message.success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+            padding: 12px 15px;
+            border-radius: 6px;
+            border-left: 4px solid #28a745;
+        }
         </style>
         <?php
         return ob_get_clean();
