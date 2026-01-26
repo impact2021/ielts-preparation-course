@@ -1358,6 +1358,7 @@ The IELTS Team'
      * Fallback check for expired memberships on user access
      * This catches memberships that expired between cron runs
      * Only checks the current user to avoid performance issues
+     * Rate limited to once per hour per user
      */
     public function check_expired_on_access() {
         // Only check for logged-in users
@@ -1366,6 +1367,16 @@ The IELTS Team'
         }
         
         $user_id = get_current_user_id();
+        
+        // Rate limiting: Only check once per hour per user to avoid excessive queries
+        $last_check = get_user_meta($user_id, '_ielts_cm_last_expiry_check', true);
+        if ($last_check && (time() - intval($last_check)) < HOUR_IN_SECONDS) {
+            return; // Already checked within the last hour
+        }
+        
+        // Update last check time
+        update_user_meta($user_id, '_ielts_cm_last_expiry_check', time());
+        
         $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
         $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
         $current_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
