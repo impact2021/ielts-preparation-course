@@ -74,6 +74,9 @@ class IELTS_CM_Membership {
     
     /**
      * Customize email from name
+     * 
+     * @param string $from_name Default from name
+     * @return string Custom from name or default if not set
      */
     public function custom_email_from_name($from_name) {
         $custom_name = get_option('ielts_cm_email_from_name', '');
@@ -82,6 +85,9 @@ class IELTS_CM_Membership {
     
     /**
      * Customize email from address
+     * 
+     * @param string $from_email Default from email address
+     * @return string Custom from email or default if not set
      */
     public function custom_email_from_address($from_email) {
         $custom_email = get_option('ielts_cm_email_from_address', '');
@@ -833,7 +839,13 @@ class IELTS_CM_Membership {
                 update_option('ielts_cm_email_from_name', sanitize_text_field($_POST['ielts_cm_email_from_name']));
             }
             if (isset($_POST['ielts_cm_email_from_address'])) {
-                update_option('ielts_cm_email_from_address', sanitize_email($_POST['ielts_cm_email_from_address']));
+                $email_address = sanitize_email($_POST['ielts_cm_email_from_address']);
+                // Validate email address and show error if invalid
+                if (!empty($_POST['ielts_cm_email_from_address']) && empty($email_address)) {
+                    echo '<div class="notice notice-error"><p>' . __('Invalid email address. Please enter a valid email address.', 'ielts-course-manager') . '</p></div>';
+                } else {
+                    update_option('ielts_cm_email_from_address', $email_address);
+                }
             }
             
             // Save email templates
