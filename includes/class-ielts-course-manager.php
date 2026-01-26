@@ -87,6 +87,12 @@ class IELTS_Course_Manager {
         
         // Add award notification element to footer for logged-in users
         add_action('wp_footer', array($this, 'add_award_notification'));
+        
+        // Track user login
+        add_action('wp_login', array($this, 'track_user_login'), 10, 2);
+        
+        // Track session time on page load
+        add_action('wp_footer', array($this, 'track_session_time'));
     }
     
     /**
@@ -292,5 +298,55 @@ class IELTS_Course_Manager {
             </div>
         </div>
         <?php
+    }
+    
+    /**
+     * Track user login
+     * 
+     * @param string $user_login Username
+     * @param WP_User $user User object
+     */
+    public function track_user_login($user_login, $user) {
+        // Update last login time
+        update_user_meta($user->ID, '_ielts_cm_last_login', current_time('timestamp'));
+        
+        // Update login count
+        $login_count = get_user_meta($user->ID, '_ielts_cm_login_count', true);
+        $login_count = $login_count ? intval($login_count) + 1 : 1;
+        update_user_meta($user->ID, '_ielts_cm_login_count', $login_count);
+        
+        // Set session start time
+        update_user_meta($user->ID, '_ielts_cm_session_start', current_time('timestamp'));
+    }
+    
+    /**
+     * Track session time on page load
+     */
+    public function track_session_time() {
+        if (!is_user_logged_in()) {
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        $session_start = get_user_meta($user_id, '_ielts_cm_session_start', true);
+        
+        if ($session_start) {
+            $current_time = current_time('timestamp');
+            $session_duration = $current_time - $session_start;
+            
+            // Define session timeout (1 hour)
+            $session_timeout = 3600;
+            
+            // Only count if session is less than timeout (to avoid counting inactive sessions)
+            if ($session_duration < $session_timeout) {
+                // Add the incremental time since last page load
+                $total_time = get_user_meta($user_id, '_ielts_cm_total_time_logged_in', true);
+                $total_time = $total_time ? intval($total_time) + $session_duration : $session_duration;
+                update_user_meta($user_id, '_ielts_cm_total_time_logged_in', $total_time);
+            }
+            
+            // Reset session start to current time for next page load
+            update_user_meta($user_id, '_ielts_cm_session_start', $current_time);
+        }
     }
 }

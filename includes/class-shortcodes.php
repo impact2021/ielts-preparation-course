@@ -27,6 +27,9 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_login', array($this, 'display_login'));
         add_shortcode('ielts_registration', array($this, 'display_registration'));
         add_shortcode('ielts_account', array($this, 'display_account'));
+        
+        // Login stats shortcode
+        add_shortcode('ielts_login_stats', array($this, 'display_login_stats'));
     }
     
     /**
@@ -2019,6 +2022,40 @@ class IELTS_CM_Shortcodes {
             border-left: 4px solid #28a745;
         }
         </style>
+        
+        <script>
+        (function() {
+            // Add loading animation to Create Account button for non-payment submissions
+            document.addEventListener('DOMContentLoaded', function() {
+                var form = document.querySelector('form[name="ielts_registration_form"]');
+                if (form) {
+                    form.addEventListener('submit', function(e) {
+                        var button = document.getElementById('ielts_register_submit');
+                        var membershipSelect = document.getElementById('ielts_membership_type');
+                        
+                        if (button && !button.classList.contains('loading')) {
+                            // Check if this is a free trial (no payment required)
+                            // Payment submissions are handled by registration-payment.js
+                            if (membershipSelect && membershipSelect.value) {
+                                var isFree = true;
+                                // If ieltsPayment is defined, check pricing
+                                if (typeof ieltsPayment !== 'undefined' && ieltsPayment.pricing) {
+                                    var price = ieltsPayment.pricing[membershipSelect.value] || 0;
+                                    isFree = (price <= 0);
+                                }
+                                
+                                // Only add loading state for free memberships
+                                // Paid memberships are handled by registration-payment.js
+                                if (isFree) {
+                                    button.classList.add('loading');
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        })();
+        </script>
         <?php
         return ob_get_clean();
     }
@@ -2868,5 +2905,188 @@ class IELTS_CM_Shortcodes {
         if ($percentage >= 15) return 1.5;
         if ($percentage >= 10) return 1.0;
         return 0.5;
+    }
+    
+    /**
+     * Display login stats
+     */
+    public function display_login_stats($atts) {
+        if (!is_user_logged_in()) {
+            return '<p>' . __('Please log in to view your stats.', 'ielts-course-manager') . '</p>';
+        }
+        
+        $atts = shortcode_atts(array(
+            'show_last_login' => 'yes',
+            'show_login_count' => 'yes',
+            'show_total_time' => 'yes'
+        ), $atts);
+        
+        $user_id = get_current_user_id();
+        
+        // Get stats (use 0 as default for numeric values)
+        $last_login = get_user_meta($user_id, '_ielts_cm_last_login', true);
+        $login_count = get_user_meta($user_id, '_ielts_cm_login_count', true);
+        $login_count = $login_count ? intval($login_count) : 0;
+        $total_time = get_user_meta($user_id, '_ielts_cm_total_time_logged_in', true);
+        $total_time = $total_time ? intval($total_time) : 0;
+        
+        ob_start();
+        ?>
+        <div class="ielts-login-stats">
+            <?php if ($atts['show_last_login'] === 'yes'): ?>
+                <div class="ielts-stat-item">
+                    <div class="ielts-stat-icon">🕒</div>
+                    <div class="ielts-stat-content">
+                        <div class="ielts-stat-label"><?php _e('Last Login', 'ielts-course-manager'); ?></div>
+                        <div class="ielts-stat-value"><?php echo $last_login ? esc_html($this->format_time_ago($last_login)) : esc_html__('Never', 'ielts-course-manager'); ?></div>
+                    </div>
+                </div>
+            <?php endif; ?>
+            
+            <?php if ($atts['show_login_count'] === 'yes'): ?>
+                <div class="ielts-stat-item">
+                    <div class="ielts-stat-icon">📊</div>
+                    <div class="ielts-stat-content">
+                        <div class="ielts-stat-label"><?php _e('Total Logins', 'ielts-course-manager'); ?></div>
+                        <div class="ielts-stat-value"><?php echo esc_html($login_count); ?></div>
+                    </div>
+                </div>
+            <?php endif; ?>
+            
+            <?php if ($atts['show_total_time'] === 'yes'): ?>
+                <div class="ielts-stat-item">
+                    <div class="ielts-stat-icon">⏱️</div>
+                    <div class="ielts-stat-content">
+                        <div class="ielts-stat-label"><?php _e('Time Logged In', 'ielts-course-manager'); ?></div>
+                        <div class="ielts-stat-value"><?php echo esc_html($this->format_duration($total_time)); ?></div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+        
+        <style>
+        .ielts-login-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .ielts-stat-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: #fff;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        .ielts-stat-item:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 4px 8px rgba(59, 130, 246, 0.1);
+        }
+        .ielts-stat-icon {
+            font-size: 32px;
+            line-height: 1;
+        }
+        .ielts-stat-content {
+            flex: 1;
+        }
+        .ielts-stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .ielts-stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        @media (max-width: 768px) {
+            .ielts-login-stats {
+                flex-direction: column;
+            }
+            .ielts-stat-item {
+                min-width: 100%;
+            }
+        }
+        </style>
+        <?php
+        return ob_get_clean();
+    }
+    
+    /**
+     * Format time ago in a human-readable format
+     * 
+     * @param int $timestamp Unix timestamp
+     * @return string Formatted time ago
+     */
+    private function format_time_ago($timestamp) {
+        $current_time = current_time('timestamp');
+        $diff = $current_time - $timestamp;
+        
+        // Seconds
+        if ($diff < 60) {
+            return __('Just now', 'ielts-course-manager');
+        }
+        
+        // Minutes
+        if ($diff < 3600) {
+            $minutes = floor($diff / 60);
+            return sprintf(_n('%d minute ago', '%d minutes ago', $minutes, 'ielts-course-manager'), $minutes);
+        }
+        
+        // Hours
+        if ($diff < 86400) {
+            $hours = floor($diff / 3600);
+            return sprintf(_n('%d hour ago', '%d hours ago', $hours, 'ielts-course-manager'), $hours);
+        }
+        
+        // Days
+        $days = floor($diff / 86400);
+        return sprintf(_n('%d day ago', '%d days ago', $days, 'ielts-course-manager'), $days);
+    }
+    
+    /**
+     * Format duration in a human-readable format
+     * 
+     * @param int $seconds Duration in seconds
+     * @return string Formatted duration
+     */
+    private function format_duration($seconds) {
+        if ($seconds == 0) {
+            return __('0 minutes', 'ielts-course-manager');
+        }
+        
+        if ($seconds < 60) {
+            return sprintf(_n('%d second', '%d seconds', $seconds, 'ielts-course-manager'), $seconds);
+        }
+        
+        if ($seconds < 3600) {
+            $minutes = floor($seconds / 60);
+            return sprintf(_n('%d minute', '%d minutes', $minutes, 'ielts-course-manager'), $minutes);
+        }
+        
+        if ($seconds < 86400) {
+            $hours = floor($seconds / 3600);
+            $minutes = floor(($seconds % 3600) / 60);
+            if ($minutes > 0) {
+                return sprintf(__('%d hours %d minutes', 'ielts-course-manager'), $hours, $minutes);
+            }
+            return sprintf(_n('%d hour', '%d hours', $hours, 'ielts-course-manager'), $hours);
+        }
+        
+        $days = floor($seconds / 86400);
+        $hours = floor(($seconds % 86400) / 3600);
+        if ($hours > 0) {
+            return sprintf(__('%d days %d hours', 'ielts-course-manager'), $days, $hours);
+        }
+        return sprintf(_n('%d day', '%d days', $days, 'ielts-course-manager'), $days);
     }
 }

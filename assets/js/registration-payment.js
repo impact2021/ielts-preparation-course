@@ -257,9 +257,9 @@
         }
         
         if (isLoading) {
-            $button.prop('disabled', true).text('Processing...');
+            $button.prop('disabled', true).addClass('loading');
         } else {
-            $button.prop('disabled', false).text(originalText);
+            $button.prop('disabled', false).removeClass('loading');
         }
     }
     
