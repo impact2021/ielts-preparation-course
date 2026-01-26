@@ -40,6 +40,7 @@ class IELTS_CM_Membership {
         add_action('admin_init', array($this, 'register_settings'));
         
         // Add email filters to customize sender name and address
+        // Note: These filters apply to all WordPress emails for consistent branding
         add_filter('wp_mail_from_name', array($this, 'custom_email_from_name'));
         add_filter('wp_mail_from', array($this, 'custom_email_from_address'));
         
