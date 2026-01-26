@@ -1867,6 +1867,25 @@ class IELTS_CM_Shortcodes {
                                 <div id="payment-message" class="ielts-message" style="display: none; margin-top: 10px;"></div>
                             </p>
                         </div>
+                        
+                        <?php
+                        // Check if Stripe is configured when paid memberships exist
+                        $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+                        $has_paid_options = false;
+                        foreach ($pricing as $key => $price) {
+                            if (!IELTS_CM_Membership::is_trial_membership($key) && floatval($price) > 0) {
+                                $has_paid_options = true;
+                                break;
+                            }
+                        }
+                        
+                        if ($has_paid_options && empty($stripe_publishable)):
+                        ?>
+                            <div class="ielts-message error" style="margin-top: 15px;">
+                                <p><strong><?php _e('Payment System Not Configured', 'ielts-course-manager'); ?></strong></p>
+                                <p><?php _e('Paid membership options are available, but the payment system is not configured. Please contact the site administrator to set up payment processing.', 'ielts-course-manager'); ?></p>
+                            </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                     
                     <p class="form-field form-field-full">
