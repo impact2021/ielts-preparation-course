@@ -39,27 +39,36 @@ class IELTS_CM_Stripe_Payment {
      * Register user account (called before payment)
      */
     public function register_user() {
+        // Log the start of registration attempt
+        error_log('IELTS Payment: register_user called');
+        
         // Verify nonce
         if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+            error_log('IELTS Payment: Nonce verification failed');
             wp_send_json_error('Security check failed', 403);
         }
         
-        $first_name = sanitize_text_field($_POST['first_name']);
-        $last_name = sanitize_text_field($_POST['last_name']);
-        $email = sanitize_email($_POST['email']);
-        $password = $_POST['password'];
-        $membership_type = sanitize_text_field($_POST['membership_type']);
+        $first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
+        $last_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
+        $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+        $password = isset($_POST['password']) ? $_POST['password'] : '';
+        $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
+        
+        error_log("IELTS Payment: Received data - Email: $email, First: $first_name, Last: $last_name, Type: $membership_type");
         
         // Validate inputs
         if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
+            error_log('IELTS Payment: Missing required fields');
             wp_send_json_error('All fields are required');
         }
         
         if (!is_email($email)) {
+            error_log('IELTS Payment: Invalid email format');
             wp_send_json_error('Invalid email address');
         }
         
         if (email_exists($email)) {
+            error_log("IELTS Payment: Email already exists: $email");
             wp_send_json_error('Email already exists');
         }
         
@@ -101,24 +110,31 @@ class IELTS_CM_Stripe_Payment {
      * Create Payment Intent for registration
      */
     public function create_payment_intent() {
+        error_log('IELTS Payment: create_payment_intent called');
+        
         // Verify nonce
         if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+            error_log('IELTS Payment: Nonce verification failed in create_payment_intent');
             wp_send_json_error('Security check failed', 403);
         }
         
-        $user_id = intval($_POST['user_id']);
-        $membership_type = sanitize_text_field($_POST['membership_type']);
-        $amount = floatval($_POST['amount']);
+        $user_id = isset($_POST['user_id']) ? intval($_POST['user_id']) : 0;
+        $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
+        $amount = isset($_POST['amount']) ? floatval($_POST['amount']) : 0;
+        
+        error_log("IELTS Payment: create_payment_intent - User: $user_id, Type: $membership_type, Amount: $amount");
         
         // Validate user exists
         $user = get_userdata($user_id);
         if (!$user) {
+            error_log("IELTS Payment: Invalid user ID: $user_id");
             wp_send_json_error('Invalid user', 400);
         }
         
         // SECURITY: Validate membership type exists and get server-side price
         $pricing = get_option('ielts_cm_membership_pricing', array());
         if (!isset($pricing[$membership_type])) {
+            error_log("IELTS Payment: Invalid membership type: $membership_type");
             wp_send_json_error('Invalid membership type', 400);
         }
         
@@ -126,11 +142,13 @@ class IELTS_CM_Stripe_Payment {
         
         // Verify amount matches server-side price
         if (abs($amount - $server_price) > 0.01) {
+            error_log("IELTS Payment: Amount mismatch - Client: $amount, Server: $server_price");
             wp_send_json_error('Amount mismatch', 400);
         }
         
         // Don't create payment intent for free memberships
         if ($amount <= 0) {
+            error_log('IELTS Payment: Attempted to create payment intent for free membership');
             wp_send_json_error('This membership is free', 400);
         }
         
