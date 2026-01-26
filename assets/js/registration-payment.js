@@ -91,11 +91,18 @@
                 appearance: {
                     theme: 'stripe',
                     variables: { colorPrimary: '#0073aa' }
-                }
+                },
+                // Disable link payment method if not needed
+                paymentMethodTypes: ['card']
             });
             
             // Create and mount Payment Element
-            paymentElement = elements.create('payment');
+            paymentElement = elements.create('payment', {
+                layout: {
+                    type: 'tabs',
+                    defaultCollapsed: false
+                }
+            });
             paymentElement.mount('#payment-element');
         } catch (error) {
             console.error('IELTS Payment: Error initializing payment element:', error);

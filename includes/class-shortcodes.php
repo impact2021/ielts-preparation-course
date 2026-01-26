@@ -1999,8 +1999,14 @@ class IELTS_CM_Shortcodes {
             width: 100%;
         }
         #payment-element {
-            width: 100%;
+            width: 100% !important;
             box-sizing: border-box;
+        }
+        #payment-element iframe {
+            width: 100% !important;
+        }
+        #payment-element > div {
+            width: 100% !important;
         }
         #payment-message {
             margin-top: 10px;
