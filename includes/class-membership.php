@@ -1133,14 +1133,50 @@ The IELTS Team'
     private function send_expiry_email($user_id, $membership_type, $type) {
         $user = get_userdata($user_id);
         if (!$user) {
+            error_log("IELTS Course Manager: Cannot send expiry email - user {$user_id} not found");
             return;
         }
         
         $email_type = $type === 'trial' ? 'trial_expired' : 'full_expired';
         $email_template = get_option('ielts_cm_email_' . $email_type, array());
         
+        // If no template exists, use default
         if (empty($email_template['subject']) || empty($email_template['message'])) {
-            return; // No email template configured
+            error_log("IELTS Course Manager: No email template configured for {$email_type}, using default");
+            
+            // Set default templates
+            if ($type === 'trial') {
+                $email_template = array(
+                    'subject' => 'Your Trial Has Expired',
+                    'message' => 'Hi {username},
+
+Your trial membership for {membership_name} has expired.
+
+To continue accessing our courses, please upgrade to a full membership.
+
+Visit: {upgrade_url}
+
+Best regards,
+The IELTS Team'
+                );
+            } else {
+                $email_template = array(
+                    'subject' => 'Your Membership Has Expired',
+                    'message' => 'Hi {username},
+
+Your membership for {membership_name} has expired.
+
+To renew your membership and continue accessing our courses, please visit your account page.
+
+Visit: {upgrade_url}
+
+Best regards,
+The IELTS Team'
+                );
+            }
+            
+            // Save the default template for future use
+            update_option('ielts_cm_email_' . $email_type, $email_template);
         }
         
         // Replace placeholders
@@ -1160,7 +1196,9 @@ The IELTS Team'
         // Send email and log failures
         $sent = wp_mail($user->user_email, $subject, $message);
         if (!$sent) {
-            error_log("IELTS Course Manager: Failed to send {$type} expiry email to user {$user_id}");
+            error_log("IELTS Course Manager: Failed to send {$type} expiry email to user {$user_id} ({$user->user_email})");
+        } else {
+            error_log("IELTS Course Manager: Successfully sent {$type} expiry email to user {$user_id} ({$user->user_email})");
         }
     }
 }
