@@ -437,6 +437,12 @@ class IELTS_CM_Membership {
      * Display membership settings page
      */
     public function settings_page() {
+        // Handle manual check for expired memberships
+        if (isset($_POST['check_expired']) && check_admin_referer('ielts_membership_manual_check')) {
+            $this->check_and_update_expired_memberships();
+            echo '<div class="notice notice-success"><p>' . __('Checked for expired memberships. See error logs for details.', 'ielts-course-manager') . '</p></div>';
+        }
+        
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
             update_option('ielts_cm_membership_enabled', isset($_POST['ielts_cm_membership_enabled']) ? 1 : 0);
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
@@ -478,6 +484,18 @@ class IELTS_CM_Membership {
         ?>
         <div class="wrap">
             <h1><?php _e('Membership Settings', 'ielts-course-manager'); ?></h1>
+            
+            <!-- Manual Expiry Check -->
+            <div class="card" style="max-width: 800px; margin-bottom: 20px;">
+                <h2><?php _e('Manual Expiry Check', 'ielts-course-manager'); ?></h2>
+                <p><?php _e('This plugin checks for expired memberships automatically once per day. Use this button to manually trigger the check and send any pending expiry emails.', 'ielts-course-manager'); ?></p>
+                <form method="post" action="">
+                    <?php wp_nonce_field('ielts_membership_manual_check'); ?>
+                    <button type="submit" name="check_expired" class="button button-secondary">
+                        <?php _e('Check for Expired Memberships Now', 'ielts-course-manager'); ?>
+                    </button>
+                </form>
+            </div>
             
             <form method="post" action="">
                 <?php wp_nonce_field('ielts_membership_settings'); ?>
