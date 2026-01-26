@@ -21,14 +21,14 @@ class IELTS_CM_Enrollment {
     
     /**
      * Check if user has automatic access to all courses
-     * Administrators and subscribers have automatic access
+     * Only administrators have automatic access (subscribers must have valid membership)
      * 
      * @param int $user_id User ID to check
      * @return bool True if user has automatic access
      */
     private function has_automatic_access($user_id) {
         $user = get_userdata($user_id);
-        return $user && (in_array('administrator', $user->roles) || in_array('subscriber', $user->roles));
+        return $user && in_array('administrator', $user->roles);
     }
     
     /**
@@ -87,10 +87,10 @@ class IELTS_CM_Enrollment {
     
     /**
      * Check if user is enrolled in a course
-     * Administrators and subscribers have automatic access to all courses
+     * Only administrators have automatic access to all courses
      */
     public function is_enrolled($user_id, $course_id) {
-        // Check if user has automatic access (admin or subscriber)
+        // Check if user has automatic access (admin only)
         if ($this->has_automatic_access($user_id)) {
             return true;
         }
@@ -142,12 +142,12 @@ class IELTS_CM_Enrollment {
     
     /**
      * Get all enrolled courses for a user
-     * Administrators and subscribers automatically get all courses
+     * Only administrators automatically get all courses
      */
     public function get_user_courses($user_id) {
-        // Check if user has automatic access (admin or subscriber)
+        // Check if user has automatic access (admin only)
         if ($this->has_automatic_access($user_id)) {
-            // Return all published courses for admins/subscribers
+            // Return all published courses for admins
             $all_courses = get_posts(array(
                 'post_type' => 'ielts_course',
                 'posts_per_page' => -1,
@@ -163,7 +163,7 @@ class IELTS_CM_Enrollment {
                     'course_id' => $course->ID,
                     // Using current time for compatibility with code expecting enrolled_date
                     'enrolled_date' => current_time('mysql'),
-                    'course_end_date' => null // No end date for admin/subscriber access
+                    'course_end_date' => null // No end date for admin access
                 );
             }
             return $formatted_courses;
