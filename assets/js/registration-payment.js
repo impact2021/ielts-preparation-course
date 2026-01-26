@@ -10,16 +10,25 @@
         stripe = Stripe(ieltsPayment.publishableKey);
     }
     
-    // Listen for membership type selection
-    $('#ielts_membership_type').on('change', function() {
-        const membershipType = $(this).val();
-        const price = ieltsPayment.pricing[membershipType] || 0;
+    // Initialize when DOM is ready
+    $(document).ready(function() {
+        // Listen for membership type selection
+        $('#ielts_membership_type').on('change', function() {
+            const membershipType = $(this).val();
+            const price = ieltsPayment.pricing[membershipType] || 0;
+            
+            // Show/hide payment section based on price
+            if (price > 0) {
+                showPaymentSection(price);
+            } else {
+                hidePaymentSection();
+            }
+        });
         
-        // Show/hide payment section based on price
-        if (price > 0) {
-            showPaymentSection(price);
-        } else {
-            hidePaymentSection();
+        // Trigger change event on page load to show payment section if membership is pre-selected
+        const $membershipSelect = $('#ielts_membership_type');
+        if ($membershipSelect.val()) {
+            $membershipSelect.trigger('change');
         }
     });
     
@@ -87,37 +96,45 @@
             return;
         }
         
-        // Get form data
-        const formData = {
-            action: 'ielts_register_user',
-            nonce: ieltsPayment.nonce,
-            first_name: $('#ielts_first_name').val(),
-            last_name: $('#ielts_last_name').val(),
-            email: $('#ielts_email').val(),
-            password: $('#ielts_password').val(),
-            membership_type: membershipType,
-            amount: price
-        };
+        // Check if user is logged in
+        const isLoggedIn = ieltsPayment.user && ieltsPayment.user.isLoggedIn;
         
-        // Create user account first
-        $.ajax({
-            url: ieltsPayment.ajaxUrl,
-            method: 'POST',
-            data: formData,
-            success: function(response) {
-                if (response.success) {
-                    // User created, now create payment intent
-                    createPaymentIntentAndConfirm(response.data.user_id, membershipType, price);
-                } else {
-                    showError(response.data || 'Failed to create account');
+        if (isLoggedIn) {
+            // User is already logged in (upgrading), skip user creation and go straight to payment
+            createPaymentIntentAndConfirm(ieltsPayment.user.userId, membershipType, price);
+        } else {
+            // Get form data for new user registration
+            const formData = {
+                action: 'ielts_register_user',
+                nonce: ieltsPayment.nonce,
+                first_name: $('#ielts_first_name').val(),
+                last_name: $('#ielts_last_name').val(),
+                email: $('#ielts_email').val(),
+                password: $('#ielts_password').val(),
+                membership_type: membershipType,
+                amount: price
+            };
+            
+            // Create user account first
+            $.ajax({
+                url: ieltsPayment.ajaxUrl,
+                method: 'POST',
+                data: formData,
+                success: function(response) {
+                    if (response.success) {
+                        // User created, now create payment intent
+                        createPaymentIntentAndConfirm(response.data.user_id, membershipType, price);
+                    } else {
+                        showError(response.data || 'Failed to create account');
+                        setLoading(false);
+                    }
+                },
+                error: function() {
+                    showError('Network error. Please try again.');
                     setLoading(false);
                 }
-            },
-            error: function() {
-                showError('Network error. Please try again.');
-                setLoading(false);
-            }
-        });
+            });
+        }
     }
     
     function createPaymentIntentAndConfirm(userId, membershipType, price) {
@@ -200,10 +217,18 @@
     }
     
     function setLoading(isLoading) {
+        const $button = $('#ielts_register_submit');
+        const originalText = $button.data('original-text') || $button.text();
+        
+        // Store original text if not already stored
+        if (!$button.data('original-text')) {
+            $button.data('original-text', originalText);
+        }
+        
         if (isLoading) {
-            $('#ielts_register_submit').prop('disabled', true).text('Processing...');
+            $button.prop('disabled', true).text('Processing...');
         } else {
-            $('#ielts_register_submit').prop('disabled', false).text('Create Account');
+            $button.prop('disabled', false).text(originalText);
         }
     }
     

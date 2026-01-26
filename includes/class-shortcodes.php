@@ -1506,11 +1506,25 @@ class IELTS_CM_Shortcodes {
                 wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
                 wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
                 
+                // Pass user information to JavaScript for logged-in users
+                $user_data = array('isLoggedIn' => false);
+                if (is_user_logged_in()) {
+                    $current_user = wp_get_current_user();
+                    $user_data = array(
+                        'isLoggedIn' => true,
+                        'userId' => $current_user->ID,
+                        'firstName' => $current_user->first_name,
+                        'lastName' => $current_user->last_name,
+                        'email' => $current_user->user_email,
+                    );
+                }
+                
                 wp_localize_script('ielts-registration-payment', 'ieltsPayment', array(
                     'publishableKey' => $stripe_publishable,
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('ielts_payment_intent'),
                     'pricing' => $pricing,
+                    'user' => $user_data,
                 ));
             }
         }
@@ -1849,6 +1863,25 @@ class IELTS_CM_Shortcodes {
                                 <div id="payment-message" class="ielts-message" style="display: none; margin-top: 10px;"></div>
                             </p>
                         </div>
+                        
+                        <?php
+                        // Check if Stripe is configured when paid memberships exist
+                        $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+                        $has_paid_options = false;
+                        foreach ($pricing as $key => $price) {
+                            if (!IELTS_CM_Membership::is_trial_membership($key) && floatval($price) > 0) {
+                                $has_paid_options = true;
+                                break;
+                            }
+                        }
+                        
+                        if ($has_paid_options && empty($stripe_publishable)):
+                        ?>
+                            <div class="ielts-message ielts-error" style="margin-top: 15px;">
+                                <p><strong><?php _e('Payment System Not Configured', 'ielts-course-manager'); ?></strong></p>
+                                <p><?php _e('Paid membership options are available, but the payment system is not configured. Please contact the site administrator to set up payment processing.', 'ielts-course-manager'); ?></p>
+                            </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                     
                     <p class="form-field form-field-full">
