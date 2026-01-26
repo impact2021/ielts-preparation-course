@@ -1998,6 +1998,7 @@ class IELTS_CM_Shortcodes {
         #ielts-payment-section {
             width: 100%;
         }
+        /* Force 100% width on Stripe elements (overrides Stripe's injected styles) */
         #payment-element {
             width: 100% !important;
             box-sizing: border-box;

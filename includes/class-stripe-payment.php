@@ -174,15 +174,16 @@ class IELTS_CM_Stripe_Payment {
         ));
         
         if ($insert_result === false) {
-            error_log('IELTS Payment: Database error - ' . $wpdb->last_error);
-            wp_send_json_error('Database error. Please try again.', 500);
+            // Log detailed error internally but return generic message
+            error_log('IELTS Payment: Database error creating payment record - ' . $wpdb->last_error);
+            wp_send_json_error('Unable to process payment. Please try again or contact support.', 500);
         }
         
         $payment_id = $wpdb->insert_id;
         
         if (!$payment_id) {
-            error_log('IELTS Payment: Failed to get payment ID');
-            wp_send_json_error('Database error. Please try again.', 500);
+            error_log('IELTS Payment: Failed to get payment ID after insert');
+            wp_send_json_error('Unable to process payment. Please try again or contact support.', 500);
         }
         
         try {
