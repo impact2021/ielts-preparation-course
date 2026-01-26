@@ -1304,8 +1304,8 @@ The IELTS Team'
         
         $subject = $email_template['subject'];
         $message = str_replace(
-            array('{username}', '{membership_name}', '{upgrade_url}'),
-            array($user->display_name, $membership_name, $upgrade_url),
+            array('{username}', '{membership_name}', '{upgrade_url}', '{renewal_url}'),
+            array($user->display_name, $membership_name, $upgrade_url, $upgrade_url),
             $email_template['message']
         );
         

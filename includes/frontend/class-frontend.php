@@ -155,6 +155,20 @@ class IELTS_CM_Frontend {
         .ielts-trial-countdown-close:hover {
             opacity: 1;
         }
+        
+        .ielts-trial-countdown.countdown-warning {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            animation: flash-warning 1s ease-in-out infinite;
+        }
+        
+        @keyframes flash-warning {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
         ';
     }
     
@@ -211,6 +225,7 @@ class IELTS_CM_Frontend {
         <script>
         (function() {
             var expiryTimestamp = <?php echo absint($expiry_timestamp); ?>;
+            var upgradeUrl = <?php echo json_encode($upgrade_url); ?>;
             var timerElement = document.getElementById('ielts-countdown-timer');
             var closeBtn = document.getElementById('ielts-countdown-close-btn');
             var countdownWidget = document.getElementById('ielts-trial-countdown');
@@ -230,11 +245,18 @@ class IELTS_CM_Frontend {
                     timerElement.textContent = '<?php _e('Expired', 'ielts-course-manager'); ?>';
                     // Clear the interval to stop updates
                     clearInterval(countdownInterval);
-                    // Reload the page after a short delay to trigger server-side access check
+                    // Redirect to the full member page
                     setTimeout(function() {
-                        window.location.reload();
+                        window.location.href = upgradeUrl;
                     }, 1000);
                     return;
+                }
+                
+                // Add warning class for last 2 minutes (120 seconds)
+                if (diff <= 120) {
+                    countdownWidget.classList.add('countdown-warning');
+                } else {
+                    countdownWidget.classList.remove('countdown-warning');
                 }
                 
                 var days = Math.floor(diff / 86400);
