@@ -1515,11 +1515,26 @@ class IELTS_CM_Shortcodes {
             }
         }
         
+        // Check if user is logged in
         if (is_user_logged_in()) {
-            return '<p>' . __('You are already registered and logged in.', 'ielts-course-manager') . '</p>';
+            $user_id = get_current_user_id();
+            $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+            $membership_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
+            
+            // Allow upgrade if user has a trial or expired membership
+            $is_trial = !empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type);
+            $is_expired = ($membership_status === IELTS_CM_Membership::STATUS_EXPIRED);
+            
+            if (!$is_trial && !$is_expired) {
+                // User has a full active membership, no need to register
+                return '<p>' . __('You are already registered and logged in with an active membership.', 'ielts-course-manager') . '</p>';
+            }
+            
+            // For trial or expired users, continue to show the upgrade/payment form below
+            // The form will be rendered but without the registration fields (name, email, password)
         }
         
-        if (!get_option('users_can_register')) {
+        if (!is_user_logged_in() && !get_option('users_can_register')) {
             return '<p>' . __('User registration is currently not allowed.', 'ielts-course-manager') . '</p>';
         }
         
@@ -1531,63 +1546,78 @@ class IELTS_CM_Shortcodes {
             if (!isset($_POST['ielts_register_nonce']) || !wp_verify_nonce($_POST['ielts_register_nonce'], 'ielts_register')) {
                 $errors[] = __('Security check failed.', 'ielts-course-manager');
             } else {
-                $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
-                $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
-                $email = sanitize_email($_POST['ielts_email']);
-                $password = $_POST['ielts_password'];
-                $password_confirm = $_POST['ielts_password_confirm'];
-                $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
+                // Check if user is already logged in (upgrading)
+                $is_upgrading = is_user_logged_in();
                 
-                // Validate name fields
-                if (empty($first_name)) {
-                    $errors[] = __('First name is required.', 'ielts-course-manager');
-                }
-                if (empty($last_name)) {
-                    $errors[] = __('Last name is required.', 'ielts-course-manager');
-                }
-                
-                // Validate email first before using it for username generation
-                if (empty($email)) {
-                    $errors[] = __('Email is required.', 'ielts-course-manager');
-                } elseif (!is_email($email)) {
-                    $errors[] = __('Invalid email address.', 'ielts-course-manager');
-                } elseif (email_exists($email)) {
-                    $errors[] = __('Email already exists.', 'ielts-course-manager');
-                }
-                
-                // Generate username from email (more user-friendly format)
-                // Only if email is valid
-                if (empty($errors) && is_email($email) && strpos($email, '@') !== false) {
-                    $email_parts = explode('@', $email);
-                    $base_username = sanitize_user($email_parts[0], true);
-                    
-                    // Ensure username is not empty
-                    if (empty($base_username)) {
-                        $base_username = 'user';
-                    }
-                    
-                    // If username exists, append timestamp for uniqueness
-                    $username = $base_username;
-                    if (username_exists($username)) {
-                        $username = $base_username . '_' . time();
-                        // If still exists (very unlikely), add random suffix
-                        if (username_exists($username)) {
-                            $username = $base_username . '_' . wp_generate_password(8, false);
-                        }
-                    }
+                if ($is_upgrading) {
+                    // For logged-in users upgrading, skip registration field validation
+                    $user_id = get_current_user_id();
+                    $user = get_userdata($user_id);
+                    $first_name = $user->first_name;
+                    $last_name = $user->last_name;
+                    $email = $user->user_email;
+                    $username = $user->user_login;
                 } else {
-                    // Fallback username if email is invalid
-                    $username = 'user_' . time();
+                    // For new registrations, process and validate all fields
+                    $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
+                    $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
+                    $email = sanitize_email($_POST['ielts_email']);
+                    $password = $_POST['ielts_password'];
+                    $password_confirm = $_POST['ielts_password_confirm'];
+                    
+                    // Validate name fields
+                    if (empty($first_name)) {
+                        $errors[] = __('First name is required.', 'ielts-course-manager');
+                    }
+                    if (empty($last_name)) {
+                        $errors[] = __('Last name is required.', 'ielts-course-manager');
+                    }
+                    
+                    // Validate email first before using it for username generation
+                    if (empty($email)) {
+                        $errors[] = __('Email is required.', 'ielts-course-manager');
+                    } elseif (!is_email($email)) {
+                        $errors[] = __('Invalid email address.', 'ielts-course-manager');
+                    } elseif (email_exists($email)) {
+                        $errors[] = __('Email already exists.', 'ielts-course-manager');
+                    }
+                    
+                    // Generate username from email (more user-friendly format)
+                    // Only if email is valid
+                    if (empty($errors) && is_email($email) && strpos($email, '@') !== false) {
+                        $email_parts = explode('@', $email);
+                        $base_username = sanitize_user($email_parts[0], true);
+                        
+                        // Ensure username is not empty
+                        if (empty($base_username)) {
+                            $base_username = 'user';
+                        }
+                        
+                        // If username exists, append timestamp for uniqueness
+                        $username = $base_username;
+                        if (username_exists($username)) {
+                            $username = $base_username . '_' . time();
+                            // If still exists (very unlikely), add random suffix
+                            if (username_exists($username)) {
+                                $username = $base_username . '_' . wp_generate_password(8, false);
+                            }
+                        }
+                    } else {
+                        // Fallback username if email is invalid
+                        $username = 'user_' . time();
+                    }
+                    
+                    // Validate password
+                    if (empty($password)) {
+                        $errors[] = __('Password is required.', 'ielts-course-manager');
+                    } elseif (strlen($password) < 6) {
+                        $errors[] = __('Password must be at least 6 characters.', 'ielts-course-manager');
+                    } elseif ($password !== $password_confirm) {
+                        $errors[] = __('Passwords do not match.', 'ielts-course-manager');
+                    }
                 }
                 
-                // Validate password
-                if (empty($password)) {
-                    $errors[] = __('Password is required.', 'ielts-course-manager');
-                } elseif (strlen($password) < 6) {
-                    $errors[] = __('Password must be at least 6 characters.', 'ielts-course-manager');
-                } elseif ($password !== $password_confirm) {
-                    $errors[] = __('Passwords do not match.', 'ielts-course-manager');
-                }
+                $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
                 
                 // Validate membership type if provided
                 if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
@@ -1600,17 +1630,26 @@ class IELTS_CM_Shortcodes {
                 
                 // Create user if no errors
                 if (empty($errors)) {
-                    $user_id = wp_create_user($username, $password, $email);
-                    if (is_wp_error($user_id)) {
-                        $errors[] = $user_id->get_error_message();
+                    if ($is_upgrading) {
+                        // User is already logged in and upgrading - don't create a new user
+                        // Just process the membership upgrade
                     } else {
-                        // Save user name fields using wp_update_user
-                        wp_update_user(array(
-                            'ID' => $user_id,
-                            'first_name' => $first_name,
-                            'last_name' => $last_name
-                        ));
-                        
+                        // Create new user for registration
+                        $user_id = wp_create_user($username, $password, $email);
+                        if (is_wp_error($user_id)) {
+                            $errors[] = $user_id->get_error_message();
+                        } else {
+                            // Save user name fields using wp_update_user
+                            wp_update_user(array(
+                                'ID' => $user_id,
+                                'first_name' => $first_name,
+                                'last_name' => $last_name
+                            ));
+                        }
+                    }
+                    
+                    // Process membership if no errors
+                    if (empty($errors)) {
                         // Set membership type if selected and membership system is enabled
                         $redirect_to_payment = false;
                         if (!empty($membership_type) && get_option('ielts_cm_membership_enabled')) {
@@ -1645,11 +1684,13 @@ class IELTS_CM_Shortcodes {
                             }
                         }
                         
-                        // Auto login and do_action to ensure cookies are set
-                        wp_set_current_user($user_id);
-                        wp_set_auth_cookie($user_id, true);
-                        $user_obj = get_userdata($user_id);
-                        do_action('wp_login', $user_obj->user_login, $user_obj);
+                        if (!$is_upgrading) {
+                            // Auto login new users and do_action to ensure cookies are set
+                            wp_set_current_user($user_id);
+                            wp_set_auth_cookie($user_id, true);
+                            $user_obj = get_userdata($user_id);
+                            do_action('wp_login', $user_obj->user_login, $user_obj);
+                        }
                         
                         // Redirect based on membership type
                         if ($redirect_to_payment) {
@@ -1670,8 +1711,19 @@ class IELTS_CM_Shortcodes {
         }
         
         ob_start();
+        
+        // Check if user is logged in for form rendering
+        $is_logged_in = is_user_logged_in();
+        $form_title = $is_logged_in ? __('Upgrade Your Membership', 'ielts-course-manager') : __('Create Your Account', 'ielts-course-manager');
+        
         ?>
         <div class="ielts-registration-form">
+            <h2><?php echo esc_html($form_title); ?></h2>
+            
+            <?php if ($is_logged_in): ?>
+                <p><?php _e('Select a membership plan below to upgrade your account.', 'ielts-course-manager'); ?></p>
+            <?php endif; ?>
+            
             <?php if ($success): ?>
                 <div class="ielts-message ielts-success">
                     <p><?php _e('Registration successful! You are now logged in.', 'ielts-course-manager'); ?></p>
@@ -1692,6 +1744,7 @@ class IELTS_CM_Shortcodes {
                 <form method="post" action="" class="ielts-form ielts-registration-form-grid">
                     <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
                     
+                    <?php if (!$is_logged_in): ?>
                     <p class="form-field form-field-half">
                         <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                         <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
@@ -1721,6 +1774,7 @@ class IELTS_CM_Shortcodes {
                         <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                         <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
                     </p>
+                    <?php endif; // End if not logged in ?>
                     
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <p class="form-field form-field-full">
@@ -1751,18 +1805,22 @@ class IELTS_CM_Shortcodes {
                                     }
                                 }
                                 
-                                // Display trial options first
-                                if (!empty($trial_options)):
-                                ?>
-                                    <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
-                                        <?php foreach ($trial_options as $key => $label): ?>
-                                            <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
-                                                <?php echo esc_html($label); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </optgroup>
-                                <?php 
-                                endif;
+                                // For logged-in users upgrading, show only paid options
+                                // For new registrations, show both trial and paid options
+                                if (!$is_logged_in) {
+                                    // Display trial options first for new users
+                                    if (!empty($trial_options)):
+                                    ?>
+                                        <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
+                                            <?php foreach ($trial_options as $key => $label): ?>
+                                                <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
+                                                    <?php echo esc_html($label); ?>
+                                                </option>
+                                            <?php endforeach; ?>
+                                        </optgroup>
+                                    <?php 
+                                    endif;
+                                }
                                 
                                 // Display paid options
                                 if (!empty($paid_options)):
@@ -1795,7 +1853,7 @@ class IELTS_CM_Shortcodes {
                     
                     <p class="form-field form-field-full">
                         <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
-                            <?php _e('Create Account', 'ielts-course-manager'); ?>
+                            <?php echo $is_logged_in ? __('Upgrade Membership', 'ielts-course-manager') : __('Create Account', 'ielts-course-manager'); ?>
                         </button>
                     </p>
                 </form>
