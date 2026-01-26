@@ -1043,7 +1043,7 @@ The IELTS Team'
         $template = get_option('ielts_cm_email_' . $template_key, array());
         
         // If no template exists, use default
-        if (empty($template['subject']) || empty($template['message'])) {
+        if (empty($template) || empty($template['subject']) || empty($template['message'])) {
             error_log("IELTS Course Manager: No email template configured for {$template_key}, using default");
             
             // Set default templates
@@ -1244,7 +1244,7 @@ The IELTS Team'
         $email_template = get_option('ielts_cm_email_' . $email_type, array());
         
         // If no template exists, use default
-        if (empty($email_template['subject']) || empty($email_template['message'])) {
+        if (empty($email_template) || empty($email_template['subject']) || empty($email_template['message'])) {
             error_log("IELTS Course Manager: No email template configured for {$email_type}, using default");
             
             // Set default templates
