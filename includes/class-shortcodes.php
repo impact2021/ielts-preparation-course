@@ -1904,11 +1904,37 @@ class IELTS_CM_Shortcodes {
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <div id="ielts-payment-section" class="payment-section-container stripe-payment-section" style="display: none;">
                             <h3 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h3>
-                            <div class="payment-section-content">
-                                <label><?php _e('Card Details', 'ielts-course-manager'); ?></label>
-                                <div id="payment-element" class="stripe-payment-element">
-                                    <!-- Stripe Payment Element will be inserted here -->
+                            
+                            <!-- Payment Method Selector -->
+                            <div class="payment-method-selector">
+                                <label><?php _e('Payment Method', 'ielts-course-manager'); ?></label>
+                                <div class="payment-methods">
+                                    <button type="button" class="payment-method-btn active" data-method="stripe">
+                                        <span class="payment-method-icon">💳</span>
+                                        <?php _e('Credit/Debit Card', 'ielts-course-manager'); ?>
+                                    </button>
+                                    <button type="button" class="payment-method-btn" data-method="paypal">
+                                        <span class="payment-method-icon">🅿️</span>
+                                        <?php _e('PayPal', 'ielts-course-manager'); ?>
+                                    </button>
                                 </div>
+                            </div>
+                            
+                            <div class="payment-section-content">
+                                <!-- Stripe Payment -->
+                                <div id="stripe-payment-container" class="payment-container active">
+                                    <label><?php _e('Card Details', 'ielts-course-manager'); ?></label>
+                                    <div id="payment-element" class="stripe-payment-element">
+                                        <!-- Stripe Payment Element will be inserted here -->
+                                    </div>
+                                </div>
+                                
+                                <!-- PayPal Payment -->
+                                <div id="paypal-payment-container" class="payment-container" style="display: none;">
+                                    <div id="paypal-button-container"></div>
+                                    <p class="payment-note"><?php _e('Click the PayPal button below to complete your payment securely.', 'ielts-course-manager'); ?></p>
+                                </div>
+                                
                                 <div id="payment-message" class="ielts-message" style="display: none;"></div>
                             </div>
                         </div>
@@ -1921,13 +1947,13 @@ class IELTS_CM_Shortcodes {
         .ielts-registration-form {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 30px;
+            padding: 20px;
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         .ielts-registration-form .ielts-form {
-            margin-top: 20px;
+            margin-top: 15px;
         }
         
         /* Form grid layout - two column layout on desktop with payment on right */
@@ -1941,7 +1967,7 @@ class IELTS_CM_Shortcodes {
         @media (min-width: 900px) {
             .ielts-registration-form-grid {
                 grid-template-columns: 1fr 380px;
-                gap: 30px;
+                gap: 20px;
                 align-items: start;
             }
             
@@ -1966,7 +1992,7 @@ class IELTS_CM_Shortcodes {
         @media (min-width: 768px) {
             .form-fields-container {
                 grid-template-columns: 1fr 1fr;
-                gap: 15px;
+                gap: 10px;
             }
             .form-fields-container .form-field-full,
             .form-fields-container .submit-button-container {
@@ -1979,12 +2005,12 @@ class IELTS_CM_Shortcodes {
         
         /* Reduced spacing between form fields */
         .ielts-registration-form .form-field {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         
         .ielts-registration-form label {
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-weight: 600;
             color: #333;
             font-size: 14px;
@@ -2058,12 +2084,77 @@ class IELTS_CM_Shortcodes {
             color: #333;
         }
         
+        /* Payment method selector */
+        .payment-method-selector {
+            margin-bottom: 15px;
+        }
+        
+        .payment-method-selector label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .payment-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .payment-method-btn {
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .payment-method-btn:hover {
+            border-color: #0073aa;
+            background: #f0f8ff;
+        }
+        
+        .payment-method-btn.active {
+            border-color: #0073aa;
+            background: #0073aa;
+            color: white;
+        }
+        
+        .payment-method-icon {
+            font-size: 18px;
+        }
+        
+        .payment-container {
+            display: none;
+        }
+        
+        .payment-container.active {
+            display: block;
+        }
+        
         .payment-section-content label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: #333;
             font-size: 14px;
+        }
+        
+        .payment-note {
+            font-size: 13px;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
         }
         
         .stripe-payment-element {
@@ -2099,6 +2190,52 @@ class IELTS_CM_Shortcodes {
         (function() {
             // Add loading animation to Create Account button for non-payment submissions
             document.addEventListener('DOMContentLoaded', function() {
+                // Payment method switcher - only if payment section exists
+                var paymentSection = document.getElementById('ielts-payment-section');
+                if (paymentSection) {
+                    var paymentMethodBtns = document.querySelectorAll('.payment-method-btn');
+                    var stripeContainer = document.getElementById('stripe-payment-container');
+                    var paypalContainer = document.getElementById('paypal-payment-container');
+                    
+                    if (paymentMethodBtns.length > 0 && stripeContainer && paypalContainer) {
+                        paymentMethodBtns.forEach(function(btn) {
+                            btn.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                var method = this.getAttribute('data-method');
+                                
+                                // Update button states and ARIA attributes
+                                paymentMethodBtns.forEach(function(b) {
+                                    b.classList.remove('active');
+                                    b.setAttribute('aria-pressed', 'false');
+                                });
+                                this.classList.add('active');
+                                this.setAttribute('aria-pressed', 'true');
+                                
+                                // Show/hide payment containers
+                                stripeContainer.classList.remove('active');
+                                paypalContainer.classList.remove('active');
+                                
+                                if (method === 'stripe') {
+                                    stripeContainer.classList.add('active');
+                                    paypalContainer.setAttribute('aria-hidden', 'true');
+                                    stripeContainer.setAttribute('aria-hidden', 'false');
+                                } else if (method === 'paypal') {
+                                    paypalContainer.classList.add('active');
+                                    stripeContainer.setAttribute('aria-hidden', 'true');
+                                    paypalContainer.setAttribute('aria-hidden', 'false');
+                                    
+                                    // Note: PayPal integration would be initialized here
+                                    // For now, show a placeholder message
+                                    var paypalButtonContainer = document.getElementById('paypal-button-container');
+                                    if (paypalButtonContainer && !paypalButtonContainer.hasChildNodes()) {
+                                        paypalButtonContainer.innerHTML = '<div style="padding: 20px; background: #fff; border: 2px dashed #ddd; border-radius: 4px; text-align: center;"><p style="margin: 0; color: #666;">PayPal integration coming soon.</p><p style="margin: 10px 0 0 0; font-size: 12px; color: #999;">Please use Credit/Debit Card payment or contact support.</p></div>';
+                                    }
+                                }
+                            });
+                        });
+                    }
+                }
+                
                 var form = document.querySelector('form[name="ielts_registration_form"]');
                 if (form) {
                     form.addEventListener('submit', function(e) {
@@ -2852,7 +2989,7 @@ class IELTS_CM_Shortcodes {
         }
         
         .ielts-band-scores-table th {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #E46B0A;
             color: white;
             padding: 15px 10px;
             text-align: center;
@@ -2873,7 +3010,7 @@ class IELTS_CM_Shortcodes {
         }
         
         .band-score-cell.has-data {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            background: #f9f9f9;
         }
         
         .band-score-value {
