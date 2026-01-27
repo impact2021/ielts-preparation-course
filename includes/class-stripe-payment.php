@@ -515,7 +515,7 @@ class IELTS_CM_Stripe_Payment {
             delete_user_meta($payment->user_id, '_ielts_cm_expiry_email_sent');
             
             // Set expiry date
-            $expiry_date = IELTS_CM_Membership::calculate_expiry_date($payment->membership_type);
+            $expiry_date = $membership->calculate_expiry_date($payment->membership_type);
             update_user_meta($payment->user_id, '_ielts_cm_membership_expiry', $expiry_date);
             
             // Store payment info
@@ -678,7 +678,7 @@ class IELTS_CM_Stripe_Payment {
             delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
             
             // Set expiry date
-            $expiry_date = IELTS_CM_Membership::calculate_expiry_date($membership_type);
+            $expiry_date = $membership->calculate_expiry_date($membership_type);
             update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
             
             // Store payment info
