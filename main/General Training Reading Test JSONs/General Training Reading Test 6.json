@@ -179,10 +179,10 @@
     },
     {
       "type": "open_question",
-      "instructions": "Questions 8–14\n\nMatch each statement to the correct tour (Tour B-I). Note: Tour descriptions are missing from the reading passage and need to be added.",
-      "question": "[Statement for Tour B - MISSING CONTENT]",
+      "instructions": "Questions 8–14\n\nMatch each statement to the correct tour (A-I). You may use any letter more than once.",
+      "question": "Includes cycling activities",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour B. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour B. Tour B mentions 'cycling tours of NZ' and keeping fit while on holiday.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -197,17 +197,17 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour B.",
-          "incorrect": "Incorrect. The correct answer is Tour B.",
-          "no_answer": "The correct answer is Tour B. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour B mentions 'cycling tours of NZ' and keeping fit while on holiday.",
+          "no_answer": "The correct answer is Tour B. Tour B mentions 'cycling tours of NZ' and keeping fit while on holiday."
         }
       }
     },
     {
       "type": "open_question",
       "instructions": "",
-      "question": "[Statement for Tour C - MISSING CONTENT]",
+      "question": "Focuses on bird watching",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour C. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour C. Tour C is for ornithologists focusing on 'wide variety of species' and native birds.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -222,17 +222,17 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour C.",
-          "incorrect": "Incorrect. The correct answer is Tour C.",
-          "no_answer": "The correct answer is Tour C. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour C is for ornithologists focusing on 'wide variety of species' and native birds.",
+          "no_answer": "The correct answer is Tour C. Tour C is for ornithologists focusing on 'wide variety of species' and native birds."
         }
       }
     },
     {
       "type": "open_question",
       "instructions": "",
-      "question": "[Statement for Tour D - MISSING CONTENT]",
+      "question": "Suitable for people who enjoy hiking",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour D. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour D. Tour D is for lovers of 'tramping' (hiking in New Zealand) with beautiful countryside.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -247,17 +247,17 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour D.",
-          "incorrect": "Incorrect. The correct answer is Tour D.",
-          "no_answer": "The correct answer is Tour D. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour D is for lovers of 'tramping' (hiking in New Zealand) with beautiful countryside.",
+          "no_answer": "The correct answer is Tour D. Tour D is for lovers of 'tramping' (hiking in New Zealand) with beautiful countryside."
         }
       }
     },
     {
       "type": "open_question",
       "instructions": "",
-      "question": "[Statement for Tour E - MISSING CONTENT]",
+      "question": "Includes educational lectures",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour E. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour E. Tour E is an 'education programme' with lectures and field trips, guest speakers from universities.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -272,17 +272,17 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour E.",
-          "incorrect": "Incorrect. The correct answer is Tour E.",
-          "no_answer": "The correct answer is Tour E. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour E is an 'education programme' with lectures and field trips, guest speakers from universities.",
+          "no_answer": "The correct answer is Tour E. Tour E is an 'education programme' with lectures and field trips, guest speakers from universities."
         }
       }
     },
     {
       "type": "open_question",
       "instructions": "",
-      "question": "[Statement for Tour G - MISSING CONTENT]",
+      "question": "Features thermal hot springs",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour G. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour G. Tour G offers thermal phenomenon such as hot pools, mud pools, and geysers.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -297,17 +297,17 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour G.",
-          "incorrect": "Incorrect. The correct answer is Tour G.",
-          "no_answer": "The correct answer is Tour G. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour G offers thermal phenomenon such as hot pools, mud pools, and geysers.",
+          "no_answer": "The correct answer is Tour G. Tour G offers thermal phenomenon such as hot pools, mud pools, and geysers."
         }
       }
     },
     {
       "type": "open_question",
       "instructions": "",
-      "question": "[Statement for Tour H - MISSING CONTENT]",
+      "question": "Involves wine tasting",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour H. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour H. Tour H visits 5 of the country's largest exporting vineyards with discount pricing.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -322,17 +322,17 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour H.",
-          "incorrect": "Incorrect. The correct answer is Tour H.",
-          "no_answer": "The correct answer is Tour H. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour H visits 5 of the country's largest exporting vineyards with discount pricing.",
+          "no_answer": "The correct answer is Tour H. Tour H visits 5 of the country's largest exporting vineyards with discount pricing."
         }
       }
     },
     {
       "type": "open_question",
       "instructions": "",
-      "question": "[Statement for Tour I - MISSING CONTENT]",
+      "question": "Uses specialized off-road vehicles",
       "points": 1,
-      "no_answer_feedback": "The correct answer is Tour I. Note: Tour descriptions and question statements are missing from the reading passage and need to be added.",
+      "no_answer_feedback": "The correct answer is Tour I. Tour I uses 'custom made jeeps' for off-road travel to inaccessible spots.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 1,
@@ -347,8 +347,8 @@
       "field_feedback": {
         "1": {
           "correct": "Correct! The answer is Tour I.",
-          "incorrect": "Incorrect. The correct answer is Tour I.",
-          "no_answer": "The correct answer is Tour I. Note: Tour descriptions are missing from the reading passage."
+          "incorrect": "Incorrect. Tour I uses 'custom made jeeps' for off-road travel to inaccessible spots.",
+          "no_answer": "The correct answer is Tour I. Tour I uses 'custom made jeeps' for off-road travel to inaccessible spots."
         }
       }
     },
@@ -1245,12 +1245,18 @@
     {
       "text_id": 1,
       "title": "Reading Text 2",
-      "content": "<h4><strong>Childcare Solutions – Nannying Positions Worldwide</strong></h4>\n\n<p>Childcare Solutions assists qualified nannies with at least one year’s post-qualification experience to find work in 16 countries worldwide. No registration fee applies.</p>\n\n<p>Services include <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">interviews arranged by the agency</span>, <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">return flights paid by employers</span>, medical insurance for many positions, <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">contracts arranged in advance</span>, and <span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">visa assistance (additional costs apply)</span>.</p>\n\n<p>Applicants must be aged 18 or over, provide a clear criminal record, supply two references (<span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">at least one from a former position</span>), and demonstrate flexibility.</p>\n\n<p>The organisation was <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">established in 1985 by three qualified nannies</span>.</p>\n\n<h4><strong>Questions 15–20</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>Applicants must attend interviews directly with families.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Childcare Solutions pays for flights overseas.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Visa costs depend on the country of employment.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>The organisation was founded by experienced childcare workers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All contracts last for at least six months.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Two references must come from previous employers.\nAnswer: FALSE</strong></h4>",
+      "content": "<h4><strong>Tour Details</strong></h4>\n\n<p><strong>Tour A.</strong> Learn more about Maori culture, food, dance, performing arts and the internationally famous Haka. The tour involves lectures on Maori traditions an etiquette; particularly customs for welcoming to and visiting a marae – the meeting house of Maori tribes. Experience an authentic cultural show in one of the country's best-known Maori performance venues.</p>\n\n<p><strong>Tour B.</strong> Whether your motivation is to be eco-friendly or simply to enjoy the great outdoors and keep fit while on holiday, <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">our cycling tours of NZ can cater to your needs</span>. Coaches are on hand to transport the group from A to B where distances are far and discounts on wine tours and quad bike tours are also available.</p>\n\n<p><strong>Tour C.</strong> <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">Ornithologists unite for this spectacular trip which focuses on the wide variety of species</span> that share our home.  Visit the nesting areas of our native birds and the north island gannet colony of Muriwai.  Guest lecturers will also give an insight into the now extinct species – the Great Moa – the largest bird ever known to have lived on our shores.</p>\n\n<p><strong>Tour D.</strong> This tour is a must for appreciators of the outdoors and lovers of what is known in New Zealand as <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">'tramping'</span>. Ideal for those who prefer to make their own way, not reliant on transport! See some of the most beautiful countryside Aotearoa (Maori for New Zealand) has to offer.  A reasonable fitness level is required though no steep paths or climbing is involved.</p>\n\n<p><strong>Tour E.</strong> <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">An education programme which focuses on lectures and field trips</span> based on the natural world. Visit the Auckland museum to see the informative display of animals and plants of New Zealand. Guest speakers include professors and researchers from our most prominent universities.</p>\n\n<p><strong>Tour F.</strong> Where two oceans meet; experience the beauty of nature, the expanse of the land and endless beaches and coastline. Often described as the 'winterless north' due to the mild climate, we offer a variety of trips year round.</p>\n\n<p><strong>Tour G.</strong> The centre of the north island offers many opportunities to experience naturally occurring <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">thermal phenomenon such as the hot pools, mud pools, and geysers</span> in national parks alive with sub-terranean activity. The tour is three days in duration and accommodation in Rotorua is provided for our clients.</p>\n\n<p><strong>Tour H.</strong> Travelling by luxury, air-conditioned tour bus, we partake in some of the best food and beverages New Zealand has to offer. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Visit 5 of the country's largest exporting vineyards</span> and take advantage of the discount pricing available to our clients.</p>\n\n<p><strong>Tour I.</strong> We take you to spots inaccessible to regular vehicles. Small group sizes. Plenty of off road travel but made as comfortable as possible in <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">our custom made jeeps</span>. Optional walking tours each day or just relaxation if preferred at our breath-taking picnic stops. N.B. We will soon also be offering excursions in the northern tip of the North island.</p>",
       "tags": []
     },
     {
       "text_id": 2,
       "title": "Reading Text 3",
+      "content": "<h4><strong>Childcare Solutions – Nannying Positions Worldwide</strong></h4>\n\n<p>Childcare Solutions assists qualified nannies with at least one year’s post-qualification experience to find work in 16 countries worldwide. No registration fee applies.</p>\n\n<p>Services include <span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">interviews arranged by the agency</span>, <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">return flights paid by employers</span>, medical insurance for many positions, <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">contracts arranged in advance</span>, and <span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">visa assistance (additional costs apply)</span>.</p>\n\n<p>Applicants must be aged 18 or over, provide a clear criminal record, supply two references (<span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">at least one from a former position</span>), and demonstrate flexibility.</p>\n\n<p>The organisation was <span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">established in 1985 by three qualified nannies</span>.</p>\n\n<h4><strong>Questions 15–20</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>Applicants must attend interviews directly with families.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Childcare Solutions pays for flights overseas.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Visa costs depend on the country of employment.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>The organisation was founded by experienced childcare workers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All contracts last for at least six months.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Two references must come from previous employers.\nAnswer: FALSE</strong></h4>",
+      "tags": []
+    },
+    {
+      "text_id": 3,
+      "title": "Reading Text 4",
       "content": "<h4><strong>Language Express Student Prospectus</strong></h4>\n\n<p>Paragraphs A–G describe facilities, student services, course structures, assessment, and international partnerships.</p>\n\n<h4><strong>Questions 21–27</strong></h4>\n\n<h4><strong>[Matching headings to paragraphs]</strong></h4>\n\n<span id=\"q21\" data-question=\"21\"></span><h4><strong>Paragraph A\nAnswer: VIII (Additional Academic Support)</strong></h4>\n\n<span id=\"q22\" data-question=\"22\"></span><h4><strong>Paragraph B\nAnswer: XII (The Student Council)</strong></h4>\n\n<span id=\"q23\" data-question=\"23\"></span><h4><strong>Paragraph C\nAnswer: VI (Unique Opportunities)</strong></h4>\n\n<span id=\"q24\" data-question=\"24\"></span><h4><strong>Paragraph D\nAnswer: VII (International Links)</strong></h4>\n\n<span id=\"q25\" data-question=\"25\"></span><h4><strong>Paragraph E\nAnswer: V (Orientation for New Students)</strong></h4>\n\n<span id=\"q26\" data-question=\"26\"></span><h4><strong>Paragraph F\nAnswer: X (Examinations and Graduation)</strong></h4>\n\n<span id=\"q27\" data-question=\"27\"></span><h4><strong>Paragraph G\nAnswer: IV (Course Commencement)</strong></h4>",
       "tags": []
     },
