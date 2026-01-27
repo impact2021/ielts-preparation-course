@@ -91,9 +91,8 @@
                 appearance: {
                     theme: 'stripe',
                     variables: { colorPrimary: '#0073aa' }
-                },
-                // Disable link payment method if not needed
-                paymentMethodTypes: ['card']
+                }
+                // Note: Removed paymentMethodTypes to work with automatic_payment_methods in Payment Intent
             });
             
             // Create and mount Payment Element
