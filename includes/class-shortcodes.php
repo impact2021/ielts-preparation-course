@@ -1859,7 +1859,6 @@ class IELTS_CM_Shortcodes {
                                 endif;
                                 ?>
                             </select>
-                            <small class="form-help"><?php _e('Choose a free trial to get started immediately, or select a full membership (payment required after registration).', 'ielts-course-manager'); ?></small>
                         </p>
                         
                         <!-- Payment Section (Hidden by default, shown when paid membership selected) -->

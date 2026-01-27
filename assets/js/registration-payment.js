@@ -171,8 +171,21 @@
                         setLoading(false);
                     }
                 },
-                error: function() {
-                    showError('Network error. Please try again.');
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('IELTS Payment Error - register_user:', {
+                        status: jqXHR.status,
+                        statusText: jqXHR.statusText,
+                        textStatus: textStatus,
+                        errorThrown: errorThrown,
+                        responseText: jqXHR.responseText
+                    });
+                    let errorMessage = 'Network error creating account.';
+                    if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
+                        errorMessage = jqXHR.responseJSON.data;
+                    } else if (jqXHR.responseText) {
+                        errorMessage = 'Server error: ' + jqXHR.statusText;
+                    }
+                    showError(errorMessage + ' Please check console for details.');
                     setLoading(false);
                 }
             });
@@ -215,8 +228,21 @@
                     setLoading(false);
                 }
             },
-            error: function() {
-                showError('Network error. Please try again.');
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('IELTS Payment Error - create_payment_intent:', {
+                    status: jqXHR.status,
+                    statusText: jqXHR.statusText,
+                    textStatus: textStatus,
+                    errorThrown: errorThrown,
+                    responseText: jqXHR.responseText
+                });
+                let errorMessage = 'Network error creating payment intent.';
+                if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
+                    errorMessage = jqXHR.responseJSON.data;
+                } else if (jqXHR.responseText) {
+                    errorMessage = 'Server error: ' + jqXHR.statusText;
+                }
+                showError(errorMessage + ' Please check console for details.');
                 setLoading(false);
             }
         });
@@ -243,8 +269,21 @@
                     setLoading(false);
                 }
             },
-            error: function() {
-                showError('Network error. Please try again.');
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.error('IELTS Payment Error - confirm_payment:', {
+                    status: jqXHR.status,
+                    statusText: jqXHR.statusText,
+                    textStatus: textStatus,
+                    errorThrown: errorThrown,
+                    responseText: jqXHR.responseText
+                });
+                let errorMessage = 'Network error confirming payment.';
+                if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
+                    errorMessage = jqXHR.responseJSON.data;
+                } else if (jqXHR.responseText) {
+                    errorMessage = 'Server error: ' + jqXHR.statusText;
+                }
+                showError(errorMessage + ' Please check console for details.');
                 setLoading(false);
             }
         });
