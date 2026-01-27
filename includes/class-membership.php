@@ -690,6 +690,7 @@ class IELTS_CM_Membership {
             update_option('ielts_cm_paypal_enabled', isset($_POST['ielts_cm_paypal_enabled']) ? 1 : 0);
             update_option('ielts_cm_paypal_client_id', sanitize_text_field($_POST['ielts_cm_paypal_client_id']));
             update_option('ielts_cm_paypal_secret', sanitize_text_field($_POST['ielts_cm_paypal_secret']));
+            update_option('ielts_cm_paypal_address', sanitize_email($_POST['ielts_cm_paypal_address']));
             
             $pricing = array();
             $errors = array();
@@ -730,6 +731,7 @@ class IELTS_CM_Membership {
         $paypal_enabled = get_option('ielts_cm_paypal_enabled', false);
         $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
         $paypal_secret = get_option('ielts_cm_paypal_secret', '');
+        $paypal_address = get_option('ielts_cm_paypal_address', '');
         $pricing = get_option('ielts_cm_membership_pricing', array());
         ?>
         <div class="wrap">
@@ -820,6 +822,15 @@ class IELTS_CM_Membership {
                             <input type="password" name="ielts_cm_paypal_secret" 
                                    value="<?php echo esc_attr($paypal_secret); ?>" 
                                    class="regular-text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('PayPal Email Address', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="email" name="ielts_cm_paypal_address" 
+                                   value="<?php echo esc_attr($paypal_address); ?>" 
+                                   class="regular-text">
+                            <p class="description"><?php _e('Your PayPal account email address for receiving payments', 'ielts-course-manager'); ?></p>
                         </td>
                     </tr>
                 </table>
@@ -1054,7 +1065,22 @@ The IELTS Team'
         <div class="wrap">
             <h1><?php _e('Email Templates', 'ielts-course-manager'); ?></h1>
             <p><?php _e('Configure the default emails sent to users for different membership events.', 'ielts-course-manager'); ?></p>
-            <p><?php _e('Available placeholders: {username}, {email}, {membership_name}, {expiry_date}, {upgrade_url}, {renewal_url}', 'ielts-course-manager'); ?></p>
+            <p><?php _e('Available placeholders:', 'ielts-course-manager'); ?></p>
+            <ul>
+                <li><code>{username}</code> - <?php _e('User\'s display name', 'ielts-course-manager'); ?></li>
+                <li><code>{email}</code> - <?php _e('User\'s email address', 'ielts-course-manager'); ?></li>
+                <li><code>{membership_name}</code> - <?php _e('Name of the membership plan', 'ielts-course-manager'); ?></li>
+                <li><code>{expiry_date}</code> - <?php _e('Membership expiry date', 'ielts-course-manager'); ?></li>
+                <li><code>{upgrade_url}</code> - <?php _e('URL to upgrade membership', 'ielts-course-manager'); ?></li>
+                <li><code>{renewal_url}</code> - <?php _e('URL to renew membership', 'ielts-course-manager'); ?></li>
+                <li><code>{videos_completed}</code> - <?php _e('Number of videos watched', 'ielts-course-manager'); ?></li>
+                <li><code>{total_videos}</code> - <?php _e('Total number of videos available', 'ielts-course-manager'); ?></li>
+                <li><code>{exercises_completed}</code> - <?php _e('Number of exercises completed', 'ielts-course-manager'); ?></li>
+                <li><code>{total_exercises}</code> - <?php _e('Total number of exercises available', 'ielts-course-manager'); ?></li>
+                <li><code>{tests_completed}</code> - <?php _e('Number of practice tests completed', 'ielts-course-manager'); ?></li>
+                <li><code>{total_tests}</code> - <?php _e('Total number of practice tests available', 'ielts-course-manager'); ?></li>
+                <li><code>{band_score}</code> - <?php _e('Current estimated overall band score', 'ielts-course-manager'); ?></li>
+            </ul>
             
             <form method="post" action="">
                 <?php wp_nonce_field('ielts_membership_emails'); ?>
@@ -1221,6 +1247,82 @@ The IELTS Team'
         $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
         $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
         
+        // Calculate progress statistics
+        global $wpdb;
+        
+        // Count videos watched (lessons/resources viewed)
+        $videos_completed = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT meta_value) 
+            FROM {$wpdb->usermeta} 
+            WHERE user_id = %d 
+            AND (meta_key LIKE '_ielts_cm_lesson_%_viewed' OR meta_key LIKE '_ielts_cm_resource_%_viewed')
+        ", $user_id));
+        
+        // Count total videos available (lessons + resources)
+        $total_videos = $wpdb->get_var("
+            SELECT COUNT(*) 
+            FROM {$wpdb->posts} 
+            WHERE post_type IN ('ielts_lesson', 'ielts_resource') 
+            AND post_status = 'publish'
+        ");
+        
+        // Count exercises completed (quizzes submitted)
+        $exercises_completed = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT quiz_id) 
+            FROM {$wpdb->prefix}ielts_cm_quiz_submissions 
+            WHERE user_id = %d
+        ", $user_id));
+        
+        // Count total exercises available
+        $total_exercises = $wpdb->get_var("
+            SELECT COUNT(*) 
+            FROM {$wpdb->posts} 
+            WHERE post_type = 'ielts_quiz' 
+            AND post_status = 'publish'
+        ");
+        
+        // Count practice tests completed (quizzes with 'practice' or 'test' in category)
+        $tests_completed = $wpdb->get_var($wpdb->prepare("
+            SELECT COUNT(DISTINCT qs.quiz_id)
+            FROM {$wpdb->prefix}ielts_cm_quiz_submissions qs
+            INNER JOIN {$wpdb->posts} p ON qs.quiz_id = p.ID
+            INNER JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
+            INNER JOIN {$wpdb->term_taxonomy} tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
+            INNER JOIN {$wpdb->terms} t ON tt.term_id = t.term_id
+            WHERE qs.user_id = %d
+            AND tt.taxonomy = 'ielts_quiz_category'
+            AND (t.slug LIKE '%%practice%%' OR t.slug LIKE '%%test%%')
+        ", $user_id));
+        
+        // Count total practice tests available
+        $total_tests = $wpdb->get_var("
+            SELECT COUNT(DISTINCT p.ID)
+            FROM {$wpdb->posts} p
+            INNER JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
+            INNER JOIN {$wpdb->term_taxonomy} tt ON tr.term_taxonomy_id = tt.term_taxonomy_id
+            INNER JOIN {$wpdb->terms} t ON tt.term_id = t.term_id
+            WHERE p.post_type = 'ielts_quiz'
+            AND p.post_status = 'publish'
+            AND tt.taxonomy = 'ielts_quiz_category'
+            AND (t.slug LIKE '%%practice%%' OR t.slug LIKE '%%test%%')
+        ");
+        
+        // Calculate overall band score
+        $gamification = new IELTS_CM_Gamification();
+        $skill_scores = $gamification->get_user_skill_scores($user_id);
+        $total_score = 0;
+        $score_count = 0;
+        foreach ($skill_scores as $skill => $percentage) {
+            if ($percentage > 0) {
+                // Convert percentage to band score
+                $band = $this->convert_percentage_to_band($percentage);
+                $total_score += $band;
+                $score_count++;
+            }
+        }
+        $overall_band = $score_count > 0 ? round(($total_score / $score_count) * 2) / 2 : 0;
+        $band_score_text = $overall_band > 0 ? number_format($overall_band, 1) : 'N/A';
+        
         // Replace placeholders
         $placeholders = array(
             '{username}' => $user->display_name,
@@ -1228,7 +1330,14 @@ The IELTS Team'
             '{membership_name}' => $membership_name,
             '{expiry_date}' => $expiry_date ? $expiry_date : 'N/A',
             '{upgrade_url}' => $upgrade_url,
-            '{renewal_url}' => $upgrade_url
+            '{renewal_url}' => $upgrade_url,
+            '{videos_completed}' => $videos_completed ?: 0,
+            '{total_videos}' => $total_videos ?: 0,
+            '{exercises_completed}' => $exercises_completed ?: 0,
+            '{total_exercises}' => $total_exercises ?: 0,
+            '{tests_completed}' => $tests_completed ?: 0,
+            '{total_tests}' => $total_tests ?: 0,
+            '{band_score}' => $band_score_text
         );
         
         $subject = str_replace(array_keys($placeholders), array_values($placeholders), $template['subject']);
@@ -1511,5 +1620,34 @@ The IELTS Team'
         } else {
             error_log("IELTS Course Manager: Successfully sent {$type} expiry email to user {$user_id} ({$user->user_email})");
         }
+    }
+    
+    /**
+     * Convert percentage score to IELTS band score
+     * 
+     * @param float $percentage Percentage score
+     * @return float Band score (0.5 to 9.0)
+     */
+    private function convert_percentage_to_band($percentage) {
+        // IELTS band score conversion based on percentage
+        // This is an approximation based on typical IELTS score distributions
+        if ($percentage >= 95) return 9.0;
+        if ($percentage >= 90) return 8.5;
+        if ($percentage >= 85) return 8.0;
+        if ($percentage >= 80) return 7.5;
+        if ($percentage >= 70) return 7.0;
+        if ($percentage >= 65) return 6.5;
+        if ($percentage >= 60) return 6.0;
+        if ($percentage >= 55) return 5.5;
+        if ($percentage >= 50) return 5.0;
+        if ($percentage >= 45) return 4.5;
+        if ($percentage >= 40) return 4.0;
+        if ($percentage >= 35) return 3.5;
+        if ($percentage >= 30) return 3.0;
+        if ($percentage >= 25) return 2.5;
+        if ($percentage >= 20) return 2.0;
+        if ($percentage >= 15) return 1.5;
+        if ($percentage >= 10) return 1.0;
+        return 0.5;
     }
 }
