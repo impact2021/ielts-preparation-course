@@ -3,7 +3,7 @@
 **Release Date:** January 27, 2026
 
 ## Overview
-This release focuses on UI improvements, payment options, and bug fixes to enhance the user registration experience and fix issues with the daily streak counter.
+This release focuses on UI improvements, payment options, bug fixes, accessibility enhancements, and file organization to improve the user registration experience and fix issues with the daily streak counter.
 
 ## New Features
 
@@ -11,6 +11,8 @@ This release focuses on UI improvements, payment options, and bug fixes to enhan
 - Added PayPal as an alternative payment method alongside Stripe
 - Payment method selector with visual toggle between Credit/Debit Card and PayPal
 - Prepared UI for PayPal integration (backend integration to be completed separately)
+- Enhanced accessibility with ARIA attributes (aria-pressed, aria-hidden)
+- Added proper null checks to prevent JavaScript errors
 - Note: Full PayPal integration requires additional backend configuration
 
 ## Improvements
@@ -31,6 +33,12 @@ This release focuses on UI improvements, payment options, and bug fixes to enhan
 - Simplified cell backgrounds (removed gradient from data cells)
 - Cleaner, more professional appearance
 
+### File Organization
+- Removed 21 Academic Reading test JSON files from the General Training Reading Test folder
+- Cleaned up misplaced test files (Academic-IELTS-Reading-Test-01.json through 21.json)
+- General Training folder now only contains General Training tests (15 JSON + 15 TXT files)
+- Better file organization for easier content management
+
 ## Bug Fixes
 
 ### Daily Streak Counter Fix
@@ -47,15 +55,23 @@ This release focuses on UI improvements, payment options, and bug fixes to enhan
 - Simplified streak counting algorithm for better maintainability
 - Improved code clarity by removing confusing conditional logic
 
+### Accessibility Improvements
+- Added ARIA pressed states to payment method toggle buttons
+- Added ARIA hidden attributes to inactive payment containers
+- Improved screen reader compatibility for payment method selection
+- Added conditional checks to prevent errors when payment section is disabled
+
 ### CSS/Styling
 - Added payment method selector styles with hover and active states
 - Improved payment section layout with better visual hierarchy
 - Added responsive payment method button grid
 
 ### JavaScript
-- Added payment method switcher functionality
+- Added payment method switcher functionality with proper null checks
+- Enhanced accessibility with ARIA attribute management
 - Placeholder messaging for PayPal integration (coming soon)
 - Maintained existing Stripe payment flow
+- Conditional initialization to prevent errors when elements don't exist
 
 ## Known Limitations
 
@@ -69,12 +85,18 @@ This release focuses on UI improvements, payment options, and bug fixes to enhan
 - No breaking changes to existing functionality
 - Version constant updated from 15.0 to 15.1
 - Compatible with WordPress 5.8+ and PHP 7.2+
+- 21 Academic Reading test files removed from General Training folder (moved to proper location)
 
 ## Files Modified
 
 1. `ielts-course-manager.php` - Version number updates
-2. `includes/class-shortcodes.php` - Registration form spacing, band scores styling, PayPal UI
+2. `includes/class-shortcodes.php` - Registration form spacing, band scores styling, PayPal UI, accessibility improvements
 3. `includes/class-gamification.php` - Streak counter bug fix
+
+## Files Removed
+
+- Removed 21 Academic Reading test JSON files from `main/General Training Reading Test JSONs/` folder
+  - Academic-IELTS-Reading-Test-01.json through Academic-IELTS-Reading-Test-21.json
 
 ## Next Steps
 
@@ -83,6 +105,7 @@ For site administrators:
 2. Review the new band scores table styling
 3. Monitor streak counter accuracy with user feedback
 4. If PayPal integration is needed, contact development team for backend setup
+5. Verify General Training Reading tests display correctly without Academic tests
 
 ## Support
 
