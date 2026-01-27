@@ -89,6 +89,41 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Safely log payment error to database
+     * Wraps the logging in try-catch to prevent logging failures from breaking AJAX responses
+     * 
+     * @param string $error_type Type of error
+     * @param string $error_message Error message
+     * @param array $error_details Additional details
+     * @param int|null $user_id User ID
+     * @param string|null $user_email User email
+     * @param string|null $membership_type Membership type
+     * @param float|null $amount Amount
+     */
+    private function safe_log_payment_error($error_type, $error_message, $error_details = array(), $user_id = null, $user_email = null, $membership_type = null, $amount = null) {
+        // Cache the class/method check for performance
+        static $logging_available = null;
+        
+        if ($logging_available === null) {
+            $logging_available = class_exists('IELTS_CM_Database') && method_exists('IELTS_CM_Database', 'log_payment_error');
+        }
+        
+        try {
+            if ($logging_available) {
+                IELTS_CM_Database::log_payment_error($error_type, $error_message, $error_details, $user_id, $user_email, $membership_type, $amount);
+            } else {
+                error_log("IELTS Payment: Cannot log error to database - IELTS_CM_Database class or log_payment_error method not found");
+                error_log("IELTS Payment Error: [$error_type] $error_message - Details: " . wp_json_encode($error_details));
+            }
+        } catch (Throwable $e) {
+            // Catch both Exception and Error to handle all possible failures
+            // If logging fails, log to error_log and continue
+            error_log("IELTS Payment: Failed to log error to database - " . $e->getMessage());
+            error_log("IELTS Payment Error: [$error_type] $error_message - Details: " . wp_json_encode($error_details));
+        }
+    }
+    
+    /**
      * Verify nonce for security
      * Logs and returns error if verification fails
      */
@@ -99,7 +134,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Nonce verification failed in ' . $context);
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'security_error',
                 'Security check failed',
                 array('context' => $context, 'action' => 'nonce_verification_failed')
@@ -132,7 +167,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Missing required fields');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'All fields are required',
                 array('missing_fields' => true),
@@ -147,7 +182,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Invalid email format');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Invalid email address',
                 array('email' => $email),
@@ -162,7 +197,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Email already exists: $email");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Email already exists',
                 array('email' => $email),
@@ -183,8 +218,14 @@ class IELTS_CM_Stripe_Payment {
             $counter++;
         }
         
+        // Suppress automatic new user notification - we'll send it after payment succeeds
+        add_filter('wp_send_new_user_notifications', '__return_false');
+        
         // Create user account
         $user_id = wp_create_user($username, $password, $email);
+        
+        // Re-enable new user notifications
+        remove_filter('wp_send_new_user_notifications', '__return_false');
         
         if (is_wp_error($user_id)) {
             wp_send_json_error($user_id->get_error_message());
@@ -228,7 +269,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Invalid user ID: $user_id");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Invalid user',
                 array('user_id' => $user_id),
@@ -244,7 +285,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Invalid membership type: $membership_type");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Invalid membership type',
                 array('membership_type' => $membership_type),
@@ -262,7 +303,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Amount mismatch detected");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'security_error',
                 'Amount mismatch',
                 array('client_amount' => $amount, 'server_price' => $server_price, 'membership_type' => $membership_type),
@@ -279,7 +320,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Attempted to create payment intent for free membership');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Attempted to create payment intent for free membership',
                 array('membership_type' => $membership_type),
@@ -296,7 +337,7 @@ class IELTS_CM_Stripe_Payment {
         $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
         if (empty($stripe_secret)) {
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'configuration_error',
                 'Payment system not configured',
                 array('missing' => 'stripe_secret_key'),
@@ -332,7 +373,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Database error creating payment record - ' . $wpdb->last_error);
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'database_error',
                 'Unable to process payment',
                 array('error' => $wpdb->last_error, 'context' => 'insert_payment_record'),
@@ -351,7 +392,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Failed to get payment ID after insert');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'database_error',
                 'Failed to get payment ID after insert',
                 array('context' => 'insert_payment_record'),
@@ -389,7 +430,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('Stripe Payment Intent Error: ' . $e->getMessage());
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'stripe_api_error',
                 'Stripe API error',
                 array(
@@ -428,7 +469,7 @@ class IELTS_CM_Stripe_Payment {
         
         if (!$payment) {
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Payment not found',
                 array('payment_id' => $payment_id, 'payment_intent_id' => $payment_intent_id)
@@ -457,7 +498,7 @@ class IELTS_CM_Stripe_Payment {
         // Verify IELTS_CM_Membership class is available
         if (!$this->verify_membership_class('confirm_payment')) {
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'system_error',
                 'Membership handler not loaded',
                 array('payment_id' => $payment_id, 'user_id' => $payment->user_id),
@@ -471,40 +512,90 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
-        // Set status to active (this also assigns the WordPress role)
-        $membership = new IELTS_CM_Membership();
-        $membership->set_user_membership_status($payment->user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+        try {
+            // Set status to active (this also assigns the WordPress role)
+            $membership = new IELTS_CM_Membership();
+            $membership->set_user_membership_status($payment->user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+            
+            // Clear expiry email tracking when activating new membership
+            delete_user_meta($payment->user_id, '_ielts_cm_expiry_email_sent');
+            
+            // Set expiry date
+            $expiry_date = $membership->calculate_expiry_date($payment->membership_type);
+            update_user_meta($payment->user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            
+            // Store payment info
+            update_user_meta($payment->user_id, '_ielts_cm_payment_intent_id', $payment_intent_id);
+            update_user_meta($payment->user_id, '_ielts_cm_payment_amount', $payment->amount);
+            update_user_meta($payment->user_id, '_ielts_cm_payment_date', current_time('mysql'));
+            
+            // Clean up registration pending flags
+            delete_user_meta($payment->user_id, '_ielts_cm_pending_membership_type');
+            delete_user_meta($payment->user_id, '_ielts_cm_registration_pending');
+            
+            // Send welcome email after successful payment
+            // Note: We suppressed the automatic email during user creation
+            // so we send it now after payment is confirmed
+            try {
+                // Send notification to both admin and user
+                wp_new_user_notification($payment->user_id, null, 'both');
+                error_log("IELTS Payment: Welcome email sent successfully for user {$payment->user_id}");
+            } catch (Throwable $e) {
+                error_log('IELTS Payment: Failed to send welcome email - ' . $e->getMessage());
+                // Log the error but don't fail the payment since membership is already activated
+                $this->safe_log_payment_error(
+                    'email_error',
+                    'Failed to send welcome email',
+                    array('error' => $e->getMessage()),
+                    $payment->user_id,
+                    $user_email,
+                    $payment->membership_type,
+                    $payment->amount
+                );
+            }
+            
+        } catch (Throwable $e) {
+            error_log('IELTS Payment: Error activating membership - ' . $e->getMessage());
+            
+            // Log to database
+            $this->safe_log_payment_error(
+                'system_error',
+                'Failed to activate membership',
+                array(
+                    'message' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString(),
+                    'payment_id' => $payment_id
+                ),
+                $payment->user_id,
+                $user_email,
+                $payment->membership_type,
+                $payment->amount
+            );
+            
+            wp_send_json_error('Failed to activate membership. Please contact support with Error Code: ACT001', 500);
+            return;
+        }
         
-        // Clear expiry email tracking when activating new membership
-        delete_user_meta($payment->user_id, '_ielts_cm_expiry_email_sent');
+        // Auto-login the user after successful payment
+        wp_set_auth_cookie($payment->user_id, true);
+        wp_set_current_user($payment->user_id);
+        do_action('wp_login', $user ? $user->user_login : '', $user);
         
-        // Set expiry date
-        $expiry_date = IELTS_CM_Membership::calculate_expiry_date($payment->membership_type);
-        update_user_meta($payment->user_id, '_ielts_cm_membership_expiry', $expiry_date);
+        // Get post-payment redirect URL
+        $redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         
-        // Store payment info
-        update_user_meta($payment->user_id, '_ielts_cm_payment_intent_id', $payment_intent_id);
-        update_user_meta($payment->user_id, '_ielts_cm_payment_amount', $payment->amount);
-        update_user_meta($payment->user_id, '_ielts_cm_payment_date', current_time('mysql'));
-        
-        // Clean up registration pending flags
-        delete_user_meta($payment->user_id, '_ielts_cm_pending_membership_type');
-        delete_user_meta($payment->user_id, '_ielts_cm_registration_pending');
-        
-        // Send welcome email
-        wp_new_user_notification($payment->user_id, null, 'user');
-        
-        // Get login page URL for redirect
-        $login_url = wp_login_url();
-        if (get_option('ielts_cm_membership_enabled')) {
-            $login_page_id = get_option('ielts_cm_login_page_id');
-            if ($login_page_id) {
-                $login_url = get_permalink($login_page_id);
+        // If no custom redirect is set, use admin dashboard or home page
+        if (empty($redirect_url)) {
+            // Check if user can access admin area
+            if (current_user_can('read')) {
+                $redirect_url = admin_url();
+            } else {
+                $redirect_url = home_url();
             }
         }
         
         wp_send_json_success(array(
-            'redirect' => $login_url
+            'redirect' => $redirect_url
         ));
     }
     
@@ -582,8 +673,15 @@ class IELTS_CM_Stripe_Payment {
             $counter++;
         }
         
+        // Suppress automatic new user notification in webhook
+        // We'll send the welcome email after membership is activated
+        add_filter('wp_send_new_user_notifications', '__return_false');
+        
         // Create user account
         $user_id = wp_create_user($username, wp_generate_password(), $email);
+        
+        // Re-enable new user notifications
+        remove_filter('wp_send_new_user_notifications', '__return_false');
         
         if (is_wp_error($user_id)) {
             error_log('Failed to create user: ' . $user_id->get_error_message());
@@ -603,28 +701,40 @@ class IELTS_CM_Stripe_Payment {
         
         // Verify IELTS_CM_Membership class is available
         if (!$this->verify_membership_class('webhook')) {
-            return array('success' => false, 'error' => 'Membership handler not loaded');
+            error_log('IELTS Payment Webhook: Membership handler not loaded');
+            return;
         }
         
-        // Set status to active (this also assigns the WordPress role)
-        $membership = new IELTS_CM_Membership();
-        $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
-        
-        // Clear expiry email tracking when activating new membership
-        delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
-        
-        // Set expiry date
-        $expiry_date = IELTS_CM_Membership::calculate_expiry_date($membership_type);
-        update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-        
-        // Store payment info
-        update_user_meta($user_id, '_ielts_cm_payment_intent_id', $payment_intent->id);
-        update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
-        update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
-        
-        // Send welcome email
-        wp_new_user_notification($user_id, null, 'user');
-        
-        error_log("Successfully created user $user_id with membership $membership_type after payment");
+        try {
+            // Set status to active (this also assigns the WordPress role)
+            $membership = new IELTS_CM_Membership();
+            $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+            
+            // Clear expiry email tracking when activating new membership
+            delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
+            
+            // Set expiry date
+            $expiry_date = $membership->calculate_expiry_date($membership_type);
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            
+            // Store payment info
+            update_user_meta($user_id, '_ielts_cm_payment_intent_id', $payment_intent->id);
+            update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
+            update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
+            
+            // Send welcome email after membership activation
+            // Note: We suppressed the automatic email during user creation
+            try {
+                wp_new_user_notification($user_id, null, 'both');
+                error_log("IELTS Payment Webhook: Welcome email sent successfully for user $user_id");
+            } catch (Throwable $e) {
+                error_log('IELTS Payment Webhook: Failed to send welcome email - ' . $e->getMessage());
+            }
+            
+            error_log("Successfully created user $user_id with membership $membership_type after payment");
+        } catch (Throwable $e) {
+            error_log('IELTS Payment Webhook: Error activating membership - ' . $e->getMessage());
+            error_log('IELTS Payment Webhook: Stack trace - ' . $e->getTraceAsString());
+        }
     }
 }

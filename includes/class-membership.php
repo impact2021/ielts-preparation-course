@@ -334,6 +334,7 @@ class IELTS_CM_Membership {
         register_setting('ielts_membership_settings', 'ielts_cm_membership_course_mapping');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_durations');
         register_setting('ielts_membership_settings', 'ielts_cm_full_member_page_url');
+        register_setting('ielts_membership_settings', 'ielts_cm_post_payment_redirect_url');
         
         // Register payment settings
         register_setting('ielts_membership_payment', 'ielts_cm_stripe_enabled');
@@ -481,6 +482,7 @@ class IELTS_CM_Membership {
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
             update_option('ielts_cm_membership_enabled', isset($_POST['ielts_cm_membership_enabled']) ? 1 : 0);
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
+            update_option('ielts_cm_post_payment_redirect_url', sanitize_text_field($_POST['ielts_cm_post_payment_redirect_url']));
             
             // Save duration settings
             $durations = array();
@@ -499,6 +501,7 @@ class IELTS_CM_Membership {
         
         $enabled = get_option('ielts_cm_membership_enabled', false);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
+        $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
         
         // Set default durations
@@ -557,6 +560,18 @@ class IELTS_CM_Membership {
                                    placeholder="https://www.ieltstestonline.com/become-a-member">
                             <p class="description">
                                 <?php _e('URL for users to upgrade to full membership (shown in trial countdown widget)', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Post-Payment Redirect Page', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="url" name="ielts_cm_post_payment_redirect_url" 
+                                   value="<?php echo esc_attr($post_payment_redirect_url); ?>" 
+                                   class="regular-text" 
+                                   placeholder="https://www.ieltstestonline.com/dashboard">
+                            <p class="description">
+                                <?php _e('Where to redirect users after successful payment (users will be automatically logged in). Leave empty to use the default WordPress dashboard.', 'ielts-course-manager'); ?>
                             </p>
                         </td>
                     </tr>
