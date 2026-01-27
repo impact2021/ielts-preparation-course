@@ -857,9 +857,9 @@
         {
             "type": "open_question",
             "instructions": "Complete the sentences below.\r\n\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\n\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
-            "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>\r\n<p>[field 1]</p>\r\n<p>[field 2]</p>\r\n<p>[field 3]</p>\r\n<p>[field 4]</p>\r\n<p>[field 5]</p>\r\n",
+            "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>",
             "points": 5,
-            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS.",
+            "no_answer_feedback": "Please provide an answer for all fields.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
@@ -877,29 +877,29 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "2": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "3": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "4": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "5": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 }
             }
         },
