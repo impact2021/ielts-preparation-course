@@ -20,7 +20,7 @@ registration-payment.js:31 IELTS Payment Error - confirm_payment: Object
 
 ## Root Cause Analysis
 
-The investigation revealed **two critical issues** in `includes/class-stripe-payment.php`:
+The investigation revealed **three critical issues** in `includes/class-stripe-payment.php`:
 
 ### Issue 1: Unhandled Database Logging Failures
 - **Problem**: All error handling paths called `IELTS_CM_Database::log_payment_error()` to log errors
@@ -37,6 +37,14 @@ The investigation revealed **two critical issues** in `includes/class-stripe-pay
   - `IELTS_CM_Membership::calculate_expiry_date()` static call
   - `wp_new_user_notification()` email sending
 - **Impact**: Any exception in these operations would cause a fatal error and 500 response
+
+### Issue 3: Welcome Email Not Sending (Discovered Post-Fix)
+- **Problem**: WordPress automatically sends a new user notification when `wp_create_user()` is called, then the code tried to send it again in `confirm_payment()`
+- **Impact**: 
+  - Duplicate/conflicting email notifications
+  - Second call to `wp_new_user_notification()` failed silently
+  - Users weren't receiving welcome emails after successful payment
+  - Payment and membership activation succeeded but no confirmation email sent
 
 ## Solution Implemented
 
@@ -117,11 +125,31 @@ Failed to activate membership. Please contact support with Error Code: ACT001
 - ✅ Logs errors without breaking webhook response
 - ✅ Prevents webhook failures from affecting payment confirmation
 
+### 5. Fixed Welcome Email Not Sending
+
+**Location**: `includes/class-stripe-payment.php`, `register_user()` and `handle_successful_payment()` methods
+
+**Problem**: WordPress automatically sends a notification during `wp_create_user()`, causing the second call in `confirm_payment()` to fail silently.
+
+**Solution**:
+- ✅ Suppress automatic notification during user creation:
+  ```php
+  add_filter('wp_send_new_user_notifications', '__return_false');
+  $user_id = wp_create_user($username, $password, $email);
+  remove_filter('wp_send_new_user_notifications', '__return_false');
+  ```
+- ✅ Send welcome email ONLY after payment succeeds and membership activates
+- ✅ Changed notification type from `'user'` to `'both'` (notifies both admin and user)
+- ✅ Added success logging: `"Welcome email sent successfully for user {$user_id}"`
+- ✅ Log email failures to payment error table for debugging
+
+**Impact**: Welcome emails now send correctly after successful payment instead of being silently skipped.
+
 ## Files Modified
 
 | File | Lines Changed | Description |
 |------|---------------|-------------|
-| `includes/class-stripe-payment.php` | +129 / -57 | Added comprehensive error handling |
+| `includes/class-stripe-payment.php` | +138 / -57 | Added comprehensive error handling and fixed welcome emails |
 
 ## Error Codes Reference
 
