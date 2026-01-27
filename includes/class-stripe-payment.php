@@ -77,10 +77,10 @@ class IELTS_CM_Stripe_Payment {
      * Verify IELTS_CM_Membership class is loaded
      * Returns true if available, sends error and returns false otherwise
      * 
-     * @param string $context Context for error logging (e.g., 'confirm_payment', 'webhook')
+     * @param string $context Context for error logging (e.g., 'confirm_payment', 'webhook', 'payment')
      * @return bool True if class exists, false otherwise
      */
-    private function verify_membership_class($context = 'payment') {
+    private function verify_membership_class($context = 'unknown') {
         if (!class_exists('IELTS_CM_Membership')) {
             error_log("IELTS Payment: CRITICAL - IELTS_CM_Membership class not found in $context");
             return false;

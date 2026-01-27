@@ -25,6 +25,8 @@
     }
     
     // Helper function to handle AJAX errors consistently
+    // Note: Logs full error details to console for debugging purposes.
+    // In production, consider limiting responseText logging if security is a concern.
     function handleAjaxError(jqXHR, textStatus, errorThrown, context) {
         console.error('IELTS Payment Error - ' + context + ':', {
             status: jqXHR.status,
