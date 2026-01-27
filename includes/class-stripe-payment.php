@@ -89,6 +89,34 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Safely log payment error to database
+     * Wraps the logging in try-catch to prevent logging failures from breaking AJAX responses
+     * 
+     * @param string $error_type Type of error
+     * @param string $error_message Error message
+     * @param array $error_details Additional details
+     * @param int|null $user_id User ID
+     * @param string|null $user_email User email
+     * @param string|null $membership_type Membership type
+     * @param float|null $amount Amount
+     */
+    private function safe_log_payment_error($error_type, $error_message, $error_details = array(), $user_id = null, $user_email = null, $membership_type = null, $amount = null) {
+        try {
+            // Check if the class and method exist before calling
+            if (class_exists('IELTS_CM_Database') && method_exists('IELTS_CM_Database', 'log_payment_error')) {
+                IELTS_CM_Database::log_payment_error($error_type, $error_message, $error_details, $user_id, $user_email, $membership_type, $amount);
+            } else {
+                error_log("IELTS Payment: Cannot log error to database - IELTS_CM_Database class or log_payment_error method not found");
+                error_log("IELTS Payment Error: [$error_type] $error_message - Details: " . wp_json_encode($error_details));
+            }
+        } catch (Exception $e) {
+            // If logging fails, log to error_log and continue
+            error_log("IELTS Payment: Failed to log error to database - " . $e->getMessage());
+            error_log("IELTS Payment Error: [$error_type] $error_message - Details: " . wp_json_encode($error_details));
+        }
+    }
+    
+    /**
      * Verify nonce for security
      * Logs and returns error if verification fails
      */
@@ -99,7 +127,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Nonce verification failed in ' . $context);
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'security_error',
                 'Security check failed',
                 array('context' => $context, 'action' => 'nonce_verification_failed')
@@ -132,7 +160,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Missing required fields');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'All fields are required',
                 array('missing_fields' => true),
@@ -147,7 +175,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Invalid email format');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Invalid email address',
                 array('email' => $email),
@@ -162,7 +190,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Email already exists: $email");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Email already exists',
                 array('email' => $email),
@@ -228,7 +256,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Invalid user ID: $user_id");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Invalid user',
                 array('user_id' => $user_id),
@@ -244,7 +272,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Invalid membership type: $membership_type");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Invalid membership type',
                 array('membership_type' => $membership_type),
@@ -262,7 +290,7 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Payment: Amount mismatch detected");
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'security_error',
                 'Amount mismatch',
                 array('client_amount' => $amount, 'server_price' => $server_price, 'membership_type' => $membership_type),
@@ -279,7 +307,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Attempted to create payment intent for free membership');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Attempted to create payment intent for free membership',
                 array('membership_type' => $membership_type),
@@ -296,7 +324,7 @@ class IELTS_CM_Stripe_Payment {
         $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
         if (empty($stripe_secret)) {
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'configuration_error',
                 'Payment system not configured',
                 array('missing' => 'stripe_secret_key'),
@@ -332,7 +360,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Database error creating payment record - ' . $wpdb->last_error);
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'database_error',
                 'Unable to process payment',
                 array('error' => $wpdb->last_error, 'context' => 'insert_payment_record'),
@@ -351,7 +379,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment: Failed to get payment ID after insert');
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'database_error',
                 'Failed to get payment ID after insert',
                 array('context' => 'insert_payment_record'),
@@ -389,7 +417,7 @@ class IELTS_CM_Stripe_Payment {
             error_log('Stripe Payment Intent Error: ' . $e->getMessage());
             
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'stripe_api_error',
                 'Stripe API error',
                 array(
@@ -428,7 +456,7 @@ class IELTS_CM_Stripe_Payment {
         
         if (!$payment) {
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'validation_error',
                 'Payment not found',
                 array('payment_id' => $payment_id, 'payment_intent_id' => $payment_intent_id)
@@ -457,7 +485,7 @@ class IELTS_CM_Stripe_Payment {
         // Verify IELTS_CM_Membership class is available
         if (!$this->verify_membership_class('confirm_payment')) {
             // Log to database
-            IELTS_CM_Database::log_payment_error(
+            $this->safe_log_payment_error(
                 'system_error',
                 'Membership handler not loaded',
                 array('payment_id' => $payment_id, 'user_id' => $payment->user_id),
