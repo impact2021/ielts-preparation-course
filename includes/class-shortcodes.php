@@ -43,6 +43,8 @@ class IELTS_CM_Shortcodes {
             return 'academic';
         } elseif (strpos($membership_type, 'general') !== false) {
             return 'general';
+        } elseif (strpos($membership_type, 'english') !== false) {
+            return 'english';
         }
         return '';
     }
@@ -61,6 +63,8 @@ class IELTS_CM_Shortcodes {
                 return 'academic';
             } elseif (strpos(strtolower($cat_slug), 'general') !== false) {
                 return 'general';
+            } elseif (strpos(strtolower($cat_slug), 'english') !== false) {
+                return 'english';
             }
         }
         
@@ -121,23 +125,39 @@ class IELTS_CM_Shortcodes {
             $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
             
             if (!empty($membership_type)) {
-                // Determine the module type from membership
-                $user_module = $this->get_module_from_membership($membership_type);
+                // Get the explicit course-to-membership mapping
+                $mapping = get_option('ielts_cm_membership_course_mapping', array());
                 
-                // Filter courses by category if user has a specific module
-                if (!empty($user_module)) {
-                    $filtered_courses = array();
-                    foreach ($courses as $course) {
-                        $course_module = $this->get_module_from_course($course->ID);
-                        
-                        // Only include course if it matches user's module
-                        // Exclude courses from opposite module (academic/general)
-                        if ($course_module === $user_module) {
+                $filtered_courses = array();
+                foreach ($courses as $course) {
+                    // First check explicit mapping - if course is mapped to memberships
+                    if (isset($mapping[$course->ID]) && is_array($mapping[$course->ID])) {
+                        // If course is explicitly mapped, only include if user's membership is in the mapping
+                        if (in_array($membership_type, $mapping[$course->ID])) {
                             $filtered_courses[] = $course;
                         }
+                    } else {
+                        // Fallback to category-based filtering for courses without explicit mapping
+                        $user_module = $this->get_module_from_membership($membership_type);
+                        
+                        if (!empty($user_module)) {
+                            $course_module = $this->get_module_from_course($course->ID);
+                            
+                            // Include if course matches user's module OR has no specific module (neutral courses)
+                            if ($course_module === $user_module || empty($course_module)) {
+                                $filtered_courses[] = $course;
+                            }
+                        } else {
+                            // If user has a membership but no specific module (e.g., English Only),
+                            // include courses without specific module assignment
+                            $course_module = $this->get_module_from_course($course->ID);
+                            if (empty($course_module)) {
+                                $filtered_courses[] = $course;
+                            }
+                        }
                     }
-                    $courses = $filtered_courses;
                 }
+                $courses = $filtered_courses;
             }
         }
         
