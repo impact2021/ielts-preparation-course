@@ -92,16 +92,12 @@
                     theme: 'stripe',
                     variables: { colorPrimary: '#0073aa' }
                 }
-                // Note: Removed paymentMethodTypes to work with automatic_payment_methods in Payment Intent
+                // Note: NO payment_method_types - works with automatic_payment_methods in Payment Intent
             });
             
             // Create and mount Payment Element
-            paymentElement = elements.create('payment', {
-                layout: {
-                    type: 'tabs',
-                    defaultCollapsed: false
-                }
-            });
+            // Following Stripe best practices - no custom layout to ensure compatibility
+            paymentElement = elements.create('payment');
             paymentElement.mount('#payment-element');
         } catch (error) {
             console.error('IELTS Payment: Error initializing payment element:', error);

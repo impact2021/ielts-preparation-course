@@ -1863,13 +1863,13 @@ class IELTS_CM_Shortcodes {
                         </p>
                         
                         <!-- Payment Section (Hidden by default, shown when paid membership selected) -->
-                        <div id="ielts-payment-section" class="form-field-full" style="display: none;">
+                        <div id="ielts-payment-section" class="form-field-full stripe-payment-section" style="display: none;">
                             <p class="form-field form-field-full">
-                                <label><?php _e('Payment Information', 'ielts-course-manager'); ?></label>
-                                <div id="payment-element">
+                                <label><?php _e('Card Details', 'ielts-course-manager'); ?></label>
+                                <div id="payment-element" class="stripe-payment-element">
                                     <!-- Stripe Payment Element will be inserted here -->
                                 </div>
-                                <div id="payment-message" class="ielts-message" style="display: none; margin-top: 10px;"></div>
+                                <div id="payment-message" class="ielts-message" style="display: none;"></div>
                             </p>
                         </div>
                         
@@ -1994,21 +1994,24 @@ class IELTS_CM_Shortcodes {
         .ielts-message ul li {
             margin: 5px 0;
         }
-        /* Stripe payment section styling */
-        #ielts-payment-section {
-            width: 100%;
+        /* Stripe Payment Element Styles - Following Stripe best practices */
+        .stripe-payment-section {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
         }
-        /* Force 100% width on Stripe elements (overrides Stripe's injected styles) */
-        #payment-element {
-            width: 100% !important;
-            box-sizing: border-box;
+        
+        .stripe-payment-element {
+            padding: 15px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 50px;
+            /* No width restrictions - allows the element to take full container width */
         }
-        #payment-element iframe {
-            width: 100% !important;
-        }
-        #payment-element > div {
-            width: 100% !important;
-        }
+        
         #payment-message {
             margin-top: 10px;
         }
