@@ -101,15 +101,22 @@ class IELTS_CM_Stripe_Payment {
      * @param float|null $amount Amount
      */
     private function safe_log_payment_error($error_type, $error_message, $error_details = array(), $user_id = null, $user_email = null, $membership_type = null, $amount = null) {
+        // Cache the class/method check for performance
+        static $logging_available = null;
+        
+        if ($logging_available === null) {
+            $logging_available = class_exists('IELTS_CM_Database') && method_exists('IELTS_CM_Database', 'log_payment_error');
+        }
+        
         try {
-            // Check if the class and method exist before calling
-            if (class_exists('IELTS_CM_Database') && method_exists('IELTS_CM_Database', 'log_payment_error')) {
+            if ($logging_available) {
                 IELTS_CM_Database::log_payment_error($error_type, $error_message, $error_details, $user_id, $user_email, $membership_type, $amount);
             } else {
                 error_log("IELTS Payment: Cannot log error to database - IELTS_CM_Database class or log_payment_error method not found");
                 error_log("IELTS Payment Error: [$error_type] $error_message - Details: " . wp_json_encode($error_details));
             }
-        } catch (Exception $e) {
+        } catch (Throwable $e) {
+            // Catch both Exception and Error to handle all possible failures
             // If logging fails, log to error_log and continue
             error_log("IELTS Payment: Failed to log error to database - " . $e->getMessage());
             error_log("IELTS Payment Error: [$error_type] $error_message - Details: " . wp_json_encode($error_details));
