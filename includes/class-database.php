@@ -16,6 +16,7 @@ class IELTS_CM_Database {
     private $content_sync_table;
     private $user_awards_table;
     private $payments_table;
+    private $payment_error_log_table;
     
     public function __construct() {
         global $wpdb;
@@ -26,6 +27,7 @@ class IELTS_CM_Database {
         $this->content_sync_table = $wpdb->prefix . 'ielts_cm_content_sync';
         $this->user_awards_table = $wpdb->prefix . 'ielts_cm_user_awards';
         $this->payments_table = $wpdb->prefix . 'ielts_cm_payments';
+        $this->payment_error_log_table = $wpdb->prefix . 'ielts_cm_payment_errors';
     }
     
     /**
@@ -147,6 +149,26 @@ class IELTS_CM_Database {
             KEY transaction_id (transaction_id)
         ) $charset_collate;";
         
+        // Payment error log table
+        $payment_error_log_table = $wpdb->prefix . 'ielts_cm_payment_errors';
+        $sql_payment_errors = "CREATE TABLE IF NOT EXISTS $payment_error_log_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            user_id bigint(20) DEFAULT NULL,
+            error_type varchar(100) NOT NULL,
+            error_message text NOT NULL,
+            error_details longtext DEFAULT NULL,
+            user_email varchar(255) DEFAULT NULL,
+            membership_type varchar(50) DEFAULT NULL,
+            amount decimal(10,2) DEFAULT NULL,
+            ip_address varchar(45) DEFAULT NULL,
+            user_agent text DEFAULT NULL,
+            created_at datetime DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY user_id (user_id),
+            KEY error_type (error_type),
+            KEY created_at (created_at)
+        ) $charset_collate;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
@@ -155,6 +177,7 @@ class IELTS_CM_Database {
         dbDelta($sql_content_sync);
         dbDelta($sql_user_awards);
         dbDelta($sql_payments);
+        dbDelta($sql_payment_errors);
     }
     
     /**
@@ -170,7 +193,8 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_site_connections',
             $wpdb->prefix . 'ielts_cm_content_sync',
             $wpdb->prefix . 'ielts_cm_user_awards',
-            $wpdb->prefix . 'ielts_cm_payments'
+            $wpdb->prefix . 'ielts_cm_payments',
+            $wpdb->prefix . 'ielts_cm_payment_errors'
         );
         
         foreach ($tables as $table) {
@@ -207,5 +231,98 @@ class IELTS_CM_Database {
     
     public function get_payments_table() {
         return $this->payments_table;
+    }
+    
+    public function get_payment_error_log_table() {
+        return $this->payment_error_log_table;
+    }
+    
+    /**
+     * Log a payment error to the database
+     * 
+     * @param string $error_type Type of error (e.g., 'stripe_api_error', 'database_error', 'validation_error')
+     * @param string $error_message User-friendly error message
+     * @param array $error_details Additional error details (will be JSON encoded)
+     * @param int|null $user_id Optional user ID
+     * @param string|null $user_email Optional user email
+     * @param string|null $membership_type Optional membership type
+     * @param float|null $amount Optional payment amount
+     * @return int|false Insert ID on success, false on failure
+     */
+    public static function log_payment_error($error_type, $error_message, $error_details = array(), $user_id = null, $user_email = null, $membership_type = null, $amount = null) {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payment_errors';
+        
+        // Ensure table exists before logging
+        self::ensure_payment_error_table_exists();
+        
+        // Get client IP address (sanitized)
+        $ip_address = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field($_SERVER['REMOTE_ADDR']) : '';
+        
+        // Get user agent (sanitized)
+        $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field($_SERVER['HTTP_USER_AGENT']) : '';
+        
+        // Prepare error details as JSON
+        $error_details_json = is_array($error_details) ? wp_json_encode($error_details) : $error_details;
+        
+        $result = $wpdb->insert(
+            $table_name,
+            array(
+                'user_id' => $user_id,
+                'error_type' => $error_type,
+                'error_message' => $error_message,
+                'error_details' => $error_details_json,
+                'user_email' => $user_email,
+                'membership_type' => $membership_type,
+                'amount' => $amount,
+                'ip_address' => $ip_address,
+                'user_agent' => $user_agent,
+                'created_at' => current_time('mysql')
+            ),
+            array('%d', '%s', '%s', '%s', '%s', '%s', '%f', '%s', '%s', '%s')
+        );
+        
+        if ($result === false) {
+            error_log('IELTS Payment: Failed to log error to database - ' . $wpdb->last_error);
+            return false;
+        }
+        
+        return $wpdb->insert_id;
+    }
+    
+    /**
+     * Ensure payment error log table exists
+     * Creates the table if it doesn't exist
+     */
+    private static function ensure_payment_error_table_exists() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payment_errors';
+        
+        // Check if table exists
+        $table_exists = $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $table_name)) === $table_name;
+        
+        if (!$table_exists) {
+            $charset_collate = $wpdb->get_charset_collate();
+            $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+                id bigint(20) NOT NULL AUTO_INCREMENT,
+                user_id bigint(20) DEFAULT NULL,
+                error_type varchar(100) NOT NULL,
+                error_message text NOT NULL,
+                error_details longtext DEFAULT NULL,
+                user_email varchar(255) DEFAULT NULL,
+                membership_type varchar(50) DEFAULT NULL,
+                amount decimal(10,2) DEFAULT NULL,
+                ip_address varchar(45) DEFAULT NULL,
+                user_agent text DEFAULT NULL,
+                created_at datetime DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY  (id),
+                KEY user_id (user_id),
+                KEY error_type (error_type),
+                KEY created_at (created_at)
+            ) $charset_collate;";
+            
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            dbDelta($sql);
+        }
     }
 }
