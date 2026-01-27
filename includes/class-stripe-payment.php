@@ -576,17 +576,26 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
-        // Get login page URL for redirect
-        $login_url = wp_login_url();
-        if (get_option('ielts_cm_membership_enabled')) {
-            $login_page_id = get_option('ielts_cm_login_page_id');
-            if ($login_page_id) {
-                $login_url = get_permalink($login_page_id);
+        // Auto-login the user after successful payment
+        wp_set_auth_cookie($payment->user_id, true);
+        wp_set_current_user($payment->user_id);
+        do_action('wp_login', $user ? $user->user_login : '', $user);
+        
+        // Get post-payment redirect URL
+        $redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
+        
+        // If no custom redirect is set, use admin dashboard or home page
+        if (empty($redirect_url)) {
+            // Check if user can access admin area
+            if (current_user_can('read')) {
+                $redirect_url = admin_url();
+            } else {
+                $redirect_url = home_url();
             }
         }
         
         wp_send_json_success(array(
-            'redirect' => $login_url
+            'redirect' => $redirect_url
         ));
     }
     
