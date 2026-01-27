@@ -1,3 +1,14 @@
+/**
+ * IELTS Payment Registration Handler
+ * 
+ * Integrates with Stripe Payment API for membership registration.
+ * 
+ * Note: Browser console may show informational warnings from third-party services:
+ * - Stripe.js cookie partitioning warnings (expected privacy feature)
+ * - hCaptcha cross-site warnings (expected for CAPTCHA iframes)
+ * - Font loading restrictions (browser security feature)
+ * These warnings are informational and do not indicate functional issues.
+ */
 (function($) {
     'use strict';
     
@@ -26,8 +37,6 @@
         $('#ielts_membership_type').on('change', function() {
             const membershipType = $(this).val();
             const price = getPriceForMembershipType(membershipType);
-            
-            console.log('IELTS Payment: Membership type selected:', membershipType, 'Price:', price);
             
             // Check if this is a paid membership (not a trial)
             const isPaidMembership = membershipType && !membershipType.endsWith('_trial');
