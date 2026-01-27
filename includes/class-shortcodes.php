@@ -1863,7 +1863,7 @@ class IELTS_CM_Shortcodes {
                         </p>
                         
                         <!-- Payment Section (Hidden by default, shown when paid membership selected) -->
-                        <div id="ielts-payment-section" style="display: none;">
+                        <div id="ielts-payment-section" class="form-field-full" style="display: none;">
                             <p class="form-field form-field-full">
                                 <label><?php _e('Payment Information', 'ielts-course-manager'); ?></label>
                                 <div id="payment-element">
