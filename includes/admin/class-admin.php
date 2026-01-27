@@ -7698,8 +7698,9 @@ class IELTS_CM_Admin {
         
         // Handle clear all action
         if (isset($_GET['action']) && $_GET['action'] === 'clear_all' && check_admin_referer('clear_all_payment_errors')) {
-            // Use DELETE instead of TRUNCATE for better security
-            // Table name is controlled and trusted (from WordPress prefix), but use proper escaping
+            // Note: Table name is trusted (WordPress prefix + plugin table name)
+            // WordPress doesn't support table name parameters in prepare(), so we use esc_sql
+            // The table name is constructed internally and not user-provided
             $wpdb->query('DELETE FROM ' . esc_sql($error_log_table));
             echo '<div class="notice notice-success is-dismissible"><p>' . __('All error logs cleared successfully.', 'ielts-course-manager') . '</p></div>';
         }
