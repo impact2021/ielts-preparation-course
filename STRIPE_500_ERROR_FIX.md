@@ -145,11 +145,32 @@ Failed to activate membership. Please contact support with Error Code: ACT001
 
 **Impact**: Welcome emails now send correctly after successful payment instead of being silently skipped.
 
+### 6. Auto-Login and Configurable Post-Payment Redirect
+
+**Location**: `includes/class-stripe-payment.php`, `confirm_payment()` method and `includes/class-membership.php`, settings
+
+**Problem**: Users had to manually log in after successful payment, creating friction in the user experience.
+
+**Solution**:
+- ✅ Auto-login user after successful payment:
+  ```php
+  wp_set_auth_cookie($payment->user_id, true);
+  wp_set_current_user($payment->user_id);
+  do_action('wp_login', $user->user_login, $user);
+  ```
+- ✅ Added new WordPress setting: `ielts_cm_post_payment_redirect_url`
+- ✅ Configurable in WordPress Admin → IELTS Course → Membership Settings
+- ✅ Defaults to admin dashboard if no custom URL is set
+- ✅ UI field with helpful description for site administrators
+
+**Impact**: Seamless user experience - payment success → auto-login → redirect to member area/dashboard.
+
 ## Files Modified
 
 | File | Lines Changed | Description |
 |------|---------------|-------------|
-| `includes/class-stripe-payment.php` | +138 / -57 | Added comprehensive error handling and fixed welcome emails |
+| `includes/class-stripe-payment.php` | +147 / -57 | Added comprehensive error handling, fixed welcome emails, and auto-login |
+| `includes/class-membership.php` | +14 / -3 | Added post-payment redirect URL setting |
 
 ## Error Codes Reference
 
@@ -178,6 +199,8 @@ Since this is a WordPress plugin without automated test infrastructure, we recom
    - Use test credit card: `4242 4242 4242 4242`
    - Verify successful payment flow
    - Check that membership is activated correctly
+   - **Verify user is automatically logged in**
+   - **Verify redirect to configured post-payment page**
 
 2. **Test Error Scenarios**:
    - Invalid payment information
@@ -219,13 +242,20 @@ Since this is a WordPress plugin without automated test infrastructure, we recom
    - W3 Total Cache
    - Object cache (Redis/Memcached)
 
-4. **Test Payment Flow**:
+4. **Configure Post-Payment Redirect** (NEW):
+   - Go to WordPress Admin → IELTS Course → Membership Settings
+   - Set "Post-Payment Redirect Page" URL (e.g., your member dashboard)
+   - Leave empty to use WordPress admin dashboard as default
+
+5. **Test Payment Flow**:
    - Enable Stripe test mode
    - Complete a test registration
    - Verify membership activation
+   - **Verify auto-login happens**
+   - **Verify redirect to configured page**
    - Check error logs for any warnings
 
-5. **Monitor Production**:
+6. **Monitor Production**:
    - Watch error logs for 24-48 hours
    - Check payment success rate
    - Verify user complaints decrease
@@ -243,6 +273,13 @@ User attempts payment → Database logging fails → Exception thrown →
 User attempts payment → Database logging fails → Exception caught → 
 Falls back to error_log → wp_send_json_error() called → 
 JavaScript receives proper JSON → Shows meaningful error message
+```
+
+### User Flow - Successful Payment (✅)
+```
+User completes payment → Payment succeeds → Membership activated → 
+Welcome email sent → User auto-logged in → Redirect to configured post-payment page → 
+Success message shown → User lands on member dashboard/configured page
 ```
 
 ### Error Display Improvement
