@@ -24,6 +24,29 @@
         return ieltsPayment.pricing[membershipType] || 0;
     }
     
+    // Helper function to handle AJAX errors consistently
+    // Note: Logs full error details to console for debugging purposes.
+    // In production, consider limiting responseText logging if security is a concern.
+    function handleAjaxError(jqXHR, textStatus, errorThrown, context) {
+        console.error('IELTS Payment Error - ' + context + ':', {
+            status: jqXHR.status,
+            statusText: jqXHR.statusText,
+            textStatus: textStatus,
+            errorThrown: errorThrown,
+            responseText: jqXHR.responseText
+        });
+        
+        let errorMessage = 'Network error during ' + context + '.';
+        if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
+            errorMessage = jqXHR.responseJSON.data;
+        } else if (jqXHR.responseText) {
+            errorMessage = 'Server error: ' + jqXHR.statusText;
+        }
+        
+        showError(errorMessage + ' Please check console for details.');
+        setLoading(false);
+    }
+    
     // Initialize Stripe
     if (typeof Stripe !== 'undefined' && ieltsPayment && ieltsPayment.publishableKey) {
         stripe = Stripe(ieltsPayment.publishableKey);
@@ -171,9 +194,8 @@
                         setLoading(false);
                     }
                 },
-                error: function() {
-                    showError('Network error. Please try again.');
-                    setLoading(false);
+                error: function(jqXHR, textStatus, errorThrown) {
+                    handleAjaxError(jqXHR, textStatus, errorThrown, 'register_user');
                 }
             });
         }
@@ -215,9 +237,8 @@
                     setLoading(false);
                 }
             },
-            error: function() {
-                showError('Network error. Please try again.');
-                setLoading(false);
+            error: function(jqXHR, textStatus, errorThrown) {
+                handleAjaxError(jqXHR, textStatus, errorThrown, 'create_payment_intent');
             }
         });
     }
@@ -243,9 +264,8 @@
                     setLoading(false);
                 }
             },
-            error: function() {
-                showError('Network error. Please try again.');
-                setLoading(false);
+            error: function(jqXHR, textStatus, errorThrown) {
+                handleAjaxError(jqXHR, textStatus, errorThrown, 'confirm_payment');
             }
         });
     }
