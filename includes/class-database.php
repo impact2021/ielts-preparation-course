@@ -256,18 +256,14 @@ class IELTS_CM_Database {
         // Ensure table exists before logging
         self::ensure_payment_error_table_exists();
         
-        // Get client IP address
+        // Get client IP address (sanitized)
         $ip_address = '';
-        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-            $ip_address = $_SERVER['HTTP_CLIENT_IP'];
-        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        } elseif (!empty($_SERVER['REMOTE_ADDR'])) {
-            $ip_address = $_SERVER['REMOTE_ADDR'];
+        if (!empty($_SERVER['REMOTE_ADDR'])) {
+            $ip_address = sanitize_text_field($_SERVER['REMOTE_ADDR']);
         }
         
-        // Get user agent
-        $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+        // Get user agent (sanitized)
+        $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field($_SERVER['HTTP_USER_AGENT']) : '';
         
         // Prepare error details as JSON
         $error_details_json = is_array($error_details) ? wp_json_encode($error_details) : $error_details;

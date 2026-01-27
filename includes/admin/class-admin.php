@@ -7698,7 +7698,8 @@ class IELTS_CM_Admin {
         
         // Handle clear all action
         if (isset($_GET['action']) && $_GET['action'] === 'clear_all' && check_admin_referer('clear_all_payment_errors')) {
-            $wpdb->query("TRUNCATE TABLE $error_log_table");
+            // Use DELETE instead of TRUNCATE for better security
+            $wpdb->query($wpdb->prepare("DELETE FROM %s WHERE 1=1", $error_log_table));
             echo '<div class="notice notice-success is-dismissible"><p>' . __('All error logs cleared successfully.', 'ielts-course-manager') . '</p></div>';
         }
         
@@ -7804,9 +7805,10 @@ class IELTS_CM_Admin {
                         </td>
                         <td>
                             <?php if ($error->error_details): ?>
-                            <button type="button" class="button button-small" onclick="alert(<?php echo esc_js(wp_json_encode($error->error_details)); ?>)">
-                                <?php _e('View Details', 'ielts-course-manager'); ?>
-                            </button>
+                            <details>
+                                <summary class="button button-small"><?php _e('View Details', 'ielts-course-manager'); ?></summary>
+                                <pre style="margin-top: 10px; padding: 10px; background: #f5f5f5; overflow-x: auto; max-width: 600px;"><?php echo esc_html($error->error_details); ?></pre>
+                            </details>
                             <?php else: ?>
                             —
                             <?php endif; ?>

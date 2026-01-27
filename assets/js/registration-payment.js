@@ -301,14 +301,22 @@
     }
     
     function showError(message) {
-        // Convert newlines to <br> for HTML display
-        const htmlMessage = message.replace(/\n/g, '<br>');
-        $('#payment-message').removeClass('success').addClass('error').html(htmlMessage).show();
+        // Use text() to avoid XSS, then add line breaks with CSS
+        const $messageEl = $('#payment-message')
+            .removeClass('success')
+            .addClass('error')
+            .text(message)
+            .css('white-space', 'pre-line') // Preserve line breaks from \n
+            .show();
     }
     
     function showSuccess(message) {
-        const htmlMessage = message.replace(/\n/g, '<br>');
-        $('#payment-message').removeClass('error').addClass('success').html(htmlMessage).show();
+        const $messageEl = $('#payment-message')
+            .removeClass('error')
+            .addClass('success')
+            .text(message)
+            .css('white-space', 'pre-line') // Preserve line breaks from \n
+            .show();
     }
     
     function setLoading(isLoading) {
