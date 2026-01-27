@@ -4627,6 +4627,39 @@ class IELTS_CM_Admin {
         
         <h3><?php _e('Display Quiz', 'ielts-course-manager'); ?></h3>
         <p><code>[ielts_quiz id="789"]</code></p>
+        
+        <h3><?php _e('Display Login Statistics', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_login_stats]</code> - <?php _e('Display user login statistics (last login, total logins, time logged in)', 'ielts-course-manager'); ?></p>
+        <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><code>[ielts_login_stats show_last_login="yes"]</code> - <?php _e('Show last login time (default: yes)', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_login_stats show_login_count="yes"]</code> - <?php _e('Show total login count (default: yes)', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_login_stats show_total_time="yes"]</code> - <?php _e('Show total time logged in (default: yes)', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Display Progress Rings', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_progress_rings]</code> - <?php _e('Display progress rings showing exercises, study time, and perfect scores', 'ielts-course-manager'); ?></p>
+        <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><code>[ielts_progress_rings view="daily"]</code> - <?php _e('Show daily progress (default)', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_progress_rings view="weekly"]</code> - <?php _e('Show weekly progress', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_progress_rings view="monthly"]</code> - <?php _e('Show monthly progress', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Display Skills Radar Chart', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_skills_radar]</code> - <?php _e('Display radar chart showing IELTS skills profile', 'ielts-course-manager'); ?></p>
+        <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><code>[ielts_skills_radar height="400"]</code> - <?php _e('Set chart height in pixels (default: 400)', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Display Band Scores Table', 'ielts-course-manager'); ?></h3>
+        <p><code>[ielts_band_scores]</code> - <?php _e('Display estimated IELTS band scores', 'ielts-course-manager'); ?></p>
+        <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><code>[ielts_band_scores skills="reading,listening,writing,speaking"]</code> - <?php _e('Which skills to show (default: all)', 'ielts-course-manager'); ?></li>
+            <li><code>[ielts_band_scores title="Your Band Scores"]</code> - <?php _e('Custom title for the table', 'ielts-course-manager'); ?></li>
+        </ul>
         <?php
     }
     

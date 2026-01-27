@@ -2900,12 +2900,26 @@ class IELTS_CM_Shortcodes {
         
         // Convert percentage scores to band scores
         $band_scores = array();
+        $total_score = 0;
+        $score_count = 0;
         foreach ($skills_to_show as $skill) {
             $skill = strtolower($skill);
             if (isset($skill_scores[$skill])) {
                 $percentage = $skill_scores[$skill];
                 $band_scores[$skill] = $this->convert_percentage_to_band($percentage);
+                if ($skill_scores[$skill] > 0) {
+                    $total_score += $band_scores[$skill];
+                    $score_count++;
+                }
             }
+        }
+        
+        // Calculate overall band score (average, rounded to nearest 0.5)
+        $overall_score = 0;
+        if ($score_count > 0) {
+            $average = $total_score / $score_count;
+            // Round to nearest 0.5
+            $overall_score = round($average * 2) / 2;
         }
         
         ob_start();
@@ -2925,6 +2939,7 @@ class IELTS_CM_Shortcodes {
                             ?>
                                 <th><?php echo esc_html($skill_label); ?></th>
                             <?php endforeach; ?>
+                            <th><?php _e('Overall', 'ielts-course-manager'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -2951,6 +2966,22 @@ class IELTS_CM_Shortcodes {
                                     <?php endif; ?>
                                 </td>
                             <?php endforeach; ?>
+                            <td class="band-score-cell overall-score <?php echo $score_count > 0 ? 'has-data' : 'no-data'; ?>">
+                                <span class="band-score-value">
+                                    <?php 
+                                    if ($score_count > 0) {
+                                        echo esc_html(number_format($overall_score, 1));
+                                    } else {
+                                        echo '—';
+                                    }
+                                    ?>
+                                </span>
+                                <?php if ($score_count > 0): ?>
+                                    <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
+                                <?php else: ?>
+                                    <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
+                                <?php endif; ?>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -3024,6 +3055,15 @@ class IELTS_CM_Shortcodes {
         .band-score-cell.no-data .band-score-value {
             font-size: 24px;
             color: #999;
+        }
+        
+        .band-score-cell.overall-score {
+            background: #fff3e0;
+            font-weight: bold;
+        }
+        
+        .band-score-cell.overall-score .band-score-value {
+            color: #E46B0A;
         }
         
         .band-score-label {

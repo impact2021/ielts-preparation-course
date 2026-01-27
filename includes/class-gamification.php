@@ -265,6 +265,8 @@ class IELTS_CM_Gamification {
             }
         }
         
+        // Return the streak (minimum 1 if there's recent activity)
+        // Note: streak is already > 0 here because we validated activity today/yesterday above
         return $streak;
     }
     
