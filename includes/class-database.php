@@ -257,10 +257,7 @@ class IELTS_CM_Database {
         self::ensure_payment_error_table_exists();
         
         // Get client IP address (sanitized)
-        $ip_address = '';
-        if (!empty($_SERVER['REMOTE_ADDR'])) {
-            $ip_address = sanitize_text_field($_SERVER['REMOTE_ADDR']);
-        }
+        $ip_address = isset($_SERVER['REMOTE_ADDR']) ? sanitize_text_field($_SERVER['REMOTE_ADDR']) : '';
         
         // Get user agent (sanitized)
         $user_agent = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field($_SERVER['HTTP_USER_AGENT']) : '';

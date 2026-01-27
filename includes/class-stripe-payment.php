@@ -93,7 +93,9 @@ class IELTS_CM_Stripe_Payment {
      * Logs and returns error if verification fails
      */
     private function verify_nonce($context = 'unknown') {
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+        $nonce = isset($_POST['nonce']) ? sanitize_text_field($_POST['nonce']) : '';
+        
+        if (empty($nonce) || !wp_verify_nonce($nonce, 'ielts_payment_intent')) {
             error_log('IELTS Payment: Nonce verification failed in ' . $context);
             
             // Log to database

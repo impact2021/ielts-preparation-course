@@ -302,7 +302,7 @@
     
     function showError(message) {
         // Use text() to avoid XSS, then add line breaks with CSS
-        const $messageEl = $('#payment-message')
+        $('#payment-message')
             .removeClass('success')
             .addClass('error')
             .text(message)
@@ -311,7 +311,7 @@
     }
     
     function showSuccess(message) {
-        const $messageEl = $('#payment-message')
+        $('#payment-message')
             .removeClass('error')
             .addClass('success')
             .text(message)
