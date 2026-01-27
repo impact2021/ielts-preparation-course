@@ -4650,7 +4650,6 @@ class IELTS_CM_Admin {
         <p><code>[ielts_skills_radar]</code> - <?php _e('Display radar chart showing IELTS skills profile', 'ielts-course-manager'); ?></p>
         <p><?php _e('With options:', 'ielts-course-manager'); ?></p>
         <ul>
-            <li><code>[ielts_skills_radar show_target="yes"]</code> - <?php _e('Show target band line (default: yes)', 'ielts-course-manager'); ?></li>
             <li><code>[ielts_skills_radar height="400"]</code> - <?php _e('Set chart height in pixels (default: 400)', 'ielts-course-manager'); ?></li>
         </ul>
         

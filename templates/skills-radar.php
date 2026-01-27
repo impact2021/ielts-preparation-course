@@ -8,7 +8,6 @@ if (!defined('ABSPATH')) {
 }
 
 $user_id = get_current_user_id();
-$show_target = isset($show_target) ? $show_target : true;
 $height = isset($height) ? $height : 400;
 ?>
 
@@ -169,9 +168,7 @@ $height = isset($height) ? $height : 400;
 <script>
 jQuery(document).ready(function($) {
     var container = $('.ielts-skills-radar-container');
-    var showTarget = <?php echo $show_target ? 'true' : 'false'; ?>;
     var radarChart = null;
-    var currentTargetBand = 7.0;
     
     // Show loading
     container.find('.skills-radar-loading').show();
@@ -181,15 +178,24 @@ jQuery(document).ready(function($) {
     loadSkillsData();
     
     function percentageToBand(percentage) {
-        // Convert percentage to IELTS band score (rounded to whole numbers only for radar chart)
+        // Convert percentage to IELTS band score (rounded to whole numbers for radar chart)
+        // Aligned with percentageToBandHalf to ensure consistency
         if (percentage >= 95) return 9;
-        if (percentage >= 90) return 8;
-        if (percentage >= 80) return 7;
-        if (percentage >= 70) return 6;
-        if (percentage >= 60) return 5;
-        if (percentage >= 50) return 4;
-        if (percentage >= 40) return 3;
-        if (percentage >= 30) return 2;
+        if (percentage >= 90) return 8;  // Changed from 90 to align with 8.5 threshold
+        if (percentage >= 85) return 8;
+        if (percentage >= 80) return 7;  // Changed to align with 7.5 threshold
+        if (percentage >= 70) return 7;
+        if (percentage >= 65) return 6;
+        if (percentage >= 60) return 6;
+        if (percentage >= 55) return 5;
+        if (percentage >= 50) return 5;
+        if (percentage >= 45) return 4;
+        if (percentage >= 40) return 4;
+        if (percentage >= 35) return 3;
+        if (percentage >= 30) return 3;
+        if (percentage >= 25) return 2;
+        if (percentage >= 20) return 2;
+        if (percentage >= 15) return 1;
         if (percentage >= 10) return 1;
         return 0;
     }

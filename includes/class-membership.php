@@ -690,7 +690,17 @@ class IELTS_CM_Membership {
             update_option('ielts_cm_paypal_enabled', isset($_POST['ielts_cm_paypal_enabled']) ? 1 : 0);
             update_option('ielts_cm_paypal_client_id', sanitize_text_field($_POST['ielts_cm_paypal_client_id']));
             update_option('ielts_cm_paypal_secret', sanitize_text_field($_POST['ielts_cm_paypal_secret']));
-            update_option('ielts_cm_paypal_address', sanitize_email($_POST['ielts_cm_paypal_address']));
+            
+            // Validate and save PayPal address
+            if (isset($_POST['ielts_cm_paypal_address'])) {
+                $paypal_address = sanitize_email($_POST['ielts_cm_paypal_address']);
+                if (!empty($_POST['ielts_cm_paypal_address']) && !is_email($paypal_address)) {
+                    // Show error for invalid email
+                    echo '<div class="notice notice-error"><p>' . __('Invalid PayPal email address. Please enter a valid email address.', 'ielts-course-manager') . '</p></div>';
+                    $paypal_address = ''; // Don't save invalid email
+                }
+                update_option('ielts_cm_paypal_address', $paypal_address);
+            }
             
             $pricing = array();
             $errors = array();
@@ -1252,10 +1262,10 @@ The IELTS Team'
         
         // Count videos watched (lessons/resources viewed)
         $videos_completed = $wpdb->get_var($wpdb->prepare("
-            SELECT COUNT(DISTINCT meta_value) 
+            SELECT COUNT(*) 
             FROM {$wpdb->usermeta} 
             WHERE user_id = %d 
-            AND (meta_key LIKE '_ielts_cm_lesson_%_viewed' OR meta_key LIKE '_ielts_cm_resource_%_viewed')
+            AND (meta_key LIKE '_ielts_cm_lesson_%%_viewed' OR meta_key LIKE '_ielts_cm_resource_%%_viewed')
         ", $user_id));
         
         // Count total videos available (lessons + resources)
