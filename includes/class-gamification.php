@@ -265,7 +265,8 @@ class IELTS_CM_Gamification {
             }
         }
         
-        return $streak;
+        // Ensure minimum streak of 1 if user has any activity
+        return max(1, $streak);
     }
     
     /**

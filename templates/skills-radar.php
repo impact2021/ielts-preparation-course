@@ -15,21 +15,6 @@ $height = isset($height) ? $height : 400;
 <div class="ielts-skills-radar-container">
     <div class="skills-radar-header">
         <h3 class="skills-radar-title"><?php _e('Your IELTS Skills Profile', 'ielts-course-manager'); ?></h3>
-        <?php if ($show_target): ?>
-        <div class="target-band-selector">
-            <label for="target-band-select"><?php _e('Target Band:', 'ielts-course-manager'); ?></label>
-            <select id="target-band-select" class="target-band-select">
-                <option value="5.5">5.5</option>
-                <option value="6.0">6.0</option>
-                <option value="6.5">6.5</option>
-                <option value="7.0" selected>7.0</option>
-                <option value="7.5">7.5</option>
-                <option value="8.0">8.0</option>
-                <option value="8.5">8.5</option>
-                <option value="9.0">9.0</option>
-            </select>
-        </div>
-        <?php endif; ?>
     </div>
     
     <div class="skills-radar-wrapper">
@@ -39,14 +24,37 @@ $height = isset($height) ? $height : 400;
     <div class="skills-radar-legend">
         <span class="legend-item">
             <span class="legend-line" style="background: #2196F3;"></span>
-            <?php _e('Your Proficiency', 'ielts-course-manager'); ?>
+            <?php _e('Your Band Scores', 'ielts-course-manager'); ?>
         </span>
-        <?php if ($show_target): ?>
-        <span class="legend-item">
-            <span class="legend-line legend-dashed" style="background: #FFC107;"></span>
-            <span id="target-band-label"><?php _e('Band 7.0 Target', 'ielts-course-manager'); ?></span>
-        </span>
-        <?php endif; ?>
+    </div>
+    
+    <div class="skills-radar-scores">
+        <div class="skill-score-item">
+            <div class="skill-label"><?php _e('Reading', 'ielts-course-manager'); ?></div>
+            <div class="skill-band-value" data-skill="reading">—</div>
+        </div>
+        <div class="skill-score-item">
+            <div class="skill-label"><?php _e('Writing', 'ielts-course-manager'); ?></div>
+            <div class="skill-band-value" data-skill="writing">—</div>
+        </div>
+        <div class="skill-score-item">
+            <div class="skill-label"><?php _e('Listening', 'ielts-course-manager'); ?></div>
+            <div class="skill-band-value" data-skill="listening">—</div>
+        </div>
+        <div class="skill-score-item">
+            <div class="skill-label"><?php _e('Speaking', 'ielts-course-manager'); ?></div>
+            <div class="skill-band-value" data-skill="speaking">—</div>
+        </div>
+        <div class="skill-score-item">
+            <div class="skill-label"><?php _e('Vocabulary', 'ielts-course-manager'); ?></div>
+            <div class="skill-band-value" data-skill="vocabulary">—</div>
+            <div class="skill-disclaimer"><?php _e('Not independently assessed in IELTS', 'ielts-course-manager'); ?></div>
+        </div>
+        <div class="skill-score-item">
+            <div class="skill-label"><?php _e('Grammar', 'ielts-course-manager'); ?></div>
+            <div class="skill-band-value" data-skill="grammar">—</div>
+            <div class="skill-disclaimer"><?php _e('Not independently assessed in IELTS', 'ielts-course-manager'); ?></div>
+        </div>
     </div>
     
     <div class="skills-radar-loading"><?php _e('Loading skills data...', 'ielts-course-manager'); ?></div>
@@ -72,40 +80,40 @@ $height = isset($height) ? $height : 400;
     color: #333;
 }
 
-.target-band-selector {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+.skills-radar-scores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
 }
 
-.target-band-selector label {
+.skill-score-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.skill-label {
     font-size: 14px;
     font-weight: 600;
     color: #555;
+    margin-bottom: 5px;
 }
 
-.target-band-select {
-    padding: 6px 12px;
-    border: 2px solid #ddd;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    background: white;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.skill-band-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2196F3;
+    margin-bottom: 3px;
 }
 
-.target-band-select:hover {
-    border-color: #FFC107;
-}
-
-.target-band-select:focus {
-    outline: none;
-    border-color: #FFC107;
-    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.1);
+.skill-disclaimer {
+    font-size: 10px;
+    color: #999;
+    font-style: italic;
+    margin-top: 3px;
 }
 
 .skills-radar-wrapper {
