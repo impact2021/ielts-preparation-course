@@ -506,28 +506,55 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
-        // Set status to active (this also assigns the WordPress role)
-        $membership = new IELTS_CM_Membership();
-        $membership->set_user_membership_status($payment->user_id, IELTS_CM_Membership::STATUS_ACTIVE);
-        
-        // Clear expiry email tracking when activating new membership
-        delete_user_meta($payment->user_id, '_ielts_cm_expiry_email_sent');
-        
-        // Set expiry date
-        $expiry_date = IELTS_CM_Membership::calculate_expiry_date($payment->membership_type);
-        update_user_meta($payment->user_id, '_ielts_cm_membership_expiry', $expiry_date);
-        
-        // Store payment info
-        update_user_meta($payment->user_id, '_ielts_cm_payment_intent_id', $payment_intent_id);
-        update_user_meta($payment->user_id, '_ielts_cm_payment_amount', $payment->amount);
-        update_user_meta($payment->user_id, '_ielts_cm_payment_date', current_time('mysql'));
-        
-        // Clean up registration pending flags
-        delete_user_meta($payment->user_id, '_ielts_cm_pending_membership_type');
-        delete_user_meta($payment->user_id, '_ielts_cm_registration_pending');
-        
-        // Send welcome email
-        wp_new_user_notification($payment->user_id, null, 'user');
+        try {
+            // Set status to active (this also assigns the WordPress role)
+            $membership = new IELTS_CM_Membership();
+            $membership->set_user_membership_status($payment->user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+            
+            // Clear expiry email tracking when activating new membership
+            delete_user_meta($payment->user_id, '_ielts_cm_expiry_email_sent');
+            
+            // Set expiry date
+            $expiry_date = IELTS_CM_Membership::calculate_expiry_date($payment->membership_type);
+            update_user_meta($payment->user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            
+            // Store payment info
+            update_user_meta($payment->user_id, '_ielts_cm_payment_intent_id', $payment_intent_id);
+            update_user_meta($payment->user_id, '_ielts_cm_payment_amount', $payment->amount);
+            update_user_meta($payment->user_id, '_ielts_cm_payment_date', current_time('mysql'));
+            
+            // Clean up registration pending flags
+            delete_user_meta($payment->user_id, '_ielts_cm_pending_membership_type');
+            delete_user_meta($payment->user_id, '_ielts_cm_registration_pending');
+            
+            // Send welcome email (non-critical, don't fail if this errors)
+            try {
+                wp_new_user_notification($payment->user_id, null, 'user');
+            } catch (Throwable $e) {
+                error_log('IELTS Payment: Failed to send welcome email - ' . $e->getMessage());
+            }
+            
+        } catch (Throwable $e) {
+            error_log('IELTS Payment: Error activating membership - ' . $e->getMessage());
+            
+            // Log to database
+            $this->safe_log_payment_error(
+                'system_error',
+                'Failed to activate membership',
+                array(
+                    'message' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString(),
+                    'payment_id' => $payment_id
+                ),
+                $payment->user_id,
+                $user_email,
+                $payment->membership_type,
+                $payment->amount
+            );
+            
+            wp_send_json_error('Failed to activate membership. Please contact support with Error Code: ACT001', 500);
+            return;
+        }
         
         // Get login page URL for redirect
         $login_url = wp_login_url();
@@ -638,28 +665,38 @@ class IELTS_CM_Stripe_Payment {
         
         // Verify IELTS_CM_Membership class is available
         if (!$this->verify_membership_class('webhook')) {
-            return array('success' => false, 'error' => 'Membership handler not loaded');
+            error_log('IELTS Payment Webhook: Membership handler not loaded');
+            return;
         }
         
-        // Set status to active (this also assigns the WordPress role)
-        $membership = new IELTS_CM_Membership();
-        $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
-        
-        // Clear expiry email tracking when activating new membership
-        delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
-        
-        // Set expiry date
-        $expiry_date = IELTS_CM_Membership::calculate_expiry_date($membership_type);
-        update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-        
-        // Store payment info
-        update_user_meta($user_id, '_ielts_cm_payment_intent_id', $payment_intent->id);
-        update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
-        update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
-        
-        // Send welcome email
-        wp_new_user_notification($user_id, null, 'user');
-        
-        error_log("Successfully created user $user_id with membership $membership_type after payment");
+        try {
+            // Set status to active (this also assigns the WordPress role)
+            $membership = new IELTS_CM_Membership();
+            $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+            
+            // Clear expiry email tracking when activating new membership
+            delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
+            
+            // Set expiry date
+            $expiry_date = IELTS_CM_Membership::calculate_expiry_date($membership_type);
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            
+            // Store payment info
+            update_user_meta($user_id, '_ielts_cm_payment_intent_id', $payment_intent->id);
+            update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
+            update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
+            
+            // Send welcome email (non-critical, don't fail if this errors)
+            try {
+                wp_new_user_notification($user_id, null, 'user');
+            } catch (Throwable $e) {
+                error_log('IELTS Payment Webhook: Failed to send welcome email - ' . $e->getMessage());
+            }
+            
+            error_log("Successfully created user $user_id with membership $membership_type after payment");
+        } catch (Throwable $e) {
+            error_log('IELTS Payment Webhook: Error activating membership - ' . $e->getMessage());
+            error_log('IELTS Payment Webhook: Stack trace - ' . $e->getTraceAsString());
+        }
     }
 }
