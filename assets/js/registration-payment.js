@@ -37,13 +37,43 @@
         });
         
         let errorMessage = 'Network error during ' + context + '.';
+        let errorCode = null;
+        
         if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
             errorMessage = jqXHR.responseJSON.data;
+            // Extract error code if present
+            const codeMatch = errorMessage.match(/Error Code: ([A-Z0-9]+)/);
+            if (codeMatch) {
+                errorCode = codeMatch[1];
+            }
         } else if (jqXHR.responseText) {
             errorMessage = 'Server error: ' + jqXHR.statusText;
         }
         
-        showError(errorMessage + ' Please check console for details.');
+        // Build comprehensive error message for user
+        let userMessage = errorMessage;
+        
+        // Add helpful debugging information
+        if (jqXHR.status === 500) {
+            userMessage += '\n\n🔍 Debugging Help:\n';
+            userMessage += '• Check the browser console (F12) for detailed error information\n';
+            
+            // If user is admin, provide more specific help
+            if (ieltsPayment.isAdmin) {
+                userMessage += '• Visit WordPress Admin → IELTS Course → Payment Error Logs for detailed error history\n';
+                userMessage += '• Check WordPress debug.log (usually in wp-content/debug.log) for server-side errors\n';
+            } else {
+                userMessage += '• Contact the site administrator with the error code shown above\n';
+            }
+            
+            if (errorCode) {
+                userMessage += '• Error Code: ' + errorCode + ' (provide this to support)\n';
+            }
+        } else if (jqXHR.status === 0) {
+            userMessage += '\n\nThis may be a network connectivity issue. Please check your internet connection and try again.';
+        }
+        
+        showError(userMessage);
         setLoading(false);
     }
     
@@ -271,11 +301,14 @@
     }
     
     function showError(message) {
-        $('#payment-message').removeClass('success').addClass('error').text(message).show();
+        // Convert newlines to <br> for HTML display
+        const htmlMessage = message.replace(/\n/g, '<br>');
+        $('#payment-message').removeClass('success').addClass('error').html(htmlMessage).show();
     }
     
     function showSuccess(message) {
-        $('#payment-message').removeClass('error').addClass('success').text(message).show();
+        const htmlMessage = message.replace(/\n/g, '<br>');
+        $('#payment-message').removeClass('error').addClass('success').html(htmlMessage).show();
     }
     
     function setLoading(isLoading) {

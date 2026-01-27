@@ -89,6 +89,25 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Verify nonce for security
+     * Logs and returns error if verification fails
+     */
+    private function verify_nonce($context = 'unknown') {
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
+            error_log('IELTS Payment: Nonce verification failed in ' . $context);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'security_error',
+                'Security check failed',
+                array('context' => $context, 'action' => 'nonce_verification_failed')
+            );
+            
+            wp_send_json_error('Security check failed. Please refresh the page and try again. If this error persists, contact support.', 403);
+        }
+    }
+    
+    /**
      * Register user account (called before payment)
      */
     public function register_user() {
@@ -96,10 +115,7 @@ class IELTS_CM_Stripe_Payment {
         error_log('IELTS Payment: register_user called');
         
         // Verify nonce
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
-            error_log('IELTS Payment: Nonce verification failed');
-            wp_send_json_error('Security check failed', 403);
-        }
+        $this->verify_nonce('register_user');
         
         $first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
         $last_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
@@ -112,17 +128,47 @@ class IELTS_CM_Stripe_Payment {
         // Validate inputs
         if (empty($first_name) || empty($last_name) || empty($email) || empty($password)) {
             error_log('IELTS Payment: Missing required fields');
-            wp_send_json_error('All fields are required');
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'All fields are required',
+                array('missing_fields' => true),
+                null,
+                $email
+            );
+            
+            wp_send_json_error('All fields are required. Please fill in all registration fields.');
         }
         
         if (!is_email($email)) {
             error_log('IELTS Payment: Invalid email format');
-            wp_send_json_error('Invalid email address');
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'Invalid email address',
+                array('email' => $email),
+                null,
+                $email
+            );
+            
+            wp_send_json_error('Invalid email address. Please enter a valid email.');
         }
         
         if (email_exists($email)) {
             error_log("IELTS Payment: Email already exists: $email");
-            wp_send_json_error('Email already exists');
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'Email already exists',
+                array('email' => $email),
+                null,
+                $email
+            );
+            
+            wp_send_json_error('Email already exists. Please use a different email or log in to your existing account.');
         }
         
         // Generate username from email
@@ -166,10 +212,7 @@ class IELTS_CM_Stripe_Payment {
         error_log('IELTS Payment: create_payment_intent called');
         
         // Verify nonce
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
-            error_log('IELTS Payment: Nonce verification failed in create_payment_intent');
-            wp_send_json_error('Security check failed', 403);
-        }
+        $this->verify_nonce('create_payment_intent');
         
         $user_id = isset($_POST['user_id']) ? intval($_POST['user_id']) : 0;
         $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
@@ -181,14 +224,33 @@ class IELTS_CM_Stripe_Payment {
         $user = get_userdata($user_id);
         if (!$user) {
             error_log("IELTS Payment: Invalid user ID: $user_id");
-            wp_send_json_error('Invalid user', 400);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'Invalid user',
+                array('user_id' => $user_id),
+                $user_id
+            );
+            
+            wp_send_json_error('Invalid user. Please refresh the page and try again.', 400);
         }
         
         // SECURITY: Validate membership type exists and get server-side price
         $pricing = get_option('ielts_cm_membership_pricing', array());
         if (!isset($pricing[$membership_type])) {
             error_log("IELTS Payment: Invalid membership type: $membership_type");
-            wp_send_json_error('Invalid membership type', 400);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'Invalid membership type',
+                array('membership_type' => $membership_type),
+                $user_id,
+                $user->user_email
+            );
+            
+            wp_send_json_error('Invalid membership type. Please refresh the page and try again.', 400);
         }
         
         $server_price = floatval($pricing[$membership_type]);
@@ -196,19 +258,53 @@ class IELTS_CM_Stripe_Payment {
         // Verify amount matches server-side price
         if (abs($amount - $server_price) > 0.01) {
             error_log("IELTS Payment: Amount mismatch detected");
-            wp_send_json_error('Amount mismatch', 400);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'security_error',
+                'Amount mismatch',
+                array('client_amount' => $amount, 'server_price' => $server_price, 'membership_type' => $membership_type),
+                $user_id,
+                $user->user_email,
+                $membership_type
+            );
+            
+            wp_send_json_error('Amount mismatch detected. Please refresh the page and try again.', 400);
         }
         
         // Don't create payment intent for free memberships
         if ($amount <= 0) {
             error_log('IELTS Payment: Attempted to create payment intent for free membership');
-            wp_send_json_error('This membership is free', 400);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'Attempted to create payment intent for free membership',
+                array('membership_type' => $membership_type),
+                $user_id,
+                $user->user_email,
+                $membership_type,
+                $amount
+            );
+            
+            wp_send_json_error('This membership is free. No payment is required.', 400);
         }
         
         // Get Stripe secret key
         $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
         if (empty($stripe_secret)) {
-            wp_send_json_error('Payment system not configured', 500);
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'configuration_error',
+                'Payment system not configured',
+                array('missing' => 'stripe_secret_key'),
+                $user_id,
+                $user->user_email,
+                $membership_type,
+                $amount
+            );
+            
+            wp_send_json_error('Payment system not configured. Please contact the site administrator.', 500);
         }
         
         $this->load_stripe();
@@ -232,14 +328,38 @@ class IELTS_CM_Stripe_Payment {
         if ($insert_result === false) {
             // Log detailed error internally but return generic message
             error_log('IELTS Payment: Database error creating payment record - ' . $wpdb->last_error);
-            wp_send_json_error('Unable to process payment. Please try again or contact support.', 500);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'database_error',
+                'Unable to process payment',
+                array('error' => $wpdb->last_error, 'context' => 'insert_payment_record'),
+                $user_id,
+                $user->user_email,
+                $membership_type,
+                $amount
+            );
+            
+            wp_send_json_error('Unable to process payment. Please try again or contact support. For assistance, please mention Error Code: DB001', 500);
         }
         
         $payment_id = $wpdb->insert_id;
         
         if (!$payment_id) {
             error_log('IELTS Payment: Failed to get payment ID after insert');
-            wp_send_json_error('Unable to process payment. Please try again or contact support.', 500);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'database_error',
+                'Failed to get payment ID after insert',
+                array('context' => 'insert_payment_record'),
+                $user_id,
+                $user->user_email,
+                $membership_type,
+                $amount
+            );
+            
+            wp_send_json_error('Unable to process payment. Please try again or contact support. For assistance, please mention Error Code: DB002', 500);
         }
         
         try {
@@ -265,7 +385,23 @@ class IELTS_CM_Stripe_Payment {
             
         } catch (\Exception $e) {
             error_log('Stripe Payment Intent Error: ' . $e->getMessage());
-            wp_send_json_error('Payment system error: ' . $e->getMessage(), 500);
+            
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'stripe_api_error',
+                'Stripe API error',
+                array(
+                    'message' => $e->getMessage(),
+                    'code' => method_exists($e, 'getCode') ? $e->getCode() : null,
+                    'type' => get_class($e)
+                ),
+                $user_id,
+                $user->user_email,
+                $membership_type,
+                $amount
+            );
+            
+            wp_send_json_error('Payment system error: ' . $e->getMessage() . ' For assistance, please mention Error Code: STRIPE001', 500);
         }
     }
     
@@ -274,9 +410,7 @@ class IELTS_CM_Stripe_Payment {
      */
     public function confirm_payment() {
         // Verify nonce
-        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_payment_intent')) {
-            wp_send_json_error('Security check failed', 403);
-        }
+        $this->verify_nonce('confirm_payment');
         
         $payment_intent_id = sanitize_text_field($_POST['payment_intent_id']);
         $payment_id = intval($_POST['payment_id']);
@@ -291,8 +425,19 @@ class IELTS_CM_Stripe_Payment {
         ));
         
         if (!$payment) {
-            wp_send_json_error('Payment not found', 404);
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'validation_error',
+                'Payment not found',
+                array('payment_id' => $payment_id, 'payment_intent_id' => $payment_intent_id)
+            );
+            
+            wp_send_json_error('Payment not found. Please try again or contact support. For assistance, please mention Error Code: PAY001', 404);
         }
+        
+        // Get user email for logging
+        $user = get_userdata($payment->user_id);
+        $user_email = $user ? $user->user_email : null;
         
         // Update payment status
         $wpdb->update(
@@ -309,7 +454,18 @@ class IELTS_CM_Stripe_Payment {
         
         // Verify IELTS_CM_Membership class is available
         if (!$this->verify_membership_class('confirm_payment')) {
-            wp_send_json_error('System error: Membership handler not loaded. Please contact administrator.', 500);
+            // Log to database
+            IELTS_CM_Database::log_payment_error(
+                'system_error',
+                'Membership handler not loaded',
+                array('payment_id' => $payment_id, 'user_id' => $payment->user_id),
+                $payment->user_id,
+                $user_email,
+                $payment->membership_type,
+                $payment->amount
+            );
+            
+            wp_send_json_error('System error: Membership handler not loaded. Please contact administrator. For assistance, please mention Error Code: SYS001', 500);
             return;
         }
         

@@ -4157,6 +4157,15 @@ class IELTS_CM_Admin {
             'ielts-awards',
             array($this, 'awards_page')
         );
+        
+        add_submenu_page(
+            'edit.php?post_type=ielts_course',
+            __('Payment Error Logs', 'ielts-course-manager'),
+            __('Payment Errors', 'ielts-course-manager'),
+            'manage_options',
+            'ielts-payment-errors',
+            array($this, 'payment_errors_page')
+        );
     }
     
     /**
@@ -7666,5 +7675,185 @@ class IELTS_CM_Admin {
             'diagram_label_r' => __('Diagram Label Completion (R)', 'ielts-course-manager'),
             'short_answer_r' => __('Short-Answer Questions (R)', 'ielts-course-manager'),
         );
+    }
+    
+    /**
+     * Payment errors page
+     */
+    public function payment_errors_page() {
+        // Check user capability
+        if (!current_user_can('manage_options')) {
+            wp_die(__('You do not have sufficient permissions to access this page.', 'ielts-course-manager'));
+        }
+        
+        global $wpdb;
+        $error_log_table = $wpdb->prefix . 'ielts_cm_payment_errors';
+        
+        // Handle delete action
+        if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['error_id']) && check_admin_referer('delete_payment_error_' . $_GET['error_id'])) {
+            $error_id = intval($_GET['error_id']);
+            $wpdb->delete($error_log_table, array('id' => $error_id), array('%d'));
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('Error log deleted successfully.', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        // Handle clear all action
+        if (isset($_GET['action']) && $_GET['action'] === 'clear_all' && check_admin_referer('clear_all_payment_errors')) {
+            $wpdb->query("TRUNCATE TABLE $error_log_table");
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('All error logs cleared successfully.', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        // Pagination
+        $per_page = 50;
+        $current_page = isset($_GET['paged']) ? max(1, intval($_GET['paged'])) : 1;
+        $offset = ($current_page - 1) * $per_page;
+        
+        // Get total count
+        $total_errors = $wpdb->get_var("SELECT COUNT(*) FROM $error_log_table");
+        $total_pages = ceil($total_errors / $per_page);
+        
+        // Get errors with pagination
+        $errors = $wpdb->get_results($wpdb->prepare(
+            "SELECT * FROM $error_log_table ORDER BY created_at DESC LIMIT %d OFFSET %d",
+            $per_page,
+            $offset
+        ));
+        
+        // Get statistics
+        $stats_by_type = $wpdb->get_results(
+            "SELECT error_type, COUNT(*) as count FROM $error_log_table GROUP BY error_type ORDER BY count DESC"
+        );
+        
+        $recent_24h = $wpdb->get_var(
+            "SELECT COUNT(*) FROM $error_log_table WHERE created_at >= DATE_SUB(NOW(), INTERVAL 24 HOUR)"
+        );
+        
+        ?>
+        <div class="wrap">
+            <h1><?php _e('Payment Error Logs', 'ielts-course-manager'); ?></h1>
+            
+            <div class="notice notice-info">
+                <p>
+                    <strong><?php _e('Total Errors Logged:', 'ielts-course-manager'); ?></strong> <?php echo number_format($total_errors); ?><br>
+                    <strong><?php _e('Errors in Last 24 Hours:', 'ielts-course-manager'); ?></strong> <?php echo number_format($recent_24h); ?>
+                </p>
+            </div>
+            
+            <?php if (!empty($stats_by_type)): ?>
+            <h2><?php _e('Error Statistics by Type', 'ielts-course-manager'); ?></h2>
+            <table class="wp-list-table widefat fixed striped" style="max-width: 600px;">
+                <thead>
+                    <tr>
+                        <th><?php _e('Error Type', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Count', 'ielts-course-manager'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($stats_by_type as $stat): ?>
+                    <tr>
+                        <td><code><?php echo esc_html($stat->error_type); ?></code></td>
+                        <td><?php echo number_format($stat->count); ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <?php endif; ?>
+            
+            <h2><?php _e('Recent Error Logs', 'ielts-course-manager'); ?></h2>
+            
+            <?php if ($total_errors > 0): ?>
+            <div style="margin-bottom: 10px;">
+                <a href="<?php echo wp_nonce_url(add_query_arg('action', 'clear_all'), 'clear_all_payment_errors'); ?>" 
+                   class="button button-secondary" 
+                   onclick="return confirm('<?php _e('Are you sure you want to delete all error logs? This cannot be undone.', 'ielts-course-manager'); ?>')">
+                    <?php _e('Clear All Logs', 'ielts-course-manager'); ?>
+                </a>
+            </div>
+            
+            <table class="wp-list-table widefat fixed striped">
+                <thead>
+                    <tr>
+                        <th style="width: 140px;"><?php _e('Date/Time', 'ielts-course-manager'); ?></th>
+                        <th style="width: 120px;"><?php _e('Error Type', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('Message', 'ielts-course-manager'); ?></th>
+                        <th><?php _e('User/Email', 'ielts-course-manager'); ?></th>
+                        <th style="width: 100px;"><?php _e('Details', 'ielts-course-manager'); ?></th>
+                        <th style="width: 80px;"><?php _e('Actions', 'ielts-course-manager'); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($errors as $error): ?>
+                    <tr>
+                        <td><?php echo esc_html(mysql2date('Y-m-d H:i:s', $error->created_at)); ?></td>
+                        <td><code><?php echo esc_html($error->error_type); ?></code></td>
+                        <td><?php echo esc_html($error->error_message); ?></td>
+                        <td>
+                            <?php 
+                            if ($error->user_id) {
+                                $user = get_userdata($error->user_id);
+                                if ($user) {
+                                    echo '<a href="' . get_edit_user_link($error->user_id) . '">' . esc_html($user->display_name) . '</a>';
+                                } else {
+                                    echo 'User ID: ' . esc_html($error->user_id);
+                                }
+                            } elseif ($error->user_email) {
+                                echo esc_html($error->user_email);
+                            } else {
+                                echo '—';
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <?php if ($error->error_details): ?>
+                            <button type="button" class="button button-small" onclick="alert(<?php echo esc_js(wp_json_encode($error->error_details)); ?>)">
+                                <?php _e('View Details', 'ielts-course-manager'); ?>
+                            </button>
+                            <?php else: ?>
+                            —
+                            <?php endif; ?>
+                        </td>
+                        <td>
+                            <a href="<?php echo wp_nonce_url(add_query_arg(array('action' => 'delete', 'error_id' => $error->id)), 'delete_payment_error_' . $error->id); ?>" 
+                               class="button button-small" 
+                               onclick="return confirm('<?php _e('Are you sure you want to delete this error log?', 'ielts-course-manager'); ?>')">
+                                <?php _e('Delete', 'ielts-course-manager'); ?>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            
+            <?php if ($total_pages > 1): ?>
+            <div class="tablenav bottom">
+                <div class="tablenav-pages">
+                    <?php
+                    echo paginate_links(array(
+                        'base' => add_query_arg('paged', '%#%'),
+                        'format' => '',
+                        'prev_text' => __('&laquo;'),
+                        'next_text' => __('&raquo;'),
+                        'total' => $total_pages,
+                        'current' => $current_page
+                    ));
+                    ?>
+                </div>
+            </div>
+            <?php endif; ?>
+            
+            <?php else: ?>
+            <p><?php _e('No payment errors have been logged yet.', 'ielts-course-manager'); ?></p>
+            <?php endif; ?>
+            
+            <div class="notice notice-warning" style="margin-top: 20px;">
+                <p>
+                    <strong><?php _e('Where to Find Debug Logs:', 'ielts-course-manager'); ?></strong><br>
+                    <?php _e('Payment errors are automatically logged to this page. Additionally:', 'ielts-course-manager'); ?><br>
+                    • <?php _e('Server-side PHP errors are logged to:', 'ielts-course-manager'); ?> <code>wp-content/debug.log</code> <?php _e('(if WP_DEBUG_LOG is enabled)', 'ielts-course-manager'); ?><br>
+                    • <?php _e('JavaScript errors appear in the browser console (press F12 to open Developer Tools)', 'ielts-course-manager'); ?><br>
+                    • <?php _e('Stripe API errors are shown both here and in the Stripe Dashboard', 'ielts-course-manager'); ?>
+                </p>
+            </div>
+        </div>
+        <?php
     }
 }

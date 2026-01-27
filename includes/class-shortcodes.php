@@ -1528,6 +1528,7 @@ class IELTS_CM_Shortcodes {
                     'nonce' => wp_create_nonce('ielts_payment_intent'),
                     'pricing' => $pricing,
                     'user' => $user_data,
+                    'isAdmin' => current_user_can('manage_options'),
                 ));
             }
         }
