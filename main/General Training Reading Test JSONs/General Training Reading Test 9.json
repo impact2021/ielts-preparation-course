@@ -4,10 +4,10 @@
     "questions": [
         {
             "type": "open_question",
-            "instructions": "Questions 1\u20137\n\nComplete the summary below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
-            "question": "<p>Travels to the [field 1] to see wildlife and forest before stopping close to [field 2].</p>\n<p>The journey has views across [field 3].</p>\n<p>Costs \u00a35.00 for children and senior citizens, and [field 4] for passengers up to 5 years old.</p>\n<p>A [field 5] is required for group bookings and is refunded only if cancelled more than [field 6] before departure.</p>\n<p>People with certain phobias are advised that the train passes through [field 7].</p>\n<p>[field 1]</p>\n<p>[field 2]</p>\n<p>[field 3]</p>\n<p>[field 4]</p>\n<p>[field 5]</p>\n<p>[field 6]</p>\n<p>[field 7]</p>",
+            "instructions": "Questions 1–7\n\nComplete the summary below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
+            "question": "<p>Travels to the [field 1] to see wildlife and forest before stopping close to [field 2].</p>\n<p>The journey has views across [field 3].</p>\n<p>Costs £5.00 for children and senior citizens, and [field 4] for passengers up to 5 years old.</p>\n<p>A [field 5] is required for group bookings and is refunded only if cancelled more than [field 6] before departure.</p>\n<p>People with certain phobias are advised that the train passes through [field 7].</p>",
             "points": 7,
-            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: Whean Ranges, Field 2: Huia Dam, Field 3: Corille Harbour, Field 4: free, Field 5: deposit, Field 6: 8 days, Field 7: tunnels.",
+            "no_answer_feedback": "Please provide an answer for all fields.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -27,45 +27,45 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "2": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "3": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "4": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "5": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "6": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 },
                 "7": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
+                    "no_answer": "Please provide an answer."
                 }
             }
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 8\u201314\n\nDo the following statements agree with the information given in Reading Passage 2?\n\nWrite\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
+            "instructions": "Questions 8–14\n\nDo the following statements agree with the information given in Reading Passage 2?\n\nWrite\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
             "question": "This is the first sale the Appliance Store has held.",
             "points": 1,
             "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states this is 'its third annual clearance sale'.",
@@ -85,7 +85,7 @@
                 {
                     "text": "FALSE",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states this is 'its third annual clearance sale', so this is not the first sale."
+                    "feedback": "Correct! The passage states this is 'its third annual clearance sale'."
                 },
                 {
                     "text": "NOT GIVEN",
@@ -102,7 +102,7 @@
             "instructions": "",
             "question": "Extra discounts are available to a limited number of customers.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'The first 100 customers receive an additional 20% discount'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The first 100 customers receive an additional 20% discount.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -114,17 +114,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states 'The first 100 customers receive an additional 20% discount', which is a limited number."
+                    "feedback": "Correct! The first 100 customers receive an additional 20% discount."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'The first 100 customers receive an additional 20% discount'."
+                    "feedback": "Incorrect. The first 100 customers receive an additional 20% discount."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'The first 100 customers receive an additional 20% discount'."
+                    "feedback": "Incorrect. The first 100 customers receive an additional 20% discount."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -136,7 +136,7 @@
             "instructions": "",
             "question": "All computers are discounted by exactly 50%.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states 'Desktop computers are reduced by up to 50%', not exactly 50%.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Desktop computers are reduced by 'up to 50%', not exactly 50%.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -148,17 +148,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Desktop computers are reduced by up to 50%', which means some may be discounted less."
+                    "feedback": "Incorrect. Desktop computers are reduced by 'up to 50%', not exactly 50%."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states 'Desktop computers are reduced by up to 50%', not exactly 50%."
+                    "feedback": "Correct! Desktop computers are reduced by 'up to 50%', not exactly 50%."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Desktop computers are reduced by up to 50%'."
+                    "feedback": "Incorrect. Desktop computers are reduced by 'up to 50%', not exactly 50%."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -170,7 +170,7 @@
             "instructions": "",
             "question": "Computer accessories receive larger discounts than laptops.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage mentions both are discounted but doesn't compare the discount amounts.",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage doesn't compare discount rates.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -182,17 +182,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions both are discounted but doesn't compare the discount amounts."
+                    "feedback": "Incorrect. The passage doesn't compare discount rates."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage mentions both are discounted but doesn't compare the discount amounts."
+                    "feedback": "Incorrect. The passage doesn't compare discount rates."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": true,
-                    "feedback": "Correct! The passage mentions both are discounted but doesn't compare the discount amounts."
+                    "feedback": "Correct! The passage doesn't compare discount rates."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -204,7 +204,7 @@
             "instructions": "",
             "question": "Every computer has a one-year guarantee.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states some models over \u00a31000 have 24 months guarantee.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. All computers include a 12-month guarantee, extended to 24 months for models over £1000.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -216,17 +216,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states the guarantee is 'extended to 24 months for models over \u00a31000'."
+                    "feedback": "Incorrect. All computers include a 12-month guarantee, extended to 24 months for models over £1000."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states the guarantee is 'extended to 24 months for models over \u00a31000', so not every computer has only a one-year guarantee."
+                    "feedback": "Correct! All computers include a 12-month guarantee, extended to 24 months for models over £1000."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage clearly states the guarantee is 'extended to 24 months for models over \u00a31000'."
+                    "feedback": "Incorrect. All computers include a 12-month guarantee, extended to 24 months for models over £1000."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -238,7 +238,7 @@
             "instructions": "",
             "question": "Buying multiple kitchen items results in bigger discounts.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'Combination packages provide greater savings'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Combination packages provide greater savings.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -250,17 +250,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states 'Combination packages provide greater savings'."
+                    "feedback": "Correct! Combination packages provide greater savings."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Combination packages provide greater savings'."
+                    "feedback": "Incorrect. Combination packages provide greater savings."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'Combination packages provide greater savings'."
+                    "feedback": "Incorrect. Combination packages provide greater savings."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -272,7 +272,7 @@
             "instructions": "",
             "question": "Plasma televisions are discounted more than LCD televisions.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage states both are reduced by up to 30% but doesn't specify if one is discounted more.",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. Both are reduced by up to 30%, but no comparison is made.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -284,17 +284,17 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'LCD and plasma televisions are reduced by up to 30%' without specifying different discount amounts."
+                    "feedback": "Incorrect. Both are reduced by up to 30%, but no comparison is made."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": false,
-                    "feedback": "Incorrect. The passage states 'LCD and plasma televisions are reduced by up to 30%' without specifying different discount amounts."
+                    "feedback": "Incorrect. Both are reduced by up to 30%, but no comparison is made."
                 },
                 {
                     "text": "NOT GIVEN",
                     "is_correct": true,
-                    "feedback": "Correct! The passage states both are reduced by up to 30% but doesn't specify if one is discounted more than the other."
+                    "feedback": "Correct! Both are reduced by up to 30%, but no comparison is made."
                 }
             ],
             "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -303,10 +303,10 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 15\u201320\n\nMatch each statement to the correct job position.\n\nA. Fruit pickers / packers\nB. Labourer\nC. Relief teacher\nD. Web designer\nE. Accountant\nF. Care giver",
+            "instructions": "Questions 15–20\n\nMatch each statement to the correct job.\n\nA: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "question": "Only limited travel required",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is D (Web designer). The passage states 'occasional office attendance' for the web designer role.",
+            "no_answer_feedback": "Please select an answer. The correct answer is D (Web designer).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -316,46 +316,46 @@
             "ielts_question_category": "matching",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A: Fruit pickers / packers",
                     "is_correct": false,
-                    "feedback": "Incorrect. The fruit pickers / packers role requires 'transport required', suggesting regular travel."
+                    "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "B",
+                    "text": "B: Labourer",
                     "is_correct": false,
-                    "feedback": "Incorrect. The labourer role does not mention limited travel."
+                    "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "C",
+                    "text": "C: Relief teacher",
                     "is_correct": false,
-                    "feedback": "Incorrect. The relief teacher role does not mention limited travel."
+                    "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "D",
+                    "text": "D: Web designer",
                     "is_correct": true,
-                    "feedback": "Correct! The web designer role mentions 'occasional office attendance', meaning only limited travel is required."
+                    "feedback": "Correct! The Web designer role matches this description."
                 },
                 {
-                    "text": "E",
+                    "text": "E: Accountant",
                     "is_correct": false,
-                    "feedback": "Incorrect. The accountant must 'work across two branches', suggesting more travel."
+                    "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "F",
+                    "text": "F: Care giver",
                     "is_correct": false,
-                    "feedback": "Incorrect. The care giver is a 'live-in role', not about limited travel."
+                    "feedback": "Incorrect. Review the job descriptions carefully."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF",
+            "options": "A: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Will not work in the same place each day",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is E (Accountant). The passage states the accountant will 'work across two branches'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is E (Accountant).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -365,46 +365,46 @@
             "ielts_question_category": "matching",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A: Fruit pickers / packers",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "B",
+                    "text": "B: Labourer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "C",
+                    "text": "C: Relief teacher",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "D",
+                    "text": "D: Web designer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "E",
+                    "text": "E: Accountant",
                     "is_correct": true,
-                    "feedback": "Correct! The accountant will 'work across two branches', meaning they will not work in the same place each day."
+                    "feedback": "Correct! The Accountant role matches this description."
                 },
                 {
-                    "text": "F",
+                    "text": "F: Care giver",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF",
+            "options": "A: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Must be able to operate specialised machinery",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is B (Labourer). The passage states 'forklift licence essential'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is B (Labourer).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -414,46 +414,46 @@
             "ielts_question_category": "matching",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A: Fruit pickers / packers",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "B",
+                    "text": "B: Labourer",
                     "is_correct": true,
-                    "feedback": "Correct! The labourer role requires a 'forklift licence essential', which is specialised machinery."
+                    "feedback": "Correct! The Labourer role matches this description."
                 },
                 {
-                    "text": "C",
+                    "text": "C: Relief teacher",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "D",
+                    "text": "D: Web designer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "E",
+                    "text": "E: Accountant",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "F",
+                    "text": "F: Care giver",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF",
+            "options": "A: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Requires living at the workplace",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is F (Care giver). The passage states it is a 'live-in role'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is F (Care giver).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -463,46 +463,46 @@
             "ielts_question_category": "matching",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A: Fruit pickers / packers",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "B",
+                    "text": "B: Labourer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "C",
+                    "text": "C: Relief teacher",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "D",
+                    "text": "D: Web designer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "E",
+                    "text": "E: Accountant",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "F",
+                    "text": "F: Care giver",
                     "is_correct": true,
-                    "feedback": "Correct! The care giver is a 'live-in role', meaning living at the workplace is required."
+                    "feedback": "Correct! The Care giver role matches this description."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF",
+            "options": "A: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Temporarily replaces existing staff",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is C (Relief teacher). The passage states 'Temporary cover for sick leave'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is C (Relief teacher).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -512,46 +512,46 @@
             "ielts_question_category": "matching",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A: Fruit pickers / packers",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "B",
+                    "text": "B: Labourer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "C",
+                    "text": "C: Relief teacher",
                     "is_correct": true,
-                    "feedback": "Correct! The relief teacher role is 'Temporary cover for sick leave', meaning they replace existing staff temporarily."
+                    "feedback": "Correct! The Relief teacher role matches this description."
                 },
                 {
-                    "text": "D",
+                    "text": "D: Web designer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "E",
+                    "text": "E: Accountant",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "F",
+                    "text": "F: Care giver",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF",
+            "options": "A: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
             "instructions": "",
             "question": "Earnings depend on how fast the person works",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is A (Fruit pickers / packers). The passage states 'earnings depend on speed'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is A (Fruit pickers / packers).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -561,46 +561,46 @@
             "ielts_question_category": "matching",
             "mc_options": [
                 {
-                    "text": "A",
+                    "text": "A: Fruit pickers / packers",
                     "is_correct": true,
-                    "feedback": "Correct! The fruit pickers / packers role states 'earnings depend on speed', which means how fast the person works."
+                    "feedback": "Correct! The Fruit pickers / packers role matches this description."
                 },
                 {
-                    "text": "B",
+                    "text": "B: Labourer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "C",
+                    "text": "C: Relief teacher",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "D",
+                    "text": "D: Web designer",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "E",
+                    "text": "E: Accountant",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 },
                 {
-                    "text": "F",
+                    "text": "F: Care giver",
                     "is_correct": false,
                     "feedback": "Incorrect. Review the job descriptions carefully."
                 }
             ],
-            "options": "A\nB\nC\nD\nE\nF",
+            "options": "A: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "open_question",
-            "instructions": "Questions 21\u201326\n\nAnswer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
-            "question": "<p>How many days' holiday does a full-time employee receive? [field 1]</p>\n<p>How much notice is required to request holiday leave? [field 2]</p>\n<p>What is the maximum holiday entitlement that can be carried over? [field 3]</p>\n<p>What may be started if compassionate leave is abused? [field 4]</p>\n<p>For how many weeks is maternity pay provided? [field 5]</p>\n<p>What must be completed within 56 days after the baby is born? [field 6]</p>\n<p>[field 1]</p>\n<p>[field 2]</p>\n<p>[field 3]</p>\n<p>[field 4]</p>\n<p>[field 5]</p>\n<p>[field 6]</p>",
+            "instructions": "Questions 21–26\n\nAnswer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
+            "question": "<p>How many days' holiday does a full-time employee receive? [field 1]</p>\n<p>How much notice is required to request holiday leave? [field 2]</p>\n<p>What is the maximum holiday entitlement that can be carried over? [field 3]</p>\n<p>What may be started if compassionate leave is abused? [field 4]</p>\n<p>For how many weeks is maternity pay provided? [field 5]</p>\n<p>What must be completed within 56 days after the baby is born? [field 6]</p>",
             "points": 6,
-            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: 28 days, Field 2: 6 weeks / six weeks, Field 3: 8 weeks / eight weeks, Field 4: an investigation / investigation, Field 5: 38 weeks, Field 6: paternity leave.",
+            "no_answer_feedback": "Please provide an answer for all fields.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
@@ -619,61 +619,476 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
                     "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "no_answer": "Please provide an answer."
+                },
+                "2": {
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+                    "no_answer": "Please provide an answer."
+                },
+                "3": {
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+                    "no_answer": "Please provide an answer."
+                },
+                "4": {
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+                    "no_answer": "Please provide an answer."
+                },
+                "5": {
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+                    "no_answer": "Please provide an answer."
+                },
+                "6": {
+                    "correct": "Correct! This answer can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
+                    "no_answer": "Please provide an answer."
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Do the following statements agree with the information given in Reading Passage 3?\r\n\r\nIn boxes 27 – 32 on your answer sheet, write\r\n\r\nTRUE if the statement agrees with the information\r\n\r\nFALSE if the statement contradicts the information\r\n\r\nNOT GIVEN if there is no information on this",
+            "question": "The Tasmanian authorities introduced legislation to protect thylacines in 1935.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The second sentence of Paragraph A states: '…the last captive Tasmanian tiger died in Hobart Zoo on the 7th of September, 1936, less than two months after the Tasmanian government had passed a law to protect the animal.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph A which states the last captive Tasmanian tiger died in September 1936, less than two months after the Tasmanian government had passed a law to protect the animal, meaning the law was passed in 1936, not 1935."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The Tasmanian tiger is genetically related to the dog family.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph B states that: 'While the thylacine's body resembles that of members of the dog family, with sharp teeth and powerful jaws, it is, in fact, a true pouched marsupial related to the Tasmanian devil.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph B which explains that while the thylacine's body resembles that of the dog family, it is actually a true pouched marsupial related to the Tasmanian devil, not genetically related to dogs."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Hunting is regarded as the main cause of the extinction of the thylacine in Tasmania.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C states that: 'Popular belief holds that the thylacine's extinction in Tasmania was largely due to the efforts of farmers and bounty hunters killing the animals.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which indicates that popular belief holds that hunting by farmers and bounty hunters was largely responsible for the thylacine's extinction in Tasmania."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Photographs published by the New Scientist were suspected to be fake.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph D states that: 'Subsequent examination raised questions about the photographs' authenticity.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph D which mentions that subsequent examination raised questions about the authenticity of the New Scientist photographs."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "The eyes of foxes shine green at night time.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. While Paragraph E mentions that dogs' and dingoes' eyes shine green in torchlight, there is no information given about what colour foxes' eyes shine, making this NOT GIVEN."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! While Paragraph E states that 'the colour of dogs' and dingoes' eyes shining in torchlight is green', the colour of foxes' eyes is not mentioned."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Bill Laurance puts the chance of finding evidence of living thylacines at less than 3%.",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G states that Laurance '…believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which states that Bill Laurance believes there is a remote possibility of between 1 and 2 percent, which is indeed less than 3%."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "open_question",
+            "instructions": "Complete the sentences below.\r\n\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\n\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
+            "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>\r\n<p>[field 1]</p>\r\n<p>[field 2]</p>\r\n<p>[field 3]</p>\r\n<p>[field 4]</p>\r\n<p>[field 5]</p>\r\n",
+            "points": 5,
+            "no_answer_feedback": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "summary_completion_r",
+            "field_count": 5,
+            "field_answers": {
+                "1": "MARSUPIAL PREDATOR",
+                "2": "HIND LEGS",
+                "3": "EUROPEAN SETTLERS|SETTLERS",
+                "4": "PARTLY HIDDEN|HIDDEN",
+                "5": "TRAIL CAMERAS|CAMERAS"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! All answers can be found directly in the reading passage.",
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 },
                 "2": {
                     "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 },
                 "3": {
                     "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 },
                 "4": {
                     "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 },
                 "5": {
                     "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
-                },
-                "6": {
-                    "correct": "Correct! All answers can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer for all fields."
+                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete each sentence.",
+                    "no_answer": "Please provide an answer for all fields. The correct answers are: Field 1: MARSUPIAL PREDATOR, Field 2: HIND LEGS, Field 3: EUROPEAN SETTLERS or SETTLERS, Field 4: PARTLY HIDDEN or HIDDEN, Field 5: TRAIL CAMERAS or CAMERAS."
                 }
             }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Reading Passage 3 has seven paragraphs, A-G.\r\n\r\nWhich paragraph contains the following information?\r\n\r\nWrite the correct letter, A-G, in boxes 38-40 on your answer sheet.",
+            "question": "The likelihood of discovering thylacines on the Cape York Peninsula",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is G. Paragraph G states that: '…the chance of rediscovering the Tasmanian tiger alive in north Queensland is very slim, given that it is unlikely that the species could survive in such low numbers, he believes that there exists a remote possibility of between one and two percent that the creature could persist in Cape York.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph G which discusses the likelihood of finding thylacines."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph G discusses the probability or likelihood of rediscovering the Tasmanian tiger alive on the Cape York Peninsula in Queensland."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Reasons behind the Tasmanian tiger's extinction",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is C. A number of causes are mentioned in Paragraph C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph C discusses multiple causes of the thylacine's extinction including competition with introduced dogs, loss of prey, disease, and hunting."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph C which discusses the reasons behind the Tasmanian tiger's extinction."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "Animals erroneously identified as being Tasmanian tigers",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is E. Paragraph E states: '…the vast majority of thylacine sightings are dismissed as cases of mistaken identity, where eyewitnesses are said to have seen foxes, dingoes or feral dogs,'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_headings",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Paragraph E discusses cases of mistaken identity where people have confused foxes, dingoes, or feral dogs for Tasmanian tigers."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Paragraph E which discusses animals that are mistakenly identified as Tasmanian tigers."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         }
     ],
     "reading_texts": [
         {
             "text_id": 0,
             "title": "Reading Text 1",
-            "content": "<h4><strong>Thorn Brook Rain Forest Express</strong></h4>\n\n<p>Jump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the Whean Ranges, where you can see glow worms and rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over Corille Harbour.</p>\n\n<p>Prices<br>\nAdults: \u00a310.00<br>\nChildren (6\u201315 years): \u00a35.00<br>\nInfants (0\u20135 years): Free<br>\nSenior citizens: \u00a35.00<br>\nGroup bookings (whole train): Contact for pricing</p>\n\n<p>Prices include one return ride. Prices and timetable may change without notice.</p>\n\n<p>Group booking conditions<br>\nMinimum group size is seven people. A deposit is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than eight days before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.</p>\n\n<p>General information<br>\nPayment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.</p>\n\n<p>Important note<br>\nThe train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.</p>\n\n<h4><strong>Questions 1\u20137</strong></h4>\n\n<p>[This is a summary completion question.<br>\nThere are 7 questions.<br>\nUse NO MORE THAN TWO WORDS from the passage.]</p>\n\n<p>Travels to the (1) ________ to see wildlife and forest before stopping close to (2) ________.<br>\nThe journey has views across (3) ________.<br>\nCosts \u00a35.00 for children and senior citizens, and (4) ________ for passengers up to 5 years old.<br>\nA (5) ________ is required for group bookings and is refunded only if cancelled more than (6) ________ before departure.<br>\nPeople with certain phobias are advised that the train passes through (7) ________.</p>\n\n<h4><strong>Answer: Whean Ranges</strong></h4>\n\n<h4><strong>Answer: Huia Dam</strong></h4>\n\n<h4><strong>Answer: Corille Harbour</strong></h4>\n\n<h4><strong>Answer: free</strong></h4>\n\n<h4><strong>Answer: deposit</strong></h4>\n\n<h4><strong>Answer: 8 days</strong></h4>\n\n<h4><strong>Answer: tunnels</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
+            "content": "<h4><strong>SECTION 1</strong></h4>",
             "tags": []
         },
         {
             "text_id": 1,
             "title": "Reading Text 2",
-            "content": "<h4><strong>The Appliance Store Sale</strong></h4>\n\n<p>From March 1st to March 8th, The Appliance Store will hold its third annual clearance sale. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The first 100 customers receive an additional 20% discount.</p>\n\n<p>Computers<br>\nDesktop computers are reduced by up to 50%. Laptops are available for under \u00a3200, including accessories. Computer accessories are also discounted. All computers include a 12-month guarantee, extended to 24 months for models over \u00a31000.</p>\n\n<p>Kitchen appliances<br>\nFridges, freezers, microwaves and toasters are discounted. Combination packages provide greater savings.</p>\n\n<p>Televisions<br>\nLCD and plasma televisions are reduced by up to 30%. Stock is limited.</p>\n\n<h4><strong>Questions 8\u201314</strong></h4>\n\n<h4><strong>[TRUE / FALSE / NOT GIVEN]</strong></h4>\n\n<h4><strong>This is the first sale the Appliance Store has held.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Extra discounts are available to a limited number of customers.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>All computers are discounted by exactly 50%.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Computer accessories receive larger discounts than laptops.\nAnswer: NOT GIVEN</strong></h4>\n\n<h4><strong>Every computer has a one-year guarantee.\nAnswer: FALSE</strong></h4>\n\n<h4><strong>Buying multiple kitchen items results in bigger discounts.\nAnswer: TRUE</strong></h4>\n\n<h4><strong>Plasma televisions are discounted more than LCD televisions.\nAnswer: NOT GIVEN</strong></h4>",
+            "content": "<p>Thorn Brook Rain Forest Express<br>\nJump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the Whean Ranges, where you can see glow worms and rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over Corille Harbour.<br>\nPrices<br>\nAdults: £10.00<br>\nChildren (6–15 years): £5.00<br>\nInfants (0–5 years): Free<br>\nSenior citizens: £5.00<br>\nGroup bookings (whole train): Contact for pricing<br>\nPrices include one return ride. Prices and timetable may change without notice.<br>\nGroup booking conditions<br>\nMinimum group size is seven people. A deposit is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than eight days before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.<br>\nGeneral information<br>\nPayment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.<br>\nImportant note<br>\nThe train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.</p>",
             "tags": []
         },
         {
             "text_id": 2,
             "title": "Reading Text 3",
-            "content": "<h4><strong>SECTION 2</strong></h4>\n<h4><strong>Reading Passage 3</strong></h4>\n\n<h4><strong>Rainbow Recruitment</strong></h4>\n\n<p>Rainbow Recruitment provides temporary employment opportunities across various industries.</p>\n\n<h4><strong>Current positions</strong></h4>\n\n<p><strong>Fruit pickers / packers</strong> \u2013 Weekly contracts; earnings depend on speed; transport required</p>\n\n<p><strong>Labourer</strong> \u2013 Six-week contract; forklift licence essential</p>\n\n<p><strong>Relief teacher</strong> \u2013 Temporary cover for sick leave</p>\n\n<p><strong>Web designer</strong> \u2013 One-month contract; occasional office attendance</p>\n\n<p><strong>Accountant</strong> \u2013 Three-month contract; work across two branches</p>\n\n<p><strong>Care giver</strong> \u2013 Live-in role caring for an elderly woman</p>\n\n<h4><strong>Questions 15\u201320</strong></h4>\n\n<p>[This is a matching question.<br>\nThere are 6 questions.]</p>\n\n<p>A. Fruit pickers / packers<br>\nB. Labourer<br>\nC. Relief teacher<br>\nD. Web designer<br>\nE. Accountant<br>\nF. Care giver</p>\n\n<p>Only limited travel required<br>\n<strong>Answer: D</strong></p>\n\n<p>Will not work in the same place each day<br>\n<strong>Answer: E</strong></p>\n\n<p>Must be able to operate specialised machinery<br>\n<strong>Answer: B</strong></p>\n\n<p>Requires living at the workplace<br>\n<strong>Answer: F</strong></p>\n\n<p>Temporarily replaces existing staff<br>\n<strong>Answer: C</strong></p>\n\n<p>Earnings depend on how fast the person works<br>\n<strong>Answer: A</strong></p>",
+            "content": "<h4><strong>SECTION 1 (continued)</strong></h4>",
             "tags": []
         },
         {
             "text_id": 3,
             "title": "Reading Text 4",
-            "content": "<h4><strong>SECTION 3</strong></h4>\n<h4><strong>Reading Passage 4</strong></h4>\n\n<h4><strong>Holiday and Leave Entitlements</strong></h4>\n\n<p>Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff). Holiday requests require six weeks' written notice. Holidays may be accumulated up to a maximum of eight weeks.</p>\n\n<p>Compassionate leave is available for emergencies involving dependants. Abuse of leave may result in an investigation.</p>\n\n<p>Maternity leave lasts 52 weeks, with pay for the first 38 weeks. Paternity leave must be taken within 56 days of the birth.</p>\n\n<h4><strong>Questions 21\u201326</strong></h4>\n\n<p>[Short answer questions.<br>\nUse NO MORE THAN THREE WORDS AND/OR A NUMBER.]</p>\n\n<p>How many days' holiday does a full-time employee receive?<br>\n<strong>Answer: 28 days</strong></p>\n\n<p>How much notice is required to request holiday leave?<br>\n<strong>Answer: 6 weeks</strong></p>\n\n<p>What is the maximum holiday entitlement that can be carried over?<br>\n<strong>Answer: 8 weeks</strong></p>\n\n<p>What may be started if compassionate leave is abused?<br>\n<strong>Answer: an investigation</strong></p>\n\n<p>For how many weeks is maternity pay provided?<br>\n<strong>Answer: 38 weeks</strong></p>\n\n<p>What must be completed within 56 days after the baby is born?<br>\n<strong>Answer: paternity leave</strong></p>",
+            "content": "<p>The Appliance Store Sale<br>\nFrom March 1st to March 8th, The Appliance Store will hold its third annual clearance sale. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The first 100 customers receive an additional 20% discount.<br>\nComputers<br>\nDesktop computers are reduced by up to 50%. Laptops are available for under £200, including accessories. Computer accessories are also discounted. All computers include a 12-month guarantee, extended to 24 months for models over £1000.<br>\nKitchen appliances<br>\nFridges, freezers, microwaves and toasters are discounted. Combination packages provide greater savings.<br>\nTelevisions<br>\nLCD and plasma televisions are reduced by up to 30%. Stock is limited.</p>",
             "tags": []
         }
     ],
