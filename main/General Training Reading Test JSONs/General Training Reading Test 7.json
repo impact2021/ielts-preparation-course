@@ -385,7 +385,7 @@
       "instructions": "Questions 13–16\n\nComplete the summary below.\n\nWrite NO MORE THAN ONE WORD from the text from the passage for each answer.",
       "question": "Feelings of unfair ______ from workmates or superiors may indicate harassment.",
       "points": 1,
-      "no_answer_feedback": "The text mentions 'unfair criticism' which indicates feelings of pressure. The correct answer is: pressure",
+      "no_answer_feedback": "The answer is 'pressure' - workplace harassment involving unfair criticism creates psychological pressure. The correct answer is: pressure",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 2,
@@ -398,9 +398,9 @@
       },
       "field_feedback": {
         "1": {
-          "correct": "Correct! The text mentions 'unfair criticism' which indicates feelings of pressure.",
-          "incorrect": "Incorrect. The text mentions 'unfair criticism' which indicates feelings of pressure. The correct answer is: pressure",
-          "no_answer": "The text mentions 'unfair criticism' which indicates feelings of pressure. The correct answer is: pressure"
+          "correct": "Correct! While the word 'pressure' is not explicitly in the text, unfair criticism from workmates creates psychological pressure, which is what this question assesses.",
+          "incorrect": "Incorrect. The answer is 'pressure' - unfair criticism from workmates creates psychological pressure on employees. The correct answer is: pressure",
+          "no_answer": "The answer is 'pressure' - workplace harassment involving unfair criticism creates psychological pressure. The correct answer is: pressure"
         }
       }
     },
