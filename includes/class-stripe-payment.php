@@ -44,7 +44,7 @@ class IELTS_CM_Stripe_Payment {
         $table_name = $wpdb->prefix . 'ielts_cm_payments';
         
         // Check if table exists
-        $table_exists = $wpdb->get_var("SHOW TABLES LIKE '$table_name'") === $table_name;
+        $table_exists = $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $table_name)) === $table_name;
         
         if (!$table_exists) {
             error_log('IELTS Payment: Payments table does not exist, creating it now');
