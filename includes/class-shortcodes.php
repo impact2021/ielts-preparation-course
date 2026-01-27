@@ -2190,41 +2190,51 @@ class IELTS_CM_Shortcodes {
         (function() {
             // Add loading animation to Create Account button for non-payment submissions
             document.addEventListener('DOMContentLoaded', function() {
-                // Payment method switcher
-                var paymentMethodBtns = document.querySelectorAll('.payment-method-btn');
-                paymentMethodBtns.forEach(function(btn) {
-                    btn.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        var method = this.getAttribute('data-method');
-                        
-                        // Update button states
-                        paymentMethodBtns.forEach(function(b) {
-                            b.classList.remove('active');
+                // Payment method switcher - only if payment section exists
+                var paymentSection = document.getElementById('ielts-payment-section');
+                if (paymentSection) {
+                    var paymentMethodBtns = document.querySelectorAll('.payment-method-btn');
+                    var stripeContainer = document.getElementById('stripe-payment-container');
+                    var paypalContainer = document.getElementById('paypal-payment-container');
+                    
+                    if (paymentMethodBtns.length > 0 && stripeContainer && paypalContainer) {
+                        paymentMethodBtns.forEach(function(btn) {
+                            btn.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                var method = this.getAttribute('data-method');
+                                
+                                // Update button states and ARIA attributes
+                                paymentMethodBtns.forEach(function(b) {
+                                    b.classList.remove('active');
+                                    b.setAttribute('aria-pressed', 'false');
+                                });
+                                this.classList.add('active');
+                                this.setAttribute('aria-pressed', 'true');
+                                
+                                // Show/hide payment containers
+                                stripeContainer.classList.remove('active');
+                                paypalContainer.classList.remove('active');
+                                
+                                if (method === 'stripe') {
+                                    stripeContainer.classList.add('active');
+                                    paypalContainer.setAttribute('aria-hidden', 'true');
+                                    stripeContainer.setAttribute('aria-hidden', 'false');
+                                } else if (method === 'paypal') {
+                                    paypalContainer.classList.add('active');
+                                    stripeContainer.setAttribute('aria-hidden', 'true');
+                                    paypalContainer.setAttribute('aria-hidden', 'false');
+                                    
+                                    // Note: PayPal integration would be initialized here
+                                    // For now, show a placeholder message
+                                    var paypalButtonContainer = document.getElementById('paypal-button-container');
+                                    if (paypalButtonContainer && !paypalButtonContainer.hasChildNodes()) {
+                                        paypalButtonContainer.innerHTML = '<div style="padding: 20px; background: #fff; border: 2px dashed #ddd; border-radius: 4px; text-align: center;"><p style="margin: 0; color: #666;">PayPal integration coming soon.</p><p style="margin: 10px 0 0 0; font-size: 12px; color: #999;">Please use Credit/Debit Card payment or contact support.</p></div>';
+                                    }
+                                }
+                            });
                         });
-                        this.classList.add('active');
-                        
-                        // Show/hide payment containers
-                        document.getElementById('stripe-payment-container').classList.remove('active');
-                        document.getElementById('paypal-payment-container').classList.remove('active');
-                        
-                        if (method === 'stripe') {
-                            document.getElementById('stripe-payment-container').classList.add('active');
-                            document.getElementById('stripe-payment-container').style.display = 'block';
-                            document.getElementById('paypal-payment-container').style.display = 'none';
-                        } else if (method === 'paypal') {
-                            document.getElementById('paypal-payment-container').classList.add('active');
-                            document.getElementById('paypal-payment-container').style.display = 'block';
-                            document.getElementById('stripe-payment-container').style.display = 'none';
-                            
-                            // Note: PayPal integration would be initialized here
-                            // For now, show a placeholder message
-                            var paypalContainer = document.getElementById('paypal-button-container');
-                            if (paypalContainer && !paypalContainer.hasChildNodes()) {
-                                paypalContainer.innerHTML = '<div style="padding: 20px; background: #fff; border: 2px dashed #ddd; border-radius: 4px; text-align: center;"><p style="margin: 0; color: #666;">PayPal integration coming soon.</p><p style="margin: 10px 0 0 0; font-size: 12px; color: #999;">Please use Credit/Debit Card payment or contact support.</p></div>';
-                            }
-                        }
-                    });
-                });
+                    }
+                }
                 
                 var form = document.querySelector('form[name="ielts_registration_form"]');
                 if (form) {
