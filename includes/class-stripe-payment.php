@@ -218,8 +218,14 @@ class IELTS_CM_Stripe_Payment {
             $counter++;
         }
         
+        // Suppress automatic new user notification - we'll send it after payment succeeds
+        add_filter('wp_send_new_user_notifications', '__return_false');
+        
         // Create user account
         $user_id = wp_create_user($username, $password, $email);
+        
+        // Re-enable new user notifications
+        remove_filter('wp_send_new_user_notifications', '__return_false');
         
         if (is_wp_error($user_id)) {
             wp_send_json_error($user_id->get_error_message());
@@ -527,11 +533,25 @@ class IELTS_CM_Stripe_Payment {
             delete_user_meta($payment->user_id, '_ielts_cm_pending_membership_type');
             delete_user_meta($payment->user_id, '_ielts_cm_registration_pending');
             
-            // Send welcome email (non-critical, don't fail if this errors)
+            // Send welcome email after successful payment
+            // Note: We suppressed the automatic email during user creation
+            // so we send it now after payment is confirmed
             try {
-                wp_new_user_notification($payment->user_id, null, 'user');
+                // Send notification to both admin and user
+                wp_new_user_notification($payment->user_id, null, 'both');
+                error_log("IELTS Payment: Welcome email sent successfully for user {$payment->user_id}");
             } catch (Throwable $e) {
                 error_log('IELTS Payment: Failed to send welcome email - ' . $e->getMessage());
+                // Log the error but don't fail the payment since membership is already activated
+                $this->safe_log_payment_error(
+                    'email_error',
+                    'Failed to send welcome email',
+                    array('error' => $e->getMessage()),
+                    $payment->user_id,
+                    $user_email,
+                    $payment->membership_type,
+                    $payment->amount
+                );
             }
             
         } catch (Throwable $e) {
@@ -644,8 +664,15 @@ class IELTS_CM_Stripe_Payment {
             $counter++;
         }
         
+        // Suppress automatic new user notification in webhook
+        // We'll send the welcome email after membership is activated
+        add_filter('wp_send_new_user_notifications', '__return_false');
+        
         // Create user account
         $user_id = wp_create_user($username, wp_generate_password(), $email);
+        
+        // Re-enable new user notifications
+        remove_filter('wp_send_new_user_notifications', '__return_false');
         
         if (is_wp_error($user_id)) {
             error_log('Failed to create user: ' . $user_id->get_error_message());
@@ -686,9 +713,11 @@ class IELTS_CM_Stripe_Payment {
             update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
             update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
             
-            // Send welcome email (non-critical, don't fail if this errors)
+            // Send welcome email after membership activation
+            // Note: We suppressed the automatic email during user creation
             try {
-                wp_new_user_notification($user_id, null, 'user');
+                wp_new_user_notification($user_id, null, 'both');
+                error_log("IELTS Payment Webhook: Welcome email sent successfully for user $user_id");
             } catch (Throwable $e) {
                 error_log('IELTS Payment Webhook: Failed to send welcome email - ' . $e->getMessage());
             }
