@@ -1998,9 +1998,16 @@ class IELTS_CM_Shortcodes {
         #ielts-payment-section {
             width: 100%;
         }
+        /* Force 100% width on Stripe elements (overrides Stripe's injected styles) */
         #payment-element {
-            width: 100%;
+            width: 100% !important;
             box-sizing: border-box;
+        }
+        #payment-element iframe {
+            width: 100% !important;
+        }
+        #payment-element > div {
+            width: 100% !important;
         }
         #payment-message {
             margin-top: 10px;

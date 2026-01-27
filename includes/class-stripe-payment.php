@@ -165,7 +165,7 @@ class IELTS_CM_Stripe_Payment {
         global $wpdb;
         $table_name = $wpdb->prefix . 'ielts_cm_payments';
         
-        $wpdb->insert($table_name, array(
+        $insert_result = $wpdb->insert($table_name, array(
             'user_id' => $user_id,
             'membership_type' => $membership_type,
             'amount' => $amount,
@@ -173,7 +173,18 @@ class IELTS_CM_Stripe_Payment {
             'created_at' => current_time('mysql')
         ));
         
+        if ($insert_result === false) {
+            // Log detailed error internally but return generic message
+            error_log('IELTS Payment: Database error creating payment record - ' . $wpdb->last_error);
+            wp_send_json_error('Unable to process payment. Please try again or contact support.', 500);
+        }
+        
         $payment_id = $wpdb->insert_id;
+        
+        if (!$payment_id) {
+            error_log('IELTS Payment: Failed to get payment ID after insert');
+            wp_send_json_error('Unable to process payment. Please try again or contact support.', 500);
+        }
         
         try {
             // Create Payment Intent
