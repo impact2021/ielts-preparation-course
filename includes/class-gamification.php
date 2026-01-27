@@ -217,6 +217,9 @@ class IELTS_CM_Gamification {
     
     /**
      * Calculate streak days
+     * 
+     * Note: Streaks are calculated based on days with quiz/exercise activity.
+     * Login-only days without completing exercises are not counted toward the streak.
      */
     private function get_streak_days($user_id) {
         global $wpdb;
@@ -243,19 +246,21 @@ class IELTS_CM_Gamification {
         $yesterday = date('Y-m-d', strtotime('-1 day'));
         
         // Check if there's activity today or yesterday to start counting
+        // Streak is maintained if user was active yesterday (even if not active today yet)
         if ($activity_dates[0] !== $today && $activity_dates[0] !== $yesterday) {
             return 0;
         }
         
-        $expected_date = $today;
+        // Start from the most recent activity date
+        $expected_date = $activity_dates[0];
+        
         foreach ($activity_dates as $date) {
             if ($date === $expected_date) {
                 $streak++;
+                // Move to the previous day
                 $expected_date = date('Y-m-d', strtotime($expected_date . ' -1 day'));
-            } else if ($date === date('Y-m-d', strtotime($expected_date . ' -1 day'))) {
-                // Allow for same day if we started from yesterday
-                $expected_date = $date;
             } else {
+                // Gap detected - streak is broken
                 break;
             }
         }
