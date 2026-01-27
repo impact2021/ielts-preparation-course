@@ -36,6 +36,44 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Ensure payment table exists in database
+     * This handles cases where the plugin was updated but not reactivated
+     */
+    private function ensure_payment_table_exists() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payments';
+        
+        // Check if table exists
+        $table_exists = $wpdb->get_var("SHOW TABLES LIKE '$table_name'") === $table_name;
+        
+        if (!$table_exists) {
+            error_log('IELTS Payment: Payments table does not exist, creating it now');
+            
+            // Create the table using the same SQL from class-database.php
+            $charset_collate = $wpdb->get_charset_collate();
+            $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+                id bigint(20) NOT NULL AUTO_INCREMENT,
+                user_id bigint(20) NOT NULL,
+                membership_type varchar(50) NOT NULL,
+                amount decimal(10,2) NOT NULL,
+                transaction_id varchar(255) DEFAULT NULL,
+                payment_status varchar(20) DEFAULT 'pending',
+                created_at datetime DEFAULT CURRENT_TIMESTAMP,
+                updated_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                PRIMARY KEY  (id),
+                KEY user_id (user_id),
+                KEY payment_status (payment_status),
+                KEY transaction_id (transaction_id)
+            ) $charset_collate;";
+            
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            dbDelta($sql);
+            
+            error_log('IELTS Payment: Payments table created successfully');
+        }
+    }
+    
+    /**
      * Register user account (called before payment)
      */
     public function register_user() {
@@ -160,6 +198,9 @@ class IELTS_CM_Stripe_Payment {
         
         $this->load_stripe();
         \Stripe\Stripe::setApiKey($stripe_secret);
+        
+        // Ensure payment table exists
+        $this->ensure_payment_table_exists();
         
         // Create payment record in database
         global $wpdb;
