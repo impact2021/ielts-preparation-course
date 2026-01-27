@@ -74,6 +74,21 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Verify IELTS_CM_Membership class is loaded
+     * Returns true if available, sends error and returns false otherwise
+     * 
+     * @param string $context Context for error logging (e.g., 'confirm_payment', 'webhook')
+     * @return bool True if class exists, false otherwise
+     */
+    private function verify_membership_class($context = 'payment') {
+        if (!class_exists('IELTS_CM_Membership')) {
+            error_log("IELTS Payment: CRITICAL - IELTS_CM_Membership class not found in $context");
+            return false;
+        }
+        return true;
+    }
+    
+    /**
      * Register user account (called before payment)
      */
     public function register_user() {
@@ -292,9 +307,8 @@ class IELTS_CM_Stripe_Payment {
         // Assign paid membership to user
         update_user_meta($payment->user_id, '_ielts_cm_membership_type', $payment->membership_type);
         
-        // Verify IELTS_CM_Membership class is available before using it
-        if (!class_exists('IELTS_CM_Membership')) {
-            error_log('IELTS Payment: CRITICAL - IELTS_CM_Membership class not found');
+        // Verify IELTS_CM_Membership class is available
+        if (!$this->verify_membership_class('confirm_payment')) {
             wp_send_json_error('System error: Membership handler not loaded. Please contact administrator.', 500);
             return;
         }
@@ -429,9 +443,8 @@ class IELTS_CM_Stripe_Payment {
         // Assign paid membership
         update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
         
-        // Verify IELTS_CM_Membership class is available before using it
-        if (!class_exists('IELTS_CM_Membership')) {
-            error_log('IELTS Webhook: CRITICAL - IELTS_CM_Membership class not found');
+        // Verify IELTS_CM_Membership class is available
+        if (!$this->verify_membership_class('webhook')) {
             return array('success' => false, 'error' => 'Membership handler not loaded');
         }
         

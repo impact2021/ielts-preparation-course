@@ -24,6 +24,27 @@
         return ieltsPayment.pricing[membershipType] || 0;
     }
     
+    // Helper function to handle AJAX errors consistently
+    function handleAjaxError(jqXHR, textStatus, errorThrown, context) {
+        console.error('IELTS Payment Error - ' + context + ':', {
+            status: jqXHR.status,
+            statusText: jqXHR.statusText,
+            textStatus: textStatus,
+            errorThrown: errorThrown,
+            responseText: jqXHR.responseText
+        });
+        
+        let errorMessage = 'Network error during ' + context + '.';
+        if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
+            errorMessage = jqXHR.responseJSON.data;
+        } else if (jqXHR.responseText) {
+            errorMessage = 'Server error: ' + jqXHR.statusText;
+        }
+        
+        showError(errorMessage + ' Please check console for details.');
+        setLoading(false);
+    }
+    
     // Initialize Stripe
     if (typeof Stripe !== 'undefined' && ieltsPayment && ieltsPayment.publishableKey) {
         stripe = Stripe(ieltsPayment.publishableKey);
@@ -172,21 +193,7 @@
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    console.error('IELTS Payment Error - register_user:', {
-                        status: jqXHR.status,
-                        statusText: jqXHR.statusText,
-                        textStatus: textStatus,
-                        errorThrown: errorThrown,
-                        responseText: jqXHR.responseText
-                    });
-                    let errorMessage = 'Network error creating account.';
-                    if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
-                        errorMessage = jqXHR.responseJSON.data;
-                    } else if (jqXHR.responseText) {
-                        errorMessage = 'Server error: ' + jqXHR.statusText;
-                    }
-                    showError(errorMessage + ' Please check console for details.');
-                    setLoading(false);
+                    handleAjaxError(jqXHR, textStatus, errorThrown, 'register_user');
                 }
             });
         }
@@ -229,21 +236,7 @@
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                console.error('IELTS Payment Error - create_payment_intent:', {
-                    status: jqXHR.status,
-                    statusText: jqXHR.statusText,
-                    textStatus: textStatus,
-                    errorThrown: errorThrown,
-                    responseText: jqXHR.responseText
-                });
-                let errorMessage = 'Network error creating payment intent.';
-                if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
-                    errorMessage = jqXHR.responseJSON.data;
-                } else if (jqXHR.responseText) {
-                    errorMessage = 'Server error: ' + jqXHR.statusText;
-                }
-                showError(errorMessage + ' Please check console for details.');
-                setLoading(false);
+                handleAjaxError(jqXHR, textStatus, errorThrown, 'create_payment_intent');
             }
         });
     }
@@ -270,21 +263,7 @@
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                console.error('IELTS Payment Error - confirm_payment:', {
-                    status: jqXHR.status,
-                    statusText: jqXHR.statusText,
-                    textStatus: textStatus,
-                    errorThrown: errorThrown,
-                    responseText: jqXHR.responseText
-                });
-                let errorMessage = 'Network error confirming payment.';
-                if (jqXHR.responseJSON && jqXHR.responseJSON.data) {
-                    errorMessage = jqXHR.responseJSON.data;
-                } else if (jqXHR.responseText) {
-                    errorMessage = 'Server error: ' + jqXHR.statusText;
-                }
-                showError(errorMessage + ' Please check console for details.');
-                setLoading(false);
+                handleAjaxError(jqXHR, textStatus, errorThrown, 'confirm_payment');
             }
         });
     }
