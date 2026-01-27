@@ -1,940 +1,1848 @@
 {
-    "title": "General Training Reading Test 8",
+    "title": "General Training IELTS Reading Test 08",
     "content": "",
     "questions": [
         {
-            "type": "open_question",
-            "instructions": "Questions 1–6",
-            "question": "List of Headings",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "I. Take precautions",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "II. Certain restrictions at the event",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "III. Music lessons",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "IV. Exhibitors plying their trade",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "V. Restaurant facilities",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "Questions 7–29",
-            "question": "All classes are available at least twice a week.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "‘Awesome Abs’ is the shortest class.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "One of the classes is only available at the weekend.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "You need to book a place to join the X-Ride class.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which class recommends some experience?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which class has the fewest possible students?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which class reduces stress by using fighting positions?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which class teaches skills you can practise outside the gym?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 1,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Where will conference attendees stay overnight?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Who must attend training on the new computer programme?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "What will participants completing Health and Safety Level 1 receive?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "How many sessions are required for the fork lift licence?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Which training event allows partners to attend?",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 2,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Induction programmes should consider orientation and _____ of new employees.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Inductions must balance information with the process of _____ into the workplace.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Inductions can also be useful for _____ who are not directly employed.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Research conducted in _____ found a link between morale and induction.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "Induction should not be handled by _____ alone.",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "A. HR department",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "B. Manager / supervisor",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "C. Safety Officer",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "D. Colleague",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
-            "question": "E. Senior manager",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 3,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
             "type": "closed_question",
-            "instructions": "Choose the most suitable headings for paragraphs B-G from the list below. Use each heading once only.",
+            "instructions": "Section 1\r\n\r\nThe reading passage has seven paragraphs A – G.\r\n\r\nChoose the correct heading for paragraphs B-G from the list of headings below.\r\n\r\nType the correct number I-XI in boxes 1-6:",
             "question": "Paragraph B",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is vii. Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability.",
+            "no_answer_feedback": "The correct answer is VIII: National and international talent.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "i. Government profiteering at the expense of citizens",
+                    "text": "I: Take precautions",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph B focuses on short-term economic gains versus long-term environmental concerns, not specifically government profiteering. Review the paragraph's main theme."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "ii. A balance provides the best options",
+                    "text": "II: Certain restrictions at the event",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the conflict between economic needs and environmental destruction, not finding a balance. That theme appears in a different paragraph."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "iii. Resistance to a change in attitudes",
+                    "text": "III: Music lessons",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph focuses on economic pressures driving deforestation, not resistance to changing attitudes. Review the main focus of the paragraph."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "iv. Landowners the driving force for positive political change",
+                    "text": "IV: Exhibitors plying their trade",
                     "is_correct": false,
-                    "feedback": "Incorrect. The paragraph doesn't discuss landowners driving positive change. Review what Paragraph B actually discusses about economic pressures."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "v. Renewable forests unable to get public support",
+                    "text": "V: Restaurant facilities",
                     "is_correct": false,
-                    "feedback": "Incorrect. This topic is not the focus of Paragraph B. The paragraph discusses economic pressures leading to deforestation."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "vi. The risks of an unequal share of land",
+                    "text": "VI: Weather forecast",
                     "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph B focuses on economic versus environmental concerns."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "text": "VII: Reduced parking conditions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
+                },
+                {
+                    "text": "VIII: National and international talent",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph B discusses how immediate financial benefits from timber are prioritized over long-term environmental sustainability."
+                    "feedback": "Correct! Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "viii. Options for alternative income generation",
+                    "text": "IX: Tastes to savour",
                     "is_correct": false,
-                    "feedback": "Incorrect. This topic is covered in a different paragraph. Paragraph B focuses on the economic pressures driving current deforestation."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 },
                 {
-                    "text": "ix. The impact personal decisions can have",
+                    "text": "X: Fun for all the family",
                     "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph B focuses on economic versus environmental priorities."
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
+                },
+                {
+                    "text": "XI: Access to the event",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph B matches heading VIII: National and international talent."
                 }
             ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "options": "I: Take precautions\nII: Certain restrictions at the event\nIII: Music lessons\nIV: Exhibitors plying their trade\nV: Restaurant facilities\nVI: Weather forecast\nVII: Reduced parking conditions\nVIII: National and international talent\nIX: Tastes to savour\nX: Fun for all the family\nXI: Access to the event",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 1-6: Choose the correct heading (I-XI) for paragraph C.",
             "question": "Paragraph C",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is viii. Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests.",
+            "no_answer_feedback": "The correct answer is IV: Exhibitors plying their trade.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "i. Government profiteering at the expense of citizens",
+                    "text": "I: Take precautions",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C discusses alternative ways to generate income from forests, not government profiteering. Review the paragraph's focus."
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
                 },
                 {
-                    "text": "ii. A balance provides the best options",
+                    "text": "II: Certain restrictions at the event",
                     "is_correct": false,
-                    "feedback": "Incorrect. While balance is mentioned elsewhere, Paragraph C specifically focuses on alternative income options like tourism."
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
                 },
                 {
-                    "text": "iii. Resistance to a change in attitudes",
+                    "text": "III: Music lessons",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph presents alternatives, not resistance to change. Review what Paragraph C discusses."
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
                 },
                 {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph C doesn't discuss landowners or political change. It focuses on ecotourism and alternative income."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This is not the topic of Paragraph C. The paragraph discusses tourism as an alternative income source."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph C focuses on ecotourism alternatives."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This theme is in a different paragraph. Paragraph C presents sustainable alternatives like tourism."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
+                    "text": "IV: Exhibitors plying their trade",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph C discusses how tourism and other sustainable practices can provide alternative sources of income from rainforests."
+                    "feedback": "Correct! Paragraph C matches heading IV: Exhibitors plying their trade."
                 },
                 {
-                    "text": "ix. The impact personal decisions can have",
+                    "text": "V: Restaurant facilities",
                     "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph C focuses on ecotourism as an alternative."
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
+                },
+                {
+                    "text": "VI: Weather forecast",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
+                },
+                {
+                    "text": "VII: Reduced parking conditions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
+                },
+                {
+                    "text": "VIII: National and international talent",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
+                },
+                {
+                    "text": "IX: Tastes to savour",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
+                },
+                {
+                    "text": "X: Fun for all the family",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
+                },
+                {
+                    "text": "XI: Access to the event",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph C matches heading IV: Exhibitors plying their trade."
                 }
             ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "options": "I: Take precautions\nII: Certain restrictions at the event\nIII: Music lessons\nIV: Exhibitors plying their trade\nV: Restaurant facilities\nVI: Weather forecast\nVII: Reduced parking conditions\nVIII: National and international talent\nIX: Tastes to savour\nX: Fun for all the family\nXI: Access to the event",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 1-6: Choose the correct heading (I-XI) for paragraph D.",
             "question": "Paragraph D",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is ii. Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting.",
+            "no_answer_feedback": "The correct answer is IX: Tastes to savour.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "i. Government profiteering at the expense of citizens",
+                    "text": "I: Take precautions",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D discusses the need for balance between conservation and development, not government profiteering."
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
                 },
                 {
-                    "text": "ii. A balance provides the best options",
+                    "text": "II: Certain restrictions at the event",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "III: Music lessons",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "IV: Exhibitors plying their trade",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "V: Restaurant facilities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "VI: Weather forecast",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "VII: Reduced parking conditions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "VIII: National and international talent",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
+                },
+                {
+                    "text": "IX: Tastes to savour",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph D emphasizes that finding a balance between conservation and economic development is most effective, discussing sensible wood harvesting."
+                    "feedback": "Correct! Paragraph D matches heading IX: Tastes to savour."
                 },
                 {
-                    "text": "iii. Resistance to a change in attitudes",
+                    "text": "X: Fun for all the family",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses balanced approaches and consequences, not resistance to change. Review Paragraph D's main theme."
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
                 },
                 {
-                    "text": "iv. Landowners the driving force for positive political change",
+                    "text": "XI: Access to the event",
                     "is_correct": false,
-                    "feedback": "Incorrect. Landowners are not the focus of this paragraph. It discusses balanced forest management and global impacts."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses balanced harvesting and environmental impacts, not public support issues."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph D focuses on balanced approaches."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph D actually discusses the OPPOSITE - countries realizing they need sustainable, long-term approaches."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While alternatives are mentioned elsewhere, Paragraph D focuses on balanced harvesting and environmental impacts."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Personal decisions are discussed in a different paragraph. Paragraph D discusses policy-level balance."
+                    "feedback": "Incorrect. Paragraph D matches heading IX: Tastes to savour."
                 }
             ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "options": "I: Take precautions\nII: Certain restrictions at the event\nIII: Music lessons\nIV: Exhibitors plying their trade\nV: Restaurant facilities\nVI: Weather forecast\nVII: Reduced parking conditions\nVIII: National and international talent\nIX: Tastes to savour\nX: Fun for all the family\nXI: Access to the event",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 1-6: Choose the correct heading (I-XI) for paragraph E.",
             "question": "Paragraph E",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is vi. Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil.",
+            "no_answer_feedback": "The correct answer is XI: Access to the event.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "i. Government profiteering at the expense of citizens",
+                    "text": "I: Take precautions",
                     "is_correct": false,
-                    "feedback": "Incorrect. While government is mentioned, the focus is on land inequality and its consequences, not specifically profiteering."
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
                 },
                 {
-                    "text": "ii. A balance provides the best options",
+                    "text": "II: Certain restrictions at the event",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the problem of unequal land distribution, not solutions involving balance."
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
                 },
                 {
-                    "text": "iii. Resistance to a change in attitudes",
+                    "text": "III: Music lessons",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses land inequality as a cause of deforestation, not resistance to change."
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
                 },
                 {
-                    "text": "iv. Landowners the driving force for positive political change",
+                    "text": "IV: Exhibitors plying their trade",
                     "is_correct": false,
-                    "feedback": "Incorrect. The paragraph shows landowners as part of the PROBLEM, not driving positive change. They influence regulations negatively."
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
                 },
                 {
-                    "text": "v. Renewable forests unable to get public support",
+                    "text": "V: Restaurant facilities",
                     "is_correct": false,
-                    "feedback": "Incorrect. Public support is not the focus. Paragraph E discusses how land inequality drives deforestation."
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
                 },
                 {
-                    "text": "vi. The risks of an unequal share of land",
+                    "text": "VI: Weather forecast",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
+                },
+                {
+                    "text": "VII: Reduced parking conditions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
+                },
+                {
+                    "text": "VIII: National and international talent",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
+                },
+                {
+                    "text": "IX: Tastes to savour",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
+                },
+                {
+                    "text": "X: Fun for all the family",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph E matches heading XI: Access to the event."
+                },
+                {
+                    "text": "XI: Access to the event",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph E focuses on the social and economic problems that result from unequal distribution of forest land in Brazil."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph specifically addresses land inequality, not the temporary versus long-term issue."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Alternatives are discussed elsewhere. Paragraph E focuses on land distribution problems."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses structural land ownership issues, not personal decisions."
+                    "feedback": "Correct! Paragraph E matches heading XI: Access to the event."
                 }
             ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "options": "I: Take precautions\nII: Certain restrictions at the event\nIII: Music lessons\nIV: Exhibitors plying their trade\nV: Restaurant facilities\nVI: Weather forecast\nVII: Reduced parking conditions\nVIII: National and international talent\nIX: Tastes to savour\nX: Fun for all the family\nXI: Access to the event",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 1-6: Choose the correct heading (I-XI) for paragraph F.",
             "question": "Paragraph F",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is ix. Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism.",
+            "no_answer_feedback": "The correct answer is I: Take precautions.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "i. Government profiteering at the expense of citizens",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Paragraph F discusses government protection policies and individual consumer choices, not profiteering."
-                },
-                {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While balance might be implied, the specific focus is on the power of individual consumer choices."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph encourages change through consumer choices, it doesn't discuss resistance to change."
-                },
-                {
-                    "text": "iv. Landowners the driving force for positive political change",
-                    "is_correct": false,
-                    "feedback": "Incorrect. It's the general population and consumers driving change, not landowners specifically."
-                },
-                {
-                    "text": "v. Renewable forests unable to get public support",
-                    "is_correct": false,
-                    "feedback": "Incorrect. The paragraph actually discusses how public demand IS creating change, showing support exists."
-                },
-                {
-                    "text": "vi. The risks of an unequal share of land",
-                    "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is discussed in a different paragraph. Paragraph F focuses on consumer power."
-                },
-                {
-                    "text": "vii. Temporary gain outweighing long term concerns",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses solutions through consumer behavior, not the problem of short-term thinking."
-                },
-                {
-                    "text": "viii. Options for alternative income generation",
-                    "is_correct": false,
-                    "feedback": "Incorrect. While alternatives are mentioned, the focus is on how personal choices drive demand for these alternatives."
-                },
-                {
-                    "text": "ix. The impact personal decisions can have",
+                    "text": "I: Take precautions",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph F emphasizes how individual consumer choices and decisions can make a significant impact on forests through green consumerism."
+                    "feedback": "Correct! Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "II: Certain restrictions at the event",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "III: Music lessons",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "IV: Exhibitors plying their trade",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "V: Restaurant facilities",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "VI: Weather forecast",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "VII: Reduced parking conditions",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "VIII: National and international talent",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "IX: Tastes to savour",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "X: Fun for all the family",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
+                },
+                {
+                    "text": "XI: Access to the event",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph F matches heading I: Take precautions."
                 }
             ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "options": "I: Take precautions\nII: Certain restrictions at the event\nIII: Music lessons\nIV: Exhibitors plying their trade\nV: Restaurant facilities\nVI: Weather forecast\nVII: Reduced parking conditions\nVIII: National and international talent\nIX: Tastes to savour\nX: Fun for all the family\nXI: Access to the event",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
         },
         {
             "type": "closed_question",
-            "instructions": "",
+            "instructions": "Questions 1-6: Choose the correct heading (I-XI) for paragraph G.",
             "question": "Paragraph G",
             "points": 1,
-            "no_answer_feedback": "You did not select an answer. The correct answer is iii. Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption.",
+            "no_answer_feedback": "The correct answer is II: Certain restrictions at the event.",
             "correct_feedback": "",
             "incorrect_feedback": "",
-            "reading_text_id": 4,
+            "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
-                    "text": "i. Government profiteering at the expense of citizens",
+                    "text": "I: Take precautions",
                     "is_correct": false,
-                    "feedback": "Incorrect. Paragraph G discusses the challenge of raising public awareness and changing habits, not government profiteering."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "ii. A balance provides the best options",
-                    "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses the difficulty of changing behaviors, not finding balance."
-                },
-                {
-                    "text": "iii. Resistance to a change in attitudes",
+                    "text": "II: Certain restrictions at the event",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph G focuses on the challenges and resistance encountered when trying to change public attitudes and habits regarding consumption."
+                    "feedback": "Correct! Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "iv. Landowners the driving force for positive political change",
+                    "text": "III: Music lessons",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses public behavior change challenges, not landowners."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "v. Renewable forests unable to get public support",
+                    "text": "IV: Exhibitors plying their trade",
                     "is_correct": false,
-                    "feedback": "Incorrect. The focus is on difficulty changing habits, not lack of support for renewables."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "vi. The risks of an unequal share of land",
+                    "text": "V: Restaurant facilities",
                     "is_correct": false,
-                    "feedback": "Incorrect. Land inequality is not discussed in this paragraph. It focuses on changing consumer behavior."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "vii. Temporary gain outweighing long term concerns",
+                    "text": "VI: Weather forecast",
                     "is_correct": false,
-                    "feedback": "Incorrect. This paragraph discusses resistance to behavioral change, not economic versus environmental priorities."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "viii. Options for alternative income generation",
+                    "text": "VII: Reduced parking conditions",
                     "is_correct": false,
-                    "feedback": "Incorrect. Income alternatives are not the focus. Paragraph G discusses the challenge of raising awareness and changing habits."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 },
                 {
-                    "text": "ix. The impact personal decisions can have",
+                    "text": "VIII: National and international talent",
                     "is_correct": false,
-                    "feedback": "Incorrect. While personal decisions are mentioned, the emphasis is on how DIFFICULT it is to change them, which is resistance to change."
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
+                },
+                {
+                    "text": "IX: Tastes to savour",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
+                },
+                {
+                    "text": "X: Fun for all the family",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
+                },
+                {
+                    "text": "XI: Access to the event",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Paragraph G matches heading II: Certain restrictions at the event."
                 }
             ],
-            "options": "i. Government profiteering at the expense of citizens\nii. A balance provides the best options\niii. Resistance to a change in attitudes\niv. Landowners the driving force for positive political change\nv. Renewable forests unable to get public support\nvi. The risks of an unequal share of land\nvii. Temporary gain outweighing long term concerns\nviii. Options for alternative income generation\nix. The impact personal decisions can have",
+            "options": "I: Take precautions\nII: Certain restrictions at the event\nIII: Music lessons\nIV: Exhibitors plying their trade\nV: Restaurant facilities\nVI: Weather forecast\nVII: Reduced parking conditions\nVIII: National and international talent\nIX: Tastes to savour\nX: Fun for all the family\nXI: Access to the event",
             "correct_answer_count": 1,
-            "show_option_letters": true
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7-10: Do the following statements agree with the information in the text? Write TRUE, FALSE or NOT GIVEN.",
+            "question": "All classes are available at least twice a week.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7-10: Do the following statements agree with the information in the text? Write TRUE, FALSE or NOT GIVEN.",
+            "question": "'Awesome Abs' is the shortest class.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7-10: Do the following statements agree with the information in the text? Write TRUE, FALSE or NOT GIVEN.",
+            "question": "One of the classes is only available at the weekend.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is TRUE.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is TRUE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 7-10: Do the following statements agree with the information in the text? Write TRUE, FALSE or NOT GIVEN.",
+            "question": "You need to book a place to join the X-Ride class.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is FALSE.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "true_false_not_given",
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct!"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is FALSE."
+                }
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 11-14: Which class (A-F) matches each description?",
+            "question": "Which class recommends some experience?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Spin &amp; Burn.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Awesome Abs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Spin &amp; Burn."
+                },
+                {
+                    "text": "B: Spin & Burn",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is B: Spin &amp; Burn."
+                },
+                {
+                    "text": "C: Weekend Warrior",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Spin &amp; Burn."
+                },
+                {
+                    "text": "D: X-Ride",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Spin &amp; Burn."
+                },
+                {
+                    "text": "E: Yoga Flow",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Spin &amp; Burn."
+                },
+                {
+                    "text": "F: Combat Fit",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Spin &amp; Burn."
+                }
+            ],
+            "options": "A: Awesome Abs\nB: Spin & Burn\nC: Weekend Warrior\nD: X-Ride\nE: Yoga Flow\nF: Combat Fit",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 11-14: Which class (A-F) matches each description?",
+            "question": "Which class has the fewest possible students?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: X-Ride.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Awesome Abs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: X-Ride."
+                },
+                {
+                    "text": "B: Spin & Burn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: X-Ride."
+                },
+                {
+                    "text": "C: Weekend Warrior",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: X-Ride."
+                },
+                {
+                    "text": "D: X-Ride",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is D: X-Ride."
+                },
+                {
+                    "text": "E: Yoga Flow",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: X-Ride."
+                },
+                {
+                    "text": "F: Combat Fit",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: X-Ride."
+                }
+            ],
+            "options": "A: Awesome Abs\nB: Spin & Burn\nC: Weekend Warrior\nD: X-Ride\nE: Yoga Flow\nF: Combat Fit",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 11-14: Which class (A-F) matches each description?",
+            "question": "Which class reduces stress by using fighting positions?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F: Combat Fit.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Awesome Abs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "B: Spin & Burn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "C: Weekend Warrior",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "D: X-Ride",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "E: Yoga Flow",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "F: Combat Fit",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is F: Combat Fit."
+                }
+            ],
+            "options": "A: Awesome Abs\nB: Spin & Burn\nC: Weekend Warrior\nD: X-Ride\nE: Yoga Flow\nF: Combat Fit",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 11-14: Which class (A-F) matches each description?",
+            "question": "Which class teaches skills you can practise outside the gym?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is F: Combat Fit.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 1,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: Awesome Abs",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "B: Spin & Burn",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "C: Weekend Warrior",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "D: X-Ride",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "E: Yoga Flow",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is F: Combat Fit."
+                },
+                {
+                    "text": "F: Combat Fit",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is F: Combat Fit."
+                }
+            ],
+            "options": "A: Awesome Abs\nB: Spin & Burn\nC: Weekend Warrior\nD: X-Ride\nE: Yoga Flow\nF: Combat Fit",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
             "type": "open_question",
-            "instructions": "Answer the following questions using NO MORE THAN TWO WORDS from the text.",
-            "question": "<p>What phenomenon is predicted to increase at a global level due to deforestation?</p>\r\n<p>36. Phenomenon:</p>\r\n",
+            "instructions": "Questions 15-19: Answer the questions. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Where will conference attendees stay overnight?",
             "points": 1,
-            "no_answer_feedback": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'",
+            "no_answer_feedback": "The correct answer is 'Riverside Hotel'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 15-19: Answer the questions. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Who must attend training on the new computer programme?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'sales staff'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 15-19: Answer the questions. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "What will participants completing Health and Safety Level 1 receive?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'certificate'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 15-19: Answer the questions. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "How many sessions are required for the fork lift licence?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'two'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 15-19: Answer the questions. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Which training event allows partners to attend?",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'Summer Social Event'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 2,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 20-24: Complete the notes. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Induction programmes should consider orientation and _____ of new employees.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'socialisation'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 20-24: Complete the notes. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Inductions must balance information with the process of _____ into the workplace.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'integrating'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 20-24: Complete the notes. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Inductions can also be useful for _____ who are not directly employed.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'contractors'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 20-24: Complete the notes. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Research conducted in _____ found a link between morale and induction.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'Harvard'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "open_question",
+            "instructions": "Questions 20-24: Complete the notes. Use NO MORE THAN THREE WORDS from the passage for each answer.",
+            "question": "Induction should not be handled by _____ alone.",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is 'Human Resources'.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 1,
+            "field_answers": [],
+            "field_feedback": {
+                "1": {
+                    "correct": "",
+                    "incorrect": "",
+                    "no_answer": ""
+                }
+            }
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25-29: Match each statement to the correct role (A-E).",
+            "question": "Best person for helping new staff get to know colleagues",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is D: Colleague.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: HR department",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: Colleague."
+                },
+                {
+                    "text": "B: Manager / supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: Colleague."
+                },
+                {
+                    "text": "C: Safety Officer",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: Colleague."
+                },
+                {
+                    "text": "D: Colleague",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is D: Colleague."
+                },
+                {
+                    "text": "E: Senior manager",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is D: Colleague."
+                }
+            ],
+            "options": "A: HR department\nB: Manager / supervisor\nC: Safety Officer\nD: Colleague\nE: Senior manager",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25-29: Match each statement to the correct role (A-E).",
+            "question": "Responsible for collecting personal information",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is A: HR department.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: HR department",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is A: HR department."
+                },
+                {
+                    "text": "B: Manager / supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A: HR department."
+                },
+                {
+                    "text": "C: Safety Officer",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A: HR department."
+                },
+                {
+                    "text": "D: Colleague",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A: HR department."
+                },
+                {
+                    "text": "E: Senior manager",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is A: HR department."
+                }
+            ],
+            "options": "A: HR department\nB: Manager / supervisor\nC: Safety Officer\nD: Colleague\nE: Senior manager",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25-29: Match each statement to the correct role (A-E).",
+            "question": "Covers legal health and safety issues",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is C: Safety Officer.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: HR department",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Safety Officer."
+                },
+                {
+                    "text": "B: Manager / supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Safety Officer."
+                },
+                {
+                    "text": "C: Safety Officer",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is C: Safety Officer."
+                },
+                {
+                    "text": "D: Colleague",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Safety Officer."
+                },
+                {
+                    "text": "E: Senior manager",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is C: Safety Officer."
+                }
+            ],
+            "options": "A: HR department\nB: Manager / supervisor\nC: Safety Officer\nD: Colleague\nE: Senior manager",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25-29: Match each statement to the correct role (A-E).",
+            "question": "Explains how the employee's immediate environment is organised",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is B: Manager / supervisor.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: HR department",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Manager / supervisor."
+                },
+                {
+                    "text": "B: Manager / supervisor",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is B: Manager / supervisor."
+                },
+                {
+                    "text": "C: Safety Officer",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Manager / supervisor."
+                },
+                {
+                    "text": "D: Colleague",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Manager / supervisor."
+                },
+                {
+                    "text": "E: Senior manager",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is B: Manager / supervisor."
+                }
+            ],
+            "options": "A: HR department\nB: Manager / supervisor\nC: Safety Officer\nD: Colleague\nE: Senior manager",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 25-29: Match each statement to the correct role (A-E).",
+            "question": "Provides an overview of the company's background and structure",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is E: Senior manager.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 3,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "mc_options": [
+                {
+                    "text": "A: HR department",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Senior manager."
+                },
+                {
+                    "text": "B: Manager / supervisor",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Senior manager."
+                },
+                {
+                    "text": "C: Safety Officer",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Senior manager."
+                },
+                {
+                    "text": "D: Colleague",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is E: Senior manager."
+                },
+                {
+                    "text": "E: Senior manager",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is E: Senior manager."
+                }
+            ],
+            "options": "A: HR department\nB: Manager / supervisor\nC: Safety Officer\nD: Colleague\nE: Senior manager",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about government action and public awareness",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph F.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "GREENHOUSE EFFECT|greenhouse effect|THE GREENHOUSE EFFECT|the greenhouse effect"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph D states that deforestation will lead to 'a 15 per cent rise in the greenhouse effect around the planet.'",
-                    "incorrect": "Incorrect. Review Paragraph D which discusses the global environmental phenomenon predicted to increase due to deforestation.",
-                    "no_answer": "The correct answer is GREENHOUSE EFFECT (or THE GREENHOUSE EFFECT). Paragraph D mentions 'a 15 per cent rise in the greenhouse effect around the planet.'"
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph F."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph F."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph F."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph F."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph F."
+                },
+                {
+                    "text": "F",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph F."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph F."
                 }
-            }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>What is becoming more common, allowing for more ecological uses of forested areas?</p>\r\n<p>37. What is becoming more common:</p>\r\n",
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph discussing the importance of reducing consumption",
             "points": 1,
-            "no_answer_feedback": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism.",
+            "no_answer_feedback": "The correct answer is Paragraph G.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "INTERNATIONAL TRAVEL|international travel"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph C states 'International travel is becoming increasingly popular,' enabling ecological tourism in forests.",
-                    "incorrect": "Incorrect. Review Paragraph C which mentions what is becoming more popular and enabling ecological uses of forests.",
-                    "no_answer": "The correct answer is INTERNATIONAL TRAVEL. Paragraph C states 'International travel is becoming increasingly popular, making the rainforests accessible' for ecotourism."
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph G."
                 }
-            }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Over two thirds of people living in the countryside in Brazil are what?</p>\r\n<p>38. They are:</p>\r\n",
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about alternative income from rainforests",
             "points": 1,
-            "no_answer_feedback": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil.",
+            "no_answer_feedback": "The correct answer is Paragraph C.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "LANDLESS|landless"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph E states that '70 per cent of rural households are landless' in Brazil.",
-                    "incorrect": "Incorrect. Review Paragraph E which discusses the situation of rural people in Brazil regarding land ownership.",
-                    "no_answer": "The correct answer is LANDLESS. Paragraph E states '70 per cent of rural households are landless' in Brazil."
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph C."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
                 }
-            }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>Which country has only one fiftieth of their original forested areas remaining?</p>\r\n<p>39. Country:</p>\r\n",
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about the consequences of deforestation",
             "points": 1,
-            "no_answer_feedback": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth.",
+            "no_answer_feedback": "The correct answer is Paragraph D.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "UNITED STATES|United States|THE USA|USA|THE U.S.A.|U.S.A.|the USA|usa|the U.S.A.|u.s.a."
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph B states the United States 'has less than two per cent of its original forest' (which is one fiftieth).",
-                    "incorrect": "Incorrect. Review Paragraph B which mentions the country with only 2% (one fiftieth) of its original forests remaining.",
-                    "no_answer": "The correct answer is UNITED STATES (or THE USA, USA). Paragraph B states the United States 'has less than two per cent of its original forest,' which equals one fiftieth."
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph D."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
                 }
-            }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         },
         {
-            "type": "open_question",
-            "instructions": "",
-            "question": "<p>What needs to be increased so that people can begin to change negative habits?</p>\r\n<p>40. What needs to be increased:</p>\r\n",
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about land ownership issues",
             "points": 1,
-            "no_answer_feedback": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change.",
+            "no_answer_feedback": "The correct answer is Paragraph E.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
-            "field_count": 1,
-            "field_answers": {
-                "1": "PUBLIC AWARENESS|public awareness|AWARENESS|awareness"
-            },
-            "field_feedback": {
-                "1": {
-                    "correct": "Correct! Paragraph G states that 'the raising of public awareness' is necessary for changing negative behaviors.",
-                    "incorrect": "Incorrect. Review Paragraph G which identifies what needs to be raised or increased to change people's harmful behaviors.",
-                    "no_answer": "The correct answer is PUBLIC AWARENESS (or AWARENESS). Paragraph G emphasizes 'the raising of public awareness' is essential for behavioral change."
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph E."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
                 }
-            }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph discussing the impact of deforestation on wildlife and food sources",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph D.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph D."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about ecotourism opportunities",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph C.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph C."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph C."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph mentioning a specific country losing most of its forests",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph B.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B."
+                },
+                {
+                    "text": "B",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph B."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph B."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about Brazil's landless rural population",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph E.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph E."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph E."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph about recycling and public participation",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph G.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph G."
+                },
+                {
+                    "text": "G",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph G."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "Questions 30-40: Which paragraph contains the following information? Choose the correct letter A-G.",
+            "question": "A paragraph discussing the greenhouse effect",
+            "points": 1,
+            "no_answer_feedback": "The correct answer is Paragraph D.",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 4,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_information",
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! The correct answer is Paragraph D."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The correct answer is Paragraph D."
+                }
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG",
+            "correct_answer_count": 1,
+            "show_option_letters": false
         }
     ],
     "reading_texts": [
         {
-            "text_id": 0,
             "title": "Reading Text 1",
-            "content": "<h4><strong>Party in the Park</strong></h4>\n\n<p>A<br>\nThe 6th Annual ‘Party in the Park’ will be held on 22 July at the usual venue, New Lynn Park. This year there will be a number of new features, as well as the traditional stalls, music and games that have made the event popular in previous years.</p>\n\n<p>B<br>\nLive music will be provided on two stages throughout the day, with over 20 different bands. Festival favourites Leaning Out will return, along with Irish dancing troupe The Emerald Slippers. New acts include Screener, recently returned from a successful European tour, and Spider Slice, a popular local band.</p>\n\n<p>C<br>\nThere will be traditional handicraft stalls where visitors can watch local craftspeople and artists at work and purchase unique products. Local artist John Henry will draw portraits on request. The Woodman will sell wooden products and run short wood-craft workshops.</p>\n\n<p>D<br>\nThere will be a wide range of food and drink stalls, from sandwiches and coffee to ice creams served in pineapple halves and freshly squeezed exotic fruit juices. Visitors will be able to sample products before buying.</p>\n\n<p>E<br>\nAdditional parking has been arranged. Two car parks are available: Turner Street for stallholders and Judd Road for the general public. An overflow car park on Smith Lane is a 10-minute walk away. Entry is free, but parking costs £1.50 (cash only).</p>\n\n<p>F<br>\nThe event will proceed regardless of weather conditions. Visitors are advised to bring wet-weather gear if rain is forecast.</p>\n\n<p>G<br>\nThis is an alcohol-free event. Anyone drinking alcohol inside the park will be asked to leave. Smokers must use designated areas and dispose of cigarette ends responsibly.</p>\n\n<h4><strong>Questions 1–6</strong></h4>\n\n<p>[This is a matching headings question.<br>\nThere are 6 questions.<br>\nChoose the correct heading (I–XI) for paragraphs B–G.]</p>\n\n<h4><strong>List of Headings</strong></h4>\n\n<p>I. Take precautions<br>\nII. Certain restrictions at the event<br>\nIII. Music lessons<br>\nIV. Exhibitors plying their trade<br>\nV. Restaurant facilities<br>\nVI. Weather forecast<br>\nVII. Reduced parking conditions<br>\nVIII. National and international talent<br>\nIX. Tastes to savour<br>\nX. Fun for all the family<br>\nXI. Access to the event</p>\n\n<h4><strong>Paragraph B\nAnswer: VIII</strong></h4>\n\n<h4><strong>Paragraph C\nAnswer: IV</strong></h4>\n\n<h4><strong>Paragraph D\nAnswer: IX</strong></h4>\n\n<h4><strong>Paragraph E\nAnswer: XI</strong></h4>\n\n<h4><strong>Paragraph F\nAnswer: I</strong></h4>\n\n<h4><strong>Paragraph G\nAnswer: II</strong></h4>",
-            "tags": []
+            "content": "<h4><strong>Party in the Park</strong></h4>\r\n\r\n<p>A<br>\r\nThe 6th Annual ‘Party in the Park’ will be held on 22 July at the usual venue, New Lynn Park. This year there will be a number of new features, as well as the traditional stalls, music and games that have made the event popular in previous years.</p>\r\n\r\n<p>B<br>\r\nLive music will be provided on two stages throughout the day, with over 20 different bands. Festival favourites Leaning Out will return, along with Irish dancing troupe The Emerald Slippers. New acts include Screener, recently returned from a successful European tour, and Spider Slice, a popular local band.</p>\r\n\r\n<p>C<br>\r\nThere will be traditional handicraft stalls where visitors can watch local craftspeople and artists at work and purchase unique products. Local artist John Henry will draw portraits on request. The Woodman will sell wooden products and run short wood-craft workshops.</p>\r\n\r\n<p>D<br>\r\nThere will be a wide range of food and drink stalls, from sandwiches and coffee to ice creams served in pineapple halves and freshly squeezed exotic fruit juices. Visitors will be able to sample products before buying.</p>\r\n\r\n<p>E<br>\r\nAdditional parking has been arranged. Two car parks are available: Turner Street for stallholders and Judd Road for the general public. An overflow car park on Smith Lane is a 10-minute walk away. Entry is free, but parking costs £1.50 (cash only).</p>\r\n\r\n<p>F<br>\r\nThe event will proceed regardless of weather conditions. Visitors are advised to bring wet-weather gear if rain is forecast.</p>\r\n\r\n<p>G<br>\r\nThis is an alcohol-free event. Anyone drinking alcohol inside the park will be asked to leave. Smokers must use designated areas and dispose of cigarette ends responsibly.</p>\r\n\r\n<h4><strong>Questions 1–6</strong></h4>\r\n\r\n<p>[This is a matching headings question.<br>\r\nThere are 6 questions.<br>\r\nChoose the correct heading (I–XI) for paragraphs B–G.]</p>\r\n\r\n<h4><strong>List of Headings</strong></h4>\r\n\r\n<p>I. Take precautions<br>\r\nII. Certain restrictions at the event<br>\r\nIII. Music lessons<br>\r\nIV. Exhibitors plying their trade<br>\r\nV. Restaurant facilities<br>\r\nVI. Weather forecast<br>\r\nVII. Reduced parking conditions<br>\r\nVIII. National and international talent<br>\r\nIX. Tastes to savour<br>\r\nX. Fun for all the family<br>\r\nXI. Access to the event</p>\r\n\r\n<h4><strong>Paragraph B\r\nAnswer: VIII</strong></h4>\r\n\r\n<h4><strong>Paragraph C\r\nAnswer: IV</strong></h4>\r\n\r\n<h4><strong>Paragraph D\r\nAnswer: IX</strong></h4>\r\n\r\n<h4><strong>Paragraph E\r\nAnswer: XI</strong></h4>\r\n\r\n<h4><strong>Paragraph F\r\nAnswer: I</strong></h4>\r\n\r\n<h4><strong>Paragraph G\r\nAnswer: II</strong></h4>"
         },
         {
-            "text_id": 1,
             "title": "Reading Text 2",
-            "content": "<h4><strong>Induction Programmes</strong></h4>\n\n<p>Induction programmes help new employees become familiar with the workplace and include orientation and socialisation. Research shows that effective induction improves staff retention and morale.</p>\n\n<p>Inductions should balance information delivery with helping employees integrate into their new environment. Tailored inductions are also useful for contractors, returning staff and promoted employees.</p>\n\n<p>Research from a Harvard study identified risks of poor induction, including low morale and loss of productivity.</p>\n\n<p>Effective induction requires input from multiple roles, including managers, colleagues, HR staff, safety officers and senior management.</p>\n\n<h4><strong>Questions 20–24</strong></h4>\n\n<h4><strong>[Complete the notes – NO MORE THAN THREE WORDS]</strong></h4>\n\n<p>Induction programmes should consider orientation and _____ of new employees.<br>\nAnswer: socialisation</p>\n\n<p>Inductions must balance information with the process of _____ into the workplace.<br>\nAnswer: integrating</p>\n\n<p>Inductions can also be useful for _____ who are not directly employed.<br>\nAnswer: contractors</p>\n\n<p>Research conducted in _____ found a link between morale and induction.<br>\nAnswer: Harvard</p>\n\n<h4><strong>Induction should not be handled by _____ alone.\nAnswer: Human Resources</strong></h4>\n\n<h4><strong>Questions 25–29</strong></h4>\n\n<h4><strong>[Matching roles – choose A–E]</strong></h4>\n\n<p>A. HR department<br>\nB. Manager / supervisor<br>\nC. Safety Officer<br>\nD. Colleague<br>\nE. Senior manager</p>\n\n<h4><strong>Best person for helping new staff get to know colleagues\nAnswer: D</strong></h4>\n\n<h4><strong>Responsible for collecting personal information\nAnswer: A</strong></h4>\n\n<h4><strong>Covers legal health and safety issues\nAnswer: C</strong></h4>\n\n<h4><strong>Explains how the employee’s immediate environment is organised\nAnswer: B</strong></h4>\n\n<h4><strong>Provides an overview of the company’s background and structure\nAnswer: E</strong></h4>",
-            "tags": []
+            "content": "<h4><strong>Greenwood Fitness Centre - Class Timetable</strong></h4>\r\n\r\n<p><strong>Awesome Abs</strong> (20 minutes)<br>\r\nA short but intensive workout focusing on core strength. Available Monday, Wednesday and Friday at 6:30am and 7:30pm. Maximum 25 participants.</p>\r\n\r\n<p><strong>Spin &amp; Burn</strong> (45 minutes)<br>\r\nHigh-energy cycling class. Available daily at various times. Booking essential - limited to 20 bikes. Previous cycling experience recommended.</p>\r\n\r\n<p><strong>Weekend Warrior</strong> (60 minutes)<br>\r\nChallenging full-body workout available Saturday and Sunday only at 9:00am. Maximum 30 participants. No booking required.</p>\r\n\r\n<p><strong>X-Ride</strong> (50 minutes)<br>\r\nOur most popular class combines cycling with strength training. Available Monday to Friday at 6:00pm. Drop-in welcome - no booking necessary. Maximum 15 participants.</p>\r\n\r\n<p><strong>Yoga Flow</strong> (60 minutes)<br>\r\nGentle stretching and relaxation class. Available Tuesday, Thursday and Saturday. Maximum 20 participants.</p>\r\n\r\n<p><strong>Combat Fit</strong> (45 minutes)<br>\r\nMartial arts-inspired cardio workout using boxing and kickboxing moves. Reduces stress through controlled fighting positions. Available Monday, Wednesday and Friday. Maximum 30 participants. Skills taught can be practised at home.</p>"
+        },
+        {
+            "title": "Reading Text 3",
+            "content": "<h4><strong>Annual Staff Training Programme</strong></h4>\r\n\r\n<h4><strong>Management Conference 2024</strong></h4>\r\n<p>Date: 15-16 March<br>\r\nVenue: Riverside Hotel Conference Centre<br>\r\nAccommodation: All attendees will stay overnight at the Riverside Hotel on 15 March. Single rooms have been reserved for all participants.</p>\r\n\r\n<h4><strong>Software Training</strong></h4>\r\n<p>Training on the new customer relationship management (CRM) computer programme is mandatory for all sales staff and customer service representatives. Sessions will run throughout April.</p>\r\n\r\n<h4><strong>Health and Safety Level 1</strong></h4>\r\n<p>This basic health and safety course runs every month. Upon successful completion, participants will receive a certified Health and Safety certificate valid for three years.</p>\r\n\r\n<h4><strong>Forklift Operator Licence</strong></h4>\r\n<p>Forklift training consists of two half-day sessions covering theory and practical operation. Participants must attend both sessions to receive their operator licence.</p>\r\n\r\n<h4><strong>Summer Social Event</strong></h4>\r\n<p>Our annual summer barbecue will be held on 20 July at Parkview Gardens. This is a family-friendly event - all staff members are welcome to bring their partners and children.</p>"
+        },
+        {
+            "title": "Reading Text 4",
+            "content": "<h4><strong>Induction Programmes</strong></h4>\r\n\r\n<p>Induction programmes help new employees become familiar with the workplace and include orientation and socialisation. Research shows that effective induction improves staff retention and morale.</p>\r\n\r\n<p>Inductions should balance information delivery with helping employees integrate into their new environment. Tailored inductions are also useful for contractors, returning staff and promoted employees.</p>\r\n\r\n<p>Research from a Harvard study identified risks of poor induction, including low morale and loss of productivity.</p>\r\n\r\n<p>Effective induction requires input from multiple roles, including managers, colleagues, HR staff, safety officers and senior management.</p>\r\n\r\n<h4><strong>Questions 20–24</strong></h4>\r\n\r\n<h4><strong>[Complete the notes – NO MORE THAN THREE WORDS]</strong></h4>\r\n\r\n<p>Induction programmes should consider orientation and _____ of new employees.<br>\r\nAnswer: socialisation</p>\r\n\r\n<p>Inductions must balance information with the process of _____ into the workplace.<br>\r\nAnswer: integrating</p>\r\n\r\n<p>Inductions can also be useful for _____ who are not directly employed.<br>\r\nAnswer: contractors</p>\r\n\r\n<p>Research conducted in _____ found a link between morale and induction.<br>\r\nAnswer: Harvard</p>\r\n\r\n<h4><strong>Induction should not be handled by _____ alone.\r\nAnswer: Human Resources</strong></h4>\r\n\r\n<h4><strong>Questions 25–29</strong></h4>\r\n\r\n<h4><strong>[Matching roles – choose A–E]</strong></h4>\r\n\r\n<p>A. HR department<br>\r\nB. Manager / supervisor<br>\r\nC. Safety Officer<br>\r\nD. Colleague<br>\r\nE. Senior manager</p>\r\n\r\n<h4><strong>Best person for helping new staff get to know colleagues\r\nAnswer: D</strong></h4>\r\n\r\n<h4><strong>Responsible for collecting personal information\r\nAnswer: A</strong></h4>\r\n\r\n<h4><strong>Covers legal health and safety issues\r\nAnswer: C</strong></h4>\r\n\r\n<h4><strong>Explains how the employee’s immediate environment is organised\r\nAnswer: B</strong></h4>\r\n\r\n<h4><strong>Provides an overview of the company’s background and structure\r\nAnswer: E</strong></h4>"
         },
         {
             "title": "Reading Text 5",
-            "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<h4><span id=\"q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or nature study activities. <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, Ghana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil against erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent of rural households are <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversal of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologically sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of their products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>",
-            "text_id": 4
+            "content": "<h3>Reading Passage 3</h3>\r\n<h2>The price of your newspaper</h2>\r\n\r\n<h4>Paragraph A</h4>\r\n<p>The average family buys two newspapers and a magazine every week, in addition to receiving up to three pieces of junk mail. Multiplied by the global population, this amounts to a lot of paper, and therefore a lot of wood. Although the rise of the home computer has gone a long way in reducing this excessive use of paper, the demand is still considerable.</p>\r\n\r\n<h4><span id=\"q25\" data-question=\"25\"></span>Paragraph B</h4>\r\n<p>Social and economic concerns have over-ridden environmental common sense, and in many western countries, the woods and forests that once covered the land have long since been cleared away. A shocking example can be found by looking at the <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">United States</span>, which now has less than two per cent of its original forest. Other areas, predominantly tropical countries, are now following the same destructive path. In 1995 over one million hectares of forest in Brazil were cleared, a disturbing statistic but nonetheless inevitable as timber and other related raw materials are important exports for countries that often have little other way of supporting themselves. They provide employment for those who harvest the wood, extract rubber or make products using available materials. With one third of the world depending on wood for fuel, it is very tempting, though shortsighted, for poorer countries to exploit the market.</p>\r\n\r\n<h4><span id=\"q26\" data-question=\"26\"></span>Paragraph C</h4>\r\n<p>It could be argued, then, that countries with rich wood resources should be fully entitled to exploit them. However, there are less destructive alternatives for generating an income from the rainforests. The forest environment provides a popular setting for ecotourism, which includes hiking, camping, bird watching and other outdoor adventure or nature study activities. <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">International travel</span> is becoming increasingly popular, making the rainforests accessible for the more adventurous holidaymaker.</p>\r\n\r\n<h4><span id=\"q27\" data-question=\"27\"></span>Paragraph D</h4>\r\n<p>No matter what the solution, the rampant spread of deforestation has to be halted. Surveys in Cameroon, the Ivory Coast, Ghana and Liberia found that forest wildlife accounted for 70 to 90 per cent of the total animal protein consumed, thus arguing that some indigenous peoples are completely dependent on forests for food. In many of these countries, wood harvesting is carried out on a considerably more sensible scale. There appears to be the realisation that selling the wood is a temporary solution that would inevitably lead to worse problems for the future. Not only would the traditional food source be gone, but the trees which protected the soil against erosion would be gone. Landslides would become more common and rainwater would not be absorbed so easily into the ground, leading to a shortage of freshwater supplies. There is also the global impact, not only from the burning of the wood but also because trees provide an important role in the recycling of carbon dioxide and the production of oxygen. Estimates based on the current rate of deforestation have predicted a 15 per cent rise in <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the greenhouse effect</span> around the planet.</p>\r\n\r\n<h4><span id=\"q28\" data-question=\"28\"></span>Paragraph E</h4>\r\n<p>In order to combat the problem of deforestation, it is important to consider its causes in greater detail. In Brazil, we should look at the unequal and unfair distribution of land – 4.5 per cent of landowners hold 81 per cent of the country's farmland, and 70 per cent of rural households are <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">landless</span>. With either no legal claim to the land or ownership of so much, deforestation is inevitable as land owners profit from the land. This is the point in which the situation is in the hands of government, yet often the landowners have shown their ability to sway official regulations regarding timber harvesting.</p>\r\n\r\n<h4><span id=\"q29\" data-question=\"29\"></span>Paragraph F</h4>\r\n<p>To effect a serious reversal of the damage, some governments are taking a more active role in forest management to protect the environment and employment – a change which has been largely encouraged by the voting and demands of the general population which have resulted in policies of replantation and protection. As well as creating political pressure, individuals can make a difference by practising green consumerism. Recycled paper is readily available, and we can all make an effort to purchase the most ecologically sensitive products. Demanding alternative products, such as clear-cut free paper and eco-certified lumber, is important in convincing companies that markets exist for such products.</p>\r\n\r\n<h4><span id=\"q30\" data-question=\"30\"></span>Paragraph G</h4>\r\n<p>None of these activities can occur without the raising of <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">public awareness</span> to inform consumers about the environmental effects of their products, and this is not an easy task. Many people are too entrenched in their habits or too lazy to change, yet one of the most important ways for a person to have a positive effect is to reduce his or her consumption of forest and related products. An increase in the participation of the public in, and the accessibility and productiveness of facilities for, reducing, reusing and recycling is not only necessary, but also a duty. So next time you buy a newspaper, just consider the cost.</p>"
         }
     ],
     "settings": {
@@ -943,8 +1851,14 @@
         "cbt_test_type": "general_training",
         "exercise_label": "practice_test",
         "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
+        "scoring_type": "percentage",
         "timer_minutes": "60",
         "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-28 10:47:22",
+        "exported_by": "impact",
+        "plugin_version": "15.0",
+        "format_version": "1.0"
     }
 }
