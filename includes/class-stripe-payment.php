@@ -581,7 +581,7 @@ class IELTS_CM_Stripe_Payment {
         wp_set_current_user($payment->user_id);
         do_action('wp_login', $user ? $user->user_login : '', $user);
         
-        // Get post-payment redirect URL
+        // Get post account creation redirect URL (applies to both free and paid accounts)
         $redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         
         // If no custom redirect is set, use admin dashboard or home page

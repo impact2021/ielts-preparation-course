@@ -564,14 +564,14 @@ class IELTS_CM_Membership {
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><?php _e('Post-Payment Redirect Page', 'ielts-course-manager'); ?></th>
+                        <th scope="row"><?php _e('Post Account Creation Redirect Page', 'ielts-course-manager'); ?></th>
                         <td>
                             <input type="url" name="ielts_cm_post_payment_redirect_url" 
                                    value="<?php echo esc_attr($post_payment_redirect_url); ?>" 
                                    class="regular-text" 
                                    placeholder="https://www.ieltstestonline.com/dashboard">
                             <p class="description">
-                                <?php _e('Where to redirect users after successful payment (users will be automatically logged in). Leave empty to use the default WordPress dashboard.', 'ielts-course-manager'); ?>
+                                <?php _e('Where to redirect users after successful account creation (both free trial and paid accounts). Users will be automatically logged in. Leave empty to use the default WordPress dashboard.', 'ielts-course-manager'); ?>
                             </p>
                         </td>
                     </tr>

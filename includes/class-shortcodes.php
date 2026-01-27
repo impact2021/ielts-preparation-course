@@ -1718,9 +1718,18 @@ class IELTS_CM_Shortcodes {
                             $payment_url = get_option('ielts_cm_full_member_page_url', home_url());
                             wp_safe_redirect(wp_validate_redirect($payment_url, home_url()));
                         } else {
-                            // Regular redirect for trial memberships
+                            // Regular redirect for trial/free memberships
+                            // First check the global post account creation redirect URL
+                            $post_account_redirect = get_option('ielts_cm_post_payment_redirect_url', '');
+                            
+                            // If post account creation redirect is set, use it; otherwise use shortcode redirect attribute
+                            if (!empty($post_account_redirect)) {
+                                $redirect_to = $post_account_redirect;
+                            } else {
+                                $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                            }
+                            
                             // Validate redirect URL for security
-                            $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
                             $redirect_to = wp_validate_redirect($redirect_to, home_url());
                             wp_safe_redirect($redirect_to);
                         }
@@ -1764,79 +1773,95 @@ class IELTS_CM_Shortcodes {
                 <form method="post" action="" name="ielts_registration_form" class="ielts-form ielts-registration-form-grid">
                     <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
                     
-                    <?php if (!$is_logged_in): ?>
-                    <p class="form-field form-field-half">
-                        <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                        <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
-                               value="<?php echo isset($_POST['ielts_first_name']) ? esc_attr($_POST['ielts_first_name']) : ''; ?>">
-                    </p>
-                    
-                    <p class="form-field form-field-half">
-                        <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                        <input type="text" name="ielts_last_name" id="ielts_last_name" required class="ielts-form-input"
-                               value="<?php echo isset($_POST['ielts_last_name']) ? esc_attr($_POST['ielts_last_name']) : ''; ?>">
-                    </p>
-                    
-                    <p class="form-field form-field-full">
-                        <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                        <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
-                               value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>">
-                        <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
-                    </p>
-                    
-                    <p class="form-field form-field-half">
-                        <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                        <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input">
-                        <small class="form-help"><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
-                    </p>
-                    
-                    <p class="form-field form-field-half">
-                        <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                        <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
-                    </p>
-                    <?php endif; // End if not logged in ?>
-                    
-                    <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                    <!-- Main form fields container (left side on desktop) -->
+                    <div class="form-fields-container">
+                        <?php if (!$is_logged_in): ?>
+                        <p class="form-field form-field-half">
+                            <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
+                                   value="<?php echo isset($_POST['ielts_first_name']) ? esc_attr($_POST['ielts_first_name']) : ''; ?>">
+                        </p>
+                        
+                        <p class="form-field form-field-half">
+                            <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="text" name="ielts_last_name" id="ielts_last_name" required class="ielts-form-input"
+                                   value="<?php echo isset($_POST['ielts_last_name']) ? esc_attr($_POST['ielts_last_name']) : ''; ?>">
+                        </p>
+                        
                         <p class="form-field form-field-full">
-                            <label for="ielts_membership_type"><?php _e('Select Membership', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                            <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
-                                <option value=""><?php _e('-- Select a membership option --', 'ielts-course-manager'); ?></option>
-                                <?php 
-                                $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
-                                $pricing = get_option('ielts_cm_membership_pricing', array());
-                                $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
-                                
-                                // Group memberships by type
-                                $trial_options = array();
-                                $paid_options = array();
-                                
-                                foreach ($membership_levels as $key => $label) {
-                                    $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
-                                    $option_label = $label;
+                            <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
+                                   value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>">
+                            <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
+                        </p>
+                        
+                        <p class="form-field form-field-half">
+                            <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input">
+                            <small class="form-help"><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
+                        </p>
+                        
+                        <p class="form-field form-field-half">
+                            <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
+                        </p>
+                        <?php endif; // End if not logged in ?>
+                        
+                        <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                            <p class="form-field form-field-full">
+                                <label for="ielts_membership_type"><?php _e('Select Membership', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                                <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
+                                    <option value=""><?php _e('-- Select a membership option --', 'ielts-course-manager'); ?></option>
+                                    <?php 
+                                    $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                    $pricing = get_option('ielts_cm_membership_pricing', array());
+                                    $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                     
-                                    if (IELTS_CM_Membership::is_trial_membership($key)) {
-                                        $option_label .= ' (Free Trial)';
-                                        $trial_options[$key] = $option_label;
-                                    } else {
-                                        // Paid membership - always show price information
-                                        if ($price > 0) {
-                                            $option_label .= ' ($' . number_format($price, 2) . ')';
+                                    // Group memberships by type
+                                    $trial_options = array();
+                                    $paid_options = array();
+                                    
+                                    foreach ($membership_levels as $key => $label) {
+                                        $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
+                                        $option_label = $label;
+                                        
+                                        if (IELTS_CM_Membership::is_trial_membership($key)) {
+                                            $option_label .= ' (Free Trial)';
+                                            $trial_options[$key] = $option_label;
                                         } else {
-                                            // Warning: price not configured
-                                            $option_label .= ' (Price Not Set - Contact Admin)';
+                                            // Paid membership - always show price information
+                                            if ($price > 0) {
+                                                $option_label .= ' ($' . number_format($price, 2) . ')';
+                                            } else {
+                                                // Warning: price not configured
+                                                $option_label .= ' (Price Not Set - Contact Admin)';
+                                            }
+                                            $paid_options[$key] = $option_label;
                                         }
-                                        $paid_options[$key] = $option_label;
                                     }
-                                }
-                                
-                                // For logged-in users upgrading, show only paid options
-                                // For new registrations, show both trial and paid options
-                                if (!$is_logged_in) {
-                                    // Display trial options first for new users
-                                    if (!empty($trial_options)):
+                                    
+                                    // For logged-in users upgrading, show only paid options
+                                    // For new registrations, show both trial and paid options
+                                    if (!$is_logged_in) {
+                                        // Display trial options first for new users
+                                        if (!empty($trial_options)):
+                                        ?>
+                                            <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
+                                                <?php foreach ($trial_options as $key => $label): ?>
+                                                    <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
+                                                        <?php echo esc_html($label); ?>
+                                                    </option>
+                                                <?php endforeach; ?>
+                                            </optgroup>
+                                        <?php 
+                                        endif;
+                                    }
+                                    
+                                    // Display paid options
+                                    if (!empty($paid_options)):
                                     ?>
-                                        <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
-                                            <?php foreach ($trial_options as $key => $label): ?>
+                                        <optgroup label="<?php _e('Full Membership (Payment Required)', 'ielts-course-manager'); ?>">
+                                            <?php foreach ($paid_options as $key => $label): ?>
                                                 <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
                                                     <?php echo esc_html($label); ?>
                                                 </option>
@@ -1844,67 +1869,57 @@ class IELTS_CM_Shortcodes {
                                         </optgroup>
                                     <?php 
                                     endif;
+                                    ?>
+                                </select>
+                            </p>
+                            
+                            <?php
+                            // Check if Stripe is configured when paid memberships exist
+                            $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+                            $has_paid_options = false;
+                            foreach ($pricing as $key => $price) {
+                                if (!IELTS_CM_Membership::is_trial_membership($key) && floatval($price) > 0) {
+                                    $has_paid_options = true;
+                                    break;
                                 }
-                                
-                                // Display paid options
-                                if (!empty($paid_options)):
-                                ?>
-                                    <optgroup label="<?php _e('Full Membership (Payment Required)', 'ielts-course-manager'); ?>">
-                                        <?php foreach ($paid_options as $key => $label): ?>
-                                            <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
-                                                <?php echo esc_html($label); ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </optgroup>
-                                <?php 
-                                endif;
-                                ?>
-                            </select>
-                        </p>
+                            }
+                            
+                            if ($has_paid_options && empty($stripe_publishable)):
+                            ?>
+                                <div class="ielts-message ielts-error" style="margin-top: 15px;">
+                                    <p><strong><?php _e('Payment System Not Configured', 'ielts-course-manager'); ?></strong></p>
+                                    <p><?php _e('Paid membership options are available, but the payment system is not configured. Please contact the site administrator to set up payment processing.', 'ielts-course-manager'); ?></p>
+                                </div>
+                            <?php endif; ?>
+                        <?php endif; ?>
                         
-                        <!-- Payment Section (Hidden by default, shown when paid membership selected) -->
-                        <div id="ielts-payment-section" class="form-field-full stripe-payment-section" style="display: none;">
-                            <p class="form-field form-field-full">
+                        <p class="form-field form-field-full submit-button-container">
+                            <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
+                                <?php echo $is_logged_in ? __('Upgrade Membership', 'ielts-course-manager') : __('Create Account', 'ielts-course-manager'); ?>
+                            </button>
+                        </p>
+                    </div>
+                    
+                    <!-- Payment Section (right side on desktop) -->
+                    <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                        <div id="ielts-payment-section" class="payment-section-container stripe-payment-section" style="display: none;">
+                            <h3 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h3>
+                            <div class="payment-section-content">
                                 <label><?php _e('Card Details', 'ielts-course-manager'); ?></label>
                                 <div id="payment-element" class="stripe-payment-element">
                                     <!-- Stripe Payment Element will be inserted here -->
                                 </div>
                                 <div id="payment-message" class="ielts-message" style="display: none;"></div>
-                            </p>
-                        </div>
-                        
-                        <?php
-                        // Check if Stripe is configured when paid memberships exist
-                        $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
-                        $has_paid_options = false;
-                        foreach ($pricing as $key => $price) {
-                            if (!IELTS_CM_Membership::is_trial_membership($key) && floatval($price) > 0) {
-                                $has_paid_options = true;
-                                break;
-                            }
-                        }
-                        
-                        if ($has_paid_options && empty($stripe_publishable)):
-                        ?>
-                            <div class="ielts-message ielts-error" style="margin-top: 15px;">
-                                <p><strong><?php _e('Payment System Not Configured', 'ielts-course-manager'); ?></strong></p>
-                                <p><?php _e('Paid membership options are available, but the payment system is not configured. Please contact the site administrator to set up payment processing.', 'ielts-course-manager'); ?></p>
                             </div>
-                        <?php endif; ?>
+                        </div>
                     <?php endif; ?>
-                    
-                    <p class="form-field form-field-full">
-                        <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
-                            <?php echo $is_logged_in ? __('Upgrade Membership', 'ielts-course-manager') : __('Create Account', 'ielts-course-manager'); ?>
-                        </button>
-                    </p>
                 </form>
             <?php endif; ?>
         </div>
         
         <style>
         .ielts-registration-form {
-            max-width: 700px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 30px;
             background: #fff;
@@ -1914,29 +1929,62 @@ class IELTS_CM_Shortcodes {
         .ielts-registration-form .ielts-form {
             margin-top: 20px;
         }
+        
+        /* Form grid layout - two column layout on desktop with payment on right */
         .ielts-registration-form-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 0;
         }
-        @media (min-width: 768px) {
+        
+        /* Desktop layout: main form on left, payment on right */
+        @media (min-width: 900px) {
             .ielts-registration-form-grid {
+                grid-template-columns: 1fr 380px;
+                gap: 30px;
+                align-items: start;
+            }
+            
+            .form-fields-container {
+                grid-column: 1;
+            }
+            
+            .payment-section-container {
+                grid-column: 2;
+                position: sticky;
+                top: 20px;
+            }
+        }
+        
+        /* Form fields inside the container use their own grid */
+        .form-fields-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+        
+        @media (min-width: 768px) {
+            .form-fields-container {
                 grid-template-columns: 1fr 1fr;
                 gap: 15px;
             }
-            .ielts-registration-form-grid .form-field-full {
+            .form-fields-container .form-field-full,
+            .form-fields-container .submit-button-container {
                 grid-column: 1 / -1;
             }
-            .ielts-registration-form-grid .form-field-half {
+            .form-fields-container .form-field-half {
                 grid-column: span 1;
             }
         }
+        
+        /* Reduced spacing between form fields */
         .ielts-registration-form .form-field {
-            margin-bottom: 20px;
+            margin-bottom: 12px;
         }
+        
         .ielts-registration-form label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
             color: #333;
             font-size: 14px;
@@ -1946,8 +1994,8 @@ class IELTS_CM_Shortcodes {
         }
         .ielts-registration-form .ielts-form-input {
             width: 100%;
-            padding: 12px 15px;
-            margin-bottom: 5px;
+            padding: 10px 12px;
+            margin-bottom: 3px;
             border: 2px solid #ddd;
             border-radius: 6px;
             font-size: 15px;
@@ -1961,19 +2009,19 @@ class IELTS_CM_Shortcodes {
         .ielts-registration-form .form-help {
             display: block;
             color: #666;
-            font-size: 13px;
-            margin-top: 5px;
+            font-size: 12px;
+            margin-top: 3px;
         }
         .ielts-registration-form .ielts-button-block {
             width: 100%;
             padding: 14px 20px;
             font-size: 16px;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 5px;
         }
         .ielts-message {
-            padding: 15px 20px;
-            margin-bottom: 20px;
+            padding: 12px 16px;
+            margin-bottom: 15px;
             border-radius: 6px;
             border-left: 4px solid;
         }
@@ -1994,13 +2042,28 @@ class IELTS_CM_Shortcodes {
         .ielts-message ul li {
             margin: 5px 0;
         }
-        /* Stripe Payment Element Styles - Following Stripe best practices */
-        .stripe-payment-section {
-            margin-top: 20px;
+        
+        /* Payment section styles */
+        .payment-section-container {
             padding: 20px;
             background: #f9f9f9;
             border-radius: 8px;
             border: 1px solid #e0e0e0;
+        }
+        
+        .payment-section-title {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .payment-section-content label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
         }
         
         .stripe-payment-element {
@@ -2009,7 +2072,6 @@ class IELTS_CM_Shortcodes {
             border: 1px solid #ddd;
             border-radius: 4px;
             min-height: 50px;
-            /* No width restrictions - allows the element to take full container width */
         }
         
         #payment-message {
