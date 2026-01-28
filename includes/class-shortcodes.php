@@ -1656,12 +1656,18 @@ class IELTS_CM_Shortcodes {
                 
                 // Validate membership type if provided
                 if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
-                    if (!in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
+                    // Extension types are valid for logged-in users upgrading
+                    $valid_types = array_merge(
+                        IELTS_CM_Membership::get_valid_membership_types(), 
+                        IELTS_CM_Membership::EXTENSION_TYPES
+                    );
+                    
+                    if (!in_array($membership_type, $valid_types)) {
                         $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
                     }
                     
                     // Additional validation: Check if English Only memberships are allowed
-                    $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+                    $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
                     if (!$english_only_enabled && in_array($membership_type, array('english_trial', 'english_full'))) {
                         $errors[] = __('The selected membership type is not available.', 'ielts-course-manager');
                     }
@@ -1878,7 +1884,7 @@ class IELTS_CM_Shortcodes {
                                         $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
                                         
                                         // Filter membership levels based on settings
-                                        $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+                                        $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
                                         if (!$english_only_enabled) {
                                             unset($membership_levels['english_trial']);
                                             unset($membership_levels['english_full']);
