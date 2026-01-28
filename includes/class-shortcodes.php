@@ -1555,10 +1555,6 @@ class IELTS_CM_Shortcodes {
         
         // Check if user is logged in
         if (is_user_logged_in()) {
-            $user_id = get_current_user_id();
-            $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
-            $membership_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
-            
             // Allow all logged-in users to access the form for upgrades, extensions, or renewals
             // This includes trial users, expired users, and active users who want to extend
             // The form will be rendered but without the registration fields (name, email, password)
@@ -1926,7 +1922,7 @@ class IELTS_CM_Shortcodes {
                         </p>
                     </div>
                     
-                    <!-- Payment Section (right side on desktop) -->
+                    <!-- Payment Section (displays below form fields) -->
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <div id="ielts-payment-section" class="payment-section-container stripe-payment-section" style="display: none;">
                             <h3 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h3>
@@ -1989,12 +1985,7 @@ class IELTS_CM_Shortcodes {
             gap: 0;
         }
         
-        .form-fields-container {
-            grid-column: 1;
-        }
-        
         .payment-section-container {
-            grid-column: 1;
             margin-top: 20px;
         }
         
