@@ -513,57 +513,57 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home."
+                    "feedback": "Correct! I. Time for a change? is the best match for Paragraph A."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph A. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -582,57 +582,57 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location."
+                    "feedback": "Correct! IV. Flexibility of technology is the best match for Paragraph B."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph B. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -651,57 +651,57 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family)."
+                    "feedback": "Correct! VII. Benefits for all is the best match for Paragraph C."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph C. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -720,57 +720,57 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels."
+                    "feedback": "Correct! IX. Keeping it clean is the best match for Paragraph D."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph D. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -789,57 +789,57 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation."
+                    "feedback": "Correct! II. Social impact is the best match for Paragraph E."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph E. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -858,57 +858,57 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": true,
-                    "feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution."
+                    "feedback": "Correct! X. The best of both worlds is the best match for Paragraph F."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
