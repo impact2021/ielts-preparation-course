@@ -603,7 +603,7 @@ class IELTS_CM_Membership {
                     <?php 
                     // Filter membership levels based on settings
                     $membership_levels_for_duration = self::MEMBERSHIP_LEVELS;
-                    if (!$english_only_enabled) {
+                    if (!(bool) $english_only_enabled) {
                         unset($membership_levels_for_duration['english_trial']);
                         unset($membership_levels_for_duration['english_full']);
                     }
@@ -664,7 +664,7 @@ class IELTS_CM_Membership {
         
         // Filter membership levels based on settings
         $membership_levels = self::MEMBERSHIP_LEVELS;
-        if (!$english_only_enabled) {
+        if (!(bool) $english_only_enabled) {
             unset($membership_levels['english_trial']);
             unset($membership_levels['english_full']);
         }
