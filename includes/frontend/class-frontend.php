@@ -561,21 +561,22 @@ class IELTS_CM_Frontend {
             // Constant for localStorage key
             const FEEDBACK_EXPANDED_KEY = 'impactFeedbackExpanded';
             
-            // Check for expanded state in localStorage (default is minimized)
+            // Check for expanded state in localStorage (default is minimized/closed)
             const isExpanded = localStorage.getItem(FEEDBACK_EXPANDED_KEY) === 'true';
+            // Always start minimized unless explicitly expanded
             if (!isExpanded) {
                 btn.classList.add('minimized');
             }
 
             btn.addEventListener('click', () => {
-                // If minimized, restore it
+                // Always open modal on click, regardless of minimized state
+                // Remove minimized class if present
                 if (btn.classList.contains('minimized')) {
                     btn.classList.remove('minimized');
                     localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'true');
-                    return;
                 }
                 
-                // Otherwise, open modal
+                // Open modal
                 modal.style.display = 'block';
 
                 // Auto-fill Contact Form 7 hidden fields

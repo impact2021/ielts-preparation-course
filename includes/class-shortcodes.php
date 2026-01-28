@@ -1757,14 +1757,31 @@ class IELTS_CM_Shortcodes {
         
         // Check if user is logged in for form rendering
         $is_logged_in = is_user_logged_in();
-        $form_title = $is_logged_in ? __('Upgrade Your Membership', 'ielts-course-manager') : __('Create Your Account', 'ielts-course-manager');
+        
+        // Determine form title based on user type
+        if ($is_logged_in) {
+            $user_id = get_current_user_id();
+            $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+            $is_trial = $membership_type && IELTS_CM_Membership::is_trial_membership($membership_type);
+            
+            if ($is_trial) {
+                $form_title = __('Upgrade Your Membership', 'ielts-course-manager');
+                $form_description = __('Select a membership plan below to upgrade your account.', 'ielts-course-manager');
+            } else {
+                $form_title = __('Extend Your Course', 'ielts-course-manager');
+                $form_description = __('Select an extension option below to extend your course access.', 'ielts-course-manager');
+            }
+        } else {
+            $form_title = __('Create Your Account', 'ielts-course-manager');
+            $form_description = '';
+        }
         
         ?>
         <div class="ielts-registration-form">
             <h2><?php echo esc_html($form_title); ?></h2>
             
-            <?php if ($is_logged_in): ?>
-                <p><?php _e('Select a membership plan below to upgrade your account.', 'ielts-course-manager'); ?></p>
+            <?php if ($is_logged_in && !empty($form_description)): ?>
+                <p><?php echo esc_html($form_description); ?></p>
             <?php endif; ?>
             
             <?php if ($success): ?>
@@ -1914,13 +1931,20 @@ class IELTS_CM_Shortcodes {
                                 </div>
                             <?php endif; ?>
                         <?php endif; ?>
-                        
-                        <p class="form-field form-field-full submit-button-container">
-                            <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
-                                <?php echo $is_logged_in ? __('Upgrade Membership', 'ielts-course-manager') : __('Create Account', 'ielts-course-manager'); ?>
-                            </button>
-                        </p>
                     </div>
+                    
+                    <!-- Non-payment submit button (for free memberships, shown when payment section is hidden) -->
+                    <p class="form-field form-field-full submit-button-container" id="ielts-free-submit-container">
+                        <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
+                            <?php 
+                            if ($is_logged_in) {
+                                echo isset($is_trial) && $is_trial ? __('Upgrade Your Membership', 'ielts-course-manager') : __('Extend Your Course', 'ielts-course-manager');
+                            } else {
+                                echo __('Create Your Account', 'ielts-course-manager');
+                            }
+                            ?>
+                        </button>
+                    </p>
                     
                     <!-- Payment Section (displays below form fields) -->
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
@@ -1958,6 +1982,19 @@ class IELTS_CM_Shortcodes {
                                 </div>
                                 
                                 <div id="payment-message" class="ielts-message" style="display: none;"></div>
+                                
+                                <!-- Payment button at the bottom -->
+                                <p class="form-field form-field-full payment-submit-button-container" style="margin-top: 20px;">
+                                    <button type="submit" name="ielts_register_submit" id="ielts_payment_submit" class="ielts-button ielts-button-primary ielts-button-block">
+                                        <?php 
+                                        if ($is_logged_in) {
+                                            echo isset($is_trial) && $is_trial ? __('Complete Payment & Upgrade', 'ielts-course-manager') : __('Complete Payment & Extend', 'ielts-course-manager');
+                                        } else {
+                                            echo __('Complete Payment & Create Account', 'ielts-course-manager');
+                                        }
+                                        ?>
+                                    </button>
+                                </p>
                             </div>
                         </div>
                     <?php endif; ?>
