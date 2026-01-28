@@ -281,22 +281,62 @@ class IELTS_CM_Stripe_Payment {
         
         // SECURITY: Validate membership type exists and get server-side price
         $pricing = get_option('ielts_cm_membership_pricing', array());
-        if (!isset($pricing[$membership_type])) {
-            error_log("IELTS Payment: Invalid membership type: $membership_type");
+        
+        // Check if it's an extension type
+        $is_extension = in_array($membership_type, array('extension_1_week', 'extension_1_month', 'extension_3_months'));
+        
+        if ($is_extension) {
+            // Get extension pricing
+            $extension_pricing = get_option('ielts_cm_extension_pricing', array(
+                '1_week' => 5.00,
+                '1_month' => 10.00,
+                '3_months' => 15.00
+            ));
             
-            // Log to database
-            $this->safe_log_payment_error(
-                'validation_error',
-                'Invalid membership type',
-                array('membership_type' => $membership_type),
-                $user_id,
-                $user->user_email
+            // Map extension type to pricing key
+            $extension_key_map = array(
+                'extension_1_week' => '1_week',
+                'extension_1_month' => '1_month',
+                'extension_3_months' => '3_months'
             );
             
-            wp_send_json_error('Invalid membership type. Please refresh the page and try again.', 400);
+            $extension_key = $extension_key_map[$membership_type];
+            
+            if (!isset($extension_pricing[$extension_key])) {
+                error_log("IELTS Payment: Invalid extension type: $membership_type");
+                
+                // Log to database
+                $this->safe_log_payment_error(
+                    'validation_error',
+                    'Invalid extension type',
+                    array('membership_type' => $membership_type),
+                    $user_id,
+                    $user->user_email
+                );
+                
+                wp_send_json_error('Invalid extension type. Please refresh the page and try again.', 400);
+            }
+            
+            $server_price = floatval($extension_pricing[$extension_key]);
+        } else {
+            // Regular membership type
+            if (!isset($pricing[$membership_type])) {
+                error_log("IELTS Payment: Invalid membership type: $membership_type");
+                
+                // Log to database
+                $this->safe_log_payment_error(
+                    'validation_error',
+                    'Invalid membership type',
+                    array('membership_type' => $membership_type),
+                    $user_id,
+                    $user->user_email
+                );
+                
+                wp_send_json_error('Invalid membership type. Please refresh the page and try again.', 400);
+            }
+            
+            $server_price = floatval($pricing[$membership_type]);
         }
-        
-        $server_price = floatval($pricing[$membership_type]);
         
         // Verify amount matches server-side price
         if (abs($amount - $server_price) > 0.01) {
