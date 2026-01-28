@@ -1834,6 +1834,14 @@ class IELTS_CM_Shortcodes {
                                     <option value=""><?php _e('-- Select a membership option --', 'ielts-course-manager'); ?></option>
                                     <?php 
                                     $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                    
+                                    // Filter membership levels based on settings
+                                    $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+                                    if (!$english_only_enabled) {
+                                        unset($membership_levels['english_trial']);
+                                        unset($membership_levels['english_full']);
+                                    }
+                                    
                                     $pricing = get_option('ielts_cm_membership_pricing', array());
                                     $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                     
