@@ -3041,7 +3041,7 @@ class IELTS_CM_Shortcodes {
         
         .ielts-band-scores-table th {
             background: #E46B0A;
-            color: white;
+            color: white !important;
             padding: 15px 10px;
             text-align: center;
             font-weight: 600;
