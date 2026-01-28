@@ -3,354 +3,1012 @@
     "content": "",
     "questions": [
         {
-            "type": "open_question",
-            "instructions": "Questions 1–7",
+            "type": "closed_question",
+            "instructions": "Questions 1–7\n\nThis is a classification question. There are 7 questions. Look at the advertisements A–H and match each statement to the correct advertisement. Use each letter once only.",
             "question": "The advertiser …",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. Match each statement to the correct advertisement (A-H) based on the information in Reading Passage 1.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": ""
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is willing to travel after seeing the item",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is H. Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'"
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "does not require payment",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is E. Advertisement E states 'Free to anyone willing to collect.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement E states 'Free to anyone willing to collect.'"
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is selling something they were given",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is C. Advertisement C states 'Unwanted gift' for the PlayStation games.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement C states 'Unwanted gift' for the PlayStation games."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is selling because they are relocating",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is B. Advertisement B states 'Must sell because I am leaving the country.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement B states 'Must sell because I am leaving the country.'"
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is missing an accessory",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is A. Advertisement A states 'Headphones are missing' for the iPhone X.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement A states 'Headphones are missing' for the iPhone X."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is not willing to change the price",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is D. Advertisement D states '£250 (price is non-negotiable).'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement D states '£250 (price is non-negotiable).'"
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "is indifferent to the condition of the item",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is F. Advertisement F states 'Does not need to be in very good condition as long as it works.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement F states 'Does not need to be in very good condition as long as it works.'"
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
             "type": "open_question",
-            "instructions": "Questions 8–14",
+            "instructions": "Questions 8–14\n\nAnswer the questions below using NO MORE THAN THREE WORDS from the text for each answer.",
             "question": "The cost to visit any local ________ is fixed.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'marinas'. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "marinas"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
+                    "incorrect": "Incorrect. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'marinas'. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "You can book a water taxi using their ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'on-demand service'. Under 'Water Taxis': 'using the on-demand service.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "on-demand service"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Water Taxis': 'using the on-demand service.'",
+                    "incorrect": "Incorrect. Under 'Water Taxis': 'using the on-demand service.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'on-demand service'. Under 'Water Taxis': 'using the on-demand service.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Passengers can visit fishing areas or secluded ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'beaches'. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "beaches"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
+                    "incorrect": "Incorrect. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'beaches'. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The fishing charter price includes fuel and the ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'skipper'. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "skipper"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
+                    "incorrect": "Incorrect. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'skipper'. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The harbour tour includes a visit to the famous ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'Dorin Cliffs'. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "Dorin Cliffs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
+                    "incorrect": "Incorrect. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'Dorin Cliffs'. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The final sight before returning to the wharf is ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'the Marble'. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "the Marble"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
+                    "incorrect": "Incorrect. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
+                    "no_answer": "Please provide an answer. The correct answer is 'the Marble'. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return)."
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The harbour tour price includes drinks and ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'light snacks'. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "light snacks"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
+                    "incorrect": "Incorrect. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'light snacks'. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'"
+                }
+            }
         },
         {
-            "type": "open_question",
-            "instructions": "Questions 15–19",
+            "type": "closed_question",
+            "instructions": "Questions 15–19\n\nChoose the correct letter A, B, C or D.",
             "question": "Employee grievances",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is B. The text states 'A clear employment contract helps reduce workplace grievances.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. are prevented by contracts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text states 'A clear employment contract helps reduce workplace grievances, but disagreements may still arise.'"
+                },
+                {
+                    "text": "B. can be reduced with a clear procedure",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'A clear employment contract helps reduce workplace grievances.'"
+                },
+                {
+                    "text": "C. are usually welcomed",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text doesn't suggest grievances are welcomed."
+                },
+                {
+                    "text": "D. must always be formal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text states 'Grievances should usually be addressed informally first.'"
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "A. are prevented by contracts",
+            "question": "A grievance procedure",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is C. The text states 'A formal grievance procedure should be established at the start of employment.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. usually causes conflict",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text suggests procedures help manage complaints constructively."
+                },
+                {
+                    "text": "B. makes employees feel threatened",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text warns against procedures that discourage staff due to fear of retaliation."
+                },
+                {
+                    "text": "C. should be introduced at the start of employment",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'A formal grievance procedure should be established at the start of employment.'"
+                },
+                {
+                    "text": "D. protects employers legally",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the text."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "B. can be reduced with a clear procedure",
+            "question": "A grievance",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is A. The text states 'Grievances should usually be addressed informally first by those directly involved.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. should first be dealt with by those involved",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Grievances should usually be addressed informally first by those directly involved.'"
+                },
+                {
+                    "text": "B. reflects employee incompetence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text doesn't suggest grievances reflect incompetence."
+                },
+                {
+                    "text": "C. must go directly to senior management",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text says they should be addressed informally first by those involved."
+                },
+                {
+                    "text": "D. can only be raised by managers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Employees can raise grievances."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "C. are usually welcomed",
+            "question": "Grievances can often be resolved by",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is B. The text implies that informal discussion can clear up misunderstandings.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. arbitration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Arbitration is mentioned as an alternative when negotiations fail, not the primary method."
+                },
+                {
+                    "text": "B. clearing up misunderstandings",
+                    "is_correct": true,
+                    "feedback": "Correct! The text implies that informal discussion can clear up misunderstandings."
+                },
+                {
+                    "text": "C. senior management intervention",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text suggests starting with those directly involved."
+                },
+                {
+                    "text": "D. legal action",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned as a primary resolution method."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "D. must always be formal",
+            "question": "Mediators or arbitrators are effective because",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is D. The text implies that mediation and arbitration are alternative methods when both parties accept them.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. they know more about the issue",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not stated in the text."
+                },
+                {
+                    "text": "B. they increase compensation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "C. they impose deadlines",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "D. both parties agree to their appointment",
+                    "is_correct": true,
+                    "feedback": "Correct! The text implies that mediation and arbitration are alternative methods when both parties accept them."
+                }
+            ]
         },
         {
-            "type": "open_question",
-            "instructions": "Questions 20–25",
+            "type": "closed_question",
+            "instructions": "Questions 20–25\n\nDo the following statements agree with the information in Reading Passage 4?\n\nWrite:\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
             "question": "Job advertisements follow the same structure as product advertising.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text states 'Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action' which is a product advertising model.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action' which is a product advertising model."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Print quality can affect how an advert appears.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text mentions 'Poor layout, excessive formatting' can reduce readability, implying print quality matters.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text mentions 'Poor layout, excessive formatting' can reduce readability, implying print quality matters."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Capital letters make job adverts easier to read.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The text mentions 'overuse of capital letters can reduce readability' but doesn't say if proper use makes them easier to read.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The text mentions 'overuse of capital letters can reduce readability' but doesn't say if proper use makes them easier to read."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "All available advertising space should be filled with text.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The text states 'Effective advertisements keep text minimal... and include space around content.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Effective advertisements keep text minimal... and include space around content.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Job headings should clearly describe the role.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text states 'use clear headlines' which implies headings should clearly describe the role.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'use clear headlines' which implies headings should clearly describe the role."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Readers deliberately avoid unusually shaped advertisements.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The text states 'Irregular advert shapes may be subconsciously ignored' - not deliberately.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Irregular advert shapes may be subconsciously ignored' - not deliberately."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
             "type": "open_question",
