@@ -523,47 +523,47 @@
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. This heading better describes a different paragraph. Review all paragraphs carefully and match the main idea of each paragraph to the headings."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -927,6 +927,18 @@
             "text_id": 1,
             "title": "Reading Text 2",
             "content": "<h4><strong>Great Barrier Tourism Info</strong></h4>\n\n<p>Water Taxis<br>\nGreat Barrier Island water taxis operate 24 hours a day, seven days a week. Wharf-to-wharf travel is available to any local marina for a set fee using the on-demand service. All boats are operated by experienced local skippers.</p>\n\n<p>Fishing Charters<br>\nWater taxis can drop passengers at secluded beaches or fishing spots around the Hauraki Gulf. Half-day fishing charters cost $275 and include fuel and skipper. Boats accommodate a maximum of four people.</p>\n\n<p>Harbour Tours<br>\nTours depart from Great Barrier Wharf, offering views of the city, harbour bridge, Dorin Cliffs, Westhaven Marina, Golden Sands Beach and the Marble rock formation. The tour lasts two hours. Cost is $45 per person and includes tea, coffee and light snacks.</p>\n\n<h4><strong>Questions 8–14</strong></h4>\n\n<h4><strong>[Short answer questions.\nUse NO MORE THAN THREE WORDS.]</strong></h4>\n\n<h4><strong>The cost to visit any local ________ is fixed.\nAnswer: marinas</strong></h4>\n\n<h4><strong>You can book a water taxi using their ________.\nAnswer: on-demand service</strong></h4>\n\n<h4><strong>Passengers can visit fishing areas or secluded ________.\nAnswer: beaches</strong></h4>\n\n<h4><strong>The fishing charter price includes fuel and the ________.\nAnswer: skipper</strong></h4>\n\n<h4><strong>The harbour tour includes a visit to the famous ________.\nAnswer: Dorin Cliffs</strong></h4>\n\n<h4><strong>The final sight before returning to the wharf is ________.\nAnswer: the Marble</strong></h4>\n\n<h4><strong>The harbour tour price includes drinks and ________.\nAnswer: light snacks</strong></h4>",
+            "tags": []
+        },
+        {
+            "text_id": 2,
+            "title": "Reading Passage 3",
+            "content": "<h4><strong>Grievance Procedures</strong></h4>\n\n<p>A clear employment contract helps reduce workplace grievances, but disagreements may still arise. A formal grievance procedure should be established at the start of employment to manage complaints constructively.</p>\n\n<p>Grievance procedures should be viewed positively by both employers and employees. When poorly handled, they may discourage staff from raising concerns due to fear of retaliation. Research suggests that employees who raise grievances may experience negative outcomes, highlighting the need for protections against backlash.</p>\n\n<p>Grievances should usually be addressed informally first by those directly involved, with escalation possible if required. Alternative resolution methods such as mediation or arbitration may be used when negotiations fail. Effective procedures save time, money and working relationships.</p>\n\n<h4><strong>Questions 15–19</strong></h4>\n\n<p>[Multiple choice questions.<br>\nChoose ONE correct letter, A–D.]</p>",
+            "tags": []
+        },
+        {
+            "text_id": 3,
+            "title": "Reading Passage 4",
+            "content": "<h4><strong>Job Advertising</strong></h4>\n\n<p>Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action. Poor layout, excessive formatting and overuse of capital letters can reduce readability.</p>\n\n<p>Effective advertisements keep text minimal, use clear headlines and include space around content. Irregular advert shapes may be subconsciously ignored by readers. Addressing the reader directly helps candidates visualise themselves in the role.</p>\n\n<h4><strong>Questions 20–25</strong></h4>\n\n<p>[TRUE / FALSE / NOT GIVEN]</p>",
             "tags": []
         },
         {
