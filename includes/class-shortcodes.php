@@ -1524,6 +1524,11 @@ class IELTS_CM_Shortcodes {
         if (get_option('ielts_cm_membership_enabled')) {
             $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
             $pricing = get_option('ielts_cm_membership_pricing', array());
+            $extension_pricing = get_option('ielts_cm_extension_pricing', array(
+                '1_week' => 5.00,
+                '1_month' => 10.00,
+                '3_months' => 15.00
+            ));
             
             if (!empty($stripe_publishable)) {
                 wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
@@ -1547,6 +1552,7 @@ class IELTS_CM_Shortcodes {
                     'ajaxUrl' => admin_url('admin-ajax.php'),
                     'nonce' => wp_create_nonce('ielts_payment_intent'),
                     'pricing' => $pricing,
+                    'extensionPricing' => $extension_pricing,
                     'user' => $user_data,
                     'isAdmin' => current_user_can('manage_options'),
                 ));
@@ -1844,49 +1850,89 @@ class IELTS_CM_Shortcodes {
                                 <select name="ielts_membership_type" id="ielts_membership_type" required class="ielts-form-input">
                                     <option value=""><?php _e('-- Select a membership option --', 'ielts-course-manager'); ?></option>
                                     <?php 
-                                    $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                    // Check if user is a paid member who needs extension options
+                                    $show_extensions = $is_logged_in && isset($is_trial) && !$is_trial;
                                     
-                                    // Filter membership levels based on settings
-                                    $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
-                                    if (!$english_only_enabled) {
-                                        unset($membership_levels['english_trial']);
-                                        unset($membership_levels['english_full']);
-                                    }
-                                    
-                                    $pricing = get_option('ielts_cm_membership_pricing', array());
-                                    $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
-                                    
-                                    // Group memberships by type
-                                    $trial_options = array();
-                                    $paid_options = array();
-                                    
-                                    foreach ($membership_levels as $key => $label) {
-                                        $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
-                                        $option_label = $label;
-                                        
-                                        if (IELTS_CM_Membership::is_trial_membership($key)) {
-                                            $option_label .= ' (Free Trial)';
-                                            $trial_options[$key] = $option_label;
-                                        } else {
-                                            // Paid membership - always show price information
-                                            if ($price > 0) {
-                                                $option_label .= ' ($' . number_format($price, 2) . ')';
-                                            } else {
-                                                // Warning: price not configured
-                                                $option_label .= ' (Price Not Set - Contact Admin)';
-                                            }
-                                            $paid_options[$key] = $option_label;
-                                        }
-                                    }
-                                    
-                                    // For logged-in users upgrading, show only paid options
-                                    // For new registrations, show both trial and paid options
-                                    if (!$is_logged_in) {
-                                        // Display trial options first for new users
-                                        if (!empty($trial_options)):
+                                    if ($show_extensions) {
+                                        // Show extension options for paid members
+                                        $extension_pricing = get_option('ielts_cm_extension_pricing', array(
+                                            '1_week' => 5.00,
+                                            '1_month' => 10.00,
+                                            '3_months' => 15.00
+                                        ));
+                                        $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                         ?>
-                                            <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
-                                                <?php foreach ($trial_options as $key => $label): ?>
+                                        <optgroup label="<?php _e('Extension Options', 'ielts-course-manager'); ?>">
+                                            <option value="extension_1_week" <?php selected($selected_membership, 'extension_1_week'); ?>>
+                                                <?php echo esc_html(sprintf(__('1 Week Extension ($%s)', 'ielts-course-manager'), number_format($extension_pricing['1_week'] ?? 5.00, 2))); ?>
+                                            </option>
+                                            <option value="extension_1_month" <?php selected($selected_membership, 'extension_1_month'); ?>>
+                                                <?php echo esc_html(sprintf(__('1 Month Extension ($%s)', 'ielts-course-manager'), number_format($extension_pricing['1_month'] ?? 10.00, 2))); ?>
+                                            </option>
+                                            <option value="extension_3_months" <?php selected($selected_membership, 'extension_3_months'); ?>>
+                                                <?php echo esc_html(sprintf(__('3 Months Extension ($%s)', 'ielts-course-manager'), number_format($extension_pricing['3_months'] ?? 15.00, 2))); ?>
+                                            </option>
+                                        </optgroup>
+                                        <?php
+                                    } else {
+                                        // Show regular membership options for new users and trial users
+                                        $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                        
+                                        // Filter membership levels based on settings
+                                        $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+                                        if (!$english_only_enabled) {
+                                            unset($membership_levels['english_trial']);
+                                            unset($membership_levels['english_full']);
+                                        }
+                                        
+                                        $pricing = get_option('ielts_cm_membership_pricing', array());
+                                        $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
+                                        
+                                        // Group memberships by type
+                                        $trial_options = array();
+                                        $paid_options = array();
+                                        
+                                        foreach ($membership_levels as $key => $label) {
+                                            $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
+                                            $option_label = $label;
+                                            
+                                            if (IELTS_CM_Membership::is_trial_membership($key)) {
+                                                $option_label .= ' (Free Trial)';
+                                                $trial_options[$key] = $option_label;
+                                            } else {
+                                                // Paid membership - always show price information
+                                                if ($price > 0) {
+                                                    $option_label .= ' ($' . number_format($price, 2) . ')';
+                                                } else {
+                                                    // Warning: price not configured
+                                                    $option_label .= ' (Price Not Set - Contact Admin)';
+                                                }
+                                                $paid_options[$key] = $option_label;
+                                            }
+                                        }
+                                        
+                                        // For logged-in trial users upgrading, show only paid options
+                                        // For new registrations, show both trial and paid options
+                                        if (!$is_logged_in) {
+                                            // Display trial options first for new users
+                                            if (!empty($trial_options)):
+                                            ?>
+                                                <optgroup label="<?php _e('Free Trial Options', 'ielts-course-manager'); ?>">
+                                                    <?php foreach ($trial_options as $key => $label): ?>
+                                                        <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
+                                                            <?php echo esc_html($label); ?>
+                                                        </option>
+                                                    <?php endforeach; ?>
+                                                </optgroup>
+                                            <?php 
+                                            endif;
+                                        }
+                                        
+                                        // Display paid options
+                                        if (!empty($paid_options)):
+                                        ?>
+                                            <optgroup label="<?php _e('Full Membership (Payment Required)', 'ielts-course-manager'); ?>">
+                                                <?php foreach ($paid_options as $key => $label): ?>
                                                     <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
                                                         <?php echo esc_html($label); ?>
                                                     </option>
@@ -1895,19 +1941,6 @@ class IELTS_CM_Shortcodes {
                                         <?php 
                                         endif;
                                     }
-                                    
-                                    // Display paid options
-                                    if (!empty($paid_options)):
-                                    ?>
-                                        <optgroup label="<?php _e('Full Membership (Payment Required)', 'ielts-course-manager'); ?>">
-                                            <?php foreach ($paid_options as $key => $label): ?>
-                                                <option value="<?php echo esc_attr($key); ?>" <?php selected($selected_membership, $key); ?>>
-                                                    <?php echo esc_html($label); ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </optgroup>
-                                    <?php 
-                                    endif;
                                     ?>
                                 </select>
                             </p>
