@@ -7,7 +7,7 @@
             "instructions": "Questions 1–7\n\nComplete the summary below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
             "question": "<p>Travels to the [field 1] to see wildlife and forest before stopping close to [field 2].</p>\n<p>The journey has views across [field 3].</p>\n<p>Costs £5.00 for children and senior citizens, and [field 4] for passengers up to 5 years old.</p>\n<p>A [field 5] is required for group bookings and is refunded only if cancelled more than [field 6] before departure.</p>\n<p>People with certain phobias are advised that the train passes through [field 7].</p>",
             "points": 7,
-            "no_answer_feedback": "Please complete all fields. Look for the specific information about the Thorn Brook Rain Forest Express train journey in the passage. Each answer should be NO MORE THAN TWO WORDS from the text.",
+            "no_answer_feedback": "Please complete all fields. The correct answers are: 1) Whean Ranges, 2) Huia Dam, 3) Corille Harbour, 4) free, 5) deposit, 6) 8 days/eight days, 7) tunnels. Each answer can be found in the passage about the Thorn Brook Rain Forest Express.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -27,39 +27,39 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! The passage states the train goes into the Whean Ranges.",
-                    "incorrect": "Incorrect. Look in the first paragraph for where the train travels to see wildlife and forest.",
-                    "no_answer": "Where does the train travel to see wildlife and forest? Find this in the first paragraph."
+                    "correct": "Correct! The answer is Whean Ranges.",
+                    "incorrect": "Incorrect. The correct answer is WHEAN RANGES. The question asks 'where you can see wildlife and forest' and the passage states 'into the Whean Ranges, where you can see glow worms and rainforests'.",
+                    "no_answer": "The correct answer is WHEAN RANGES. The question asks where you can see wildlife and forest, and the passage states 'into the Whean Ranges, where you can see glow worms and rainforests'."
                 },
                 "2": {
-                    "correct": "Correct! The passage mentions relaxing with a picnic near the Huia Dam.",
-                    "incorrect": "Incorrect. Check the first paragraph for what landmark is mentioned near the picnic spot.",
-                    "no_answer": "What body of water is near the picnic area? Find this in the first paragraph."
+                    "correct": "Correct! The answer is Huia Dam.",
+                    "incorrect": "Incorrect. The correct answer is HUIA DAM. The question asks where the train stops close to, and the passage states 'relaxing with a picnic near the Huia Dam'.",
+                    "no_answer": "The correct answer is HUIA DAM. The question asks where the train stops close to, and the passage states 'relaxing with a picnic near the Huia Dam'."
                 },
                 "3": {
-                    "correct": "Correct! Passengers look out over Corille Harbour.",
-                    "incorrect": "Incorrect. Read the first paragraph to find what passengers can look out over.",
-                    "no_answer": "What can passengers look out over from the train? Find this in the first paragraph."
+                    "correct": "Correct! The answer is Corille Harbour.",
+                    "incorrect": "Incorrect. The correct answer is CORILLE HARBOUR. The question asks what the journey has views across, and the passage states 'look out over Corille Harbour'.",
+                    "no_answer": "The correct answer is CORILLE HARBOUR. The question asks what the journey has views across, and the passage states 'look out over Corille Harbour'."
                 },
                 "4": {
-                    "correct": "Correct! Infants (0-5 years) travel for free.",
-                    "incorrect": "Incorrect. Check the Prices section for the cost for infants aged 0-5 years.",
-                    "no_answer": "What is the price for passengers up to 5 years old? Check the Prices section."
+                    "correct": "Correct! The answer is free.",
+                    "incorrect": "Incorrect. The correct answer is FREE. The question asks what the cost is for passengers up to 5 years old, and the passage states 'Infants (0–5 years): Free'.",
+                    "no_answer": "The correct answer is FREE. The question asks what the cost is for passengers up to 5 years old, and the passage states 'Infants (0–5 years): Free'."
                 },
                 "5": {
-                    "correct": "Correct! A deposit is required for group bookings.",
-                    "incorrect": "Incorrect. Look in the Group booking conditions section for what is required.",
-                    "no_answer": "What payment is required for group bookings? Check the Group booking conditions."
+                    "correct": "Correct! The answer is deposit.",
+                    "incorrect": "Incorrect. The correct answer is DEPOSIT. The question asks what is required for group bookings, and the passage states 'A deposit is required and must be paid within ten days of booking'.",
+                    "no_answer": "The correct answer is DEPOSIT. The question asks what is required for group bookings, and the passage states 'A deposit is required and must be paid within ten days of booking'."
                 },
                 "6": {
-                    "correct": "Correct! Deposits are refunded if cancelled more than eight days before.",
-                    "incorrect": "Incorrect. Read the Group booking conditions to find the cancellation timeframe.",
-                    "no_answer": "How many days before departure can you cancel and get a refund? Check Group booking conditions."
+                    "correct": "Correct! The answer is 8 days or eight days.",
+                    "incorrect": "Incorrect. The correct answer is 8 DAYS (or EIGHT DAYS). The question asks how long before departure you can cancel and get a refund, and the passage states 'Deposits are refunded only if cancelled more than eight days before the booking'.",
+                    "no_answer": "The correct answer is 8 DAYS (or EIGHT DAYS). The question asks how long before departure you can cancel and get a refund, and the passage states 'Deposits are refunded only if cancelled more than eight days before the booking'."
                 },
                 "7": {
-                    "correct": "Correct! The train passes through two tunnels.",
-                    "incorrect": "Incorrect. Check the Important note section for what feature may affect people with phobias.",
-                    "no_answer": "What does the train pass through that may affect people with certain phobias? See Important note."
+                    "correct": "Correct! The answer is tunnels.",
+                    "incorrect": "Incorrect. The correct answer is TUNNELS. The question asks what feature may affect people with phobias, and the passage states 'The train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces'.",
+                    "no_answer": "The correct answer is TUNNELS. The question asks what feature may affect people with phobias, and the passage states 'The train passes through two tunnels' and notes this 'may affect passengers with a fear of darkness or confined spaces'."
                 }
             }
         },
@@ -600,7 +600,7 @@
             "instructions": "Questions 21–26\n\nAnswer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
             "question": "<p>How many days' holiday does a full-time employee receive? [field 1]</p>\n<p>How much notice is required to request holiday leave? [field 2]</p>\n<p>What is the maximum holiday entitlement that can be carried over? [field 3]</p>\n<p>What may be started if compassionate leave is abused? [field 4]</p>\n<p>For how many weeks is maternity pay provided? [field 5]</p>\n<p>What must be completed within 56 days after the baby is born? [field 6]</p>",
             "points": 6,
-            "no_answer_feedback": "Please complete all fields. Look for specific information about holiday and leave entitlements in the passage. Each answer should be NO MORE THAN THREE WORDS AND/OR A NUMBER from the text.",
+            "no_answer_feedback": "Please complete all fields. The correct answers are: 1) 28 days, 2) 6 weeks/six weeks, 3) 8 weeks/eight weeks, 4) an investigation/investigation, 5) 38 weeks, 6) paternity leave. Each answer can be found in the passage about Holiday and Leave Entitlements.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
@@ -619,34 +619,34 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! Full-time staff are entitled to 28 days of paid annual leave.",
-                    "incorrect": "Incorrect. Look in the first paragraph for the number of days for full-time staff.",
-                    "no_answer": "How many days of holiday does a full-time employee receive? Check the first paragraph."
+                    "correct": "Correct! The answer is 28 days.",
+                    "incorrect": "Incorrect. The correct answer is 28 DAYS. The question asks how many days of holiday a full-time employee receives, and the passage states 'Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff)'.",
+                    "no_answer": "The correct answer is 28 DAYS. The question asks how many days of holiday a full-time employee receives, and the passage states 'Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff)'."
                 },
                 "2": {
-                    "correct": "Correct! Holiday requests require six weeks' written notice.",
-                    "incorrect": "Incorrect. Check the first paragraph for how much notice is required.",
-                    "no_answer": "How much notice is required to request holiday leave? See the first paragraph."
+                    "correct": "Correct! The answer is 6 weeks or six weeks.",
+                    "incorrect": "Incorrect. The correct answer is 6 WEEKS (or SIX WEEKS). The question asks how much notice is required to request holiday leave, and the passage states 'Holiday requests require six weeks' written notice'.",
+                    "no_answer": "The correct answer is 6 WEEKS (or SIX WEEKS). The question asks how much notice is required to request holiday leave, and the passage states 'Holiday requests require six weeks' written notice'."
                 },
                 "3": {
-                    "correct": "Correct! Holidays may be accumulated up to a maximum of eight weeks.",
-                    "incorrect": "Incorrect. Look in the first paragraph for the maximum accumulation period.",
-                    "no_answer": "What is the maximum holiday entitlement that can be carried over? Check the first paragraph."
+                    "correct": "Correct! The answer is 8 weeks or eight weeks.",
+                    "incorrect": "Incorrect. The correct answer is 8 WEEKS (or EIGHT WEEKS). The question asks what the maximum holiday entitlement that can be carried over is, and the passage states 'Holidays may be accumulated up to a maximum of eight weeks'.",
+                    "no_answer": "The correct answer is 8 WEEKS (or EIGHT WEEKS). The question asks what the maximum holiday entitlement that can be carried over is, and the passage states 'Holidays may be accumulated up to a maximum of eight weeks'."
                 },
                 "4": {
-                    "correct": "Correct! Abuse of compassionate leave may result in an investigation.",
-                    "incorrect": "Incorrect. Read the second paragraph about compassionate leave abuse.",
-                    "no_answer": "What may be started if compassionate leave is abused? See the second paragraph."
+                    "correct": "Correct! The answer is an investigation or investigation.",
+                    "incorrect": "Incorrect. The correct answer is AN INVESTIGATION (or INVESTIGATION). The question asks what may be started if compassionate leave is abused, and the passage states 'Abuse of leave may result in an investigation'.",
+                    "no_answer": "The correct answer is AN INVESTIGATION (or INVESTIGATION). The question asks what may be started if compassionate leave is abused, and the passage states 'Abuse of leave may result in an investigation'."
                 },
                 "5": {
-                    "correct": "Correct! Maternity pay is provided for the first 38 weeks.",
-                    "incorrect": "Incorrect. Check the third paragraph for the number of weeks with pay.",
-                    "no_answer": "For how many weeks is maternity pay provided? Look in the third paragraph."
+                    "correct": "Correct! The answer is 38 weeks.",
+                    "incorrect": "Incorrect. The correct answer is 38 WEEKS. The question asks for how many weeks maternity pay is provided, and the passage states 'Maternity leave lasts 52 weeks, with pay for the first 38 weeks'.",
+                    "no_answer": "The correct answer is 38 WEEKS. The question asks for how many weeks maternity pay is provided, and the passage states 'Maternity leave lasts 52 weeks, with pay for the first 38 weeks'."
                 },
                 "6": {
-                    "correct": "Correct! Paternity leave must be taken within 56 days of the birth.",
-                    "incorrect": "Incorrect. Read the third paragraph for what must be completed within 56 days.",
-                    "no_answer": "What must be completed within 56 days after the baby is born? Check the third paragraph."
+                    "correct": "Correct! The answer is paternity leave.",
+                    "incorrect": "Incorrect. The correct answer is PATERNITY LEAVE. The question asks what must be completed within 56 days after the baby is born, and the passage states 'Paternity leave must be taken within 56 days of the birth'.",
+                    "no_answer": "The correct answer is PATERNITY LEAVE. The question asks what must be completed within 56 days after the baby is born, and the passage states 'Paternity leave must be taken within 56 days of the birth'."
                 }
             }
         },
@@ -859,7 +859,7 @@
             "instructions": "Complete the sentences below.\r\n\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\n\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>",
             "points": 5,
-            "no_answer_feedback": "Please complete all fields. Look for specific information about the Tasmanian Tiger in the passage. Each answer should be NO MORE THAN TWO WORDS from the text.",
+            "no_answer_feedback": "Please complete all fields. The correct answers are: 1) marsupial predator, 2) hind legs, 3) European settlers/settlers, 4) partly hidden/hidden, 5) trail cameras/cameras. Each answer can be found in the passage about the Tasmanian Tiger.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
@@ -877,29 +877,29 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The answer is marsupial predator.",
+                    "incorrect": "Incorrect. The correct answer is MARSUPIAL PREDATOR. The question asks what the Tasmanian tiger was once the planet's biggest of, and the passage states it was 'at one time the world's largest marsupial predator'.",
+                    "no_answer": "The correct answer is MARSUPIAL PREDATOR. The question asks what the Tasmanian tiger was once the planet's biggest of, and the passage states it was 'at one time the world's largest marsupial predator'."
                 },
                 "2": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The answer is hind legs.",
+                    "incorrect": "Incorrect. The correct answer is HIND LEGS. The question asks what thylacines could use to jump and move upright, and the passage mentions their ability to use their 'hind legs'.",
+                    "no_answer": "The correct answer is HIND LEGS. The question asks what thylacines could use to jump and move upright, and the passage mentions their ability to use their 'hind legs'."
                 },
                 "3": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The answer is European settlers or settlers.",
+                    "incorrect": "Incorrect. The correct answer is EUROPEAN SETTLERS (or SETTLERS). The question asks who brought dogs to Tasmania, and the passage states that 'European settlers' brought dogs.",
+                    "no_answer": "The correct answer is EUROPEAN SETTLERS (or SETTLERS). The question asks who brought dogs to Tasmania, and the passage states that 'European settlers' brought dogs."
                 },
                 "4": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The answer is partly hidden or hidden.",
+                    "incorrect": "Incorrect. The correct answer is PARTLY HIDDEN (or HIDDEN). The question asks how the creature in photos published in New Scientist was affected by vegetation, and the passage indicates it was 'partly hidden' by vegetation.",
+                    "no_answer": "The correct answer is PARTLY HIDDEN (or HIDDEN). The question asks how the creature in photos published in New Scientist was affected by vegetation, and the passage indicates it was 'partly hidden' by vegetation."
                 },
                 "5": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The answer is trail cameras or cameras.",
+                    "incorrect": "Incorrect. The correct answer is TRAIL CAMERAS (or CAMERAS). The question asks what the James Cook University researchers intend to install, and the passage states they plan to install 'trail cameras'.",
+                    "no_answer": "The correct answer is TRAIL CAMERAS (or CAMERAS). The question asks what the James Cook University researchers intend to install, and the passage states they plan to install 'trail cameras'."
                 }
             }
         },
