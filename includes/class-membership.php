@@ -22,6 +22,11 @@ class IELTS_CM_Membership {
     );
     
     /**
+     * Extension types for paid members
+     */
+    const EXTENSION_TYPES = array('extension_1_week', 'extension_1_month', 'extension_3_months');
+    
+    /**
      * Trial period in days
      */
     const TRIAL_PERIOD_DAYS = 30;
@@ -505,7 +510,7 @@ class IELTS_CM_Membership {
         }
         
         $enabled = get_option('ielts_cm_membership_enabled', false);
-        $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+        $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
@@ -603,7 +608,7 @@ class IELTS_CM_Membership {
                     <?php 
                     // Filter membership levels based on settings
                     $membership_levels_for_duration = self::MEMBERSHIP_LEVELS;
-                    if (!(bool) $english_only_enabled) {
+                    if (!$english_only_enabled) {
                         unset($membership_levels_for_duration['english_trial']);
                         unset($membership_levels_for_duration['english_full']);
                     }
@@ -654,7 +659,7 @@ class IELTS_CM_Membership {
         }
         
         $mapping = get_option('ielts_cm_membership_course_mapping', array());
-        $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+        $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
         $courses = get_posts(array(
             'post_type' => 'ielts_course',
             'posts_per_page' => -1,
@@ -664,7 +669,7 @@ class IELTS_CM_Membership {
         
         // Filter membership levels based on settings
         $membership_levels = self::MEMBERSHIP_LEVELS;
-        if (!(bool) $english_only_enabled) {
+        if (!$english_only_enabled) {
             unset($membership_levels['english_trial']);
             unset($membership_levels['english_full']);
         }

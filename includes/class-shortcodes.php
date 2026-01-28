@@ -1657,8 +1657,10 @@ class IELTS_CM_Shortcodes {
                 // Validate membership type if provided
                 if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
                     // Extension types are valid for logged-in users upgrading
-                    $extension_types = array('extension_1_week', 'extension_1_month', 'extension_3_months');
-                    $valid_types = array_merge(IELTS_CM_Membership::get_valid_membership_types(), $extension_types);
+                    $valid_types = array_merge(
+                        IELTS_CM_Membership::get_valid_membership_types(), 
+                        IELTS_CM_Membership::EXTENSION_TYPES
+                    );
                     
                     if (!in_array($membership_type, $valid_types)) {
                         $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
