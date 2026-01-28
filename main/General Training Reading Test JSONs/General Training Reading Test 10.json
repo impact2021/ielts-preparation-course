@@ -3,354 +3,955 @@
     "content": "",
     "questions": [
         {
-            "type": "open_question",
-            "instructions": "Questions 1–7",
-            "question": "The advertiser …",
-            "points": 1,
-            "no_answer_feedback": "",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "short_answer"
-        },
-        {
-            "type": "open_question",
-            "instructions": "",
+            "type": "closed_question",
+            "instructions": "Questions 1–7\n\nThis is a classification question. There are 7 questions. Look at the advertisements A–H and match each statement to the correct advertisement. Use each letter once only.",
             "question": "is willing to travel after seeing the item",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is H. Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'"
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "does not require payment",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is E. Advertisement E states 'Free to anyone willing to collect.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement E states 'Free to anyone willing to collect.'"
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is selling something they were given",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is C. Advertisement C states 'Unwanted gift' for the PlayStation games.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement C states 'Unwanted gift' for the PlayStation games."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is selling because they are relocating",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is B. Advertisement B states 'Must sell because I am leaving the country.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement B states 'Must sell because I am leaving the country.'"
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is missing an accessory",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is A. Advertisement A states 'Headphones are missing' for the iPhone X.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement A states 'Headphones are missing' for the iPhone X."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "is not willing to change the price",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is D. Advertisement D states '£250 (price is non-negotiable).'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement D states '£250 (price is non-negotiable).'"
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "is indifferent to the condition of the item",
+            "points": 1,
+            "no_answer_feedback": "Please select an answer. The correct answer is F. Advertisement F states 'Does not need to be in very good condition as long as it works.'",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": 0,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "matching_features",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "B",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "C",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "D",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "E",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "F",
+                    "is_correct": true,
+                    "feedback": "Correct! Advertisement F states 'Does not need to be in very good condition as long as it works.'"
+                },
+                {
+                    "text": "G",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                },
+                {
+                    "text": "H",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review the advertisements to find which one matches this description."
+                }
+            ]
         },
         {
             "type": "open_question",
-            "instructions": "Questions 8–14",
+            "instructions": "Questions 8–14\n\nAnswer the questions below using NO MORE THAN THREE WORDS from the text for each answer.",
             "question": "The cost to visit any local ________ is fixed.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'marinas'. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "marinas"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
+                    "incorrect": "Incorrect. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'marinas'. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "You can book a water taxi using their ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'on-demand service'. Under 'Water Taxis': 'using the on-demand service.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "on-demand service"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Water Taxis': 'using the on-demand service.'",
+                    "incorrect": "Incorrect. Under 'Water Taxis': 'using the on-demand service.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'on-demand service'. Under 'Water Taxis': 'using the on-demand service.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "Passengers can visit fishing areas or secluded ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'beaches'. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "beaches"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
+                    "incorrect": "Incorrect. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'beaches'. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The fishing charter price includes fuel and the ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'skipper'. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "skipper"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
+                    "incorrect": "Incorrect. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'skipper'. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The harbour tour includes a visit to the famous ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'Dorin Cliffs'. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "Dorin Cliffs"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
+                    "incorrect": "Incorrect. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'Dorin Cliffs'. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'"
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The final sight before returning to the wharf is ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'the Marble'. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "the Marble"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
+                    "incorrect": "Incorrect. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
+                    "no_answer": "Please provide an answer. The correct answer is 'the Marble'. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return)."
+                }
+            }
         },
         {
             "type": "open_question",
             "instructions": "",
             "question": "The harbour tour price includes drinks and ________.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please provide an answer. The correct answer is 'light snacks'. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "short_answer_r",
+            "field_count": 1,
+            "field_answers": {
+                "1": "light snacks"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
+                    "incorrect": "Incorrect. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
+                    "no_answer": "Please provide an answer. The correct answer is 'light snacks'. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'"
+                }
+            }
         },
         {
-            "type": "open_question",
-            "instructions": "Questions 15–19",
+            "type": "closed_question",
+            "instructions": "Questions 15–19\n\nChoose the correct letter A, B, C or D.",
             "question": "Employee grievances",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is B. The text states 'A clear employment contract helps reduce workplace grievances.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. are prevented by contracts",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text states 'A clear employment contract helps reduce workplace grievances, but disagreements may still arise.'"
+                },
+                {
+                    "text": "B. can be reduced with a clear procedure",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'A clear employment contract helps reduce workplace grievances.'"
+                },
+                {
+                    "text": "C. are usually welcomed",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text doesn't suggest grievances are welcomed."
+                },
+                {
+                    "text": "D. must always be formal",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text states 'Grievances should usually be addressed informally first.'"
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "A. are prevented by contracts",
+            "question": "A grievance procedure",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is C. The text states 'A formal grievance procedure should be established at the start of employment.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. usually causes conflict",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text suggests procedures help manage complaints constructively."
+                },
+                {
+                    "text": "B. makes employees feel threatened",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text warns against procedures that discourage staff due to fear of retaliation."
+                },
+                {
+                    "text": "C. should be introduced at the start of employment",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'A formal grievance procedure should be established at the start of employment.'"
+                },
+                {
+                    "text": "D. protects employers legally",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned in the text."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "B. can be reduced with a clear procedure",
+            "question": "A grievance",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is A. The text states 'Grievances should usually be addressed informally first by those directly involved.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. should first be dealt with by those involved",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Grievances should usually be addressed informally first by those directly involved.'"
+                },
+                {
+                    "text": "B. reflects employee incompetence",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text doesn't suggest grievances reflect incompetence."
+                },
+                {
+                    "text": "C. must go directly to senior management",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text says they should be addressed informally first by those involved."
+                },
+                {
+                    "text": "D. can only be raised by managers",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Employees can raise grievances."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "C. are usually welcomed",
+            "question": "Grievances can often be resolved by",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is B. The text implies that informal discussion can clear up misunderstandings.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. arbitration",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Arbitration is mentioned as an alternative when negotiations fail, not the primary method."
+                },
+                {
+                    "text": "B. clearing up misunderstandings",
+                    "is_correct": true,
+                    "feedback": "Correct! The text implies that informal discussion can clear up misunderstandings."
+                },
+                {
+                    "text": "C. senior management intervention",
+                    "is_correct": false,
+                    "feedback": "Incorrect. The text suggests starting with those directly involved."
+                },
+                {
+                    "text": "D. legal action",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned as a primary resolution method."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
-            "question": "D. must always be formal",
+            "question": "Mediators or arbitrators are effective because",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is D. The text implies that mediation and arbitration are alternative methods when both parties accept them.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "multiple_choice_r",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "A. they know more about the issue",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not stated in the text."
+                },
+                {
+                    "text": "B. they increase compensation",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "C. they impose deadlines",
+                    "is_correct": false,
+                    "feedback": "Incorrect. This is not mentioned."
+                },
+                {
+                    "text": "D. both parties agree to their appointment",
+                    "is_correct": true,
+                    "feedback": "Correct! The text implies that mediation and arbitration are alternative methods when both parties accept them."
+                }
+            ]
         },
         {
-            "type": "open_question",
-            "instructions": "Questions 20–25",
+            "type": "closed_question",
+            "instructions": "Questions 20–25\n\nDo the following statements agree with the information in Reading Passage 4?\n\nWrite:\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
             "question": "Job advertisements follow the same structure as product advertising.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text states 'Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action' which is a product advertising model.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action' which is a product advertising model."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Print quality can affect how an advert appears.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text mentions 'Poor layout, excessive formatting' can reduce readability, implying print quality matters.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text mentions 'Poor layout, excessive formatting' can reduce readability, implying print quality matters."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Capital letters make job adverts easier to read.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The text mentions 'overuse of capital letters can reduce readability' but doesn't say if proper use makes them easier to read.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": true,
+                    "feedback": "Correct! The text mentions 'overuse of capital letters can reduce readability' but doesn't say if proper use makes them easier to read."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "All available advertising space should be filled with text.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The text states 'Effective advertisements keep text minimal... and include space around content.'",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Effective advertisements keep text minimal... and include space around content.'"
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Job headings should clearly describe the role.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text states 'use clear headlines' which implies headings should clearly describe the role.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'use clear headlines' which implies headings should clearly describe the role."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
-            "type": "open_question",
+            "type": "closed_question",
             "instructions": "",
             "question": "Readers deliberately avoid unusually shaped advertisements.",
             "points": 1,
-            "no_answer_feedback": "",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The text states 'Irregular advert shapes may be subconsciously ignored' - not deliberately.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "short_answer"
+            "ielts_question_category": "true_false_not_given",
+            "correct_answer_count": 1,
+            "mc_options": [
+                {
+                    "text": "TRUE",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                },
+                {
+                    "text": "FALSE",
+                    "is_correct": true,
+                    "feedback": "Correct! The text states 'Irregular advert shapes may be subconsciously ignored' - not deliberately."
+                },
+                {
+                    "text": "NOT GIVEN",
+                    "is_correct": false,
+                    "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
+                }
+            ]
         },
         {
             "type": "open_question",
@@ -513,7 +1114,7 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
@@ -523,47 +1124,47 @@
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph A to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph A. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph A. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -582,22 +1183,22 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
@@ -607,32 +1208,32 @@
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph B to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph B. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph B. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -651,37 +1252,37 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
@@ -691,17 +1292,17 @@
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph C to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph C. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph C. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -720,47 +1321,47 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph D. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph D to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
@@ -770,7 +1371,7 @@
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph D. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -789,12 +1390,12 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
@@ -804,42 +1405,42 @@
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph E to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph E. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. X. The best of both worlds better describes Paragraph F, not Paragraph E. Review both paragraphs carefully."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
@@ -858,52 +1459,52 @@
             "audio_section_id": null,
             "audio_start_time": null,
             "audio_end_time": null,
-            "ielts_question_category": "",
+            "ielts_question_category": "matching_headings",
             "mc_options": [
                 {
                     "text": "I. Time for a change?",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. I. Time for a change? better describes Paragraph A, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "II. Social impact",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. II. Social impact better describes Paragraph E, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "III. Management decisions",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. III. Management decisions does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IV. Flexibility of technology better describes Paragraph B, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "V. Wasted time on the road",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. V. Wasted time on the road does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "VI. Technology keeping us at home",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VI. Technology keeping us at home does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VII. Benefits for all better describes Paragraph C, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "VIII. Business in the workplace",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. VIII. Business in the workplace does not accurately describe any paragraph in this passage. Review Paragraph F to find the heading that matches its main idea."
                 },
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": false,
-                    "feedback": "Incorrect. This heading better describes a different paragraph."
+                    "feedback": "Incorrect. IX. Keeping it clean better describes Paragraph D, not Paragraph F. Review both paragraphs carefully."
                 },
                 {
                     "text": "X. The best of both worlds",
@@ -920,18 +1521,30 @@
         {
             "text_id": 0,
             "title": "Reading Text 1",
-            "content": "<h4><strong>WWW.TRADEWITHME.COM\n – Classified Advertisements</strong></h4>\n\n<p>A<br>\nFor sale: iPhone X. In very good condition without protective rubber case. Headphones are missing, but the phone is in perfect working order. Asking £150, but willing to accept offers.</p>\n\n<p>B<br>\n52-inch flat screen LCD television for sale. Small scratch on the top, but the screen is fine. Must sell because I am leaving the country, so any offer will be considered.</p>\n\n<p>C<br>\nPlayStation games (20 different games). Brand new, boxed with manuals. Unwanted gift. All reasonable offers considered.</p>\n\n<p>D<br>\nFor sale: complete dining room set (table and six chairs). In reasonable condition, may need repainting. Table folds for storage. Buyer must collect. £250 (price is non-negotiable).</p>\n\n<p>E<br>\nZanussi fridge freezer, 1.6 metres tall. Four years old. Motor works, but door seal is faulty. Free to anyone willing to collect.</p>\n\n<p>F<br>\nWanted: cheap laptop computer. Does not need to be in very good condition as long as it works. Required for word processing and internet use. Will pay up to £200. Must include all cables, accessories and a carry bag.</p>\n\n<p>G<br>\nBoat trailer wanted. Must take a small boat (2 metres long). Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</p>\n\n<p>H<br>\nWanted: antique figurines from the Lladro collection. Will pay a good price for authentic pieces in good condition. We will travel to inspect the item, but a photograph must be sent first.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a classification question.<br>\nThere are 7 questions.<br>\nUse each letter A–H once only.]</p>\n\n<h4><strong>The advertiser …</strong></h4>\n\n<h4><strong>is willing to travel after seeing the item\nAnswer: H</strong></h4>\n\n<h4><strong>does not require payment\nAnswer: E</strong></h4>\n\n<h4><strong>is selling something they were given\nAnswer: C</strong></h4>\n\n<h4><strong>is selling because they are relocating\nAnswer: B</strong></h4>\n\n<h4><strong>is missing an accessory\nAnswer: A</strong></h4>\n\n<h4><strong>is not willing to change the price\nAnswer: D</strong></h4>\n\n<h4><strong>is indifferent to the condition of the item\nAnswer: F</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
+            "content": "<h4><strong>WWW.TRADEWITHME.COM\n – Classified Advertisements</strong></h4>\n\n<p>A<br>\nFor sale: iPhone X. In very good condition without protective rubber case. <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Headphones are missing</span>, but the phone is in perfect working order. Asking £150, but willing to accept offers.</p>\n\n<p>B<br>\n52-inch flat screen LCD television for sale. Small scratch on the top, but the screen is fine. <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Must sell because I am leaving the country</span>, so any offer will be considered.</p>\n\n<p>C<br>\nPlayStation games (20 different games). Brand new, boxed with manuals. <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Unwanted gift</span>. All reasonable offers considered.</p>\n\n<p>D<br>\nFor sale: complete dining room set (table and six chairs). In reasonable condition, may need repainting. Table folds for storage. Buyer must collect. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">£250 (price is non-negotiable)</span>.</p>\n\n<p>E<br>\nZanussi fridge freezer, 1.6 metres tall. Four years old. Motor works, but door seal is faulty. <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Free to anyone willing to collect</span>.</p>\n\n<p>F<br>\nWanted: cheap laptop computer. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Does not need to be in very good condition as long as it works</span>. Required for word processing and internet use. Will pay up to £200. Must include all cables, accessories and a carry bag.</p>\n\n<p>G<br>\nBoat trailer wanted. Must take a small boat (2 metres long). Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</p>\n\n<p>H<br>\nWanted: antique figurines from the Lladro collection. Will pay a good price for authentic pieces in good condition. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">We will travel to inspect the item</span>, but a photograph must be sent first.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a classification question.<br>\nThere are 7 questions.<br>\nUse each letter A–H once only.]</p>\n\n<h4><strong>The advertiser …</strong></h4>\n\n<h4><strong>is willing to travel after seeing the item\nAnswer: H</strong></h4>\n\n<h4><strong>does not require payment\nAnswer: E</strong></h4>\n\n<h4><strong>is selling something they were given\nAnswer: C</strong></h4>\n\n<h4><strong>is selling because they are relocating\nAnswer: B</strong></h4>\n\n<h4><strong>is missing an accessory\nAnswer: A</strong></h4>\n\n<h4><strong>is not willing to change the price\nAnswer: D</strong></h4>\n\n<h4><strong>is indifferent to the condition of the item\nAnswer: F</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
             "tags": []
         },
         {
             "text_id": 1,
             "title": "Reading Text 2",
-            "content": "<h4><strong>Great Barrier Tourism Info</strong></h4>\n\n<p>Water Taxis<br>\nGreat Barrier Island water taxis operate 24 hours a day, seven days a week. Wharf-to-wharf travel is available to any local marina for a set fee using the on-demand service. All boats are operated by experienced local skippers.</p>\n\n<p>Fishing Charters<br>\nWater taxis can drop passengers at secluded beaches or fishing spots around the Hauraki Gulf. Half-day fishing charters cost $275 and include fuel and skipper. Boats accommodate a maximum of four people.</p>\n\n<p>Harbour Tours<br>\nTours depart from Great Barrier Wharf, offering views of the city, harbour bridge, Dorin Cliffs, Westhaven Marina, Golden Sands Beach and the Marble rock formation. The tour lasts two hours. Cost is $45 per person and includes tea, coffee and light snacks.</p>\n\n<h4><strong>Questions 8–14</strong></h4>\n\n<h4><strong>[Short answer questions.\nUse NO MORE THAN THREE WORDS.]</strong></h4>\n\n<h4><strong>The cost to visit any local ________ is fixed.\nAnswer: marinas</strong></h4>\n\n<h4><strong>You can book a water taxi using their ________.\nAnswer: on-demand service</strong></h4>\n\n<h4><strong>Passengers can visit fishing areas or secluded ________.\nAnswer: beaches</strong></h4>\n\n<h4><strong>The fishing charter price includes fuel and the ________.\nAnswer: skipper</strong></h4>\n\n<h4><strong>The harbour tour includes a visit to the famous ________.\nAnswer: Dorin Cliffs</strong></h4>\n\n<h4><strong>The final sight before returning to the wharf is ________.\nAnswer: the Marble</strong></h4>\n\n<h4><strong>The harbour tour price includes drinks and ________.\nAnswer: light snacks</strong></h4>",
+            "content": "<h4><strong>Great Barrier Tourism Info</strong></h4>\n\n<p>Water Taxis<br>\nGreat Barrier Island water taxis operate 24 hours a day, seven days a week. Wharf-to-wharf travel is available to any local <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">marina</span> for a set fee using the <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">on-demand service</span>. All boats are operated by experienced local skippers.</p>\n\n<p>Fishing Charters<br>\nWater taxis can drop passengers at secluded <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">beaches</span> or fishing spots around the Hauraki Gulf. Half-day fishing charters cost $275 and include fuel and <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">skipper</span>. Boats accommodate a maximum of four people.</p>\n\n<p>Harbour Tours<br>\nTours depart from Great Barrier Wharf, offering views of the city, harbour bridge, <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Dorin Cliffs</span>, Westhaven Marina, Golden Sands Beach and <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">the Marble rock formation</span>. The tour lasts two hours. Cost is $45 per person and includes tea, coffee and <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">light snacks</span>.</p>\n\n<h4><strong>Questions 8–14</strong></h4>\n\n<h4><strong>[Short answer questions.\nUse NO MORE THAN THREE WORDS.]</strong></h4>\n\n<h4><strong>The cost to visit any local ________ is fixed.\nAnswer: marinas</strong></h4>\n\n<h4><strong>You can book a water taxi using their ________.\nAnswer: on-demand service</strong></h4>\n\n<h4><strong>Passengers can visit fishing areas or secluded ________.\nAnswer: beaches</strong></h4>\n\n<h4><strong>The fishing charter price includes fuel and the ________.\nAnswer: skipper</strong></h4>\n\n<h4><strong>The harbour tour includes a visit to the famous ________.\nAnswer: Dorin Cliffs</strong></h4>\n\n<h4><strong>The final sight before returning to the wharf is ________.\nAnswer: the Marble</strong></h4>\n\n<h4><strong>The harbour tour price includes drinks and ________.\nAnswer: light snacks</strong></h4>",
+            "tags": []
+        },
+        {
+            "text_id": 2,
+            "title": "Reading Passage 3",
+            "content": "<h4><strong>Grievance Procedures</strong></h4>\n\n<p><span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">A clear employment contract helps reduce workplace grievances</span>, but disagreements may still arise. A formal grievance procedure <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">should be established at the start of employment</span> to manage complaints constructively.</p>\n\n<p>Grievance procedures should be viewed positively by both employers and employees. When poorly handled, they may discourage staff from raising concerns due to fear of retaliation. Research suggests that employees who raise grievances may experience negative outcomes, highlighting the need for protections against backlash.</p>\n\n<p><span id=\"q17\" data-question=\"17\"></span><span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Grievances should usually be addressed informally first by those directly involved, with escalation possible if required</span>. <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">Alternative resolution methods such as mediation or arbitration may be used when negotiations fail</span>. Effective procedures save time, money and working relationships.</p>\n\n<h4><strong>Questions 15–19</strong></h4>\n\n<p>[Multiple choice questions.<br>\nChoose ONE correct letter, A–D.]</p>",
+            "tags": []
+        },
+        {
+            "text_id": 3,
+            "title": "Reading Passage 4",
+            "content": "<h4><strong>Job Advertising</strong></h4>\n\n<p><span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action</span>. <span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Poor layout, excessive formatting and overuse of capital letters can reduce readability</span>.</p>\n\n<p><span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Effective advertisements keep text minimal</span>, <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">use clear headlines</span> and include space around content. <span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Irregular advert shapes may be subconsciously ignored by readers</span>. Addressing the reader directly helps candidates visualise themselves in the role.</p>\n\n<h4><strong>Questions 20–25</strong></h4>\n\n<p>[TRUE / FALSE / NOT GIVEN]</p>",
             "tags": []
         },
         {
             "title": "Reading Text 5",
-            "content": "<h3>Reading Passage 3</h3>\r\n<h4>You should spend about 20 minutes on Questions 26 - 40 which are based on Reading Passage 3.</h4>\r\n\r\n<h2>Working from home</h2>\r\n\r\n<p><strong>A:</strong><span id=\"q35\" data-question=\"35\"></span> Can you feel your anxiety and stress levels increasing every time you get caught in a traffic jam? Do you find it difficult to control your tongue when your boss points out your shortcomings yet again? Do you just not have the right kind of office attire, hate spending hours shopping for it and, frankly, would feel much better if you only had more independence, more freedom, more flexible hours and fewer people on your back? Do you yearn for state-of-the-art technology in your home, that ... wait for it ... you haven't had to pay for? If you are shouting an enthusiastic 'Yes!' in answer to these questions, then it could be time to make a career and life change that may not even require you to quit your job. Just suggest to your boss that you wish to become one of the new breed of executives whose office is based at home.</p>\r\n\r\n<p><strong>B:</strong><span id=\"q36\" data-question=\"36\"></span> Working from home is a relatively new phenomenon, but is becoming an increasingly popular option with both businesses and employees. The technology available to us now means that <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">we no longer need to be in the same office building as our colleagues to communicate effectively with each other</span>. E-mail, video conferencing, mobile telephones and more, mean that <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">we can do business just as efficiently, regardless of our location</span>.</p>\r\n\r\n<p><strong>C:</strong><span id=\"q37\" data-question=\"37\"></span> Companies may choose to employ a proportion of their staff as home-based workers, as, of course, a workforce set up in such a way requires far less office space and fewer parking facilities. <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The fixed costs of a business can be dramatically reduced</span>. Employees can enjoy the added benefits of freedom to schedule the day as they choose and freedom to spend more time at home with their families. Working from home can be a particularly valid option for young mothers who wish to pursue their careers but find it impossible to be out of the house for nine or ten hours per day.</p>\r\n\r\n<p><strong>D:</strong><span id=\"q38\" data-question=\"38\"></span> We can even go so far as to say that the working-from-home phenomenon could be one of the answers to the pollution problems which the modern world has inflicted upon itself. Fewer people travelling to work every day equals fewer cars. Fewer cars, of course, equates to lower CO2 levels in the atmosphere. Governments have been trying for years to persuade us to forsake our private car journey to work each day for the hideous experience of a crowded bus or train, but <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">this is still unpopular</span>. Most of us have been resistant, even when parking fees in city areas have been on the rise and unpredictable traffic patterns mean we have to leave our house 30 minutes earlier than necessary anyway. But working from home gives us no excuse whatsoever to emit CO2 into the atmosphere twice a day in our working week.</p>\r\n\r\n<p><strong>E:</strong><span id=\"q39\" data-question=\"39\"></span> But what are the drawbacks to working from home? There must be some or everybody would be doing it. For many of us, work is a means of escaping our nearest and dearest and making our own mark on the world. The relationships we have with our colleagues, be they good or bad, are a significant part of our life and <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">should not be overlooked</span> - after all, full-time workers spend a third of their day in their workplace. After-hours pursuits of a game of squash or a pint in the pub become part of our daily routine. We cement sound friendships at work and an astounding percentage of us meet our life partner at our place of work. The people there have similar ambitions and business interests and we are, after all, social animals. The majority of us become depressed and withdrawn if we do not have enough interaction with others. Some people who work from home feel that, because they do spend a large proportion of the day at home alone with few distractions, they are actually much more productive and can get tasks done in a much shorter time than in an office environment. Others, however, may be demotivated by the isolation and find it difficult to get down to tasks which have a more intangible deadline.</p>\r\n\r\n<p><strong>F:</strong><span id=\"q40\" data-question=\"40\"></span> As with most aspects of life, a balance is probably the best solution for the majority of workers - a job based at home which requires regular contact with colleagues at regular meetings. Management surveys show that successful business is easier if we operate as a team: brainstorming and sharing ideas and offering support and motivation to each other. After all, we are only human and we need others to complain to if we have a bad day at work!</p>",
+            "content": "<h3>Reading Passage 3</h3>\r\n<h4>You should spend about 20 minutes on Questions 26 - 40 which are based on Reading Passage 3.</h4>\r\n\r\n<h2>Working from home</h2>\r\n\r\n<p><strong>A:</strong><span id=\"q31\" data-question=\"31\"></span> Can you feel your anxiety and stress levels increasing every time you get caught in a traffic jam? Do you find it difficult to control your tongue when your boss points out your shortcomings yet again? Do you just not have the right kind of office attire, hate spending hours shopping for it and, frankly, would feel much better if you only had more independence, more freedom, more flexible hours and fewer people on your back? Do you yearn for state-of-the-art technology in your home, that ... wait for it ... you haven't had to pay for? If you are shouting an enthusiastic 'Yes!' in answer to these questions, then it could be time to make a career and life change that may not even require you to quit your job. Just suggest to your boss that you wish to become one of the new breed of executives whose office is based at home.</p>\r\n\r\n<p><strong>B:</strong><span id=\"q32\" data-question=\"32\"></span> Working from home is a relatively new phenomenon, but is becoming an increasingly popular option with both businesses and employees. The technology available to us now means that <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">we no longer need to be in the same office building as our colleagues to communicate effectively with each other</span>. E-mail, video conferencing, mobile telephones and more, mean that <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">we can do business just as efficiently, regardless of our location</span>.</p>\r\n\r\n<p><strong>C:</strong><span id=\"q33\" data-question=\"33\"></span> Companies may choose to employ a proportion of their staff as home-based workers, as, of course, a workforce set up in such a way requires far less office space and fewer parking facilities. <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The fixed costs of a business can be dramatically reduced</span>. Employees can enjoy the added benefits of freedom to schedule the day as they choose and freedom to spend more time at home with their families. Working from home can be a particularly valid option for young mothers who wish to pursue their careers but find it impossible to be out of the house for nine or ten hours per day.</p>\r\n\r\n<p><strong>D:</strong><span id=\"q34\" data-question=\"34\"></span> We can even go so far as to say that the working-from-home phenomenon could be one of the answers to the pollution problems which the modern world has inflicted upon itself. Fewer people travelling to work every day equals fewer cars. Fewer cars, of course, equates to lower CO2 levels in the atmosphere. Governments have been trying for years to persuade us to forsake our private car journey to work each day for the hideous experience of a crowded bus or train, but <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">this is still unpopular</span>. Most of us have been resistant, even when parking fees in city areas have been on the rise and unpredictable traffic patterns mean we have to leave our house 30 minutes earlier than necessary anyway. But working from home gives us no excuse whatsoever to emit CO2 into the atmosphere twice a day in our working week.</p>\r\n\r\n<p><strong>E:</strong><span id=\"q35\" data-question=\"35\"></span> But what are the drawbacks to working from home? There must be some or everybody would be doing it. For many of us, work is a means of escaping our nearest and dearest and making our own mark on the world. The relationships we have with our colleagues, be they good or bad, are a significant part of our life and <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">should not be overlooked</span> - after all, full-time workers spend a third of their day in their workplace. After-hours pursuits of a game of squash or a pint in the pub become part of our daily routine. We cement sound friendships at work and an astounding percentage of us meet our life partner at our place of work. The people there have similar ambitions and business interests and we are, after all, social animals. The majority of us become depressed and withdrawn if we do not have enough interaction with others. Some people who work from home feel that, because they do spend a large proportion of the day at home alone with few distractions, they are actually much more productive and can get tasks done in a much shorter time than in an office environment. Others, however, may be demotivated by the isolation and find it difficult to get down to tasks which have a more intangible deadline.</p>\r\n\r\n<p><strong>F:</strong><span id=\"q36\" data-question=\"36\"></span> As with most aspects of life, a balance is probably the best solution for the majority of workers - a job based at home which requires regular contact with colleagues at regular meetings. Management surveys show that successful business is easier if we operate as a team: brainstorming and sharing ideas and offering support and motivation to each other. After all, we are only human and we need others to complain to if we have a bad day at work!</p>",
             "text_id": 4
         }
     ],
