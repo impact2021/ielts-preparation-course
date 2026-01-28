@@ -1662,6 +1662,12 @@ class IELTS_CM_Shortcodes {
                     if (!in_array($membership_type, IELTS_CM_Membership::get_valid_membership_types())) {
                         $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
                     }
+                    
+                    // Additional validation: Check if English Only memberships are allowed
+                    $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+                    if (!$english_only_enabled && in_array($membership_type, array('english_trial', 'english_full'))) {
+                        $errors[] = __('The selected membership type is not available.', 'ielts-course-manager');
+                    }
                     // Note: Paid memberships can now be selected during registration
                     // For paid memberships, users will be redirected to payment after registration
                 }
@@ -1834,6 +1840,14 @@ class IELTS_CM_Shortcodes {
                                     <option value=""><?php _e('-- Select a membership option --', 'ielts-course-manager'); ?></option>
                                     <?php 
                                     $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+                                    
+                                    // Filter membership levels based on settings
+                                    $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
+                                    if (!$english_only_enabled) {
+                                        unset($membership_levels['english_trial']);
+                                        unset($membership_levels['english_full']);
+                                    }
+                                    
                                     $pricing = get_option('ielts_cm_membership_pricing', array());
                                     $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                     
