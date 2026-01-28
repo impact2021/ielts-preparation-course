@@ -116,9 +116,11 @@
     
     function showPaymentSection(price) {
         const $paymentSection = $('#ielts-payment-section');
+        const $freeSubmitContainer = $('#ielts-free-submit-container');
         
-        // Show the section
+        // Show payment section, hide free submit button
         $paymentSection.slideDown();
+        $freeSubmitContainer.hide();
         
         // Initialize payment element if not already done or if price changed
         if (!elements || !paymentElement) {
@@ -127,7 +129,13 @@
     }
     
     function hidePaymentSection() {
-        $('#ielts-payment-section').slideUp();
+        const $paymentSection = $('#ielts-payment-section');
+        const $freeSubmitContainer = $('#ielts-free-submit-container');
+        
+        // Hide payment section, show free submit button
+        $paymentSection.slideUp();
+        $freeSubmitContainer.show();
+        
         if (elements) {
             elements = null;
             paymentElement = null;
@@ -320,18 +328,16 @@
     }
     
     function setLoading(isLoading) {
-        const $button = $('#ielts_register_submit');
-        const originalText = $button.data('original-text') || $button.text();
-        
-        // Store original text if not already stored
-        if (!$button.data('original-text')) {
-            $button.data('original-text', originalText);
-        }
+        // Handle both buttons (free submit and payment submit)
+        const $freeButton = $('#ielts_register_submit');
+        const $paymentButton = $('#ielts_payment_submit');
         
         if (isLoading) {
-            $button.prop('disabled', true).addClass('loading');
+            $freeButton.prop('disabled', true).addClass('loading');
+            $paymentButton.prop('disabled', true).addClass('loading');
         } else {
-            $button.prop('disabled', false).removeClass('loading');
+            $freeButton.prop('disabled', false).removeClass('loading');
+            $paymentButton.prop('disabled', false).removeClass('loading');
         }
     }
     

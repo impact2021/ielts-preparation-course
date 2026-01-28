@@ -348,6 +348,7 @@ class IELTS_CM_Membership {
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_client_id');
         register_setting('ielts_membership_payment', 'ielts_cm_paypal_secret');
         register_setting('ielts_membership_payment', 'ielts_cm_membership_pricing');
+        register_setting('ielts_membership_payment', 'ielts_cm_extension_pricing');
         
         // Register email templates
         register_setting('ielts_membership_emails', 'ielts_cm_email_trial_enrollment');
@@ -757,6 +758,19 @@ class IELTS_CM_Membership {
             }
             update_option('ielts_cm_membership_pricing', $pricing);
             
+            // Save course extension pricing
+            $extension_pricing = array();
+            if (isset($_POST['extension_1_week'])) {
+                $extension_pricing['1_week'] = floatval($_POST['extension_1_week']);
+            }
+            if (isset($_POST['extension_1_month'])) {
+                $extension_pricing['1_month'] = floatval($_POST['extension_1_month']);
+            }
+            if (isset($_POST['extension_3_months'])) {
+                $extension_pricing['3_months'] = floatval($_POST['extension_3_months']);
+            }
+            update_option('ielts_cm_extension_pricing', $extension_pricing);
+            
             if (!empty($errors)) {
                 echo '<div class="notice notice-warning"><p><strong>' . __('Warning:', 'ielts-course-manager') . '</strong></p><ul>';
                 foreach ($errors as $error) {
@@ -777,6 +791,13 @@ class IELTS_CM_Membership {
         $paypal_secret = get_option('ielts_cm_paypal_secret', '');
         $paypal_address = get_option('ielts_cm_paypal_address', '');
         $pricing = get_option('ielts_cm_membership_pricing', array());
+        
+        // Get extension pricing with defaults
+        $extension_pricing = get_option('ielts_cm_extension_pricing', array(
+            '1_week' => 5.00,
+            '1_month' => 10.00,
+            '3_months' => 15.00
+        ));
         ?>
         <div class="wrap">
             <h1><?php _e('Payment Settings', 'ielts-course-manager'); ?></h1>
@@ -798,6 +819,41 @@ class IELTS_CM_Membership {
                             </td>
                         </tr>
                     <?php endforeach; ?>
+                </table>
+                
+                <h2><?php _e('Course Extension Pricing', 'ielts-course-manager'); ?></h2>
+                <p class="description"><?php _e('Set pricing for course extensions available to paid members. These options allow existing paid members to extend their course access.', 'ielts-course-manager'); ?></p>
+                <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('1 Week Extension', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="number" step="0.01" min="0" 
+                                   name="extension_1_week" 
+                                   value="<?php echo esc_attr($extension_pricing['1_week']); ?>" 
+                                   class="regular-text">
+                            <p class="description"><?php _e('Price in USD (default: $5)', 'ielts-course-manager'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('1 Month Extension', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="number" step="0.01" min="0" 
+                                   name="extension_1_month" 
+                                   value="<?php echo esc_attr($extension_pricing['1_month']); ?>" 
+                                   class="regular-text">
+                            <p class="description"><?php _e('Price in USD (default: $10)', 'ielts-course-manager'); ?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('3 Months Extension', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="number" step="0.01" min="0" 
+                                   name="extension_3_months" 
+                                   value="<?php echo esc_attr($extension_pricing['3_months']); ?>" 
+                                   class="regular-text">
+                            <p class="description"><?php _e('Price in USD (default: $15)', 'ielts-course-manager'); ?></p>
+                        </td>
+                    </tr>
                 </table>
                 
                 <h2><?php _e('Stripe Settings', 'ielts-course-manager'); ?></h2>
