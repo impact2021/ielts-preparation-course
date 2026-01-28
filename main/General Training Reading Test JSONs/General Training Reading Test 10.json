@@ -1,10 +1,10 @@
 {
-    "title": "General Training Reading Test 10",
+    "title": "General Training IELTS Reading Test 10",
     "content": "",
     "questions": [
         {
             "type": "closed_question",
-            "instructions": "Questions 1–7\n\nThis is a classification question. There are 7 questions. Look at the advertisements A–H and match each statement to the correct advertisement. Use each letter once only.",
+            "instructions": "Questions 1–7\r\n\r\nThis is a classification question. There are 7 questions. Look at the advertisements A–H and match each statement to the correct advertisement. Use each letter once only.",
             "question": "is willing to travel after seeing the item",
             "points": 1,
             "no_answer_feedback": "Please select an answer. The correct answer is H. Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'",
@@ -15,7 +15,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -57,7 +56,10 @@
                     "is_correct": true,
                     "feedback": "Correct! Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'"
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -72,7 +74,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -114,7 +115,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review the advertisements to find which one matches this description."
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -129,7 +133,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -171,7 +174,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review the advertisements to find which one matches this description."
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -186,7 +192,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -228,7 +233,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review the advertisements to find which one matches this description."
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -243,7 +251,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -285,7 +292,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review the advertisements to find which one matches this description."
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -300,7 +310,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -342,7 +351,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review the advertisements to find which one matches this description."
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -357,7 +369,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A",
@@ -399,12 +410,15 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review the advertisements to find which one matches this description."
                 }
-            ]
+            ],
+            "options": "A\nB\nC\nD\nE\nF\nG\nH",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
-            "instructions": "Questions 8–14\n\nAnswer the questions below using NO MORE THAN THREE WORDS from the text for each answer.",
-            "question": "The cost to visit any local ________ is fixed.",
+            "instructions": "Questions 8–14\r\n\r\nAnswer the questions below using NO MORE THAN THREE WORDS from the text for each answer.",
+            "question": "The cost to visit any local [field 1] is fixed.",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'marinas'. Under 'Water Taxis': 'Wharf-to-wharf travel is available to any local marina for a set fee.'",
             "correct_feedback": "",
@@ -429,7 +443,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "You can book a water taxi using their ________.",
+            "question": "You can book a water taxi using their [field 1].",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'on-demand service'. Under 'Water Taxis': 'using the on-demand service.'",
             "correct_feedback": "",
@@ -454,7 +468,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "Passengers can visit fishing areas or secluded ________.",
+            "question": "Passengers can visit fishing areas or secluded [field 1].",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'beaches'. Under 'Fishing Charters': 'Water taxis can drop passengers at secluded beaches.'",
             "correct_feedback": "",
@@ -479,7 +493,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The fishing charter price includes fuel and the ________.",
+            "question": "The fishing charter price includes fuel and the [field 1].",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'skipper'. Under 'Fishing Charters': 'Half-day fishing charters cost $275 and include fuel and skipper.'",
             "correct_feedback": "",
@@ -504,7 +518,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The harbour tour includes a visit to the famous ________.",
+            "question": "The harbour tour includes a visit to the famous [field 1].",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'Dorin Cliffs'. Under 'Harbour Tours': 'offering views of the city, harbour bridge, Dorin Cliffs.'",
             "correct_feedback": "",
@@ -529,7 +543,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The final sight before returning to the wharf is ________.",
+            "question": "The final sight before returning to the wharf is [field 1].",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'the Marble'. Under 'Harbour Tours': 'and the Marble rock formation' (last location mentioned before return).",
             "correct_feedback": "",
@@ -554,7 +568,7 @@
         {
             "type": "open_question",
             "instructions": "",
-            "question": "The harbour tour price includes drinks and ________.",
+            "question": "The harbour tour price includes drinks and [field 1].",
             "points": 1,
             "no_answer_feedback": "Please provide an answer. The correct answer is 'light snacks'. Under 'Harbour Tours': 'includes tea, coffee and light snacks.'",
             "correct_feedback": "",
@@ -578,7 +592,7 @@
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 15–19\n\nChoose the correct letter A, B, C or D.",
+            "instructions": "Questions 15–19\r\n\r\nChoose the correct letter A, B, C or D.",
             "question": "Employee grievances",
             "points": 1,
             "no_answer_feedback": "Please select an answer. The correct answer is B. The text states 'A clear employment contract helps reduce workplace grievances.'",
@@ -589,7 +603,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice_r",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A. are prevented by contracts",
@@ -611,7 +624,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. The text states 'Grievances should usually be addressed informally first.'"
                 }
-            ]
+            ],
+            "options": "A. are prevented by contracts\nB. can be reduced with a clear procedure\nC. are usually welcomed\nD. must always be formal",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -626,7 +642,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice_r",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A. usually causes conflict",
@@ -648,7 +663,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. This is not mentioned in the text."
                 }
-            ]
+            ],
+            "options": "A. usually causes conflict\nB. makes employees feel threatened\nC. should be introduced at the start of employment\nD. protects employers legally",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -663,7 +681,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice_r",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A. should first be dealt with by those involved",
@@ -685,7 +702,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Employees can raise grievances."
                 }
-            ]
+            ],
+            "options": "A. should first be dealt with by those involved\nB. reflects employee incompetence\nC. must go directly to senior management\nD. can only be raised by managers",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -700,7 +720,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice_r",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A. arbitration",
@@ -722,7 +741,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. This is not mentioned as a primary resolution method."
                 }
-            ]
+            ],
+            "options": "A. arbitration\nB. clearing up misunderstandings\nC. senior management intervention\nD. legal action",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -737,7 +759,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "multiple_choice_r",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "A. they know more about the issue",
@@ -759,11 +780,14 @@
                     "is_correct": true,
                     "feedback": "Correct! The text implies that mediation and arbitration are alternative methods when both parties accept them."
                 }
-            ]
+            ],
+            "options": "A. they know more about the issue\nB. they increase compensation\nC. they impose deadlines\nD. both parties agree to their appointment",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
-            "instructions": "Questions 20–25\n\nDo the following statements agree with the information in Reading Passage 4?\n\nWrite:\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
+            "instructions": "Questions 20–25\r\n\r\nDo the following statements agree with the information in Reading Passage 4?\r\n\r\nWrite:\r\nTRUE if the statement agrees with the information\r\nFALSE if the statement contradicts the information\r\nNOT GIVEN if there is no information on this",
             "question": "Job advertisements follow the same structure as product advertising.",
             "points": 1,
             "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The text states 'Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action' which is a product advertising model.",
@@ -774,7 +798,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -791,7 +814,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
                 }
-            ]
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -806,7 +832,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -823,7 +848,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
                 }
-            ]
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -838,7 +866,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -855,7 +882,10 @@
                     "is_correct": true,
                     "feedback": "Correct! The text mentions 'overuse of capital letters can reduce readability' but doesn't say if proper use makes them easier to read."
                 }
-            ]
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -870,7 +900,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -887,7 +916,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
                 }
-            ]
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -902,7 +934,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -919,7 +950,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
                 }
-            ]
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "closed_question",
@@ -934,7 +968,6 @@
             "audio_start_time": null,
             "audio_end_time": null,
             "ielts_question_category": "true_false_not_given",
-            "correct_answer_count": 1,
             "mc_options": [
                 {
                     "text": "TRUE",
@@ -951,7 +984,10 @@
                     "is_correct": false,
                     "feedback": "Incorrect. Review Reading Passage 4 to check if this statement is true, false, or not given."
                 }
-            ]
+            ],
+            "options": "TRUE\nFALSE\nNOT GIVEN",
+            "correct_answer_count": 1,
+            "show_option_letters": true
         },
         {
             "type": "open_question",
@@ -1519,33 +1555,24 @@
     ],
     "reading_texts": [
         {
-            "text_id": 0,
             "title": "Reading Text 1",
-            "content": "<h4><strong>WWW.TRADEWITHME.COM\n – Classified Advertisements</strong></h4>\n\n<p>A<br>\nFor sale: iPhone X. In very good condition without protective rubber case. <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Headphones are missing</span>, but the phone is in perfect working order. Asking £150, but willing to accept offers.</p>\n\n<p>B<br>\n52-inch flat screen LCD television for sale. Small scratch on the top, but the screen is fine. <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Must sell because I am leaving the country</span>, so any offer will be considered.</p>\n\n<p>C<br>\nPlayStation games (20 different games). Brand new, boxed with manuals. <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Unwanted gift</span>. All reasonable offers considered.</p>\n\n<p>D<br>\nFor sale: complete dining room set (table and six chairs). In reasonable condition, may need repainting. Table folds for storage. Buyer must collect. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">£250 (price is non-negotiable)</span>.</p>\n\n<p>E<br>\nZanussi fridge freezer, 1.6 metres tall. Four years old. Motor works, but door seal is faulty. <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Free to anyone willing to collect</span>.</p>\n\n<p>F<br>\nWanted: cheap laptop computer. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Does not need to be in very good condition as long as it works</span>. Required for word processing and internet use. Will pay up to £200. Must include all cables, accessories and a carry bag.</p>\n\n<p>G<br>\nBoat trailer wanted. Must take a small boat (2 metres long). Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</p>\n\n<p>H<br>\nWanted: antique figurines from the Lladro collection. Will pay a good price for authentic pieces in good condition. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">We will travel to inspect the item</span>, but a photograph must be sent first.</p>\n\n<h4><strong>Questions 1–7</strong></h4>\n\n<p>[This is a classification question.<br>\nThere are 7 questions.<br>\nUse each letter A–H once only.]</p>\n\n<h4><strong>The advertiser …</strong></h4>\n\n<h4><strong>is willing to travel after seeing the item\nAnswer: H</strong></h4>\n\n<h4><strong>does not require payment\nAnswer: E</strong></h4>\n\n<h4><strong>is selling something they were given\nAnswer: C</strong></h4>\n\n<h4><strong>is selling because they are relocating\nAnswer: B</strong></h4>\n\n<h4><strong>is missing an accessory\nAnswer: A</strong></h4>\n\n<h4><strong>is not willing to change the price\nAnswer: D</strong></h4>\n\n<h4><strong>is indifferent to the condition of the item\nAnswer: F</strong></h4>\n\n<h4><strong>SECTION 1 (continued)</strong></h4>",
-            "tags": []
+            "content": "<h4><strong>WWW.TRADEWITHME.COM\r\n – Classified Advertisements</strong></h4>\r\n\r\n<p>A<br>\r\nFor sale: iPhone X. In very good condition without protective rubber case. <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Headphones are missing</span>, but the phone is in perfect working order. Asking £150, but willing to accept offers.</p>\r\n\r\n<p>B<br>\r\n52-inch flat screen LCD television for sale. Small scratch on the top, but the screen is fine. <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Must sell because I am leaving the country</span>, so any offer will be considered.</p>\r\n\r\n<p>C<br>\r\nPlayStation games (20 different games). Brand new, boxed with manuals. <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Unwanted gift</span>. All reasonable offers considered.</p>\r\n\r\n<p>D<br>\r\nFor sale: complete dining room set (table and six chairs). In reasonable condition, may need repainting. Table folds for storage. Buyer must collect. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">£250 (price is non-negotiable)</span>.</p>\r\n\r\n<p>E<br>\r\nZanussi fridge freezer, 1.6 metres tall. Four years old. Motor works, but door seal is faulty. <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Free to anyone willing to collect</span>.</p>\r\n\r\n<p>F<br>\r\nWanted: cheap laptop computer. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Does not need to be in very good condition as long as it works</span>. Required for word processing and internet use. Will pay up to £200. Must include all cables, accessories and a carry bag.</p>\r\n\r\n<p>G<br>\r\nBoat trailer wanted. Must take a small boat (2 metres long). Must be in good condition with no rust or damage. Will pay up to £250 depending on size. I can collect from anywhere in the country.</p>\r\n\r\n<p>H<br>\r\nWanted: antique figurines from the Lladro collection. Will pay a good price for authentic pieces in good condition. <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">We will travel to inspect the item</span>, but a photograph must be sent first.</p>"
         },
         {
-            "text_id": 1,
             "title": "Reading Text 2",
-            "content": "<h4><strong>Great Barrier Tourism Info</strong></h4>\n\n<p>Water Taxis<br>\nGreat Barrier Island water taxis operate 24 hours a day, seven days a week. Wharf-to-wharf travel is available to any local <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">marina</span> for a set fee using the <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">on-demand service</span>. All boats are operated by experienced local skippers.</p>\n\n<p>Fishing Charters<br>\nWater taxis can drop passengers at secluded <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">beaches</span> or fishing spots around the Hauraki Gulf. Half-day fishing charters cost $275 and include fuel and <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">skipper</span>. Boats accommodate a maximum of four people.</p>\n\n<p>Harbour Tours<br>\nTours depart from Great Barrier Wharf, offering views of the city, harbour bridge, <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Dorin Cliffs</span>, Westhaven Marina, Golden Sands Beach and <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">the Marble rock formation</span>. The tour lasts two hours. Cost is $45 per person and includes tea, coffee and <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">light snacks</span>.</p>\n\n<h4><strong>Questions 8–14</strong></h4>\n\n<h4><strong>[Short answer questions.\nUse NO MORE THAN THREE WORDS.]</strong></h4>\n\n<h4><strong>The cost to visit any local ________ is fixed.\nAnswer: marinas</strong></h4>\n\n<h4><strong>You can book a water taxi using their ________.\nAnswer: on-demand service</strong></h4>\n\n<h4><strong>Passengers can visit fishing areas or secluded ________.\nAnswer: beaches</strong></h4>\n\n<h4><strong>The fishing charter price includes fuel and the ________.\nAnswer: skipper</strong></h4>\n\n<h4><strong>The harbour tour includes a visit to the famous ________.\nAnswer: Dorin Cliffs</strong></h4>\n\n<h4><strong>The final sight before returning to the wharf is ________.\nAnswer: the Marble</strong></h4>\n\n<h4><strong>The harbour tour price includes drinks and ________.\nAnswer: light snacks</strong></h4>",
-            "tags": []
+            "content": "<h4><strong>Great Barrier Tourism Info</strong></h4>\r\n\r\n<p>Water Taxis<br>\r\nGreat Barrier Island water taxis operate 24 hours a day, seven days a week. Wharf-to-wharf travel is available to any local <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">marina</span> for a set fee using the <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">on-demand service</span>. All boats are operated by experienced local skippers.</p>\r\n\r\n<p>Fishing Charters<br>\r\nWater taxis can drop passengers at secluded <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">beaches</span> or fishing spots around the Hauraki Gulf. Half-day fishing charters cost $275 and include fuel and <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">skipper</span>. Boats accommodate a maximum of four people.</p>\r\n\r\n<p>Harbour Tours<br>\r\nTours depart from Great Barrier Wharf, offering views of the city, harbour bridge, <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">Dorin Cliffs</span>, Westhaven Marina, Golden Sands Beach and <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">the Marble rock formation</span>. The tour lasts two hours. Cost is $45 per person and includes tea, coffee and <span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">light snacks</span>.</p>"
         },
         {
-            "text_id": 2,
             "title": "Reading Passage 3",
-            "content": "<h4><strong>Grievance Procedures</strong></h4>\n\n<p><span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">A clear employment contract helps reduce workplace grievances</span>, but disagreements may still arise. A formal grievance procedure <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">should be established at the start of employment</span> to manage complaints constructively.</p>\n\n<p>Grievance procedures should be viewed positively by both employers and employees. When poorly handled, they may discourage staff from raising concerns due to fear of retaliation. Research suggests that employees who raise grievances may experience negative outcomes, highlighting the need for protections against backlash.</p>\n\n<p><span id=\"q17\" data-question=\"17\"></span><span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Grievances should usually be addressed informally first by those directly involved, with escalation possible if required</span>. <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">Alternative resolution methods such as mediation or arbitration may be used when negotiations fail</span>. Effective procedures save time, money and working relationships.</p>\n\n<h4><strong>Questions 15–19</strong></h4>\n\n<p>[Multiple choice questions.<br>\nChoose ONE correct letter, A–D.]</p>",
-            "tags": []
+            "content": "<h4><strong>Grievance Procedures</strong></h4>\r\n\r\n<p><span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">A clear employment contract helps reduce workplace grievances</span>, but disagreements may still arise. A formal grievance procedure <span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">should be established at the start of employment</span> to manage complaints constructively.</p>\r\n\r\n<p>Grievance procedures should be viewed positively by both employers and employees. When poorly handled, they may discourage staff from raising concerns due to fear of retaliation. Research suggests that employees who raise grievances may experience negative outcomes, highlighting the need for protections against backlash.</p>\r\n\r\n<p><span id=\"q17\" data-question=\"17\"></span><span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Grievances should usually be addressed informally first by those directly involved, with escalation possible if required</span>. <span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">Alternative resolution methods such as mediation or arbitration may be used when negotiations fail</span>. Effective procedures save time, money and working relationships.</p>\r\n\r\n"
         },
         {
-            "text_id": 3,
             "title": "Reading Passage 4",
-            "content": "<h4><strong>Job Advertising</strong></h4>\n\n<p><span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action</span>. <span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Poor layout, excessive formatting and overuse of capital letters can reduce readability</span>.</p>\n\n<p><span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Effective advertisements keep text minimal</span>, <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">use clear headlines</span> and include space around content. <span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Irregular advert shapes may be subconsciously ignored by readers</span>. Addressing the reader directly helps candidates visualise themselves in the role.</p>\n\n<h4><strong>Questions 20–25</strong></h4>\n\n<p>[TRUE / FALSE / NOT GIVEN]</p>",
-            "tags": []
+            "content": "<h4><strong>Job Advertising</strong></h4>\r\n\r\n<p><span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Job advertisements should follow the AIDA model: Attention, Interest, Desire and Action</span>. <span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Poor layout, excessive formatting and overuse of capital letters can reduce readability</span>.</p>\r\n\r\n<p><span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">Effective advertisements keep text minimal</span>, <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">use clear headlines</span> and include space around content. <span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">Irregular advert shapes may be subconsciously ignored by readers</span>. Addressing the reader directly helps candidates visualise themselves in the role.</p>\r\n\r\n"
         },
         {
             "title": "Reading Text 5",
-            "content": "<h3>Reading Passage 3</h3>\r\n<h4>You should spend about 20 minutes on Questions 26 - 40 which are based on Reading Passage 3.</h4>\r\n\r\n<h2>Working from home</h2>\r\n\r\n<p><strong>A:</strong><span id=\"q31\" data-question=\"31\"></span> Can you feel your anxiety and stress levels increasing every time you get caught in a traffic jam? Do you find it difficult to control your tongue when your boss points out your shortcomings yet again? Do you just not have the right kind of office attire, hate spending hours shopping for it and, frankly, would feel much better if you only had more independence, more freedom, more flexible hours and fewer people on your back? Do you yearn for state-of-the-art technology in your home, that ... wait for it ... you haven't had to pay for? If you are shouting an enthusiastic 'Yes!' in answer to these questions, then it could be time to make a career and life change that may not even require you to quit your job. Just suggest to your boss that you wish to become one of the new breed of executives whose office is based at home.</p>\r\n\r\n<p><strong>B:</strong><span id=\"q32\" data-question=\"32\"></span> Working from home is a relatively new phenomenon, but is becoming an increasingly popular option with both businesses and employees. The technology available to us now means that <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">we no longer need to be in the same office building as our colleagues to communicate effectively with each other</span>. E-mail, video conferencing, mobile telephones and more, mean that <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">we can do business just as efficiently, regardless of our location</span>.</p>\r\n\r\n<p><strong>C:</strong><span id=\"q33\" data-question=\"33\"></span> Companies may choose to employ a proportion of their staff as home-based workers, as, of course, a workforce set up in such a way requires far less office space and fewer parking facilities. <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The fixed costs of a business can be dramatically reduced</span>. Employees can enjoy the added benefits of freedom to schedule the day as they choose and freedom to spend more time at home with their families. Working from home can be a particularly valid option for young mothers who wish to pursue their careers but find it impossible to be out of the house for nine or ten hours per day.</p>\r\n\r\n<p><strong>D:</strong><span id=\"q34\" data-question=\"34\"></span> We can even go so far as to say that the working-from-home phenomenon could be one of the answers to the pollution problems which the modern world has inflicted upon itself. Fewer people travelling to work every day equals fewer cars. Fewer cars, of course, equates to lower CO2 levels in the atmosphere. Governments have been trying for years to persuade us to forsake our private car journey to work each day for the hideous experience of a crowded bus or train, but <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">this is still unpopular</span>. Most of us have been resistant, even when parking fees in city areas have been on the rise and unpredictable traffic patterns mean we have to leave our house 30 minutes earlier than necessary anyway. But working from home gives us no excuse whatsoever to emit CO2 into the atmosphere twice a day in our working week.</p>\r\n\r\n<p><strong>E:</strong><span id=\"q35\" data-question=\"35\"></span> But what are the drawbacks to working from home? There must be some or everybody would be doing it. For many of us, work is a means of escaping our nearest and dearest and making our own mark on the world. The relationships we have with our colleagues, be they good or bad, are a significant part of our life and <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">should not be overlooked</span> - after all, full-time workers spend a third of their day in their workplace. After-hours pursuits of a game of squash or a pint in the pub become part of our daily routine. We cement sound friendships at work and an astounding percentage of us meet our life partner at our place of work. The people there have similar ambitions and business interests and we are, after all, social animals. The majority of us become depressed and withdrawn if we do not have enough interaction with others. Some people who work from home feel that, because they do spend a large proportion of the day at home alone with few distractions, they are actually much more productive and can get tasks done in a much shorter time than in an office environment. Others, however, may be demotivated by the isolation and find it difficult to get down to tasks which have a more intangible deadline.</p>\r\n\r\n<p><strong>F:</strong><span id=\"q36\" data-question=\"36\"></span> As with most aspects of life, a balance is probably the best solution for the majority of workers - a job based at home which requires regular contact with colleagues at regular meetings. Management surveys show that successful business is easier if we operate as a team: brainstorming and sharing ideas and offering support and motivation to each other. After all, we are only human and we need others to complain to if we have a bad day at work!</p>",
-            "text_id": 4
+            "content": "<h3>Reading Passage 3</h3>\r\n<h4>You should spend about 20 minutes on Questions 26 - 40 which are based on Reading Passage 3.</h4>\r\n\r\n<h2>Working from home</h2>\r\n\r\n<p><strong>A:</strong><span id=\"q31\" data-question=\"31\"></span> Can you feel your anxiety and stress levels increasing every time you get caught in a traffic jam? Do you find it difficult to control your tongue when your boss points out your shortcomings yet again? Do you just not have the right kind of office attire, hate spending hours shopping for it and, frankly, would feel much better if you only had more independence, more freedom, more flexible hours and fewer people on your back? Do you yearn for state-of-the-art technology in your home, that ... wait for it ... you haven't had to pay for? If you are shouting an enthusiastic 'Yes!' in answer to these questions, then it could be time to make a career and life change that may not even require you to quit your job. Just suggest to your boss that you wish to become one of the new breed of executives whose office is based at home.</p>\r\n\r\n<p><strong>B:</strong><span id=\"q32\" data-question=\"32\"></span> Working from home is a relatively new phenomenon, but is becoming an increasingly popular option with both businesses and employees. The technology available to us now means that <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">we no longer need to be in the same office building as our colleagues to communicate effectively with each other</span>. E-mail, video conferencing, mobile telephones and more, mean that <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">we can do business just as efficiently, regardless of our location</span>.</p>\r\n\r\n<p><strong>C:</strong><span id=\"q33\" data-question=\"33\"></span> Companies may choose to employ a proportion of their staff as home-based workers, as, of course, a workforce set up in such a way requires far less office space and fewer parking facilities. <span id=\"q27\" data-question=\"27\"></span><span class=\"reading-answer-marker\">The fixed costs of a business can be dramatically reduced</span>. Employees can enjoy the added benefits of freedom to schedule the day as they choose and freedom to spend more time at home with their families. Working from home can be a particularly valid option for young mothers who wish to pursue their careers but find it impossible to be out of the house for nine or ten hours per day.</p>\r\n\r\n<p><strong>D:</strong><span id=\"q34\" data-question=\"34\"></span> We can even go so far as to say that the working-from-home phenomenon could be one of the answers to the pollution problems which the modern world has inflicted upon itself. Fewer people travelling to work every day equals fewer cars. Fewer cars, of course, equates to lower CO2 levels in the atmosphere. Governments have been trying for years to persuade us to forsake our private car journey to work each day for the hideous experience of a crowded bus or train, but <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">this is still unpopular</span>. Most of us have been resistant, even when parking fees in city areas have been on the rise and unpredictable traffic patterns mean we have to leave our house 30 minutes earlier than necessary anyway. But working from home gives us no excuse whatsoever to emit CO2 into the atmosphere twice a day in our working week.</p>\r\n\r\n<p><strong>E:</strong><span id=\"q35\" data-question=\"35\"></span> But what are the drawbacks to working from home? There must be some or everybody would be doing it. For many of us, work is a means of escaping our nearest and dearest and making our own mark on the world. The relationships we have with our colleagues, be they good or bad, are a significant part of our life and <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">should not be overlooked</span> - after all, full-time workers spend a third of their day in their workplace. After-hours pursuits of a game of squash or a pint in the pub become part of our daily routine. We cement sound friendships at work and an astounding percentage of us meet our life partner at our place of work. The people there have similar ambitions and business interests and we are, after all, social animals. The majority of us become depressed and withdrawn if we do not have enough interaction with others. Some people who work from home feel that, because they do spend a large proportion of the day at home alone with few distractions, they are actually much more productive and can get tasks done in a much shorter time than in an office environment. Others, however, may be demotivated by the isolation and find it difficult to get down to tasks which have a more intangible deadline.</p>\r\n\r\n<p><strong>F:</strong><span id=\"q36\" data-question=\"36\"></span> As with most aspects of life, a balance is probably the best solution for the majority of workers - a job based at home which requires regular contact with colleagues at regular meetings. Management surveys show that successful business is easier if we operate as a team: brainstorming and sharing ideas and offering support and motivation to each other. After all, we are only human and we need others to complain to if we have a bad day at work!</p>"
         }
     ],
     "settings": {
@@ -1554,8 +1581,14 @@
         "cbt_test_type": "general_training",
         "exercise_label": "practice_test",
         "open_as_popup": "",
-        "scoring_type": "ielts_general_training_reading",
+        "scoring_type": "percentage",
         "timer_minutes": "60",
         "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-01-29 09:29:05",
+        "exported_by": "impact",
+        "plugin_version": "15.2",
+        "format_version": "1.0"
     }
 }
