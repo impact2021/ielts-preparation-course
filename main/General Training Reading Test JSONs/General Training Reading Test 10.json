@@ -518,7 +518,7 @@
                 {
                     "text": "I. Time for a change?",
                     "is_correct": true,
-                    "feedback": "Correct! I. Time for a change? is the best match for Paragraph A."
+                    "feedback": "Correct! Paragraph A asks questions about wanting change and suggests making a career change to work from home."
                 },
                 {
                     "text": "II. Social impact",
@@ -602,7 +602,7 @@
                 {
                     "text": "IV. Flexibility of technology",
                     "is_correct": true,
-                    "feedback": "Correct! IV. Flexibility of technology is the best match for Paragraph B."
+                    "feedback": "Correct! Paragraph B discusses how technology enables flexible work arrangements and communication from any location."
                 },
                 {
                     "text": "V. Wasted time on the road",
@@ -686,7 +686,7 @@
                 {
                     "text": "VII. Benefits for all",
                     "is_correct": true,
-                    "feedback": "Correct! VII. Benefits for all is the best match for Paragraph C."
+                    "feedback": "Correct! Paragraph C discusses the benefits for both companies (reduced costs) and employees (flexibility, time with family)."
                 },
                 {
                     "text": "VIII. Business in the workplace",
@@ -765,7 +765,7 @@
                 {
                     "text": "IX. Keeping it clean",
                     "is_correct": true,
-                    "feedback": "Correct! IX. Keeping it clean is the best match for Paragraph D."
+                    "feedback": "Correct! Paragraph D discusses environmental benefits of working from home, including reduced pollution and CO2 levels."
                 },
                 {
                     "text": "X. The best of both worlds",
@@ -799,7 +799,7 @@
                 {
                     "text": "II. Social impact",
                     "is_correct": true,
-                    "feedback": "Correct! II. Social impact is the best match for Paragraph E."
+                    "feedback": "Correct! Paragraph E discusses the social aspects of work, relationships with colleagues, and the psychological impact of isolation."
                 },
                 {
                     "text": "III. Management decisions",
@@ -908,7 +908,7 @@
                 {
                     "text": "X. The best of both worlds",
                     "is_correct": true,
-                    "feedback": "Correct! X. The best of both worlds is the best match for Paragraph F."
+                    "feedback": "Correct! Paragraph F suggests that a balance combining home-based work with regular office meetings is the best solution."
                 }
             ],
             "options": "I. Time for a change?\nII. Social impact\nIII. Management decisions\nIV. Flexibility of technology\nV. Wasted time on the road\nVI. Technology keeping us at home\nVII. Benefits for all\nVIII. Business in the workplace\nIX. Keeping it clean\nX. The best of both worlds",
