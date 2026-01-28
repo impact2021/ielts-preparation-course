@@ -204,7 +204,7 @@
             "instructions": "",
             "question": "Every computer has a one-year guarantee.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. All computers have a 12-month (one-year) guarantee, but some models over £1000 get 24 months, so not every computer has just one year.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states 'All computers include a 12-month guarantee, extended to 24 months for models over £1000.' This means some computers have two years (24 months), not just one year, so the statement 'every computer has a one-year guarantee' is false.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -216,12 +216,12 @@
                 {
                     "text": "TRUE",
                     "is_correct": false,
-                    "feedback": "Incorrect. All computers include a 12-month guarantee, extended to 24 months for models over £1000."
+                    "feedback": "Incorrect. While all computers do include at least a 12-month guarantee, the passage states this is 'extended to 24 months for models over £1000', so not every computer has just one year."
                 },
                 {
                     "text": "FALSE",
                     "is_correct": true,
-                    "feedback": "Correct! All computers include a 12-month guarantee, extended to 24 months for models over £1000."
+                    "feedback": "Correct! The passage states all computers have a 12-month guarantee, but this is extended to 24 months for models over £1000. Since some have two years, not all have exactly one year."
                 },
                 {
                     "text": "NOT GIVEN",
