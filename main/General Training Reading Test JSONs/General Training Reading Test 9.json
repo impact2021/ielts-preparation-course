@@ -7,7 +7,7 @@
             "instructions": "Questions 1–7\n\nComplete the summary below.\n\nChoose NO MORE THAN TWO WORDS from the passage for each answer.",
             "question": "<p>Travels to the [field 1] to see wildlife and forest before stopping close to [field 2].</p>\n<p>The journey has views across [field 3].</p>\n<p>Costs £5.00 for children and senior citizens, and [field 4] for passengers up to 5 years old.</p>\n<p>A [field 5] is required for group bookings and is refunded only if cancelled more than [field 6] before departure.</p>\n<p>People with certain phobias are advised that the train passes through [field 7].</p>",
             "points": 7,
-            "no_answer_feedback": "Please provide an answer for all fields.",
+            "no_answer_feedback": "Please complete all fields. Look for the specific information about the Thorn Brook Rain Forest Express train journey in the passage. Each answer should be NO MORE THAN TWO WORDS from the text.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 0,
@@ -27,39 +27,39 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The passage states the train goes into the Whean Ranges.",
+                    "incorrect": "Incorrect. Look in the first paragraph for where the train travels to see wildlife and forest.",
+                    "no_answer": "Where does the train travel to see wildlife and forest? Find this in the first paragraph."
                 },
                 "2": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The passage mentions relaxing with a picnic near the Huia Dam.",
+                    "incorrect": "Incorrect. Check the first paragraph for what landmark is mentioned near the picnic spot.",
+                    "no_answer": "What body of water is near the picnic area? Find this in the first paragraph."
                 },
                 "3": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Passengers look out over Corille Harbour.",
+                    "incorrect": "Incorrect. Read the first paragraph to find what passengers can look out over.",
+                    "no_answer": "What can passengers look out over from the train? Find this in the first paragraph."
                 },
                 "4": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Infants (0-5 years) travel for free.",
+                    "incorrect": "Incorrect. Check the Prices section for the cost for infants aged 0-5 years.",
+                    "no_answer": "What is the price for passengers up to 5 years old? Check the Prices section."
                 },
                 "5": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! A deposit is required for group bookings.",
+                    "incorrect": "Incorrect. Look in the Group booking conditions section for what is required.",
+                    "no_answer": "What payment is required for group bookings? Check the Group booking conditions."
                 },
                 "6": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Deposits are refunded if cancelled more than eight days before.",
+                    "incorrect": "Incorrect. Read the Group booking conditions to find the cancellation timeframe.",
+                    "no_answer": "How many days before departure can you cancel and get a refund? Check Group booking conditions."
                 },
                 "7": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact words that complete this sentence.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! The train passes through two tunnels.",
+                    "incorrect": "Incorrect. Check the Important note section for what feature may affect people with phobias.",
+                    "no_answer": "What does the train pass through that may affect people with certain phobias? See Important note."
                 }
             }
         },
@@ -68,7 +68,7 @@
             "instructions": "Questions 8–14\n\nDo the following statements agree with the information given in Reading Passage 2?\n\nWrite\n\nTRUE if the statement agrees with the information\nFALSE if the statement contradicts the information\nNOT GIVEN if there is no information on this",
             "question": "This is the first sale the Appliance Store has held.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states this is 'its third annual clearance sale'.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage states this is the 'third annual clearance sale', so it's not the first.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -102,7 +102,7 @@
             "instructions": "",
             "question": "Extra discounts are available to a limited number of customers.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The first 100 customers receive an additional 20% discount.",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'The first 100 customers receive an additional 20% discount', which is a limited number.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -136,7 +136,7 @@
             "instructions": "",
             "question": "All computers are discounted by exactly 50%.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. Desktop computers are reduced by 'up to 50%', not exactly 50%.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. The passage says 'Desktop computers are reduced by up to 50%', not exactly 50%.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -170,7 +170,7 @@
             "instructions": "",
             "question": "Computer accessories receive larger discounts than laptops.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage doesn't compare discount rates.",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. The passage mentions both are discounted but doesn't compare their discount rates.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -204,7 +204,7 @@
             "instructions": "",
             "question": "Every computer has a one-year guarantee.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. All computers include a 12-month guarantee, extended to 24 months for models over £1000.",
+            "no_answer_feedback": "Please select an answer. The correct answer is FALSE. All computers have a 12-month (one-year) guarantee, but some models over £1000 get 24 months, so not every computer has just one year.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -238,7 +238,7 @@
             "instructions": "",
             "question": "Buying multiple kitchen items results in bigger discounts.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. Combination packages provide greater savings.",
+            "no_answer_feedback": "Please select an answer. The correct answer is TRUE. The passage states 'Combination packages provide greater savings'.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -272,7 +272,7 @@
             "instructions": "",
             "question": "Plasma televisions are discounted more than LCD televisions.",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. Both are reduced by up to 30%, but no comparison is made.",
+            "no_answer_feedback": "Please select an answer. The correct answer is NOT GIVEN. Both are reduced by 'up to 30%' but the passage doesn't say if one is discounted more than the other.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 1,
@@ -306,7 +306,7 @@
             "instructions": "Questions 15–20\n\nMatch each statement to the correct job.\n\nA: Fruit pickers / packers\nB: Labourer\nC: Relief teacher\nD: Web designer\nE: Accountant\nF: Care giver",
             "question": "Only limited travel required",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is D (Web designer).",
+            "no_answer_feedback": "Please select an answer. The correct answer is D (Web designer). This role requires 'occasional office attendance', meaning limited travel.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -355,7 +355,7 @@
             "instructions": "",
             "question": "Will not work in the same place each day",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is E (Accountant).",
+            "no_answer_feedback": "Please select an answer. The correct answer is E (Accountant). This role requires 'work across two branches', meaning different locations.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -404,7 +404,7 @@
             "instructions": "",
             "question": "Must be able to operate specialised machinery",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is B (Labourer).",
+            "no_answer_feedback": "Please select an answer. The correct answer is B (Labourer). This role requires a 'forklift licence essential', which is specialised machinery.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -453,7 +453,7 @@
             "instructions": "",
             "question": "Requires living at the workplace",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is F (Care giver).",
+            "no_answer_feedback": "Please select an answer. The correct answer is F (Care giver). This is a 'Live-in role', meaning living at the workplace.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -502,7 +502,7 @@
             "instructions": "",
             "question": "Temporarily replaces existing staff",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is C (Relief teacher).",
+            "no_answer_feedback": "Please select an answer. The correct answer is C (Relief teacher). This role is 'Temporary cover for sick leave', replacing staff temporarily.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -551,7 +551,7 @@
             "instructions": "",
             "question": "Earnings depend on how fast the person works",
             "points": 1,
-            "no_answer_feedback": "Please select an answer. The correct answer is A (Fruit pickers / packers).",
+            "no_answer_feedback": "Please select an answer. The correct answer is A (Fruit pickers / packers). The passage states 'earnings depend on speed'.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 2,
@@ -600,7 +600,7 @@
             "instructions": "Questions 21–26\n\nAnswer the questions below.\n\nChoose NO MORE THAN THREE WORDS AND/OR A NUMBER from the passage for each answer.",
             "question": "<p>How many days' holiday does a full-time employee receive? [field 1]</p>\n<p>How much notice is required to request holiday leave? [field 2]</p>\n<p>What is the maximum holiday entitlement that can be carried over? [field 3]</p>\n<p>What may be started if compassionate leave is abused? [field 4]</p>\n<p>For how many weeks is maternity pay provided? [field 5]</p>\n<p>What must be completed within 56 days after the baby is born? [field 6]</p>",
             "points": 6,
-            "no_answer_feedback": "Please provide an answer for all fields.",
+            "no_answer_feedback": "Please complete all fields. Look for specific information about holiday and leave entitlements in the passage. Each answer should be NO MORE THAN THREE WORDS AND/OR A NUMBER from the text.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 3,
@@ -619,34 +619,34 @@
             },
             "field_feedback": {
                 "1": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Full-time staff are entitled to 28 days of paid annual leave.",
+                    "incorrect": "Incorrect. Look in the first paragraph for the number of days for full-time staff.",
+                    "no_answer": "How many days of holiday does a full-time employee receive? Check the first paragraph."
                 },
                 "2": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Holiday requests require six weeks' written notice.",
+                    "incorrect": "Incorrect. Check the first paragraph for how much notice is required.",
+                    "no_answer": "How much notice is required to request holiday leave? See the first paragraph."
                 },
                 "3": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Holidays may be accumulated up to a maximum of eight weeks.",
+                    "incorrect": "Incorrect. Look in the first paragraph for the maximum accumulation period.",
+                    "no_answer": "What is the maximum holiday entitlement that can be carried over? Check the first paragraph."
                 },
                 "4": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Abuse of compassionate leave may result in an investigation.",
+                    "incorrect": "Incorrect. Read the second paragraph about compassionate leave abuse.",
+                    "no_answer": "What may be started if compassionate leave is abused? See the second paragraph."
                 },
                 "5": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Maternity pay is provided for the first 38 weeks.",
+                    "incorrect": "Incorrect. Check the third paragraph for the number of weeks with pay.",
+                    "no_answer": "For how many weeks is maternity pay provided? Look in the third paragraph."
                 },
                 "6": {
-                    "correct": "Correct! This answer can be found directly in the reading passage.",
-                    "incorrect": "Incorrect. Review the passage carefully to find the exact answer.",
-                    "no_answer": "Please provide an answer."
+                    "correct": "Correct! Paternity leave must be taken within 56 days of the birth.",
+                    "incorrect": "Incorrect. Read the third paragraph for what must be completed within 56 days.",
+                    "no_answer": "What must be completed within 56 days after the baby is born? Check the third paragraph."
                 }
             }
         },
@@ -859,7 +859,7 @@
             "instructions": "Complete the sentences below.\r\n\r\nChoose NO MORE THAN TWO WORDS from the passage for each answer.\r\n\r\nWrite your answers in boxes 33 – 37 on your answer sheet.",
             "question": "<p>The Tasmanian tiger was once the planet's biggest [field 1]. Thylacines could jump and move upright using their [field 2]. [field 3] brought dogs to Tasmania. The creature in photos published in New Scientist was [field 4] by vegetation. The James Cook University researchers intend to install a number of [field 5].</p>",
             "points": 5,
-            "no_answer_feedback": "Please provide an answer for all fields.",
+            "no_answer_feedback": "Please complete all fields. Look for specific information about the Tasmanian Tiger in the passage. Each answer should be NO MORE THAN TWO WORDS from the text.",
             "correct_feedback": "",
             "incorrect_feedback": "",
             "reading_text_id": 4,
@@ -1070,25 +1070,25 @@
         {
             "text_id": 0,
             "title": "Reading Text 1",
-            "content": "<h4><strong>Thorn Brook Rain Forest Express</strong></h4>\n\n<p>Jump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the Whean Ranges, where you can see glow worms and rainforests before relaxing with a picnic near the Huia Dam. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over Corille Harbour.</p>\n\n<p>Prices<br>\nAdults: £10.00<br>\nChildren (6–15 years): £5.00<br>\nInfants (0–5 years): Free<br>\nSenior citizens: £5.00<br>\nGroup bookings (whole train): Contact for pricing</p>\n\n<p>Prices include one return ride. Prices and timetable may change without notice.</p>\n\n<p>Group booking conditions<br>\nMinimum group size is seven people. A deposit is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than eight days before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.</p>\n\n<p>General information<br>\nPayment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.</p>\n\n<p>Important note<br>\nThe train passes through two tunnels, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.</p>",
+            "content": "<h4><strong>Thorn Brook Rain Forest Express</strong></h4>\n\n<p>Jump on board the Thorn Brook Rain Forest Express train and enjoy a family adventure on a narrow-gauge railway into the <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">Whean Ranges</span>, where you can see glow worms and rainforests before relaxing with a picnic near the <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">Huia Dam</span>. Travelling on a miniature train, passengers cross wooden bridges, pass through tunnels, view ancient forest and look out over <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">Corille Harbour</span>.</p>\n\n<p>Prices<br>\nAdults: £10.00<br>\nChildren (6–15 years): £5.00<br>\nInfants (0–5 years): <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">Free</span><br>\nSenior citizens: £5.00<br>\nGroup bookings (whole train): Contact for pricing</p>\n\n<p>Prices include one return ride. Prices and timetable may change without notice.</p>\n\n<p>Group booking conditions<br>\nMinimum group size is seven people. A <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">deposit</span> is required and must be paid within ten days of booking. Bookings are not confirmed until the deposit is received. Deposits are refunded only if cancelled more than <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">eight days</span> before the booking. If the trip is cancelled due to weather or operational reasons, deposits are refunded in full.</p>\n\n<p>General information<br>\nPayment by cash or cheque only. Please arrive at least 15 minutes before departure. Booking is essential and should be made at least two weeks in advance.</p>\n\n<p>Important note<br>\nThe train passes through two <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">tunnels</span>, one 0.7 km long. Lights are dimmed to view glow worms. This may affect passengers with a fear of darkness or confined spaces.</p>",
             "tags": []
         },
         {
             "text_id": 1,
             "title": "Reading Text 2",
-            "content": "<h4><strong>The Appliance Store Sale</strong></h4>\n\n<p>From March 1st to March 8th, The Appliance Store will hold its third annual clearance sale. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The first 100 customers receive an additional 20% discount.</p>\n\n<p>Computers<br>\nDesktop computers are reduced by up to 50%. Laptops are available for under £200, including accessories. Computer accessories are also discounted. All computers include a 12-month guarantee, extended to 24 months for models over £1000.</p>\n\n<p>Kitchen appliances<br>\nFridges, freezers, microwaves and toasters are discounted. Combination packages provide greater savings.</p>\n\n<p>Televisions<br>\nLCD and plasma televisions are reduced by up to 30%. Stock is limited.</p>",
+            "content": "<h4><strong>The Appliance Store Sale</strong></h4>\n\n<p>From March 1st to March 8th, The Appliance Store will hold its <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">third annual clearance sale</span>. Prices will be reduced by up to 50%. The sale begins at 8.00 a.m. on March 1st. The <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">first 100 customers</span> receive an additional 20% discount.</p>\n\n<p>Computers<br>\n<span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Desktop computers are reduced by up to 50%.</span> Laptops are available for under £200, including accessories. <span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">Computer accessories are also discounted.</span> <span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">All computers include a 12-month guarantee, extended to 24 months for models over £1000.</span></p>\n\n<p>Kitchen appliances<br>\nFridges, freezers, microwaves and toasters are discounted. <span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">Combination packages provide greater savings.</span></p>\n\n<p>Televisions<br>\n<span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">LCD and plasma televisions are reduced by up to 30%.</span> Stock is limited.</p>",
             "tags": []
         },
         {
             "text_id": 2,
             "title": "Reading Text 3",
-            "content": "<h4><strong>Rainbow Recruitment</strong></h4>\n\n<p>Rainbow Recruitment provides temporary employment opportunities across various industries.</p>\n\n<h4><strong>Current positions</strong></h4>\n\n<p>Fruit pickers / packers – Weekly contracts; earnings depend on speed; transport required</p>\n\n<h4><strong>Labourer – Six-week contract; forklift licence essential</strong></h4>\n\n<h4><strong>Relief teacher – Temporary cover for sick leave</strong></h4>\n\n<h4><strong>Web designer – One-month contract; occasional office attendance</strong></h4>\n\n<h4><strong>Accountant – Three-month contract; work across two branches</strong></h4>\n\n<h4><strong>Care giver – Live-in role caring for an elderly woman</strong></h4>",
+            "content": "<h4><strong>Rainbow Recruitment</strong></h4>\n\n<p>Rainbow Recruitment provides temporary employment opportunities across various industries.</p>\n\n<h4><strong>Current positions</strong></h4>\n\n<p><span id=\"q20\" data-question=\"20\"></span><span class=\"reading-answer-marker\">Fruit pickers / packers – Weekly contracts; earnings depend on speed; transport required</span></p>\n\n<h4><strong><span id=\"q17\" data-question=\"17\"></span><span class=\"reading-answer-marker\">Labourer – Six-week contract; forklift licence essential</span></strong></h4>\n\n<h4><strong><span id=\"q19\" data-question=\"19\"></span><span class=\"reading-answer-marker\">Relief teacher – Temporary cover for sick leave</span></strong></h4>\n\n<h4><strong><span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">Web designer – One-month contract; occasional office attendance</span></strong></h4>\n\n<h4><strong><span id=\"q16\" data-question=\"16\"></span><span class=\"reading-answer-marker\">Accountant – Three-month contract; work across two branches</span></strong></h4>\n\n<h4><strong><span id=\"q18\" data-question=\"18\"></span><span class=\"reading-answer-marker\">Care giver – Live-in role caring for an elderly woman</span></strong></h4>",
             "tags": []
         },
         {
             "text_id": 3,
             "title": "Reading Text 4",
-            "content": "<h4><strong>Holiday and Leave Entitlements</strong></h4>\n\n<p>Employees are entitled to 5.6 weeks of paid annual leave (28 days for full-time staff). Holiday requests require six weeks' written notice. Holidays may be accumulated up to a maximum of eight weeks.</p>\n\n<p>Compassionate leave is available for emergencies involving dependants. Abuse of leave may result in an investigation.</p>\n\n<p>Maternity leave lasts 52 weeks, with pay for the first 38 weeks. Paternity leave must be taken within 56 days of the birth.</p>",
+            "content": "<h4><strong>Holiday and Leave Entitlements</strong></h4>\n\n<p>Employees are entitled to 5.6 weeks of paid annual leave (<span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">28 days</span> for full-time staff). Holiday requests require <span id=\"q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">six weeks</span>' written notice. Holidays may be accumulated up to a maximum of <span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">eight weeks</span>.</p>\n\n<p>Compassionate leave is available for emergencies involving dependants. Abuse of leave may result in <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">an investigation</span>.</p>\n\n<p>Maternity leave lasts 52 weeks, with pay for the first <span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">38 weeks</span>. <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Paternity leave</span> must be taken within 56 days of the birth.</p>",
             "tags": []
         },
         {
