@@ -18,7 +18,22 @@
     
     // Helper function to get price for membership type
     function getPriceForMembershipType(membershipType) {
-        if (!ieltsPayment || !ieltsPayment.pricing || !membershipType) {
+        if (!ieltsPayment || !membershipType) {
+            return 0;
+        }
+        
+        // Check if this is an extension option
+        if (membershipType.startsWith('extension_')) {
+            if (!ieltsPayment.extensionPricing) {
+                return 0;
+            }
+            // Extract the extension duration (e.g., 'extension_1_week' -> '1_week')
+            const duration = membershipType.replace('extension_', '');
+            return ieltsPayment.extensionPricing[duration] || 0;
+        }
+        
+        // Regular membership pricing
+        if (!ieltsPayment.pricing) {
             return 0;
         }
         return ieltsPayment.pricing[membershipType] || 0;
@@ -91,8 +106,8 @@
             const membershipType = $(this).val();
             const price = getPriceForMembershipType(membershipType);
             
-            // Check if this is a paid membership (not a trial)
-            const isPaidMembership = membershipType && !membershipType.endsWith('_trial');
+            // Check if this is a paid membership (not a trial) or an extension
+            const isPaidMembership = membershipType && (!membershipType.endsWith('_trial') || membershipType.startsWith('extension_'));
             
             // Show/hide payment section based on price
             if (price > 0) {
