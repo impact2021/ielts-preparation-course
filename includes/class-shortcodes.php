@@ -1559,16 +1559,8 @@ class IELTS_CM_Shortcodes {
             $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
             $membership_status = get_user_meta($user_id, '_ielts_cm_membership_status', true);
             
-            // Allow upgrade if user has a trial or expired membership
-            $is_trial = !empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type);
-            $is_expired = ($membership_status === IELTS_CM_Membership::STATUS_EXPIRED);
-            
-            if (!$is_trial && !$is_expired) {
-                // User has a full active membership, no need to register
-                return '<p>' . __('You are already registered and logged in with an active membership.', 'ielts-course-manager') . '</p>';
-            }
-            
-            // For trial or expired users, continue to show the upgrade/payment form below
+            // Allow all logged-in users to access the form for upgrades, extensions, or renewals
+            // This includes trial users, expired users, and active users who want to extend
             // The form will be rendered but without the registration fields (name, email, password)
         }
         
@@ -1979,7 +1971,7 @@ class IELTS_CM_Shortcodes {
         
         <style>
         .ielts-registration-form {
-            max-width: 1100px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background: #fff;
@@ -1990,30 +1982,20 @@ class IELTS_CM_Shortcodes {
             margin-top: 15px;
         }
         
-        /* Form grid layout - two column layout on desktop with payment on right */
+        /* Form grid layout - single column layout */
         .ielts-registration-form-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 0;
         }
         
-        /* Desktop layout: main form on left, payment on right */
-        @media (min-width: 900px) {
-            .ielts-registration-form-grid {
-                grid-template-columns: 1fr 380px;
-                gap: 20px;
-                align-items: start;
-            }
-            
-            .form-fields-container {
-                grid-column: 1;
-            }
-            
-            .payment-section-container {
-                grid-column: 2;
-                position: sticky;
-                top: 20px;
-            }
+        .form-fields-container {
+            grid-column: 1;
+        }
+        
+        .payment-section-container {
+            grid-column: 1;
+            margin-top: 20px;
         }
         
         /* Form fields inside the container use their own grid */
