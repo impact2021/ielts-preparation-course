@@ -16,7 +16,9 @@ class IELTS_CM_Membership {
         'academic_trial' => 'Academic Module - Free Trial',
         'general_trial' => 'General Training - Free Trial',
         'academic_full' => 'Academic Module Full Membership',
-        'general_full' => 'General Training Full Membership'
+        'general_full' => 'General Training Full Membership',
+        'english_trial' => 'English Only - Free Trial',
+        'english_full' => 'English Only Full Membership'
     );
     
     /**
@@ -335,6 +337,7 @@ class IELTS_CM_Membership {
         register_setting('ielts_membership_settings', 'ielts_cm_membership_durations');
         register_setting('ielts_membership_settings', 'ielts_cm_full_member_page_url');
         register_setting('ielts_membership_settings', 'ielts_cm_post_payment_redirect_url');
+        register_setting('ielts_membership_settings', 'ielts_cm_english_only_enabled');
         
         // Register payment settings
         register_setting('ielts_membership_payment', 'ielts_cm_stripe_enabled');
@@ -481,6 +484,7 @@ class IELTS_CM_Membership {
         
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
             update_option('ielts_cm_membership_enabled', isset($_POST['ielts_cm_membership_enabled']) ? 1 : 0);
+            update_option('ielts_cm_english_only_enabled', isset($_POST['ielts_cm_english_only_enabled']) ? 1 : 0);
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
             update_option('ielts_cm_post_payment_redirect_url', sanitize_text_field($_POST['ielts_cm_post_payment_redirect_url']));
             
@@ -500,6 +504,7 @@ class IELTS_CM_Membership {
         }
         
         $enabled = get_option('ielts_cm_membership_enabled', false);
+        $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
@@ -509,7 +514,9 @@ class IELTS_CM_Membership {
             'academic_trial' => array('value' => 6, 'unit' => 'hours'),
             'general_trial' => array('value' => 6, 'unit' => 'hours'),
             'academic_full' => array('value' => 30, 'unit' => 'days'),
-            'general_full' => array('value' => 30, 'unit' => 'days')
+            'general_full' => array('value' => 30, 'unit' => 'days'),
+            'english_trial' => array('value' => 6, 'unit' => 'hours'),
+            'english_full' => array('value' => 30, 'unit' => 'days')
         );
         
         // Merge with defaults
@@ -552,6 +559,18 @@ class IELTS_CM_Membership {
                         </td>
                     </tr>
                     <tr>
+                        <th scope="row"><?php _e('Enable English Only Membership', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="ielts_cm_english_only_enabled" value="1" <?php checked($english_only_enabled, 1); ?>>
+                                <?php _e('Enable English Only membership option (in addition to Academic and General Training)', 'ielts-course-manager'); ?>
+                            </label>
+                            <p class="description">
+                                <?php _e('When enabled, users can sign up for English Only trial/full memberships. This is useful for sites that offer General English courses separately.', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
                         <th scope="row"><?php _e('Become a Full Member Page', 'ielts-course-manager'); ?></th>
                         <td>
                             <input type="url" name="ielts_cm_full_member_page_url" 
@@ -580,7 +599,14 @@ class IELTS_CM_Membership {
                 <h2><?php _e('Membership Durations', 'ielts-course-manager'); ?></h2>
                 <p><?php _e('Set the duration for each membership type.', 'ielts-course-manager'); ?></p>
                 <table class="form-table">
-                    <?php foreach (self::MEMBERSHIP_LEVELS as $key => $label): ?>
+                    <?php 
+                    // Filter membership levels based on settings
+                    $membership_levels_for_duration = self::MEMBERSHIP_LEVELS;
+                    if (!$english_only_enabled) {
+                        unset($membership_levels_for_duration['english_trial']);
+                        unset($membership_levels_for_duration['english_full']);
+                    }
+                    foreach ($membership_levels_for_duration as $key => $label): ?>
                         <tr>
                             <th scope="row"><?php echo esc_html($label); ?></th>
                             <td>
@@ -627,12 +653,20 @@ class IELTS_CM_Membership {
         }
         
         $mapping = get_option('ielts_cm_membership_course_mapping', array());
+        $english_only_enabled = get_option('ielts_cm_english_only_enabled', false);
         $courses = get_posts(array(
             'post_type' => 'ielts_course',
             'posts_per_page' => -1,
             'orderby' => 'title',
             'order' => 'ASC'
         ));
+        
+        // Filter membership levels based on settings
+        $membership_levels = self::MEMBERSHIP_LEVELS;
+        if (!$english_only_enabled) {
+            unset($membership_levels['english_trial']);
+            unset($membership_levels['english_full']);
+        }
         ?>
         <div class="wrap">
             <h1><?php _e('Membership Courses', 'ielts-course-manager'); ?></h1>
@@ -645,7 +679,7 @@ class IELTS_CM_Membership {
                     <thead>
                         <tr>
                             <th><?php _e('Course', 'ielts-course-manager'); ?></th>
-                            <?php foreach (self::MEMBERSHIP_LEVELS as $key => $label): ?>
+                            <?php foreach ($membership_levels as $key => $label): ?>
                                 <th><?php echo esc_html($label); ?></th>
                             <?php endforeach; ?>
                         </tr>
@@ -654,7 +688,7 @@ class IELTS_CM_Membership {
                         <?php foreach ($courses as $course): ?>
                             <tr>
                                 <td><strong><?php echo esc_html($course->post_title); ?></strong></td>
-                                <?php foreach (self::MEMBERSHIP_LEVELS as $key => $label): ?>
+                                <?php foreach ($membership_levels as $key => $label): ?>
                                     <td>
                                         <input type="checkbox" 
                                                name="course_membership[<?php echo esc_attr($course->ID); ?>][]" 
