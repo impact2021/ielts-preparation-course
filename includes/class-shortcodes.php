@@ -1967,7 +1967,8 @@ class IELTS_CM_Shortcodes {
                     </div>
                     
                     <!-- Non-payment submit button (for free memberships, shown when payment section is hidden) -->
-                    <p class="form-field form-field-full submit-button-container" id="ielts-free-submit-container">
+                    <p class="form-field form-field-full submit-button-container" id="ielts-free-submit-container" 
+                       <?php if ($is_logged_in && isset($is_trial) && !$is_trial): ?>style="display: none;"<?php endif; ?>>
                         <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
                             <?php 
                             if ($is_logged_in) {
