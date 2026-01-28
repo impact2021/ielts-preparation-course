@@ -170,8 +170,8 @@ $view = isset($view) ? $view : 'daily';
 }
 
 .progress-rings-streak {
-    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
-    color: white;
+    background: transparent;
+    color: #333;
     padding: 15px;
     border-radius: 10px;
     margin-top: 15px;
