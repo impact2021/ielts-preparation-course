@@ -5,63 +5,6 @@
         {
             "type": "closed_question",
             "instructions": "Questions 1–7\n\nThis is a classification question. There are 7 questions. Look at the advertisements A–H and match each statement to the correct advertisement. Use each letter once only.",
-            "question": "The advertiser …",
-            "points": 1,
-            "no_answer_feedback": "Please select an answer. Match each statement to the correct advertisement (A-H) based on the information in Reading Passage 1.",
-            "correct_feedback": "",
-            "incorrect_feedback": "",
-            "reading_text_id": 0,
-            "audio_section_id": null,
-            "audio_start_time": null,
-            "audio_end_time": null,
-            "ielts_question_category": "matching_features",
-            "correct_answer_count": 1,
-            "mc_options": [
-                {
-                    "text": "A",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "B",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "C",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "D",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "E",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "F",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "G",
-                    "is_correct": false,
-                    "feedback": ""
-                },
-                {
-                    "text": "H",
-                    "is_correct": false,
-                    "feedback": ""
-                }
-            ]
-        },
-        {
-            "type": "closed_question",
-            "instructions": "",
             "question": "is willing to travel after seeing the item",
             "points": 1,
             "no_answer_feedback": "Please select an answer. The correct answer is H. Advertisement H states 'We will travel to inspect the item, but a photograph must be sent first.'",
