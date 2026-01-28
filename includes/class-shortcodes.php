@@ -1938,9 +1938,9 @@ class IELTS_CM_Shortcodes {
                         <button type="submit" name="ielts_register_submit" id="ielts_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
                             <?php 
                             if ($is_logged_in) {
-                                echo isset($is_trial) && $is_trial ? __('Upgrade Membership', 'ielts-course-manager') : __('Extend Course', 'ielts-course-manager');
+                                echo isset($is_trial) && $is_trial ? __('Upgrade Your Membership', 'ielts-course-manager') : __('Extend Your Course', 'ielts-course-manager');
                             } else {
-                                echo __('Create Account', 'ielts-course-manager');
+                                echo __('Create Your Account', 'ielts-course-manager');
                             }
                             ?>
                         </button>
@@ -1990,7 +1990,7 @@ class IELTS_CM_Shortcodes {
                                         if ($is_logged_in) {
                                             echo isset($is_trial) && $is_trial ? __('Complete Payment & Upgrade', 'ielts-course-manager') : __('Complete Payment & Extend', 'ielts-course-manager');
                                         } else {
-                                            echo __('Complete Payment', 'ielts-course-manager');
+                                            echo __('Complete Payment & Create Account', 'ielts-course-manager');
                                         }
                                         ?>
                                     </button>
