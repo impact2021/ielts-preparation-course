@@ -1520,15 +1520,18 @@ class IELTS_CM_Shortcodes {
             'redirect' => ''
         ), $atts);
         
+        // Define extension pricing defaults - used throughout the function
+        $extension_pricing_defaults = array(
+            '1_week' => 5.00,
+            '1_month' => 10.00,
+            '3_months' => 15.00
+        );
+        
         // Enqueue Stripe.js and payment handling scripts if membership system is enabled
         if (get_option('ielts_cm_membership_enabled')) {
             $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
             $pricing = get_option('ielts_cm_membership_pricing', array());
-            $extension_pricing = get_option('ielts_cm_extension_pricing', array(
-                '1_week' => 5.00,
-                '1_month' => 10.00,
-                '3_months' => 15.00
-            ));
+            $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
             
             if (!empty($stripe_publishable)) {
                 wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
@@ -1855,11 +1858,7 @@ class IELTS_CM_Shortcodes {
                                     
                                     if ($show_extensions) {
                                         // Show extension options for paid members
-                                        $extension_pricing = get_option('ielts_cm_extension_pricing', array(
-                                            '1_week' => 5.00,
-                                            '1_month' => 10.00,
-                                            '3_months' => 15.00
-                                        ));
+                                        $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
                                         $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                         ?>
                                         <optgroup label="<?php _e('Extension Options', 'ielts-course-manager'); ?>">
@@ -1946,13 +1945,26 @@ class IELTS_CM_Shortcodes {
                             </p>
                             
                             <?php
-                            // Check if Stripe is configured when paid memberships exist
+                            // Check if Stripe is configured when paid memberships or extensions exist
                             $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
                             $has_paid_options = false;
-                            foreach ($pricing as $key => $price) {
-                                if (!IELTS_CM_Membership::is_trial_membership($key) && floatval($price) > 0) {
-                                    $has_paid_options = true;
-                                    break;
+                            
+                            // Check for paid membership options
+                            if (!$show_extensions) {
+                                foreach ($pricing as $key => $price) {
+                                    if (!IELTS_CM_Membership::is_trial_membership($key) && floatval($price) > 0) {
+                                        $has_paid_options = true;
+                                        break;
+                                    }
+                                }
+                            } else {
+                                // For extension options, check if any extension has a price > 0
+                                $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
+                                foreach ($extension_pricing as $price) {
+                                    if (floatval($price) > 0) {
+                                        $has_paid_options = true;
+                                        break;
+                                    }
                                 }
                             }
                             
