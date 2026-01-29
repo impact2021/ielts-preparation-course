@@ -106,6 +106,9 @@ if ($layout_type === 'two_column_listening') {
 
 $test_type = ($is_listening_exercise === '1') ? 'listening' : 'reading';
 
+// Get hide reading pane option
+$hide_reading_pane = get_post_meta($quiz->ID, '_ielts_cm_hide_reading_pane', true);
+
 $audio_url = get_post_meta($quiz->ID, '_ielts_cm_audio_url', true);
 $transcript = get_post_meta($quiz->ID, '_ielts_cm_transcript', true);
 $audio_sections = get_post_meta($quiz->ID, '_ielts_cm_audio_sections', true);
@@ -225,7 +228,7 @@ if ($lesson_id) {
 }
 ?>
 
-<div class="ielts-computer-based-quiz" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($test_type); ?>">
+<div class="ielts-computer-based-quiz<?php echo ($hide_reading_pane === '1') ? ' hide-reading-pane' : ''; ?>" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($test_type); ?>">
     
     <!-- Header toggle button -->
     <button type="button" id="header-toggle-btn" class="header-toggle-btn" title="<?php _e('Toggle header visibility', 'ielts-course-manager'); ?>">

@@ -1300,6 +1300,18 @@ class IELTS_CM_Admin {
         </p>
         
         <?php
+        $hide_reading_pane = get_post_meta($post->ID, '_ielts_cm_hide_reading_pane', true);
+        ?>
+        
+        <p>
+            <label>
+                <input type="checkbox" id="ielts_cm_hide_reading_pane" name="ielts_cm_hide_reading_pane" value="1" <?php checked($hide_reading_pane, '1'); ?>>
+                <?php _e('Hide reading pane (full-width questions)', 'ielts-course-manager'); ?>
+            </label>
+            <br><small><?php _e('Check this box to hide the left reading/listening pane and display questions in full width. Useful for exercises that work better with a single column layout.', 'ielts-course-manager'); ?></small>
+        </p>
+        
+        <?php
         $skill_type = get_post_meta($post->ID, '_ielts_cm_skill_type', true);
         // Auto-detect if listening
         if ($is_listening_exercise === '1' && empty($skill_type)) {
@@ -3555,6 +3567,13 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_is_listening_exercise', '1');
             } else {
                 delete_post_meta($post_id, '_ielts_cm_is_listening_exercise');
+            }
+            
+            // Save "hide reading pane" checkbox
+            if (isset($_POST['ielts_cm_hide_reading_pane'])) {
+                update_post_meta($post_id, '_ielts_cm_hide_reading_pane', '1');
+            } else {
+                delete_post_meta($post_id, '_ielts_cm_hide_reading_pane');
             }
             
             // Save skill type
