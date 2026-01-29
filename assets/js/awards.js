@@ -11,6 +11,7 @@
     $(document).ready(function() {
         // Don't show award notifications on the registration page
         // Users have already gotten to that point and shouldn't be distracted
+        // Check for both the form class and form name to ensure we catch the registration page
         var skipNotifications = $('.ielts-registration-form').length > 0 || $('form[name="ielts_registration_form"]').length > 0;
         
         // Load awards
@@ -26,6 +27,9 @@
     });
     
     function loadAwards(skipNotifications) {
+        // Default to false if not provided
+        skipNotifications = skipNotifications || false;
+        
         $.ajax({
             url: ieltsAwardsConfig.ajaxUrl,
             type: 'POST',
@@ -164,6 +168,12 @@
     window.IELTSAwards = window.IELTSAwards || {};
     window.IELTSAwards.showAwardNotifications = function(awards) {
         if (!awards || !Array.isArray(awards) || awards.length === 0) {
+            return;
+        }
+        
+        // Don't show notifications on registration page
+        var isRegistrationPage = $('.ielts-registration-form').length > 0 || $('form[name="ielts_registration_form"]').length > 0;
+        if (isRegistrationPage) {
             return;
         }
         
