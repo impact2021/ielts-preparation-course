@@ -5103,13 +5103,17 @@ class IELTS_CM_Admin {
                             statusDiv.html(html);
                         } else {
                             var errorMessage = response.data && response.data.message ? response.data.message : '<?php _e('An unknown error occurred. Please try again or contact support.', 'ielts-course-manager'); ?>';
-                            statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + errorMessage + '</p></div>');
+                            var errorDiv = $('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> <span class="error-message"></span></p></div>');
+                            errorDiv.find('.error-message').text(errorMessage);
+                            statusDiv.html(errorDiv);
                         }
                     },
                     error: function(xhr, status, error) {
                         button.prop('disabled', false);
                         var errorMessage = error || status || '<?php _e('Network error. Please check your connection and try again.', 'ielts-course-manager'); ?>';
-                        statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + errorMessage + '</p></div>');
+                        var errorDiv = $('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> <span class="error-message"></span></p></div>');
+                        errorDiv.find('.error-message').text(errorMessage);
+                        statusDiv.html(errorDiv);
                     }
                 });
             });

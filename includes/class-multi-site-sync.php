@@ -222,12 +222,13 @@ class IELTS_CM_Multi_Site_Sync {
         
         // Check HTTP response code
         $status_code = wp_remote_retrieve_response_code($response);
-        if ($status_code < 200 || $status_code >= 300) {
+        // Ensure we have a valid status code before checking
+        if (!is_numeric($status_code) || $status_code < 200 || $status_code >= 300) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
             $error_message = sprintf(
                 'Subsite "%s" returned HTTP error %d. Please check the subsite is configured correctly and the REST API endpoint is available.',
                 $subsite->site_name,
-                $status_code
+                is_numeric($status_code) ? intval($status_code) : 0
             );
             return new WP_Error('http_error', $error_message);
         }
@@ -239,10 +240,12 @@ class IELTS_CM_Multi_Site_Sync {
         // Check if JSON decoding was successful
         if (json_last_error() !== JSON_ERROR_NONE || !is_array($body)) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
+            // Sanitize response body to prevent exposing sensitive data
+            $sanitized_response = preg_replace('/["\']?(?:token|password|key|secret|auth)["\']?\s*[:=]\s*["\']?[^,}\s]+/i', '***REDACTED***', $response_body);
             $error_message = sprintf(
                 'Subsite "%s" returned invalid JSON response. Response: %s',
                 $subsite->site_name,
-                substr($response_body, 0, 200) // Include first 200 chars for debugging
+                esc_html(substr($sanitized_response, 0, 200)) // Sanitize for safe display
             );
             return new WP_Error('invalid_response', $error_message);
         }
