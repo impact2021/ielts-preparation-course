@@ -5071,12 +5071,13 @@ class IELTS_CM_Admin {
                 
                 // Disable button and show loading
                 button.prop('disabled', true);
-                statusDiv.html('<p class="sync-loading"><span class="spinner is-active" style="float: none;"></span> <?php _e('Pushing content to subsites...', 'ielts-course-manager'); ?></p>');
+                statusDiv.html('<p class="sync-loading"><span class="spinner is-active" style="float: none;"></span> <?php _e('Pushing content to subsites... This may take several minutes for courses with many lessons.', 'ielts-course-manager'); ?></p>');
                 
-                // Make AJAX request
+                // Make AJAX request with extended timeout for large sync operations
                 $.ajax({
                     url: ajaxurl,
                     type: 'POST',
+                    timeout: 300000, // 5 minutes (300 seconds) to match PHP execution limit
                     data: {
                         action: 'ielts_cm_push_to_subsites',
                         post_id: postId,
@@ -5102,12 +5103,24 @@ class IELTS_CM_Admin {
                             html += '</div>';
                             statusDiv.html(html);
                         } else {
-                            statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                            var errorMessage = response.data && response.data.message ? response.data.message : '<?php _e('An unknown error occurred. Please try again or contact support.', 'ielts-course-manager'); ?>';
+                            var errorDiv = $('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> <span class="error-message"></span></p></div>');
+                            errorDiv.find('.error-message').text(errorMessage);
+                            statusDiv.html(errorDiv);
                         }
                     },
                     error: function(xhr, status, error) {
                         button.prop('disabled', false);
-                        statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + error + '</p></div>');
+                        // Provide specific error messages for different failure types
+                        var errorMessage;
+                        if (status === 'timeout') {
+                            errorMessage = '<?php _e('The sync operation timed out. The course may be too large to sync all at once. Some content may have been synced successfully. Please try syncing individual lessons instead, or contact your administrator to increase server timeout limits.', 'ielts-course-manager'); ?>';
+                        } else {
+                            errorMessage = error || status || '<?php _e('Network error. Please check your connection and try again.', 'ielts-course-manager'); ?>';
+                        }
+                        var errorDiv = $('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> <span class="error-message"></span></p></div>');
+                        errorDiv.find('.error-message').text(errorMessage);
+                        statusDiv.html(errorDiv);
                     }
                 });
             });

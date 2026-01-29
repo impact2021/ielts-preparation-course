@@ -30,6 +30,9 @@ class IELTS_CM_Shortcodes {
         
         // Login stats shortcode
         add_shortcode('ielts_login_stats', array($this, 'display_login_stats'));
+        
+        // Pricing shortcode
+        add_shortcode('ielts_price', array($this, 'display_price'));
     }
     
     /**
@@ -3433,5 +3436,48 @@ class IELTS_CM_Shortcodes {
             return sprintf(__('%d days %d hours', 'ielts-course-manager'), $days, $hours);
         }
         return sprintf(_n('%d day', '%d days', $days, 'ielts-course-manager'), $days);
+    }
+    
+    /**
+     * Display membership price
+     * 
+     * Usage: [ielts_price type="academic_full"]
+     * 
+     * @param array $atts Shortcode attributes
+     * @return string Formatted price
+     */
+    public function display_price($atts) {
+        $atts = shortcode_atts(array(
+            'type' => 'academic_full',  // Default to academic full membership
+            'format' => '$%.2f',         // Default format: $10.00
+            'currency' => 'USD',         // Currency (for future use)
+            'class' => ''                // Optional CSS class
+        ), $atts);
+        
+        // Get pricing from options
+        $pricing = get_option('ielts_cm_membership_pricing', array());
+        
+        // Get the membership type
+        $type = sanitize_text_field($atts['type']);
+        
+        // Validate that the membership type exists
+        $valid_types = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
+        if (!in_array($type, $valid_types)) {
+            // If type is not valid, try to find a matching type
+            $type = 'academic_full'; // Fallback to academic_full
+        }
+        
+        // Get the price for this membership type
+        $price = isset($pricing[$type]) ? floatval($pricing[$type]) : 0;
+        
+        // Format the price
+        $format = sanitize_text_field($atts['format']);
+        $formatted_price = sprintf($format, $price);
+        
+        // Wrap in span with optional class
+        $class = !empty($atts['class']) ? ' class="' . esc_attr($atts['class']) . '"' : '';
+        $output = '<span' . $class . '>' . esc_html($formatted_price) . '</span>';
+        
+        return $output;
     }
 }

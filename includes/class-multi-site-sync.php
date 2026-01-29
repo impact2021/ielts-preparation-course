@@ -192,11 +192,22 @@ class IELTS_CM_Multi_Site_Sync {
             return $content_data;
         }
         
+        // Calculate appropriate timeout based on content size
+        // Larger content needs more time to transmit and process
+        $content_size = strlen(wp_json_encode($content_data));
+        $timeout = 30; // Base timeout of 30 seconds
+        
+        // Add 1 second per 10KB above the base 10KB (min 30s, max 120s)
+        if ($content_size > 10240) { // > 10KB
+            $additional_time = ceil(($content_size - 10240) / 10240);
+            $timeout = min(120, 30 + $additional_time);
+        }
+        
         // Make API request to subsite
         $response = wp_remote_post(
             trailingslashit($subsite->site_url) . 'wp-json/ielts-cm/v1/sync-content',
             array(
-                'timeout' => 30,
+                'timeout' => $timeout,
                 'headers' => array(
                     'Content-Type' => 'application/json',
                     'X-IELTS-Auth-Token' => $subsite->auth_token
@@ -211,17 +222,61 @@ class IELTS_CM_Multi_Site_Sync {
         
         if (is_wp_error($response)) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
-            return $response;
+            // Enhance error message with more context
+            $error_message = sprintf(
+                'Failed to connect to subsite "%s": %s',
+                $subsite->site_name,
+                $response->get_error_message()
+            );
+            return new WP_Error($response->get_error_code(), $error_message);
         }
         
-        $body = json_decode(wp_remote_retrieve_body($response), true);
+        // Check HTTP response code
+        $status_code = wp_remote_retrieve_response_code($response);
+        // Ensure we have a valid status code before checking
+        if (!is_numeric($status_code) || $status_code < 200 || $status_code >= 300) {
+            $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
+            $error_message = sprintf(
+                'Subsite "%s" returned HTTP error %d. Please check the subsite is configured correctly and the REST API endpoint is available.',
+                $subsite->site_name,
+                is_numeric($status_code) ? intval($status_code) : 0
+            );
+            return new WP_Error('http_error', $error_message);
+        }
+        
+        // Decode and validate response body
+        $response_body = wp_remote_retrieve_body($response);
+        $body = json_decode($response_body, true);
+        
+        // Check if JSON decoding was successful
+        if (json_last_error() !== JSON_ERROR_NONE || !is_array($body)) {
+            $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
+            // First escape HTML, then redact sensitive data from the safe string
+            $safe_response = esc_html(substr($response_body, 0, 200));
+            $sanitized_response = preg_replace(
+                '/(token|password|key|secret|auth)(["\']?\s*[:=]\s*["\']?)([^,}\s&"\']+)/i',
+                '$1$2***REDACTED***',
+                $safe_response
+            );
+            $error_message = sprintf(
+                'Subsite "%s" returned invalid JSON response. Response: %s',
+                $subsite->site_name,
+                $sanitized_response
+            );
+            return new WP_Error('invalid_response', $error_message);
+        }
+        
         if (isset($body['success']) && $body['success']) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'success');
             $this->update_last_sync($subsite->id);
-            return array('success' => true, 'message' => $body['message']);
+            return array('success' => true, 'message' => $body['message'] ?? 'Content synced successfully');
         } else {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
-            return new WP_Error('sync_failed', $body['message'] ?? 'Unknown error');
+            // Provide a meaningful error message even if the response doesn't include one
+            $error_message = isset($body['message']) && !empty($body['message']) 
+                ? $body['message'] 
+                : sprintf('Subsite "%s" rejected the sync request. Please check authentication and permissions.', $subsite->site_name);
+            return new WP_Error('sync_failed', $error_message);
         }
     }
     
@@ -499,6 +554,14 @@ class IELTS_CM_Multi_Site_Sync {
         $subsites = $this->get_connected_subsites();
         if (empty($subsites)) {
             return new WP_Error('no_subsites', 'No connected subsites found');
+        }
+        
+        // Increase PHP execution time limit for large sync operations
+        // This prevents timeouts when syncing courses with many lessons
+        $original_time_limit = ini_get('max_execution_time');
+        if ($original_time_limit !== '0') { // Only set if not already unlimited
+            // Suppress warning if function is disabled in php.ini
+            @set_time_limit(300); // 5 minutes should be enough for most courses
         }
         
         $results = array();
