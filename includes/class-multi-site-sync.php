@@ -195,11 +195,12 @@ class IELTS_CM_Multi_Site_Sync {
         // Calculate appropriate timeout based on content size
         // Larger content needs more time to transmit and process
         $content_size = strlen(wp_json_encode($content_data));
-        $timeout = 30; // Default 30 seconds
+        $timeout = 30; // Base timeout of 30 seconds
         
-        // Increase timeout for larger content (1 second per 10KB, min 30s, max 120s)
+        // Add 1 second per 10KB above the base 10KB (min 30s, max 120s)
         if ($content_size > 10240) { // > 10KB
-            $timeout = min(120, max(30, ceil($content_size / 10240)));
+            $additional_time = ceil(($content_size - 10240) / 10240);
+            $timeout = min(120, 30 + $additional_time);
         }
         
         // Make API request to subsite
@@ -250,12 +251,17 @@ class IELTS_CM_Multi_Site_Sync {
         // Check if JSON decoding was successful
         if (json_last_error() !== JSON_ERROR_NONE || !is_array($body)) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
-            // Sanitize response body to prevent exposing sensitive data
-            $sanitized_response = preg_replace('/["\']?(?:token|password|key|secret|auth)["\']?\s*[:=]\s*["\']?[^,}\s]+/i', '***REDACTED***', $response_body);
+            // First escape HTML, then redact sensitive data from the safe string
+            $safe_response = esc_html(substr($response_body, 0, 200));
+            $sanitized_response = preg_replace(
+                '/(token|password|key|secret|auth)(["\']?\s*[:=]\s*["\']?)([^,}\s&"\']+)/i',
+                '$1$2***REDACTED***',
+                $safe_response
+            );
             $error_message = sprintf(
                 'Subsite "%s" returned invalid JSON response. Response: %s',
                 $subsite->site_name,
-                esc_html(substr($sanitized_response, 0, 200)) // Sanitize for safe display
+                $sanitized_response
             );
             return new WP_Error('invalid_response', $error_message);
         }
@@ -554,7 +560,8 @@ class IELTS_CM_Multi_Site_Sync {
         // This prevents timeouts when syncing courses with many lessons
         $original_time_limit = ini_get('max_execution_time');
         if ($original_time_limit !== '0') { // Only set if not already unlimited
-            set_time_limit(300); // 5 minutes should be enough for most courses
+            // Suppress warning if function is disabled in php.ini
+            @set_time_limit(300); // 5 minutes should be enough for most courses
         }
         
         $results = array();
