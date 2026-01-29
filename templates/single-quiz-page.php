@@ -103,17 +103,7 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
 <?php endif; ?>
 </style>
 
-<?php
-// Get quiz ID early to check settings
-global $post;
-$quiz_id = $post->ID;
-
-// Check if "hide reading pane" (full-width) is enabled
-$hide_reading_pane = get_post_meta($quiz_id, '_ielts_cm_hide_reading_pane', true);
-$full_width_class = $hide_reading_pane ? 'ielts-full-width' : '';
-?>
-
-<div id="primary" class="content-area <?php echo esc_attr($full_width_class); ?>">
+<div id="primary" class="content-area <?php echo esc_attr(get_post_meta(get_the_ID(), '_ielts_cm_hide_reading_pane', true) ? 'ielts-full-width' : ''); ?>">
     <main id="main" class="site-main">
         <?php
         while (have_posts()) :

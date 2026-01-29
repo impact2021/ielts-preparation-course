@@ -325,7 +325,7 @@ class IELTS_CM_Frontend {
         }
         
         ?>
-        <div id="ielts-trial-popup" class="ielts-trial-popup" role="dialog" aria-modal="true" aria-labelledby="ielts-trial-popup-title">
+        <div id="ielts-trial-popup" class="ielts-trial-popup" role="dialog" aria-labelledby="ielts-trial-popup-title">
             <div class="ielts-trial-popup-content">
                 <button class="ielts-trial-popup-close" id="ielts-trial-popup-close" aria-label="<?php esc_attr_e('Minimize', 'ielts-course-manager'); ?>">−</button>
                 <h2 id="ielts-trial-popup-title"><?php _e('Start Your Free 2-Hour Trial!', 'ielts-course-manager'); ?></h2>
@@ -334,7 +334,7 @@ class IELTS_CM_Frontend {
                     <?php _e('Start Free Trial', 'ielts-course-manager'); ?>
                 </a>
             </div>
-            <div class="ielts-trial-popup-minimized" id="ielts-trial-popup-minimized">
+            <div class="ielts-trial-popup-minimized" id="ielts-trial-popup-minimized" role="button" tabindex="0" aria-label="<?php esc_attr_e('Expand free trial information', 'ielts-course-manager'); ?>">
                 <span class="minimized-icon">🎓</span>
                 <span class="minimized-text"><?php _e('Free Trial', 'ielts-course-manager'); ?></span>
             </div>
@@ -373,11 +373,6 @@ class IELTS_CM_Frontend {
             to { opacity: 1; }
         }
         
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
-        }
-        
         .ielts-trial-popup-content {
             background: #fff;
             margin: 10% auto;
@@ -399,17 +394,6 @@ class IELTS_CM_Frontend {
             to {
                 transform: translateY(0);
                 opacity: 1;
-            }
-        }
-        
-        @keyframes shrinkToBottom {
-            from {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-            }
-            to {
-                transform: translateY(100vh) scale(0.2);
-                opacity: 0;
             }
         }
         
@@ -445,9 +429,12 @@ class IELTS_CM_Frontend {
             }
         }
         
-        .ielts-trial-popup-minimized:hover {
+        .ielts-trial-popup-minimized:hover,
+        .ielts-trial-popup-minimized:focus {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
         }
         
         .minimized-icon {
@@ -523,6 +510,7 @@ class IELTS_CM_Frontend {
                 if (popup) {
                     popup.style.display = 'block';
                     popup.classList.remove('minimized');
+                    popup.setAttribute('aria-modal', 'true');
                     isMinimized = false;
                     // Focus on close button for accessibility
                     if (closeBtn) {
@@ -534,7 +522,12 @@ class IELTS_CM_Frontend {
             function minimizePopup() {
                 if (popup) {
                     popup.classList.add('minimized');
+                    popup.removeAttribute('aria-modal');
                     isMinimized = true;
+                    // Return focus to minimized badge for keyboard navigation
+                    if (minimizedBtn) {
+                        minimizedBtn.focus();
+                    }
                     // Store the current timestamp when popup is minimized
                     try {
                         localStorage.setItem(POPUP_STORAGE_KEY, Date.now().toString());
@@ -548,6 +541,7 @@ class IELTS_CM_Frontend {
                 if (popup) {
                     popup.style.display = 'none';
                     popup.classList.remove('minimized');
+                    popup.removeAttribute('aria-modal');
                     isMinimized = false;
                 }
             }
@@ -578,11 +572,19 @@ class IELTS_CM_Frontend {
                 });
             }
             
-            // Expand popup when minimized button is clicked
+            // Expand popup when minimized button is clicked or activated with keyboard
             if (minimizedBtn) {
                 minimizedBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     showPopup();
+                });
+                
+                // Add keyboard support for Enter and Space keys
+                minimizedBtn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        showPopup();
+                    }
                 });
             }
             
