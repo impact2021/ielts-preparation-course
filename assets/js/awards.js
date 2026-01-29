@@ -11,10 +11,10 @@
     $(document).ready(function() {
         // Don't show award notifications on the registration page
         // Users have already gotten to that point and shouldn't be distracted
-        var isRegistrationPage = $('.ielts-registration-form').length > 0 || $('form[name="ielts_registration_form"]').length > 0;
+        var skipNotifications = $('.ielts-registration-form').length > 0 || $('form[name="ielts_registration_form"]').length > 0;
         
         // Load awards
-        loadAwards(isRegistrationPage);
+        loadAwards(skipNotifications);
         
         // Tab switching
         $('.awards-tab').on('click', function() {
