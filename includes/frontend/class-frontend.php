@@ -292,6 +292,12 @@ class IELTS_CM_Frontend {
             return;
         }
         
+        // Never show popup on the membership-register page
+        $current_url = home_url($_SERVER['REQUEST_URI']);
+        if (strpos($current_url, '/membership-register/') !== false || strpos($current_url, '/membership-register') !== false) {
+            return;
+        }
+        
         // Get registration page URL
         // First try custom registration page, then fall back to WordPress default
         $registration_url = get_option('ielts_cm_registration_page_url');

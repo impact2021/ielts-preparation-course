@@ -1908,6 +1908,11 @@ class IELTS_CM_Shortcodes {
                                                 $option_label .= ' (Free Trial)';
                                                 $trial_options[$key] = $option_label;
                                             } else {
+                                                // Add subtitle for IELTS Plus courses
+                                                if ($key === 'academic_plus' || $key === 'general_plus') {
+                                                    $option_label .= ' - Includes 2 x 30 minute live speaking assessments';
+                                                }
+                                                
                                                 // Paid membership - always show price information
                                                 if ($price > 0) {
                                                     $option_label .= ' ($' . number_format($price, 2) . ')';
