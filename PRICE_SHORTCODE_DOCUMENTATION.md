@@ -16,8 +16,16 @@ This will display the price in the default format: `$10.00` (or whatever price i
 
 ### `type` (required)
 The membership type to display the price for. Available options:
-- `academic_full` - Academic Module Full Membership (default)
-- `general_full` - General Training Full Membership
+
+**Core Memberships (30 days):**
+- `academic_full` - IELTS Core (Academic Module) (default)
+- `general_full` - IELTS Core (General Training Module)
+
+**Plus Memberships (90 days + 2 live speaking assessments):**
+- `academic_plus` - IELTS Plus (Academic Module)
+- `general_plus` - IELTS Plus (General Training Module)
+
+**Other Memberships:**
 - `english_full` - English Only Full Membership
 - `academic_trial` - Academic Module - Free Trial
 - `general_trial` - General Training - Free Trial
@@ -25,7 +33,7 @@ The membership type to display the price for. Available options:
 
 **Example:**
 ```
-[ielts_price type="general_full"]
+[ielts_price type="academic_plus"]
 ```
 
 ### `format` (optional)
@@ -74,16 +82,24 @@ Output: "The Academic Module Full Course costs $10.00."
 ```
 <table>
     <tr>
-        <td>Academic Module:</td>
+        <td>IELTS Core (Academic):</td>
         <td>[ielts_price type="academic_full"]</td>
+        <td>30 days access</td>
     </tr>
     <tr>
-        <td>General Training:</td>
+        <td>IELTS Plus (Academic):</td>
+        <td>[ielts_price type="academic_plus"]</td>
+        <td>90 days + 2 live speaking assessments</td>
+    </tr>
+    <tr>
+        <td>IELTS Core (General Training):</td>
         <td>[ielts_price type="general_full"]</td>
+        <td>30 days access</td>
     </tr>
     <tr>
-        <td>English Only:</td>
-        <td>[ielts_price type="english_full"]</td>
+        <td>IELTS Plus (General Training):</td>
+        <td>[ielts_price type="general_plus"]</td>
+        <td>90 days + 2 live speaking assessments</td>
     </tr>
 </table>
 ```
