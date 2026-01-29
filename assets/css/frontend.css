@@ -958,6 +958,16 @@ body.ielts-course-archive .content-area {
     max-height: 100% !important;
 }
 
+/* Full-width mode: Hide reading pane and make questions full width */
+.ielts-computer-based-quiz.hide-reading-pane .reading-column {
+    display: none !important;
+}
+
+.ielts-computer-based-quiz.hide-reading-pane .questions-column {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+}
+
 .questions-content {
     padding: 20px;
     padding-bottom: 0; /* No bottom padding to allow nav bar to sit flush at bottom */
