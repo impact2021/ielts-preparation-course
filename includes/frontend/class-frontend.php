@@ -28,6 +28,9 @@ class IELTS_CM_Frontend {
         // Add trial countdown widget to footer
         add_action('wp_footer', array($this, 'add_trial_countdown_widget'));
         
+        // Add trial popup for non-logged-in users
+        add_action('wp_footer', array($this, 'add_trial_popup'));
+        
         // Enqueue frontend styles and scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         
@@ -275,6 +278,235 @@ class IELTS_CM_Frontend {
             
             updateCountdown();
             countdownInterval = setInterval(updateCountdown, 1000);
+        })();
+        </script>
+        <?php
+    }
+    
+    /**
+     * Add trial popup for non-logged-in users
+     */
+    public function add_trial_popup() {
+        // Only show for non-logged-in users
+        if (is_user_logged_in()) {
+            return;
+        }
+        
+        // Get registration page URL
+        // First try custom registration page, then fall back to WordPress default
+        $registration_url = get_option('ielts_cm_registration_page_url');
+        if (empty($registration_url)) {
+            // Check if we have a cached registration URL
+            $registration_url = get_transient('ielts_cm_cached_registration_url');
+            
+            if (false === $registration_url) {
+                // Try to find a page with the registration shortcode
+                $pages = get_posts(array(
+                    'post_type' => 'page',
+                    'posts_per_page' => 1,
+                    's' => '[ielts_registration]',
+                ));
+                
+                if (!empty($pages)) {
+                    $registration_url = get_permalink($pages[0]->ID);
+                } else {
+                    // Fall back to WordPress default registration if enabled
+                    if (get_option('users_can_register')) {
+                        $registration_url = wp_registration_url();
+                    } else {
+                        // If registration is disabled, use home URL as fallback
+                        $registration_url = home_url();
+                    }
+                }
+                
+                // Cache the result for 24 hours to improve performance
+                set_transient('ielts_cm_cached_registration_url', $registration_url, DAY_IN_SECONDS);
+            }
+        }
+        
+        ?>
+        <div id="ielts-trial-popup" class="ielts-trial-popup" role="dialog" aria-modal="true" aria-labelledby="ielts-trial-popup-title">
+            <div class="ielts-trial-popup-content">
+                <button class="ielts-trial-popup-close" id="ielts-trial-popup-close" aria-label="<?php esc_attr_e('Close', 'ielts-course-manager'); ?>">&times;</button>
+                <h2 id="ielts-trial-popup-title"><?php _e('Start Your Free 2-Hour Trial!', 'ielts-course-manager'); ?></h2>
+                <p><?php _e('Get instant access to our complete IELTS preparation course. No credit card required!', 'ielts-course-manager'); ?></p>
+                <a href="<?php echo esc_url($registration_url); ?>" class="ielts-trial-popup-button">
+                    <?php _e('Start Free Trial', 'ielts-course-manager'); ?>
+                </a>
+            </div>
+        </div>
+        
+        <style>
+        .ielts-trial-popup {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .ielts-trial-popup-content {
+            background: #fff;
+            margin: 10% auto;
+            padding: 30px 40px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.3s ease-out;
+            text-align: center;
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .ielts-trial-popup-content h2 {
+            margin: 0 0 15px 0;
+            font-size: 28px;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .ielts-trial-popup-content p {
+            margin: 0 0 25px 0;
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .ielts-trial-popup-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 32px;
+            color: #999;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        
+        .ielts-trial-popup-close:hover {
+            color: #333;
+        }
+        
+        .ielts-trial-popup-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .ielts-trial-popup-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            color: white;
+        }
+        </style>
+        
+        <script>
+        (function() {
+            var popup = document.getElementById('ielts-trial-popup');
+            var closeBtn = document.getElementById('ielts-trial-popup-close');
+            var POPUP_STORAGE_KEY = 'ielts_trial_popup_last_closed';
+            var POPUP_INTERVAL = 5 * 60 * 1000; // 5 minutes in milliseconds
+            
+            function showPopup() {
+                if (popup) {
+                    popup.style.display = 'block';
+                    // Focus on close button for accessibility
+                    if (closeBtn) {
+                        closeBtn.focus();
+                    }
+                }
+            }
+            
+            function hidePopup() {
+                if (popup) {
+                    popup.style.display = 'none';
+                    // Store the current timestamp when popup is closed
+                    try {
+                        localStorage.setItem(POPUP_STORAGE_KEY, Date.now().toString());
+                    } catch (e) {
+                        // localStorage may be disabled or full - silently fail
+                    }
+                }
+            }
+            
+            function shouldShowPopup() {
+                try {
+                    var lastClosed = localStorage.getItem(POPUP_STORAGE_KEY);
+                    
+                    // If never closed before, show it
+                    if (!lastClosed) {
+                        return true;
+                    }
+                    
+                    // Check if 5 minutes have passed since last close
+                    var timeSinceClose = Date.now() - parseInt(lastClosed, 10);
+                    return timeSinceClose >= POPUP_INTERVAL;
+                } catch (e) {
+                    // If localStorage is not available, always show popup
+                    return true;
+                }
+            }
+            
+            // Close popup when close button is clicked
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    hidePopup();
+                });
+            }
+            
+            // Close popup when clicking outside the content
+            if (popup) {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === popup) {
+                        hidePopup();
+                    }
+                });
+            }
+            
+            // Close popup when Escape key is pressed
+            function handleEscapeKey(e) {
+                if (e.key === 'Escape' && popup && popup.style.display === 'block') {
+                    hidePopup();
+                }
+            }
+            document.addEventListener('keydown', handleEscapeKey);
+            
+            // Check if we should show the popup on page load
+            if (shouldShowPopup()) {
+                // Show popup after a short delay for better UX
+                setTimeout(showPopup, 2000);
+            }
         })();
         </script>
         <?php
