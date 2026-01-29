@@ -325,14 +325,18 @@ class IELTS_CM_Frontend {
         }
         
         ?>
-        <div id="ielts-trial-popup" class="ielts-trial-popup" role="dialog" aria-modal="true" aria-labelledby="ielts-trial-popup-title">
+        <div id="ielts-trial-popup" class="ielts-trial-popup" role="dialog" aria-labelledby="ielts-trial-popup-title">
             <div class="ielts-trial-popup-content">
-                <button class="ielts-trial-popup-close" id="ielts-trial-popup-close" aria-label="<?php esc_attr_e('Close', 'ielts-course-manager'); ?>">&times;</button>
+                <button class="ielts-trial-popup-close" id="ielts-trial-popup-close" aria-label="<?php esc_attr_e('Minimize', 'ielts-course-manager'); ?>">−</button>
                 <h2 id="ielts-trial-popup-title"><?php _e('Start Your Free 2-Hour Trial!', 'ielts-course-manager'); ?></h2>
                 <p><?php _e('Get instant access to our complete IELTS preparation course. No credit card required!', 'ielts-course-manager'); ?></p>
                 <a href="<?php echo esc_url($registration_url); ?>" class="ielts-trial-popup-button">
                     <?php _e('Start Free Trial', 'ielts-course-manager'); ?>
                 </a>
+            </div>
+            <div class="ielts-trial-popup-minimized" id="ielts-trial-popup-minimized" role="button" tabindex="0" aria-label="<?php esc_attr_e('Expand free trial information', 'ielts-course-manager'); ?>">
+                <span class="minimized-icon">🎓</span>
+                <span class="minimized-text"><?php _e('Free Trial', 'ielts-course-manager'); ?></span>
             </div>
         </div>
         
@@ -347,6 +351,21 @@ class IELTS_CM_Frontend {
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             animation: fadeIn 0.3s ease-in;
+            transition: background-color 0.3s ease;
+        }
+        
+        /* Minimized state - no overlay */
+        .ielts-trial-popup.minimized {
+            background-color: transparent;
+            pointer-events: none;
+        }
+        
+        .ielts-trial-popup.minimized .ielts-trial-popup-content {
+            display: none;
+        }
+        
+        .ielts-trial-popup.minimized .ielts-trial-popup-minimized {
+            display: flex;
         }
         
         @keyframes fadeIn {
@@ -376,6 +395,54 @@ class IELTS_CM_Frontend {
                 transform: translateY(0);
                 opacity: 1;
             }
+        }
+        
+        /* Minimized button at bottom right */
+        .ielts-trial-popup-minimized {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            pointer-events: auto;
+            transition: all 0.3s;
+            animation: slideInFromBottom 0.5s ease-out;
+        }
+        
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .ielts-trial-popup-minimized:hover,
+        .ielts-trial-popup-minimized:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
+        }
+        
+        .minimized-icon {
+            font-size: 18px;
+        }
+        
+        .minimized-text {
+            font-size: 14px;
         }
         
         .ielts-trial-popup-content h2 {
@@ -434,12 +501,17 @@ class IELTS_CM_Frontend {
         (function() {
             var popup = document.getElementById('ielts-trial-popup');
             var closeBtn = document.getElementById('ielts-trial-popup-close');
+            var minimizedBtn = document.getElementById('ielts-trial-popup-minimized');
             var POPUP_STORAGE_KEY = 'ielts_trial_popup_last_closed';
             var POPUP_INTERVAL = 5 * 60 * 1000; // 5 minutes in milliseconds
+            var isMinimized = false;
             
             function showPopup() {
                 if (popup) {
                     popup.style.display = 'block';
+                    popup.classList.remove('minimized');
+                    popup.setAttribute('aria-modal', 'true');
+                    isMinimized = false;
                     // Focus on close button for accessibility
                     if (closeBtn) {
                         closeBtn.focus();
@@ -447,15 +519,30 @@ class IELTS_CM_Frontend {
                 }
             }
             
-            function hidePopup() {
+            function minimizePopup() {
                 if (popup) {
-                    popup.style.display = 'none';
-                    // Store the current timestamp when popup is closed
+                    popup.classList.add('minimized');
+                    popup.removeAttribute('aria-modal');
+                    isMinimized = true;
+                    // Return focus to minimized badge for keyboard navigation
+                    if (minimizedBtn) {
+                        minimizedBtn.focus();
+                    }
+                    // Store the current timestamp when popup is minimized
                     try {
                         localStorage.setItem(POPUP_STORAGE_KEY, Date.now().toString());
                     } catch (e) {
                         // localStorage may be disabled or full - silently fail
                     }
+                }
+            }
+            
+            function hidePopup() {
+                if (popup) {
+                    popup.style.display = 'none';
+                    popup.classList.remove('minimized');
+                    popup.removeAttribute('aria-modal');
+                    isMinimized = false;
                 }
             }
             
@@ -477,27 +564,43 @@ class IELTS_CM_Frontend {
                 }
             }
             
-            // Close popup when close button is clicked
+            // Minimize popup when close button is clicked
             if (closeBtn) {
                 closeBtn.addEventListener('click', function(e) {
                     e.preventDefault();
-                    hidePopup();
+                    minimizePopup();
                 });
             }
             
-            // Close popup when clicking outside the content
-            if (popup) {
-                popup.addEventListener('click', function(e) {
-                    if (e.target === popup) {
-                        hidePopup();
+            // Expand popup when minimized button is clicked or activated with keyboard
+            if (minimizedBtn) {
+                minimizedBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPopup();
+                });
+                
+                // Add keyboard support for Enter and Space keys
+                minimizedBtn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        showPopup();
                     }
                 });
             }
             
-            // Close popup when Escape key is pressed
+            // Minimize popup when clicking outside the content
+            if (popup) {
+                popup.addEventListener('click', function(e) {
+                    if (e.target === popup && !isMinimized) {
+                        minimizePopup();
+                    }
+                });
+            }
+            
+            // Minimize popup when Escape key is pressed
             function handleEscapeKey(e) {
-                if (e.key === 'Escape' && popup && popup.style.display === 'block') {
-                    hidePopup();
+                if (e.key === 'Escape' && popup && popup.style.display === 'block' && !isMinimized) {
+                    minimizePopup();
                 }
             }
             document.addEventListener('keydown', handleEscapeKey);
@@ -506,6 +609,10 @@ class IELTS_CM_Frontend {
             if (shouldShowPopup()) {
                 // Show popup after a short delay for better UX
                 setTimeout(showPopup, 2000);
+            } else {
+                // If not showing full popup, show minimized version immediately
+                popup.style.display = 'block';
+                minimizePopup();
             }
         })();
         </script>

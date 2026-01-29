@@ -103,7 +103,7 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
 <?php endif; ?>
 </style>
 
-<div id="primary" class="content-area ielts-full-width">
+<div id="primary" class="content-area <?php echo esc_attr(get_post_meta(get_the_ID(), '_ielts_cm_hide_reading_pane', true) ? 'ielts-full-width' : ''); ?>">
     <main id="main" class="site-main">
         <?php
         while (have_posts()) :
