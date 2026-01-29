@@ -211,17 +211,53 @@ class IELTS_CM_Multi_Site_Sync {
         
         if (is_wp_error($response)) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
-            return $response;
+            // Enhance error message with more context
+            $error_message = sprintf(
+                'Failed to connect to subsite "%s": %s',
+                $subsite->site_name,
+                $response->get_error_message()
+            );
+            return new WP_Error($response->get_error_code(), $error_message);
         }
         
-        $body = json_decode(wp_remote_retrieve_body($response), true);
+        // Check HTTP response code
+        $status_code = wp_remote_retrieve_response_code($response);
+        if ($status_code < 200 || $status_code >= 300) {
+            $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
+            $error_message = sprintf(
+                'Subsite "%s" returned HTTP error %d. Please check the subsite is configured correctly and the REST API endpoint is available.',
+                $subsite->site_name,
+                $status_code
+            );
+            return new WP_Error('http_error', $error_message);
+        }
+        
+        // Decode and validate response body
+        $response_body = wp_remote_retrieve_body($response);
+        $body = json_decode($response_body, true);
+        
+        // Check if JSON decoding was successful
+        if (json_last_error() !== JSON_ERROR_NONE || !is_array($body)) {
+            $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
+            $error_message = sprintf(
+                'Subsite "%s" returned invalid JSON response. Response: %s',
+                $subsite->site_name,
+                substr($response_body, 0, 200) // Include first 200 chars for debugging
+            );
+            return new WP_Error('invalid_response', $error_message);
+        }
+        
         if (isset($body['success']) && $body['success']) {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'success');
             $this->update_last_sync($subsite->id);
-            return array('success' => true, 'message' => $body['message']);
+            return array('success' => true, 'message' => $body['message'] ?? 'Content synced successfully');
         } else {
             $this->log_sync($content_id, $content_type, $content_hash, $subsite->id, 'failed');
-            return new WP_Error('sync_failed', $body['message'] ?? 'Unknown error');
+            // Provide a meaningful error message even if the response doesn't include one
+            $error_message = isset($body['message']) && !empty($body['message']) 
+                ? $body['message'] 
+                : sprintf('Subsite "%s" rejected the sync request. Please check authentication and permissions.', $subsite->site_name);
+            return new WP_Error('sync_failed', $error_message);
         }
     }
     

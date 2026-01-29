@@ -5102,12 +5102,14 @@ class IELTS_CM_Admin {
                             html += '</div>';
                             statusDiv.html(html);
                         } else {
-                            statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + response.data.message + '</p></div>');
+                            var errorMessage = response.data && response.data.message ? response.data.message : '<?php _e('An unknown error occurred. Please try again or contact support.', 'ielts-course-manager'); ?>';
+                            statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + errorMessage + '</p></div>');
                         }
                     },
                     error: function(xhr, status, error) {
                         button.prop('disabled', false);
-                        statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + error + '</p></div>');
+                        var errorMessage = error || status || '<?php _e('Network error. Please check your connection and try again.', 'ielts-course-manager'); ?>';
+                        statusDiv.html('<div class="notice notice-error inline"><p><strong><?php _e('Error:', 'ielts-course-manager'); ?></strong> ' + errorMessage + '</p></div>');
                     }
                 });
             });
