@@ -296,18 +296,31 @@ class IELTS_CM_Frontend {
         // First try custom registration page, then fall back to WordPress default
         $registration_url = get_option('ielts_cm_registration_page_url');
         if (empty($registration_url)) {
-            // Try to find a page with the registration shortcode
-            $pages = get_posts(array(
-                'post_type' => 'page',
-                'posts_per_page' => 1,
-                's' => '[ielts_registration]',
-            ));
+            // Check if we have a cached registration URL
+            $registration_url = get_transient('ielts_cm_cached_registration_url');
             
-            if (!empty($pages)) {
-                $registration_url = get_permalink($pages[0]->ID);
-            } else {
-                // Fall back to WordPress default registration
-                $registration_url = wp_registration_url();
+            if (false === $registration_url) {
+                // Try to find a page with the registration shortcode
+                $pages = get_posts(array(
+                    'post_type' => 'page',
+                    'posts_per_page' => 1,
+                    's' => '[ielts_registration]',
+                ));
+                
+                if (!empty($pages)) {
+                    $registration_url = get_permalink($pages[0]->ID);
+                } else {
+                    // Fall back to WordPress default registration if enabled
+                    if (get_option('users_can_register')) {
+                        $registration_url = wp_registration_url();
+                    } else {
+                        // If registration is disabled, use home URL as fallback
+                        $registration_url = home_url();
+                    }
+                }
+                
+                // Cache the result for 24 hours to improve performance
+                set_transient('ielts_cm_cached_registration_url', $registration_url, DAY_IN_SECONDS);
             }
         }
         
@@ -482,11 +495,12 @@ class IELTS_CM_Frontend {
             }
             
             // Close popup when Escape key is pressed
-            document.addEventListener('keydown', function(e) {
+            function handleEscapeKey(e) {
                 if (e.key === 'Escape' && popup && popup.style.display === 'block') {
                     hidePopup();
                 }
-            });
+            }
+            document.addEventListener('keydown', handleEscapeKey);
             
             // Check if we should show the popup on page load
             if (shouldShowPopup()) {
