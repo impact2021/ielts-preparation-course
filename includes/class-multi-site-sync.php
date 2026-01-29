@@ -192,11 +192,21 @@ class IELTS_CM_Multi_Site_Sync {
             return $content_data;
         }
         
+        // Calculate appropriate timeout based on content size
+        // Larger content needs more time to transmit and process
+        $content_size = strlen(wp_json_encode($content_data));
+        $timeout = 30; // Default 30 seconds
+        
+        // Increase timeout for larger content (1 second per 10KB, min 30s, max 120s)
+        if ($content_size > 10240) { // > 10KB
+            $timeout = min(120, max(30, ceil($content_size / 10240)));
+        }
+        
         // Make API request to subsite
         $response = wp_remote_post(
             trailingslashit($subsite->site_url) . 'wp-json/ielts-cm/v1/sync-content',
             array(
-                'timeout' => 30,
+                'timeout' => $timeout,
                 'headers' => array(
                     'Content-Type' => 'application/json',
                     'X-IELTS-Auth-Token' => $subsite->auth_token
@@ -538,6 +548,13 @@ class IELTS_CM_Multi_Site_Sync {
         $subsites = $this->get_connected_subsites();
         if (empty($subsites)) {
             return new WP_Error('no_subsites', 'No connected subsites found');
+        }
+        
+        // Increase PHP execution time limit for large sync operations
+        // This prevents timeouts when syncing courses with many lessons
+        $original_time_limit = ini_get('max_execution_time');
+        if ($original_time_limit !== '0') { // Only set if not already unlimited
+            set_time_limit(300); // 5 minutes should be enough for most courses
         }
         
         $results = array();
