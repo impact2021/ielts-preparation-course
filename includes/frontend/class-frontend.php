@@ -312,10 +312,10 @@ class IELTS_CM_Frontend {
         }
         
         ?>
-        <div id="ielts-trial-popup" class="ielts-trial-popup">
+        <div id="ielts-trial-popup" class="ielts-trial-popup" role="dialog" aria-modal="true" aria-labelledby="ielts-trial-popup-title">
             <div class="ielts-trial-popup-content">
-                <button class="ielts-trial-popup-close" id="ielts-trial-popup-close">&times;</button>
-                <h2><?php _e('Start Your Free 2-Hour Trial!', 'ielts-course-manager'); ?></h2>
+                <button class="ielts-trial-popup-close" id="ielts-trial-popup-close" aria-label="<?php esc_attr_e('Close', 'ielts-course-manager'); ?>">&times;</button>
+                <h2 id="ielts-trial-popup-title"><?php _e('Start Your Free 2-Hour Trial!', 'ielts-course-manager'); ?></h2>
                 <p><?php _e('Get instant access to our complete IELTS preparation course. No credit card required!', 'ielts-course-manager'); ?></p>
                 <a href="<?php echo esc_url($registration_url); ?>" class="ielts-trial-popup-button">
                     <?php _e('Start Free Trial', 'ielts-course-manager'); ?>
@@ -327,7 +327,7 @@ class IELTS_CM_Frontend {
         .ielts-trial-popup {
             display: none;
             position: fixed;
-            z-index: 99999;
+            z-index: 10000;
             left: 0;
             top: 0;
             width: 100%;
@@ -427,6 +427,10 @@ class IELTS_CM_Frontend {
             function showPopup() {
                 if (popup) {
                     popup.style.display = 'block';
+                    // Focus on close button for accessibility
+                    if (closeBtn) {
+                        closeBtn.focus();
+                    }
                 }
             }
             
@@ -434,21 +438,30 @@ class IELTS_CM_Frontend {
                 if (popup) {
                     popup.style.display = 'none';
                     // Store the current timestamp when popup is closed
-                    localStorage.setItem(POPUP_STORAGE_KEY, Date.now().toString());
+                    try {
+                        localStorage.setItem(POPUP_STORAGE_KEY, Date.now().toString());
+                    } catch (e) {
+                        // localStorage may be disabled or full - silently fail
+                    }
                 }
             }
             
             function shouldShowPopup() {
-                var lastClosed = localStorage.getItem(POPUP_STORAGE_KEY);
-                
-                // If never closed before, show it
-                if (!lastClosed) {
+                try {
+                    var lastClosed = localStorage.getItem(POPUP_STORAGE_KEY);
+                    
+                    // If never closed before, show it
+                    if (!lastClosed) {
+                        return true;
+                    }
+                    
+                    // Check if 5 minutes have passed since last close
+                    var timeSinceClose = Date.now() - parseInt(lastClosed, 10);
+                    return timeSinceClose >= POPUP_INTERVAL;
+                } catch (e) {
+                    // If localStorage is not available, always show popup
                     return true;
                 }
-                
-                // Check if 5 minutes have passed since last close
-                var timeSinceClose = Date.now() - parseInt(lastClosed, 10);
-                return timeSinceClose >= POPUP_INTERVAL;
             }
             
             // Close popup when close button is clicked
@@ -468,21 +481,17 @@ class IELTS_CM_Frontend {
                 });
             }
             
+            // Close popup when Escape key is pressed
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && popup && popup.style.display === 'block') {
+                    hidePopup();
+                }
+            });
+            
             // Check if we should show the popup on page load
             if (shouldShowPopup()) {
                 // Show popup after a short delay for better UX
                 setTimeout(showPopup, 2000);
-            } else {
-                // Set a timer to show popup after 5 minutes
-                var lastClosed = localStorage.getItem(POPUP_STORAGE_KEY);
-                var timeSinceClose = Date.now() - parseInt(lastClosed, 10);
-                var timeUntilNextShow = POPUP_INTERVAL - timeSinceClose;
-                
-                if (timeUntilNextShow > 0) {
-                    setTimeout(function() {
-                        showPopup();
-                    }, timeUntilNextShow);
-                }
             }
         })();
         </script>
