@@ -293,8 +293,9 @@ class IELTS_CM_Frontend {
         }
         
         // Never show popup on the membership-register page
-        $current_url = home_url($_SERVER['REQUEST_URI']);
-        if (strpos($current_url, '/membership-register/') !== false || strpos($current_url, '/membership-register') !== false) {
+        $request_uri = isset($_SERVER['REQUEST_URI']) ? sanitize_text_field($_SERVER['REQUEST_URI']) : '';
+        $current_url = home_url($request_uri);
+        if (strpos($current_url, '/membership-register') !== false) {
             return;
         }
         

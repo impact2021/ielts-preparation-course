@@ -1910,7 +1910,7 @@ class IELTS_CM_Shortcodes {
                                             } else {
                                                 // Add subtitle for IELTS Plus courses
                                                 if ($key === 'academic_plus' || $key === 'general_plus') {
-                                                    $option_label .= ' - Includes 2 x 30 minute live speaking assessments';
+                                                    $option_label .= ' - Includes 2 x 30-minute live speaking assessments';
                                                 }
                                                 
                                                 // Paid membership - always show price information
