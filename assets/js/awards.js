@@ -9,8 +9,12 @@
     var currentFilter = 'all';
     
     $(document).ready(function() {
+        // Don't show award notifications on the registration page
+        // Users have already gotten to that point and shouldn't be distracted
+        var isRegistrationPage = $('.ielts-registration-form').length > 0 || $('form[name="ielts_registration_form"]').length > 0;
+        
         // Load awards
-        loadAwards();
+        loadAwards(isRegistrationPage);
         
         // Tab switching
         $('.awards-tab').on('click', function() {
@@ -21,7 +25,7 @@
         });
     });
     
-    function loadAwards() {
+    function loadAwards(skipNotifications) {
         $.ajax({
             url: ieltsAwardsConfig.ajaxUrl,
             type: 'POST',
@@ -34,8 +38,8 @@
                     awardsData = response.data;
                     renderAwards();
                     
-                    // Show notifications for new awards
-                    if (awardsData.new && awardsData.new.length > 0) {
+                    // Show notifications for new awards, unless we're on the registration page
+                    if (!skipNotifications && awardsData.new && awardsData.new.length > 0) {
                         showNewAwardNotifications(awardsData.new);
                     }
                 } else {
