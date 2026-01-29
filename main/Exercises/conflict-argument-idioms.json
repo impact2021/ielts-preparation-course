@@ -5,41 +5,206 @@
     {
       "type": "open_question",
       "ielts_question_type": "Sentence Completion",
-      "instructions": "Complete the idioms by filling in the missing words. Type your answers in the fields provided.",
-      "question": "Complete the following idioms and phrases:",
-      "field_count": 12,
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "A [field 1] of wills",
+      "field_count": 1,
       "field_labels": [
-        "1. A [field 1] of wills - A disagreement where both sides are determined to win",
-        "2. Get off (someone's) [field 2] - Stop criticising or telling someone what to do",
-        "3. Bury the [field 3] - To stop an argument and agree to make peace",
-        "4. Send (someone) [field 4] - To tell someone to leave",
-        "5. Wipe the [field 5] clean (very similar to 'bury the hatchet') - To forget about previous disagreements or problems and to start again",
-        "6. [field 6] on thin ice - Doing or saying something that could easily/quickly end up in a disagreement or trouble",
-        "7. Pick [field 7] in (something) - Trying to find faults in something someone is doing or saying",
-        "8. An [field 8] branch - Something you do, say or offer to try and end a disagreement",
-        "9. Add [field 9] to the fire - To make a situation or argument even worse",
-        "10. At each other's [field 10] - Always arguing (normally strongly)",
-        "11. A [field 11] point - A subject that someone is sensitive about and should therefore be avoided",
-        "12. A [field 12] battle - A disagreement that has been going on for some time"
+        "1. A [field 1] of wills - A disagreement where both sides are determined to win"
       ],
       "field_answers": [
-        "battle",
-        "back",
-        "hatchet",
-        "packing",
-        "slate",
-        "skating",
-        "holes",
-        "olive",
-        "fuel",
-        "throats|throat",
-        "sore",
+        "battle"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: battle",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "Get off (someone's) [field 1]",
+      "field_count": 1,
+      "field_labels": [
+        "2. Get off (someone's) [field 1] - Stop criticising or telling someone what to do"
+      ],
+      "field_answers": [
+        "back"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: back",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "Bury the [field 1]",
+      "field_count": 1,
+      "field_labels": [
+        "3. Bury the [field 1] - To stop an argument and agree to make peace"
+      ],
+      "field_answers": [
+        "hatchet"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: hatchet",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "Send (someone) [field 1]",
+      "field_count": 1,
+      "field_labels": [
+        "4. Send (someone) [field 1] - To tell someone to leave"
+      ],
+      "field_answers": [
+        "packing"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: packing",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "Wipe the [field 1] clean",
+      "field_count": 1,
+      "field_labels": [
+        "5. Wipe the [field 1] clean - To forget about previous disagreements or problems and to start again"
+      ],
+      "field_answers": [
+        "slate"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: slate",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "[field 1] on thin ice",
+      "field_count": 1,
+      "field_labels": [
+        "6. [field 1] on thin ice - Doing or saying something that could easily/quickly end up in a disagreement or trouble"
+      ],
+      "field_answers": [
+        "skating"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: skating",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "Pick [field 1] in (something)",
+      "field_count": 1,
+      "field_labels": [
+        "7. Pick [field 1] in (something) - Trying to find faults in something someone is doing or saying"
+      ],
+      "field_answers": [
+        "holes"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: holes",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "An [field 1] branch",
+      "field_count": 1,
+      "field_labels": [
+        "8. An [field 1] branch - Something you do, say or offer to try and end a disagreement"
+      ],
+      "field_answers": [
+        "olive"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: olive",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "Add [field 1] to the fire",
+      "field_count": 1,
+      "field_labels": [
+        "9. Add [field 1] to the fire - To make a situation or argument even worse"
+      ],
+      "field_answers": [
+        "fuel"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: fuel",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "At each other's [field 1]",
+      "field_count": 1,
+      "field_labels": [
+        "10. At each other's [field 1] - Always arguing (normally strongly)"
+      ],
+      "field_answers": [
+        "throats|throat"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: throats (or throat)",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "A [field 1] point",
+      "field_count": 1,
+      "field_labels": [
+        "11. A [field 1] point - A subject that someone is sensitive about and should therefore be avoided"
+      ],
+      "field_answers": [
+        "sore"
+      ],
+      "correct_feedback": "Excellent! You got this idiom correct.",
+      "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
+      "no_answer_feedback": "The correct answer is: sore",
+      "points": 1
+    },
+    {
+      "type": "open_question",
+      "ielts_question_type": "Sentence Completion",
+      "instructions": "Complete the idiom by filling in the missing word.",
+      "question": "A [field 1] battle",
+      "field_count": 1,
+      "field_labels": [
+        "12. A [field 1] battle - A disagreement that has been going on for some time"
+      ],
+      "field_answers": [
         "running"
       ],
       "correct_feedback": "Excellent! You got this idiom correct.",
       "incorrect_feedback": "Not quite. Review the meaning and try to think of the word that best fits the idiom.",
-      "no_answer_feedback": "The correct answer is shown above. Study these idioms to improve your understanding of conflict-related expressions.",
-      "points": 12
+      "no_answer_feedback": "The correct answer is: running",
+      "points": 1
     }
   ],
   "reading_texts": [],
