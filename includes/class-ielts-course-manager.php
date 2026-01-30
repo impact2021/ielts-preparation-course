@@ -20,6 +20,7 @@ class IELTS_Course_Manager {
     protected $sync_manager;
     protected $sync_api;
     protected $sync_settings_page;
+    protected $sync_status_page;
     protected $awards;
     protected $gamification;
     protected $membership;
@@ -45,6 +46,7 @@ class IELTS_Course_Manager {
         $this->sync_manager = new IELTS_CM_Multi_Site_Sync();
         $this->sync_api = new IELTS_CM_Sync_API();
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
+        $this->sync_status_page = new IELTS_CM_Sync_Status_Page();
         $this->awards = new IELTS_CM_Awards();
         $this->gamification = new IELTS_CM_Gamification();
         $this->membership = new IELTS_CM_Membership();
@@ -76,6 +78,10 @@ class IELTS_Course_Manager {
             // Initialize sync settings page
             add_action('admin_menu', array($this->sync_settings_page, 'add_menu_page'));
             add_action('admin_init', array($this->sync_settings_page, 'handle_form_submit'));
+            
+            // Initialize sync status page
+            add_action('admin_menu', array($this->sync_status_page, 'add_menu_page'));
+            add_action('wp_ajax_ielts_cm_check_sync_status', array($this->sync_status_page, 'handle_ajax_check_sync'));
         }
         
         // Initialize frontend

@@ -41,6 +41,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-membership.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-stripe-payment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-settings-page.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-status-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
 
 /**
