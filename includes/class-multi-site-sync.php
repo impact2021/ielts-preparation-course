@@ -599,4 +599,201 @@ class IELTS_CM_Multi_Site_Sync {
         
         return $results;
     }
+    
+    /**
+     * Get all courses with their complete hierarchy
+     */
+    public function get_all_courses_with_hierarchy() {
+        $courses = get_posts(array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'orderby' => 'menu_order',
+            'order' => 'ASC'
+        ));
+        
+        $courses_data = array();
+        
+        foreach ($courses as $course) {
+            $course_data = array(
+                'id' => $course->ID,
+                'title' => $course->post_title,
+                'type' => 'course',
+                'lessons' => array()
+            );
+            
+            // Get lessons for this course
+            $lessons = $this->get_course_lessons($course->ID);
+            
+            foreach ($lessons as $lesson) {
+                $lesson_data = array(
+                    'id' => $lesson->ID,
+                    'title' => $lesson->post_title,
+                    'type' => 'lesson',
+                    'resources' => array(),
+                    'exercises' => array()
+                );
+                
+                // Get resources (sublessons) for this lesson
+                $resources = $this->get_lesson_resources($lesson->ID);
+                foreach ($resources as $resource) {
+                    $lesson_data['resources'][] = array(
+                        'id' => $resource->ID,
+                        'title' => $resource->post_title,
+                        'type' => 'resource'
+                    );
+                }
+                
+                // Get exercises (quizzes) for this lesson
+                $exercises = $this->get_lesson_exercises($lesson->ID);
+                foreach ($exercises as $exercise) {
+                    $lesson_data['exercises'][] = array(
+                        'id' => $exercise->ID,
+                        'title' => $exercise->post_title,
+                        'type' => 'quiz'
+                    );
+                }
+                
+                $course_data['lessons'][] = $lesson_data;
+            }
+            
+            $courses_data[] = $course_data;
+        }
+        
+        return $courses_data;
+    }
+    
+    /**
+     * Get sync status for a specific content item across all subsites
+     */
+    public function get_content_sync_status($content_id, $content_type) {
+        global $wpdb;
+        
+        $subsites = $this->get_connected_subsites();
+        $content_hash = $this->generate_content_hash($content_id, $content_type);
+        $table = $this->db->get_content_sync_table();
+        
+        $status_data = array(
+            'content_id' => $content_id,
+            'content_type' => $content_type,
+            'current_hash' => $content_hash,
+            'subsites' => array()
+        );
+        
+        foreach ($subsites as $subsite) {
+            // Get the latest sync record for this content and subsite
+            $latest_sync = $wpdb->get_row($wpdb->prepare(
+                "SELECT * FROM $table 
+                WHERE content_id = %d 
+                AND content_type = %s 
+                AND site_id = %d 
+                ORDER BY sync_date DESC 
+                LIMIT 1",
+                $content_id,
+                $content_type,
+                $subsite->id
+            ));
+            
+            if ($latest_sync) {
+                $is_synced = ($latest_sync->content_hash === $content_hash && $latest_sync->sync_status === 'success');
+                $status_data['subsites'][$subsite->id] = array(
+                    'site_name' => $subsite->site_name,
+                    'synced' => $is_synced,
+                    'last_sync' => $latest_sync->sync_date,
+                    'sync_status' => $latest_sync->sync_status,
+                    'hash' => $latest_sync->content_hash
+                );
+            } else {
+                // Never synced
+                $status_data['subsites'][$subsite->id] = array(
+                    'site_name' => $subsite->site_name,
+                    'synced' => false,
+                    'last_sync' => null,
+                    'sync_status' => 'never_synced',
+                    'hash' => null
+                );
+            }
+        }
+        
+        return $status_data;
+    }
+    
+    /**
+     * Get comprehensive sync status for all content
+     */
+    public function get_all_content_sync_status() {
+        $courses_hierarchy = $this->get_all_courses_with_hierarchy();
+        $subsites = $this->get_connected_subsites();
+        
+        $status_summary = array(
+            'total_items' => 0,
+            'synced_items' => 0,
+            'out_of_sync_items' => 0,
+            'never_synced_items' => 0,
+            'subsites' => array()
+        );
+        
+        foreach ($subsites as $subsite) {
+            $status_summary['subsites'][$subsite->id] = array(
+                'site_name' => $subsite->site_name,
+                'total' => 0,
+                'synced' => 0,
+                'out_of_sync' => 0,
+                'never_synced' => 0
+            );
+        }
+        
+        // Iterate through all content and check sync status
+        foreach ($courses_hierarchy as $course) {
+            $this->update_status_for_content($course, $status_summary);
+            
+            foreach ($course['lessons'] as $lesson) {
+                $this->update_status_for_content($lesson, $status_summary);
+                
+                foreach ($lesson['resources'] as $resource) {
+                    $this->update_status_for_content($resource, $status_summary);
+                }
+                
+                foreach ($lesson['exercises'] as $exercise) {
+                    $this->update_status_for_content($exercise, $status_summary);
+                }
+            }
+        }
+        
+        return $status_summary;
+    }
+    
+    /**
+     * Helper to update status summary for a content item
+     */
+    private function update_status_for_content($content, &$status_summary) {
+        $status = $this->get_content_sync_status($content['id'], $content['type']);
+        $status_summary['total_items']++;
+        
+        $all_synced = true;
+        $any_synced = false;
+        
+        foreach ($status['subsites'] as $site_id => $site_status) {
+            $status_summary['subsites'][$site_id]['total']++;
+            
+            if ($site_status['synced']) {
+                $status_summary['subsites'][$site_id]['synced']++;
+                $any_synced = true;
+            } else if ($site_status['sync_status'] === 'never_synced') {
+                $status_summary['subsites'][$site_id]['never_synced']++;
+                $all_synced = false;
+            } else {
+                $status_summary['subsites'][$site_id]['out_of_sync']++;
+                $all_synced = false;
+            }
+        }
+        
+        if ($all_synced && count($status['subsites']) > 0) {
+            $status_summary['synced_items']++;
+        } else if (!$any_synced) {
+            $status_summary['never_synced_items']++;
+        } else {
+            $status_summary['out_of_sync_items']++;
+        }
+    }
 }

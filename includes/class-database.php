@@ -17,6 +17,7 @@ class IELTS_CM_Database {
     private $user_awards_table;
     private $payments_table;
     private $payment_error_log_table;
+    private $auto_sync_log_table;
     
     public function __construct() {
         global $wpdb;
@@ -28,6 +29,7 @@ class IELTS_CM_Database {
         $this->user_awards_table = $wpdb->prefix . 'ielts_cm_user_awards';
         $this->payments_table = $wpdb->prefix . 'ielts_cm_payments';
         $this->payment_error_log_table = $wpdb->prefix . 'ielts_cm_payment_errors';
+        $this->auto_sync_log_table = $wpdb->prefix . 'ielts_cm_auto_sync_log';
     }
     
     /**
@@ -169,6 +171,20 @@ class IELTS_CM_Database {
             KEY created_at (created_at)
         ) $charset_collate;";
         
+        // Auto-sync log table
+        $auto_sync_log_table = $wpdb->prefix . 'ielts_cm_auto_sync_log';
+        $sql_auto_sync_log = "CREATE TABLE IF NOT EXISTS $auto_sync_log_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            content_type varchar(50) NOT NULL,
+            message text NOT NULL,
+            status varchar(20) DEFAULT 'success',
+            log_date datetime DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY content_type (content_type),
+            KEY status (status),
+            KEY log_date (log_date)
+        ) $charset_collate;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
@@ -178,6 +194,7 @@ class IELTS_CM_Database {
         dbDelta($sql_user_awards);
         dbDelta($sql_payments);
         dbDelta($sql_payment_errors);
+        dbDelta($sql_auto_sync_log);
     }
     
     /**
@@ -194,7 +211,8 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_content_sync',
             $wpdb->prefix . 'ielts_cm_user_awards',
             $wpdb->prefix . 'ielts_cm_payments',
-            $wpdb->prefix . 'ielts_cm_payment_errors'
+            $wpdb->prefix . 'ielts_cm_payment_errors',
+            $wpdb->prefix . 'ielts_cm_auto_sync_log'
         );
         
         foreach ($tables as $table) {
@@ -235,6 +253,10 @@ class IELTS_CM_Database {
     
     public function get_payment_error_log_table() {
         return $this->payment_error_log_table;
+    }
+    
+    public function get_auto_sync_log_table() {
+        return $this->auto_sync_log_table;
     }
     
     /**

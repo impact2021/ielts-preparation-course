@@ -63,6 +63,15 @@ class IELTS_CM_Sync_Settings_Page {
             case 'generate_token':
                 $this->handle_generate_token();
                 break;
+            case 'update_auto_sync':
+                $this->handle_update_auto_sync();
+                break;
+            case 'trigger_manual_sync':
+                $this->handle_trigger_manual_sync();
+                break;
+            case 'clear_sync_logs':
+                $this->handle_clear_sync_logs();
+                break;
         }
     }
     
@@ -190,6 +199,51 @@ class IELTS_CM_Sync_Settings_Page {
         $token = wp_generate_password(32, true, true);
         update_option('ielts_cm_subsite_auth_token', $token);
         add_settings_error('ielts_cm_sync', 'token_generated', 'New authentication token generated', 'success');
+    }
+    
+    /**
+     * Update auto-sync settings
+     */
+    private function handle_update_auto_sync() {
+        $enabled = isset($_POST['auto_sync_enabled']) ? '1' : '0';
+        $interval = absint($_POST['auto_sync_interval'] ?? 15);
+        
+        // Validate interval (minimum 5 minutes, maximum 1440 minutes / 24 hours)
+        if ($interval < 5 || $interval > 1440) {
+            add_settings_error('ielts_cm_sync', 'invalid_interval', 'Invalid interval. Must be between 5 and 1440 minutes.');
+            return;
+        }
+        
+        update_option('ielts_cm_auto_sync_enabled', $enabled);
+        update_option('ielts_cm_auto_sync_interval', $interval);
+        
+        // Initialize auto-sync manager to reschedule cron
+        $auto_sync = new IELTS_CM_Auto_Sync_Manager();
+        $auto_sync->schedule_auto_sync();
+        
+        $message = $enabled === '1' 
+            ? sprintf('Auto-sync enabled with %d minute interval', $interval)
+            : 'Auto-sync disabled';
+        
+        add_settings_error('ielts_cm_sync', 'auto_sync_updated', $message, 'success');
+    }
+    
+    /**
+     * Trigger manual sync
+     */
+    private function handle_trigger_manual_sync() {
+        $auto_sync = new IELTS_CM_Auto_Sync_Manager();
+        $auto_sync->trigger_manual_sync();
+        add_settings_error('ielts_cm_sync', 'manual_sync_triggered', 'Manual sync triggered. Check the sync log below for results.', 'success');
+    }
+    
+    /**
+     * Clear sync logs
+     */
+    private function handle_clear_sync_logs() {
+        $auto_sync = new IELTS_CM_Auto_Sync_Manager();
+        $auto_sync->clear_logs();
+        add_settings_error('ielts_cm_sync', 'logs_cleared', 'Sync logs cleared successfully', 'success');
     }
     
     /**
@@ -404,6 +458,174 @@ class IELTS_CM_Sync_Settings_Page {
                             
                             <?php submit_button(__('Add Subsite', 'ielts-course-manager')); ?>
                         </form>
+                    </div>
+                </div>
+                
+                <!-- Automatic Sync Settings -->
+                <div class="postbox">
+                    <div class="inside">
+                        <h2><?php _e('Automatic Sync', 'ielts-course-manager'); ?></h2>
+                        <p class="description">
+                            <?php _e('Automatically sync content changes to subsites on a scheduled interval.', 'ielts-course-manager'); ?>
+                        </p>
+                        
+                        <?php
+                        $auto_sync = new IELTS_CM_Auto_Sync_Manager();
+                        $auto_sync_enabled = $auto_sync->is_enabled();
+                        $auto_sync_interval = $auto_sync->get_interval();
+                        $last_run = $auto_sync->get_last_run();
+                        $next_run = $auto_sync->get_next_run();
+                        $consecutive_failures = absint(get_option('ielts_cm_auto_sync_failures', 0));
+                        ?>
+                        
+                        <form method="post" action="">
+                            <?php wp_nonce_field('ielts_cm_sync_settings', 'ielts_cm_sync_nonce'); ?>
+                            <input type="hidden" name="ielts_cm_sync_action" value="update_auto_sync">
+                            
+                            <table class="form-table">
+                                <tr>
+                                    <th scope="row"><?php _e('Enable Auto-Sync', 'ielts-course-manager'); ?></th>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" name="auto_sync_enabled" value="1" <?php checked($auto_sync_enabled, true); ?>>
+                                            <?php _e('Automatically sync content changes', 'ielts-course-manager'); ?>
+                                        </label>
+                                        <p class="description">
+                                            <?php _e('When enabled, the system will automatically check for content changes and push to subsites.', 'ielts-course-manager'); ?>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><?php _e('Sync Interval', 'ielts-course-manager'); ?></th>
+                                    <td>
+                                        <select name="auto_sync_interval">
+                                            <option value="5" <?php selected($auto_sync_interval, 5); ?>>5 minutes</option>
+                                            <option value="10" <?php selected($auto_sync_interval, 10); ?>>10 minutes</option>
+                                            <option value="15" <?php selected($auto_sync_interval, 15); ?>>15 minutes</option>
+                                            <option value="30" <?php selected($auto_sync_interval, 30); ?>>30 minutes</option>
+                                            <option value="60" <?php selected($auto_sync_interval, 60); ?>>1 hour</option>
+                                            <option value="120" <?php selected($auto_sync_interval, 120); ?>>2 hours</option>
+                                            <option value="360" <?php selected($auto_sync_interval, 360); ?>>6 hours</option>
+                                            <option value="720" <?php selected($auto_sync_interval, 720); ?>>12 hours</option>
+                                            <option value="1440" <?php selected($auto_sync_interval, 1440); ?>>24 hours</option>
+                                        </select>
+                                        <p class="description">
+                                            <?php _e('How often to check for content changes. Shorter intervals provide faster sync but use more server resources.', 'ielts-course-manager'); ?>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><?php _e('Status', 'ielts-course-manager'); ?></th>
+                                    <td>
+                                        <?php if ($auto_sync_enabled): ?>
+                                            <span style="color: #46b450; font-weight: bold;">● Active</span>
+                                        <?php else: ?>
+                                            <span style="color: #999;">○ Inactive</span>
+                                        <?php endif; ?>
+                                        
+                                        <?php if ($consecutive_failures > 0): ?>
+                                            <br>
+                                            <span style="color: #dc3232;">
+                                                ⚠ <?php printf(__('%d consecutive failures', 'ielts-course-manager'), $consecutive_failures); ?>
+                                            </span>
+                                        <?php endif; ?>
+                                        
+                                        <?php if ($last_run): ?>
+                                            <br>
+                                            <small><?php printf(__('Last run: %s', 'ielts-course-manager'), human_time_diff(strtotime($last_run), current_time('timestamp')) . ' ago'); ?></small>
+                                        <?php endif; ?>
+                                        
+                                        <?php if ($next_run && $auto_sync_enabled): ?>
+                                            <br>
+                                            <small><?php printf(__('Next run: %s', 'ielts-course-manager'), human_time_diff(strtotime($next_run), current_time('timestamp'))); ?></small>
+                                        <?php endif; ?>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <?php submit_button(__('Save Auto-Sync Settings', 'ielts-course-manager')); ?>
+                        </form>
+                        
+                        <hr style="margin: 20px 0;">
+                        
+                        <h3><?php _e('Manual Sync', 'ielts-course-manager'); ?></h3>
+                        <p class="description">
+                            <?php _e('Trigger an immediate sync check without waiting for the scheduled interval.', 'ielts-course-manager'); ?>
+                        </p>
+                        
+                        <form method="post" action="" style="display: inline;">
+                            <?php wp_nonce_field('ielts_cm_sync_settings', 'ielts_cm_sync_nonce'); ?>
+                            <input type="hidden" name="ielts_cm_sync_action" value="trigger_manual_sync">
+                            <?php submit_button(__('Run Sync Now', 'ielts-course-manager'), 'secondary', 'submit', false); ?>
+                        </form>
+                        
+                        <hr style="margin: 20px 0;">
+                        
+                        <h3><?php _e('Sync Activity Log', 'ielts-course-manager'); ?></h3>
+                        <p class="description">
+                            <?php _e('Recent automatic sync activities (last 20 entries).', 'ielts-course-manager'); ?>
+                        </p>
+                        
+                        <?php $sync_logs = $auto_sync->get_sync_logs(20); ?>
+                        
+                        <?php if (!empty($sync_logs)): ?>
+                        <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ddd; padding: 10px; background: #f9f9f9;">
+                            <table class="wp-list-table widefat fixed striped" style="margin: 0;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 15%;"><?php _e('Date/Time', 'ielts-course-manager'); ?></th>
+                                        <th style="width: 15%;"><?php _e('Type', 'ielts-course-manager'); ?></th>
+                                        <th style="width: 10%;"><?php _e('Status', 'ielts-course-manager'); ?></th>
+                                        <th><?php _e('Message', 'ielts-course-manager'); ?></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($sync_logs as $log): ?>
+                                    <tr>
+                                        <td><?php echo esc_html(human_time_diff(strtotime($log->log_date), current_time('timestamp')) . ' ago'); ?></td>
+                                        <td><?php echo esc_html($log->content_type); ?></td>
+                                        <td>
+                                            <?php
+                                            $status_color = array(
+                                                'success' => '#46b450',
+                                                'failed' => '#dc3232',
+                                                'warning' => '#f56e28',
+                                                'running' => '#00a0d2',
+                                                'skipped' => '#999'
+                                            );
+                                            $color = $status_color[$log->status] ?? '#666';
+                                            ?>
+                                            <span style="color: <?php echo $color; ?>; font-weight: bold;">
+                                                <?php echo esc_html(ucfirst($log->status)); ?>
+                                            </span>
+                                        </td>
+                                        <td><?php echo esc_html($log->message); ?></td>
+                                    </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <form method="post" action="" style="margin-top: 10px;">
+                            <?php wp_nonce_field('ielts_cm_sync_settings', 'ielts_cm_sync_nonce'); ?>
+                            <input type="hidden" name="ielts_cm_sync_action" value="clear_sync_logs">
+                            <?php submit_button(__('Clear Log', 'ielts-course-manager'), 'secondary small', 'submit', false); ?>
+                        </form>
+                        <?php else: ?>
+                        <p><em><?php _e('No sync activity recorded yet.', 'ielts-course-manager'); ?></em></p>
+                        <?php endif; ?>
+                        
+                        <div class="notice notice-info inline" style="margin-top: 20px;">
+                            <p><strong><?php _e('Server Load Considerations:', 'ielts-course-manager'); ?></strong></p>
+                            <ul style="margin-left: 20px;">
+                                <li><?php _e('Auto-sync only pushes content that has actually changed (detected via hash comparison)', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('A maximum of 50 items are synced per run to prevent timeouts', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('The system monitors memory usage and stops if limits are approached', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('After 5 consecutive failures, auto-sync is automatically disabled', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('For most sites, 15-30 minute intervals provide a good balance', 'ielts-course-manager'); ?></li>
+                                <li><?php _e('Use shorter intervals (5-10 min) only if you need near real-time sync', 'ielts-course-manager'); ?></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <?php endif; ?>
