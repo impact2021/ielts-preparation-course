@@ -35,6 +35,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-shortcodes.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-enrollment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-multi-site-sync.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-sync-api.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/class-auto-sync-manager.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-awards.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-gamification.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-membership.php';

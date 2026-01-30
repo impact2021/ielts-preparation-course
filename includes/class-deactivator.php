@@ -25,6 +25,12 @@ class IELTS_CM_Deactivator {
             wp_unschedule_event($timestamp, 'ielts_cm_check_expired_memberships');
         }
         
+        // Clear auto-sync cron
+        $auto_sync_timestamp = wp_next_scheduled('ielts_cm_auto_sync_content');
+        if ($auto_sync_timestamp) {
+            wp_unschedule_event($auto_sync_timestamp, 'ielts_cm_auto_sync_content');
+        }
+        
         // Note: We don't drop tables on deactivation to preserve data
         // Tables are only dropped on uninstall
     }
