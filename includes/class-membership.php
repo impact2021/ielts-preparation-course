@@ -1183,8 +1183,34 @@ class IELTS_CM_Membership {
     
     /**
      * Check if user has access to course
+     * Works for both Paid Membership and Access Code Membership systems
      */
     public function user_has_course_access($user_id, $course_id) {
+        // First check if user has an access code membership role
+        // Access code users don't use the membership meta fields, they use roles + enrollment table
+        $user = get_userdata($user_id);
+        if ($user && class_exists('IELTS_CM_Access_Codes')) {
+            $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+            foreach ($user->roles as $role) {
+                if (in_array($role, $access_code_roles)) {
+                    // Access code users rely on enrollment table, not course mapping
+                    // They'll be granted access via is_enrolled() check instead
+                    // Check their expiry via iw_membership_expiry meta
+                    $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
+                    if (!empty($expiry_date)) {
+                        $expiry_timestamp = strtotime($expiry_date);
+                        if ($expiry_timestamp <= time()) {
+                            return false; // Expired
+                        }
+                    }
+                    // For access code users, return false here so is_enrolled() handles the actual check
+                    // This prevents them from being granted access through the course mapping system
+                    return false;
+                }
+            }
+        }
+        
+        // For paid membership users, continue with the original logic
         $membership_type = $this->get_user_membership($user_id);
         if (empty($membership_type)) {
             return false;

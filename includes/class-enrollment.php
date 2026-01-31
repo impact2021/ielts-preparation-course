@@ -122,10 +122,16 @@ class IELTS_CM_Enrollment {
             return false;
         }
         
-        // Get valid membership role slugs
+        // Get valid membership role slugs from BOTH paid membership and access code systems
         $valid_membership_roles = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
         
-        // Check if user has any membership role (academic_trial, general_trial, academic_full, general_full)
+        // Add access code membership roles if the access code system is available
+        if (class_exists('IELTS_CM_Access_Codes')) {
+            $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+            $valid_membership_roles = array_merge($valid_membership_roles, $access_code_roles);
+        }
+        
+        // Check if user has any membership role (paid or access code)
         $has_membership_role = false;
         foreach ($user->roles as $role) {
             if (in_array($role, $valid_membership_roles)) {
