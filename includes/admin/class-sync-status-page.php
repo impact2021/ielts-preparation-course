@@ -82,13 +82,13 @@ class IELTS_CM_Sync_Status_Page {
             }
             
             // Push content to all subsites
-            $sync_result = $this->sync_manager->push_to_all_subsites($content_id, $content_type);
+            $sync_result = $this->sync_manager->push_content_to_subsites($content_id, $content_type);
             
-            if ($sync_result) {
+            if (!is_wp_error($sync_result)) {
                 $results['success']++;
             } else {
                 $results['failed']++;
-                $results['errors'][] = sprintf('Failed to sync %s (ID: %d)', $content_type, $content_id);
+                $results['errors'][] = sprintf('Failed to sync %s (ID: %d): %s', $content_type, $content_id, $sync_result->get_error_message());
             }
         }
         
