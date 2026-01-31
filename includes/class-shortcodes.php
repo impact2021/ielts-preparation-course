@@ -33,6 +33,9 @@ class IELTS_CM_Shortcodes {
         
         // Pricing shortcode
         add_shortcode('ielts_price', array($this, 'display_price'));
+        
+        // Access code registration shortcode
+        add_shortcode('ielts_access_code_registration', array($this, 'display_access_code_registration'));
     }
     
     /**
@@ -3569,5 +3572,274 @@ class IELTS_CM_Shortcodes {
         $output = '<span' . $class . '>' . esc_html($formatted_price) . '</span>';
         
         return $output;
+    }
+    
+    /**
+     * Display access code registration form
+     * This is for access code membership ONLY - no payment options
+     * 
+     * @param array $atts Shortcode attributes
+     * @return string HTML output
+     */
+    public function display_access_code_registration($atts) {
+        $atts = shortcode_atts(array(
+            'redirect' => ''
+        ), $atts);
+        
+        // Check if access code system is enabled
+        if (!get_option('ielts_cm_access_code_enabled', false)) {
+            return '<p>' . __('Access code registration is currently not available.', 'ielts-course-manager') . '</p>';
+        }
+        
+        // Redirect if user is already logged in
+        if (is_user_logged_in()) {
+            return '<p>' . __('You are already logged in. Access codes can only be used during registration.', 'ielts-course-manager') . '</p>';
+        }
+        
+        // Check if user registration is allowed
+        if (!get_option('users_can_register')) {
+            return '<p>' . __('User registration is currently not allowed.', 'ielts-course-manager') . '</p>';
+        }
+        
+        $errors = array();
+        $success = false;
+        
+        if (isset($_POST['ielts_access_code_register_submit'])) {
+            // Verify nonce first before processing any data
+            if (!isset($_POST['ielts_access_code_register_nonce']) || !wp_verify_nonce($_POST['ielts_access_code_register_nonce'], 'ielts_access_code_register')) {
+                $errors[] = __('Security check failed.', 'ielts-course-manager');
+            } else {
+                // Process and validate all fields
+                $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
+                $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
+                $email = isset($_POST['ielts_email']) ? sanitize_email($_POST['ielts_email']) : '';
+                $password = isset($_POST['ielts_password']) ? $_POST['ielts_password'] : '';
+                $password_confirm = isset($_POST['ielts_password_confirm']) ? $_POST['ielts_password_confirm'] : '';
+                $access_code = isset($_POST['ielts_access_code']) ? strtoupper(sanitize_text_field($_POST['ielts_access_code'])) : '';
+                
+                // Validate name fields
+                if (empty($first_name)) {
+                    $errors[] = __('First name is required.', 'ielts-course-manager');
+                }
+                if (empty($last_name)) {
+                    $errors[] = __('Last name is required.', 'ielts-course-manager');
+                }
+                
+                // Validate email first before using it for username generation
+                if (empty($email)) {
+                    $errors[] = __('Email is required.', 'ielts-course-manager');
+                } elseif (!is_email($email)) {
+                    $errors[] = __('Invalid email address.', 'ielts-course-manager');
+                } elseif (email_exists($email)) {
+                    $errors[] = __('Email already exists.', 'ielts-course-manager');
+                }
+                
+                // Validate password
+                if (empty($password)) {
+                    $errors[] = __('Password is required.', 'ielts-course-manager');
+                } elseif (strlen($password) < 6) {
+                    $errors[] = __('Password must be at least 6 characters.', 'ielts-course-manager');
+                } elseif ($password !== $password_confirm) {
+                    $errors[] = __('Passwords do not match.', 'ielts-course-manager');
+                }
+                
+                // Validate access code
+                if (empty($access_code)) {
+                    $errors[] = __('Access code is required.', 'ielts-course-manager');
+                } else {
+                    // Check if access code exists and is valid
+                    global $wpdb;
+                    $table = $wpdb->prefix . 'ielts_cm_access_codes';
+                    $code_data = $wpdb->get_row($wpdb->prepare(
+                        "SELECT * FROM $table WHERE code = %s AND status = 'active'",
+                        $access_code
+                    ));
+                    
+                    if (!$code_data) {
+                        $errors[] = __('Invalid or already used access code.', 'ielts-course-manager');
+                    } elseif (!empty($code_data->expiry_date) && strtotime($code_data->expiry_date) < time()) {
+                        $errors[] = __('This access code has expired.', 'ielts-course-manager');
+                    }
+                }
+                
+                // Generate username from email if no errors so far
+                if (empty($errors) && is_email($email)) {
+                    $email_parts = explode('@', $email);
+                    $base_username = sanitize_user($email_parts[0], true);
+                    
+                    // Ensure username is not empty
+                    if (empty($base_username)) {
+                        $base_username = 'user';
+                    }
+                    
+                    // If username exists, append timestamp for uniqueness
+                    $username = $base_username;
+                    if (username_exists($username)) {
+                        $username = $base_username . '_' . time();
+                        // If still exists (very unlikely), add random suffix
+                        if (username_exists($username)) {
+                            $username = $base_username . '_' . wp_generate_password(8, false);
+                        }
+                    }
+                } else {
+                    // Fallback username if email is invalid
+                    $username = 'user_' . time();
+                }
+                
+                // Create user if no errors
+                if (empty($errors)) {
+                    // Create new user
+                    $user_id = wp_create_user($username, $password, $email);
+                    if (is_wp_error($user_id)) {
+                        $errors[] = $user_id->get_error_message();
+                    } else {
+                        // Save user name fields
+                        wp_update_user(array(
+                            'ID' => $user_id,
+                            'first_name' => $first_name,
+                            'last_name' => $last_name,
+                            'display_name' => $first_name . ' ' . $last_name
+                        ));
+                        
+                        // Apply access code benefits
+                        $course_group = $code_data->course_group;
+                        $duration_days = $code_data->duration_days;
+                        $expiry_date = date('Y-m-d H:i:s', strtotime("+{$duration_days} days"));
+                        
+                        // Use the access codes class to set up membership
+                        if (class_exists('IELTS_CM_Access_Codes')) {
+                            $access_codes = new IELTS_CM_Access_Codes();
+                            
+                            // Set membership using the private method via reflection or directly set the meta
+                            update_user_meta($user_id, 'iw_course_group', $course_group);
+                            update_user_meta($user_id, 'iw_membership_expiry', $expiry_date);
+                            update_user_meta($user_id, 'iw_membership_status', 'active');
+                            
+                            // Map course group to access code membership type and assign role
+                            $role_mapping = array(
+                                'academic_module' => 'access_academic_module',
+                                'general_module' => 'access_general_module',
+                                'general_english' => 'access_general_english'
+                            );
+                            
+                            if (isset($role_mapping[$course_group])) {
+                                $membership_type = $role_mapping[$course_group];
+                                
+                                // Set membership type meta
+                                update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                                update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+                                update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                                
+                                // Assign WordPress role
+                                $user = get_userdata($user_id);
+                                if ($user) {
+                                    $user->add_role($membership_type);
+                                }
+                            }
+                            
+                            // Enroll user in courses
+                            $access_codes->enroll_user_in_courses($user_id, $course_group);
+                        }
+                        
+                        // Mark access code as used
+                        $wpdb->update(
+                            $table,
+                            array(
+                                'status' => 'used',
+                                'used_by' => $user_id,
+                                'used_date' => current_time('mysql')
+                            ),
+                            array('id' => $code_data->id)
+                        );
+                        
+                        // Store who created this user (from the code creator)
+                        update_user_meta($user_id, 'iw_created_by_partner', $code_data->created_by);
+                        
+                        // Auto login the new user
+                        wp_set_current_user($user_id);
+                        wp_set_auth_cookie($user_id, true);
+                        $user_obj = get_userdata($user_id);
+                        do_action('wp_login', $user_obj->user_login, $user_obj);
+                        
+                        // Redirect
+                        $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                        $redirect_to = wp_validate_redirect($redirect_to, home_url());
+                        wp_safe_redirect($redirect_to);
+                        exit;
+                    }
+                }
+            }
+        }
+        
+        ob_start();
+        ?>
+        <div class="ielts-registration-form ielts-access-code-registration">
+            <h2><?php _e('Register with Access Code', 'ielts-course-manager'); ?></h2>
+            
+            <p class="form-description">
+                <?php _e('Enter your access code to create your account and start learning.', 'ielts-course-manager'); ?>
+            </p>
+            
+            <?php if (!empty($errors)): ?>
+                <div class="ielts-message ielts-error">
+                    <ul>
+                        <?php foreach ($errors as $error): ?>
+                            <li><?php echo esc_html($error); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+            
+            <form method="post" action="" class="ielts-form">
+                <?php wp_nonce_field('ielts_access_code_register', 'ielts_access_code_register_nonce'); ?>
+                
+                <p class="form-field">
+                    <label for="ielts_access_code"><?php _e('Access Code', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <input type="text" name="ielts_access_code" id="ielts_access_code" required class="ielts-form-input"
+                           value="<?php echo isset($_POST['ielts_access_code']) ? esc_attr(strtoupper($_POST['ielts_access_code'])) : ''; ?>"
+                           style="text-transform: uppercase;" maxlength="50">
+                    <small class="form-help"><?php _e('Enter the 8-character code you received', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p class="form-field">
+                    <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
+                           value="<?php echo isset($_POST['ielts_first_name']) ? esc_attr($_POST['ielts_first_name']) : ''; ?>">
+                </p>
+                
+                <p class="form-field">
+                    <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <input type="text" name="ielts_last_name" id="ielts_last_name" required class="ielts-form-input"
+                           value="<?php echo isset($_POST['ielts_last_name']) ? esc_attr($_POST['ielts_last_name']) : ''; ?>">
+                </p>
+                
+                <p class="form-field">
+                    <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
+                           value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>">
+                    <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p class="form-field">
+                    <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input">
+                    <small class="form-help"><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
+                </p>
+                
+                <p class="form-field">
+                    <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
+                </p>
+                
+                <p class="form-field">
+                    <button type="submit" name="ielts_access_code_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
+                        <?php _e('Create Account', 'ielts-course-manager'); ?>
+                    </button>
+                </p>
+            </form>
+        </div>
+        <?php
+        
+        return ob_get_clean();
     }
 }
