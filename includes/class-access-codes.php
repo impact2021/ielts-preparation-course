@@ -249,12 +249,6 @@ class IELTS_CM_Access_Codes {
                                             <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
                                         <?php endforeach; ?>
                                     </select>
-                                    <p class="description" style="margin-top: 5px; font-size: 12px; color: #666;">
-                                        <strong>What's included:</strong><br>
-                                        • <strong>Academic Module:</strong> Courses with slugs: academic, english, academic-practice-tests<br>
-                                        • <strong>General Training Module:</strong> Courses with slugs: general, english, general-practice-tests<br>
-                                        • <strong>General English:</strong> Only course with slug: english
-                                    </p>
                                 </td>
                             </tr>
                             <tr>
