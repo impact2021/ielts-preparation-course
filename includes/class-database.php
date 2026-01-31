@@ -185,6 +185,39 @@ class IELTS_CM_Database {
             KEY log_date (log_date)
         ) $charset_collate;";
         
+        // Access codes table
+        $access_codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
+        $sql_access_codes = "CREATE TABLE IF NOT EXISTS $access_codes_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            code varchar(50) NOT NULL,
+            course_group varchar(50) NOT NULL,
+            duration_days int(11) NOT NULL DEFAULT 30,
+            created_by bigint(20) NOT NULL,
+            created_date datetime DEFAULT CURRENT_TIMESTAMP,
+            status varchar(20) DEFAULT 'active',
+            used_by bigint(20) DEFAULT NULL,
+            used_date datetime DEFAULT NULL,
+            expiry_date datetime DEFAULT NULL,
+            PRIMARY KEY  (id),
+            UNIQUE KEY code (code),
+            KEY created_by (created_by),
+            KEY status (status),
+            KEY used_by (used_by)
+        ) $charset_collate;";
+        
+        // Access code course mapping table
+        $access_code_courses_table = $wpdb->prefix . 'ielts_cm_access_code_courses';
+        $sql_access_code_courses = "CREATE TABLE IF NOT EXISTS $access_code_courses_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            course_group varchar(50) NOT NULL,
+            course_id bigint(20) NOT NULL,
+            created_date datetime DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY course_group (course_group),
+            KEY course_id (course_id),
+            UNIQUE KEY group_course (course_group, course_id)
+        ) $charset_collate;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
@@ -195,6 +228,8 @@ class IELTS_CM_Database {
         dbDelta($sql_payments);
         dbDelta($sql_payment_errors);
         dbDelta($sql_auto_sync_log);
+        dbDelta($sql_access_codes);
+        dbDelta($sql_access_code_courses);
     }
     
     /**
@@ -212,7 +247,9 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_user_awards',
             $wpdb->prefix . 'ielts_cm_payments',
             $wpdb->prefix . 'ielts_cm_payment_errors',
-            $wpdb->prefix . 'ielts_cm_auto_sync_log'
+            $wpdb->prefix . 'ielts_cm_auto_sync_log',
+            $wpdb->prefix . 'ielts_cm_access_codes',
+            $wpdb->prefix . 'ielts_cm_access_code_courses'
         );
         
         foreach ($tables as $table) {
