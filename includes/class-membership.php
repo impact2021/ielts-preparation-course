@@ -364,7 +364,7 @@ class IELTS_CM_Membership {
                     if (!empty($iw_expiry_input)) {
                         // Validate date format (Y-m-d or Y-m-d H:i:s)
                         $timestamp = strtotime($iw_expiry_input);
-                        if ($timestamp === false || $timestamp < 0) {
+                        if ($timestamp === false) {
                             // Invalid date format, use default
                             $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
                         } else {
@@ -437,7 +437,7 @@ class IELTS_CM_Membership {
             // Validate and convert from date format (Y-m-d) to MySQL datetime at end of day
             if (!empty($iw_expiry_input)) {
                 $timestamp = strtotime($iw_expiry_input);
-                if ($timestamp !== false && $timestamp >= 0) {
+                if ($timestamp !== false) {
                     $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
                     update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
                 }
