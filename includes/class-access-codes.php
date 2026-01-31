@@ -1058,9 +1058,9 @@ class IELTS_CM_Access_Codes {
         // Use email as username
         $username = $email;
         
-        // Check if email/username already exists
-        if (username_exists($username) || email_exists($email)) {
-            wp_send_json_error(array('message' => 'Email already in use'));
+        // Check if email already exists (which also checks username since they're the same)
+        if (email_exists($email)) {
+            wp_send_json_error(array('message' => 'An account with this email already exists'));
         }
         
         $password = wp_generate_password(12);
@@ -1165,24 +1165,21 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'Expiry date is required'));
         }
         
-        // Convert dd/mm/yyyy to MySQL format
-        $date_parts = explode('/', $new_expiry);
-        if (count($date_parts) !== 3) {
+        // Convert dd/mm/yyyy to MySQL format using DateTime for better validation
+        $date = DateTime::createFromFormat('d/m/Y', $new_expiry);
+        if (!$date) {
             wp_send_json_error(array('message' => 'Invalid date format. Use dd/mm/yyyy'));
         }
         
-        $mysql_date = $date_parts[2] . '-' . $date_parts[1] . '-' . $date_parts[0] . ' 23:59:59';
-        
-        // Validate the date
-        if (!strtotime($mysql_date)) {
-            wp_send_json_error(array('message' => 'Invalid date'));
-        }
+        // Set to end of day
+        $date->setTime(23, 59, 59);
+        $mysql_date = $date->format('Y-m-d H:i:s');
         
         update_user_meta($user_id, 'iw_membership_expiry', $mysql_date);
         
         wp_send_json_success(array(
             'message' => 'Expiry date updated successfully',
-            'new_expiry' => date('d/m/Y', strtotime($mysql_date))
+            'new_expiry' => $date->format('d/m/Y')
         ));
     }
     

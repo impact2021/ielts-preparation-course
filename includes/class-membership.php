@@ -293,7 +293,7 @@ class IELTS_CM_Membership {
                     ?>
                     <input type="date" name="iw_membership_expiry" id="iw_membership_expiry" 
                            value="<?php echo esc_attr($date_value); ?>" class="regular-text">
-                    <p class="description"><?php _e('Expiry date for access code based enrollment (dd/mm/yyyy format)', 'ielts-course-manager'); ?></p>
+                    <p class="description"><?php _e('Expiry date for access code based enrollment. Dates are displayed in dd/mm/yyyy format throughout the system.', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
         </table>
