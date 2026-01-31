@@ -43,6 +43,12 @@ class IELTS_CM_Membership {
     const EXTENSION_TYPES = array('extension_1_week', 'extension_1_month', 'extension_3_months');
     
     /**
+     * Default access code expiry duration (1 year)
+     * Used when admin sets access code enrollment without specifying expiry date
+     */
+    const DEFAULT_ACCESS_CODE_DURATION = '+1 year';
+    
+    /**
      * Trial period in days
      */
     const TRIAL_PERIOD_DAYS = 30;
@@ -354,8 +360,8 @@ class IELTS_CM_Membership {
                     if (!empty($iw_expiry)) {
                         $iw_expiry = date('Y-m-d', strtotime($iw_expiry)) . ' 23:59:59';
                     } else {
-                        // Default to 1 year if no expiry set
-                        $iw_expiry = date('Y-m-d H:i:s', strtotime('+1 year'));
+                        // Use default duration if no expiry specified
+                        $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
                     }
                     
                     // Use the access codes class methods to properly set up the user
@@ -391,11 +397,7 @@ class IELTS_CM_Membership {
                         }
                         
                         // Enroll user in courses based on course group
-                        // This uses reflection to call the private method
-                        $reflection = new ReflectionClass($access_codes);
-                        $method = $reflection->getMethod('enroll_user_in_courses');
-                        $method->setAccessible(true);
-                        $method->invoke($access_codes, $user_id, $course_group);
+                        $access_codes->enroll_user_in_courses($user_id, $course_group);
                     }
                 } else if (empty($course_group)) {
                     // Course group cleared - remove role and unenroll
@@ -413,8 +415,12 @@ class IELTS_CM_Membership {
             }
         }
         
-        // Only update expiry if no course group change (otherwise handled above)
-        if (isset($_POST['iw_membership_expiry']) && (!isset($_POST['iw_course_group']) || sanitize_text_field($_POST['iw_course_group']) === get_user_meta($user_id, 'iw_course_group', true))) {
+        // Only update expiry separately if course group didn't change
+        // (to avoid overwriting the expiry that was just set above)
+        $course_group_from_post = isset($_POST['iw_course_group']) ? sanitize_text_field($_POST['iw_course_group']) : null;
+        $course_group_unchanged = ($course_group_from_post === null || $course_group_from_post === get_user_meta($user_id, 'iw_course_group', true));
+        
+        if (isset($_POST['iw_membership_expiry']) && $course_group_unchanged) {
             $iw_expiry = sanitize_text_field($_POST['iw_membership_expiry']);
             // Convert from date format (Y-m-d) to MySQL datetime at end of day
             if (!empty($iw_expiry)) {
