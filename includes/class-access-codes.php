@@ -23,6 +23,13 @@ class IELTS_CM_Access_Codes {
         'all_courses' => 'All Courses'
     );
     
+    private $course_group_descriptions = array(
+        'academic_english' => 'Includes IELTS Academic module and General English courses',
+        'general_english' => 'Includes IELTS General Training module and General English courses',
+        'english_only' => 'Only General English courses (no IELTS content)',
+        'all_courses' => 'Full access to all courses (Academic, General Training, and English)'
+    );
+    
     public function __construct() {
         $this->create_partner_admin_role();
     }
@@ -186,8 +193,14 @@ class IELTS_CM_Access_Codes {
         ?>
         <style>
             .iw-dashboard { max-width: 1200px; margin: 20px auto; }
-            .iw-card { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-            .iw-card h2 { margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+            .iw-card { background: #fff; border: 1px solid #ddd; border-radius: 4px; padding: 0; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+            .iw-card-header { padding: 20px; cursor: pointer; border-bottom: 1px solid #eee; position: relative; user-select: none; }
+            .iw-card-header:hover { background: #f9f9f9; }
+            .iw-card-header h2 { margin: 0; padding-right: 30px; }
+            .iw-card-header::after { content: '▼'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); transition: transform 0.3s; font-size: 12px; }
+            .iw-card.collapsed .iw-card-header::after { transform: translateY(-50%) rotate(-90deg); }
+            .iw-card-body { padding: 20px; display: none; }
+            .iw-card.expanded .iw-card-body { display: block; }
             .iw-form-table { width: 100%; }
             .iw-form-table th { text-align: left; padding: 10px; width: 200px; }
             .iw-form-table td { padding: 10px; }
@@ -195,6 +208,9 @@ class IELTS_CM_Access_Codes {
             .iw-btn:hover { background: #005177; color: #fff; }
             .iw-btn-danger { background: #dc3545; }
             .iw-btn-danger:hover { background: #c82333; }
+            .iw-filter-btn { display: inline-block; padding: 6px 12px; background: #f1f1f1; color: #333; border: 1px solid #ddd; border-radius: 3px; cursor: pointer; margin-right: 5px; }
+            .iw-filter-btn:hover { background: #e1e1e1; }
+            .iw-filter-btn.active { background: #0073aa; color: #fff; border-color: #0073aa; }
             .iw-msg { padding: 12px; border-radius: 3px; margin: 15px 0; }
             .iw-msg.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
             .iw-msg.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
@@ -216,93 +232,153 @@ class IELTS_CM_Access_Codes {
                 <p><strong>Active Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
             </div>
             
-            <div class="iw-card">
-                <h2>Create Invite Codes</h2>
-                <div id="create-invite-msg"></div>
-                <form id="create-invite-form">
-                    <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
-                    <table class="iw-form-table">
-                        <tr>
-                            <th>Number of Codes (1-10):</th>
-                            <td><input type="number" name="quantity" min="1" max="10" value="1" required></td>
-                        </tr>
-                        <tr>
-                            <th>Course Group:</th>
-                            <td>
-                                <select name="course_group" required>
-                                    <?php foreach ($this->course_groups as $key => $label): ?>
-                                        <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Access Days:</th>
-                            <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><button type="submit" class="iw-btn">Generate Codes</button></td>
-                        </tr>
-                    </table>
-                </form>
+            <div class="iw-card collapsed">
+                <div class="iw-card-header">
+                    <h2>Create Invite Codes</h2>
+                </div>
+                <div class="iw-card-body">
+                    <div id="create-invite-msg"></div>
+                    <form id="create-invite-form">
+                        <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
+                        <table class="iw-form-table">
+                            <tr>
+                                <th>Number of Codes (1-10):</th>
+                                <td><input type="number" name="quantity" min="1" max="10" value="1" required></td>
+                            </tr>
+                            <tr>
+                                <th>Course Group:</th>
+                                <td>
+                                    <select name="course_group" required>
+                                        <?php foreach ($this->course_groups as $key => $label): ?>
+                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    <p class="description" style="margin-top: 5px; font-size: 12px; color: #666;">
+                                        <strong>What's included:</strong><br>
+                                        • <strong>IELTS Academic + English:</strong> IELTS Academic module + General English<br>
+                                        • <strong>IELTS General Training + English:</strong> IELTS General Training + General English<br>
+                                        • <strong>General English Only:</strong> Only General English courses<br>
+                                        • <strong>All Courses:</strong> Complete access to all modules
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Access Days:</th>
+                                <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button type="submit" class="iw-btn">Generate Codes</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
             
-            <div class="iw-card">
-                <h2>Create User Manually</h2>
-                <div id="create-user-msg"></div>
-                <form id="create-user-form">
-                    <?php wp_nonce_field('iw_create_user', 'iw_create_user_nonce'); ?>
-                    <table class="iw-form-table">
-                        <tr>
-                            <th>Email:</th>
-                            <td><input type="email" name="email" required></td>
-                        </tr>
-                        <tr>
-                            <th>First Name:</th>
-                            <td><input type="text" name="first_name" required></td>
-                        </tr>
-                        <tr>
-                            <th>Last Name:</th>
-                            <td><input type="text" name="last_name" required></td>
-                        </tr>
-                        <tr>
-                            <th>Access Days:</th>
-                            <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
-                        </tr>
-                        <tr>
-                            <th>Course Group:</th>
-                            <td>
-                                <select name="course_group" required>
-                                    <?php foreach ($this->course_groups as $key => $label): ?>
-                                        <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><button type="submit" class="iw-btn">Create User</button></td>
-                        </tr>
-                    </table>
-                </form>
+            <div class="iw-card collapsed">
+                <div class="iw-card-header">
+                    <h2>Create User Manually</h2>
+                </div>
+                <div class="iw-card-body">
+                    <div id="create-user-msg"></div>
+                    <form id="create-user-form">
+                        <?php wp_nonce_field('iw_create_user', 'iw_create_user_nonce'); ?>
+                        <table class="iw-form-table">
+                            <tr>
+                                <th>Email:</th>
+                                <td><input type="email" name="email" required></td>
+                            </tr>
+                            <tr>
+                                <th>First Name:</th>
+                                <td><input type="text" name="first_name" required></td>
+                            </tr>
+                            <tr>
+                                <th>Last Name:</th>
+                                <td><input type="text" name="last_name" required></td>
+                            </tr>
+                            <tr>
+                                <th>Access Days:</th>
+                                <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
+                            </tr>
+                            <tr>
+                                <th>Course Group:</th>
+                                <td>
+                                    <select name="course_group" required>
+                                        <?php foreach ($this->course_groups as $key => $label): ?>
+                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><button type="submit" class="iw-btn">Create User</button></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
             
-            <div class="iw-card">
-                <h2>My Invite Codes</h2>
-                <button class="iw-btn" onclick="IWDashboard.downloadCSV()">Download CSV</button>
-                <?php echo $this->render_codes_table($partner_id); ?>
+            <div class="iw-card collapsed">
+                <div class="iw-card-header">
+                    <h2>Your Codes</h2>
+                </div>
+                <div class="iw-card-body">
+                    <div style="margin-bottom: 15px;">
+                        <button class="iw-filter-btn active" data-filter="all">All</button>
+                        <button class="iw-filter-btn" data-filter="active">Active</button>
+                        <button class="iw-filter-btn" data-filter="available">Available</button>
+                        <button class="iw-filter-btn" data-filter="expired">Expired</button>
+                        <button class="iw-btn" onclick="IWDashboard.downloadCSV()" style="float: right;">Download CSV</button>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <?php echo $this->render_codes_table($partner_id); ?>
+                </div>
             </div>
             
-            <div class="iw-card">
-                <h2>Managed Students</h2>
-                <?php echo $this->render_students_table($active_students); ?>
+            <div class="iw-card collapsed">
+                <div class="iw-card-header">
+                    <h2>Managed Students</h2>
+                </div>
+                <div class="iw-card-body">
+                    <?php echo $this->render_students_table($active_students); ?>
+                </div>
             </div>
         </div>
         
         <script>
         jQuery(document).ready(function($) {
+            // Collapsible card functionality
+            $('.iw-card-header').on('click', function() {
+                $(this).parent('.iw-card').toggleClass('collapsed expanded');
+            });
+            
             window.IWDashboard = {
                 deleteNonce: '<?php echo wp_create_nonce('iw_delete_code'); ?>',
                 revokeNonce: '<?php echo wp_create_nonce('iw_revoke_student'); ?>',
+                
+                filterCodes: function(status) {
+                    $('.iw-filter-btn').removeClass('active');
+                    $('.iw-filter-btn[data-filter="' + status + '"]').addClass('active');
+                    
+                    if (status === 'all') {
+                        $('.iw-table tbody tr').show();
+                    } else if (status === 'available') {
+                        $('.iw-table tbody tr').each(function() {
+                            if ($(this).data('status') === 'active') {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    } else {
+                        $('.iw-table tbody tr').each(function() {
+                            if ($(this).data('status') === status) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    }
+                },
                 
                 deleteCode: function(codeId) {
                     if (!confirm('Delete this code?')) return;
@@ -343,7 +419,7 @@ class IELTS_CM_Access_Codes {
                     }
                     
                     var csv = 'Code,Group,Days,Status,Used By,Created\n';
-                    $('.iw-table tbody tr').each(function() {
+                    $('.iw-table tbody tr:visible').each(function() {
                         var cols = $(this).find('td');
                         if (cols.length >= 6) {
                             csv += escapeCSV(cols.eq(0).text()) + ',';
@@ -362,6 +438,12 @@ class IELTS_CM_Access_Codes {
                     a.click();
                 }
             };
+            
+            // Filter button handlers
+            $('.iw-filter-btn').on('click', function() {
+                var filter = $(this).data('filter');
+                IWDashboard.filterCodes(filter);
+            });
             
             $('#create-invite-form').on('submit', function(e) {
                 e.preventDefault();
@@ -441,7 +523,11 @@ class IELTS_CM_Access_Codes {
                 $user = get_userdata($code->used_by);
                 $used_by = $user ? $user->user_login : 'Deleted User';
             }
-            $html .= '<tr>';
+            
+            // Determine actual status for filtering
+            $filter_status = $code->status;
+            
+            $html .= '<tr data-status="' . esc_attr($filter_status) . '">';
             $html .= '<td>' . esc_html($code->code) . '</td>';
             $html .= '<td>' . esc_html($this->course_groups[$code->course_group] ?? $code->course_group) . '</td>';
             $html .= '<td>' . esc_html($code->access_days) . '</td>';
@@ -489,12 +575,20 @@ class IELTS_CM_Access_Codes {
     }
     
     private function get_partner_students($partner_id) {
-        global $wpdb;
-        $table = $wpdb->prefix . 'ielts_cm_access_codes';
-        return $wpdb->get_results($wpdb->prepare(
-            "SELECT DISTINCT used_by as user_id FROM $table WHERE created_by = %d AND status = 'used' AND used_by IS NOT NULL",
-            $partner_id
+        // Get all users managed by this partner
+        // This includes users created manually and users who used access codes
+        $users = get_users(array(
+            'meta_key' => 'iw_created_by_partner',
+            'meta_value' => $partner_id,
+            'fields' => array('ID')
         ));
+        
+        // Return in format compatible with existing code
+        $results = array();
+        foreach ($users as $user) {
+            $results[] = (object) array('user_id' => $user->ID);
+        }
+        return $results;
     }
     
     public function ajax_create_invite() {
