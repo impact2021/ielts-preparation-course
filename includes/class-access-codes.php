@@ -128,7 +128,13 @@ class IELTS_CM_Access_Codes {
                     </tr>
                     <tr>
                         <th>Max Students Per Partner</th>
-                        <td><input type="number" name="iw_max_students_per_partner" value="<?php echo esc_attr($max_students); ?>" min="1" class="regular-text"></td>
+                        <td>
+                            <select name="iw_max_students_per_partner">
+                                <option value="50" <?php selected($max_students, 50); ?>>Tier 1: Up to 50 active students</option>
+                                <option value="100" <?php selected($max_students, 100); ?>>Tier 2: Up to 100 active students</option>
+                                <option value="200" <?php selected($max_students, 200); ?>>Tier 3: Up to 200 active students</option>
+                            </select>
+                        </td>
                     </tr>
                     <tr>
                         <th>Expiry Action</th>
@@ -505,7 +511,7 @@ class IELTS_CM_Access_Codes {
         global $wpdb;
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         $codes = $wpdb->get_results($wpdb->prepare(
-            "SELECT * FROM $table WHERE created_by = %d ORDER BY created_at DESC LIMIT 100",
+            "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT 100",
             $partner_id
         ));
         
@@ -518,10 +524,25 @@ class IELTS_CM_Access_Codes {
         $html .= '</tr></thead><tbody>';
         
         foreach ($codes as $code) {
-            $used_by = '-';
-            if ($code->used_by) {
+            $used_by_display = '-';
+            
+            // Determine status display based on code status
+            if ($code->status === 'used' && $code->used_by) {
                 $user = get_userdata($code->used_by);
-                $used_by = $user ? $user->user_login : 'Deleted User';
+                if ($user) {
+                    $used_by_display = $user->display_name . ' (' . $user->user_email . ')';
+                    $status_display = 'Used';
+                } else {
+                    $used_by_display = 'Deleted User';
+                    $status_display = 'Used';
+                }
+            } else if ($code->status === 'expired') {
+                $status_display = 'Expired';
+            } else if ($code->status === 'active') {
+                $status_display = 'Available';
+            } else {
+                // Fallback for any other status
+                $status_display = ucfirst($code->status);
             }
             
             // Determine actual status for filtering
@@ -530,10 +551,10 @@ class IELTS_CM_Access_Codes {
             $html .= '<tr data-status="' . esc_attr($filter_status) . '">';
             $html .= '<td>' . esc_html($code->code) . '</td>';
             $html .= '<td>' . esc_html($this->course_groups[$code->course_group] ?? $code->course_group) . '</td>';
-            $html .= '<td>' . esc_html($code->access_days) . '</td>';
-            $html .= '<td>' . esc_html($code->status) . '</td>';
-            $html .= '<td>' . esc_html($used_by) . '</td>';
-            $html .= '<td>' . esc_html(date('Y-m-d', strtotime($code->created_at))) . '</td>';
+            $html .= '<td>' . esc_html($code->duration_days) . '</td>';
+            $html .= '<td>' . esc_html($status_display) . '</td>';
+            $html .= '<td>' . esc_html($used_by_display) . '</td>';
+            $html .= '<td>' . esc_html(date('Y-m-d', strtotime($code->created_date))) . '</td>';
             $html .= '<td>';
             if ($code->status === 'active') {
                 $html .= '<button class="iw-btn iw-btn-danger" onclick="IWDashboard.deleteCode(' . $code->id . ')">Delete</button>';
@@ -619,10 +640,10 @@ class IELTS_CM_Access_Codes {
             $wpdb->insert($table, array(
                 'code' => $code,
                 'course_group' => $course_group,
-                'access_days' => $days,
+                'duration_days' => $days,
                 'status' => 'active',
                 'created_by' => get_current_user_id(),
-                'created_at' => current_time('mysql')
+                'created_date' => current_time('mysql')
             ));
             $codes[] = $code;
         }
@@ -693,12 +714,12 @@ class IELTS_CM_Access_Codes {
         $wpdb->insert($table, array(
             'code' => $code,
             'course_group' => $course_group,
-            'access_days' => $days,
+            'duration_days' => $days,
             'status' => 'used',
             'created_by' => get_current_user_id(),
             'used_by' => $user_id,
-            'created_at' => current_time('mysql'),
-            'used_at' => current_time('mysql')
+            'created_date' => current_time('mysql'),
+            'used_date' => current_time('mysql')
         ));
         
         $this->send_welcome_email($user_id, $username, $password);

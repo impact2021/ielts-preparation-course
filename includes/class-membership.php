@@ -206,6 +206,20 @@ class IELTS_CM_Membership {
         
         $membership_type = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
         $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
+        
+        // Access code system fields
+        $course_group = get_user_meta($user->ID, 'iw_course_group', true);
+        $iw_expiry = get_user_meta($user->ID, 'iw_membership_expiry', true);
+        $enrolled_academic = get_user_meta($user->ID, 'enrolled_ielts_academic', true);
+        $enrolled_general = get_user_meta($user->ID, 'enrolled_ielts_general', true);
+        $enrolled_english = get_user_meta($user->ID, 'enrolled_general_english', true);
+        
+        $course_groups = array(
+            'academic_english' => 'IELTS Academic + English',
+            'general_english' => 'IELTS General Training + English',
+            'english_only' => 'General English Only',
+            'all_courses' => 'All Courses'
+        );
         ?>
         <h2><?php _e('Membership Information', 'ielts-course-manager'); ?></h2>
         <table class="form-table">
@@ -228,6 +242,59 @@ class IELTS_CM_Membership {
                     <input type="date" name="ielts_cm_membership_expiry" id="ielts_cm_membership_expiry" 
                            value="<?php echo esc_attr($expiry_date); ?>" class="regular-text">
                     <p class="description"><?php _e('Leave empty for lifetime membership', 'ielts-course-manager'); ?></p>
+                </td>
+            </tr>
+        </table>
+        
+        <h2><?php _e('Access Code Enrollment', 'ielts-course-manager'); ?></h2>
+        <table class="form-table">
+            <tr>
+                <th><label for="iw_course_group"><?php _e('Course Group', 'ielts-course-manager'); ?></label></th>
+                <td>
+                    <select name="iw_course_group" id="iw_course_group">
+                        <option value=""><?php _e('None', 'ielts-course-manager'); ?></option>
+                        <?php foreach ($course_groups as $key => $label): ?>
+                            <option value="<?php echo esc_attr($key); ?>" <?php selected($course_group, $key); ?>>
+                                <?php echo esc_html($label); ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <p class="description"><?php _e('Course group assigned via access codes or manual enrollment', 'ielts-course-manager'); ?></p>
+                </td>
+            </tr>
+            <tr>
+                <th><label for="iw_membership_expiry"><?php _e('Access Code Expiry', 'ielts-course-manager'); ?></label></th>
+                <td>
+                    <?php
+                    $datetime_local_value = '';
+                    if ($iw_expiry) {
+                        $timestamp = strtotime($iw_expiry);
+                        if ($timestamp !== false) {
+                            $datetime_local_value = date('Y-m-d\TH:i', $timestamp);
+                        }
+                    }
+                    ?>
+                    <input type="datetime-local" name="iw_membership_expiry" id="iw_membership_expiry" 
+                           value="<?php echo esc_attr($datetime_local_value); ?>" class="regular-text">
+                    <p class="description"><?php _e('Expiry date for access code based enrollment', 'ielts-course-manager'); ?></p>
+                </td>
+            </tr>
+            <tr>
+                <th><?php _e('Enrolled Courses', 'ielts-course-manager'); ?></th>
+                <td>
+                    <label style="display: block; margin-bottom: 5px;">
+                        <input type="checkbox" name="enrolled_ielts_academic" value="true" <?php checked($enrolled_academic, 'true'); ?>>
+                        <?php _e('IELTS Academic', 'ielts-course-manager'); ?>
+                    </label>
+                    <label style="display: block; margin-bottom: 5px;">
+                        <input type="checkbox" name="enrolled_ielts_general" value="true" <?php checked($enrolled_general, 'true'); ?>>
+                        <?php _e('IELTS General Training', 'ielts-course-manager'); ?>
+                    </label>
+                    <label style="display: block; margin-bottom: 5px;">
+                        <input type="checkbox" name="enrolled_general_english" value="true" <?php checked($enrolled_english, 'true'); ?>>
+                        <?php _e('General English', 'ielts-course-manager'); ?>
+                    </label>
+                    <p class="description"><?php _e('Check courses this user should have access to', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
         </table>
@@ -269,6 +336,40 @@ class IELTS_CM_Membership {
         
         if (isset($_POST['ielts_cm_membership_expiry'])) {
             update_user_meta($user_id, '_ielts_cm_membership_expiry', sanitize_text_field($_POST['ielts_cm_membership_expiry']));
+        }
+        
+        // Save access code enrollment fields
+        if (isset($_POST['iw_course_group'])) {
+            $course_group = sanitize_text_field($_POST['iw_course_group']);
+            update_user_meta($user_id, 'iw_course_group', $course_group);
+        }
+        
+        if (isset($_POST['iw_membership_expiry'])) {
+            $iw_expiry = sanitize_text_field($_POST['iw_membership_expiry']);
+            // Convert from datetime-local format to MySQL datetime
+            if (!empty($iw_expiry)) {
+                $iw_expiry = date('Y-m-d H:i:s', strtotime($iw_expiry));
+            }
+            update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
+        }
+        
+        // Save course enrollments
+        if (isset($_POST['enrolled_ielts_academic'])) {
+            update_user_meta($user_id, 'enrolled_ielts_academic', 'true');
+        } else {
+            delete_user_meta($user_id, 'enrolled_ielts_academic');
+        }
+        
+        if (isset($_POST['enrolled_ielts_general'])) {
+            update_user_meta($user_id, 'enrolled_ielts_general', 'true');
+        } else {
+            delete_user_meta($user_id, 'enrolled_ielts_general');
+        }
+        
+        if (isset($_POST['enrolled_general_english'])) {
+            update_user_meta($user_id, 'enrolled_general_english', 'true');
+        } else {
+            delete_user_meta($user_id, 'enrolled_general_english');
         }
     }
     
