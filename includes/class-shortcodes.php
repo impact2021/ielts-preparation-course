@@ -3612,9 +3612,9 @@ class IELTS_CM_Shortcodes {
                 // Process and validate all fields
                 $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
                 $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
-                $email = sanitize_email($_POST['ielts_email']);
-                $password = $_POST['ielts_password'];
-                $password_confirm = $_POST['ielts_password_confirm'];
+                $email = isset($_POST['ielts_email']) ? sanitize_email($_POST['ielts_email']) : '';
+                $password = isset($_POST['ielts_password']) ? $_POST['ielts_password'] : '';
+                $password_confirm = isset($_POST['ielts_password_confirm']) ? $_POST['ielts_password_confirm'] : '';
                 $access_code = isset($_POST['ielts_access_code']) ? strtoupper(sanitize_text_field($_POST['ielts_access_code'])) : '';
                 
                 // Validate name fields
@@ -3663,7 +3663,7 @@ class IELTS_CM_Shortcodes {
                 }
                 
                 // Generate username from email if no errors so far
-                if (empty($errors) && is_email($email) && strpos($email, '@') !== false) {
+                if (empty($errors) && is_email($email)) {
                     $email_parts = explode('@', $email);
                     $base_username = sanitize_user($email_parts[0], true);
                     
