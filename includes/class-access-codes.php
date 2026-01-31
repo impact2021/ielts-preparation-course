@@ -643,7 +643,7 @@ class IELTS_CM_Access_Codes {
             $html .= '<tr data-student-status="' . esc_attr($status_class) . '">';
             $html .= '<td>' . esc_html($user->user_login) . '</td>';
             $html .= '<td>' . esc_html($user->user_email) . '</td>';
-            $html .= '<td>' . esc_html($this->course_groups[$group] ?? $group) . '</td>';
+            $html .= '<td>' . esc_html($this->get_course_group_display_name($group)) . '</td>';
             $html .= '<td>' . esc_html($expiry ? date('Y-m-d H:i', strtotime($expiry)) : '-') . '</td>';
             $html .= '<td><span style="color: ' . ($is_active ? 'green' : 'red') . ';">' . esc_html($status_label) . '</span></td>';
             $html .= '<td><button class="iw-btn iw-btn-danger" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button></td>';
@@ -858,6 +858,19 @@ class IELTS_CM_Access_Codes {
     }
     
     private function enroll_user_in_courses($user_id, $course_group) {
+        // Handle backward compatibility with old course group names
+        $legacy_mapping = array(
+            'academic_english' => 'academic_module',
+            'english_only' => 'general_english',
+            'all_courses' => 'academic_module'  // Map to academic as it was the most common
+        );
+        
+        if (isset($legacy_mapping[$course_group])) {
+            $course_group = $legacy_mapping[$course_group];
+            // Update the user meta to the new value
+            update_user_meta($user_id, 'iw_course_group', $course_group);
+        }
+        
         $courses = array();
         
         switch ($course_group) {
@@ -902,5 +915,25 @@ class IELTS_CM_Access_Codes {
         $message .= "Best regards,\nIELTS Course Team";
         
         wp_mail($user->user_email, $subject, $message);
+    }
+    
+    /**
+     * Get display name for course group, including legacy values
+     */
+    private function get_course_group_display_name($group) {
+        // Legacy course group names for backward compatibility
+        $legacy_groups = array(
+            'academic_english' => 'IELTS Academic + English (Legacy)',
+            'english_only' => 'General English Only (Legacy)',
+            'all_courses' => 'All Courses (Legacy)'
+        );
+        
+        if (isset($this->course_groups[$group])) {
+            return $this->course_groups[$group];
+        } elseif (isset($legacy_groups[$group])) {
+            return $legacy_groups[$group];
+        } else {
+            return $group;
+        }
     }
 }
