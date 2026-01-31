@@ -893,33 +893,33 @@ class IELTS_CM_Access_Codes {
         $users_with_access_codes = array();
         if (current_user_can('manage_options')) {
             // Admin can see all legacy access code users
-            $all_access_users = get_users(array(
-                'meta_key' => 'iw_course_group',
-                'meta_compare' => 'EXISTS',
-                'fields' => array('ID')
+            // Use meta_query to efficiently get users with iw_course_group but without iw_created_by_partner
+            $users_with_access_codes = get_users(array(
+                'fields' => array('ID'),
+                'meta_query' => array(
+                    'relation' => 'AND',
+                    array(
+                        'key' => 'iw_course_group',
+                        'compare' => 'EXISTS'
+                    ),
+                    array(
+                        'key' => 'iw_created_by_partner',
+                        'compare' => 'NOT EXISTS'
+                    )
+                )
             ));
-            
-            // Filter to only those without a partner assignment
-            foreach ($all_access_users as $user) {
-                $has_partner = get_user_meta($user->ID, 'iw_created_by_partner', true);
-                if (empty($has_partner)) {
-                    $users_with_access_codes[] = $user;
-                }
-            }
         }
         
         // Merge and deduplicate user IDs
-        $all_user_ids = array();
-        foreach ($users_by_partner as $user) {
-            $all_user_ids[$user->ID] = true;
-        }
-        foreach ($users_with_access_codes as $user) {
-            $all_user_ids[$user->ID] = true;
-        }
+        $user_ids = array_merge(
+            array_map(function($user) { return $user->ID; }, $users_by_partner),
+            array_map(function($user) { return $user->ID; }, $users_with_access_codes)
+        );
+        $user_ids = array_unique($user_ids);
         
         // Return in format compatible with existing code
         $results = array();
-        foreach (array_keys($all_user_ids) as $user_id) {
+        foreach ($user_ids as $user_id) {
             $results[] = (object) array('user_id' => $user_id);
         }
         return $results;
