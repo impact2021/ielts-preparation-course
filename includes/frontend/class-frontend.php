@@ -292,6 +292,11 @@ class IELTS_CM_Frontend {
             return;
         }
         
+        // Only show if membership system is enabled
+        if (!get_option('ielts_cm_membership_enabled', false)) {
+            return;
+        }
+        
         // Never show popup on the membership-register page
         $request_uri = isset($_SERVER['REQUEST_URI']) ? esc_url_raw(wp_unslash($_SERVER['REQUEST_URI'])) : '';
         $current_url = home_url($request_uri);

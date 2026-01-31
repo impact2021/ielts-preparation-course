@@ -4867,23 +4867,23 @@ class IELTS_CM_Admin {
                 <table class="form-table">
                     <tr>
                         <th scope="row">
-                            <?php _e('Membership System', 'ielts-course-manager'); ?>
+                            <?php _e('Paid Membership', 'ielts-course-manager'); ?>
                         </th>
                         <td>
                             <fieldset>
                                 <label>
                                     <input type="checkbox" name="ielts_cm_membership_enabled" value="1" <?php checked($membership_enabled, true); ?>>
-                                    <?php _e('Enable Membership System', 'ielts-course-manager'); ?>
+                                    <?php _e('Enable Paid Membership System', 'ielts-course-manager'); ?>
                                 </label>
                                 <p class="description">
-                                    <?php _e('Enable the membership system including the Memberships admin menu. When disabled, all membership features will be hidden. Use this if your site has its own external membership system.', 'ielts-course-manager'); ?>
+                                    <?php _e('Enable the paid membership system including trial signups, Stripe payments, and the Memberships admin menu. When disabled, all paid membership features will be hidden. Disable this if your site only uses access codes or has its own external membership system.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
                         </td>
                     </tr>
                     <tr>
                         <th scope="row">
-                            <?php _e('Access Code System', 'ielts-course-manager'); ?>
+                            <?php _e('Access Code Membership', 'ielts-course-manager'); ?>
                         </th>
                         <td>
                             <fieldset>
@@ -4892,7 +4892,7 @@ class IELTS_CM_Admin {
                                     <?php _e('Enable Access Code Membership System', 'ielts-course-manager'); ?>
                                 </label>
                                 <p class="description">
-                                    <?php _e('Enable access code-based enrollment. Users can enroll in courses using access codes instead of or in addition to the payment-based membership system.', 'ielts-course-manager'); ?>
+                                    <?php _e('Enable access code-based enrollment. Partners can create invite codes and manually enroll users. Users can join courses using access codes instead of or in addition to the payment-based membership system.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
                         </td>
