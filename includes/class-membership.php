@@ -345,8 +345,9 @@ class IELTS_CM_Membership {
         }
         
         // Save access code enrollment fields
-        if (isset($_POST['iw_course_group'])) {
-            $course_group = sanitize_text_field($_POST['iw_course_group']);
+        $course_group = isset($_POST['iw_course_group']) ? sanitize_text_field($_POST['iw_course_group']) : null;
+        
+        if ($course_group !== null) {
             $old_course_group = get_user_meta($user_id, 'iw_course_group', true);
             
             // Check if course group changed or is being set for first time
@@ -355,10 +356,19 @@ class IELTS_CM_Membership {
                 
                 // If a course group is selected, assign role and enroll in courses
                 if (!empty($course_group) && class_exists('IELTS_CM_Access_Codes')) {
-                    // Get or set expiry date
-                    $iw_expiry = isset($_POST['iw_membership_expiry']) ? sanitize_text_field($_POST['iw_membership_expiry']) : '';
-                    if (!empty($iw_expiry)) {
-                        $iw_expiry = date('Y-m-d', strtotime($iw_expiry)) . ' 23:59:59';
+                    // Get and validate expiry date
+                    $iw_expiry_input = isset($_POST['iw_membership_expiry']) ? sanitize_text_field($_POST['iw_membership_expiry']) : '';
+                    
+                    if (!empty($iw_expiry_input)) {
+                        // Validate date format (Y-m-d or Y-m-d H:i:s)
+                        $timestamp = strtotime($iw_expiry_input);
+                        if ($timestamp === false || $timestamp < 0) {
+                            // Invalid date format, use default
+                            $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
+                        } else {
+                            // Valid date, convert to end of day
+                            $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
+                        }
                     } else {
                         // Use default duration if no expiry specified
                         $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
@@ -399,7 +409,7 @@ class IELTS_CM_Membership {
                         // Enroll user in courses based on course group
                         $access_codes->enroll_user_in_courses($user_id, $course_group);
                     }
-                } else if (empty($course_group)) {
+                } elseif (empty($course_group)) {
                     // Course group cleared - remove role and unenroll
                     $user = get_userdata($user_id);
                     if ($user && class_exists('IELTS_CM_Access_Codes')) {
@@ -417,16 +427,18 @@ class IELTS_CM_Membership {
         
         // Only update expiry separately if course group didn't change
         // (to avoid overwriting the expiry that was just set above)
-        $course_group_from_post = isset($_POST['iw_course_group']) ? sanitize_text_field($_POST['iw_course_group']) : null;
-        $course_group_unchanged = ($course_group_from_post === null || $course_group_from_post === get_user_meta($user_id, 'iw_course_group', true));
+        $course_group_unchanged = ($course_group === null || $course_group === get_user_meta($user_id, 'iw_course_group', true));
         
         if (isset($_POST['iw_membership_expiry']) && $course_group_unchanged) {
-            $iw_expiry = sanitize_text_field($_POST['iw_membership_expiry']);
-            // Convert from date format (Y-m-d) to MySQL datetime at end of day
-            if (!empty($iw_expiry)) {
-                $iw_expiry = date('Y-m-d', strtotime($iw_expiry)) . ' 23:59:59';
+            $iw_expiry_input = sanitize_text_field($_POST['iw_membership_expiry']);
+            // Validate and convert from date format (Y-m-d) to MySQL datetime at end of day
+            if (!empty($iw_expiry_input)) {
+                $timestamp = strtotime($iw_expiry_input);
+                if ($timestamp !== false && $timestamp >= 0) {
+                    $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
+                    update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
+                }
             }
-            update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
         }
         
         // Save course enrollments (legacy fields - maintained for backward compatibility)
