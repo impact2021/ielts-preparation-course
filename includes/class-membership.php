@@ -1187,7 +1187,7 @@ class IELTS_CM_Membership {
                     }
                     
                     // Grant access to access code users who are not expired
-                    // They will be checked against the enrollment table in is_enrolled()
+                    // Returning true here grants immediate access without checking enrollment table
                     return true;
                 }
             }
