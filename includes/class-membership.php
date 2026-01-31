@@ -1267,7 +1267,6 @@ class IELTS_CM_Membership {
             $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
             foreach ($user->roles as $role) {
                 if (in_array($role, $access_code_roles)) {
-                    // Access code users rely on enrollment table, not course mapping
                     // Check their expiry via iw_membership_expiry meta
                     $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
                     if (!empty($expiry_date)) {
@@ -1277,9 +1276,43 @@ class IELTS_CM_Membership {
                         }
                     }
                     
-                    // IMPORTANT: Return false to skip paid membership course mapping
-                    // Access code users will be validated via enrollment table + role check in is_enrolled()
-                    // This ensures they only access courses in their specific course group
+                    // For access code users, check if course matches their course group categories
+                    // This allows access even if they're not explicitly enrolled in the course
+                    $course_group = get_user_meta($user_id, 'iw_course_group', true);
+                    if (empty($course_group)) {
+                        return false;
+                    }
+                    
+                    // Get course categories
+                    $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+                    if (is_wp_error($categories) || empty($categories)) {
+                        return false;
+                    }
+                    
+                    // Map course group to allowed category slugs
+                    $allowed_categories = array();
+                    switch ($course_group) {
+                        case 'academic_module':
+                            $allowed_categories = array('academic', 'english', 'academic-practice-tests');
+                            break;
+                        case 'general_module':
+                            $allowed_categories = array('general', 'english', 'general-practice-tests');
+                            break;
+                        case 'general_english':
+                            $allowed_categories = array('english');
+                            break;
+                        default:
+                            // Unknown course group - deny access
+                            return false;
+                    }
+                    
+                    // Check if course has any of the allowed categories
+                    foreach ($categories as $cat_slug) {
+                        if (in_array($cat_slug, $allowed_categories)) {
+                            return true;
+                        }
+                    }
+                    
                     return false;
                 }
             }
