@@ -1267,7 +1267,6 @@ class IELTS_CM_Membership {
             $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
             foreach ($user->roles as $role) {
                 if (in_array($role, $access_code_roles)) {
-                    // Access code users rely on enrollment table, not course mapping
                     // Check their expiry via iw_membership_expiry meta
                     $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
                     if (!empty($expiry_date)) {
@@ -1277,9 +1276,40 @@ class IELTS_CM_Membership {
                         }
                     }
                     
-                    // IMPORTANT: Return false to skip paid membership course mapping
-                    // Access code users will be validated via enrollment table + role check in is_enrolled()
-                    // This ensures they only access courses in their specific course group
+                    // For access code users, check if course matches their course group categories
+                    // This allows access even if they're not explicitly enrolled in the course
+                    $course_group = get_user_meta($user_id, 'iw_course_group', true);
+                    if (empty($course_group)) {
+                        return false;
+                    }
+                    
+                    // Get course categories
+                    $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+                    if (is_wp_error($categories) || empty($categories)) {
+                        return false;
+                    }
+                    
+                    // Map course group to allowed category slugs
+                    $allowed_categories = array();
+                    switch ($course_group) {
+                        case 'academic_module':
+                            $allowed_categories = array('academic', 'english', 'academic-practice-tests');
+                            break;
+                        case 'general_module':
+                            $allowed_categories = array('general', 'english', 'general-practice-tests');
+                            break;
+                        case 'general_english':
+                            $allowed_categories = array('english');
+                            break;
+                    }
+                    
+                    // Check if course has any of the allowed categories
+                    foreach ($categories as $cat_slug) {
+                        if (in_array($cat_slug, $allowed_categories)) {
+                            return true;
+                        }
+                    }
+                    
                     return false;
                 }
             }
@@ -1318,53 +1348,6 @@ class IELTS_CM_Membership {
         $mapping = get_option('ielts_cm_membership_course_mapping', array());
         if (isset($mapping[$course_id]) && is_array($mapping[$course_id])) {
             return in_array($membership_type, $mapping[$course_id]);
-        }
-        
-        // Fallback: If no explicit course mapping exists, use category-based matching
-        // This ensures users with active memberships can access courses even if mapping not configured
-        $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
-        if (empty($categories)) {
-            return false;
-        }
-        
-        // Determine membership module type
-        $membership_module = '';
-        if (strpos($membership_type, 'academic') !== false) {
-            $membership_module = 'academic';
-        } elseif (strpos($membership_type, 'general') !== false) {
-            $membership_module = 'general';
-        } elseif (strpos($membership_type, 'english') !== false) {
-            $membership_module = 'english';
-        }
-        
-        if (empty($membership_module)) {
-            return false;
-        }
-        
-        // Check if any course category matches the membership module
-        foreach ($categories as $cat_slug) {
-            $cat_lower = strtolower($cat_slug);
-            
-            // Academic memberships: access to academic and english categories
-            if ($membership_module === 'academic') {
-                if (strpos($cat_lower, 'academic') !== false || $cat_lower === 'english') {
-                    return true;
-                }
-            }
-            
-            // General memberships: access to general and english categories
-            if ($membership_module === 'general') {
-                if (strpos($cat_lower, 'general') !== false || $cat_lower === 'english') {
-                    return true;
-                }
-            }
-            
-            // English-only memberships: access only to english category
-            if ($membership_module === 'english') {
-                if ($cat_lower === 'english') {
-                    return true;
-                }
-            }
         }
         
         return false;
