@@ -106,8 +106,14 @@ class IELTS_CM_Membership {
     /**
      * Create custom WordPress roles for each membership level
      * This ensures role-based access control instead of relying on fragile meta fields
+     * Only creates roles when Paid Membership system is enabled
      */
     public function create_membership_roles() {
+        // Only create membership roles if paid membership system is enabled
+        if (!$this->is_enabled()) {
+            return;
+        }
+        
         // Get subscriber capabilities as base
         $subscriber = get_role('subscriber');
         if (!$subscriber) {
@@ -1177,8 +1183,36 @@ class IELTS_CM_Membership {
     
     /**
      * Check if user has access to course
+     * Works for both Paid Membership and Access Code Membership systems
      */
     public function user_has_course_access($user_id, $course_id) {
+        // First check if user has an access code membership role
+        // Access code users don't use the membership meta fields, they use roles + enrollment table
+        $user = get_userdata($user_id);
+        if ($user && class_exists('IELTS_CM_Access_Codes')) {
+            $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+            foreach ($user->roles as $role) {
+                if (in_array($role, $access_code_roles)) {
+                    // Access code users rely on enrollment table, not course mapping
+                    // Check their expiry via iw_membership_expiry meta
+                    $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
+                    if (!empty($expiry_date)) {
+                        $expiry_timestamp = strtotime($expiry_date);
+                        if ($expiry_timestamp <= time()) {
+                            return false; // Expired - deny access
+                        }
+                    }
+                    
+                    // IMPORTANT: Returning false here does NOT mean "no access"
+                    // It means "don't use the paid membership course mapping system"
+                    // Access code users will be granted access via the is_enrolled() check
+                    // which validates their enrollment table records and role
+                    return false;
+                }
+            }
+        }
+        
+        // For paid membership users, continue with the original logic
         $membership_type = $this->get_user_membership($user_id);
         if (empty($membership_type)) {
             return false;
