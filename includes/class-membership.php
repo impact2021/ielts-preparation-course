@@ -73,7 +73,7 @@ class IELTS_CM_Membership {
         // Create custom roles for membership levels on init
         $this->create_membership_roles();
         
-        // Always add admin menu and register settings so users can enable/disable the system
+        // Add admin menu (only shows if system is enabled) and register settings
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
         
@@ -276,6 +276,11 @@ class IELTS_CM_Membership {
      * Add admin menu
      */
     public function add_admin_menu() {
+        // Only add the membership menu if the system is enabled
+        if (!$this->is_enabled()) {
+            return;
+        }
+        
         // Main memberships menu
         add_menu_page(
             __('Memberships', 'ielts-course-manager'),
@@ -505,7 +510,6 @@ class IELTS_CM_Membership {
         }
         
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
-            update_option('ielts_cm_membership_enabled', isset($_POST['ielts_cm_membership_enabled']) ? 1 : 0);
             update_option('ielts_cm_english_only_enabled', isset($_POST['ielts_cm_english_only_enabled']) ? 1 : 0);
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
             update_option('ielts_cm_post_payment_redirect_url', sanitize_text_field($_POST['ielts_cm_post_payment_redirect_url']));
@@ -525,7 +529,6 @@ class IELTS_CM_Membership {
             echo '<div class="notice notice-success"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
         
-        $enabled = get_option('ielts_cm_membership_enabled', false);
         $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
@@ -570,18 +573,6 @@ class IELTS_CM_Membership {
                 <?php wp_nonce_field('ielts_membership_settings'); ?>
                 
                 <table class="form-table">
-                    <tr>
-                        <th scope="row"><?php _e('Enable Membership System', 'ielts-course-manager'); ?></th>
-                        <td>
-                            <label>
-                                <input type="checkbox" name="ielts_cm_membership_enabled" value="1" <?php checked($enabled, 1); ?>>
-                                <?php _e('Enable the membership system (disable if using external membership system)', 'ielts-course-manager'); ?>
-                            </label>
-                            <p class="description">
-                                <?php _e('When disabled, all membership features will be hidden. Use this if your site has its own membership system.', 'ielts-course-manager'); ?>
-                            </p>
-                        </td>
-                    </tr>
                     <tr>
                         <th scope="row"><?php _e('Enable English Only Membership', 'ielts-course-manager'); ?></th>
                         <td>
