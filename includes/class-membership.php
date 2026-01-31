@@ -1320,6 +1320,53 @@ class IELTS_CM_Membership {
             return in_array($membership_type, $mapping[$course_id]);
         }
         
+        // Fallback: If no explicit course mapping exists, use category-based matching
+        // This ensures users with active memberships can access courses even if mapping not configured
+        $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+        if (empty($categories)) {
+            return false;
+        }
+        
+        // Determine membership module type
+        $membership_module = '';
+        if (strpos($membership_type, 'academic') !== false) {
+            $membership_module = 'academic';
+        } elseif (strpos($membership_type, 'general') !== false) {
+            $membership_module = 'general';
+        } elseif (strpos($membership_type, 'english') !== false) {
+            $membership_module = 'english';
+        }
+        
+        if (empty($membership_module)) {
+            return false;
+        }
+        
+        // Check if any course category matches the membership module
+        foreach ($categories as $cat_slug) {
+            $cat_lower = strtolower($cat_slug);
+            
+            // Academic memberships: access to academic and english categories
+            if ($membership_module === 'academic') {
+                if (strpos($cat_lower, 'academic') !== false || $cat_lower === 'english') {
+                    return true;
+                }
+            }
+            
+            // General memberships: access to general and english categories
+            if ($membership_module === 'general') {
+                if (strpos($cat_lower, 'general') !== false || $cat_lower === 'english') {
+                    return true;
+                }
+            }
+            
+            // English-only memberships: access only to english category
+            if ($membership_module === 'english') {
+                if ($cat_lower === 'english') {
+                    return true;
+                }
+            }
+        }
+        
         return false;
     }
     
