@@ -320,7 +320,9 @@ class IELTS_Course_Manager {
      */
     public function track_user_login($user_login, $user) {
         // Update last login time
+        $current_time = current_time('mysql');
         update_user_meta($user->ID, '_ielts_cm_last_login', current_time('timestamp'));
+        update_user_meta($user->ID, 'last_login', $current_time);
         
         // Update login count
         $login_count = get_user_meta($user->ID, '_ielts_cm_login_count', true);

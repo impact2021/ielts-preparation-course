@@ -55,6 +55,8 @@ class IELTS_CM_Access_Codes {
         add_action('wp_ajax_iw_create_user_manually', array($this, 'ajax_create_user_manually'));
         add_action('wp_ajax_iw_revoke_student', array($this, 'ajax_revoke_student'));
         add_action('wp_ajax_iw_delete_code', array($this, 'ajax_delete_code'));
+        add_action('wp_ajax_iw_edit_student', array($this, 'ajax_edit_student'));
+        add_action('wp_ajax_iw_resend_welcome', array($this, 'ajax_resend_welcome'));
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
@@ -424,6 +426,7 @@ class IELTS_CM_Access_Codes {
             .iw-form-table td { padding: 10px; }
             .iw-btn { display: inline-block; padding: 8px 16px; background: #0073aa; color: #fff; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; }
             .iw-btn:hover { background: #005177; color: #fff; }
+            .iw-btn-small { padding: 4px 8px; font-size: 12px; }
             .iw-btn-danger { background: #dc3545; }
             .iw-btn-danger:hover { background: #c82333; }
             .iw-filter-btn { display: inline-block; padding: 6px 12px; background: #f1f1f1; color: #333; border: 1px solid #ddd; border-radius: 3px; cursor: pointer; margin-right: 5px; }
@@ -574,6 +577,8 @@ class IELTS_CM_Access_Codes {
             window.IWDashboard = {
                 deleteNonce: '<?php echo wp_create_nonce('iw_delete_code'); ?>',
                 revokeNonce: '<?php echo wp_create_nonce('iw_revoke_student'); ?>',
+                editNonce: '<?php echo wp_create_nonce('iw_edit_student'); ?>',
+                resendNonce: '<?php echo wp_create_nonce('iw_resend_welcome'); ?>',
                 
                 filterCodes: function(status) {
                     $('.iw-filter-btn').removeClass('active');
@@ -624,6 +629,47 @@ class IELTS_CM_Access_Codes {
                     }, function(response) {
                         if (response.success) {
                             location.reload();
+                        } else {
+                            alert(response.data.message);
+                        }
+                    });
+                },
+                
+                editStudent: function(userId) {
+                    var currentExpiry = '';
+                    var $row = $('.iw-students-table tr[data-user-id="' + userId + '"]');
+                    if ($row.length) {
+                        currentExpiry = $row.find('.expiry-display').text().trim();
+                        if (currentExpiry === '-') currentExpiry = '';
+                    }
+                    
+                    var newExpiry = prompt('Enter new expiry date (dd/mm/yyyy):', currentExpiry);
+                    if (!newExpiry) return;
+                    
+                    $.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        action: 'iw_edit_student',
+                        user_id: userId,
+                        expiry: newExpiry,
+                        nonce: IWDashboard.editNonce
+                    }, function(response) {
+                        if (response.success) {
+                            alert(response.data.message);
+                            location.reload();
+                        } else {
+                            alert(response.data.message);
+                        }
+                    });
+                },
+                
+                resendWelcome: function(userId) {
+                    if (!confirm('This will generate a new password and send a welcome email. Continue?')) return;
+                    $.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        action: 'iw_resend_welcome',
+                        user_id: userId,
+                        nonce: IWDashboard.resendNonce
+                    }, function(response) {
+                        if (response.success) {
+                            alert(response.data.message);
                         } else {
                             alert(response.data.message);
                         }
@@ -801,11 +847,11 @@ class IELTS_CM_Access_Codes {
             
             $html .= '<tr data-status="' . esc_attr($filter_status) . '">';
             $html .= '<td>' . esc_html($code->code) . '</td>';
-            $html .= '<td>' . esc_html($this->course_groups[$code->course_group] ?? $code->course_group) . '</td>';
+            $html .= '<td>' . esc_html($this->get_course_group_display_name($code->course_group)) . '</td>';
             $html .= '<td>' . esc_html($code->duration_days) . '</td>';
             $html .= '<td>' . esc_html($status_display) . '</td>';
             $html .= '<td>' . esc_html($used_by_display) . '</td>';
-            $html .= '<td>' . esc_html(date('Y-m-d', strtotime($code->created_date))) . '</td>';
+            $html .= '<td>' . esc_html(date('d/m/Y', strtotime($code->created_date))) . '</td>';
             $html .= '<td>';
             if ($code->status === 'active') {
                 $html .= '<button class="iw-btn iw-btn-danger" onclick="IWDashboard.deleteCode(' . $code->id . ')">Delete</button>';
@@ -823,7 +869,7 @@ class IELTS_CM_Access_Codes {
         }
         
         $html = '<table class="iw-table iw-students-table"><thead><tr>';
-        $html .= '<th>Username</th><th>Email</th><th>Group</th><th>Expiry</th><th>Status</th><th>Action</th>';
+        $html .= '<th>Username</th><th>Email</th><th>Group</th><th>Expiry</th><th>Last Login</th><th>Status</th><th>Action</th>';
         $html .= '</tr></thead><tbody>';
         
         $has_active = false;
@@ -835,6 +881,7 @@ class IELTS_CM_Access_Codes {
             
             $group = get_user_meta($student->user_id, 'iw_course_group', true);
             $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
+            $last_login = get_user_meta($student->user_id, 'last_login', true);
             
             // Determine if membership is active or expired
             $is_active = false;
@@ -853,13 +900,18 @@ class IELTS_CM_Access_Codes {
             
             $status_class = $is_active ? 'active' : 'expired';
             
-            $html .= '<tr data-student-status="' . esc_attr($status_class) . '">';
+            $html .= '<tr data-student-status="' . esc_attr($status_class) . '" data-user-id="' . esc_attr($student->user_id) . '">';
             $html .= '<td>' . esc_html($user->user_login) . '</td>';
             $html .= '<td>' . esc_html($user->user_email) . '</td>';
             $html .= '<td>' . esc_html($this->get_course_group_display_name($group)) . '</td>';
-            $html .= '<td>' . esc_html($expiry ? date('Y-m-d H:i', strtotime($expiry)) : '-') . '</td>';
+            $html .= '<td class="expiry-display">' . esc_html($expiry ? date('d/m/Y', strtotime($expiry)) : '-') . '</td>';
+            $html .= '<td>' . esc_html($last_login ? date('d/m/Y', strtotime($last_login)) : 'Never') . '</td>';
             $html .= '<td><span style="color: ' . ($is_active ? 'green' : 'red') . ';">' . esc_html($status_label) . '</span></td>';
-            $html .= '<td><button class="iw-btn iw-btn-danger" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button></td>';
+            $html .= '<td>';
+            $html .= '<button class="iw-btn iw-btn-small" onclick="IWDashboard.editStudent(' . $student->user_id . ')">Edit</button> ';
+            $html .= '<button class="iw-btn iw-btn-small" onclick="IWDashboard.resendWelcome(' . $student->user_id . ')">Resend Email</button> ';
+            $html .= '<button class="iw-btn iw-btn-danger iw-btn-small" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button>';
+            $html .= '</td>';
             $html .= '</tr>';
         }
         
@@ -1003,18 +1055,14 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'Email already exists'));
         }
         
-        $base_username = sanitize_user(strtolower($first_name . $last_name));
-        $username = $base_username . rand(1000, 99999);
+        // Use email as username
+        $username = $email;
         
-        $attempts = 0;
-        while (username_exists($username) && $attempts < 10) {
-            $username = $base_username . rand(1000, 99999);
-            $attempts++;
+        // Check if email/username already exists
+        if (username_exists($username) || email_exists($email)) {
+            wp_send_json_error(array('message' => 'Email already in use'));
         }
         
-        if (username_exists($username)) {
-            wp_send_json_error(array('message' => 'Could not generate unique username'));
-        }
         $password = wp_generate_password(12);
         
         $user_id = wp_create_user($username, $password, $email);
@@ -1101,6 +1149,65 @@ class IELTS_CM_Access_Codes {
         $wpdb->delete($table, array('id' => $code_id));
         
         wp_send_json_success(array('message' => 'Code deleted'));
+    }
+    
+    public function ajax_edit_student() {
+        check_ajax_referer('iw_edit_student', 'nonce');
+        
+        if (!current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+        }
+        
+        $user_id = absint($_POST['user_id']);
+        $new_expiry = sanitize_text_field($_POST['expiry']);
+        
+        if (empty($new_expiry)) {
+            wp_send_json_error(array('message' => 'Expiry date is required'));
+        }
+        
+        // Convert dd/mm/yyyy to MySQL format
+        $date_parts = explode('/', $new_expiry);
+        if (count($date_parts) !== 3) {
+            wp_send_json_error(array('message' => 'Invalid date format. Use dd/mm/yyyy'));
+        }
+        
+        $mysql_date = $date_parts[2] . '-' . $date_parts[1] . '-' . $date_parts[0] . ' 23:59:59';
+        
+        // Validate the date
+        if (!strtotime($mysql_date)) {
+            wp_send_json_error(array('message' => 'Invalid date'));
+        }
+        
+        update_user_meta($user_id, 'iw_membership_expiry', $mysql_date);
+        
+        wp_send_json_success(array(
+            'message' => 'Expiry date updated successfully',
+            'new_expiry' => date('d/m/Y', strtotime($mysql_date))
+        ));
+    }
+    
+    public function ajax_resend_welcome() {
+        check_ajax_referer('iw_resend_welcome', 'nonce');
+        
+        if (!current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+        }
+        
+        $user_id = absint($_POST['user_id']);
+        $user = get_userdata($user_id);
+        
+        if (!$user) {
+            wp_send_json_error(array('message' => 'User not found'));
+        }
+        
+        // Generate a new password
+        $new_password = wp_generate_password(12);
+        wp_set_password($new_password, $user_id);
+        
+        // Send welcome email with new password
+        $this->send_welcome_email($user_id, $user->user_login, $new_password);
+        
+        wp_send_json_success(array('message' => 'Welcome email sent with new password'));
     }
     
     private function generate_unique_code() {
