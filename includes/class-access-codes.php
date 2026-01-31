@@ -223,18 +223,10 @@ class IELTS_CM_Access_Codes {
             .iw-table th { background: #f9f9f9; font-weight: 600; }
             .iw-table tr:hover { background: #f5f5f5; }
             input[type="text"], input[type="email"], input[type="number"], select { padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; width: 100%; }
-            .iw-welcome { background: #e7f3ff; padding: 15px; border-left: 4px solid #0073aa; margin-bottom: 20px; }
         </style>
         
         <div class="iw-dashboard">
-            <div class="iw-welcome">
-                <?php 
-                $current_user = wp_get_current_user();
-                $display_name = $current_user->display_name ?: $current_user->user_login;
-                ?>
-                <h2>Welcome, <?php echo esc_html($display_name); ?>!</h2>
-                <p><strong>Active Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
-            </div>
+            <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
