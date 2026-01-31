@@ -106,8 +106,14 @@ class IELTS_CM_Membership {
     /**
      * Create custom WordPress roles for each membership level
      * This ensures role-based access control instead of relying on fragile meta fields
+     * Only creates roles when Paid Membership system is enabled
      */
     public function create_membership_roles() {
+        // Only create membership roles if paid membership system is enabled
+        if (!$this->is_enabled()) {
+            return;
+        }
+        
         // Get subscriber capabilities as base
         $subscriber = get_role('subscriber');
         if (!$subscriber) {

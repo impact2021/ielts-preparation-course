@@ -16,6 +16,16 @@ class IELTS_CM_Access_Codes {
     const STATUS_USED = 'used';
     const STATUS_EXPIRED = 'expired';
     
+    /**
+     * Access code membership types - separate from paid memberships
+     * These are created when Access Code Membership system is enabled
+     */
+    const ACCESS_CODE_MEMBERSHIP_TYPES = array(
+        'access_academic_module' => 'Academic Module (Access Code)',
+        'access_general_module' => 'General Training Module (Access Code)',
+        'access_general_english' => 'General English (Access Code)'
+    );
+    
     private $course_groups = array(
         'academic_module' => 'Academic Module',
         'general_module' => 'General Training Module',
@@ -23,13 +33,14 @@ class IELTS_CM_Access_Codes {
     );
     
     private $course_group_descriptions = array(
-        'academic_module' => 'Includes courses with slugs: academic, english, academic-practice-tests',
-        'general_module' => 'Includes courses with slugs: general, english, general-practice-tests',
-        'general_english' => 'Only includes course with slug: english'
+        'academic_module' => 'Includes courses with category slugs: academic, english, academic-practice-tests',
+        'general_module' => 'Includes courses with category slugs: general, english, general-practice-tests',
+        'general_english' => 'Includes courses with category slug: english only'
     );
     
     public function __construct() {
         $this->create_partner_admin_role();
+        $this->create_access_code_membership_roles();
     }
     
     public function init() {
@@ -59,6 +70,32 @@ class IELTS_CM_Access_Codes {
         }
     }
     
+    /**
+     * Create custom WordPress roles for access code membership types
+     * Only creates roles when Access Code Membership system is enabled
+     */
+    public function create_access_code_membership_roles() {
+        // Only create roles if access code system is enabled
+        if (!get_option('ielts_cm_access_code_enabled', false)) {
+            return;
+        }
+        
+        // Get subscriber capabilities as base
+        $subscriber = get_role('subscriber');
+        if (!$subscriber) {
+            return;
+        }
+        
+        $base_caps = $subscriber->capabilities;
+        
+        // Create role for each access code membership type if it doesn't exist
+        foreach (self::ACCESS_CODE_MEMBERSHIP_TYPES as $role_slug => $role_name) {
+            if (!get_role($role_slug)) {
+                add_role($role_slug, $role_name, $base_caps);
+            }
+        }
+    }
+    
     public function add_admin_menu() {
         add_menu_page(
             'Partner Dashboard',
@@ -68,6 +105,15 @@ class IELTS_CM_Access_Codes {
             array($this, 'admin_dashboard_page'),
             'dashicons-groups',
             31
+        );
+        
+        add_submenu_page(
+            'ielts-partner-dashboard',
+            'How It Works',
+            'How It Works',
+            'manage_options',
+            'ielts-partner-documentation',
+            array($this, 'documentation_page')
         );
         
         add_submenu_page(
@@ -174,6 +220,174 @@ class IELTS_CM_Access_Codes {
         echo '<div class="wrap"><h1>Partner Admin Dashboard</h1>';
         echo '<p>Use the <code>[iw_partner_dashboard]</code> shortcode on a page to display the partner dashboard for partners.</p>';
         echo '</div>';
+    }
+    
+    /**
+     * Documentation page explaining how the Access Code Membership system works
+     */
+    public function documentation_page() {
+        if (!current_user_can('manage_options')) {
+            wp_die('Unauthorized');
+        }
+        ?>
+        <div class="wrap">
+            <h1>Access Code Membership System - How It Works</h1>
+            
+            <div style="max-width: 900px;">
+                <h2>Overview</h2>
+                <p>The Access Code Membership system allows partners to manually create users and manage course access without payments. This is separate from the Paid Membership system.</p>
+                
+                <h2>Membership System Comparison</h2>
+                <table class="widefat" style="margin: 20px 0;">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Paid Membership</th>
+                            <th>Access Code Membership</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Activation</strong></td>
+                            <td>IELTS Courses → Settings → Enable Paid Membership System</td>
+                            <td>IELTS Courses → Settings → Enable Access Code Membership System</td>
+                        </tr>
+                        <tr>
+                            <td><strong>User Creation</strong></td>
+                            <td>Self-signup with Stripe payment</td>
+                            <td>Partner creates users manually or via invite codes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Membership Types</strong></td>
+                            <td>Academic Trial, General Trial, Academic Full, General Full, Academic Plus, General Plus, English Trial, English Full</td>
+                            <td>Academic Module, General Training Module, General English</td>
+                        </tr>
+                        <tr>
+                            <td><strong>WordPress Roles</strong></td>
+                            <td>academic_trial, general_trial, academic_full, general_full, academic_plus, general_plus, english_trial, english_full</td>
+                            <td>access_academic_module, access_general_module, access_general_english</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Course Access</strong></td>
+                            <td>Based on payment tier and course mapping</td>
+                            <td>Based on course category slugs assigned to membership type</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Expiry Management</strong></td>
+                            <td>Automatic via Stripe subscription</td>
+                            <td>Manual via partner dashboard or user edit page</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2>Access Code Membership Types</h2>
+                <p>When the Access Code Membership system is enabled, three membership types are created:</p>
+                
+                <h3>1. Academic Module</h3>
+                <ul>
+                    <li><strong>WordPress Role:</strong> <code>access_academic_module</code></li>
+                    <li><strong>Courses Included:</strong> All courses with category slugs: <code>academic</code>, <code>english</code>, <code>academic-practice-tests</code></li>
+                    <li><strong>Typical Use:</strong> Students preparing for IELTS Academic exam + General English content</li>
+                </ul>
+                
+                <h3>2. General Training Module</h3>
+                <ul>
+                    <li><strong>WordPress Role:</strong> <code>access_general_module</code></li>
+                    <li><strong>Courses Included:</strong> All courses with category slugs: <code>general</code>, <code>english</code>, <code>general-practice-tests</code></li>
+                    <li><strong>Typical Use:</strong> Students preparing for IELTS General Training exam + General English content</li>
+                </ul>
+                
+                <h3>3. General English</h3>
+                <ul>
+                    <li><strong>WordPress Role:</strong> <code>access_general_english</code></li>
+                    <li><strong>Courses Included:</strong> Only courses with category slug: <code>english</code></li>
+                    <li><strong>Typical Use:</strong> Students who only want General English courses without IELTS-specific content</li>
+                </ul>
+                
+                <h2>How Users Get Access to Courses</h2>
+                <p>When a user is created via the Partner Dashboard or an invite code is used:</p>
+                <ol>
+                    <li><strong>WordPress Role Assigned:</strong> User gets one of the three access code membership roles (e.g., <code>access_academic_module</code>)</li>
+                    <li><strong>Courses Queried:</strong> System finds all published courses with matching category slugs</li>
+                    <li><strong>Enrollment Created:</strong> User is enrolled in each matching course in the enrollment table</li>
+                    <li><strong>Expiry Set:</strong> All enrollments inherit the expiry date specified during creation</li>
+                    <li><strong>Access Check:</strong> When user tries to access a course, system checks:
+                        <ul>
+                            <li>Does user have a valid membership role?</li>
+                            <li>Is there an active enrollment record?</li>
+                            <li>Has the membership expired?</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h2>Managing Users</h2>
+                
+                <h3>Creating a User Manually</h3>
+                <ol>
+                    <li>Go to Partner Dashboard (frontend) using <code>[iw_partner_dashboard]</code> shortcode</li>
+                    <li>Expand "Create User Manually" section</li>
+                    <li>Fill in email, first name, last name</li>
+                    <li>Select course group (Academic Module, General Training Module, or General English)</li>
+                    <li>Set access days (e.g., 365 for one year)</li>
+                    <li>Click "Create User" - user receives welcome email with credentials</li>
+                </ol>
+                
+                <h3>Editing User Access (Admin)</h3>
+                <p>Go to Users → Edit User → scroll to "Access Code Enrollment" section:</p>
+                <ul>
+                    <li><strong>Course Group:</strong> Change which membership type user has</li>
+                    <li><strong>Access Code Expiry:</strong> Extend or shorten access period</li>
+                    <li><strong>Enrolled Courses:</strong> Manually toggle specific course enrollments (for backward compatibility only)</li>
+                </ul>
+                
+                <h3>Revoking Access</h3>
+                <p>From the Partner Dashboard, in the "Managed Students" section, click "Revoke" next to a student. Action depends on settings:</p>
+                <ul>
+                    <li><strong>Remove Enrollments:</strong> User remains in database but loses all course access</li>
+                    <li><strong>Delete User:</strong> User account is completely deleted from WordPress</li>
+                </ul>
+                
+                <h2>Important Notes</h2>
+                <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0;">
+                    <h3 style="margin-top: 0;">System Separation</h3>
+                    <p><strong>Paid Membership and Access Code Membership are completely separate systems.</strong></p>
+                    <ul>
+                        <li>They use different WordPress roles</li>
+                        <li>They have different membership types</li>
+                        <li>They can be enabled/disabled independently</li>
+                        <li>Users can only have ONE type of membership (not both)</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #d1ecf1; border-left: 4px solid #0c5460; padding: 15px; margin: 20px 0;">
+                    <h3 style="margin-top: 0;">Course Categories Matter</h3>
+                    <p>For the Access Code Membership system to work correctly:</p>
+                    <ul>
+                        <li>Courses must be properly categorized with slugs: <code>academic</code>, <code>general</code>, <code>english</code>, etc.</li>
+                        <li>If a course has no categories or wrong categories, users won't be enrolled in it</li>
+                        <li>Check: IELTS Courses → Categories to manage course categories</li>
+                    </ul>
+                </div>
+                
+                <h2>Troubleshooting</h2>
+                
+                <h3>User Created But Shows "Enrol Now" on All Courses</h3>
+                <p><strong>Possible causes:</strong></p>
+                <ul>
+                    <li>Courses don't have proper category slugs assigned</li>
+                    <li>User's WordPress role wasn't set (check Users → Edit User → Role)</li>
+                    <li>Enrollment records weren't created in database</li>
+                </ul>
+                <p><strong>Solution:</strong> Edit the user (Users → Edit User), change their Course Group to something else, save, then change it back to the correct group and save again. This will re-trigger the enrollment process.</p>
+                
+                <h3>User Has Access But Shouldn't</h3>
+                <p>Check if user has an admin role or if they have both access code AND paid membership roles (they should only have one).</p>
+                
+                <h3>Access Expired But User Still Has Access</h3>
+                <p>The system runs a daily cron job to check for expired memberships. To manually trigger it, go to Tools → Site Health → Scheduled Events and run <code>ielts_cm_check_expired_memberships</code>.</p>
+            </div>
+        </div>
+        <?php
     }
     
     public function enqueue_frontend_scripts() {
@@ -857,26 +1071,98 @@ class IELTS_CM_Access_Codes {
             update_user_meta($user_id, 'iw_course_group', $course_group);
         }
         
-        $courses = array();
+        // Determine which category slugs to query based on course group
+        $category_slugs = array();
         
         switch ($course_group) {
             case 'academic_module':
-                $courses = array('ielts_academic', 'general_english');
+                $category_slugs = array('academic', 'english', 'academic-practice-tests');
                 break;
             case 'general_module':
-                $courses = array('ielts_general', 'general_english');
+                $category_slugs = array('general', 'english', 'general-practice-tests');
                 break;
             case 'general_english':
-                $courses = array('general_english');
+                $category_slugs = array('english');
                 break;
         }
         
-        foreach ($courses as $course) {
+        // Query courses by category slugs
+        $course_ids = $this->get_courses_by_category_slugs($category_slugs);
+        
+        // Enroll user in each course using the enrollment table
+        if (!empty($course_ids)) {
+            require_once IELTS_CM_PLUGIN_DIR . 'includes/class-enrollment.php';
+            $enrollment = new IELTS_CM_Enrollment();
+            
+            // Calculate expiry date from user meta
+            $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
+            
+            foreach ($course_ids as $course_id) {
+                $enrollment->enroll($user_id, $course_id, 'active', $expiry_date);
+            }
+        }
+        
+        // Keep legacy meta fields for backward compatibility (but they're not used for access checks)
+        $legacy_courses = array();
+        switch ($course_group) {
+            case 'academic_module':
+                $legacy_courses = array('ielts_academic', 'general_english');
+                break;
+            case 'general_module':
+                $legacy_courses = array('ielts_general', 'general_english');
+                break;
+            case 'general_english':
+                $legacy_courses = array('general_english');
+                break;
+        }
+        
+        foreach ($legacy_courses as $course) {
             update_user_meta($user_id, "enrolled_{$course}", true);
         }
     }
     
+    /**
+     * Get course IDs by category slugs
+     * 
+     * @param array $category_slugs Array of category slugs to query
+     * @return array Array of course IDs
+     */
+    private function get_courses_by_category_slugs($category_slugs) {
+        if (empty($category_slugs)) {
+            return array();
+        }
+        
+        $args = array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'ielts_course_category',
+                    'field' => 'slug',
+                    'terms' => $category_slugs,
+                    'operator' => 'IN'
+                )
+            ),
+            'fields' => 'ids' // Only get IDs for efficiency
+        );
+        
+        $query = new WP_Query($args);
+        return $query->posts;
+    }
+    
     private function remove_user_enrollments($user_id) {
+        // Remove from enrollment table
+        require_once IELTS_CM_PLUGIN_DIR . 'includes/class-enrollment.php';
+        $enrollment = new IELTS_CM_Enrollment();
+        
+        // Get all user's courses and unenroll
+        $user_courses = $enrollment->get_user_courses($user_id);
+        foreach ($user_courses as $course) {
+            $enrollment->unenroll($user_id, $course->course_id);
+        }
+        
+        // Remove legacy meta fields
         delete_user_meta($user_id, 'enrolled_ielts_academic');
         delete_user_meta($user_id, 'enrolled_ielts_general');
         delete_user_meta($user_id, 'enrolled_general_english');
@@ -886,6 +1172,33 @@ class IELTS_CM_Access_Codes {
         update_user_meta($user_id, 'iw_course_group', $course_group);
         update_user_meta($user_id, 'iw_membership_expiry', $expiry_date);
         update_user_meta($user_id, 'iw_membership_status', 'active');
+        
+        // Map course group to access code membership type and assign role
+        $role_mapping = array(
+            'academic_module' => 'access_academic_module',
+            'general_module' => 'access_general_module',
+            'general_english' => 'access_general_english'
+        );
+        
+        if (isset($role_mapping[$course_group])) {
+            $membership_type = $role_mapping[$course_group];
+            
+            // Set membership type meta (used by is_enrolled check)
+            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+            update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            
+            // Assign WordPress role
+            $user = get_userdata($user_id);
+            if ($user) {
+                // Remove any existing membership roles first
+                foreach (self::ACCESS_CODE_MEMBERSHIP_TYPES as $role_slug => $role_name) {
+                    $user->remove_role($role_slug);
+                }
+                // Add the new role
+                $user->add_role($membership_type);
+            }
+        }
     }
     
     private function send_welcome_email($user_id, $username, $password) {
