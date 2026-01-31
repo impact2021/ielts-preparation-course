@@ -1105,10 +1105,17 @@ class IELTS_CM_Access_Codes {
         $attempts = 0;
         do {
             // Generate cryptographically secure 8-character alphanumeric code
-            $code = strtoupper(wp_generate_password(8, false));
-            $exists = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table WHERE code = %s", $code));
+            // Exclude visually ambiguous characters (0, O, 1, I, l) for better usability
+            $chars = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+            $code = '';
+            for ($i = 0; $i < 8; $i++) {
+                $code .= $chars[random_int(0, strlen($chars) - 1)];
+            }
+            
+            // Check if code already exists (using efficient SELECT 1 query)
+            $exists = $wpdb->get_var($wpdb->prepare("SELECT 1 FROM $table WHERE code = %s LIMIT 1", $code));
             $attempts++;
-        } while ($exists > 0 && $attempts < 10);
+        } while ($exists && $attempts < 10);
         
         return $code;
     }
