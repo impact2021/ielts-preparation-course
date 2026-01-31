@@ -450,6 +450,12 @@ class IELTS_CM_Access_Codes {
                     <h2>Create Invite Codes</h2>
                 </div>
                 <div class="iw-card-body">
+                    <?php if ($remaining_places <= 0): ?>
+                        <div class="iw-msg error">
+                            You have reached your student limit (<?php echo $max_students; ?> students). 
+                            Please contact support to upgrade your tier or remove expired students.
+                        </div>
+                    <?php else: ?>
                     <div id="create-invite-msg"></div>
                     <form id="create-invite-form">
                         <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
@@ -457,7 +463,7 @@ class IELTS_CM_Access_Codes {
                             <tr>
                                 <th>Number of Codes:</th>
                                 <td>
-                                    <input type="number" name="quantity" min="1" max="<?php echo max(1, $remaining_places); ?>" value="1" required>
+                                    <input type="number" name="quantity" min="1" max="<?php echo $remaining_places; ?>" value="1" required>
                                     <p class="description">Remaining places: <?php echo $remaining_places; ?></p>
                                 </td>
                             </tr>
@@ -480,6 +486,7 @@ class IELTS_CM_Access_Codes {
                             </tr>
                         </table>
                     </form>
+                    <?php endif; ?>
                 </div>
             </div>
             
@@ -880,13 +887,26 @@ class IELTS_CM_Access_Codes {
             'fields' => array('ID')
         ));
         
-        // Also get all users with access code memberships (for backwards compatibility)
-        // This catches students created before the partner system was fully implemented
-        $users_with_access_codes = get_users(array(
-            'meta_key' => 'iw_course_group',
-            'meta_compare' => 'EXISTS',
-            'fields' => array('ID')
-        ));
+        // Also get all users with access code memberships but NO partner assignment
+        // This catches legacy students created before the partner system was fully implemented
+        // Only include these if we're the first/admin partner (for backwards compatibility)
+        $users_with_access_codes = array();
+        if (current_user_can('manage_options')) {
+            // Admin can see all legacy access code users
+            $all_access_users = get_users(array(
+                'meta_key' => 'iw_course_group',
+                'meta_compare' => 'EXISTS',
+                'fields' => array('ID')
+            ));
+            
+            // Filter to only those without a partner assignment
+            foreach ($all_access_users as $user) {
+                $has_partner = get_user_meta($user->ID, 'iw_created_by_partner', true);
+                if (empty($has_partner)) {
+                    $users_with_access_codes[] = $user;
+                }
+            }
+        }
         
         // Merge and deduplicate user IDs
         $all_user_ids = array();
