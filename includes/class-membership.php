@@ -43,6 +43,12 @@ class IELTS_CM_Membership {
     const EXTENSION_TYPES = array('extension_1_week', 'extension_1_month', 'extension_3_months');
     
     /**
+     * Default access code expiry duration (1 year)
+     * Used when admin sets access code enrollment without specifying expiry date
+     */
+    const DEFAULT_ACCESS_CODE_DURATION = '+1 year';
+    
+    /**
      * Trial period in days
      */
     const TRIAL_PERIOD_DAYS = 30;
@@ -339,18 +345,103 @@ class IELTS_CM_Membership {
         }
         
         // Save access code enrollment fields
-        if (isset($_POST['iw_course_group'])) {
-            $course_group = sanitize_text_field($_POST['iw_course_group']);
-            update_user_meta($user_id, 'iw_course_group', $course_group);
+        $course_group = isset($_POST['iw_course_group']) ? sanitize_text_field($_POST['iw_course_group']) : null;
+        $course_group_changed = false;
+        
+        if ($course_group !== null) {
+            $old_course_group = get_user_meta($user_id, 'iw_course_group', true);
+            
+            // Check if course group changed or is being set for first time
+            if ($course_group !== $old_course_group) {
+                $course_group_changed = true;
+                update_user_meta($user_id, 'iw_course_group', $course_group);
+                
+                // If a course group is selected, assign role and enroll in courses
+                if (!empty($course_group) && class_exists('IELTS_CM_Access_Codes')) {
+                    // Get and validate expiry date
+                    $iw_expiry_input = isset($_POST['iw_membership_expiry']) ? sanitize_text_field($_POST['iw_membership_expiry']) : '';
+                    
+                    if (!empty($iw_expiry_input)) {
+                        // Validate date format (Y-m-d or Y-m-d H:i:s)
+                        $timestamp = strtotime($iw_expiry_input);
+                        if ($timestamp === false) {
+                            // Invalid date format, use default
+                            $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
+                        } else {
+                            // Valid date, convert to end of day
+                            $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
+                        }
+                    } else {
+                        // Use default duration if no expiry specified
+                        $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
+                    }
+                    
+                    // Use the access codes class methods to properly set up the user
+                    $access_codes = new IELTS_CM_Access_Codes();
+                    
+                    // Map course group to role
+                    $role_mapping = array(
+                        'academic_module' => 'access_academic_module',
+                        'general_module' => 'access_general_module',
+                        'general_english' => 'access_general_english'
+                    );
+                    
+                    if (isset($role_mapping[$course_group])) {
+                        $membership_type = $role_mapping[$course_group];
+                        
+                        // Set meta fields
+                        update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
+                        update_user_meta($user_id, 'iw_membership_status', 'active');
+                        update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                        update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+                        update_user_meta($user_id, '_ielts_cm_membership_expiry', $iw_expiry);
+                        
+                        // Assign WordPress role
+                        $user = get_userdata($user_id);
+                        if ($user) {
+                            // Remove any existing access code membership roles first
+                            $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+                            foreach ($access_code_roles as $role_slug) {
+                                $user->remove_role($role_slug);
+                            }
+                            // Add the new role
+                            $user->add_role($membership_type);
+                        }
+                        
+                        // Enroll user in courses based on course group
+                        $access_codes->enroll_user_in_courses($user_id, $course_group);
+                    }
+                } elseif (empty($course_group)) {
+                    // Course group cleared - remove role and clear all access code meta fields
+                    $user = get_userdata($user_id);
+                    if ($user && class_exists('IELTS_CM_Access_Codes')) {
+                        $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+                        foreach ($access_code_roles as $role_slug) {
+                            $user->remove_role($role_slug);
+                        }
+                    }
+                    // Clear all access code related meta fields
+                    delete_user_meta($user_id, 'iw_membership_status');
+                    delete_user_meta($user_id, 'iw_membership_expiry');
+                    delete_user_meta($user_id, '_ielts_cm_membership_type');
+                    delete_user_meta($user_id, '_ielts_cm_membership_status');
+                    delete_user_meta($user_id, '_ielts_cm_membership_expiry');
+                }
+            }
         }
         
-        if (isset($_POST['iw_membership_expiry'])) {
-            $iw_expiry = sanitize_text_field($_POST['iw_membership_expiry']);
-            // Convert from date format (Y-m-d) to MySQL datetime at end of day
-            if (!empty($iw_expiry)) {
-                $iw_expiry = date('Y-m-d', strtotime($iw_expiry)) . ' 23:59:59';
+        // Only update expiry separately if course group didn't change
+        // (to avoid overwriting the expiry that was just set above)
+        if (isset($_POST['iw_membership_expiry']) && !$course_group_changed) {
+            $iw_expiry_input = sanitize_text_field($_POST['iw_membership_expiry']);
+            // Validate and convert from date format (Y-m-d) to MySQL datetime at end of day
+            if (!empty($iw_expiry_input)) {
+                $timestamp = strtotime($iw_expiry_input);
+                if ($timestamp !== false) {
+                    $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
+                    update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
+                }
             }
-            update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
         }
         
         // Save course enrollments (legacy fields - maintained for backward compatibility)
@@ -1186,10 +1277,9 @@ class IELTS_CM_Membership {
                         }
                     }
                     
-                    // IMPORTANT: Returning false here does NOT mean "no access"
-                    // It means "don't use the paid membership course mapping system"
-                    // Access code users will be granted access via the is_enrolled() check
-                    // which validates their enrollment table records and role
+                    // IMPORTANT: Return false to skip paid membership course mapping
+                    // Access code users will be validated via enrollment table + role check in is_enrolled()
+                    // This ensures they only access courses in their specific course group
                     return false;
                 }
             }

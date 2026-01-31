@@ -1236,7 +1236,14 @@ class IELTS_CM_Access_Codes {
         return $code;
     }
     
-    private function enroll_user_in_courses($user_id, $course_group) {
+    /**
+     * Enroll user in courses based on their course group
+     * Public method so it can be called from admin enrollment process
+     * 
+     * @param int $user_id User ID to enroll
+     * @param string $course_group Course group (academic_module, general_module, general_english)
+     */
+    public function enroll_user_in_courses($user_id, $course_group) {
         // Handle backward compatibility with old course group names
         $legacy_mapping = array(
             'academic_english' => 'academic_module',
