@@ -17,17 +17,15 @@ class IELTS_CM_Access_Codes {
     const STATUS_EXPIRED = 'expired';
     
     private $course_groups = array(
-        'academic_english' => 'IELTS Academic + English',
-        'general_english' => 'IELTS General Training + English',
-        'english_only' => 'General English Only',
-        'all_courses' => 'All Courses'
+        'academic_module' => 'Academic Module',
+        'general_module' => 'General Training Module',
+        'general_english' => 'General English'
     );
     
     private $course_group_descriptions = array(
-        'academic_english' => 'Includes IELTS Academic module and General English courses',
-        'general_english' => 'Includes IELTS General Training module and General English courses',
-        'english_only' => 'Only General English courses (no IELTS content)',
-        'all_courses' => 'Full access to all courses (Academic, General Training, and English)'
+        'academic_module' => 'Includes courses with slugs: academic, english, academic-practice-tests',
+        'general_module' => 'Includes courses with slugs: general, english, general-practice-tests',
+        'general_english' => 'Only includes course with slug: english'
     );
     
     public function __construct() {
@@ -225,18 +223,10 @@ class IELTS_CM_Access_Codes {
             .iw-table th { background: #f9f9f9; font-weight: 600; }
             .iw-table tr:hover { background: #f5f5f5; }
             input[type="text"], input[type="email"], input[type="number"], select { padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; width: 100%; }
-            .iw-welcome { background: #e7f3ff; padding: 15px; border-left: 4px solid #0073aa; margin-bottom: 20px; }
         </style>
         
         <div class="iw-dashboard">
-            <div class="iw-welcome">
-                <?php 
-                $current_user = wp_get_current_user();
-                $display_name = $current_user->display_name ?: $current_user->user_login;
-                ?>
-                <h2>Welcome, <?php echo esc_html($display_name); ?>!</h2>
-                <p><strong>Active Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
-            </div>
+            <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
@@ -259,13 +249,6 @@ class IELTS_CM_Access_Codes {
                                             <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
                                         <?php endforeach; ?>
                                     </select>
-                                    <p class="description" style="margin-top: 5px; font-size: 12px; color: #666;">
-                                        <strong>What's included:</strong><br>
-                                        • <strong>IELTS Academic + English:</strong> IELTS Academic module + General English<br>
-                                        • <strong>IELTS General Training + English:</strong> IELTS General Training + General English<br>
-                                        • <strong>General English Only:</strong> Only General English courses<br>
-                                        • <strong>All Courses:</strong> Complete access to all modules
-                                    </p>
                                 </td>
                             </tr>
                             <tr>
@@ -340,11 +323,15 @@ class IELTS_CM_Access_Codes {
                 </div>
             </div>
             
-            <div class="iw-card collapsed">
+            <div class="iw-card expanded">
                 <div class="iw-card-header">
                     <h2>Managed Students</h2>
                 </div>
                 <div class="iw-card-body">
+                    <div style="margin-bottom: 15px;">
+                        <button class="iw-filter-btn active" data-filter-students="active">Active</button>
+                        <button class="iw-filter-btn" data-filter-students="expired">Expired</button>
+                    </div>
                     <?php echo $this->render_students_table($active_students); ?>
                 </div>
             </div>
@@ -416,6 +403,34 @@ class IELTS_CM_Access_Codes {
                     });
                 },
                 
+                filterStudents: function(status) {
+                    $('.iw-filter-btn[data-filter-students]').removeClass('active');
+                    $('.iw-filter-btn[data-filter-students="' + status + '"]').addClass('active');
+                    
+                    var $table = $('.iw-students-table');
+                    var $rows = $table.find('tbody tr');
+                    var visibleCount = 0;
+                    
+                    $rows.each(function() {
+                        var rowStatus = $(this).data('student-status');
+                        if (rowStatus === status) {
+                            $(this).show();
+                            visibleCount++;
+                        } else {
+                            $(this).hide();
+                        }
+                    });
+                    
+                    // Show/hide empty state messages
+                    $('[data-empty-state]').hide();
+                    if (visibleCount === 0) {
+                        $table.hide();
+                        $('[data-empty-state="' + status + '"]').show();
+                    } else {
+                        $table.show();
+                    }
+                },
+                
                 downloadCSV: function() {
                     function escapeCSV(val) {
                         if (val.indexOf(',') >= 0 || val.indexOf('"') >= 0 || val.indexOf('\n') >= 0) {
@@ -446,10 +461,19 @@ class IELTS_CM_Access_Codes {
             };
             
             // Filter button handlers
-            $('.iw-filter-btn').on('click', function() {
+            $('.iw-filter-btn[data-filter]').on('click', function() {
                 var filter = $(this).data('filter');
                 IWDashboard.filterCodes(filter);
             });
+            
+            // Student filter button handlers
+            $('.iw-filter-btn[data-filter-students]').on('click', function() {
+                var filter = $(this).data('filter-students');
+                IWDashboard.filterStudents(filter);
+            });
+            
+            // Initialize student filter to show active by default
+            IWDashboard.filterStudents('active');
             
             $('#create-invite-form').on('submit', function(e) {
                 e.preventDefault();
@@ -568,12 +592,15 @@ class IELTS_CM_Access_Codes {
     
     private function render_students_table($students) {
         if (empty($students)) {
-            return '<p>No students managed yet.</p>';
+            return '<p class="no-students-msg">No students managed yet.</p>';
         }
         
-        $html = '<table class="iw-table"><thead><tr>';
-        $html .= '<th>Username</th><th>Email</th><th>Group</th><th>Expiry</th><th>Action</th>';
+        $html = '<table class="iw-table iw-students-table"><thead><tr>';
+        $html .= '<th>Username</th><th>Email</th><th>Group</th><th>Expiry</th><th>Status</th><th>Action</th>';
         $html .= '</tr></thead><tbody>';
+        
+        $has_active = false;
+        $has_expired = false;
         
         foreach ($students as $student) {
             $user = get_userdata($student->user_id);
@@ -582,16 +609,43 @@ class IELTS_CM_Access_Codes {
             $group = get_user_meta($student->user_id, 'iw_course_group', true);
             $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
             
-            $html .= '<tr>';
+            // Determine if membership is active or expired
+            $is_active = false;
+            $status_label = 'No Membership';
+            if ($expiry) {
+                $expiry_timestamp = strtotime($expiry);
+                $is_active = $expiry_timestamp > time();
+                $status_label = $is_active ? 'Active' : 'Expired';
+            }
+            
+            if ($is_active) {
+                $has_active = true;
+            } else {
+                $has_expired = true;
+            }
+            
+            $status_class = $is_active ? 'active' : 'expired';
+            
+            $html .= '<tr data-student-status="' . esc_attr($status_class) . '">';
             $html .= '<td>' . esc_html($user->user_login) . '</td>';
             $html .= '<td>' . esc_html($user->user_email) . '</td>';
-            $html .= '<td>' . esc_html($this->course_groups[$group] ?? $group) . '</td>';
-            $html .= '<td>' . esc_html($expiry ? date('Y-m-d', strtotime($expiry)) : '-') . '</td>';
+            $html .= '<td>' . esc_html($this->get_course_group_display_name($group)) . '</td>';
+            $html .= '<td>' . esc_html($expiry ? date('Y-m-d H:i', strtotime($expiry)) : '-') . '</td>';
+            $html .= '<td><span style="color: ' . ($is_active ? 'green' : 'red') . ';">' . esc_html($status_label) . '</span></td>';
             $html .= '<td><button class="iw-btn iw-btn-danger" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button></td>';
             $html .= '</tr>';
         }
         
         $html .= '</tbody></table>';
+        
+        // Add messages for empty states
+        if (!$has_active) {
+            $html .= '<p class="no-students-msg" data-empty-state="active" style="display: none;">No active students.</p>';
+        }
+        if (!$has_expired) {
+            $html .= '<p class="no-students-msg" data-empty-state="expired" style="display: none;">No expired students.</p>';
+        }
+        
         return $html;
     }
     
@@ -790,20 +844,30 @@ class IELTS_CM_Access_Codes {
     }
     
     private function enroll_user_in_courses($user_id, $course_group) {
+        // Handle backward compatibility with old course group names
+        $legacy_mapping = array(
+            'academic_english' => 'academic_module',
+            'english_only' => 'general_english',
+            'all_courses' => 'academic_module'  // Map to academic as it was the most common
+        );
+        
+        if (isset($legacy_mapping[$course_group])) {
+            $course_group = $legacy_mapping[$course_group];
+            // Update the user meta to the new value
+            update_user_meta($user_id, 'iw_course_group', $course_group);
+        }
+        
         $courses = array();
         
         switch ($course_group) {
-            case 'academic_english':
+            case 'academic_module':
                 $courses = array('ielts_academic', 'general_english');
                 break;
-            case 'general_english':
+            case 'general_module':
                 $courses = array('ielts_general', 'general_english');
                 break;
-            case 'english_only':
+            case 'general_english':
                 $courses = array('general_english');
-                break;
-            case 'all_courses':
-                $courses = array('ielts_academic', 'ielts_general', 'general_english');
                 break;
         }
         
@@ -837,5 +901,25 @@ class IELTS_CM_Access_Codes {
         $message .= "Best regards,\nIELTS Course Team";
         
         wp_mail($user->user_email, $subject, $message);
+    }
+    
+    /**
+     * Get display name for course group, including legacy values
+     */
+    private function get_course_group_display_name($group) {
+        // Legacy course group names for backward compatibility
+        $legacy_groups = array(
+            'academic_english' => 'IELTS Academic + English (Legacy)',
+            'english_only' => 'General English Only (Legacy)',
+            'all_courses' => 'All Courses (Legacy)'
+        );
+        
+        if (isset($this->course_groups[$group])) {
+            return $this->course_groups[$group];
+        } elseif (isset($legacy_groups[$group])) {
+            return $legacy_groups[$group];
+        } else {
+            return $group;
+        }
     }
 }
