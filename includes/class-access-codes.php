@@ -911,11 +911,10 @@ class IELTS_CM_Access_Codes {
         }
         
         // Merge and deduplicate user IDs
-        $user_ids = array_merge(
-            array_map(function($user) { return $user->ID; }, $users_by_partner),
-            array_map(function($user) { return $user->ID; }, $users_with_access_codes)
-        );
-        $user_ids = array_unique($user_ids);
+        $user_ids = array_unique(array_merge(
+            array_column($users_by_partner, 'ID'),
+            array_column($users_with_access_codes, 'ID')
+        ));
         
         // Return in format compatible with existing code
         $results = array();
