@@ -1124,8 +1124,11 @@ class IELTS_CM_Access_Codes {
     /**
      * Get course IDs by category slugs
      * 
-     * @param array $category_slugs Array of category slugs to query
-     * @return array Array of course IDs
+     * Queries the database for published courses that have any of the specified category slugs.
+     * This is used to dynamically enroll users in courses based on their membership type.
+     * 
+     * @param array $category_slugs Array of category slugs to query (e.g., ['academic', 'english'])
+     * @return array Array of course IDs. Returns empty array if no category slugs provided or no matching courses found.
      */
     private function get_courses_by_category_slugs($category_slugs) {
         if (empty($category_slugs)) {

@@ -1194,17 +1194,19 @@ class IELTS_CM_Membership {
             foreach ($user->roles as $role) {
                 if (in_array($role, $access_code_roles)) {
                     // Access code users rely on enrollment table, not course mapping
-                    // They'll be granted access via is_enrolled() check instead
                     // Check their expiry via iw_membership_expiry meta
                     $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
                     if (!empty($expiry_date)) {
                         $expiry_timestamp = strtotime($expiry_date);
                         if ($expiry_timestamp <= time()) {
-                            return false; // Expired
+                            return false; // Expired - deny access
                         }
                     }
-                    // For access code users, return false here so is_enrolled() handles the actual check
-                    // This prevents them from being granted access through the course mapping system
+                    
+                    // IMPORTANT: Returning false here does NOT mean "no access"
+                    // It means "don't use the paid membership course mapping system"
+                    // Access code users will be granted access via the is_enrolled() check
+                    // which validates their enrollment table records and role
                     return false;
                 }
             }
