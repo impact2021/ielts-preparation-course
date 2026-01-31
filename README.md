@@ -21,6 +21,8 @@ WordPress plugin for managing IELTS preparation exercises, quizzes, and tests.
 - **Template Files**: See `templates/` directory for PHP templates
 - **Gamification Ideas**: See [GAMIFICATION_RECOMMENDATIONS.md](GAMIFICATION_RECOMMENDATIONS.md) for enhancement suggestions
 - **Progress Rings & Skills Radar**: See [PROGRESS_RINGS_AND_SKILLS_RADAR_GUIDE.md](PROGRESS_RINGS_AND_SKILLS_RADAR_GUIDE.md) for using the new shortcodes
+- **External Membership Integration**: See [EXTERNAL_MEMBERSHIP_INTEGRATION_GUIDE.md](EXTERNAL_MEMBERSHIP_INTEGRATION_GUIDE.md) for integrating with external membership systems (LearnDash, etc.)
+  - **Quick Reference**: See [EXTERNAL_MEMBERSHIP_QUICK_REFERENCE.md](EXTERNAL_MEMBERSHIP_QUICK_REFERENCE.md) for a condensed reference
 
 ## 🎯 Common Questions
 
