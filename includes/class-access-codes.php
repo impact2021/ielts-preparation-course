@@ -889,7 +889,7 @@ class IELTS_CM_Access_Codes {
         
         // Also get all users with access code memberships but NO partner assignment
         // This catches legacy students created before the partner system was fully implemented
-        // Only include these if we're the first/admin partner (for backwards compatibility)
+        // Only administrators can see legacy users (those without partner assignment)
         $users_with_access_codes = array();
         if (current_user_can('manage_options')) {
             // Admin can see all legacy access code users
@@ -910,10 +910,10 @@ class IELTS_CM_Access_Codes {
             ));
         }
         
-        // Merge and deduplicate user IDs
+        // Merge and deduplicate user IDs using WordPress-optimized function
         $user_ids = array_unique(array_merge(
-            array_column($users_by_partner, 'ID'),
-            array_column($users_with_access_codes, 'ID')
+            wp_list_pluck($users_by_partner, 'ID'),
+            wp_list_pluck($users_with_access_codes, 'ID')
         ));
         
         // Return in format compatible with existing code
