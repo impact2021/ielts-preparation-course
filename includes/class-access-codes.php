@@ -234,7 +234,7 @@ class IELTS_CM_Access_Codes {
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Create invite codes</h2>
+                    <h2>Create Invite Codes</h2>
                 </div>
                 <div class="iw-card-body">
                     <div id="create-invite-msg"></div>
@@ -276,7 +276,7 @@ class IELTS_CM_Access_Codes {
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Create user manually</h2>
+                    <h2>Create User Manually</h2>
                 </div>
                 <div class="iw-card-body">
                     <div id="create-user-msg"></div>
@@ -319,7 +319,7 @@ class IELTS_CM_Access_Codes {
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Your codes</h2>
+                    <h2>Your Codes</h2>
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
@@ -336,7 +336,7 @@ class IELTS_CM_Access_Codes {
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Students</h2>
+                    <h2>Managed Students</h2>
                 </div>
                 <div class="iw-card-body">
                     <?php echo $this->render_students_table($active_students); ?>
