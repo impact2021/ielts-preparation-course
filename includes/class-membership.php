@@ -1186,11 +1186,9 @@ class IELTS_CM_Membership {
                         }
                     }
                     
-                    // IMPORTANT: Returning false here does NOT mean "no access"
-                    // It means "don't use the paid membership course mapping system"
-                    // Access code users will be granted access via the is_enrolled() check
-                    // which validates their enrollment table records and role
-                    return false;
+                    // Grant access to access code users who are not expired
+                    // They will be checked against the enrollment table in is_enrolled()
+                    return true;
                 }
             }
         }
