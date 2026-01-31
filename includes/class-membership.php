@@ -214,14 +214,18 @@ class IELTS_CM_Membership {
         $enrolled_general = get_user_meta($user->ID, 'enrolled_ielts_general', true);
         $enrolled_english = get_user_meta($user->ID, 'enrolled_general_english', true);
         
+        // Updated course groups to match requirements
         $course_groups = array(
-            'academic_english' => 'IELTS Academic + English',
-            'general_english' => 'IELTS General Training + English',
-            'english_only' => 'General English Only',
-            'all_courses' => 'All Courses'
+            'academic_module' => 'Academic Module',
+            'general_module' => 'General Training Module',
+            'general_english' => 'General English'
         );
+        
+        // Check if paid membership system is enabled
+        $membership_enabled = get_option('ielts_cm_membership_enabled', false);
         ?>
         <h2><?php _e('Membership Information', 'ielts-course-manager'); ?></h2>
+        <?php if ($membership_enabled): ?>
         <table class="form-table">
             <tr>
                 <th><label for="ielts_cm_membership_type"><?php _e('Membership Type', 'ielts-course-manager'); ?></label></th>
@@ -245,6 +249,9 @@ class IELTS_CM_Membership {
                 </td>
             </tr>
         </table>
+        <?php else: ?>
+        <p class="description"><?php _e('Paid membership system is disabled. Use Access Code Enrollment below to manage user access.', 'ielts-course-manager'); ?></p>
+        <?php endif; ?>
         
         <h2><?php _e('Access Code Enrollment', 'ielts-course-manager'); ?></h2>
         <table class="form-table">
@@ -259,7 +266,11 @@ class IELTS_CM_Membership {
                             </option>
                         <?php endforeach; ?>
                     </select>
-                    <p class="description"><?php _e('Course group assigned via access codes or manual enrollment', 'ielts-course-manager'); ?></p>
+                    <p class="description">
+                        <strong><?php _e('Academic Module:', 'ielts-course-manager'); ?></strong> <?php _e('Includes courses with slugs: academic, english, academic-practice-tests', 'ielts-course-manager'); ?><br>
+                        <strong><?php _e('General Training Module:', 'ielts-course-manager'); ?></strong> <?php _e('Includes courses with slugs: general, english, general-practice-tests', 'ielts-course-manager'); ?><br>
+                        <strong><?php _e('General English:', 'ielts-course-manager'); ?></strong> <?php _e('Only includes course with slug: english', 'ielts-course-manager'); ?>
+                    </p>
                 </td>
             </tr>
             <tr>
