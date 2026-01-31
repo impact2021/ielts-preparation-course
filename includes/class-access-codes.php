@@ -568,170 +568,171 @@ class IELTS_CM_Access_Codes {
         </div>
         
         <script>
+        // Define IWDashboard object outside of jQuery ready to make it immediately available
+        window.IWDashboard = {
+            deleteNonce: '<?php echo wp_create_nonce('iw_delete_code'); ?>',
+            revokeNonce: '<?php echo wp_create_nonce('iw_revoke_student'); ?>',
+            editNonce: '<?php echo wp_create_nonce('iw_edit_student'); ?>',
+            resendNonce: '<?php echo wp_create_nonce('iw_resend_welcome'); ?>',
+            
+            filterCodes: function(status) {
+                jQuery('.iw-filter-btn').removeClass('active');
+                jQuery('.iw-filter-btn[data-filter="' + status + '"]').addClass('active');
+                
+                if (status === 'all') {
+                    jQuery('.iw-table tbody tr').show();
+                } else if (status === 'available') {
+                    jQuery('.iw-table tbody tr').each(function() {
+                        if (jQuery(this).data('status') === 'active') {
+                            jQuery(this).show();
+                        } else {
+                            jQuery(this).hide();
+                        }
+                    });
+                } else {
+                    jQuery('.iw-table tbody tr').each(function() {
+                        if (jQuery(this).data('status') === status) {
+                            jQuery(this).show();
+                        } else {
+                            jQuery(this).hide();
+                        }
+                    });
+                }
+            },
+            
+            deleteCode: function(codeId) {
+                if (!confirm('Delete this code?')) return;
+                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                    action: 'iw_delete_code',
+                    code_id: codeId,
+                    nonce: IWDashboard.deleteNonce
+                }, function(response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert(response.data.message);
+                    }
+                });
+            },
+            
+            revokeStudent: function(userId) {
+                if (!confirm('Revoke access for this student?')) return;
+                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                    action: 'iw_revoke_student',
+                    user_id: userId,
+                    nonce: IWDashboard.revokeNonce
+                }, function(response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert(response.data.message);
+                    }
+                });
+            },
+            
+            editStudent: function(userId) {
+                var currentExpiry = '';
+                var $row = jQuery('.iw-students-table tr[data-user-id="' + userId + '"]');
+                if ($row.length) {
+                    currentExpiry = $row.find('.expiry-display').text().trim();
+                    if (currentExpiry === '-') currentExpiry = '';
+                }
+                
+                var newExpiry = prompt('Enter new expiry date (dd/mm/yyyy):', currentExpiry);
+                if (!newExpiry) return;
+                
+                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                    action: 'iw_edit_student',
+                    user_id: userId,
+                    expiry: newExpiry,
+                    nonce: IWDashboard.editNonce
+                }, function(response) {
+                    if (response.success) {
+                        alert(response.data.message);
+                        location.reload();
+                    } else {
+                        alert(response.data.message);
+                    }
+                });
+            },
+            
+            resendWelcome: function(userId) {
+                if (!confirm('This will generate a new password and send a welcome email. Continue?')) return;
+                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                    action: 'iw_resend_welcome',
+                    user_id: userId,
+                    nonce: IWDashboard.resendNonce
+                }, function(response) {
+                    if (response.success) {
+                        alert(response.data.message);
+                    } else {
+                        alert(response.data.message);
+                    }
+                });
+            },
+            
+            filterStudents: function(status) {
+                jQuery('.iw-filter-btn[data-filter-students]').removeClass('active');
+                jQuery('.iw-filter-btn[data-filter-students="' + status + '"]').addClass('active');
+                
+                var $table = jQuery('.iw-students-table');
+                var $rows = $table.find('tbody tr');
+                var visibleCount = 0;
+                
+                $rows.each(function() {
+                    var rowStatus = jQuery(this).data('student-status');
+                    if (rowStatus === status) {
+                        jQuery(this).show();
+                        visibleCount++;
+                    } else {
+                        jQuery(this).hide();
+                    }
+                });
+                
+                // Show/hide empty state messages
+                jQuery('[data-empty-state]').hide();
+                if (visibleCount === 0) {
+                    $table.hide();
+                    jQuery('[data-empty-state="' + status + '"]').show();
+                } else {
+                    $table.show();
+                }
+            },
+            
+            downloadCSV: function() {
+                function escapeCSV(val) {
+                    if (val.indexOf(',') >= 0 || val.indexOf('"') >= 0 || val.indexOf('\n') >= 0) {
+                        return '"' + val.replace(/"/g, '""') + '"';
+                    }
+                    return val;
+                }
+                
+                var csv = 'Code,Group,Days,Status,Used By,Created\n';
+                jQuery('.iw-table tbody tr:visible').each(function() {
+                    var cols = jQuery(this).find('td');
+                    if (cols.length >= 6) {
+                        csv += escapeCSV(cols.eq(0).text()) + ',';
+                        csv += escapeCSV(cols.eq(1).text()) + ',';
+                        csv += escapeCSV(cols.eq(2).text()) + ',';
+                        csv += escapeCSV(cols.eq(3).text()) + ',';
+                        csv += escapeCSV(cols.eq(4).text()) + ',';
+                        csv += escapeCSV(cols.eq(5).text()) + '\n';
+                    }
+                });
+                var blob = new Blob([csv], { type: 'text/csv' });
+                var url = window.URL.createObjectURL(blob);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = 'invite-codes.csv';
+                a.click();
+            }
+        };
+        
         jQuery(document).ready(function($) {
             // Collapsible card functionality
             $('.iw-card-header').on('click', function() {
                 $(this).parent('.iw-card').toggleClass('collapsed expanded');
             });
-            
-            window.IWDashboard = {
-                deleteNonce: '<?php echo wp_create_nonce('iw_delete_code'); ?>',
-                revokeNonce: '<?php echo wp_create_nonce('iw_revoke_student'); ?>',
-                editNonce: '<?php echo wp_create_nonce('iw_edit_student'); ?>',
-                resendNonce: '<?php echo wp_create_nonce('iw_resend_welcome'); ?>',
-                
-                filterCodes: function(status) {
-                    $('.iw-filter-btn').removeClass('active');
-                    $('.iw-filter-btn[data-filter="' + status + '"]').addClass('active');
-                    
-                    if (status === 'all') {
-                        $('.iw-table tbody tr').show();
-                    } else if (status === 'available') {
-                        $('.iw-table tbody tr').each(function() {
-                            if ($(this).data('status') === 'active') {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                    } else {
-                        $('.iw-table tbody tr').each(function() {
-                            if ($(this).data('status') === status) {
-                                $(this).show();
-                            } else {
-                                $(this).hide();
-                            }
-                        });
-                    }
-                },
-                
-                deleteCode: function(codeId) {
-                    if (!confirm('Delete this code?')) return;
-                    $.post('<?php echo admin_url('admin-ajax.php'); ?>', {
-                        action: 'iw_delete_code',
-                        code_id: codeId,
-                        nonce: IWDashboard.deleteNonce
-                    }, function(response) {
-                        if (response.success) {
-                            location.reload();
-                        } else {
-                            alert(response.data.message);
-                        }
-                    });
-                },
-                
-                revokeStudent: function(userId) {
-                    if (!confirm('Revoke access for this student?')) return;
-                    $.post('<?php echo admin_url('admin-ajax.php'); ?>', {
-                        action: 'iw_revoke_student',
-                        user_id: userId,
-                        nonce: IWDashboard.revokeNonce
-                    }, function(response) {
-                        if (response.success) {
-                            location.reload();
-                        } else {
-                            alert(response.data.message);
-                        }
-                    });
-                },
-                
-                editStudent: function(userId) {
-                    var currentExpiry = '';
-                    var $row = $('.iw-students-table tr[data-user-id="' + userId + '"]');
-                    if ($row.length) {
-                        currentExpiry = $row.find('.expiry-display').text().trim();
-                        if (currentExpiry === '-') currentExpiry = '';
-                    }
-                    
-                    var newExpiry = prompt('Enter new expiry date (dd/mm/yyyy):', currentExpiry);
-                    if (!newExpiry) return;
-                    
-                    $.post('<?php echo admin_url('admin-ajax.php'); ?>', {
-                        action: 'iw_edit_student',
-                        user_id: userId,
-                        expiry: newExpiry,
-                        nonce: IWDashboard.editNonce
-                    }, function(response) {
-                        if (response.success) {
-                            alert(response.data.message);
-                            location.reload();
-                        } else {
-                            alert(response.data.message);
-                        }
-                    });
-                },
-                
-                resendWelcome: function(userId) {
-                    if (!confirm('This will generate a new password and send a welcome email. Continue?')) return;
-                    $.post('<?php echo admin_url('admin-ajax.php'); ?>', {
-                        action: 'iw_resend_welcome',
-                        user_id: userId,
-                        nonce: IWDashboard.resendNonce
-                    }, function(response) {
-                        if (response.success) {
-                            alert(response.data.message);
-                        } else {
-                            alert(response.data.message);
-                        }
-                    });
-                },
-                
-                filterStudents: function(status) {
-                    $('.iw-filter-btn[data-filter-students]').removeClass('active');
-                    $('.iw-filter-btn[data-filter-students="' + status + '"]').addClass('active');
-                    
-                    var $table = $('.iw-students-table');
-                    var $rows = $table.find('tbody tr');
-                    var visibleCount = 0;
-                    
-                    $rows.each(function() {
-                        var rowStatus = $(this).data('student-status');
-                        if (rowStatus === status) {
-                            $(this).show();
-                            visibleCount++;
-                        } else {
-                            $(this).hide();
-                        }
-                    });
-                    
-                    // Show/hide empty state messages
-                    $('[data-empty-state]').hide();
-                    if (visibleCount === 0) {
-                        $table.hide();
-                        $('[data-empty-state="' + status + '"]').show();
-                    } else {
-                        $table.show();
-                    }
-                },
-                
-                downloadCSV: function() {
-                    function escapeCSV(val) {
-                        if (val.indexOf(',') >= 0 || val.indexOf('"') >= 0 || val.indexOf('\n') >= 0) {
-                            return '"' + val.replace(/"/g, '""') + '"';
-                        }
-                        return val;
-                    }
-                    
-                    var csv = 'Code,Group,Days,Status,Used By,Created\n';
-                    $('.iw-table tbody tr:visible').each(function() {
-                        var cols = $(this).find('td');
-                        if (cols.length >= 6) {
-                            csv += escapeCSV(cols.eq(0).text()) + ',';
-                            csv += escapeCSV(cols.eq(1).text()) + ',';
-                            csv += escapeCSV(cols.eq(2).text()) + ',';
-                            csv += escapeCSV(cols.eq(3).text()) + ',';
-                            csv += escapeCSV(cols.eq(4).text()) + ',';
-                            csv += escapeCSV(cols.eq(5).text()) + '\n';
-                        }
-                    });
-                    var blob = new Blob([csv], { type: 'text/csv' });
-                    var url = window.URL.createObjectURL(blob);
-                    var a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'invite-codes.csv';
-                    a.click();
-                }
-            };
             
             // Filter button handlers
             $('.iw-filter-btn[data-filter]').on('click', function() {
