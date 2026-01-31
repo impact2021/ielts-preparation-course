@@ -283,38 +283,21 @@ class IELTS_CM_Membership {
                 <th><label for="iw_membership_expiry"><?php _e('Access Code Expiry', 'ielts-course-manager'); ?></label></th>
                 <td>
                     <?php
-                    $datetime_local_value = '';
+                    $date_value = '';
                     if ($iw_expiry) {
                         $timestamp = strtotime($iw_expiry);
                         if ($timestamp !== false) {
-                            $datetime_local_value = date('Y-m-d\TH:i', $timestamp);
+                            $date_value = date('Y-m-d', $timestamp);
                         }
                     }
                     ?>
-                    <input type="datetime-local" name="iw_membership_expiry" id="iw_membership_expiry" 
-                           value="<?php echo esc_attr($datetime_local_value); ?>" class="regular-text">
-                    <p class="description"><?php _e('Expiry date for access code based enrollment', 'ielts-course-manager'); ?></p>
-                </td>
-            </tr>
-            <tr>
-                <th><?php _e('Enrolled Courses', 'ielts-course-manager'); ?></th>
-                <td>
-                    <label style="display: block; margin-bottom: 5px;">
-                        <input type="checkbox" name="enrolled_ielts_academic" value="true" <?php checked($enrolled_academic, 'true'); ?>>
-                        <?php _e('IELTS Academic', 'ielts-course-manager'); ?>
-                    </label>
-                    <label style="display: block; margin-bottom: 5px;">
-                        <input type="checkbox" name="enrolled_ielts_general" value="true" <?php checked($enrolled_general, 'true'); ?>>
-                        <?php _e('IELTS General Training', 'ielts-course-manager'); ?>
-                    </label>
-                    <label style="display: block; margin-bottom: 5px;">
-                        <input type="checkbox" name="enrolled_general_english" value="true" <?php checked($enrolled_english, 'true'); ?>>
-                        <?php _e('General English', 'ielts-course-manager'); ?>
-                    </label>
-                    <p class="description"><?php _e('Check courses this user should have access to', 'ielts-course-manager'); ?></p>
+                    <input type="date" name="iw_membership_expiry" id="iw_membership_expiry" 
+                           value="<?php echo esc_attr($date_value); ?>" class="regular-text">
+                    <p class="description"><?php _e('Expiry date for access code based enrollment. Dates are displayed in dd/mm/yyyy format throughout the system.', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
         </table>
+        <p class="description"><em><?php _e('Note: Course access is determined by the Course Group selection above. The checkboxes below are legacy fields and will be deprecated.', 'ielts-course-manager'); ?></em></p>
         <?php
     }
     
@@ -363,14 +346,14 @@ class IELTS_CM_Membership {
         
         if (isset($_POST['iw_membership_expiry'])) {
             $iw_expiry = sanitize_text_field($_POST['iw_membership_expiry']);
-            // Convert from datetime-local format to MySQL datetime
+            // Convert from date format (Y-m-d) to MySQL datetime at end of day
             if (!empty($iw_expiry)) {
-                $iw_expiry = date('Y-m-d H:i:s', strtotime($iw_expiry));
+                $iw_expiry = date('Y-m-d', strtotime($iw_expiry)) . ' 23:59:59';
             }
             update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
         }
         
-        // Save course enrollments
+        // Save course enrollments (legacy fields - maintained for backward compatibility)
         if (isset($_POST['enrolled_ielts_academic'])) {
             update_user_meta($user_id, 'enrolled_ielts_academic', 'true');
         } else {

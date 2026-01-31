@@ -164,6 +164,52 @@ class IELTS_CM_Shortcodes {
             }
         }
         
+        // Also filter based on access code enrollment
+        if (is_user_logged_in()) {
+            $user_id = get_current_user_id();
+            $course_group = get_user_meta($user_id, 'iw_course_group', true);
+            
+            if (!empty($course_group)) {
+                $filtered_courses = array();
+                foreach ($courses as $course) {
+                    $course_categories = wp_get_post_terms($course->ID, 'ielts_course_category', array('fields' => 'slugs'));
+                    $include_course = false;
+                    
+                    // Determine if course should be included based on course group
+                    if ($course_group === 'academic_module') {
+                        // Include academic, english, and academic-practice-tests
+                        foreach ($course_categories as $cat) {
+                            if (in_array($cat, array('academic', 'english', 'academic-practice-tests'))) {
+                                $include_course = true;
+                                break;
+                            }
+                        }
+                    } elseif ($course_group === 'general_module') {
+                        // Include general, english, and general-practice-tests
+                        foreach ($course_categories as $cat) {
+                            if (in_array($cat, array('general', 'english', 'general-practice-tests'))) {
+                                $include_course = true;
+                                break;
+                            }
+                        }
+                    } elseif ($course_group === 'general_english') {
+                        // Include only english
+                        foreach ($course_categories as $cat) {
+                            if ($cat === 'english') {
+                                $include_course = true;
+                                break;
+                            }
+                        }
+                    }
+                    
+                    if ($include_course) {
+                        $filtered_courses[] = $course;
+                    }
+                }
+                $courses = $filtered_courses;
+            }
+        }
+        
         // Pass columns setting to template
         $columns = intval($atts['columns']);
         if ($columns < 1) {
@@ -552,6 +598,8 @@ class IELTS_CM_Shortcodes {
         // Get membership information
         $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
         $expiry_date = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        $iw_expiry = get_user_meta($user_id, 'iw_membership_expiry', true);
+        $course_group = get_user_meta($user_id, 'iw_course_group', true);
         $is_trial = $membership_type && IELTS_CM_Membership::is_trial_membership($membership_type);
         $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
         
@@ -599,9 +647,9 @@ class IELTS_CM_Shortcodes {
                                     } else {
                                         $expiry_timestamp = strtotime($expiry_date);
                                         if ($is_expired) {
-                                            echo '<span class="expired-text">' . date('F j, Y g:i a', $expiry_timestamp) . ' (' . __('Expired', 'ielts-course-manager') . ')</span>';
+                                            echo '<span class="expired-text">' . date('d/m/Y', $expiry_timestamp) . ' (' . __('Expired', 'ielts-course-manager') . ')</span>';
                                         } else {
-                                            echo '<span class="active-text">' . date('F j, Y g:i a', $expiry_timestamp) . '</span>';
+                                            echo '<span class="active-text">' . date('d/m/Y', $expiry_timestamp) . '</span>';
                                         }
                                     }
                                     ?>
@@ -622,6 +670,37 @@ class IELTS_CM_Shortcodes {
                         <p><?php _e('You do not have an active membership.', 'ielts-course-manager'); ?></p>
                     <?php endif; ?>
                     
+                    <?php if ($iw_expiry && $course_group): ?>
+                        <h3><?php _e('Access Code Enrollment', 'ielts-course-manager'); ?></h3>
+                        <table class="account-info-table">
+                            <tr>
+                                <th><?php _e('Course Group:', 'ielts-course-manager'); ?></th>
+                                <td><?php 
+                                    $course_groups = array(
+                                        'academic_module' => 'Academic Module',
+                                        'general_module' => 'General Training Module',
+                                        'general_english' => 'General English'
+                                    );
+                                    echo esc_html($course_groups[$course_group] ?? $course_group);
+                                ?></td>
+                            </tr>
+                            <tr>
+                                <th><?php _e('Course Expiry:', 'ielts-course-manager'); ?></th>
+                                <td>
+                                    <?php 
+                                    $iw_expiry_timestamp = strtotime($iw_expiry);
+                                    $iw_is_expired = $iw_expiry_timestamp < time();
+                                    if ($iw_is_expired) {
+                                        echo '<span class="expired-text">' . date('d/m/Y', $iw_expiry_timestamp) . ' (' . __('Expired', 'ielts-course-manager') . ')</span>';
+                                    } else {
+                                        echo '<span class="active-text">' . date('d/m/Y', $iw_expiry_timestamp) . '</span>';
+                                    }
+                                    ?>
+                                </td>
+                            </tr>
+                        </table>
+                    <?php endif; ?>
+                    
                     <h4><?php _e('My Courses', 'ielts-course-manager'); ?></h4>
                     <?php if (empty($enrolled_courses)): ?>
                         <p><?php _e('You are not currently enrolled in any courses.', 'ielts-course-manager'); ?></p>
@@ -632,8 +711,8 @@ class IELTS_CM_Shortcodes {
                                 if (!$course) continue;
                                 
                                 $completion = $progress_tracker->get_course_completion_percentage($user_id, $enrollment_data->course_id);
-                                $enrolled_date = date('F j, Y', strtotime($enrollment_data->enrolled_date));
-                                $end_date = $enrollment_data->course_end_date ? date('F j, Y', strtotime($enrollment_data->course_end_date)) : __('No end date set', 'ielts-course-manager');
+                                $enrolled_date = date('d/m/Y', strtotime($enrollment_data->enrolled_date));
+                                $end_date = $enrollment_data->course_end_date ? date('d/m/Y', strtotime($enrollment_data->course_end_date)) : __('No end date set', 'ielts-course-manager');
                                 
                                 // Check if course access has expired
                                 $course_expired = false;
