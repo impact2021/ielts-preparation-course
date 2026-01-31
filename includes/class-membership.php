@@ -346,12 +346,14 @@ class IELTS_CM_Membership {
         
         // Save access code enrollment fields
         $course_group = isset($_POST['iw_course_group']) ? sanitize_text_field($_POST['iw_course_group']) : null;
+        $course_group_changed = false;
         
         if ($course_group !== null) {
             $old_course_group = get_user_meta($user_id, 'iw_course_group', true);
             
             // Check if course group changed or is being set for first time
             if ($course_group !== $old_course_group) {
+                $course_group_changed = true;
                 update_user_meta($user_id, 'iw_course_group', $course_group);
                 
                 // If a course group is selected, assign role and enroll in courses
@@ -410,7 +412,7 @@ class IELTS_CM_Membership {
                         $access_codes->enroll_user_in_courses($user_id, $course_group);
                     }
                 } elseif (empty($course_group)) {
-                    // Course group cleared - remove role and unenroll
+                    // Course group cleared - remove role and clear all access code meta fields
                     $user = get_userdata($user_id);
                     if ($user && class_exists('IELTS_CM_Access_Codes')) {
                         $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
@@ -418,18 +420,19 @@ class IELTS_CM_Membership {
                             $user->remove_role($role_slug);
                         }
                     }
-                    // Clear meta fields
+                    // Clear all access code related meta fields
                     delete_user_meta($user_id, 'iw_membership_status');
+                    delete_user_meta($user_id, 'iw_membership_expiry');
                     delete_user_meta($user_id, '_ielts_cm_membership_type');
+                    delete_user_meta($user_id, '_ielts_cm_membership_status');
+                    delete_user_meta($user_id, '_ielts_cm_membership_expiry');
                 }
             }
         }
         
         // Only update expiry separately if course group didn't change
         // (to avoid overwriting the expiry that was just set above)
-        $course_group_unchanged = ($course_group === null || $course_group === get_user_meta($user_id, 'iw_course_group', true));
-        
-        if (isset($_POST['iw_membership_expiry']) && $course_group_unchanged) {
+        if (isset($_POST['iw_membership_expiry']) && !$course_group_changed) {
             $iw_expiry_input = sanitize_text_field($_POST['iw_membership_expiry']);
             // Validate and convert from date format (Y-m-d) to MySQL datetime at end of day
             if (!empty($iw_expiry_input)) {
