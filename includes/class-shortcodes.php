@@ -631,7 +631,8 @@ class IELTS_CM_Shortcodes {
                         $membership_name = isset(IELTS_CM_Membership::MEMBERSHIP_LEVELS[$membership_type]) 
                             ? IELTS_CM_Membership::MEMBERSHIP_LEVELS[$membership_type] 
                             : $membership_type;
-                        $is_expired = !empty($expiry_date) && strtotime($expiry_date) < time();
+                        $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
+                        $is_expired = $expiry_timestamp !== false && $expiry_timestamp < time();
                     ?>
                         <table class="account-info-table">
                             <tr>
@@ -716,8 +717,11 @@ class IELTS_CM_Shortcodes {
                                 
                                 // Check if course access has expired
                                 $course_expired = false;
-                                if ($enrollment_data->course_end_date && strtotime($enrollment_data->course_end_date) < time()) {
-                                    $course_expired = true;
+                                if ($enrollment_data->course_end_date) {
+                                    $course_end_timestamp = strtotime($enrollment_data->course_end_date);
+                                    if ($course_end_timestamp !== false && $course_end_timestamp < time()) {
+                                        $course_expired = true;
+                                    }
                                 }
                             ?>
                                 <div class="enrolled-course-item <?php echo $course_expired ? 'expired' : ''; ?>">
@@ -2472,8 +2476,9 @@ class IELTS_CM_Shortcodes {
         $is_trial = !empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type);
         
         // Check if membership is expired
+        $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
         $is_expired = ($membership_status === 'expired') || 
-                      (!empty($expiry_date) && strtotime($expiry_date) < time());
+                      ($expiry_timestamp !== false && $expiry_timestamp < time());
         
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
@@ -2639,7 +2644,8 @@ class IELTS_CM_Shortcodes {
                                 <th><?php _e('Status:', 'ielts-course-manager'); ?></th>
                                 <td>
                                     <?php 
-                                    if (!empty($expiry_date) && strtotime($expiry_date) < time()) {
+                                    $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
+                                    if ($expiry_timestamp !== false && $expiry_timestamp < time()) {
                                         echo '<span class="ielts-status-expired">' . __('Expired', 'ielts-course-manager') . '</span>';
                                     } else {
                                         echo '<span class="ielts-status-active">' . __('Active', 'ielts-course-manager') . '</span>';

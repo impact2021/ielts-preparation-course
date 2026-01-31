@@ -191,8 +191,9 @@ class IELTS_CM_Membership {
                 : $membership_type;
             
             // Check status first, then fall back to date comparison for legacy data
+            $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
             $is_expired = ($status === self::STATUS_EXPIRED) || 
-                          (!empty($expiry_date) && strtotime($expiry_date) < time());
+                          ($expiry_timestamp !== false && $expiry_timestamp < time());
             
             if ($is_expired) {
                 return '<span style="color: #dc3232;">' . esc_html($membership_name) . ' (Expired)</span>';
@@ -621,7 +622,8 @@ class IELTS_CM_Membership {
                         <?php foreach ($users as $user):
                             $membership_type = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
                             $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
-                            $is_expired = !empty($expiry_date) && strtotime($expiry_date) < time();
+                            $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
+                            $is_expired = $expiry_timestamp !== false && $expiry_timestamp < time();
                             $membership_name = isset(self::MEMBERSHIP_LEVELS[$membership_type]) 
                                 ? self::MEMBERSHIP_LEVELS[$membership_type] 
                                 : $membership_type;
@@ -1275,7 +1277,9 @@ class IELTS_CM_Membership {
                     $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
                     if (!empty($expiry_date)) {
                         $expiry_timestamp = strtotime($expiry_date);
-                        if ($expiry_timestamp <= time()) {
+                        // Only check expiry if strtotime succeeded (returns false on failure)
+                        // If strtotime fails, we don't deny access - treat as no expiry set
+                        if ($expiry_timestamp !== false && $expiry_timestamp <= time()) {
                             return false; // Expired - deny access
                         }
                     }
