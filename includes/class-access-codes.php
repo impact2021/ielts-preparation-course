@@ -443,7 +443,7 @@ class IELTS_CM_Access_Codes {
             <?php 
             $remaining_places = $max_students - $active_count;
             ?>
-            <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
+            <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo esc_html($active_count); ?> / <?php echo esc_html($max_students); ?></p>
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
@@ -452,7 +452,7 @@ class IELTS_CM_Access_Codes {
                 <div class="iw-card-body">
                     <?php if ($remaining_places <= 0): ?>
                         <div class="iw-msg error">
-                            You have reached your student limit (<?php echo $max_students; ?> students). 
+                            You have reached your student limit (<?php echo esc_html($max_students); ?> students). 
                             Please contact support to upgrade your tier or remove expired students.
                         </div>
                     <?php else: ?>
@@ -463,8 +463,8 @@ class IELTS_CM_Access_Codes {
                             <tr>
                                 <th>Number of Codes:</th>
                                 <td>
-                                    <input type="number" name="quantity" min="1" max="<?php echo $remaining_places; ?>" value="1" required>
-                                    <p class="description">Remaining places: <?php echo $remaining_places; ?></p>
+                                    <input type="number" name="quantity" min="1" max="<?php echo esc_attr($remaining_places); ?>" value="1" required>
+                                    <p class="description">Remaining places: <?php echo esc_html($remaining_places); ?></p>
                                 </td>
                             </tr>
                             <tr>
@@ -1107,9 +1107,10 @@ class IELTS_CM_Access_Codes {
             // Generate cryptographically secure 8-character alphanumeric code
             // Exclude visually ambiguous characters (0, O, 1, I, l) for better usability
             $chars = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ';
+            $chars_length = strlen($chars);
             $code = '';
             for ($i = 0; $i < 8; $i++) {
-                $code .= $chars[random_int(0, strlen($chars) - 1)];
+                $code .= $chars[random_int(0, $chars_length - 1)];
             }
             
             // Check if code already exists (using efficient SELECT 1 query)
