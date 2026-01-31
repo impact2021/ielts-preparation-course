@@ -321,6 +321,10 @@ class IELTS_CM_Sync_Status_Page {
         </style>
         
         <script>
+        var ielts_cm_i18n = {
+            confirm_bulk_sync: '<?php echo esc_js(sprintf(__('Are you sure you want to sync %s item(s) to all subsites?', 'ielts-course-manager'), '{count}')); ?>'
+        };
+        
         jQuery(document).ready(function($) {
             var isChecking = false;
             var currentFilter = 'all';
@@ -437,8 +441,10 @@ class IELTS_CM_Sync_Status_Page {
             
             $('#last-page').on('click', function() {
                 var totalPages = parseInt($('#total-pages').text());
-                currentPage = totalPages;
-                applyFilterAndPagination();
+                if (totalPages > 0) {
+                    currentPage = totalPages;
+                    applyFilterAndPagination();
+                }
             });
             
             $('#current-page-selector').on('change', function() {
@@ -549,7 +555,8 @@ class IELTS_CM_Sync_Status_Page {
                     return;
                 }
                 
-                if (!confirm('Are you sure you want to sync ' + selectedItems.length + ' item(s) to all subsites?')) {
+                var confirmMessage = ielts_cm_i18n.confirm_bulk_sync.replace('{count}', selectedItems.length);
+                if (!confirm(confirmMessage)) {
                     return;
                 }
                 
@@ -570,6 +577,9 @@ class IELTS_CM_Sync_Status_Page {
                             var messageHtml = '<span style="color: #155724;">✓ ' + results.success + ' item(s) synced successfully';
                             if (results.failed > 0) {
                                 messageHtml += ', ' + results.failed + ' failed';
+                                if (results.errors && results.errors.length > 0) {
+                                    messageHtml += '<br><small>' + results.errors.join('<br>') + '</small>';
+                                }
                             }
                             messageHtml += '</span>';
                             $message.html(messageHtml);
