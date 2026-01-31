@@ -322,7 +322,7 @@ class IELTS_CM_Sync_Status_Page {
         
         <script>
         var ielts_cm_i18n = {
-            confirm_bulk_sync: '<?php echo esc_js(sprintf(__('Are you sure you want to sync %s item(s) to all subsites?', 'ielts-course-manager'), '{count}')); ?>'
+            confirm_bulk_sync: '<?php echo esc_js(__('Are you sure you want to sync {count} item(s) to all subsites?', 'ielts-course-manager')); ?>'
         };
         
         jQuery(document).ready(function($) {
@@ -404,7 +404,7 @@ class IELTS_CM_Sync_Status_Page {
                 
                 // Enable/disable pagination buttons
                 $('#first-page, #prev-page').prop('disabled', currentPage === 1);
-                $('#next-page, #last-page').prop('disabled', currentPage >= totalPages || totalPages === 0);
+                $('#next-page, #last-page').prop('disabled', currentPage === totalPages || totalPages === 0);
             }
             
             // Tab click handler
