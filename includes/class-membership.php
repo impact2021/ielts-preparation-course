@@ -73,7 +73,7 @@ class IELTS_CM_Membership {
         // Create custom roles for membership levels on init
         $this->create_membership_roles();
         
-        // Always add admin menu and register settings so users can enable/disable the system
+        // Add admin menu (only shows if system is enabled) and register settings
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
         
@@ -276,6 +276,11 @@ class IELTS_CM_Membership {
      * Add admin menu
      */
     public function add_admin_menu() {
+        // Only add the membership menu if the system is enabled
+        if (!$this->is_enabled()) {
+            return;
+        }
+        
         // Main memberships menu
         add_menu_page(
             __('Memberships', 'ielts-course-manager'),

@@ -4836,10 +4836,19 @@ class IELTS_CM_Admin {
             } else {
                 update_option('ielts_cm_delete_data_on_uninstall', false);
             }
+            
+            // Save membership system toggle
+            if (isset($_POST['ielts_cm_membership_enabled'])) {
+                update_option('ielts_cm_membership_enabled', true);
+            } else {
+                update_option('ielts_cm_membership_enabled', false);
+            }
+            
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
         
         $delete_data_on_uninstall = get_option('ielts_cm_delete_data_on_uninstall', false);
+        $membership_enabled = get_option('ielts_cm_membership_enabled', false);
         ?>
         <div class="wrap">
             <h1><?php _e('IELTS Course Manager Settings', 'ielts-course-manager'); ?></h1>
@@ -4848,6 +4857,22 @@ class IELTS_CM_Admin {
                 <?php wp_nonce_field('ielts_cm_settings', 'ielts_cm_settings_nonce'); ?>
                 
                 <table class="form-table">
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Membership System', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_membership_enabled" value="1" <?php checked($membership_enabled, true); ?>>
+                                    <?php _e('Enable Membership System', 'ielts-course-manager'); ?>
+                                </label>
+                                <p class="description">
+                                    <?php _e('Enable the membership system including the Memberships admin menu. When disabled, all membership features will be hidden. Use this if your site has its own external membership system.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
                     <tr>
                         <th scope="row">
                             <?php _e('Data Management', 'ielts-course-manager'); ?>
