@@ -87,6 +87,12 @@ class IELTS_CM_Membership {
             wp_schedule_event(time(), 'daily', 'ielts_cm_check_expired_memberships');
         }
         
+        // Add user edit fields (always show, including Access Code Enrollment section)
+        add_action('show_user_profile', array($this, 'user_membership_fields'));
+        add_action('edit_user_profile', array($this, 'user_membership_fields'));
+        add_action('personal_options_update', array($this, 'save_user_membership_fields'));
+        add_action('edit_user_profile_update', array($this, 'save_user_membership_fields'));
+        
         // Only initialize other features if membership system is enabled
         if (!$this->is_enabled()) {
             return;
@@ -95,12 +101,6 @@ class IELTS_CM_Membership {
         // Add user columns
         add_filter('manage_users_columns', array($this, 'add_user_columns'));
         add_filter('manage_users_custom_column', array($this, 'user_column_content'), 10, 3);
-        
-        // Add user edit fields
-        add_action('show_user_profile', array($this, 'user_membership_fields'));
-        add_action('edit_user_profile', array($this, 'user_membership_fields'));
-        add_action('personal_options_update', array($this, 'save_user_membership_fields'));
-        add_action('edit_user_profile_update', array($this, 'save_user_membership_fields'));
     }
     
     /**
