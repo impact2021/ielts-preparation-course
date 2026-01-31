@@ -87,6 +87,7 @@ class IELTS_Course_Manager {
             // Initialize sync status page
             add_action('admin_menu', array($this->sync_status_page, 'add_menu_page'));
             add_action('wp_ajax_ielts_cm_check_sync_status', array($this->sync_status_page, 'handle_ajax_check_sync'));
+            add_action('wp_ajax_ielts_cm_bulk_sync', array($this->sync_status_page, 'handle_ajax_bulk_sync'));
         }
         
         // Initialize frontend

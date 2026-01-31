@@ -50,6 +50,55 @@ class IELTS_CM_Sync_Status_Page {
     }
     
     /**
+     * Handle AJAX request to bulk sync content
+     */
+    public function handle_ajax_bulk_sync() {
+        check_ajax_referer('ielts_cm_sync_status', 'nonce');
+        
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+            return;
+        }
+        
+        $content_items = isset($_POST['content_items']) ? json_decode(stripslashes($_POST['content_items']), true) : array();
+        
+        if (empty($content_items)) {
+            wp_send_json_error(array('message' => 'No items selected'));
+            return;
+        }
+        
+        $results = array(
+            'success' => 0,
+            'failed' => 0,
+            'errors' => array()
+        );
+        
+        foreach ($content_items as $item) {
+            $content_id = isset($item['id']) ? intval($item['id']) : 0;
+            $content_type = isset($item['type']) ? sanitize_text_field($item['type']) : '';
+            
+            if (!$content_id || !$content_type) {
+                continue;
+            }
+            
+            // Push content to all subsites
+            $sync_result = $this->sync_manager->push_content_to_subsites($content_id, $content_type);
+            
+            if (!is_wp_error($sync_result)) {
+                $results['success']++;
+            } else {
+                $results['failed']++;
+                $results['errors'][] = sprintf('Failed to sync %s (ID: %d): %s', $content_type, $content_id, $sync_result->get_error_message());
+            }
+        }
+        
+        wp_send_json_success(array(
+            'results' => $results,
+            'message' => sprintf('%d items synced successfully, %d failed', $results['success'], $results['failed'])
+        ));
+    }
+    
+    /**
      * Render the sync status page
      */
     public function render_page() {
@@ -99,6 +148,25 @@ class IELTS_CM_Sync_Status_Page {
                 <!-- Summary will be inserted here via JS -->
             </div>
             
+            <!-- Tabs for filtering by sync status -->
+            <div class="ielts-cm-sync-tabs" style="margin: 20px 0;">
+                <ul class="subsubsub">
+                    <li><a href="#" data-filter="all" class="current"><?php _e('All', 'ielts-course-manager'); ?> <span class="count" id="count-all">(0)</span></a> |</li>
+                    <li><a href="#" data-filter="synced"><?php _e('Synced', 'ielts-course-manager'); ?> <span class="count" id="count-synced">(0)</span></a> |</li>
+                    <li><a href="#" data-filter="out-of-sync"><?php _e('Out of Sync', 'ielts-course-manager'); ?> <span class="count" id="count-out-of-sync">(0)</span></a> |</li>
+                    <li><a href="#" data-filter="never-synced"><?php _e('Never Synced', 'ielts-course-manager'); ?> <span class="count" id="count-never-synced">(0)</span></a></li>
+                </ul>
+            </div>
+            
+            <!-- Bulk actions -->
+            <div class="ielts-cm-bulk-actions" style="margin: 10px 0;">
+                <button id="bulk-sync-selected" class="button button-secondary" disabled>
+                    <span class="dashicons dashicons-update"></span>
+                    <?php _e('Sync Selected to All Subsites', 'ielts-course-manager'); ?>
+                </button>
+                <span id="bulk-sync-message" style="margin-left: 15px; font-weight: bold;"></span>
+            </div>
+            
             <div class="ielts-cm-sync-status-content">
                 
                 <?php if (empty($courses_hierarchy)): ?>
@@ -110,33 +178,61 @@ class IELTS_CM_Sync_Status_Page {
                 <table class="wp-list-table widefat fixed striped">
                     <thead>
                         <tr>
-                            <th style="width: 40%;"><?php _e('Content Item', 'ielts-course-manager'); ?></th>
+                            <th style="width: 40px;">
+                                <input type="checkbox" id="select-all-items" />
+                            </th>
+                            <th style="width: 35%;"><?php _e('Content Item', 'ielts-course-manager'); ?></th>
                             <th style="width: 15%;"><?php _e('Type', 'ielts-course-manager'); ?></th>
                             <?php foreach ($subsites as $subsite): ?>
-                                <th style="width: <?php echo floor(45 / count($subsites)); ?>%;">
+                                <th style="width: <?php echo floor(40 / count($subsites)); ?>%;">
                                     <?php echo esc_html($subsite->site_name); ?>
                                 </th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
-                    <tbody>
-                        <?php foreach ($courses_hierarchy as $course): ?>
-                            <?php $this->render_content_row($course, 0, $subsites); ?>
+                    <tbody id="sync-status-table-body">
+                        <?php 
+                        $row_index = 0;
+                        foreach ($courses_hierarchy as $course): 
+                            $this->render_content_row($course, 0, $subsites, $row_index);
+                            $row_index++;
                             
-                            <?php foreach ($course['lessons'] as $lesson): ?>
-                                <?php $this->render_content_row($lesson, 1, $subsites); ?>
+                            foreach ($course['lessons'] as $lesson): 
+                                $this->render_content_row($lesson, 1, $subsites, $row_index);
+                                $row_index++;
                                 
-                                <?php foreach ($lesson['resources'] as $resource): ?>
-                                    <?php $this->render_content_row($resource, 2, $subsites); ?>
-                                <?php endforeach; ?>
+                                foreach ($lesson['resources'] as $resource): 
+                                    $this->render_content_row($resource, 2, $subsites, $row_index);
+                                    $row_index++;
+                                endforeach;
                                 
-                                <?php foreach ($lesson['exercises'] as $exercise): ?>
-                                    <?php $this->render_content_row($exercise, 2, $subsites); ?>
-                                <?php endforeach; ?>
-                            <?php endforeach; ?>
-                        <?php endforeach; ?>
+                                foreach ($lesson['exercises'] as $exercise): 
+                                    $this->render_content_row($exercise, 2, $subsites, $row_index);
+                                    $row_index++;
+                                endforeach;
+                            endforeach;
+                        endforeach; 
+                        ?>
                     </tbody>
                 </table>
+                
+                <!-- Pagination -->
+                <div class="tablenav bottom">
+                    <div class="tablenav-pages">
+                        <span class="displaying-num" id="displaying-num"></span>
+                        <span class="pagination-links">
+                            <button class="button" id="first-page" disabled>&laquo;</button>
+                            <button class="button" id="prev-page" disabled>&lsaquo;</button>
+                            <span class="paging-input">
+                                <label for="current-page-selector" class="screen-reader-text"><?php _e('Current Page', 'ielts-course-manager'); ?></label>
+                                <input class="current-page" id="current-page-selector" type="text" name="paged" value="1" size="2" aria-describedby="table-paging">
+                                <span class="tablenav-paging-text"> of <span class="total-pages" id="total-pages">1</span></span>
+                            </span>
+                            <button class="button" id="next-page" disabled>&rsaquo;</button>
+                            <button class="button" id="last-page" disabled>&raquo;</button>
+                        </span>
+                    </div>
+                </div>
                 
                 <?php endif; ?>
                 
@@ -225,9 +321,174 @@ class IELTS_CM_Sync_Status_Page {
         </style>
         
         <script>
+        var ielts_cm_i18n = {
+            confirm_bulk_sync: '<?php echo esc_js(__('Are you sure you want to sync %s item(s) to all subsites?', 'ielts-course-manager')); ?>',
+            no_items_found: '<?php echo esc_js(__('No items found', 'ielts-course-manager')); ?>',
+            items_display: '<?php echo esc_js(__('%1$s–%2$s of %3$s items', 'ielts-course-manager')); ?>',
+            syncing: '<?php echo esc_js(__('Syncing...', 'ielts-course-manager')); ?>',
+            error_occurred: '<?php echo esc_js(__('An error occurred', 'ielts-course-manager')); ?>'
+        };
+        
         jQuery(document).ready(function($) {
             var isChecking = false;
+            var currentFilter = 'all';
+            var currentPage = 1;
+            var itemsPerPage = 100;
+            var allRows = [];
             
+            // Initialize
+            function init() {
+                allRows = $('.sync-status-row').toArray();
+                updateCounts();
+                applyFilterAndPagination();
+            }
+            
+            // Update counts for each tab
+            function updateCounts() {
+                var counts = {
+                    all: allRows.length,
+                    synced: 0,
+                    'out-of-sync': 0,
+                    'never-synced': 0
+                };
+                
+                allRows.forEach(function(row) {
+                    var status = $(row).data('status');
+                    if (status in counts) {
+                        counts[status]++;
+                    }
+                });
+                
+                $('#count-all').text('(' + counts.all + ')');
+                $('#count-synced').text('(' + counts.synced + ')');
+                $('#count-out-of-sync').text('(' + counts['out-of-sync'] + ')');
+                $('#count-never-synced').text('(' + counts['never-synced'] + ')');
+            }
+            
+            // Filter and paginate rows
+            function applyFilterAndPagination() {
+                var filteredRows = allRows;
+                
+                // Apply filter
+                if (currentFilter !== 'all') {
+                    filteredRows = allRows.filter(function(row) {
+                        return $(row).data('status') === currentFilter;
+                    });
+                }
+                
+                // Hide all rows first
+                $(allRows).hide();
+                
+                // Calculate pagination
+                var totalItems = filteredRows.length;
+                var totalPages = Math.ceil(totalItems / itemsPerPage);
+                var startIndex = (currentPage - 1) * itemsPerPage;
+                var endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+                
+                // Show only current page items
+                for (var i = startIndex; i < endIndex; i++) {
+                    $(filteredRows[i]).show();
+                }
+                
+                // Update pagination controls
+                updatePagination(totalItems, totalPages);
+                
+                // Update display message
+                if (totalItems === 0) {
+                    $('#displaying-num').text(ielts_cm_i18n.no_items_found);
+                } else {
+                    $('#displaying-num').text(ielts_cm_i18n.items_display
+                        .replace('%1$s', startIndex + 1)
+                        .replace('%2$s', endIndex)
+                        .replace('%3$s', totalItems));
+                }
+            }
+            
+            // Update pagination controls
+            function updatePagination(totalItems, totalPages) {
+                $('#total-pages').text(totalPages);
+                $('#current-page-selector').val(currentPage);
+                
+                // Enable/disable pagination buttons
+                $('#first-page, #prev-page').prop('disabled', currentPage === 1);
+                $('#next-page, #last-page').prop('disabled', currentPage === totalPages || totalPages === 0);
+            }
+            
+            // Tab click handler
+            $('.ielts-cm-sync-tabs a').on('click', function(e) {
+                e.preventDefault();
+                $('.ielts-cm-sync-tabs a').removeClass('current');
+                $(this).addClass('current');
+                
+                currentFilter = $(this).data('filter');
+                currentPage = 1;
+                applyFilterAndPagination();
+            });
+            
+            // Pagination handlers
+            $('#first-page').on('click', function() {
+                currentPage = 1;
+                applyFilterAndPagination();
+            });
+            
+            $('#prev-page').on('click', function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    applyFilterAndPagination();
+                }
+            });
+            
+            $('#next-page').on('click', function() {
+                var totalPages = parseInt($('#total-pages').text());
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    applyFilterAndPagination();
+                }
+            });
+            
+            $('#last-page').on('click', function() {
+                var totalPages = parseInt($('#total-pages').text());
+                if (totalPages > 0) {
+                    currentPage = totalPages;
+                    applyFilterAndPagination();
+                }
+            });
+            
+            $('#current-page-selector').on('change', function() {
+                var totalPages = parseInt($('#total-pages').text());
+                var newPage = parseInt($(this).val());
+                if (newPage >= 1 && newPage <= totalPages) {
+                    currentPage = newPage;
+                    applyFilterAndPagination();
+                } else {
+                    $(this).val(currentPage);
+                }
+            });
+            
+            // Select all checkbox
+            $('#select-all-items').on('change', function() {
+                var isChecked = $(this).prop('checked');
+                $('.sync-status-row:visible .sync-item-checkbox').prop('checked', isChecked);
+                updateBulkActionButton();
+            });
+            
+            // Individual checkbox handler
+            $(document).on('change', '.sync-item-checkbox', function() {
+                updateBulkActionButton();
+                
+                // Update select-all checkbox state
+                var totalVisible = $('.sync-status-row:visible .sync-item-checkbox').length;
+                var totalChecked = $('.sync-status-row:visible .sync-item-checkbox:checked').length;
+                $('#select-all-items').prop('checked', totalVisible > 0 && totalVisible === totalChecked);
+            });
+            
+            // Update bulk action button state
+            function updateBulkActionButton() {
+                var checkedCount = $('.sync-item-checkbox:checked').length;
+                $('#bulk-sync-selected').prop('disabled', checkedCount === 0);
+            }
+            
+            // Check sync status button
             $('#check-sync-status').on('click', function() {
                 if (isChecking) {
                     return;
@@ -266,10 +527,10 @@ class IELTS_CM_Sync_Status_Page {
                             
                             $summary.html(summaryHtml).show();
                             
-                            // Reload the page to show updated status
+                            // Reload the page to show updated status without hiding the summary
                             setTimeout(function() {
                                 location.reload();
-                            }, 1500);
+                            }, 2000);
                         } else {
                             $message.html('<span style="color: #721c24;">✗ ' + response.data.message + '</span>');
                         }
@@ -283,6 +544,71 @@ class IELTS_CM_Sync_Status_Page {
                     }
                 });
             });
+            
+            // Bulk sync button
+            $('#bulk-sync-selected').on('click', function() {
+                var $button = $(this);
+                var $message = $('#bulk-sync-message');
+                var selectedItems = [];
+                
+                $('.sync-item-checkbox:checked').each(function() {
+                    selectedItems.push({
+                        id: $(this).data('content-id'),
+                        type: $(this).data('content-type')
+                    });
+                });
+                
+                if (selectedItems.length === 0) {
+                    return;
+                }
+                
+                var confirmMessage = ielts_cm_i18n.confirm_bulk_sync.replace('%s', selectedItems.length);
+                if (!confirm(confirmMessage)) {
+                    return;
+                }
+                
+                $button.prop('disabled', true);
+                $message.html('<span class="sync-status-badge sync-status-checking">' + ielts_cm_i18n.syncing + '</span>');
+                
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_bulk_sync',
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_sync_status'); ?>',
+                        content_items: JSON.stringify(selectedItems)
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            var results = response.data.results;
+                            var messageHtml = '<span style="color: #155724;">✓ ' + results.success + ' item(s) synced successfully';
+                            if (results.failed > 0) {
+                                messageHtml += ', ' + results.failed + ' failed';
+                                if (results.errors && results.errors.length > 0) {
+                                    messageHtml += '<br><small>' + results.errors.join('<br>') + '</small>';
+                                }
+                            }
+                            messageHtml += '</span>';
+                            $message.html(messageHtml);
+                            
+                            // Reload after 2 seconds to show updated status
+                            setTimeout(function() {
+                                location.reload();
+                            }, 2000);
+                        } else {
+                            $message.html('<span style="color: #721c24;">✗ ' + response.data.message + '</span>');
+                            $button.prop('disabled', false);
+                        }
+                    },
+                    error: function() {
+                        $message.html('<span style="color: #721c24;">✗ ' + ielts_cm_i18n.error_occurred + '</span>');
+                        $button.prop('disabled', false);
+                    }
+                });
+            });
+            
+            // Initialize on page load
+            init();
         });
         </script>
         <?php
@@ -291,11 +617,42 @@ class IELTS_CM_Sync_Status_Page {
     /**
      * Render a content row with sync status for all subsites
      */
-    private function render_content_row($content, $indent_level, $subsites) {
+    private function render_content_row($content, $indent_level, $subsites, $row_index = 0) {
         $status = $this->sync_manager->get_content_sync_status($content['id'], $content['type']);
         
+        // Determine overall sync status for filtering
+        $overall_status = 'synced';
+        $has_never_synced = false;
+        $has_out_of_sync = false;
+        
+        foreach ($subsites as $subsite) {
+            $site_status = $status['subsites'][$subsite->id] ?? null;
+            if ($site_status) {
+                if ($site_status['sync_status'] === 'never_synced') {
+                    $has_never_synced = true;
+                } elseif (!$site_status['synced']) {
+                    $has_out_of_sync = true;
+                }
+            }
+        }
+        
+        if ($has_never_synced) {
+            $overall_status = 'never-synced';
+        } elseif ($has_out_of_sync) {
+            $overall_status = 'out-of-sync';
+        }
+        
         ?>
-        <tr>
+        <tr class="sync-status-row" 
+            data-status="<?php echo esc_attr($overall_status); ?>" 
+            data-row-index="<?php echo esc_attr($row_index); ?>"
+            data-content-id="<?php echo esc_attr($content['id']); ?>"
+            data-content-type="<?php echo esc_attr($content['type']); ?>">
+            <td>
+                <input type="checkbox" class="sync-item-checkbox" 
+                       data-content-id="<?php echo esc_attr($content['id']); ?>"
+                       data-content-type="<?php echo esc_attr($content['type']); ?>" />
+            </td>
             <td class="indent-<?php echo $indent_level; ?>">
                 <strong><?php echo esc_html($content['title']); ?></strong>
             </td>
