@@ -195,6 +195,9 @@ class IELTS_CM_Access_Codes {
             .iw-btn:hover { background: #005177; color: #fff; }
             .iw-btn-danger { background: #dc3545; }
             .iw-btn-danger:hover { background: #c82333; }
+            .iw-filter-btn { display: inline-block; padding: 6px 12px; background: #f1f1f1; color: #333; border: 1px solid #ddd; border-radius: 3px; cursor: pointer; margin-right: 5px; }
+            .iw-filter-btn:hover { background: #e1e1e1; }
+            .iw-filter-btn.active { background: #0073aa; color: #fff; border-color: #0073aa; }
             .iw-msg { padding: 12px; border-radius: 3px; margin: 15px 0; }
             .iw-msg.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
             .iw-msg.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
@@ -287,8 +290,15 @@ class IELTS_CM_Access_Codes {
             </div>
             
             <div class="iw-card">
-                <h2>My Invite Codes</h2>
-                <button class="iw-btn" onclick="IWDashboard.downloadCSV()">Download CSV</button>
+                <h2>Your codes</h2>
+                <div style="margin-bottom: 15px;">
+                    <button class="iw-filter-btn active" data-filter="all">All</button>
+                    <button class="iw-filter-btn" data-filter="active">Active</button>
+                    <button class="iw-filter-btn" data-filter="available">Available</button>
+                    <button class="iw-filter-btn" data-filter="expired">Expired</button>
+                    <button class="iw-btn" onclick="IWDashboard.downloadCSV()" style="float: right;">Download CSV</button>
+                </div>
+                <div style="clear: both;"></div>
                 <?php echo $this->render_codes_table($partner_id); ?>
             </div>
             
@@ -303,6 +313,31 @@ class IELTS_CM_Access_Codes {
             window.IWDashboard = {
                 deleteNonce: '<?php echo wp_create_nonce('iw_delete_code'); ?>',
                 revokeNonce: '<?php echo wp_create_nonce('iw_revoke_student'); ?>',
+                
+                filterCodes: function(status) {
+                    $('.iw-filter-btn').removeClass('active');
+                    $('.iw-filter-btn[data-filter="' + status + '"]').addClass('active');
+                    
+                    if (status === 'all') {
+                        $('.iw-table tbody tr').show();
+                    } else if (status === 'available') {
+                        $('.iw-table tbody tr').each(function() {
+                            if ($(this).data('status') === 'active') {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    } else {
+                        $('.iw-table tbody tr').each(function() {
+                            if ($(this).data('status') === status) {
+                                $(this).show();
+                            } else {
+                                $(this).hide();
+                            }
+                        });
+                    }
+                },
                 
                 deleteCode: function(codeId) {
                     if (!confirm('Delete this code?')) return;
@@ -343,7 +378,7 @@ class IELTS_CM_Access_Codes {
                     }
                     
                     var csv = 'Code,Group,Days,Status,Used By,Created\n';
-                    $('.iw-table tbody tr').each(function() {
+                    $('.iw-table tbody tr:visible').each(function() {
                         var cols = $(this).find('td');
                         if (cols.length >= 6) {
                             csv += escapeCSV(cols.eq(0).text()) + ',';
@@ -362,6 +397,12 @@ class IELTS_CM_Access_Codes {
                     a.click();
                 }
             };
+            
+            // Filter button handlers
+            $('.iw-filter-btn').on('click', function() {
+                var filter = $(this).data('filter');
+                IWDashboard.filterCodes(filter);
+            });
             
             $('#create-invite-form').on('submit', function(e) {
                 e.preventDefault();
@@ -489,12 +530,20 @@ class IELTS_CM_Access_Codes {
     }
     
     private function get_partner_students($partner_id) {
-        global $wpdb;
-        $table = $wpdb->prefix . 'ielts_cm_access_codes';
-        return $wpdb->get_results($wpdb->prepare(
-            "SELECT DISTINCT used_by as user_id FROM $table WHERE created_by = %d AND status = 'used' AND used_by IS NOT NULL",
-            $partner_id
+        // Get all users managed by this partner
+        // This includes users created manually and users who used access codes
+        $users = get_users(array(
+            'meta_key' => 'iw_created_by_partner',
+            'meta_value' => $partner_id,
+            'fields' => array('ID')
         ));
+        
+        // Return in format compatible with existing code
+        $results = array();
+        foreach ($users as $user) {
+            $results[] = (object) array('user_id' => $user->ID);
+        }
+        return $results;
     }
     
     public function ajax_create_invite() {
