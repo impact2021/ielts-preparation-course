@@ -440,6 +440,9 @@ class IELTS_CM_Access_Codes {
         </style>
         
         <div class="iw-dashboard">
+            <?php 
+            $remaining_places = $max_students - $active_count;
+            ?>
             <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo $active_count; ?> / <?php echo $max_students; ?></p>
             
             <div class="iw-card collapsed">
@@ -452,8 +455,11 @@ class IELTS_CM_Access_Codes {
                         <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
                         <table class="iw-form-table">
                             <tr>
-                                <th>Number of Codes (1-10):</th>
-                                <td><input type="number" name="quantity" min="1" max="10" value="1" required></td>
+                                <th>Number of Codes:</th>
+                                <td>
+                                    <input type="number" name="quantity" min="1" max="<?php echo max(1, $remaining_places); ?>" value="1" required>
+                                    <p class="description">Remaining places: <?php echo $remaining_places; ?></p>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Course Group:</th>
@@ -758,7 +764,7 @@ class IELTS_CM_Access_Codes {
         }
         
         $html = '<table class="iw-table"><thead><tr>';
-        $html .= '<th>Code</th><th>Group</th><th>Days</th><th>Status</th><th>Used By</th><th>Created</th><th>Action</th>';
+        $html .= '<th>Code</th><th>Membership</th><th>Days</th><th>Status</th><th>Used By</th><th>Created</th><th>Action</th>';
         $html .= '</tr></thead><tbody>';
         
         foreach ($codes as $code) {
@@ -866,16 +872,35 @@ class IELTS_CM_Access_Codes {
     private function get_partner_students($partner_id) {
         // Get all users managed by this partner
         // This includes users created manually and users who used access codes
-        $users = get_users(array(
+        
+        // First get users with the partner meta key
+        $users_by_partner = get_users(array(
             'meta_key' => 'iw_created_by_partner',
             'meta_value' => $partner_id,
             'fields' => array('ID')
         ));
         
+        // Also get all users with access code memberships (for backwards compatibility)
+        // This catches students created before the partner system was fully implemented
+        $users_with_access_codes = get_users(array(
+            'meta_key' => 'iw_course_group',
+            'meta_compare' => 'EXISTS',
+            'fields' => array('ID')
+        ));
+        
+        // Merge and deduplicate user IDs
+        $all_user_ids = array();
+        foreach ($users_by_partner as $user) {
+            $all_user_ids[$user->ID] = true;
+        }
+        foreach ($users_with_access_codes as $user) {
+            $all_user_ids[$user->ID] = true;
+        }
+        
         // Return in format compatible with existing code
         $results = array();
-        foreach ($users as $user) {
-            $results[] = (object) array('user_id' => $user->ID);
+        foreach (array_keys($all_user_ids) as $user_id) {
+            $results[] = (object) array('user_id' => $user_id);
         }
         return $results;
     }
@@ -891,8 +916,19 @@ class IELTS_CM_Access_Codes {
         $course_group = sanitize_text_field($_POST['course_group']);
         $days = absint($_POST['days']);
         
-        if ($quantity < 1 || $quantity > 10) {
-            wp_send_json_error(array('message' => 'Quantity must be 1-10'));
+        // Check remaining places based on tier level
+        $partner_id = get_current_user_id();
+        $max_students = get_option('iw_max_students_per_partner', 100);
+        $active_students = $this->get_partner_students($partner_id);
+        $active_count = count($active_students);
+        $remaining_places = $max_students - $active_count;
+        
+        if ($quantity < 1) {
+            wp_send_json_error(array('message' => 'Quantity must be at least 1'));
+        }
+        
+        if ($quantity > $remaining_places) {
+            wp_send_json_error(array('message' => "You can only create {$remaining_places} more codes (tier limit: {$max_students}, current students: {$active_count})"));
         }
         
         if (!array_key_exists($course_group, $this->course_groups)) {
@@ -1049,7 +1085,8 @@ class IELTS_CM_Access_Codes {
         
         $attempts = 0;
         do {
-            $code = 'IELTS-' . strtoupper(substr(md5(uniqid(rand(), true)), 0, 8));
+            // Generate 8 digit alphanumeric code without prefix
+            $code = strtoupper(substr(md5(uniqid(rand(), true)), 0, 8));
             $exists = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table WHERE code = %s", $code));
             $attempts++;
         } while ($exists > 0 && $attempts < 10);
