@@ -947,7 +947,12 @@ class IELTS_CM_Access_Codes {
         }
         
         if ($quantity > $remaining_places) {
-            wp_send_json_error(array('message' => "You can only create {$remaining_places} more codes (tier limit: {$max_students}, current students: {$active_count})"));
+            wp_send_json_error(array('message' => sprintf(
+                'You can only create %d more codes (tier limit: %d, current students: %d)',
+                absint($remaining_places),
+                absint($max_students),
+                absint($active_count)
+            )));
         }
         
         if (!array_key_exists($course_group, $this->course_groups)) {
