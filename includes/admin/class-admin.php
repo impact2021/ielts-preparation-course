@@ -4844,11 +4844,19 @@ class IELTS_CM_Admin {
                 update_option('ielts_cm_membership_enabled', false);
             }
             
+            // Save access code membership system toggle
+            if (isset($_POST['ielts_cm_access_code_enabled'])) {
+                update_option('ielts_cm_access_code_enabled', true);
+            } else {
+                update_option('ielts_cm_access_code_enabled', false);
+            }
+            
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
         
         $delete_data_on_uninstall = get_option('ielts_cm_delete_data_on_uninstall', false);
         $membership_enabled = get_option('ielts_cm_membership_enabled', false);
+        $access_code_enabled = get_option('ielts_cm_access_code_enabled', false);
         ?>
         <div class="wrap">
             <h1><?php _e('IELTS Course Manager Settings', 'ielts-course-manager'); ?></h1>
@@ -4869,6 +4877,22 @@ class IELTS_CM_Admin {
                                 </label>
                                 <p class="description">
                                     <?php _e('Enable the membership system including the Memberships admin menu. When disabled, all membership features will be hidden. Use this if your site has its own external membership system.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Access Code System', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_access_code_enabled" value="1" <?php checked($access_code_enabled, true); ?>>
+                                    <?php _e('Enable Access Code Membership System', 'ielts-course-manager'); ?>
+                                </label>
+                                <p class="description">
+                                    <?php _e('Enable access code-based enrollment. Users can enroll in courses using access codes instead of or in addition to the payment-based membership system.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
                         </td>
