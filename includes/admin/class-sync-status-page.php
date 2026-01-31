@@ -322,7 +322,11 @@ class IELTS_CM_Sync_Status_Page {
         
         <script>
         var ielts_cm_i18n = {
-            confirm_bulk_sync: '<?php echo esc_js(__('Are you sure you want to sync {count} item(s) to all subsites?', 'ielts-course-manager')); ?>'
+            confirm_bulk_sync: '<?php echo esc_js(__('Are you sure you want to sync %s item(s) to all subsites?', 'ielts-course-manager')); ?>',
+            no_items_found: '<?php echo esc_js(__('No items found', 'ielts-course-manager')); ?>',
+            items_display: '<?php echo esc_js(__('%1$s–%2$s of %3$s items', 'ielts-course-manager')); ?>',
+            syncing: '<?php echo esc_js(__('Syncing...', 'ielts-course-manager')); ?>',
+            error_occurred: '<?php echo esc_js(__('An error occurred', 'ielts-course-manager')); ?>'
         };
         
         jQuery(document).ready(function($) {
@@ -391,9 +395,12 @@ class IELTS_CM_Sync_Status_Page {
                 
                 // Update display message
                 if (totalItems === 0) {
-                    $('#displaying-num').text('No items found');
+                    $('#displaying-num').text(ielts_cm_i18n.no_items_found);
                 } else {
-                    $('#displaying-num').text((startIndex + 1) + '–' + endIndex + ' of ' + totalItems + ' items');
+                    $('#displaying-num').text(ielts_cm_i18n.items_display
+                        .replace('%1$s', startIndex + 1)
+                        .replace('%2$s', endIndex)
+                        .replace('%3$s', totalItems));
                 }
             }
             
@@ -555,13 +562,13 @@ class IELTS_CM_Sync_Status_Page {
                     return;
                 }
                 
-                var confirmMessage = ielts_cm_i18n.confirm_bulk_sync.replace('{count}', selectedItems.length);
+                var confirmMessage = ielts_cm_i18n.confirm_bulk_sync.replace('%s', selectedItems.length);
                 if (!confirm(confirmMessage)) {
                     return;
                 }
                 
                 $button.prop('disabled', true);
-                $message.html('<span class="sync-status-badge sync-status-checking">Syncing...</span>');
+                $message.html('<span class="sync-status-badge sync-status-checking">' + ielts_cm_i18n.syncing + '</span>');
                 
                 $.ajax({
                     url: ajaxurl,
@@ -594,7 +601,7 @@ class IELTS_CM_Sync_Status_Page {
                         }
                     },
                     error: function() {
-                        $message.html('<span style="color: #721c24;">✗ An error occurred</span>');
+                        $message.html('<span style="color: #721c24;">✗ ' + ielts_cm_i18n.error_occurred + '</span>');
                         $button.prop('disabled', false);
                     }
                 });
