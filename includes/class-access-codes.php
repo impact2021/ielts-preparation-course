@@ -1104,8 +1104,8 @@ class IELTS_CM_Access_Codes {
         
         $attempts = 0;
         do {
-            // Generate 8 digit alphanumeric code without prefix
-            $code = strtoupper(substr(md5(uniqid(rand(), true)), 0, 8));
+            // Generate cryptographically secure 8-character alphanumeric code
+            $code = strtoupper(wp_generate_password(8, false));
             $exists = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table WHERE code = %s", $code));
             $attempts++;
         } while ($exists > 0 && $attempts < 10);
