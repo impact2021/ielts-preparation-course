@@ -525,8 +525,8 @@ class IELTS_CM_Access_Codes {
         
         foreach ($codes as $code) {
             $used_by_display = '-';
-            $status_display = 'Available';
             
+            // Determine status display based on code status
             if ($code->status === 'used' && $code->used_by) {
                 $user = get_userdata($code->used_by);
                 if ($user) {
@@ -541,6 +541,7 @@ class IELTS_CM_Access_Codes {
             } else if ($code->status === 'active') {
                 $status_display = 'Available';
             } else {
+                // Fallback for any other status
                 $status_display = ucfirst($code->status);
             }
             

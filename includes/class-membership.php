@@ -265,8 +265,17 @@ class IELTS_CM_Membership {
             <tr>
                 <th><label for="iw_membership_expiry"><?php _e('Access Code Expiry', 'ielts-course-manager'); ?></label></th>
                 <td>
+                    <?php
+                    $datetime_local_value = '';
+                    if ($iw_expiry) {
+                        $timestamp = strtotime($iw_expiry);
+                        if ($timestamp !== false) {
+                            $datetime_local_value = date('Y-m-d\TH:i', $timestamp);
+                        }
+                    }
+                    ?>
                     <input type="datetime-local" name="iw_membership_expiry" id="iw_membership_expiry" 
-                           value="<?php echo $iw_expiry ? esc_attr(date('Y-m-d\TH:i', strtotime($iw_expiry))) : ''; ?>" class="regular-text">
+                           value="<?php echo esc_attr($datetime_local_value); ?>" class="regular-text">
                     <p class="description"><?php _e('Expiry date for access code based enrollment', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
