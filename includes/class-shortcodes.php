@@ -3790,53 +3790,246 @@ class IELTS_CM_Shortcodes {
                 </div>
             <?php endif; ?>
             
-            <form method="post" action="" class="ielts-form">
+            <form method="post" action="" class="ielts-form ielts-access-code-form">
                 <?php wp_nonce_field('ielts_access_code_register', 'ielts_access_code_register_nonce'); ?>
                 
-                <p class="form-field">
+                <!-- Access Code Field - Full Width -->
+                <div class="form-field form-field-full">
                     <label for="ielts_access_code"><?php _e('Access Code', 'ielts-course-manager'); ?> <span class="required">*</span></label>
                     <input type="text" name="ielts_access_code" id="ielts_access_code" required class="ielts-form-input"
                            value="<?php echo isset($_POST['ielts_access_code']) ? esc_attr(strtoupper($_POST['ielts_access_code'])) : ''; ?>"
-                           style="text-transform: uppercase;" maxlength="50">
+                           style="text-transform: uppercase;" maxlength="50" placeholder="XXXXXXXX">
                     <small class="form-help"><?php _e('Enter the 8-character code you received', 'ielts-course-manager'); ?></small>
-                </p>
+                </div>
                 
-                <p class="form-field">
-                    <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                    <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
-                           value="<?php echo isset($_POST['ielts_first_name']) ? esc_attr($_POST['ielts_first_name']) : ''; ?>">
-                </p>
+                <!-- Two Column Layout -->
+                <div class="form-row form-row-2col">
+                    <div class="form-column">
+                        <h3 class="form-section-title"><?php _e('Personal Information', 'ielts-course-manager'); ?></h3>
+                        
+                        <div class="form-field">
+                            <label for="ielts_first_name"><?php _e('First Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="text" name="ielts_first_name" id="ielts_first_name" required class="ielts-form-input"
+                                   value="<?php echo isset($_POST['ielts_first_name']) ? esc_attr($_POST['ielts_first_name']) : ''; ?>"
+                                   placeholder="<?php esc_attr_e('John', 'ielts-course-manager'); ?>">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="text" name="ielts_last_name" id="ielts_last_name" required class="ielts-form-input"
+                                   value="<?php echo isset($_POST['ielts_last_name']) ? esc_attr($_POST['ielts_last_name']) : ''; ?>"
+                                   placeholder="<?php esc_attr_e('Doe', 'ielts-course-manager'); ?>">
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
+                                   value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>"
+                                   placeholder="<?php esc_attr_e('your@email.com', 'ielts-course-manager'); ?>">
+                            <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-column">
+                        <h3 class="form-section-title"><?php _e('Account Security', 'ielts-course-manager'); ?></h3>
+                        
+                        <div class="form-field">
+                            <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input"
+                                   placeholder="<?php esc_attr_e('Minimum 6 characters', 'ielts-course-manager'); ?>">
+                            <small class="form-help"><?php _e('Choose a strong password', 'ielts-course-manager'); ?></small>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input"
+                                   placeholder="<?php esc_attr_e('Re-enter password', 'ielts-course-manager'); ?>">
+                        </div>
+                    </div>
+                </div>
                 
-                <p class="form-field">
-                    <label for="ielts_last_name"><?php _e('Last Name', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                    <input type="text" name="ielts_last_name" id="ielts_last_name" required class="ielts-form-input"
-                           value="<?php echo isset($_POST['ielts_last_name']) ? esc_attr($_POST['ielts_last_name']) : ''; ?>">
-                </p>
-                
-                <p class="form-field">
-                    <label for="ielts_email"><?php _e('Email Address', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                    <input type="email" name="ielts_email" id="ielts_email" required class="ielts-form-input"
-                           value="<?php echo isset($_POST['ielts_email']) ? esc_attr($_POST['ielts_email']) : ''; ?>">
-                    <small class="form-help"><?php _e('You will use this email to log in', 'ielts-course-manager'); ?></small>
-                </p>
-                
-                <p class="form-field">
-                    <label for="ielts_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                    <input type="password" name="ielts_password" id="ielts_password" required class="ielts-form-input">
-                    <small class="form-help"><?php _e('Minimum 6 characters', 'ielts-course-manager'); ?></small>
-                </p>
-                
-                <p class="form-field">
-                    <label for="ielts_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                    <input type="password" name="ielts_password_confirm" id="ielts_password_confirm" required class="ielts-form-input">
-                </p>
-                
-                <p class="form-field">
+                <div class="form-field form-field-full form-submit">
                     <button type="submit" name="ielts_access_code_register_submit" class="ielts-button ielts-button-primary ielts-button-block">
-                        <?php _e('Create Account', 'ielts-course-manager'); ?>
+                        <?php _e('Create Account & Start Learning', 'ielts-course-manager'); ?>
                     </button>
-                </p>
+                </div>
             </form>
+            
+            <style>
+            .ielts-access-code-registration {
+                max-width: 900px;
+                margin: 30px auto;
+                padding: 40px;
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+            }
+            
+            .ielts-access-code-registration h2 {
+                margin: 0 0 10px 0;
+                color: #2c3e50;
+                font-size: 28px;
+                font-weight: 600;
+                text-align: center;
+            }
+            
+            .ielts-access-code-registration .form-description {
+                text-align: center;
+                color: #7f8c8d;
+                margin-bottom: 30px;
+                font-size: 16px;
+            }
+            
+            .ielts-message.ielts-error {
+                background: #fee;
+                border-left: 4px solid #e74c3c;
+                padding: 15px 20px;
+                margin-bottom: 25px;
+                border-radius: 6px;
+            }
+            
+            .ielts-message.ielts-error ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+            
+            .ielts-message.ielts-error li {
+                color: #c0392b;
+                margin: 5px 0;
+            }
+            
+            .ielts-access-code-form {
+                margin-top: 20px;
+            }
+            
+            .form-field {
+                margin-bottom: 20px;
+            }
+            
+            .form-field-full {
+                width: 100%;
+            }
+            
+            .form-field label {
+                display: block;
+                margin-bottom: 8px;
+                color: #34495e;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            
+            .form-field label .required {
+                color: #e74c3c;
+                margin-left: 2px;
+            }
+            
+            .ielts-form-input {
+                width: 100%;
+                padding: 12px 16px;
+                border: 2px solid #e0e0e0;
+                border-radius: 8px;
+                font-size: 15px;
+                transition: all 0.3s ease;
+                background: #fafafa;
+                box-sizing: border-box;
+            }
+            
+            .ielts-form-input:focus {
+                outline: none;
+                border-color: #3498db;
+                background: #ffffff;
+                box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+            }
+            
+            .ielts-form-input::placeholder {
+                color: #bdc3c7;
+            }
+            
+            .form-help {
+                display: block;
+                margin-top: 6px;
+                color: #95a5a6;
+                font-size: 13px;
+                font-style: italic;
+            }
+            
+            .form-row-2col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                margin: 25px 0;
+            }
+            
+            .form-column {
+                background: #f8f9fa;
+                padding: 25px;
+                border-radius: 10px;
+                border: 1px solid #e9ecef;
+            }
+            
+            .form-section-title {
+                margin: 0 0 20px 0;
+                color: #2c3e50;
+                font-size: 18px;
+                font-weight: 600;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #3498db;
+            }
+            
+            .form-submit {
+                margin-top: 30px;
+            }
+            
+            .ielts-button-primary {
+                background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+                color: #ffffff;
+                border: none;
+                padding: 16px 32px;
+                font-size: 16px;
+                font-weight: 600;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 6px rgba(52, 152, 219, 0.2);
+                width: 100%;
+            }
+            
+            .ielts-button-primary:hover {
+                background: linear-gradient(135deg, #2980b9 0%, #21618c 100%);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+            }
+            
+            .ielts-button-primary:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 4px rgba(52, 152, 219, 0.2);
+            }
+            
+            /* Mobile Responsive */
+            @media (max-width: 768px) {
+                .ielts-access-code-registration {
+                    padding: 25px 20px;
+                    margin: 15px;
+                }
+                
+                .form-row-2col {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+                
+                .form-column {
+                    padding: 20px;
+                }
+                
+                .ielts-access-code-registration h2 {
+                    font-size: 24px;
+                }
+                
+                .form-section-title {
+                    font-size: 16px;
+                }
+            }
+            </style>
         </div>
         <?php
         
