@@ -789,10 +789,7 @@ class IELTS_CM_Progress_Tracker {
         // Get resource counts for all lessons
         $resource_counts = $wpdb->get_results($wpdb->prepare("
             SELECT 
-                CASE 
-                    WHEN pm.meta_key = '_ielts_cm_lesson_id' THEN pm.meta_value
-                    ELSE NULL
-                END as lesson_id,
+                pm.meta_value as lesson_id,
                 COUNT(DISTINCT pm.post_id) as count
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
@@ -800,7 +797,7 @@ class IELTS_CM_Progress_Tracker {
               AND p.post_status = 'publish'
               AND pm.meta_key = '_ielts_cm_lesson_id'
               AND pm.meta_value IN ($lesson_placeholders)
-            GROUP BY lesson_id
+            GROUP BY pm.meta_value
         ", $lesson_ids), ARRAY_A);
         
         foreach ($resource_counts as $row) {
@@ -852,10 +849,7 @@ class IELTS_CM_Progress_Tracker {
         // Get quiz counts for all lessons
         $quiz_counts = $wpdb->get_results($wpdb->prepare("
             SELECT 
-                CASE 
-                    WHEN pm.meta_key = '_ielts_cm_lesson_id' THEN pm.meta_value
-                    ELSE NULL
-                END as lesson_id,
+                pm.meta_value as lesson_id,
                 COUNT(DISTINCT pm.post_id) as count
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
@@ -863,7 +857,7 @@ class IELTS_CM_Progress_Tracker {
               AND p.post_status = 'publish'
               AND pm.meta_key = '_ielts_cm_lesson_id'
               AND pm.meta_value IN ($lesson_placeholders)
-            GROUP BY lesson_id
+            GROUP BY pm.meta_value
         ", $lesson_ids), ARRAY_A);
         
         foreach ($quiz_counts as $row) {
