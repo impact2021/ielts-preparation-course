@@ -1,4 +1,44 @@
-# ⚠️ CRITICAL FEEDBACK RULES - READ FIRST ⚠️
+# ⚠️ CRITICAL RULES - READ BEFORE CREATING/EDITING JSONS ⚠️
+
+## ⛔ RULE #0: LISTENING TRANSCRIPT MARKERS - CORRECT FORMAT ONLY
+
+**ALWAYS use the correct HTML span format for transcript markers in listening tests.**
+
+### ✅ CORRECT Format:
+```html
+<span id="q1" data-question="1"></span><span class="reading-answer-marker">answer text</span>
+```
+
+### ❌ WRONG Formats (DO NOT USE):
+- `(Q1)` or `(Q1: answer)` - Old broken format
+- `[Q1]` or `[Q1: answer]` - Only for reading passages, NOT listening
+- Any format other than the HTML span format above
+
+### Placement Rules:
+1. Place marker **immediately before** the actual answer text
+2. The `reading-answer-marker` span should contain **ONLY** the answer text
+3. Do NOT include extra words or context in the marker
+
+### Example - Question asks for day of departure:
+**❌ WRONG:**
+```html
+it leaves at (Q5) 5.30pm sharp on Friday evening
+```
+Problem: Marker includes "5.30pm sharp on" which is not the answer
+
+**✅ CORRECT:**
+```html
+it leaves at 5.30pm sharp on <span id="q5" data-question="5"></span><span class="reading-answer-marker">Friday</span> evening
+```
+Only "Friday" is marked as the answer
+
+### Before Creating ANY Listening Test JSON:
+1. **READ** `TRANSCRIPT_MARKER_PLACEMENT_GUIDE.md`
+2. **VERIFY** all markers use `<span id="q#" data-question="#"></span><span class="reading-answer-marker">answer</span>` format
+3. **CHECK** each marker is placed immediately before the answer text (not at start of sentence)
+4. **NEVER** use `(Q#)`, `[Q#]`, or any other format
+
+---
 
 ## ⛔ RULE #1: NEVER REINSTATE THE GENERIC FEEDBACK TABLE
 
