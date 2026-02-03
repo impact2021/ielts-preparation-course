@@ -443,6 +443,7 @@ class IELTS_CM_Access_Codes {
             .iw-form-table th { text-align: left; padding: 10px; width: 200px; }
             .iw-form-table td { padding: 10px; }
             .iw-btn { display: inline-block; padding: 8px 16px; background: #0073aa; color: #fff; border: none; border-radius: 3px; cursor: pointer; text-decoration: none; }
+            .iw-btn-full-width { display: block; width: 100%; margin-bottom: 5px; }
             .iw-btn:hover { background: #005177; color: #fff; }
             .iw-btn-small { padding: 4px 8px; font-size: 12px; }
             .iw-btn-danger { background: #dc3545; }
@@ -855,7 +856,7 @@ class IELTS_CM_Access_Codes {
         }
         
         $html = '<table class="iw-table"><thead><tr>';
-        $html .= '<th>Code</th><th>Membership</th><th>Days</th><th>Status</th><th>Used By</th><th>Created</th><th>Action</th>';
+        $html .= '<th scope="col">Code</th><th scope="col">Membership</th><th scope="col">Days</th><th scope="col">Status</th><th scope="col">Used By</th><th scope="col">Created</th><th scope="col">Action</th>';
         $html .= '</tr></thead><tbody>';
         
         foreach ($codes as $code) {
@@ -907,7 +908,7 @@ class IELTS_CM_Access_Codes {
         }
         
         $html = '<table class="iw-table iw-students-table"><thead><tr>';
-        $html .= '<th>User Details</th><th>Membership</th><th>Expiry</th><th>Actions</th>';
+        $html .= '<th scope="col">User Details</th><th scope="col">Membership</th><th scope="col">Expiry</th><th scope="col">Actions</th>';
         $html .= '</tr></thead><tbody>';
         
         $has_active = false;
@@ -962,9 +963,9 @@ class IELTS_CM_Access_Codes {
             
             // Col 4: Actions - full width buttons with spacing
             $html .= '<td>';
-            $html .= '<button class="iw-btn" style="display: block; width: 100%; margin-bottom: 5px;" onclick="IWDashboard.editStudent(' . $student->user_id . ')">Edit</button>';
-            $html .= '<button class="iw-btn" style="display: block; width: 100%; margin-bottom: 5px;" onclick="IWDashboard.resendWelcome(' . $student->user_id . ')">Resend Email</button>';
-            $html .= '<button class="iw-btn iw-btn-danger" style="display: block; width: 100%;" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button>';
+            $html .= '<button class="iw-btn iw-btn-full-width" onclick="IWDashboard.editStudent(' . $student->user_id . ')">Edit</button>';
+            $html .= '<button class="iw-btn iw-btn-full-width" onclick="IWDashboard.resendWelcome(' . $student->user_id . ')">Resend Email</button>';
+            $html .= '<button class="iw-btn iw-btn-danger iw-btn-full-width" style="margin-bottom: 0;" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button>';
             $html .= '</td>';
             $html .= '</tr>';
         }
