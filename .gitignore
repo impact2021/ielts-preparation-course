@@ -51,3 +51,5 @@ migrate_feedback_to_modern.py
 # Test scripts
 test_*.php
 *_test.php
+test-*.json
+*-test.json
