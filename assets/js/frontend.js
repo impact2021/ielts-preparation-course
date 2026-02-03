@@ -912,18 +912,18 @@
                                         }
                                     });
                                     
-                                    // Also show general no-answer feedback if provided and no options were selected
-                                    if (questionResult.feedback && (!questionResult.user_answer || 
-                                        (Array.isArray(questionResult.user_answer) && questionResult.user_answer.length === 0) ||
-                                        questionResult.user_answer === null || questionResult.user_answer === '')) {
+                                    // Show general question-level feedback if provided
+                                    // This includes "Show me" links that are added server-side
+                                    if (questionResult.feedback) {
+                                        var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
                                         var feedbackDiv = $('<div>')
                                             .addClass('question-feedback-message')
-                                            .addClass('feedback-incorrect')
+                                            .addClass(feedbackClass)
                                             .html(questionResult.feedback);
                                         questionElement.append(feedbackDiv);
                                     } else if (needsShowMeContainer(questionResult)) {
                                         // Create an empty question-level feedback div for "Show me" button
-                                        // even when feedback is shown per-option (for correct/incorrect answers)
+                                        // if no feedback but audio_section_id or reading_text_id exists
                                         createShowMeContainer(questionElement, questionResult);
                                     }
                                 } else if (questionResult.feedback) {
