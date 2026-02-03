@@ -1,0 +1,117 @@
+{
+  "title": "IELTS Listening Test - Forms and Notes Completion",
+  "content": "",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Questions 1-5: Complete the notes below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\r\n\r\n",
+      "question": "<p><strong>Section 1 Questions 1-10</strong></p>\r\n<p><strong><em>Questions 1-5</em></strong></p>\r\n<p>Complete the notes below</p>\r\n<p>Write <em><strong>NO MORE THAN THREE WORDS AND/OR A NUMBER</strong></em> for each answer.</p>\r\n<p><strong>Trip Information</strong></p>\r\n<p><em>Example Answer</em></p>\r\n<p>Frequency of trips: <em>Every weekend</em></p>\r\n<p>Next trip: <em>Gold Coast</em></p>\r\n<ul>\r\n<li>Departure Date: Friday 8th June</li>\r\n<li>Cost: $75 includes: transport both ways, accommodation and 1.[field 1]</li>\r\n<li>Sunshine Retreat Facilities:</li>\r\n<li>Has: swimming pool, 2.[field 2] and communal cooking area.</li>\r\n<li>Additional Activity of interest: Animal reserve</li>\r\n<li>Can view endangered and many 3.[field 3] species</li>\r\n<li>Book additional activities through: 4.[field 4]</li>\r\n<li>Bus Departs: on 5.[field 5] at 5.30 P.M in the evening.</li>\r\n</ul>\r\n",
+      "points": 5,
+      "no_answer_feedback": "The correct answer is shown above. Listen carefully and take notes while listening.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "form_completion_l",
+      "field_count": 5,
+      "field_answers": {
+        "1": "breakfast",
+        "2": "tennis court|a tennis court",
+        "3": "native",
+        "4": "tour guide|guide",
+        "5": "friday"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The advisor states that the cost of $75 includes transport, accommodation, and breakfast.",
+          "incorrect": "Incorrect. Listen carefully to what is included in the $75 cost. The advisor mentions three things that are included.",
+          "no_answer": "The correct answer is: breakfast. Make sure to listen carefully for what is included in the trip cost."
+        },
+        "2": {
+          "correct": "Correct! The advisor mentions the Sunshine Retreat has a tennis court, a swimming pool, and a communal kitchen area.",
+          "incorrect": "Incorrect. Listen to the facilities mentioned for the Sunshine Retreat hostel. There are three facilities listed.",
+          "no_answer": "The correct answer is: tennis court (or 'a tennis court'). The article 'A' was not essential as these are notes, not complete sentences."
+        },
+        "3": {
+          "correct": "Correct! The advisor explains that the animal reserve allows visitors to see native and endangered species in natural habitats.",
+          "incorrect": "Incorrect. Listen carefully to what types of animals can be seen at the Animal Reserve alongside endangered species.",
+          "no_answer": "The correct answer is: native. Pay attention to the description of the animals at the Animal Reserve."
+        },
+        "4": {
+          "correct": "Correct! The advisor instructs the student to tell the tour guide which activities they want to book when boarding the bus.",
+          "incorrect": "Incorrect. Listen to who the student should contact to book additional activities when they get on the bus.",
+          "no_answer": "The correct answer is: tour guide (or just 'guide'). Listen for who makes arrangements for additional activities."
+        },
+        "5": {
+          "correct": "Correct! The advisor states the bus departs at 5.30pm on Friday evening.",
+          "incorrect": "Incorrect. Listen carefully to the departure day and time. The advisor mentions both explicitly.",
+          "no_answer": "The correct answer is: Friday. Pay attention to when the bus departs."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Questions 6-10: Complete the table below. Write NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.\r\n\r\n",
+      "question": "<p><strong><em>Questions 6-10</em></strong></p>\r\n<p>Complete the table below</p>\r\n<p>Write <strong><em>NO MORE THAN THREE WORDS AND/OR A NUMBER</em></strong> for each answer.</p>\r\n<table border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td colspan=\"2\" valign=\"top\">\r\n<p align=\"center\"><strong>Tours for June</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"30%\">\r\n<p align=\"center\"><strong>Destination and date</strong></p>\r\n</td>\r\n<td valign=\"top\" width=\"70%\">\r\n<p align=\"center\"><strong>Additional Details</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"30%\">\r\n<p align=\"center\">City day trip including bridge climb</p>\r\n<p align=\"center\">16th June</p>\r\n</td>\r\n<td valign=\"top\" width=\"70%\">\r\n<p align=\"center\">The climb is in the morning and takes 2 and a half hours then free afternoon for 6.[field 6] and sight-seeing</p>\r\n<p align=\"center\">Training session on safety precautions given before the climb</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"30%\">\r\n<p align=\"center\">Frazer Island</p>\r\n<p align=\"center\">Friday 22nd-Sunday 24th</p>\r\n</td>\r\n<td valign=\"top\" width=\"70%\">\r\n<p align=\"center\">Sand island with amazing 7.[field 7] and freshwater lakes</p>\r\n<p align=\"center\">Camping trip: all required 8.[field 8] provided; travel by 4-wheel drive</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"30%\">\r\n<p align=\"center\">Winery Tour</p>\r\n<p align=\"center\">30th June</p>\r\n</td>\r\n<td valign=\"top\" width=\"70%\">\r\n<p align=\"center\">Visit 3 wineries and Botanical gardens</p>\r\n<p align=\"center\">Food provided as part of a 9.[field 9] lunch</p>\r\n<p align=\"center\">Cost of trip: $ 10.[field 10]</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n",
+      "points": 5,
+      "no_answer_feedback": "The correct answer is shown above. Listen carefully and take notes while listening.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": 0,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "table_completion_l",
+      "field_count": 5,
+      "field_answers": {
+        "6": "shopping",
+        "7": "white beaches|beaches",
+        "8": "equipment",
+        "9": "picnic",
+        "10": "80|eighty"
+      },
+      "field_feedback": {
+        "6": {
+          "correct": "Correct! The advisor mentions that after the bridge climb, there is free time for shopping and sight-seeing in the afternoon.",
+          "incorrect": "Incorrect. Listen to what activities are available in the afternoon after the bridge climb finishes.",
+          "no_answer": "The correct answer is: shopping. Pay attention to the afternoon activities available on the city day trip."
+        },
+        "7": {
+          "correct": "Correct! The advisor describes Frazer Island as having amazing white beaches and freshwater lakes.",
+          "incorrect": "Incorrect. Listen carefully to the description of Frazer Island's natural features alongside the freshwater lakes.",
+          "no_answer": "The correct answer is: white beaches (or just 'beaches'). Focus on the natural features described for Frazer Island."
+        },
+        "8": {
+          "correct": "Correct! The advisor states that all required equipment including tents, sleeping bags, and cooking equipment is provided for the camping trip.",
+          "incorrect": "Incorrect. Listen to what is provided for the camping trip to Frazer Island. NOTE: 'equipments' is incorrect - equipment is an uncountable noun.",
+          "no_answer": "The correct answer is: equipment. Remember that equipment is an uncountable noun and should not have a plural -s."
+        },
+        "9": {
+          "correct": "Correct! The advisor mentions that food is provided as part of a picnic lunch in the Albert River Valley.",
+          "incorrect": "Incorrect. Listen to the type of lunch that is provided during the winery tour in the Albert River Valley.",
+          "no_answer": "The correct answer is: picnic. Pay attention to how the lunch is described on the winery tour."
+        },
+        "10": {
+          "correct": "Correct! The advisor states that the winery tour costs $80.",
+          "incorrect": "Incorrect. Listen carefully to the cost of the winery tour. Remember, the currency symbol ($) was already given, so you should only write the number.",
+          "no_answer": "The correct answer is: 80 or eighty. The currency symbol ($) was already given so should not have been added to the answer."
+        }
+      }
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_listening",
+    "exercise_label": "practice_test",
+    "scoring_type": "ielts_listening_band",
+    "timer_minutes": 10,
+    "starting_question_number": 1
+  },
+  "audio": {
+    "url": "https://ieltstestonline.com/wp-content/uploads/2018/11/Forms_notes-review.mp3",
+    "transcript": "<h3>TRANSCRIPT</h3>\r\n<table style=\"width: 100%\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Student</td>\r\n<td valign=\"top\" width=\"75%\">Hello, am I in the right office? I've come to find out some information about the college's social activity programme.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Yes, you are in the right place, please take a seat. How can I help you?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Well, I'm quite new here and I'd like to join some activities, as a way of getting to know people. Can you tell me what is available in the next few weeks?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Sure, now we run trips every weekend, sometimes they are day trips and sometimes they run for the whole weekend, it really depends how far we have to travel. The next trip – that's Friday 8<sup>th </sup>June, is to the Gold Coast – we still have a couple of places left if you would be interested?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Yes, please tell me more. How much does it cost?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Well, it's a full weekend trip, so it is one of the more expensive. <u>It costs $75 and that includes transport to and from the Gold Coast (we go by bus), (Q1) accommodation, and breakfast.</u> It's cheaper than you would be able to do in your own, as we get group discounts for the accommodation and some of the cost is subsidised by the college.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Where does the group stay?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">At a backpacker hostel in the centre of town. It's called Sunshine Retreat, and <u>has great facilities including a (Q2) tennis court and a swimming pool</u>. There is a communal kitchen area, so you can either cook dinner at the hostel or go out to one of the restaurants in the local area – there's a lot of choice!</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">I haven't been to the Gold Coast before, but I hear there is a lot to do?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Yes, too much to fit in to one weekend really! Two places that are popular with our students are the Animal Reserve and Cinema World.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">I think I'd be interested in the animal reserve is it expensive to get in?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Well, no, it's actually quite cheap, we have a special rate and the cost is $8.50 per person. It's a fantastic place – it focuses on environmental protection and education. <u>You get to see many (Q3) native and endangered animals living in conditions similar to their natural habitat.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Okay, well yes, I'd like to book the Gold Coast trip please, and I'd like to go to the animal centre while I am there.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Okay well, I'll take your booking for the weekend trip now, but you need to <u>tell the (Q4) tour guide when you get on the bus which activities you are interested in. She'll collect details for the whole group and make arrangements on your behalf.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">I can pay in cash now – for the weekend trip I mean. Here you are.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">That's great. I'll just do you a receipt, be outside the library building no later than 5.15. to meet <u>the bus, it leaves at (Q5) 5.30pm sharp on Friday evening </u>(it takes around 2 hours to get to the Gold Coast from here, so you should be there not long after 7.30), You'll get back to the campus on Sunday at around 6pm.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">That's great, thanks very much, I really looking forward to it.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">So is there anything else I can help you with?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Student</td>\r\n<td valign=\"top\">Well, I was just wondering if you have any information on any of the other trips that will be happening soon?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Yes, I can tell you about the trips we have arranged for the rest of the month. On the 16<sup>th</sup> June we have one day trip to the city which involves a Bridge Climb, the rest of the afternoon is free for shopping and sight-seeing. There are just 20 places available now on that trip. <u>The bridge climb takes (Q6) 2 1/2 hours in the morning</u>. It costs $105 and that includes the climb and the transportation</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">That sounds quite exciting – is it dangerous?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">No, the climb is organised by a professional company and all the climbers are given a safety precautions training session before going onto the bridge. Of course all protective clothing is provided and you get to see the most amazing views of the city.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Okay, I'll think about that one, what else is available?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">The weekend after that we have a full weekend trip to <u>Frazer Island – it's a beautiful sand island with the most fantastic (Q7)white beaches and freshwater lakes.</u> It's a camping trip and <u>all the (Q8) equipment you need, you know, tents, sleeping bags and cooking equipment is provided.</u> That runs from Friday 22<sup>nd</sup> and returns Sunday 24<sup>th</sup>.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Now that sounds really interesting – is there a tour of the island?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Yes, groups travel around in four-wheel drive minibuses, there are 10 people in each bus and we expect to take 4 vehicles, so that's enough room for 40 people. Ocean Beach on the island is amazing- its 75 kilometres long!</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">How much does it cost?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">It's $150. Now the last trip for the month is a winery tour – that's on the 30<sup>th</sup> of June. The group goes by coach to the Botanical Gardens and visits 3 wineries for wine-tasting. <u>There's a (Q9) picnic lunch in the Albert River Valley, really good quality food, by the way! The trip costs (Q10) $80.</u></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Wow, they all sound so interesting. I think I'll go on my trip this weekend and see how it goes, then come back in to make another booking.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Advisor</td>\r\n<td valign=\"top\">Sure, there is more information in this month's Student Gazette, here's a copy – take with you – and remember you can book here or if you are studying on the St James campus you can book at the information centre which is next to the student bookshop.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\">Student</td>\r\n<td valign=\"top\">Thanks so much for your help. Bye for now.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<hr />\r\n<h3>ANSWERS</h3>\r\n<ol>\r\n<li>BREAKFAST</li>\r\n<li>TENNIS COURT (or 'A TENNIS COURT' – the article 'A' was not essential as these are notes, not complete sentences)</li>\r\n<li>NATIVE</li>\r\n<li>TOUR GUIDE (or just 'GUIDE')</li>\r\n<li>FRIDAY</li>\r\n<li>SHOPPING</li>\r\n<li>WHITE BEACHES (or just 'BEACHES')</li>\r\n<li>EQUIPMENT (NOTE: writing 'Equipments' here is incorrect – equipment is an uncountable noun so should not have a plural -s)</li>\r\n<li>PICNIC</li>\r\n<li>80 or EIGHTY (the currency symbol [$] was already given so should not have been added to the answer)</li>\r\n</ol>"
+  }
+}
