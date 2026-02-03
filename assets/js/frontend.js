@@ -934,6 +934,10 @@
                                         .addClass(feedbackClass)
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
+                                } else if (needsShowMeContainer(questionResult)) {
+                                    // Create an empty question-level feedback div for "Show me" button
+                                    // when there's no feedback text but audio_section_id or reading_text_id exists
+                                    createShowMeContainer(questionElement, questionResult);
                                 }
                             } else if (questionResult.question_type === 'multiple_choice' || 
                                        questionResult.question_type === 'matching' || 
@@ -1043,8 +1047,9 @@
                                     
                                     questionElement.append(feedbackDiv);
                                 }
-                            } else if (questionResult.feedback) {
+                            } else if (questionResult.feedback || needsShowMeContainer(questionResult)) {
                                 // For other question types (text input, etc.), show general feedback
+                                // OR create container for "Show me" button even if no feedback text
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
@@ -1052,9 +1057,13 @@
                                 var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
                                 var feedbackDiv = $('<div>')
                                     .addClass('question-feedback-message')
-                                    .addClass(feedbackClass)
-                                    .html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
-                                                                     // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                    .addClass(feedbackClass);
+                                
+                                // Only add HTML content if feedback exists
+                                if (questionResult.feedback) {
+                                    feedbackDiv.html(questionResult.feedback); // Using .html() because feedback explicitly supports HTML formatting
+                                                                                // Content is sanitized server-side with wp_kses_post() in class-quiz-handler.php
+                                }
                                 
                                 // Add special class for open questions to show icon beside feedback
                                 if (questionResult.question_type === 'open_question') {
@@ -1511,11 +1520,24 @@
             
             if ($questionMarker.length) {
                 // Highlight the specific sentence or phrase containing the marker
-                // For table-formatted transcripts (most common), highlight the table cell
+                // For table-formatted transcripts, find the reading-answer-marker span in the same cell
                 var $tableCell = $questionMarker.closest('td');
                 if ($tableCell.length) {
-                    // For table cells, highlight the cell containing the answer
-                    $tableCell.addClass('transcript-highlight');
+                    // For table cells, look for the reading-answer-marker span within the cell
+                    // Try to find the marker that immediately follows the question marker
+                    var $answerMarker = $questionMarker.nextAll('.reading-answer-marker').first();
+                    if (!$answerMarker.length) {
+                        // If not found as sibling, search within the entire table cell
+                        $answerMarker = $tableCell.find('.reading-answer-marker').first();
+                    }
+                    
+                    if ($answerMarker.length) {
+                        // Highlight only the span containing the answer text
+                        $answerMarker.addClass('transcript-highlight');
+                    } else {
+                        // Fallback: highlight the entire cell only if no answer marker found
+                        $tableCell.addClass('transcript-highlight');
+                    }
                 } else {
                     // For non-table content, highlight ALL reading-answer-marker elements associated with this question
                     // Find all markers with id="q{N}" for this question and highlight the reading-answer-marker that follows each

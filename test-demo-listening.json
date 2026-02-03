@@ -1,0 +1,91 @@
+{
+    "title": "Listening example",
+    "content": "",
+    "questions": [
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "This is question 1",
+            "points": 1,
+            "no_answer_feedback": "No answer feedback",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "Correct answer",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Incorrect answer",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "Correct answer\nIncorrect answer",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        },
+        {
+            "type": "closed_question",
+            "instructions": "",
+            "question": "This is question 2",
+            "points": 1,
+            "no_answer_feedback": "No answer feedback",
+            "correct_feedback": "",
+            "incorrect_feedback": "",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "multiple_choice_l",
+            "mc_options": [
+                {
+                    "text": "Correct answer",
+                    "is_correct": true,
+                    "feedback": ""
+                },
+                {
+                    "text": "Incorrect answer",
+                    "is_correct": false,
+                    "feedback": ""
+                }
+            ],
+            "options": "Correct answer\nIncorrect answer",
+            "correct_answer_count": 1,
+            "show_option_letters": false
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "audio": {
+        "url": "https://www.ilsnz.com/course-uploads/audio-files/Listening-Test-1.mp3",
+        "transcript": "",
+        "sections": [
+            {
+                "section_number": 1,
+                "transcript": "<table border=\"1\" width=\"90%\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\">\n<tbody>\n<tr>\n<td valign=\"top\" width=\"20%\">Student</td>\n<td valign=\"top\" width=\"80%\">Yes, please tell me more. How much does it cost?</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Advisor</td>\n<td valign=\"top\" width=\"80%\">Well, it's a full weekend trip, so it is one of the more expensive. It costs $75 and that includes <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">transport to and from the Gold Coast</span>. It's cheaper than you would be able to do on your own.</td>\n</tr>\n<tr>\n<td valign=\"top\" width=\"20%\">Student</td>\n<td valign=\"top\" width=\"80%\">That sounds great! What about <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">the accommodation</span>?</td>\n</tr>\n</tbody>\n</table>"
+            }
+        ]
+    },
+    "_metadata": {
+        "exported_at": "2026-02-04 11:12:26",
+        "exported_by": "impact",
+        "plugin_version": "15.3",
+        "format_version": "1.0"
+    }
+}
