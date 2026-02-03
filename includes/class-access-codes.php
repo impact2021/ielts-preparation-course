@@ -409,6 +409,24 @@ class IELTS_CM_Access_Codes {
         $active_students = $this->get_partner_students($partner_id);
         $active_count = count($active_students);
         
+        // Calculate active and expired student counts for display on tabs
+        $active_student_count = 0;
+        $expired_student_count = 0;
+        foreach ($active_students as $student) {
+            $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
+            if ($expiry) {
+                $expiry_timestamp = strtotime($expiry);
+                $is_active = $expiry_timestamp > time();
+                if ($is_active) {
+                    $active_student_count++;
+                } else {
+                    $expired_student_count++;
+                }
+            } else {
+                $expired_student_count++;
+            }
+        }
+        
         ob_start();
         ?>
         <style>
@@ -450,7 +468,7 @@ class IELTS_CM_Access_Codes {
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Create Invite Codes</h2>
+                    <h2>Create Invite Codes (Remaining places: <?php echo esc_html($remaining_places); ?>)</h2>
                 </div>
                 <div class="iw-card-body">
                     <?php if ($remaining_places <= 0): ?>
@@ -529,6 +547,15 @@ class IELTS_CM_Access_Codes {
                                 </td>
                             </tr>
                             <tr>
+                                <th>Send copy to me:</th>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" name="send_copy_to_partner" value="1" checked>
+                                        Send a copy of the welcome email to me as well
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td colspan="2"><button type="submit" class="iw-btn">Create User</button></td>
                             </tr>
                         </table>
@@ -542,10 +569,8 @@ class IELTS_CM_Access_Codes {
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
-                        <button class="iw-filter-btn active" data-filter="all">All</button>
-                        <button class="iw-filter-btn" data-filter="active">Active</button>
-                        <button class="iw-filter-btn" data-filter="available">Available</button>
-                        <button class="iw-filter-btn" data-filter="expired">Expired</button>
+                        <button class="iw-filter-btn active" data-filter="used">Used</button>
+                        <button class="iw-filter-btn" data-filter="available">Unused</button>
                         <button class="iw-btn" onclick="IWDashboard.downloadCSV()" style="float: right;">Download CSV</button>
                     </div>
                     <div style="clear: both;"></div>
@@ -559,8 +584,8 @@ class IELTS_CM_Access_Codes {
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
-                        <button class="iw-filter-btn active" data-filter-students="active">Active</button>
-                        <button class="iw-filter-btn" data-filter-students="expired">Expired</button>
+                        <button class="iw-filter-btn active" data-filter-students="active">Active (<?php echo esc_html($active_student_count); ?>)</button>
+                        <button class="iw-filter-btn" data-filter-students="expired">Expired (<?php echo esc_html($expired_student_count); ?>)</button>
                     </div>
                     <?php echo $this->render_students_table($active_students); ?>
                 </div>
@@ -579,9 +604,8 @@ class IELTS_CM_Access_Codes {
                 jQuery('.iw-filter-btn').removeClass('active');
                 jQuery('.iw-filter-btn[data-filter="' + status + '"]').addClass('active');
                 
-                if (status === 'all') {
-                    jQuery('.iw-table tbody tr').show();
-                } else if (status === 'available') {
+                if (status === 'available') {
+                    // Show unused/available codes (status = 'active')
                     jQuery('.iw-table tbody tr').each(function() {
                         if (jQuery(this).data('status') === 'active') {
                             jQuery(this).show();
@@ -589,7 +613,17 @@ class IELTS_CM_Access_Codes {
                             jQuery(this).hide();
                         }
                     });
+                } else if (status === 'used') {
+                    // Show used codes (status = 'used')
+                    jQuery('.iw-table tbody tr').each(function() {
+                        if (jQuery(this).data('status') === 'used') {
+                            jQuery(this).show();
+                        } else {
+                            jQuery(this).hide();
+                        }
+                    });
                 } else {
+                    // Default: show all matching the status
                     jQuery('.iw-table tbody tr').each(function() {
                         if (jQuery(this).data('status') === status) {
                             jQuery(this).show();
@@ -749,6 +783,9 @@ class IELTS_CM_Access_Codes {
             // Initialize student filter to show active by default
             IWDashboard.filterStudents('active');
             
+            // Initialize code filter to show used by default
+            IWDashboard.filterCodes('used');
+            
             $('#create-invite-form').on('submit', function(e) {
                 e.preventDefault();
                 var $form = $(this);
@@ -870,7 +907,7 @@ class IELTS_CM_Access_Codes {
         }
         
         $html = '<table class="iw-table iw-students-table"><thead><tr>';
-        $html .= '<th>Username</th><th>Email</th><th>Group</th><th>Expiry</th><th>Last Login</th><th>Status</th><th>Action</th>';
+        $html .= '<th>User Details</th><th>Membership</th><th>Expiry</th><th>Actions</th>';
         $html .= '</tr></thead><tbody>';
         
         $has_active = false;
@@ -886,11 +923,9 @@ class IELTS_CM_Access_Codes {
             
             // Determine if membership is active or expired
             $is_active = false;
-            $status_label = 'No Membership';
             if ($expiry) {
                 $expiry_timestamp = strtotime($expiry);
                 $is_active = $expiry_timestamp > time();
-                $status_label = $is_active ? 'Active' : 'Expired';
             }
             
             if ($is_active) {
@@ -901,17 +936,35 @@ class IELTS_CM_Access_Codes {
             
             $status_class = $is_active ? 'active' : 'expired';
             
+            // Get full name
+            $full_name = trim($user->first_name . ' ' . $user->last_name);
+            if (empty($full_name)) {
+                $full_name = $user->display_name;
+            }
+            
             $html .= '<tr data-student-status="' . esc_attr($status_class) . '" data-user-id="' . esc_attr($student->user_id) . '">';
-            $html .= '<td>' . esc_html($user->user_login) . '</td>';
-            $html .= '<td>' . esc_html($user->user_email) . '</td>';
+            
+            // Col 1: User Details - Username, full name (smaller), email (smaller) - compact
+            $html .= '<td style="line-height: 1.3;">';
+            $html .= '<div style="font-weight: 600;">' . esc_html($user->user_login) . '</div>';
+            $html .= '<div style="font-size: 0.9em; color: #666; margin-top: 2px;">' . esc_html($full_name) . '</div>';
+            $html .= '<div style="font-size: 0.85em; color: #888; margin-top: 2px;">' . esc_html($user->user_email) . '</div>';
+            $html .= '</td>';
+            
+            // Col 2: Membership (not "Group")
             $html .= '<td>' . esc_html($this->get_course_group_display_name($group)) . '</td>';
-            $html .= '<td class="expiry-display">' . esc_html($expiry ? date('d/m/Y', strtotime($expiry)) : '-') . '</td>';
-            $html .= '<td>' . esc_html($last_login ? date('d/m/Y', strtotime($last_login)) : 'Never') . '</td>';
-            $html .= '<td><span style="color: ' . ($is_active ? 'green' : 'red') . ';">' . esc_html($status_label) . '</span></td>';
+            
+            // Col 3: Expiry with Last login underneath (smaller)
+            $html .= '<td class="expiry-display" style="line-height: 1.3;">';
+            $html .= '<div>' . esc_html($expiry ? date('d/m/Y', strtotime($expiry)) : '-') . '</div>';
+            $html .= '<div style="font-size: 0.85em; color: #888; margin-top: 4px;">Last login: ' . esc_html($last_login ? date('d/m/Y', strtotime($last_login)) : 'Never') . '</div>';
+            $html .= '</td>';
+            
+            // Col 4: Actions - full width buttons with spacing
             $html .= '<td>';
-            $html .= '<button class="iw-btn iw-btn-small" onclick="IWDashboard.editStudent(' . $student->user_id . ')">Edit</button> ';
-            $html .= '<button class="iw-btn iw-btn-small" onclick="IWDashboard.resendWelcome(' . $student->user_id . ')">Resend Email</button> ';
-            $html .= '<button class="iw-btn iw-btn-danger iw-btn-small" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button>';
+            $html .= '<button class="iw-btn" style="display: block; width: 100%; margin-bottom: 5px;" onclick="IWDashboard.editStudent(' . $student->user_id . ')">Edit</button>';
+            $html .= '<button class="iw-btn" style="display: block; width: 100%; margin-bottom: 5px;" onclick="IWDashboard.resendWelcome(' . $student->user_id . ')">Resend Email</button>';
+            $html .= '<button class="iw-btn iw-btn-danger" style="display: block; width: 100%;" onclick="IWDashboard.revokeStudent(' . $student->user_id . ')">Revoke</button>';
             $html .= '</td>';
             $html .= '</tr>';
         }
@@ -1047,6 +1100,7 @@ class IELTS_CM_Access_Codes {
         $last_name = sanitize_text_field($_POST['last_name']);
         $days = absint($_POST['days']);
         $course_group = sanitize_text_field($_POST['course_group']);
+        $send_copy_to_partner = isset($_POST['send_copy_to_partner']) && $_POST['send_copy_to_partner'] === '1';
         
         if (!is_email($email)) {
             wp_send_json_error(array('message' => 'Invalid email'));
@@ -1099,7 +1153,7 @@ class IELTS_CM_Access_Codes {
             'used_date' => current_time('mysql')
         ));
         
-        $this->send_welcome_email($user_id, $username, $password);
+        $this->send_welcome_email($user_id, $username, $password, $send_copy_to_partner);
         
         wp_send_json_success(array(
             'message' => "User created! Username: {$username}, Password sent to email."
@@ -1391,7 +1445,7 @@ class IELTS_CM_Access_Codes {
         }
     }
     
-    private function send_welcome_email($user_id, $username, $password) {
+    private function send_welcome_email($user_id, $username, $password, $send_copy_to_partner = false) {
         $user = get_userdata($user_id);
         $login_url = get_option('iw_login_page_url', wp_login_url());
         
@@ -1403,7 +1457,26 @@ class IELTS_CM_Access_Codes {
         $message .= "Login here: {$login_url}\n\n";
         $message .= "Best regards,\nIELTS Course Team";
         
+        // Send to student
         wp_mail($user->user_email, $subject, $message);
+        
+        // Send copy to partner if requested
+        if ($send_copy_to_partner) {
+            $partner = wp_get_current_user();
+            if ($partner && $partner->user_email) {
+                $partner_subject = 'Copy: Student Account Created - ' . $username;
+                $partner_message = "This is a copy of the welcome email sent to your student.\n\n";
+                $partner_message .= "Student Details:\n";
+                $partner_message .= "Email: {$user->user_email}\n";
+                $partner_message .= "Username: {$username}\n";
+                $partner_message .= "Password: {$password}\n\n";
+                $partner_message .= "Login URL: {$login_url}\n\n";
+                $partner_message .= "The student has received a welcome email at {$user->user_email}.\n\n";
+                $partner_message .= "Best regards,\nIELTS Course Team";
+                
+                wp_mail($partner->user_email, $partner_subject, $partner_message);
+            }
+        }
     }
     
     /**
