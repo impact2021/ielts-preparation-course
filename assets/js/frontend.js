@@ -1965,11 +1965,17 @@
             function applyFontSize(size) {
                 $quizContent.css('font-size', size + 'px');
                 currentFontSize = size;
-                localStorage.setItem('ielts_quiz_font_size', size);
+                try {
+                    localStorage.setItem('ielts_quiz_font_size', size);
+                } catch (e) {
+                    // Handle localStorage errors (e.g., privacy mode, quota exceeded)
+                    console.warn('Could not save font size preference:', e);
+                }
             }
             
             $('.font-decrease').on('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
                 var newSize = Math.max(minFontSize, currentFontSize - fontSizeStep);
                 if (newSize !== currentFontSize) {
                     applyFontSize(newSize);
@@ -1978,6 +1984,7 @@
             
             $('.font-increase').on('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
                 var newSize = Math.min(maxFontSize, currentFontSize + fontSizeStep);
                 if (newSize !== currentFontSize) {
                     applyFontSize(newSize);
@@ -1986,6 +1993,7 @@
             
             $('.font-reset').on('click', function(e) {
                 e.preventDefault();
+                e.stopPropagation();
                 applyFontSize(baseFontSize);
             });
         }
