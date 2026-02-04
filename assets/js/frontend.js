@@ -1501,6 +1501,9 @@
             var sectionId = $(this).data('section');
             var questionNumber = $(this).data('question');
             
+            // Update URL hash to match reading exercise behavior
+            window.location.hash = '#q' + questionNumber;
+            
             // Hide all transcript sections
             $('.transcript-section-content').hide();
             
