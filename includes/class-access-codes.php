@@ -781,7 +781,10 @@ class IELTS_CM_Access_Codes {
             });
             
             // Initialize student filter to show active by default
-            IWDashboard.filterStudents('active');
+            // Use setTimeout to ensure the table is fully rendered before filtering
+            setTimeout(function() {
+                IWDashboard.filterStudents('active');
+            }, 0);
             
             // Initialize code filter to show used by default
             IWDashboard.filterCodes('used');
