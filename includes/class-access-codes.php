@@ -666,27 +666,76 @@ class IELTS_CM_Access_Codes {
             
             editStudent: function(userId) {
                 var currentExpiry = '';
+                var currentMembership = '';
                 var $row = jQuery('.iw-students-table tr[data-user-id="' + userId + '"]');
                 if ($row.length) {
-                    currentExpiry = $row.find('.expiry-display').text().trim();
-                    if (currentExpiry === '-') currentExpiry = '';
+                    var expiryText = $row.find('.expiry-display > div:first-child').text().trim();
+                    currentExpiry = expiryText !== '-' ? expiryText : '';
+                    currentMembership = $row.data('membership-type') || '';
                 }
                 
-                var newExpiry = prompt('Enter new expiry date (dd/mm/yyyy):', currentExpiry);
-                if (!newExpiry) return;
+                // Create modal HTML
+                var modalHtml = '<div id="iw-edit-student-modal" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 10000; display: flex; align-items: center; justify-content: center;">' +
+                    '<div style="background: white; padding: 30px; border-radius: 8px; max-width: 500px; width: 90%;">' +
+                    '<h3 style="margin-top: 0; margin-bottom: 20px;">Edit Student</h3>' +
+                    '<div style="margin-bottom: 15px;">' +
+                    '<label style="display: block; margin-bottom: 5px; font-weight: 600;">Membership Type:</label>' +
+                    '<select id="iw-edit-membership-type" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">' +
+                    '<option value="academic_module"' + (currentMembership === 'academic_module' ? ' selected' : '') + '>Academic Module</option>' +
+                    '<option value="general_module"' + (currentMembership === 'general_module' ? ' selected' : '') + '>General Training Module</option>' +
+                    '<option value="general_english"' + (currentMembership === 'general_english' ? ' selected' : '') + '>General English</option>' +
+                    '</select>' +
+                    '</div>' +
+                    '<div style="margin-bottom: 20px;">' +
+                    '<label style="display: block; margin-bottom: 5px; font-weight: 600;">Expiry Date (dd/mm/yyyy):</label>' +
+                    '<input type="text" id="iw-edit-expiry" value="' + currentExpiry + '" placeholder="dd/mm/yyyy" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;" />' +
+                    '</div>' +
+                    '<div style="display: flex; gap: 10px; justify-content: flex-end;">' +
+                    '<button id="iw-edit-cancel" style="padding: 10px 20px; border: 1px solid #ddd; background: white; border-radius: 4px; cursor: pointer;">Cancel</button>' +
+                    '<button id="iw-edit-save" style="padding: 10px 20px; border: none; background: #2271b1; color: white; border-radius: 4px; cursor: pointer;">Save Changes</button>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
                 
-                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
-                    action: 'iw_edit_student',
-                    user_id: userId,
-                    expiry: newExpiry,
-                    nonce: IWDashboard.editNonce
-                }, function(response) {
-                    if (response.success) {
-                        alert(response.data.message);
-                        location.reload();
-                    } else {
-                        alert(response.data.message);
+                // Add modal to page
+                jQuery('body').append(modalHtml);
+                
+                // Handle cancel
+                jQuery('#iw-edit-cancel, #iw-edit-student-modal').on('click', function(e) {
+                    if (e.target === this) {
+                        jQuery('#iw-edit-student-modal').remove();
                     }
+                });
+                
+                // Handle save
+                jQuery('#iw-edit-save').on('click', function() {
+                    var newExpiry = jQuery('#iw-edit-expiry').val().trim();
+                    var newMembershipType = jQuery('#iw-edit-membership-type').val();
+                    
+                    if (!newExpiry) {
+                        alert('Expiry date is required');
+                        return;
+                    }
+                    
+                    if (!newMembershipType) {
+                        alert('Membership type is required');
+                        return;
+                    }
+                    
+                    jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        action: 'iw_edit_student',
+                        user_id: userId,
+                        expiry: newExpiry,
+                        membership_type: newMembershipType,
+                        nonce: IWDashboard.editNonce
+                    }, function(response) {
+                        if (response.success) {
+                            alert(response.data.message);
+                            location.reload();
+                        } else {
+                            alert(response.data.message);
+                        }
+                    });
                 });
             },
             
@@ -945,7 +994,7 @@ class IELTS_CM_Access_Codes {
                 $full_name = $user->display_name;
             }
             
-            $html .= '<tr data-student-status="' . esc_attr($status_class) . '" data-user-id="' . esc_attr($student->user_id) . '">';
+            $html .= '<tr data-student-status="' . esc_attr($status_class) . '" data-user-id="' . esc_attr($student->user_id) . '" data-membership-type="' . esc_attr($group) . '">';
             
             // Col 1: User Details - Username, full name (smaller), email (smaller) - compact
             $html .= '<td style="line-height: 1.3;">';
@@ -1218,9 +1267,19 @@ class IELTS_CM_Access_Codes {
         
         $user_id = absint($_POST['user_id']);
         $new_expiry = sanitize_text_field($_POST['expiry']);
+        $new_membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
         
         if (empty($new_expiry)) {
             wp_send_json_error(array('message' => 'Expiry date is required'));
+        }
+        
+        // Validate membership type - must be provided and valid
+        $valid_membership_types = array('academic_module', 'general_module', 'general_english');
+        if (empty($new_membership_type)) {
+            wp_send_json_error(array('message' => 'Membership type is required'));
+        }
+        if (!in_array($new_membership_type, $valid_membership_types, true)) {
+            wp_send_json_error(array('message' => 'Invalid membership type'));
         }
         
         // Convert dd/mm/yyyy to MySQL format using DateTime for better validation
@@ -1233,10 +1292,47 @@ class IELTS_CM_Access_Codes {
         $date->setTime(23, 59, 59);
         $mysql_date = $date->format('Y-m-d H:i:s');
         
+        // Update expiry date
         update_user_meta($user_id, 'iw_membership_expiry', $mysql_date);
         
+        // Track what was updated for the success message
+        $updated_fields = array();
+        $updated_fields[] = 'expiry date';
+        
+        // Update membership type
+        $current_membership_type = get_user_meta($user_id, 'iw_course_group', true);
+        
+        // Only update if it's different
+        if ($current_membership_type !== $new_membership_type) {
+            update_user_meta($user_id, 'iw_course_group', $new_membership_type);
+            $updated_fields[] = 'membership type';
+            
+            // Update user role to match the membership type
+            $user = get_userdata($user_id);
+            if ($user) {
+                // Map course group to access code membership role
+                $role_mapping = array(
+                    'academic_module' => 'access_academic_module',
+                    'general_module' => 'access_general_module',
+                    'general_english' => 'access_general_english'
+                );
+                
+                if (isset($role_mapping[$new_membership_type])) {
+                    // Remove all access code roles first
+                    foreach ($role_mapping as $role) {
+                        $user->remove_role($role);
+                    }
+                    // Add the new role
+                    $user->add_role($role_mapping[$new_membership_type]);
+                }
+            }
+        }
+        
+        // Create dynamic success message
+        $message = 'Student ' . implode(' and ', $updated_fields) . ' updated successfully';
+        
         wp_send_json_success(array(
-            'message' => 'Expiry date updated successfully',
+            'message' => $message,
             'new_expiry' => $date->format('d/m/Y')
         ));
     }
