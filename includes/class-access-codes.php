@@ -717,6 +717,11 @@ class IELTS_CM_Access_Codes {
                         return;
                     }
                     
+                    if (!newMembershipType) {
+                        alert('Membership type is required');
+                        return;
+                    }
+                    
                     jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
                         action: 'iw_edit_student',
                         user_id: userId,
@@ -1268,9 +1273,12 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'Expiry date is required'));
         }
         
-        // Validate membership type
+        // Validate membership type - must be provided and valid
         $valid_membership_types = array('academic_module', 'general_module', 'general_english');
-        if (!empty($new_membership_type) && !in_array($new_membership_type, $valid_membership_types)) {
+        if (empty($new_membership_type)) {
+            wp_send_json_error(array('message' => 'Membership type is required'));
+        }
+        if (!in_array($new_membership_type, $valid_membership_types, true)) {
             wp_send_json_error(array('message' => 'Invalid membership type'));
         }
         
@@ -1287,38 +1295,44 @@ class IELTS_CM_Access_Codes {
         // Update expiry date
         update_user_meta($user_id, 'iw_membership_expiry', $mysql_date);
         
-        // Update membership type if provided
-        if (!empty($new_membership_type)) {
-            $current_membership_type = get_user_meta($user_id, 'iw_course_group', true);
+        // Track what was updated for the success message
+        $updated_fields = array();
+        $updated_fields[] = 'expiry date';
+        
+        // Update membership type
+        $current_membership_type = get_user_meta($user_id, 'iw_course_group', true);
+        
+        // Only update if it's different
+        if ($current_membership_type !== $new_membership_type) {
+            update_user_meta($user_id, 'iw_course_group', $new_membership_type);
+            $updated_fields[] = 'membership type';
             
-            // Only update if it's different
-            if ($current_membership_type !== $new_membership_type) {
-                update_user_meta($user_id, 'iw_course_group', $new_membership_type);
+            // Update user role to match the membership type
+            $user = get_userdata($user_id);
+            if ($user) {
+                // Map course group to access code membership role
+                $role_mapping = array(
+                    'academic_module' => 'access_academic_module',
+                    'general_module' => 'access_general_module',
+                    'general_english' => 'access_general_english'
+                );
                 
-                // Update user role to match the membership type
-                $user = get_userdata($user_id);
-                if ($user) {
-                    // Map course group to access code membership role
-                    $role_mapping = array(
-                        'academic_module' => 'access_academic_module',
-                        'general_module' => 'access_general_module',
-                        'general_english' => 'access_general_english'
-                    );
-                    
-                    if (isset($role_mapping[$new_membership_type])) {
-                        // Remove all access code roles first
-                        foreach ($role_mapping as $role) {
-                            $user->remove_role($role);
-                        }
-                        // Add the new role
-                        $user->add_role($role_mapping[$new_membership_type]);
+                if (isset($role_mapping[$new_membership_type])) {
+                    // Remove all access code roles first
+                    foreach ($role_mapping as $role) {
+                        $user->remove_role($role);
                     }
+                    // Add the new role
+                    $user->add_role($role_mapping[$new_membership_type]);
                 }
             }
         }
         
+        // Create dynamic success message
+        $message = 'Student ' . implode(' and ', $updated_fields) . ' updated successfully';
+        
         wp_send_json_success(array(
-            'message' => 'Student details updated successfully',
+            'message' => $message,
             'new_expiry' => $date->format('d/m/Y')
         ));
     }
