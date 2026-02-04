@@ -486,7 +486,6 @@ class IELTS_CM_Access_Codes {
                                 <th>Number of Codes:</th>
                                 <td>
                                     <input type="number" name="quantity" min="1" max="<?php echo esc_attr($remaining_places); ?>" value="1" required>
-                                    <p class="description">Remaining places: <?php echo esc_html($remaining_places); ?></p>
                                 </td>
                             </tr>
                             <tr>
