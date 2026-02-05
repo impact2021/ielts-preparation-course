@@ -1090,23 +1090,54 @@ class IELTS_CM_Frontend {
         $recipient = get_option('admin_email');
         $subject = 'Error Report: ' . sanitize_text_field($page_title);
         
-        // Build email content with better formatting
-        $email_body = sprintf(
-            "<strong>From: </strong>\n%s <%s><%s><%s>\n\n" .
-            "<strong>Reported error on: </strong>\n%s\n\n" .
-            "<strong>Message Body:</strong>\n%s\n\n" .
-            "<strong>Page URL: </strong>\n%s",
-            sanitize_text_field($user_name),
-            sanitize_email($user_email),
-            sanitize_text_field($first_name),
-            sanitize_text_field($last_name),
-            sanitize_text_field($page_title),
-            $message_clean,
-            esc_url_raw($page_url)
-        );
+        // Build email content as HTML table with 2 columns
+        $email_body = '
+        <html>
+        <head>
+            <style>
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    max-width: 600px;
+                    font-family: Arial, sans-serif;
+                }
+                td {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    vertical-align: top;
+                }
+                td:first-child {
+                    font-weight: bold;
+                    width: 30%;
+                    background-color: #f5f5f5;
+                }
+            </style>
+        </head>
+        <body>
+            <table>
+                <tr>
+                    <td>From</td>
+                    <td>' . sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name) . ' (' . sanitize_text_field($user_name) . ') &lt;' . sanitize_email($user_email) . '&gt;</td>
+                </tr>
+                <tr>
+                    <td>Reported error on</td>
+                    <td>' . sanitize_text_field($page_title) . '</td>
+                </tr>
+                <tr>
+                    <td>Message Body</td>
+                    <td>' . $message_clean . '</td>
+                </tr>
+                <tr>
+                    <td>Page URL</td>
+                    <td><a href="' . esc_url($page_url) . '">' . esc_url($page_url) . '</a></td>
+                </tr>
+            </table>
+        </body>
+        </html>';
         
-        // Set email headers
+        // Set email headers with HTML content type
         $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
             'From: ' . get_bloginfo('name') . ' <' . $recipient . '>',
             'Reply-To: ' . sanitize_text_field($user_name) . ' <' . sanitize_email($user_email) . '>'
         );
