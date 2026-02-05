@@ -39,6 +39,10 @@ class IELTS_CM_Frontend {
         
         // Allow email login
         add_filter('authenticate', array($this, 'authenticate_with_email'), 20, 3);
+        
+        // Register endpoint for issue reporting mechanism
+        add_action('wp_ajax_process_issue_notification', array($this, 'handle_error_report_submission'));
+        add_action('wp_ajax_nopriv_process_issue_notification', array($this, 'handle_error_report_submission'));
     }
     
     /**
@@ -844,7 +848,38 @@ class IELTS_CM_Frontend {
                 <h2 id="impact-modal-title" style="margin: 0 0 15px 0; font-size: 18px;">Report an Issue</h2>
                 <span id="impact-close-modal" aria-label="Close">&times;</span>
                 <div id="impact-form-container">
-                    <?php echo do_shortcode('[contact-form-7 id="930fa24" title="Report an issue"]'); ?>
+                    <form id="impact-error-report-form" class="ielts-issue-reporter">
+                        <?php wp_nonce_field('ielts_report_token', 'security_token'); ?>
+                        <input type="hidden" class="ctx-page-heading" value="">
+                        <input type="hidden" class="ctx-page-location" value="">
+                        <input type="hidden" class="ctx-reporter-login" value="">
+                        <input type="hidden" class="ctx-reporter-contact" value="">
+                        <input type="hidden" class="ctx-reporter-given-name" value="">
+                        <input type="hidden" class="ctx-reporter-family-name" value="">
+                        
+                        <p style="margin: 0 0 12px;">
+                            <label style="display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; color: #333;">
+                                What's the problem?
+                            </label>
+                            <textarea class="concern-details" rows="7" 
+                                style="width: 100%; box-sizing: border-box; padding: 10px; border: 2px solid #e0e0e0; 
+                                border-radius: 6px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+                                font-size: 14px; resize: vertical;" 
+                                placeholder="Please describe the issue you encountered..." 
+                                required></textarea>
+                        </p>
+                        
+                        <p style="margin: 15px 0 0;">
+                            <button type="submit" class="submit-concern-btn"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                                color: #fff; padding: 12px 28px; border: 0; border-radius: 6px; 
+                                cursor: pointer; font-size: 15px; font-weight: 600; 
+                                box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+                                transition: transform 0.2s, box-shadow 0.2s;">
+                                Submit Report
+                            </button>
+                        </p>
+                    </form>
                 </div>
                 <input type="hidden" id="impact-page-title" value="<?php echo esc_attr(get_the_title()); ?>">
                 <input type="hidden" id="impact-page-url" value="<?php echo esc_url(get_permalink()); ?>">
@@ -991,25 +1026,26 @@ class IELTS_CM_Frontend {
                 // Open modal
                 modal.style.display = 'block';
 
-                // Auto-fill Contact Form 7 hidden fields
-                const titleField = document.querySelector('[name="page-title"]');
-                const urlField = document.querySelector('[name="page-url"]');
-                const userField = document.querySelector('[name="user-name"]');
-                const emailField = document.querySelector('[name="user-email"]');
-                const firstNameField = document.querySelector('[name="first-name"]');
-                const lastNameField = document.querySelector('[name="last-name"]');
+                // Populate context fields
+                const contextFields = {
+                    '.ctx-page-heading': title,
+                    '.ctx-page-location': url,
+                    '.ctx-reporter-login': user,
+                    '.ctx-reporter-contact': email,
+                    '.ctx-reporter-given-name': firstName,
+                    '.ctx-reporter-family-name': lastName
+                };
                 
-                if (titleField) titleField.value = title;
-                if (urlField) urlField.value = url;
-                if (userField) userField.value = user;
-                if (emailField) emailField.value = email;
-                if (firstNameField) firstNameField.value = firstName;
-                if (lastNameField) lastNameField.value = lastName;
+                Object.entries(contextFields).forEach(([selector, val]) => {
+                    const elem = document.querySelector(selector);
+                    if (elem) elem.value = val;
+                });
 
-                // Reset form container in case user sent previously
+                // Clear previous submission state
                 if (formContainer) {
                     formContainer.style.display = 'block';
-                    formContainer.innerHTML = formContainer.querySelector('form')?.outerHTML || formContainer.innerHTML;
+                    const txtArea = document.querySelector('.concern-details');
+                    if (txtArea) txtArea.value = '';
                 }
             });
 
@@ -1029,23 +1065,134 @@ class IELTS_CM_Frontend {
                 }
             });
 
-            // Contact Form 7 successful submission - no page reload needed
-            document.addEventListener('wpcf7mailsent', function(event) {
-                if (!formContainer) return;
-                // Show success message without reloading, with ARIA live region for screen readers
-                // Using explicit "Success:" text for color-blind users, not just color
-                formContainer.innerHTML = '<div role="status" aria-live="polite" style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px; border: 2px solid #28a745; background: #d4edda; border-radius: 4px;"><strong>Success:</strong> ✅ Thanks for letting us know!</div>';
-                // Auto-close modal after 2 seconds and minimize button
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    updateButtonState(true);
-                    localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
-                }, 2000);
-            }, false);
+            // Handle form submission via fetch API
+            const reporterForm = document.getElementById('impact-error-report-form');
+            if (reporterForm) {
+                reporterForm.addEventListener('submit', async (evt) => {
+                    evt.preventDefault();
+                    
+                    const submitBtn = reporterForm.querySelector('.submit-concern-btn');
+                    const originalBtnText = submitBtn ? submitBtn.textContent : '';
+                    
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Sending...';
+                    }
+                    
+                    const payload = new FormData();
+                    payload.append('action', 'process_issue_notification');
+                    payload.append('security_token', reporterForm.querySelector('[name="security_token"]')?.value || '');
+                    payload.append('message', reporterForm.querySelector('.concern-details')?.value || '');
+                    payload.append('page_title', reporterForm.querySelector('.ctx-page-heading')?.value || '');
+                    payload.append('page_url', reporterForm.querySelector('.ctx-page-location')?.value || '');
+                    payload.append('user_name', reporterForm.querySelector('.ctx-reporter-login')?.value || '');
+                    payload.append('user_email', reporterForm.querySelector('.ctx-reporter-contact')?.value || '');
+                    payload.append('first_name', reporterForm.querySelector('.ctx-reporter-given-name')?.value || '');
+                    payload.append('last_name', reporterForm.querySelector('.ctx-reporter-family-name')?.value || '');
+                    
+                    try {
+                        const response = await fetch('<?php echo esc_url(admin_url("admin-ajax.php")); ?>', {
+                            method: 'POST',
+                            body: payload
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (result.success) {
+                            if (formContainer) {
+                                formContainer.innerHTML = `
+                                    <div role="alert" aria-live="assertive" 
+                                        style="padding: 24px; background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); 
+                                        color: white; border-radius: 8px; text-align: center; 
+                                        font-size: 16px; font-weight: 600; box-shadow: 0 4px 12px rgba(17, 153, 142, 0.25);">
+                                        <span style="font-size: 28px; display: block; margin-bottom: 8px;">✓</span>
+                                        Report received! Thank you for your feedback.
+                                    </div>
+                                `;
+                            }
+                            
+                            setTimeout(() => {
+                                modal.style.display = 'none';
+                                updateButtonState(true);
+                                localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
+                            }, 2000);
+                        } else {
+                            alert('Unable to submit report. Please try again.');
+                            if (submitBtn) {
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = originalBtnText;
+                            }
+                        }
+                    } catch (err) {
+                        alert('Network error. Please check your connection and retry.');
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalBtnText;
+                        }
+                    }
+                });
+            }
         });
         </script>
 
         <?php
         echo ob_get_clean();
+    }
+    
+    /**
+     * Process issue report submissions
+     */
+    public function handle_error_report_submission() {
+        $token_field = isset($_POST['security_token']) ? sanitize_text_field($_POST['security_token']) : '';
+        
+        if (!wp_verify_nonce($token_field, 'ielts_report_token')) {
+            wp_send_json_error(array('reason' => 'Invalid security token'));
+            return;
+        }
+        
+        $concern_text = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
+        $heading_text = isset($_POST['page_title']) ? sanitize_text_field($_POST['page_title']) : '';
+        $location_url = isset($_POST['page_url']) ? esc_url_raw($_POST['page_url']) : '';
+        $reporter_login = isset($_POST['user_name']) ? sanitize_text_field($_POST['user_name']) : '';
+        $reporter_contact = isset($_POST['user_email']) ? sanitize_email($_POST['user_email']) : '';
+        $given_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
+        $family_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
+        
+        if (empty($concern_text)) {
+            wp_send_json_error(array('reason' => 'Message cannot be empty'));
+            return;
+        }
+        
+        $recipient = get_option('admin_email');
+        $subject_line = 'Issue Report: ' . $heading_text;
+        
+        $email_body = '<html><body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">';
+        $email_body .= '<div style="max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px;">';
+        $email_body .= '<h2 style="color: #555; border-bottom: 2px solid #667eea; padding-bottom: 10px;">New Issue Report</h2>';
+        
+        $email_body .= '<div style="margin: 20px 0; padding: 15px; background: white; border-radius: 6px;">';
+        $email_body .= '<p style="margin: 8px 0;"><strong style="color: #667eea;">From: </strong>' . esc_html($reporter_login) . ' &lt;' . esc_html($reporter_contact) . '&gt;</p>';
+        $email_body .= '<p style="margin: 8px 0;"><strong style="color: #667eea;">Name: </strong>' . esc_html($given_name) . ' ' . esc_html($family_name) . '</p>';
+        $email_body .= '<p style="margin: 8px 0;"><strong style="color: #667eea;">Reported issue on: </strong>' . esc_html($heading_text) . '</p>';
+        $email_body .= '<p style="margin: 8px 0;"><strong style="color: #667eea;">Message Body:</strong></p>';
+        $email_body .= '<div style="padding: 12px; background: #fafafa; border-left: 4px solid #667eea; margin: 10px 0;">' . nl2br(esc_html($concern_text)) . '</div>';
+        $email_body .= '<p style="margin: 8px 0;"><strong style="color: #667eea;">Page URL: </strong><a href="' . esc_url($location_url) . '" style="color: #764ba2; text-decoration: none;">' . esc_html($location_url) . '</a></p>';
+        $email_body .= '</div>';
+        
+        $email_body .= '</div></body></html>';
+        
+        $from_email = 'noreply@' . wp_parse_url(home_url(), PHP_URL_HOST);
+        $mail_headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'From: ' . get_bloginfo('name') . ' <' . $from_email . '>'
+        );
+        
+        $mail_sent = wp_mail($recipient, $subject_line, $email_body, $mail_headers);
+        
+        if ($mail_sent) {
+            wp_send_json_success(array('status' => 'delivered'));
+        } else {
+            wp_send_json_error(array('reason' => 'Email delivery failed'));
+        }
     }
 }
