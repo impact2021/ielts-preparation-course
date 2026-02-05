@@ -1117,7 +1117,7 @@ class IELTS_CM_Frontend {
             <table>
                 <tr>
                     <td>From</td>
-                    <td>' . sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name) . ' (' . sanitize_text_field($user_name) . ') &lt;' . sanitize_email($user_email) . '&gt;</td>
+                    <td>' . sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name) . ' (' . sanitize_text_field($user_name) . ') <' . sanitize_email($user_email) . '></td>
                 </tr>
                 <tr>
                     <td>Reported error on</td>
@@ -1125,11 +1125,11 @@ class IELTS_CM_Frontend {
                 </tr>
                 <tr>
                     <td>Message Body</td>
-                    <td>' . $message_clean . '</td>
+                    <td>' . wp_kses_post($message_clean) . '</td>
                 </tr>
                 <tr>
                     <td>Page URL</td>
-                    <td><a href="' . esc_url($page_url) . '">' . esc_url($page_url) . '</a></td>
+                    <td><a href="' . esc_url_raw($page_url) . '">' . esc_url($page_url) . '</a></td>
                 </tr>
             </table>
         </body>
