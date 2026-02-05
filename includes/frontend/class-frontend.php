@@ -891,7 +891,13 @@ class IELTS_CM_Frontend {
         }
         #impact-report-issue-btn.minimized:hover {
             background: #005bb5;
-            transform: scale(1.1);
+        }
+        
+        /* Respect reduced motion preferences */
+        @media (prefers-reduced-motion: no-preference) {
+            #impact-report-issue-btn.minimized:hover {
+                transform: scale(1.1);
+            }
         }
 
         /* Modal styling */
@@ -1027,7 +1033,8 @@ class IELTS_CM_Frontend {
             document.addEventListener('wpcf7mailsent', function(event) {
                 if (!formContainer) return;
                 // Show success message without reloading, with ARIA live region for screen readers
-                formContainer.innerHTML = '<div role="status" aria-live="polite" style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px;">✅ Thanks for letting us know!</div>';
+                // Using explicit "Success:" text for color-blind users, not just color
+                formContainer.innerHTML = '<div role="status" aria-live="polite" style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px; border: 2px solid #28a745; background: #d4edda; border-radius: 4px;"><strong>Success:</strong> ✅ Thanks for letting us know!</div>';
                 // Auto-close modal after 2 seconds and minimize button
                 setTimeout(() => {
                     modal.style.display = 'none';
