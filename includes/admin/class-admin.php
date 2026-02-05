@@ -912,6 +912,32 @@ class IELTS_CM_Admin {
                                 <label><strong><?php _e('Word/Phrase:', 'ielts-course-manager'); ?></strong></label><br>
                                 <input type="text" name="vocabulary_items[<?php echo $index; ?>][word]" value="<?php echo esc_attr($item['word']); ?>" style="width: 100%;" placeholder="e.g., INSTRUCTIONS">
                             </div>
+                            <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                                <div style="flex: 1;">
+                                    <label><strong><?php _e('Part of Speech:', 'ielts-course-manager'); ?></strong></label><br>
+                                    <select name="vocabulary_items[<?php echo $index; ?>][part_of_speech]" style="width: 100%;">
+                                        <option value=""><?php _e('Select...', 'ielts-course-manager'); ?></option>
+                                        <option value="noun" <?php selected(isset($item['part_of_speech']) ? $item['part_of_speech'] : '', 'noun'); ?>><?php _e('Noun', 'ielts-course-manager'); ?></option>
+                                        <option value="verb" <?php selected(isset($item['part_of_speech']) ? $item['part_of_speech'] : '', 'verb'); ?>><?php _e('Verb', 'ielts-course-manager'); ?></option>
+                                        <option value="adjective" <?php selected(isset($item['part_of_speech']) ? $item['part_of_speech'] : '', 'adjective'); ?>><?php _e('Adjective', 'ielts-course-manager'); ?></option>
+                                        <option value="adverb" <?php selected(isset($item['part_of_speech']) ? $item['part_of_speech'] : '', 'adverb'); ?>><?php _e('Adverb', 'ielts-course-manager'); ?></option>
+                                        <option value="phrase" <?php selected(isset($item['part_of_speech']) ? $item['part_of_speech'] : '', 'phrase'); ?>><?php _e('Phrase', 'ielts-course-manager'); ?></option>
+                                        <option value="idiom" <?php selected(isset($item['part_of_speech']) ? $item['part_of_speech'] : '', 'idiom'); ?>><?php _e('Idiom', 'ielts-course-manager'); ?></option>
+                                    </select>
+                                </div>
+                                <div style="flex: 1;">
+                                    <label><strong><?php _e('CEFR Level:', 'ielts-course-manager'); ?></strong></label><br>
+                                    <select name="vocabulary_items[<?php echo $index; ?>][cefr_level]" style="width: 100%;">
+                                        <option value=""><?php _e('Select...', 'ielts-course-manager'); ?></option>
+                                        <option value="A1" <?php selected(isset($item['cefr_level']) ? $item['cefr_level'] : '', 'A1'); ?>>A1</option>
+                                        <option value="A2" <?php selected(isset($item['cefr_level']) ? $item['cefr_level'] : '', 'A2'); ?>>A2</option>
+                                        <option value="B1" <?php selected(isset($item['cefr_level']) ? $item['cefr_level'] : '', 'B1'); ?>>B1</option>
+                                        <option value="B2" <?php selected(isset($item['cefr_level']) ? $item['cefr_level'] : '', 'B2'); ?>>B2</option>
+                                        <option value="C1" <?php selected(isset($item['cefr_level']) ? $item['cefr_level'] : '', 'C1'); ?>>C1</option>
+                                        <option value="C2" <?php selected(isset($item['cefr_level']) ? $item['cefr_level'] : '', 'C2'); ?>>C2</option>
+                                    </select>
+                                </div>
+                            </div>
                             <div style="margin-bottom: 10px;">
                                 <label><strong><?php _e('Definition:', 'ielts-course-manager'); ?></strong></label><br>
                                 <textarea name="vocabulary_items[<?php echo $index; ?>][definition]" rows="2" style="width: 100%;" placeholder="Detailed information on how to do something..."><?php echo esc_textarea($item['definition']); ?></textarea>
@@ -927,6 +953,19 @@ class IELTS_CM_Admin {
             </div>
             
             <button type="button" id="add_vocabulary_item" class="button button-secondary"><?php _e('Add Vocabulary Item', 'ielts-course-manager'); ?></button>
+        </div>
+        
+        <div id="vocabulary_styling" style="<?php echo $is_vocabulary ? '' : 'display:none;'; ?>">
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+            <h4 style="margin-top: 0;"><?php _e('Vocabulary Table Styling', 'ielts-course-manager'); ?></h4>
+            <?php
+            $vocab_header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
+            ?>
+            <div style="margin-bottom: 15px;">
+                <label><strong><?php _e('Table Header Color:', 'ielts-course-manager'); ?></strong></label><br>
+                <input type="text" id="ielts_cm_vocab_header_color" name="ielts_cm_vocab_header_color" value="<?php echo esc_attr($vocab_header_color); ?>" class="color-picker" data-default-color="#E56C0A">
+                <small><?php _e('Choose the background color for vocabulary table headers', 'ielts-course-manager'); ?></small>
+            </div>
         </div>
         
         <script>
@@ -965,10 +1004,17 @@ class IELTS_CM_Admin {
             $('#ielts_cm_is_vocabulary').on('change', function() {
                 if ($(this).is(':checked')) {
                     $('#vocabulary_fields').slideDown();
+                    $('#vocabulary_styling').slideDown();
                 } else {
                     $('#vocabulary_fields').slideUp();
+                    $('#vocabulary_styling').slideUp();
                 }
             });
+            
+            // Initialize WordPress color picker
+            if (typeof $.fn.wpColorPicker !== 'undefined') {
+                $('.color-picker').wpColorPicker();
+            }
             
             // Add vocabulary item
             $('#add_vocabulary_item').on('click', function() {
@@ -976,6 +1022,32 @@ class IELTS_CM_Admin {
                     '<div style="margin-bottom: 10px;">' +
                     '<label><strong>' + i18n.wordLabel + '</strong></label><br>' +
                     '<input type="text" name="vocabulary_items[' + vocabularyIndex + '][word]" style="width: 100%;" placeholder="' + i18n.wordPlaceholder + '">' +
+                    '</div>' +
+                    '<div style="display: flex; gap: 10px; margin-bottom: 10px;">' +
+                    '<div style="flex: 1;">' +
+                    '<label><strong>Part of Speech:</strong></label><br>' +
+                    '<select name="vocabulary_items[' + vocabularyIndex + '][part_of_speech]" style="width: 100%;">' +
+                    '<option value="">Select...</option>' +
+                    '<option value="noun">Noun</option>' +
+                    '<option value="verb">Verb</option>' +
+                    '<option value="adjective">Adjective</option>' +
+                    '<option value="adverb">Adverb</option>' +
+                    '<option value="phrase">Phrase</option>' +
+                    '<option value="idiom">Idiom</option>' +
+                    '</select>' +
+                    '</div>' +
+                    '<div style="flex: 1;">' +
+                    '<label><strong>CEFR Level:</strong></label><br>' +
+                    '<select name="vocabulary_items[' + vocabularyIndex + '][cefr_level]" style="width: 100%;">' +
+                    '<option value="">Select...</option>' +
+                    '<option value="A1">A1</option>' +
+                    '<option value="A2">A2</option>' +
+                    '<option value="B1">B1</option>' +
+                    '<option value="B2">B2</option>' +
+                    '<option value="C1">C1</option>' +
+                    '<option value="C2">C2</option>' +
+                    '</select>' +
+                    '</div>' +
                     '</div>' +
                     '<div style="margin-bottom: 10px;">' +
                     '<label><strong>' + i18n.definitionLabel + '</strong></label><br>' +
@@ -1031,6 +1103,32 @@ class IELTS_CM_Admin {
                         '<div style="margin-bottom: 10px;">' +
                         '<label><strong>' + i18n.wordLabel + '</strong></label><br>' +
                         '<input type="text" name="vocabulary_items[' + vocabularyIndex + '][word]" value="' + escapeHtml(word) + '" style="width: 100%;" placeholder="' + i18n.wordPlaceholder + '">' +
+                        '</div>' +
+                        '<div style="display: flex; gap: 10px; margin-bottom: 10px;">' +
+                        '<div style="flex: 1;">' +
+                        '<label><strong>Part of Speech:</strong></label><br>' +
+                        '<select name="vocabulary_items[' + vocabularyIndex + '][part_of_speech]" style="width: 100%;">' +
+                        '<option value="">Select...</option>' +
+                        '<option value="noun">Noun</option>' +
+                        '<option value="verb">Verb</option>' +
+                        '<option value="adjective">Adjective</option>' +
+                        '<option value="adverb">Adverb</option>' +
+                        '<option value="phrase">Phrase</option>' +
+                        '<option value="idiom">Idiom</option>' +
+                        '</select>' +
+                        '</div>' +
+                        '<div style="flex: 1;">' +
+                        '<label><strong>CEFR Level:</strong></label><br>' +
+                        '<select name="vocabulary_items[' + vocabularyIndex + '][cefr_level]" style="width: 100%;">' +
+                        '<option value="">Select...</option>' +
+                        '<option value="A1">A1</option>' +
+                        '<option value="A2">A2</option>' +
+                        '<option value="B1">B1</option>' +
+                        '<option value="B2">B2</option>' +
+                        '<option value="C1">C1</option>' +
+                        '<option value="C2">C2</option>' +
+                        '</select>' +
+                        '</div>' +
                         '</div>' +
                         '<div style="margin-bottom: 10px;">' +
                         '<label><strong>' + i18n.definitionLabel + '</strong></label><br>' +
@@ -3505,6 +3603,8 @@ class IELTS_CM_Admin {
                         if (!empty($item['word'])) {
                             $vocabulary_items[] = array(
                                 'word' => sanitize_text_field($item['word']),
+                                'part_of_speech' => isset($item['part_of_speech']) ? sanitize_text_field($item['part_of_speech']) : '',
+                                'cefr_level' => isset($item['cefr_level']) ? sanitize_text_field($item['cefr_level']) : '',
                                 'definition' => isset($item['definition']) ? sanitize_textarea_field($item['definition']) : '',
                                 'example' => isset($item['example']) ? sanitize_textarea_field($item['example']) : ''
                             );
@@ -3514,6 +3614,11 @@ class IELTS_CM_Admin {
                 update_post_meta($post_id, '_ielts_cm_vocabulary_items', $vocabulary_items);
             } else {
                 update_post_meta($post_id, '_ielts_cm_vocabulary_items', array());
+            }
+            
+            // Save vocabulary header color setting (global option)
+            if (isset($_POST['ielts_cm_vocab_header_color'])) {
+                update_option('ielts_cm_vocab_header_color', sanitize_hex_color($_POST['ielts_cm_vocab_header_color']));
             }
         }
         

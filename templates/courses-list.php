@@ -94,7 +94,7 @@ if (!isset($columns)) {
                                 </button>
                             <?php endif; ?>
                         <?php else: ?>
-                            <a href="<?php echo wp_login_url(get_permalink($course->ID)); ?>" class="button">
+                            <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink($course->ID))); ?>" class="button">
                                 <?php _e('Login to Enroll', 'ielts-course-manager'); ?>
                             </a>
                         <?php endif; ?>

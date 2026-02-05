@@ -1,0 +1,113 @@
+{
+    "title": "Completion questions - quick test",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Now practice using this Section 1 listening. Type your answers in the spaces provided.\r\n\r\nSection 1 Questions 1-10\r\n\r\nComplete the form below.\r\n\r\nWrite NO MORE THAN THREE WORDS AND/OR A NUMBER for each answer.",
+            "question": "<table style=\"border-collapse: collapse\" border=\"1\" width=\"100%\" cellspacing=\"0\" cellpadding=\"5\">\r\n<tbody>\r\n<tr>\r\n<td style=\"font-weight: bold;text-align: center\" colspan=\"2\">Customer Requirements</td>\r\n</tr>\r\n<tr>\r\n<td><em>Example:</em>\r\nProduct/Make required:</td>\r\n<td><em>Answer:</em>\r\nLaptop computer / no preference</td>\r\n</tr>\r\n<tr>\r\n<td>Requirements:</td>\r\n<td></td>\r\n</tr>\r\n<tr>\r\n<td>Large memory capacity:</td>\r\n<td>Not required</td>\r\n</tr>\r\n<tr>\r\n<td>Main use:</td>\r\n<td>Completing [field 1] work while travelling</td>\r\n</tr>\r\n<tr>\r\n<td>Requires model with:</td>\r\n<td>A suitable [field 2] for extended use away from electric points</td>\r\n</tr>\r\n<tr>\r\n<td>Model recommended:</td>\r\n<td>Axer Business Pro (can be used for around [field 3] hours without recharge)</td>\r\n</tr>\r\n<tr>\r\n<td>Price (Axer Business Pro):</td>\r\n<td>$ [field 4].95</td>\r\n</tr>\r\n<tr>\r\n<td>Period of guarantee cover taken:</td>\r\n<td>Cover for [field 5]</td>\r\n</tr>\r\n<tr>\r\n<td>Details on Computer</td>\r\n<td></td>\r\n</tr>\r\n<tr>\r\n<td>Customer Name:</td>\r\n<td>H. [field 6]</td>\r\n</tr>\r\n<tr>\r\n<td>Title:</td>\r\n<td>Mrs</td>\r\n</tr>\r\n<tr>\r\n<td>Address:</td>\r\n<td>[field 7] White Hill Rd\r\n[field 8]\r\n[field 9] Auckland</td>\r\n</tr>\r\n<tr>\r\n<td>Post code:</td>\r\n<td>0614</td>\r\n</tr>\r\n<tr>\r\n<td>Mobile number:</td>\r\n<td>n/a will be [field 10]</td>\r\n</tr>\r\n<tr>\r\n<td>Home number:</td>\r\n<td>(09) 821 7745</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+            "points": 10,
+            "no_answer_feedback": "Make sure to listen carefully to the audio and take notes while listening. Check the transcript using the 'Show in transcript' button to find the answers.",
+            "correct_feedback": "Excellent work! You captured all the key details from the conversation.",
+            "incorrect_feedback": "Not quite right. Listen to the audio again and use the 'Show in transcript' button to locate the specific information needed.",
+            "reading_text_id": null,
+            "audio_section_id": 0,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "form_completion_l",
+            "ielts_question_type": "Form Completion",
+            "field_count": 10,
+            "field_answers": {
+                "1": "word-processing|word processing|wordprocessing",
+                "2": "battery|long battery life|battery life",
+                "3": "6|six",
+                "4": "1236",
+                "5": "3 years|three years|3 year's|three year's",
+                "6": "Bartford",
+                "7": "76",
+                "8": "Maslee",
+                "9": "West|West Auckland",
+                "10": "changed"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The customer mentions using the laptop for word-processing work.",
+                    "incorrect": "Incorrect. Listen for what type of work the customer will be doing while travelling.",
+                    "no_answer": "The correct answer is 'word-processing'. The customer states she'll be using the laptop for word-processing work as she travels."
+                },
+                "2": {
+                    "correct": "Correct! The customer needs a model with a long battery life.",
+                    "incorrect": "Incorrect. Listen for what feature the customer needs for extended use away from electric points.",
+                    "no_answer": "The correct answer is 'battery' or 'long battery life'. The customer mentions needing a laptop with a long battery life for train journeys."
+                },
+                "3": {
+                    "correct": "Correct! The Axer Business Pro can be used for around 6 hours without recharge.",
+                    "incorrect": "Incorrect. Listen for how many hours the Axer Business Pro can be used without recharging.",
+                    "no_answer": "The correct answer is '6' (or 'six'). The shop assistant states the Business Pro can be used for around 6 hours before needing to recharge."
+                },
+                "4": {
+                    "correct": "Correct! The Axer Business Pro costs $1236.95.",
+                    "incorrect": "Incorrect. Listen carefully for the price of the Axer Business Pro.",
+                    "no_answer": "The correct answer is '1236'. The shop assistant states the Business Pro is $1236.95 (you only need to write the number before the decimal point)."
+                },
+                "5": {
+                    "correct": "Correct! The customer chose 3 years of guarantee cover.",
+                    "incorrect": "Incorrect. Listen for how long the customer decided to extend the warranty.",
+                    "no_answer": "The correct answer is '3 years'. The customer agrees to extend the warranty to 3 years' cover."
+                },
+                "6": {
+                    "correct": "Correct! The customer's surname is Bartford.",
+                    "incorrect": "Incorrect. Listen carefully when the customer spells out her last name.",
+                    "no_answer": "The correct answer is 'Bartford'. The customer spells it: B-A-R-T-F-O-R-D."
+                },
+                "7": {
+                    "correct": "Correct! The street number is 76.",
+                    "incorrect": "Incorrect. Listen for the house/street number in the address.",
+                    "no_answer": "The correct answer is '76'. The customer states her address is 76 White Hill Rd."
+                },
+                "8": {
+                    "correct": "Correct! The area is Maslee.",
+                    "incorrect": "Incorrect. Listen for what area White Hill Road is in.",
+                    "no_answer": "The correct answer is 'Maslee'. When asked what area the road is in, the customer replies 'Maslee' (spelled M-A-S-L-E-E)."
+                },
+                "9": {
+                    "correct": "Correct! The location is West Auckland.",
+                    "incorrect": "Incorrect. Listen for which part of Auckland the address is in.",
+                    "no_answer": "The correct answer is 'West' or 'West Auckland'. The customer confirms it's in West Auckland."
+                },
+                "10": {
+                    "correct": "Correct! The mobile number will be changed.",
+                    "incorrect": "Incorrect. Listen for what will happen to the mobile number.",
+                    "no_answer": "The correct answer is 'changed'. The customer states her mobile number will be changed soon when she goes away."
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_listening",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "audio": {
+        "url": "https://www.ilsnz.com/wp-content/uploads/2018/11/forms-notes-lesson.mp3",
+        "transcript": "",
+        "sections": [
+            {
+                "section_number": 1,
+                "transcript": "<strong>Transcript:</strong>\r\n<table border=\"1\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Good morning, can I help you with anything or are you just looking at the moment?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">No, I would like some help please, I am thinking of buying a laptop computer and I'd like some advice if you are free.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Sure, I'd be glad to help. Have you got any particular make in mind?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">I'd be quite interested in looking at the Axer laptops; I have a PC at home of that make and it's pretty good. Though I don't have any preference really, I'll have a look at anything you recommend.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Well, we have quite a wide selection here. Are you looking for one with a large memory capacity?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Not really, I do most of my work on my personal computer at home – I'm a writer you see – but..erm.. I am going to Europe next month for a three month trip, so I need a laptop to take with me. I'll just be using it for <span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">word-processing</span> so I can work as I travel.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Okay well, the Axer Travel Companion Z40 might be a good model to look at. Here it is. It has a good memory size and it is a good price, but it's not really suitable for people who need to use a lot of accessories as it doesn't have many USB points.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Right, but I don't really need that so I guess it could still be suitable for me. Oh, I forgot to mention, I am planning to take some long train journeys during my time in Europe, so I need a laptop with a <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">long battery life</span>.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Okay, well maybe we should look at some other models then. The Axer Travel Companion has quite a short battery life; you generally need to recharge it after 2 or 3 hours of use. Would that not really be long enough?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">I'm not really sure, but maybe just in case, I should buy one that needs charging less frequently.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Well, there's the Axer Business Pro, it's designed, as the name suggests, for business use. It has lots of additional functions that you may not really use, but you can use it for around <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">6 hours</span> before needing to recharge the battery.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">And its quite a bit smaller too isn't it? Easier to carry. Is there much difference in price?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Yes, but it's probably worth paying the extra so you know that you can do what you want to do while you are away. The Travel Companion is $924.99 and the Business Pro is <span id=\"q4\" data-question=\"4\"></span><span class=\"reading-answer-marker\">$1236</span>.95</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Hmm, okay, but as you say, probably worth it. Okay, I'll take the Business Pro… erm, I'd like to pay some of the amount in cash and the rest by credit card, if that's okay. I've got $900 dollars in cash with me now.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">That's no problem, so you want to pay $900 in cash and the remaining $336.95 on your card is that right?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, please</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Okay well come over to the counter with me and I can get everything arranged for you.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n\r\n<table border=\"1\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Okay, well the laptop comes with a 12 month guarantee; however, if you would like to extend the warranty period for an additional 2 years, giving you 3 year's cover, you can do so by paying an extra $140. Would you be interested in that option?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Well, it's already quite expensive, but I suppose I should pay the extra, after all I will be taking it on quite a long journey! I'll take pretty good care of it, I think but it's always better to be safe. So I'll take the <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">3 years' cover</span> please.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Okay well, I need to put some of your details into our computer, just in case anything does go wrong and you need to make a claim. Could I have your full name please?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, it's Heather <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Bartford</span>. That's B-A-R-T-F-O-R-D</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">And is that Mrs..Miss or Ms?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">It's Mrs</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Right, and could you give me your address please?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, its <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">76</span> White Hill Rd</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Is that white like the colour?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, it is.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">And what area is the road in?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">It's <span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">Maslee</span></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Is that M-A-S-L-E-A?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Almost, the last letter is E (so its double ee at the end) not 'a'.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">And is that in Auckland?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">Yes, it is, <span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">West Auckland</span></td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Do you know your postcode?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">It's 0614</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Great, and your phone number please?</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">My mobile is 027 643 718 but that will be <span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">changed</span> soon, when I go away, so its better to keep my home number on record so that's (09) 821 7745.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Shop assistant</td>\r\n<td valign=\"top\" width=\"75%\">Ok, so we have all your details for the warranty, so we can now sort out the payment. I'll just do that now and then I'll get your laptop from the store room.</td>\r\n</tr>\r\n<tr>\r\n<td valign=\"top\" width=\"25%\">Customer</td>\r\n<td valign=\"top\" width=\"75%\">That's great, thanks very much.</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n"
+            }
+        ]
+    },
+    "_metadata": {
+        "exported_at": "2026-02-05 16:31:37",
+        "exported_by": "impact",
+        "plugin_version": "15.13",
+        "format_version": "1.0"
+    }
+}
