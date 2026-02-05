@@ -897,9 +897,10 @@ class IELTS_CM_Admin {
             <!-- Bulk Import Section -->
             <div style="margin-bottom: 20px; padding: 15px; background: #f0f7ff; border: 1px solid #0073aa; border-radius: 4px;">
                 <label><strong><?php _e('Bulk Import from Text', 'ielts-course-manager'); ?></strong></label><br>
-                <small><?php _e('Paste vocabulary items below. Each line should contain: Word/Phrase | Definition | Example Sentence', 'ielts-course-manager'); ?></small><br>
-                <small><?php _e('Use the pipe character (|) or tab to separate columns. Lines with only a word will have empty definition and example.', 'ielts-course-manager'); ?></small>
-                <textarea id="vocabulary_bulk_import" rows="6" style="width: 100%; margin-top: 10px; font-family: monospace;" placeholder="INSTRUCTIONS | Detailed information on how to do something | Read the instructions carefully&#10;VOCABULARY | A set of words used in a particular language | She has an extensive vocabulary"></textarea>
+                <small><?php _e('Format: Word | Definition | Example | Part of Speech | CEFR Level', 'ielts-course-manager'); ?></small><br>
+                <small><?php _e('Columns 4 and 5 are optional. Valid parts of speech: noun, verb, adjective, adverb, phrase, idiom', 'ielts-course-manager'); ?></small><br>
+                <small><?php _e('Valid CEFR levels: A1, A2, B1, B2, C1, C2', 'ielts-course-manager'); ?></small>
+                <textarea id="vocabulary_bulk_import" rows="6" style="width: 100%; margin-top: 10px; font-family: monospace;" placeholder="PROFICIENT|skilled|proficient in English|adjective|C1"></textarea>
                 <button type="button" id="import_vocabulary_button" class="button button-primary" style="margin-top: 10px;"><?php _e('Import Vocabulary', 'ielts-course-manager'); ?></button>
                 <button type="button" id="clear_vocabulary_button" class="button" style="margin-top: 10px; color: #b32d2e;"><?php _e('Clear All Items', 'ielts-course-manager'); ?></button>
             </div>
@@ -1091,12 +1092,37 @@ class IELTS_CM_Admin {
                         parts = line.split('\t');
                     }
                     
-                    // Trim each part
+                    // Extract all 5 columns
                     var word = (parts[0] || '').trim();
                     var definition = (parts[1] || '').trim();
                     var example = (parts[2] || '').trim();
+                    var partOfSpeech = (parts[3] || '').trim().toLowerCase();
+                    var cefrLevel = (parts[4] || '').trim().toUpperCase();
                     
                     if (!word) continue; // Skip if no word
+                    
+                    // Validate part of speech
+                    var validParts = ['noun', 'verb', 'adjective', 'adverb', 'phrase', 'idiom'];
+                    var selectedPart = validParts.indexOf(partOfSpeech) !== -1 ? partOfSpeech : '';
+                    
+                    // Validate CEFR level
+                    var validLevels = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'];
+                    var selectedLevel = validLevels.indexOf(cefrLevel) !== -1 ? cefrLevel : '';
+                    
+                    // Build part of speech options
+                    var partOptions = '<option value="">Select...</option>';
+                    for (var j = 0; j < validParts.length; j++) {
+                        var isSelected = validParts[j] === selectedPart ? ' selected' : '';
+                        var capitalizedPart = validParts[j].charAt(0).toUpperCase() + validParts[j].slice(1);
+                        partOptions += '<option value="' + validParts[j] + '"' + isSelected + '>' + capitalizedPart + '</option>';
+                    }
+                    
+                    // Build CEFR level options
+                    var levelOptions = '<option value="">Select...</option>';
+                    for (var k = 0; k < validLevels.length; k++) {
+                        var isSelected2 = validLevels[k] === selectedLevel ? ' selected' : '';
+                        levelOptions += '<option value="' + validLevels[k] + '"' + isSelected2 + '>' + validLevels[k] + '</option>';
+                    }
                     
                     // Create new vocabulary item with proper escaping
                     var html = '<div class="vocabulary-item" style="border: 1px solid #ddd; padding: 15px; margin-bottom: 10px; background: #f9f9f9;">' +
@@ -1108,25 +1134,13 @@ class IELTS_CM_Admin {
                         '<div style="flex: 1;">' +
                         '<label><strong>Part of Speech:</strong></label><br>' +
                         '<select name="vocabulary_items[' + vocabularyIndex + '][part_of_speech]" style="width: 100%;">' +
-                        '<option value="">Select...</option>' +
-                        '<option value="noun">Noun</option>' +
-                        '<option value="verb">Verb</option>' +
-                        '<option value="adjective">Adjective</option>' +
-                        '<option value="adverb">Adverb</option>' +
-                        '<option value="phrase">Phrase</option>' +
-                        '<option value="idiom">Idiom</option>' +
+                        partOptions +
                         '</select>' +
                         '</div>' +
                         '<div style="flex: 1;">' +
                         '<label><strong>CEFR Level:</strong></label><br>' +
                         '<select name="vocabulary_items[' + vocabularyIndex + '][cefr_level]" style="width: 100%;">' +
-                        '<option value="">Select...</option>' +
-                        '<option value="A1">A1</option>' +
-                        '<option value="A2">A2</option>' +
-                        '<option value="B1">B1</option>' +
-                        '<option value="B2">B2</option>' +
-                        '<option value="C1">C1</option>' +
-                        '<option value="C2">C2</option>' +
+                        levelOptions +
                         '</select>' +
                         '</div>' +
                         '</div>' +

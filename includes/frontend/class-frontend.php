@@ -39,6 +39,9 @@ class IELTS_CM_Frontend {
         
         // Allow email login
         add_filter('authenticate', array($this, 'authenticate_with_email'), 20, 3);
+        
+        // AJAX handler for error report submission
+        add_action('wp_ajax_ielts_cm_submit_error_report', array($this, 'handle_error_report_submission'));
     }
     
     /**
@@ -844,14 +847,22 @@ class IELTS_CM_Frontend {
                 <h2 id="impact-modal-title" style="margin: 0 0 15px 0; font-size: 18px;">Report an Issue</h2>
                 <span id="impact-close-modal" aria-label="Close">&times;</span>
                 <div id="impact-form-container">
-                    <?php echo do_shortcode('[contact-form-7 id="930fa24" title="Report an issue"]'); ?>
+                    <form id="impact-error-report-form">
+                        <div style="margin-bottom: 12px;">
+                            <label for="impact-message-field" style="display: block; margin-bottom: 5px; font-weight: 600;">Your Message <span style="color: red;">*</span></label>
+                            <textarea id="impact-message-field" name="report_message" required style="width: 100%; min-height: 120px; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; resize: vertical;" placeholder="Describe the issue you found..."></textarea>
+                        </div>
+                        <input type="hidden" name="report_page_title" value="<?php echo esc_attr(get_the_title()); ?>">
+                        <input type="hidden" name="report_page_url" value="<?php echo esc_url(get_permalink()); ?>">
+                        <input type="hidden" name="report_user_name" value="<?php echo esc_attr($user_name); ?>">
+                        <input type="hidden" name="report_user_email" value="<?php echo esc_attr($user_email); ?>">
+                        <input type="hidden" name="report_first_name" value="<?php echo esc_attr($user_first_name); ?>">
+                        <input type="hidden" name="report_last_name" value="<?php echo esc_attr($user_last_name); ?>">
+                        <input type="hidden" name="action" value="ielts_cm_submit_error_report">
+                        <input type="hidden" name="error_report_nonce" value="<?php echo wp_create_nonce('ielts_error_report_nonce'); ?>">
+                        <button type="submit" style="background: #0073e6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600;">Submit Report</button>
+                    </form>
                 </div>
-                <input type="hidden" id="impact-page-title" value="<?php echo esc_attr(get_the_title()); ?>">
-                <input type="hidden" id="impact-page-url" value="<?php echo esc_url(get_permalink()); ?>">
-                <input type="hidden" id="impact-user-name" value="<?php echo $user_name; ?>">
-                <input type="hidden" id="impact-user-email" value="<?php echo $user_email; ?>">
-                <input type="hidden" id="impact-user-first-name" value="<?php echo $user_first_name; ?>">
-                <input type="hidden" id="impact-user-last-name" value="<?php echo $user_last_name; ?>">
             </div>
         </div>
 
@@ -950,13 +961,8 @@ class IELTS_CM_Frontend {
             const btn = document.getElementById('impact-report-issue-btn');
             const modal = document.getElementById('impact-report-issue-modal');
             const close = document.getElementById('impact-close-modal');
-            const title = document.getElementById('impact-page-title').value;
-            const url = document.getElementById('impact-page-url').value;
-            const user = document.getElementById('impact-user-name').value;
-            const email = document.getElementById('impact-user-email').value;
-            const firstName = document.getElementById('impact-user-first-name').value;
-            const lastName = document.getElementById('impact-user-last-name').value;
             const formContainer = document.getElementById('impact-form-container');
+            const errorForm = document.getElementById('impact-error-report-form');
             
             // Get button text from data attributes
             const fullText = btn.getAttribute('data-full-text');
@@ -970,7 +976,7 @@ class IELTS_CM_Frontend {
                 if (minimized) {
                     btn.classList.add('minimized');
                     btn.textContent = minText;
-                    btn.setAttribute('title', fullText); // Add tooltip
+                    btn.setAttribute('title', fullText);
                 } else {
                     btn.classList.remove('minimized');
                     btn.textContent = fullText;
@@ -980,42 +986,22 @@ class IELTS_CM_Frontend {
             
             // Check for expanded state in localStorage (default is minimized)
             const isExpanded = localStorage.getItem(FEEDBACK_EXPANDED_KEY) === 'true';
-            // Always start minimized unless explicitly expanded
             updateButtonState(!isExpanded);
 
             btn.addEventListener('click', () => {
-                // Expand button when clicked
                 updateButtonState(false);
                 localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'true');
-                
-                // Open modal
                 modal.style.display = 'block';
-
-                // Auto-fill Contact Form 7 hidden fields
-                const titleField = document.querySelector('[name="page-title"]');
-                const urlField = document.querySelector('[name="page-url"]');
-                const userField = document.querySelector('[name="user-name"]');
-                const emailField = document.querySelector('[name="user-email"]');
-                const firstNameField = document.querySelector('[name="first-name"]');
-                const lastNameField = document.querySelector('[name="last-name"]');
                 
-                if (titleField) titleField.value = title;
-                if (urlField) urlField.value = url;
-                if (userField) userField.value = user;
-                if (emailField) emailField.value = email;
-                if (firstNameField) firstNameField.value = firstName;
-                if (lastNameField) lastNameField.value = lastName;
-
-                // Reset form container in case user sent previously
-                if (formContainer) {
-                    formContainer.style.display = 'block';
-                    formContainer.innerHTML = formContainer.querySelector('form')?.outerHTML || formContainer.innerHTML;
+                // Reset form if it was previously submitted
+                if (errorForm && errorForm.querySelector) {
+                    const originalFormHtml = errorForm.outerHTML;
+                    formContainer.innerHTML = originalFormHtml;
                 }
             });
 
             close.addEventListener('click', () => {
                 modal.style.display = 'none';
-                // Minimize the button
                 updateButtonState(true);
                 localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
             });
@@ -1023,29 +1009,115 @@ class IELTS_CM_Frontend {
             window.addEventListener('click', e => { 
                 if (e.target === modal) {
                     modal.style.display = 'none';
-                    // Minimize the button
                     updateButtonState(true);
                     localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
                 }
             });
 
-            // Contact Form 7 successful submission - no page reload needed
-            document.addEventListener('wpcf7mailsent', function(event) {
-                if (!formContainer) return;
-                // Show success message without reloading, with ARIA live region for screen readers
-                // Using explicit "Success:" text for color-blind users, not just color
-                formContainer.innerHTML = '<div role="status" aria-live="polite" style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px; border: 2px solid #28a745; background: #d4edda; border-radius: 4px;"><strong>Success:</strong> ✅ Thanks for letting us know!</div>';
-                // Auto-close modal after 2 seconds and minimize button
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                    updateButtonState(true);
-                    localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
-                }, 2000);
-            }, false);
+            // Handle form submission via AJAX
+            document.addEventListener('submit', function(e) {
+                if (e.target && e.target.id === 'impact-error-report-form') {
+                    e.preventDefault();
+                    
+                    const submitBtn = e.target.querySelector('button[type="submit"]');
+                    const originalBtnText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Sending...';
+                    
+                    const formData = new FormData(e.target);
+                    
+                    fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            formContainer.innerHTML = '<div role="status" aria-live="polite" style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px; border: 2px solid #28a745; background: #d4edda; border-radius: 4px;"><strong>Success:</strong> ✅ Thanks for letting us know!</div>';
+                            setTimeout(() => {
+                                modal.style.display = 'none';
+                                updateButtonState(true);
+                                localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
+                            }, 2000);
+                        } else {
+                            formContainer.innerHTML = '<div role="alert" aria-live="assertive" style="font-size:14px; color: #d32f2f; text-align: center; padding: 15px; border: 2px solid #d32f2f; background: #ffebee; border-radius: 4px;"><strong>Error:</strong> ' + (data.data || 'Failed to submit report. Please try again.') + '</div>';
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = originalBtnText;
+                        }
+                    })
+                    .catch(error => {
+                        formContainer.innerHTML = '<div role="alert" aria-live="assertive" style="font-size:14px; color: #d32f2f; text-align: center; padding: 15px; border: 2px solid #d32f2f; background: #ffebee; border-radius: 4px;"><strong>Error:</strong> Network error. Please try again.</div>';
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                    });
+                }
+            });
         });
         </script>
 
         <?php
         echo ob_get_clean();
+    }
+    
+    public function handle_error_report_submission() {
+        // Explicitly extract POST variables instead of using extract()
+        $nonce = isset($_POST['error_report_nonce']) ? $_POST['error_report_nonce'] : '';
+        $message = isset($_POST['report_message']) ? $_POST['report_message'] : '';
+        $page_title = isset($_POST['report_page_title']) ? $_POST['report_page_title'] : '';
+        $page_url = isset($_POST['report_page_url']) ? $_POST['report_page_url'] : '';
+        $user_name = isset($_POST['report_user_name']) ? $_POST['report_user_name'] : '';
+        $user_email = isset($_POST['report_user_email']) ? $_POST['report_user_email'] : '';
+        $first_name = isset($_POST['report_first_name']) ? $_POST['report_first_name'] : '';
+        $last_name = isset($_POST['report_last_name']) ? $_POST['report_last_name'] : '';
+        
+        // Validate nonce
+        if (!wp_verify_nonce($nonce, 'ielts_error_report_nonce')) {
+            wp_send_json_error('Security verification failed. Please refresh the page and try again.');
+        }
+        
+        // Validate user is logged in
+        if (get_current_user_id() === 0) {
+            wp_send_json_error('You must be logged in to report an error.');
+        }
+        
+        // Sanitize and validate message
+        $message_clean = wp_kses_post($message);
+        if (strlen(trim(strip_tags($message_clean))) === 0) {
+            wp_send_json_error('Message cannot be empty. Please describe the error you found.');
+        }
+        
+        // Prepare email
+        $recipient = get_option('admin_email');
+        $subject = 'Error Report: ' . sanitize_text_field($page_title);
+        
+        // Build email content with better formatting
+        $email_body = sprintf(
+            "<strong>From: </strong>\n%s <%s><%s><%s>\n\n" .
+            "<strong>Reported error on: </strong>\n%s\n\n" .
+            "<strong>Message Body:</strong>\n%s\n\n" .
+            "<strong>Page URL: </strong>\n%s",
+            sanitize_text_field($user_name),
+            sanitize_email($user_email),
+            sanitize_text_field($first_name),
+            sanitize_text_field($last_name),
+            sanitize_text_field($page_title),
+            $message_clean,
+            esc_url_raw($page_url)
+        );
+        
+        // Set email headers
+        $headers = array(
+            'From: ' . get_bloginfo('name') . ' <' . $recipient . '>',
+            'Reply-To: ' . sanitize_text_field($user_name) . ' <' . sanitize_email($user_email) . '>'
+        );
+        
+        // Send email
+        $sent = wp_mail($recipient, $subject, $email_body, $headers);
+        
+        if ($sent) {
+            wp_send_json_success('Your error report has been sent successfully. Thank you!');
+        } else {
+            wp_send_json_error('Failed to send error report. Please try again later.');
+        }
     }
 }
