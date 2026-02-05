@@ -64,8 +64,11 @@ body.ielts-resource-single .content-area {
                     // Check if already completed
                     $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
                     
-                    // If not already completed, mark as complete automatically
-                    if (!$is_completed) {
+                    // For vocabulary pages, don't auto-mark as complete on first view
+                    // For other resources, auto-mark as complete if not already done
+                    $is_vocabulary_page = get_post_meta($resource_id, '_ielts_cm_is_vocabulary', true);
+                    
+                    if (!$is_completed && !$is_vocabulary_page) {
                         $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
                         $is_completed = true;
                     }
@@ -217,9 +220,14 @@ body.ielts-resource-single .content-area {
                     <div class="resource-vocabulary-content">
                         <p><?php _e('To complete this lesson, you will need to know the following vocabulary. When you are sure you know all the words, continue to the next page.', 'ielts-course-manager'); ?></p>
                         
+                        <?php 
+                        // Get vocabulary header color
+                        $vocab_header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
+                        ?>
+                        
                         <table class="vocabulary-table">
                             <thead>
-                                <tr>
+                                <tr style="background-color: <?php echo esc_attr($vocab_header_color); ?>;">
                                     <th><?php _e('Vocabulary', 'ielts-course-manager'); ?></th>
                                     <th><?php _e('Description', 'ielts-course-manager'); ?></th>
                                     <th><?php _e('Example Sentence', 'ielts-course-manager'); ?></th>
@@ -229,7 +237,21 @@ body.ielts-resource-single .content-area {
                                 <?php foreach ($vocabulary_items as $item): ?>
                                     <?php if (is_array($item) && !empty($item['word'])): ?>
                                         <tr>
-                                            <td><strong><?php echo esc_html($item['word']); ?></strong></td>
+                                            <td>
+                                                <strong><?php echo esc_html($item['word']); ?></strong>
+                                                <?php 
+                                                $meta_parts = array();
+                                                if (!empty($item['part_of_speech'])) {
+                                                    $meta_parts[] = esc_html($item['part_of_speech']);
+                                                }
+                                                if (!empty($item['cefr_level'])) {
+                                                    $meta_parts[] = esc_html($item['cefr_level']);
+                                                }
+                                                if (!empty($meta_parts)): 
+                                                ?>
+                                                    <div class="vocab-meta"><?php echo implode(' • ', $meta_parts); ?></div>
+                                                <?php endif; ?>
+                                            </td>
                                             <td><?php echo isset($item['definition']) ? esc_html($item['definition']) : ''; ?></td>
                                             <td><?php echo isset($item['example']) ? esc_html($item['example']) : ''; ?></td>
                                         </tr>
@@ -416,17 +438,17 @@ body.ielts-resource-single .content-area {
                 width: 100%;
                 border-collapse: collapse;
                 margin-top: 20px;
+                font-size: 14px; /* Slightly smaller font */
             }
             .vocabulary-table th,
             .vocabulary-table td {
-                padding: 12px 15px;
+                padding: 8px 12px; /* Reduced padding */
                 text-align: left;
                 border: 1px solid #ddd;
             }
             .vocabulary-table th {
-                background-color: #f8f9fa;
                 font-weight: bold;
-                color: #333;
+                color: #fff; /* White text for header */
             }
             .vocabulary-table tr:nth-child(even) {
                 background-color: #f9f9f9;
@@ -446,13 +468,22 @@ body.ielts-resource-single .content-area {
                 width: 40%;
                 font-style: italic;
             }
+            .vocab-meta {
+                font-size: 11px; /* Smaller font for meta info */
+                color: #666;
+                font-weight: normal;
+                margin-top: 4px;
+            }
             @media (max-width: 768px) {
                 .vocabulary-table {
-                    font-size: 14px;
+                    font-size: 13px;
                 }
                 .vocabulary-table th,
                 .vocabulary-table td {
-                    padding: 8px 10px;
+                    padding: 6px 8px;
+                }
+                .vocab-meta {
+                    font-size: 10px;
                 }
             }
             </style>
