@@ -897,7 +897,9 @@ class IELTS_CM_Admin {
             <!-- Bulk Import Section -->
             <div style="margin-bottom: 20px; padding: 15px; background: #f0f7ff; border: 1px solid #0073aa; border-radius: 4px;">
                 <label><strong><?php _e('Bulk Import from Text', 'ielts-course-manager'); ?></strong></label><br>
-                <small>Format: word|definition|example|part_of_speech|cefr_level. Columns 4 and 5 can be empty. Part of speech: noun, verb, adjective, adverb, phrase, idiom. CEFR level: A1, A2, B1, B2, C1, C2.</small>
+                <small><?php _e('Format: Word | Definition | Example | Part of Speech | CEFR Level', 'ielts-course-manager'); ?></small><br>
+                <small><?php _e('Columns 4 and 5 are optional. Valid parts of speech: noun, verb, adjective, adverb, phrase, idiom', 'ielts-course-manager'); ?></small><br>
+                <small><?php _e('Valid CEFR levels: A1, A2, B1, B2, C1, C2', 'ielts-course-manager'); ?></small>
                 <textarea id="vocabulary_bulk_import" rows="6" style="width: 100%; margin-top: 10px; font-family: monospace;" placeholder="PROFICIENT|skilled|proficient in English|adjective|C1"></textarea>
                 <button type="button" id="import_vocabulary_button" class="button button-primary" style="margin-top: 10px;"><?php _e('Import Vocabulary', 'ielts-course-manager'); ?></button>
                 <button type="button" id="clear_vocabulary_button" class="button" style="margin-top: 10px; color: #b32d2e;"><?php _e('Clear All Items', 'ielts-course-manager'); ?></button>

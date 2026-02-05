@@ -1060,39 +1060,64 @@ class IELTS_CM_Frontend {
     }
     
     public function handle_error_report_submission() {
-        extract($_POST, EXTR_PREFIX_ALL, 'form');
+        // Explicitly extract POST variables instead of using extract()
+        $nonce = isset($_POST['error_report_nonce']) ? $_POST['error_report_nonce'] : '';
+        $message = isset($_POST['report_message']) ? $_POST['report_message'] : '';
+        $page_title = isset($_POST['report_page_title']) ? $_POST['report_page_title'] : '';
+        $page_url = isset($_POST['report_page_url']) ? $_POST['report_page_url'] : '';
+        $user_name = isset($_POST['report_user_name']) ? $_POST['report_user_name'] : '';
+        $user_email = isset($_POST['report_user_email']) ? $_POST['report_user_email'] : '';
+        $first_name = isset($_POST['report_first_name']) ? $_POST['report_first_name'] : '';
+        $last_name = isset($_POST['report_last_name']) ? $_POST['report_last_name'] : '';
         
-        $nonce_valid = isset($form_error_report_nonce) && wp_verify_nonce($form_error_report_nonce, 'ielts_error_report_nonce');
-        $user_logged = get_current_user_id() > 0;
-        $message_clean = wp_kses_post($form_report_message ?? '');
-        $message_valid = strlen(trim(strip_tags($message_clean))) > 0;
-        
-        if (!$nonce_valid) {
-            echo json_encode(['success' => false, 'data' => 'Nonce fail']);
-            exit;
-        }
-        if (!$user_logged) {
-            echo json_encode(['success' => false, 'data' => 'Auth fail']);
-            exit;
-        }
-        if (!$message_valid) {
-            echo json_encode(['success' => false, 'data' => 'Message fail']);
-            exit;
+        // Validate nonce
+        if (!wp_verify_nonce($nonce, 'ielts_error_report_nonce')) {
+            wp_send_json_error('Security verification failed. Please refresh the page and try again.');
         }
         
+        // Validate user is logged in
+        if (get_current_user_id() === 0) {
+            wp_send_json_error('You must be logged in to report an error.');
+        }
+        
+        // Sanitize and validate message
+        $message_clean = wp_kses_post($message);
+        if (strlen(trim(strip_tags($message_clean))) === 0) {
+            wp_send_json_error('Message cannot be empty. Please describe the error you found.');
+        }
+        
+        // Prepare email
         $recipient = get_option('admin_email');
-        $topic = 'Error Report: ' . sanitize_text_field($form_report_page_title ?? '');
+        $subject = 'Error Report: ' . sanitize_text_field($page_title);
         
-        $content = 'From: ' . sanitize_text_field($form_report_user_name ?? '') . ' <' . sanitize_email($form_report_user_email ?? '') . '><' . sanitize_text_field($form_report_first_name ?? '') . '><' . sanitize_text_field($form_report_last_name ?? '') . '>' . "\n";
-        $content .= 'Reported error on: ' . sanitize_text_field($form_report_page_title ?? '') . "\n";
-        $content .= 'Message Body: ' . $message_clean . "\n";
-        $content .= 'Page URL: ' . esc_url_raw($form_report_page_url ?? '') . "\n";
+        // Build email content with better formatting
+        $email_body = sprintf(
+            "<strong>From: </strong>\n%s <%s><%s><%s>\n\n" .
+            "<strong>Reported error on: </strong>\n%s\n\n" .
+            "<strong>Message Body:</strong>\n%s\n\n" .
+            "<strong>Page URL: </strong>\n%s",
+            sanitize_text_field($user_name),
+            sanitize_email($user_email),
+            sanitize_text_field($first_name),
+            sanitize_text_field($last_name),
+            sanitize_text_field($page_title),
+            $message_clean,
+            esc_url_raw($page_url)
+        );
         
-        $meta = ['From: ' . get_bloginfo('name') . ' <' . $recipient . '>', 'Reply-To: ' . sanitize_text_field($form_report_user_name ?? '') . ' <' . sanitize_email($form_report_user_email ?? '') . '>'];
+        // Set email headers
+        $headers = array(
+            'From: ' . get_bloginfo('name') . ' <' . $recipient . '>',
+            'Reply-To: ' . sanitize_text_field($user_name) . ' <' . sanitize_email($user_email) . '>'
+        );
         
-        $dispatched = wp_mail($recipient, $topic, $content, $meta);
+        // Send email
+        $sent = wp_mail($recipient, $subject, $email_body, $headers);
         
-        echo json_encode(['success' => $dispatched, 'data' => $dispatched ? 'Success' : 'Failure']);
-        exit;
+        if ($sent) {
+            wp_send_json_success('Your error report has been sent successfully. Thank you!');
+        } else {
+            wp_send_json_error('Failed to send error report. Please try again later.');
+        }
     }
 }

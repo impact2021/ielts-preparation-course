@@ -240,16 +240,18 @@ body.ielts-resource-single .content-area {
                                             <td>
                                                 <strong><?php echo esc_html($item['word']); ?></strong>
                                                 <?php 
-                                                printf(
-                                                    '%s%s%s',
-                                                    !empty($item['part_of_speech']) ? '<div class="vocab-meta">' : '',
-                                                    !empty($item['part_of_speech']) || !empty($item['cefr_level']) ? esc_html(
-                                                        (!empty($item['part_of_speech']) ? mb_strtoupper($item['part_of_speech']) : '') .
-                                                        (!empty($item['part_of_speech']) && !empty($item['cefr_level']) ? ' • ' : '') .
-                                                        (!empty($item['cefr_level']) ? 'CEFR Level ' . $item['cefr_level'] : '')
-                                                    ) : '',
-                                                    !empty($item['part_of_speech']) || !empty($item['cefr_level']) ? '</div>' : ''
-                                                );
+                                                // Build metadata string for display
+                                                $metadata_parts = array();
+                                                if (!empty($item['part_of_speech'])) {
+                                                    $metadata_parts[] = mb_strtoupper($item['part_of_speech']);
+                                                }
+                                                if (!empty($item['cefr_level'])) {
+                                                    $metadata_parts[] = 'CEFR Level ' . $item['cefr_level'];
+                                                }
+                                                
+                                                if (!empty($metadata_parts)) {
+                                                    echo '<div class="vocab-meta">' . esc_html(implode(' • ', $metadata_parts)) . '</div>';
+                                                }
                                                 ?>
                                             </td>
                                             <td><?php echo isset($item['definition']) ? esc_html($item['definition']) : ''; ?></td>
