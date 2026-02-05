@@ -1090,6 +1090,14 @@ class IELTS_CM_Frontend {
         $recipient = get_option('admin_email');
         $subject = 'Error Report: ' . sanitize_text_field($page_title);
         
+        // Prepare sanitized and escaped data for email
+        $from_name = esc_html(sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name));
+        $from_username = esc_html(sanitize_text_field($user_name));
+        $from_email = esc_html(sanitize_email($user_email));
+        $page_title_clean = esc_html(sanitize_text_field($page_title));
+        $page_url_clean = esc_url_raw($page_url);
+        $page_url_display = esc_url($page_url);
+        
         // Build email content as HTML table with 2 columns
         $email_body = '
         <html>
@@ -1117,11 +1125,11 @@ class IELTS_CM_Frontend {
             <table>
                 <tr>
                     <td>From</td>
-                    <td>' . esc_html(sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name) . ' (' . sanitize_text_field($user_name) . ') <' . sanitize_email($user_email) . '>') . '</td>
+                    <td>' . $from_name . ' (' . $from_username . ') &lt;' . $from_email . '&gt;</td>
                 </tr>
                 <tr>
                     <td>Reported error on</td>
-                    <td>' . esc_html(sanitize_text_field($page_title)) . '</td>
+                    <td>' . $page_title_clean . '</td>
                 </tr>
                 <tr>
                     <td>Message Body</td>
@@ -1129,7 +1137,7 @@ class IELTS_CM_Frontend {
                 </tr>
                 <tr>
                     <td>Page URL</td>
-                    <td><a href="' . esc_url_raw($page_url) . '">' . esc_url($page_url) . '</a></td>
+                    <td><a href="' . $page_url_clean . '">' . $page_url_display . '</a></td>
                 </tr>
             </table>
         </body>
