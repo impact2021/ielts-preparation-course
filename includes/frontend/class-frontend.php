@@ -97,7 +97,8 @@ class IELTS_CM_Frontend {
         
         // Add redirect parameter if provided
         if (!empty($redirect)) {
-            $login_url = add_query_arg('redirect_to', urlencode($redirect), $login_url);
+            // add_query_arg already handles URL encoding, no need to urlencode
+            $login_url = add_query_arg('redirect_to', $redirect, $login_url);
         }
         
         return $login_url;
@@ -827,18 +828,21 @@ class IELTS_CM_Frontend {
         $current_user = wp_get_current_user();
         $user_name = esc_html($current_user->display_name);
         $user_email = esc_html($current_user->user_email);
+        $user_first_name = esc_html(get_user_meta($current_user->ID, 'first_name', true));
+        $user_last_name = esc_html(get_user_meta($current_user->ID, 'last_name', true));
         
         // Start output buffering
         ob_start();
         ?>
         
         <!-- Feedback Button -->
-        <button id="impact-report-issue-btn" data-full-text="Found a mistake on this page?" data-min-text="?">?</button>
+        <button id="impact-report-issue-btn" data-full-text="Found a mistake on this page?" data-min-text="?" aria-label="Found a mistake on this page?">?</button>
 
         <!-- Modal -->
-        <div id="impact-report-issue-modal">
+        <div id="impact-report-issue-modal" role="dialog" aria-modal="true" aria-labelledby="impact-modal-title">
             <div class="impact-report-issue-content">
-                <span id="impact-close-modal">&times;</span>
+                <h2 id="impact-modal-title" style="margin: 0 0 15px 0; font-size: 18px;">Report an Issue</h2>
+                <span id="impact-close-modal" aria-label="Close">&times;</span>
                 <div id="impact-form-container">
                     <?php echo do_shortcode('[contact-form-7 id="930fa24" title="Report an issue"]'); ?>
                 </div>
@@ -846,6 +850,8 @@ class IELTS_CM_Frontend {
                 <input type="hidden" id="impact-page-url" value="<?php echo esc_url(get_permalink()); ?>">
                 <input type="hidden" id="impact-user-name" value="<?php echo $user_name; ?>">
                 <input type="hidden" id="impact-user-email" value="<?php echo $user_email; ?>">
+                <input type="hidden" id="impact-user-first-name" value="<?php echo $user_first_name; ?>">
+                <input type="hidden" id="impact-user-last-name" value="<?php echo $user_last_name; ?>">
             </div>
         </div>
 
@@ -942,6 +948,8 @@ class IELTS_CM_Frontend {
             const url = document.getElementById('impact-page-url').value;
             const user = document.getElementById('impact-user-name').value;
             const email = document.getElementById('impact-user-email').value;
+            const firstName = document.getElementById('impact-user-first-name').value;
+            const lastName = document.getElementById('impact-user-last-name').value;
             const formContainer = document.getElementById('impact-form-container');
             
             // Get button text from data attributes
@@ -982,10 +990,15 @@ class IELTS_CM_Frontend {
                 const urlField = document.querySelector('[name="page-url"]');
                 const userField = document.querySelector('[name="user-name"]');
                 const emailField = document.querySelector('[name="user-email"]');
+                const firstNameField = document.querySelector('[name="first-name"]');
+                const lastNameField = document.querySelector('[name="last-name"]');
+                
                 if (titleField) titleField.value = title;
                 if (urlField) urlField.value = url;
                 if (userField) userField.value = user;
                 if (emailField) emailField.value = email;
+                if (firstNameField) firstNameField.value = firstName;
+                if (lastNameField) lastNameField.value = lastName;
 
                 // Reset form container in case user sent previously
                 if (formContainer) {
@@ -1013,19 +1026,14 @@ class IELTS_CM_Frontend {
             // Contact Form 7 successful submission - no page reload needed
             document.addEventListener('wpcf7mailsent', function(event) {
                 if (!formContainer) return;
-                // Show success message without reloading
-                formContainer.innerHTML = '<p style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px;">✅ Thanks for letting us know!</p>';
+                // Show success message without reloading, with ARIA live region for screen readers
+                formContainer.innerHTML = '<div role="status" aria-live="polite" style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px;">✅ Thanks for letting us know!</div>';
                 // Auto-close modal after 2 seconds and minimize button
                 setTimeout(() => {
                     modal.style.display = 'none';
                     updateButtonState(true);
                     localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
                 }, 2000);
-            }, false);
-            
-            // Prevent form submission from causing page reload (extra safety)
-            document.addEventListener('wpcf7submit', function(event) {
-                event.preventDefault?.();
             }, false);
         });
         </script>
