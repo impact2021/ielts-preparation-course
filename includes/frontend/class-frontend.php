@@ -1117,11 +1117,11 @@ class IELTS_CM_Frontend {
             <table>
                 <tr>
                     <td>From</td>
-                    <td>' . sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name) . ' (' . sanitize_text_field($user_name) . ') <' . sanitize_email($user_email) . '></td>
+                    <td>' . esc_html(sanitize_text_field($first_name) . ' ' . sanitize_text_field($last_name) . ' (' . sanitize_text_field($user_name) . ') <' . sanitize_email($user_email) . '>') . '</td>
                 </tr>
                 <tr>
                     <td>Reported error on</td>
-                    <td>' . sanitize_text_field($page_title) . '</td>
+                    <td>' . esc_html(sanitize_text_field($page_title)) . '</td>
                 </tr>
                 <tr>
                     <td>Message Body</td>
