@@ -240,17 +240,17 @@ body.ielts-resource-single .content-area {
                                             <td>
                                                 <strong><?php echo esc_html($item['word']); ?></strong>
                                                 <?php 
-                                                $meta_parts = array();
-                                                if (!empty($item['part_of_speech'])) {
-                                                    $meta_parts[] = esc_html($item['part_of_speech']);
-                                                }
-                                                if (!empty($item['cefr_level'])) {
-                                                    $meta_parts[] = esc_html($item['cefr_level']);
-                                                }
-                                                if (!empty($meta_parts)): 
+                                                printf(
+                                                    '%s%s%s',
+                                                    !empty($item['part_of_speech']) ? '<div class="vocab-meta">' : '',
+                                                    !empty($item['part_of_speech']) || !empty($item['cefr_level']) ? esc_html(
+                                                        (!empty($item['part_of_speech']) ? mb_strtoupper($item['part_of_speech']) : '') .
+                                                        (!empty($item['part_of_speech']) && !empty($item['cefr_level']) ? ' • ' : '') .
+                                                        (!empty($item['cefr_level']) ? 'CEFR Level ' . $item['cefr_level'] : '')
+                                                    ) : '',
+                                                    !empty($item['part_of_speech']) || !empty($item['cefr_level']) ? '</div>' : ''
+                                                );
                                                 ?>
-                                                    <div class="vocab-meta"><?php echo implode(' • ', $meta_parts); ?></div>
-                                                <?php endif; ?>
                                             </td>
                                             <td><?php echo isset($item['definition']) ? esc_html($item['definition']) : ''; ?></td>
                                             <td><?php echo isset($item['example']) ? esc_html($item['example']) : ''; ?></td>
