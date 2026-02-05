@@ -1137,7 +1137,7 @@ class IELTS_CM_Frontend {
                 </tr>
                 <tr>
                     <td>Page URL</td>
-                    <td><a href="' . $page_url_safe . '">' . esc_url($page_url) . '</a></td>
+                    <td><a href="' . $page_url_safe . '">' . esc_html($page_url_safe) . '</a></td>
                 </tr>
             </table>
         </body>
