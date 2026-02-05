@@ -815,7 +815,7 @@ if ($lesson_id) {
     <?php elseif (!empty($questions) && !is_user_logged_in()): ?>
         <div class="quiz-login-notice">
             <p><?php _e('Please log in to take this quiz.', 'ielts-course-manager'); ?></p>
-            <a href="<?php echo wp_login_url(get_permalink($quiz->ID)); ?>" class="button button-primary">
+            <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink($quiz->ID))); ?>" class="button button-primary">
                 <?php _e('Login', 'ielts-course-manager'); ?>
             </a>
         </div>

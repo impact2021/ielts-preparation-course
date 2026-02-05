@@ -124,7 +124,7 @@ body.ielts-resource-single .content-area {
                     <?php elseif (!is_user_logged_in()): ?>
                         <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
                         <p>
-                            <a href="<?php echo wp_login_url(get_permalink()); ?>" class="button button-primary">
+                            <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink())); ?>" class="button button-primary">
                                 <?php _e('Login', 'ielts-course-manager'); ?>
                             </a>
                         </p>

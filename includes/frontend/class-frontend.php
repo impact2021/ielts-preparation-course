@@ -80,6 +80,30 @@ class IELTS_CM_Frontend {
     }
     
     /**
+     * Get custom login URL from settings
+     * Falls back to /membership-login/ if not set
+     * 
+     * @param string $redirect Optional redirect URL after login
+     * @return string Login URL
+     */
+    public static function get_custom_login_url($redirect = '') {
+        // Get custom login URL from settings, default to /membership-login/
+        $login_url = get_option('iw_login_page_url', '');
+        
+        // If no custom URL is set, use /membership-login/ as default
+        if (empty($login_url)) {
+            $login_url = home_url('/membership-login/');
+        }
+        
+        // Add redirect parameter if provided
+        if (!empty($redirect)) {
+            $login_url = add_query_arg('redirect_to', urlencode($redirect), $login_url);
+        }
+        
+        return $login_url;
+    }
+    
+    /**
      * Enqueue frontend scripts and styles
      */
     public function enqueue_scripts() {
@@ -809,7 +833,7 @@ class IELTS_CM_Frontend {
         ?>
         
         <!-- Feedback Button -->
-        <button id="impact-report-issue-btn">Found a mistake on this page?</button>
+        <button id="impact-report-issue-btn" data-full-text="Found a mistake on this page?" data-min-text="?">?</button>
 
         <!-- Modal -->
         <div id="impact-report-issue-modal">
@@ -839,18 +863,29 @@ class IELTS_CM_Frontend {
             cursor: pointer;
             z-index: 9999;
             box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-            transition: background 0.2s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            overflow: hidden;
         }
         #impact-report-issue-btn:hover { 
             background: #005bb5;
             transform: translateY(-2px);
         }
         #impact-report-issue-btn.minimized {
-            /* Keep the button text visible with improved styling */
-            padding: 10px 16px;
+            /* Minimized state - just show icon/question mark */
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            border-radius: 50%;
+            font-size: 24px;
+            line-height: 48px;
+            text-align: center;
             background: #0073e6;
-            border-radius: 6px;
             box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+        }
+        #impact-report-issue-btn.minimized:hover {
+            background: #005bb5;
+            transform: scale(1.1);
         }
 
         /* Modal styling */
@@ -909,23 +944,35 @@ class IELTS_CM_Frontend {
             const email = document.getElementById('impact-user-email').value;
             const formContainer = document.getElementById('impact-form-container');
             
+            // Get button text from data attributes
+            const fullText = btn.getAttribute('data-full-text');
+            const minText = btn.getAttribute('data-min-text');
+            
             // Constant for localStorage key
             const FEEDBACK_EXPANDED_KEY = 'impactFeedbackExpanded';
             
-            // Check for expanded state in localStorage (default is minimized/closed)
+            // Function to update button appearance
+            function updateButtonState(minimized) {
+                if (minimized) {
+                    btn.classList.add('minimized');
+                    btn.textContent = minText;
+                    btn.setAttribute('title', fullText); // Add tooltip
+                } else {
+                    btn.classList.remove('minimized');
+                    btn.textContent = fullText;
+                    btn.removeAttribute('title');
+                }
+            }
+            
+            // Check for expanded state in localStorage (default is minimized)
             const isExpanded = localStorage.getItem(FEEDBACK_EXPANDED_KEY) === 'true';
             // Always start minimized unless explicitly expanded
-            if (!isExpanded) {
-                btn.classList.add('minimized');
-            }
+            updateButtonState(!isExpanded);
 
             btn.addEventListener('click', () => {
-                // Always open modal on click, regardless of minimized state
-                // Remove minimized class if present
-                if (btn.classList.contains('minimized')) {
-                    btn.classList.remove('minimized');
-                    localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'true');
-                }
+                // Expand button when clicked
+                updateButtonState(false);
+                localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'true');
                 
                 // Open modal
                 modal.style.display = 'block';
@@ -949,24 +996,36 @@ class IELTS_CM_Frontend {
 
             close.addEventListener('click', () => {
                 modal.style.display = 'none';
-                // Minimize the button instead of closing it
-                btn.classList.add('minimized');
+                // Minimize the button
+                updateButtonState(true);
                 localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
             });
             
             window.addEventListener('click', e => { 
                 if (e.target === modal) {
                     modal.style.display = 'none';
-                    // Minimize the button instead of closing it
-                    btn.classList.add('minimized');
+                    // Minimize the button
+                    updateButtonState(true);
                     localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
                 }
             });
 
-            // Contact Form 7 successful submission
+            // Contact Form 7 successful submission - no page reload needed
             document.addEventListener('wpcf7mailsent', function(event) {
                 if (!formContainer) return;
-                formContainer.innerHTML = '<p style="font-size:16px; font-weight:bold;">✅ Thanks for letting us know!</p>';
+                // Show success message without reloading
+                formContainer.innerHTML = '<p style="font-size:16px; font-weight:bold; color: #28a745; text-align: center; padding: 20px;">✅ Thanks for letting us know!</p>';
+                // Auto-close modal after 2 seconds and minimize button
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    updateButtonState(true);
+                    localStorage.setItem(FEEDBACK_EXPANDED_KEY, 'false');
+                }, 2000);
+            }, false);
+            
+            // Prevent form submission from causing page reload (extra safety)
+            document.addEventListener('wpcf7submit', function(event) {
+                event.preventDefault?.();
             }, false);
         });
         </script>
