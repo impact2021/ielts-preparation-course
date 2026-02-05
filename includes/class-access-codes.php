@@ -99,6 +99,11 @@ class IELTS_CM_Access_Codes {
     }
     
     public function add_admin_menu() {
+        // Only show Partner Dashboard menu if Access Code Membership is enabled
+        if (!get_option('ielts_cm_access_code_enabled', false)) {
+            return;
+        }
+        
         add_menu_page(
             'Partner Dashboard',
             'Partner Dashboard',

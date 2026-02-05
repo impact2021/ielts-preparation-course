@@ -36,6 +36,9 @@ class IELTS_CM_Shortcodes {
         
         // Access code registration shortcode
         add_shortcode('ielts_access_code_registration', array($this, 'display_access_code_registration'));
+        
+        // Last visited page shortcode
+        add_shortcode('ielts_last_page', array($this, 'display_last_page'));
     }
     
     /**
@@ -4030,6 +4033,106 @@ class IELTS_CM_Shortcodes {
                 }
             }
             </style>
+        </div>
+        <?php
+        
+        return ob_get_clean();
+    }
+    
+    /**
+     * Display last visited page shortcode
+     * Shows a link to the last page/lesson the user was on
+     */
+    public function display_last_page($atts) {
+        // Get current user
+        $user_id = get_current_user_id();
+        if (!$user_id) {
+            return '<p>' . __('Please log in to see your progress.', 'ielts-course-manager') . '</p>';
+        }
+        
+        // Get last accessed page from progress tracker
+        global $wpdb;
+        $db = new IELTS_CM_Database();
+        $table = $db->get_progress_table();
+        
+        $last_progress = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $table WHERE user_id = %d ORDER BY last_accessed DESC LIMIT 1",
+            $user_id
+        ));
+        
+        if (!$last_progress) {
+            return '<p>' . __('You haven\'t started any lessons yet.', 'ielts-course-manager') . '</p>';
+        }
+        
+        // Build the message
+        ob_start();
+        ?>
+        <div class="ielts-last-page-widget">
+            <style>
+                .ielts-last-page-widget {
+                    padding: 20px;
+                    background: #f5f5f5;
+                    border-left: 4px solid #0073aa;
+                    margin: 20px 0;
+                }
+                .ielts-last-page-widget h3 {
+                    margin-top: 0;
+                    color: #0073aa;
+                }
+                .ielts-last-page-widget .continue-link {
+                    display: inline-block;
+                    padding: 10px 20px;
+                    background: #0073aa;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 3px;
+                    margin-top: 10px;
+                }
+                .ielts-last-page-widget .continue-link:hover {
+                    background: #005a87;
+                    color: white;
+                }
+                .ielts-last-page-widget .last-accessed-time {
+                    color: #666;
+                    font-size: 0.9em;
+                    margin-top: 5px;
+                }
+            </style>
+            
+            <h3><?php _e('Continue Where You Left Off', 'ielts-course-manager'); ?></h3>
+            
+            <?php
+            // Get lesson info
+            $lesson = get_post($last_progress->lesson_id);
+            if ($lesson) {
+                $lesson_url = get_permalink($lesson->ID);
+                $lesson_title = $lesson->post_title;
+                
+                // Get course info
+                $course_id = $last_progress->course_id;
+                $course = get_post($course_id);
+                $course_title = $course ? $course->post_title : '';
+                
+                echo '<p>';
+                if ($course_title) {
+                    printf(__('You were last studying: <strong>%s</strong> in course <strong>%s</strong>', 'ielts-course-manager'), 
+                        esc_html($lesson_title), 
+                        esc_html($course_title)
+                    );
+                } else {
+                    printf(__('You were last studying: <strong>%s</strong>', 'ielts-course-manager'), 
+                        esc_html($lesson_title)
+                    );
+                }
+                echo '</p>';
+                
+                // Show last accessed time
+                $time_diff = human_time_diff(strtotime($last_progress->last_accessed), current_time('timestamp'));
+                echo '<p class="last-accessed-time">' . sprintf(__('Last accessed %s ago', 'ielts-course-manager'), $time_diff) . '</p>';
+                
+                echo '<a href="' . esc_url($lesson_url) . '" class="continue-link">' . __('Continue Learning', 'ielts-course-manager') . '</a>';
+            }
+            ?>
         </div>
         <?php
         

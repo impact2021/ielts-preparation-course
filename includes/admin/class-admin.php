@@ -60,6 +60,9 @@ class IELTS_CM_Admin {
         // Register settings
         add_action('admin_init', array($this, 'register_settings'));
         
+        // Enqueue admin scripts
+        add_action('admin_enqueue_scripts', array($this, 'enqueue_admin_scripts'));
+        
         // Add admin notices
         add_action('admin_notices', array($this, 'quiz_validation_notices'));
     }
@@ -80,6 +83,17 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             <?php
+        }
+    }
+    
+    /**
+     * Enqueue admin scripts and styles
+     */
+    public function enqueue_admin_scripts($hook) {
+        // Only enqueue on our settings page
+        if ($hook === 'ielts_course_page_ielts-settings') {
+            wp_enqueue_style('wp-color-picker');
+            wp_enqueue_script('wp-color-picker');
         }
     }
     
@@ -4970,12 +4984,18 @@ class IELTS_CM_Admin {
                 update_option('ielts_cm_access_code_enabled', false);
             }
             
+            // Save vocabulary header color
+            if (isset($_POST['ielts_cm_vocab_header_color'])) {
+                update_option('ielts_cm_vocab_header_color', sanitize_hex_color($_POST['ielts_cm_vocab_header_color']));
+            }
+            
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
         
         $delete_data_on_uninstall = get_option('ielts_cm_delete_data_on_uninstall', false);
         $membership_enabled = get_option('ielts_cm_membership_enabled', false);
         $access_code_enabled = get_option('ielts_cm_access_code_enabled', false);
+        $vocab_header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
         ?>
         <div class="wrap">
             <h1><?php _e('IELTS Course Manager Settings', 'ielts-course-manager'); ?></h1>
@@ -5032,10 +5052,30 @@ class IELTS_CM_Admin {
                             </fieldset>
                         </td>
                     </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Primary Color', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <input type="text" id="ielts_cm_vocab_header_color" name="ielts_cm_vocab_header_color" value="<?php echo esc_attr($vocab_header_color); ?>" class="ielts-cm-color-picker" data-default-color="#E56C0A">
+                                <p class="description">
+                                    <?php _e('Set the primary color for your site. This is currently used for vocabulary table headers and will be used in additional places later.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
                 </table>
                 
                 <?php submit_button(); ?>
             </form>
+            
+            <script>
+            jQuery(document).ready(function($) {
+                // Initialize color picker
+                $('.ielts-cm-color-picker').wpColorPicker();
+            });
+            </script>
         </div>
         <?php
     }
