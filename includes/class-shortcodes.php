@@ -47,6 +47,9 @@ class IELTS_CM_Shortcodes {
         // Conditional shortcodes for new vs returning users
         add_shortcode('ielts_is_new_user', array($this, 'display_if_new_user'));
         add_shortcode('ielts_is_returning_user', array($this, 'display_if_returning_user'));
+        
+        // Tour replay shortcode
+        add_shortcode('ielts_replay_tour', array($this, 'display_replay_tour_button'));
     }
     
     /**
@@ -4191,5 +4194,62 @@ class IELTS_CM_Shortcodes {
         }
         
         return '';
+    }
+    
+    /**
+     * Display replay tour button shortcode
+     * Shortcode: [ielts_replay_tour text="Play the welcome tour again"]
+     * Creates a button that allows users to replay the welcome tour
+     * 
+     * @param array $atts Shortcode attributes
+     * @return string HTML for replay tour button
+     */
+    public function display_replay_tour_button($atts) {
+        // Only show for logged-in users
+        if (!is_user_logged_in()) {
+            return '';
+        }
+        
+        // Parse shortcode attributes
+        $atts = shortcode_atts(array(
+            'text' => 'Play the welcome tour again',
+            'class' => 'ielts-replay-tour-button'
+        ), $atts);
+        
+        // Sanitize attributes
+        $button_text = esc_html($atts['text']);
+        $button_class = esc_attr($atts['class']);
+        
+        // Generate unique ID for this button instance
+        $button_id = 'ielts-replay-tour-' . uniqid();
+        
+        // Return button HTML with accessibility attributes and separate JS
+        $html = sprintf(
+            '<button type="button" id="%s" class="%s" aria-label="Replay the welcome tour">%s</button>',
+            $button_id,
+            $button_class,
+            $button_text
+        );
+        
+        // Add inline script to attach event handler (loaded after jQuery)
+        $html .= sprintf(
+            '<script>
+                (function($) {
+                    $(document).ready(function() {
+                        $("#%s").on("click", function(e) {
+                            e.preventDefault();
+                            if (typeof ieltsStartTour === "function") {
+                                ieltsStartTour(true);
+                            } else {
+                                alert("Tour is not available on this page.");
+                            }
+                        });
+                    });
+                })(jQuery);
+            </script>',
+            $button_id
+        );
+        
+        return $html;
     }
 }

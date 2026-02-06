@@ -9,7 +9,9 @@
 (function($) {
     'use strict';
     
-    $(document).ready(function() {
+    // Global function to manually start tour (for replay button)
+    window.ieltsStartTour = function(forceReplay) {
+        forceReplay = forceReplay || false;
         
         // Only run if Shepherd is loaded
         if (typeof Shepherd === 'undefined') {
@@ -26,9 +28,9 @@
         // Get membership/tour type from PHP
         const tourType = ieltsTourData.tourType; // 'academic', 'general', or 'english'
         
-        // Check localStorage as quick cache (optional, but faster)
+        // Check localStorage as quick cache (optional, but faster) - skip if force replay
         const localStorageKey = 'ielts_tour_completed_' + tourType;
-        if (localStorage.getItem(localStorageKey)) {
+        if (!forceReplay && localStorage.getItem(localStorageKey)) {
             console.log('IELTS Tours: Already completed (localStorage)');
             return; // Tour already completed
         }
@@ -55,48 +57,52 @@
             return;
         }
         
-        // When tour is completed, save to database
+        // When tour is completed, save to database (only if not forced replay)
         tour.on('complete', function() {
             console.log('IELTS Tours: Tour completed, saving to database');
             
-            // Save to WordPress database (cross-device)
-            $.ajax({
-                url: ieltsTourData.ajaxUrl,
-                type: 'POST',
-                data: {
-                    action: 'ielts_complete_tour',
-                    tour_type: tourType,
-                    nonce: ieltsTourData.nonce,
-                    user_id: ieltsTourData.userId
-                },
-                success: function(response) {
-                    console.log('IELTS Tours: Completion saved:', response);
-                },
-                error: function(xhr, status, error) {
-                    console.error('IELTS Tours: Error saving completion:', error);
-                }
-            });
-            
-            // Also save to localStorage for quick access
-            localStorage.setItem(localStorageKey, 'true');
+            if (!forceReplay) {
+                // Save to WordPress database (cross-device)
+                $.ajax({
+                    url: ieltsTourData.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_complete_tour',
+                        tour_type: tourType,
+                        nonce: ieltsTourData.nonce,
+                        user_id: ieltsTourData.userId
+                    },
+                    success: function(response) {
+                        console.log('IELTS Tours: Completion saved:', response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('IELTS Tours: Error saving completion:', error);
+                    }
+                });
+                
+                // Also save to localStorage for quick access
+                localStorage.setItem(localStorageKey, 'true');
+            }
         });
         
-        // When tour is cancelled/skipped
+        // When tour is cancelled/skipped (only save if not forced replay)
         tour.on('cancel', function() {
             console.log('IELTS Tours: Tour cancelled/skipped, saving status');
             
-            // Still mark as completed so it doesn't show again
-            $.ajax({
-                url: ieltsTourData.ajaxUrl,
-                type: 'POST',
-                data: {
-                    action: 'ielts_complete_tour',
-                    tour_type: tourType,
-                    nonce: ieltsTourData.nonce,
-                    user_id: ieltsTourData.userId
-                }
-            });
-            localStorage.setItem(localStorageKey, 'true');
+            if (!forceReplay) {
+                // Still mark as completed so it doesn't show again
+                $.ajax({
+                    url: ieltsTourData.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_complete_tour',
+                        tour_type: tourType,
+                        nonce: ieltsTourData.nonce,
+                        user_id: ieltsTourData.userId
+                    }
+                });
+                localStorage.setItem(localStorageKey, 'true');
+            }
         });
         
         // Start tour after short delay to ensure page is fully loaded
@@ -104,6 +110,11 @@
             console.log('IELTS Tours: Starting', tourType, 'tour');
             tour.start();
         }, 1000);
+    };
+    
+    $(document).ready(function() {
+        // Auto-start tour for first-time users
+        ieltsStartTour(false);
     });
     
     /**
@@ -116,6 +127,75 @@
                 text: '<h3>Your Estimated IELTS Band Scores 📊</h3><p>This section shows your estimated band scores for Reading, Listening, Writing, Speaking, and Overall. Complete more tests for more accurate results!</p>',
                 attachTo: { 
                     element: '.ielts-band-scores-container',
+                    on: 'bottom' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+    }
+    
+    /**
+     * Helper function to add common course navigation steps (used by all tour types)
+     */
+    function addCourseNavigationSteps(tour) {
+        // Courses section
+        if ($('#courses').length) {
+            tour.addStep({
+                id: 'courses',
+                text: '<h3>Your Course Units 📚</h3><p>After the tour, click Unit 1 below to start your course.</p>',
+                attachTo: { 
+                    element: '#courses',
+                    on: 'top' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // Practice tests section
+        if ($('#practice-tests').length) {
+            tour.addStep({
+                id: 'practice-tests',
+                text: '<h3>Practice Tests 📝</h3><p>Test yourself with full-length practice exams to track your progress and prepare for the real test.</p>',
+                attachTo: { 
+                    element: '#practice-tests',
+                    on: 'top' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // General English section
+        if ($('#general-english').length) {
+            tour.addStep({
+                id: 'general-english',
+                text: '<h3>General English 🌍</h3><p>A good result in IELTS requires a good level of English, so don\'t ignore this section. Build your foundation here!</p>',
+                attachTo: { 
+                    element: '#general-english',
+                    on: 'top' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // Vocabulary course section (using the specific structure provided)
+        if ($('.ielts-course-item a[href*="vocabulary-for-ielts"]').length) {
+            tour.addStep({
+                id: 'vocabulary-course',
+                text: '<h3>Vocabulary for IELTS 📖</h3><p>Expand your vocabulary with our specialized IELTS vocabulary course. A strong vocabulary is essential for achieving a high band score!</p>',
+                attachTo: { 
+                    element: '.ielts-course-item a[href*="vocabulary-for-ielts"]',
                     on: 'bottom' 
                 },
                 buttons: [
@@ -143,6 +223,9 @@
         
         // IELTS Band Scores - Show FIRST if present
         addBandScoresStep(tour);
+        
+        // Add course navigation steps (courses, practice tests, general english, vocabulary)
+        addCourseNavigationSteps(tour);
         
         // Main Navigation
         if ($('.main-navigation, .primary-menu, .site-navigation, #site-navigation').length) {
@@ -236,6 +319,9 @@
         // IELTS Band Scores - Show FIRST if present
         addBandScoresStep(tour);
         
+        // Add course navigation steps (courses, practice tests, general english, vocabulary)
+        addCourseNavigationSteps(tour);
+        
         // Main Navigation
         if ($('.main-navigation, .primary-menu, .site-navigation, #site-navigation').length) {
             tour.addStep({
@@ -327,6 +413,9 @@
         
         // IELTS Band Scores - Show FIRST if present
         addBandScoresStep(tour);
+        
+        // Add course navigation steps (courses, practice tests, general english, vocabulary)
+        addCourseNavigationSteps(tour);
         
         // Main Navigation
         if ($('.main-navigation, .primary-menu, .site-navigation, #site-navigation').length) {
