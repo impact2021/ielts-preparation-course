@@ -1,0 +1,90 @@
+{
+    "title": "About the listening test",
+    "content": "",
+    "questions": [
+        {
+            "type": "open_question",
+            "instructions": "Complete the summary below using NO MORE THAN ONE WORD OR A NUMBER from the passage.",
+            "question": "There are [field 1] sections to the listening test, with [field 2] questions for each section. The recordings take about 25 minutes and then you have [field 3] minutes to transfer your answers to the answer paper. You will have only [field 4] chance to hear the recordings except for the example given at the beginning of the test. The recordings will pause briefly for about 20 seconds for you to read the next set of questions, except for in section [field 5], when the recording will play right through with only a few seconds break in the middle.\r\n\r\nIn sections 1 and 2, the recording has a social or semi-formal focus. In sections 3 and 4, the topic is more academic or educational. In Sections 2 and 4 you will generally only have [field 6] main speaker.\r\n\r\nThere are a number of points you should keep in mind when writing your answers. Your [field 7] must be correct (words spelled incorrectly will be marked wrong). You should always keep to the word [field 8] given in the instructions. Writing more words than specified means that your answer will be marked wrong.",
+            "points": 8,
+            "no_answer_feedback": "Please answer all questions to get feedback on your performance.",
+            "correct_feedback": "Excellent! You have a good understanding of the IELTS listening test format.",
+            "incorrect_feedback": "Not quite. Review the information about the IELTS listening test format and try again.",
+            "reading_text_id": null,
+            "audio_section_id": null,
+            "audio_start_time": null,
+            "audio_end_time": null,
+            "ielts_question_category": "",
+            "field_count": 8,
+            "field_answers": {
+                "1": "4|four",
+                "2": "10|ten",
+                "3": "10|ten",
+                "4": "1|one",
+                "5": "4|four",
+                "6": "1|one",
+                "7": "spelling",
+                "8": "limit"
+            },
+            "field_feedback": {
+                "1": {
+                    "correct": "Correct! The IELTS listening test has 4 sections.",
+                    "incorrect": "Incorrect. The listening test is divided into a specific number of sections. Review the passage carefully.",
+                    "no_answer": "Please provide an answer. How many sections are in the listening test?"
+                },
+                "2": {
+                    "correct": "Correct! Each section has 10 questions.",
+                    "incorrect": "Incorrect. Each section has the same number of questions. Check the passage again.",
+                    "no_answer": "Please provide an answer. How many questions does each section have?"
+                },
+                "3": {
+                    "correct": "Correct! You have 10 minutes to transfer your answers.",
+                    "incorrect": "Incorrect. You are given a specific amount of time after the recordings finish. Review the passage.",
+                    "no_answer": "Please provide an answer. How many minutes do you have to transfer your answers?"
+                },
+                "4": {
+                    "correct": "Correct! You only get one chance to hear the recordings.",
+                    "incorrect": "Incorrect. The recordings are not repeated. Check the passage for the exact number.",
+                    "no_answer": "Please provide an answer. How many chances do you have to hear the recordings?"
+                },
+                "5": {
+                    "correct": "Correct! Section 4 plays right through without pauses.",
+                    "incorrect": "Incorrect. One specific section plays continuously without the usual pauses. Review the passage.",
+                    "no_answer": "Please provide an answer. Which section plays without pauses for reading questions?"
+                },
+                "6": {
+                    "correct": "Correct! Sections 2 and 4 generally have one main speaker.",
+                    "incorrect": "Incorrect. Sections 2 and 4 typically feature a specific number of speakers. Check the passage.",
+                    "no_answer": "Please provide an answer. How many main speakers are in sections 2 and 4?"
+                },
+                "7": {
+                    "correct": "Correct! Your spelling must be correct or the answer will be marked wrong.",
+                    "incorrect": "Incorrect. There's a specific aspect of your answer that must be accurate. Review what the passage emphasizes.",
+                    "no_answer": "Please provide an answer. What aspect of your written answers must be correct?"
+                },
+                "8": {
+                    "correct": "Correct! You must keep to the word limit given in the instructions.",
+                    "incorrect": "Incorrect. There's a specific restriction mentioned in the instructions. Review the passage carefully.",
+                    "no_answer": "Please provide an answer. What must you keep to when writing your answers?"
+                }
+            }
+        }
+    ],
+    "reading_texts": [],
+    "settings": {
+        "pass_percentage": "70",
+        "layout_type": "two_column_reading",
+        "cbt_test_type": "",
+        "exercise_label": "exercise",
+        "open_as_popup": "",
+        "scoring_type": "percentage",
+        "timer_minutes": "",
+        "starting_question_number": "1"
+    },
+    "_metadata": {
+        "exported_at": "2026-02-06 19:15:23",
+        "exported_by": "impact",
+        "plugin_version": "15.15",
+        "format_version": "1.0"
+    }
+}
