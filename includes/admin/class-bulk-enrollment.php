@@ -147,25 +147,23 @@ class IELTS_CM_Bulk_Enrollment {
             return 'academic_module';
         }
         
-        // Check for academic course first (most specific)
-        foreach ($categories as $cat_slug) {
-            if (strpos(strtolower($cat_slug), 'academic') !== false) {
-                return 'academic_module';
-            }
-        }
-        
-        // Check for general course (but not general_english)
+        // Check categories in a single loop (most specific to least specific)
         foreach ($categories as $cat_slug) {
             $lower_slug = strtolower($cat_slug);
+            
+            // Check for academic course first (most specific)
+            if (strpos($lower_slug, 'academic') !== false) {
+                return 'academic_module';
+            }
+            
+            // Check for general course (but not general_english)
             // Ensure it's general but not general_english by checking for 'general' without 'english'
             if (strpos($lower_slug, 'general') !== false && strpos($lower_slug, 'english') === false) {
                 return 'general_module';
             }
-        }
-        
-        // Check for english-only course (can be general_english or just english)
-        foreach ($categories as $cat_slug) {
-            if (strpos(strtolower($cat_slug), 'english') !== false) {
+            
+            // Check for english-only course (can be general_english or just english)
+            if (strpos($lower_slug, 'english') !== false) {
                 return 'general_english';
             }
         }
@@ -202,7 +200,7 @@ class IELTS_CM_Bulk_Enrollment {
             $user = get_userdata($user_id);
             if ($user) {
                 // Remove any existing access code membership roles first
-                $access_code_roles = array('access_academic_module', 'access_general_module', 'access_general_english');
+                $access_code_roles = array_values($role_mapping);
                 foreach ($access_code_roles as $role) {
                     $user->remove_role($role);
                 }
