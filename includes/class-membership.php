@@ -99,6 +99,10 @@ class IELTS_CM_Membership {
         add_action('personal_options_update', array($this, 'save_user_membership_fields'));
         add_action('edit_user_profile_update', array($this, 'save_user_membership_fields'));
         
+        // Hide WordPress default profile fields
+        add_action('admin_head-user-edit.php', array($this, 'hide_default_profile_fields'));
+        add_action('admin_head-profile.php', array($this, 'hide_default_profile_fields'));
+        
         // Only initialize other features if membership system is enabled
         if (!$this->is_enabled()) {
             return;
@@ -217,94 +221,65 @@ class IELTS_CM_Membership {
             return;
         }
         
-        $membership_type = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
-        $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
-        
-        // Access code system fields
-        $course_group = get_user_meta($user->ID, 'iw_course_group', true);
-        $iw_expiry = get_user_meta($user->ID, 'iw_membership_expiry', true);
-        $enrolled_academic = get_user_meta($user->ID, 'enrolled_ielts_academic', true);
-        $enrolled_general = get_user_meta($user->ID, 'enrolled_ielts_general', true);
-        $enrolled_english = get_user_meta($user->ID, 'enrolled_general_english', true);
-        
-        // Updated course groups to match requirements
-        $course_groups = array(
-            'academic_module' => 'Academic Module',
-            'general_module' => 'General Training Module',
-            'general_english' => 'General English'
-        );
-        
         // Check if paid membership system is enabled
         $membership_enabled = get_option('ielts_cm_membership_enabled', false);
-        ?>
-        <h2><?php _e('Membership Information', 'ielts-course-manager'); ?></h2>
-        <?php if ($membership_enabled): ?>
-        <table class="form-table">
-            <tr>
-                <th><label for="ielts_cm_membership_type"><?php _e('Membership Type', 'ielts-course-manager'); ?></label></th>
-                <td>
-                    <select name="ielts_cm_membership_type" id="ielts_cm_membership_type">
-                        <option value=""><?php _e('None', 'ielts-course-manager'); ?></option>
-                        <?php foreach (self::MEMBERSHIP_LEVELS as $key => $label): ?>
-                            <option value="<?php echo esc_attr($key); ?>" <?php selected($membership_type, $key); ?>>
-                                <?php echo esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th><label for="ielts_cm_membership_expiry"><?php _e('Expiry Date', 'ielts-course-manager'); ?></label></th>
-                <td>
-                    <input type="date" name="ielts_cm_membership_expiry" id="ielts_cm_membership_expiry" 
-                           value="<?php echo esc_attr($expiry_date); ?>" class="regular-text">
-                    <p class="description"><?php _e('Leave empty for lifetime membership', 'ielts-course-manager'); ?></p>
-                </td>
-            </tr>
-        </table>
-        <?php else: ?>
-        <p class="description"><?php _e('Paid membership system is disabled. Use Access Code Enrollment below to manage user access.', 'ielts-course-manager'); ?></p>
-        <?php endif; ?>
         
-        <h2><?php _e('Access Code Enrollment', 'ielts-course-manager'); ?></h2>
+        // Determine which course and expiry to display
+        if ($membership_enabled) {
+            // Use paid membership fields
+            $current_course = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
+            $current_expiry = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
+        } else {
+            // Use access code fields
+            $current_course = get_user_meta($user->ID, 'iw_course_group', true);
+            $iw_expiry = get_user_meta($user->ID, 'iw_membership_expiry', true);
+            // Format expiry date for display
+            $current_expiry = '';
+            if ($iw_expiry) {
+                $timestamp = strtotime($iw_expiry);
+                if ($timestamp !== false) {
+                    $current_expiry = date('Y-m-d', $timestamp);
+                }
+            }
+        }
+        
+        // Define available courses based on membership system
+        if ($membership_enabled) {
+            $courses = self::MEMBERSHIP_LEVELS;
+        } else {
+            $courses = array(
+                'academic_module' => 'Academic Module',
+                'general_module' => 'General Training Module',
+                'general_english' => 'General English'
+            );
+        }
+        
+        ?>
+        <h2><?php _e('Course Enrollment', 'ielts-course-manager'); ?></h2>
         <table class="form-table">
             <tr>
-                <th><label for="iw_course_group"><?php _e('Course Group', 'ielts-course-manager'); ?></label></th>
+                <th><label for="user_course"><?php _e('Course', 'ielts-course-manager'); ?></label></th>
                 <td>
-                    <select name="iw_course_group" id="iw_course_group">
+                    <select name="user_course" id="user_course" class="regular-text">
                         <option value=""><?php _e('None', 'ielts-course-manager'); ?></option>
-                        <?php foreach ($course_groups as $key => $label): ?>
-                            <option value="<?php echo esc_attr($key); ?>" <?php selected($course_group, $key); ?>>
+                        <?php foreach ($courses as $key => $label): ?>
+                            <option value="<?php echo esc_attr($key); ?>" <?php selected($current_course, $key); ?>>
                                 <?php echo esc_html($label); ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
-                    <p class="description">
-                        <strong><?php _e('Academic Module:', 'ielts-course-manager'); ?></strong> <?php _e('Includes courses with slugs: academic, english, academic-practice-tests', 'ielts-course-manager'); ?><br>
-                        <strong><?php _e('General Training Module:', 'ielts-course-manager'); ?></strong> <?php _e('Includes courses with slugs: general, english, general-practice-tests', 'ielts-course-manager'); ?><br>
-                        <strong><?php _e('General English:', 'ielts-course-manager'); ?></strong> <?php _e('Only includes course with slug: english', 'ielts-course-manager'); ?>
-                    </p>
+                    <p class="description"><?php _e('Select the course to enroll this user in.', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
             <tr>
-                <th><label for="iw_membership_expiry"><?php _e('Access Code Expiry', 'ielts-course-manager'); ?></label></th>
+                <th><label for="user_expiry"><?php _e('Expiry Date', 'ielts-course-manager'); ?></label></th>
                 <td>
-                    <?php
-                    $date_value = '';
-                    if ($iw_expiry) {
-                        $timestamp = strtotime($iw_expiry);
-                        if ($timestamp !== false) {
-                            $date_value = date('Y-m-d', $timestamp);
-                        }
-                    }
-                    ?>
-                    <input type="date" name="iw_membership_expiry" id="iw_membership_expiry" 
-                           value="<?php echo esc_attr($date_value); ?>" class="regular-text">
-                    <p class="description"><?php _e('Expiry date for access code based enrollment. Dates are displayed in dd/mm/yyyy format throughout the system.', 'ielts-course-manager'); ?></p>
+                    <input type="date" name="user_expiry" id="user_expiry" 
+                           value="<?php echo esc_attr($current_expiry); ?>" class="regular-text">
+                    <p class="description"><?php _e('Leave empty for lifetime access. Format: dd/mm/yyyy', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
         </table>
-        <p class="description"><em><?php _e('Note: Course access is determined by the Course Group selection above. The checkboxes below are legacy fields and will be deprecated.', 'ielts-course-manager'); ?></em></p>
         <?php
     }
     
@@ -316,16 +291,21 @@ class IELTS_CM_Membership {
             return;
         }
         
-        if (isset($_POST['ielts_cm_membership_type'])) {
-            $membership_type = sanitize_text_field($_POST['ielts_cm_membership_type']);
-            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+        // Check if membership system is enabled to determine which fields to save
+        $membership_enabled = get_option('ielts_cm_membership_enabled', false);
+        
+        // Get the unified course and expiry values
+        $user_course = isset($_POST['user_course']) ? sanitize_text_field($_POST['user_course']) : '';
+        $user_expiry = isset($_POST['user_expiry']) ? sanitize_text_field($_POST['user_expiry']) : '';
+        
+        if ($membership_enabled) {
+            // Save to paid membership fields
+            update_user_meta($user_id, '_ielts_cm_membership_type', $user_course);
             
             // Set status based on whether membership type is set and expiry date
-            if (!empty($membership_type)) {
-                $expiry_date = isset($_POST['ielts_cm_membership_expiry']) ? sanitize_text_field($_POST['ielts_cm_membership_expiry']) : '';
-                
+            if (!empty($user_course)) {
                 // If no expiry or expiry is in the future, set as active
-                if (empty($expiry_date) || strtotime($expiry_date) > time()) {
+                if (empty($user_expiry) || strtotime($user_expiry) > time()) {
                     $this->set_user_membership_status($user_id, self::STATUS_ACTIVE);
                     // Clear expiry email tracking when setting to active
                     delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
@@ -339,99 +319,78 @@ class IELTS_CM_Membership {
                 // Clear expiry email tracking when no membership
                 delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
             }
-        }
-        
-        if (isset($_POST['ielts_cm_membership_expiry'])) {
-            update_user_meta($user_id, '_ielts_cm_membership_expiry', sanitize_text_field($_POST['ielts_cm_membership_expiry']));
-        }
-        
-        // ============================================================================
-        // ACCESS CODE ENROLLMENT SECTION (separate from paid membership above)
-        // ============================================================================
-        // Save access code enrollment fields
-        $course_group = isset($_POST['iw_course_group']) ? sanitize_text_field($_POST['iw_course_group']) : null;
-        $course_group_changed = false;
-        
-        if ($course_group !== null) {
+            
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $user_expiry);
+        } else {
+            // Save to access code fields
             $old_course_group = get_user_meta($user_id, 'iw_course_group', true);
-            
-            // Check if course group changed or is being set for first time
-            if ($course_group !== $old_course_group) {
-                $course_group_changed = true;
-            }
-            
-            update_user_meta($user_id, 'iw_course_group', $course_group);
+            update_user_meta($user_id, 'iw_course_group', $user_course);
             
             // If a course group is selected, assign role and enroll in courses
-            // Process ALWAYS when course_group is set (not just when changed) to ensure enrollment
-            if (!empty($course_group) && class_exists('IELTS_CM_Access_Codes')) {
-                    // Get and validate expiry date
-                    $iw_expiry_input = isset($_POST['iw_membership_expiry']) ? sanitize_text_field($_POST['iw_membership_expiry']) : '';
-                    
-                    if (!empty($iw_expiry_input)) {
-                        // Validate date format (Y-m-d or Y-m-d H:i:s)
-                        $timestamp = strtotime($iw_expiry_input);
-                        if ($timestamp === false) {
-                            // Invalid date format, use default
-                            $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
-                        } else {
-                            // Valid date, convert to end of day
-                            $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
-                        }
-                    } else {
-                        // Use default duration if no expiry specified
+            if (!empty($user_course) && class_exists('IELTS_CM_Access_Codes')) {
+                // Get and validate expiry date
+                if (!empty($user_expiry)) {
+                    // Validate date format (Y-m-d or Y-m-d H:i:s)
+                    $timestamp = strtotime($user_expiry);
+                    if ($timestamp === false) {
+                        // Invalid date format, use default
                         $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
+                    } else {
+                        // Valid date, convert to end of day
+                        $iw_expiry = date('Y-m-d', $timestamp) . ' 23:59:59';
                     }
+                } else {
+                    // Use default duration if no expiry specified
+                    $iw_expiry = date('Y-m-d H:i:s', strtotime(self::DEFAULT_ACCESS_CODE_DURATION));
+                }
+                
+                // Use the access codes class methods to properly set up the user
+                $access_codes = new IELTS_CM_Access_Codes();
+                
+                // Map course group to role
+                $role_mapping = array(
+                    'academic_module' => 'access_academic_module',
+                    'general_module' => 'access_general_module',
+                    'general_english' => 'access_general_english'
+                );
+                
+                if (isset($role_mapping[$user_course])) {
+                    $membership_type = $role_mapping[$user_course];
                     
-                    // Use the access codes class methods to properly set up the user
-                    $access_codes = new IELTS_CM_Access_Codes();
+                    // Set meta fields
+                    update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
+                    update_user_meta($user_id, 'iw_membership_status', 'active');
+                    update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                    update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+                    update_user_meta($user_id, '_ielts_cm_membership_expiry', $iw_expiry);
                     
-                    // Map course group to role
-                    $role_mapping = array(
-                        'academic_module' => 'access_academic_module',
-                        'general_module' => 'access_general_module',
-                        'general_english' => 'access_general_english'
-                    );
-                    
-                    if (isset($role_mapping[$course_group])) {
-                        $membership_type = $role_mapping[$course_group];
-                        
-                        // Set meta fields
-                        update_user_meta($user_id, 'iw_membership_expiry', $iw_expiry);
-                        update_user_meta($user_id, 'iw_membership_status', 'active');
-                        update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-                        update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
-                        update_user_meta($user_id, '_ielts_cm_membership_expiry', $iw_expiry);
-                        
-                        // Assign WordPress role (ACCESS CODE MEMBERSHIP ONLY)
-                        // This creates and assigns access code roles, which are separate from paid membership roles
-                        $user = get_userdata($user_id);
-                        if ($user) {
-                            // Ensure the access code role exists before trying to assign it
-                            // Create access code role if it doesn't exist (independent of global access code system setting)
-                            if (!get_role($membership_type)) {
-                                $subscriber = get_role('subscriber');
-                                if ($subscriber) {
-                                    // Only create if this is an access code role (safety check)
-                                    if (isset(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES[$membership_type])) {
-                                        add_role($membership_type, IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES[$membership_type], $subscriber->capabilities);
-                                    }
+                    // Assign WordPress role (ACCESS CODE MEMBERSHIP ONLY)
+                    $user = get_userdata($user_id);
+                    if ($user) {
+                        // Ensure the access code role exists before trying to assign it
+                        if (!get_role($membership_type)) {
+                            $subscriber = get_role('subscriber');
+                            if ($subscriber) {
+                                // Only create if this is an access code role (safety check)
+                                if (isset(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES[$membership_type])) {
+                                    add_role($membership_type, IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES[$membership_type], $subscriber->capabilities);
                                 }
                             }
-                            
-                            // Remove any existing access code membership roles first (but NOT paid membership roles)
-                            $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
-                            foreach ($access_code_roles as $role_slug) {
-                                $user->remove_role($role_slug);
-                            }
-                            // Add the new access code role
-                            $user->add_role($membership_type);
                         }
                         
-                        // Enroll user in courses based on course group
-                        $access_codes->enroll_user_in_courses($user_id, $course_group);
+                        // Remove any existing access code membership roles first
+                        $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+                        foreach ($access_code_roles as $role_slug) {
+                            $user->remove_role($role_slug);
+                        }
+                        // Add the new access code role
+                        $user->add_role($membership_type);
                     }
-            } elseif (empty($course_group)) {
+                    
+                    // Enroll user in courses based on course group
+                    $access_codes->enroll_user_in_courses($user_id, $user_course);
+                }
+            } elseif (empty($user_course)) {
                 // Course group cleared - remove role and clear all access code meta fields
                 $user = get_userdata($user_id);
                 if ($user && class_exists('IELTS_CM_Access_Codes')) {
@@ -448,25 +407,50 @@ class IELTS_CM_Membership {
                 delete_user_meta($user_id, '_ielts_cm_membership_expiry');
             }
         }
-        
-        // Legacy course enrollment checkboxes - maintained for backward compatibility
-        if (isset($_POST['enrolled_ielts_academic'])) {
-            update_user_meta($user_id, 'enrolled_ielts_academic', 'true');
-        } else {
-            delete_user_meta($user_id, 'enrolled_ielts_academic');
+    }
+    
+    /**
+     * Hide default WordPress profile fields that are not needed
+     */
+    public function hide_default_profile_fields() {
+        if (!current_user_can('edit_users')) {
+            return;
         }
-        
-        if (isset($_POST['enrolled_ielts_general'])) {
-            update_user_meta($user_id, 'enrolled_ielts_general', 'true');
-        } else {
-            delete_user_meta($user_id, 'enrolled_ielts_general');
-        }
-        
-        if (isset($_POST['enrolled_general_english'])) {
-            update_user_meta($user_id, 'enrolled_general_english', 'true');
-        } else {
-            delete_user_meta($user_id, 'enrolled_general_english');
-        }
+        ?>
+        <style type="text/css">
+            /* Hide Personal Options section */
+            .user-admin-color-wrap,
+            .user-comment-shortcuts-wrap,
+            .user-admin-bar-front-wrap,
+            .user-language-wrap,
+            /* Hide About the user section */
+            .user-description-wrap,
+            .user-profile-picture,
+            /* Hide Application Passwords section */
+            .application-passwords-section {
+                display: none !important;
+            }
+        </style>
+        <script type="text/javascript">
+            jQuery(document).ready(function($) {
+                // Hide the entire "Personal Options" section heading
+                $('h2:contains("Personal Options")').hide();
+                
+                // Hide "About Yourself" or "About the user" section heading
+                $('h2').filter(function() {
+                    return $(this).text().match(/About (Yourself|the user)/i);
+                }).hide();
+                
+                // Hide Application Passwords section
+                $('.application-passwords').closest('tr').hide();
+                $('h2:contains("Application Passwords")').hide();
+                $('.application-passwords-section').hide();
+                
+                // Also hide any sections that might have been missed
+                $('.user-profile-picture').closest('tr').hide();
+            });
+        </script>
+        <?php
     }
     
     /**
