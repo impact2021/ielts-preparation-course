@@ -195,6 +195,7 @@ class IELTS_CM_Frontend {
                                 background-color: {$vocab_header_color};
                                 color: #ffffff;
                                 text-align: center;
+                                border-radius: 12px;
                             }
                             .shepherd-element.ielts-tour-step .shepherd-header {
                                 background-color: {$vocab_header_color};
@@ -207,6 +208,22 @@ class IELTS_CM_Frontend {
                             }
                             .shepherd-element.ielts-tour-step .shepherd-text p {
                                 color: #ffffff;
+                            }
+                            .shepherd-element.ielts-tour-step .shepherd-footer {
+                                justify-content: center;
+                            }
+                            .shepherd-element.ielts-tour-step .shepherd-cancel-icon {
+                                background-color: #000000;
+                                border-radius: 50%;
+                                width: 24px;
+                                height: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                padding: 0;
+                            }
+                            .shepherd-element.ielts-tour-step .shepherd-cancel-icon svg path {
+                                fill: #ffffff;
                             }
                         ";
                         wp_add_inline_style('shepherd-theme', $tour_css);
