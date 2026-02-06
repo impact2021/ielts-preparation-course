@@ -13,9 +13,14 @@ A guided tour that automatically shows first-time users:
 - ✅ How to access practice tests  
 - ✅ Where to find the trophy room
 - ✅ How to track their progress
+- ✅ **Highlights specific buttons and areas** (e.g., "Submit Quiz" button)
 - ✅ Other key features
 
-**No shortcodes needed!** Everything is JavaScript-based.
+**Key Features:**
+- 🎯 **Automatically highlights** buttons, forms, and interactive elements
+- 🌟 **Spotlights** important areas while dimming the rest of the page
+- 📍 **Points to specific elements** like submit buttons, timers, score displays
+- **No shortcodes needed!** Everything is JavaScript-based.
 
 ---
 
@@ -168,6 +173,23 @@ Create new file: `assets/js/user-tour.js`
             ]
         });
         
+        // EXAMPLE: Highlighting a Submit Quiz Button (if on quiz page)
+        // Uncomment and customize this if you want to highlight the submit button
+        /*
+        tour.addStep({
+            id: 'submit-quiz',
+            text: '<h3>Submit Your Quiz ✓</h3><p>When you finish answering, click this button to see your results!</p>',
+            attachTo: { 
+                element: 'button[type="submit"]',  // Highlights the submit button!
+                on: 'top'  // Tooltip appears above the button
+            },
+            buttons: [
+                { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                { text: 'Got it!', action: tour.next }
+            ]
+        });
+        */
+        
         // Finish
         tour.addStep({
             id: 'finish',
@@ -226,6 +248,46 @@ The tour won't work properly until you update the CSS selectors to match YOUR si
 - `#site-navigation`
 
 Do this for each tour step (menu, practice tests, trophy room, progress).
+
+---
+
+## 🎯 Highlighting Specific Elements
+
+**Important:** When you use `attachTo` in a tour step, the element is **automatically highlighted**!
+
+```javascript
+tour.addStep({
+    text: 'Click this button to submit!',
+    attachTo: { 
+        element: 'button[type="submit"]',  // ← Element gets highlighted!
+        on: 'top'  // Tooltip position
+    }
+});
+```
+
+**What happens:**
+- ✅ The button **glows** and stands out
+- ✅ The rest of the page **dims** (dark overlay)
+- ✅ Page **scrolls** the button into view automatically
+- ✅ User can't miss it!
+
+### Common Elements to Highlight:
+
+```javascript
+// Submit button
+attachTo: { element: 'button[type="submit"]', on: 'top' }
+
+// Quiz timer
+attachTo: { element: '#quiz-timer', on: 'bottom' }
+
+// Score display
+attachTo: { element: '.quiz-score', on: 'left' }
+
+// Answer area
+attachTo: { element: '.quiz-question:first', on: 'right' }
+```
+
+**See full examples:** [USER_TOUR_HIGHLIGHTING_EXAMPLES.md](USER_TOUR_HIGHLIGHTING_EXAMPLES.md)
 
 ---
 

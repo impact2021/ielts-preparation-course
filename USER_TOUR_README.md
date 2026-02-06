@@ -21,7 +21,16 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 - Troubleshooting guide
 - FAQs and best practices
 
-### 3. [Library Comparison](USER_TOUR_LIBRARY_COMPARISON.md) 🔍
+### 3. [Highlighting Buttons & Areas Guide](USER_TOUR_HIGHLIGHTING_EXAMPLES.md) 🎯 NEW!
+**Read this to learn how to highlight specific elements**
+
+- How to highlight submit buttons, forms, and interactive elements
+- Complete quiz tour example
+- Custom styling for highlighted elements
+- Tips for finding CSS selectors
+- Visual examples and best practices
+
+### 4. [Library Comparison](USER_TOUR_LIBRARY_COMPARISON.md) 🔍
 **Read this if you're deciding which approach to use**
 
 - Comparison of Shepherd.js, Intro.js, Driver.js, and WordPress plugins
@@ -36,11 +45,15 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 
 > "How difficult would it be to create a user tour for first time users? Would I have to add a shortcode for each stage or how would it work?"
 
+> "I would also want it to do things like highlight a button or an area (e.g. Submit a quiz)"
+
 ### Answer:
 
 **Difficulty**: Easy to Moderate (1-2 hours)
 
 **No shortcodes needed!** The tour is JavaScript-based. You define all tour steps in one JavaScript file.
+
+**Highlighting is automatic!** When you point to an element (like a submit button), it automatically gets highlighted with a glow effect while the rest of the page dims. No extra code needed!
 
 **What you need:**
 1. Add Shepherd.js library (via CDN) - 2 minutes
@@ -49,6 +62,19 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 4. Test and refine - 30 minutes
 
 **Total time**: ~1 hour for basic implementation
+
+**Highlighting example:**
+```javascript
+tour.addStep({
+    text: 'Click here to submit your quiz!',
+    attachTo: { 
+        element: 'button[type="submit"]',  // Submit button gets highlighted!
+        on: 'top' 
+    }
+});
+```
+
+The button will glow, the page will dim, and the user can't miss it! ✨
 
 ---
 
@@ -70,11 +96,18 @@ We recommend using **Shepherd.js** because:
 A guided tour that automatically shows first-time users:
 
 1. **Welcome Message** - Friendly introduction
-2. **Main Navigation** - Where the menu is located
-3. **Practice Tests** - How to access test materials
-4. **Trophy Room** - Where to view achievements
-5. **Progress Dashboard** - How to track learning
-6. **Getting Started** - Encouragement to begin
+2. **Main Navigation** - Where the menu is located (highlighted)
+3. **Practice Tests** - How to access test materials (highlighted)
+4. **Trophy Room** - Where to view achievements (highlighted)
+5. **Progress Dashboard** - How to track learning (highlighted)
+6. **Submit Quiz Button** - How to complete quizzes (highlighted with glow!)
+7. **Getting Started** - Encouragement to begin
+
+**Each highlighted element:**
+- 🌟 Glows with a spotlight effect
+- 🎯 Stands out from dimmed background
+- 📍 Shows helpful tooltip/explanation
+- ↕️ Scrolls into view automatically
 
 All with **no shortcodes** - just JavaScript!
 
@@ -108,6 +141,29 @@ tour.addStep({
     ]
 });
 ```
+
+### Automatic Element Highlighting
+When you want to highlight a button or area (like "Submit Quiz"), just point to it:
+
+```javascript
+tour.addStep({
+    id: 'submit-button',
+    text: 'Click here when you finish!',
+    attachTo: { 
+        element: 'button[type="submit"]',  // ← This button gets highlighted!
+        on: 'top'  // Tooltip appears above
+    }
+});
+```
+
+**What happens automatically:**
+- ✅ The element **glows** with a spotlight effect
+- ✅ Rest of page **dims** (dark overlay)
+- ✅ Element **scrolls into view** smoothly
+- ✅ **Tooltip appears** next to the element
+- ✅ User **can't miss it**!
+
+**No extra code needed** - highlighting is built into Shepherd.js!
 
 ### Easy Setup for You
 As requested, the setup is as easy as possible:
@@ -268,6 +324,7 @@ All issues covered in detail in [Troubleshooting Guide](USER_TOUR_IMPLEMENTATION
 |----------|----------|---------------|
 | Quick Start | Fast implementation | 30 mins |
 | Complete Guide | Understanding details | 1-2 hours |
+| **Highlighting Guide** | **Learning to highlight buttons/areas** | **15 mins** |
 | Library Comparison | Making decisions | 20 mins |
 
 ---
