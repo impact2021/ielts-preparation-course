@@ -4220,11 +4220,36 @@ class IELTS_CM_Shortcodes {
         $button_text = esc_html($atts['text']);
         $button_class = esc_attr($atts['class']);
         
-        // Return button HTML with inline onclick handler
-        return sprintf(
-            '<button class="%s" onclick="if(typeof ieltsStartTour === \'function\') { ieltsStartTour(true); } else { alert(\'Tour is not available on this page.\'); }">%s</button>',
+        // Generate unique ID for this button instance
+        $button_id = 'ielts-replay-tour-' . uniqid();
+        
+        // Return button HTML with accessibility attributes and separate JS
+        $html = sprintf(
+            '<button type="button" id="%s" class="%s" aria-label="Replay the welcome tour">%s</button>',
+            $button_id,
             $button_class,
             $button_text
         );
+        
+        // Add inline script to attach event handler (loaded after jQuery)
+        $html .= sprintf(
+            '<script>
+                (function($) {
+                    $(document).ready(function() {
+                        $("#%s").on("click", function(e) {
+                            e.preventDefault();
+                            if (typeof ieltsStartTour === "function") {
+                                ieltsStartTour(true);
+                            } else {
+                                alert("Tour is not available on this page.");
+                            }
+                        });
+                    });
+                })(jQuery);
+            </script>',
+            $button_id
+        );
+        
+        return $html;
     }
 }

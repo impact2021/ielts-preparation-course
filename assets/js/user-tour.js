@@ -109,7 +109,7 @@
         setTimeout(function() {
             console.log('IELTS Tours: Starting', tourType, 'tour');
             tour.start();
-        }, 500);
+        }, 1000);
     };
     
     $(document).ready(function() {
