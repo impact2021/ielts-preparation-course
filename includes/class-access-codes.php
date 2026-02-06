@@ -46,6 +46,7 @@ class IELTS_CM_Access_Codes {
     public function init() {
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
+        add_action('admin_init', array($this, 'block_partner_admin_backend'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -96,6 +97,64 @@ class IELTS_CM_Access_Codes {
                 add_role($role_slug, $role_name, $base_caps);
             }
         }
+    }
+    
+    /**
+     * Block partner admins from accessing WordPress backend
+     * Only full site admins (with manage_options capability) should access wp-admin
+     */
+    public function block_partner_admin_backend() {
+        // Allow AJAX requests
+        if (defined('DOING_AJAX') && DOING_AJAX) {
+            return;
+        }
+        
+        // Check if user is partner admin (has manage_partner_invites but NOT manage_options)
+        if (current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            // Redirect to home page or a custom partner dashboard page
+            $redirect_url = home_url('/');
+            
+            // If there's a custom partner dashboard URL configured, use it
+            $partner_dashboard_url = get_option('iw_partner_dashboard_url', '');
+            if (!empty($partner_dashboard_url)) {
+                $redirect_url = $partner_dashboard_url;
+            }
+            
+            wp_redirect($redirect_url);
+            exit;
+        }
+    }
+    
+    /**
+     * Get the partner organization ID for a user
+     * This allows multiple partner admins to be part of the same organization
+     * and see the same students, codes, and remaining spaces
+     * 
+     * @param int $user_id User ID (defaults to current user)
+     * @return int Partner organization ID
+     */
+    private function get_partner_org_id($user_id = null) {
+        if ($user_id === null) {
+            $user_id = get_current_user_id();
+        }
+        
+        // Full site admins see all data - use a special org ID of 0
+        if (current_user_can('manage_options')) {
+            return 0;
+        }
+        
+        // Get the partner organization ID from user meta
+        // If not set, use the user's own ID for backward compatibility
+        $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
+        
+        if (empty($org_id)) {
+            // Default to user's own ID for backward compatibility
+            // This means existing partner admins will continue to see their own data
+            // until an admin assigns them to an organization
+            $org_id = $user_id;
+        }
+        
+        return absint($org_id);
     }
     
     public function add_admin_menu() {
@@ -409,9 +468,11 @@ class IELTS_CM_Access_Codes {
             return '<p>You do not have permission to access this dashboard.</p>';
         }
         
-        $partner_id = get_current_user_id();
+        // Use partner organization ID instead of individual user ID
+        // This allows multiple partner admins to see the same data
+        $partner_org_id = $this->get_partner_org_id();
         $max_students = get_option('iw_max_students_per_partner', 100);
-        $active_students = $this->get_partner_students($partner_id);
+        $active_students = $this->get_partner_students($partner_org_id);
         $active_count = count($active_students);
         
         // Calculate active and expired student counts for display on tabs
@@ -579,7 +640,7 @@ class IELTS_CM_Access_Codes {
                         <button class="iw-btn" onclick="IWDashboard.downloadCSV()" style="float: right;">Download CSV</button>
                     </div>
                     <div style="clear: both;"></div>
-                    <?php echo $this->render_codes_table($partner_id); ?>
+                    <?php echo $this->render_codes_table($partner_org_id); ?>
                 </div>
             </div>
             
@@ -899,13 +960,21 @@ class IELTS_CM_Access_Codes {
         return ob_get_clean();
     }
     
-    private function render_codes_table($partner_id) {
+    private function render_codes_table($partner_org_id) {
         global $wpdb;
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
-        $codes = $wpdb->get_results($wpdb->prepare(
-            "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT 100",
-            $partner_id
-        ));
+        
+        // If org_id is 0 (admin), show all codes, otherwise filter by org_id
+        if ($partner_org_id === 0) {
+            $codes = $wpdb->get_results(
+                "SELECT * FROM $table ORDER BY created_date DESC LIMIT 100"
+            );
+        } else {
+            $codes = $wpdb->get_results($wpdb->prepare(
+                "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT 100",
+                $partner_org_id
+            ));
+        }
         
         if (empty($codes)) {
             return '<p>No codes generated yet.</p>';
@@ -1039,45 +1108,56 @@ class IELTS_CM_Access_Codes {
         return $html;
     }
     
-    private function get_partner_students($partner_id) {
-        // Get all users managed by this partner
+    private function get_partner_students($partner_org_id) {
+        // Get all users managed by this partner organization
         // This includes users created manually and users who used access codes
         
-        // First get users with the partner meta key
-        $users_by_partner = get_users(array(
-            'meta_key' => 'iw_created_by_partner',
-            'meta_value' => $partner_id,
-            'fields' => array('ID')
-        ));
-        
-        // Also get all users with access code memberships but NO partner assignment
-        // This catches legacy students created before the partner system was fully implemented
-        // Only administrators can see legacy users (those without partner assignment)
-        $users_with_access_codes = array();
-        if (current_user_can('manage_options')) {
-            // Admin can see all legacy access code users
-            // Use meta_query to efficiently get users with iw_course_group but without iw_created_by_partner
+        // If org_id is 0 (admin), get all access code users
+        if ($partner_org_id === 0) {
             $users_with_access_codes = get_users(array(
                 'fields' => array('ID'),
-                'meta_query' => array(
-                    'relation' => 'AND',
-                    array(
-                        'key' => 'iw_course_group',
-                        'compare' => 'EXISTS'
-                    ),
-                    array(
-                        'key' => 'iw_created_by_partner',
-                        'compare' => 'NOT EXISTS'
+                'meta_key' => 'iw_course_group',
+                'meta_compare' => 'EXISTS'
+            ));
+            
+            $user_ids = wp_list_pluck($users_with_access_codes, 'ID');
+        } else {
+            // Get users with the partner organization meta key
+            $users_by_partner = get_users(array(
+                'meta_key' => 'iw_created_by_partner',
+                'meta_value' => $partner_org_id,
+                'fields' => array('ID')
+            ));
+            
+            // Also get all users with access code memberships but NO partner assignment
+            // This catches legacy students created before the partner organization system
+            // Only administrators can see legacy users (those without partner assignment)
+            $users_with_access_codes = array();
+            if (current_user_can('manage_options')) {
+                // Admin can see all legacy access code users
+                // Use meta_query to efficiently get users with iw_course_group but without iw_created_by_partner
+                $users_with_access_codes = get_users(array(
+                    'fields' => array('ID'),
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        array(
+                            'key' => 'iw_course_group',
+                            'compare' => 'EXISTS'
+                        ),
+                        array(
+                            'key' => 'iw_created_by_partner',
+                            'compare' => 'NOT EXISTS'
+                        )
                     )
-                )
+                ));
+            }
+            
+            // Merge and deduplicate user IDs using WordPress-optimized function
+            $user_ids = array_unique(array_merge(
+                wp_list_pluck($users_by_partner, 'ID'),
+                wp_list_pluck($users_with_access_codes, 'ID')
             ));
         }
-        
-        // Merge and deduplicate user IDs using WordPress-optimized function
-        $user_ids = array_unique(array_merge(
-            wp_list_pluck($users_by_partner, 'ID'),
-            wp_list_pluck($users_with_access_codes, 'ID')
-        ));
         
         // Return in format compatible with existing code
         $results = array();
@@ -1099,9 +1179,10 @@ class IELTS_CM_Access_Codes {
         $days = absint($_POST['days']);
         
         // Check remaining places based on tier level
-        $partner_id = get_current_user_id();
+        // Use partner organization ID instead of individual user ID
+        $partner_org_id = $this->get_partner_org_id();
         $max_students = get_option('iw_max_students_per_partner', 100);
-        $active_students = $this->get_partner_students($partner_id);
+        $active_students = $this->get_partner_students($partner_org_id);
         $active_count = count($active_students);
         $remaining_places = $max_students - $active_count;
         
@@ -1133,7 +1214,7 @@ class IELTS_CM_Access_Codes {
                 'course_group' => $course_group,
                 'duration_days' => $days,
                 'status' => 'active',
-                'created_by' => get_current_user_id(),
+                'created_by' => $partner_org_id,
                 'created_date' => current_time('mysql')
             ));
             $codes[] = $code;
@@ -1194,7 +1275,9 @@ class IELTS_CM_Access_Codes {
         $this->set_ielts_membership($user_id, $course_group, $expiry_date);
         $this->enroll_user_in_courses($user_id, $course_group);
         
-        update_user_meta($user_id, 'iw_created_by_partner', get_current_user_id());
+        // Use partner organization ID instead of individual user ID
+        $partner_org_id = $this->get_partner_org_id();
+        update_user_meta($user_id, 'iw_created_by_partner', $partner_org_id);
         
         global $wpdb;
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
@@ -1204,7 +1287,7 @@ class IELTS_CM_Access_Codes {
             'course_group' => $course_group,
             'duration_days' => $days,
             'status' => 'used',
-            'created_by' => get_current_user_id(),
+            'created_by' => $partner_org_id,
             'used_by' => $user_id,
             'created_date' => current_time('mysql'),
             'used_date' => current_time('mysql')
