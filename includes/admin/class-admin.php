@@ -94,6 +94,10 @@ class IELTS_CM_Admin {
         if ($hook === 'ielts_course_page_ielts-settings') {
             wp_enqueue_style('wp-color-picker');
             wp_enqueue_script('wp-color-picker');
+            
+            // Add inline script to initialize color picker
+            $inline_script = "jQuery(document).ready(function($) { $('.ielts-cm-color-picker').wpColorPicker(); });";
+            wp_add_inline_script('wp-color-picker', $inline_script);
         }
     }
     
@@ -5069,13 +5073,6 @@ class IELTS_CM_Admin {
                 
                 <?php submit_button(); ?>
             </form>
-            
-            <script>
-            jQuery(document).ready(function($) {
-                // Initialize color picker
-                $('.ielts-cm-color-picker').wpColorPicker();
-            });
-            </script>
         </div>
         <?php
     }

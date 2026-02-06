@@ -4056,7 +4056,7 @@ class IELTS_CM_Shortcodes {
         $table = $db->get_progress_table();
         
         $last_progress = $wpdb->get_row($wpdb->prepare(
-            "SELECT * FROM $table WHERE user_id = %d ORDER BY last_accessed DESC LIMIT 1",
+            "SELECT lesson_id, course_id, last_accessed FROM $table WHERE user_id = %d ORDER BY last_accessed DESC LIMIT 1",
             $user_id
         ));
         
@@ -4066,8 +4066,11 @@ class IELTS_CM_Shortcodes {
         
         // Build the message
         ob_start();
-        ?>
-        <div class="ielts-last-page-widget">
+        
+        // Only output styles once per page load
+        static $styles_output = false;
+        if (!$styles_output) {
+            ?>
             <style>
                 .ielts-last-page-widget {
                     padding: 20px;
@@ -4098,6 +4101,11 @@ class IELTS_CM_Shortcodes {
                     margin-top: 5px;
                 }
             </style>
+            <?php
+            $styles_output = true;
+        }
+        ?>
+        <div class="ielts-last-page-widget">
             
             <h3><?php _e('Continue Where You Left Off', 'ielts-course-manager'); ?></h3>
             
