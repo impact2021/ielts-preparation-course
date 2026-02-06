@@ -69,7 +69,10 @@ class IELTS_CM_Bulk_Enrollment {
         ));
         
         // If no academic courses found, get any published course as fallback
+        // NOTE: This is intentional - we still want to enroll users even if no Academic 
+        // courses exist yet, and they'll still get Academic Module membership
         if (empty($academic_courses)) {
+            error_log('IELTS Bulk Enrollment WARNING: No Academic courses found. Falling back to any available course but users will still get Academic Module membership.');
             $academic_courses = get_posts(array(
                 'post_type' => 'ielts_course',
                 'posts_per_page' => -1,
@@ -80,7 +83,7 @@ class IELTS_CM_Bulk_Enrollment {
         
         if (empty($academic_courses)) {
             // No courses found at all, redirect with error
-            $redirect_to = add_query_arg('ielts_bulk_enroll', 'no_courses', $redirect_to);
+            $redirect_to = add_query_arg('ielts_bulk_enroll', 'no_courses_at_all', $redirect_to);
             return $redirect_to;
         }
         
@@ -125,10 +128,10 @@ class IELTS_CM_Bulk_Enrollment {
         $enrolled_count = intval($_REQUEST['ielts_bulk_enrolled']);
         
         // Check for no courses error - sanitize the input
-        if (isset($_REQUEST['ielts_bulk_enroll']) && sanitize_key($_REQUEST['ielts_bulk_enroll']) === 'no_courses') {
+        if (isset($_REQUEST['ielts_bulk_enroll']) && sanitize_key($_REQUEST['ielts_bulk_enroll']) === 'no_courses_at_all') {
             ?>
             <div class="notice notice-error is-dismissible">
-                <p><?php _e('No IELTS courses found. Please create a course first.', 'ielts-course-manager'); ?></p>
+                <p><?php _e('No IELTS courses found. Please create at least one course first.', 'ielts-course-manager'); ?></p>
             </div>
             <?php
             return;
