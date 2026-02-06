@@ -99,6 +99,15 @@ class IELTS_CM_Access_Codes {
             return;
         }
         
+        // Use transient lock to prevent concurrent execution
+        $lock_key = 'iw_partner_migration_lock';
+        if (get_transient($lock_key)) {
+            return; // Another process is running the migration
+        }
+        
+        // Set lock for 5 minutes
+        set_transient($lock_key, true, 300);
+        
         global $wpdb;
         
         // Get all partner admin user IDs (users with manage_partner_invites capability)
@@ -110,10 +119,18 @@ class IELTS_CM_Access_Codes {
         if (empty($partner_admins)) {
             // No partner admins found, mark migration as done
             update_option('iw_partner_site_org_migration_done', true);
+            delete_transient($lock_key);
             return;
         }
         
         $partner_admin_ids = $partner_admins;
+        
+        // Validate array count for security
+        if (!is_array($partner_admin_ids) || count($partner_admin_ids) > 1000) {
+            // Sanity check: Don't process if too many IDs (potential data issue)
+            delete_transient($lock_key);
+            return;
+        }
         
         // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
         $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
@@ -122,7 +139,14 @@ class IELTS_CM_Access_Codes {
         // Build query with table name outside of prepare, parameters inside prepare
         $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by IN ({$placeholders})";
         $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
-        $wpdb->query($prepared_query);
+        $codes_result = $wpdb->query($prepared_query);
+        
+        // Check for errors
+        if ($codes_result === false) {
+            // Database error occurred, rollback and try again next time
+            delete_transient($lock_key);
+            return;
+        }
         
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
         // Use a single query to batch update all user meta values
@@ -132,10 +156,18 @@ class IELTS_CM_Access_Codes {
         // Build query with table name outside of prepare, parameters inside prepare
         $query = "UPDATE {$meta_table} SET meta_value = %d WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders})";
         $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
-        $wpdb->query($prepared_query);
+        $meta_result = $wpdb->query($prepared_query);
         
-        // Mark migration as complete
+        // Check for errors
+        if ($meta_result === false) {
+            // Database error occurred, rollback and try again next time
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Mark migration as complete only if both queries succeeded
         update_option('iw_partner_site_org_migration_done', true);
+        delete_transient($lock_key);
     }
     
     public function create_partner_admin_role() {
