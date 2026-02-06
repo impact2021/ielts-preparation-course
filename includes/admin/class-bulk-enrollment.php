@@ -141,21 +141,29 @@ class IELTS_CM_Bulk_Enrollment {
     private function get_course_group_from_course($course_id) {
         $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
         
-        // Check for academic course
+        // Handle error from wp_get_post_terms
+        if (is_wp_error($categories)) {
+            // Default to academic_module if we can't determine the category
+            return 'academic_module';
+        }
+        
+        // Check for academic course first (most specific)
         foreach ($categories as $cat_slug) {
             if (strpos(strtolower($cat_slug), 'academic') !== false) {
                 return 'academic_module';
             }
         }
         
-        // Check for general course
+        // Check for general course (but not general_english)
         foreach ($categories as $cat_slug) {
-            if (strpos(strtolower($cat_slug), 'general') !== false) {
+            $lower_slug = strtolower($cat_slug);
+            // Ensure it's general but not general_english by checking for 'general' without 'english'
+            if (strpos($lower_slug, 'general') !== false && strpos($lower_slug, 'english') === false) {
                 return 'general_module';
             }
         }
         
-        // Check for english-only course
+        // Check for english-only course (can be general_english or just english)
         foreach ($categories as $cat_slug) {
             if (strpos(strtolower($cat_slug), 'english') !== false) {
                 return 'general_english';
