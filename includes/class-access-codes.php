@@ -70,6 +70,7 @@ class IELTS_CM_Access_Codes {
         add_action('admin_init', array($this, 'register_settings'));
         add_action('admin_init', array($this, 'block_partner_admin_backend'));
         add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
+        add_action('admin_init', array($this, 'migrate_all_partner_data_to_site_org'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -174,6 +175,104 @@ class IELTS_CM_Access_Codes {
         
         // Mark migration as complete
         update_option('iw_partner_site_org_migration_v2_done', true);
+        delete_transient($lock_key);
+    }
+    
+    /**
+     * Migrate ALL partner data to use site-wide organization ID (V3 Migration)
+     * 
+     * This migration complements V2 by cleaning up data from:
+     * - Former partner admins (deleted or role changed)
+     * - Partner admins with custom org IDs set to their user ID
+     * - Any other legacy org IDs that aren't 0 (admin) or 1 (site partner)
+     * 
+     * The purpose is to consolidate ALL partner-created data to use
+     * SITE_PARTNER_ORG_ID (1), ensuring all partner admins on the same site
+     * see the same students and codes.
+     * 
+     * Public visibility required because it's hooked to admin_init
+     */
+    public function migrate_all_partner_data_to_site_org() {
+        // Only allow admins to run this migration
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+        
+        // Check if migration has already run
+        $migration_done = get_option('iw_partner_site_org_migration_v3_done', false);
+        if ($migration_done) {
+            return;
+        }
+        
+        // Use transient lock to prevent concurrent execution
+        $lock_key = 'iw_partner_migration_v3_lock';
+        if (get_transient($lock_key)) {
+            return; // Another process is running the migration
+        }
+        
+        // Set lock for 5 minutes
+        set_transient($lock_key, true, 300);
+        
+        global $wpdb;
+        
+        // Get all current partner admin user IDs to preserve if they have custom org IDs
+        $partner_admin_ids = get_users(array(
+            'role' => 'partner_admin',
+            'fields' => 'ID'
+        ));
+        
+        // Build list of valid org IDs:
+        // - ADMIN_ORG_ID (0): Site admins
+        // - SITE_PARTNER_ORG_ID (1): Default partner org
+        // - Current partner admin IDs with custom org IDs (rare, but preserve for backward compatibility)
+        $valid_org_ids = array_merge(
+            array(self::ADMIN_ORG_ID, self::SITE_PARTNER_ORG_ID),
+            $partner_admin_ids
+        );
+        
+        // Convert to integers
+        $valid_org_ids = array_map('absint', $valid_org_ids);
+        
+        // Build placeholders for NOT IN clause
+        $placeholders = implode(',', array_fill(0, count($valid_org_ids), '%d'));
+        
+        // Migrate access codes: Update created_by from invalid org IDs to SITE_PARTNER_ORG_ID
+        // This catches codes created by former partner admins or invalid org IDs
+        $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
+        $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by NOT IN ({$placeholders})";
+        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$valid_org_ids);
+        $codes_result = $wpdb->query($prepared_query);
+        
+        if ($codes_result === false) {
+            error_log("Partner admin migration v3 failed: codes table update error");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Migrate user meta: Update iw_created_by_partner from invalid org IDs to SITE_PARTNER_ORG_ID
+        // Note: meta_value is stored as string, so we need string comparison
+        $meta_table = $wpdb->usermeta;
+        $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
+        $valid_org_ids_str = array_map('strval', $valid_org_ids);
+        $placeholders_str = implode(',', array_fill(0, count($valid_org_ids_str), '%s'));
+        
+        $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value NOT IN ({$placeholders_str})";
+        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$valid_org_ids_str);
+        $meta_result = $wpdb->query($prepared_query);
+        
+        if ($meta_result === false) {
+            error_log("Partner admin migration v3 failed: usermeta table update error");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Log how many rows were affected for debugging
+        if ($codes_result > 0 || $meta_result > 0) {
+            error_log("Partner admin migration v3 completed: Updated {$codes_result} codes and {$meta_result} user meta records");
+        }
+        
+        // Mark migration as complete
+        update_option('iw_partner_site_org_migration_v3_done', true);
         delete_transient($lock_key);
     }
     
