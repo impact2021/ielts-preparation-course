@@ -17,6 +17,16 @@ class IELTS_CM_Access_Codes {
     const STATUS_EXPIRED = 'expired';
     
     /**
+     * Admin organization ID - special value indicating admin sees all data
+     */
+    const ADMIN_ORG_ID = 0;
+    
+    /**
+     * User meta key for partner organization ID
+     */
+    const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
+    
+    /**
      * Access code membership types - separate from paid memberships
      * These are created when Access Code Membership system is enabled
      */
@@ -117,10 +127,13 @@ class IELTS_CM_Access_Codes {
             // If there's a custom partner dashboard URL configured, use it
             $partner_dashboard_url = get_option('iw_partner_dashboard_url', '');
             if (!empty($partner_dashboard_url)) {
-                $redirect_url = $partner_dashboard_url;
+                // Validate and sanitize the URL to prevent open redirect vulnerabilities
+                $redirect_url = esc_url_raw($partner_dashboard_url);
+                // Use wp_validate_redirect to ensure redirect is to allowed location
+                $redirect_url = wp_validate_redirect($redirect_url, home_url('/'));
             }
             
-            wp_redirect($redirect_url);
+            wp_safe_redirect($redirect_url);
             exit;
         }
     }
@@ -138,14 +151,14 @@ class IELTS_CM_Access_Codes {
             $user_id = get_current_user_id();
         }
         
-        // Full site admins see all data - use a special org ID of 0
+        // Full site admins see all data - use ADMIN_ORG_ID constant
         if (current_user_can('manage_options')) {
-            return 0;
+            return self::ADMIN_ORG_ID;
         }
         
         // Get the partner organization ID from user meta
         // If not set, use the user's own ID for backward compatibility
-        $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
+        $org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
         
         if (empty($org_id)) {
             // Default to user's own ID for backward compatibility
@@ -964,15 +977,18 @@ class IELTS_CM_Access_Codes {
         global $wpdb;
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         
-        // If org_id is 0 (admin), show all codes, otherwise filter by org_id
-        if ($partner_org_id === 0) {
-            $codes = $wpdb->get_results(
-                "SELECT * FROM $table ORDER BY created_date DESC LIMIT 100"
-            );
+        // If org_id is ADMIN_ORG_ID (admin), show all codes, otherwise filter by org_id
+        if ($partner_org_id === self::ADMIN_ORG_ID) {
+            // Use prepare even without parameters for consistency
+            $codes = $wpdb->get_results($wpdb->prepare(
+                "SELECT * FROM {$wpdb->prefix}ielts_cm_access_codes ORDER BY created_date DESC LIMIT %d",
+                100
+            ));
         } else {
             $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT 100",
-                $partner_org_id
+                "SELECT * FROM {$wpdb->prefix}ielts_cm_access_codes WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
+                $partner_org_id,
+                100
             ));
         }
         
@@ -1112,8 +1128,8 @@ class IELTS_CM_Access_Codes {
         // Get all users managed by this partner organization
         // This includes users created manually and users who used access codes
         
-        // If org_id is 0 (admin), get all access code users
-        if ($partner_org_id === 0) {
+        // If org_id is ADMIN_ORG_ID (admin), get all access code users
+        if ($partner_org_id === self::ADMIN_ORG_ID) {
             $users_with_access_codes = get_users(array(
                 'fields' => array('ID'),
                 'meta_key' => 'iw_course_group',
