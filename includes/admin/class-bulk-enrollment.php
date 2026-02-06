@@ -12,6 +12,13 @@ class IELTS_CM_Bulk_Enrollment {
     
     private $enrollment;
     
+    // Role mapping for course groups
+    private $role_mapping = array(
+        'academic_module' => 'access_academic_module',
+        'general_module' => 'access_general_module',
+        'general_english' => 'access_general_english'
+    );
+    
     public function __construct() {
         $this->enrollment = new IELTS_CM_Enrollment();
         
@@ -148,25 +155,31 @@ class IELTS_CM_Bulk_Enrollment {
             return 'academic_module';
         }
         
-        // Check for academic-specific categories first (highest priority)
+        // Check all categories in a single loop with priority order
+        $has_general = false;
+        $has_english = false;
+        
         foreach ($categories as $cat_slug) {
+            // Check for academic-specific categories first (highest priority)
             if ($cat_slug === 'academic' || $cat_slug === 'academic-practice-tests') {
                 return 'academic_module';
             }
-        }
-        
-        // Check for general-specific categories (medium priority)
-        foreach ($categories as $cat_slug) {
+            
+            // Track general and english for later evaluation
             if ($cat_slug === 'general' || $cat_slug === 'general-practice-tests') {
-                return 'general_module';
+                $has_general = true;
+            }
+            if ($cat_slug === 'english') {
+                $has_english = true;
             }
         }
         
-        // Check for english-only category (lowest priority)
-        foreach ($categories as $cat_slug) {
-            if ($cat_slug === 'english') {
-                return 'general_english';
-            }
+        // Return based on what we found (priority: general > english)
+        if ($has_general) {
+            return 'general_module';
+        }
+        if ($has_english) {
+            return 'general_english';
         }
         
         // Default to academic_module for uncategorized courses
@@ -182,15 +195,8 @@ class IELTS_CM_Bulk_Enrollment {
         update_user_meta($user_id, 'iw_membership_expiry', $expiry_date);
         update_user_meta($user_id, 'iw_membership_status', 'active');
         
-        // Map course group to membership type and role
-        $role_mapping = array(
-            'academic_module' => 'access_academic_module',
-            'general_module' => 'access_general_module',
-            'general_english' => 'access_general_english'
-        );
-        
-        if (isset($role_mapping[$course_group])) {
-            $membership_type = $role_mapping[$course_group];
+        if (isset($this->role_mapping[$course_group])) {
+            $membership_type = $this->role_mapping[$course_group];
             
             // Set new membership meta fields (used by is_enrolled check)
             update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
@@ -201,8 +207,7 @@ class IELTS_CM_Bulk_Enrollment {
             $user = get_userdata($user_id);
             if ($user) {
                 // Remove any existing access code membership roles first
-                $access_code_roles = array_values($role_mapping);
-                foreach ($access_code_roles as $role) {
+                foreach ($this->role_mapping as $role) {
                     $user->remove_role($role);
                 }
                 
