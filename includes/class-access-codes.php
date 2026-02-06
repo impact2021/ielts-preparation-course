@@ -89,8 +89,10 @@ class IELTS_CM_Access_Codes {
      * Migrate existing partner admin data to use site-wide organization ID
      * This is a one-time migration that consolidates all partner admin data
      * so that all partner admins see the same students and codes
+     * 
+     * Public visibility required because it's hooked to admin_init
      */
-    private function migrate_partner_data_to_site_org() {
+    public function migrate_partner_data_to_site_org() {
         // Check if migration has already run
         $migration_done = get_option('iw_partner_site_org_migration_done', false);
         if ($migration_done) {
@@ -114,25 +116,23 @@ class IELTS_CM_Access_Codes {
         $partner_admin_ids = $partner_admins;
         
         // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
-        $table = $wpdb->prefix . 'ielts_cm_access_codes';
+        $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
         $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
-        $query = $wpdb->prepare(
-            "UPDATE $table SET created_by = %d WHERE created_by IN ($placeholders)",
-            self::SITE_PARTNER_ORG_ID,
-            ...$partner_admin_ids
-        );
-        $wpdb->query($query);
+        
+        // Build query with table name outside of prepare, parameters inside prepare
+        $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by IN ({$placeholders})";
+        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
+        $wpdb->query($prepared_query);
         
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
         // Use a single query to batch update all user meta values
         $meta_table = $wpdb->usermeta;
         $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
-        $query = $wpdb->prepare(
-            "UPDATE $meta_table SET meta_value = %d WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ($placeholders)",
-            self::SITE_PARTNER_ORG_ID,
-            ...$partner_admin_ids
-        );
-        $wpdb->query($query);
+        
+        // Build query with table name outside of prepare, parameters inside prepare
+        $query = "UPDATE {$meta_table} SET meta_value = %d WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders})";
+        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
+        $wpdb->query($prepared_query);
         
         // Mark migration as complete
         update_option('iw_partner_site_org_migration_done', true);
