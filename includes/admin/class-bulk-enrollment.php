@@ -145,6 +145,9 @@ class IELTS_CM_Bulk_Enrollment {
     /**
      * Determine course group from course categories
      * Priority: academic_module > general_module > general_english
+     * 
+     * @param int $course_id The WordPress post ID of the IELTS course
+     * @return string One of 'academic_module', 'general_module', or 'general_english'
      */
     private function get_course_group_from_course($course_id) {
         $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
@@ -188,6 +191,10 @@ class IELTS_CM_Bulk_Enrollment {
     
     /**
      * Set user membership meta fields and assign role
+     * 
+     * @param int $user_id WordPress user ID
+     * @param string $course_group Course group type (academic_module, general_module, or general_english)
+     * @param string $expiry_date Membership expiry date in Y-m-d H:i:s format
      */
     private function set_user_membership($user_id, $course_group, $expiry_date) {
         // Set legacy user meta fields (required for partner dashboard)
@@ -214,6 +221,11 @@ class IELTS_CM_Bulk_Enrollment {
                 // Add the new role
                 $user->add_role($membership_type);
             }
+        } else {
+            // Fallback: if course_group is not recognized, default to academic_module
+            // This ensures users always get proper access configuration
+            error_log("IELTS Bulk Enrollment: Unknown course group '{$course_group}' for user {$user_id}, defaulting to academic_module");
+            $this->set_user_membership($user_id, 'academic_module', $expiry_date);
         }
     }
 }
