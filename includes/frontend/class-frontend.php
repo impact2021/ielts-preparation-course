@@ -191,21 +191,21 @@ class IELTS_CM_Frontend {
                         
                         // Add inline CSS for tour styling
                         $tour_css = "
-                            .shepherd-element.ielts-tour-highlight .shepherd-content {
+                            .shepherd-element.ielts-tour-step .shepherd-content {
                                 background-color: {$vocab_header_color};
                                 color: #ffffff;
                                 text-align: center;
                             }
-                            .shepherd-element.ielts-tour-highlight .shepherd-header {
+                            .shepherd-element.ielts-tour-step .shepherd-header {
                                 background-color: {$vocab_header_color};
                             }
-                            .shepherd-element.ielts-tour-highlight .shepherd-text {
+                            .shepherd-element.ielts-tour-step .shepherd-text {
                                 color: #ffffff;
                             }
-                            .shepherd-element.ielts-tour-highlight .shepherd-text h3 {
+                            .shepherd-element.ielts-tour-step .shepherd-text h3 {
                                 color: #ffffff;
                             }
-                            .shepherd-element.ielts-tour-highlight .shepherd-text p {
+                            .shepherd-element.ielts-tour-step .shepherd-text p {
                                 color: #ffffff;
                             }
                         ";

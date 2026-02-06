@@ -166,7 +166,6 @@
                     element: MENU_ITEMS.DOWNLOAD_EBOOKS.selector,
                     on: 'bottom' 
                 },
-                classes: 'ielts-tour-step ielts-tour-highlight',
                 buttons: [
                     { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
                     { text: 'Next', action: tour.next }
@@ -183,7 +182,6 @@
                     element: MENU_ITEMS.SUPPORT_TUTOR.selector,
                     on: 'bottom' 
                 },
-                classes: 'ielts-tour-step ielts-tour-highlight',
                 buttons: [
                     { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
                     { text: 'Next', action: tour.next }
@@ -200,7 +198,6 @@
                     element: MENU_ITEMS.MY_ACCOUNT.selector,
                     on: 'bottom' 
                 },
-                classes: 'ielts-tour-step ielts-tour-highlight',
                 buttons: [
                     { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
                     { text: 'Next', action: tour.next }
