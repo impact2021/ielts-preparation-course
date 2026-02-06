@@ -22,6 +22,12 @@ class IELTS_CM_Access_Codes {
     const ADMIN_ORG_ID = 0;
     
     /**
+     * Site-wide partner organization ID - all partner admins on this site share this ID
+     * This ensures all partner admins see the same students and codes
+     */
+    const SITE_PARTNER_ORG_ID = 1;
+    
+    /**
      * User meta key for partner organization ID
      */
     const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
@@ -76,6 +82,68 @@ class IELTS_CM_Access_Codes {
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
+        
+        // Run one-time migration to consolidate partner data
+        $this->migrate_partner_data_to_site_org();
+    }
+    
+    /**
+     * Migrate existing partner admin data to use site-wide organization ID
+     * This is a one-time migration that consolidates all partner admin data
+     * so that all partner admins see the same students and codes
+     */
+    private function migrate_partner_data_to_site_org() {
+        // Check if migration has already run
+        $migration_done = get_option('iw_partner_site_org_migration_done', false);
+        if ($migration_done) {
+            return;
+        }
+        
+        global $wpdb;
+        
+        // Get all partner admin user IDs (users with manage_partner_invites capability)
+        $partner_admins = get_users(array(
+            'role' => 'partner_admin',
+            'fields' => 'ID'
+        ));
+        
+        if (empty($partner_admins)) {
+            // No partner admins found, mark migration as done
+            update_option('iw_partner_site_org_migration_done', true);
+            return;
+        }
+        
+        $partner_admin_ids = $partner_admins;
+        
+        // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
+        $table = $wpdb->prefix . 'ielts_cm_access_codes';
+        if (count($partner_admin_ids) > 0) {
+            $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+            $query = $wpdb->prepare(
+                "UPDATE $table SET created_by = %d WHERE created_by IN ($placeholders)",
+                self::SITE_PARTNER_ORG_ID,
+                ...$partner_admin_ids
+            );
+            $wpdb->query($query);
+        }
+        
+        // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
+        foreach ($partner_admin_ids as $partner_id) {
+            // Get all users created by this partner admin
+            $users = get_users(array(
+                'meta_key' => 'iw_created_by_partner',
+                'meta_value' => $partner_id,
+                'fields' => 'ID'
+            ));
+            
+            // Update their meta to use SITE_PARTNER_ORG_ID
+            foreach ($users as $user_id) {
+                update_user_meta($user_id, 'iw_created_by_partner', self::SITE_PARTNER_ORG_ID);
+            }
+        }
+        
+        // Mark migration as complete
+        update_option('iw_partner_site_org_migration_done', true);
     }
     
     public function create_partner_admin_role() {
@@ -148,6 +216,9 @@ class IELTS_CM_Access_Codes {
      * This allows multiple partner admins to be part of the same organization
      * and see the same students, codes, and remaining spaces
      * 
+     * For single-site installations, all partner admins share the same organization
+     * (SITE_PARTNER_ORG_ID) so they see all students on the site.
+     * 
      * @param int $user_id User ID (defaults to current user)
      * @return int Partner organization ID
      */
@@ -163,14 +234,13 @@ class IELTS_CM_Access_Codes {
         }
         
         // Get the partner organization ID from user meta
-        // If not set, use the user's own ID for backward compatibility
+        // If not set, use site-wide partner org ID so all partner admins see the same data
         $org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
         
         if (empty($org_id)) {
-            // Default to user's own ID for backward compatibility
-            // This means existing partner admins will continue to see their own data
-            // until an admin assigns them to an organization
-            $org_id = $user_id;
+            // Use site-wide partner organization ID
+            // This means ALL partner admins on this site see the same students and codes
+            $org_id = self::SITE_PARTNER_ORG_ID;
         }
         
         return absint($org_id);
