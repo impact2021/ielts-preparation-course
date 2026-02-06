@@ -17,19 +17,21 @@ class IELTS_CM_Access_Codes {
     const STATUS_EXPIRED = 'expired';
     
     /**
-     * Admin organization ID - special value for site admins to see all data
-     * Site admins use this org_id to view users from all partner organizations
+     * Admin organization ID - used for tagging admin-created data
+     * NOTE: No longer used for filtering - all users see all data
      */
     const ADMIN_ORG_ID = 0;
     
     /**
-     * Site-wide partner organization ID - all partner admins on this site share this ID
-     * This ensures all partner admins see the same students and codes
+     * Site-wide partner organization ID - used for tagging partner-created data
+     * NOTE: No longer used for filtering - all users see all data
+     * All partner admins function like full admins on the partner dashboard
      */
     const SITE_PARTNER_ORG_ID = 1;
     
     /**
      * User meta key for partner organization ID
+     * NOTE: Deprecated - no longer used since all partner admins see all data
      */
     const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
     
@@ -332,32 +334,31 @@ class IELTS_CM_Access_Codes {
     }
     
     /**
-     * Get the partner organization ID for a user
+     * Get the organization ID for tagging newly created data
      * 
-     * For the partner dashboard:
-     * - Site admins see ALL data (ADMIN_ORG_ID = 0)
-     * - Partner admins share site-wide organization (SITE_PARTNER_ORG_ID = 1)
+     * Returns:
+     * - ADMIN_ORG_ID (0) for site admins
+     * - SITE_PARTNER_ORG_ID (1) for partner admins
      * 
-     * NOTE: This system is designed for single-organization deployments.
-     * All partner admins on the same website share the same organization
-     * and see the same students, codes, and remaining spaces.
+     * NOTE: This is ONLY used for tagging new users/codes with iw_created_by_partner.
+     * It is NOT used for filtering queries - all users see ALL data regardless of org_id.
+     * Partner admins function like full admins on the partner dashboard.
      * 
      * @param int $user_id User ID (defaults to current user)
-     * @return int Partner organization ID (always 0 for admins, 1 for partner admins)
+     * @return int Organization ID for tagging data
      */
     private function get_partner_org_id($user_id = null) {
         if ($user_id === null) {
             $user_id = get_current_user_id();
         }
         
-        // Full site admins see all data - use ADMIN_ORG_ID constant
-        // This allows admins to see users created by any partner organization
+        // Site admins tag their data with ADMIN_ORG_ID
         if (user_can($user_id, 'manage_options')) {
             return self::ADMIN_ORG_ID;
         }
         
-        // All partner admins share the site-wide organization ID
-        // There is no support for multiple organizations on the same website
+        // Partner admins tag their data with SITE_PARTNER_ORG_ID
+        // All partner admins share the same org ID
         return self::SITE_PARTNER_ORG_ID;
     }
     
@@ -1169,19 +1170,12 @@ class IELTS_CM_Access_Codes {
         // Safe: $wpdb->prefix is sanitized by WordPress core
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         
-        // If org_id is ADMIN_ORG_ID (admin), show all codes, otherwise filter by org_id
-        if ($partner_org_id === self::ADMIN_ORG_ID) {
-            $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
-                self::CODES_TABLE_LIMIT
-            ));
-        } else {
-            $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
-                $partner_org_id,
-                self::CODES_TABLE_LIMIT
-            ));
-        }
+        // Show all codes - both site admins and partner admins see ALL codes
+        // This matches the requirement that partner admins function like full admins
+        $codes = $wpdb->get_results($wpdb->prepare(
+            "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+            self::CODES_TABLE_LIMIT
+        ));
         
         if (empty($codes)) {
             return '<p>No codes generated yet.</p>';
@@ -1316,28 +1310,17 @@ class IELTS_CM_Access_Codes {
     }
     
     private function get_partner_students($partner_org_id) {
-        // Get all users managed by this partner organization
-        // This includes users created manually and users who used access codes
+        // Get all users with access codes
+        // Both site admins and partner admins see ALL users - no org filtering
+        // This matches the requirement that partner admins function like full admins
         
-        // If org_id is ADMIN_ORG_ID (admin), get all access code users
-        if ($partner_org_id === self::ADMIN_ORG_ID) {
-            $users_with_access_codes = get_users(array(
-                'fields' => array('ID'),
-                'meta_key' => 'iw_course_group',
-                'meta_compare' => 'EXISTS'
-            ));
-            
-            $user_ids = wp_list_pluck($users_with_access_codes, 'ID');
-        } else {
-            // Get users with the partner organization meta key
-            $users_by_partner = get_users(array(
-                'meta_key' => 'iw_created_by_partner',
-                'meta_value' => $partner_org_id,
-                'fields' => array('ID')
-            ));
-            
-            $user_ids = wp_list_pluck($users_by_partner, 'ID');
-        }
+        $users_with_access_codes = get_users(array(
+            'fields' => array('ID'),
+            'meta_key' => 'iw_course_group',
+            'meta_compare' => 'EXISTS'
+        ));
+        
+        $user_ids = wp_list_pluck($users_with_access_codes, 'ID');
         
         // Return in format compatible with existing code
         $results = array();
