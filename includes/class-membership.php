@@ -190,9 +190,14 @@ class IELTS_CM_Membership {
                 return __('None', 'ielts-course-manager');
             }
             
-            $membership_name = isset(self::MEMBERSHIP_LEVELS[$membership_type]) 
-                ? self::MEMBERSHIP_LEVELS[$membership_type] 
-                : $membership_type;
+            // Check both paid membership levels and access code membership types
+            if (isset(self::MEMBERSHIP_LEVELS[$membership_type])) {
+                $membership_name = self::MEMBERSHIP_LEVELS[$membership_type];
+            } elseif (class_exists('IELTS_CM_Access_Codes') && isset(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES[$membership_type])) {
+                $membership_name = IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES[$membership_type];
+            } else {
+                $membership_name = $membership_type;
+            }
             
             // Check status first, then fall back to date comparison for legacy data
             $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
