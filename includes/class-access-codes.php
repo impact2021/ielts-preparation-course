@@ -68,6 +68,7 @@ class IELTS_CM_Access_Codes {
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
         add_action('admin_init', array($this, 'block_partner_admin_backend'));
+        add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -82,9 +83,6 @@ class IELTS_CM_Access_Codes {
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
-        
-        // Run one-time migration to consolidate partner data
-        $this->migrate_partner_data_to_site_org();
     }
     
     /**
@@ -117,30 +115,24 @@ class IELTS_CM_Access_Codes {
         
         // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
-        if (count($partner_admin_ids) > 0) {
-            $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
-            $query = $wpdb->prepare(
-                "UPDATE $table SET created_by = %d WHERE created_by IN ($placeholders)",
-                self::SITE_PARTNER_ORG_ID,
-                ...$partner_admin_ids
-            );
-            $wpdb->query($query);
-        }
+        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+        $query = $wpdb->prepare(
+            "UPDATE $table SET created_by = %d WHERE created_by IN ($placeholders)",
+            self::SITE_PARTNER_ORG_ID,
+            ...$partner_admin_ids
+        );
+        $wpdb->query($query);
         
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
-        foreach ($partner_admin_ids as $partner_id) {
-            // Get all users created by this partner admin
-            $users = get_users(array(
-                'meta_key' => 'iw_created_by_partner',
-                'meta_value' => $partner_id,
-                'fields' => 'ID'
-            ));
-            
-            // Update their meta to use SITE_PARTNER_ORG_ID
-            foreach ($users as $user_id) {
-                update_user_meta($user_id, 'iw_created_by_partner', self::SITE_PARTNER_ORG_ID);
-            }
-        }
+        // Use a single query to batch update all user meta values
+        $meta_table = $wpdb->usermeta;
+        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+        $query = $wpdb->prepare(
+            "UPDATE $meta_table SET meta_value = %d WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ($placeholders)",
+            self::SITE_PARTNER_ORG_ID,
+            ...$partner_admin_ids
+        );
+        $wpdb->query($query);
         
         // Mark migration as complete
         update_option('iw_partner_site_org_migration_done', true);
