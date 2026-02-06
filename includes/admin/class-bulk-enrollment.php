@@ -162,6 +162,8 @@ class IELTS_CM_Bulk_Enrollment {
         
         // Handle error from wp_get_post_terms
         if (is_wp_error($categories)) {
+            // Log error details for debugging
+            error_log('IELTS Bulk Enrollment: Failed to get course categories for course ' . $course_id . ': ' . $categories->get_error_message());
             // Default to academic_module if we can't determine the category
             $this->course_group_cache[$course_id] = 'academic_module';
             return 'academic_module';
