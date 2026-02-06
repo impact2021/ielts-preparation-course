@@ -46,9 +46,11 @@ if (empty($partner_admins)) {
 echo "<h3>Migration Status</h3>\n";
 $migration_v1 = get_option('iw_partner_site_org_migration_done', false);
 $migration_v2 = get_option('iw_partner_site_org_migration_v2_done', false);
+$migration_v3 = get_option('iw_partner_site_org_migration_v3_done', false);
 
 echo "<p>V1 Migration (old): " . ($migration_v1 ? 'Complete' : 'Not run') . "</p>\n";
-echo "<p>V2 Migration (new): " . ($migration_v2 ? 'Complete' : 'Not run') . "</p>\n";
+echo "<p>V2 Migration (current partner admins): " . ($migration_v2 ? 'Complete' : 'Not run') . "</p>\n";
+echo "<p>V3 Migration (all legacy data cleanup): " . ($migration_v3 ? 'Complete' : 'Not run') . "</p>\n";
 
 // Check for users with partner org meta
 global $wpdb;
@@ -121,8 +123,41 @@ if (empty($codes_by_org)) {
 }
 
 echo "<h3>Recommendation</h3>\n";
-if (!$migration_v2) {
-    echo "<p><strong>The V2 migration has NOT run yet.</strong> To trigger it, visit any WordPress admin page as a site administrator.</p>\n";
+
+// Check for invalid org IDs in the data
+$has_invalid_codes = false;
+$has_invalid_users = false;
+
+foreach ($codes_by_org as $row) {
+    $org_id = $row->created_by;
+    if ($org_id !== '0' && $org_id !== '1') {
+        $has_invalid_codes = true;
+        break;
+    }
+}
+
+foreach ($users_with_org_meta as $row) {
+    $org_id = $row->org_id;
+    if ($org_id !== '0' && $org_id !== '1') {
+        $has_invalid_users = true;
+        break;
+    }
+}
+
+if (!$migration_v3) {
+    echo "<p><strong>⚠️ The V3 migration has NOT run yet.</strong></p>\n";
+    echo "<p>V3 migration cleans up legacy organization IDs (like user IDs used as org IDs).</p>\n";
+    echo "<p>To trigger it, visit any WordPress admin page as a site administrator.</p>\n";
+} elseif ($has_invalid_codes || $has_invalid_users) {
+    echo "<p><strong>⚠️ Legacy organization IDs still found in your data!</strong></p>\n";
+    echo "<p>This indicates custom org IDs or former partner admins' data that wasn't migrated.</p>\n";
+    echo "<p>To re-run V3 migration:</p>\n";
+    echo "<ol>\n";
+    echo "<li>Run this command in WordPress: <code>delete_option('iw_partner_site_org_migration_v3_done');</code></li>\n";
+    echo "<li>Visit any WordPress admin page as a site administrator</li>\n";
+    echo "</ol>\n";
 } else {
-    echo "<p>The V2 migration has completed. If partner admins still can't see each other's data, check if they have custom org IDs set above.</p>\n";
+    echo "<p><strong>✓ All migrations complete and data is clean!</strong></p>\n";
+    echo "<p>All partner admins should now see the same students and codes.</p>\n";
+    echo "<p>If partner admins still can't see each other's data, check if they have custom org IDs set in the first table above.</p>\n";
 }

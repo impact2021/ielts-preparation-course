@@ -17,19 +17,21 @@ class IELTS_CM_Access_Codes {
     const STATUS_EXPIRED = 'expired';
     
     /**
-     * Admin organization ID - special value for site admins to see all data
-     * Site admins use this org_id to view users from all partner organizations
+     * Admin organization ID - used for tagging admin-created data
+     * NOTE: No longer used for filtering - all users see all data
      */
     const ADMIN_ORG_ID = 0;
     
     /**
-     * Site-wide partner organization ID - all partner admins on this site share this ID
-     * This ensures all partner admins see the same students and codes
+     * Site-wide partner organization ID - used for tagging partner-created data
+     * NOTE: No longer used for filtering - all users see all data
+     * All partner admins function like full admins on the partner dashboard
      */
     const SITE_PARTNER_ORG_ID = 1;
     
     /**
      * User meta key for partner organization ID
+     * NOTE: Deprecated - no longer used since all partner admins see all data
      */
     const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
     
@@ -70,6 +72,7 @@ class IELTS_CM_Access_Codes {
         add_action('admin_init', array($this, 'register_settings'));
         add_action('admin_init', array($this, 'block_partner_admin_backend'));
         add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
+        add_action('admin_init', array($this, 'migrate_all_partner_data_to_site_org'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -177,6 +180,94 @@ class IELTS_CM_Access_Codes {
         delete_transient($lock_key);
     }
     
+    /**
+     * Migrate ALL partner data to use site-wide organization ID (V3 Migration)
+     * 
+     * This migration enforces the single-organization model by consolidating
+     * ALL partner-created data to use SITE_PARTNER_ORG_ID (1).
+     * 
+     * Cleans up data from:
+     * - Former partner admins (deleted or role changed)
+     * - Partner admins with custom org IDs set to their user ID
+     * - Any other legacy org IDs that aren't 0 (admin) or 1 (site partner)
+     * 
+     * Since there will NEVER be multiple organizations on the same website,
+     * this migration consolidates everything to the single site-wide org ID.
+     * 
+     * Public visibility required because it's hooked to admin_init
+     */
+    public function migrate_all_partner_data_to_site_org() {
+        // Only allow admins to run this migration
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+        
+        // Check if migration has already run
+        $migration_done = get_option('iw_partner_site_org_migration_v3_done', false);
+        if ($migration_done) {
+            return;
+        }
+        
+        // Use transient lock to prevent concurrent execution
+        $lock_key = 'iw_partner_migration_v3_lock';
+        if (get_transient($lock_key)) {
+            return; // Another process is running the migration
+        }
+        
+        // Set lock for 5 minutes
+        set_transient($lock_key, true, 300);
+        
+        global $wpdb;
+        
+        // Valid org IDs for single-organization deployments:
+        // - ADMIN_ORG_ID (0): Site admins
+        // - SITE_PARTNER_ORG_ID (1): All partner admins share this
+        // NO custom org IDs are supported - all partner admins use org_id 1
+        $valid_org_ids = array(self::ADMIN_ORG_ID, self::SITE_PARTNER_ORG_ID);
+        
+        // Build placeholders for NOT IN clause
+        $placeholders = implode(',', array_fill(0, count($valid_org_ids), '%d'));
+        
+        // Migrate access codes: Update created_by from invalid org IDs to SITE_PARTNER_ORG_ID
+        // This catches codes created by former partner admins or invalid org IDs
+        $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
+        $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by NOT IN ({$placeholders})";
+        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$valid_org_ids);
+        $codes_result = $wpdb->query($prepared_query);
+        
+        if ($codes_result === false) {
+            error_log("Partner admin migration v3 failed: codes table update error");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Migrate user meta: Update iw_created_by_partner from invalid org IDs to SITE_PARTNER_ORG_ID
+        // Note: meta_value is stored as string, so we need string comparison
+        $meta_table = $wpdb->usermeta;
+        $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
+        $valid_org_ids_str = array_map('strval', $valid_org_ids);
+        $placeholders_str = implode(',', array_fill(0, count($valid_org_ids_str), '%s'));
+        
+        $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value NOT IN ({$placeholders_str})";
+        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$valid_org_ids_str);
+        $meta_result = $wpdb->query($prepared_query);
+        
+        if ($meta_result === false) {
+            error_log("Partner admin migration v3 failed: usermeta table update error");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Log how many rows were affected for debugging
+        if ($codes_result > 0 || $meta_result > 0) {
+            error_log("Partner admin migration v3 completed: Updated {$codes_result} codes and {$meta_result} user meta records");
+        }
+        
+        // Mark migration as complete
+        update_option('iw_partner_site_org_migration_v3_done', true);
+        delete_transient($lock_key);
+    }
+    
     public function create_partner_admin_role() {
         $role = get_role('partner_admin');
         if (!$role) {
@@ -243,39 +334,32 @@ class IELTS_CM_Access_Codes {
     }
     
     /**
-     * Get the partner organization ID for a user
-     * This allows multiple partner admins to be part of the same organization
-     * and see the same students, codes, and remaining spaces
+     * Get the organization ID for tagging newly created data
      * 
-     * For the partner dashboard:
-     * - Site admins see ALL data (ADMIN_ORG_ID = 0)
-     * - Partner admins share site-wide organization (SITE_PARTNER_ORG_ID = 1)
+     * Returns:
+     * - ADMIN_ORG_ID (0) for site admins
+     * - SITE_PARTNER_ORG_ID (1) for partner admins
+     * 
+     * NOTE: This is ONLY used for tagging new users/codes with iw_created_by_partner.
+     * It is NOT used for filtering queries - all users see ALL data regardless of org_id.
+     * Partner admins function like full admins on the partner dashboard.
      * 
      * @param int $user_id User ID (defaults to current user)
-     * @return int Partner organization ID
+     * @return int Organization ID for tagging data
      */
     private function get_partner_org_id($user_id = null) {
         if ($user_id === null) {
             $user_id = get_current_user_id();
         }
         
-        // Full site admins see all data - use ADMIN_ORG_ID constant
-        // This allows admins to see users created by any partner organization
+        // Site admins tag their data with ADMIN_ORG_ID
         if (user_can($user_id, 'manage_options')) {
             return self::ADMIN_ORG_ID;
         }
         
-        // Get the partner organization ID from user meta
-        // If not set, use site-wide partner org ID so all partner admins see the same data
-        $org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
-        
-        if (empty($org_id)) {
-            // Use site-wide partner organization ID
-            // This means ALL partner admins on this site see the same students and codes
-            $org_id = self::SITE_PARTNER_ORG_ID;
-        }
-        
-        return absint($org_id);
+        // Partner admins tag their data with SITE_PARTNER_ORG_ID
+        // All partner admins share the same org ID
+        return self::SITE_PARTNER_ORG_ID;
     }
     
     public function add_admin_menu() {
@@ -1081,24 +1165,26 @@ class IELTS_CM_Access_Codes {
         return ob_get_clean();
     }
     
+    /**
+     * Render the codes table
+     * 
+     * @param int $partner_org_id (DEPRECATED - No longer used for filtering. Kept for backward compatibility with calling code.)
+     * @return string HTML table of access codes
+     */
     private function render_codes_table($partner_org_id) {
         global $wpdb;
         // Safe: $wpdb->prefix is sanitized by WordPress core
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         
-        // If org_id is ADMIN_ORG_ID (admin), show all codes, otherwise filter by org_id
-        if ($partner_org_id === self::ADMIN_ORG_ID) {
-            $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
-                self::CODES_TABLE_LIMIT
-            ));
-        } else {
-            $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
-                $partner_org_id,
-                self::CODES_TABLE_LIMIT
-            ));
-        }
+        // Show all codes - both site admins and partner admins see ALL codes
+        // This matches the requirement that partner admins function like full admins
+        //
+        // NOTE: The $partner_org_id parameter is no longer used for filtering.
+        // It's kept to maintain backward compatibility with existing calling code.
+        $codes = $wpdb->get_results($wpdb->prepare(
+            "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+            self::CODES_TABLE_LIMIT
+        ));
         
         if (empty($codes)) {
             return '<p>No codes generated yet.</p>';
@@ -1232,29 +1318,27 @@ class IELTS_CM_Access_Codes {
         return $html;
     }
     
+    /**
+     * Get all partner students
+     * 
+     * @param int $partner_org_id (DEPRECATED - No longer used for filtering. Kept for backward compatibility with calling code.)
+     * @return array Array of student objects with user_id property
+     */
     private function get_partner_students($partner_org_id) {
-        // Get all users managed by this partner organization
-        // This includes users created manually and users who used access codes
+        // Get all users with access codes
+        // Both site admins and partner admins see ALL users - no org filtering
+        // This matches the requirement that partner admins function like full admins
+        //
+        // NOTE: The $partner_org_id parameter is no longer used for filtering.
+        // It's kept to maintain backward compatibility with existing calling code.
         
-        // If org_id is ADMIN_ORG_ID (admin), get all access code users
-        if ($partner_org_id === self::ADMIN_ORG_ID) {
-            $users_with_access_codes = get_users(array(
-                'fields' => array('ID'),
-                'meta_key' => 'iw_course_group',
-                'meta_compare' => 'EXISTS'
-            ));
-            
-            $user_ids = wp_list_pluck($users_with_access_codes, 'ID');
-        } else {
-            // Get users with the partner organization meta key
-            $users_by_partner = get_users(array(
-                'meta_key' => 'iw_created_by_partner',
-                'meta_value' => $partner_org_id,
-                'fields' => array('ID')
-            ));
-            
-            $user_ids = wp_list_pluck($users_by_partner, 'ID');
-        }
+        $users_with_access_codes = get_users(array(
+            'fields' => array('ID'),
+            'meta_key' => 'iw_course_group',
+            'meta_compare' => 'EXISTS'
+        ));
+        
+        $user_ids = wp_list_pluck($users_with_access_codes, 'ID');
         
         // Return in format compatible with existing code
         $results = array();
