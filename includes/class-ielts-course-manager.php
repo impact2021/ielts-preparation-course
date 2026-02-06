@@ -21,6 +21,7 @@ class IELTS_Course_Manager {
     protected $sync_api;
     protected $sync_settings_page;
     protected $sync_status_page;
+    protected $tours_page;
     protected $auto_sync_manager;
     protected $awards;
     protected $gamification;
@@ -48,6 +49,7 @@ class IELTS_Course_Manager {
         $this->sync_api = new IELTS_CM_Sync_API();
         $this->sync_settings_page = new IELTS_CM_Sync_Settings_Page();
         $this->sync_status_page = new IELTS_CM_Sync_Status_Page();
+        $this->tours_page = new IELTS_CM_Tours_Page();
         $this->auto_sync_manager = new IELTS_CM_Auto_Sync_Manager();
         $this->awards = new IELTS_CM_Awards();
         $this->gamification = new IELTS_CM_Gamification();
@@ -88,6 +90,10 @@ class IELTS_Course_Manager {
             add_action('admin_menu', array($this->sync_status_page, 'add_menu_page'));
             add_action('wp_ajax_ielts_cm_check_sync_status', array($this->sync_status_page, 'handle_ajax_check_sync'));
             add_action('wp_ajax_ielts_cm_bulk_sync', array($this->sync_status_page, 'handle_ajax_bulk_sync'));
+            
+            // Initialize tours page
+            add_action('admin_menu', array($this->tours_page, 'add_menu_page'));
+            add_action('admin_init', array($this->tours_page, 'handle_form_submit'));
         }
         
         // Initialize frontend
