@@ -4542,6 +4542,7 @@ class IELTS_CM_Admin {
                     <button class="ielts-tab-btn" data-tab="question-types"><?php _e('Question Types', 'ielts-course-manager'); ?></button>
                     <button class="ielts-tab-btn" data-tab="shortcodes"><?php _e('Shortcodes', 'ielts-course-manager'); ?></button>
                     <button class="ielts-tab-btn" data-tab="enrollment"><?php _e('Enrollment & Progress', 'ielts-course-manager'); ?></button>
+                    <button class="ielts-tab-btn" data-tab="tours"><?php _e('User Tours', 'ielts-course-manager'); ?></button>
                 </div>
                 
                 <div class="ielts-docs-content">
@@ -4627,6 +4628,9 @@ class IELTS_CM_Admin {
                     
                     <!-- Enrollment & Progress Tab -->
                     <div class="ielts-tab-content" id="enrollment"><?php $this->render_enrollment_tab(); ?></div>
+                    
+                    <!-- User Tours Tab -->
+                    <div class="ielts-tab-content" id="tours"><?php $this->render_tours_tab(); ?></div>
                 </div>
             </div>
             
@@ -4843,6 +4847,139 @@ class IELTS_CM_Admin {
         <h2><?php _e('Support', 'ielts-course-manager'); ?></h2>
         <p><?php _e('For issues or feature requests, please visit:', 'ielts-course-manager'); ?></p>
         <p><a href="https://github.com/impact2021/ielts-preparation-course" target="_blank">https://github.com/impact2021/ielts-preparation-course</a></p>
+        <?php
+    }
+    
+    /**
+     * Render User Tours tab in documentation
+     */
+    private function render_tours_tab() {
+        ?>
+        <h2><?php _e('User Tours', 'ielts-course-manager'); ?></h2>
+        <p><?php _e('The user tour system provides guided walkthroughs to help new users understand the platform and its features.', 'ielts-course-manager'); ?></p>
+        
+        <h3><?php _e('What is a User Tour?', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('A user tour is an interactive guided experience that highlights key features and functionality when a new user first logs into the platform. It uses tooltips and highlights to draw attention to important elements like navigation menus, practice tests, the trophy room, and progress tracking.', 'ielts-course-manager'); ?></p>
+        
+        <h3><?php _e('Managing Tours', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('To configure user tours, go to:', 'ielts-course-manager'); ?></p>
+        <p><strong><a href="<?php echo admin_url('edit.php?post_type=ielts_course&page=ielts-cm-tours'); ?>"><?php _e('IELTS Courses > Tours', 'ielts-course-manager'); ?></a></strong></p>
+        
+        <p><?php _e('From the Tours admin page, you can:', 'ielts-course-manager'); ?></p>
+        <ul>
+            <li><?php _e('Enable or disable tours globally', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Enable tours for specific membership types', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Test the tour as an administrator', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Reset tours for all users (useful after making tour updates)', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('How to Modify the Tour', 'ielts-course-manager'); ?></h3>
+        <p><?php _e('The tour is implemented using Shepherd.js, a popular JavaScript library for creating guided tours. To modify the tour content or steps:', 'ielts-course-manager'); ?></p>
+        
+        <ol>
+            <li>
+                <strong><?php _e('Locate the tour file:', 'ielts-course-manager'); ?></strong>
+                <code>assets/js/user-tour.js</code>
+            </li>
+            <li>
+                <strong><?php _e('Edit tour steps:', 'ielts-course-manager'); ?></strong>
+                <?php _e('Each tour step is defined in the JavaScript file. You can add, remove, or modify steps by editing the tour configuration.', 'ielts-course-manager'); ?>
+            </li>
+            <li>
+                <strong><?php _e('Example of adding a tour step:', 'ielts-course-manager'); ?></strong>
+                <pre style="background: #f5f5f5; padding: 15px; border-radius: 4px; overflow-x: auto;">
+tour.addStep({
+    id: 'my-custom-step',
+    text: '&lt;h3&gt;Step Title&lt;/h3&gt;&lt;p&gt;Step description...&lt;/p&gt;',
+    attachTo: {
+        element: '.css-selector',  // Element to highlight
+        on: 'bottom'                // Tooltip position: top, bottom, left, right
+    },
+    buttons: [
+        { text: 'Back', action: tour.back },
+        { text: 'Next', action: tour.next }
+    ]
+});</pre>
+            </li>
+            <li>
+                <strong><?php _e('Finding CSS selectors:', 'ielts-course-manager'); ?></strong>
+                <ul style="margin-left: 20px;">
+                    <li><?php _e('Right-click on the element you want to highlight', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Select "Inspect" or "Inspect Element"', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Look for class or id attributes (e.g., .main-navigation, #trophy-link)', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Use these selectors in your tour configuration', 'ielts-course-manager'); ?></li>
+                </ul>
+            </li>
+            <li>
+                <strong><?php _e('Test your changes:', 'ielts-course-manager'); ?></strong>
+                <ul style="margin-left: 20px;">
+                    <li><?php _e('Save the JavaScript file', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Go to IELTS Courses > Tours', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Click "Run Tour as Admin" to test your changes', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Clear your browser cache if changes don\'t appear', 'ielts-course-manager'); ?></li>
+                </ul>
+            </li>
+        </ol>
+        
+        <h3><?php _e('Common Tour Modifications', 'ielts-course-manager'); ?></h3>
+        
+        <h4><?php _e('Change step text or title:', 'ielts-course-manager'); ?></h4>
+        <p><?php _e('Find the step by its ID and modify the text property:', 'ielts-course-manager'); ?></p>
+        <pre style="background: #f5f5f5; padding: 15px; border-radius: 4px;">
+// Before
+text: '&lt;h3&gt;Welcome!&lt;/h3&gt;&lt;p&gt;Let\'s get started...&lt;/p&gt;'
+
+// After
+text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begins here...&lt;/p&gt;'
+</pre>
+        
+        <h4><?php _e('Remove a tour step:', 'ielts-course-manager'); ?></h4>
+        <p><?php _e('Simply delete or comment out the tour.addStep() block for that step.', 'ielts-course-manager'); ?></p>
+        
+        <h4><?php _e('Change the order of steps:', 'ielts-course-manager'); ?></h4>
+        <p><?php _e('Rearrange the order of tour.addStep() calls in the JavaScript file.', 'ielts-course-manager'); ?></p>
+        
+        <h4><?php _e('Customize styling:', 'ielts-course-manager'); ?></h4>
+        <p><?php _e('Edit the CSS file at:', 'ielts-course-manager'); ?> <code>assets/css/user-tour.css</code></p>
+        
+        <h3><?php _e('Best Practices', 'ielts-course-manager'); ?></h3>
+        <ul>
+            <li><?php _e('Keep tours short (5-7 steps maximum)', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Focus on essential features only', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Use clear, concise language', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Always provide a "Skip" option', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Test on different screen sizes (desktop, tablet, mobile)', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Update tours when you make significant UI changes', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Troubleshooting', 'ielts-course-manager'); ?></h3>
+        
+        <h4><?php _e('Tour doesn\'t appear:', 'ielts-course-manager'); ?></h4>
+        <ul>
+            <li><?php _e('Check that tours are enabled in IELTS Courses > Tours', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Verify that tours are enabled for your membership type', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Clear your browser cache and refresh the page', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Check the browser console for JavaScript errors', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h4><?php _e('Tour shows every time:', 'ielts-course-manager'); ?></h4>
+        <ul>
+            <li><?php _e('Clear browser localStorage: Open browser console and run: localStorage.removeItem(\'ielts_tour_completed\')', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Check that the AJAX handler is saving completion status correctly', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h4><?php _e('Tour highlights wrong element:', 'ielts-course-manager'); ?></h4>
+        <ul>
+            <li><?php _e('Update the CSS selector in the tour configuration', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Use a more specific selector if the current one matches multiple elements', 'ielts-course-manager'); ?></li>
+            <li><?php _e('Ensure the element exists on the page before the tour starts', 'ielts-course-manager'); ?></li>
+        </ul>
+        
+        <h3><?php _e('Additional Resources', 'ielts-course-manager'); ?></h3>
+        <ul>
+            <li><a href="https://shepherdjs.dev/" target="_blank"><?php _e('Shepherd.js Official Documentation', 'ielts-course-manager'); ?></a></li>
+            <li><a href="<?php echo admin_url('edit.php?post_type=ielts_course&page=ielts-cm-tours'); ?>"><?php _e('Tours Admin Page', 'ielts-course-manager'); ?></a></li>
+        </ul>
         <?php
     }
     
