@@ -39,6 +39,10 @@ class IELTS_CM_Shortcodes {
         
         // Last visited page shortcode
         add_shortcode('ielts_last_page', array($this, 'display_last_page'));
+        
+        // User data shortcodes
+        add_shortcode('ielts_user_firstname', array($this, 'display_user_firstname'));
+        add_shortcode('ielts_predicted_band_score', array($this, 'display_predicted_band_score'));
     }
     
     /**
@@ -4145,5 +4149,67 @@ class IELTS_CM_Shortcodes {
         <?php
         
         return ob_get_clean();
+    }
+    
+    /**
+     * Display user's first name
+     * Shortcode: [ielts_user_firstname]
+     */
+    public function display_user_firstname($atts) {
+        if (!is_user_logged_in()) {
+            return '';
+        }
+        
+        $user = wp_get_current_user();
+        $first_name = $user->first_name;
+        
+        // If first name is not set, use display name or username
+        if (empty($first_name)) {
+            $first_name = $user->display_name;
+            if (empty($first_name)) {
+                $first_name = $user->user_login;
+            }
+        }
+        
+        return esc_html($first_name);
+    }
+    
+    /**
+     * Display user's predicted band score
+     * Shortcode: [ielts_predicted_band_score]
+     * Returns the overall average band score based on all skills
+     */
+    public function display_predicted_band_score($atts) {
+        if (!is_user_logged_in()) {
+            return '';
+        }
+        
+        $user_id = get_current_user_id();
+        
+        // Get skill scores using the gamification class
+        $gamification = new IELTS_CM_Gamification();
+        $skill_scores = $gamification->get_user_skill_scores($user_id);
+        
+        // Calculate overall band score from all skills
+        $skills = array('reading', 'listening', 'writing', 'speaking');
+        $band_scores = array();
+        
+        foreach ($skills as $skill) {
+            if (isset($skill_scores[$skill]) && $skill_scores[$skill] > 0) {
+                $percentage = $skill_scores[$skill];
+                $band_scores[] = $this->convert_percentage_to_band($percentage);
+            }
+        }
+        
+        // If no scores available, return a default message
+        if (empty($band_scores)) {
+            return __('N/A', 'ielts-course-manager');
+        }
+        
+        // Calculate average and round to nearest 0.5
+        $average = array_sum($band_scores) / count($band_scores);
+        $overall_score = round($average * 2) / 2;
+        
+        return number_format($overall_score, 1);
     }
 }
