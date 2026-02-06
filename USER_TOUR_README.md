@@ -21,7 +21,7 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 - Troubleshooting guide
 - FAQs and best practices
 
-### 3. [Highlighting Buttons & Areas Guide](USER_TOUR_HIGHLIGHTING_EXAMPLES.md) 🎯 NEW!
+### 3. [Highlighting Buttons & Areas Guide](USER_TOUR_HIGHLIGHTING_EXAMPLES.md) 🎯
 **Read this to learn how to highlight specific elements**
 
 - How to highlight submit buttons, forms, and interactive elements
@@ -30,7 +30,24 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 - Tips for finding CSS selectors
 - Visual examples and best practices
 
-### 4. [Library Comparison](USER_TOUR_LIBRARY_COMPARISON.md) 🔍
+### 4. [Membership-Specific Tours Guide](USER_TOUR_MEMBERSHIP_SPECIFIC.md) 👥 NEW!
+**Read this for different tours based on membership type**
+
+- Create separate tours for Academic, General Training, and English memberships
+- Database persistence for cross-device support
+- How to detect and use membership type
+- Complete code examples for each membership
+- Testing different membership scenarios
+
+### 5. [Visual Guide](USER_TOUR_VISUAL_GUIDE.md) 🎨
+**See visual examples of how highlighting works**
+
+- Visual diagrams showing highlighting effects
+- Tooltip positioning examples
+- Step-by-step animation sequences
+- Mobile vs desktop comparison
+
+### 6. [Library Comparison](USER_TOUR_LIBRARY_COMPARISON.md) 🔍
 **Read this if you're deciding which approach to use**
 
 - Comparison of Shepherd.js, Intro.js, Driver.js, and WordPress plugins
@@ -41,11 +58,13 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 
 ---
 
-## 🎯 Quick Answer to Your Question
+## 🎯 Quick Answer to Your Questions
 
 > "How difficult would it be to create a user tour for first time users? Would I have to add a shortcode for each stage or how would it work?"
 
 > "I would also want it to do things like highlight a button or an area (e.g. Submit a quiz)"
+
+> "There would also need to be a different tour for different memberships - people on a general training membership need to see the general training pages. So that's a tour for general training, academic and English. It would have to save to the user's account to say they've seen it or skipped it in case they login from a different device."
 
 ### Answer:
 
@@ -55,26 +74,35 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 
 **Highlighting is automatic!** When you point to an element (like a submit button), it automatically gets highlighted with a glow effect while the rest of the page dims. No extra code needed!
 
+**Different tours for each membership!** The system automatically detects if a user has Academic, General Training, or English membership and shows the appropriate tour with relevant content.
+
+**Cross-device persistence!** Tour completion is saved to the WordPress database (user meta), so when users login from a different device (phone, tablet, etc.), they won't see the tour again.
+
 **What you need:**
 1. Add Shepherd.js library (via CDN) - 2 minutes
-2. Create tour configuration file - 20 minutes  
-3. Add simple AJAX handler - 2 minutes
-4. Test and refine - 30 minutes
+2. Create tour configuration file with 3 membership-specific tours - 30 minutes  
+3. Update PHP to pass membership type to JavaScript - 5 minutes
+4. Update AJAX handler to save with membership type - 5 minutes
+5. Test each membership type - 20 minutes
 
-**Total time**: ~1 hour for basic implementation
+**Total time**: ~1 hour for complete implementation with all 3 membership types
 
-**Highlighting example:**
+**Example structure:**
 ```javascript
-tour.addStep({
-    text: 'Click here to submit your quiz!',
-    attachTo: { 
-        element: 'button[type="submit"]',  // Submit button gets highlighted!
-        on: 'top' 
-    }
-});
+// Detects membership automatically
+if (tourType === 'academic') {
+    // Show Academic-specific tour (Academic tests, Academic reading, etc.)
+} else if (tourType === 'general') {
+    // Show General Training tour (General tests, General reading, etc.)
+} else if (tourType === 'english') {
+    // Show English-only tour
+}
+
+// Saves to database (works across devices)
+update_user_meta($user_id, 'ielts_tour_completed_academic', true);
 ```
 
-The button will glow, the page will dim, and the user can't miss it! ✨
+**Result**: Each membership type gets a customized tour, saves to database, works on all devices! ✨
 
 ---
 
@@ -325,6 +353,8 @@ All issues covered in detail in [Troubleshooting Guide](USER_TOUR_IMPLEMENTATION
 | Quick Start | Fast implementation | 30 mins |
 | Complete Guide | Understanding details | 1-2 hours |
 | **Highlighting Guide** | **Learning to highlight buttons/areas** | **15 mins** |
+| **Membership Tours** | **Different tours per membership type** | **20 mins** |
+| Visual Guide | See how highlighting looks | 10 mins |
 | Library Comparison | Making decisions | 20 mins |
 
 ---
