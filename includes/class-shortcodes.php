@@ -4161,7 +4161,9 @@ class IELTS_CM_Shortcodes {
         $login_count = get_user_meta($user_id, '_ielts_cm_login_count', true);
         
         // If login count is empty or 1, consider user as new
-        if (empty($login_count) || $login_count <= 1) {
+        // Cast to int for proper comparison
+        $login_count = (int)$login_count;
+        if ($login_count <= 1) {
             return do_shortcode($content);
         }
         
@@ -4182,7 +4184,9 @@ class IELTS_CM_Shortcodes {
         $login_count = get_user_meta($user_id, '_ielts_cm_login_count', true);
         
         // Only show content if user has logged in more than once
-        if (!empty($login_count) && $login_count > 1) {
+        // Cast to int for proper comparison
+        $login_count = (int)$login_count;
+        if ($login_count > 1) {
             return do_shortcode($content);
         }
         
