@@ -435,18 +435,18 @@ class IELTS_CM_Membership {
             jQuery(document).ready(function($) {
                 // Hide the entire "Personal Options" section heading (case-insensitive)
                 $('h2').filter(function() {
-                    return $(this).text().match(/Personal Options/i);
+                    return /Personal Options/i.test($(this).text());
                 }).hide();
                 
                 // Hide "About Yourself" or "About the user" section heading (case-insensitive)
                 $('h2').filter(function() {
-                    return $(this).text().match(/About (Yourself|the user)/i);
+                    return /About (Yourself|the user)/i.test($(this).text());
                 }).hide();
                 
                 // Hide Application Passwords section (case-insensitive)
                 $('.application-passwords').closest('tr').hide();
                 $('h2').filter(function() {
-                    return $(this).text().match(/Application Passwords/i);
+                    return /Application Passwords/i.test($(this).text());
                 }).hide();
                 $('.application-passwords-section').hide();
                 
