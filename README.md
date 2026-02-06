@@ -15,6 +15,7 @@ WordPress plugin for managing IELTS preparation exercises, quizzes, and tests.
   - `example-dropdown-closed-question.json` - Dropdown questions template
 - **Adding Videos**: See [docs/VIDEO-FIELD-GUIDE.md](docs/VIDEO-FIELD-GUIDE.md)
 - **Question Types**: All supported IELTS question types in [JSON-FORMAT-README.md](TEMPLATES/JSON-FORMAT-README.md)
+- **Shortcodes**: See [docs/SHORTCODES.md](docs/SHORTCODES.md) for available shortcodes
 
 ### For Developers
 - **Plugin Documentation**: See [docs/](docs/) directory
