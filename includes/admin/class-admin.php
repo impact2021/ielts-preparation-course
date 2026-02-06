@@ -65,6 +65,12 @@ class IELTS_CM_Admin {
         
         // Add admin notices
         add_action('admin_notices', array($this, 'quiz_validation_notices'));
+        
+        // Add bulk and quick edit support for skill type
+        add_action('bulk_edit_custom_box', array($this, 'quiz_bulk_edit'), 10, 2);
+        add_action('quick_edit_custom_box', array($this, 'quiz_quick_edit'), 10, 2);
+        add_action('save_post', array($this, 'quiz_bulk_quick_edit_save'));
+        add_action('admin_footer', array($this, 'quiz_bulk_quick_edit_javascript'));
     }
     
     /**
@@ -4524,7 +4530,148 @@ class IELTS_CM_Admin {
             } else {
                 echo '<span style="color: #999;">' . esc_html__('Not set', 'ielts-course-manager') . '</span>';
             }
+            // Add data attribute for quick edit
+            echo '<span style="display:none;" data-skill-type="' . esc_attr($skill_type) . '"></span>';
         }
+    }
+    
+    /**
+     * Add bulk edit field for skill type
+     */
+    public function quiz_bulk_edit($column_name, $post_type) {
+        if ($post_type !== 'ielts_quiz' || $column_name !== 'skill_type') {
+            return;
+        }
+        ?>
+        <fieldset class="inline-edit-col-right">
+            <div class="inline-edit-col">
+                <label>
+                    <span class="title"><?php _e('Skill Type', 'ielts-course-manager'); ?></span>
+                    <span class="input-text-wrap">
+                        <select name="ielts_cm_skill_type">
+                            <option value="-1"><?php _e('— No Change —', 'ielts-course-manager'); ?></option>
+                            <option value=""><?php _e('Not Set', 'ielts-course-manager'); ?></option>
+                            <option value="reading"><?php _e('Reading', 'ielts-course-manager'); ?></option>
+                            <option value="writing"><?php _e('Writing', 'ielts-course-manager'); ?></option>
+                            <option value="listening"><?php _e('Listening', 'ielts-course-manager'); ?></option>
+                            <option value="speaking"><?php _e('Speaking', 'ielts-course-manager'); ?></option>
+                            <option value="vocabulary"><?php _e('Vocabulary', 'ielts-course-manager'); ?></option>
+                            <option value="grammar"><?php _e('Grammar', 'ielts-course-manager'); ?></option>
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </fieldset>
+        <?php
+    }
+    
+    /**
+     * Add quick edit field for skill type
+     */
+    public function quiz_quick_edit($column_name, $post_type) {
+        if ($post_type !== 'ielts_quiz' || $column_name !== 'skill_type') {
+            return;
+        }
+        ?>
+        <fieldset class="inline-edit-col-right">
+            <div class="inline-edit-col">
+                <label>
+                    <span class="title"><?php _e('Skill Type', 'ielts-course-manager'); ?></span>
+                    <span class="input-text-wrap">
+                        <select name="ielts_cm_skill_type">
+                            <option value=""><?php _e('Not Set', 'ielts-course-manager'); ?></option>
+                            <option value="reading"><?php _e('Reading', 'ielts-course-manager'); ?></option>
+                            <option value="writing"><?php _e('Writing', 'ielts-course-manager'); ?></option>
+                            <option value="listening"><?php _e('Listening', 'ielts-course-manager'); ?></option>
+                            <option value="speaking"><?php _e('Speaking', 'ielts-course-manager'); ?></option>
+                            <option value="vocabulary"><?php _e('Vocabulary', 'ielts-course-manager'); ?></option>
+                            <option value="grammar"><?php _e('Grammar', 'ielts-course-manager'); ?></option>
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </fieldset>
+        <?php
+    }
+    
+    /**
+     * Save bulk/quick edit data for skill type
+     */
+    public function quiz_bulk_quick_edit_save($post_id) {
+        // Skip autosave
+        if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+            return;
+        }
+        
+        // Check post type
+        if (get_post_type($post_id) !== 'ielts_quiz') {
+            return;
+        }
+        
+        // Check if skill type is being edited
+        if (!isset($_REQUEST['ielts_cm_skill_type'])) {
+            return;
+        }
+        
+        $skill_type = $_REQUEST['ielts_cm_skill_type'];
+        
+        // For bulk edit, -1 means "no change"
+        if ($skill_type === '-1') {
+            return;
+        }
+        
+        // Validate skill type
+        $allowed_skills = array('', 'reading', 'writing', 'listening', 'speaking', 'vocabulary', 'grammar');
+        if (!in_array($skill_type, $allowed_skills)) {
+            return;
+        }
+        
+        // Update or delete meta
+        if (empty($skill_type)) {
+            delete_post_meta($post_id, '_ielts_cm_skill_type');
+        } else {
+            update_post_meta($post_id, '_ielts_cm_skill_type', sanitize_text_field($skill_type));
+        }
+    }
+    
+    /**
+     * Add JavaScript to populate quick edit fields
+     */
+    public function quiz_bulk_quick_edit_javascript() {
+        global $current_screen;
+        
+        // Only load on the exercises list page
+        if (!$current_screen || $current_screen->post_type !== 'ielts_quiz' || $current_screen->base !== 'edit') {
+            return;
+        }
+        ?>
+        <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            // Populate quick edit fields when quick edit is clicked
+            var $wp_inline_edit = inlineEditPost.edit;
+            
+            inlineEditPost.edit = function(id) {
+                // Call the original WP edit function
+                $wp_inline_edit.apply(this, arguments);
+                
+                // Get the post ID
+                var post_id = 0;
+                if (typeof(id) == 'object') {
+                    post_id = parseInt(this.getId(id));
+                }
+                
+                if (post_id > 0) {
+                    // Get the skill type from the data attribute in the row
+                    var $row = $('#post-' + post_id);
+                    var skill_type = $row.find('td.skill_type span[data-skill-type]').data('skill-type') || '';
+                    
+                    // Set the value in the quick edit select
+                    $(':input[name="ielts_cm_skill_type"]', '.inline-edit-row').val(skill_type);
+                }
+            };
+        });
+        </script>
+        <?php
     }
     
     /**
