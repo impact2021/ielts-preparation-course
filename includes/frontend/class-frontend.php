@@ -191,22 +191,22 @@ class IELTS_CM_Frontend {
                         
                         // Add inline CSS for tour styling
                         $tour_css = "
-                            .ielts-tour-highlight .shepherd-content {
-                                background-color: {$vocab_header_color} !important;
-                                color: #ffffff !important;
-                                text-align: center !important;
+                            .shepherd-element.ielts-tour-highlight .shepherd-content {
+                                background-color: {$vocab_header_color};
+                                color: #ffffff;
+                                text-align: center;
                             }
-                            .ielts-tour-highlight .shepherd-header {
-                                background-color: {$vocab_header_color} !important;
+                            .shepherd-element.ielts-tour-highlight .shepherd-header {
+                                background-color: {$vocab_header_color};
                             }
-                            .ielts-tour-highlight .shepherd-text {
-                                color: #ffffff !important;
+                            .shepherd-element.ielts-tour-highlight .shepherd-text {
+                                color: #ffffff;
                             }
-                            .ielts-tour-highlight .shepherd-text h3 {
-                                color: #ffffff !important;
+                            .shepherd-element.ielts-tour-highlight .shepherd-text h3 {
+                                color: #ffffff;
                             }
-                            .ielts-tour-highlight .shepherd-text p {
-                                color: #ffffff !important;
+                            .shepherd-element.ielts-tour-highlight .shepherd-text p {
+                                color: #ffffff;
                             }
                         ";
                         wp_add_inline_style('shepherd-theme', $tour_css);

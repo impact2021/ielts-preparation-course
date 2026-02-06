@@ -9,6 +9,22 @@
 (function($) {
     'use strict';
     
+    // Menu item IDs for tour highlighting
+    const MENU_ITEMS = {
+        DOWNLOAD_EBOOKS: {
+            id: '71976754',
+            selector: 'li.menu-item-71976754, a[href*="download-your-ielts-ebooks"]'
+        },
+        SUPPORT_TUTOR: {
+            id: '71968208',
+            selector: 'li.menu-item-71968208, a[href*="my-support-tutor"]'
+        },
+        MY_ACCOUNT: {
+            id: '71963842',
+            selector: 'li.menu-item-71963842, a[href*="my-account"]'
+        }
+    };
+    
     // Global function to manually start tour (for replay button)
     window.ieltsStartTour = function(forceReplay) {
         forceReplay = forceReplay || false;
@@ -142,12 +158,12 @@
      */
     function addMenuItemSteps(tour) {
         // Download eBooks
-        if ($('li.menu-item-71976754, a[href*="download-your-ielts-ebooks"]').length) {
+        if ($(MENU_ITEMS.DOWNLOAD_EBOOKS.selector).length) {
             tour.addStep({
                 id: 'download-ebooks',
                 text: '<h3>Download All 7 IELTS eBooks 📚</h3><p>Access and download your comprehensive IELTS preparation eBooks here.</p>',
                 attachTo: { 
-                    element: 'li.menu-item-71976754, a[href*="download-your-ielts-ebooks"]',
+                    element: MENU_ITEMS.DOWNLOAD_EBOOKS.selector,
                     on: 'bottom' 
                 },
                 classes: 'ielts-tour-step ielts-tour-highlight',
@@ -159,12 +175,12 @@
         }
         
         // Support Tutor
-        if ($('li.menu-item-71968208, a[href*="my-support-tutor"]').length) {
+        if ($(MENU_ITEMS.SUPPORT_TUTOR.selector).length) {
             tour.addStep({
                 id: 'support-tutor',
                 text: '<h3>My Support Tutor 👨‍🏫</h3><p>Need help as you study? Get support from your personal tutor here.</p>',
                 attachTo: { 
-                    element: 'li.menu-item-71968208, a[href*="my-support-tutor"]',
+                    element: MENU_ITEMS.SUPPORT_TUTOR.selector,
                     on: 'bottom' 
                 },
                 classes: 'ielts-tour-step ielts-tour-highlight',
@@ -176,12 +192,12 @@
         }
         
         // My Account
-        if ($('li.menu-item-71963842, a[href*="my-account"]').length) {
+        if ($(MENU_ITEMS.MY_ACCOUNT.selector).length) {
             tour.addStep({
                 id: 'my-account',
                 text: '<h3>My Account ⚙️</h3><p>Manage your account settings, view your remaining time, and update your password here.</p>',
                 attachTo: { 
-                    element: 'li.menu-item-71963842, a[href*="my-account"]',
+                    element: MENU_ITEMS.MY_ACCOUNT.selector,
                     on: 'bottom' 
                 },
                 classes: 'ielts-tour-step ielts-tour-highlight',
