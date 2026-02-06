@@ -137,6 +137,7 @@ class IELTS_CM_Bulk_Enrollment {
     
     /**
      * Determine course group from course categories
+     * Priority: academic_module > general_module > general_english
      */
     private function get_course_group_from_course($course_id) {
         $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
@@ -147,23 +148,23 @@ class IELTS_CM_Bulk_Enrollment {
             return 'academic_module';
         }
         
-        // Check categories in a single loop (most specific to least specific)
+        // Check for academic-specific categories first (highest priority)
         foreach ($categories as $cat_slug) {
-            $lower_slug = strtolower($cat_slug);
-            
-            // Check for academic course first (most specific)
-            if (strpos($lower_slug, 'academic') !== false) {
+            if ($cat_slug === 'academic' || $cat_slug === 'academic-practice-tests') {
                 return 'academic_module';
             }
-            
-            // Check for general course (but not general_english)
-            // Ensure it's general but not general_english by checking for 'general' without 'english'
-            if (strpos($lower_slug, 'general') !== false && strpos($lower_slug, 'english') === false) {
+        }
+        
+        // Check for general-specific categories (medium priority)
+        foreach ($categories as $cat_slug) {
+            if ($cat_slug === 'general' || $cat_slug === 'general-practice-tests') {
                 return 'general_module';
             }
-            
-            // Check for english-only course (can be general_english or just english)
-            if (strpos($lower_slug, 'english') !== false) {
+        }
+        
+        // Check for english-only category (lowest priority)
+        foreach ($categories as $cat_slug) {
+            if ($cat_slug === 'english') {
                 return 'general_english';
             }
         }
