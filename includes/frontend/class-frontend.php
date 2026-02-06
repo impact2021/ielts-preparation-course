@@ -42,6 +42,15 @@ class IELTS_CM_Frontend {
         
         // AJAX handler for error report submission
         add_action('wp_ajax_ielts_cm_submit_error_report', array($this, 'handle_error_report_submission'));
+        
+        // User tour completion handler
+        add_action('wp_ajax_ielts_complete_tour', array($this, 'handle_tour_completion'));
+        
+        // Register tour settings (admin only)
+        if (is_admin()) {
+            add_action('admin_init', array($this, 'register_tour_settings'));
+            add_action('admin_menu', array($this, 'add_tour_admin_menu'));
+        }
     }
     
     /**
@@ -115,6 +124,76 @@ class IELTS_CM_Frontend {
         wp_register_style('ielts-cm-countdown', false);
         wp_enqueue_style('ielts-cm-countdown');
         wp_add_inline_style('ielts-cm-countdown', $this->get_countdown_widget_styles());
+        
+        // User tour for first-time users
+        if (is_user_logged_in()) {
+            // Check if tours are enabled globally
+            $tours_enabled = get_option('ielts_cm_tour_enabled', true);
+            
+            if ($tours_enabled) {
+                $user_id = get_current_user_id();
+                
+                // Get user's membership type
+                $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+                
+                // Determine tour type based on membership
+                $tour_type = '';
+                if (strpos($membership_type, 'academic') !== false) {
+                    $tour_type = 'academic';
+                } elseif (strpos($membership_type, 'general') !== false) {
+                    $tour_type = 'general';
+                } elseif (strpos($membership_type, 'english') !== false) {
+                    $tour_type = 'english';
+                }
+                
+                // Only load tour if user has a valid membership type and hasn't completed it
+                if (!empty($tour_type)) {
+                    // Check if this specific tour type is enabled
+                    $tour_type_enabled = get_option('ielts_cm_tour_enabled_' . $tour_type, true);
+                    
+                    if ($tour_type_enabled) {
+                        // Check if user has completed tour for their membership type
+                        $tour_completed = get_user_meta($user_id, 'ielts_tour_completed_' . $tour_type, true);
+                        
+                        if (!$tour_completed) {
+                            // Enqueue Shepherd.js library from CDN
+                            wp_enqueue_style(
+                                'shepherd-theme',
+                                'https://cdn.jsdelivr.net/npm/shepherd.js@11.2.0/dist/css/shepherd.css',
+                                array(),
+                                '11.2.0'
+                            );
+                            
+                            wp_enqueue_script(
+                                'shepherd-js',
+                                'https://cdn.jsdelivr.net/npm/shepherd.js@11.2.0/dist/js/shepherd.min.js',
+                                array(),
+                                '11.2.0',
+                                true
+                            );
+                            
+                            // Enqueue custom tour configuration
+                            wp_enqueue_script(
+                                'ielts-user-tour',
+                                IELTS_CM_PLUGIN_URL . 'assets/js/user-tour.js',
+                                array('jquery', 'shepherd-js'),
+                                IELTS_CM_VERSION,
+                                true
+                            );
+                            
+                            // Pass data to JavaScript
+                            wp_localize_script('ielts-user-tour', 'ieltsTourData', array(
+                                'ajaxUrl' => admin_url('admin-ajax.php'),
+                                'nonce' => wp_create_nonce('ielts_tour_complete'),
+                                'userId' => $user_id,
+                                'membershipType' => $membership_type,
+                                'tourType' => $tour_type
+                            ));
+                        }
+                    }
+                }
+            }
+        }
     }
     
     /**
@@ -1158,5 +1237,385 @@ class IELTS_CM_Frontend {
         } else {
             wp_send_json_error('Failed to send error report. Please try again later.');
         }
+    }
+    
+    /**
+     * Handle tour completion AJAX request
+     */
+    public function handle_tour_completion() {
+        check_ajax_referer('ielts_tour_complete', 'nonce');
+        
+        $user_id = get_current_user_id();
+        $tour_type = isset($_POST['tour_type']) ? sanitize_text_field($_POST['tour_type']) : '';
+        
+        if ($user_id && in_array($tour_type, array('academic', 'general', 'english'))) {
+            // Save completion with tour type suffix for cross-device persistence
+            update_user_meta($user_id, 'ielts_tour_completed_' . $tour_type, true);
+            
+            // Also save timestamp
+            update_user_meta($user_id, 'ielts_tour_completed_' . $tour_type . '_date', current_time('mysql'));
+            
+            wp_send_json_success(array(
+                'message' => 'Tour completed successfully',
+                'tour_type' => $tour_type
+            ));
+        } else {
+            wp_send_json_error(array('message' => 'Invalid request'));
+        }
+    }
+    
+    /**
+     * Register tour settings
+     */
+    public function register_tour_settings() {
+        // Register global enable setting
+        register_setting('ielts_cm_tour_settings', 'ielts_cm_tour_enabled', array(
+            'type' => 'boolean',
+            'default' => true,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
+        
+        // Register per-membership settings
+        register_setting('ielts_cm_tour_settings', 'ielts_cm_tour_enabled_academic', array(
+            'type' => 'boolean',
+            'default' => true,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
+        
+        register_setting('ielts_cm_tour_settings', 'ielts_cm_tour_enabled_general', array(
+            'type' => 'boolean',
+            'default' => true,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
+        
+        register_setting('ielts_cm_tour_settings', 'ielts_cm_tour_enabled_english', array(
+            'type' => 'boolean',
+            'default' => true,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
+        
+        // Add settings section
+        add_settings_section(
+            'ielts_cm_tour_section',
+            __('User Tour Controls', 'ielts-course-manager'),
+            array($this, 'tour_settings_section_callback'),
+            'ielts_cm_tour_settings'
+        );
+        
+        // Add global enable field
+        add_settings_field(
+            'ielts_cm_tour_enabled',
+            __('Enable All Tours', 'ielts-course-manager'),
+            array($this, 'tour_enabled_field_callback'),
+            'ielts_cm_tour_settings',
+            'ielts_cm_tour_section'
+        );
+        
+        // Add per-membership fields
+        add_settings_field(
+            'ielts_cm_tour_enabled_academic',
+            __('Academic Module Tour', 'ielts-course-manager'),
+            array($this, 'tour_enabled_academic_callback'),
+            'ielts_cm_tour_settings',
+            'ielts_cm_tour_section'
+        );
+        
+        add_settings_field(
+            'ielts_cm_tour_enabled_general',
+            __('General Training Tour', 'ielts-course-manager'),
+            array($this, 'tour_enabled_general_callback'),
+            'ielts_cm_tour_settings',
+            'ielts_cm_tour_section'
+        );
+        
+        add_settings_field(
+            'ielts_cm_tour_enabled_english',
+            __('English Only Tour', 'ielts-course-manager'),
+            array($this, 'tour_enabled_english_callback'),
+            'ielts_cm_tour_settings',
+            'ielts_cm_tour_section'
+        );
+    }
+    
+    /**
+     * Settings section description
+     */
+    public function tour_settings_section_callback() {
+        echo '<p>' . __('Control whether guided tours are shown to first-time users. Tours help new members understand the platform.', 'ielts-course-manager') . '</p>';
+    }
+    
+    /**
+     * Global enable/disable field
+     */
+    public function tour_enabled_field_callback() {
+        $enabled = get_option('ielts_cm_tour_enabled', true);
+        ?>
+        <label>
+            <input type="checkbox" 
+                   name="ielts_cm_tour_enabled" 
+                   value="1" 
+                   <?php checked($enabled, true); ?> />
+            <?php _e('Show guided tours to first-time users', 'ielts-course-manager'); ?>
+        </label>
+        <p class="description">
+            <?php _e('Uncheck to disable ALL user tours globally. Individual tours below will be ignored if this is disabled.', 'ielts-course-manager'); ?>
+        </p>
+        <?php
+    }
+    
+    /**
+     * Academic tour enable field
+     */
+    public function tour_enabled_academic_callback() {
+        $enabled = get_option('ielts_cm_tour_enabled_academic', true);
+        ?>
+        <label>
+            <input type="checkbox" 
+                   name="ielts_cm_tour_enabled_academic" 
+                   value="1" 
+                   <?php checked($enabled, true); ?> />
+            <?php _e('Show tour for Academic module members', 'ielts-course-manager'); ?>
+        </label>
+        <?php
+    }
+    
+    /**
+     * General Training tour enable field
+     */
+    public function tour_enabled_general_callback() {
+        $enabled = get_option('ielts_cm_tour_enabled_general', true);
+        ?>
+        <label>
+            <input type="checkbox" 
+                   name="ielts_cm_tour_enabled_general" 
+                   value="1" 
+                   <?php checked($enabled, true); ?> />
+            <?php _e('Show tour for General Training members', 'ielts-course-manager'); ?>
+        </label>
+        <?php
+    }
+    
+    /**
+     * English tour enable field
+     */
+    public function tour_enabled_english_callback() {
+        $enabled = get_option('ielts_cm_tour_enabled_english', true);
+        ?>
+        <label>
+            <input type="checkbox" 
+                   name="ielts_cm_tour_enabled_english" 
+                   value="1" 
+                   <?php checked($enabled, true); ?> />
+            <?php _e('Show tour for English-only members', 'ielts-course-manager'); ?>
+        </label>
+        <?php
+    }
+    
+    /**
+     * Add admin menu page
+     */
+    public function add_tour_admin_menu() {
+        add_options_page(
+            __('User Tour Settings', 'ielts-course-manager'),
+            __('User Tours', 'ielts-course-manager'),
+            'manage_options',
+            'ielts-tour-settings',
+            array($this, 'render_tour_settings_page')
+        );
+    }
+    
+    /**
+     * Render tour settings page
+     */
+    public function render_tour_settings_page() {
+        // Check user capabilities
+        if (!current_user_can('manage_options')) {
+            wp_die(__('You do not have sufficient permissions to access this page.', 'ielts-course-manager'));
+        }
+        
+        // Handle reset actions
+        if (isset($_POST['reset_all_tours']) && check_admin_referer('reset_tours_nonce')) {
+            $this->reset_all_user_tours();
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('All user tours have been reset! Users will see tours again on their next login.', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        if (isset($_POST['reset_academic_tours']) && check_admin_referer('reset_tours_nonce')) {
+            $this->reset_tours_by_type('academic');
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('Academic tours have been reset!', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        if (isset($_POST['reset_general_tours']) && check_admin_referer('reset_tours_nonce')) {
+            $this->reset_tours_by_type('general');
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('General Training tours have been reset!', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        if (isset($_POST['reset_english_tours']) && check_admin_referer('reset_tours_nonce')) {
+            $this->reset_tours_by_type('english');
+            echo '<div class="notice notice-success is-dismissible"><p>' . __('English tours have been reset!', 'ielts-course-manager') . '</p></div>';
+        }
+        
+        // Get tour statistics
+        $stats = $this->get_tour_statistics();
+        
+        ?>
+        <div class="wrap">
+            <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
+            
+            <div class="card" style="max-width: 800px;">
+                <h2><?php _e('Tour Settings', 'ielts-course-manager'); ?></h2>
+                <form method="post" action="options.php">
+                    <?php
+                    settings_fields('ielts_cm_tour_settings');
+                    do_settings_sections('ielts_cm_tour_settings');
+                    submit_button(__('Save Settings', 'ielts-course-manager'));
+                    ?>
+                </form>
+            </div>
+            
+            <div class="card" style="max-width: 800px; margin-top: 20px;">
+                <h2><?php _e('Tour Statistics', 'ielts-course-manager'); ?></h2>
+                <table class="widefat">
+                    <thead>
+                        <tr>
+                            <th><?php _e('Tour Type', 'ielts-course-manager'); ?></th>
+                            <th><?php _e('Users Completed', 'ielts-course-manager'); ?></th>
+                            <th><?php _e('Status', 'ielts-course-manager'); ?></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><?php _e('Academic Module', 'ielts-course-manager'); ?></td>
+                            <td><?php echo esc_html($stats['academic']); ?></td>
+                            <td>
+                                <?php echo get_option('ielts_cm_tour_enabled_academic', true) 
+                                    ? '<span style="color: green;">●</span> ' . __('Enabled', 'ielts-course-manager')
+                                    : '<span style="color: red;">●</span> ' . __('Disabled', 'ielts-course-manager'); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><?php _e('General Training', 'ielts-course-manager'); ?></td>
+                            <td><?php echo esc_html($stats['general']); ?></td>
+                            <td>
+                                <?php echo get_option('ielts_cm_tour_enabled_general', true) 
+                                    ? '<span style="color: green;">●</span> ' . __('Enabled', 'ielts-course-manager')
+                                    : '<span style="color: red;">●</span> ' . __('Disabled', 'ielts-course-manager'); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><?php _e('English Only', 'ielts-course-manager'); ?></td>
+                            <td><?php echo esc_html($stats['english']); ?></td>
+                            <td>
+                                <?php echo get_option('ielts_cm_tour_enabled_english', true) 
+                                    ? '<span style="color: green;">●</span> ' . __('Enabled', 'ielts-course-manager')
+                                    : '<span style="color: red;">●</span> ' . __('Disabled', 'ielts-course-manager'); ?>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card" style="max-width: 800px; margin-top: 20px;">
+                <h2><?php _e('Reset Tours', 'ielts-course-manager'); ?></h2>
+                <p><?php _e('Force users to see tours again by resetting completion status. This is useful after updating tour content.', 'ielts-course-manager'); ?></p>
+                
+                <form method="post" style="display: inline; margin-right: 10px;">
+                    <?php wp_nonce_field('reset_tours_nonce'); ?>
+                    <button type="submit" 
+                            name="reset_all_tours" 
+                            class="button button-secondary"
+                            onclick="return confirm('<?php esc_attr_e('Reset ALL user tours? All users will see tours again on their next login.', 'ielts-course-manager'); ?>');">
+                        <?php _e('Reset All Tours', 'ielts-course-manager'); ?>
+                    </button>
+                </form>
+                
+                <form method="post" style="display: inline; margin-right: 10px;">
+                    <?php wp_nonce_field('reset_tours_nonce'); ?>
+                    <button type="submit" 
+                            name="reset_academic_tours" 
+                            class="button button-secondary"
+                            onclick="return confirm('<?php esc_attr_e('Reset Academic tours only?', 'ielts-course-manager'); ?>');">
+                        <?php _e('Reset Academic', 'ielts-course-manager'); ?>
+                    </button>
+                </form>
+                
+                <form method="post" style="display: inline; margin-right: 10px;">
+                    <?php wp_nonce_field('reset_tours_nonce'); ?>
+                    <button type="submit" 
+                            name="reset_general_tours" 
+                            class="button button-secondary"
+                            onclick="return confirm('<?php esc_attr_e('Reset General Training tours?', 'ielts-course-manager'); ?>');">
+                        <?php _e('Reset General', 'ielts-course-manager'); ?>
+                    </button>
+                </form>
+                
+                <form method="post" style="display: inline;">
+                    <?php wp_nonce_field('reset_tours_nonce'); ?>
+                    <button type="submit" 
+                            name="reset_english_tours" 
+                            class="button button-secondary"
+                            onclick="return confirm('<?php esc_attr_e('Reset English tours?', 'ielts-course-manager'); ?>');">
+                        <?php _e('Reset English', 'ielts-course-manager'); ?>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <?php
+    }
+    
+    /**
+     * Get tour completion statistics
+     */
+    private function get_tour_statistics() {
+        global $wpdb;
+        
+        $stats = array(
+            'academic' => 0,
+            'general' => 0,
+            'english' => 0
+        );
+        
+        // Count users who completed each tour type
+        $stats['academic'] = (int) $wpdb->get_var(
+            "SELECT COUNT(*) FROM {$wpdb->usermeta} 
+             WHERE meta_key = 'ielts_tour_completed_academic' AND meta_value = '1'"
+        );
+        
+        $stats['general'] = (int) $wpdb->get_var(
+            "SELECT COUNT(*) FROM {$wpdb->usermeta} 
+             WHERE meta_key = 'ielts_tour_completed_general' AND meta_value = '1'"
+        );
+        
+        $stats['english'] = (int) $wpdb->get_var(
+            "SELECT COUNT(*) FROM {$wpdb->usermeta} 
+             WHERE meta_key = 'ielts_tour_completed_english' AND meta_value = '1'"
+        );
+        
+        return $stats;
+    }
+    
+    /**
+     * Reset all user tours
+     */
+    private function reset_all_user_tours() {
+        global $wpdb;
+        
+        // Delete all tour completion meta
+        $wpdb->query("DELETE FROM {$wpdb->usermeta} WHERE meta_key LIKE 'ielts_tour_completed_%'");
+    }
+    
+    /**
+     * Reset tours by type
+     */
+    private function reset_tours_by_type($type) {
+        global $wpdb;
+        
+        $meta_key = 'ielts_tour_completed_' . sanitize_key($type);
+        $date_key = $meta_key . '_date';
+        
+        $wpdb->query($wpdb->prepare(
+            "DELETE FROM {$wpdb->usermeta} WHERE meta_key IN (%s, %s)",
+            $meta_key,
+            $date_key
+        ));
     }
 }
