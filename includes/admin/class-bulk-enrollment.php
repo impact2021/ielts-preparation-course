@@ -39,7 +39,7 @@ class IELTS_CM_Bulk_Enrollment {
      * Add bulk enrollment action to users page
      */
     public function add_bulk_action($bulk_actions) {
-        $bulk_actions['ielts_bulk_enroll'] = __('Enroll in IELTS Course (30 days)', 'ielts-course-manager');
+        $bulk_actions['ielts_bulk_enroll'] = __('Enroll in Academic Module (Access Code) - 30 days', 'ielts-course-manager');
         return $bulk_actions;
     }
     
@@ -52,16 +52,34 @@ class IELTS_CM_Bulk_Enrollment {
             return $redirect_to;
         }
         
-        // Get all published IELTS courses
-        $courses = get_posts(array(
+        // Get Academic module courses first (with academic or academic-practice-tests category)
+        $academic_courses = get_posts(array(
             'post_type' => 'ielts_course',
             'posts_per_page' => -1,
             'post_status' => 'publish',
-            'fields' => 'ids'
+            'fields' => 'ids',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'ielts_course_category',
+                    'field' => 'slug',
+                    'terms' => array('academic', 'academic-practice-tests'),
+                    'operator' => 'IN'
+                )
+            )
         ));
         
-        if (empty($courses)) {
-            // No courses found, redirect with error
+        // If no academic courses found, get any published course as fallback
+        if (empty($academic_courses)) {
+            $academic_courses = get_posts(array(
+                'post_type' => 'ielts_course',
+                'posts_per_page' => -1,
+                'post_status' => 'publish',
+                'fields' => 'ids'
+            ));
+        }
+        
+        if (empty($academic_courses)) {
+            // No courses found at all, redirect with error
             $redirect_to = add_query_arg('ielts_bulk_enroll', 'no_courses', $redirect_to);
             return $redirect_to;
         }
@@ -72,10 +90,11 @@ class IELTS_CM_Bulk_Enrollment {
         $expiry_date = date('Y-m-d H:i:s', $expiry_timestamp);
         
         $enrolled_count = 0;
-        $course_id = $courses[0]; // Enroll in the first course found
+        $course_id = $academic_courses[0]; // Enroll in the first Academic course found
         
-        // Determine course group based on the course being enrolled
-        $course_group = $this->get_course_group_from_course($course_id);
+        // Always use academic_module for this bulk enrollment
+        // This ensures users appear in the partner dashboard with the correct membership
+        $course_group = 'academic_module';
         
         // Enroll each selected user
         foreach ($user_ids as $user_id) {
