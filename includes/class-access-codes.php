@@ -145,9 +145,11 @@ class IELTS_CM_Access_Codes {
         $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
         
         // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
+        // Table name is safe: prefix comes from WordPress core, suffix is hardcoded
         $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
         
         // Build query with table name outside of prepare, parameters inside prepare
+        // Placeholders must be built dynamically since the number of IDs varies
         $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by IN ({$placeholders})";
         $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
         $codes_result = $wpdb->query($prepared_query);
@@ -163,6 +165,7 @@ class IELTS_CM_Access_Codes {
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
         // Note: meta_value is stored as string in usermeta table
         // Convert partner admin IDs to strings for proper comparison
+        // Table name is safe: usermeta is WordPress core table
         $meta_table = $wpdb->usermeta;
         $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
         
@@ -171,6 +174,8 @@ class IELTS_CM_Access_Codes {
         $placeholders_str = implode(',', array_fill(0, count($partner_admin_ids_str), '%s'));
         
         // Build query with table name outside of prepare, parameters inside prepare
+        // Placeholders must be built dynamically since the number of IDs varies
+        // meta_key is hardcoded literal (not user input), safe to include in query
         $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders_str})";
         $prepared_query = $wpdb->prepare($query, $org_id_string, ...$partner_admin_ids_str);
         $meta_result = $wpdb->query($prepared_query);
