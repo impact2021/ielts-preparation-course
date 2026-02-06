@@ -121,6 +121,22 @@
             ]
         });
         
+        // IELTS Band Scores - Show FIRST if present
+        if ($('.ielts-band-scores-container').length) {
+            tour.addStep({
+                id: 'band-scores',
+                text: '<h3>Your Estimated IELTS Band Scores 📊</h3><p>This section shows your estimated band scores for Reading, Listening, Writing, Speaking, and Overall. Complete more tests for more accurate results!</p>',
+                attachTo: { 
+                    element: '.ielts-band-scores-container',
+                    on: 'bottom' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
         // Main Navigation
         if ($('.main-navigation, .primary-menu, .site-navigation, #site-navigation').length) {
             tour.addStep({
@@ -210,6 +226,22 @@
             ]
         });
         
+        // IELTS Band Scores - Show FIRST if present
+        if ($('.ielts-band-scores-container').length) {
+            tour.addStep({
+                id: 'band-scores',
+                text: '<h3>Your Estimated IELTS Band Scores 📊</h3><p>This section shows your estimated band scores for Reading, Listening, Writing, Speaking, and Overall. Complete more tests for more accurate results!</p>',
+                attachTo: { 
+                    element: '.ielts-band-scores-container',
+                    on: 'bottom' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
         // Main Navigation
         if ($('.main-navigation, .primary-menu, .site-navigation, #site-navigation').length) {
             tour.addStep({
@@ -298,6 +330,22 @@
                 { text: 'Start Tour', action: tour.next }
             ]
         });
+        
+        // IELTS Band Scores - Show FIRST if present
+        if ($('.ielts-band-scores-container').length) {
+            tour.addStep({
+                id: 'band-scores',
+                text: '<h3>Your Estimated IELTS Band Scores 📊</h3><p>This section shows your estimated band scores for Reading, Listening, Writing, Speaking, and Overall. Complete more tests for more accurate results!</p>',
+                attachTo: { 
+                    element: '.ielts-band-scores-container',
+                    on: 'bottom' 
+                },
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
         
         // Main Navigation
         if ($('.main-navigation, .primary-menu, .site-navigation, #site-navigation').length) {
