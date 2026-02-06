@@ -276,7 +276,7 @@ class IELTS_CM_Membership {
                 <td>
                     <input type="date" name="user_expiry" id="user_expiry" 
                            value="<?php echo esc_attr($current_expiry); ?>" class="regular-text">
-                    <p class="description"><?php _e('Leave empty for lifetime access. Format: dd/mm/yyyy', 'ielts-course-manager'); ?></p>
+                    <p class="description"><?php _e('Leave empty for lifetime access.', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
         </table>
@@ -433,17 +433,21 @@ class IELTS_CM_Membership {
         </style>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                // Hide the entire "Personal Options" section heading
-                $('h2:contains("Personal Options")').hide();
+                // Hide the entire "Personal Options" section heading (case-insensitive)
+                $('h2').filter(function() {
+                    return $(this).text().match(/Personal Options/i);
+                }).hide();
                 
-                // Hide "About Yourself" or "About the user" section heading
+                // Hide "About Yourself" or "About the user" section heading (case-insensitive)
                 $('h2').filter(function() {
                     return $(this).text().match(/About (Yourself|the user)/i);
                 }).hide();
                 
-                // Hide Application Passwords section
+                // Hide Application Passwords section (case-insensitive)
                 $('.application-passwords').closest('tr').hide();
-                $('h2:contains("Application Passwords")').hide();
+                $('h2').filter(function() {
+                    return $(this).text().match(/Application Passwords/i);
+                }).hide();
                 $('.application-passwords-section').hide();
                 
                 // Also hide any sections that might have been missed
