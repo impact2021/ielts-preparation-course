@@ -122,8 +122,8 @@ class IELTS_CM_Access_Codes {
         ));
         
         if (empty($partner_admins)) {
-            // No partner admins found, mark migration as done
-            update_option('iw_partner_site_org_migration_done', true);
+            // No partner admins found - skip migration but don't mark as done
+            // This allows the migration to run later if partner admins are added
             delete_transient($lock_key);
             return;
         }
@@ -133,9 +133,10 @@ class IELTS_CM_Access_Codes {
         // Maximum batch size for migration to prevent issues with large datasets
         $max_batch_size = 1000;
         
-        // Validate array count for security
-        if (!is_array($partner_admin_ids) || count($partner_admin_ids) > $max_batch_size) {
-            // Sanity check: Don't process if too many IDs (potential data issue)
+        // Validate count for security (though get_users should always return array)
+        if (count($partner_admin_ids) > $max_batch_size) {
+            // Too many partner admins - log error and skip migration
+            error_log("Partner admin migration skipped: too many partner admins (" . count($partner_admin_ids) . ")");
             delete_transient($lock_key);
             return;
         }
@@ -153,24 +154,31 @@ class IELTS_CM_Access_Codes {
         
         // Check for errors
         if ($codes_result === false) {
-            // Database error occurred, rollback and try again next time
+            // Database error occurred, don't mark as complete to retry next time
+            error_log("Partner admin migration failed: codes table update error");
             delete_transient($lock_key);
             return;
         }
         
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
-        // Note: meta_value is stored as string in usermeta table, so we need to convert to string
+        // Note: meta_value is stored as string in usermeta table
+        // Convert partner admin IDs to strings for proper comparison
         $meta_table = $wpdb->usermeta;
         $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
         
+        // Convert partner admin IDs to strings for comparison
+        $partner_admin_ids_str = array_map('strval', $partner_admin_ids);
+        $placeholders_str = implode(',', array_fill(0, count($partner_admin_ids_str), '%s'));
+        
         // Build query with table name outside of prepare, parameters inside prepare
-        $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders})";
-        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$partner_admin_ids);
+        $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders_str})";
+        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$partner_admin_ids_str);
         $meta_result = $wpdb->query($prepared_query);
         
         // Check for errors
         if ($meta_result === false) {
-            // Database error occurred, rollback and try again next time
+            // Database error occurred, don't mark as complete to retry next time
+            error_log("Partner admin migration failed: usermeta table update error");
             delete_transient($lock_key);
             return;
         }
