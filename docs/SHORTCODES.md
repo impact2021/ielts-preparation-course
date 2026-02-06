@@ -46,19 +46,17 @@ your scores and performance so far.
 ---
 
 ### `[ielts_last_page]`
-Displays the last lesson/page the user was studying with a "Continue Learning" button.
+Displays the last lesson/page the user was studying as a hyperlinked lesson title.
 
 **Usage:**
 ```
-[ielts_last_page]
+Welcome back! The last lesson you were studying was [ielts_last_page].
 ```
 
 **Output:**
-- Shows a formatted widget with the last accessed lesson
-- Includes course name, lesson title, and time since last access
-- Provides a "Continue Learning" button linking to the lesson
-- Returns a message if user hasn't started any lessons yet
-- Returns login prompt if user is not logged in
+- Returns the lesson title as a hyperlink to the lesson
+- Returns "your first lesson" if user hasn't started any lessons yet
+- Returns "your last lesson" if user is not logged in or lesson data is unavailable
 
 ---
 
