@@ -27,6 +27,11 @@ class IELTS_CM_Access_Codes {
     const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
     
     /**
+     * Maximum number of codes to display in table
+     */
+    const CODES_TABLE_LIMIT = 100;
+    
+    /**
      * Access code membership types - separate from paid memberships
      * These are created when Access Code Membership system is enabled
      */
@@ -152,7 +157,8 @@ class IELTS_CM_Access_Codes {
         }
         
         // Full site admins see all data - use ADMIN_ORG_ID constant
-        if (current_user_can('manage_options')) {
+        // Check the specific user's capabilities, not the current user's
+        if (user_can($user_id, 'manage_options')) {
             return self::ADMIN_ORG_ID;
         }
         
@@ -981,14 +987,14 @@ class IELTS_CM_Access_Codes {
         if ($partner_org_id === self::ADMIN_ORG_ID) {
             // Use prepare even without parameters for consistency
             $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM {$wpdb->prefix}ielts_cm_access_codes ORDER BY created_date DESC LIMIT %d",
-                100
+                "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+                self::CODES_TABLE_LIMIT
             ));
         } else {
             $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM {$wpdb->prefix}ielts_cm_access_codes WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
+                "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
                 $partner_org_id,
-                100
+                self::CODES_TABLE_LIMIT
             ));
         }
         
@@ -1145,34 +1151,7 @@ class IELTS_CM_Access_Codes {
                 'fields' => array('ID')
             ));
             
-            // Also get all users with access code memberships but NO partner assignment
-            // This catches legacy students created before the partner organization system
-            // Only administrators can see legacy users (those without partner assignment)
-            $users_with_access_codes = array();
-            if (current_user_can('manage_options')) {
-                // Admin can see all legacy access code users
-                // Use meta_query to efficiently get users with iw_course_group but without iw_created_by_partner
-                $users_with_access_codes = get_users(array(
-                    'fields' => array('ID'),
-                    'meta_query' => array(
-                        'relation' => 'AND',
-                        array(
-                            'key' => 'iw_course_group',
-                            'compare' => 'EXISTS'
-                        ),
-                        array(
-                            'key' => 'iw_created_by_partner',
-                            'compare' => 'NOT EXISTS'
-                        )
-                    )
-                ));
-            }
-            
-            // Merge and deduplicate user IDs using WordPress-optimized function
-            $user_ids = array_unique(array_merge(
-                wp_list_pluck($users_by_partner, 'ID'),
-                wp_list_pluck($users_with_access_codes, 'ID')
-            ));
+            $user_ids = wp_list_pluck($users_by_partner, 'ID');
         }
         
         // Return in format compatible with existing code
