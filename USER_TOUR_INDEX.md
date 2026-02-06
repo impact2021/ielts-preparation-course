@@ -26,6 +26,12 @@ User Tour Implementation Documentation
 │  └─ Different tours for Academic, General Training, English
 │     + Database persistence for cross-device support
 │
+├─ 🎛️ USER_TOUR_ADMIN_CONTROLS.md (26K) ⭐ NEW!
+│  └─ Enable/disable tours via WordPress admin
+│     + Global or per-membership controls
+│     + Reset tours functionality
+│     + Emergency disable methods
+│
 └─ 🎨 USER_TOUR_VISUAL_GUIDE.md (17K)
    └─ Visual diagrams showing highlighting effects
 
@@ -57,6 +63,7 @@ Requirements Addressed
 ✅ Highlight buttons/areas (automatic with Shepherd.js)
 ✅ Different tours per membership (Academic, General, English)
 ✅ Cross-device persistence (WordPress database)
+✅ Can be turned on/off (admin controls + emergency disable)
 
 Implementation Time
 ===================
@@ -71,7 +78,12 @@ Phase 2: Tour Content (30 min)
   - Create General Training tour
   - Create English tour
 
-Phase 3: Testing (20 min)
+Phase 3: Admin Controls (Optional - 10 min)
+  - Add enable/disable settings
+  - Add reset functionality
+  - Add tour statistics
+
+Phase 4: Testing (20 min)
   - Test each membership type
   - Verify cross-device persistence
   - Check highlighting effects
@@ -168,6 +180,9 @@ A: Yes! Detects Academic, General, English automatically
 
 Q: Cross-device persistence?
 A: Yes! Saves to WordPress database (user meta)
+
+Q: Can I turn tours off if necessary?
+A: Yes! Add admin controls or use emergency disable
 
 Ready to Start?
 ===============

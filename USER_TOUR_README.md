@@ -30,7 +30,7 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 - Tips for finding CSS selectors
 - Visual examples and best practices
 
-### 4. [Membership-Specific Tours Guide](USER_TOUR_MEMBERSHIP_SPECIFIC.md) 👥 NEW!
+### 4. [Membership-Specific Tours Guide](USER_TOUR_MEMBERSHIP_SPECIFIC.md) 👥
 **Read this for different tours based on membership type**
 
 - Create separate tours for Academic, General Training, and English memberships
@@ -39,7 +39,16 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 - Complete code examples for each membership
 - Testing different membership scenarios
 
-### 5. [Visual Guide](USER_TOUR_VISUAL_GUIDE.md) 🎨
+### 5. [Admin Controls - Enable/Disable Tours](USER_TOUR_ADMIN_CONTROLS.md) 🎛️ NEW!
+**Read this to add controls for turning tours on/off**
+
+- Add WordPress admin settings to enable/disable tours
+- Global on/off switch or per-membership controls
+- Reset tours to force users to see them again
+- Emergency disable methods
+- Tour statistics and monitoring
+
+### 6. [Visual Guide](USER_TOUR_VISUAL_GUIDE.md) 🎨
 **See visual examples of how highlighting works**
 
 - Visual diagrams showing highlighting effects
@@ -47,7 +56,7 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 - Step-by-step animation sequences
 - Mobile vs desktop comparison
 
-### 6. [Library Comparison](USER_TOUR_LIBRARY_COMPARISON.md) 🔍
+### 7. [Library Comparison](USER_TOUR_LIBRARY_COMPARISON.md) 🔍
 **Read this if you're deciding which approach to use**
 
 - Comparison of Shepherd.js, Intro.js, Driver.js, and WordPress plugins
@@ -66,6 +75,8 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 
 > "There would also need to be a different tour for different memberships - people on a general training membership need to see the general training pages. So that's a tour for general training, academic and English. It would have to save to the user's account to say they've seen it or skipped it in case they login from a different device."
 
+> "I'd also like to be able to turn the tour off if necessary. Would that be possible?"
+
 ### Answer:
 
 **Difficulty**: Easy to Moderate (1-2 hours)
@@ -78,14 +89,17 @@ This directory contains comprehensive guides for implementing a user tour/onboar
 
 **Cross-device persistence!** Tour completion is saved to the WordPress database (user meta), so when users login from a different device (phone, tablet, etc.), they won't see the tour again.
 
+**Can be turned on/off!** Add admin settings to enable/disable tours globally, or control each membership type (Academic, General, English) separately. Perfect for temporary disabling during maintenance or testing.
+
 **What you need:**
 1. Add Shepherd.js library (via CDN) - 2 minutes
 2. Create tour configuration file with 3 membership-specific tours - 30 minutes  
 3. Update PHP to pass membership type to JavaScript - 5 minutes
 4. Update AJAX handler to save with membership type - 5 minutes
-5. Test each membership type - 20 minutes
+5. Add admin controls for enable/disable (optional) - 10 minutes
+6. Test each membership type - 20 minutes
 
-**Total time**: ~1 hour for complete implementation with all 3 membership types
+**Total time**: ~1 hour for complete implementation with all 3 membership types + admin controls
 
 **Example structure:**
 ```javascript
@@ -354,6 +368,7 @@ All issues covered in detail in [Troubleshooting Guide](USER_TOUR_IMPLEMENTATION
 | Complete Guide | Understanding details | 1-2 hours |
 | **Highlighting Guide** | **Learning to highlight buttons/areas** | **15 mins** |
 | **Membership Tours** | **Different tours per membership type** | **20 mins** |
+| **Admin Controls** | **Enable/disable tours, reset options** | **15 mins** |
 | Visual Guide | See how highlighting looks | 10 mins |
 | Library Comparison | Making decisions | 20 mins |
 
