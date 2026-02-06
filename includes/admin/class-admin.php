@@ -4608,12 +4608,18 @@ class IELTS_CM_Admin {
             return;
         }
         
+        // Check user capabilities
+        if (!current_user_can('edit_post', $post_id)) {
+            return;
+        }
+        
         // Check if skill type is being edited
         if (!isset($_REQUEST['ielts_cm_skill_type'])) {
             return;
         }
         
-        $skill_type = $_REQUEST['ielts_cm_skill_type'];
+        // Sanitize input immediately
+        $skill_type = sanitize_text_field($_REQUEST['ielts_cm_skill_type']);
         
         // For bulk edit, -1 means "no change"
         if ($skill_type === '-1') {
@@ -4622,7 +4628,7 @@ class IELTS_CM_Admin {
         
         // Validate skill type
         $allowed_skills = array('', 'reading', 'writing', 'listening', 'speaking', 'vocabulary', 'grammar');
-        if (!in_array($skill_type, $allowed_skills)) {
+        if (!in_array($skill_type, $allowed_skills, true)) {
             return;
         }
         
@@ -4630,7 +4636,7 @@ class IELTS_CM_Admin {
         if (empty($skill_type)) {
             delete_post_meta($post_id, '_ielts_cm_skill_type');
         } else {
-            update_post_meta($post_id, '_ielts_cm_skill_type', sanitize_text_field($skill_type));
+            update_post_meta($post_id, '_ielts_cm_skill_type', $skill_type);
         }
     }
     
