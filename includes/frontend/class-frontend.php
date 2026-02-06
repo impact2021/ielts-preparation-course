@@ -125,7 +125,7 @@ class IELTS_CM_Frontend {
         wp_enqueue_style('ielts-cm-countdown');
         wp_add_inline_style('ielts-cm-countdown', $this->get_countdown_widget_styles());
         
-        // User tour for first-time users
+        // User tour for logged-in users (auto-start for first-time, replay button for all)
         if (is_user_logged_in()) {
             // Check if tours are enabled globally
             $tours_enabled = get_option('ielts_cm_tour_enabled', true);
@@ -146,50 +146,46 @@ class IELTS_CM_Frontend {
                     $tour_type = 'english';
                 }
                 
-                // Only load tour if user has a valid membership type and hasn't completed it
+                // Load tour scripts if user has a valid membership type
+                // (always load so replay button works, auto-start is conditional in JS)
                 if (!empty($tour_type)) {
                     // Check if this specific tour type is enabled
                     $tour_type_enabled = get_option('ielts_cm_tour_enabled_' . $tour_type, true);
                     
                     if ($tour_type_enabled) {
-                        // Check if user has completed tour for their membership type
-                        $tour_completed = get_user_meta($user_id, 'ielts_tour_completed_' . $tour_type, true);
+                        // Enqueue Shepherd.js library from CDN
+                        wp_enqueue_style(
+                            'shepherd-theme',
+                            'https://cdn.jsdelivr.net/npm/shepherd.js@11.2.0/dist/css/shepherd.css',
+                            array(),
+                            '11.2.0'
+                        );
                         
-                        if (!$tour_completed) {
-                            // Enqueue Shepherd.js library from CDN
-                            wp_enqueue_style(
-                                'shepherd-theme',
-                                'https://cdn.jsdelivr.net/npm/shepherd.js@11.2.0/dist/css/shepherd.css',
-                                array(),
-                                '11.2.0'
-                            );
-                            
-                            wp_enqueue_script(
-                                'shepherd-js',
-                                'https://cdn.jsdelivr.net/npm/shepherd.js@11.2.0/dist/js/shepherd.min.js',
-                                array(),
-                                '11.2.0',
-                                true
-                            );
-                            
-                            // Enqueue custom tour configuration
-                            wp_enqueue_script(
-                                'ielts-user-tour',
-                                IELTS_CM_PLUGIN_URL . 'assets/js/user-tour.js',
-                                array('jquery', 'shepherd-js'),
-                                IELTS_CM_VERSION,
-                                true
-                            );
-                            
-                            // Pass data to JavaScript
-                            wp_localize_script('ielts-user-tour', 'ieltsTourData', array(
-                                'ajaxUrl' => admin_url('admin-ajax.php'),
-                                'nonce' => wp_create_nonce('ielts_tour_complete'),
-                                'userId' => $user_id,
-                                'membershipType' => $membership_type,
-                                'tourType' => $tour_type
-                            ));
-                        }
+                        wp_enqueue_script(
+                            'shepherd-js',
+                            'https://cdn.jsdelivr.net/npm/shepherd.js@11.2.0/dist/js/shepherd.min.js',
+                            array(),
+                            '11.2.0',
+                            true
+                        );
+                        
+                        // Enqueue custom tour configuration
+                        wp_enqueue_script(
+                            'ielts-user-tour',
+                            IELTS_CM_PLUGIN_URL . 'assets/js/user-tour.js',
+                            array('jquery', 'shepherd-js'),
+                            IELTS_CM_VERSION,
+                            true
+                        );
+                        
+                        // Pass data to JavaScript
+                        wp_localize_script('ielts-user-tour', 'ieltsTourData', array(
+                            'ajaxUrl' => admin_url('admin-ajax.php'),
+                            'nonce' => wp_create_nonce('ielts_tour_complete'),
+                            'userId' => $user_id,
+                            'membershipType' => $membership_type,
+                            'tourType' => $tour_type
+                        ));
                     }
                 }
             }
