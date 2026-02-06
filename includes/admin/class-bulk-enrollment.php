@@ -57,7 +57,9 @@ class IELTS_CM_Bulk_Enrollment {
         }
         
         // Calculate expiry date (30 days from today)
-        $expiry_date = date('Y-m-d H:i:s', strtotime('+30 days'));
+        // Using WordPress timezone-aware function
+        $expiry_timestamp = strtotime('+30 days', current_time('timestamp'));
+        $expiry_date = date('Y-m-d H:i:s', $expiry_timestamp);
         
         $enrolled_count = 0;
         $course_id = $courses[0]; // Enroll in the first course found
@@ -81,15 +83,15 @@ class IELTS_CM_Bulk_Enrollment {
      * Show admin notice after bulk enrollment
      */
     public function bulk_enrollment_admin_notice() {
-        // Check if we have enrolled users
-        if (!isset($_GET['ielts_bulk_enrolled'])) {
+        // Check if we have enrolled users - sanitize the input
+        if (!isset($_REQUEST['ielts_bulk_enrolled'])) {
             return;
         }
         
-        $enrolled_count = intval($_GET['ielts_bulk_enrolled']);
+        $enrolled_count = intval($_REQUEST['ielts_bulk_enrolled']);
         
-        // Check for no courses error
-        if (isset($_GET['ielts_bulk_enroll']) && $_GET['ielts_bulk_enroll'] === 'no_courses') {
+        // Check for no courses error - sanitize the input
+        if (isset($_REQUEST['ielts_bulk_enroll']) && sanitize_key($_REQUEST['ielts_bulk_enroll']) === 'no_courses') {
             ?>
             <div class="notice notice-error is-dismissible">
                 <p><?php _e('No IELTS courses found. Please create a course first.', 'ielts-course-manager'); ?></p>
@@ -100,9 +102,11 @@ class IELTS_CM_Bulk_Enrollment {
         
         // Show success message
         if ($enrolled_count > 0) {
-            $course_id = isset($_GET['ielts_course_id']) ? intval($_GET['ielts_course_id']) : 0;
+            $course_id = isset($_REQUEST['ielts_course_id']) ? intval($_REQUEST['ielts_course_id']) : 0;
             $course_title = $course_id ? get_the_title($course_id) : 'course';
-            $expiry_date = date('F j, Y', strtotime('+30 days'));
+            // Use WordPress timezone-aware date function
+            $expiry_timestamp = strtotime('+30 days', current_time('timestamp'));
+            $expiry_date = date_i18n('F j, Y', $expiry_timestamp);
             
             ?>
             <div class="notice notice-success is-dismissible">
