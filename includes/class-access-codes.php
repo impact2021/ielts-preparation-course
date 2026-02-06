@@ -93,6 +93,11 @@ class IELTS_CM_Access_Codes {
      * Public visibility required because it's hooked to admin_init
      */
     public function migrate_partner_data_to_site_org() {
+        // Only allow admins to run this migration
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+        
         // Check if migration has already run
         $migration_done = get_option('iw_partner_site_org_migration_done', false);
         if ($migration_done) {
@@ -125,16 +130,21 @@ class IELTS_CM_Access_Codes {
         
         $partner_admin_ids = $partner_admins;
         
+        // Maximum batch size for migration to prevent issues with large datasets
+        $max_batch_size = 1000;
+        
         // Validate array count for security
-        if (!is_array($partner_admin_ids) || count($partner_admin_ids) > 1000) {
+        if (!is_array($partner_admin_ids) || count($partner_admin_ids) > $max_batch_size) {
             // Sanity check: Don't process if too many IDs (potential data issue)
             delete_transient($lock_key);
             return;
         }
         
+        // Build placeholders once for reuse
+        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+        
         // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
         $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
-        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
         
         // Build query with table name outside of prepare, parameters inside prepare
         $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by IN ({$placeholders})";
@@ -149,13 +159,13 @@ class IELTS_CM_Access_Codes {
         }
         
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
-        // Use a single query to batch update all user meta values
+        // Note: meta_value is stored as string in usermeta table, so we need to convert to string
         $meta_table = $wpdb->usermeta;
-        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+        $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
         
         // Build query with table name outside of prepare, parameters inside prepare
-        $query = "UPDATE {$meta_table} SET meta_value = %d WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders})";
-        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
+        $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders})";
+        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$partner_admin_ids);
         $meta_result = $wpdb->query($prepared_query);
         
         // Check for errors
