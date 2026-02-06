@@ -198,13 +198,18 @@ class IELTS_CM_Gamification {
                 continue;
             }
             
-            // Calculate average score for this skill
+            // Get the best (highest) score for each quiz, then average those best scores
+            // This ensures we only count the best attempt for each exercise
             $placeholders = implode(',', array_fill(0, count($quiz_ids), '%d'));
             $query = $wpdb->prepare(
-                "SELECT AVG(percentage) as avg_score 
-                 FROM {$quiz_results_table} 
-                 WHERE user_id = %d 
-                 AND quiz_id IN ($placeholders)",
+                "SELECT AVG(best_percentage) as avg_score 
+                 FROM (
+                     SELECT quiz_id, MAX(percentage) as best_percentage
+                     FROM {$quiz_results_table} 
+                     WHERE user_id = %d 
+                     AND quiz_id IN ($placeholders)
+                     GROUP BY quiz_id
+                 ) as best_scores",
                 array_merge(array($user_id), $quiz_ids)
             );
             
