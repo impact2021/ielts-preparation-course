@@ -9,6 +9,22 @@
 (function($) {
     'use strict';
     
+    // Menu item IDs for tour highlighting
+    const MENU_ITEMS = {
+        DOWNLOAD_EBOOKS: {
+            id: '71976754',
+            selector: 'li.menu-item-71976754, a[href*="download-your-ielts-ebooks"]'
+        },
+        SUPPORT_TUTOR: {
+            id: '71968208',
+            selector: 'li.menu-item-71968208, a[href*="my-support-tutor"]'
+        },
+        MY_ACCOUNT: {
+            id: '71963842',
+            selector: 'li.menu-item-71963842, a[href*="my-account"]'
+        }
+    };
+    
     // Global function to manually start tour (for replay button)
     window.ieltsStartTour = function(forceReplay) {
         forceReplay = forceReplay || false;
@@ -138,6 +154,62 @@
     }
     
     /**
+     * Helper function to add menu item steps for eBooks, support, and account
+     */
+    function addMenuItemSteps(tour) {
+        // Download eBooks
+        if ($(MENU_ITEMS.DOWNLOAD_EBOOKS.selector).length) {
+            tour.addStep({
+                id: 'download-ebooks',
+                text: '<h3>Download All 7 IELTS eBooks 📚</h3><p>Access and download your comprehensive IELTS preparation eBooks here.</p>',
+                attachTo: { 
+                    element: MENU_ITEMS.DOWNLOAD_EBOOKS.selector,
+                    on: 'bottom' 
+                },
+                classes: 'ielts-tour-step ielts-tour-highlight',
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // Support Tutor
+        if ($(MENU_ITEMS.SUPPORT_TUTOR.selector).length) {
+            tour.addStep({
+                id: 'support-tutor',
+                text: '<h3>My Support Tutor 👨‍🏫</h3><p>Need help as you study? Get support from your personal tutor here.</p>',
+                attachTo: { 
+                    element: MENU_ITEMS.SUPPORT_TUTOR.selector,
+                    on: 'bottom' 
+                },
+                classes: 'ielts-tour-step ielts-tour-highlight',
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // My Account
+        if ($(MENU_ITEMS.MY_ACCOUNT.selector).length) {
+            tour.addStep({
+                id: 'my-account',
+                text: '<h3>My Account ⚙️</h3><p>Manage your account settings, view your remaining time, and update your password here.</p>',
+                attachTo: { 
+                    element: MENU_ITEMS.MY_ACCOUNT.selector,
+                    on: 'bottom' 
+                },
+                classes: 'ielts-tour-step ielts-tour-highlight',
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+    }
+    
+    /**
      * Helper function to add common course navigation steps (used by all tour types)
      */
     function addCourseNavigationSteps(tour) {
@@ -243,6 +315,9 @@
             });
         }
         
+        // Add menu item steps (eBooks, support, account)
+        addMenuItemSteps(tour);
+        
         // Academic Practice Tests
         if ($('a[href*="academic"][href*="practice"], a[href*="practice"][href*="academic"]').length) {
             tour.addStep({
@@ -338,6 +413,9 @@
             });
         }
         
+        // Add menu item steps (eBooks, support, account)
+        addMenuItemSteps(tour);
+        
         // General Training Practice Tests
         if ($('a[href*="general"][href*="practice"], a[href*="practice"][href*="general"]').length) {
             tour.addStep({
@@ -432,6 +510,9 @@
                 ]
             });
         }
+        
+        // Add menu item steps (eBooks, support, account)
+        addMenuItemSteps(tour);
         
         // Trophy Room / Awards
         if ($('a[href*="trophy"], a[href*="award"]').length) {

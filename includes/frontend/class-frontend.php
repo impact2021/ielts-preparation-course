@@ -178,14 +178,38 @@ class IELTS_CM_Frontend {
                             true
                         );
                         
-                        // Pass data to JavaScript
+                        // Pass data to JavaScript including vocab header color
+                        $vocab_header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
                         wp_localize_script('ielts-user-tour', 'ieltsTourData', array(
                             'ajaxUrl' => admin_url('admin-ajax.php'),
                             'nonce' => wp_create_nonce('ielts_tour_complete'),
                             'userId' => $user_id,
                             'membershipType' => $membership_type,
-                            'tourType' => $tour_type
+                            'tourType' => $tour_type,
+                            'primaryColor' => $vocab_header_color
                         ));
+                        
+                        // Add inline CSS for tour styling
+                        $tour_css = "
+                            .shepherd-element.ielts-tour-highlight .shepherd-content {
+                                background-color: {$vocab_header_color};
+                                color: #ffffff;
+                                text-align: center;
+                            }
+                            .shepherd-element.ielts-tour-highlight .shepherd-header {
+                                background-color: {$vocab_header_color};
+                            }
+                            .shepherd-element.ielts-tour-highlight .shepherd-text {
+                                color: #ffffff;
+                            }
+                            .shepherd-element.ielts-tour-highlight .shepherd-text h3 {
+                                color: #ffffff;
+                            }
+                            .shepherd-element.ielts-tour-highlight .shepherd-text p {
+                                color: #ffffff;
+                            }
+                        ";
+                        wp_add_inline_style('shepherd-theme', $tour_css);
                     }
                 }
             }
