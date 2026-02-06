@@ -4075,7 +4075,7 @@ class IELTS_CM_Shortcodes {
             $lesson_title = $lesson->post_title;
             
             // Return just the hyperlinked lesson title
-            return '<a href="' . esc_url($lesson_url) . '">' . esc_html($lesson_title) . '</a>';
+            return '<a href="' . esc_url($lesson_url) . '" title="' . esc_attr(sprintf(__('Continue learning %s', 'ielts-course-manager'), $lesson_title)) . '">' . esc_html($lesson_title) . '</a>';
         }
         
         return __('your last lesson', 'ielts-course-manager');
