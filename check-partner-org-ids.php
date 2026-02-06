@@ -130,7 +130,7 @@ $has_invalid_users = false;
 
 foreach ($codes_by_org as $row) {
     $org_id = $row->created_by;
-    if ($org_id != '0' && $org_id != '1') {
+    if ($org_id !== '0' && $org_id !== '1') {
         $has_invalid_codes = true;
         break;
     }
@@ -138,7 +138,7 @@ foreach ($codes_by_org as $row) {
 
 foreach ($users_with_org_meta as $row) {
     $org_id = $row->org_id;
-    if ($org_id != '0' && $org_id != '1') {
+    if ($org_id !== '0' && $org_id !== '1') {
         $has_invalid_users = true;
         break;
     }

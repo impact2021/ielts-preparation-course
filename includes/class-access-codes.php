@@ -1165,6 +1165,12 @@ class IELTS_CM_Access_Codes {
         return ob_get_clean();
     }
     
+    /**
+     * Render the codes table
+     * 
+     * @param int $partner_org_id (DEPRECATED - No longer used for filtering. Kept for backward compatibility with calling code.)
+     * @return string HTML table of access codes
+     */
     private function render_codes_table($partner_org_id) {
         global $wpdb;
         // Safe: $wpdb->prefix is sanitized by WordPress core
@@ -1172,6 +1178,9 @@ class IELTS_CM_Access_Codes {
         
         // Show all codes - both site admins and partner admins see ALL codes
         // This matches the requirement that partner admins function like full admins
+        //
+        // NOTE: The $partner_org_id parameter is no longer used for filtering.
+        // It's kept to maintain backward compatibility with existing calling code.
         $codes = $wpdb->get_results($wpdb->prepare(
             "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
             self::CODES_TABLE_LIMIT
@@ -1309,10 +1318,19 @@ class IELTS_CM_Access_Codes {
         return $html;
     }
     
+    /**
+     * Get all partner students
+     * 
+     * @param int $partner_org_id (DEPRECATED - No longer used for filtering. Kept for backward compatibility with calling code.)
+     * @return array Array of student objects with user_id property
+     */
     private function get_partner_students($partner_org_id) {
         // Get all users with access codes
         // Both site admins and partner admins see ALL users - no org filtering
         // This matches the requirement that partner admins function like full admins
+        //
+        // NOTE: The $partner_org_id parameter is no longer used for filtering.
+        // It's kept to maintain backward compatibility with existing calling code.
         
         $users_with_access_codes = get_users(array(
             'fields' => array('ID'),
