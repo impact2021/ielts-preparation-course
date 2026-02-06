@@ -981,9 +981,11 @@ class IELTS_CM_Access_Codes {
     
     private function render_codes_table($partner_org_id) {
         global $wpdb;
+        // Safe: $wpdb->prefix is sanitized by WordPress core
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         
         // If org_id is ADMIN_ORG_ID (admin), show all codes, otherwise filter by org_id
+        // Note: created_by field stores partner organization ID (which defaults to user_id for backward compatibility)
         if ($partner_org_id === self::ADMIN_ORG_ID) {
             // Use prepare even without parameters for consistency
             $codes = $wpdb->get_results($wpdb->prepare(
@@ -1204,6 +1206,7 @@ class IELTS_CM_Access_Codes {
         
         for ($i = 0; $i < $quantity; $i++) {
             $code = $this->generate_unique_code();
+            // Note: created_by stores partner organization ID (defaults to user_id for backward compatibility)
             $wpdb->insert($table, array(
                 'code' => $code,
                 'course_group' => $course_group,
@@ -1277,6 +1280,7 @@ class IELTS_CM_Access_Codes {
         global $wpdb;
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         $code = $this->generate_unique_code();
+        // Note: created_by stores partner organization ID (defaults to user_id for backward compatibility)
         $wpdb->insert($table, array(
             'code' => $code,
             'course_group' => $course_group,
