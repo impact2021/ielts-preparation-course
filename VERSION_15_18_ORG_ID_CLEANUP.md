@@ -6,6 +6,8 @@ After V2 migration completed, the diagnostic tool still showed data with org_id 
 
 > "Why do we even need this organization ID - the plugin is used on different websites, but everyone on a single website IS the same organization?"
 
+**New Requirement:** There will NEVER be multiple organizations on the same website.
+
 ### Diagnostic Output Showing the Issue
 
 ```
@@ -43,21 +45,51 @@ $partner_admins = get_users(array(
 
 This is what happened with org_id 9893 - it was likely a former partner admin whose data wasn't cleaned up.
 
-## Solution Implemented: V3 Migration
+## Solution Implemented
+
+### 1. Simplified Organization ID Logic
+
+Given the requirement that there will NEVER be multiple organizations on the same website, we simplified the `get_partner_org_id()` function:
+
+**Before (Complex):**
+```php
+// Get the partner organization ID from user meta
+// If not set, use site-wide partner org ID
+$org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
+
+if (empty($org_id)) {
+    $org_id = self::SITE_PARTNER_ORG_ID;
+}
+
+return absint($org_id);
+```
+
+**After (Simple):**
+```php
+// All partner admins share the site-wide organization ID
+// There is no support for multiple organizations on the same website
+return self::SITE_PARTNER_ORG_ID;
+```
+
+This removes:
+- User meta checks for `iw_partner_organization_id`
+- Custom org ID support
+- Unnecessary complexity
+
+### 2. V3 Migration for Complete Data Cleanup
 
 Created a comprehensive migration (`migrate_all_partner_data_to_site_org()`) that:
 
 ### What It Does
 
-1. **Identifies valid organization IDs:**
+1. **Identifies valid organization IDs (simplified for single-org model):**
    - `0` (ADMIN_ORG_ID) - Site administrators
-   - `1` (SITE_PARTNER_ORG_ID) - Default partner organization
-   - Current partner admin user IDs (for rare cases with custom org IDs)
+   - `1` (SITE_PARTNER_ORG_ID) - All partner admins (no custom org IDs)
 
-2. **Migrates invalid organization IDs:**
-   - Updates `ielts_cm_access_codes.created_by` from invalid org IDs → `1`
-   - Updates `wp_usermeta.iw_created_by_partner` from invalid org IDs → `1`
-   - Uses `NOT IN (valid_org_ids)` to catch ALL legacy data
+2. **Migrates ALL other organization IDs:**
+   - Updates `ielts_cm_access_codes.created_by` from any invalid org ID → `1`
+   - Updates `wp_usermeta.iw_created_by_partner` from any invalid org ID → `1`
+   - Uses `NOT IN (0, 1)` to catch ALL legacy data (user IDs, custom org IDs, etc.)
 
 3. **Logs migration results:**
    - Records how many codes and user meta records were updated
@@ -65,18 +97,21 @@ Created a comprehensive migration (`migrate_all_partner_data_to_site_org()`) tha
 
 ### Why This Works
 
-Instead of trying to identify which users were partner admins in the past, we take the opposite approach:
-- **Preserve** only data from current admins and the standard org IDs (0 and 1)
-- **Migrate everything else** to SITE_PARTNER_ORG_ID (1)
+Since there will NEVER be multiple organizations on the same website:
+- **Only preserve** org_id 0 (admins) and org_id 1 (partner admins)
+- **Migrate everything else** to org_id 1
+- No need to check if former partner admins or custom org IDs should be preserved
 
-This ensures ALL partner-created data is consolidated under org_id 1, regardless of whether the creator still exists or has the partner admin role.
+This ensures ALL partner-created data is consolidated under org_id 1, regardless of how it was created.
 
 ## Implementation Details
 
 ### Files Changed
 
 1. **`includes/class-access-codes.php`**
-   - Added `migrate_all_partner_data_to_site_org()` function
+   - **Simplified** `get_partner_org_id()` to always return SITE_PARTNER_ORG_ID for partner admins
+   - **Removed** user meta checks for custom org IDs
+   - **Added** `migrate_all_partner_data_to_site_org()` V3 migration function
    - Hooked to `admin_init` action
    - Uses V3 migration flag: `iw_partner_site_org_migration_v3_done`
 
@@ -99,7 +134,26 @@ This ensures ALL partner-created data is consolidated under org_id 1, regardless
 
 ### Code Changes
 
-**New migration function added after V2 migration:**
+**Simplified `get_partner_org_id()` function:**
+
+```php
+private function get_partner_org_id($user_id = null) {
+    if ($user_id === null) {
+        $user_id = get_current_user_id();
+    }
+    
+    // Full site admins see all data - use ADMIN_ORG_ID constant
+    if (user_can($user_id, 'manage_options')) {
+        return self::ADMIN_ORG_ID;
+    }
+    
+    // All partner admins share the site-wide organization ID
+    // There is no support for multiple organizations on the same website
+    return self::SITE_PARTNER_ORG_ID;
+}
+```
+
+**New V3 migration function:**
 
 ```php
 public function migrate_all_partner_data_to_site_org() {
@@ -125,17 +179,11 @@ public function migrate_all_partner_data_to_site_org() {
     
     global $wpdb;
     
-    // Get all current partner admin user IDs
-    $partner_admin_ids = get_users(array(
-        'role' => 'partner_admin',
-        'fields' => 'ID'
-    ));
-    
-    // Build list of valid org IDs
-    $valid_org_ids = array_merge(
-        array(self::ADMIN_ORG_ID, self::SITE_PARTNER_ORG_ID),
-        $partner_admin_ids
-    );
+    // Valid org IDs for single-organization deployments:
+    // - ADMIN_ORG_ID (0): Site admins
+    // - SITE_PARTNER_ORG_ID (1): All partner admins share this
+    // NO custom org IDs are supported
+    $valid_org_ids = array(self::ADMIN_ORG_ID, self::SITE_PARTNER_ORG_ID);
     
     // Migrate access codes with invalid org IDs
     $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';

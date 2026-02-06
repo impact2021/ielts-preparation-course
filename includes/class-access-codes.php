@@ -181,14 +181,16 @@ class IELTS_CM_Access_Codes {
     /**
      * Migrate ALL partner data to use site-wide organization ID (V3 Migration)
      * 
-     * This migration complements V2 by cleaning up data from:
+     * This migration enforces the single-organization model by consolidating
+     * ALL partner-created data to use SITE_PARTNER_ORG_ID (1).
+     * 
+     * Cleans up data from:
      * - Former partner admins (deleted or role changed)
      * - Partner admins with custom org IDs set to their user ID
      * - Any other legacy org IDs that aren't 0 (admin) or 1 (site partner)
      * 
-     * The purpose is to consolidate ALL partner-created data to use
-     * SITE_PARTNER_ORG_ID (1), ensuring all partner admins on the same site
-     * see the same students and codes.
+     * Since there will NEVER be multiple organizations on the same website,
+     * this migration consolidates everything to the single site-wide org ID.
      * 
      * Public visibility required because it's hooked to admin_init
      */
@@ -215,23 +217,11 @@ class IELTS_CM_Access_Codes {
         
         global $wpdb;
         
-        // Get all current partner admin user IDs to preserve if they have custom org IDs
-        $partner_admin_ids = get_users(array(
-            'role' => 'partner_admin',
-            'fields' => 'ID'
-        ));
-        
-        // Build list of valid org IDs:
+        // Valid org IDs for single-organization deployments:
         // - ADMIN_ORG_ID (0): Site admins
-        // - SITE_PARTNER_ORG_ID (1): Default partner org
-        // - Current partner admin IDs with custom org IDs (rare, but preserve for backward compatibility)
-        $valid_org_ids = array_merge(
-            array(self::ADMIN_ORG_ID, self::SITE_PARTNER_ORG_ID),
-            $partner_admin_ids
-        );
-        
-        // Convert to integers
-        $valid_org_ids = array_map('absint', $valid_org_ids);
+        // - SITE_PARTNER_ORG_ID (1): All partner admins share this
+        // NO custom org IDs are supported - all partner admins use org_id 1
+        $valid_org_ids = array(self::ADMIN_ORG_ID, self::SITE_PARTNER_ORG_ID);
         
         // Build placeholders for NOT IN clause
         $placeholders = implode(',', array_fill(0, count($valid_org_ids), '%d'));
@@ -343,15 +333,17 @@ class IELTS_CM_Access_Codes {
     
     /**
      * Get the partner organization ID for a user
-     * This allows multiple partner admins to be part of the same organization
-     * and see the same students, codes, and remaining spaces
      * 
      * For the partner dashboard:
      * - Site admins see ALL data (ADMIN_ORG_ID = 0)
      * - Partner admins share site-wide organization (SITE_PARTNER_ORG_ID = 1)
      * 
+     * NOTE: This system is designed for single-organization deployments.
+     * All partner admins on the same website share the same organization
+     * and see the same students, codes, and remaining spaces.
+     * 
      * @param int $user_id User ID (defaults to current user)
-     * @return int Partner organization ID
+     * @return int Partner organization ID (always 0 for admins, 1 for partner admins)
      */
     private function get_partner_org_id($user_id = null) {
         if ($user_id === null) {
@@ -364,17 +356,9 @@ class IELTS_CM_Access_Codes {
             return self::ADMIN_ORG_ID;
         }
         
-        // Get the partner organization ID from user meta
-        // If not set, use site-wide partner org ID so all partner admins see the same data
-        $org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
-        
-        if (empty($org_id)) {
-            // Use site-wide partner organization ID
-            // This means ALL partner admins on this site see the same students and codes
-            $org_id = self::SITE_PARTNER_ORG_ID;
-        }
-        
-        return absint($org_id);
+        // All partner admins share the site-wide organization ID
+        // There is no support for multiple organizations on the same website
+        return self::SITE_PARTNER_ORG_ID;
     }
     
     public function add_admin_menu() {
