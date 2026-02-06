@@ -138,6 +138,62 @@
     }
     
     /**
+     * Helper function to add menu item steps for eBooks, support, and account
+     */
+    function addMenuItemSteps(tour) {
+        // Download eBooks
+        if ($('li.menu-item-71976754, a[href*="download-your-ielts-ebooks"]').length) {
+            tour.addStep({
+                id: 'download-ebooks',
+                text: '<h3>Download All 7 IELTS eBooks 📚</h3><p>Access and download your comprehensive IELTS preparation eBooks here.</p>',
+                attachTo: { 
+                    element: 'li.menu-item-71976754, a[href*="download-your-ielts-ebooks"]',
+                    on: 'bottom' 
+                },
+                classes: 'ielts-tour-step ielts-tour-highlight',
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // Support Tutor
+        if ($('li.menu-item-71968208, a[href*="my-support-tutor"]').length) {
+            tour.addStep({
+                id: 'support-tutor',
+                text: '<h3>My Support Tutor 👨‍🏫</h3><p>Need help as you study? Get support from your personal tutor here.</p>',
+                attachTo: { 
+                    element: 'li.menu-item-71968208, a[href*="my-support-tutor"]',
+                    on: 'bottom' 
+                },
+                classes: 'ielts-tour-step ielts-tour-highlight',
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+        
+        // My Account
+        if ($('li.menu-item-71963842, a[href*="my-account"]').length) {
+            tour.addStep({
+                id: 'my-account',
+                text: '<h3>My Account ⚙️</h3><p>Manage your account settings, view your remaining time, and update your password here.</p>',
+                attachTo: { 
+                    element: 'li.menu-item-71963842, a[href*="my-account"]',
+                    on: 'bottom' 
+                },
+                classes: 'ielts-tour-step ielts-tour-highlight',
+                buttons: [
+                    { text: 'Back', classes: 'shepherd-button-secondary', action: tour.back },
+                    { text: 'Next', action: tour.next }
+                ]
+            });
+        }
+    }
+    
+    /**
      * Helper function to add common course navigation steps (used by all tour types)
      */
     function addCourseNavigationSteps(tour) {
@@ -243,6 +299,9 @@
             });
         }
         
+        // Add menu item steps (eBooks, support, account)
+        addMenuItemSteps(tour);
+        
         // Academic Practice Tests
         if ($('a[href*="academic"][href*="practice"], a[href*="practice"][href*="academic"]').length) {
             tour.addStep({
@@ -338,6 +397,9 @@
             });
         }
         
+        // Add menu item steps (eBooks, support, account)
+        addMenuItemSteps(tour);
+        
         // General Training Practice Tests
         if ($('a[href*="general"][href*="practice"], a[href*="practice"][href*="general"]').length) {
             tour.addStep({
@@ -432,6 +494,9 @@
                 ]
             });
         }
+        
+        // Add menu item steps (eBooks, support, account)
+        addMenuItemSteps(tour);
         
         // Trophy Room / Awards
         if ($('a[href*="trophy"], a[href*="award"]').length) {

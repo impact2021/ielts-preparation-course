@@ -85,8 +85,13 @@ if (!isset($columns)) {
                     <div class="course-actions">
                         <?php if (is_user_logged_in()): ?>
                             <?php if ($enrollment->is_enrolled($user_id, $course->ID)): ?>
+                                <?php 
+                                // Check if course has been started by checking completion percentage
+                                $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+                                $button_text = ($completion > 0) ? __('Continue Course', 'ielts-course-manager') : __('Start Course', 'ielts-course-manager');
+                                ?>
                                 <a href="<?php echo get_permalink($course->ID); ?>" class="button button-primary">
-                                    <?php _e('Continue Course', 'ielts-course-manager'); ?>
+                                    <?php echo $button_text; ?>
                                 </a>
                             <?php else: ?>
                                 <button class="button button-primary enroll-button" data-course-id="<?php echo $course->ID; ?>">
