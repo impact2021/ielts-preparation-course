@@ -22,6 +22,12 @@ class IELTS_CM_Access_Codes {
     const ADMIN_ORG_ID = 0;
     
     /**
+     * Site-wide partner organization ID - all partner admins on this site share this ID
+     * This ensures all partner admins see the same students and codes
+     */
+    const SITE_PARTNER_ORG_ID = 1;
+    
+    /**
      * User meta key for partner organization ID
      */
     const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
@@ -62,6 +68,7 @@ class IELTS_CM_Access_Codes {
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
         add_action('admin_init', array($this, 'block_partner_admin_backend'));
+        add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -76,6 +83,114 @@ class IELTS_CM_Access_Codes {
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
+    }
+    
+    /**
+     * Migrate existing partner admin data to use site-wide organization ID
+     * This is a one-time migration that consolidates all partner admin data
+     * so that all partner admins see the same students and codes
+     * 
+     * Public visibility required because it's hooked to admin_init
+     */
+    public function migrate_partner_data_to_site_org() {
+        // Only allow admins to run this migration
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+        
+        // Check if migration has already run
+        $migration_done = get_option('iw_partner_site_org_migration_done', false);
+        if ($migration_done) {
+            return;
+        }
+        
+        // Use transient lock to prevent concurrent execution
+        $lock_key = 'iw_partner_migration_lock';
+        if (get_transient($lock_key)) {
+            return; // Another process is running the migration
+        }
+        
+        // Set lock for 5 minutes
+        set_transient($lock_key, true, 300);
+        
+        global $wpdb;
+        
+        // Get all partner admin user IDs (users with manage_partner_invites capability)
+        $partner_admins = get_users(array(
+            'role' => 'partner_admin',
+            'fields' => 'ID'
+        ));
+        
+        if (empty($partner_admins)) {
+            // No partner admins found - skip migration but don't mark as done
+            // This allows the migration to run later if partner admins are added
+            delete_transient($lock_key);
+            return;
+        }
+        
+        $partner_admin_ids = $partner_admins;
+        
+        // Maximum batch size for migration to prevent issues with large datasets
+        $max_batch_size = 1000;
+        
+        // Validate count for security (though get_users should always return array)
+        if (count($partner_admin_ids) > $max_batch_size) {
+            // Too many partner admins - log error and skip migration
+            error_log("Partner admin migration skipped: too many partner admins (" . count($partner_admin_ids) . ")");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Build placeholders once for reuse
+        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+        
+        // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
+        // Table name is safe: prefix comes from WordPress core, suffix is hardcoded
+        $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
+        
+        // Build query with table name outside of prepare, parameters inside prepare
+        // Placeholders must be built dynamically since the number of IDs varies
+        $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by IN ({$placeholders})";
+        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
+        $codes_result = $wpdb->query($prepared_query);
+        
+        // Check for errors
+        if ($codes_result === false) {
+            // Database error occurred, don't mark as complete to retry next time
+            error_log("Partner admin migration failed: codes table update error");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
+        // Note: meta_value is stored as string in usermeta table
+        // Convert partner admin IDs to strings for proper comparison
+        // Table name is safe: usermeta is WordPress core table
+        $meta_table = $wpdb->usermeta;
+        $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
+        
+        // Convert partner admin IDs to strings for comparison
+        $partner_admin_ids_str = array_map('strval', $partner_admin_ids);
+        $placeholders_str = implode(',', array_fill(0, count($partner_admin_ids_str), '%s'));
+        
+        // Build query with table name outside of prepare, parameters inside prepare
+        // Placeholders must be built dynamically since the number of IDs varies
+        // meta_key is hardcoded literal (not user input), safe to include in query
+        $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders_str})";
+        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$partner_admin_ids_str);
+        $meta_result = $wpdb->query($prepared_query);
+        
+        // Check for errors
+        if ($meta_result === false) {
+            // Database error occurred, don't mark as complete to retry next time
+            error_log("Partner admin migration failed: usermeta table update error");
+            delete_transient($lock_key);
+            return;
+        }
+        
+        // Mark migration as complete only if both queries succeeded
+        update_option('iw_partner_site_org_migration_done', true);
+        delete_transient($lock_key);
     }
     
     public function create_partner_admin_role() {
@@ -148,6 +263,9 @@ class IELTS_CM_Access_Codes {
      * This allows multiple partner admins to be part of the same organization
      * and see the same students, codes, and remaining spaces
      * 
+     * For single-site installations, all partner admins share the same organization
+     * (SITE_PARTNER_ORG_ID) so they see all students on the site.
+     * 
      * @param int $user_id User ID (defaults to current user)
      * @return int Partner organization ID
      */
@@ -163,14 +281,13 @@ class IELTS_CM_Access_Codes {
         }
         
         // Get the partner organization ID from user meta
-        // If not set, use the user's own ID for backward compatibility
+        // If not set, use site-wide partner org ID so all partner admins see the same data
         $org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
         
         if (empty($org_id)) {
-            // Default to user's own ID for backward compatibility
-            // This means existing partner admins will continue to see their own data
-            // until an admin assigns them to an organization
-            $org_id = $user_id;
+            // Use site-wide partner organization ID
+            // This means ALL partner admins on this site see the same students and codes
+            $org_id = self::SITE_PARTNER_ORG_ID;
         }
         
         return absint($org_id);
