@@ -64,10 +64,15 @@ class IELTS_CM_Bulk_Enrollment {
         $enrolled_count = 0;
         $course_id = $courses[0]; // Enroll in the first course found
         
+        // Determine course group based on the course being enrolled
+        $course_group = $this->get_course_group_from_course($course_id);
+        
         // Enroll each selected user
         foreach ($user_ids as $user_id) {
             $result = $this->enrollment->enroll($user_id, $course_id, 'active', $expiry_date);
             if ($result !== false) {
+                // Set user meta fields required for partner dashboard and access control
+                $this->set_user_membership($user_id, $course_group, $expiry_date);
                 $enrolled_count++;
             }
         }
@@ -127,6 +132,76 @@ class IELTS_CM_Bulk_Enrollment {
                 </p>
             </div>
             <?php
+        }
+    }
+    
+    /**
+     * Determine course group from course categories
+     */
+    private function get_course_group_from_course($course_id) {
+        $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+        
+        // Check for academic course
+        foreach ($categories as $cat_slug) {
+            if (strpos(strtolower($cat_slug), 'academic') !== false) {
+                return 'academic_module';
+            }
+        }
+        
+        // Check for general course
+        foreach ($categories as $cat_slug) {
+            if (strpos(strtolower($cat_slug), 'general') !== false) {
+                return 'general_module';
+            }
+        }
+        
+        // Check for english-only course
+        foreach ($categories as $cat_slug) {
+            if (strpos(strtolower($cat_slug), 'english') !== false) {
+                return 'general_english';
+            }
+        }
+        
+        // Default to academic_module for uncategorized courses
+        return 'academic_module';
+    }
+    
+    /**
+     * Set user membership meta fields and assign role
+     */
+    private function set_user_membership($user_id, $course_group, $expiry_date) {
+        // Set legacy user meta fields (required for partner dashboard)
+        update_user_meta($user_id, 'iw_course_group', $course_group);
+        update_user_meta($user_id, 'iw_membership_expiry', $expiry_date);
+        update_user_meta($user_id, 'iw_membership_status', 'active');
+        
+        // Map course group to membership type and role
+        $role_mapping = array(
+            'academic_module' => 'access_academic_module',
+            'general_module' => 'access_general_module',
+            'general_english' => 'access_general_english'
+        );
+        
+        if (isset($role_mapping[$course_group])) {
+            $membership_type = $role_mapping[$course_group];
+            
+            // Set new membership meta fields (used by is_enrolled check)
+            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+            update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            
+            // Assign WordPress role
+            $user = get_userdata($user_id);
+            if ($user) {
+                // Remove any existing access code membership roles first
+                $access_code_roles = array('access_academic_module', 'access_general_module', 'access_general_english');
+                foreach ($access_code_roles as $role) {
+                    $user->remove_role($role);
+                }
+                
+                // Add the new role
+                $user->add_role($membership_type);
+            }
         }
     }
 }
