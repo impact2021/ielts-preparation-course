@@ -17,7 +17,8 @@ class IELTS_CM_Access_Codes {
     const STATUS_EXPIRED = 'expired';
     
     /**
-     * Admin organization ID - special value indicating admin sees all data
+     * Admin organization ID - special value for site admins to see all data
+     * Site admins use this org_id to view users from all partner organizations
      */
     const ADMIN_ORG_ID = 0;
     
@@ -87,8 +88,8 @@ class IELTS_CM_Access_Codes {
     
     /**
      * Migrate existing partner admin data to use site-wide organization ID
-     * This is a one-time migration that consolidates all partner admin data
-     * so that all partner admins see the same students and codes
+     * This migration consolidates all partner admin data so that all partner admins
+     * see the same students and codes.
      * 
      * Public visibility required because it's hooked to admin_init
      */
@@ -98,14 +99,14 @@ class IELTS_CM_Access_Codes {
             return;
         }
         
-        // Check if migration has already run
-        $migration_done = get_option('iw_partner_site_org_migration_done', false);
+        // Check if migration has already run (using v2 option name for new migration)
+        $migration_done = get_option('iw_partner_site_org_migration_v2_done', false);
         if ($migration_done) {
             return;
         }
         
         // Use transient lock to prevent concurrent execution
-        $lock_key = 'iw_partner_migration_lock';
+        $lock_key = 'iw_partner_migration_v2_lock';
         if (get_transient($lock_key)) {
             return; // Another process is running the migration
         }
@@ -115,81 +116,64 @@ class IELTS_CM_Access_Codes {
         
         global $wpdb;
         
-        // Get all partner admin user IDs (users with manage_partner_invites capability)
+        // Get all partner admin user IDs
         $partner_admins = get_users(array(
             'role' => 'partner_admin',
             'fields' => 'ID'
         ));
         
-        if (empty($partner_admins)) {
-            // No partner admins found - skip migration but don't mark as done
-            // This allows the migration to run later if partner admins are added
+        // Build list of org IDs to migrate (partner admin user IDs)
+        $org_ids_to_migrate = $partner_admins;
+        
+        if (empty($org_ids_to_migrate)) {
+            // No partner admins found - skip but don't mark as done
             delete_transient($lock_key);
             return;
         }
         
-        $partner_admin_ids = $partner_admins;
-        
-        // Maximum batch size for migration to prevent issues with large datasets
+        // Maximum batch size for migration
         $max_batch_size = 1000;
         
-        // Validate count for security (though get_users should always return array)
-        if (count($partner_admin_ids) > $max_batch_size) {
-            // Too many partner admins - log error and skip migration
-            error_log("Partner admin migration skipped: too many partner admins (" . count($partner_admin_ids) . ")");
+        if (count($org_ids_to_migrate) > $max_batch_size) {
+            error_log("Partner admin migration skipped: too many users (" . count($org_ids_to_migrate) . ")");
             delete_transient($lock_key);
             return;
         }
         
-        // Build placeholders once for reuse
-        $placeholders = implode(',', array_fill(0, count($partner_admin_ids), '%d'));
+        // Build placeholders for IN clause
+        $placeholders = implode(',', array_fill(0, count($org_ids_to_migrate), '%d'));
         
         // Migrate access codes: Update created_by from partner admin user IDs to SITE_PARTNER_ORG_ID
-        // Table name is safe: prefix comes from WordPress core, suffix is hardcoded
         $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
-        
-        // Build query with table name outside of prepare, parameters inside prepare
-        // Placeholders must be built dynamically since the number of IDs varies
         $query = "UPDATE {$codes_table} SET created_by = %d WHERE created_by IN ({$placeholders})";
-        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$partner_admin_ids);
+        $prepared_query = $wpdb->prepare($query, self::SITE_PARTNER_ORG_ID, ...$org_ids_to_migrate);
         $codes_result = $wpdb->query($prepared_query);
         
-        // Check for errors
         if ($codes_result === false) {
-            // Database error occurred, don't mark as complete to retry next time
-            error_log("Partner admin migration failed: codes table update error");
+            error_log("Partner admin migration v2 failed: codes table update error");
             delete_transient($lock_key);
             return;
         }
         
         // Migrate user meta: Update iw_created_by_partner from partner admin user IDs to SITE_PARTNER_ORG_ID
-        // Note: meta_value is stored as string in usermeta table
-        // Convert partner admin IDs to strings for proper comparison
-        // Table name is safe: usermeta is WordPress core table
+        // Note: meta_value is stored as string
         $meta_table = $wpdb->usermeta;
         $org_id_string = (string) self::SITE_PARTNER_ORG_ID;
+        $org_ids_str = array_map('strval', $org_ids_to_migrate);
+        $placeholders_str = implode(',', array_fill(0, count($org_ids_str), '%s'));
         
-        // Convert partner admin IDs to strings for comparison
-        $partner_admin_ids_str = array_map('strval', $partner_admin_ids);
-        $placeholders_str = implode(',', array_fill(0, count($partner_admin_ids_str), '%s'));
-        
-        // Build query with table name outside of prepare, parameters inside prepare
-        // Placeholders must be built dynamically since the number of IDs varies
-        // meta_key is hardcoded literal (not user input), safe to include in query
         $query = "UPDATE {$meta_table} SET meta_value = %s WHERE meta_key = 'iw_created_by_partner' AND meta_value IN ({$placeholders_str})";
-        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$partner_admin_ids_str);
+        $prepared_query = $wpdb->prepare($query, $org_id_string, ...$org_ids_str);
         $meta_result = $wpdb->query($prepared_query);
         
-        // Check for errors
         if ($meta_result === false) {
-            // Database error occurred, don't mark as complete to retry next time
-            error_log("Partner admin migration failed: usermeta table update error");
+            error_log("Partner admin migration v2 failed: usermeta table update error");
             delete_transient($lock_key);
             return;
         }
         
-        // Mark migration as complete only if both queries succeeded
-        update_option('iw_partner_site_org_migration_done', true);
+        // Mark migration as complete
+        update_option('iw_partner_site_org_migration_v2_done', true);
         delete_transient($lock_key);
     }
     
@@ -263,8 +247,9 @@ class IELTS_CM_Access_Codes {
      * This allows multiple partner admins to be part of the same organization
      * and see the same students, codes, and remaining spaces
      * 
-     * For single-site installations, all partner admins share the same organization
-     * (SITE_PARTNER_ORG_ID) so they see all students on the site.
+     * For the partner dashboard:
+     * - Site admins see ALL data (ADMIN_ORG_ID = 0)
+     * - Partner admins share site-wide organization (SITE_PARTNER_ORG_ID = 1)
      * 
      * @param int $user_id User ID (defaults to current user)
      * @return int Partner organization ID
@@ -275,7 +260,7 @@ class IELTS_CM_Access_Codes {
         }
         
         // Full site admins see all data - use ADMIN_ORG_ID constant
-        // Check the specific user's capabilities, not the current user's
+        // This allows admins to see users created by any partner organization
         if (user_can($user_id, 'manage_options')) {
             return self::ADMIN_ORG_ID;
         }
@@ -1102,9 +1087,7 @@ class IELTS_CM_Access_Codes {
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         
         // If org_id is ADMIN_ORG_ID (admin), show all codes, otherwise filter by org_id
-        // Note: created_by field stores partner organization ID (which defaults to user_id for backward compatibility)
         if ($partner_org_id === self::ADMIN_ORG_ID) {
-            // Use prepare even without parameters for consistency
             $codes = $wpdb->get_results($wpdb->prepare(
                 "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
                 self::CODES_TABLE_LIMIT
