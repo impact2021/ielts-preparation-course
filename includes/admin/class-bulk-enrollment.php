@@ -19,6 +19,9 @@ class IELTS_CM_Bulk_Enrollment {
         'general_english' => 'access_general_english'
     );
     
+    // Cache for course group lookups to avoid repeated database queries
+    private $course_group_cache = array();
+    
     public function __construct() {
         $this->enrollment = new IELTS_CM_Enrollment();
         
@@ -150,11 +153,17 @@ class IELTS_CM_Bulk_Enrollment {
      * @return string One of 'academic_module', 'general_module', or 'general_english'
      */
     private function get_course_group_from_course($course_id) {
+        // Check cache first to avoid repeated database queries
+        if (isset($this->course_group_cache[$course_id])) {
+            return $this->course_group_cache[$course_id];
+        }
+        
         $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
         
         // Handle error from wp_get_post_terms
         if (is_wp_error($categories)) {
             // Default to academic_module if we can't determine the category
+            $this->course_group_cache[$course_id] = 'academic_module';
             return 'academic_module';
         }
         
@@ -165,6 +174,7 @@ class IELTS_CM_Bulk_Enrollment {
         foreach ($categories as $cat_slug) {
             // Check for academic-specific categories first (highest priority)
             if ($cat_slug === 'academic' || $cat_slug === 'academic-practice-tests') {
+                $this->course_group_cache[$course_id] = 'academic_module';
                 return 'academic_module';
             }
             
@@ -178,15 +188,15 @@ class IELTS_CM_Bulk_Enrollment {
         }
         
         // Return based on what we found (priority: general > english)
+        $result = 'academic_module'; // default
         if ($has_general) {
-            return 'general_module';
-        }
-        if ($has_english) {
-            return 'general_english';
+            $result = 'general_module';
+        } elseif ($has_english) {
+            $result = 'general_english';
         }
         
-        // Default to academic_module for uncategorized courses
-        return 'academic_module';
+        $this->course_group_cache[$course_id] = $result;
+        return $result;
     }
     
     /**
@@ -197,35 +207,37 @@ class IELTS_CM_Bulk_Enrollment {
      * @param string $expiry_date Membership expiry date in Y-m-d H:i:s format
      */
     private function set_user_membership($user_id, $course_group, $expiry_date) {
+        // Fallback: if course_group is not recognized, default to academic_module
+        if (!isset($this->role_mapping[$course_group])) {
+            error_log("IELTS Bulk Enrollment: Unknown course group '{$course_group}' for user {$user_id}, defaulting to academic_module");
+            $course_group = 'academic_module';
+        }
+        
         // Set legacy user meta fields (required for partner dashboard)
         update_user_meta($user_id, 'iw_course_group', $course_group);
         update_user_meta($user_id, 'iw_membership_expiry', $expiry_date);
         update_user_meta($user_id, 'iw_membership_status', 'active');
         
-        if (isset($this->role_mapping[$course_group])) {
-            $membership_type = $this->role_mapping[$course_group];
-            
-            // Set new membership meta fields (used by is_enrolled check)
-            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-            update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
-            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-            
-            // Assign WordPress role
-            $user = get_userdata($user_id);
-            if ($user) {
-                // Remove any existing access code membership roles first
-                foreach ($this->role_mapping as $role) {
-                    $user->remove_role($role);
-                }
-                
-                // Add the new role
-                $user->add_role($membership_type);
-            }
-        } else {
-            // Fallback: if course_group is not recognized, default to academic_module
-            // This ensures users always get proper access configuration
-            error_log("IELTS Bulk Enrollment: Unknown course group '{$course_group}' for user {$user_id}, defaulting to academic_module");
-            $this->set_user_membership($user_id, 'academic_module', $expiry_date);
+        $membership_type = $this->role_mapping[$course_group];
+        
+        // Set new membership meta fields (used by is_enrolled check)
+        update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+        update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+        update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+        
+        // Assign WordPress role
+        $user = get_userdata($user_id);
+        if (!$user) {
+            error_log("IELTS Bulk Enrollment: Failed to get user data for user ID {$user_id}");
+            return;
         }
+        
+        // Remove any existing access code membership roles first
+        foreach ($this->role_mapping as $role) {
+            $user->remove_role($role);
+        }
+        
+        // Add the new role
+        $user->add_role($membership_type);
     }
 }
