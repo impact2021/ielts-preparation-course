@@ -43,6 +43,10 @@ class IELTS_CM_Shortcodes {
         // User data shortcodes
         add_shortcode('ielts_user_firstname', array($this, 'display_user_firstname'));
         add_shortcode('ielts_predicted_band_score', array($this, 'display_predicted_band_score'));
+        
+        // Conditional shortcodes for new vs returning users
+        add_shortcode('ielts_is_new_user', array($this, 'display_if_new_user'));
+        add_shortcode('ielts_is_returning_user', array($this, 'display_if_returning_user'));
     }
     
     /**
@@ -4141,5 +4145,51 @@ class IELTS_CM_Shortcodes {
         $overall_score = round($average * 2) / 2;
         
         return number_format($overall_score, 1);
+    }
+    
+    /**
+     * Conditional shortcode for new users
+     * Shortcode: [ielts_is_new_user]content[/ielts_is_new_user]
+     * Displays content only for new users (login count <= 1)
+     */
+    public function display_if_new_user($atts, $content = null) {
+        if (!is_user_logged_in()) {
+            return '';
+        }
+        
+        $user_id = get_current_user_id();
+        $login_count = get_user_meta($user_id, '_ielts_cm_login_count', true);
+        
+        // If login count is empty or 1, consider user as new
+        // Cast to int for proper comparison
+        $login_count = (int)$login_count;
+        if ($login_count <= 1) {
+            return do_shortcode($content);
+        }
+        
+        return '';
+    }
+    
+    /**
+     * Conditional shortcode for returning users
+     * Shortcode: [ielts_is_returning_user]content[/ielts_is_returning_user]
+     * Displays content only for returning users (login count > 1)
+     */
+    public function display_if_returning_user($atts, $content = null) {
+        if (!is_user_logged_in()) {
+            return '';
+        }
+        
+        $user_id = get_current_user_id();
+        $login_count = get_user_meta($user_id, '_ielts_cm_login_count', true);
+        
+        // Only show content if user has logged in more than once
+        // Cast to int for proper comparison
+        $login_count = (int)$login_count;
+        if ($login_count > 1) {
+            return do_shortcode($content);
+        }
+        
+        return '';
     }
 }

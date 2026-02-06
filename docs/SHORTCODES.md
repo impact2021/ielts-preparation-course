@@ -43,6 +43,56 @@ Your current predicted band score is [ielts_predicted_band_score] based on
 your scores and performance so far.
 ```
 
+**Better Example for New vs Returning Users:**
+```
+Hi [ielts_user_firstname],
+
+[ielts_is_new_user]
+Welcome to the IELTS Preparation Course! We're excited to help you achieve your target band score. 
+Let's get started with your first lesson.
+[/ielts_is_new_user]
+
+[ielts_is_returning_user]
+Welcome back! The last lesson you were studying was [ielts_last_page]. 
+Your current predicted band score is [ielts_predicted_band_score] based on 
+your scores and performance so far.
+[/ielts_is_returning_user]
+```
+
+---
+
+### `[ielts_is_new_user]`
+Conditional shortcode that displays content only for new users (first-time login).
+
+**Usage:**
+```
+[ielts_is_new_user]
+This content only appears for new users on their first login.
+[/ielts_is_new_user]
+```
+
+**Output:**
+- Shows the enclosed content if the user is logging in for the first time (login count <= 1)
+- Returns empty string for returning users or if user is not logged in
+- Can be nested with other shortcodes
+
+---
+
+### `[ielts_is_returning_user]`
+Conditional shortcode that displays content only for returning users.
+
+**Usage:**
+```
+[ielts_is_returning_user]
+This content only appears for users who have logged in before.
+[/ielts_is_returning_user]
+```
+
+**Output:**
+- Shows the enclosed content if the user has logged in more than once (login count > 1)
+- Returns empty string for new users or if user is not logged in
+- Can be nested with other shortcodes
+
 ---
 
 ### `[ielts_last_page]`
