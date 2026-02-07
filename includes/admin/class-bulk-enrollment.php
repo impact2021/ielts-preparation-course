@@ -39,6 +39,9 @@ class IELTS_CM_Bulk_Enrollment {
         
         // Add visible debugger panel to users page
         add_action('admin_footer-users.php', array($this, 'render_debug_panel'));
+        
+        // AJAX handler for clearing debug log
+        add_action('wp_ajax_clear_bulk_enrollment_debug_log', array($this, 'clear_debug_log_ajax'));
     }
     
     /**
@@ -290,10 +293,28 @@ class IELTS_CM_Bulk_Enrollment {
      * Log debug message for visible debugger
      */
     private function log_debug($message) {
-        $this->debug_log[] = array(
+        $log_entry = array(
             'time' => current_time('Y-m-d H:i:s'),
             'message' => $message
         );
+        
+        // Add to current session log
+        $this->debug_log[] = $log_entry;
+        
+        // Store in transient for persistence across page loads (30 minutes)
+        $stored_logs = get_transient('ielts_bulk_enrollment_debug_log');
+        if (!is_array($stored_logs)) {
+            $stored_logs = array();
+        }
+        $stored_logs[] = $log_entry;
+        
+        // Keep only last 50 log entries
+        if (count($stored_logs) > 50) {
+            $stored_logs = array_slice($stored_logs, -50);
+        }
+        
+        set_transient('ielts_bulk_enrollment_debug_log', $stored_logs, 30 * MINUTE_IN_SECONDS);
+        
         error_log('IELTS Bulk Enrollment Debug: ' . $message);
     }
     
@@ -400,11 +421,17 @@ class IELTS_CM_Bulk_Enrollment {
                 </div>
                 <?php endif; ?>
                 
-                <?php if (!empty($this->debug_log)): ?>
+                <?php 
+                // Get stored logs from transient
+                $stored_logs = get_transient('ielts_bulk_enrollment_debug_log');
+                if (!empty($stored_logs) && is_array($stored_logs)): 
+                ?>
                 <div style="margin-bottom: 10px;">
-                    <strong>📝 Recent Activity Log:</strong><br>
+                    <strong>📝 Recent Activity Log:</strong>
+                    <button onclick="clearDebugLog()" style="float: right; font-size: 10px; padding: 2px 6px; cursor: pointer;">Clear Log</button>
+                    <br>
                     <div style="margin-left: 15px; margin-top: 5px; max-height: 150px; overflow-y: auto; background: #f5f5f5; padding: 8px; border-radius: 3px; font-family: monospace; font-size: 11px;">
-                        <?php foreach (array_reverse($this->debug_log) as $log): ?>
+                        <?php foreach (array_reverse($stored_logs) as $log): ?>
                             <div style="margin-bottom: 5px; <?php echo strpos($log['message'], 'ERROR') !== false ? 'color: #dc3545;' : (strpos($log['message'], 'WARNING') !== false ? 'color: #ffc107;' : ''); ?>">
                                 [<?php echo esc_html($log['time']); ?>] <?php echo esc_html($log['message']); ?>
                             </div>
@@ -499,7 +526,32 @@ class IELTS_CM_Bulk_Enrollment {
                 }
             });
         });
+        
+        // Clear debug log function
+        function clearDebugLog() {
+            if (confirm('Clear all debug logs?')) {
+                jQuery.post(ajaxurl, {
+                    action: 'clear_bulk_enrollment_debug_log',
+                    nonce: '<?php echo wp_create_nonce('clear_debug_log'); ?>'
+                }, function() {
+                    location.reload();
+                });
+            }
+        }
         </script>
         <?php
+    }
+    
+    /**
+     * AJAX handler to clear debug log
+     */
+    public function clear_debug_log_ajax() {
+        // Verify nonce
+        check_ajax_referer('clear_debug_log', 'nonce');
+        
+        // Clear the transient
+        delete_transient('ielts_bulk_enrollment_debug_log');
+        
+        wp_send_json_success();
     }
 }
