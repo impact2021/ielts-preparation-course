@@ -448,6 +448,7 @@ class IELTS_CM_Access_Codes {
                                 <option value="50" <?php selected($max_students, 50); ?>>Tier 1: Up to 50 active students</option>
                                 <option value="100" <?php selected($max_students, 100); ?>>Tier 2: Up to 100 active students</option>
                                 <option value="200" <?php selected($max_students, 200); ?>>Tier 3: Up to 200 active students</option>
+                                <option value="300" <?php selected($max_students, 300); ?>>Tier 4: Up to 300 active students</option>
                             </select>
                         </td>
                     </tr>
