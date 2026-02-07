@@ -152,6 +152,15 @@ class IELTS_CM_Activator {
         
         $created_count = 0;
         
+        // Get the first available administrator user
+        $admin_users = get_users(array(
+            'role' => 'administrator',
+            'number' => 1,
+            'fields' => 'ID'
+        ));
+        
+        $author_id = !empty($admin_users) ? (int) $admin_users[0] : 1;
+        
         foreach ($courses_to_create as $course_data) {
             // Create the course post
             $post_id = wp_insert_post(array(
@@ -159,7 +168,7 @@ class IELTS_CM_Activator {
                 'post_content' => $course_data['content'],
                 'post_status' => $course_data['status'],
                 'post_type' => 'ielts_course',
-                'post_author' => 1 // Admin user
+                'post_author' => $author_id
             ));
             
             if (!is_wp_error($post_id) && $post_id > 0) {
