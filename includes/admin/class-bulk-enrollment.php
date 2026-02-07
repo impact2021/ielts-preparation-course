@@ -64,6 +64,20 @@ class IELTS_CM_Bulk_Enrollment {
         // Log the start of the bulk enrollment process
         $this->log_debug('Bulk enrollment started for ' . count($user_ids) . ' user(s)');
         
+        // DIAGNOSTIC: Check if post type exists
+        if (!post_type_exists('ielts_course')) {
+            $this->log_debug('CRITICAL ERROR: Post type ielts_course does not exist!');
+            error_log('IELTS Bulk Enrollment CRITICAL: Post type ielts_course not registered when bulk action triggered');
+            $redirect_to = add_query_arg('ielts_bulk_enroll', 'post_type_not_registered', $redirect_to);
+            return $redirect_to;
+        }
+        
+        // DIAGNOSTIC: Check if taxonomy exists
+        if (!taxonomy_exists('ielts_course_category')) {
+            $this->log_debug('WARNING: Taxonomy ielts_course_category does not exist');
+            error_log('IELTS Bulk Enrollment WARNING: Taxonomy not registered, will skip category filtering');
+        }
+        
         // Get Academic module courses first (with academic or academic-practice-tests category)
         $academic_courses = get_posts(array(
             'post_type' => 'ielts_course',
@@ -144,22 +158,37 @@ class IELTS_CM_Bulk_Enrollment {
      * Show admin notice after bulk enrollment
      */
     public function bulk_enrollment_admin_notice() {
+        // Check for error conditions first
+        if (isset($_REQUEST['ielts_bulk_enroll'])) {
+            $error_type = sanitize_key($_REQUEST['ielts_bulk_enroll']);
+            
+            if ($error_type === 'no_courses_at_all') {
+                ?>
+                <div class="notice notice-error is-dismissible">
+                    <p><strong><?php _e('Bulk Enrollment Failed:', 'ielts-course-manager'); ?></strong> <?php _e('No IELTS courses found. Please create and publish at least one course first.', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('Check the debug panel at the bottom-right of this page for more details.', 'ielts-course-manager'); ?></p>
+                </div>
+                <?php
+                return;
+            }
+            
+            if ($error_type === 'post_type_not_registered') {
+                ?>
+                <div class="notice notice-error is-dismissible">
+                    <p><strong><?php _e('Bulk Enrollment Failed:', 'ielts-course-manager'); ?></strong> <?php _e('IELTS Course post type is not registered. This is a critical plugin error.', 'ielts-course-manager'); ?></p>
+                    <p><?php _e('Please deactivate and reactivate the IELTS Course Manager plugin, or contact support.', 'ielts-course-manager'); ?></p>
+                </div>
+                <?php
+                return;
+            }
+        }
+        
         // Check if we have enrolled users - sanitize the input
         if (!isset($_REQUEST['ielts_bulk_enrolled'])) {
             return;
         }
         
         $enrolled_count = intval($_REQUEST['ielts_bulk_enrolled']);
-        
-        // Check for no courses error - sanitize the input
-        if (isset($_REQUEST['ielts_bulk_enroll']) && sanitize_key($_REQUEST['ielts_bulk_enroll']) === 'no_courses_at_all') {
-            ?>
-            <div class="notice notice-error is-dismissible">
-                <p><?php _e('No IELTS courses found. Please create at least one course first.', 'ielts-course-manager'); ?></p>
-            </div>
-            <?php
-            return;
-        }
         
         // Show success message
         if ($enrolled_count > 0) {
