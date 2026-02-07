@@ -37,6 +37,9 @@ class IELTS_CM_Bulk_Enrollment {
         // Show admin notice after bulk enrollment
         add_action('admin_notices', array($this, 'bulk_enrollment_admin_notice'));
         
+        // Show admin notice when default content is created
+        add_action('admin_notices', array($this, 'default_content_notice'));
+        
         // Add visible debugger panel to users page
         add_action('admin_footer-users.php', array($this, 'render_debug_panel'));
         
@@ -587,5 +590,53 @@ class IELTS_CM_Bulk_Enrollment {
         delete_transient('ielts_bulk_enrollment_debug_log');
         
         wp_send_json_success();
+    }
+    
+    /**
+     * Show admin notice when default content is created on activation
+     */
+    public function default_content_notice() {
+        $content_data = get_transient('ielts_cm_default_content_created');
+        
+        if (!$content_data) {
+            return;
+        }
+        
+        // Delete the transient so notice only shows once
+        delete_transient('ielts_cm_default_content_created');
+        
+        $courses = isset($content_data['courses']) ? (int) $content_data['courses'] : 0;
+        $categories = isset($content_data['categories']) ? (int) $content_data['categories'] : 0;
+        
+        if ($courses > 0) {
+            ?>
+            <div class="notice notice-success is-dismissible">
+                <h3><?php _e('IELTS Course Manager - Default Content Created', 'ielts-course-manager'); ?></h3>
+                <p>
+                    <?php 
+                    printf(
+                        _n(
+                            'Welcome! We\'ve created %1$d sample course and %2$d categories to help you get started.',
+                            'Welcome! We\'ve created %1$d sample courses and %2$d categories to help you get started.',
+                            $courses,
+                            'ielts-course-manager'
+                        ),
+                        $courses,
+                        $categories
+                    );
+                    ?>
+                </p>
+                <p>
+                    <strong><?php _e('What\'s next?', 'ielts-course-manager'); ?></strong>
+                </p>
+                <ul style="list-style: disc; margin-left: 20px;">
+                    <li><?php _e('Edit or delete the sample courses from the IELTS Courses menu', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Create your own courses and lessons', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Use bulk enrollment to enroll users in courses', 'ielts-course-manager'); ?></li>
+                    <li><?php _e('Check the debug panel on the Users page for enrollment diagnostics', 'ielts-course-manager'); ?></li>
+                </ul>
+            </div>
+            <?php
+        }
     }
 }
