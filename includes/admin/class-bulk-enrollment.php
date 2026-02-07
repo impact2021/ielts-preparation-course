@@ -64,6 +64,9 @@ class IELTS_CM_Bulk_Enrollment {
             return $redirect_to;
         }
         
+        // Verify nonce for security - WordPress requires this for bulk actions
+        check_admin_referer('bulk-users');
+        
         // Log the start of the bulk enrollment process
         $this->log_debug('Bulk enrollment started for ' . count($user_ids) . ' user(s)');
         
