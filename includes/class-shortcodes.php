@@ -2486,8 +2486,11 @@ class IELTS_CM_Shortcodes {
         $expiry_date = get_user_meta($user->ID, '_ielts_cm_membership_expiry', true);
         $membership_status = get_user_meta($user->ID, '_ielts_cm_membership_status', true);
         
-        // Get membership levels directly from constant
+        // Get membership levels from both regular and access code memberships
         $membership_levels = IELTS_CM_Membership::MEMBERSHIP_LEVELS;
+        if (class_exists('IELTS_CM_Access_Codes')) {
+            $membership_levels = array_merge($membership_levels, IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+        }
         
         // Determine if this is a trial membership (or was a trial that expired)
         $is_trial = !empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type);
@@ -2496,6 +2499,10 @@ class IELTS_CM_Shortcodes {
         $expiry_timestamp = !empty($expiry_date) ? strtotime($expiry_date) : false;
         $is_expired = ($membership_status === 'expired') || 
                       ($expiry_timestamp !== false && $expiry_timestamp < time());
+        
+        // Determine if we should show membership tab
+        // Show if membership system is enabled OR user has a membership (including access codes)
+        $show_membership_tab = get_option('ielts_cm_membership_enabled') || !empty($membership_type);
         
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
@@ -2576,15 +2583,15 @@ class IELTS_CM_Shortcodes {
             
             <!-- Tab Navigation -->
             <div class="ielts-account-tabs">
-                <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                <?php if ($show_membership_tab): ?>
                     <button class="ielts-tab-button active" data-tab="membership-info">
                         <?php _e('Membership Information', 'ielts-course-manager'); ?>
                     </button>
                 <?php endif; ?>
-                <button class="ielts-tab-button<?php echo !get_option('ielts_cm_membership_enabled') ? ' active' : ''; ?>" data-tab="personal-details">
+                <button class="ielts-tab-button<?php echo !$show_membership_tab ? ' active' : ''; ?>" data-tab="personal-details">
                     <?php _e('Personal Details', 'ielts-course-manager'); ?>
                 </button>
-                <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                <?php if ($show_membership_tab): ?>
                     <?php if ($is_trial): ?>
                         <button class="ielts-tab-button" data-tab="become-full-member">
                             <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
@@ -2598,7 +2605,7 @@ class IELTS_CM_Shortcodes {
             </div>
             
             <!-- Tab Content -->
-            <?php if (get_option('ielts_cm_membership_enabled')): ?>
+            <?php if ($show_membership_tab): ?>
                 <div class="ielts-tab-content active" id="membership-info">
                     <h3><?php _e('Membership Information', 'ielts-course-manager'); ?></h3>
                     <table class="ielts-account-table">
@@ -2676,7 +2683,7 @@ class IELTS_CM_Shortcodes {
             <?php endif; ?>
             
             <!-- Personal Details Tab -->
-            <div class="ielts-tab-content<?php echo !get_option('ielts_cm_membership_enabled') ? ' active' : ''; ?>" id="personal-details">
+            <div class="ielts-tab-content<?php echo !$show_membership_tab ? ' active' : ''; ?>" id="personal-details">
                 <h3><?php _e('Personal Details', 'ielts-course-manager'); ?></h3>
                 
                 <?php if ($update_success): ?>
@@ -2759,7 +2766,7 @@ class IELTS_CM_Shortcodes {
                 </form>
             </div>
             
-            <?php if (get_option('ielts_cm_membership_enabled')): ?>
+            <?php if ($show_membership_tab): ?>
                 <?php if (!empty($membership_type)): ?>
                     <?php if ($is_trial): ?>
                         <!-- Become a Full Member Tab -->
