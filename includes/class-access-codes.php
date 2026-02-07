@@ -1250,13 +1250,18 @@ class IELTS_CM_Access_Codes {
         $has_active = false;
         $has_expired = false;
         
+        // Instantiate gamification once for efficiency
+        $gamification = new IELTS_CM_Gamification();
+        
         foreach ($students as $student) {
             $user = get_userdata($student->user_id);
             if (!$user) continue;
             
             $group = get_user_meta($student->user_id, 'iw_course_group', true);
             $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
-            $last_login = get_user_meta($student->user_id, 'last_login', true);
+            
+            // Calculate overall band score
+            $overall_band_score = $this->calculate_overall_band_score($student->user_id, $gamification);
             
             // Determine if membership is active or expired
             $is_active = false;
@@ -1291,10 +1296,10 @@ class IELTS_CM_Access_Codes {
             // Col 2: Membership (not "Group")
             $html .= '<td>' . esc_html($this->get_course_group_display_name($group)) . '</td>';
             
-            // Col 3: Expiry with Last login underneath (smaller)
+            // Col 3: Expiry with Overall Band Score underneath (smaller)
             $html .= '<td class="expiry-display" style="line-height: 1.3;">';
             $html .= '<div>' . esc_html($expiry ? date('d/m/Y', strtotime($expiry)) : '-') . '</div>';
-            $html .= '<div style="font-size: 0.85em; color: #888; margin-top: 4px;">Last login: ' . esc_html($last_login ? date('d/m/Y', strtotime($last_login)) : 'Never') . '</div>';
+            $html .= '<div style="font-size: 0.85em; color: #888; margin-top: 4px;">Overall band score: ' . esc_html($overall_band_score) . '</div>';
             $html .= '</td>';
             
             // Col 4: Actions - full width buttons with spacing
@@ -1347,6 +1352,77 @@ class IELTS_CM_Access_Codes {
             $results[] = (object) array('user_id' => $user_id);
         }
         return $results;
+    }
+    
+    /**
+     * Calculate overall band score for a user
+     * Based on skill scores from gamification system
+     * 
+     * NOTE: This is an approximation for display purposes. 
+     * Official IELTS band score calculation may differ.
+     * 
+     * @param int $user_id User ID
+     * @param IELTS_CM_Gamification $gamification Gamification instance (for efficiency)
+     * @return string Overall band score or 'N/A' if no scores available
+     */
+    private function calculate_overall_band_score($user_id, $gamification = null) {
+        // Get skill scores using the gamification class
+        if ($gamification === null) {
+            $gamification = new IELTS_CM_Gamification();
+        }
+        $skill_scores = $gamification->get_user_skill_scores($user_id);
+        
+        // Calculate overall band score from all skills
+        $skills = array('reading', 'listening', 'writing', 'speaking');
+        $band_scores = array();
+        
+        foreach ($skills as $skill) {
+            if (isset($skill_scores[$skill]) && $skill_scores[$skill] > 0) {
+                $percentage = $skill_scores[$skill];
+                $band_scores[] = $this->convert_percentage_to_band($percentage);
+            }
+        }
+        
+        // If no scores available, return N/A
+        if (empty($band_scores)) {
+            return 'N/A';
+        }
+        
+        // Calculate average and round to nearest 0.5
+        // NOTE: This is a simplified approximation. Official IELTS uses specific rounding rules.
+        $average = array_sum($band_scores) / count($band_scores);
+        $overall_score = round($average * 2) / 2;
+        
+        return number_format($overall_score, 1);
+    }
+    
+    /**
+     * Convert percentage score to IELTS band score
+     * Based on approximate IELTS scoring guidelines
+     * 
+     * @param float $percentage Percentage score
+     * @return float Band score
+     */
+    private function convert_percentage_to_band($percentage) {
+        // IELTS band score conversion based on percentage
+        if ($percentage >= 95) return 9.0;
+        if ($percentage >= 90) return 8.5;
+        if ($percentage >= 85) return 8.0;
+        if ($percentage >= 80) return 7.5;
+        if ($percentage >= 70) return 7.0;
+        if ($percentage >= 65) return 6.5;
+        if ($percentage >= 60) return 6.0;
+        if ($percentage >= 55) return 5.5;
+        if ($percentage >= 50) return 5.0;
+        if ($percentage >= 45) return 4.5;
+        if ($percentage >= 40) return 4.0;
+        if ($percentage >= 35) return 3.5;
+        if ($percentage >= 30) return 3.0;
+        if ($percentage >= 25) return 2.5;
+        if ($percentage >= 20) return 2.0;
+        if ($percentage >= 15) return 1.5;
+        if ($percentage >= 10) return 1.0;
+        return 0.5;
     }
     
     public function ajax_create_invite() {
