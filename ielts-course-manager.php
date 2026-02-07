@@ -3,7 +3,7 @@
  * Plugin Name: IELTS Course Manager
  * Plugin URI: https://www.ieltstestonline.com/
  * Description: A flexible Learning Management System for IELTS preparation courses with lessons, resources, quizzes, and progress tracking.
- * Version: 15.19
+ * Version: 15.20
  * Author: IELTStestONLINE
  * Author URI: https://www.ieltstestonline.com/
  * Text Domain: ielts-course-manager
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('IELTS_CM_VERSION', '15.19');
+define('IELTS_CM_VERSION', '15.20');
 define('IELTS_CM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IELTS_CM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('IELTS_CM_PLUGIN_FILE', __FILE__);
@@ -41,6 +41,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-gamification.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-membership.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-access-codes.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-stripe-payment.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/class-search.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-settings-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-status-page.php';
@@ -67,6 +68,10 @@ function ielts_cm_init() {
     if (is_admin()) {
         new IELTS_CM_Bulk_Enrollment();
     }
+    
+    // Initialize Search functionality
+    $search = new IELTS_CM_Search();
+    $search->init();
 }
 add_action('plugins_loaded', 'ielts_cm_init');
 
