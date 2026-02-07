@@ -22,6 +22,9 @@ class IELTS_CM_Bulk_Enrollment {
     // Cache for course group lookups to avoid repeated database queries
     private $course_group_cache = array();
     
+    // Debug log for visible debugger
+    private $debug_log = array();
+    
     public function __construct() {
         $this->enrollment = new IELTS_CM_Enrollment();
         
@@ -33,6 +36,9 @@ class IELTS_CM_Bulk_Enrollment {
         
         // Show admin notice after bulk enrollment
         add_action('admin_notices', array($this, 'bulk_enrollment_admin_notice'));
+        
+        // Add visible debugger panel to users page
+        add_action('admin_footer-users.php', array($this, 'render_debug_panel'));
     }
     
     /**
@@ -52,6 +58,9 @@ class IELTS_CM_Bulk_Enrollment {
             return $redirect_to;
         }
         
+        // Log the start of the bulk enrollment process
+        $this->log_debug('Bulk enrollment started for ' . count($user_ids) . ' user(s)');
+        
         // Get Academic module courses first (with academic or academic-practice-tests category)
         $academic_courses = get_posts(array(
             'post_type' => 'ielts_course',
@@ -68,10 +77,13 @@ class IELTS_CM_Bulk_Enrollment {
             )
         ));
         
+        $this->log_debug('Academic courses found: ' . count($academic_courses));
+        
         // If no academic courses found, get any published course as fallback
         // NOTE: This is intentional - we still want to enroll users even if no Academic 
         // courses exist yet, and they'll still get Academic Module membership
         if (empty($academic_courses)) {
+            $this->log_debug('WARNING: No Academic courses found. Falling back to any available course.');
             error_log('IELTS Bulk Enrollment WARNING: No Academic courses found. Falling back to any available course but users will still get Academic Module membership.');
             $academic_courses = get_posts(array(
                 'post_type' => 'ielts_course',
@@ -79,10 +91,13 @@ class IELTS_CM_Bulk_Enrollment {
                 'post_status' => 'publish',
                 'fields' => 'ids'
             ));
+            $this->log_debug('Fallback: Total courses found: ' . count($academic_courses));
         }
         
         if (empty($academic_courses)) {
             // No courses found at all, redirect with error
+            $this->log_debug('ERROR: No courses found at all in the database');
+            error_log('IELTS Bulk Enrollment ERROR: No courses found at all in the database');
             $redirect_to = add_query_arg('ielts_bulk_enroll', 'no_courses_at_all', $redirect_to);
             return $redirect_to;
         }
@@ -94,6 +109,7 @@ class IELTS_CM_Bulk_Enrollment {
         
         $enrolled_count = 0;
         $course_id = $academic_courses[0]; // Enroll in the first Academic course found
+        $this->log_debug('Selected course ID: ' . $course_id . ' (' . get_the_title($course_id) . ')');
         
         // Always use academic_module for this bulk enrollment
         // This ensures users appear in the partner dashboard with the correct membership
@@ -106,8 +122,13 @@ class IELTS_CM_Bulk_Enrollment {
                 // Set user meta fields required for partner dashboard and access control
                 $this->set_user_membership($user_id, $course_group, $expiry_date);
                 $enrolled_count++;
+                $this->log_debug('User ID ' . $user_id . ' enrolled successfully');
+            } else {
+                $this->log_debug('ERROR: Failed to enroll user ID ' . $user_id);
             }
         }
+        
+        $this->log_debug('Bulk enrollment completed. Total enrolled: ' . $enrolled_count);
         
         // Redirect with success message
         $redirect_to = add_query_arg('ielts_bulk_enrolled', $enrolled_count, $redirect_to);
@@ -263,5 +284,222 @@ class IELTS_CM_Bulk_Enrollment {
         
         // Add the new role
         $user->add_role($membership_type);
+    }
+    
+    /**
+     * Log debug message for visible debugger
+     */
+    private function log_debug($message) {
+        $this->debug_log[] = array(
+            'time' => current_time('Y-m-d H:i:s'),
+            'message' => $message
+        );
+        error_log('IELTS Bulk Enrollment Debug: ' . $message);
+    }
+    
+    /**
+     * Render visible debug panel on users page
+     */
+    public function render_debug_panel() {
+        // Get diagnostic information
+        $all_courses = get_posts(array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'post_status' => 'any',
+            'fields' => 'ids'
+        ));
+        
+        $published_courses = get_posts(array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'fields' => 'ids'
+        ));
+        
+        $academic_courses = get_posts(array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'post_status' => 'publish',
+            'fields' => 'ids',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'ielts_course_category',
+                    'field' => 'slug',
+                    'terms' => array('academic', 'academic-practice-tests'),
+                    'operator' => 'IN'
+                )
+            )
+        ));
+        
+        // Get all course categories
+        $all_categories = get_terms(array(
+            'taxonomy' => 'ielts_course_category',
+            'hide_empty' => false
+        ));
+        
+        // Get course details for published courses
+        $course_details = array();
+        foreach ($published_courses as $course_id) {
+            $categories = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'names'));
+            $course_details[] = array(
+                'id' => $course_id,
+                'title' => get_the_title($course_id),
+                'status' => get_post_status($course_id),
+                'categories' => is_array($categories) ? implode(', ', $categories) : 'None'
+            );
+        }
+        
+        ?>
+        <div id="ielts-bulk-enrollment-debugger" style="position: fixed; bottom: 20px; right: 20px; width: 400px; max-height: 600px; overflow-y: auto; background: #fff; border: 2px solid #2271b1; box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 99999; border-radius: 4px;">
+            <div style="background: #2271b1; color: #fff; padding: 12px 15px; font-weight: bold; cursor: move; display: flex; justify-content: space-between; align-items: center;" id="debug-panel-header">
+                <span>📊 Bulk Enrollment Debugger</span>
+                <button id="toggle-debug-panel" style="background: none; border: none; color: #fff; cursor: pointer; font-size: 18px; padding: 0;">−</button>
+            </div>
+            <div id="debug-panel-content" style="padding: 15px; font-size: 13px; line-height: 1.6;">
+                
+                <div style="margin-bottom: 15px; padding: 10px; background: <?php echo empty($published_courses) ? '#f8d7da' : '#d1ecf1'; ?>; border-left: 4px solid <?php echo empty($published_courses) ? '#dc3545' : '#17a2b8'; ?>;">
+                    <strong>System Status:</strong>
+                    <?php if (empty($published_courses)): ?>
+                        <span style="color: #dc3545;">⚠️ No published courses found!</span>
+                    <?php else: ?>
+                        <span style="color: #28a745;">✓ System operational</span>
+                    <?php endif; ?>
+                </div>
+                
+                <div style="margin-bottom: 10px;">
+                    <strong>📚 Course Statistics:</strong><br>
+                    <div style="margin-left: 15px; margin-top: 5px;">
+                        • Total courses (all statuses): <strong><?php echo count($all_courses); ?></strong><br>
+                        • Published courses: <strong><?php echo count($published_courses); ?></strong><br>
+                        • Academic module courses: <strong><?php echo count($academic_courses); ?></strong>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 10px;">
+                    <strong>🏷️ Available Categories:</strong><br>
+                    <div style="margin-left: 15px; margin-top: 5px;">
+                        <?php if (empty($all_categories) || is_wp_error($all_categories)): ?>
+                            <em style="color: #dc3545;">No categories found</em>
+                        <?php else: ?>
+                            <?php foreach ($all_categories as $cat): ?>
+                                • <?php echo esc_html($cat->name); ?> (<?php echo esc_html($cat->slug); ?>)<br>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                
+                <?php if (!empty($course_details)): ?>
+                <div style="margin-bottom: 10px;">
+                    <strong>📖 Published Courses:</strong><br>
+                    <div style="margin-left: 15px; margin-top: 5px; max-height: 150px; overflow-y: auto; font-size: 11px;">
+                        <?php foreach ($course_details as $detail): ?>
+                            • ID: <?php echo $detail['id']; ?> - <?php echo esc_html($detail['title']); ?><br>
+                            &nbsp;&nbsp;Categories: <em><?php echo esc_html($detail['categories']); ?></em><br>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                
+                <?php if (!empty($this->debug_log)): ?>
+                <div style="margin-bottom: 10px;">
+                    <strong>📝 Recent Activity Log:</strong><br>
+                    <div style="margin-left: 15px; margin-top: 5px; max-height: 150px; overflow-y: auto; background: #f5f5f5; padding: 8px; border-radius: 3px; font-family: monospace; font-size: 11px;">
+                        <?php foreach (array_reverse($this->debug_log) as $log): ?>
+                            <div style="margin-bottom: 5px; <?php echo strpos($log['message'], 'ERROR') !== false ? 'color: #dc3545;' : (strpos($log['message'], 'WARNING') !== false ? 'color: #ffc107;' : ''); ?>">
+                                [<?php echo esc_html($log['time']); ?>] <?php echo esc_html($log['message']); ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+                <?php endif; ?>
+                
+                <?php
+                // Display URL parameters if present
+                if (isset($_GET['ielts_bulk_enroll']) || isset($_GET['ielts_bulk_enrolled'])):
+                ?>
+                <div style="margin-bottom: 10px; padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107;">
+                    <strong>⚡ Current Action:</strong><br>
+                    <?php if (isset($_GET['ielts_bulk_enroll']) && $_GET['ielts_bulk_enroll'] === 'no_courses_at_all'): ?>
+                        <span style="color: #dc3545;">❌ Error: No courses found in database</span>
+                    <?php elseif (isset($_GET['ielts_bulk_enrolled'])): ?>
+                        <span style="color: #28a745;">✓ Successfully enrolled <?php echo intval($_GET['ielts_bulk_enrolled']); ?> user(s)</span>
+                    <?php endif; ?>
+                </div>
+                <?php endif; ?>
+                
+                <div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #ddd; font-size: 11px; color: #666;">
+                    <strong>💡 Troubleshooting:</strong><br>
+                    • If no courses are found, create an IELTS course first<br>
+                    • Ensure courses are published (not draft)<br>
+                    • Add "academic" or "academic-practice-tests" category<br>
+                    • Check WordPress error logs for details
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        jQuery(document).ready(function($) {
+            // Make panel draggable
+            var isDragging = false;
+            var currentX;
+            var currentY;
+            var initialX;
+            var initialY;
+            var xOffset = 0;
+            var yOffset = 0;
+            
+            var container = document.getElementById("ielts-bulk-enrollment-debugger");
+            var header = document.getElementById("debug-panel-header");
+            
+            header.addEventListener("mousedown", dragStart);
+            document.addEventListener("mousemove", drag);
+            document.addEventListener("mouseup", dragEnd);
+            
+            function dragStart(e) {
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
+                
+                if (e.target === header || header.contains(e.target)) {
+                    isDragging = true;
+                }
+            }
+            
+            function drag(e) {
+                if (isDragging) {
+                    e.preventDefault();
+                    currentX = e.clientX - initialX;
+                    currentY = e.clientY - initialY;
+                    xOffset = currentX;
+                    yOffset = currentY;
+                    
+                    setTranslate(currentX, currentY, container);
+                }
+            }
+            
+            function dragEnd(e) {
+                initialX = currentX;
+                initialY = currentY;
+                isDragging = false;
+            }
+            
+            function setTranslate(xPos, yPos, el) {
+                el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+            }
+            
+            // Toggle panel
+            $('#toggle-debug-panel').click(function(e) {
+                e.stopPropagation();
+                var content = $('#debug-panel-content');
+                if (content.is(':visible')) {
+                    content.slideUp();
+                    $(this).text('+');
+                } else {
+                    content.slideDown();
+                    $(this).text('−');
+                }
+            });
+        });
+        </script>
+        <?php
     }
 }
