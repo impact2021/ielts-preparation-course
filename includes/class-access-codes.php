@@ -1250,6 +1250,9 @@ class IELTS_CM_Access_Codes {
         $has_active = false;
         $has_expired = false;
         
+        // Instantiate gamification once for efficiency
+        $gamification = new IELTS_CM_Gamification();
+        
         foreach ($students as $student) {
             $user = get_userdata($student->user_id);
             if (!$user) continue;
@@ -1258,7 +1261,7 @@ class IELTS_CM_Access_Codes {
             $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
             
             // Calculate overall band score
-            $overall_band_score = $this->calculate_overall_band_score($student->user_id);
+            $overall_band_score = $this->calculate_overall_band_score($student->user_id, $gamification);
             
             // Determine if membership is active or expired
             $is_active = false;
@@ -1355,12 +1358,18 @@ class IELTS_CM_Access_Codes {
      * Calculate overall band score for a user
      * Based on skill scores from gamification system
      * 
+     * NOTE: This is an approximation for display purposes. 
+     * Official IELTS band score calculation may differ.
+     * 
      * @param int $user_id User ID
+     * @param IELTS_CM_Gamification $gamification Gamification instance (for efficiency)
      * @return string Overall band score or 'N/A' if no scores available
      */
-    private function calculate_overall_band_score($user_id) {
+    private function calculate_overall_band_score($user_id, $gamification = null) {
         // Get skill scores using the gamification class
-        $gamification = new IELTS_CM_Gamification();
+        if ($gamification === null) {
+            $gamification = new IELTS_CM_Gamification();
+        }
         $skill_scores = $gamification->get_user_skill_scores($user_id);
         
         // Calculate overall band score from all skills
@@ -1380,6 +1389,7 @@ class IELTS_CM_Access_Codes {
         }
         
         // Calculate average and round to nearest 0.5
+        // NOTE: This is a simplified approximation. Official IELTS uses specific rounding rules.
         $average = array_sum($band_scores) / count($band_scores);
         $overall_score = round($average * 2) / 2;
         

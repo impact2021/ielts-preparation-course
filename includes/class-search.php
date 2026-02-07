@@ -53,6 +53,10 @@ class IELTS_CM_Search {
     
     /**
      * Extend WHERE clause to search in meta fields
+     * 
+     * NOTE: LIKE queries on meta_value can be slow on large datasets.
+     * For optimal performance on large sites, consider adding a database index
+     * on (meta_key, meta_value) columns in the postmeta table.
      */
     public function search_where($where, $query) {
         global $wpdb;
