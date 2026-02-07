@@ -470,15 +470,20 @@ class IELTS_CM_Bulk_Enrollment {
                 <?php endif; ?>
                 
                 <?php
-                // Display URL parameters if present
-                if (isset($_GET['ielts_bulk_enroll']) || isset($_GET['ielts_bulk_enrolled'])):
+                // Display URL parameters if present - sanitize all inputs
+                $bulk_enroll_status = isset($_GET['ielts_bulk_enroll']) ? sanitize_key($_GET['ielts_bulk_enroll']) : '';
+                $enrolled_count = isset($_GET['ielts_bulk_enrolled']) ? absint($_GET['ielts_bulk_enrolled']) : 0;
+                
+                if ($bulk_enroll_status || $enrolled_count > 0):
                 ?>
                 <div style="margin-bottom: 10px; padding: 10px; background: #fff3cd; border-left: 4px solid #ffc107;">
                     <strong>⚡ Current Action:</strong><br>
-                    <?php if (isset($_GET['ielts_bulk_enroll']) && $_GET['ielts_bulk_enroll'] === 'no_courses_at_all'): ?>
+                    <?php if ($bulk_enroll_status === 'no_courses_at_all'): ?>
                         <span style="color: #dc3545;">❌ Error: No courses found in database</span>
-                    <?php elseif (isset($_GET['ielts_bulk_enrolled'])): ?>
-                        <span style="color: #28a745;">✓ Successfully enrolled <?php echo intval($_GET['ielts_bulk_enrolled']); ?> user(s)</span>
+                    <?php elseif ($bulk_enroll_status === 'post_type_not_registered'): ?>
+                        <span style="color: #dc3545;">❌ Error: Post type not registered</span>
+                    <?php elseif ($enrolled_count > 0): ?>
+                        <span style="color: #28a745;">✓ Successfully enrolled <?php echo esc_html($enrolled_count); ?> user(s)</span>
                     <?php endif; ?>
                 </div>
                 <?php endif; ?>
@@ -561,7 +566,7 @@ class IELTS_CM_Bulk_Enrollment {
             if (confirm('Clear all debug logs?')) {
                 jQuery.post(ajaxurl, {
                     action: 'clear_bulk_enrollment_debug_log',
-                    nonce: '<?php echo wp_create_nonce('clear_debug_log'); ?>'
+                    nonce: '<?php echo esc_js(wp_create_nonce('clear_debug_log')); ?>'
                 }, function() {
                     location.reload();
                 });
