@@ -15,7 +15,7 @@ This feature adds a bulk action to the WordPress Users page (`/wp-admin/users.ph
 
 ### 3. Use the Bulk Action
 - In the "Bulk Actions" dropdown at the top of the users list
-- Select **"Enroll in IELTS Course (30 days)"**
+- Select **"Enroll in Academic Module (Access Code) - 30 days"**
 - Click the **Apply** button
 
 ### 4. Verify Enrollment
@@ -41,30 +41,28 @@ No IELTS courses found. Please create a course first.
 ## Technical Details
 
 ### What Happens When You Enroll Users
-1. The system finds the first published IELTS course
-2. The system determines the course group (academic_module, general_module, or general_english) based on the course's categories
-3. Each selected user is enrolled in that course
-4. User metadata is set for partner dashboard visibility:
-   - `iw_course_group` - Course group type
+1. The system finds Academic module courses (with 'academic' or 'academic-practice-tests' categories)
+2. If no Academic courses exist, it falls back to the first published course
+3. The course group is ALWAYS set to 'academic_module' (hardcoded for consistency)
+4. Each selected user is enrolled in that course
+5. User metadata is set for partner dashboard visibility:
+   - `iw_course_group` - ALWAYS 'academic_module'
    - `iw_membership_expiry` - 30 days from now
    - `iw_membership_status` - 'active'
-   - `_ielts_cm_membership_type` - Access role type
+   - `_ielts_cm_membership_type` - ALWAYS 'access_academic_module'
    - `_ielts_cm_membership_status` - 'active'
    - `_ielts_cm_membership_expiry` - 30 days from now
-5. WordPress role is assigned based on course group:
-   - Academic courses → `access_academic_module` role
-   - General courses → `access_general_module` role
-   - English-only courses → `access_general_english` role
-6. Enrollment status is set to 'active'
-7. Expiry date is set to exactly 30 days from the current date/time (respecting WordPress timezone)
-8. If a user is already enrolled, their enrollment is updated
+6. WordPress role is assigned: ALWAYS 'access_academic_module'
+7. Enrollment status is set to 'active'
+8. Expiry date is set to exactly 30 days from the current date/time (respecting WordPress timezone)
+9. If a user is already enrolled, their enrollment is updated
 
 ### Partner Dashboard Visibility
 After enrollment, users will:
 - Appear in the partner dashboard (Users > Partner Dashboard)
-- Have access to courses based on their assigned course group
+- Have access to Academic Module courses
 - Show the correct expiry date (30 days from enrollment)
-- Have the appropriate WordPress role for course access
+- Have the 'access_academic_module' WordPress role for course access
 
 ### Database Changes
 - Records are created/updated in the `wp_ielts_cm_enrollment` table:
@@ -94,18 +92,16 @@ After bulk enrollment, verify the fix is working by:
    - Go to Users → All Users
    - Edit one of the enrolled users
    - In the Custom Fields section (or use a plugin like "User Meta Manager"), verify these meta fields exist:
-     - `iw_course_group` (should be academic_module, general_module, or general_english)
+     - `iw_course_group` (should be 'academic_module')
      - `iw_membership_expiry` (should be 30 days from now)
      - `iw_membership_status` (should be 'active')
-     - `_ielts_cm_membership_type` (should be access_academic_module, access_general_module, or access_general_english)
+     - `_ielts_cm_membership_type` (should be 'access_academic_module')
      - `_ielts_cm_membership_status` (should be 'active')
      - `_ielts_cm_membership_expiry` (should be 30 days from now)
 
 3. **Check User Role**
-   - In the user edit screen, verify the user has one of these roles:
-     - `access_academic_module` (for academic courses)
-     - `access_general_module` (for general courses)
-     - `access_general_english` (for english-only courses)
+   - In the user edit screen, verify the user has this role:
+     - `access_academic_module` (for Academic Module access)
 
 4. **Check Course Access**
    - Log in as one of the enrolled users
