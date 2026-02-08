@@ -2689,6 +2689,11 @@ class IELTS_CM_Shortcodes {
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         
+        // Check if this is an access code membership on a hybrid site (used for hiding Extend My Course tab)
+        $is_access_code_membership = !empty($membership_type) && strpos($membership_type, 'access_') === 0;
+        $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        $hide_extend_tab = $is_access_code_membership && $hybrid_mode_enabled;
+        
         // Handle profile update form submission
         $update_errors = array();
         $update_success = false;
@@ -2781,12 +2786,8 @@ class IELTS_CM_Shortcodes {
                         </button>
                     <?php elseif (!empty($membership_type) && !$is_trial): ?>
                         <?php 
-                        // Check if this is an access code membership on a hybrid site
-                        $is_access_code_membership = strpos($membership_type, 'access_') === 0;
-                        $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
-                        
                         // Hide "Extend My Course" tab for access code users on hybrid sites
-                        if (!($is_access_code_membership && $hybrid_mode_enabled)): 
+                        if (!$hide_extend_tab): 
                         ?>
                             <button class="ielts-tab-button" data-tab="extend-course">
                                 <?php _e('Extend My Course', 'ielts-course-manager'); ?>
@@ -2983,12 +2984,8 @@ class IELTS_CM_Shortcodes {
                         </div>
                     <?php else: ?>
                         <?php 
-                        // Check if this is an access code membership on a hybrid site
-                        $is_access_code_membership = strpos($membership_type, 'access_') === 0;
-                        $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
-                        
                         // Hide "Extend My Course" tab for access code users on hybrid sites
-                        if (!($is_access_code_membership && $hybrid_mode_enabled)): 
+                        if (!$hide_extend_tab): 
                         ?>
                         <!-- Extend My Course Tab -->
                         <div class="ielts-tab-content" id="extend-course">
