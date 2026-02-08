@@ -87,6 +87,7 @@ class IELTS_CM_Access_Codes {
         add_action('wp_ajax_iw_delete_code', array($this, 'ajax_delete_code'));
         add_action('wp_ajax_iw_edit_student', array($this, 'ajax_edit_student'));
         add_action('wp_ajax_iw_resend_welcome', array($this, 'ajax_resend_welcome'));
+        add_action('wp_ajax_iw_purchase_codes', array($this, 'ajax_purchase_codes'));
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
@@ -706,6 +707,9 @@ class IELTS_CM_Access_Codes {
             return '<p>You do not have permission to access this dashboard.</p>';
         }
         
+        // Check if hybrid mode is enabled
+        $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+        
         // Use partner organization ID instead of individual user ID
         // This allows multiple partner admins to see the same data
         $partner_org_id = $this->get_partner_org_id();
@@ -767,21 +771,106 @@ class IELTS_CM_Access_Codes {
         
         <div class="iw-dashboard">
             <?php 
-            $remaining_places = $max_students - $active_count;
+            $remaining_places = $is_hybrid_mode ? 999999 : ($max_students - $active_count);
             ?>
+            <?php if (!$is_hybrid_mode): ?>
             <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo esc_html($active_count); ?> / <?php echo esc_html($max_students); ?></p>
+            <?php else: ?>
+            <p style="margin-bottom: 15px;"><strong>Active Students:</strong> <?php echo esc_html($active_count); ?></p>
+            <?php endif; ?>
+            
+            <?php if ($is_hybrid_mode): ?>
+            <div class="iw-card expanded">
+                <div class="iw-card-header">
+                    <h2>Purchase Access Codes</h2>
+                </div>
+                <div class="iw-card-body">
+                    <p style="margin-top: 0;">Purchase access codes for your students. Select the quantity you need and complete payment via Stripe or PayPal.</p>
+                    <div id="purchase-codes-msg"></div>
+                    <form id="purchase-codes-form">
+                        <?php wp_nonce_field('iw_purchase_codes', 'iw_purchase_codes_nonce'); ?>
+                        <table class="iw-form-table">
+                            <tr>
+                                <th>Number of Codes:</th>
+                                <td>
+                                    <select name="quantity" id="code-quantity" required>
+                                        <option value="50">50 Codes</option>
+                                        <option value="100">100 Codes</option>
+                                        <option value="200">200 Codes</option>
+                                        <option value="300">300 Codes</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Price:</th>
+                                <td>
+                                    <span id="code-price" style="font-size: 18px; font-weight: bold; color: #0073aa;">$50.00</span>
+                                    <script>
+                                        // Update price when quantity changes
+                                        (function() {
+                                            var pricing = <?php 
+                                                $code_pricing = get_option('ielts_cm_access_code_pricing', array(
+                                                    '50' => 50.00,
+                                                    '100' => 90.00,
+                                                    '200' => 170.00,
+                                                    '300' => 240.00
+                                                ));
+                                                echo json_encode($code_pricing); 
+                                            ?>;
+                                            var quantitySelect = document.getElementById('code-quantity');
+                                            var priceSpan = document.getElementById('code-price');
+                                            
+                                            if (quantitySelect && priceSpan) {
+                                                quantitySelect.addEventListener('change', function() {
+                                                    var qty = this.value;
+                                                    var price = pricing[qty] || 0;
+                                                    priceSpan.textContent = '$' + price.toFixed(2);
+                                                });
+                                            }
+                                        })();
+                                    </script>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Course Group:</th>
+                                <td>
+                                    <select name="course_group" required>
+                                        <?php foreach ($this->course_groups as $key => $label): ?>
+                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Access Days:</th>
+                                <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button type="submit" class="iw-btn" style="width: 100%; padding: 12px; font-size: 16px;">Proceed to Payment</button>
+                                    <p class="description" style="margin: 10px 0 0 0;">You will be redirected to a secure payment page to complete your purchase.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <?php endif; ?>
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Create Invite Codes (Remaining places: <?php echo esc_html($remaining_places); ?>)</h2>
+                    <h2>Create Invite Codes<?php if (!$is_hybrid_mode): ?> (Remaining places: <?php echo esc_html($remaining_places); ?>)<?php endif; ?></h2>
                 </div>
                 <div class="iw-card-body">
-                    <?php if ($remaining_places <= 0): ?>
+                    <?php if (!$is_hybrid_mode && $remaining_places <= 0): ?>
                         <div class="iw-msg error">
                             You have reached your student limit (<?php echo esc_html($max_students); ?> students). 
                             Please contact support to upgrade your tier or remove expired students.
                         </div>
                     <?php else: ?>
+                    <?php if ($is_hybrid_mode): ?>
+                        <p style="margin-top: 0;"><strong>Note:</strong> In hybrid mode, you can only create codes after purchasing them via the "Purchase Access Codes" section above. This section is for creating codes from your purchased allocation.</p>
+                    <?php endif; ?>
                     <div id="create-invite-msg"></div>
                     <form id="create-invite-form">
                         <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
@@ -789,7 +878,7 @@ class IELTS_CM_Access_Codes {
                             <tr>
                                 <th>Number of Codes:</th>
                                 <td>
-                                    <input type="number" name="quantity" min="1" max="<?php echo esc_attr($remaining_places); ?>" value="1" required>
+                                    <input type="number" name="quantity" min="1" <?php if (!$is_hybrid_mode): ?>max="<?php echo esc_attr($remaining_places); ?>"<?php endif; ?> value="1" required>
                                 </td>
                             </tr>
                             <tr>
@@ -815,6 +904,7 @@ class IELTS_CM_Access_Codes {
                 </div>
             </div>
             
+            <?php if (!$is_hybrid_mode): ?>
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
                     <h2>Create User Manually</h2>
@@ -866,6 +956,7 @@ class IELTS_CM_Access_Codes {
                     </form>
                 </div>
             </div>
+            <?php endif; ?>
             
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
@@ -1168,6 +1259,37 @@ class IELTS_CM_Access_Codes {
                         } else {
                             $msg.html($('<div class="iw-msg error">').text(response.data.message));
                         }
+                    }
+                });
+            });
+            
+            // Handle purchase codes form submission (hybrid mode only)
+            $('#purchase-codes-form').on('submit', function(e) {
+                e.preventDefault();
+                var $form = $(this);
+                var $msg = $('#purchase-codes-msg');
+                var $submitBtn = $form.find('button[type="submit"]');
+                
+                // Show loading state
+                $submitBtn.prop('disabled', true).text('Processing...');
+                
+                $.ajax({
+                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                    type: 'POST',
+                    data: $form.serialize() + '&action=iw_purchase_codes',
+                    success: function(response) {
+                        if (response.success && response.data.redirect_url) {
+                            // Redirect to payment page
+                            $msg.html($('<div class="iw-msg success">').text('Redirecting to payment...'));
+                            window.location.href = response.data.redirect_url;
+                        } else {
+                            $msg.html($('<div class="iw-msg error">').text(response.data.message || 'An error occurred'));
+                            $submitBtn.prop('disabled', false).text('Proceed to Payment');
+                        }
+                    },
+                    error: function() {
+                        $msg.html($('<div class="iw-msg error">').text('Connection error. Please try again.'));
+                        $submitBtn.prop('disabled', false).text('Proceed to Payment');
                     }
                 });
             });
@@ -1739,6 +1861,94 @@ class IELTS_CM_Access_Codes {
         $this->send_welcome_email($user_id, $user->user_login, $new_password);
         
         wp_send_json_success(array('message' => 'Welcome email sent with new password'));
+    }
+    
+    /**
+     * AJAX handler for purchasing access codes (hybrid mode only)
+     */
+    public function ajax_purchase_codes() {
+        check_ajax_referer('iw_purchase_codes', 'iw_purchase_codes_nonce');
+        
+        // Check if hybrid mode is enabled
+        if (!get_option('ielts_cm_hybrid_site_enabled', false)) {
+            wp_send_json_error(array('message' => 'Code purchasing is only available in hybrid mode'));
+        }
+        
+        if (!current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+        }
+        
+        $quantity = absint($_POST['quantity']);
+        $course_group = sanitize_text_field($_POST['course_group']);
+        $days = absint($_POST['days']);
+        
+        // Validate inputs
+        if (!in_array($quantity, array(50, 100, 200, 300))) {
+            wp_send_json_error(array('message' => 'Invalid quantity selected'));
+        }
+        
+        if (!array_key_exists($course_group, $this->course_groups)) {
+            wp_send_json_error(array('message' => 'Invalid course group'));
+        }
+        
+        if ($days < 1) {
+            wp_send_json_error(array('message' => 'Access days must be at least 1'));
+        }
+        
+        // Get pricing
+        $code_pricing = get_option('ielts_cm_access_code_pricing', array(
+            '50' => 50.00,
+            '100' => 90.00,
+            '200' => 170.00,
+            '300' => 240.00
+        ));
+        
+        $price = isset($code_pricing[$quantity]) ? floatval($code_pricing[$quantity]) : 0;
+        
+        if ($price <= 0) {
+            wp_send_json_error(array('message' => 'Invalid pricing configuration. Please contact support.'));
+        }
+        
+        // Store pending purchase in session/transient for payment completion
+        $partner_id = get_current_user_id();
+        $purchase_data = array(
+            'quantity' => $quantity,
+            'course_group' => $course_group,
+            'days' => $days,
+            'price' => $price,
+            'partner_id' => $partner_id,
+            'created' => time()
+        );
+        
+        // Store as transient for 1 hour
+        $purchase_key = 'iw_code_purchase_' . $partner_id . '_' . time();
+        set_transient($purchase_key, $purchase_data, HOUR_IN_SECONDS);
+        
+        // Check if Stripe is enabled
+        $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
+        
+        if (!$stripe_enabled) {
+            wp_send_json_error(array('message' => 'Payment processing is not configured. Please contact support.'));
+        }
+        
+        // Create payment session and return redirect URL
+        // For now, we'll redirect to a payment page that will be handled by the Stripe payment class
+        // This is a placeholder - the actual Stripe integration would go through IELTS_CM_Stripe_Payment class
+        
+        // Return success with redirect URL to payment page
+        // The payment page should be created to handle access code purchases
+        $redirect_url = add_query_arg(array(
+            'action' => 'purchase_access_codes',
+            'purchase_key' => $purchase_key,
+            'quantity' => $quantity,
+            'price' => $price
+        ), home_url('/access-code-checkout/'));
+        
+        wp_send_json_success(array(
+            'message' => 'Redirecting to payment...',
+            'redirect_url' => $redirect_url,
+            'purchase_key' => $purchase_key
+        ));
     }
     
     private function generate_unique_code() {
