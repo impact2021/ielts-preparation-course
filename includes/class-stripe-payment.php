@@ -1150,7 +1150,7 @@ class IELTS_CM_Stripe_Payment {
             $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
             
             // Verify table exists
-            $table_exists = $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $table_name)) === $table_name;
+            $table_exists = $wpdb->get_var("SHOW TABLES LIKE '{$table_name}'") === $table_name;
             if (!$table_exists) {
                 error_log("CRITICAL: Access codes table $table_name does not exist! Plugin may not be properly activated.");
                 // Still try to continue - maybe the table will be created by the class

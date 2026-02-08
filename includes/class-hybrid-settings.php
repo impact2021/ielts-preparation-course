@@ -215,7 +215,7 @@ class IELTS_CM_Hybrid_Settings {
                 
                 if (!$webhook_configured || !$api_keys_configured) {
                     echo '<div class="notice notice-warning">';
-                    echo '<p><strong>' . __('⚠️ Stripe Configuration Incomplete', 'ielts-course-manager') . '</strong></p>';
+                    echo '<p><strong><span class="screen-reader-text">Warning: </span>⚠️ ' . __('Stripe Configuration Incomplete', 'ielts-course-manager') . '</strong></p>';
                     echo '<ul style="list-style-type: disc; margin-left: 20px;">';
                     
                     if (!$api_keys_configured) {
@@ -231,7 +231,7 @@ class IELTS_CM_Hybrid_Settings {
                     echo '</div>';
                 } else {
                     echo '<div class="notice notice-success">';
-                    echo '<p><strong>✅ ' . __('Stripe appears to be configured correctly', 'ielts-course-manager') . '</strong></p>';
+                    echo '<p><strong><span class="screen-reader-text">Success: </span>✅ ' . __('Stripe appears to be configured correctly', 'ielts-course-manager') . '</strong></p>';
                     echo '<p style="margin: 5px 0;"><small>' . __('If payments are not working, check the error logs for webhook issues.', 'ielts-course-manager') . '</small></p>';
                     echo '</div>';
                 }
