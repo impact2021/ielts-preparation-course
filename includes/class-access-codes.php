@@ -899,20 +899,18 @@ class IELTS_CM_Access_Codes {
             </div>
             <?php endif; ?>
             
+            <?php if (!$is_hybrid_mode): ?>
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Create Invite Codes<?php if (!$is_hybrid_mode): ?> (Remaining places: <?php echo esc_html($remaining_places); ?>)<?php endif; ?></h2>
+                    <h2>Create Invite Codes (Remaining places: <?php echo esc_html($remaining_places); ?>)</h2>
                 </div>
                 <div class="iw-card-body">
-                    <?php if (!$is_hybrid_mode && $remaining_places <= 0): ?>
+                    <?php if ($remaining_places <= 0): ?>
                         <div class="iw-msg error">
                             You have reached your student limit (<?php echo esc_html($max_students); ?> students). 
                             Please contact support to upgrade your tier or remove expired students.
                         </div>
                     <?php else: ?>
-                    <?php if ($is_hybrid_mode): ?>
-                        <p style="margin-top: 0;"><strong>Note:</strong> In hybrid mode, you can only create codes after purchasing them via the "Purchase Access Codes" section above. This section is for creating codes from your purchased allocation.</p>
-                    <?php endif; ?>
                     <div id="create-invite-msg"></div>
                     <form id="create-invite-form">
                         <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
@@ -920,7 +918,7 @@ class IELTS_CM_Access_Codes {
                             <tr>
                                 <th>Number of Codes:</th>
                                 <td>
-                                    <input type="number" name="quantity" min="1" <?php if (!$is_hybrid_mode): ?>max="<?php echo esc_attr($remaining_places); ?>"<?php endif; ?> value="1" required>
+                                    <input type="number" name="quantity" min="1" max="<?php echo esc_attr($remaining_places); ?>" value="1" required>
                                 </td>
                             </tr>
                             <tr>
@@ -945,6 +943,7 @@ class IELTS_CM_Access_Codes {
                     <?php endif; ?>
                 </div>
             </div>
+            <?php endif; ?>
             
             <?php if (!$is_hybrid_mode): ?>
             <div class="iw-card collapsed">
