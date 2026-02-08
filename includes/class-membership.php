@@ -447,56 +447,25 @@ class IELTS_CM_Membership {
         </style>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                // Hide the entire "Personal Options" section heading (case-insensitive)
-                $('h2').filter(function() {
-                    return /Personal Options/i.test($(this).text());
-                }).hide();
-                
-                // Hide "About Yourself" or "About the user" section heading (case-insensitive)
-                $('h2').filter(function() {
-                    return /About (Yourself|the user)/i.test($(this).text());
-                }).hide();
-                
-                // Hide Application Passwords section (case-insensitive)
-                $('.application-passwords').closest('tr').hide();
-                $('h2').filter(function() {
-                    return /Application Passwords/i.test($(this).text());
-                }).hide();
-                $('.application-passwords-section').hide();
-                
-                // Hide the entire Application Passwords section by looking for the heading
+                // Hide section headings
                 $('h2, h3').filter(function() {
-                    return /Application Passwords/i.test($(this).text());
+                    var text = $(this).text();
+                    return /Personal Options|About (Yourself|the user)|Application Passwords|Additional Capabilities/i.test(text);
                 }).each(function() {
-                    // Hide heading and everything until next h2/h3 or end of section
-                    $(this).nextUntil('h2, h3').addBack().hide();
+                    $(this).hide();
+                    // For Application Passwords, also hide everything until next section
+                    if (/Application Passwords/i.test($(this).text())) {
+                        $(this).nextUntil('h2, h3').hide();
+                    }
                 });
                 
-                // Also hide the paragraph describing application passwords
+                // Hide specific field rows
+                $('.user-url-wrap, .user-nickname-wrap, .user-display-name-wrap, .user-profile-picture, .user-role-wrap').closest('tr').hide();
+                
+                // Hide paragraphs describing application passwords
                 $('p').filter(function() {
                     return /Application passwords allow authentication/i.test($(this).text());
                 }).hide();
-                
-                // Hide website, nickname, and display publicly as fields
-                $('.user-url-wrap').closest('tr').hide();
-                $('.user-nickname-wrap').closest('tr').hide();
-                $('.user-display-name-wrap').closest('tr').hide();
-                
-                // Hide Additional Capabilities section
-                $('h2, h3').filter(function() {
-                    return /Additional Capabilities/i.test($(this).text());
-                }).hide();
-                
-                // Also hide any sections that might have been missed
-                $('.user-profile-picture').closest('tr').hide();
-                
-                // Hide role dropdown (keep only Course Enrollment section visible)
-                $('.user-role-wrap').closest('tr').hide();
-                
-                // Hide "Other Roles" section if it exists
-                $('label').filter(function() {
-                    return /Other Roles/i.test($(this).text());
-                }).closest('tr').hide();
             });
         </script>
         <?php

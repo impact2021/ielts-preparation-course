@@ -5355,7 +5355,7 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                                     <?php _e('Enable Hybrid Site Mode', 'ielts-course-manager'); ?>
                                 </label>
                                 <p class="description">
-                                    <?php _e('Enable hybrid site mode for sites that need both paid membership and siloed partnerships with access code enrollment. This mode combines features from both paid and access code membership systems with additional partnership isolation features.', 'ielts-course-manager'); ?>
+                                    <?php _e('Enable hybrid site mode for sites that need both paid membership and siloed partnerships with access code enrollment. This provides the foundation for future partnership isolation features.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
                         </td>

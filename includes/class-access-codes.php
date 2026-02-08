@@ -62,7 +62,7 @@ class IELTS_CM_Access_Codes {
         'academic_module' => 'Includes courses with category slugs: academic, english, academic-practice-tests',
         'general_module' => 'Includes courses with category slugs: general, english, general-practice-tests',
         'general_english' => 'Includes courses with category slug: english only',
-        'entry_test' => 'Includes courses with category slug: entry_test only'
+        'entry_test' => 'Includes courses with category slug: entry-test only'
     );
     
     public function __construct() {
@@ -504,7 +504,7 @@ class IELTS_CM_Access_Codes {
                                     Enable Entry Test membership type (for partner access code sites only)
                                 </label>
                                 <p class="description">
-                                    When enabled, partners can enroll users in the Entry Test membership which only includes courses with the 'entry_test' category. This is NOT activated by default and should only be enabled for select partner sites.
+                                    When enabled, partners can enroll users in the Entry Test membership which only includes courses with the 'entry-test' category. This is NOT activated by default and should only be enabled for select partner sites.
                                 </p>
                             </fieldset>
                         </td>
@@ -1805,7 +1805,7 @@ class IELTS_CM_Access_Codes {
                 $category_slugs = array('english');
                 break;
             case 'entry_test':
-                $category_slugs = array('entry_test');
+                $category_slugs = array('entry-test');
                 break;
         }
         
