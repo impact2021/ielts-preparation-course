@@ -2737,7 +2737,8 @@ class IELTS_CM_Shortcodes {
                         'ID' => $user->ID,
                         'first_name' => $first_name,
                         'last_name' => $last_name,
-                        'user_email' => $email
+                        'user_email' => $email,
+                        'nickname' => !empty($user->nickname) ? $user->nickname : $user->user_login
                     );
                     
                     // Add password if changing (validated above)
