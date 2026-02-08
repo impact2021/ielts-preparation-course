@@ -1129,7 +1129,7 @@ class IELTS_CM_Stripe_Payment {
                 // Generate secure random code using WordPress function
                 $code = strtoupper(substr(str_replace(array('-', '_'), '', wp_generate_password(10, false)), 0, 10));
                 
-                $wpdb->insert(
+                $insert_result = $wpdb->insert(
                     $table_name,
                     array(
                         'code' => $code,
@@ -1142,15 +1142,23 @@ class IELTS_CM_Stripe_Payment {
                     array('%s', '%s', '%d', '%d', '%s', '%s')
                 );
                 
-                $generated_codes[] = $code;
+                if ($insert_result === false) {
+                    error_log("CRITICAL: Failed to insert code $code for user $user_id (org $partner_org_id): " . $wpdb->last_error);
+                } else {
+                    $generated_codes[] = $code;
+                }
             }
             
-            error_log("Successfully created $quantity access codes for user $user_id (org $partner_org_id)");
+            error_log("Successfully created " . count($generated_codes) . "/$quantity access codes for user $user_id (org $partner_org_id)");
             
             // Send confirmation email with the codes
             if (method_exists($access_codes, 'send_purchase_confirmation_email')) {
-                $access_codes->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
-                error_log("Sent purchase confirmation email to user $user_id");
+                $email_sent = $access_codes->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
+                if ($email_sent) {
+                    error_log("Successfully sent purchase confirmation email to user $user_id with " . count($generated_codes) . " codes");
+                } else {
+                    error_log("CRITICAL: Failed to send purchase confirmation email to user $user_id");
+                }
             }
         } else {
             error_log("Code purchase payment failed: IELTS_CM_Access_Codes class not found");
