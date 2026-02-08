@@ -207,6 +207,37 @@ class IELTS_CM_Hybrid_Settings {
                 </p>
             </div>
             
+            <?php
+            // Display webhook configuration status
+            if ($stripe_enabled) {
+                $webhook_configured = !empty($stripe_webhook_secret);
+                $api_keys_configured = !empty($stripe_publishable) && !empty($stripe_secret);
+                
+                if (!$webhook_configured || !$api_keys_configured) {
+                    echo '<div class="notice notice-warning">';
+                    echo '<p><strong><span class="screen-reader-text">Warning: </span>⚠️ ' . __('Stripe Configuration Incomplete', 'ielts-course-manager') . '</strong></p>';
+                    echo '<ul style="list-style-type: disc; margin-left: 20px;">';
+                    
+                    if (!$api_keys_configured) {
+                        echo '<li>' . __('Stripe API keys (Publishable and Secret) are not configured. Payments will not work.', 'ielts-course-manager') . '</li>';
+                    }
+                    
+                    if (!$webhook_configured) {
+                        echo '<li><strong>' . __('Webhook Secret is not configured. Access codes and payments will NOT be processed after purchase!', 'ielts-course-manager') . '</strong></li>';
+                        echo '<li>' . __('To fix: Configure a webhook in Stripe Dashboard with the URL shown below, then paste the webhook secret here.', 'ielts-course-manager') . '</li>';
+                    }
+                    
+                    echo '</ul>';
+                    echo '</div>';
+                } else {
+                    echo '<div class="notice notice-success">';
+                    echo '<p><strong><span class="screen-reader-text">Success: </span>✅ ' . __('Stripe appears to be configured correctly', 'ielts-course-manager') . '</strong></p>';
+                    echo '<p style="margin: 5px 0;"><small>' . __('If payments are not working, check the error logs for webhook issues.', 'ielts-course-manager') . '</small></p>';
+                    echo '</div>';
+                }
+            }
+            ?>
+            
             <form method="post" action="">
                 <?php wp_nonce_field('ielts_cm_hybrid_settings', 'ielts_cm_hybrid_settings_nonce'); ?>
                 
@@ -245,6 +276,11 @@ class IELTS_CM_Hybrid_Settings {
                         <td>
                             <input type="password" name="ielts_cm_stripe_webhook_secret" value="<?php echo esc_attr($stripe_webhook_secret); ?>" class="regular-text" placeholder="whsec_...">
                             <p class="description"><?php _e('Your Stripe webhook signing secret (starts with whsec_)', 'ielts-course-manager'); ?></p>
+                            <div style="margin-top: 10px; padding: 10px; background: #f0f8ff; border: 1px solid #0073aa; border-radius: 4px;">
+                                <strong><?php _e('Webhook Endpoint URL:', 'ielts-course-manager'); ?></strong><br>
+                                <code style="background: #fff; padding: 5px; display: inline-block; margin-top: 5px;"><?php echo esc_html(rest_url('ielts-cm/v1/stripe-webhook')); ?></code><br>
+                                <small style="color: #666;"><?php _e('Configure this URL in your Stripe Dashboard → Developers → Webhooks. Listen for event: payment_intent.succeeded', 'ielts-course-manager'); ?></small>
+                            </div>
                         </td>
                     </tr>
                 </table>
