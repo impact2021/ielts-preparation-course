@@ -840,13 +840,195 @@ class IELTS_CM_Shortcodes {
                                 </a>
                             </div>
                         <?php else: ?>
-                            <h3><?php _e('Extend My Course', 'ielts-course-manager'); ?></h3>
-                            <p><?php _e('Extend your course access to continue learning without interruption.', 'ielts-course-manager'); ?></p>
-                            <div class="membership-cta">
-                                <a href="<?php echo esc_url($upgrade_url); ?>" class="ielts-button ielts-button-primary">
-                                    <?php _e('Extend Course', 'ielts-course-manager'); ?>
-                                </a>
-                            </div>
+                            <?php 
+                            // Check if hybrid mode is enabled
+                            $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+                            $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
+                            $paypal_enabled = get_option('ielts_cm_paypal_enabled', false);
+                            
+                            if ($hybrid_mode_enabled && ($stripe_enabled || $paypal_enabled)): 
+                                // Show inline payment form for course extension
+                                $extension_pricing = get_option('ielts_cm_extension_pricing', array(
+                                    '1_week' => 10.00,
+                                    '1_month' => 15.00,
+                                    '3_months' => 20.00
+                                ));
+                            ?>
+                                <h3><?php _e('Extend My Course', 'ielts-course-manager'); ?></h3>
+                                <p><?php _e('Select an extension option below to extend your course access.', 'ielts-course-manager'); ?></p>
+                                
+                                <div id="extension-options" style="margin: 20px 0;">
+                                    <?php foreach ($extension_pricing as $key => $price): 
+                                        $labels = array(
+                                            '1_week' => __('1 Week Extension (5 Days)', 'ielts-course-manager'),
+                                            '1_month' => __('1 Month Extension (10 Days)', 'ielts-course-manager'),
+                                            '3_months' => __('3 Months Extension (30 Days)', 'ielts-course-manager')
+                                        );
+                                        $days = array('1_week' => 5, '1_month' => 10, '3_months' => 30);
+                                    ?>
+                                        <label class="extension-option" style="display: block; padding: 15px; margin-bottom: 10px; border: 2px solid #ddd; border-radius: 4px; cursor: pointer;">
+                                            <input type="radio" name="extension_option" value="<?php echo esc_attr($key); ?>" data-price="<?php echo esc_attr($price); ?>" data-days="<?php echo esc_attr($days[$key]); ?>">
+                                            <strong><?php echo esc_html($labels[$key]); ?></strong>
+                                            <span style="float: right; font-size: 18px; color: #0073aa;">$<?php echo number_format($price, 2); ?></span>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                                
+                                <!-- Payment Section -->
+                                <div id="extension-payment-section" style="display: none; margin-top: 20px;">
+                                    <h4><?php _e('Payment Method', 'ielts-course-manager'); ?></h4>
+                                    
+                                    <?php if ($stripe_enabled && $paypal_enabled): ?>
+                                        <div class="payment-method-selector" style="margin: 15px 0;">
+                                            <label style="margin-right: 20px;">
+                                                <input type="radio" name="payment_method" value="stripe" checked>
+                                                <?php _e('Credit Card', 'ielts-course-manager'); ?>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="payment_method" value="paypal">
+                                                <?php _e('PayPal', 'ielts-course-manager'); ?>
+                                            </label>
+                                        </div>
+                                    <?php endif; ?>
+                                    
+                                    <?php if ($stripe_enabled): ?>
+                                        <div id="stripe-payment-form" style="margin: 20px 0;">
+                                            <div id="card-element" style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; background: white;"></div>
+                                            <div id="card-errors" style="color: #dc3232; margin-top: 10px;"></div>
+                                        </div>
+                                    <?php endif; ?>
+                                    
+                                    <?php if ($paypal_enabled): ?>
+                                        <div id="paypal-button-container" style="margin: 20px 0; <?php echo ($stripe_enabled && $paypal_enabled) ? 'display: none;' : ''; ?>"></div>
+                                    <?php endif; ?>
+                                    
+                                    <?php if ($stripe_enabled): ?>
+                                        <button id="extension-submit-btn" class="ielts-button ielts-button-primary" style="<?php echo ($paypal_enabled) ? '' : 'margin-top: 15px;'; ?>">
+                                            <?php _e('Complete Payment & Extend', 'ielts-course-manager'); ?>
+                                        </button>
+                                    <?php endif; ?>
+                                    
+                                    <div id="extension-payment-message" style="margin-top: 15px;"></div>
+                                </div>
+                                
+                                <script>
+                                jQuery(document).ready(function($) {
+                                    // Show payment section when extension option is selected
+                                    $('input[name="extension_option"]').on('change', function() {
+                                        $('#extension-payment-section').slideDown();
+                                        $('.extension-option').css('border-color', '#ddd');
+                                        $(this).closest('.extension-option').css('border-color', '#0073aa');
+                                    });
+                                    
+                                    // Toggle payment method display
+                                    $('input[name="payment_method"]').on('change', function() {
+                                        if ($(this).val() === 'stripe') {
+                                            $('#stripe-payment-form').show();
+                                            $('#extension-submit-btn').show();
+                                            $('#paypal-button-container').hide();
+                                        } else {
+                                            $('#stripe-payment-form').hide();
+                                            $('#extension-submit-btn').hide();
+                                            $('#paypal-button-container').show();
+                                        }
+                                    });
+                                    
+                                    <?php if ($stripe_enabled): ?>
+                                    // Initialize Stripe
+                                    var stripe = Stripe('<?php echo esc_js(get_option('ielts_cm_stripe_publishable_key')); ?>');
+                                    var elements = stripe.elements();
+                                    var cardElement = elements.create('card', {
+                                        style: {
+                                            base: {
+                                                fontSize: '16px',
+                                                color: '#32325d',
+                                                fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                                                '::placeholder': {
+                                                    color: '#aab7c4'
+                                                }
+                                            }
+                                        }
+                                    });
+                                    cardElement.mount('#card-element');
+                                    
+                                    cardElement.on('change', function(event) {
+                                        var displayError = document.getElementById('card-errors');
+                                        if (event.error) {
+                                            displayError.textContent = event.error.message;
+                                        } else {
+                                            displayError.textContent = '';
+                                        }
+                                    });
+                                    
+                                    // Handle payment submission
+                                    $('#extension-submit-btn').on('click', function(e) {
+                                        e.preventDefault();
+                                        
+                                        var selectedOption = $('input[name="extension_option"]:checked');
+                                        if (!selectedOption.length) {
+                                            alert('<?php echo esc_js(__('Please select an extension option', 'ielts-course-manager')); ?>');
+                                            return;
+                                        }
+                                        
+                                        var $button = $(this);
+                                        var $message = $('#extension-payment-message');
+                                        
+                                        $button.prop('disabled', true).text('<?php echo esc_js(__('Processing...', 'ielts-course-manager')); ?>');
+                                        $message.html('');
+                                        
+                                        // Create payment intent on server
+                                        $.ajax({
+                                            url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                                            type: 'POST',
+                                            data: {
+                                                action: 'ielts_cm_create_extension_payment_intent',
+                                                extension_type: selectedOption.val(),
+                                                price: selectedOption.data('price'),
+                                                days: selectedOption.data('days'),
+                                                nonce: '<?php echo wp_create_nonce('ielts_cm_extension_payment'); ?>'
+                                            },
+                                            success: function(response) {
+                                                if (response.success) {
+                                                    // Confirm payment with Stripe
+                                                    stripe.confirmCardPayment(response.data.client_secret, {
+                                                        payment_method: {
+                                                            card: cardElement
+                                                        }
+                                                    }).then(function(result) {
+                                                        if (result.error) {
+                                                            $message.html('<div class="notice notice-error"><p>' + result.error.message + '</p></div>');
+                                                            $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
+                                                        } else {
+                                                            $message.html('<div class="notice notice-success"><p><?php echo esc_js(__('Payment successful! Your course has been extended.', 'ielts-course-manager')); ?></p></div>');
+                                                            setTimeout(function() {
+                                                                location.reload();
+                                                            }, 2000);
+                                                        }
+                                                    });
+                                                } else {
+                                                    $message.html('<div class="notice notice-error"><p>' + response.data.message + '</p></div>');
+                                                    $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
+                                                }
+                                            },
+                                            error: function() {
+                                                $message.html('<div class="notice notice-error"><p><?php echo esc_js(__('An error occurred. Please try again.', 'ielts-course-manager')); ?></p></div>');
+                                                $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
+                                            }
+                                        });
+                                    });
+                                    <?php endif; ?>
+                                });
+                                </script>
+                            <?php else: ?>
+                                <!-- Fallback for non-hybrid mode or payment not configured -->
+                                <h3><?php _e('Extend My Course', 'ielts-course-manager'); ?></h3>
+                                <p><?php _e('Extend your course access to continue learning without interruption.', 'ielts-course-manager'); ?></p>
+                                <div class="membership-cta">
+                                    <a href="<?php echo esc_url($upgrade_url); ?>" class="ielts-button ielts-button-primary">
+                                        <?php _e('Extend Course', 'ielts-course-manager'); ?>
+                                    </a>
+                                </div>
+                            <?php endif; ?>
                         <?php endif; ?>
                     </div>
                 </div>

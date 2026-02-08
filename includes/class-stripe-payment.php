@@ -22,6 +22,9 @@ class IELTS_CM_Stripe_Payment {
         add_action('wp_ajax_nopriv_ielts_confirm_payment', array($this, 'confirm_payment'));
         add_action('wp_ajax_ielts_confirm_payment', array($this, 'confirm_payment'));
         
+        // AJAX endpoint for course extension payment intent
+        add_action('wp_ajax_ielts_cm_create_extension_payment_intent', array($this, 'create_extension_payment_intent'));
+        
         // Webhook handler for payment confirmation
         add_action('rest_api_init', array($this, 'register_webhook_endpoint'));
     }
@@ -691,6 +694,12 @@ class IELTS_CM_Stripe_Payment {
     private function handle_successful_payment($payment_intent) {
         $metadata = $payment_intent->metadata;
         
+        // Check if this is a course extension payment
+        if (isset($metadata->payment_type) && $metadata->payment_type === 'course_extension') {
+            $this->handle_extension_payment($payment_intent);
+            return;
+        }
+        
         // Extract user data from metadata
         $email = $metadata->email;
         $first_name = $metadata->first_name;
@@ -776,5 +785,170 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Payment Webhook: Error activating membership - ' . $e->getMessage());
             error_log('IELTS Payment Webhook: Stack trace - ' . $e->getTraceAsString());
         }
+    }
+    
+    /**
+     * Create payment intent for course extension
+     */
+    public function create_extension_payment_intent() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_extension_payment')) {
+            wp_send_json_error(array('message' => 'Security check failed'));
+            return;
+        }
+        
+        // Verify user is logged in
+        if (!is_user_logged_in()) {
+            wp_send_json_error(array('message' => 'You must be logged in to purchase an extension'));
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        $extension_type = sanitize_text_field($_POST['extension_type']);
+        $price = floatval($_POST['price']);
+        $days = intval($_POST['days']);
+        
+        // Validate inputs
+        if (!in_array($extension_type, array('1_week', '1_month', '3_months'))) {
+            wp_send_json_error(array('message' => 'Invalid extension type'));
+            return;
+        }
+        
+        if ($price <= 0 || $days <= 0) {
+            wp_send_json_error(array('message' => 'Invalid pricing or duration'));
+            return;
+        }
+        
+        // Verify pricing matches server-side settings
+        $extension_pricing = get_option('ielts_cm_extension_pricing', array());
+        if (!isset($extension_pricing[$extension_type]) || floatval($extension_pricing[$extension_type]) !== $price) {
+            wp_send_json_error(array('message' => 'Price mismatch. Please refresh and try again.'));
+            return;
+        }
+        
+        // Load Stripe
+        $this->load_stripe();
+        
+        try {
+            // Get Stripe secret key
+            $stripe_secret = get_option('ielts_cm_stripe_secret_key');
+            if (empty($stripe_secret)) {
+                wp_send_json_error(array('message' => 'Payment system not configured'));
+                return;
+            }
+            
+            \Stripe\Stripe::setApiKey($stripe_secret);
+            
+            // Create payment intent
+            $amount = intval($price * 100); // Convert to cents
+            $user = get_userdata($user_id);
+            
+            $payment_intent = \Stripe\PaymentIntent::create([
+                'amount' => $amount,
+                'currency' => 'usd',
+                'description' => sprintf('Course Extension - %d days', $days),
+                'metadata' => [
+                    'user_id' => $user_id,
+                    'user_email' => $user->user_email,
+                    'extension_type' => $extension_type,
+                    'days' => $days,
+                    'payment_type' => 'course_extension'
+                ],
+                'receipt_email' => $user->user_email
+            ]);
+            
+            // Store pending extension in user meta for webhook processing
+            update_user_meta($user_id, '_ielts_cm_pending_extension', array(
+                'extension_type' => $extension_type,
+                'days' => $days,
+                'amount' => $price,
+                'payment_intent_id' => $payment_intent->id,
+                'created' => time()
+            ));
+            
+            wp_send_json_success(array(
+                'client_secret' => $payment_intent->client_secret
+            ));
+            
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            error_log('Stripe Error: ' . $e->getMessage());
+            wp_send_json_error(array('message' => 'Payment system error: ' . $e->getMessage()));
+        } catch (Exception $e) {
+            error_log('Extension Payment Error: ' . $e->getMessage());
+            wp_send_json_error(array('message' => 'An error occurred. Please try again.'));
+        }
+    }
+    
+    /**
+     * Handle successful course extension payment
+     */
+    private function handle_extension_payment($payment_intent) {
+        $metadata = $payment_intent->metadata;
+        
+        $user_id = intval($metadata->user_id);
+        $days = intval($metadata->days);
+        $extension_type = $metadata->extension_type;
+        
+        error_log("Processing course extension payment for user $user_id - $days days");
+        
+        // Verify user exists
+        $user = get_userdata($user_id);
+        if (!$user) {
+            error_log("Extension payment failed: User $user_id not found");
+            return;
+        }
+        
+        // Get current expiry date
+        $current_expiry = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        $iw_expiry = get_user_meta($user_id, 'iw_membership_expiry', true);
+        
+        // Determine which expiry to extend (prioritize access code expiry if exists)
+        if (!empty($iw_expiry)) {
+            // Extend access code membership
+            $expiry_timestamp = strtotime($iw_expiry);
+            if ($expiry_timestamp < time()) {
+                // If expired, start from now
+                $expiry_timestamp = time();
+            }
+            $new_expiry = date('Y-m-d H:i:s', strtotime("+{$days} days", $expiry_timestamp));
+            update_user_meta($user_id, 'iw_membership_expiry', $new_expiry);
+            error_log("Extended access code membership for user $user_id to $new_expiry");
+        } elseif (!empty($current_expiry)) {
+            // Extend paid membership
+            $expiry_timestamp = strtotime($current_expiry);
+            if ($expiry_timestamp < time()) {
+                // If expired, start from now
+                $expiry_timestamp = time();
+            }
+            $new_expiry = date('Y-m-d H:i:s', strtotime("+{$days} days", $expiry_timestamp));
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $new_expiry);
+            error_log("Extended paid membership for user $user_id to $new_expiry");
+        } else {
+            // No existing membership, create one starting now
+            $new_expiry = date('Y-m-d H:i:s', strtotime("+{$days} days"));
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $new_expiry);
+            error_log("Created new membership for user $user_id with expiry $new_expiry");
+        }
+        
+        // Log the payment
+        $this->ensure_payment_table_exists();
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payments';
+        $wpdb->insert(
+            $table_name,
+            array(
+                'user_id' => $user_id,
+                'membership_type' => 'extension_' . $extension_type,
+                'amount' => $payment_intent->amount / 100,
+                'transaction_id' => $payment_intent->id,
+                'payment_status' => 'completed'
+            ),
+            array('%d', '%s', '%f', '%s', '%s')
+        );
+        
+        // Clean up pending extension meta
+        delete_user_meta($user_id, '_ielts_cm_pending_extension');
+        
+        error_log("Successfully processed course extension payment for user $user_id");
     }
 }
