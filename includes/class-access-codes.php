@@ -47,19 +47,22 @@ class IELTS_CM_Access_Codes {
     const ACCESS_CODE_MEMBERSHIP_TYPES = array(
         'access_academic_module' => 'Academic Module (Access Code)',
         'access_general_module' => 'General Training Module (Access Code)',
-        'access_general_english' => 'General English (Access Code)'
+        'access_general_english' => 'General English (Access Code)',
+        'access_entry_test' => 'Entry Test (Access Code)'
     );
     
     private $course_groups = array(
         'academic_module' => 'Academic Module',
         'general_module' => 'General Training Module',
-        'general_english' => 'General English'
+        'general_english' => 'General English',
+        'entry_test' => 'Entry Test'
     );
     
     private $course_group_descriptions = array(
         'academic_module' => 'Includes courses with category slugs: academic, english, academic-practice-tests',
         'general_module' => 'Includes courses with category slugs: general, english, general-practice-tests',
-        'general_english' => 'Includes courses with category slug: english only'
+        'general_english' => 'Includes courses with category slug: english only',
+        'entry_test' => 'Includes courses with category slug: entry-test only'
     );
     
     public function __construct() {
@@ -298,6 +301,11 @@ class IELTS_CM_Access_Codes {
         
         // Create role for each access code membership type if it doesn't exist
         foreach (self::ACCESS_CODE_MEMBERSHIP_TYPES as $role_slug => $role_name) {
+            // Skip entry_test role if not enabled
+            if ($role_slug === 'access_entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) {
+                continue;
+            }
+            
             if (!get_role($role_slug)) {
                 add_role($role_slug, $role_name, $base_caps);
             }
@@ -405,6 +413,7 @@ class IELTS_CM_Access_Codes {
         register_setting('ielts_partner_settings', 'iw_redirect_after_creation');
         register_setting('ielts_partner_settings', 'iw_login_page_url');
         register_setting('ielts_partner_settings', 'iw_registration_page_url');
+        register_setting('ielts_partner_settings', 'ielts_cm_entry_test_enabled');
     }
     
     public function settings_page() {
@@ -420,6 +429,14 @@ class IELTS_CM_Access_Codes {
             update_option('iw_redirect_after_creation', esc_url_raw($_POST['iw_redirect_after_creation']));
             update_option('iw_login_page_url', esc_url_raw($_POST['iw_login_page_url']));
             update_option('iw_registration_page_url', esc_url_raw($_POST['iw_registration_page_url']));
+            
+            // Save entry test setting
+            if (isset($_POST['ielts_cm_entry_test_enabled'])) {
+                update_option('ielts_cm_entry_test_enabled', true);
+            } else {
+                update_option('ielts_cm_entry_test_enabled', false);
+            }
+            
             echo '<div class="notice notice-success"><p>Settings saved.</p></div>';
         }
         
@@ -430,6 +447,7 @@ class IELTS_CM_Access_Codes {
         $redirect_url = get_option('iw_redirect_after_creation', '');
         $login_url = get_option('iw_login_page_url', wp_login_url());
         $register_url = get_option('iw_registration_page_url', wp_registration_url());
+        $entry_test_enabled = get_option('ielts_cm_entry_test_enabled', false);
         
         ?>
         <div class="wrap">
@@ -476,6 +494,20 @@ class IELTS_CM_Access_Codes {
                     <tr>
                         <th>Registration Page URL</th>
                         <td><input type="url" name="iw_registration_page_url" value="<?php echo esc_attr($register_url); ?>" class="regular-text"></td>
+                    </tr>
+                    <tr>
+                        <th>Enable Entry Test Membership</th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_entry_test_enabled" value="1" <?php checked($entry_test_enabled, true); ?>>
+                                    Enable Entry Test membership type (for partner access code sites only)
+                                </label>
+                                <p class="description">
+                                    When enabled, partners can enroll users in the Entry Test membership which only includes courses with the 'entry-test' category. This is NOT activated by default and should only be enabled for select partner sites.
+                                </p>
+                            </fieldset>
+                        </td>
                     </tr>
                 </table>
                 <?php submit_button(); ?>
@@ -1772,6 +1804,9 @@ class IELTS_CM_Access_Codes {
             case 'general_english':
                 $category_slugs = array('english');
                 break;
+            case 'entry_test':
+                $category_slugs = array('entry-test');
+                break;
         }
         
         // Query courses by category slugs
@@ -1868,7 +1903,8 @@ class IELTS_CM_Access_Codes {
         $role_mapping = array(
             'academic_module' => 'access_academic_module',
             'general_module' => 'access_general_module',
-            'general_english' => 'access_general_english'
+            'general_english' => 'access_general_english',
+            'entry_test' => 'access_entry_test'
         );
         
         if (isset($role_mapping[$course_group])) {

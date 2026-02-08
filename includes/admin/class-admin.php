@@ -5278,9 +5278,21 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 update_option('ielts_cm_access_code_enabled', false);
             }
             
+            // Save hybrid site toggle
+            if (isset($_POST['ielts_cm_hybrid_site_enabled'])) {
+                update_option('ielts_cm_hybrid_site_enabled', true);
+            } else {
+                update_option('ielts_cm_hybrid_site_enabled', false);
+            }
+            
             // Save vocabulary header color
             if (isset($_POST['ielts_cm_vocab_header_color'])) {
                 update_option('ielts_cm_vocab_header_color', sanitize_hex_color($_POST['ielts_cm_vocab_header_color']));
+            }
+            
+            // Save band scores header color
+            if (isset($_POST['ielts_cm_band_scores_header_color'])) {
+                update_option('ielts_cm_band_scores_header_color', sanitize_hex_color($_POST['ielts_cm_band_scores_header_color']));
             }
             
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
@@ -5289,7 +5301,9 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         $delete_data_on_uninstall = get_option('ielts_cm_delete_data_on_uninstall', false);
         $membership_enabled = get_option('ielts_cm_membership_enabled', false);
         $access_code_enabled = get_option('ielts_cm_access_code_enabled', false);
+        $hybrid_site_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
         $vocab_header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
+        $band_scores_header_color = get_option('ielts_cm_band_scores_header_color', '#E46B0A');
         ?>
         <div class="wrap">
             <h1><?php _e('IELTS Course Manager Settings', 'ielts-course-manager'); ?></h1>
@@ -5332,6 +5346,22 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                     </tr>
                     <tr>
                         <th scope="row">
+                            <?php _e('Hybrid Site', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_hybrid_site_enabled" value="1" <?php checked($hybrid_site_enabled, true); ?>>
+                                    <?php _e('Enable Hybrid Site Mode', 'ielts-course-manager'); ?>
+                                </label>
+                                <p class="description">
+                                    <?php _e('Enable hybrid site mode for sites that need both paid membership and siloed partnerships with access code enrollment. This provides the foundation for future partnership isolation features.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
                             <?php _e('Data Management', 'ielts-course-manager'); ?>
                         </th>
                         <td>
@@ -5355,6 +5385,19 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                                 <input type="text" id="ielts_cm_vocab_header_color" name="ielts_cm_vocab_header_color" value="<?php echo esc_attr($vocab_header_color); ?>" class="ielts-cm-color-picker" data-default-color="#E56C0A">
                                 <p class="description">
                                     <?php _e('Set the primary color for your site. This is currently used for vocabulary table headers and will be used in additional places later.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Band Scores Table Header Color', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <input type="text" id="ielts_cm_band_scores_header_color" name="ielts_cm_band_scores_header_color" value="<?php echo esc_attr($band_scores_header_color); ?>" class="ielts-cm-color-picker" data-default-color="#E46B0A">
+                                <p class="description">
+                                    <?php _e('Set the header color for the [ielts_band_scores] table.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
                         </td>

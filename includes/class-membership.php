@@ -103,14 +103,11 @@ class IELTS_CM_Membership {
         add_action('admin_head-user-edit.php', array($this, 'hide_default_profile_fields'));
         add_action('admin_head-profile.php', array($this, 'hide_default_profile_fields'));
         
-        // Only initialize other features if membership system is enabled
-        if (!$this->is_enabled()) {
-            return;
+        // Add user columns if either membership system is enabled
+        if ($this->is_enabled() || get_option('ielts_cm_access_code_enabled', false)) {
+            add_filter('manage_users_columns', array($this, 'add_user_columns'));
+            add_filter('manage_users_custom_column', array($this, 'user_column_content'), 10, 3);
         }
-        
-        // Add user columns
-        add_filter('manage_users_columns', array($this, 'add_user_columns'));
-        add_filter('manage_users_custom_column', array($this, 'user_column_content'), 10, 3);
     }
     
     /**
@@ -257,6 +254,11 @@ class IELTS_CM_Membership {
                 'general_module' => 'General Training Module',
                 'general_english' => 'General English'
             );
+            
+            // Add entry_test if enabled
+            if (get_option('ielts_cm_entry_test_enabled', false)) {
+                $courses['entry_test'] = 'Entry Test';
+            }
         }
         
         ?>
@@ -432,31 +434,38 @@ class IELTS_CM_Membership {
             .user-description-wrap,
             .user-profile-picture,
             /* Hide Application Passwords section */
-            .application-passwords-section {
+            .application-passwords-section,
+            /* Hide unnecessary profile fields */
+            .user-url-wrap,
+            .user-nickname-wrap,
+            .user-display-name-wrap,
+            /* Hide Additional Capabilities and Other Roles */
+            .user-capabilities-wrap,
+            .user-role-wrap {
                 display: none !important;
             }
         </style>
         <script type="text/javascript">
             jQuery(document).ready(function($) {
-                // Hide the entire "Personal Options" section heading (case-insensitive)
-                $('h2').filter(function() {
-                    return /Personal Options/i.test($(this).text());
-                }).hide();
+                // Hide section headings
+                $('h2, h3').filter(function() {
+                    var text = $(this).text();
+                    return /Personal Options|About (Yourself|the user)|Application Passwords|Additional Capabilities/i.test(text);
+                }).each(function() {
+                    $(this).hide();
+                    // For Application Passwords, also hide everything until next section
+                    if (/Application Passwords/i.test($(this).text())) {
+                        $(this).nextUntil('h2, h3').hide();
+                    }
+                });
                 
-                // Hide "About Yourself" or "About the user" section heading (case-insensitive)
-                $('h2').filter(function() {
-                    return /About (Yourself|the user)/i.test($(this).text());
-                }).hide();
+                // Hide specific field rows
+                $('.user-url-wrap, .user-nickname-wrap, .user-display-name-wrap, .user-profile-picture, .user-role-wrap').closest('tr').hide();
                 
-                // Hide Application Passwords section (case-insensitive)
-                $('.application-passwords').closest('tr').hide();
-                $('h2').filter(function() {
-                    return /Application Passwords/i.test($(this).text());
+                // Hide paragraphs describing application passwords
+                $('p').filter(function() {
+                    return /Application passwords allow authentication/i.test($(this).text());
                 }).hide();
-                $('.application-passwords-section').hide();
-                
-                // Also hide any sections that might have been missed
-                $('.user-profile-picture').closest('tr').hide();
             });
         </script>
         <?php
