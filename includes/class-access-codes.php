@@ -90,6 +90,8 @@ class IELTS_CM_Access_Codes {
         add_action('wp_ajax_iw_edit_student', array($this, 'ajax_edit_student'));
         add_action('wp_ajax_iw_resend_welcome', array($this, 'ajax_resend_welcome'));
         add_action('wp_ajax_iw_purchase_codes', array($this, 'ajax_purchase_codes'));
+        add_action('wp_ajax_ielts_cm_create_paypal_code_order', array($this, 'ajax_create_paypal_code_order'));
+        add_action('wp_ajax_ielts_cm_capture_paypal_code_order', array($this, 'ajax_capture_paypal_code_order'));
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
@@ -929,6 +931,15 @@ class IELTS_CM_Access_Codes {
             if ($is_hybrid_mode && $stripe_enabled && !empty($stripe_publishable)) {
                 wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
             }
+            
+            // Enqueue PayPal SDK if hybrid mode is enabled and PayPal is configured
+            $paypal_enabled = get_option('ielts_cm_paypal_enabled', false);
+            $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
+            
+            if ($is_hybrid_mode && $paypal_enabled && !empty($paypal_client_id)) {
+                $paypal_sdk_url = 'https://www.paypal.com/sdk/js?client-id=' . urlencode($paypal_client_id) . '&currency=USD';
+                wp_enqueue_script('paypal-sdk', $paypal_sdk_url, array(), null, true);
+            }
         }
     }
     
@@ -1067,7 +1078,7 @@ class IELTS_CM_Access_Codes {
                             </td>
                         </tr>
                         <tr>
-                            <th>Access Days:</th>
+                            <th>Days:</th>
                             <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 30); ?>" min="1" required style="width: 100%;"></td>
                         </tr>
                     </table>
@@ -1627,6 +1638,83 @@ class IELTS_CM_Access_Codes {
                     }
                 });
             });
+            <?php endif; ?>
+            
+            <?php 
+            $paypal_enabled = get_option('ielts_cm_paypal_enabled', false);
+            if ($paypal_enabled): 
+            ?>
+            // Initialize PayPal for code purchase
+            if (typeof paypal !== 'undefined' && document.getElementById('code-paypal-button-container')) {
+                paypal.Buttons({
+                    createOrder: function(data, actions) {
+                        var quantity = $('#code-quantity-select').val();
+                        var courseGroup = $('#code-course-group').val();
+                        var accessDays = $('#code-access-days').val();
+                        var price = $('#code-quantity-select option:selected').data('price');
+                        
+                        if (!quantity || !courseGroup || !accessDays) {
+                            alert('Please fill in all fields');
+                            return;
+                        }
+                        
+                        return fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                            },
+                            body: new URLSearchParams({
+                                action: 'ielts_cm_create_paypal_code_order',
+                                quantity: quantity,
+                                course_group: courseGroup,
+                                access_days: accessDays,
+                                price: price,
+                                nonce: '<?php echo wp_create_nonce('ielts_cm_paypal_code_purchase'); ?>'
+                            })
+                        })
+                        .then(function(res) {
+                            return res.json();
+                        })
+                        .then(function(data) {
+                            if (data.success) {
+                                return data.data.order_id;
+                            } else {
+                                throw new Error(data.data.message || 'Failed to create PayPal order');
+                            }
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                            },
+                            body: new URLSearchParams({
+                                action: 'ielts_cm_capture_paypal_code_order',
+                                order_id: data.orderID,
+                                nonce: '<?php echo wp_create_nonce('ielts_cm_paypal_code_capture'); ?>'
+                            })
+                        })
+                        .then(function(res) {
+                            return res.json();
+                        })
+                        .then(function(data) {
+                            if (data.success) {
+                                $('#code-purchase-message').html('<div class="iw-msg success">Payment successful! Your access codes have been created. Refreshing...</div>');
+                                setTimeout(function() {
+                                    location.reload();
+                                }, 2000);
+                            } else {
+                                $('#code-purchase-message').html('<div class="iw-msg error">' + (data.data.message || 'Payment failed') + '</div>');
+                            }
+                        });
+                    },
+                    onError: function(err) {
+                        console.error('PayPal error:', err);
+                        $('#code-purchase-message').html('<div class="iw-msg error">PayPal error occurred. Please try again.</div>');
+                    }
+                }).render('#code-paypal-button-container');
+            }
             <?php endif; ?>
             <?php endif; ?>
             
@@ -2657,5 +2745,285 @@ class IELTS_CM_Access_Codes {
         } else {
             return $group;
         }
+    }
+    
+    /**
+     * AJAX handler to create PayPal order for code purchase
+     */
+    public function ajax_create_paypal_code_order() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_paypal_code_purchase')) {
+            wp_send_json_error(array('message' => 'Security check failed'));
+            return;
+        }
+        
+        // Verify user is logged in and has permission
+        if (!is_user_logged_in() || (!current_user_can('manage_partner_invites') && !current_user_can('manage_options'))) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+            return;
+        }
+        
+        // Verify hybrid mode is enabled
+        if (!get_option('ielts_cm_hybrid_site_enabled', false)) {
+            wp_send_json_error(array('message' => 'Code purchasing is only available in hybrid mode'));
+            return;
+        }
+        
+        // Verify PayPal is enabled
+        if (!get_option('ielts_cm_paypal_enabled', false)) {
+            wp_send_json_error(array('message' => 'PayPal is not enabled'));
+            return;
+        }
+        
+        $quantity = intval($_POST['quantity']);
+        $course_group = sanitize_text_field($_POST['course_group']);
+        $access_days = intval($_POST['access_days']);
+        $price = floatval($_POST['price']);
+        
+        // Validate inputs
+        if ($quantity <= 0 || $access_days <= 0 || $price <= 0) {
+            wp_send_json_error(array('message' => 'Invalid purchase parameters'));
+            return;
+        }
+        
+        // Verify course group is valid
+        if (!array_key_exists($course_group, $this->course_groups)) {
+            wp_send_json_error(array('message' => 'Invalid course group'));
+            return;
+        }
+        
+        // Verify pricing matches server-side settings
+        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+        $price_valid = false;
+        
+        if (!empty($pricing_tiers)) {
+            foreach ($pricing_tiers as $tier) {
+                if (intval($tier['quantity']) === $quantity && floatval($tier['price']) === $price) {
+                    $price_valid = true;
+                    break;
+                }
+            }
+        } else {
+            // Fall back to old format
+            $old_pricing = get_option('ielts_cm_access_code_pricing', array());
+            if (isset($old_pricing[strval($quantity)]) && floatval($old_pricing[strval($quantity)]) === $price) {
+                $price_valid = true;
+            }
+        }
+        
+        if (!$price_valid) {
+            wp_send_json_error(array('message' => 'Price mismatch. Please refresh and try again.'));
+            return;
+        }
+        
+        // Create PayPal order via API
+        $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
+        $paypal_secret = get_option('ielts_cm_paypal_secret', '');
+        
+        if (empty($paypal_client_id) || empty($paypal_secret)) {
+            wp_send_json_error(array('message' => 'PayPal is not configured properly'));
+            return;
+        }
+        
+        // Get access token
+        $auth_response = wp_remote_post('https://api-m.paypal.com/v1/oauth2/token', array(
+            'headers' => array(
+                'Accept' => 'application/json',
+                'Accept-Language' => 'en_US',
+                'Authorization' => 'Basic ' . base64_encode($paypal_client_id . ':' . $paypal_secret)
+            ),
+            'body' => array(
+                'grant_type' => 'client_credentials'
+            )
+        ));
+        
+        if (is_wp_error($auth_response)) {
+            error_log('PayPal auth error: ' . $auth_response->get_error_message());
+            wp_send_json_error(array('message' => 'PayPal authentication failed'));
+            return;
+        }
+        
+        $auth_body = json_decode(wp_remote_retrieve_body($auth_response), true);
+        if (!isset($auth_body['access_token'])) {
+            error_log('PayPal auth failed: ' . print_r($auth_body, true));
+            wp_send_json_error(array('message' => 'PayPal authentication failed'));
+            return;
+        }
+        
+        $access_token = $auth_body['access_token'];
+        
+        // Create order
+        $user_id = get_current_user_id();
+        $user = get_userdata($user_id);
+        
+        $order_data = array(
+            'intent' => 'CAPTURE',
+            'purchase_units' => array(
+                array(
+                    'description' => sprintf('Access Codes Purchase - %d codes', $quantity),
+                    'amount' => array(
+                        'currency_code' => 'USD',
+                        'value' => number_format($price, 2, '.', '')
+                    )
+                )
+            ),
+            'application_context' => array(
+                'brand_name' => get_bloginfo('name'),
+                'shipping_preference' => 'NO_SHIPPING'
+            )
+        );
+        
+        $create_response = wp_remote_post('https://api-m.paypal.com/v2/checkout/orders', array(
+            'headers' => array(
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Bearer ' . $access_token
+            ),
+            'body' => json_encode($order_data)
+        ));
+        
+        if (is_wp_error($create_response)) {
+            error_log('PayPal create order error: ' . $create_response->get_error_message());
+            wp_send_json_error(array('message' => 'Failed to create PayPal order'));
+            return;
+        }
+        
+        $create_body = json_decode(wp_remote_retrieve_body($create_response), true);
+        if (!isset($create_body['id'])) {
+            error_log('PayPal create order failed: ' . print_r($create_body, true));
+            wp_send_json_error(array('message' => 'Failed to create PayPal order'));
+            return;
+        }
+        
+        // Store pending purchase data
+        update_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase', array(
+            'order_id' => $create_body['id'],
+            'quantity' => $quantity,
+            'course_group' => $course_group,
+            'access_days' => $access_days,
+            'amount' => $price,
+            'created' => time()
+        ));
+        
+        wp_send_json_success(array('order_id' => $create_body['id']));
+    }
+    
+    /**
+     * AJAX handler to capture PayPal order and generate codes
+     */
+    public function ajax_capture_paypal_code_order() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_paypal_code_capture')) {
+            wp_send_json_error(array('message' => 'Security check failed'));
+            return;
+        }
+        
+        // Verify user is logged in and has permission
+        if (!is_user_logged_in() || (!current_user_can('manage_partner_invites') && !current_user_can('manage_options'))) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+            return;
+        }
+        
+        $order_id = sanitize_text_field($_POST['order_id']);
+        $user_id = get_current_user_id();
+        
+        // Get pending purchase data
+        $pending_purchase = get_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase', true);
+        if (empty($pending_purchase) || $pending_purchase['order_id'] !== $order_id) {
+            wp_send_json_error(array('message' => 'Invalid order'));
+            return;
+        }
+        
+        // Get PayPal credentials
+        $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
+        $paypal_secret = get_option('ielts_cm_paypal_secret', '');
+        
+        // Get access token
+        $auth_response = wp_remote_post('https://api-m.paypal.com/v1/oauth2/token', array(
+            'headers' => array(
+                'Accept' => 'application/json',
+                'Accept-Language' => 'en_US',
+                'Authorization' => 'Basic ' . base64_encode($paypal_client_id . ':' . $paypal_secret)
+            ),
+            'body' => array(
+                'grant_type' => 'client_credentials'
+            )
+        ));
+        
+        if (is_wp_error($auth_response)) {
+            wp_send_json_error(array('message' => 'PayPal authentication failed'));
+            return;
+        }
+        
+        $auth_body = json_decode(wp_remote_retrieve_body($auth_response), true);
+        $access_token = $auth_body['access_token'];
+        
+        // Capture the order
+        $capture_response = wp_remote_post("https://api-m.paypal.com/v2/checkout/orders/{$order_id}/capture", array(
+            'headers' => array(
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Bearer ' . $access_token
+            )
+        ));
+        
+        if (is_wp_error($capture_response)) {
+            error_log('PayPal capture error: ' . $capture_response->get_error_message());
+            wp_send_json_error(array('message' => 'Failed to capture payment'));
+            return;
+        }
+        
+        $capture_body = json_decode(wp_remote_retrieve_body($capture_response), true);
+        if (!isset($capture_body['status']) || $capture_body['status'] !== 'COMPLETED') {
+            error_log('PayPal capture failed: ' . print_r($capture_body, true));
+            wp_send_json_error(array('message' => 'Payment capture failed'));
+            return;
+        }
+        
+        // Payment successful - generate codes
+        $quantity = intval($pending_purchase['quantity']);
+        $course_group = $pending_purchase['course_group'];
+        $duration_days = intval($pending_purchase['access_days']);
+        $amount = floatval($pending_purchase['amount']);
+        
+        // Get partner organization ID
+        $partner_org_id = $user_id;
+        $org_id = get_user_meta($user_id, 'iw_partner_org_id', true);
+        if (!empty($org_id) && is_numeric($org_id)) {
+            $partner_org_id = (int) $org_id;
+        }
+        
+        // Generate access codes
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
+        $generated_codes = array();
+        
+        for ($i = 0; $i < $quantity; $i++) {
+            $code = $this->generate_unique_code();
+            
+            $wpdb->insert(
+                $table_name,
+                array(
+                    'code' => $code,
+                    'course_group' => $course_group,
+                    'duration_days' => $duration_days,
+                    'created_by' => $partner_org_id,
+                    'status' => 'active',
+                    'created_date' => current_time('mysql')
+                ),
+                array('%s', '%s', '%d', '%d', '%s', '%s')
+            );
+            
+            $generated_codes[] = $code;
+        }
+        
+        // Send confirmation email
+        $this->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
+        
+        // Clean up pending purchase data
+        delete_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase');
+        
+        // Log successful transaction
+        error_log(sprintf('PayPal code purchase completed for user %d - Order: %s - %d codes generated', $user_id, $order_id, $quantity));
+        
+        wp_send_json_success(array('message' => 'Codes generated successfully'));
     }
 }

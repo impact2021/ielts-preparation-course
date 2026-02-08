@@ -1148,7 +1148,7 @@ class IELTS_CM_Stripe_Payment {
             
             // Send confirmation email with the codes
             if (method_exists($access_codes, 'send_purchase_confirmation_email')) {
-                $access_codes->send_purchase_confirmation_email($partner_org_id, $generated_codes, $course_group, $duration_days, $amount);
+                $access_codes->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
                 error_log("Sent purchase confirmation email to user $user_id");
             }
         } else {
