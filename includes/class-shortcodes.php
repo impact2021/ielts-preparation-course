@@ -2996,13 +2996,24 @@ class IELTS_CM_Shortcodes {
                                     ?>
                                 </p>
                             <?php endif; ?>
-                            <p><?php _e('To extend your course access, please contact us or visit our membership page.', 'ielts-course-manager'); ?></p>
-                            <?php if (!empty($full_member_page_url)): ?>
-                                <p>
-                                    <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
-                                        <?php _e('Renew Membership', 'ielts-course-manager'); ?>
-                                    </a>
-                                </p>
+                            <?php 
+                            // Check if this is an access code membership (starts with 'access_')
+                            $is_access_code_membership = strpos($membership_type, 'access_') === 0;
+                            
+                            if (!$is_access_code_membership): 
+                                // Show extension message only for paid memberships
+                            ?>
+                                <p><?php _e('To extend your course access, please contact us or visit our membership page.', 'ielts-course-manager'); ?></p>
+                                <?php if (!empty($full_member_page_url)): ?>
+                                    <p>
+                                        <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
+                                            <?php _e('Renew Membership', 'ielts-course-manager'); ?>
+                                        </a>
+                                    </p>
+                                <?php endif; ?>
+                            <?php else: ?>
+                                <!-- Access code membership - contact partner admin -->
+                                <p><?php _e('Your access was provided through a partner access code. To extend your course access, please contact your course administrator.', 'ielts-course-manager'); ?></p>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
