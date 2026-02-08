@@ -40,6 +40,7 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/class-awards.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-gamification.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-membership.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-access-codes.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/class-hybrid-settings.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-stripe-payment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/class-search.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
@@ -62,6 +63,10 @@ function ielts_cm_init() {
     // Initialize Access Code system
     $access_codes = new IELTS_CM_Access_Codes();
     $access_codes->init();
+    
+    // Initialize Hybrid Settings
+    $hybrid_settings = new IELTS_CM_Hybrid_Settings();
+    $hybrid_settings->init();
     
     // Initialize Search functionality
     $search = new IELTS_CM_Search();

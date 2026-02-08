@@ -794,27 +794,69 @@ class IELTS_CM_Access_Codes {
                                 <th>Number of Codes:</th>
                                 <td>
                                     <select name="quantity" id="code-quantity" required>
-                                        <option value="50">50 Codes</option>
-                                        <option value="100">100 Codes</option>
-                                        <option value="200">200 Codes</option>
-                                        <option value="300">300 Codes</option>
+                                        <?php
+                                        // Get pricing tiers
+                                        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+                                        
+                                        if (empty($pricing_tiers)) {
+                                            // Fall back to old format
+                                            $old_pricing = get_option('ielts_cm_access_code_pricing', array(
+                                                '50' => 50.00,
+                                                '100' => 90.00,
+                                                '200' => 170.00,
+                                                '300' => 240.00
+                                            ));
+                                            foreach ($old_pricing as $qty => $price) {
+                                                echo '<option value="' . esc_attr($qty) . '">' . esc_html($qty) . ' Codes</option>';
+                                            }
+                                        } else {
+                                            // Use new pricing tiers
+                                            foreach ($pricing_tiers as $tier) {
+                                                echo '<option value="' . esc_attr($tier['quantity']) . '">' . esc_html($tier['quantity']) . ' Codes</option>';
+                                            }
+                                        }
+                                        ?>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Price:</th>
                                 <td>
-                                    <span id="code-price" style="font-size: 18px; font-weight: bold; color: #0073aa;">$50.00</span>
+                                    <span id="code-price" style="font-size: 18px; font-weight: bold; color: #0073aa;">
+                                        <?php
+                                        // Show first price as default
+                                        if (!empty($pricing_tiers)) {
+                                            echo '$' . number_format($pricing_tiers[0]['price'], 2);
+                                        } else if (!empty($old_pricing)) {
+                                            $first_price = reset($old_pricing);
+                                            echo '$' . number_format($first_price, 2);
+                                        } else {
+                                            echo '$50.00';
+                                        }
+                                        ?>
+                                    </span>
                                     <script>
                                         // Update price when quantity changes
                                         (function() {
                                             var pricing = <?php 
-                                                $code_pricing = get_option('ielts_cm_access_code_pricing', array(
-                                                    '50' => 50.00,
-                                                    '100' => 90.00,
-                                                    '200' => 170.00,
-                                                    '300' => 240.00
-                                                ));
+                                                // Try new pricing tiers first
+                                                $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+                                                $code_pricing = array();
+                                                
+                                                if (!empty($pricing_tiers)) {
+                                                    // Convert new format to old format for JS
+                                                    foreach ($pricing_tiers as $tier) {
+                                                        $code_pricing[strval($tier['quantity'])] = floatval($tier['price']);
+                                                    }
+                                                } else {
+                                                    // Fall back to old format
+                                                    $code_pricing = get_option('ielts_cm_access_code_pricing', array(
+                                                        '50' => 50.00,
+                                                        '100' => 90.00,
+                                                        '200' => 170.00,
+                                                        '300' => 240.00
+                                                    ));
+                                                }
                                                 echo json_encode($code_pricing); 
                                             ?>;
                                             var quantitySelect = document.getElementById('code-quantity');
@@ -1895,13 +1937,24 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'Access days must be at least 1'));
         }
         
-        // Get pricing
-        $code_pricing = get_option('ielts_cm_access_code_pricing', array(
-            '50' => 50.00,
-            '100' => 90.00,
-            '200' => 170.00,
-            '300' => 240.00
-        ));
+        // Get pricing - support both new tiers and old format
+        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+        $code_pricing = array();
+        
+        if (!empty($pricing_tiers)) {
+            // Convert new format to old format for lookup
+            foreach ($pricing_tiers as $tier) {
+                $code_pricing[strval($tier['quantity'])] = floatval($tier['price']);
+            }
+        } else {
+            // Fall back to old format
+            $code_pricing = get_option('ielts_cm_access_code_pricing', array(
+                '50' => 50.00,
+                '100' => 90.00,
+                '200' => 170.00,
+                '300' => 240.00
+            ));
+        }
         
         $price = isset($code_pricing[$quantity]) ? floatval($code_pricing[$quantity]) : 0;
         
@@ -2170,6 +2223,75 @@ class IELTS_CM_Access_Codes {
                 wp_mail($partner->user_email, $partner_subject, $partner_message);
             }
         }
+    }
+    
+    /**
+     * Send access code purchase confirmation email to partner
+     * 
+     * @param int $partner_id Partner user ID
+     * @param array $codes Array of generated access codes
+     * @param string $course_group Course group identifier
+     * @param int $days Number of days access
+     * @param float $amount Payment amount
+     */
+    private function send_purchase_confirmation_email($partner_id, $codes, $course_group, $days, $amount) {
+        $partner = get_userdata($partner_id);
+        if (!$partner || !$partner->user_email) {
+            error_log('Cannot send purchase confirmation: invalid partner ID or email');
+            return false;
+        }
+        
+        $partner_org_name = get_user_meta($partner_id, 'partner_organization_name', true);
+        $course_group_name = $this->get_course_group_display_name($course_group);
+        
+        $subject = sprintf('[IELTS Course] Access Codes Purchase Confirmation - %d codes', count($codes));
+        
+        $message = "Hello" . ($partner_org_name ? " {$partner_org_name}" : "") . ",\n\n";
+        $message .= "Thank you for your purchase! Your access codes have been generated successfully.\n\n";
+        $message .= "Purchase Details:\n";
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        $message .= sprintf("Quantity: %d access codes\n", count($codes));
+        $message .= sprintf("Course Access: %s\n", $course_group_name);
+        $message .= sprintf("Access Duration: %d days\n", $days);
+        $message .= sprintf("Amount Paid: $%.2f\n", $amount);
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+        
+        $message .= "Your Access Codes:\n";
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        
+        // List all codes
+        foreach ($codes as $index => $code) {
+            $message .= sprintf("%d. %s\n", $index + 1, $code);
+        }
+        
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+        
+        // Add instructions for using codes
+        $message .= "How to Use These Codes:\n";
+        $message .= "1. Share each code with one student\n";
+        $message .= "2. Students can register at your registration page\n";
+        $message .= "3. They will enter the code during registration\n";
+        $message .= "4. Upon successful registration, students get {$days} days of access\n\n";
+        
+        // Add partner dashboard link
+        $dashboard_url = home_url('/partner-dashboard/');
+        $message .= "You can manage all your codes and students from your Partner Dashboard:\n";
+        $message .= "{$dashboard_url}\n\n";
+        
+        $message .= "If you have any questions, please don't hesitate to contact us.\n\n";
+        $message .= "Best regards,\n";
+        $message .= "IELTS Course Team";
+        
+        // Send email
+        $sent = wp_mail($partner->user_email, $subject, $message);
+        
+        if ($sent) {
+            error_log(sprintf('Purchase confirmation email sent to %s (%d codes)', $partner->user_email, count($codes)));
+        } else {
+            error_log(sprintf('Failed to send purchase confirmation email to %s', $partner->user_email));
+        }
+        
+        return $sent;
     }
     
     /**
