@@ -377,8 +377,8 @@ class IELTS_CM_Access_Codes {
         }
         
         add_menu_page(
-            'Partner Dashboard',
-            'Partner Dashboard',
+            'Access code settings',
+            'Access code settings',
             'manage_options',
             'ielts-partner-dashboard',
             array($this, 'admin_dashboard_page'),

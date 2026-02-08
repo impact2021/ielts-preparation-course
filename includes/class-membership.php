@@ -482,8 +482,8 @@ class IELTS_CM_Membership {
         
         // Main memberships menu
         add_menu_page(
-            __('Memberships', 'ielts-course-manager'),
-            __('Memberships', 'ielts-course-manager'),
+            __('Paid membership settings', 'ielts-course-manager'),
+            __('Paid membership settings', 'ielts-course-manager'),
             'manage_options',
             'ielts-memberships',
             array($this, 'memberships_page'),
