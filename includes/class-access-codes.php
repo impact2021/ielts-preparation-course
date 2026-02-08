@@ -2579,7 +2579,7 @@ class IELTS_CM_Access_Codes {
      * @param int $days Number of days access
      * @param float $amount Payment amount
      */
-    private function send_purchase_confirmation_email($partner_id, $codes, $course_group, $days, $amount) {
+    public function send_purchase_confirmation_email($partner_id, $codes, $course_group, $days, $amount) {
         $partner = get_userdata($partner_id);
         if (!$partner || !$partner->user_email) {
             error_log('Cannot send purchase confirmation: invalid partner ID or email');

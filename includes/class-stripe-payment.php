@@ -1096,7 +1096,8 @@ class IELTS_CM_Stripe_Payment {
         $user_id = intval($metadata->user_id);
         $quantity = intval($metadata->quantity);
         $course_group = $metadata->course_group;
-        $access_days = intval($metadata->access_days);
+        $duration_days = intval($metadata->access_days);
+        $amount = $payment_intent->amount / 100;
         
         error_log("Processing code purchase payment for user $user_id - $quantity codes");
         
@@ -1107,7 +1108,20 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
+        // Get partner organization ID
+        $partner_org_id = $user_id; // Default to user_id
+        if (class_exists('IELTS_CM_Access_Codes')) {
+            // Try to get the organization ID from the access codes class
+            $access_codes_instance = new IELTS_CM_Access_Codes();
+            // Use reflection to call private method or just use user meta directly
+            $org_id = get_user_meta($user_id, 'iw_partner_org_id', true);
+            if (!empty($org_id) && is_numeric($org_id)) {
+                $partner_org_id = (int) $org_id;
+            }
+        }
+        
         // Create the access codes
+        $generated_codes = array();
         if (class_exists('IELTS_CM_Access_Codes')) {
             $access_codes = new IELTS_CM_Access_Codes();
             
@@ -1124,16 +1138,24 @@ class IELTS_CM_Stripe_Payment {
                     array(
                         'code' => $code,
                         'course_group' => $course_group,
-                        'access_days' => $access_days,
-                        'created_by' => $user_id,
+                        'duration_days' => $duration_days,
+                        'created_by' => $partner_org_id,
                         'status' => 'active',
-                        'created_at' => current_time('mysql')
+                        'created_date' => current_time('mysql')
                     ),
                     array('%s', '%s', '%d', '%d', '%s', '%s')
                 );
+                
+                $generated_codes[] = $code;
             }
             
-            error_log("Successfully created $quantity access codes for user $user_id");
+            error_log("Successfully created $quantity access codes for user $user_id (org $partner_org_id)");
+            
+            // Send confirmation email with the codes
+            if (method_exists($access_codes, 'send_purchase_confirmation_email')) {
+                $access_codes->send_purchase_confirmation_email($partner_org_id, $generated_codes, $course_group, $duration_days, $amount);
+                error_log("Sent purchase confirmation email to user $user_id");
+            }
         } else {
             error_log("Code purchase payment failed: IELTS_CM_Access_Codes class not found");
         }
@@ -1147,7 +1169,7 @@ class IELTS_CM_Stripe_Payment {
             array(
                 'user_id' => $user_id,
                 'membership_type' => 'access_codes_' . $quantity,
-                'amount' => $payment_intent->amount / 100,
+                'amount' => $amount,
                 'transaction_id' => $payment_intent->id,
                 'payment_status' => 'completed'
             ),
@@ -1157,6 +1179,6 @@ class IELTS_CM_Stripe_Payment {
         // Clean up pending purchase meta
         delete_user_meta($user_id, '_ielts_cm_pending_code_purchase');
         
-        error_log("Successfully processed code purchase payment for user $user_id");
+        error_log("Successfully processed code purchase payment for user $user_id - Codes: " . implode(', ', $generated_codes));
     }
 }
