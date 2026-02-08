@@ -3135,6 +3135,9 @@ class IELTS_CM_Shortcodes {
             $overall_score = round($average * 2) / 2;
         }
         
+        // Get header color from settings
+        $header_color = get_option('ielts_cm_band_scores_header_color', '#E46B0A');
+        
         ob_start();
         ?>
         <div class="ielts-band-scores-container">
@@ -3233,7 +3236,7 @@ class IELTS_CM_Shortcodes {
         }
         
         .ielts-band-scores-table th {
-            background: #E46B0A;
+            background: <?php echo esc_attr($header_color); ?>;
             color: white !important;
             padding: 15px 10px;
             text-align: center;

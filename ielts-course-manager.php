@@ -46,7 +46,6 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-admin.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-settings-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-status-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-tours-page.php';
-require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-bulk-enrollment.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
 
 /**
@@ -63,11 +62,6 @@ function ielts_cm_init() {
     // Initialize Access Code system
     $access_codes = new IELTS_CM_Access_Codes();
     $access_codes->init();
-    
-    // Initialize Bulk Enrollment (admin only)
-    if (is_admin()) {
-        new IELTS_CM_Bulk_Enrollment();
-    }
     
     // Initialize Search functionality
     $search = new IELTS_CM_Search();
