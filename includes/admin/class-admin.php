@@ -8721,27 +8721,27 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 </table>
                 
                 <h2><?php _e('Course Extension Pricing (for Students)', 'ielts-course-manager'); ?></h2>
-                <p class="description"><?php _e('Set pricing for course extensions that students can purchase. These allow students to extend their course access. Note: Duration labels can be edited, but actual durations are: 1 week = 5 days, 1 month = 10 days, 3 months = 30 days.', 'ielts-course-manager'); ?></p>
+                <p class="description"><?php _e('Set pricing for course extensions that students can purchase. These allow students to extend their course access. Note: The labels below are for marketing purposes - the actual durations granted are 5 days, 10 days, and 30 days respectively.', 'ielts-course-manager'); ?></p>
                 <table class="form-table">
                     <tr>
-                        <th scope="row"><?php _e('1 Week Extension', 'ielts-course-manager'); ?></th>
+                        <th scope="row"><?php _e('1 Week Extension (5 Days)', 'ielts-course-manager'); ?></th>
                         <td>
                             <input type="number" step="0.01" min="0" name="extension_1_week" value="<?php echo esc_attr($extension_pricing['1_week'] ?? 10.00); ?>" class="regular-text">
-                            <p class="description"><?php _e('Price in USD for 5 day extension (default: $10)', 'ielts-course-manager'); ?></p>
+                            <p class="description"><?php _e('Price in USD for 5-day extension (default: $10)', 'ielts-course-manager'); ?></p>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><?php _e('1 Month Extension', 'ielts-course-manager'); ?></th>
+                        <th scope="row"><?php _e('1 Month Extension (10 Days)', 'ielts-course-manager'); ?></th>
                         <td>
                             <input type="number" step="0.01" min="0" name="extension_1_month" value="<?php echo esc_attr($extension_pricing['1_month'] ?? 15.00); ?>" class="regular-text">
-                            <p class="description"><?php _e('Price in USD for 10 day extension (default: $15)', 'ielts-course-manager'); ?></p>
+                            <p class="description"><?php _e('Price in USD for 10-day extension (default: $15)', 'ielts-course-manager'); ?></p>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><?php _e('3 Months Extension', 'ielts-course-manager'); ?></th>
+                        <th scope="row"><?php _e('3 Months Extension (30 Days)', 'ielts-course-manager'); ?></th>
                         <td>
                             <input type="number" step="0.01" min="0" name="extension_3_months" value="<?php echo esc_attr($extension_pricing['3_months'] ?? 20.00); ?>" class="regular-text">
-                            <p class="description"><?php _e('Price in USD for 30 day extension (default: $20)', 'ielts-course-manager'); ?></p>
+                            <p class="description"><?php _e('Price in USD for 30-day extension (default: $20)', 'ielts-course-manager'); ?></p>
                         </td>
                     </tr>
                 </table>
