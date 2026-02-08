@@ -992,7 +992,8 @@ class IELTS_CM_Stripe_Payment {
         $user_id = get_current_user_id();
         $quantity = intval($_POST['quantity']);
         $course_group = sanitize_text_field($_POST['course_group']);
-        $access_days = 30; // Fixed 30-day access for hybrid sites
+        // Fixed 30-day access for hybrid sites (validated above - this function only runs on hybrid sites)
+        $access_days = 30;
         $price = floatval($_POST['price']);
         
         // Validate inputs
