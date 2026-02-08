@@ -1068,7 +1068,7 @@ class IELTS_CM_Access_Codes {
                         </tr>
                         <tr>
                             <th>Access Days:</th>
-                            <td><input type="number" id="code-access-days" value="30" min="1" required style="width: 100%;"></td>
+                            <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 30); ?>" min="1" required style="width: 100%;"></td>
                         </tr>
                     </table>
                     

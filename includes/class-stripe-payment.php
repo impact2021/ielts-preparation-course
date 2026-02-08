@@ -1108,16 +1108,11 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
-        // Get partner organization ID
+        // Get partner organization ID from user meta
         $partner_org_id = $user_id; // Default to user_id
-        if (class_exists('IELTS_CM_Access_Codes')) {
-            // Try to get the organization ID from the access codes class
-            $access_codes_instance = new IELTS_CM_Access_Codes();
-            // Use reflection to call private method or just use user meta directly
-            $org_id = get_user_meta($user_id, 'iw_partner_org_id', true);
-            if (!empty($org_id) && is_numeric($org_id)) {
-                $partner_org_id = (int) $org_id;
-            }
+        $org_id = get_user_meta($user_id, 'iw_partner_org_id', true);
+        if (!empty($org_id) && is_numeric($org_id)) {
+            $partner_org_id = (int) $org_id;
         }
         
         // Create the access codes
