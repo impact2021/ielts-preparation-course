@@ -5276,25 +5276,22 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 update_option('ielts_cm_delete_data_on_uninstall', false);
             }
             
-            // Save membership system toggle
-            if (isset($_POST['ielts_cm_membership_enabled'])) {
-                update_option('ielts_cm_membership_enabled', true);
-            } else {
-                update_option('ielts_cm_membership_enabled', false);
-            }
+            // Save site type - radio button means only one can be selected
+            // First, disable all options
+            update_option('ielts_cm_membership_enabled', false);
+            update_option('ielts_cm_access_code_enabled', false);
+            update_option('ielts_cm_hybrid_site_enabled', false);
             
-            // Save access code membership system toggle
-            if (isset($_POST['ielts_cm_access_code_enabled'])) {
-                update_option('ielts_cm_access_code_enabled', true);
-            } else {
-                update_option('ielts_cm_access_code_enabled', false);
-            }
-            
-            // Save hybrid site toggle
-            if (isset($_POST['ielts_cm_hybrid_site_enabled'])) {
-                update_option('ielts_cm_hybrid_site_enabled', true);
-            } else {
-                update_option('ielts_cm_hybrid_site_enabled', false);
+            // Then enable the selected one
+            if (isset($_POST['ielts_cm_site_type'])) {
+                $site_type = sanitize_text_field($_POST['ielts_cm_site_type']);
+                if ($site_type === 'paid_membership') {
+                    update_option('ielts_cm_membership_enabled', true);
+                } elseif ($site_type === 'access_code') {
+                    update_option('ielts_cm_access_code_enabled', true);
+                } elseif ($site_type === 'hybrid') {
+                    update_option('ielts_cm_hybrid_site_enabled', true);
+                }
             }
             
             // Save vocabulary header color (also used for band scores table)
@@ -5309,6 +5306,17 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         $membership_enabled = get_option('ielts_cm_membership_enabled', false);
         $access_code_enabled = get_option('ielts_cm_access_code_enabled', false);
         $hybrid_site_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        
+        // Determine which site type is currently selected
+        $current_site_type = 'none';
+        if ($membership_enabled) {
+            $current_site_type = 'paid_membership';
+        } elseif ($access_code_enabled) {
+            $current_site_type = 'access_code';
+        } elseif ($hybrid_site_enabled) {
+            $current_site_type = 'hybrid';
+        }
+        
         $vocab_header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
         ?>
         <div class="wrap">
@@ -5320,49 +5328,45 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 <table class="form-table">
                     <tr>
                         <th scope="row">
-                            <?php _e('Paid Membership', 'ielts-course-manager'); ?>
+                            <?php _e('Site Type', 'ielts-course-manager'); ?>
                         </th>
                         <td>
                             <fieldset>
-                                <label>
-                                    <input type="checkbox" name="ielts_cm_membership_enabled" value="1" <?php checked($membership_enabled, true); ?>>
-                                    <?php _e('Enable Paid Membership System', 'ielts-course-manager'); ?>
-                                </label>
-                                <p class="description">
-                                    <?php _e('Enable the paid membership system including trial signups, Stripe payments, and the Memberships admin menu. When disabled, all paid membership features will be hidden. Disable this if your site only uses access codes or has its own external membership system.', 'ielts-course-manager'); ?>
+                                <p class="description" style="margin-top: 0;">
+                                    <?php _e('Choose the membership system for your site. Only one option can be selected at a time.', 'ielts-course-manager'); ?>
                                 </p>
-                            </fieldset>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <?php _e('Access Code Membership', 'ielts-course-manager'); ?>
-                        </th>
-                        <td>
-                            <fieldset>
-                                <label>
-                                    <input type="checkbox" name="ielts_cm_access_code_enabled" value="1" <?php checked($access_code_enabled, true); ?>>
-                                    <?php _e('Enable Access Code Membership System', 'ielts-course-manager'); ?>
+                                
+                                <label style="display: block; margin: 15px 0;">
+                                    <input type="radio" name="ielts_cm_site_type" value="paid_membership" <?php checked($current_site_type, 'paid_membership'); ?>>
+                                    <strong><?php _e('Paid Membership', 'ielts-course-manager'); ?></strong>
+                                    <p class="description" style="margin-left: 25px;">
+                                        <?php _e('Enable the paid membership system including trial signups, Stripe payments, and the Memberships admin menu. When disabled, all paid membership features will be hidden. Disable this if your site only uses access codes or has its own external membership system.', 'ielts-course-manager'); ?>
+                                    </p>
                                 </label>
-                                <p class="description">
-                                    <?php _e('Enable access code-based enrollment. Partners can create invite codes and manually enroll users. Users can join courses using access codes instead of or in addition to the payment-based membership system.', 'ielts-course-manager'); ?>
-                                </p>
-                            </fieldset>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <?php _e('Hybrid Site', 'ielts-course-manager'); ?>
-                        </th>
-                        <td>
-                            <fieldset>
-                                <label>
-                                    <input type="checkbox" name="ielts_cm_hybrid_site_enabled" value="1" <?php checked($hybrid_site_enabled, true); ?>>
-                                    <?php _e('Enable Hybrid Site Mode', 'ielts-course-manager'); ?>
+                                
+                                <label style="display: block; margin: 15px 0;">
+                                    <input type="radio" name="ielts_cm_site_type" value="access_code" <?php checked($current_site_type, 'access_code'); ?>>
+                                    <strong><?php _e('Access Code Membership', 'ielts-course-manager'); ?></strong>
+                                    <p class="description" style="margin-left: 25px;">
+                                        <?php _e('Enable access code-based enrollment. Partners can create invite codes and manually enroll users. Users can join courses using access codes instead of or in addition to the payment-based membership system.', 'ielts-course-manager'); ?>
+                                    </p>
                                 </label>
-                                <p class="description">
-                                    <?php _e('Enable hybrid site mode for sites with multiple companies that need both paid membership features and access code enrollment. In hybrid mode: (1) Multiple companies can exist on one site, each purchasing their own access codes; (2) Partner admins only see codes and users connected to their company; (3) Partner admins cannot extend access or manipulate course enrollments; (4) Users CAN purchase course extensions (5, 10, or 30 days) which you configure in Payment Settings. This mode does NOT impact existing single-company sites.', 'ielts-course-manager'); ?>
-                                </p>
+                                
+                                <label style="display: block; margin: 15px 0;">
+                                    <input type="radio" name="ielts_cm_site_type" value="hybrid" <?php checked($current_site_type, 'hybrid'); ?>>
+                                    <strong><?php _e('Hybrid Site', 'ielts-course-manager'); ?></strong>
+                                    <p class="description" style="margin-left: 25px;">
+                                        <?php _e('Enable hybrid site mode for sites with multiple companies that need both paid membership features and access code enrollment. In hybrid mode: (1) Multiple companies can exist on one site, each purchasing their own access codes; (2) Partner admins only see codes and users connected to their company; (3) Partner admins cannot extend access or manipulate course enrollments; (4) Users CAN purchase course extensions (5, 10, or 30 days) which you configure in Payment Settings. This mode does NOT impact existing single-company sites.', 'ielts-course-manager'); ?>
+                                    </p>
+                                </label>
+                                
+                                <label style="display: block; margin: 15px 0;">
+                                    <input type="radio" name="ielts_cm_site_type" value="none" <?php checked($current_site_type, 'none'); ?>>
+                                    <strong><?php _e('None (Disabled)', 'ielts-course-manager'); ?></strong>
+                                    <p class="description" style="margin-left: 25px;">
+                                        <?php _e('Disable all membership systems. Use this if you have your own external membership or enrollment system.', 'ielts-course-manager'); ?>
+                                    </p>
+                                </label>
                             </fieldset>
                         </td>
                     </tr>
@@ -5393,6 +5397,9 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                                     <?php _e('Set the primary color for your site. This is used for vocabulary table headers, band scores table headers, and will be used in additional places later.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
+                        </td>
+                    </tr>
+                </table>
                         </td>
                     </tr>
                 </table>
