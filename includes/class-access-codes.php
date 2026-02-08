@@ -472,6 +472,26 @@ class IELTS_CM_Access_Codes {
         ?>
         <div class="wrap">
             <h1>Partner Dashboard Settings</h1>
+            
+            <?php 
+            // Show notice about Organizations page for hybrid sites
+            $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+            if ($is_hybrid_mode): 
+                $partner_admins = get_users(array('role' => 'partner_admin'));
+                if (!empty($partner_admins)):
+            ?>
+                <div class="notice notice-info">
+                    <p>
+                        <strong>💡 Managing Multiple Companies?</strong> 
+                        Visit the <a href="<?php echo admin_url('admin.php?page=ielts-partner-organizations'); ?>"><strong>Organizations</strong></a> page 
+                        to assign partner admins to different organizations. Partners in the same organization will see each other's students and codes.
+                    </p>
+                </div>
+            <?php 
+                endif;
+            endif; 
+            ?>
+            
             <form method="post" action="">
                 <?php wp_nonce_field('iw_partner_settings'); ?>
                 <table class="form-table">
@@ -541,8 +561,27 @@ class IELTS_CM_Access_Codes {
             wp_die('Unauthorized');
         }
         
+        $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+        $partner_admins = get_users(array('role' => 'partner_admin'));
+        
         echo '<div class="wrap"><h1>Partner Admin Dashboard</h1>';
         echo '<p>Use the <code>[iw_partner_dashboard]</code> shortcode on a page to display the partner dashboard for partners.</p>';
+        
+        // Show organization management info for hybrid sites
+        if ($is_hybrid_mode && !empty($partner_admins)) {
+            echo '<div class="notice notice-info" style="margin-top: 20px;">';
+            echo '<h3 style="margin-top: 10px;">📋 Organization Management</h3>';
+            echo '<p>For hybrid sites with multiple companies, you can assign partner admins to different organizations:</p>';
+            echo '<ol>';
+            echo '<li>Go to <a href="' . admin_url('admin.php?page=ielts-partner-organizations') . '"><strong>Organizations</strong></a> page (in the menu below)</li>';
+            echo '<li>Assign organization IDs to each partner admin</li>';
+            echo '<li>Partners with the same organization ID will see each other\'s students and codes</li>';
+            echo '<li>Partners with different organization IDs will be isolated from each other</li>';
+            echo '</ol>';
+            echo '<p><a href="' . admin_url('admin.php?page=ielts-partner-organizations') . '" class="button button-primary">Manage Organizations</a></p>';
+            echo '</div>';
+        }
+        
         echo '</div>';
     }
     
