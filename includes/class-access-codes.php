@@ -1768,6 +1768,41 @@ class IELTS_CM_Access_Codes {
         // Check if hybrid mode is enabled
         $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
         
+        // Get current user info for debugging
+        $current_user_id = get_current_user_id();
+        $current_user_org_id = get_user_meta($current_user_id, 'iw_partner_org_id', true);
+        
+        // Add debugging information panel
+        $debug_html = '<div style="background: #f0f8ff; border: 1px solid #0073aa; border-radius: 4px; padding: 15px; margin-bottom: 20px;">';
+        $debug_html .= '<h4 style="margin: 0 0 10px 0; color: #0073aa;">🔍 Debug Information (Hybrid Site)</h4>';
+        $debug_html .= '<p style="margin: 5px 0;"><strong>Your User ID:</strong> ' . esc_html($current_user_id) . '</p>';
+        $debug_html .= '<p style="margin: 5px 0;"><strong>Your Organization ID:</strong> ' . esc_html($current_user_org_id ?: 'Not Set') . '</p>';
+        $debug_html .= '<p style="margin: 5px 0;"><strong>Filtering by Org ID:</strong> ' . esc_html($partner_org_id) . '</p>';
+        $debug_html .= '<p style="margin: 5px 0;"><strong>Hybrid Mode:</strong> ' . ($is_hybrid_mode ? 'Enabled ✓' : 'Disabled ✗') . '</p>';
+        
+        // Count all codes in database
+        $total_codes = $wpdb->get_var("SELECT COUNT(*) FROM $table");
+        $your_codes = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM $table WHERE created_by = %d", $partner_org_id));
+        
+        $debug_html .= '<p style="margin: 5px 0;"><strong>Total Codes in Database:</strong> ' . esc_html($total_codes) . '</p>';
+        $debug_html .= '<p style="margin: 5px 0;"><strong>Codes Created by Your Org:</strong> ' . esc_html($your_codes) . '</p>';
+        
+        // Get recent payment logs
+        $payment_table = $wpdb->prefix . 'ielts_cm_payments';
+        $recent_payment = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $payment_table WHERE user_id = %d ORDER BY payment_date DESC LIMIT 1",
+            $current_user_id
+        ));
+        
+        if ($recent_payment) {
+            $debug_html .= '<p style="margin: 5px 0;"><strong>Last Payment:</strong> ' . esc_html($recent_payment->membership_type) . ' - $' . esc_html($recent_payment->amount) . ' - ' . esc_html($recent_payment->payment_status) . ' (' . esc_html($recent_payment->payment_date) . ')</p>';
+        } else {
+            $debug_html .= '<p style="margin: 5px 0;"><strong>Last Payment:</strong> None found</p>';
+        }
+        
+        $debug_html .= '<p style="margin: 10px 0 0 0; font-size: 12px; color: #666;"><em>If codes are not showing after purchase, this info will help debug the issue.</em></p>';
+        $debug_html .= '</div>';
+        
         if ($is_hybrid_mode) {
             // HYBRID MODE: Filter codes by organization ID
             // Partner admins only see codes from their organization
@@ -1797,10 +1832,11 @@ class IELTS_CM_Access_Codes {
         }
         
         if (empty($codes)) {
-            return '<p>No codes generated yet.</p>';
+            return $debug_html . '<p>No codes generated yet.</p>';
         }
         
-        $html = '<table class="iw-table"><thead><tr>';
+        $html = $debug_html;
+        $html .= '<table class="iw-table"><thead><tr>';
         $html .= '<th scope="col">Code</th><th scope="col">Membership</th><th scope="col">Days</th><th scope="col">Status</th><th scope="col">Used By</th><th scope="col">Created</th><th scope="col">Action</th>';
         $html .= '</tr></thead><tbody>';
         
