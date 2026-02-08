@@ -1293,9 +1293,9 @@ class IELTS_CM_Access_Codes {
             if ($stripe_enabled): 
             ?>
             // Initialize Stripe for code purchase
-            var codeStripe = Stripe('<?php echo esc_js(get_option('ielts_cm_stripe_publishable_key')); ?>');
-            var codeElements = codeStripe.elements();
-            var codeCardElement = codeElements.create('card', {
+            var stripeForCodePurchase = Stripe('<?php echo esc_js(get_option('ielts_cm_stripe_publishable_key')); ?>');
+            var codePurchaseElements = stripeForCodePurchase.elements();
+            var codePurchaseCardElement = codePurchaseElements.create('card', {
                 style: {
                     base: {
                         fontSize: '16px',
@@ -1309,9 +1309,9 @@ class IELTS_CM_Access_Codes {
             });
             
             if (document.getElementById('code-card-element')) {
-                codeCardElement.mount('#code-card-element');
+                codePurchaseCardElement.mount('#code-card-element');
                 
-                codeCardElement.on('change', function(event) {
+                codePurchaseCardElement.on('change', function(event) {
                     var displayError = document.getElementById('code-card-errors');
                     if (event.error) {
                         displayError.textContent = event.error.message;
@@ -1369,9 +1369,9 @@ class IELTS_CM_Access_Codes {
                     success: function(response) {
                         if (response.success) {
                             // Confirm payment with Stripe
-                            codeStripe.confirmCardPayment(response.data.client_secret, {
+                            stripeForCodePurchase.confirmCardPayment(response.data.client_secret, {
                                 payment_method: {
-                                    card: codeCardElement
+                                    card: codePurchaseCardElement
                                 }
                             }).then(function(result) {
                                 if (result.error) {

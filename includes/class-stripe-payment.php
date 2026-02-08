@@ -1116,7 +1116,8 @@ class IELTS_CM_Stripe_Payment {
             
             // Generate codes
             for ($i = 0; $i < $quantity; $i++) {
-                $code = strtoupper(substr(md5(uniqid(rand(), true)), 0, 10));
+                // Generate secure random code using WordPress function
+                $code = strtoupper(substr(str_replace(array('-', '_'), '', wp_generate_password(10, false)), 0, 10));
                 
                 $wpdb->insert(
                     $table_name,
