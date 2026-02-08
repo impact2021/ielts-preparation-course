@@ -794,27 +794,69 @@ class IELTS_CM_Access_Codes {
                                 <th>Number of Codes:</th>
                                 <td>
                                     <select name="quantity" id="code-quantity" required>
-                                        <option value="50">50 Codes</option>
-                                        <option value="100">100 Codes</option>
-                                        <option value="200">200 Codes</option>
-                                        <option value="300">300 Codes</option>
+                                        <?php
+                                        // Get pricing tiers
+                                        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+                                        
+                                        if (empty($pricing_tiers)) {
+                                            // Fall back to old format
+                                            $old_pricing = get_option('ielts_cm_access_code_pricing', array(
+                                                '50' => 50.00,
+                                                '100' => 90.00,
+                                                '200' => 170.00,
+                                                '300' => 240.00
+                                            ));
+                                            foreach ($old_pricing as $qty => $price) {
+                                                echo '<option value="' . esc_attr($qty) . '">' . esc_html($qty) . ' Codes</option>';
+                                            }
+                                        } else {
+                                            // Use new pricing tiers
+                                            foreach ($pricing_tiers as $tier) {
+                                                echo '<option value="' . esc_attr($tier['quantity']) . '">' . esc_html($tier['quantity']) . ' Codes</option>';
+                                            }
+                                        }
+                                        ?>
                                     </select>
                                 </td>
                             </tr>
                             <tr>
                                 <th>Price:</th>
                                 <td>
-                                    <span id="code-price" style="font-size: 18px; font-weight: bold; color: #0073aa;">$50.00</span>
+                                    <span id="code-price" style="font-size: 18px; font-weight: bold; color: #0073aa;">
+                                        <?php
+                                        // Show first price as default
+                                        if (!empty($pricing_tiers)) {
+                                            echo '$' . number_format($pricing_tiers[0]['price'], 2);
+                                        } else if (!empty($old_pricing)) {
+                                            $first_price = reset($old_pricing);
+                                            echo '$' . number_format($first_price, 2);
+                                        } else {
+                                            echo '$50.00';
+                                        }
+                                        ?>
+                                    </span>
                                     <script>
                                         // Update price when quantity changes
                                         (function() {
                                             var pricing = <?php 
-                                                $code_pricing = get_option('ielts_cm_access_code_pricing', array(
-                                                    '50' => 50.00,
-                                                    '100' => 90.00,
-                                                    '200' => 170.00,
-                                                    '300' => 240.00
-                                                ));
+                                                // Try new pricing tiers first
+                                                $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+                                                $code_pricing = array();
+                                                
+                                                if (!empty($pricing_tiers)) {
+                                                    // Convert new format to old format for JS
+                                                    foreach ($pricing_tiers as $tier) {
+                                                        $code_pricing[strval($tier['quantity'])] = floatval($tier['price']);
+                                                    }
+                                                } else {
+                                                    // Fall back to old format
+                                                    $code_pricing = get_option('ielts_cm_access_code_pricing', array(
+                                                        '50' => 50.00,
+                                                        '100' => 90.00,
+                                                        '200' => 170.00,
+                                                        '300' => 240.00
+                                                    ));
+                                                }
                                                 echo json_encode($code_pricing); 
                                             ?>;
                                             var quantitySelect = document.getElementById('code-quantity');
@@ -1895,13 +1937,24 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'Access days must be at least 1'));
         }
         
-        // Get pricing
-        $code_pricing = get_option('ielts_cm_access_code_pricing', array(
-            '50' => 50.00,
-            '100' => 90.00,
-            '200' => 170.00,
-            '300' => 240.00
-        ));
+        // Get pricing - support both new tiers and old format
+        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+        $code_pricing = array();
+        
+        if (!empty($pricing_tiers)) {
+            // Convert new format to old format for lookup
+            foreach ($pricing_tiers as $tier) {
+                $code_pricing[strval($tier['quantity'])] = floatval($tier['price']);
+            }
+        } else {
+            // Fall back to old format
+            $code_pricing = get_option('ielts_cm_access_code_pricing', array(
+                '50' => 50.00,
+                '100' => 90.00,
+                '200' => 170.00,
+                '300' => 240.00
+            ));
+        }
         
         $price = isset($code_pricing[$quantity]) ? floatval($code_pricing[$quantity]) : 0;
         
