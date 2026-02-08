@@ -699,6 +699,15 @@ class IELTS_CM_Access_Codes {
         global $post;
         if ($post && has_shortcode($post->post_content, 'iw_partner_dashboard')) {
             wp_enqueue_script('jquery');
+            
+            // Enqueue Stripe.js if hybrid mode is enabled and Stripe is configured
+            $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+            $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
+            $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+            
+            if ($is_hybrid_mode && $stripe_enabled && !empty($stripe_publishable)) {
+                wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
+            }
         }
     }
     
