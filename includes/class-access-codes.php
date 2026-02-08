@@ -3065,10 +3065,15 @@ class IELTS_CM_Access_Codes {
         $amount = floatval($pending_purchase['amount']);
         
         // Get partner organization ID
-        $partner_org_id = $user_id;
+        // For hybrid sites: Default to SITE_PARTNER_ORG_ID if user doesn't have custom org ID set
+        // This ensures codes are visible in the partner dashboard
         $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
         if (!empty($org_id) && is_numeric($org_id)) {
             $partner_org_id = (int) $org_id;
+        } else {
+            // HYBRID FIX: Use SITE_PARTNER_ORG_ID instead of user_id
+            // This matches the default organization used by get_partner_org_id()
+            $partner_org_id = self::SITE_PARTNER_ORG_ID;
         }
         
         // Generate access codes with error handling
