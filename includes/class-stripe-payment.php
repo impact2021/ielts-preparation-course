@@ -992,11 +992,11 @@ class IELTS_CM_Stripe_Payment {
         $user_id = get_current_user_id();
         $quantity = intval($_POST['quantity']);
         $course_group = sanitize_text_field($_POST['course_group']);
-        $access_days = intval($_POST['access_days']);
+        $access_days = 30; // Fixed 30-day access for hybrid sites
         $price = floatval($_POST['price']);
         
         // Validate inputs
-        if ($quantity <= 0 || $access_days <= 0 || $price <= 0) {
+        if ($quantity <= 0 || $price <= 0) {
             wp_send_json_error(array('message' => 'Invalid purchase parameters'));
             return;
         }

@@ -1088,10 +1088,6 @@ class IELTS_CM_Access_Codes {
                                 </select>
                             </td>
                         </tr>
-                        <tr>
-                            <th>Access Duration (Days):</th>
-                            <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 30); ?>" min="1" required style="width: 100%;" aria-label="Number of days students will have access to the course"></td>
-                        </tr>
                     </table>
                     
                     <!-- Payment Section -->
@@ -1594,10 +1590,10 @@ class IELTS_CM_Access_Codes {
                 
                 var quantity = $('#code-quantity-select').val();
                 var courseGroup = $('#code-course-group').val();
-                var accessDays = $('#code-access-days').val();
+                var accessDays = 30; // Fixed 30-day access for hybrid sites
                 var price = $('#code-quantity-select option:selected').data('price');
                 
-                if (!quantity || !courseGroup || !accessDays) {
+                if (!quantity || !courseGroup) {
                     alert('Please fill in all fields');
                     return;
                 }
@@ -1661,10 +1657,10 @@ class IELTS_CM_Access_Codes {
                     createOrder: function(data, actions) {
                         var quantity = $('#code-quantity-select').val();
                         var courseGroup = $('#code-course-group').val();
-                        var accessDays = $('#code-access-days').val();
+                        var accessDays = 30; // Fixed 30-day access for hybrid sites
                         var price = $('#code-quantity-select option:selected').data('price');
                         
-                        if (!quantity || !courseGroup || !accessDays) {
+                        if (!quantity || !courseGroup) {
                             $('#code-purchase-message').html('<div class="iw-msg error">Please fill in all fields</div>');
                             return actions.reject();
                         }
@@ -2791,11 +2787,11 @@ class IELTS_CM_Access_Codes {
         
         $quantity = intval($_POST['quantity']);
         $course_group = sanitize_text_field($_POST['course_group']);
-        $access_days = intval($_POST['access_days']);
+        $access_days = 30; // Fixed 30-day access for hybrid sites
         $price = floatval($_POST['price']);
         
         // Validate inputs
-        if ($quantity <= 0 || $access_days <= 0 || $price <= 0) {
+        if ($quantity <= 0 || $price <= 0) {
             wp_send_json_error(array('message' => 'Invalid purchase parameters'));
             return;
         }
