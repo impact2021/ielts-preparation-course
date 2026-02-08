@@ -2780,9 +2780,18 @@ class IELTS_CM_Shortcodes {
                             <?php _e('Become a Full Member', 'ielts-course-manager'); ?>
                         </button>
                     <?php elseif (!empty($membership_type) && !$is_trial): ?>
-                        <button class="ielts-tab-button" data-tab="extend-course">
-                            <?php _e('Extend My Course', 'ielts-course-manager'); ?>
-                        </button>
+                        <?php 
+                        // Check if this is an access code membership on a hybrid site
+                        $is_access_code_membership = strpos($membership_type, 'access_') === 0;
+                        $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+                        
+                        // Hide "Extend My Course" tab for access code users on hybrid sites
+                        if (!($is_access_code_membership && $hybrid_mode_enabled)): 
+                        ?>
+                            <button class="ielts-tab-button" data-tab="extend-course">
+                                <?php _e('Extend My Course', 'ielts-course-manager'); ?>
+                            </button>
+                        <?php endif; ?>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
@@ -2973,6 +2982,14 @@ class IELTS_CM_Shortcodes {
                             <?php endif; ?>
                         </div>
                     <?php else: ?>
+                        <?php 
+                        // Check if this is an access code membership on a hybrid site
+                        $is_access_code_membership = strpos($membership_type, 'access_') === 0;
+                        $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+                        
+                        // Hide "Extend My Course" tab for access code users on hybrid sites
+                        if (!($is_access_code_membership && $hybrid_mode_enabled)): 
+                        ?>
                         <!-- Extend My Course Tab -->
                         <div class="ielts-tab-content" id="extend-course">
                             <h3><?php _e('Extend My Course', 'ielts-course-manager'); ?></h3>
@@ -2998,12 +3015,6 @@ class IELTS_CM_Shortcodes {
                                 </p>
                             <?php endif; ?>
                             <?php 
-                            // Check if this is an access code membership (starts with 'access_')
-                            $is_access_code_membership = strpos($membership_type, 'access_') === 0;
-                            
-                            // Check if hybrid mode is enabled
-                            $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
-                            
                             if (!$is_access_code_membership): 
                                 // Show extension message only for paid memberships
                             ?>
@@ -3015,20 +3026,12 @@ class IELTS_CM_Shortcodes {
                                         </a>
                                     </p>
                                 <?php endif; ?>
-                            <?php elseif (!$hybrid_mode_enabled): ?>
+                            <?php else: ?>
                                 <!-- Access code membership on non-hybrid site - contact partner admin -->
                                 <p><?php _e('Your access was provided through a partner access code. To extend your course access, please contact your course administrator.', 'ielts-course-manager'); ?></p>
-                            <?php else: ?>
-                                <!-- Access code membership on hybrid site - show extension options -->
-                                <p><?php _e('Your access was provided through a partner access code. You can extend your course access below.', 'ielts-course-manager'); ?></p>
-                                <?php if (!empty($full_member_page_url)): ?>
-                                    <p>
-                                        <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
-                                            <?php _e('Extend Course Access', 'ielts-course-manager'); ?>
-                                        </a>
-                                    </p>
-                                <?php endif; ?>
                             <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
                         </div>
                     <?php endif; ?>
                 <?php endif; ?>
