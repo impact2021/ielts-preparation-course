@@ -1111,7 +1111,7 @@ class IELTS_CM_Stripe_Payment {
         
         // Get partner organization ID from user meta
         $partner_org_id = $user_id; // Default to user_id
-        $org_id = get_user_meta($user_id, 'iw_partner_org_id', true);
+        $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
         if (!empty($org_id) && is_numeric($org_id)) {
             $partner_org_id = (int) $org_id;
         }

@@ -1770,7 +1770,7 @@ class IELTS_CM_Access_Codes {
         
         // Get current user info for debugging
         $current_user_id = get_current_user_id();
-        $current_user_org_id = get_user_meta($current_user_id, 'iw_partner_org_id', true);
+        $current_user_org_id = get_user_meta($current_user_id, 'iw_partner_organization_id', true);
         
         // Add debugging information panel
         $debug_html = '<div style="background: #f0f8ff; border: 1px solid #0073aa; border-radius: 4px; padding: 15px; margin-bottom: 20px;">';
@@ -3066,7 +3066,7 @@ class IELTS_CM_Access_Codes {
         
         // Get partner organization ID
         $partner_org_id = $user_id;
-        $org_id = get_user_meta($user_id, 'iw_partner_org_id', true);
+        $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
         if (!empty($org_id) && is_numeric($org_id)) {
             $partner_org_id = (int) $org_id;
         }
