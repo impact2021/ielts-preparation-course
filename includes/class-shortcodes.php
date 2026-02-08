@@ -3135,8 +3135,8 @@ class IELTS_CM_Shortcodes {
             $overall_score = round($average * 2) / 2;
         }
         
-        // Get header color from settings
-        $header_color = get_option('ielts_cm_band_scores_header_color', '#E46B0A');
+        // Get header color from settings (using primary color)
+        $header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
         
         ob_start();
         ?>
