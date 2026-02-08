@@ -25,6 +25,9 @@ class IELTS_CM_Stripe_Payment {
         // AJAX endpoint for course extension payment intent
         add_action('wp_ajax_ielts_cm_create_extension_payment_intent', array($this, 'create_extension_payment_intent'));
         
+        // AJAX endpoint for code purchase payment intent
+        add_action('wp_ajax_ielts_cm_create_code_purchase_payment_intent', array($this, 'create_code_purchase_payment_intent'));
+        
         // Webhook handler for payment confirmation
         add_action('rest_api_init', array($this, 'register_webhook_endpoint'));
     }
@@ -700,6 +703,12 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
+        // Check if this is an access code purchase payment
+        if (isset($metadata->payment_type) && $metadata->payment_type === 'access_code_purchase') {
+            $this->handle_code_purchase_payment($payment_intent);
+            return;
+        }
+        
         // Extract user data from metadata
         $email = $metadata->email;
         $first_name = $metadata->first_name;
@@ -950,5 +959,203 @@ class IELTS_CM_Stripe_Payment {
         delete_user_meta($user_id, '_ielts_cm_pending_extension');
         
         error_log("Successfully processed course extension payment for user $user_id");
+    }
+    
+    /**
+     * Create payment intent for access code purchase
+     */
+    public function create_code_purchase_payment_intent() {
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_code_purchase_payment')) {
+            wp_send_json_error(array('message' => 'Security check failed'));
+            return;
+        }
+        
+        // Verify user is logged in
+        if (!is_user_logged_in()) {
+            wp_send_json_error(array('message' => 'You must be logged in to purchase codes'));
+            return;
+        }
+        
+        // Verify user has permission (partner admin or site admin)
+        if (!current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'You do not have permission to purchase codes'));
+            return;
+        }
+        
+        // Verify hybrid mode is enabled
+        if (!get_option('ielts_cm_hybrid_site_enabled', false)) {
+            wp_send_json_error(array('message' => 'Code purchasing is only available in hybrid mode'));
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        $quantity = intval($_POST['quantity']);
+        $course_group = sanitize_text_field($_POST['course_group']);
+        $access_days = intval($_POST['access_days']);
+        $price = floatval($_POST['price']);
+        
+        // Validate inputs
+        if ($quantity <= 0 || $access_days <= 0 || $price <= 0) {
+            wp_send_json_error(array('message' => 'Invalid purchase parameters'));
+            return;
+        }
+        
+        // Verify course group is valid
+        $valid_groups = array('academic_module', 'general_module', 'general_english', 'entry_test');
+        if (!in_array($course_group, $valid_groups)) {
+            wp_send_json_error(array('message' => 'Invalid course group'));
+            return;
+        }
+        
+        // Verify pricing matches server-side settings
+        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+        $price_valid = false;
+        
+        if (!empty($pricing_tiers)) {
+            foreach ($pricing_tiers as $tier) {
+                if (intval($tier['quantity']) === $quantity && floatval($tier['price']) === $price) {
+                    $price_valid = true;
+                    break;
+                }
+            }
+        } else {
+            // Fall back to old format
+            $old_pricing = get_option('ielts_cm_access_code_pricing', array());
+            if (isset($old_pricing[strval($quantity)]) && floatval($old_pricing[strval($quantity)]) === $price) {
+                $price_valid = true;
+            }
+        }
+        
+        if (!$price_valid) {
+            wp_send_json_error(array('message' => 'Price mismatch. Please refresh and try again.'));
+            return;
+        }
+        
+        // Load Stripe
+        $this->load_stripe();
+        
+        try {
+            // Get Stripe secret key
+            $stripe_secret = get_option('ielts_cm_stripe_secret_key');
+            if (empty($stripe_secret)) {
+                wp_send_json_error(array('message' => 'Payment system not configured'));
+                return;
+            }
+            
+            \Stripe\Stripe::setApiKey($stripe_secret);
+            
+            // Create payment intent
+            $amount = intval($price * 100); // Convert to cents
+            $user = get_userdata($user_id);
+            
+            $payment_intent = \Stripe\PaymentIntent::create([
+                'amount' => $amount,
+                'currency' => 'usd',
+                'description' => sprintf('Access Codes Purchase - %d codes', $quantity),
+                'metadata' => [
+                    'user_id' => $user_id,
+                    'user_email' => $user->user_email,
+                    'quantity' => $quantity,
+                    'course_group' => $course_group,
+                    'access_days' => $access_days,
+                    'payment_type' => 'access_code_purchase'
+                ],
+                'receipt_email' => $user->user_email
+            ]);
+            
+            // Store pending purchase in user meta for webhook processing
+            update_user_meta($user_id, '_ielts_cm_pending_code_purchase', array(
+                'quantity' => $quantity,
+                'course_group' => $course_group,
+                'access_days' => $access_days,
+                'amount' => $price,
+                'payment_intent_id' => $payment_intent->id,
+                'created' => time()
+            ));
+            
+            wp_send_json_success(array(
+                'client_secret' => $payment_intent->client_secret
+            ));
+            
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            error_log('Stripe Error: ' . $e->getMessage());
+            wp_send_json_error(array('message' => 'Payment system error: ' . $e->getMessage()));
+        } catch (Exception $e) {
+            error_log('Code Purchase Payment Error: ' . $e->getMessage());
+            wp_send_json_error(array('message' => 'An error occurred. Please try again.'));
+        }
+    }
+    
+    /**
+     * Handle successful code purchase payment
+     */
+    private function handle_code_purchase_payment($payment_intent) {
+        $metadata = $payment_intent->metadata;
+        
+        $user_id = intval($metadata->user_id);
+        $quantity = intval($metadata->quantity);
+        $course_group = $metadata->course_group;
+        $access_days = intval($metadata->access_days);
+        
+        error_log("Processing code purchase payment for user $user_id - $quantity codes");
+        
+        // Verify user exists
+        $user = get_userdata($user_id);
+        if (!$user) {
+            error_log("Code purchase payment failed: User $user_id not found");
+            return;
+        }
+        
+        // Create the access codes
+        if (class_exists('IELTS_CM_Access_Codes')) {
+            $access_codes = new IELTS_CM_Access_Codes();
+            
+            global $wpdb;
+            $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
+            
+            // Generate codes
+            for ($i = 0; $i < $quantity; $i++) {
+                $code = strtoupper(substr(md5(uniqid(rand(), true)), 0, 10));
+                
+                $wpdb->insert(
+                    $table_name,
+                    array(
+                        'code' => $code,
+                        'course_group' => $course_group,
+                        'access_days' => $access_days,
+                        'created_by' => $user_id,
+                        'status' => 'active',
+                        'created_at' => current_time('mysql')
+                    ),
+                    array('%s', '%s', '%d', '%d', '%s', '%s')
+                );
+            }
+            
+            error_log("Successfully created $quantity access codes for user $user_id");
+        } else {
+            error_log("Code purchase payment failed: IELTS_CM_Access_Codes class not found");
+        }
+        
+        // Log the payment
+        $this->ensure_payment_table_exists();
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payments';
+        $wpdb->insert(
+            $table_name,
+            array(
+                'user_id' => $user_id,
+                'membership_type' => 'access_codes_' . $quantity,
+                'amount' => $payment_intent->amount / 100,
+                'transaction_id' => $payment_intent->id,
+                'payment_status' => 'completed'
+            ),
+            array('%d', '%s', '%f', '%s', '%s')
+        );
+        
+        // Clean up pending purchase meta
+        delete_user_meta($user_id, '_ielts_cm_pending_code_purchase');
+        
+        error_log("Successfully processed code purchase payment for user $user_id");
     }
 }
