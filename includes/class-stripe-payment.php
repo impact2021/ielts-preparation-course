@@ -660,6 +660,8 @@ class IELTS_CM_Stripe_Payment {
      * Handle Stripe webhook events
      */
     public function handle_webhook($request) {
+        error_log('IELTS Stripe Webhook: Received webhook request');
+        
         $stripe_secret = get_option('ielts_cm_stripe_secret_key', '');
         
         $this->load_stripe();
@@ -671,21 +673,30 @@ class IELTS_CM_Stripe_Payment {
         // Get webhook signing secret from settings
         $webhook_secret = get_option('ielts_cm_stripe_webhook_secret', '');
         
+        if (empty($webhook_secret)) {
+            error_log('IELTS Stripe Webhook: ERROR - Webhook secret not configured');
+            return new WP_Error('configuration_error', 'Webhook secret not configured', array('status' => 500));
+        }
+        
         try {
             $event = \Stripe\Webhook::constructEvent(
                 $payload,
                 $sig_header,
                 $webhook_secret
             );
+            error_log('IELTS Stripe Webhook: Successfully verified signature for event type: ' . $event->type);
         } catch (\Exception $e) {
-            error_log('Webhook signature verification failed: ' . $e->getMessage());
+            error_log('IELTS Stripe Webhook: Signature verification failed - ' . $e->getMessage());
             return new WP_Error('invalid_signature', 'Invalid signature', array('status' => 400));
         }
         
         // Handle the event
         if ($event->type === 'payment_intent.succeeded') {
+            error_log('IELTS Stripe Webhook: Processing payment_intent.succeeded event');
             $payment_intent = $event->data->object;
             $this->handle_successful_payment($payment_intent);
+        } else {
+            error_log('IELTS Stripe Webhook: Received unhandled event type: ' . $event->type);
         }
         
         return new WP_REST_Response(['status' => 'success'], 200);
@@ -697,17 +708,24 @@ class IELTS_CM_Stripe_Payment {
     private function handle_successful_payment($payment_intent) {
         $metadata = $payment_intent->metadata;
         
+        error_log('IELTS Stripe Webhook: handle_successful_payment called for payment_intent: ' . $payment_intent->id);
+        error_log('IELTS Stripe Webhook: Metadata payment_type: ' . (isset($metadata->payment_type) ? $metadata->payment_type : 'NOT SET'));
+        
         // Check if this is a course extension payment
         if (isset($metadata->payment_type) && $metadata->payment_type === 'course_extension') {
+            error_log('IELTS Stripe Webhook: Delegating to handle_extension_payment');
             $this->handle_extension_payment($payment_intent);
             return;
         }
         
         // Check if this is an access code purchase payment
         if (isset($metadata->payment_type) && $metadata->payment_type === 'access_code_purchase') {
+            error_log('IELTS Stripe Webhook: Delegating to handle_code_purchase_payment');
             $this->handle_code_purchase_payment($payment_intent);
             return;
         }
+        
+        error_log('IELTS Stripe Webhook: Processing as standard membership payment');
         
         // Extract user data from metadata
         $email = $metadata->email;
@@ -1092,6 +1110,8 @@ class IELTS_CM_Stripe_Payment {
      * Handle successful code purchase payment
      */
     private function handle_code_purchase_payment($payment_intent) {
+        error_log("IELTS Webhook: handle_code_purchase_payment START - Payment Intent ID: " . $payment_intent->id);
+        
         $metadata = $payment_intent->metadata;
         
         $user_id = intval($metadata->user_id);
@@ -1100,14 +1120,16 @@ class IELTS_CM_Stripe_Payment {
         $duration_days = intval($metadata->access_days);
         $amount = $payment_intent->amount / 100;
         
-        error_log("Processing code purchase payment for user $user_id - $quantity codes");
+        error_log("IELTS Webhook: Processing code purchase - User: $user_id, Quantity: $quantity, Group: $course_group, Days: $duration_days, Amount: $$amount");
         
         // Verify user exists
         $user = get_userdata($user_id);
         if (!$user) {
-            error_log("Code purchase payment failed: User $user_id not found");
+            error_log("CRITICAL: Code purchase payment failed - User $user_id not found");
             return;
         }
+        
+        error_log("IELTS Webhook: User verified - Email: " . $user->user_email);
         
         // Get partner organization ID from user meta
         $partner_org_id = $user_id; // Default to user_id
@@ -1116,13 +1138,18 @@ class IELTS_CM_Stripe_Payment {
             $partner_org_id = (int) $org_id;
         }
         
+        error_log("IELTS Webhook: Partner Org ID: $partner_org_id (user meta org_id: " . ($org_id ?: 'not set') . ")");
+        
         // Create the access codes
         $generated_codes = array();
         if (class_exists('IELTS_CM_Access_Codes')) {
+            error_log("IELTS Webhook: IELTS_CM_Access_Codes class found, creating codes...");
             $access_codes = new IELTS_CM_Access_Codes();
             
             global $wpdb;
             $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
+            
+            error_log("IELTS Webhook: Generating $quantity codes into table: $table_name");
             
             // Generate codes
             for ($i = 0; $i < $quantity; $i++) {
@@ -1146,29 +1173,36 @@ class IELTS_CM_Stripe_Payment {
                     error_log("CRITICAL: Failed to insert code $code for user $user_id (org $partner_org_id): " . $wpdb->last_error);
                 } else {
                     $generated_codes[] = $code;
+                    error_log("IELTS Webhook: Code created successfully: $code");
                 }
             }
             
-            error_log("Successfully created " . count($generated_codes) . "/$quantity access codes for user $user_id (org $partner_org_id)");
+            error_log("IELTS Webhook: Successfully created " . count($generated_codes) . "/$quantity access codes for user $user_id (org $partner_org_id)");
             
             // Send confirmation email with the codes
             if (method_exists($access_codes, 'send_purchase_confirmation_email')) {
+                error_log("IELTS Webhook: Sending purchase confirmation email...");
                 $email_sent = $access_codes->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
                 if ($email_sent) {
-                    error_log("Successfully sent purchase confirmation email to user $user_id with " . count($generated_codes) . " codes");
+                    error_log("IELTS Webhook: Successfully sent purchase confirmation email to user $user_id with " . count($generated_codes) . " codes");
                 } else {
                     error_log("CRITICAL: Failed to send purchase confirmation email to user $user_id");
                 }
+            } else {
+                error_log("IELTS Webhook: send_purchase_confirmation_email method not found in IELTS_CM_Access_Codes");
             }
         } else {
-            error_log("Code purchase payment failed: IELTS_CM_Access_Codes class not found");
+            error_log("CRITICAL: Code purchase payment failed - IELTS_CM_Access_Codes class not found");
         }
         
         // Log the payment
         $this->ensure_payment_table_exists();
         global $wpdb;
         $table_name = $wpdb->prefix . 'ielts_cm_payments';
-        $wpdb->insert(
+        
+        error_log("IELTS Webhook: Logging payment to database table: $table_name");
+        
+        $insert_result = $wpdb->insert(
             $table_name,
             array(
                 'user_id' => $user_id,
@@ -1179,6 +1213,12 @@ class IELTS_CM_Stripe_Payment {
             ),
             array('%d', '%s', '%f', '%s', '%s')
         );
+        
+        if ($insert_result === false) {
+            error_log("CRITICAL: Failed to log payment to database for user $user_id: " . $wpdb->last_error);
+        } else {
+            error_log("SUCCESS: Payment logged to database for user $user_id");
+        }
         
         // Clean up pending purchase meta
         delete_user_meta($user_id, '_ielts_cm_pending_code_purchase');
