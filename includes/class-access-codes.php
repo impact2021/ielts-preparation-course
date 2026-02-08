@@ -17,21 +17,22 @@ class IELTS_CM_Access_Codes {
     const STATUS_EXPIRED = 'expired';
     
     /**
-     * Admin organization ID - used for tagging admin-created data
-     * NOTE: No longer used for filtering - all users see all data
+     * Admin organization ID - used for admin-created data
+     * Site admins with org_id = 0 see all data across all organizations
      */
     const ADMIN_ORG_ID = 0;
     
     /**
-     * Site-wide partner organization ID - used for tagging partner-created data
-     * NOTE: No longer used for filtering - all users see all data
-     * All partner admins function like full admins on the partner dashboard
+     * Default partner organization ID
+     * Partner admins without a custom org ID are assigned to this organization
+     * In non-hybrid mode, all partner admins share this org and see all data
      */
     const SITE_PARTNER_ORG_ID = 1;
     
     /**
      * User meta key for partner organization ID
-     * NOTE: Deprecated - no longer used since all partner admins see all data
+     * Used in hybrid mode to assign partner admins to different organizations
+     * Partner admins in the same org see each other's codes and students
      */
     const META_PARTNER_ORG_ID = 'iw_partner_organization_id';
     
@@ -343,31 +344,40 @@ class IELTS_CM_Access_Codes {
     }
     
     /**
-     * Get the organization ID for tagging newly created data
+     * Get the organization ID for a user
      * 
      * Returns:
      * - ADMIN_ORG_ID (0) for site admins
-     * - SITE_PARTNER_ORG_ID (1) for partner admins
+     * - Custom org ID from user meta if set (for hybrid sites with multiple organizations)
+     * - SITE_PARTNER_ORG_ID (1) as default for partner admins (backward compatibility)
      * 
-     * NOTE: This is ONLY used for tagging new users/codes with iw_created_by_partner.
-     * It is NOT used for filtering queries - all users see ALL data regardless of org_id.
-     * Partner admins function like full admins on the partner dashboard.
+     * For hybrid sites: Partner admins can be assigned different organization IDs,
+     * allowing multiple separate companies to use the same site while keeping their
+     * data isolated from each other.
      * 
      * @param int $user_id User ID (defaults to current user)
-     * @return int Organization ID for tagging data
+     * @return int Organization ID
      */
     private function get_partner_org_id($user_id = null) {
         if ($user_id === null) {
             $user_id = get_current_user_id();
         }
         
-        // Site admins tag their data with ADMIN_ORG_ID
+        // Site admins always use ADMIN_ORG_ID (can see all data)
         if (user_can($user_id, 'manage_options')) {
             return self::ADMIN_ORG_ID;
         }
         
-        // Partner admins tag their data with SITE_PARTNER_ORG_ID
-        // All partner admins share the same org ID
+        // Check for custom organization ID in user meta
+        // This allows different partner admins to be grouped into separate organizations
+        $org_id = get_user_meta($user_id, self::META_PARTNER_ORG_ID, true);
+        
+        if (!empty($org_id) && is_numeric($org_id)) {
+            return (int) $org_id;
+        }
+        
+        // Default to SITE_PARTNER_ORG_ID for backward compatibility
+        // All partner admins without a custom org ID share the same organization
         return self::SITE_PARTNER_ORG_ID;
     }
     
@@ -403,6 +413,15 @@ class IELTS_CM_Access_Codes {
             'manage_options',
             'ielts-partner-settings',
             array($this, 'settings_page')
+        );
+        
+        add_submenu_page(
+            'ielts-partner-dashboard',
+            'Manage Organizations',
+            'Organizations',
+            'manage_options',
+            'ielts-partner-organizations',
+            array($this, 'organizations_page')
         );
     }
     
@@ -525,6 +544,136 @@ class IELTS_CM_Access_Codes {
         echo '<div class="wrap"><h1>Partner Admin Dashboard</h1>';
         echo '<p>Use the <code>[iw_partner_dashboard]</code> shortcode on a page to display the partner dashboard for partners.</p>';
         echo '</div>';
+    }
+    
+    /**
+     * Organizations management page for hybrid sites
+     * Allows assigning partner admins to different organizations
+     */
+    public function organizations_page() {
+        if (!current_user_can('manage_options')) {
+            wp_die('Unauthorized');
+        }
+        
+        // Handle form submission
+        if (isset($_POST['update_organizations']) && check_admin_referer('iw_update_organizations')) {
+            if (isset($_POST['user_org_ids']) && is_array($_POST['user_org_ids'])) {
+                foreach ($_POST['user_org_ids'] as $user_id => $org_id) {
+                    $user_id = absint($user_id);
+                    $org_id = absint($org_id);
+                    
+                    if ($org_id > 0) {
+                        update_user_meta($user_id, self::META_PARTNER_ORG_ID, $org_id);
+                    } else {
+                        delete_user_meta($user_id, self::META_PARTNER_ORG_ID);
+                    }
+                }
+                echo '<div class="notice notice-success"><p>Organization assignments updated.</p></div>';
+            }
+        }
+        
+        // Get all partner admin users
+        $partner_admins = get_users(array(
+            'role' => 'partner_admin',
+            'orderby' => 'display_name',
+            'order' => 'ASC'
+        ));
+        
+        // Get hybrid mode status
+        $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+        
+        ?>
+        <div class="wrap">
+            <h1>Manage Partner Organizations</h1>
+            
+            <?php if (!$is_hybrid_mode): ?>
+                <div class="notice notice-warning">
+                    <p><strong>Note:</strong> This site is not in hybrid mode. Organization filtering is disabled for non-hybrid sites. 
+                    All partner admins will see all students and codes regardless of organization assignment.</p>
+                    <p>To enable hybrid mode and organization-based isolation, go to <strong>IELTS Courses → Settings</strong> and enable "Hybrid Site Mode".</p>
+                </div>
+            <?php else: ?>
+                <div class="notice notice-info">
+                    <p><strong>Hybrid Mode Enabled:</strong> Partner admins are filtered by organization. Partners in the same organization will see each other's codes and students.</p>
+                </div>
+            <?php endif; ?>
+            
+            <p>Assign partner admins to organizations. Partner admins in the same organization will share access to codes and students.</p>
+            <p><strong>Organization ID Guidelines:</strong></p>
+            <ul style="list-style: disc; margin-left: 30px;">
+                <li><strong>0:</strong> Reserved for site administrators (see all data)</li>
+                <li><strong>1:</strong> Default organization (all partner admins without a custom org ID)</li>
+                <li><strong>2+:</strong> Custom organizations for separating different companies</li>
+            </ul>
+            
+            <?php if (empty($partner_admins)): ?>
+                <p><em>No partner admins found. Create users with the "Partner Admin" role first.</em></p>
+            <?php else: ?>
+                <form method="post" action="">
+                    <?php wp_nonce_field('iw_update_organizations'); ?>
+                    <table class="wp-list-table widefat fixed striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Partner Admin</th>
+                                <th style="width: 30%;">Email</th>
+                                <th style="width: 20%;">Organization ID</th>
+                                <th style="width: 20%;">Current Stats</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($partner_admins as $admin): 
+                                $current_org_id = get_user_meta($admin->ID, self::META_PARTNER_ORG_ID, true);
+                                if (empty($current_org_id)) {
+                                    $current_org_id = self::SITE_PARTNER_ORG_ID; // Default
+                                    $display_org_id = '';
+                                } else {
+                                    $display_org_id = $current_org_id;
+                                }
+                                
+                                // Get stats for this partner's organization
+                                $org_students = $this->get_partner_students((int)$current_org_id);
+                                $student_count = count($org_students);
+                            ?>
+                                <tr>
+                                    <td><strong><?php echo esc_html($admin->display_name); ?></strong></td>
+                                    <td><?php echo esc_html($admin->user_email); ?></td>
+                                    <td>
+                                        <input type="number" 
+                                               name="user_org_ids[<?php echo esc_attr($admin->ID); ?>]" 
+                                               value="<?php echo esc_attr($display_org_id); ?>" 
+                                               min="1" 
+                                               max="999"
+                                               placeholder="<?php echo self::SITE_PARTNER_ORG_ID; ?> (default)"
+                                               style="width: 100px;">
+                                        <p class="description">Leave empty for default (1)</p>
+                                    </td>
+                                    <td>
+                                        <span title="Students in organization <?php echo esc_attr($current_org_id); ?>">
+                                            <?php echo esc_html($student_count); ?> student<?php echo $student_count !== 1 ? 's' : ''; ?>
+                                        </span>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                    
+                    <p class="submit">
+                        <input type="submit" name="update_organizations" class="button button-primary" value="Update Organization Assignments">
+                    </p>
+                </form>
+                
+                <div style="margin-top: 30px; padding: 15px; background: #f9f9f9; border-left: 4px solid #2271b1;">
+                    <h3 style="margin-top: 0;">Example Usage</h3>
+                    <p><strong>Scenario:</strong> You have two companies using your hybrid site:</p>
+                    <ul style="list-style: disc; margin-left: 30px;">
+                        <li><strong>Company A:</strong> Assign partner admins John and Sarah to Organization ID <strong>2</strong></li>
+                        <li><strong>Company B:</strong> Assign partner admin Mike to Organization ID <strong>3</strong></li>
+                    </ul>
+                    <p><strong>Result:</strong> John and Sarah will see each other's students and codes. Mike will only see his own data.</p>
+                </div>
+            <?php endif; ?>
+        </div>
+        <?php
     }
     
     /**
@@ -1444,15 +1593,36 @@ class IELTS_CM_Access_Codes {
         // Safe: $wpdb->prefix is sanitized by WordPress core
         $table = $wpdb->prefix . 'ielts_cm_access_codes';
         
-        // Show all codes - both site admins and partner admins see ALL codes
-        // This matches the requirement that partner admins function like full admins
-        //
-        // NOTE: The $partner_org_id parameter is no longer used for filtering.
-        // It's kept to maintain backward compatibility with existing calling code.
-        $codes = $wpdb->get_results($wpdb->prepare(
-            "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
-            self::CODES_TABLE_LIMIT
-        ));
+        // Check if hybrid mode is enabled
+        $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+        
+        if ($is_hybrid_mode) {
+            // HYBRID MODE: Filter codes by organization ID
+            // Partner admins only see codes from their organization
+            // Site admins (org_id = 0) see all codes
+            
+            if ($partner_org_id == self::ADMIN_ORG_ID) {
+                // Site admin - see all codes
+                $codes = $wpdb->get_results($wpdb->prepare(
+                    "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+                    self::CODES_TABLE_LIMIT
+                ));
+            } else {
+                // Partner admin - see only codes from their organization
+                $codes = $wpdb->get_results($wpdb->prepare(
+                    "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
+                    $partner_org_id,
+                    self::CODES_TABLE_LIMIT
+                ));
+            }
+        } else {
+            // NON-HYBRID MODE: All partner admins see all codes
+            // This maintains backward compatibility for non-hybrid sites
+            $codes = $wpdb->get_results($wpdb->prepare(
+                "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+                self::CODES_TABLE_LIMIT
+            ));
+        }
         
         if (empty($codes)) {
             return '<p>No codes generated yet.</p>';
@@ -1598,18 +1768,48 @@ class IELTS_CM_Access_Codes {
      * @return array Array of student objects with user_id property
      */
     private function get_partner_students($partner_org_id) {
-        // Get all users with access codes
-        // Both site admins and partner admins see ALL users - no org filtering
-        // This matches the requirement that partner admins function like full admins
-        //
-        // NOTE: The $partner_org_id parameter is no longer used for filtering.
-        // It's kept to maintain backward compatibility with existing calling code.
+        // Check if hybrid mode is enabled
+        $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
         
-        $users_with_access_codes = get_users(array(
-            'fields' => array('ID'),
-            'meta_key' => 'iw_course_group',
-            'meta_compare' => 'EXISTS'
-        ));
+        if ($is_hybrid_mode) {
+            // HYBRID MODE: Filter by organization ID
+            // Partner admins only see students from their organization
+            // Site admins (org_id = 0) see all students
+            
+            if ($partner_org_id == self::ADMIN_ORG_ID) {
+                // Site admin - see all students
+                $users_with_access_codes = get_users(array(
+                    'fields' => array('ID'),
+                    'meta_key' => 'iw_course_group',
+                    'meta_compare' => 'EXISTS'
+                ));
+            } else {
+                // Partner admin - see only students from their organization
+                $users_with_access_codes = get_users(array(
+                    'fields' => array('ID'),
+                    'meta_query' => array(
+                        'relation' => 'AND',
+                        array(
+                            'key' => 'iw_course_group',
+                            'compare' => 'EXISTS'
+                        ),
+                        array(
+                            'key' => 'iw_created_by_partner',
+                            'value' => $partner_org_id,
+                            'compare' => '='
+                        )
+                    )
+                ));
+            }
+        } else {
+            // NON-HYBRID MODE: All partner admins see all students
+            // This maintains backward compatibility for non-hybrid sites
+            $users_with_access_codes = get_users(array(
+                'fields' => array('ID'),
+                'meta_key' => 'iw_course_group',
+                'meta_compare' => 'EXISTS'
+            ));
+        }
         
         $user_ids = wp_list_pluck($users_with_access_codes, 'ID');
         
