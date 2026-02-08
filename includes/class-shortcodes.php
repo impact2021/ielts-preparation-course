@@ -2690,7 +2690,7 @@ class IELTS_CM_Shortcodes {
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         
         // Check if this is an access code membership on a hybrid site (used for hiding Extend My Course tab)
-        $is_access_code_membership = !empty($membership_type) && strpos($membership_type, 'access_') === 0;
+        $is_access_code_membership = isset($membership_type) && $membership_type !== '' && strpos($membership_type, 'access_') === 0;
         $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
         $hide_extend_tab = $is_access_code_membership && $hybrid_mode_enabled;
         
@@ -3024,7 +3024,7 @@ class IELTS_CM_Shortcodes {
                                     </p>
                                 <?php endif; ?>
                             <?php else: ?>
-                                <!-- Access code membership on non-hybrid site - contact partner admin -->
+                                <!-- Access code membership - contact partner admin (Note: hybrid sites won't reach here as tab is hidden) -->
                                 <p><?php _e('Your access was provided through a partner access code. To extend your course access, please contact your course administrator.', 'ielts-course-manager'); ?></p>
                             <?php endif; ?>
                         </div>
