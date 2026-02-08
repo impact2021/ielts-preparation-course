@@ -3032,7 +3032,6 @@ class IELTS_CM_Shortcodes {
                             <?php endif; ?>
                         </div>
                         <?php endif; ?>
-                        </div>
                     <?php endif; ?>
                 <?php endif; ?>
             <?php endif; ?>
