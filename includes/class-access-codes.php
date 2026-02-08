@@ -73,6 +73,7 @@ class IELTS_CM_Access_Codes {
     
     public function init() {
         add_action('admin_menu', array($this, 'add_admin_menu'));
+        add_action('admin_menu', array($this, 'add_hybrid_admin_menu'), 20); // Priority 20 to run after hybrid settings menu
         add_action('admin_init', array($this, 'register_settings'));
         add_action('admin_init', array($this, 'block_partner_admin_backend'));
         add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
@@ -414,9 +415,21 @@ class IELTS_CM_Access_Codes {
             'ielts-partner-settings',
             array($this, 'settings_page')
         );
+    }
+    
+    /**
+     * Add Organizations submenu to Hybrid Settings menu
+     * This is separate because it's only relevant to hybrid sites, not access code sites
+     */
+    public function add_hybrid_admin_menu() {
+        // Only show Organizations menu if hybrid mode is enabled
+        if (!get_option('ielts_cm_hybrid_site_enabled', false)) {
+            return;
+        }
         
+        // Add Organizations submenu under Hybrid site settings
         add_submenu_page(
-            'ielts-partner-dashboard',
+            'ielts-hybrid-settings',
             'Manage Organizations',
             'Organizations',
             'manage_options',
@@ -484,7 +497,7 @@ class IELTS_CM_Access_Codes {
                     <p>
                         <strong>💡 Managing Multiple Companies?</strong> 
                         Visit the <a href="<?php echo admin_url('admin.php?page=ielts-partner-organizations'); ?>"><strong>Organizations</strong></a> page 
-                        to assign partner admins to different organizations. Partners in the same organization will see each other's students and codes.
+                        (under <strong>Hybrid site settings</strong> menu) to assign partner admins to different organizations. Partners in the same organization will see each other's students and codes.
                     </p>
                 </div>
             <?php 
@@ -570,10 +583,10 @@ class IELTS_CM_Access_Codes {
         // Show organization management info for hybrid sites
         if ($is_hybrid_mode && !empty($partner_admins)) {
             echo '<div class="notice notice-info" style="margin-top: 20px;">';
-            echo '<h3 style="margin-top: 10px;">📋 Organization Management</h3>';
+            echo '<h3 style="margin-top: 10px;">📋 Organization Management (Hybrid Sites Only)</h3>';
             echo '<p>For hybrid sites with multiple companies, you can assign partner admins to different organizations:</p>';
             echo '<ol>';
-            echo '<li>Go to <a href="' . admin_url('admin.php?page=ielts-partner-organizations') . '"><strong>Organizations</strong></a> page (in the menu below)</li>';
+            echo '<li>Go to <a href="' . admin_url('admin.php?page=ielts-partner-organizations') . '"><strong>Hybrid site settings → Organizations</strong></a></li>';
             echo '<li>Assign organization IDs to each partner admin</li>';
             echo '<li>Partners with the same organization ID will see each other\'s students and codes</li>';
             echo '<li>Partners with different organization IDs will be isolated from each other</li>';

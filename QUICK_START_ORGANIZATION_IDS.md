@@ -1,13 +1,19 @@
 # Quick Start: Modifying Organization IDs in Hybrid Sites
 
+## ⚠️ IMPORTANT: Hybrid Sites Only!
+
+**Organization IDs are ONLY for HYBRID SITES** where partners purchase access codes with Stripe/PayPal payments.
+
+They are **NOT for Access Code Membership sites** where partners manually create free codes.
+
 ## Where to Modify Organization IDs
 
-**Location:** WordPress Admin → **Access code settings** → **Organizations**
+**Location:** WordPress Admin → **Hybrid site settings** → **Organizations**
 
 ### Navigation Steps
 
 1. Log in to WordPress Admin
-2. In the left sidebar, find **"Access code settings"** menu
+2. In the left sidebar, find **"Hybrid site settings"** menu (only visible when hybrid mode is enabled)
 3. Click on **"Organizations"** submenu
 4. You'll see a table of all partner admin users
 5. Enter organization IDs for each partner admin
@@ -23,11 +29,11 @@ WordPress Admin Sidebar:
 ├── Pages
 ├── Comments
 ├── ...
-├── Access code settings  ← Click here
-│   ├── Access code settings
-│   ├── How It Works
+├── Hybrid site settings  ← Click here (Hybrid Sites)
 │   ├── Settings
+│   ├── Documentation
 │   └── Organizations  ← Then click here
+├── Access code settings  ← Different menu! (Access Code Membership)
 └── ...
 ```
 
@@ -71,11 +77,17 @@ The Organizations page displays:
 ### Q: I don't see the Organizations menu
 **A:** Make sure:
 - You're logged in as a site administrator (not partner admin)
-- Access Code Membership system is enabled
-- You're looking under "Access code settings" menu
+- **Hybrid mode is enabled** (the menu only appears for hybrid sites!)
+- You're looking under "**Hybrid site settings**" NOT "Access code settings"
+- Access Code Membership and Hybrid Sites are different systems
+
+### Q: What's the difference between Hybrid Sites and Access Code sites?
+**A:** 
+- **Hybrid Sites:** Partners PURCHASE codes with Stripe/PayPal → Need organization filtering
+- **Access Code Sites:** Partners CREATE codes for free → No organization filtering needed
 
 ### Q: Is hybrid mode required?
-**A:** Organization filtering only works when hybrid mode is enabled. Check the notice at the top of the Organizations page.
+**A:** YES! Organization filtering ONLY works for hybrid sites. The Organizations menu only appears when hybrid mode is enabled.
 
 ### Q: What if I leave the organization ID empty?
 **A:** Partner admins without a custom org ID default to organization 1. They'll see all data from org 1.
@@ -111,11 +123,11 @@ Admin Menu:
 │ 📷 Media                     │
 │ 📄 Pages                     │
 │ ...                         │
-│ 👥 Access code settings  ◄──┤ 1. Click here
-│   ├─ Access code settings   │
-│   ├─ How It Works          │
-│   ├─ Settings              │
+│ 🔧 Hybrid site settings  ◄──┤ 1. Click here
+│   ├─ Settings               │
+│   ├─ Documentation          │
 │   └─ Organizations      ◄───┤ 2. Then here
+│ 👥 Access code settings     │   (Different menu!)
 │ ...                         │
 └─────────────────────────────┘
 ```
@@ -150,10 +162,12 @@ Admin Menu:
 
 ## Quick Steps Summary
 
-1. **Access:** WordPress Admin → Access code settings → Organizations
+1. **Access:** WordPress Admin → **Hybrid site settings** → **Organizations**
 2. **Assign:** Enter organization IDs for each partner admin
 3. **Same company = Same org ID**
 4. **Different companies = Different org IDs**
 5. **Save:** Click "Update Organization Assignments"
+
+**Remember:** This is ONLY for hybrid sites where partners purchase codes!
 
 That's it! Your hybrid site now has organization-based isolation.

@@ -1,24 +1,30 @@
 # Where to Modify Organization IDs in Hybrid Sites
 
-## Answer: Access code settings → Organizations
+## Answer: Hybrid site settings → Organizations
 
 ### Quick Navigation
 
 ```
 WordPress Admin Menu
 ↓
-Access code settings (menu item)
+Hybrid site settings (menu item)
 ↓
 Organizations (submenu)
 ↓
 Assign organization IDs to partner admins
 ```
 
+## IMPORTANT: Hybrid Sites Only
+
+**Organization IDs are ONLY for HYBRID SITES** where partners purchase codes with Stripe payments.
+
+They are **NOT for Access Code Membership sites** where partners manually create free codes.
+
 ## Step-by-Step Instructions
 
 ### 1. Access the Organizations Page
 
-**Path:** WordPress Admin → **Access code settings** → **Organizations**
+**Path:** WordPress Admin → **Hybrid site settings** → **Organizations**
 
 ### 2. Assign Organization IDs
 
@@ -76,19 +82,21 @@ Click **"Update Organization Assignments"** button at the bottom.
 │  Comments                           │
 │  ...                                │
 │  ┌───────────────────────────────┐ │
-│  │ Access code settings      ◄───┼─┤ CLICK HERE
+│  │ Hybrid site settings      ◄───┼─┤ CLICK HERE (Hybrid Sites Only)
 │  ├───────────────────────────────┤ │
-│  │  Access code settings         │ │
-│  │  How It Works                 │ │
 │  │  Settings                     │ │
+│  │  Documentation                │ │
 │  │  Organizations            ◄───┼─┤ THEN HERE
 │  └───────────────────────────────┘ │
+│  Access code settings (different!) │
 │  Users                              │
 │  Tools                              │
 │  Settings                           │
 │                                     │
 └─────────────────────────────────────┘
 ```
+
+**IMPORTANT:** Don't confuse with "Access code settings" - that's a different menu for the Access Code Membership system.
 
 ### Organizations Page Layout
 
@@ -124,18 +132,31 @@ Click **"Update Organization Assignments"** button at the bottom.
 
 ## Alternative Access Methods
 
-### Method 1: From Settings Page
-1. Go to **Access code settings** → **Settings**
-2. Look for the blue info box at the top
-3. Click the **Organizations** link
+### Method 1: From Hybrid Settings Page
+1. Go to **Hybrid site settings** → **Settings**
+2. Scroll to find organization information
+3. Click link to Organizations page
 
-### Method 2: From Main Dashboard
-1. Go to **Access code settings** → **Access code settings** (main page)
-2. Find the "Organization Management" section
-3. Click **"Manage Organizations"** button
+### Method 2: From Admin Sidebar
+1. Find **Hybrid site settings** in the sidebar
+2. Click **Organizations** submenu
 
 ### Method 3: Direct URL
 Navigate to: `wp-admin/admin.php?page=ielts-partner-organizations`
+
+## Important Distinction
+
+### Hybrid Sites vs Access Code Sites
+
+| Feature | Hybrid Sites | Access Code Membership Sites |
+|---------|--------------|------------------------------|
+| Partners purchase codes | ✅ Yes (with Stripe/PayPal) | ❌ No |
+| Partners create free codes | ❌ No | ✅ Yes |
+| Organization filtering | ✅ Yes | ❌ No (not needed) |
+| Menu location | Hybrid site settings | Access code settings |
+| Organizations page | ✅ Available | ❌ Not available |
+
+**Organization IDs are ONLY for Hybrid Sites!**
 
 ## Prerequisites
 
@@ -158,8 +179,23 @@ Before you can modify organization IDs:
 
 **Check:**
 - Are you logged in as a site administrator? (not partner admin)
-- Is Access Code Membership system enabled?
-- Look under "Access code settings" not "Settings"
+- **Is Hybrid Mode enabled?** The menu only appears for hybrid sites
+- Look under "Hybrid site settings" NOT "Access code settings"
+- If you only see "Access code settings", you have an Access Code Membership site, not a hybrid site
+
+### "What's the difference between Hybrid Sites and Access Code sites?"
+
+**Hybrid Sites:**
+- Partners PURCHASE codes with Stripe/PayPal
+- Used when you want to sell access codes to companies
+- Has "Hybrid site settings" menu
+- Needs organization filtering for multi-company isolation
+
+**Access Code Membership Sites:**
+- Partners CREATE codes for free (manual assignment)
+- Used when you want to give partners free access to distribute
+- Has "Access code settings" menu  
+- Doesn't need organization filtering (single partner or fully trusted partners)
 
 ### "Organization filtering isn't working"
 
@@ -196,13 +232,18 @@ Once you assign organization IDs:
 
 **Question:** In hybrid sites, where do I modify the organisation ID?
 
-**Answer:** WordPress Admin → Access code settings → Organizations
+**Answer:** WordPress Admin → **Hybrid site settings** → **Organizations**
+
+**⚠️ IMPORTANT:** Organization IDs are **ONLY for Hybrid Sites** where partners purchase codes. They are NOT for Access Code Membership sites where partners create free codes.
 
 **Quick Access:**
 - Look in the WordPress admin sidebar
-- Find "Access code settings" menu
-- Click "Organizations" submenu
+- Find "**Hybrid site settings**" menu (only visible when hybrid mode enabled)
+- Click "**Organizations**" submenu
 - Assign IDs and save
+
+**Don't Confuse With:**
+- "Access code settings" menu - That's for the Access Code Membership system (different feature)
 
 That's it! 🎉
 
