@@ -1141,10 +1141,11 @@ class IELTS_CM_Stripe_Payment {
         } else {
             // HYBRID FIX: Use SITE_PARTNER_ORG_ID constant from IELTS_CM_Access_Codes class
             // This matches the default organization used by class-access-codes.php
+            // Note: Access_Codes class is always loaded before Stripe_Payment in plugin init
             if (class_exists('IELTS_CM_Access_Codes')) {
                 $partner_org_id = IELTS_CM_Access_Codes::SITE_PARTNER_ORG_ID;
             } else {
-                // Fallback to hardcoded value if class not loaded (should never happen)
+                // Defensive fallback (should never execute in normal operation)
                 $partner_org_id = 1;
             }
             error_log("IELTS Webhook: Partner Org ID: $partner_org_id (using SITE_PARTNER_ORG_ID - no custom org_id set for user)");
