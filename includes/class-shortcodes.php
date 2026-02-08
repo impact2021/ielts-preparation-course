@@ -3001,6 +3001,9 @@ class IELTS_CM_Shortcodes {
                             // Check if this is an access code membership (starts with 'access_')
                             $is_access_code_membership = strpos($membership_type, 'access_') === 0;
                             
+                            // Check if hybrid mode is enabled
+                            $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+                            
                             if (!$is_access_code_membership): 
                                 // Show extension message only for paid memberships
                             ?>
@@ -3012,9 +3015,19 @@ class IELTS_CM_Shortcodes {
                                         </a>
                                     </p>
                                 <?php endif; ?>
-                            <?php else: ?>
-                                <!-- Access code membership - contact partner admin -->
+                            <?php elseif (!$hybrid_mode_enabled): ?>
+                                <!-- Access code membership on non-hybrid site - contact partner admin -->
                                 <p><?php _e('Your access was provided through a partner access code. To extend your course access, please contact your course administrator.', 'ielts-course-manager'); ?></p>
+                            <?php else: ?>
+                                <!-- Access code membership on hybrid site - show extension options -->
+                                <p><?php _e('Your access was provided through a partner access code. You can extend your course access below.', 'ielts-course-manager'); ?></p>
+                                <?php if (!empty($full_member_page_url)): ?>
+                                    <p>
+                                        <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
+                                            <?php _e('Extend Course Access', 'ielts-course-manager'); ?>
+                                        </a>
+                                    </p>
+                                <?php endif; ?>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
