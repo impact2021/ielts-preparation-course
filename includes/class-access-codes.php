@@ -562,9 +562,12 @@ class IELTS_CM_Access_Codes {
                     $user_id = absint($user_id);
                     $org_id = absint($org_id);
                     
-                    if ($org_id > 0) {
+                    // Organization ID must be >= 1 for partner admins
+                    // ID 0 is reserved for site administrators
+                    if ($org_id >= 1) {
                         update_user_meta($user_id, self::META_PARTNER_ORG_ID, $org_id);
                     } else {
+                        // Delete custom org ID to use default (SITE_PARTNER_ORG_ID = 1)
                         delete_user_meta($user_id, self::META_PARTNER_ORG_ID);
                     }
                 }
@@ -621,7 +624,23 @@ class IELTS_CM_Access_Codes {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($partner_admins as $admin): 
+                            <?php 
+                            // Pre-fetch student counts for all organizations to avoid N+1 queries
+                            $org_student_counts = array();
+                            foreach ($partner_admins as $admin): 
+                                $admin_org_id = get_user_meta($admin->ID, self::META_PARTNER_ORG_ID, true);
+                                if (empty($admin_org_id)) {
+                                    $admin_org_id = self::SITE_PARTNER_ORG_ID;
+                                }
+                                // Only fetch if we haven't already for this org
+                                if (!isset($org_student_counts[$admin_org_id])) {
+                                    $org_students = $this->get_partner_students((int)$admin_org_id);
+                                    $org_student_counts[$admin_org_id] = count($org_students);
+                                }
+                            endforeach;
+                            
+                            // Now render the table
+                            foreach ($partner_admins as $admin): 
                                 $current_org_id = get_user_meta($admin->ID, self::META_PARTNER_ORG_ID, true);
                                 if (empty($current_org_id)) {
                                     $current_org_id = self::SITE_PARTNER_ORG_ID; // Default
@@ -630,9 +649,10 @@ class IELTS_CM_Access_Codes {
                                     $display_org_id = $current_org_id;
                                 }
                                 
-                                // Get stats for this partner's organization
-                                $org_students = $this->get_partner_students((int)$current_org_id);
-                                $student_count = count($org_students);
+                                // Get pre-fetched student count for this organization
+                                $student_count = isset($org_student_counts[$current_org_id]) 
+                                    ? $org_student_counts[$current_org_id] 
+                                    : 0;
                             ?>
                                 <tr>
                                     <td><strong><?php echo esc_html($admin->display_name); ?></strong></td>
