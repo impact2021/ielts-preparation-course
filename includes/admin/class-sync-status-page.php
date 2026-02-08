@@ -181,10 +181,13 @@ class IELTS_CM_Sync_Status_Page {
                             <th style="width: 40px;">
                                 <input type="checkbox" id="select-all-items" />
                             </th>
-                            <th style="width: 35%;"><?php _e('Content Item', 'ielts-course-manager'); ?></th>
-                            <th style="width: 15%;"><?php _e('Type', 'ielts-course-manager'); ?></th>
-                            <?php foreach ($subsites as $subsite): ?>
-                                <th style="width: <?php echo floor(40 / count($subsites)); ?>%;">
+                            <th style="width: 25%;"><?php _e('Content Item', 'ielts-course-manager'); ?></th>
+                            <?php 
+                            $subsite_count = count($subsites);
+                            $subsite_width = $subsite_count > 0 ? floor(75 / $subsite_count) : 75;
+                            foreach ($subsites as $subsite): 
+                            ?>
+                                <th style="width: <?php echo $subsite_width; ?>%;">
                                     <?php echo esc_html($subsite->site_name); ?>
                                 </th>
                             <?php endforeach; ?>
@@ -194,20 +197,20 @@ class IELTS_CM_Sync_Status_Page {
                         <?php 
                         $row_index = 0;
                         foreach ($courses_hierarchy as $course): 
-                            $this->render_content_row($course, 0, $subsites, $row_index);
+                            $this->render_content_row($course, 0, $subsites, $row_index, true);
                             $row_index++;
                             
                             foreach ($course['lessons'] as $lesson): 
-                                $this->render_content_row($lesson, 1, $subsites, $row_index);
+                                $this->render_content_row($lesson, 1, $subsites, $row_index, false, $course['id']);
                                 $row_index++;
                                 
                                 foreach ($lesson['resources'] as $resource): 
-                                    $this->render_content_row($resource, 2, $subsites, $row_index);
+                                    $this->render_content_row($resource, 2, $subsites, $row_index, false, $lesson['id']);
                                     $row_index++;
                                 endforeach;
                                 
                                 foreach ($lesson['exercises'] as $exercise): 
-                                    $this->render_content_row($exercise, 2, $subsites, $row_index);
+                                    $this->render_content_row($exercise, 2, $subsites, $row_index, false, $lesson['id']);
                                     $row_index++;
                                 endforeach;
                             endforeach;
@@ -248,6 +251,21 @@ class IELTS_CM_Sync_Status_Page {
             }
             .ielts-cm-sync-status-content .indent-2 {
                 padding-left: 60px;
+            }
+            .toggle-children {
+                transition: transform 0.2s ease;
+            }
+            .toggle-children.dashicons-arrow-down {
+                transform: rotate(0deg);
+            }
+            .toggle-children.dashicons-arrow-right {
+                transform: rotate(0deg);
+            }
+            .child-row {
+                background-color: #f9f9f9;
+            }
+            .child-row.level-2 {
+                background-color: #f0f0f0;
             }
             .sync-status-badge {
                 display: inline-block;
@@ -607,6 +625,34 @@ class IELTS_CM_Sync_Status_Page {
                 });
             });
             
+            // Toggle children rows (expand/collapse)
+            $(document).on('click', '.toggle-children', function(e) {
+                e.stopPropagation();
+                var $toggle = $(this);
+                var contentId = $toggle.data('content-id');
+                var $childRows = $('.parent-' + contentId);
+                
+                if ($toggle.hasClass('dashicons-arrow-right')) {
+                    // Expand
+                    $toggle.removeClass('dashicons-arrow-right').addClass('dashicons-arrow-down');
+                    $childRows.show();
+                } else {
+                    // Collapse
+                    $toggle.removeClass('dashicons-arrow-down').addClass('dashicons-arrow-right');
+                    $childRows.hide();
+                    
+                    // Also collapse any nested children
+                    $childRows.each(function() {
+                        var $row = $(this);
+                        var childContentId = $row.data('content-id');
+                        $row.find('.toggle-children')
+                            .removeClass('dashicons-arrow-down')
+                            .addClass('dashicons-arrow-right');
+                        $('.parent-' + childContentId).hide();
+                    });
+                }
+            });
+            
             // Initialize on page load
             init();
         });
@@ -617,7 +663,7 @@ class IELTS_CM_Sync_Status_Page {
     /**
      * Render a content row with sync status for all subsites
      */
-    private function render_content_row($content, $indent_level, $subsites, $row_index = 0) {
+    private function render_content_row($content, $indent_level, $subsites, $row_index = 0, $is_course = false, $parent_id = null) {
         $status = $this->sync_manager->get_content_sync_status($content['id'], $content['type']);
         
         // Determine overall sync status for filtering
@@ -642,30 +688,46 @@ class IELTS_CM_Sync_Status_Page {
             $overall_status = 'out-of-sync';
         }
         
+        // Determine if this item has children (for courses and lessons)
+        $has_children = false;
+        if ($content['type'] === 'course') {
+            $has_children = !empty($content['lessons']);
+        } elseif ($content['type'] === 'lesson') {
+            $has_children = !empty($content['resources']) || !empty($content['exercises']);
+        }
+        
+        // Build classes for row
+        $row_classes = array('sync-status-row');
+        if ($indent_level > 0 && $parent_id) {
+            $row_classes[] = 'child-row';
+            $row_classes[] = 'parent-' . $parent_id;
+            $row_classes[] = 'level-' . $indent_level;
+        }
+        
         ?>
-        <tr class="sync-status-row" 
+        <tr class="<?php echo esc_attr(implode(' ', $row_classes)); ?>" 
             data-status="<?php echo esc_attr($overall_status); ?>" 
             data-row-index="<?php echo esc_attr($row_index); ?>"
             data-content-id="<?php echo esc_attr($content['id']); ?>"
-            data-content-type="<?php echo esc_attr($content['type']); ?>">
+            data-content-type="<?php echo esc_attr($content['type']); ?>"
+            <?php if ($indent_level > 0 && $parent_id): ?>
+                data-parent-id="<?php echo esc_attr($parent_id); ?>"
+                style="display: none;"
+            <?php endif; ?>>
             <td>
                 <input type="checkbox" class="sync-item-checkbox" 
                        data-content-id="<?php echo esc_attr($content['id']); ?>"
                        data-content-type="<?php echo esc_attr($content['type']); ?>" />
             </td>
             <td class="indent-<?php echo $indent_level; ?>">
+                <?php if ($has_children): ?>
+                    <span class="toggle-children dashicons dashicons-arrow-right" 
+                          data-content-id="<?php echo esc_attr($content['id']); ?>"
+                          style="cursor: pointer; color: #2271b1; margin-right: 5px;"></span>
+                <?php else: ?>
+                    <span style="display: inline-block; width: 20px;"></span>
+                <?php endif; ?>
                 <strong><?php echo esc_html($content['title']); ?></strong>
-            </td>
-            <td>
-                <?php 
-                $type_labels = array(
-                    'course' => __('Course', 'ielts-course-manager'),
-                    'lesson' => __('Lesson', 'ielts-course-manager'),
-                    'resource' => __('Sub-lesson', 'ielts-course-manager'),
-                    'quiz' => __('Exercise', 'ielts-course-manager')
-                );
-                echo esc_html($type_labels[$content['type']] ?? ucfirst($content['type']));
-                ?>
             </td>
             <?php foreach ($subsites as $subsite): ?>
                 <td class="sync-status-cell">
@@ -677,9 +739,6 @@ class IELTS_CM_Sync_Status_Page {
                                 <span class="dashicons dashicons-yes" style="font-size: 12px; width: 12px; height: 12px; margin-top: 2px;"></span>
                                 Synced
                             </span>
-                            <br><small style="color: #666;">
-                                <?php echo $site_status['last_sync'] ? human_time_diff(strtotime($site_status['last_sync']), current_time('timestamp')) . ' ago' : ''; ?>
-                            </small>
                         <?php elseif ($site_status['sync_status'] === 'never_synced'): ?>
                             <span class="sync-status-badge sync-status-never-synced">
                                 <span class="dashicons dashicons-warning" style="font-size: 12px; width: 12px; height: 12px; margin-top: 2px;"></span>
@@ -690,9 +749,6 @@ class IELTS_CM_Sync_Status_Page {
                                 <span class="dashicons dashicons-update" style="font-size: 12px; width: 12px; height: 12px; margin-top: 2px;"></span>
                                 Out of Sync
                             </span>
-                            <br><small style="color: #666;">
-                                <?php echo $site_status['last_sync'] ? human_time_diff(strtotime($site_status['last_sync']), current_time('timestamp')) . ' ago' : ''; ?>
-                            </small>
                         <?php endif;
                     else: ?>
                         <span class="sync-status-badge sync-status-never-synced">Unknown</span>
