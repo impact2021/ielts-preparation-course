@@ -608,7 +608,7 @@ class IELTS_CM_Multi_Site_Sync {
             'post_type' => 'ielts_course',
             'posts_per_page' => -1,
             'post_status' => 'publish',
-            'orderby' => 'menu_order',
+            'orderby' => 'title',
             'order' => 'ASC'
         ));
         
