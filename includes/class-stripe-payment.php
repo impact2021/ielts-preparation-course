@@ -1137,13 +1137,18 @@ class IELTS_CM_Stripe_Payment {
         $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
         if (!empty($org_id) && is_numeric($org_id)) {
             $partner_org_id = (int) $org_id;
+            error_log("IELTS Webhook: Partner Org ID: $partner_org_id (from user meta)");
         } else {
-            // HYBRID FIX: Use constant SITE_PARTNER_ORG_ID (1) instead of user_id
+            // HYBRID FIX: Use SITE_PARTNER_ORG_ID constant from IELTS_CM_Access_Codes class
             // This matches the default organization used by class-access-codes.php
-            $partner_org_id = 1; // SITE_PARTNER_ORG_ID constant value
+            if (class_exists('IELTS_CM_Access_Codes')) {
+                $partner_org_id = IELTS_CM_Access_Codes::SITE_PARTNER_ORG_ID;
+            } else {
+                // Fallback to hardcoded value if class not loaded (should never happen)
+                $partner_org_id = 1;
+            }
+            error_log("IELTS Webhook: Partner Org ID: $partner_org_id (using SITE_PARTNER_ORG_ID - no custom org_id set for user)");
         }
-        
-        error_log("IELTS Webhook: Partner Org ID: $partner_org_id (user meta org_id: " . ($org_id ?: 'not set - using SITE_PARTNER_ORG_ID') . ")");
         
         // Create the access codes
         $generated_codes = array();
