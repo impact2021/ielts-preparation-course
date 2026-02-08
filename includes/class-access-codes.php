@@ -1042,12 +1042,14 @@ class IELTS_CM_Access_Codes {
                                             '300' => 240.00
                                         ));
                                         foreach ($old_pricing as $qty => $price) {
-                                            echo '<option value="' . esc_attr($qty) . '" data-price="' . esc_attr($price) . '">' . esc_html($qty) . ' Codes - $' . number_format($price, 2) . '</option>';
+                                            $code_label = $qty == 1 ? 'Code' : 'Codes';
+                                            echo '<option value="' . esc_attr($qty) . '" data-price="' . esc_attr($price) . '">' . esc_html($qty) . ' ' . $code_label . ' - $' . number_format($price, 2) . '</option>';
                                         }
                                     } else {
                                         // Use new pricing tiers
                                         foreach ($pricing_tiers as $tier) {
-                                            echo '<option value="' . esc_attr($tier['quantity']) . '" data-price="' . esc_attr($tier['price']) . '">' . esc_html($tier['quantity']) . ' Codes - $' . number_format($tier['price'], 2) . '</option>';
+                                            $code_label = $tier['quantity'] == 1 ? 'Code' : 'Codes';
+                                            echo '<option value="' . esc_attr($tier['quantity']) . '" data-price="' . esc_attr($tier['price']) . '">' . esc_html($tier['quantity']) . ' ' . $code_label . ' - $' . number_format($tier['price'], 2) . '</option>';
                                         }
                                     }
                                     ?>
@@ -1066,7 +1068,7 @@ class IELTS_CM_Access_Codes {
                         </tr>
                         <tr>
                             <th>Access Days:</th>
-                            <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required style="width: 100%;"></td>
+                            <td><input type="number" id="code-access-days" value="30" min="1" required style="width: 100%;"></td>
                         </tr>
                     </table>
                     
