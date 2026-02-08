@@ -633,7 +633,7 @@ class IELTS_CM_Shortcodes {
                 <button class="ielts-tab-button" data-tab="personal-details">
                     <?php _e('Personal Details', 'ielts-course-manager'); ?>
                 </button>
-                <?php if ($membership_type): ?>
+                <?php if ($membership_type || $iw_expiry): ?>
                     <button class="ielts-tab-button" data-tab="membership-action">
                         <?php echo $is_trial ? __('Become a Full Member', 'ielts-course-manager') : __('Extend My Course', 'ielts-course-manager'); ?>
                     </button>
@@ -828,7 +828,7 @@ class IELTS_CM_Shortcodes {
             </div>
             
             <!-- Membership Action Tab (Upgrade/Extend) -->
-            <?php if ($membership_type): ?>
+            <?php if ($membership_type || $iw_expiry): ?>
                 <div class="ielts-tab-content" id="membership-action">
                     <div class="account-section">
                         <?php if ($is_trial): ?>

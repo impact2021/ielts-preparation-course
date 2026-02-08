@@ -779,140 +779,120 @@ class IELTS_CM_Access_Codes {
             <p style="margin-bottom: 15px;"><strong>Active Students:</strong> <?php echo esc_html($active_count); ?></p>
             <?php endif; ?>
             
-            <?php if ($is_hybrid_mode): ?>
+            <?php if ($is_hybrid_mode): 
+                // Check if payment methods are enabled
+                $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
+                $paypal_enabled = get_option('ielts_cm_paypal_enabled', false);
+                
+                if ($stripe_enabled || $paypal_enabled):
+            ?>
             <div class="iw-card expanded">
                 <div class="iw-card-header">
                     <h2>Purchase Access Codes</h2>
                 </div>
                 <div class="iw-card-body">
-                    <p style="margin-top: 0;">Purchase access codes for your students. Select the quantity you need and complete payment via Stripe or PayPal.</p>
-                    <div id="purchase-codes-msg"></div>
-                    <form id="purchase-codes-form">
-                        <?php wp_nonce_field('iw_purchase_codes', 'iw_purchase_codes_nonce'); ?>
-                        <table class="iw-form-table">
-                            <tr>
-                                <th>Number of Codes:</th>
-                                <td>
-                                    <select name="quantity" id="code-quantity" required>
-                                        <?php
-                                        // Get pricing tiers
-                                        $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
-                                        
-                                        if (empty($pricing_tiers)) {
-                                            // Fall back to old format
-                                            $old_pricing = get_option('ielts_cm_access_code_pricing', array(
-                                                '50' => 50.00,
-                                                '100' => 90.00,
-                                                '200' => 170.00,
-                                                '300' => 240.00
-                                            ));
-                                            foreach ($old_pricing as $qty => $price) {
-                                                echo '<option value="' . esc_attr($qty) . '">' . esc_html($qty) . ' Codes</option>';
-                                            }
-                                        } else {
-                                            // Use new pricing tiers
-                                            foreach ($pricing_tiers as $tier) {
-                                                echo '<option value="' . esc_attr($tier['quantity']) . '">' . esc_html($tier['quantity']) . ' Codes</option>';
-                                            }
+                    <p style="margin-top: 0;">Purchase access codes for your students. Select the options below and complete payment inline.</p>
+                    
+                    <!-- Code Options Form -->
+                    <table class="iw-form-table" style="margin-bottom: 20px;">
+                        <tr>
+                            <th>Number of Codes:</th>
+                            <td>
+                                <select id="code-quantity-select" required style="width: 100%;">
+                                    <?php
+                                    // Get pricing tiers
+                                    $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
+                                    
+                                    if (empty($pricing_tiers)) {
+                                        // Fall back to old format
+                                        $old_pricing = get_option('ielts_cm_access_code_pricing', array(
+                                            '50' => 50.00,
+                                            '100' => 90.00,
+                                            '200' => 170.00,
+                                            '300' => 240.00
+                                        ));
+                                        foreach ($old_pricing as $qty => $price) {
+                                            echo '<option value="' . esc_attr($qty) . '" data-price="' . esc_attr($price) . '">' . esc_html($qty) . ' Codes - $' . number_format($price, 2) . '</option>';
                                         }
-                                        ?>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Price:</th>
-                                <td>
-                                    <span id="code-price" style="font-size: 18px; font-weight: bold; color: #0073aa;">
-                                        <?php
-                                        // Show first price as default
-                                        if (!empty($pricing_tiers)) {
-                                            echo '$' . number_format($pricing_tiers[0]['price'], 2);
-                                        } else if (!empty($old_pricing)) {
-                                            $first_price = reset($old_pricing);
-                                            echo '$' . number_format($first_price, 2);
-                                        } else {
-                                            echo '$50.00';
+                                    } else {
+                                        // Use new pricing tiers
+                                        foreach ($pricing_tiers as $tier) {
+                                            echo '<option value="' . esc_attr($tier['quantity']) . '" data-price="' . esc_attr($tier['price']) . '">' . esc_html($tier['quantity']) . ' Codes - $' . number_format($tier['price'], 2) . '</option>';
                                         }
-                                        ?>
-                                    </span>
-                                    <script>
-                                        // Update price when quantity changes
-                                        (function() {
-                                            var pricing = <?php 
-                                                // Try new pricing tiers first
-                                                $pricing_tiers = get_option('ielts_cm_access_code_pricing_tiers', array());
-                                                $code_pricing = array();
-                                                
-                                                if (!empty($pricing_tiers)) {
-                                                    // Convert new format to old format for JS
-                                                    foreach ($pricing_tiers as $tier) {
-                                                        $code_pricing[strval($tier['quantity'])] = floatval($tier['price']);
-                                                    }
-                                                } else {
-                                                    // Fall back to old format
-                                                    $code_pricing = get_option('ielts_cm_access_code_pricing', array(
-                                                        '50' => 50.00,
-                                                        '100' => 90.00,
-                                                        '200' => 170.00,
-                                                        '300' => 240.00
-                                                    ));
-                                                }
-                                                echo json_encode($code_pricing); 
-                                            ?>;
-                                            var quantitySelect = document.getElementById('code-quantity');
-                                            var priceSpan = document.getElementById('code-price');
-                                            
-                                            if (quantitySelect && priceSpan) {
-                                                quantitySelect.addEventListener('change', function() {
-                                                    var qty = this.value;
-                                                    var price = pricing[qty] || 0;
-                                                    priceSpan.textContent = '$' + price.toFixed(2);
-                                                });
-                                            }
-                                        })();
-                                    </script>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Course Group:</th>
-                                <td>
-                                    <select name="course_group" required>
-                                        <?php foreach ($this->course_groups as $key => $label): ?>
-                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Access Days:</th>
-                                <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <button type="submit" class="iw-btn" style="width: 100%; padding: 12px; font-size: 16px;">Proceed to Payment</button>
-                                    <p class="description" style="margin: 10px 0 0 0;">You will be redirected to a secure payment page to complete your purchase.</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </form>
+                                    }
+                                    ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Course Group:</th>
+                            <td>
+                                <select id="code-course-group" required style="width: 100%;">
+                                    <?php foreach ($this->course_groups as $key => $label): ?>
+                                        <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Access Days:</th>
+                            <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required style="width: 100%;"></td>
+                        </tr>
+                    </table>
+                    
+                    <!-- Payment Section -->
+                    <div id="code-payment-section" style="margin-top: 20px;">
+                        <h4>Payment Method</h4>
+                        
+                        <?php if ($stripe_enabled && $paypal_enabled): ?>
+                            <div class="payment-method-selector" style="margin: 15px 0;">
+                                <label style="margin-right: 20px;">
+                                    <input type="radio" name="code_payment_method" value="stripe" checked>
+                                    Credit Card
+                                </label>
+                                <label>
+                                    <input type="radio" name="code_payment_method" value="paypal">
+                                    PayPal
+                                </label>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <?php if ($stripe_enabled): ?>
+                            <div id="code-stripe-payment-form" style="margin: 20px 0;">
+                                <div id="code-card-element" style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; background: white;"></div>
+                                <div id="code-card-errors" style="color: #dc3232; margin-top: 10px;"></div>
+                            </div>
+                        <?php endif; ?>
+                        
+                        <?php if ($paypal_enabled): ?>
+                            <div id="code-paypal-button-container" style="margin: 20px 0; <?php echo ($stripe_enabled && $paypal_enabled) ? 'display: none;' : ''; ?>"></div>
+                        <?php endif; ?>
+                        
+                        <?php if ($stripe_enabled): ?>
+                            <button id="code-purchase-submit-btn" class="iw-btn" style="width: 100%; padding: 12px; font-size: 16px;">
+                                Complete Payment & Purchase Codes
+                            </button>
+                        <?php endif; ?>
+                        
+                        <div id="code-purchase-message" style="margin-top: 15px;"></div>
+                    </div>
                 </div>
             </div>
             <?php endif; ?>
+            <?php endif; ?>
             
+            <?php if (!$is_hybrid_mode): ?>
             <div class="iw-card collapsed">
                 <div class="iw-card-header">
-                    <h2>Create Invite Codes<?php if (!$is_hybrid_mode): ?> (Remaining places: <?php echo esc_html($remaining_places); ?>)<?php endif; ?></h2>
+                    <h2>Create Invite Codes (Remaining places: <?php echo esc_html($remaining_places); ?>)</h2>
                 </div>
                 <div class="iw-card-body">
-                    <?php if (!$is_hybrid_mode && $remaining_places <= 0): ?>
+                    <?php if ($remaining_places <= 0): ?>
                         <div class="iw-msg error">
                             You have reached your student limit (<?php echo esc_html($max_students); ?> students). 
                             Please contact support to upgrade your tier or remove expired students.
                         </div>
                     <?php else: ?>
-                    <?php if ($is_hybrid_mode): ?>
-                        <p style="margin-top: 0;"><strong>Note:</strong> In hybrid mode, you can only create codes after purchasing them via the "Purchase Access Codes" section above. This section is for creating codes from your purchased allocation.</p>
-                    <?php endif; ?>
                     <div id="create-invite-msg"></div>
                     <form id="create-invite-form">
                         <?php wp_nonce_field('iw_create_invite', 'iw_create_invite_nonce'); ?>
@@ -920,7 +900,7 @@ class IELTS_CM_Access_Codes {
                             <tr>
                                 <th>Number of Codes:</th>
                                 <td>
-                                    <input type="number" name="quantity" min="1" <?php if (!$is_hybrid_mode): ?>max="<?php echo esc_attr($remaining_places); ?>"<?php endif; ?> value="1" required>
+                                    <input type="number" name="quantity" min="1" max="<?php echo esc_attr($remaining_places); ?>" value="1" required>
                                 </td>
                             </tr>
                             <tr>
@@ -945,6 +925,7 @@ class IELTS_CM_Access_Codes {
                     <?php endif; ?>
                 </div>
             </div>
+            <?php endif; ?>
             
             <?php if (!$is_hybrid_mode): ?>
             <div class="iw-card collapsed">
@@ -1305,36 +1286,117 @@ class IELTS_CM_Access_Codes {
                 });
             });
             
-            // Handle purchase codes form submission (hybrid mode only)
-            $('#purchase-codes-form').on('submit', function(e) {
+            // Handle inline code purchase payment (hybrid mode only)
+            <?php if ($is_hybrid_mode): ?>
+            <?php 
+            $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
+            if ($stripe_enabled): 
+            ?>
+            // Initialize Stripe for code purchase
+            var stripeForCodePurchase = Stripe('<?php echo esc_js(get_option('ielts_cm_stripe_publishable_key')); ?>');
+            var codePurchaseElements = stripeForCodePurchase.elements();
+            var codePurchaseCardElement = codePurchaseElements.create('card', {
+                style: {
+                    base: {
+                        fontSize: '16px',
+                        color: '#32325d',
+                        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                        '::placeholder': {
+                            color: '#aab7c4'
+                        }
+                    }
+                }
+            });
+            
+            if (document.getElementById('code-card-element')) {
+                codePurchaseCardElement.mount('#code-card-element');
+                
+                codePurchaseCardElement.on('change', function(event) {
+                    var displayError = document.getElementById('code-card-errors');
+                    if (event.error) {
+                        displayError.textContent = event.error.message;
+                    } else {
+                        displayError.textContent = '';
+                    }
+                });
+            }
+            
+            // Toggle payment method display for code purchase
+            $('input[name="code_payment_method"]').on('change', function() {
+                if ($(this).val() === 'stripe') {
+                    $('#code-stripe-payment-form').show();
+                    $('#code-purchase-submit-btn').show();
+                    $('#code-paypal-button-container').hide();
+                } else {
+                    $('#code-stripe-payment-form').hide();
+                    $('#code-purchase-submit-btn').hide();
+                    $('#code-paypal-button-container').show();
+                }
+            });
+            
+            // Handle code purchase payment submission
+            $('#code-purchase-submit-btn').on('click', function(e) {
                 e.preventDefault();
-                var $form = $(this);
-                var $msg = $('#purchase-codes-msg');
-                var $submitBtn = $form.find('button[type="submit"]');
                 
-                // Show loading state
-                $submitBtn.prop('disabled', true).text('Processing...');
+                var quantity = $('#code-quantity-select').val();
+                var courseGroup = $('#code-course-group').val();
+                var accessDays = $('#code-access-days').val();
+                var price = $('#code-quantity-select option:selected').data('price');
                 
+                if (!quantity || !courseGroup || !accessDays) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+                
+                var $button = $(this);
+                var $message = $('#code-purchase-message');
+                
+                $button.prop('disabled', true).text('Processing...');
+                $message.html('');
+                
+                // Create payment intent on server
                 $.ajax({
                     url: '<?php echo admin_url('admin-ajax.php'); ?>',
                     type: 'POST',
-                    data: $form.serialize() + '&action=iw_purchase_codes',
+                    data: {
+                        action: 'ielts_cm_create_code_purchase_payment_intent',
+                        quantity: quantity,
+                        course_group: courseGroup,
+                        access_days: accessDays,
+                        price: price,
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_code_purchase_payment'); ?>'
+                    },
                     success: function(response) {
-                        if (response.success && response.data.redirect_url) {
-                            // Redirect to payment page
-                            $msg.html($('<div class="iw-msg success">').text('Redirecting to payment...'));
-                            window.location.href = response.data.redirect_url;
+                        if (response.success) {
+                            // Confirm payment with Stripe
+                            stripeForCodePurchase.confirmCardPayment(response.data.client_secret, {
+                                payment_method: {
+                                    card: codePurchaseCardElement
+                                }
+                            }).then(function(result) {
+                                if (result.error) {
+                                    $message.html('<div class="iw-msg error">' + result.error.message + '</div>');
+                                    $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
+                                } else {
+                                    $message.html('<div class="iw-msg success">Payment successful! Your access codes have been created. Refreshing...</div>');
+                                    setTimeout(function() {
+                                        location.reload();
+                                    }, 2000);
+                                }
+                            });
                         } else {
-                            $msg.html($('<div class="iw-msg error">').text(response.data.message || 'An error occurred'));
-                            $submitBtn.prop('disabled', false).text('Proceed to Payment');
+                            $message.html('<div class="iw-msg error">' + response.data.message + '</div>');
+                            $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
                         }
                     },
                     error: function() {
-                        $msg.html($('<div class="iw-msg error">').text('Connection error. Please try again.'));
-                        $submitBtn.prop('disabled', false).text('Proceed to Payment');
+                        $message.html('<div class="iw-msg error">An error occurred. Please try again.</div>');
+                        $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
                     }
                 });
             });
+            <?php endif; ?>
+            <?php endif; ?>
             
             $('#create-user-form').on('submit', function(e) {
                 e.preventDefault();
