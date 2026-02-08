@@ -1790,12 +1790,12 @@ class IELTS_CM_Access_Codes {
         // Get recent payment logs
         $payment_table = $wpdb->prefix . 'ielts_cm_payments';
         $recent_payment = $wpdb->get_row($wpdb->prepare(
-            "SELECT * FROM $payment_table WHERE user_id = %d ORDER BY payment_date DESC LIMIT 1",
+            "SELECT * FROM $payment_table WHERE user_id = %d ORDER BY created_at DESC LIMIT 1",
             $current_user_id
         ));
         
         if ($recent_payment) {
-            $debug_html .= '<p style="margin: 5px 0;"><strong>Last Payment:</strong> ' . esc_html($recent_payment->membership_type) . ' - $' . esc_html($recent_payment->amount) . ' - ' . esc_html($recent_payment->payment_status) . ' (' . esc_html($recent_payment->payment_date) . ')</p>';
+            $debug_html .= '<p style="margin: 5px 0;"><strong>Last Payment:</strong> ' . esc_html($recent_payment->membership_type) . ' - $' . esc_html($recent_payment->amount) . ' - ' . esc_html($recent_payment->payment_status) . ' (' . esc_html($recent_payment->created_at) . ')</p>';
         } else {
             $debug_html .= '<p style="margin: 5px 0;"><strong>Last Payment:</strong> None found</p>';
         }
@@ -2797,29 +2797,39 @@ class IELTS_CM_Access_Codes {
      * AJAX handler to create PayPal order for code purchase
      */
     public function ajax_create_paypal_code_order() {
+        error_log('IELTS PayPal: ajax_create_paypal_code_order CALLED');
+        
         // Verify nonce
         if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_paypal_code_purchase')) {
+            error_log('IELTS PayPal: Code purchase failed - nonce verification failed');
             wp_send_json_error(array('message' => 'Security check failed'));
             return;
         }
         
         // Verify user is logged in and has permission
         if (!is_user_logged_in() || (!current_user_can('manage_partner_invites') && !current_user_can('manage_options'))) {
+            $user_id = is_user_logged_in() ? get_current_user_id() : 'not logged in';
+            error_log("IELTS PayPal: Code purchase failed - unauthorized user: $user_id");
             wp_send_json_error(array('message' => 'Unauthorized'));
             return;
         }
         
         // Verify hybrid mode is enabled
         if (!get_option('ielts_cm_hybrid_site_enabled', false)) {
+            error_log('IELTS PayPal: Code purchase failed - hybrid mode not enabled');
             wp_send_json_error(array('message' => 'Code purchasing is only available in hybrid mode'));
             return;
         }
         
         // Verify PayPal is enabled
         if (!get_option('ielts_cm_paypal_enabled', false)) {
+            error_log('IELTS PayPal: Code purchase failed - PayPal not enabled');
             wp_send_json_error(array('message' => 'PayPal is not enabled'));
             return;
         }
+        
+        $user_id = get_current_user_id();
+        error_log("IELTS PayPal: Creating PayPal order for user $user_id");
         
         $quantity = intval($_POST['quantity']);
         $course_group = sanitize_text_field($_POST['course_group']);
@@ -2958,20 +2968,26 @@ class IELTS_CM_Access_Codes {
      * AJAX handler to capture PayPal order and generate codes
      */
     public function ajax_capture_paypal_code_order() {
+        error_log('IELTS PayPal: ajax_capture_paypal_code_order CALLED');
+        
         // Verify nonce
         if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_paypal_code_capture')) {
+            error_log('IELTS PayPal: Capture failed - nonce verification failed');
             wp_send_json_error(array('message' => 'Security check failed'));
             return;
         }
         
         // Verify user is logged in and has permission
         if (!is_user_logged_in() || (!current_user_can('manage_partner_invites') && !current_user_can('manage_options'))) {
+            $user_id = is_user_logged_in() ? get_current_user_id() : 'not logged in';
+            error_log("IELTS PayPal: Capture failed - unauthorized user: $user_id");
             wp_send_json_error(array('message' => 'Unauthorized'));
             return;
         }
         
         $order_id = sanitize_text_field($_POST['order_id']);
         $user_id = get_current_user_id();
+        error_log("IELTS PayPal: Capturing order $order_id for user $user_id");
         
         // Get pending purchase data
         $pending_purchase = get_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase', true);
@@ -3064,16 +3080,20 @@ class IELTS_CM_Access_Codes {
         $duration_days = intval($pending_purchase['access_days']);
         $amount = floatval($pending_purchase['amount']);
         
+        error_log("IELTS PayPal: Payment captured successfully - Generating $quantity codes for user $user_id");
+        
         // Get partner organization ID
         // For hybrid sites: Default to SITE_PARTNER_ORG_ID if user doesn't have custom org ID set
         // This ensures codes are visible in the partner dashboard
         $org_id = get_user_meta($user_id, 'iw_partner_organization_id', true);
         if (!empty($org_id) && is_numeric($org_id)) {
             $partner_org_id = (int) $org_id;
+            error_log("IELTS PayPal: Partner Org ID: $partner_org_id (from user meta)");
         } else {
             // HYBRID FIX: Use SITE_PARTNER_ORG_ID instead of user_id
             // This matches the default organization used by get_partner_org_id()
             $partner_org_id = self::SITE_PARTNER_ORG_ID;
+            error_log("IELTS PayPal: Partner Org ID: $partner_org_id (using SITE_PARTNER_ORG_ID - no custom org_id set for user)");
         }
         
         // Generate access codes with error handling
@@ -3125,6 +3145,26 @@ class IELTS_CM_Access_Codes {
                 error_log(sprintf('CRITICAL: Failed to send confirmation email for PayPal order %s - User %d - %d codes', $order_id, $user_id, count($generated_codes)));
                 // Note: Don't fail the request since codes were generated successfully
             }
+        }
+        
+        // Log the payment to database
+        $payment_table = $wpdb->prefix . 'ielts_cm_payments';
+        $insert_result = $wpdb->insert(
+            $payment_table,
+            array(
+                'user_id' => $user_id,
+                'membership_type' => 'access_codes_' . $quantity,
+                'amount' => $amount,
+                'transaction_id' => $order_id,
+                'payment_status' => 'completed'
+            ),
+            array('%d', '%s', '%f', '%s', '%s')
+        );
+        
+        if ($insert_result === false) {
+            error_log("CRITICAL: Failed to log PayPal payment to database for user $user_id: " . $wpdb->last_error);
+        } else {
+            error_log("SUCCESS: PayPal payment logged to database for user $user_id");
         }
         
         // Clean up pending purchase data

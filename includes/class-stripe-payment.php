@@ -983,31 +983,39 @@ class IELTS_CM_Stripe_Payment {
      * Create payment intent for access code purchase
      */
     public function create_code_purchase_payment_intent() {
+        error_log('IELTS Stripe: create_code_purchase_payment_intent CALLED');
+        
         // Verify nonce
         if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_code_purchase_payment')) {
+            error_log('IELTS Stripe: Code purchase failed - nonce verification failed');
             wp_send_json_error(array('message' => 'Security check failed'));
             return;
         }
         
         // Verify user is logged in
         if (!is_user_logged_in()) {
+            error_log('IELTS Stripe: Code purchase failed - user not logged in');
             wp_send_json_error(array('message' => 'You must be logged in to purchase codes'));
             return;
         }
         
         // Verify user has permission (partner admin or site admin)
         if (!current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            $user_id = get_current_user_id();
+            error_log("IELTS Stripe: Code purchase failed - user $user_id lacks permission");
             wp_send_json_error(array('message' => 'You do not have permission to purchase codes'));
             return;
         }
         
         // Verify hybrid mode is enabled
         if (!get_option('ielts_cm_hybrid_site_enabled', false)) {
+            error_log('IELTS Stripe: Code purchase failed - hybrid mode not enabled');
             wp_send_json_error(array('message' => 'Code purchasing is only available in hybrid mode'));
             return;
         }
         
         $user_id = get_current_user_id();
+        error_log("IELTS Stripe: Creating payment intent for user $user_id");
         $quantity = intval($_POST['quantity']);
         $course_group = sanitize_text_field($_POST['course_group']);
         // Fixed 30-day access for hybrid sites (validated above - this function only runs on hybrid sites)
