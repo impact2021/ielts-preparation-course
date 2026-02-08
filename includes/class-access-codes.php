@@ -2933,6 +2933,13 @@ class IELTS_CM_Access_Codes {
             return;
         }
         
+        // Clean up stale pending purchases (older than 1 hour)
+        if (isset($pending_purchase['created']) && (time() - $pending_purchase['created']) > 3600) {
+            delete_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase');
+            wp_send_json_error(array('message' => 'Order expired. Please try again.'));
+            return;
+        }
+        
         // Get PayPal credentials
         $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
         $paypal_secret = get_option('ielts_cm_paypal_secret', '');
@@ -2955,7 +2962,33 @@ class IELTS_CM_Access_Codes {
         }
         
         $auth_body = json_decode(wp_remote_retrieve_body($auth_response), true);
+        if (!isset($auth_body['access_token'])) {
+            error_log('PayPal auth failed in capture: ' . print_r($auth_body, true));
+            wp_send_json_error(array('message' => 'PayPal authentication failed'));
+            return;
+        }
         $access_token = $auth_body['access_token'];
+        
+        // Verify order status before capture to prevent replay attacks
+        $get_order_response = wp_remote_get("https://api-m.paypal.com/v2/checkout/orders/{$order_id}", array(
+            'headers' => array(
+                'Content-Type' => 'application/json',
+                'Authorization' => 'Bearer ' . $access_token
+            )
+        ));
+        
+        if (is_wp_error($get_order_response)) {
+            error_log('PayPal get order error: ' . $get_order_response->get_error_message());
+            wp_send_json_error(array('message' => 'Failed to verify order'));
+            return;
+        }
+        
+        $order_details = json_decode(wp_remote_retrieve_body($get_order_response), true);
+        if (!isset($order_details['status']) || $order_details['status'] !== 'APPROVED') {
+            error_log('PayPal order not in APPROVED state: ' . print_r($order_details, true));
+            wp_send_json_error(array('message' => 'Order cannot be captured. Status: ' . ($order_details['status'] ?? 'unknown')));
+            return;
+        }
         
         // Capture the order
         $capture_response = wp_remote_post("https://api-m.paypal.com/v2/checkout/orders/{$order_id}/capture", array(
@@ -2991,15 +3024,16 @@ class IELTS_CM_Access_Codes {
             $partner_org_id = (int) $org_id;
         }
         
-        // Generate access codes
+        // Generate access codes with error handling
         global $wpdb;
         $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
         $generated_codes = array();
+        $failed_inserts = 0;
         
         for ($i = 0; $i < $quantity; $i++) {
             $code = $this->generate_unique_code();
             
-            $wpdb->insert(
+            $result = $wpdb->insert(
                 $table_name,
                 array(
                     'code' => $code,
@@ -3012,17 +3046,40 @@ class IELTS_CM_Access_Codes {
                 array('%s', '%s', '%d', '%d', '%s', '%s')
             );
             
-            $generated_codes[] = $code;
+            if ($result === false) {
+                error_log("Failed to insert access code $code for user $user_id: " . $wpdb->last_error);
+                $failed_inserts++;
+            } else {
+                $generated_codes[] = $code;
+            }
         }
         
-        // Send confirmation email
-        $this->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
+        // If too many inserts failed, log critical error
+        if ($failed_inserts > 0) {
+            error_log(sprintf('CRITICAL: PayPal code purchase for user %d - %d/%d codes failed to insert', $user_id, $failed_inserts, $quantity));
+            
+            // If more than 50% failed, this is a critical issue
+            if ($failed_inserts > ($quantity / 2)) {
+                wp_send_json_error(array('message' => 'Payment processed but code generation encountered errors. Please contact support with order ID: ' . $order_id));
+                return;
+            }
+        }
+        
+        // Send confirmation email only if at least some codes were generated
+        if (!empty($generated_codes)) {
+            $email_sent = $this->send_purchase_confirmation_email($user_id, $generated_codes, $course_group, $duration_days, $amount);
+            
+            if (!$email_sent) {
+                error_log(sprintf('CRITICAL: Failed to send confirmation email for PayPal order %s - User %d - %d codes', $order_id, $user_id, count($generated_codes)));
+                // Note: Don't fail the request since codes were generated successfully
+            }
+        }
         
         // Clean up pending purchase data
         delete_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase');
         
         // Log successful transaction
-        error_log(sprintf('PayPal code purchase completed for user %d - Order: %s - %d codes generated', $user_id, $order_id, $quantity));
+        error_log(sprintf('PayPal code purchase completed for user %d - Order: %s - %d codes generated', $user_id, $order_id, count($generated_codes)));
         
         wp_send_json_success(array('message' => 'Codes generated successfully'));
     }
