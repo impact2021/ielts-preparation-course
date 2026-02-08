@@ -42,6 +42,17 @@ class IELTS_CM_Access_Codes {
     const CODES_TABLE_LIMIT = 100;
     
     /**
+     * PayPal order expiration time in seconds (1 hour)
+     */
+    const PAYPAL_ORDER_EXPIRATION = 3600;
+    
+    /**
+     * Threshold for code generation failures (50%)
+     * If more than this percentage fails, treat as critical error
+     */
+    const CODE_GENERATION_FAILURE_THRESHOLD = 0.5;
+    
+    /**
      * Access code membership types - separate from paid memberships
      * These are created when Access Code Membership system is enabled
      */
@@ -1078,8 +1089,8 @@ class IELTS_CM_Access_Codes {
                             </td>
                         </tr>
                         <tr>
-                            <th>Days:</th>
-                            <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 30); ?>" min="1" required style="width: 100%;"></td>
+                            <th>Access Duration (Days):</th>
+                            <td><input type="number" id="code-access-days" value="<?php echo get_option('iw_default_invite_days', 30); ?>" min="1" required style="width: 100%;" aria-label="Number of days students will have access to the course"></td>
                         </tr>
                     </table>
                     
@@ -1654,9 +1665,12 @@ class IELTS_CM_Access_Codes {
                         var price = $('#code-quantity-select option:selected').data('price');
                         
                         if (!quantity || !courseGroup || !accessDays) {
-                            alert('Please fill in all fields');
-                            return;
+                            $('#code-purchase-message').html('<div class="iw-msg error">Please fill in all fields</div>');
+                            return actions.reject();
                         }
+                        
+                        // Clear any previous messages
+                        $('#code-purchase-message').html('');
                         
                         return fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
                             method: 'POST',
@@ -2934,7 +2948,7 @@ class IELTS_CM_Access_Codes {
         }
         
         // Clean up stale pending purchases (older than 1 hour)
-        if (isset($pending_purchase['created']) && (time() - $pending_purchase['created']) > 3600) {
+        if (isset($pending_purchase['created']) && (time() - $pending_purchase['created']) > self::PAYPAL_ORDER_EXPIRATION) {
             delete_user_meta($user_id, '_ielts_cm_pending_paypal_code_purchase');
             wp_send_json_error(array('message' => 'Order expired. Please try again.'));
             return;
@@ -3058,8 +3072,8 @@ class IELTS_CM_Access_Codes {
         if ($failed_inserts > 0) {
             error_log(sprintf('CRITICAL: PayPal code purchase for user %d - %d/%d codes failed to insert', $user_id, $failed_inserts, $quantity));
             
-            // If more than 50% failed, this is a critical issue
-            if ($failed_inserts > ($quantity / 2)) {
+            // If more than threshold failed, this is a critical issue
+            if ($failed_inserts > ($quantity * self::CODE_GENERATION_FAILURE_THRESHOLD)) {
                 wp_send_json_error(array('message' => 'Payment processed but code generation encountered errors. Please contact support with order ID: ' . $order_id));
                 return;
             }
