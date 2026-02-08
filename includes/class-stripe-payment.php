@@ -1149,7 +1149,14 @@ class IELTS_CM_Stripe_Payment {
             global $wpdb;
             $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
             
-            error_log("IELTS Webhook: Generating $quantity codes into table: $table_name");
+            // Verify table exists
+            $table_exists = $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $table_name)) === $table_name;
+            if (!$table_exists) {
+                error_log("CRITICAL: Access codes table $table_name does not exist! Plugin may not be properly activated.");
+                // Still try to continue - maybe the table will be created by the class
+            } else {
+                error_log("IELTS Webhook: Access codes table verified, generating $quantity codes...");
+            }
             
             // Generate codes
             for ($i = 0; $i < $quantity; $i++) {
