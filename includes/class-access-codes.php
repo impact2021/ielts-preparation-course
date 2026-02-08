@@ -2226,6 +2226,75 @@ class IELTS_CM_Access_Codes {
     }
     
     /**
+     * Send access code purchase confirmation email to partner
+     * 
+     * @param int $partner_id Partner user ID
+     * @param array $codes Array of generated access codes
+     * @param string $course_group Course group identifier
+     * @param int $days Number of days access
+     * @param float $amount Payment amount
+     */
+    private function send_purchase_confirmation_email($partner_id, $codes, $course_group, $days, $amount) {
+        $partner = get_userdata($partner_id);
+        if (!$partner || !$partner->user_email) {
+            error_log('Cannot send purchase confirmation: invalid partner ID or email');
+            return false;
+        }
+        
+        $partner_org_name = get_user_meta($partner_id, 'partner_organization_name', true);
+        $course_group_name = $this->get_course_group_display_name($course_group);
+        
+        $subject = sprintf('[IELTS Course] Access Codes Purchase Confirmation - %d codes', count($codes));
+        
+        $message = "Hello" . ($partner_org_name ? " {$partner_org_name}" : "") . ",\n\n";
+        $message .= "Thank you for your purchase! Your access codes have been generated successfully.\n\n";
+        $message .= "Purchase Details:\n";
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        $message .= sprintf("Quantity: %d access codes\n", count($codes));
+        $message .= sprintf("Course Access: %s\n", $course_group_name);
+        $message .= sprintf("Access Duration: %d days\n", $days);
+        $message .= sprintf("Amount Paid: $%.2f\n", $amount);
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+        
+        $message .= "Your Access Codes:\n";
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
+        
+        // List all codes
+        foreach ($codes as $index => $code) {
+            $message .= sprintf("%d. %s\n", $index + 1, $code);
+        }
+        
+        $message .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n";
+        
+        // Add instructions for using codes
+        $message .= "How to Use These Codes:\n";
+        $message .= "1. Share each code with one student\n";
+        $message .= "2. Students can register at your registration page\n";
+        $message .= "3. They will enter the code during registration\n";
+        $message .= "4. Upon successful registration, students get {$days} days of access\n\n";
+        
+        // Add partner dashboard link
+        $dashboard_url = home_url('/partner-dashboard/');
+        $message .= "You can manage all your codes and students from your Partner Dashboard:\n";
+        $message .= "{$dashboard_url}\n\n";
+        
+        $message .= "If you have any questions, please don't hesitate to contact us.\n\n";
+        $message .= "Best regards,\n";
+        $message .= "IELTS Course Team";
+        
+        // Send email
+        $sent = wp_mail($partner->user_email, $subject, $message);
+        
+        if ($sent) {
+            error_log(sprintf('Purchase confirmation email sent to %s (%d codes)', $partner->user_email, count($codes)));
+        } else {
+            error_log(sprintf('Failed to send purchase confirmation email to %s', $partner->user_email));
+        }
+        
+        return $sent;
+    }
+    
+    /**
      * Get display name for course group, including legacy values
      */
     private function get_course_group_display_name($group) {
