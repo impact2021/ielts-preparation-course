@@ -971,9 +971,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         </div>
         
         <?php if (!empty($questions) && is_user_logged_in()): ?>
-            <!-- Submit button moved to bottom nav -->
-        
-        <?php if (!empty($questions) && is_user_logged_in()): ?>
             <!-- Sticky Bottom Navigation with Timer and Submit -->
             <div class="ielts-sticky-bottom-nav quiz-bottom-nav">
                 <div class="nav-item nav-prev">
