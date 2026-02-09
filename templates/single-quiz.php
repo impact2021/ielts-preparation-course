@@ -831,11 +831,25 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                     $processed_text = $question_text;
                                     $dropdown_num = 1;
                                     
+                                    // Check if using numbered dropdown syntax (e.g., "1.[dropdown]", "2.[dropdown]")
+                                    $has_numbered_dropdowns = preg_match('/\d+\.\s*\[dropdown\]/i', $question_text);
+                                    
                                     // Replace each [dropdown] placeholder with a select element
                                     while ($dropdown_num <= $correct_answer_count) {
-                                        // Check if placeholder exists before attempting replacement
-                                        if (stripos($processed_text, '[dropdown]') === false) {
-                                            break; // No more placeholders to replace
+                                        // Calculate the display number for this dropdown
+                                        $display_number = $display_nums['start'] + $dropdown_num - 1;
+                                        
+                                        if ($has_numbered_dropdowns) {
+                                            // Check for numbered placeholder (e.g., "1.[dropdown]", "2.[dropdown]")
+                                            $numbered_pattern = '/(\d+)\.\s*\[dropdown\]/i';
+                                            if (!preg_match($numbered_pattern, $processed_text)) {
+                                                break; // No more numbered placeholders to replace
+                                            }
+                                        } else {
+                                            // Check for unnumbered placeholder
+                                            if (stripos($processed_text, '[dropdown]') === false) {
+                                                break; // No more placeholders to replace
+                                            }
                                         }
                                         
                                         // Build the select dropdown
@@ -854,8 +868,15 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         
                                         $select_field .= '</select>';
                                         
-                                        // Replace the first occurrence of [dropdown] and verify replacement happened
-                                        $new_text = preg_replace('/\[dropdown\]/i', $select_field, $processed_text, 1);
+                                        if ($has_numbered_dropdowns) {
+                                            // Replace numbered placeholder, keeping the display number
+                                            // This replaces "1.[dropdown]" with "1. <select>..."
+                                            $new_text = preg_replace('/(\d+)\.\s*\[dropdown\]/i', '$1. ' . $select_field, $processed_text, 1);
+                                        } else {
+                                            // Replace the first occurrence of unnumbered [dropdown]
+                                            $new_text = preg_replace('/\[dropdown\]/i', $select_field, $processed_text, 1);
+                                        }
+                                        
                                         if ($new_text === $processed_text) {
                                             // No replacement occurred, break to prevent infinite loop
                                             break;

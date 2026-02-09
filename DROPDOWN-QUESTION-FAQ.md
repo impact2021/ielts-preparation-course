@@ -140,12 +140,65 @@ For the `[dropdown]` question type (technically called `closed_question_dropdown
 
 ---
 
+## Complete Example: Numbered Dropdowns (NEW!)
+
+You can now include question numbers inline with dropdowns by using numbered placeholders like `1.[dropdown]`, `2.[dropdown]`, etc.
+
+```json
+{
+  "type": "closed_question_dropdown",
+  "ielts_question_type": "Multiple Choice (Multiple Answers)",
+  "instructions": "Complete the dialogue by selecting the correct options from the dropdown menus.",
+  "question": "<strong>Examiner:</strong> Do you think parents should allow children to watch television?<br><strong>Candidate:</strong> Well, that's an interesting question. There are clearly some 1.[dropdown] where watching television does not negatively affect children. Some educational programmes, for example, can help 2.[dropdown].",
+  "correct_answer_count": 2,
+  "mc_options": [
+    {
+      "text": "situations",
+      "is_correct": true,
+      "feedback": "Correct! 'Situations' fits well in this context."
+    },
+    {
+      "text": "times",
+      "is_correct": false,
+      "feedback": "Not quite. 'Times' doesn't work as well in this context."
+    },
+    {
+      "text": "children learn",
+      "is_correct": false,
+      "feedback": "Close, but not the best answer."
+    },
+    {
+      "text": "children to learn",
+      "is_correct": true,
+      "feedback": "Correct! 'Help children to learn' is the right construction."
+    }
+  ],
+  "correct_answer": "field_1:0|field_2:3",
+  "no_answer_feedback": "You did not complete all the answers.",
+  "points": 2
+}
+```
+
+### How it Works:
+1. **Numbered Syntax**: Use `1.[dropdown]`, `2.[dropdown]`, etc. instead of just `[dropdown]`
+2. **Display**: The numbers (1., 2., etc.) will appear inline before each dropdown
+3. **Same Options**: All dropdowns still use the same `mc_options` list
+4. **Backward Compatible**: You can still use `[dropdown]` without numbers if you prefer
+
+### When to Use Numbered Dropdowns:
+- ✅ Use when you want explicit question numbers visible inline with dropdowns
+- ✅ Useful for IELTS-style questions where each blank needs a number
+- ✅ Better for dialogues or passages with multiple blanks
+- ❌ Not needed if you prefer the cleaner look without numbers
+
+---
+
 ## Key Points to Remember
 
 ### ✅ DO:
 - Use `"type": "closed_question_dropdown"` (not just "dropdown")
 - Put all your dropdown options in the `mc_options` array
-- Use `[dropdown]` placeholders in your question text
+- Use `[dropdown]` placeholders in your question text (or `1.[dropdown]`, `2.[dropdown]` for numbered dropdowns)
 - Mark which options are correct with `"is_correct": true`
 - Include feedback for each option
 - Use 0-based indexing for `correct_answer` (first option is index 0)
@@ -163,7 +216,7 @@ For the `[dropdown]` question type (technically called `closed_question_dropdown
 ```
 closed_question_dropdown
 ├── type: "closed_question_dropdown"
-├── question: "Your text with [dropdown] placeholder(s)"
+├── question: "Your text with [dropdown] or 1.[dropdown], 2.[dropdown] placeholder(s)"
 ├── correct_answer_count: (number of dropdowns)
 ├── mc_options: [
 │   ├── { text: "option1", is_correct: true/false, feedback: "..." }
@@ -178,8 +231,9 @@ closed_question_dropdown
 
 ## More Examples
 
-See the complete working example file:
+See the complete working example files:
 - **`TEMPLATES/example-dropdown-closed-question.json`** - Full exercise with 3 dropdown questions
+- **`TEST-DROPDOWN-NUMBERED.json`** - Example with numbered dropdowns (NEW!)
 
 See the full documentation:
 - **`TEMPLATES/JSON-FORMAT-README.md`** - Complete JSON format reference (lines 210-299)
