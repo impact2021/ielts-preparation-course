@@ -670,6 +670,17 @@ class IELTS_CM_Stripe_Payment {
         $payload = $request->get_body();
         $sig_header = $request->get_header('stripe-signature');
         
+        // Fallback: WordPress REST API may not pass headers correctly on all servers
+        // Try direct $_SERVER access if get_header returns empty
+        if (empty($sig_header) && isset($_SERVER['HTTP_STRIPE_SIGNATURE'])) {
+            $sig_header = sanitize_text_field(wp_unslash($_SERVER['HTTP_STRIPE_SIGNATURE']));
+            error_log('IELTS Stripe Webhook: Retrieved signature from $_SERVER fallback');
+        }
+        
+        if (empty($sig_header)) {
+            error_log('IELTS Stripe Webhook: ERROR - Signature header NOT FOUND');
+        }
+        
         // Get webhook signing secret from settings
         $webhook_secret = get_option('ielts_cm_stripe_webhook_secret', '');
         
