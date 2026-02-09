@@ -571,6 +571,37 @@ body.ielts-resource-single .content-area {
                 
                 $prev_item = ($current_index > 0) ? $all_items[$current_index - 1] : null;
                 $next_item = ($current_index >= 0 && $current_index < count($all_items) - 1) ? $all_items[$current_index + 1] : null;
+                
+                // Check if this is the last lesson in the course (for completion message)
+                $is_last_lesson = false;
+                if (!$next_item && $course_id && $lesson_id) {
+                    // Get all lessons in the course
+                    $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+                    $str_pattern_course = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+                    
+                    $all_lesson_ids = $wpdb->get_col($wpdb->prepare("
+                        SELECT DISTINCT post_id 
+                        FROM {$wpdb->postmeta} 
+                        WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+                           OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                    ", $course_id, $int_pattern_course, $str_pattern_course));
+                    
+                    if (!empty($all_lesson_ids)) {
+                        $all_lessons = get_posts(array(
+                            'post_type' => 'ielts_lesson',
+                            'posts_per_page' => -1,
+                            'post__in' => $all_lesson_ids,
+                            'orderby' => 'menu_order',
+                            'order' => 'ASC',
+                            'post_status' => 'publish'
+                        ));
+                        
+                        // Check if current lesson is the last one
+                        if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
+                            $is_last_lesson = true;
+                        }
+                    }
+                }
                 ?>
                 
                 <?php if ($prev_item || $next_item || $lesson_id || $course_id): ?>
@@ -655,6 +686,14 @@ body.ielts-resource-single .content-area {
                                     </span>
                                     <span class="nav-arrow">&raquo;</span>
                                 </a>
+                            <?php else: ?>
+                                <div class="nav-completion-message">
+                                    <?php if ($is_last_lesson): ?>
+                                        <span><?php _e('You have finished this course', 'ielts-course-manager'); ?></span>
+                                    <?php else: ?>
+                                        <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </div>
