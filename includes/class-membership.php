@@ -15,10 +15,8 @@ class IELTS_CM_Membership {
     const MEMBERSHIP_LEVELS = array(
         'academic_trial' => 'Academic Module - Free Trial',
         'general_trial' => 'General Training - Free Trial',
-        'academic_full' => 'IELTS Core (Academic Module)',
-        'general_full' => 'IELTS Core (General Training Module)',
-        'academic_plus' => 'IELTS Plus (Academic Module)',
-        'general_plus' => 'IELTS Plus (General Training Module)',
+        'academic_full' => 'Academic Module IELTS',
+        'general_full' => 'General Module IELTS',
         'english_trial' => 'English Only - Free Trial',
         'english_full' => 'English Only Full Membership'
     );
@@ -31,8 +29,6 @@ class IELTS_CM_Membership {
         'general_trial' => 'Free 6-hour trial access',
         'academic_full' => '30 days full access to Academic Module',
         'general_full' => '30 days full access to General Training Module',
-        'academic_plus' => '90 days full access + 2 live speaking assessments',
-        'general_plus' => '90 days full access + 2 live speaking assessments',
         'english_trial' => 'Free 6-hour trial access',
         'english_full' => '30 days full access to English Only content'
     );
@@ -740,8 +736,6 @@ class IELTS_CM_Membership {
             'general_trial' => array('value' => 6, 'unit' => 'hours'),
             'academic_full' => array('value' => 30, 'unit' => 'days'),
             'general_full' => array('value' => 30, 'unit' => 'days'),
-            'academic_plus' => array('value' => 90, 'unit' => 'days'),
-            'general_plus' => array('value' => 90, 'unit' => 'days'),
             'english_trial' => array('value' => 6, 'unit' => 'hours'),
             'english_full' => array('value' => 30, 'unit' => 'days')
         );

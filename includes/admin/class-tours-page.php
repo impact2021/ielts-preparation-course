@@ -68,8 +68,6 @@ class IELTS_CM_Tours_Page {
             'general_trial',
             'academic_full',
             'general_full',
-            'academic_plus',
-            'general_plus',
             'english_trial',
             'english_full'
         );
@@ -124,10 +122,8 @@ class IELTS_CM_Tours_Page {
         $membership_levels = array(
             'academic_trial' => 'Academic Module - Free Trial',
             'general_trial' => 'General Training - Free Trial',
-            'academic_full' => 'IELTS Core (Academic Module)',
-            'general_full' => 'IELTS Core (General Training Module)',
-            'academic_plus' => 'IELTS Plus (Academic Module)',
-            'general_plus' => 'IELTS Plus (General Training Module)',
+            'academic_full' => 'Academic Module IELTS',
+            'general_full' => 'General Module IELTS',
             'english_trial' => 'English Only - Free Trial',
             'english_full' => 'English Only Full Membership'
         );

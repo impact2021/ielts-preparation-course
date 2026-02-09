@@ -803,7 +803,7 @@ class IELTS_CM_Access_Codes {
                         </tr>
                         <tr>
                             <td><strong>WordPress Roles</strong></td>
-                            <td>academic_trial, general_trial, academic_full, general_full, academic_plus, general_plus, english_trial, english_full</td>
+                            <td>academic_trial, general_trial, academic_full, general_full, english_trial, english_full</td>
                             <td>access_academic_module, access_general_module, access_general_english</td>
                         </tr>
                         <tr>
@@ -1252,6 +1252,10 @@ class IELTS_CM_Access_Codes {
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
+                        <label for="iw-student-search" style="display: block; margin-bottom: 5px; font-weight: 500;">Search Students:</label>
+                        <input type="text" id="iw-student-search" placeholder="Type name, username, or email..." aria-label="Search students" style="max-width: 400px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
                         <button class="iw-filter-btn active" data-filter-students="active">Active (<?php echo esc_html($active_student_count); ?>)</button>
                         <button class="iw-filter-btn" data-filter-students="expired">Expired (<?php echo esc_html($expired_student_count); ?>)</button>
                     </div>
@@ -1428,23 +1432,45 @@ class IELTS_CM_Access_Codes {
                 
                 var $table = jQuery('.iw-students-table');
                 var $rows = $table.find('tbody tr');
+                var searchTerm = jQuery('#iw-student-search').val().toLowerCase();
                 var visibleCount = 0;
                 
                 $rows.each(function() {
-                    var rowStatus = jQuery(this).data('student-status');
-                    if (rowStatus === status) {
-                        jQuery(this).show();
+                    var $row = jQuery(this);
+                    var rowStatus = $row.data('student-status');
+                    var shouldShowByStatus = (rowStatus === status);
+                    var shouldShowBySearch = true;
+                    
+                    // If there's a search term, check if row matches
+                    if (searchTerm) {
+                        var rowText = $row.find('td:first').text().toLowerCase();
+                        shouldShowBySearch = rowText.indexOf(searchTerm) !== -1;
+                    }
+                    
+                    if (shouldShowByStatus && shouldShowBySearch) {
+                        $row.show();
                         visibleCount++;
                     } else {
-                        jQuery(this).hide();
+                        $row.hide();
                     }
                 });
                 
                 // Show/hide empty state messages
                 jQuery('[data-empty-state]').hide();
+                // Remove any previous search messages
+                jQuery('.no-students-search-msg').remove();
+                
                 if (visibleCount === 0) {
                     $table.hide();
-                    jQuery('[data-empty-state="' + status + '"]').show();
+                    if (searchTerm) {
+                        // Show custom message for no search results (use text() for safe insertion)
+                        var searchValue = jQuery('#iw-student-search').val();
+                        var searchMsg = jQuery('<p class="no-students-msg no-students-search-msg">').text('No students found matching "' + searchValue + '"');
+                        jQuery('[data-empty-state="' + status + '"]').after(searchMsg);
+                        searchMsg.show();
+                    } else {
+                        jQuery('[data-empty-state="' + status + '"]').show();
+                    }
                 } else {
                     $table.show();
                 }
@@ -1495,6 +1521,13 @@ class IELTS_CM_Access_Codes {
             $('.iw-filter-btn[data-filter-students]').on('click', function() {
                 var filter = $(this).data('filter-students');
                 IWDashboard.filterStudents(filter);
+            });
+            
+            // Student search functionality
+            $('#iw-student-search').on('keyup', function() {
+                // Get current active filter (active or expired)
+                var currentFilter = $('.iw-filter-btn[data-filter-students].active').data('filter-students');
+                IWDashboard.filterStudents(currentFilter);
             });
             
             // Initialize student filter to show active by default
