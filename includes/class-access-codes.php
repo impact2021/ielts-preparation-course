@@ -1252,7 +1252,7 @@ class IELTS_CM_Access_Codes {
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
-                        <input type="text" id="iw-student-search" placeholder="Search by name, username, or email..." style="margin-bottom: 10px; max-width: 400px;">
+                        <input type="text" id="iw-student-search" placeholder="Search by name, username, or email..." aria-label="Search students" style="margin-bottom: 10px; max-width: 400px;">
                     </div>
                     <div style="margin-bottom: 15px;">
                         <button class="iw-filter-btn active" data-filter-students="active">Active (<?php echo esc_html($active_student_count); ?>)</button>
@@ -1456,11 +1456,15 @@ class IELTS_CM_Access_Codes {
                 
                 // Show/hide empty state messages
                 jQuery('[data-empty-state]').hide();
+                // Remove any previous search messages
+                jQuery('.no-students-search-msg').remove();
+                
                 if (visibleCount === 0) {
                     $table.hide();
                     if (searchTerm) {
-                        // Show custom message for no search results
-                        var searchMsg = jQuery('<p class="no-students-msg">').text('No students found matching "' + jQuery('#iw-student-search').val() + '"');
+                        // Show custom message for no search results (use text() for safe insertion)
+                        var searchValue = jQuery('#iw-student-search').val();
+                        var searchMsg = jQuery('<p class="no-students-msg no-students-search-msg">').text('No students found matching "' + searchValue + '"');
                         jQuery('[data-empty-state="' + status + '"]').after(searchMsg);
                         searchMsg.show();
                     } else {
