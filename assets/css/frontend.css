@@ -1288,6 +1288,143 @@ body.ielts-course-archive .content-area {
     scroll-behavior: smooth;
 }
 
+/* Sticky Bottom Navigation Bar - Global Styles */
+.ielts-sticky-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    z-index: 90;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 50px;
+}
+
+/* For quiz pages with question navigation, position below it */
+.ielts-quiz-single .ielts-sticky-bottom-nav,
+.ielts-quiz-fullscreen .ielts-sticky-bottom-nav {
+    bottom: auto;
+    position: relative;
+    z-index: 89;
+}
+
+.ielts-sticky-bottom-nav .nav-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ielts-sticky-bottom-nav .nav-item.nav-prev {
+    justify-content: flex-start;
+}
+
+.ielts-sticky-bottom-nav .nav-item.nav-next {
+    justify-content: flex-end;
+}
+
+.ielts-sticky-bottom-nav .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.ielts-sticky-bottom-nav .nav-link:hover {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-course,
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson {
+    background: #0073aa;
+    color: white;
+    border-color: #0073aa;
+}
+
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-course:hover,
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson:hover {
+    background: #005a87;
+    border-color: #005a87;
+}
+
+.ielts-sticky-bottom-nav .nav-arrow {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ielts-sticky-bottom-nav .nav-label {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ielts-sticky-bottom-nav .nav-label small {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.ielts-sticky-bottom-nav .nav-label strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Responsive adjustments for sticky nav */
+@media (max-width: 768px) {
+    .ielts-sticky-bottom-nav {
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 8px 10px;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-item {
+        flex: 0 0 100%;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-item.nav-prev,
+    .ielts-sticky-bottom-nav .nav-item.nav-next {
+        justify-content: center;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-link {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-label {
+        align-items: center;
+    }
+}
+
+/* Add padding to body to prevent content from being hidden under sticky nav */
+body.has-sticky-bottom-nav {
+    padding-bottom: 60px;
+}
+
+/* For quiz pages, no extra padding needed as nav is positioned differently */
+body.ielts-quiz-single.has-sticky-bottom-nav,
+body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
+    padding-bottom: 0;
+}
+
 /* Question highlight animation */
 .ielts-computer-based-quiz .quiz-question.highlight-question {
     animation: highlightPulse 1s ease;

@@ -317,8 +317,8 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
     ?>
     
     <?php if ($prev_course || $next_course): ?>
-        <div class="ielts-navigation">
-            <div class="nav-prev">
+        <div class="ielts-sticky-bottom-nav">
+            <div class="nav-item nav-prev">
                 <?php if ($prev_course): ?>
                     <a href="<?php echo get_permalink($prev_course->ID); ?>" class="nav-link">
                         <span class="nav-arrow">&laquo;</span>
@@ -329,7 +329,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                     </a>
                 <?php endif; ?>
             </div>
-            <div class="nav-next">
+            <div class="nav-item nav-next">
                 <?php if ($next_course): ?>
                     <a href="<?php echo get_permalink($next_course->ID); ?>" class="nav-link">
                         <span class="nav-label">
@@ -341,60 +341,8 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                 <?php endif; ?>
             </div>
         </div>
-        
-        <style>
-        .ielts-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #e0e0e0;
-        }
-        .ielts-navigation .nav-prev {
-            flex: 0 0 48%;
-        }
-        .ielts-navigation .nav-next {
-            flex: 0 0 48%;
-            text-align: right;
-        }
-        .ielts-navigation .nav-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 20px;
-            background: #f5f5f5;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.3s ease;
-        }
-        .ielts-navigation .nav-link:hover {
-            background: #e0e0e0;
-            transform: translateY(-2px);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .ielts-navigation .nav-arrow {
-            font-size: 24px;
-            color: #0073aa;
-            font-weight: bold;
-        }
-        .ielts-navigation .nav-label {
-            display: flex;
-            flex-direction: column;
-        }
-        .ielts-navigation .nav-label small {
-            font-size: 12px;
-            color: #666;
-            text-transform: uppercase;
-        }
-        .ielts-navigation .nav-label strong {
-            font-size: 14px;
-            color: #333;
-            margin-top: 3px;
-        }
-        .ielts-navigation .nav-next .nav-label {
-            align-items: flex-end;
-        }
-        </style>
+        <script>
+        document.body.classList.add('has-sticky-bottom-nav');
+        </script>
     <?php endif; ?>
 </div>
