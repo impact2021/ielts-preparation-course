@@ -1364,8 +1364,11 @@ body.ielts-course-archive .content-area {
     border-color: #ddd;
 }
 
+/* All navigation buttons should turn blue on hover */
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-course:hover,
-.ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson:hover {
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson:hover,
+.ielts-sticky-bottom-nav .nav-item.nav-prev .nav-link:hover,
+.ielts-sticky-bottom-nav .nav-item.nav-next .nav-link:hover {
     background: #0073aa;
     color: #fff;
     border-color: #0073aa;
