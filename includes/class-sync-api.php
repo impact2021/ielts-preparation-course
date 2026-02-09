@@ -234,18 +234,52 @@ class IELTS_CM_Sync_API {
     
     /**
      * Find existing content by original ID
+     * Improved to filter by correct post type to avoid matching wrong content
+     * Uses direct SQL query for better reliability with 'any' post status
      */
     private function find_existing_content($original_id, $content_type) {
-        $args = array(
-            'post_type' => 'any',
-            'meta_key' => '_ielts_cm_original_id',
-            'meta_value' => $original_id,
-            'posts_per_page' => 1,
-            'post_status' => 'any'
+        global $wpdb;
+        
+        // Ensure original_id is a string for consistent meta_value comparison
+        $original_id = strval($original_id);
+        
+        // Map content type to post type for more accurate matching
+        $post_type_map = array(
+            'course' => 'ielts_course',
+            'lesson' => 'ielts_lesson',
+            'resource' => 'ielts_resource',
+            'quiz' => 'ielts_quiz'
         );
         
-        $posts = get_posts($args);
-        return !empty($posts) ? $posts[0]->ID : false;
+        // Use specific post type if available, otherwise fallback to 'any'
+        $post_type = isset($post_type_map[$content_type]) ? $post_type_map[$content_type] : 'any';
+        
+        // Use direct SQL query for better control over post_status filtering
+        // This is more reliable than get_posts() with post_status = 'any'
+        if ($post_type !== 'any') {
+            $existing_post = $wpdb->get_var($wpdb->prepare("
+                SELECT p.ID
+                FROM {$wpdb->posts} p
+                INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+                WHERE pm.meta_key = '_ielts_cm_original_id'
+                AND pm.meta_value = %s
+                AND p.post_type = %s
+                AND p.post_status != 'trash'
+                LIMIT 1
+            ", $original_id, $post_type));
+        } else {
+            $existing_post = $wpdb->get_var($wpdb->prepare("
+                SELECT p.ID
+                FROM {$wpdb->posts} p
+                INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+                WHERE pm.meta_key = '_ielts_cm_original_id'
+                AND pm.meta_value = %s
+                AND p.post_status != 'trash'
+                LIMIT 1
+            ", $original_id));
+        }
+        
+        return $existing_post ? intval($existing_post) : false;
     }
     
     /**
@@ -501,7 +535,7 @@ class IELTS_CM_Sync_API {
         
         // Get all lessons currently associated with this course on the subsite
         $subsite_lessons = $wpdb->get_results($wpdb->prepare("
-            SELECT post_id, meta_value as original_id 
+            SELECT DISTINCT pm.post_id as post_id, pm.meta_value as original_id 
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
@@ -544,6 +578,104 @@ class IELTS_CM_Sync_API {
                 wp_trash_post($lesson->post_id);
             }
         }
+        
+        // Clean up duplicate connections after sync
+        $this->cleanup_duplicate_course_connections($course_id);
+    }
+    
+    /**
+     * Clean up duplicate course connections
+     * Finds lessons with the same original_id connected to a course and keeps only one
+     * 
+     * @param int $course_id The course ID on the subsite
+     */
+    private function cleanup_duplicate_course_connections($course_id) {
+        global $wpdb;
+        
+        $course_id = intval($course_id);
+        
+        // Find all lessons connected to this course, grouped by original_id
+        $duplicates = $wpdb->get_results($wpdb->prepare("
+            SELECT pm.meta_value as original_id, GROUP_CONCAT(p.ID ORDER BY p.ID ASC) as post_ids
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ielts_cm_original_id'
+            AND p.post_type = 'ielts_lesson'
+            AND p.post_status != 'trash'
+            AND (
+                EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm2 
+                    WHERE pm2.post_id = pm.post_id 
+                    AND pm2.meta_key = '_ielts_cm_course_id' 
+                    AND pm2.meta_value = %d
+                )
+                OR EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm3 
+                    WHERE pm3.post_id = pm.post_id 
+                    AND pm3.meta_key = '_ielts_cm_course_ids'
+                    AND (
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value = %s
+                    )
+                )
+            )
+            GROUP BY pm.meta_value
+            HAVING COUNT(*) > 1
+        ", 
+            $course_id,
+            '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%',
+            '%' . $wpdb->esc_like('"' . $course_id . '"') . '%',
+            '%' . $wpdb->esc_like(':' . $course_id . '}') . '%',
+            serialize(array($course_id))
+        ));
+        
+        if (empty($duplicates)) {
+            return; // No duplicates found
+        }
+        
+        $total_disconnected = 0;
+        
+        foreach ($duplicates as $dup) {
+            $original_id = $dup->original_id;
+            $post_ids = explode(',', $dup->post_ids);
+            
+            if (count($post_ids) <= 1) {
+                continue; // Not actually duplicates
+            }
+            
+            // Keep the first lesson (lowest ID), disconnect the rest
+            $keep_post_id = intval($post_ids[0]);
+            $disconnect_ids = array_slice($post_ids, 1);
+            
+            error_log("IELTS Sync: Found " . count($post_ids) . " lessons with original_id={$original_id} connected to course {$course_id}. Keeping lesson {$keep_post_id}, disconnecting " . count($disconnect_ids) . " duplicates.");
+            
+            foreach ($disconnect_ids as $disconnect_id) {
+                $disconnect_id = intval($disconnect_id);
+                
+                // Remove the course_id association
+                delete_post_meta($disconnect_id, '_ielts_cm_course_id', $course_id);
+                
+                // Remove from course_ids array if present
+                $course_ids = get_post_meta($disconnect_id, '_ielts_cm_course_ids', true);
+                if (is_array($course_ids)) {
+                    $course_ids = array_diff($course_ids, array($course_id));
+                    if (!empty($course_ids)) {
+                        update_post_meta($disconnect_id, '_ielts_cm_course_ids', $course_ids);
+                    } else {
+                        delete_post_meta($disconnect_id, '_ielts_cm_course_ids');
+                    }
+                }
+                
+                $total_disconnected++;
+                error_log("IELTS Sync: Disconnected duplicate lesson {$disconnect_id} (original_id={$original_id}) from course {$course_id}");
+            }
+        }
+        
+        if ($total_disconnected > 0) {
+            error_log("IELTS Sync: Cleanup complete for course {$course_id}: disconnected {$total_disconnected} duplicate lesson connections");
+        }
     }
     
     /**
@@ -579,7 +711,7 @@ class IELTS_CM_Sync_API {
         // Pages can be either ielts_resource or custom page posts linked to this lesson
         // Check both _ielts_cm_lesson_id (singular) and _ielts_cm_lesson_ids (plural)
         $subsite_pages = $wpdb->get_results($wpdb->prepare("
-            SELECT p.ID as post_id, p.post_title, p.post_type, pm.meta_value as original_id 
+            SELECT DISTINCT p.ID as post_id, p.post_title, p.post_type, pm.meta_value as original_id 
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
@@ -639,6 +771,103 @@ class IELTS_CM_Sync_API {
         }
         
         error_log("IELTS Sync: sync_lesson_pages complete for lesson {$lesson_id}: kept {$kept_count}, trashed {$trashed_count}");
+        
+        // Clean up duplicate connections after sync
+        $this->cleanup_duplicate_lesson_connections($lesson_id);
+    }
+    
+    /**
+     * Clean up duplicate lesson connections
+     * Finds posts with the same original_id connected to a lesson and keeps only one
+     * 
+     * @param int $lesson_id The lesson ID on the subsite
+     */
+    private function cleanup_duplicate_lesson_connections($lesson_id) {
+        global $wpdb;
+        
+        $lesson_id = intval($lesson_id);
+        
+        // Find all posts connected to this lesson, grouped by original_id
+        $duplicates = $wpdb->get_results($wpdb->prepare("
+            SELECT pm.meta_value as original_id, GROUP_CONCAT(p.ID ORDER BY p.ID ASC) as post_ids
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ielts_cm_original_id'
+            AND p.post_status != 'trash'
+            AND (
+                EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm2 
+                    WHERE pm2.post_id = pm.post_id 
+                    AND pm2.meta_key = '_ielts_cm_lesson_id' 
+                    AND pm2.meta_value = %d
+                )
+                OR EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm3 
+                    WHERE pm3.post_id = pm.post_id 
+                    AND pm3.meta_key = '_ielts_cm_lesson_ids'
+                    AND (
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value = %s
+                    )
+                )
+            )
+            GROUP BY pm.meta_value
+            HAVING COUNT(*) > 1
+        ", 
+            $lesson_id,
+            '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%',
+            '%' . $wpdb->esc_like('"' . $lesson_id . '"') . '%',
+            '%' . $wpdb->esc_like(':' . $lesson_id . '}') . '%',
+            serialize(array($lesson_id))
+        ));
+        
+        if (empty($duplicates)) {
+            return; // No duplicates found
+        }
+        
+        $total_disconnected = 0;
+        
+        foreach ($duplicates as $dup) {
+            $original_id = $dup->original_id;
+            $post_ids = explode(',', $dup->post_ids);
+            
+            if (count($post_ids) <= 1) {
+                continue; // Not actually duplicates
+            }
+            
+            // Keep the first post (lowest ID), disconnect the rest
+            $keep_post_id = intval($post_ids[0]);
+            $disconnect_ids = array_slice($post_ids, 1);
+            
+            error_log("IELTS Sync: Found " . count($post_ids) . " posts with original_id={$original_id} connected to lesson {$lesson_id}. Keeping post {$keep_post_id}, disconnecting " . count($disconnect_ids) . " duplicates.");
+            
+            foreach ($disconnect_ids as $disconnect_id) {
+                $disconnect_id = intval($disconnect_id);
+                
+                // Remove the lesson_id association
+                delete_post_meta($disconnect_id, '_ielts_cm_lesson_id', $lesson_id);
+                
+                // Remove from lesson_ids array if present
+                $lesson_ids = get_post_meta($disconnect_id, '_ielts_cm_lesson_ids', true);
+                if (is_array($lesson_ids)) {
+                    $lesson_ids = array_diff($lesson_ids, array($lesson_id));
+                    if (!empty($lesson_ids)) {
+                        update_post_meta($disconnect_id, '_ielts_cm_lesson_ids', $lesson_ids);
+                    } else {
+                        delete_post_meta($disconnect_id, '_ielts_cm_lesson_ids');
+                    }
+                }
+                
+                $total_disconnected++;
+                error_log("IELTS Sync: Disconnected duplicate post {$disconnect_id} (original_id={$original_id}) from lesson {$lesson_id}");
+            }
+        }
+        
+        if ($total_disconnected > 0) {
+            error_log("IELTS Sync: Cleanup complete for lesson {$lesson_id}: disconnected {$total_disconnected} duplicate connections");
+        }
     }
     
     /**
