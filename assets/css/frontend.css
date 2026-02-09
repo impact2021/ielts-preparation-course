@@ -1350,6 +1350,12 @@ body.ielts-course-archive .content-area {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Ensure hover text is readable */
+.ielts-sticky-bottom-nav .nav-link:hover .nav-label small,
+.ielts-sticky-bottom-nav .nav-link:hover .nav-label strong {
+    color: #fff;
+}
+
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-course,
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson {
     background: #0073aa;
@@ -1492,6 +1498,9 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
     color: #0073aa;
     font-weight: 700;
     font-size: 16px;
+    min-width: 50px;
+    display: inline-block;
+    text-align: left;
 }
 
 .quiz-bottom-nav .quiz-submit-btn {
@@ -1515,7 +1524,9 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
     
     .quiz-bottom-nav .nav-item.nav-prev,
     .quiz-bottom-nav .nav-item.nav-next,
-    .quiz-bottom-nav .nav-item.nav-center {
+    .quiz-bottom-nav .nav-item.nav-center,
+    .quiz-bottom-nav .nav-item.nav-back-left,
+    .quiz-bottom-nav .nav-item.nav-back-right {
         flex: 0 0 100%;
     }
     

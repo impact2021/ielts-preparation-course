@@ -966,6 +966,16 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         </a>
                     <?php endif; ?>
                 </div>
+                <div class="nav-item nav-back-left">
+                    <?php if ($lesson_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('the lesson menu', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
                 <div class="nav-item nav-center">
                     <div class="quiz-center-controls">
                         <?php if ($timer_minutes > 0): ?>
@@ -978,6 +988,16 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             <?php _e('Submit', 'ielts-course-manager'); ?>
                         </button>
                     </div>
+                </div>
+                <div class="nav-item nav-back-right">
+                    <?php if ($course_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('the course', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
                 </div>
                 <div class="nav-item nav-next">
                     <?php if (isset($next_item) && $next_item): ?>

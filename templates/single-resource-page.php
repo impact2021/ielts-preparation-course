@@ -642,7 +642,7 @@ body.ielts-resource-single .content-area {
                                 <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
                                     <span class="nav-label">
                                         <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                        <strong><?php _e('Lesson', 'ielts-course-manager'); ?></strong>
+                                        <strong><?php _e('the lesson menu', 'ielts-course-manager'); ?></strong>
                                     </span>
                                 </a>
                             <?php endif; ?>
@@ -652,7 +652,7 @@ body.ielts-resource-single .content-area {
                                 <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
                                     <span class="nav-label">
                                         <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                        <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
+                                        <strong><?php _e('the course', 'ielts-course-manager'); ?></strong>
                                     </span>
                                 </a>
                             <?php endif; ?>
