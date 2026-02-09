@@ -1356,17 +1356,19 @@ body.ielts-course-archive .content-area {
     color: #fff;
 }
 
+/* Back buttons should match previous/next styling (white background) */
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-course,
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson {
-    background: #0073aa;
-    color: white;
-    border-color: #0073aa;
+    background: #fff;
+    color: #333;
+    border-color: #ddd;
 }
 
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-course:hover,
 .ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson:hover {
-    background: #005a87;
-    border-color: #005a87;
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
 }
 
 .ielts-sticky-bottom-nav .nav-arrow {
@@ -1386,6 +1388,12 @@ body.ielts-course-archive .content-area {
     text-transform: uppercase;
     opacity: 0.8;
     white-space: nowrap;
+}
+
+/* Remove uppercase transform from back button labels for consistency */
+.ielts-sticky-bottom-nav .nav-back-to-course .nav-label small,
+.ielts-sticky-bottom-nav .nav-back-to-lesson .nav-label small {
+    text-transform: none;
 }
 
 .ielts-sticky-bottom-nav .nav-label small::after {
@@ -1482,20 +1490,21 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
     gap: 8px;
     padding: 8px 16px;
     background: #fff;
-    border: 1px solid #ddd;
+    border: 2px solid #d63638;
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
     white-space: nowrap;
+    box-shadow: 0 0 0 1px rgba(214, 54, 56, 0.1);
 }
 
 .quiz-bottom-nav .timer-display strong {
-    color: #666;
-    font-weight: 600;
+    color: #d63638;
+    font-weight: 700;
 }
 
 .quiz-bottom-nav .timer-display span {
-    color: #0073aa;
+    color: #d63638;
     font-weight: 700;
     font-size: 16px;
     min-width: 50px;
@@ -1506,8 +1515,20 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
 .quiz-bottom-nav .quiz-submit-btn {
     padding: 10px 24px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     white-space: nowrap;
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    box-shadow: 0 1px 0 #2271b1, 0 0 0 1px rgba(34, 113, 177, 0.2);
+}
+
+.quiz-bottom-nav .quiz-submit-btn:hover,
+.quiz-bottom-nav .quiz-submit-btn:focus {
+    background: #135e96;
+    border-color: #135e96;
+    color: #fff;
+}
 }
 
 /* Responsive adjustments for quiz nav */
