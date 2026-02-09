@@ -669,16 +669,56 @@ class IELTS_CM_Stripe_Payment {
         
         $payload = $request->get_body();
         $sig_header = $request->get_header('stripe-signature');
+        $sig_method = 'get_header';
         
-        // Fallback: WordPress REST API may not pass headers correctly on all servers
-        // Try direct $_SERVER access if get_header returns empty
-        if (empty($sig_header) && isset($_SERVER['HTTP_STRIPE_SIGNATURE'])) {
-            $sig_header = sanitize_text_field(wp_unslash($_SERVER['HTTP_STRIPE_SIGNATURE']));
-            error_log('IELTS Stripe Webhook: Retrieved signature from $_SERVER fallback');
+        // Comprehensive fallback chain for retrieving Stripe-Signature header
+        // Different server configurations may require different methods
+        if (empty($sig_header)) {
+            // Method 2: Direct $_SERVER access (works on most PHP-FPM/FastCGI setups)
+            if (isset($_SERVER['HTTP_STRIPE_SIGNATURE'])) {
+                $sig_header = sanitize_text_field(wp_unslash($_SERVER['HTTP_STRIPE_SIGNATURE']));
+                $sig_method = '$_SERVER';
+            }
+            // Method 3: getallheaders() function (available on Apache and some others)
+            elseif (function_exists('getallheaders')) {
+                $all_headers = getallheaders();
+                if (isset($all_headers['Stripe-Signature'])) {
+                    $sig_header = sanitize_text_field($all_headers['Stripe-Signature']);
+                    $sig_method = 'getallheaders';
+                } elseif (isset($all_headers['stripe-signature'])) {
+                    // Try lowercase version
+                    $sig_header = sanitize_text_field($all_headers['stripe-signature']);
+                    $sig_method = 'getallheaders (lowercase)';
+                }
+            }
+            // Method 4: apache_request_headers() (older Apache versions)
+            elseif (function_exists('apache_request_headers')) {
+                $all_headers = apache_request_headers();
+                if (isset($all_headers['Stripe-Signature'])) {
+                    $sig_header = sanitize_text_field($all_headers['Stripe-Signature']);
+                    $sig_method = 'apache_request_headers';
+                } elseif (isset($all_headers['stripe-signature'])) {
+                    // Try lowercase version
+                    $sig_header = sanitize_text_field($all_headers['stripe-signature']);
+                    $sig_method = 'apache_request_headers (lowercase)';
+                }
+            }
         }
         
-        if (empty($sig_header)) {
-            error_log('IELTS Stripe Webhook: ERROR - Signature header NOT FOUND');
+        if (!empty($sig_header)) {
+            error_log('IELTS Stripe Webhook: Retrieved signature using method: ' . $sig_method);
+        } else {
+            error_log('IELTS Stripe Webhook: ERROR - Signature header NOT FOUND with any method');
+            // Log available headers for debugging (only keys, not values for security)
+            if (function_exists('getallheaders')) {
+                $header_keys = array_keys(getallheaders());
+                error_log('IELTS Stripe Webhook: Available headers: ' . implode(', ', $header_keys));
+            } elseif (isset($_SERVER)) {
+                $http_headers = array_keys(array_filter($_SERVER, function($key) {
+                    return strpos($key, 'HTTP_') === 0;
+                }, ARRAY_FILTER_USE_KEY));
+                error_log('IELTS Stripe Webhook: Available HTTP_* vars: ' . implode(', ', $http_headers));
+            }
         }
         
         // Get webhook signing secret from settings
