@@ -88,6 +88,125 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     </div>
     <?php endif; ?>
     
+    <?php
+    // Calculate Previous/Next items for navigation (needed for sticky nav)
+    $prev_item = null;
+    $next_item = null;
+    $prev_label = '';
+    $next_label = '';
+    
+    if ($lesson_id) {
+        global $wpdb;
+        
+        // Check for both integer and string serialization in lesson_ids array
+        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+        
+        // Get all resources (sublessons) for this lesson
+        $resource_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        // Get all quizzes (exercises) for this lesson
+        $quiz_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $lesson_id, $int_pattern, $str_pattern));
+        
+        // Combine all content items (resources and quizzes)
+        $all_content_items = array();
+        
+        if (!empty($resource_ids)) {
+            $resources = get_posts(array(
+                'post_type' => 'ielts_resource',
+                'posts_per_page' => -1,
+                'post__in' => $resource_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish'
+            ));
+            foreach ($resources as $resource) {
+                $all_content_items[] = array('post' => $resource, 'order' => $resource->menu_order);
+            }
+        }
+        
+        if (!empty($quiz_ids)) {
+            $quizzes = get_posts(array(
+                'post_type' => 'ielts_quiz',
+                'posts_per_page' => -1,
+                'post__in' => $quiz_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish'
+            ));
+            foreach ($quizzes as $quiz_item) {
+                $all_content_items[] = array('post' => $quiz_item, 'order' => $quiz_item->menu_order);
+            }
+        }
+        
+        // Sort by menu order
+        usort($all_content_items, function($a, $b) {
+            return $a['order'] - $b['order'];
+        });
+        
+        // Find current quiz and get previous/next items
+        $current_index = -1;
+        foreach ($all_content_items as $index => $item) {
+            if ($item['post']->ID == $quiz->ID) {
+                $current_index = $index;
+                break;
+            }
+        }
+        
+        $prev_item = ($current_index > 0) ? $all_content_items[$current_index - 1]['post'] : null;
+        $next_item = ($current_index >= 0 && $current_index < count($all_content_items) - 1) ? $all_content_items[$current_index + 1]['post'] : null;
+        
+        // Determine labels for previous/next items
+        if ($prev_item) {
+            $prev_label = __('Previous', 'ielts-course-manager');
+        }
+        if ($next_item) {
+            $next_label = __('Next', 'ielts-course-manager');
+        }
+        
+        // Check if this is the last lesson in the course (for completion message)
+        $is_last_lesson = false;
+        if (!$next_item && $course_id && $lesson_id) {
+            // Get all lessons in the course
+            $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+            $str_pattern_course = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+            
+            $all_lesson_ids = $wpdb->get_col($wpdb->prepare("
+                SELECT DISTINCT post_id 
+                FROM {$wpdb->postmeta} 
+                WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+                   OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+            ", $course_id, $int_pattern_course, $str_pattern_course));
+            
+            if (!empty($all_lesson_ids)) {
+                $all_lessons = get_posts(array(
+                    'post_type' => 'ielts_lesson',
+                    'posts_per_page' => -1,
+                    'post__in' => $all_lesson_ids,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                    'post_status' => 'publish'
+                ));
+                
+                // Check if current lesson is the last one
+                if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
+                    $is_last_lesson = true;
+                }
+            }
+        }
+    }
+    ?>
+    
     <form id="ielts-quiz-form" class="quiz-form">
         <div class="quiz-questions">
             <?php if (!empty($questions)): ?>
@@ -831,233 +950,86 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         </div>
         
         <?php if (!empty($questions) && is_user_logged_in()): ?>
-            <div class="quiz-submit">
-                <button type="submit" class="button button-primary">
-                    <?php _e('Submit Quiz', 'ielts-course-manager'); ?>
-                </button>
-            </div>
-        <?php elseif (!is_user_logged_in()): ?>
-            <div class="quiz-login-notice">
-                <p><?php _e('Please log in to take this quiz.', 'ielts-course-manager'); ?></p>
-                <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink($quiz->ID))); ?>" class="button button-primary">
-                    <?php _e('Login', 'ielts-course-manager'); ?>
-                </a>
+            <!-- Submit button moved to bottom nav -->
+        
+        <?php if (!empty($questions) && is_user_logged_in()): ?>
+            <!-- Sticky Bottom Navigation with Timer and Submit -->
+            <div class="ielts-sticky-bottom-nav quiz-bottom-nav">
+                <div class="nav-item nav-prev">
+                    <?php if (isset($prev_item) && $prev_item): ?>
+                        <a href="<?php echo get_permalink($prev_item->ID); ?>" class="nav-link">
+                            <span class="nav-arrow">&laquo;</span>
+                            <span class="nav-label">
+                                <small><?php echo isset($prev_label) ? esc_html($prev_label) : __('Previous', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($prev_item->post_title); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-back-left">
+                    <?php if ($lesson_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('the lesson menu', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-center">
+                    <div class="quiz-center-controls">
+                        <?php if ($timer_minutes > 0): ?>
+                        <div class="timer-display">
+                            <strong><?php _e('Time:', 'ielts-course-manager'); ?></strong>
+                            <span id="timer-display-bottom">--:--</span>
+                        </div>
+                        <?php endif; ?>
+                        <button type="submit" class="button button-primary quiz-submit-btn">
+                            <?php _e('Submit', 'ielts-course-manager'); ?>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-item nav-back-right">
+                    <?php if ($course_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('the course', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-next">
+                    <?php if (isset($next_item) && $next_item): ?>
+                        <a href="<?php echo get_permalink($next_item->ID); ?>" class="nav-link">
+                            <span class="nav-label">
+                                <small><?php echo isset($next_label) ? esc_html($next_label) : __('Next', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($next_item->post_title); ?></strong>
+                            </span>
+                            <span class="nav-arrow">&raquo;</span>
+                        </a>
+                    <?php else: ?>
+                        <div class="nav-completion-message">
+                            <?php if (isset($is_last_lesson) && $is_last_lesson): ?>
+                                <span><?php _e('You have finished this course', 'ielts-course-manager'); ?></span>
+                            <?php else: ?>
+                                <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
             </div>
         <?php endif; ?>
     </form>
     
     <div id="quiz-result" class="quiz-result" style="display: none;"></div>
     
-    <?php
-    // Previous/Next content navigation within the lesson (includes both sublessons and exercises)
-    if ($lesson_id) {
-        global $wpdb;
-        
-        // Check for both integer and string serialization in lesson_ids array
-        // Integer: i:123; String: s:3:"123";
-        $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
-        $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
-        
-        // Get all resources (sublessons) for this lesson
-        $resource_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT post_id 
-            FROM {$wpdb->postmeta} 
-            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
-        ", $lesson_id, $int_pattern, $str_pattern));
-        
-        // Get all quizzes (exercises) for this lesson
-        $quiz_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT post_id 
-            FROM {$wpdb->postmeta} 
-            WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
-               OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
-        ", $lesson_id, $int_pattern, $str_pattern));
-        
-        // Combine all content items (resources and quizzes)
-        $all_content_items = array();
-        
-        if (!empty($resource_ids)) {
-            $resources = get_posts(array(
-                'post_type' => 'ielts_resource',
-                'posts_per_page' => -1,
-                'post__in' => $resource_ids,
-                'orderby' => 'menu_order',
-                'order' => 'ASC',
-                'post_status' => 'publish'
-            ));
-            foreach ($resources as $resource) {
-                $all_content_items[] = array('post' => $resource, 'order' => $resource->menu_order);
-            }
-        }
-        
-        if (!empty($quiz_ids)) {
-            $quizzes = get_posts(array(
-                'post_type' => 'ielts_quiz',
-                'posts_per_page' => -1,
-                'post__in' => $quiz_ids,
-                'orderby' => 'menu_order',
-                'order' => 'ASC',
-                'post_status' => 'publish'
-            ));
-            foreach ($quizzes as $quiz_item) {
-                $all_content_items[] = array('post' => $quiz_item, 'order' => $quiz_item->menu_order);
-            }
-        }
-        
-        // Sort by menu order
-        usort($all_content_items, function($a, $b) {
-            return $a['order'] - $b['order'];
-        });
-        
-        // Find current quiz and get previous/next items
-        $current_index = -1;
-        foreach ($all_content_items as $index => $item) {
-            if ($item['post']->ID == $quiz->ID) {
-                $current_index = $index;
-                break;
-            }
-        }
-        
-        $prev_item = ($current_index > 0) ? $all_content_items[$current_index - 1]['post'] : null;
-        $next_item = ($current_index >= 0 && $current_index < count($all_content_items) - 1) ? $all_content_items[$current_index + 1]['post'] : null;
-        
-        // Determine labels for previous/next items
-        $prev_label = '';
-        if ($prev_item) {
-            $prev_label = ($prev_item->post_type === 'ielts_resource') ? __('Previous Sublesson', 'ielts-course-manager') : __('Previous Exercise', 'ielts-course-manager');
-        }
-        $next_label = '';
-        if ($next_item) {
-            $next_label = ($next_item->post_type === 'ielts_resource') ? __('Next Sublesson', 'ielts-course-manager') : __('Next Exercise', 'ielts-course-manager');
-        }
-        ?>
-        
-        <?php if ($prev_item || $next_item): ?>
-            <div class="ielts-navigation">
-                <div class="nav-prev">
-                    <?php if ($prev_item): ?>
-                        <a href="<?php echo get_permalink($prev_item->ID); ?>" class="nav-link">
-                            <span class="nav-arrow">&laquo;</span>
-                            <span class="nav-label">
-                                <small><?php echo esc_html($prev_label); ?></small>
-                                <strong><?php echo esc_html($prev_item->post_title); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-                <div class="nav-center">
-                    <?php if ($course_id): ?>
-                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
-                            <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-                <div class="nav-next">
-                    <?php if ($next_item): ?>
-                        <a href="<?php echo get_permalink($next_item->ID); ?>" class="nav-link">
-                            <span class="nav-label">
-                                <small><?php echo esc_html($next_label); ?></small>
-                                <strong><?php echo esc_html($next_item->post_title); ?></strong>
-                            </span>
-                            <span class="nav-arrow">&raquo;</span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-            </div>
-            
-            <style>
-            .ielts-navigation {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-top: 40px;
-                padding-top: 30px;
-                border-top: 2px solid #e0e0e0;
-                gap: 15px;
-            }
-            .ielts-navigation .nav-prev {
-                flex: 1;
-            }
-            .ielts-navigation .nav-center {
-                flex: 0 0 auto;
-                text-align: center;
-            }
-            .ielts-navigation .nav-next {
-                flex: 1;
-                text-align: right;
-            }
-            .ielts-navigation .nav-link {
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-                padding: 15px 20px;
-                background: #f5f5f5;
-                border-radius: 5px;
-                text-decoration: none;
-                color: #333;
-                transition: all 0.3s ease;
-            }
-            .ielts-navigation .nav-link:hover {
-                background: #e0e0e0;
-                transform: translateY(-2px);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            }
-            .ielts-navigation .nav-back-to-course {
-                background: #0073aa;
-                color: white;
-            }
-            .ielts-navigation .nav-back-to-course:hover {
-                background: #005a87;
-            }
-            .ielts-navigation .nav-back-to-course .nav-label small,
-            .ielts-navigation .nav-back-to-course .nav-label strong {
-                color: white;
-            }
-            .ielts-navigation .nav-arrow {
-                font-size: 24px;
-                color: #0073aa;
-                font-weight: bold;
-            }
-            .ielts-navigation .nav-label {
-                display: flex;
-                flex-direction: column;
-            }
-            .ielts-navigation .nav-label small {
-                font-size: 12px;
-                color: #666;
-                text-transform: uppercase;
-            }
-            .ielts-navigation .nav-label strong {
-                font-size: 14px;
-                color: #333;
-                margin-top: 3px;
-            }
-            .ielts-navigation .nav-next .nav-label {
-                align-items: flex-end;
-            }
-            .ielts-navigation .nav-center .nav-label {
-                align-items: center;
-            }
-            @media (max-width: 768px) {
-                .ielts-navigation {
-                    flex-direction: column;
-                    gap: 10px;
-                }
-                .ielts-navigation .nav-prev,
-                .ielts-navigation .nav-center,
-                .ielts-navigation .nav-next {
-                    width: 100%;
-                    text-align: center;
-                }
-                .ielts-navigation .nav-label {
-                    align-items: center !important;
-                }
-            }
-            </style>
-        <?php endif; ?>
-    <?php } ?>
+    <?php if (!is_user_logged_in()): ?>
+        <div class="quiz-login-notice">
+            <p><?php _e('Please log in to take this quiz.', 'ielts-course-manager'); ?></p>
+            <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink($quiz->ID))); ?>" class="button button-primary">
+                <?php _e('Login', 'ielts-course-manager'); ?>
+            </a>
+        </div>
+    <?php endif; ?>
 </div>

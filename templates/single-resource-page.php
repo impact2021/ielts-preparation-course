@@ -571,11 +571,42 @@ body.ielts-resource-single .content-area {
                 
                 $prev_item = ($current_index > 0) ? $all_items[$current_index - 1] : null;
                 $next_item = ($current_index >= 0 && $current_index < count($all_items) - 1) ? $all_items[$current_index + 1] : null;
+                
+                // Check if this is the last lesson in the course (for completion message)
+                $is_last_lesson = false;
+                if (!$next_item && $course_id && $lesson_id) {
+                    // Get all lessons in the course
+                    $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+                    $str_pattern_course = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+                    
+                    $all_lesson_ids = $wpdb->get_col($wpdb->prepare("
+                        SELECT DISTINCT post_id 
+                        FROM {$wpdb->postmeta} 
+                        WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+                           OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                    ", $course_id, $int_pattern_course, $str_pattern_course));
+                    
+                    if (!empty($all_lesson_ids)) {
+                        $all_lessons = get_posts(array(
+                            'post_type' => 'ielts_lesson',
+                            'posts_per_page' => -1,
+                            'post__in' => $all_lesson_ids,
+                            'orderby' => 'menu_order',
+                            'order' => 'ASC',
+                            'post_status' => 'publish'
+                        ));
+                        
+                        // Check if current lesson is the last one
+                        if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
+                            $is_last_lesson = true;
+                        }
+                    }
+                }
                 ?>
                 
-                <?php if ($prev_item || $next_item): ?>
-                    <div class="ielts-navigation">
-                        <div class="nav-prev">
+                <?php if ($prev_item || $next_item || $lesson_id || $course_id): ?>
+                    <div class="ielts-sticky-bottom-nav">
+                        <div class="nav-item nav-prev">
                             <?php if ($prev_item): ?>
                                 <?php
                                 // Get appropriate URL for the previous item
@@ -594,7 +625,7 @@ body.ielts-resource-single .content-area {
                                     $prev_label = __('Previous Exercise', 'ielts-course-manager');
                                 } else {
                                     $prev_url = get_permalink($prev_item['post']->ID);
-                                    $prev_label = __('Previous Sub Lesson', 'ielts-course-manager');
+                                    $prev_label = __('Previous', 'ielts-course-manager');
                                 }
                                 ?>
                                 <a href="<?php echo esc_url($prev_url); ?>" class="nav-link">
@@ -606,17 +637,27 @@ body.ielts-resource-single .content-area {
                                 </a>
                             <?php endif; ?>
                         </div>
-                        <div class="nav-center">
-                            <?php if ($course_id): ?>
-                                <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                        <div class="nav-item nav-center-left">
+                            <?php if ($lesson_id): ?>
+                                <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
                                     <span class="nav-label">
                                         <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                        <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
+                                        <strong><?php _e('the lesson menu', 'ielts-course-manager'); ?></strong>
                                     </span>
                                 </a>
                             <?php endif; ?>
                         </div>
-                        <div class="nav-next">
+                        <div class="nav-item nav-center-right">
+                            <?php if ($course_id): ?>
+                                <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                                    <span class="nav-label">
+                                        <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                        <strong><?php _e('the course', 'ielts-course-manager'); ?></strong>
+                                    </span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                        <div class="nav-item nav-next">
                             <?php if ($next_item): ?>
                                 <?php
                                 // Get appropriate URL for the next item
@@ -635,7 +676,7 @@ body.ielts-resource-single .content-area {
                                     $next_label = __('Next Exercise', 'ielts-course-manager');
                                 } else {
                                     $next_url = get_permalink($next_item['post']->ID);
-                                    $next_label = __('Next Sub Lesson', 'ielts-course-manager');
+                                    $next_label = __('Next', 'ielts-course-manager');
                                 }
                                 ?>
                                 <a href="<?php echo esc_url($next_url); ?>" class="nav-link">
@@ -645,99 +686,20 @@ body.ielts-resource-single .content-area {
                                     </span>
                                     <span class="nav-arrow">&raquo;</span>
                                 </a>
+                            <?php else: ?>
+                                <div class="nav-completion-message">
+                                    <?php if ($is_last_lesson): ?>
+                                        <span><?php _e('You have finished this course', 'ielts-course-manager'); ?></span>
+                                    <?php else: ?>
+                                        <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
+                                </div>
                             <?php endif; ?>
                         </div>
                     </div>
-                    
-                    <style>
-                    .ielts-navigation {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-top: 40px;
-                        padding-top: 30px;
-                        border-top: 2px solid #e0e0e0;
-                        gap: 15px;
-                    }
-                    .ielts-navigation .nav-prev {
-                        flex: 1;
-                    }
-                    .ielts-navigation .nav-center {
-                        flex: 0 0 auto;
-                        text-align: center;
-                    }
-                    .ielts-navigation .nav-next {
-                        flex: 1;
-                        text-align: right;
-                    }
-                    .ielts-navigation .nav-link {
-                        display: inline-flex;
-                        align-items: center;
-                        gap: 10px;
-                        padding: 15px 20px;
-                        background: #f5f5f5;
-                        border-radius: 5px;
-                        text-decoration: none;
-                        color: #333;
-                        transition: all 0.3s ease;
-                    }
-                    .ielts-navigation .nav-link:hover {
-                        background: #e0e0e0;
-                        transform: translateY(-2px);
-                        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                    }
-                    .ielts-navigation .nav-back-to-course {
-                        background: #0073aa;
-                        color: white;
-                    }
-                    .ielts-navigation .nav-back-to-course:hover {
-                        background: #005a87;
-                    }
-                    .ielts-navigation .nav-back-to-course .nav-label small,
-                    .ielts-navigation .nav-back-to-course .nav-label strong {
-                        color: white;
-                    }
-                    .ielts-navigation .nav-arrow {
-                        font-size: 24px;
-                        color: #0073aa;
-                        font-weight: bold;
-                    }
-                    .ielts-navigation .nav-label {
-                        display: flex;
-                        flex-direction: column;
-                    }
-                    .ielts-navigation .nav-label small {
-                        font-size: 12px;
-                        color: #666;
-                        text-transform: uppercase;
-                    }
-                    .ielts-navigation .nav-label strong {
-                        font-size: 14px;
-                        color: #333;
-                        margin-top: 3px;
-                    }
-                    .ielts-navigation .nav-next .nav-label {
-                        align-items: flex-end;
-                    }
-                    .ielts-navigation .nav-center .nav-label {
-                        align-items: center;
-                    }
-                    @media (max-width: 768px) {
-                        .ielts-navigation {
-                            flex-direction: column;
-                            gap: 10px;
-                        }
-                        .ielts-navigation .nav-prev,
-                        .ielts-navigation .nav-center,
-                        .ielts-navigation .nav-next {
-                            width: 100%;
-                            text-align: center;
-                        }
-                        .ielts-navigation .nav-label {
-                            align-items: center !important;
-                        }
-                    }
-                    </style>
+                    <script>
+                    document.body.classList.add('has-sticky-bottom-nav');
+                    </script>
                 <?php endif; ?>
             <?php } ?>
             

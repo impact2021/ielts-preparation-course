@@ -1288,6 +1288,358 @@ body.ielts-course-archive .content-area {
     scroll-behavior: smooth;
 }
 
+/* Sticky Bottom Navigation Bar - Global Styles */
+.ielts-sticky-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: #f5f5f5;
+    border-top: 1px solid #ddd;
+    z-index: 90;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 50px;
+}
+
+/* For quiz pages with question navigation, position below it */
+.ielts-quiz-single .ielts-sticky-bottom-nav,
+.ielts-quiz-fullscreen .ielts-sticky-bottom-nav {
+    bottom: auto;
+    position: relative;
+    z-index: 89;
+}
+
+.ielts-sticky-bottom-nav .nav-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.ielts-sticky-bottom-nav .nav-item.nav-prev {
+    justify-content: flex-start;
+}
+
+.ielts-sticky-bottom-nav .nav-item.nav-next {
+    justify-content: flex-end;
+}
+
+.ielts-sticky-bottom-nav .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.ielts-sticky-bottom-nav .nav-link:hover {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Ensure hover text is readable */
+.ielts-sticky-bottom-nav .nav-link:hover .nav-label small,
+.ielts-sticky-bottom-nav .nav-link:hover .nav-label strong {
+    color: #fff;
+}
+
+/* Back buttons should match previous/next styling (white background) */
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-course,
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson {
+    background: #fff;
+    color: #333;
+    border-color: #ddd;
+}
+
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-course:hover,
+.ielts-sticky-bottom-nav .nav-link.nav-back-to-lesson:hover {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+.ielts-sticky-bottom-nav .nav-arrow {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ielts-sticky-bottom-nav .nav-label {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: baseline;
+}
+
+.ielts-sticky-bottom-nav .nav-label small {
+    font-size: 10px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    white-space: nowrap;
+}
+
+/* Remove uppercase transform from back button labels for consistency */
+.ielts-sticky-bottom-nav .nav-back-to-course .nav-label small,
+.ielts-sticky-bottom-nav .nav-back-to-lesson .nav-label small {
+    text-transform: none;
+}
+
+.ielts-sticky-bottom-nav .nav-label small::after {
+    content: ':';
+}
+
+/* Don't add colon for "Back to" buttons */
+.ielts-sticky-bottom-nav .nav-back-to-course .nav-label small::after,
+.ielts-sticky-bottom-nav .nav-back-to-lesson .nav-label small::after {
+    content: none;
+}
+
+.ielts-sticky-bottom-nav .nav-label strong {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Responsive adjustments for sticky nav */
+/* Responsive adjustments for sticky nav - Mobile icon-only layout */
+@media (max-width: 768px) {
+    .ielts-sticky-bottom-nav {
+        flex-wrap: nowrap;
+        gap: 5px;
+        padding: 8px 10px;
+        justify-content: space-between;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-item {
+        flex: 0 0 auto;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-item.nav-prev,
+    .ielts-sticky-bottom-nav .nav-item.nav-next {
+        justify-content: center;
+    }
+    
+    /* Hide text labels on mobile, show only arrows */
+    .ielts-sticky-bottom-nav .nav-label {
+        display: none;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-link {
+        width: auto;
+        padding: 10px 16px;
+        font-size: 20px;
+        min-width: 44px;
+    }
+    
+    /* Show only the arrow on mobile */
+    .ielts-sticky-bottom-nav .nav-arrow {
+        display: block;
+        font-size: 24px;
+    }
+    
+    /* Hide back buttons on mobile to save space */
+    .ielts-sticky-bottom-nav .nav-item.nav-center,
+    .ielts-sticky-bottom-nav .nav-item.nav-back-left,
+    .ielts-sticky-bottom-nav .nav-item.nav-back-right {
+        display: none;
+    }
+}
+
+/* Add padding to body to prevent content from being hidden under sticky nav */
+body.has-sticky-bottom-nav {
+    padding-bottom: 60px;
+}
+
+/* For quiz pages, no extra padding needed as nav is positioned differently */
+body.ielts-quiz-single.has-sticky-bottom-nav,
+body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
+    padding-bottom: 0;
+}
+
+/* Quiz-specific bottom navigation styles */
+.quiz-bottom-nav {
+    position: relative;
+    z-index: 89;
+    bottom: auto;
+}
+
+/* Quiz center controls container */
+.quiz-center-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.quiz-bottom-nav .nav-item.nav-center {
+    flex: 0 0 auto;
+}
+
+.quiz-bottom-nav .nav-item.nav-timer {
+    flex: 0 0 auto;
+}
+
+.quiz-bottom-nav .nav-item.nav-submit {
+    flex: 0 0 auto;
+}
+
+.quiz-bottom-nav .timer-display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #fff;
+    border: 2px solid #d63638;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 0 0 1px rgba(214, 54, 56, 0.1);
+}
+
+.quiz-bottom-nav .timer-display strong {
+    color: #d63638;
+    font-weight: 700;
+}
+
+.quiz-bottom-nav .timer-display span {
+    color: #d63638;
+    font-weight: 700;
+    font-size: 16px;
+    min-width: 50px;
+    display: inline-block;
+    text-align: left;
+}
+
+.quiz-bottom-nav .quiz-submit-btn {
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    box-shadow: 0 1px 0 #2271b1, 0 0 0 1px rgba(34, 113, 177, 0.2);
+}
+
+.quiz-bottom-nav .quiz-submit-btn:hover,
+.quiz-bottom-nav .quiz-submit-btn:focus {
+    background: #135e96;
+    border-color: #135e96;
+    color: #fff;
+}
+
+/* Responsive adjustments for quiz nav - Mobile icon-only layout */
+@media (max-width: 768px) {
+    .quiz-bottom-nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    
+    /* Hide text labels on mobile */
+    .quiz-bottom-nav .nav-label {
+        display: none;
+    }
+    
+    .quiz-bottom-nav .nav-link {
+        width: auto;
+        padding: 10px 16px;
+        font-size: 20px;
+        min-width: 44px;
+    }
+    
+    /* Show only arrows on mobile */
+    .quiz-bottom-nav .nav-arrow {
+        display: block;
+        font-size: 24px;
+    }
+    
+    /* Hide back buttons on mobile */
+    .quiz-bottom-nav .nav-item.nav-back-left,
+    .quiz-bottom-nav .nav-item.nav-back-right {
+        display: none;
+    }
+    
+    /* Center controls stay visible but compact */
+    .quiz-center-controls {
+        flex-direction: row;
+        gap: 8px;
+        width: auto;
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+    
+    .quiz-bottom-nav .nav-item.nav-prev,
+    .quiz-bottom-nav .nav-item.nav-next {
+        flex: 0 0 auto;
+    }
+    
+    .quiz-bottom-nav .nav-item.nav-center {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .quiz-bottom-nav .timer-display {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .quiz-bottom-nav .timer-display strong {
+        display: none;
+    }
+    
+    .quiz-bottom-nav .timer-display span {
+        font-size: 14px;
+    }
+    
+    .quiz-bottom-nav .quiz-submit-btn {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+
+/* Completion message in navigation */
+.nav-completion-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    color: #155724;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+}
+
+.nav-completion-message span {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .nav-completion-message {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
 /* Question highlight animation */
 .ielts-computer-based-quiz .quiz-question.highlight-question {
     animation: highlightPulse 1s ease;

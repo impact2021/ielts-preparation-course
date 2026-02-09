@@ -225,15 +225,48 @@ if ($lesson_id) {
         }
         $prev_url = get_permalink($prev_post->ID);
     }
+    
+    // Check if this is the last lesson in the course (for completion message)
+    $is_last_lesson = false;
+    if (empty($next_url) && $course_id && $lesson_id) {
+        // Get all lessons in the course
+        $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+        $str_pattern_course = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+        
+        $all_lesson_ids = $wpdb->get_col($wpdb->prepare("
+            SELECT DISTINCT post_id 
+            FROM {$wpdb->postmeta} 
+            WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+               OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+        ", $course_id, $int_pattern_course, $str_pattern_course));
+        
+        if (!empty($all_lesson_ids)) {
+            $all_lessons = get_posts(array(
+                'post_type' => 'ielts_lesson',
+                'posts_per_page' => -1,
+                'post__in' => $all_lesson_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish'
+            ));
+            
+            // Check if current lesson is the last one
+            if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
+                $is_last_lesson = true;
+            }
+        }
+    }
 }
 ?>
 
 <div class="ielts-computer-based-quiz<?php echo ($hide_reading_pane === '1') ? ' hide-reading-pane' : ''; ?>" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($test_type); ?>">
     
-    <!-- Header toggle button -->
+    <!-- Header toggle button (admins only) -->
+    <?php if (current_user_can('manage_options')): ?>
     <button type="button" id="header-toggle-btn" class="header-toggle-btn" title="<?php _e('Toggle header visibility', 'ielts-course-manager'); ?>">
         <span class="toggle-icon">▼</span>
     </button>
+    <?php endif; ?>
     
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -281,7 +314,7 @@ if ($lesson_id) {
         }
         ?>
         <form id="ielts-quiz-form" class="quiz-form">
-            <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen">
+            <div id="quiz-timer-fullscreen" class="quiz-timer-fullscreen" style="display: none;">
                 <div class="timer-left-section">
                     <?php if ($course_id): ?>
                     <?php 
@@ -1236,6 +1269,73 @@ if ($lesson_id) {
                         endfor;
                     endforeach; 
                     ?>
+                </div>
+            </div>
+            
+            <!-- Sticky Bottom Navigation with Timer and Submit -->
+            <div class="ielts-sticky-bottom-nav quiz-bottom-nav">
+                <div class="nav-item nav-prev">
+                    <?php if ($prev_url): ?>
+                        <a href="<?php echo esc_url($prev_url); ?>" class="nav-link">
+                            <span class="nav-arrow">&laquo;</span>
+                            <span class="nav-label">
+                                <small><?php _e('Previous', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($prev_title); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-back-left">
+                    <?php if ($lesson_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('the lesson menu', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-center">
+                    <div class="quiz-center-controls">
+                        <?php if ($timer_minutes > 0): ?>
+                        <div class="timer-display">
+                            <strong><?php _e('Time:', 'ielts-course-manager'); ?></strong>
+                            <span id="timer-display-bottom">--:--</span>
+                        </div>
+                        <?php endif; ?>
+                        <button type="submit" class="button button-primary quiz-submit-btn">
+                            <?php _e('Submit', 'ielts-course-manager'); ?>
+                        </button>
+                    </div>
+                </div>
+                <div class="nav-item nav-back-right">
+                    <?php if ($course_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('the course', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-next">
+                    <?php if ($next_url): ?>
+                        <a href="<?php echo esc_url($next_url); ?>" class="nav-link">
+                            <span class="nav-label">
+                                <small><?php _e('Next', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($next_title); ?></strong>
+                            </span>
+                            <span class="nav-arrow">&raquo;</span>
+                        </a>
+                    <?php else: ?>
+                        <div class="nav-completion-message">
+                            <?php if ($is_last_lesson): ?>
+                                <span><?php _e('You have finished this course', 'ielts-course-manager'); ?></span>
+                            <?php else: ?>
+                                <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </form>

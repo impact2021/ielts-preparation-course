@@ -151,6 +151,21 @@ class IELTS_Course_Manager {
         wp_enqueue_style('ielts-cm-frontend', IELTS_CM_PLUGIN_URL . 'assets/css/frontend.css', array(), IELTS_CM_VERSION);
         wp_enqueue_script('ielts-cm-frontend', IELTS_CM_PLUGIN_URL . 'assets/js/frontend.js', array('jquery'), IELTS_CM_VERSION, true);
         
+        // Add inline CSS for primary color on sticky bottom navigation
+        $primary_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
+        $nav_css = "
+            .ielts-sticky-bottom-nav {
+                background: {$primary_color} !important;
+            }
+            .ielts-sticky-bottom-nav .nav-link {
+                background: rgba(255, 255, 255, 0.95);
+            }
+            .ielts-sticky-bottom-nav .nav-link:hover {
+                background: rgba(255, 255, 255, 1);
+            }
+        ";
+        wp_add_inline_style('ielts-cm-frontend', $nav_css);
+        
         // Enqueue awards scripts globally for all logged-in users
         if (is_user_logged_in()) {
             wp_enqueue_style('ielts-cm-awards-css', IELTS_CM_PLUGIN_URL . 'assets/css/awards.css', array(), IELTS_CM_VERSION);
