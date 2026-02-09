@@ -1370,14 +1370,26 @@ body.ielts-course-archive .content-area {
 
 .ielts-sticky-bottom-nav .nav-label {
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    flex-direction: row;
+    gap: 4px;
+    align-items: baseline;
 }
 
 .ielts-sticky-bottom-nav .nav-label small {
     font-size: 10px;
     text-transform: uppercase;
     opacity: 0.8;
+    white-space: nowrap;
+}
+
+.ielts-sticky-bottom-nav .nav-label small::after {
+    content: ':';
+}
+
+/* Don't add colon for "Back to" buttons */
+.ielts-sticky-bottom-nav .nav-back-to-course .nav-label small::after,
+.ielts-sticky-bottom-nav .nav-back-to-lesson .nav-label small::after {
+    content: none;
 }
 
 .ielts-sticky-bottom-nav .nav-label strong {
@@ -1410,7 +1422,13 @@ body.ielts-course-archive .content-area {
     }
     
     .ielts-sticky-bottom-nav .nav-label {
+        flex-direction: column;
         align-items: center;
+        gap: 2px;
+    }
+    
+    .ielts-sticky-bottom-nav .nav-label small::after {
+        content: none;
     }
 }
 
