@@ -488,6 +488,9 @@ class IELTS_CM_Sync_API {
     private function sync_course_lessons($course_id, $primary_lesson_ids) {
         global $wpdb;
         
+        // Ensure course_id is an integer for security
+        $course_id = intval($course_id);
+        
         // Validate input
         if (!is_array($primary_lesson_ids)) {
             return;
@@ -552,14 +555,22 @@ class IELTS_CM_Sync_API {
     private function sync_lesson_pages($lesson_id, $primary_page_ids) {
         global $wpdb;
         
+        // Ensure lesson_id is an integer for security
+        $lesson_id = intval($lesson_id);
+        
         // Validate input
         if (!is_array($primary_page_ids)) {
             error_log("IELTS Sync: sync_lesson_pages called with non-array primary_page_ids for lesson {$lesson_id}");
             return;
         }
         
-        // Enhanced logging for debugging
-        error_log("IELTS Sync: sync_lesson_pages for lesson {$lesson_id}, primary has " . count($primary_page_ids) . " pages: " . implode(',', $primary_page_ids));
+        // Enhanced logging for debugging (limit verbosity for large datasets)
+        $page_count = count($primary_page_ids);
+        if ($page_count <= 20) {
+            error_log("IELTS Sync: sync_lesson_pages for lesson {$lesson_id}, primary has {$page_count} pages: " . implode(',', $primary_page_ids));
+        } else {
+            error_log("IELTS Sync: sync_lesson_pages for lesson {$lesson_id}, primary has {$page_count} pages");
+        }
         
         // Convert to associative array for O(1) lookup
         $primary_pages_map = array_flip($primary_page_ids);
