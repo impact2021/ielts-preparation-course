@@ -604,7 +604,7 @@ class IELTS_CM_Sync_API {
                 )
             )
         ", 
-            $lesson_id,
+            $lesson_id,  // Already cast to int on line 559, safe for concatenation
             '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%',  // Serialized array format
             '%' . $wpdb->esc_like('"' . $lesson_id . '"') . '%',   // JSON format
             '%' . $wpdb->esc_like(':' . $lesson_id . '}') . '%',   // End of serialized array
@@ -616,6 +616,9 @@ class IELTS_CM_Sync_API {
         // Find pages that should be removed (exist on subsite but not in primary list)
         $trashed_count = 0;
         $kept_count = 0;
+        $total_pages = count($subsite_pages);
+        $verbose_logging = ($total_pages <= 20); // Only detailed logs for small datasets
+        
         foreach ($subsite_pages as $page) {
             $original_id = intval($page->original_id);
             
@@ -624,10 +627,14 @@ class IELTS_CM_Sync_API {
                 // Trash the page instead of deleting to preserve data
                 wp_trash_post($page->post_id);
                 $trashed_count++;
-                error_log("IELTS Sync: Trashed {$page->post_type} {$page->post_id} '{$page->post_title}' (original: {$original_id}) from lesson {$lesson_id} - no longer in primary site");
+                if ($verbose_logging) {
+                    error_log("IELTS Sync: Trashed {$page->post_type} {$page->post_id} '{$page->post_title}' (original: {$original_id}) from lesson {$lesson_id} - no longer in primary site");
+                }
             } else {
                 $kept_count++;
-                error_log("IELTS Sync: Keeping {$page->post_type} {$page->post_id} '{$page->post_title}' (original: {$original_id}) - still in primary site");
+                if ($verbose_logging) {
+                    error_log("IELTS Sync: Keeping {$page->post_type} {$page->post_id} '{$page->post_title}' (original: {$original_id}) - still in primary site");
+                }
             }
         }
         
