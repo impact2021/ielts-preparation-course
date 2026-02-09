@@ -55,9 +55,11 @@ Implemented a real-time search input that filters the managed students table as 
 
 #### 1. Search Input HTML
 ```html
+<label for="iw-student-search" style="display: block; margin-bottom: 5px; font-weight: 500;">Search Students:</label>
 <input type="text" id="iw-student-search" 
-       placeholder="Search by name, username, or email..." 
-       style="margin-bottom: 10px; max-width: 400px;">
+       placeholder="Type name, username, or email..." 
+       aria-label="Search students"
+       style="max-width: 400px;">
 ```
 
 #### 2. Enhanced JavaScript Filtering
@@ -84,7 +86,8 @@ $('#iw-student-search').on('keyup', function() {
 ┌─────────────────────────────────────────┐
 │ Managed Students                         │
 ├─────────────────────────────────────────┤
-│ [Search by name, username, or email...] │
+│ Search Students:                         │
+│ [Type name, username, or email...     ] │
 │                                          │
 │ [Active (25)] [Expired (5)]             │
 │                                          │
