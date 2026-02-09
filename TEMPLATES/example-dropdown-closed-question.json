@@ -142,6 +142,63 @@
       "correct_answer": "field_1:0|field_2:3|field_3:8",
       "no_answer_feedback": "You did not complete all the answers. The correct answers are 'at', 'for (duration)', and 'for (responsibility)'.",
       "points": 3
+    },
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the IELTS Speaking Part 3 dialogue by selecting the correct options from the numbered dropdown menus.",
+      "question": "<strong>Examiner:</strong> Do you think parents should allow children to watch television?<br><br><strong>Candidate:</strong> Well, that's an interesting question. There are clearly some 1.[dropdown] where watching television does not negatively affect children. Some educational programmes, for example, can help 2.[dropdown]. However, I think it's important that parents 3.[dropdown] the amount of time their children spend in front of the screen.",
+      "correct_answer_count": 3,
+      "mc_options": [
+        {
+          "text": "situations",
+          "is_correct": true,
+          "feedback": "Correct! 'Situations' fits well in this context when discussing different circumstances."
+        },
+        {
+          "text": "times",
+          "is_correct": false,
+          "feedback": "Not quite. 'Times' doesn't work as well with 'some' in this formal context."
+        },
+        {
+          "text": "moments",
+          "is_correct": false,
+          "feedback": "Close, but 'moments' is typically used for brief periods, not general circumstances."
+        },
+        {
+          "text": "children learn",
+          "is_correct": false,
+          "feedback": "Close, but grammatically incomplete. You need 'to' before the infinitive."
+        },
+        {
+          "text": "children to learn",
+          "is_correct": true,
+          "feedback": "Correct! 'Help children to learn' is the right grammatical construction."
+        },
+        {
+          "text": "to educate",
+          "is_correct": false,
+          "feedback": "While grammatically possible, 'help to educate' is less natural than 'help children to learn'."
+        },
+        {
+          "text": "monitor",
+          "is_correct": true,
+          "feedback": "Correct! 'Monitor' is the right verb meaning to watch and check something over time."
+        },
+        {
+          "text": "control",
+          "is_correct": false,
+          "feedback": "While 'control' could work, 'monitor' is more appropriate as it suggests supervision rather than strict control."
+        },
+        {
+          "text": "limit",
+          "is_correct": false,
+          "feedback": "Close, but the sentence says 'limit the amount' which would be redundant. 'Monitor' fits better."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:4|field_3:6",
+      "no_answer_feedback": "You did not complete all the answers. The correct answers are 'situations', 'children to learn', and 'monitor'.",
+      "points": 3
     }
   ],
   "reading_texts": [],

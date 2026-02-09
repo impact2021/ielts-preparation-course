@@ -836,9 +836,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                     
                                     // Replace each [dropdown] placeholder with a select element
                                     while ($dropdown_num <= $correct_answer_count) {
-                                        // Calculate the display number for this dropdown
-                                        $display_number = $display_nums['start'] + $dropdown_num - 1;
-                                        
                                         if ($has_numbered_dropdowns) {
                                             // Check for numbered placeholder (e.g., "1.[dropdown]", "2.[dropdown]")
                                             $numbered_pattern = '/(\d+)\.\s*\[dropdown\]/i';
