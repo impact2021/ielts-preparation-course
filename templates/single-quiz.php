@@ -168,10 +168,10 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         
         // Determine labels for previous/next items
         if ($prev_item) {
-            $prev_label = ($prev_item->post_type === 'ielts_resource') ? __('Previous', 'ielts-course-manager') : __('Previous', 'ielts-course-manager');
+            $prev_label = __('Previous', 'ielts-course-manager');
         }
         if ($next_item) {
-            $next_label = ($next_item->post_type === 'ielts_resource') ? __('Next', 'ielts-course-manager') : __('Next', 'ielts-course-manager');
+            $next_label = __('Next', 'ielts-course-manager');
         }
     }
     ?>
@@ -985,7 +985,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     
     <div id="quiz-result" class="quiz-result" style="display: none;"></div>
     
-    <?php if (empty($questions) && !is_user_logged_in()): ?>
+    <?php if (!is_user_logged_in()): ?>
         <div class="quiz-login-notice">
             <p><?php _e('Please log in to take this quiz.', 'ielts-course-manager'); ?></p>
             <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink($quiz->ID))); ?>" class="button button-primary">
