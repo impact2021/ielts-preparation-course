@@ -608,17 +608,28 @@ class IELTS_CM_Sync_API {
             return new WP_Error('invalid_type', 'Invalid content type', array('status' => 400));
         }
         
+        // Map content type to post type
+        $type_mapping = array(
+            'course' => 'ielts_course',
+            'lesson' => 'ielts_lesson',
+            'resource' => 'ielts_resource',
+            'quiz' => 'ielts_quiz'
+        );
+        $expected_post_type = $type_mapping[$content_type];
+        
         global $wpdb;
         
         // Find the synced content on this subsite using the original_id meta
         // Include all statuses (even trash) to handle permanent deletion
+        // Also validate post_type to prevent unintended deletions
         $synced_posts = $wpdb->get_results($wpdb->prepare("
             SELECT p.ID, p.post_status
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
             AND pm.meta_value = %d
-        ", $original_content_id));
+            AND p.post_type = %s
+        ", $original_content_id, $expected_post_type));
         
         if (empty($synced_posts)) {
             // Content doesn't exist on this subsite, nothing to delete
