@@ -803,7 +803,7 @@ class IELTS_CM_Access_Codes {
                         </tr>
                         <tr>
                             <td><strong>WordPress Roles</strong></td>
-                            <td>academic_trial, general_trial, academic_full, general_full, academic_plus, general_plus, english_trial, english_full</td>
+                            <td>academic_trial, general_trial, academic_full, general_full, english_trial, english_full</td>
                             <td>access_academic_module, access_general_module, access_general_english</td>
                         </tr>
                         <tr>
