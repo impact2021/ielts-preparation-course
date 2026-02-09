@@ -1252,7 +1252,8 @@ class IELTS_CM_Access_Codes {
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
-                        <input type="text" id="iw-student-search" placeholder="Search by name, username, or email..." aria-label="Search students" style="margin-bottom: 10px; max-width: 400px;">
+                        <label for="iw-student-search" style="display: block; margin-bottom: 5px; font-weight: 500;">Search Students:</label>
+                        <input type="text" id="iw-student-search" placeholder="Type name, username, or email..." aria-label="Search students" style="max-width: 400px;">
                     </div>
                     <div style="margin-bottom: 15px;">
                         <button class="iw-filter-btn active" data-filter-students="active">Active (<?php echo esc_html($active_student_count); ?>)</button>
