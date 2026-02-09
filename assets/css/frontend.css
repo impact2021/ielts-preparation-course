@@ -1371,6 +1371,14 @@ body.ielts-course-archive .content-area {
     border-color: #0073aa;
 }
 
+/* Previous and next buttons should also turn blue on hover like back buttons */
+.ielts-sticky-bottom-nav .nav-item.nav-prev .nav-link:hover,
+.ielts-sticky-bottom-nav .nav-item.nav-next .nav-link:hover {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
 .ielts-sticky-bottom-nav .nav-arrow {
     font-size: 16px;
     font-weight: bold;
