@@ -82,6 +82,22 @@ See [TEMPLATES/JSON-FORMAT-README.md](TEMPLATES/JSON-FORMAT-README.md) for full 
 
 ---
 
-**Plugin Version**: 15.0  
+## 📝 Changelog
+
+### Version 15.28 (2026-02-08)
+**Bug Fixes - Hybrid Mode Code Purchases**
+- Fixed payment logging issue where debug panel showed "Last Payment: None found" even after successful payments
+  - Corrected SQL query to use `created_at` column instead of non-existent `payment_date` column
+- Fixed missing payment logging for PayPal code purchases
+  - PayPal code purchases now properly logged to database (matching Stripe webhook behavior)
+- Added comprehensive debug logging to both Stripe and PayPal code purchase flows
+  - Easier to diagnose issues via error logs
+  - Tracks permission checks, organization ID resolution, and code generation
+
+**Impact**: These fixes ensure payment tracking works correctly in hybrid mode for both Stripe and PayPal, improving the debug panel's accuracy and making issue diagnosis much easier.
+
+---
+
+**Plugin Version**: 15.28  
 **WordPress Version Required**: 5.8+  
 **PHP Version Required**: 7.2+
