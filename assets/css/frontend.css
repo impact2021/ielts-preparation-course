@@ -1412,15 +1412,17 @@ body.ielts-course-archive .content-area {
 }
 
 /* Responsive adjustments for sticky nav */
+/* Responsive adjustments for sticky nav - Mobile icon-only layout */
 @media (max-width: 768px) {
     .ielts-sticky-bottom-nav {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 5px;
         padding: 8px 10px;
+        justify-content: space-between;
     }
     
     .ielts-sticky-bottom-nav .nav-item {
-        flex: 0 0 100%;
+        flex: 0 0 auto;
     }
     
     .ielts-sticky-bottom-nav .nav-item.nav-prev,
@@ -1428,21 +1430,29 @@ body.ielts-course-archive .content-area {
         justify-content: center;
     }
     
-    .ielts-sticky-bottom-nav .nav-link {
-        width: 100%;
-        justify-content: center;
-        padding: 10px 12px;
-        font-size: 12px;
-    }
-    
+    /* Hide text labels on mobile, show only arrows */
     .ielts-sticky-bottom-nav .nav-label {
-        flex-direction: column;
-        align-items: center;
-        gap: 2px;
+        display: none;
     }
     
-    .ielts-sticky-bottom-nav .nav-label small::after {
-        content: none;
+    .ielts-sticky-bottom-nav .nav-link {
+        width: auto;
+        padding: 10px 16px;
+        font-size: 20px;
+        min-width: 44px;
+    }
+    
+    /* Show only the arrow on mobile */
+    .ielts-sticky-bottom-nav .nav-arrow {
+        display: block;
+        font-size: 24px;
+    }
+    
+    /* Hide back buttons on mobile to save space */
+    .ielts-sticky-bottom-nav .nav-item.nav-center,
+    .ielts-sticky-bottom-nav .nav-item.nav-back-left,
+    .ielts-sticky-bottom-nav .nav-item.nav-back-right {
+        display: none;
     }
 }
 
@@ -1529,32 +1539,77 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
     border-color: #135e96;
     color: #fff;
 }
-}
 
-/* Responsive adjustments for quiz nav */
+/* Responsive adjustments for quiz nav - Mobile icon-only layout */
 @media (max-width: 768px) {
     .quiz-bottom-nav {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 5px;
     }
     
+    /* Hide text labels on mobile */
+    .quiz-bottom-nav .nav-label {
+        display: none;
+    }
+    
+    .quiz-bottom-nav .nav-link {
+        width: auto;
+        padding: 10px 16px;
+        font-size: 20px;
+        min-width: 44px;
+    }
+    
+    /* Show only arrows on mobile */
+    .quiz-bottom-nav .nav-arrow {
+        display: block;
+        font-size: 24px;
+    }
+    
+    /* Hide back buttons on mobile */
+    .quiz-bottom-nav .nav-item.nav-back-left,
+    .quiz-bottom-nav .nav-item.nav-back-right {
+        display: none;
+    }
+    
+    /* Center controls stay visible but compact */
     .quiz-center-controls {
-        flex-direction: column;
+        flex-direction: row;
         gap: 8px;
-        width: 100%;
+        width: auto;
+        flex: 1 1 auto;
+        justify-content: center;
     }
     
     .quiz-bottom-nav .nav-item.nav-prev,
-    .quiz-bottom-nav .nav-item.nav-next,
-    .quiz-bottom-nav .nav-item.nav-center,
-    .quiz-bottom-nav .nav-item.nav-back-left,
-    .quiz-bottom-nav .nav-item.nav-back-right {
-        flex: 0 0 100%;
+    .quiz-bottom-nav .nav-item.nav-next {
+        flex: 0 0 auto;
     }
     
-    .quiz-bottom-nav .timer-display,
-    .quiz-bottom-nav .quiz-submit-btn {
-        width: 100%;
+    .quiz-bottom-nav .nav-item.nav-center {
+        flex: 1 1 auto;
+        display: flex;
         justify-content: center;
+    }
+    
+    .quiz-bottom-nav .timer-display {
+        width: auto;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    
+    .quiz-bottom-nav .timer-display strong {
+        display: none;
+    }
+    
+    .quiz-bottom-nav .timer-display span {
+        font-size: 14px;
+    }
+    
+    .quiz-bottom-nav .quiz-submit-btn {
+        width: auto;
+        padding: 8px 16px;
+        font-size: 13px;
     }
 }
 
