@@ -611,13 +611,13 @@ class IELTS_CM_Sync_API {
         global $wpdb;
         
         // Find the synced content on this subsite using the original_id meta
+        // Include all statuses (even trash) to handle permanent deletion
         $synced_posts = $wpdb->get_results($wpdb->prepare("
-            SELECT p.ID
+            SELECT p.ID, p.post_status
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
             AND pm.meta_value = %d
-            AND p.post_status != 'trash'
         ", $original_content_id));
         
         if (empty($synced_posts)) {
@@ -631,17 +631,25 @@ class IELTS_CM_Sync_API {
         
         $deleted_count = 0;
         foreach ($synced_posts as $post) {
-            // Trash the post instead of permanently deleting to preserve data
-            $result = wp_trash_post($post->ID);
-            if ($result) {
-                $deleted_count++;
-                error_log("IELTS Sync: Trashed {$content_type} {$post->ID} (original: {$original_content_id}) - deleted on primary site");
+            // If already in trash, permanently delete it; otherwise, trash it
+            if ($post->post_status === 'trash') {
+                $result = wp_delete_post($post->ID, true);
+                if ($result) {
+                    $deleted_count++;
+                    error_log("IELTS Sync: Permanently deleted {$content_type} {$post->ID} (original: {$original_content_id}) - deleted on primary site");
+                }
+            } else {
+                $result = wp_trash_post($post->ID);
+                if ($result) {
+                    $deleted_count++;
+                    error_log("IELTS Sync: Trashed {$content_type} {$post->ID} (original: {$original_content_id}) - deleted on primary site");
+                }
             }
         }
         
         return rest_ensure_response(array(
             'success' => true,
-            'message' => sprintf('%d %s item(s) trashed successfully', $deleted_count, $content_type),
+            'message' => sprintf('%d %s item(s) processed successfully', $deleted_count, $content_type),
             'deleted_count' => $deleted_count
         ));
     }
