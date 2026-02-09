@@ -670,6 +670,7 @@ class IELTS_CM_Stripe_Payment {
         $payload = $request->get_body();
         $sig_header = $request->get_header('stripe-signature');
         $sig_method = 'get_header';
+        $all_headers = null; // Cache for header retrieval
         
         // Comprehensive fallback chain for retrieving Stripe-Signature header
         // Different server configurations may require different methods
@@ -679,7 +680,7 @@ class IELTS_CM_Stripe_Payment {
                 $sig_header = sanitize_text_field(wp_unslash($_SERVER['HTTP_STRIPE_SIGNATURE']));
                 $sig_method = '$_SERVER';
             }
-            // Method 3: getallheaders() function (available on Apache and some others)
+            // Method 3: getallheaders() function (available on most modern PHP setups)
             elseif (function_exists('getallheaders')) {
                 $all_headers = getallheaders();
                 if (isset($all_headers['Stripe-Signature'])) {
@@ -691,7 +692,7 @@ class IELTS_CM_Stripe_Payment {
                     $sig_method = 'getallheaders (lowercase)';
                 }
             }
-            // Method 4: apache_request_headers() (older Apache versions)
+            // Method 4: apache_request_headers() as final fallback (alias of getallheaders in some setups)
             elseif (function_exists('apache_request_headers')) {
                 $all_headers = apache_request_headers();
                 if (isset($all_headers['Stripe-Signature'])) {
@@ -710,8 +711,12 @@ class IELTS_CM_Stripe_Payment {
         } else {
             error_log('IELTS Stripe Webhook: ERROR - Signature header NOT FOUND with any method');
             // Log available headers for debugging (only keys, not values for security)
-            if (function_exists('getallheaders')) {
-                $header_keys = array_keys(getallheaders());
+            // Reuse cached headers if available from fallback attempt
+            if ($all_headers === null && function_exists('getallheaders')) {
+                $all_headers = getallheaders();
+            }
+            if ($all_headers !== null) {
+                $header_keys = array_keys($all_headers);
                 error_log('IELTS Stripe Webhook: Available headers: ' . implode(', ', $header_keys));
             } elseif (isset($_SERVER)) {
                 $http_headers = array_keys(array_filter($_SERVER, function($key) {
