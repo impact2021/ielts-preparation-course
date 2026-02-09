@@ -240,6 +240,9 @@ class IELTS_CM_Sync_API {
     private function find_existing_content($original_id, $content_type) {
         global $wpdb;
         
+        // Ensure original_id is a string for consistent meta_value comparison
+        $original_id = strval($original_id);
+        
         // Map content type to post type for more accurate matching
         $post_type_map = array(
             'course' => 'ielts_course',
