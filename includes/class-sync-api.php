@@ -41,6 +41,13 @@ class IELTS_CM_Sync_API {
             'callback' => array($this, 'get_site_info'),
             'permission_callback' => array($this, 'check_auth_token')
         ));
+        
+        // Endpoint for receiving deletion notifications from primary site
+        register_rest_route($this->namespace, '/delete-content', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'receive_deletion'),
+            'permission_callback' => array($this, 'check_auth_token')
+        ));
     }
     
     /**
@@ -577,5 +584,65 @@ class IELTS_CM_Sync_API {
                 error_log("IELTS Sync: Trashed page {$page->post_id} (original: {$original_id}) from lesson {$lesson_id} - no longer in primary site");
             }
         }
+    }
+    
+    /**
+     * Receive and process deletion notification from primary site
+     * 
+     * @param WP_REST_Request $request
+     * @return WP_REST_Response|WP_Error
+     */
+    public function receive_deletion($request) {
+        $params = $request->get_json_params();
+        
+        if (empty($params['content_id']) || empty($params['content_type'])) {
+            return new WP_Error('missing_data', 'Content ID and type are required', array('status' => 400));
+        }
+        
+        $original_content_id = intval($params['content_id']);
+        $content_type = sanitize_text_field($params['content_type']);
+        
+        // Validate content type
+        $valid_types = array('course', 'lesson', 'resource', 'quiz');
+        if (!in_array($content_type, $valid_types)) {
+            return new WP_Error('invalid_type', 'Invalid content type', array('status' => 400));
+        }
+        
+        global $wpdb;
+        
+        // Find the synced content on this subsite using the original_id meta
+        $synced_posts = $wpdb->get_results($wpdb->prepare("
+            SELECT p.ID
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ielts_cm_original_id'
+            AND pm.meta_value = %d
+            AND p.post_status != 'trash'
+        ", $original_content_id));
+        
+        if (empty($synced_posts)) {
+            // Content doesn't exist on this subsite, nothing to delete
+            return rest_ensure_response(array(
+                'success' => true,
+                'message' => 'Content not found on this subsite (may have been already deleted)',
+                'deleted_count' => 0
+            ));
+        }
+        
+        $deleted_count = 0;
+        foreach ($synced_posts as $post) {
+            // Trash the post instead of permanently deleting to preserve data
+            $result = wp_trash_post($post->ID);
+            if ($result) {
+                $deleted_count++;
+                error_log("IELTS Sync: Trashed {$content_type} {$post->ID} (original: {$original_content_id}) - deleted on primary site");
+            }
+        }
+        
+        return rest_ensure_response(array(
+            'success' => true,
+            'message' => sprintf('%d %s item(s) trashed successfully', $deleted_count, $content_type),
+            'deleted_count' => $deleted_count
+        ));
     }
 }

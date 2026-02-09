@@ -111,6 +111,10 @@ class IELTS_Course_Manager {
         
         // Track session time on page load
         add_action('wp_footer', array($this, 'track_session_time'));
+        
+        // Add hooks for syncing deletions to subsites
+        add_action('wp_trash_post', array($this, 'sync_content_deletion'), 10, 1);
+        add_action('before_delete_post', array($this, 'sync_content_deletion'), 10, 1);
     }
     
     /**
@@ -367,6 +371,60 @@ class IELTS_Course_Manager {
             
             // Reset session start to current time for next page load
             update_user_meta($user_id, '_ielts_cm_session_start', $current_time);
+        }
+    }
+    
+    /**
+     * Sync content deletion to subsites when content is trashed or deleted
+     * 
+     * @param int $post_id The ID of the post being deleted/trashed
+     */
+    public function sync_content_deletion($post_id) {
+        // Only sync if this is a primary site
+        if (!$this->sync_manager->is_primary_site()) {
+            return;
+        }
+        
+        // Get the post to check its type
+        $post = get_post($post_id);
+        if (!$post) {
+            return;
+        }
+        
+        // Map post types to content types
+        $type_mapping = array(
+            'ielts_course' => 'course',
+            'ielts_lesson' => 'lesson',
+            'ielts_resource' => 'resource',
+            'ielts_quiz' => 'quiz'
+        );
+        
+        // Check if this is a content type we sync
+        if (!isset($type_mapping[$post->post_type])) {
+            return;
+        }
+        
+        $content_type = $type_mapping[$post->post_type];
+        
+        // Push deletion notification to all subsites
+        $results = $this->sync_manager->push_deletion_to_subsites($post_id, $content_type);
+        
+        // Log the results
+        if (is_wp_error($results)) {
+            error_log("IELTS Sync: Failed to push deletion notification: " . $results->get_error_message());
+        } else {
+            $success_count = 0;
+            $fail_count = 0;
+            
+            foreach ($results as $site_id => $result) {
+                if (is_wp_error($result)) {
+                    $fail_count++;
+                } else {
+                    $success_count++;
+                }
+            }
+            
+            error_log("IELTS Sync: Deletion notification for {$content_type} {$post_id} sent to {$success_count} subsite(s), {$fail_count} failed");
         }
     }
 }
