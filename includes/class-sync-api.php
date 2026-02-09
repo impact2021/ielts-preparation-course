@@ -234,10 +234,22 @@ class IELTS_CM_Sync_API {
     
     /**
      * Find existing content by original ID
+     * Improved to filter by correct post type to avoid matching wrong content
      */
     private function find_existing_content($original_id, $content_type) {
+        // Map content type to post type for more accurate matching
+        $post_type_map = array(
+            'course' => 'ielts_course',
+            'lesson' => 'ielts_lesson',
+            'resource' => 'ielts_resource',
+            'quiz' => 'ielts_quiz'
+        );
+        
+        // Use specific post type if available, otherwise fallback to 'any'
+        $post_type = isset($post_type_map[$content_type]) ? $post_type_map[$content_type] : 'any';
+        
         $args = array(
-            'post_type' => 'any',
+            'post_type' => $post_type,
             'meta_key' => '_ielts_cm_original_id',
             'meta_value' => $original_id,
             'posts_per_page' => 1,
@@ -501,7 +513,7 @@ class IELTS_CM_Sync_API {
         
         // Get all lessons currently associated with this course on the subsite
         $subsite_lessons = $wpdb->get_results($wpdb->prepare("
-            SELECT post_id, meta_value as original_id 
+            SELECT DISTINCT pm.post_id as post_id, pm.meta_value as original_id 
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
@@ -579,7 +591,7 @@ class IELTS_CM_Sync_API {
         // Pages can be either ielts_resource or custom page posts linked to this lesson
         // Check both _ielts_cm_lesson_id (singular) and _ielts_cm_lesson_ids (plural)
         $subsite_pages = $wpdb->get_results($wpdb->prepare("
-            SELECT p.ID as post_id, p.post_title, p.post_type, pm.meta_value as original_id 
+            SELECT DISTINCT p.ID as post_id, p.post_title, p.post_type, pm.meta_value as original_id 
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
