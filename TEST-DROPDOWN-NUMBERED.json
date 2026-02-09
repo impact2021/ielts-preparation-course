@@ -1,0 +1,47 @@
+{
+  "title": "TEST: Numbered Dropdown Questions",
+  "content": "Testing how dropdown questions display with numbering",
+  "questions": [
+    {
+      "type": "closed_question_dropdown",
+      "ielts_question_type": "Multiple Choice (Multiple Answers)",
+      "instructions": "Complete the dialogue by selecting the correct options from the dropdown menus.",
+      "question": "<strong>Examiner:</strong> Do you think parents should allow children to watch television?<br><strong>Candidate:</strong> Well, that's an interesting question. There are clearly some 1.[dropdown] where watching television does not negatively affect children. Some educational programmes, for example, can help 2.[dropdown].",
+      "correct_answer_count": 2,
+      "mc_options": [
+        {
+          "text": "situations",
+          "is_correct": true,
+          "feedback": "Correct! 'Situations' fits well in this context."
+        },
+        {
+          "text": "times",
+          "is_correct": false,
+          "feedback": "Not quite. 'Times' doesn't work as well with 'some' in this context."
+        },
+        {
+          "text": "children learn",
+          "is_correct": false,
+          "feedback": "Close, but not the best answer for the second blank."
+        },
+        {
+          "text": "children to learn",
+          "is_correct": true,
+          "feedback": "Correct! 'Help children to learn' is the right construction."
+        }
+      ],
+      "correct_answer": "field_1:0|field_2:3",
+      "no_answer_feedback": "You did not complete all the answers.",
+      "points": 2
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "one_column_exercise",
+    "exercise_label": "exercise",
+    "scoring_type": "percentage",
+    "timer_minutes": 0,
+    "starting_question_number": 1
+  }
+}
