@@ -966,25 +966,18 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         </a>
                     <?php endif; ?>
                 </div>
-                <div class="nav-item nav-center-left">
-                    <?php if ($lesson_id): ?>
-                        <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
-                            <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('Lesson', 'ielts-course-manager'); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-                <div class="nav-item nav-center-right">
-                    <?php if ($course_id): ?>
-                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
-                            <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
+                <div class="nav-item nav-center">
+                    <div class="quiz-center-controls">
+                        <?php if ($timer_minutes > 0): ?>
+                        <div class="timer-display">
+                            <strong><?php _e('Time:', 'ielts-course-manager'); ?></strong>
+                            <span id="timer-display-bottom">--:--</span>
+                        </div>
+                        <?php endif; ?>
+                        <button type="submit" class="button button-primary quiz-submit-btn">
+                            <?php _e('Submit', 'ielts-course-manager'); ?>
+                        </button>
+                    </div>
                 </div>
                 <div class="nav-item nav-next">
                     <?php if (isset($next_item) && $next_item): ?>
@@ -1004,19 +997,6 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                </div>
-                <?php if ($timer_minutes > 0): ?>
-                <div class="nav-item nav-timer">
-                    <div class="timer-display">
-                        <strong><?php _e('Time:', 'ielts-course-manager'); ?></strong>
-                        <span id="timer-display-bottom">--:--</span>
-                    </div>
-                </div>
-                <?php endif; ?>
-                <div class="nav-item nav-submit">
-                    <button type="submit" class="button button-primary quiz-submit-btn">
-                        <?php _e('Submit', 'ielts-course-manager'); ?>
-                    </button>
                 </div>
             </div>
         <?php endif; ?>

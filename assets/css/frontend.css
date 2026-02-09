@@ -1450,6 +1450,18 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
     bottom: auto;
 }
 
+/* Quiz center controls container */
+.quiz-center-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.quiz-bottom-nav .nav-item.nav-center {
+    flex: 0 0 auto;
+}
+
 .quiz-bottom-nav .nav-item.nav-timer {
     flex: 0 0 auto;
 }
@@ -1495,21 +1507,22 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
         flex-wrap: wrap;
     }
     
-    .quiz-bottom-nav .nav-item.nav-prev,
-    .quiz-bottom-nav .nav-item.nav-next,
-    .quiz-bottom-nav .nav-item.nav-center-left,
-    .quiz-bottom-nav .nav-item.nav-center-right {
-        flex: 0 0 48%;
+    .quiz-center-controls {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
     }
     
-    .quiz-bottom-nav .nav-item.nav-timer,
-    .quiz-bottom-nav .nav-item.nav-submit {
-        flex: 0 0 48%;
+    .quiz-bottom-nav .nav-item.nav-prev,
+    .quiz-bottom-nav .nav-item.nav-next,
+    .quiz-bottom-nav .nav-item.nav-center {
+        flex: 0 0 100%;
     }
     
     .quiz-bottom-nav .timer-display,
     .quiz-bottom-nav .quiz-submit-btn {
         width: 100%;
+        justify-content: center;
     }
 }
 

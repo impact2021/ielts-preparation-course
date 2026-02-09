@@ -261,10 +261,12 @@ if ($lesson_id) {
 
 <div class="ielts-computer-based-quiz<?php echo ($hide_reading_pane === '1') ? ' hide-reading-pane' : ''; ?>" data-quiz-id="<?php echo $quiz->ID; ?>" data-course-id="<?php echo $course_id; ?>" data-lesson-id="<?php echo $lesson_id; ?>" data-timer-minutes="<?php echo esc_attr($timer_minutes); ?>" data-next-url="<?php echo esc_attr($next_url); ?>" data-test-type="<?php echo esc_attr($test_type); ?>">
     
-    <!-- Header toggle button -->
+    <!-- Header toggle button (admins only) -->
+    <?php if (current_user_can('manage_options')): ?>
     <button type="button" id="header-toggle-btn" class="header-toggle-btn" title="<?php _e('Toggle header visibility', 'ielts-course-manager'); ?>">
         <span class="toggle-icon">▼</span>
     </button>
+    <?php endif; ?>
     
     <div class="quiz-header">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -1283,25 +1285,18 @@ if ($lesson_id) {
                         </a>
                     <?php endif; ?>
                 </div>
-                <div class="nav-item nav-center-left">
-                    <?php if ($lesson_id): ?>
-                        <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
-                            <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('Lesson', 'ielts-course-manager'); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
-                </div>
-                <div class="nav-item nav-center-right">
-                    <?php if ($course_id): ?>
-                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
-                            <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
-                            </span>
-                        </a>
-                    <?php endif; ?>
+                <div class="nav-item nav-center">
+                    <div class="quiz-center-controls">
+                        <?php if ($timer_minutes > 0): ?>
+                        <div class="timer-display">
+                            <strong><?php _e('Time:', 'ielts-course-manager'); ?></strong>
+                            <span id="timer-display-bottom">--:--</span>
+                        </div>
+                        <?php endif; ?>
+                        <button type="submit" class="button button-primary quiz-submit-btn">
+                            <?php _e('Submit', 'ielts-course-manager'); ?>
+                        </button>
+                    </div>
                 </div>
                 <div class="nav-item nav-next">
                     <?php if ($next_url): ?>
@@ -1321,19 +1316,6 @@ if ($lesson_id) {
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
-                </div>
-                <?php if ($timer_minutes > 0): ?>
-                <div class="nav-item nav-timer">
-                    <div class="timer-display">
-                        <strong><?php _e('Time:', 'ielts-course-manager'); ?></strong>
-                        <span id="timer-display-bottom">--:--</span>
-                    </div>
-                </div>
-                <?php endif; ?>
-                <div class="nav-item nav-submit">
-                    <button type="submit" class="button button-primary quiz-submit-btn">
-                        <?php _e('Submit', 'ielts-course-manager'); ?>
-                    </button>
                 </div>
             </div>
         </form>
