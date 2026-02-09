@@ -674,7 +674,7 @@ class IELTS_CM_Stripe_Payment {
         // Try direct $_SERVER access if get_header returns empty
         if (empty($sig_header) && isset($_SERVER['HTTP_STRIPE_SIGNATURE'])) {
             $sig_header = sanitize_text_field(wp_unslash($_SERVER['HTTP_STRIPE_SIGNATURE']));
-            error_log('IELTS Stripe Webhook: Retrieved signature from $_SERVER fallback (length: ' . strlen($sig_header) . ')');
+            error_log('IELTS Stripe Webhook: Retrieved signature from $_SERVER fallback');
         }
         
         if (empty($sig_header)) {
