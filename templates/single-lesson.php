@@ -575,9 +575,9 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         $next_lesson = ($current_index >= 0 && $current_index < count($all_lessons) - 1) ? $all_lessons[$current_index + 1] : null;
         ?>
         
-        <?php if ($prev_lesson || $next_lesson): ?>
-            <div class="ielts-navigation">
-                <div class="nav-prev">
+        <?php if ($prev_lesson || $next_lesson || $course_id): ?>
+            <div class="ielts-sticky-bottom-nav">
+                <div class="nav-item nav-prev">
                     <?php if ($prev_lesson): ?>
                         <a href="<?php echo get_permalink($prev_lesson->ID); ?>" class="nav-link">
                             <span class="nav-arrow">&laquo;</span>
@@ -588,7 +588,17 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                         </a>
                     <?php endif; ?>
                 </div>
-                <div class="nav-next">
+                <div class="nav-item nav-center">
+                    <?php if ($course_id): ?>
+                        <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                            <span class="nav-label">
+                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
+                                <strong><?php _e('Course', 'ielts-course-manager'); ?></strong>
+                            </span>
+                        </a>
+                    <?php endif; ?>
+                </div>
+                <div class="nav-item nav-next">
                     <?php if ($next_lesson): ?>
                         <a href="<?php echo get_permalink($next_lesson->ID); ?>" class="nav-link">
                             <span class="nav-label">
@@ -600,61 +610,9 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                     <?php endif; ?>
                 </div>
             </div>
-            
-            <style>
-            .ielts-navigation {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 40px;
-                padding-top: 30px;
-                border-top: 2px solid #e0e0e0;
-            }
-            .ielts-navigation .nav-prev {
-                flex: 0 0 48%;
-            }
-            .ielts-navigation .nav-next {
-                flex: 0 0 48%;
-                text-align: right;
-            }
-            .ielts-navigation .nav-link {
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-                padding: 15px 20px;
-                background: #f5f5f5;
-                border-radius: 5px;
-                text-decoration: none;
-                color: #333;
-                transition: all 0.3s ease;
-            }
-            .ielts-navigation .nav-link:hover {
-                background: #e0e0e0;
-                transform: translateY(-2px);
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            }
-            .ielts-navigation .nav-arrow {
-                font-size: 24px;
-                color: #0073aa;
-                font-weight: bold;
-            }
-            .ielts-navigation .nav-label {
-                display: flex;
-                flex-direction: column;
-            }
-            .ielts-navigation .nav-label small {
-                font-size: 12px;
-                color: #666;
-                text-transform: uppercase;
-            }
-            .ielts-navigation .nav-label strong {
-                font-size: 14px;
-                color: #333;
-                margin-top: 3px;
-            }
-            .ielts-navigation .nav-next .nav-label {
-                align-items: flex-end;
-            }
-            </style>
+            <script>
+            document.body.classList.add('has-sticky-bottom-nav');
+            </script>
         <?php endif; ?>
     <?php } ?>
 </div>
