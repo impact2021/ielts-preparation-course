@@ -199,6 +199,12 @@ class IELTS_CM_Sync_API {
             $this->sync_course_lessons($post_id, $content_data['current_lesson_ids']);
         }
         
+        // Handle page synchronization for lessons
+        // Remove pages/content that are no longer in the lesson on the primary site
+        if ($content_type === 'lesson' && isset($content_data['current_page_ids'])) {
+            $this->sync_lesson_pages($post_id, $content_data['current_page_ids']);
+        }
+        
         // Handle featured image
         if (!empty($content_data['featured_image_url'])) {
             $this->set_featured_image_from_url($post_id, $content_data['featured_image_url']);
@@ -523,6 +529,52 @@ class IELTS_CM_Sync_API {
             if (!isset($primary_lessons_map[$original_id])) {
                 // Trash the lesson instead of deleting to preserve data
                 wp_trash_post($lesson->post_id);
+            }
+        }
+    }
+    
+    /**
+     * Sync lesson pages - remove pages that no longer exist in the primary site
+     * 
+     * @param int $lesson_id The lesson ID on the subsite
+     * @param array $primary_page_ids Array of page IDs (post IDs) that exist on the primary site
+     */
+    private function sync_lesson_pages($lesson_id, $primary_page_ids) {
+        global $wpdb;
+        
+        // Validate input
+        if (!is_array($primary_page_ids)) {
+            return;
+        }
+        
+        // Convert to associative array for O(1) lookup
+        $primary_pages_map = array_flip($primary_page_ids);
+        
+        // Get all pages/resources currently associated with this lesson on the subsite
+        // Pages can be either ielts_resource or custom page posts linked to this lesson
+        $subsite_pages = $wpdb->get_results($wpdb->prepare("
+            SELECT p.ID as post_id, pm.meta_value as original_id 
+            FROM {$wpdb->postmeta} pm
+            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            WHERE pm.meta_key = '_ielts_cm_original_id'
+            AND p.post_status != 'trash'
+            AND EXISTS (
+                SELECT 1 FROM {$wpdb->postmeta} pm2 
+                WHERE pm2.post_id = pm.post_id 
+                AND pm2.meta_key = '_ielts_cm_lesson_id' 
+                AND pm2.meta_value = %d
+            )
+        ", $lesson_id));
+        
+        // Find pages that should be removed (exist on subsite but not in primary list)
+        foreach ($subsite_pages as $page) {
+            $original_id = intval($page->original_id);
+            
+            // If this page's original ID is not in the current primary page list, remove it
+            if (!isset($primary_pages_map[$original_id])) {
+                // Trash the page instead of deleting to preserve data
+                wp_trash_post($page->post_id);
+                error_log("IELTS Sync: Trashed page {$page->post_id} (original: {$original_id}) from lesson {$lesson_id} - no longer in primary site");
             }
         }
     }

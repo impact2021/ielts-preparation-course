@@ -1800,6 +1800,36 @@ class IELTS_CM_Access_Codes {
             $debug_html .= '<p style="margin: 5px 0;"><strong>Last Payment:</strong> None found</p>';
         }
         
+        // Get recent webhook events
+        $webhook_table = $wpdb->prefix . 'ielts_cm_webhook_log';
+        $recent_webhooks = $wpdb->get_results($wpdb->prepare(
+            "SELECT * FROM $webhook_table WHERE user_id = %d OR user_id IS NULL ORDER BY created_at DESC LIMIT 5",
+            $current_user_id
+        ));
+        
+        if (!empty($recent_webhooks)) {
+            $debug_html .= '<p style="margin: 10px 0 5px 0;"><strong>Recent Webhook Events:</strong></p>';
+            $debug_html .= '<div style="font-size: 11px; max-height: 150px; overflow-y: auto; background: #fff; padding: 8px; border-radius: 3px;">';
+            foreach ($recent_webhooks as $webhook) {
+                $status_color = $webhook->status === 'processed' ? '#0a0' : ($webhook->status === 'failed' ? '#d00' : '#f90');
+                $status_symbol = $webhook->status === 'processed' ? '✓' : ($webhook->status === 'failed' ? '✗' : '⏳');
+                $debug_html .= '<div style="margin: 4px 0; padding: 4px; border-left: 3px solid ' . $status_color . ';">';
+                $debug_html .= '<span style="color: ' . $status_color . '; font-weight: bold;">' . $status_symbol . '</span> ';
+                $debug_html .= esc_html($webhook->event_type) . ' | ';
+                $debug_html .= esc_html($webhook->payment_type ?: 'N/A') . ' | ';
+                $debug_html .= 'Amount: $' . esc_html($webhook->amount ?: '0') . ' | ';
+                $debug_html .= esc_html($webhook->created_at);
+                if ($webhook->error_message) {
+                    $debug_html .= '<br><span style="color: #d00; font-size: 10px;">Error: ' . esc_html(substr($webhook->error_message, 0, 100)) . '</span>';
+                }
+                $debug_html .= '</div>';
+            }
+            $debug_html .= '</div>';
+        } else {
+            $debug_html .= '<p style="margin: 10px 0 5px 0;"><strong>Recent Webhook Events:</strong> <span style="color: #d00;">No webhook events found. This may indicate webhooks are not configured!</span></p>';
+            $debug_html .= '<p style="margin: 5px 0; font-size: 12px; background: #ffe5e5; padding: 8px; border-radius: 3px;"><strong>⚠️ Important:</strong> If you just made a purchase and no codes appeared, check that:<br>1. Stripe webhook is configured correctly<br>2. Webhook secret is set in Hybrid Site Settings<br>3. Stripe is sending events to the correct webhook URL</p>';
+        }
+        
         $debug_html .= '<p style="margin: 10px 0 0 0; font-size: 12px; color: #666;"><em>If codes are not showing after purchase, this info will help debug the issue.</em></p>';
         $debug_html .= '</div>';
         

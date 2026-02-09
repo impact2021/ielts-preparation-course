@@ -320,6 +320,13 @@ class IELTS_CM_Multi_Site_Sync {
             $data['current_lesson_ids'] = wp_list_pluck($lessons, 'ID');
         }
         
+        // Get current page IDs for lessons
+        // This allows subsites to remove pages that are no longer in the lesson
+        if ($content_type === 'lesson') {
+            $pages = $this->get_lesson_pages($content_id);
+            $data['current_page_ids'] = wp_list_pluck($pages, 'ID');
+        }
+        
         // Get featured image
         if (has_post_thumbnail($content_id)) {
             $thumbnail_id = get_post_thumbnail_id($content_id);
@@ -505,6 +512,19 @@ class IELTS_CM_Multi_Site_Sync {
             'orderby' => 'menu_order',
             'order' => 'ASC'
         ));
+    }
+    
+    /**
+     * Get all pages associated with a lesson
+     * This includes both resources and any custom page content
+     */
+    private function get_lesson_pages($lesson_id) {
+        // Get all resources and quizzes for this lesson
+        $resources = $this->get_lesson_resources($lesson_id);
+        $exercises = $this->get_lesson_exercises($lesson_id);
+        
+        // Combine them to get all page content
+        return array_merge($resources, $exercises);
     }
     
     /**
