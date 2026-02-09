@@ -235,8 +235,11 @@ class IELTS_CM_Sync_API {
     /**
      * Find existing content by original ID
      * Improved to filter by correct post type to avoid matching wrong content
+     * Uses direct SQL query for better reliability with 'any' post status
      */
     private function find_existing_content($original_id, $content_type) {
+        global $wpdb;
+        
         // Map content type to post type for more accurate matching
         $post_type_map = array(
             'course' => 'ielts_course',
@@ -248,16 +251,32 @@ class IELTS_CM_Sync_API {
         // Use specific post type if available, otherwise fallback to 'any'
         $post_type = isset($post_type_map[$content_type]) ? $post_type_map[$content_type] : 'any';
         
-        $args = array(
-            'post_type' => $post_type,
-            'meta_key' => '_ielts_cm_original_id',
-            'meta_value' => $original_id,
-            'posts_per_page' => 1,
-            'post_status' => 'any'
-        );
+        // Use direct SQL query for better control over post_status filtering
+        // This is more reliable than get_posts() with post_status = 'any'
+        if ($post_type !== 'any') {
+            $existing_post = $wpdb->get_var($wpdb->prepare("
+                SELECT p.ID
+                FROM {$wpdb->posts} p
+                INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+                WHERE pm.meta_key = '_ielts_cm_original_id'
+                AND pm.meta_value = %s
+                AND p.post_type = %s
+                AND p.post_status != 'trash'
+                LIMIT 1
+            ", $original_id, $post_type));
+        } else {
+            $existing_post = $wpdb->get_var($wpdb->prepare("
+                SELECT p.ID
+                FROM {$wpdb->posts} p
+                INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+                WHERE pm.meta_key = '_ielts_cm_original_id'
+                AND pm.meta_value = %s
+                AND p.post_status != 'trash'
+                LIMIT 1
+            ", $original_id));
+        }
         
-        $posts = get_posts($args);
-        return !empty($posts) ? $posts[0]->ID : false;
+        return $existing_post ? intval($existing_post) : false;
     }
     
     /**
