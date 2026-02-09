@@ -566,19 +566,39 @@ class IELTS_CM_Sync_API {
         
         // Get all pages/resources currently associated with this lesson on the subsite
         // Pages can be either ielts_resource or custom page posts linked to this lesson
+        // Check both _ielts_cm_lesson_id (singular) and _ielts_cm_lesson_ids (plural)
         $subsite_pages = $wpdb->get_results($wpdb->prepare("
             SELECT p.ID as post_id, p.post_title, p.post_type, pm.meta_value as original_id 
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE pm.meta_key = '_ielts_cm_original_id'
             AND p.post_status != 'trash'
-            AND EXISTS (
-                SELECT 1 FROM {$wpdb->postmeta} pm2 
-                WHERE pm2.post_id = pm.post_id 
-                AND pm2.meta_key = '_ielts_cm_lesson_id' 
-                AND pm2.meta_value = %d
+            AND (
+                EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm2 
+                    WHERE pm2.post_id = pm.post_id 
+                    AND pm2.meta_key = '_ielts_cm_lesson_id' 
+                    AND pm2.meta_value = %d
+                )
+                OR EXISTS (
+                    SELECT 1 FROM {$wpdb->postmeta} pm3 
+                    WHERE pm3.post_id = pm.post_id 
+                    AND pm3.meta_key = '_ielts_cm_lesson_ids'
+                    AND (
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value LIKE %s OR
+                        pm3.meta_value = %s
+                    )
+                )
             )
-        ", $lesson_id));
+        ", 
+            $lesson_id,
+            '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%',  // Serialized array format
+            '%' . $wpdb->esc_like('"' . $lesson_id . '"') . '%',   // JSON format
+            '%' . $wpdb->esc_like(':' . $lesson_id . '}') . '%',   // End of serialized array
+            serialize(array($lesson_id))                            // Single item array
+        ));
         
         error_log("IELTS Sync: Found " . count($subsite_pages) . " pages on subsite for lesson {$lesson_id}");
         
