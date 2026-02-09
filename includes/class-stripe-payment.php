@@ -675,6 +675,20 @@ class IELTS_CM_Stripe_Payment {
         
         if (empty($webhook_secret)) {
             error_log('IELTS Stripe Webhook: ERROR - Webhook secret not configured');
+            
+            // Log webhook event with error
+            IELTS_CM_Database::log_webhook_event(
+                'unknown',
+                'N/A',
+                'N/A',
+                null,
+                null,
+                null,
+                'failed',
+                'Webhook secret not configured',
+                substr($payload, 0, 1000) // Store first 1000 chars of payload for debugging
+            );
+            
             return new WP_Error('configuration_error', 'Webhook secret not configured', array('status' => 500));
         }
         
@@ -687,19 +701,96 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Stripe Webhook: Successfully verified signature for event type: ' . $event->type);
         } catch (\Exception $e) {
             error_log('IELTS Stripe Webhook: Signature verification failed - ' . $e->getMessage());
+            
+            // Log webhook event with error
+            IELTS_CM_Database::log_webhook_event(
+                'verification_failed',
+                'N/A',
+                'N/A',
+                null,
+                null,
+                null,
+                'failed',
+                'Signature verification failed: ' . $e->getMessage(),
+                substr($payload, 0, 1000)
+            );
+            
             return new WP_Error('invalid_signature', 'Invalid signature', array('status' => 400));
         }
         
-        // Handle the event
-        if ($event->type === 'payment_intent.succeeded') {
-            error_log('IELTS Stripe Webhook: Processing payment_intent.succeeded event');
+        // Extract payment intent data for logging
+        $payment_intent_id = 'N/A';
+        $payment_type = null;
+        $user_id = null;
+        $amount = null;
+        
+        if ($event->type === 'payment_intent.succeeded' && isset($event->data->object)) {
             $payment_intent = $event->data->object;
-            $this->handle_successful_payment($payment_intent);
-        } else {
-            error_log('IELTS Stripe Webhook: Received unhandled event type: ' . $event->type);
+            $payment_intent_id = $payment_intent->id;
+            $amount = $payment_intent->amount / 100;
+            
+            if (isset($payment_intent->metadata->payment_type)) {
+                $payment_type = $payment_intent->metadata->payment_type;
+            }
+            
+            if (isset($payment_intent->metadata->user_id)) {
+                $user_id = intval($payment_intent->metadata->user_id);
+            }
         }
         
-        return new WP_REST_Response(['status' => 'success'], 200);
+        // Log webhook receipt
+        $log_id = IELTS_CM_Database::log_webhook_event(
+            $event->type,
+            $event->id ?? 'N/A',
+            $payment_intent_id,
+            $payment_type,
+            $user_id,
+            $amount,
+            'received',
+            null,
+            null // Don't store full payload to save space
+        );
+        
+        // Handle the event
+        try {
+            if ($event->type === 'payment_intent.succeeded') {
+                error_log('IELTS Stripe Webhook: Processing payment_intent.succeeded event');
+                $payment_intent = $event->data->object;
+                $this->handle_successful_payment($payment_intent);
+                
+                // Update log to processed status
+                if ($log_id) {
+                    global $wpdb;
+                    $wpdb->update(
+                        $wpdb->prefix . 'ielts_cm_webhook_log',
+                        array('status' => 'processed', 'processed_at' => current_time('mysql')),
+                        array('id' => $log_id),
+                        array('%s', '%s'),
+                        array('%d')
+                    );
+                }
+            } else {
+                error_log('IELTS Stripe Webhook: Received unhandled event type: ' . $event->type);
+            }
+            
+            return new WP_REST_Response(['status' => 'success'], 200);
+        } catch (\Exception $e) {
+            error_log('IELTS Stripe Webhook: Error processing webhook - ' . $e->getMessage());
+            
+            // Update log with error
+            if ($log_id) {
+                global $wpdb;
+                $wpdb->update(
+                    $wpdb->prefix . 'ielts_cm_webhook_log',
+                    array('status' => 'failed', 'error_message' => $e->getMessage()),
+                    array('id' => $log_id),
+                    array('%s', '%s'),
+                    array('%d')
+                );
+            }
+            
+            return new WP_Error('processing_error', 'Error processing webhook: ' . $e->getMessage(), array('status' => 500));
+        }
     }
     
     /**

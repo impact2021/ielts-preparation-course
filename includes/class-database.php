@@ -18,6 +18,7 @@ class IELTS_CM_Database {
     private $payments_table;
     private $payment_error_log_table;
     private $auto_sync_log_table;
+    private $webhook_log_table;
     
     public function __construct() {
         global $wpdb;
@@ -30,6 +31,7 @@ class IELTS_CM_Database {
         $this->payments_table = $wpdb->prefix . 'ielts_cm_payments';
         $this->payment_error_log_table = $wpdb->prefix . 'ielts_cm_payment_errors';
         $this->auto_sync_log_table = $wpdb->prefix . 'ielts_cm_auto_sync_log';
+        $this->webhook_log_table = $wpdb->prefix . 'ielts_cm_webhook_log';
     }
     
     /**
@@ -218,6 +220,28 @@ class IELTS_CM_Database {
             UNIQUE KEY group_course (course_group, course_id)
         ) $charset_collate;";
         
+        // Webhook event log table
+        $webhook_log_table = $wpdb->prefix . 'ielts_cm_webhook_log';
+        $sql_webhook_log = "CREATE TABLE IF NOT EXISTS $webhook_log_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            event_type varchar(100) NOT NULL,
+            event_id varchar(255) DEFAULT NULL,
+            payment_intent_id varchar(255) DEFAULT NULL,
+            payment_type varchar(50) DEFAULT NULL,
+            user_id bigint(20) DEFAULT NULL,
+            amount decimal(10,2) DEFAULT NULL,
+            status varchar(20) DEFAULT 'received',
+            error_message text DEFAULT NULL,
+            raw_payload longtext DEFAULT NULL,
+            processed_at datetime DEFAULT NULL,
+            created_at datetime DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY event_type (event_type),
+            KEY payment_intent_id (payment_intent_id),
+            KEY status (status),
+            KEY created_at (created_at)
+        ) $charset_collate;";
+        
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
@@ -230,6 +254,7 @@ class IELTS_CM_Database {
         dbDelta($sql_auto_sync_log);
         dbDelta($sql_access_codes);
         dbDelta($sql_access_code_courses);
+        dbDelta($sql_webhook_log);
     }
     
     /**
@@ -249,7 +274,8 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_payment_errors',
             $wpdb->prefix . 'ielts_cm_auto_sync_log',
             $wpdb->prefix . 'ielts_cm_access_codes',
-            $wpdb->prefix . 'ielts_cm_access_code_courses'
+            $wpdb->prefix . 'ielts_cm_access_code_courses',
+            $wpdb->prefix . 'ielts_cm_webhook_log'
         );
         
         foreach ($tables as $table) {
@@ -294,6 +320,52 @@ class IELTS_CM_Database {
     
     public function get_auto_sync_log_table() {
         return $this->auto_sync_log_table;
+    }
+    
+    public function get_webhook_log_table() {
+        return $this->webhook_log_table;
+    }
+    
+    /**
+     * Log a webhook event to the database
+     * 
+     * @param string $event_type Type of webhook event (e.g., 'payment_intent.succeeded')
+     * @param string $event_id Stripe event ID
+     * @param string $payment_intent_id Payment intent ID
+     * @param string $payment_type Type of payment (e.g., 'access_code_purchase')
+     * @param int|null $user_id User ID if applicable
+     * @param float|null $amount Payment amount
+     * @param string $status Event processing status (received, processed, failed)
+     * @param string|null $error_message Error message if failed
+     * @param string|null $raw_payload Raw JSON payload for debugging
+     * @return int|false Insert ID on success, false on failure
+     */
+    public static function log_webhook_event($event_type, $event_id, $payment_intent_id, $payment_type, $user_id, $amount, $status, $error_message = null, $raw_payload = null) {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_webhook_log';
+        
+        $data = array(
+            'event_type' => sanitize_text_field($event_type),
+            'event_id' => sanitize_text_field($event_id),
+            'payment_intent_id' => sanitize_text_field($payment_intent_id),
+            'payment_type' => $payment_type ? sanitize_text_field($payment_type) : null,
+            'user_id' => $user_id ? intval($user_id) : null,
+            'amount' => $amount ? floatval($amount) : null,
+            'status' => sanitize_text_field($status),
+            'error_message' => $error_message,
+            'raw_payload' => $raw_payload,
+        );
+        
+        $formats = array('%s', '%s', '%s', '%s', '%d', '%f', '%s', '%s', '%s');
+        
+        if ($status === 'processed') {
+            $data['processed_at'] = current_time('mysql');
+            $formats[] = '%s';
+        }
+        
+        $result = $wpdb->insert($table_name, $data, $formats);
+        
+        return $result ? $wpdb->insert_id : false;
     }
     
     /**
