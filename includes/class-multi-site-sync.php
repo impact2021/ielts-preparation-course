@@ -816,4 +816,58 @@ class IELTS_CM_Multi_Site_Sync {
             $status_summary['out_of_sync_items']++;
         }
     }
+    
+    /**
+     * Push deletion notification to all connected subsites
+     * 
+     * @param int $content_id The ID of the deleted content on the primary site
+     * @param string $content_type The type of content (course, lesson, resource, quiz)
+     * @return array Results from each subsite
+     */
+    public function push_deletion_to_subsites($content_id, $content_type) {
+        if (!$this->is_primary_site()) {
+            return new WP_Error('not_primary', 'Only primary sites can push deletions');
+        }
+        
+        $subsites = $this->get_connected_subsites();
+        if (empty($subsites)) {
+            return new WP_Error('no_subsites', 'No connected subsites found');
+        }
+        
+        $results = array();
+        
+        foreach ($subsites as $subsite) {
+            $response = wp_remote_post(
+                trailingslashit($subsite->site_url) . 'wp-json/ielts-cm/v1/delete-content',
+                array(
+                    'timeout' => 30,
+                    'headers' => array(
+                        'Content-Type' => 'application/json',
+                        'X-IELTS-Auth-Token' => $subsite->auth_token
+                    ),
+                    'body' => wp_json_encode(array(
+                        'content_id' => $content_id,
+                        'content_type' => $content_type
+                    ))
+                )
+            );
+            
+            if (is_wp_error($response)) {
+                $results[$subsite->id] = $response;
+                error_log("IELTS Sync: Failed to push deletion to {$subsite->site_name}: " . $response->get_error_message());
+            } else {
+                $status_code = wp_remote_retrieve_response_code($response);
+                $body = json_decode(wp_remote_retrieve_body($response), true);
+                
+                if ($status_code >= 200 && $status_code < 300 && isset($body['success']) && $body['success']) {
+                    $results[$subsite->id] = array('success' => true, 'message' => $body['message'] ?? 'Deletion synced successfully');
+                } else {
+                    $results[$subsite->id] = new WP_Error('sync_failed', $body['message'] ?? 'Failed to sync deletion');
+                    error_log("IELTS Sync: Failed to push deletion to {$subsite->site_name}: " . ($body['message'] ?? 'Unknown error'));
+                }
+            }
+        }
+        
+        return $results;
+    }
 }
