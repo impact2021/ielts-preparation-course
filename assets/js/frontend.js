@@ -28,8 +28,9 @@
         // Check for both standard and computer-based quiz timers
         var timerElement = $('#quiz-timer').length ? $('#quiz-timer') : $('#quiz-timer-fullscreen');
         var timerDisplay = $('#timer-display').length ? $('#timer-display') : $('#timer-display-fullscreen');
+        var timerDisplayBottom = $('#timer-display-bottom');
         
-        if (timerMinutes && timerMinutes > 0 && timerElement.length && timerDisplay.length) {
+        if (timerMinutes && timerMinutes > 0 && (timerElement.length || timerDisplayBottom.length)) {
             var totalSeconds = timerMinutes * 60;
             
             quizTimerInterval = setInterval(function() {
@@ -37,26 +38,56 @@
                 
                 var mins = Math.floor(totalSeconds / 60);
                 var secs = totalSeconds % 60;
-                timerDisplay.text(mins + ':' + (secs < 10 ? '0' : '') + secs);
+                var timeString = mins + ':' + (secs < 10 ? '0' : '') + secs;
+                
+                // Update all timer displays
+                if (timerDisplay.length) {
+                    timerDisplay.text(timeString);
+                }
+                if (timerDisplayBottom.length) {
+                    timerDisplayBottom.text(timeString);
+                }
                 
                 // Warning at 5 minutes
                 if (totalSeconds === 300) {
-                    timerElement.css('color', 'orange');
-                    timerDisplay.css('color', 'orange');
+                    if (timerElement.length) {
+                        timerElement.css('color', 'orange');
+                    }
+                    if (timerDisplay.length) {
+                        timerDisplay.css('color', 'orange');
+                    }
+                    if (timerDisplayBottom.length) {
+                        timerDisplayBottom.css('color', 'orange');
+                    }
                 }
                 
                 // Critical at 1 minute
                 if (totalSeconds === 60) {
-                    timerElement.css('color', 'red');
-                    timerDisplay.css('color', 'red');
+                    if (timerElement.length) {
+                        timerElement.css('color', 'red');
+                    }
+                    if (timerDisplay.length) {
+                        timerDisplay.css('color', 'red');
+                    }
+                    if (timerDisplayBottom.length) {
+                        timerDisplayBottom.css('color', 'red');
+                    }
                 }
                 
                 if (totalSeconds <= 0) {
                     clearInterval(quizTimerInterval);
                     quizTimerInterval = null;
-                    timerDisplay.text('0:00');
-                    timerElement.css('color', 'red');
-                    timerDisplay.css('color', 'red');
+                    if (timerDisplay.length) {
+                        timerDisplay.text('0:00');
+                        timerDisplay.css('color', 'red');
+                    }
+                    if (timerDisplayBottom.length) {
+                        timerDisplayBottom.text('0:00');
+                        timerDisplayBottom.css('color', 'red');
+                    }
+                    if (timerElement.length) {
+                        timerElement.css('color', 'red');
+                    }
                     
                     // Auto-submit the form
                     alert('Time is up! The exercise will be submitted automatically.');
