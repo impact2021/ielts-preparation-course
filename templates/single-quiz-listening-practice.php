@@ -117,7 +117,7 @@ if ($user_id) {
     global $wpdb;
     $quiz_results_table = $wpdb->prefix . 'ielts_cm_quiz_results';
     $user_has_completed_quiz = (bool) $wpdb->get_var($wpdb->prepare(
-        "SELECT id FROM $quiz_results_table WHERE user_id = %d AND quiz_id = %d LIMIT 1",
+        "SELECT 1 FROM $quiz_results_table WHERE user_id = %d AND quiz_id = %d LIMIT 1",
         $user_id,
         $quiz->ID
     ));
