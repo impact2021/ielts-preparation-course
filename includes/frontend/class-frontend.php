@@ -883,8 +883,8 @@ class IELTS_CM_Frontend {
      * 
      * @deprecated This function has been disabled to fix incorrect completion behavior.
      *             Completion logic is now handled in single-resource-page.php template
-     *             which marks resources as completed on the second visit, not the first.
-     *             This prevents the "Completed" badge from showing on first visit.
+     *             which tracks resource access but does NOT auto-mark as completed.
+     *             Resources should only be marked as completed through explicit user action.
      * 
      * The function is kept to avoid breaking the wp action hook registration,
      * but no longer performs any actions. It will do nothing when called.

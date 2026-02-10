@@ -64,7 +64,8 @@ body.ielts-resource-single .content-area {
                     // Check if already completed
                     $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
                     
-                    // Check if this resource has been accessed before
+                    // Track that user has accessed this resource (for last_accessed timestamp)
+                    // but don't auto-mark as completed - only mark as completed when user explicitly does so
                     global $wpdb;
                     $table = $progress_tracker->get_progress_table();
                     $existing = $wpdb->get_row($wpdb->prepare(
@@ -73,15 +74,11 @@ body.ielts-resource-single .content-area {
                     ));
                     
                     if ($existing) {
-                        // Resource has been accessed before - mark as completed if not already
-                        if (!$is_completed) {
-                            $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
-                            $is_completed = true;
-                        }
+                        // Resource has been accessed before - update last_accessed but keep completed status as-is
+                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, $existing->completed);
                     } else {
-                        // First time viewing - just track access, don't mark as completed
+                        // First time viewing - track access without marking as completed
                         $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
-                        $is_completed = false;
                     }
                 }
             }
