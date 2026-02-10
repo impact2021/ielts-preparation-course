@@ -201,16 +201,13 @@
                         lesson_id: lessonId,
                         resource_id: resourceId
                     },
-                    success: function(response) {
-                        // Navigate after successful completion tracking
-                        window.location.href = targetUrl;
-                    },
-                    error: function() {
-                        // Navigate anyway even if tracking fails - don't block user navigation
+                    complete: function() {
+                        // Navigate after AJAX completes (success or failure)
                         window.location.href = targetUrl;
                     }
                 });
             }
+            // If missing IDs, allow default navigation to proceed
         });
         
         // Store quiz start time (set when quiz form is first shown)
