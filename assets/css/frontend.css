@@ -1621,8 +1621,10 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
 /* Completion message in navigation */
 .nav-completion-message {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     padding: 8px 16px;
     background: #d4edda;
     border: 1px solid #c3e6cb;
@@ -1635,6 +1637,10 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
 
 .nav-completion-message span {
     display: inline-block;
+}
+
+.nav-completion-message a.button {
+    margin-top: 0;
 }
 
 @media (max-width: 768px) {
