@@ -628,7 +628,7 @@ body.ielts-resource-single .content-area {
                 if ($is_last_lesson && $course_id) {
                     $current_course = get_post($course_id);
                     if ($current_course) {
-                        // Get all published courses ordered by menu_order
+                        // Get all published units ordered by menu_order
                         $all_courses = get_posts(array(
                             'post_type' => 'ielts_course',
                             'posts_per_page' => -1,
@@ -637,7 +637,7 @@ body.ielts-resource-single .content-area {
                             'post_status' => 'publish'
                         ));
                         
-                        // Find the current course and get the next one
+                        // Find the current unit and get the next one
                         foreach ($all_courses as $index => $course) {
                             if ($course->ID == $course_id) {
                                 if (isset($all_courses[$index + 1])) {
