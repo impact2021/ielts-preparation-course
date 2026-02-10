@@ -23,7 +23,7 @@ This release adds two improvements:
 
 **Technical Details**:
 - Modified `includes/class-post-types.php` to add `'page-attributes'` to the supports array
-- Unit navigation already respects `menu_order` in `templates/single-course.php` (line 320)
+- Unit navigation already respects `menu_order` in `templates/single-course.php`
 - No database changes required - uses WordPress's built-in menu_order field
 
 ### 2. Report Error Button Improvements

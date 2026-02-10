@@ -975,7 +975,7 @@ class IELTS_CM_Frontend {
             padding: 12px 18px;
             border-radius: 6px;
             cursor: pointer;
-            z-index: 9998;
+            z-index: 9998; /* Below navigation elements (9999) to avoid obscuring next/prev buttons */
             box-shadow: 0 3px 8px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             white-space: nowrap;
