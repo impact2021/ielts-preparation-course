@@ -188,18 +188,22 @@ class IELTS_CM_Progress_Tracker {
         $quiz_ids = array();
         if (!empty($lesson_ids)) {
             $lesson_count = count($lesson_ids);
+            // Note: For courses exceeding MAX_QUERY_ITEMS lessons, quiz counting is skipped
+            // This is an edge case limitation affecting very large courses (1000+ lessons)
             if ($lesson_count <= self::MAX_QUERY_ITEMS) {
                 // Ensure all lesson IDs are integers for security
                 $lesson_ids = array_map('intval', $lesson_ids);
                 
                 // Build safe OR conditions for each lesson ID (checking both single lesson_id and serialized lesson_ids)
+                // Each condition is individually escaped using wpdb->prepare() before concatenation
                 $quiz_conditions = array();
                 foreach ($lesson_ids as $lid) {
-                    // Each condition is properly prepared with wpdb->prepare for security
+                    // Prepared statement for single lesson_id - safe integer substitution
                     $quiz_conditions[] = $wpdb->prepare(
                         "(pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)",
                         $lid
                     );
+                    // Prepared statement for serialized lesson_ids - safe string substitution with escaped LIKE patterns
                     $int_pattern_lesson = '%' . $wpdb->esc_like('i:' . $lid . ';') . '%';
                     $str_pattern_lesson = '%' . $wpdb->esc_like(serialize(strval($lid))) . '%';
                     $quiz_conditions[] = $wpdb->prepare(
@@ -208,10 +212,11 @@ class IELTS_CM_Progress_Tracker {
                         $str_pattern_lesson
                     );
                 }
-                // Safe to concatenate since each condition is already prepared/escaped
+                // Safe to concatenate: all conditions are already escaped via wpdb->prepare()
+                // This pattern is necessary because wpdb->prepare() doesn't support dynamic OR clause construction
                 $quiz_where_clause = implode(' OR ', $quiz_conditions);
                 
-                // Execute query - no additional prepare needed as all inputs are already sanitized
+                // Execute query - no additional prepare needed as all inputs are already sanitized above
                 $quiz_ids = $wpdb->get_col("
                     SELECT DISTINCT pm.post_id 
                     FROM {$wpdb->postmeta} pm
