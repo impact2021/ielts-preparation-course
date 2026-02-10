@@ -55,17 +55,14 @@ body.ielts-resource-single .content-area {
             // Check if user has access to this resource
             $has_access = false;
             $is_completed = false;
+            $has_visited_before = false;  // Track if user has visited this resource before
             
             if ($user_id && $course_id) {
                 $enrollment = new IELTS_CM_Enrollment();
                 $has_access = $enrollment->is_enrolled($user_id, $course_id);
                 
                 if ($has_access && $lesson_id) {
-                    // Check if already completed
-                    $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
-                    
-                    // Track that user has accessed this resource (for last_accessed timestamp)
-                    // but don't auto-mark as completed - only mark as completed when user explicitly does so
+                    // Check if this resource has been accessed before
                     global $wpdb;
                     $table = $progress_tracker->get_progress_table();
                     $existing = $wpdb->get_row($wpdb->prepare(
@@ -74,10 +71,18 @@ body.ielts-resource-single .content-area {
                     ));
                     
                     if ($existing) {
-                        // Resource has been accessed before - update last_accessed but keep completed status as-is
+                        // Resource has been accessed before
+                        $has_visited_before = true;
+                        $is_completed = (bool) $existing->completed;
+                        
+                        // Update last_accessed but keep completed status as-is
                         $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, $existing->completed);
                     } else {
-                        // First time viewing - track access without marking as completed
+                        // First time viewing this resource
+                        $has_visited_before = false;
+                        $is_completed = false;
+                        
+                        // Track access without marking as completed
                         $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
                     }
                 }
@@ -202,7 +207,14 @@ body.ielts-resource-single .content-area {
                 <div class="resource-header">
                     <h1><?php echo esc_html($resource->post_title); ?></h1>
                     
-                    <?php if ($user_id && $lesson_id && $is_completed): ?>
+                    <?php 
+                    // Only show completed badge if:
+                    // 1. User is logged in
+                    // 2. Resource is part of a lesson
+                    // 3. User has visited this resource before (not first visit)
+                    // 4. Resource is marked as completed
+                    if ($user_id && $lesson_id && $has_visited_before && $is_completed): 
+                    ?>
                         <div class="resource-completed-badge">
                             <span class="dashicons dashicons-yes-alt"></span>
                             <?php _e('Completed', 'ielts-course-manager'); ?>
