@@ -193,7 +193,7 @@ class IELTS_CM_Auto_Sync_Manager {
      * Get all content that has changed since last sync
      * Returns items in the correct order to prevent progress loss:
      * 1. Courses (so lessons can reference them)
-     * 2. Resources and exercises (so sync_lesson_pages doesn't trash them)
+     * 2. Resources and quizzes (so sync_lesson_pages doesn't trash them)
      * 3. Lessons (after their children exist)
      */
     private function get_changed_content() {
@@ -229,7 +229,7 @@ class IELTS_CM_Auto_Sync_Manager {
                     }
                 }
                 
-                // Collect exercises for this lesson
+                // Collect quizzes for this lesson
                 foreach ($lesson['exercises'] as $exercise) {
                     if ($this->is_content_changed($exercise['id'], $exercise['type'])) {
                         $lesson_children[] = array(
@@ -250,11 +250,11 @@ class IELTS_CM_Auto_Sync_Manager {
         
         // Add items in the correct order:
         // 1. All courses first
-        $changed_items = array_merge($changed_items, $courses);
+        $changed_items = $courses;
         
         // 2. Then for each lesson: add children first, then the lesson
         foreach ($lessons_with_children as $item) {
-            // Add children (resources and exercises) first
+            // Add children (resources and quizzes) first
             $changed_items = array_merge($changed_items, $item['children']);
             
             // Then add the lesson itself if it has changed

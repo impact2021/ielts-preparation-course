@@ -587,7 +587,7 @@ class IELTS_CM_Multi_Site_Sync {
         $results = array();
         
         // For lessons, push children BEFORE the main content to prevent progress loss
-        // This ensures sync_lesson_pages doesn't trash existing resources/exercises
+        // This ensures sync_lesson_pages doesn't trash existing resources/quizzes
         if ($content_type === 'lesson') {
             $lesson_children = $this->push_lesson_children($content_id);
             $results['resources'] = $lesson_children['resources'];
@@ -598,13 +598,13 @@ class IELTS_CM_Multi_Site_Sync {
         $main_results = $this->push_content_to_subsites($content_id, $content_type);
         $results['main'] = $main_results;
         
-        // If it's a course, push all lessons, resources, and exercises
+        // If it's a course, push all lessons, resources, and quizzes
         if ($content_type === 'course') {
             $lessons = $this->get_course_lessons($content_id);
             $results['lessons'] = array();
             
             foreach ($lessons as $lesson) {
-                // Push all resources and exercises for this lesson BEFORE pushing the lesson
+                // Push all resources and quizzes for this lesson BEFORE pushing the lesson
                 // This prevents sync_lesson_pages from trashing existing content when the lesson is synced
                 $lesson_children = $this->push_lesson_children($lesson->ID);
                 
