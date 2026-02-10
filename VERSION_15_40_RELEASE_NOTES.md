@@ -82,44 +82,49 @@ if ($user_has_completed_quiz && $current_index >= 0 && $current_index < count($a
 - `templates/single-quiz-listening-exercise.php`
 - `templates/single-quiz-listening-practice.php`
 
-### 3. Completed Badge Fix (Critical)
+### 3. Completed Badge Fix (Critical - Multiple Iterations)
 
-**Issue**: The green "Completed" badge/text was appearing on resource pages on the **second visit**, even though users had not actually completed the content. This was confusing because it made users think they had already finished content when they had only viewed it once before.
+**Issue**: The green "Completed" badge was appearing on resource pages **on the very first page load**, even though users hadn't read anything yet. A student would open a resource for the first time and immediately see "Completed" at the top - nonsensical and confusing.
 
-**Root Cause**: In `single-resource-page.php`, there was logic that automatically marked resources as completed on the second visit:
+**Evolution of the Fix**:
 
+*First Iteration:* Removed auto-completion on second visit
+- Problem: Resources were being auto-marked as completed on the second visit
+- Fix: Track access without auto-completing
+
+*Second Iteration (Final):* Prevent badge from showing on first visit
+- Problem: Even without auto-completion, the badge could show on first visit if the resource was marked complete elsewhere (admin action, bulk import, etc.)
+- Root Cause: The code was checking completion status without verifying if the user had visited this resource before
+- **Final Solution**: Added `$has_visited_before` flag to track if a progress record exists
+
+**Current Behavior**:
 ```php
+// Check if visited before
 if ($existing) {
-    // Resource has been accessed before - mark as completed if not already
-    if (!$is_completed) {
-        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
-        $is_completed = true;  // ❌ Wrong! Auto-completing on 2nd visit
-    }
-}
-```
-
-This was originally intended to prevent showing "Completed" on the first visit, but it went too far by auto-completing on the second visit.
-
-**Solution**: Resources are now tracked for access (updating `last_accessed` timestamp) but are **NOT** automatically marked as completed:
-
-```php
-if ($existing) {
-    // Resource has been accessed before - update last_accessed but keep completed status as-is
-    $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, $existing->completed);
+    $has_visited_before = true;
+    $is_completed = (bool) $existing->completed;
 } else {
-    // First time viewing - track access without marking as completed
-    $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
+    $has_visited_before = false;  // First visit!
+    $is_completed = false;
+}
+
+// Badge shows ONLY if visited before AND completed
+if ($user_id && $lesson_id && $has_visited_before && $is_completed) {
+    // Show "Completed" badge
 }
 ```
 
-**Behavior**:
-- **First visit**: Tracks access, no "Completed" badge shown
-- **Second+ visits**: Updates `last_accessed`, preserves existing `completed` status (stays false until explicitly marked)
-- **Badge display**: Only shows when resource is explicitly marked as complete through user action
+**The Key Insight**: Even if a resource is legitimately marked as complete in the database, showing "Completed" on the very first page load is confusing. The badge should only appear on subsequent visits.
+
+**Result**:
+- **First visit**: NO badge shown (regardless of database state) ✅
+- **Second+ visits**: Badge shows if resource is marked as completed ✅
+- **Clear UX**: Students never see "Completed" when opening a resource for the first time
 
 **Files Updated:**
-- `templates/single-resource-page.php`
+- `templates/single-resource-page.php` - Added first-visit tracking
 - `includes/frontend/class-frontend.php` (comment updated)
+- `COMPLETED_BADGE_FIX.md` - Comprehensive documentation of the fix evolution
 
 ### 4. Version Updates
 
@@ -156,14 +161,15 @@ The Continue button fix uses the existing `ielts_cm_quiz_results` table to check
   - Listening exercise
   - Listening practice
 
-### 3. Completed Badge Verification (NEW)
-- [ ] As a logged-in user, navigate to a resource page you have NOT viewed before
-- [ ] Verify NO green "Completed" badge appears
+### 3. Completed Badge Verification (UPDATED - Final Fix)
+- [ ] As a logged-in user, navigate to a resource page you have NEVER visited before
+- [ ] **CRITICAL**: Verify NO green "Completed" badge appears on this first visit
 - [ ] Leave the page and return to the same resource (second visit)
-- [ ] Verify NO green "Completed" badge appears on second visit
-- [ ] Visit the resource a third time
-- [ ] Verify badge STILL does not appear (should only show when explicitly marked complete)
-- [ ] If there's a way to manually mark the resource as complete, test that the badge appears after doing so
+- [ ] Verify NO green "Completed" badge appears (resource not completed)
+- [ ] If resource gets marked as complete somehow (admin action, etc.)
+- [ ] Reload the page (third visit)
+- [ ] Verify badge NOW appears (visited before + completed = show badge)
+- [ ] Key test: Badge should NEVER show on the very first page load
 
 ### 4. Backwards Compatibility
 - [ ] Verify all existing quiz results still display correctly
