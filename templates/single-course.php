@@ -333,8 +333,9 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                 // Check if any category matches
                 $has_matching_category = !empty(array_intersect($current_categories, $c_categories));
                 
-                // Include course if it has matching category or if current course has no categories
-                if ($has_matching_category || empty($current_categories)) {
+                // Include course if it has matching category
+                // OR if both current course and this course have no categories (navigation within uncategorized courses)
+                if ($has_matching_category || (empty($current_categories) && empty($c_categories))) {
                     $filtered_courses[] = $c;
                 }
             }
