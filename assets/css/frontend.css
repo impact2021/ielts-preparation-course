@@ -459,7 +459,8 @@ body.ielts-course-archive .content-area {
     color: inherit !important;
 }
 
-.ielts-single-quiz .option-label input[type="radio"] {
+.ielts-single-quiz .option-label input[type="radio"],
+.ielts-single-quiz .option-label input[type="checkbox"] {
     margin: 0 10px 0 0;
     flex-shrink: 0;
     align-self: flex-start;
