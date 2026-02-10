@@ -968,10 +968,14 @@ class IELTS_CM_Sync_API {
         // Get the subsite URL without trailing slash
         $subsite_url = untrailingslashit(get_site_url());
         
+        // Ensure primary URL has no trailing slash for consistent comparison
+        $primary_site_url = untrailingslashit($primary_site_url);
+        
         // Normalize both URLs to use the same scheme for comparison
         // This prevents unnecessary rewriting when only the scheme differs
-        $primary_normalized = preg_replace('/^https?:\/\//', '', $primary_site_url);
-        $subsite_normalized = preg_replace('/^https?:\/\//', '', $subsite_url);
+        // Using str_replace for simplicity and reliability
+        $primary_normalized = str_replace(array('https://', 'http://'), '', $primary_site_url);
+        $subsite_normalized = str_replace(array('https://', 'http://'), '', $subsite_url);
         
         // If both domains are the same (ignoring scheme), no need to rewrite
         if ($primary_normalized === $subsite_normalized) {
@@ -991,6 +995,7 @@ class IELTS_CM_Sync_API {
         // - Closing parenthesis (for JavaScript/CSS)
         // - Closing square bracket (for shortcodes/arrays)
         // - Whitespace or end of string
+        // Note: When matching end of string ($), nothing follows so $2 will be empty
         $pattern = '/(' . $escaped_primary . ')(\/|"|\'|>|\?|&|\)|\]|\s|$)/';
         $replacement = $subsite_url . '$2';
         $result = preg_replace($pattern, $replacement, $content);
