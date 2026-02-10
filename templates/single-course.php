@@ -323,7 +323,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                     <a href="<?php echo get_permalink($prev_course->ID); ?>" class="nav-link">
                         <span class="nav-arrow">&laquo;</span>
                         <span class="nav-label">
-                            <small><?php _e('Previous Course', 'ielts-course-manager'); ?></small>
+                            <small><?php _e('Previous Unit', 'ielts-course-manager'); ?></small>
                             <strong><?php echo esc_html($prev_course->post_title); ?></strong>
                         </span>
                     </a>
@@ -333,7 +333,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                 <?php if ($next_course): ?>
                     <a href="<?php echo get_permalink($next_course->ID); ?>" class="nav-link">
                         <span class="nav-label">
-                            <small><?php _e('Next Course', 'ielts-course-manager'); ?></small>
+                            <small><?php _e('Next Unit', 'ielts-course-manager'); ?></small>
                             <strong><?php echo esc_html($next_course->post_title); ?></strong>
                         </span>
                         <span class="nav-arrow">&raquo;</span>
