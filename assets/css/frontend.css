@@ -422,7 +422,6 @@ body.ielts-course-archive .content-area {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 10px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -460,8 +459,9 @@ body.ielts-course-archive .content-area {
     color: inherit !important;
 }
 
-.ielts-single-quiz .option-label input[type="radio"] {
-    margin: 0;
+.ielts-single-quiz .option-label input[type="radio"],
+.ielts-single-quiz .option-label input[type="checkbox"] {
+    margin: 0 10px 0 0;
     flex-shrink: 0;
     align-self: flex-start;
 }
@@ -1904,7 +1904,6 @@ body.ielts-quiz-fullscreen.has-sticky-bottom-nav {
 
 /* Add spacing after option letter (for closed questions) */
 .option-letter {
-    margin-left: 4px;
     margin-right: 4px;
     flex: 0 0 auto; /* Prevent letter prefix from growing/pushing text to the right */
 }
