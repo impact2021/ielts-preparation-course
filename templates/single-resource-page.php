@@ -625,6 +625,7 @@ body.ielts-resource-single .content-area {
                 
                 // Find next unit if this is the last lesson
                 $next_unit = null;
+                $next_unit_label = __('Move on to next unit', 'ielts-course-manager');
                 if ($is_last_lesson && $course_id) {
                     if (get_post_status($course_id) === 'publish') {
                         // Get all published units ordered by menu_order
@@ -641,6 +642,11 @@ body.ielts-resource-single .content-area {
                             if ($unit->ID === $course_id) {
                                 if (isset($all_units[$index + 1])) {
                                     $next_unit = $all_units[$index + 1];
+                                    // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
+                                    $sanitized_title = sanitize_text_field($next_unit->post_title);
+                                    if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
+                                        $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
+                                    }
                                 }
                                 break;
                             }
@@ -735,7 +741,7 @@ body.ielts-resource-single .content-area {
                                         <span><?php _e('That is the end of this unit', 'ielts-course-manager'); ?></span>
                                         <?php if (isset($next_unit) && $next_unit): ?>
                                             <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary" style="margin-top: 10px;">
-                                                <?php _e('Move on to next unit', 'ielts-course-manager'); ?>
+                                                <?php echo esc_html($next_unit_label); ?>
                                             </a>
                                         <?php endif; ?>
                                     <?php else: ?>
