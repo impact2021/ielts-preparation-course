@@ -183,17 +183,39 @@ class IELTS_CM_Progress_Tracker {
         
         $total_resources = count($resource_ids);
         
-        // Get all quizzes in the course (check both old and new meta keys)
-        // Join with wp_posts to ensure we only get quizzes
-        $quiz_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT pm.post_id 
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-            WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status = 'publish'
-              AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
-                OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
-        ", $course_id, $int_pattern, $str_pattern));
+        // Get all quizzes that belong to lessons in this course (not course-level quizzes that aren't in lessons)
+        // This ensures we only count quizzes that are actually part of lessons, matching what users see
+        $quiz_ids = array();
+        if (!empty($lesson_ids)) {
+            $lesson_count = count($lesson_ids);
+            if ($lesson_count <= self::MAX_QUERY_ITEMS) {
+                // Build OR conditions for each lesson ID (checking both single lesson_id and serialized lesson_ids)
+                $quiz_conditions = array();
+                foreach ($lesson_ids as $lid) {
+                    $quiz_conditions[] = $wpdb->prepare(
+                        "(pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)",
+                        $lid
+                    );
+                    $int_pattern_lesson = '%' . $wpdb->esc_like('i:' . $lid . ';') . '%';
+                    $str_pattern_lesson = '%' . $wpdb->esc_like(serialize(strval($lid))) . '%';
+                    $quiz_conditions[] = $wpdb->prepare(
+                        "(pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s))",
+                        $int_pattern_lesson,
+                        $str_pattern_lesson
+                    );
+                }
+                $quiz_where_clause = implode(' OR ', $quiz_conditions);
+                
+                $quiz_ids = $wpdb->get_col("
+                    SELECT DISTINCT pm.post_id 
+                    FROM {$wpdb->postmeta} pm
+                    INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+                    WHERE p.post_type = 'ielts_quiz'
+                      AND p.post_status = 'publish'
+                      AND ($quiz_where_clause)
+                ");
+            }
+        }
         
         $total_quizzes = count($quiz_ids);
         
