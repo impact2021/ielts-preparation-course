@@ -225,7 +225,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         if (isset($all_units[$index + 1])) {
                             $next_unit = $all_units[$index + 1];
                             // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
-                            if (preg_match('/Unit\s+(\d+)/i', $next_unit->post_title, $matches)) {
+                            $sanitized_title = sanitize_text_field($next_unit->post_title);
+                            if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
                                 $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
                             }
                         }
