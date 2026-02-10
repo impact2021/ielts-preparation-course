@@ -622,6 +622,32 @@ body.ielts-resource-single .content-area {
                         }
                     }
                 }
+                
+                // Find next unit if this is the last lesson
+                $next_unit = null;
+                if ($is_last_lesson && $course_id) {
+                    $current_course = get_post($course_id);
+                    if ($current_course) {
+                        // Get all published courses ordered by menu_order
+                        $all_courses = get_posts(array(
+                            'post_type' => 'ielts_course',
+                            'posts_per_page' => -1,
+                            'orderby' => 'menu_order',
+                            'order' => 'ASC',
+                            'post_status' => 'publish'
+                        ));
+                        
+                        // Find the current course and get the next one
+                        foreach ($all_courses as $index => $course) {
+                            if ($course->ID == $course_id) {
+                                if (isset($all_courses[$index + 1])) {
+                                    $next_unit = $all_courses[$index + 1];
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
                 ?>
                 
                 <?php if ($prev_item || $next_item || $lesson_id || $course_id): ?>
@@ -707,7 +733,12 @@ body.ielts-resource-single .content-area {
                             <?php else: ?>
                                 <div class="nav-completion-message">
                                     <?php if ($is_last_lesson): ?>
-                                        <span><?php _e('You have finished this course', 'ielts-course-manager'); ?></span>
+                                        <span><?php _e('You have finished this unit', 'ielts-course-manager'); ?></span>
+                                        <?php if (isset($next_unit) && $next_unit): ?>
+                                            <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary" style="margin-top: 10px;">
+                                                <?php _e('Move on to next unit', 'ielts-course-manager'); ?>
+                                            </a>
+                                        <?php endif; ?>
                                     <?php else: ?>
                                         <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
                                     <?php endif; ?>
