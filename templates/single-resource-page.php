@@ -55,15 +55,13 @@ body.ielts-resource-single .content-area {
             // Check if user has access to this resource
             $has_access = false;
             $is_completed = false;
+            $has_visited_before = false;  // Track if user has visited this resource before
             
             if ($user_id && $course_id) {
                 $enrollment = new IELTS_CM_Enrollment();
                 $has_access = $enrollment->is_enrolled($user_id, $course_id);
                 
                 if ($has_access && $lesson_id) {
-                    // Check if already completed
-                    $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
-                    
                     // Check if this resource has been accessed before
                     global $wpdb;
                     $table = $progress_tracker->get_progress_table();
@@ -73,15 +71,19 @@ body.ielts-resource-single .content-area {
                     ));
                     
                     if ($existing) {
-                        // Resource has been accessed before - mark as completed if not already
-                        if (!$is_completed) {
-                            $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
-                            $is_completed = true;
-                        }
+                        // Resource has been accessed before
+                        $has_visited_before = true;
+                        $is_completed = (bool) $existing->completed;
+                        
+                        // Update last_accessed but keep completed status as-is
+                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, $existing->completed);
                     } else {
-                        // First time viewing - just track access, don't mark as completed
-                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
+                        // First time viewing this resource
+                        $has_visited_before = false;
                         $is_completed = false;
+                        
+                        // Track access without marking as completed
+                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
                     }
                 }
             }
@@ -136,17 +138,17 @@ body.ielts-resource-single .content-area {
                             </a>
                         </p>
                     <?php elseif (!is_user_logged_in()): ?>
-                        <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
+                        <p><?php _e('You need to be enrolled in this unit to access this resource.', 'ielts-course-manager'); ?></p>
                         <p>
                             <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink())); ?>" class="button button-primary">
                                 <?php _e('Login', 'ielts-course-manager'); ?>
                             </a>
                         </p>
                     <?php else: ?>
-                        <p><?php _e('You need to be enrolled in this course to access this resource.', 'ielts-course-manager'); ?></p>
+                        <p><?php _e('You need to be enrolled in this unit to access this resource.', 'ielts-course-manager'); ?></p>
                         <p>
                             <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button button-primary">
-                                <?php _e('View Course', 'ielts-course-manager'); ?>
+                                <?php _e('View Unit', 'ielts-course-manager'); ?>
                             </a>
                         </p>
                     <?php endif; ?>
@@ -205,7 +207,14 @@ body.ielts-resource-single .content-area {
                 <div class="resource-header">
                     <h1><?php echo esc_html($resource->post_title); ?></h1>
                     
-                    <?php if ($user_id && $lesson_id && $is_completed): ?>
+                    <?php 
+                    // Only show completed badge if:
+                    // 1. User is logged in
+                    // 2. Resource is part of a lesson
+                    // 3. User has visited this resource before (not first visit)
+                    // 4. Resource is marked as completed
+                    if ($user_id && $lesson_id && $has_visited_before && $is_completed): 
+                    ?>
                         <div class="resource-completed-badge">
                             <span class="dashicons dashicons-yes-alt"></span>
                             <?php _e('Completed', 'ielts-course-manager'); ?>

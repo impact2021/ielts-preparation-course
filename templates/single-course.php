@@ -38,7 +38,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
             <div class="course-progress-stats">
                 <div class="course-stats-container">
                     <div class="course-stat-item course-stat-progress">
-                        <span class="stat-label"><?php _e('Course Progress:', 'ielts-course-manager'); ?></span>
+                        <span class="stat-label"><?php _e('Unit Progress:', 'ielts-course-manager'); ?></span>
                         <span class="stat-value"><?php echo number_format($completion, 1); ?>%</span>
                         <div class="stat-progress-bar">
                             <div class="stat-progress-fill" style="width: <?php echo min(100, $completion); ?>%;"></div>
@@ -67,7 +67,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
     
     <?php if (!empty($lessons)): ?>
         <div class="course-lessons">
-            <h3><?php _e('Course Lessons', 'ielts-course-manager'); ?></h3>
+            <h3><?php _e('Unit Lessons', 'ielts-course-manager'); ?></h3>
             
             <?php
             // Batch fetch content counts for all lessons to avoid N+1 queries
@@ -140,7 +140,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                                     <?php
                                     $counts_parts = array();
                                     if ($resource_count > 0) {
-                                        $counts_parts[] = sprintf(_n('%d sublesson', '%d sublessons', $resource_count, 'ielts-course-manager'), $resource_count);
+                                        $counts_parts[] = sprintf(_n('%d learning resource', '%d learning resources', $resource_count, 'ielts-course-manager'), $resource_count);
                                     }
                                     if ($video_count > 0) {
                                         $counts_parts[] = sprintf(_n('%d video', '%d videos', $video_count, 'ielts-course-manager'), $video_count);
@@ -168,7 +168,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         </div>
         
         <style>
-        /* Course progress stats styling */
+        /* Unit progress stats styling */
         .course-progress-stats {
             width: 100%;
             margin: 20px 0;

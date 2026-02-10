@@ -162,7 +162,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             if (!empty($video_url)) {
                                 $type_label = __('Video', 'ielts-course-manager');
                             } else {
-                                $type_label = __('Sublesson', 'ielts-course-manager');
+                                $type_label = __('Learning Resource', 'ielts-course-manager');
                             }
                             $type_badge_class = 'resource';
                         } else {
