@@ -189,9 +189,13 @@ class IELTS_CM_Progress_Tracker {
         if (!empty($lesson_ids)) {
             $lesson_count = count($lesson_ids);
             if ($lesson_count <= self::MAX_QUERY_ITEMS) {
-                // Build OR conditions for each lesson ID (checking both single lesson_id and serialized lesson_ids)
+                // Ensure all lesson IDs are integers for security
+                $lesson_ids = array_map('intval', $lesson_ids);
+                
+                // Build safe OR conditions for each lesson ID (checking both single lesson_id and serialized lesson_ids)
                 $quiz_conditions = array();
                 foreach ($lesson_ids as $lid) {
+                    // Each condition is properly prepared with wpdb->prepare for security
                     $quiz_conditions[] = $wpdb->prepare(
                         "(pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)",
                         $lid
@@ -204,8 +208,10 @@ class IELTS_CM_Progress_Tracker {
                         $str_pattern_lesson
                     );
                 }
+                // Safe to concatenate since each condition is already prepared/escaped
                 $quiz_where_clause = implode(' OR ', $quiz_conditions);
                 
+                // Execute query - no additional prepare needed as all inputs are already sanitized
                 $quiz_ids = $wpdb->get_col("
                     SELECT DISTINCT pm.post_id 
                     FROM {$wpdb->postmeta} pm
