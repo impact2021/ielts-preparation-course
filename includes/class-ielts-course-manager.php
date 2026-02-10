@@ -115,6 +115,9 @@ class IELTS_Course_Manager {
         // Add hooks for syncing deletions to subsites
         add_action('wp_trash_post', array($this, 'sync_content_deletion'), 10, 1);
         add_action('before_delete_post', array($this, 'sync_content_deletion'), 10, 1);
+        
+        // Add plugin version to admin bar
+        add_action('admin_bar_menu', array($this, 'add_version_to_admin_bar'), 100);
     }
     
     /**
@@ -441,5 +444,22 @@ class IELTS_Course_Manager {
             
             error_log("IELTS Sync: Deletion notification for {$content_type} {$post_id} sent to {$success_count} subsite(s), {$fail_count} failed");
         }
+    }
+    
+    /**
+     * Add plugin version to admin bar
+     */
+    public function add_version_to_admin_bar($wp_admin_bar) {
+        // Only show in admin area
+        if (!is_admin()) {
+            return;
+        }
+        
+        $args = array(
+            'id'    => 'ielts-cm-version',
+            'title' => 'IELTS v' . IELTS_CM_VERSION,
+            'meta'  => array('class' => 'ielts-cm-version-node')
+        );
+        $wp_admin_bar->add_node($args);
     }
 }

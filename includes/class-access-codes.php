@@ -561,13 +561,18 @@ class IELTS_CM_Access_Codes {
                         <th>Registration Page URL</th>
                         <td><input type="url" name="iw_registration_page_url" value="<?php echo esc_attr($register_url); ?>" class="regular-text"></td>
                     </tr>
+                    <?php
+                    // Only show Entry Test option for Access Code sites (not hybrid or paid membership sites)
+                    $is_access_code_site = get_option('ielts_cm_access_code_enabled', false);
+                    if ($is_access_code_site):
+                    ?>
                     <tr>
                         <th>Enable Entry Test Membership</th>
                         <td>
                             <fieldset>
                                 <label>
                                     <input type="checkbox" name="ielts_cm_entry_test_enabled" value="1" <?php checked($entry_test_enabled, true); ?>>
-                                    Enable Entry Test membership type (for partner access code sites only)
+                                    Enable Entry Test membership type (for access code sites only)
                                 </label>
                                 <p class="description">
                                     When enabled, partners can enroll users in the Entry Test membership which only includes courses with the 'entry-test' category. This is NOT activated by default and should only be enabled for select partner sites.
@@ -575,6 +580,7 @@ class IELTS_CM_Access_Codes {
                             </fieldset>
                         </td>
                     </tr>
+                    <?php endif; ?>
                 </table>
                 <?php submit_button(); ?>
             </form>
