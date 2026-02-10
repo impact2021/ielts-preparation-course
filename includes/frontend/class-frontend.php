@@ -880,16 +880,18 @@ class IELTS_CM_Frontend {
     
     /**
      * Auto-mark resource (sublesson) as complete when user views it
-     * This runs on every page load, but only acts on resource pages
      * 
-     * Note: This function no longer auto-completes resources on view.
-     * The completion logic is handled in the template (single-resource-page.php)
-     * which marks resources as completed on the second visit, not the first.
+     * @deprecated This function has been disabled to fix incorrect completion behavior.
+     *             Completion logic is now handled in single-resource-page.php template
+     *             which marks resources as completed on the second visit, not the first.
+     *             This prevents the "Completed" badge from showing on first visit.
+     * 
+     * The function is kept to avoid breaking the wp action hook registration,
+     * but no longer performs any actions. It will do nothing when called.
      */
     public function auto_mark_resource_on_view() {
+        // This function is intentionally left empty (disabled)
         // Completion logic has been moved to single-resource-page.php template
-        // to properly handle first visit vs. subsequent visits
-        // This function is kept for backwards compatibility but does nothing
         return;
     }
     
