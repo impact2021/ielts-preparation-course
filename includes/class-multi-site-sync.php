@@ -297,6 +297,7 @@ class IELTS_CM_Multi_Site_Sync {
             'status' => $post->post_status,
             'menu_order' => $post->menu_order,
             'type' => $content_type,
+            'primary_site_url' => untrailingslashit(get_site_url()),
             'metadata' => array()
         );
         

@@ -148,10 +148,16 @@ class IELTS_CM_Sync_API {
         
         $post_type = $post_type_map[$content_type];
         
+        // Rewrite URLs in content from primary site to subsite
+        $content = $content_data['content'];
+        if (!empty($content_data['primary_site_url'])) {
+            $content = $this->rewrite_urls($content, $content_data['primary_site_url']);
+        }
+        
         // Prepare post data
         $post_data = array(
             'post_title' => $content_data['title'],
-            'post_content' => $content_data['content'],
+            'post_content' => $content,
             'post_excerpt' => $content_data['excerpt'] ?? '',
             'post_status' => $content_data['status'] ?? 'publish',
             'post_type' => $post_type,
@@ -947,5 +953,29 @@ class IELTS_CM_Sync_API {
             'message' => sprintf('%d %s item(s) processed successfully', $deleted_count, $content_type),
             'deleted_count' => $deleted_count
         ));
+    }
+    
+    /**
+     * Rewrite URLs from primary site to subsite
+     * Replaces absolute URLs from primary domain with current subsite domain
+     * while preserving the path structure
+     */
+    private function rewrite_urls($content, $primary_site_url) {
+        // Get the subsite URL without trailing slash
+        $subsite_url = untrailingslashit(get_site_url());
+        
+        // If both URLs are the same, no need to rewrite
+        if ($primary_site_url === $subsite_url) {
+            return $content;
+        }
+        
+        // Rewrite absolute URLs
+        // This handles URLs in href, src, and other HTML attributes
+        $content = str_replace($primary_site_url, $subsite_url, $content);
+        
+        // Also handle URLs with trailing slashes
+        $content = str_replace(trailingslashit($primary_site_url), trailingslashit($subsite_url), $content);
+        
+        return $content;
     }
 }
