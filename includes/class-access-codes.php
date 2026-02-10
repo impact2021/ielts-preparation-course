@@ -1089,6 +1089,7 @@ class IELTS_CM_Access_Codes {
                             <td>
                                 <select id="code-course-group" required style="width: 100%;">
                                     <?php foreach ($this->course_groups as $key => $label): ?>
+                                        <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
                                         <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -1164,6 +1165,7 @@ class IELTS_CM_Access_Codes {
                                 <td>
                                     <select name="course_group" required>
                                         <?php foreach ($this->course_groups as $key => $label): ?>
+                                            <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
                                             <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
                                         <?php endforeach; ?>
                                     </select>
@@ -1214,6 +1216,7 @@ class IELTS_CM_Access_Codes {
                                 <td>
                                     <select name="course_group" required>
                                         <?php foreach ($this->course_groups as $key => $label): ?>
+                                            <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
                                             <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
                                         <?php endforeach; ?>
                                     </select>

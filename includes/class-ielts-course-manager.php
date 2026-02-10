@@ -450,8 +450,8 @@ class IELTS_Course_Manager {
      * Add plugin version to admin bar
      */
     public function add_version_to_admin_bar($wp_admin_bar) {
-        // Only show in admin area
-        if (!is_admin()) {
+        // Only show for admins
+        if (!current_user_can('manage_options')) {
             return;
         }
         

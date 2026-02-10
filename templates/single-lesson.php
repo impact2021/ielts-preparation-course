@@ -593,7 +593,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                         <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
                             <span class="nav-label">
                                 <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('the course', 'ielts-course-manager'); ?></strong>
+                                <strong><?php _e('the unit', 'ielts-course-manager'); ?></strong>
                             </span>
                         </a>
                     <?php endif; ?>
