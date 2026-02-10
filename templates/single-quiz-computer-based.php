@@ -273,7 +273,7 @@ if ($lesson_id) {
     
     // Find next unit if this is the last lesson
     $next_unit = null;
-    $next_unit_label = null;
+    $next_unit_label = __('Move on to next unit', 'ielts-course-manager');
     if ($is_last_lesson && $course_id) {
         if (get_post_status($course_id) === 'publish') {
             // Get all published units ordered by menu_order
@@ -293,8 +293,6 @@ if ($lesson_id) {
                         // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
                         if (preg_match('/Unit\s+(\d+)/i', $next_unit->post_title, $matches)) {
                             $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
-                        } else {
-                            $next_unit_label = __('Move on to next unit', 'ielts-course-manager');
                         }
                     }
                     break;
