@@ -255,7 +255,9 @@ class IELTS_CM_Auto_Sync_Manager {
         // 2. Then for each lesson: add children first, then the lesson
         foreach ($lessons_with_children as $item) {
             // Add children (resources and quizzes) first
-            $changed_items = array_merge($changed_items, $item['children']);
+            foreach ($item['children'] as $child) {
+                $changed_items[] = $child;
+            }
             
             // Then add the lesson itself if it has changed
             if ($this->is_content_changed($item['lesson']['id'], $item['lesson']['type'])) {
