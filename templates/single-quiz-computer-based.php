@@ -137,6 +137,19 @@ $next_url = '';
 $prev_url = '';
 $next_title = '';
 $prev_title = '';
+
+// Check if user has already completed this quiz (so we know whether to show the Continue button)
+$user_has_completed_quiz = false;
+if ($user_id) {
+    global $wpdb;
+    $quiz_results_table = $wpdb->prefix . 'ielts_cm_quiz_results';
+    $user_has_completed_quiz = (bool) $wpdb->get_var($wpdb->prepare(
+        "SELECT id FROM $quiz_results_table WHERE user_id = %d AND quiz_id = %d LIMIT 1",
+        $user_id,
+        $quiz->ID
+    ));
+}
+
 if ($lesson_id) {
     global $wpdb;
     // Check for both integer and string serialization in lesson_ids array
@@ -205,7 +218,8 @@ if ($lesson_id) {
     }
     
     // If there's a next item in this lesson, get its URL and title
-    if ($current_index >= 0 && $current_index < count($all_items) - 1) {
+    // Only show the next button if user has already completed this quiz
+    if ($user_has_completed_quiz && $current_index >= 0 && $current_index < count($all_items) - 1) {
         $next_post = $all_items[$current_index + 1]['post'];
         $next_title = $next_post->post_title;
         // Truncate to 15 characters
