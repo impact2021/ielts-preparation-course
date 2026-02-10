@@ -176,6 +176,40 @@
             });
         });
         
+        // Mark resource as complete when clicking navigation buttons
+        $(document).on('click', '.resource-nav-link', function(e) {
+            var link = $(this);
+            var courseId = link.data('course-id');
+            var lessonId = link.data('lesson-id');
+            var resourceId = link.data('resource-id');
+            
+            // Only mark as complete if we have all required IDs
+            if (courseId && lessonId && resourceId) {
+                // Prevent default navigation
+                e.preventDefault();
+                
+                var targetUrl = link.attr('href');
+                
+                // Send AJAX request to mark resource as complete
+                $.ajax({
+                    url: ieltsCM.ajaxUrl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_mark_complete',
+                        nonce: ieltsCM.nonce,
+                        course_id: courseId,
+                        lesson_id: lessonId,
+                        resource_id: resourceId
+                    },
+                    complete: function() {
+                        // Navigate after AJAX completes (success or failure)
+                        window.location.href = targetUrl;
+                    }
+                });
+            }
+            // If missing IDs, allow default navigation to proceed
+        });
+        
         // Store quiz start time (set when quiz form is first shown)
         var quizStartTime = null;
         

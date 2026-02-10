@@ -648,7 +648,7 @@ body.ielts-resource-single .content-area {
                                     $prev_label = __('Previous', 'ielts-course-manager');
                                 }
                                 ?>
-                                <a href="<?php echo esc_url($prev_url); ?>" class="nav-link">
+                                <a href="<?php echo esc_url($prev_url); ?>" class="nav-link resource-nav-link" data-course-id="<?php echo esc_attr($course_id); ?>" data-lesson-id="<?php echo esc_attr($lesson_id); ?>" data-resource-id="<?php echo esc_attr($resource_id); ?>">
                                     <span class="nav-arrow">&laquo;</span>
                                     <span class="nav-label">
                                         <small><?php echo esc_html($prev_label); ?></small>
@@ -659,7 +659,7 @@ body.ielts-resource-single .content-area {
                         </div>
                         <div class="nav-item nav-center-left">
                             <?php if ($lesson_id): ?>
-                                <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
+                                <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson resource-nav-link" data-course-id="<?php echo esc_attr($course_id); ?>" data-lesson-id="<?php echo esc_attr($lesson_id); ?>" data-resource-id="<?php echo esc_attr($resource_id); ?>">
                                     <span class="nav-label">
                                         <small><?php _e('Back to the Lesson', 'ielts-course-manager'); ?></small>
                                     </span>
@@ -668,7 +668,7 @@ body.ielts-resource-single .content-area {
                         </div>
                         <div class="nav-item nav-center-right">
                             <?php if ($course_id): ?>
-                                <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
+                                <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course resource-nav-link" data-course-id="<?php echo esc_attr($course_id); ?>" data-lesson-id="<?php echo esc_attr($lesson_id); ?>" data-resource-id="<?php echo esc_attr($resource_id); ?>">
                                     <span class="nav-label">
                                         <small><?php _e('Back to the Unit', 'ielts-course-manager'); ?></small>
                                     </span>
@@ -697,7 +697,7 @@ body.ielts-resource-single .content-area {
                                     $next_label = __('Next', 'ielts-course-manager');
                                 }
                                 ?>
-                                <a href="<?php echo esc_url($next_url); ?>" class="nav-link">
+                                <a href="<?php echo esc_url($next_url); ?>" class="nav-link resource-nav-link" data-course-id="<?php echo esc_attr($course_id); ?>" data-lesson-id="<?php echo esc_attr($lesson_id); ?>" data-resource-id="<?php echo esc_attr($resource_id); ?>">
                                     <span class="nav-label">
                                         <small><?php echo esc_html($next_label); ?></small>
                                         <strong><?php echo esc_html($next_item['post']->post_title); ?></strong>
