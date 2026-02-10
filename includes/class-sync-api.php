@@ -958,7 +958,7 @@ class IELTS_CM_Sync_API {
     /**
      * Rewrite URLs from primary site to subsite
      * Replaces absolute URLs from primary domain with current subsite domain
-     * while preserving the path structure
+     * while preserving the path structure. Handles both http and https schemes.
      * 
      * @param string $content The content to rewrite
      * @param string $primary_site_url The primary site URL to replace
@@ -971,39 +971,33 @@ class IELTS_CM_Sync_API {
         // Ensure primary URL has no trailing slash for consistent comparison
         $primary_site_url = untrailingslashit($primary_site_url);
         
-        // Normalize both URLs to use the same scheme for comparison
-        // This prevents unnecessary rewriting when only the scheme differs
-        // Using str_replace for simplicity and reliability
-        $primary_normalized = str_replace(array('https://', 'http://'), '', $primary_site_url);
-        $subsite_normalized = str_replace(array('https://', 'http://'), '', $subsite_url);
+        // Use parse_url for reliable domain comparison
+        $primary_host = parse_url($primary_site_url, PHP_URL_HOST);
+        $subsite_host = parse_url($subsite_url, PHP_URL_HOST);
         
-        // If both domains are the same (ignoring scheme), no need to rewrite
-        if ($primary_normalized === $subsite_normalized) {
+        // If both domains are the same, no need to rewrite
+        if ($primary_host === $subsite_host) {
             return $content;
         }
         
-        // Escape special regex characters in URLs for safe pattern matching
-        $escaped_primary = preg_quote($primary_site_url, '/');
+        // Handle both http and https versions of the primary URL
+        // Get scheme-neutral version by removing scheme
+        $primary_without_scheme = preg_replace('/^https?:\/\//', '', $primary_site_url);
         
-        // Use regex to replace URLs with word boundaries to avoid partial matches
-        // This pattern matches the primary URL followed by common delimiters:
-        // - Forward slash (for paths)
-        // - Quotes (for attribute values)
-        // - Greater than (for closing tags)
-        // - Question mark (for query parameters)
-        // - Ampersand (for additional query parameters)
-        // - Closing parenthesis (for JavaScript/CSS)
-        // - Closing square bracket (for shortcodes/arrays)
-        // - Whitespace or end of string
-        // Note: When matching end of string ($), nothing follows so $2 will be empty
-        $pattern = '/(' . $escaped_primary . ')(\/|"|\'|>|\?|&|\)|\]|\s|$)/';
+        // Create patterns for both http and https versions
+        $patterns = array();
+        $patterns[] = preg_quote('https://' . $primary_without_scheme, '/');
+        $patterns[] = preg_quote('http://' . $primary_without_scheme, '/');
+        
+        // Combine patterns to match either scheme
+        $pattern = '/(' . implode('|', $patterns) . ')(\/|"|\'|>|\?|&|\)|\]|\s|$)/';
         $replacement = $subsite_url . '$2';
         $result = preg_replace($pattern, $replacement, $content);
         
         // Check for preg_replace failure
         if ($result === null) {
-            // Log the error for debugging
-            error_log('IELTS Sync: preg_replace failed during URL rewriting. Pattern: ' . $pattern);
+            // Log error without exposing URL details
+            error_log('IELTS Sync: URL rewriting failed - preg_replace returned null');
             // Return original content unchanged
             return $content;
         }
