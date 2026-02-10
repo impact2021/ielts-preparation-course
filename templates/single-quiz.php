@@ -204,6 +204,31 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                 }
             }
         }
+        
+        // Find next unit if this is the last lesson
+        $next_unit = null;
+        if ($is_last_lesson && $course_id) {
+            if (get_post_status($course_id) === 'publish') {
+                // Get all published units ordered by menu_order
+                $all_units = get_posts(array(
+                    'post_type' => 'ielts_course',
+                    'posts_per_page' => -1,
+                    'orderby' => 'menu_order',
+                    'order' => 'ASC',
+                    'post_status' => 'publish'
+                ));
+                
+                // Find the current unit and get the next one
+                foreach ($all_units as $index => $unit) {
+                    if ($unit->ID === $course_id) {
+                        if (isset($all_units[$index + 1])) {
+                            $next_unit = $all_units[$index + 1];
+                        }
+                        break;
+                    }
+                }
+            }
+        }
     }
     ?>
     
@@ -1024,7 +1049,12 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                     <?php else: ?>
                         <div class="nav-completion-message">
                             <?php if (isset($is_last_lesson) && $is_last_lesson): ?>
-                                <span><?php _e('You have finished this course', 'ielts-course-manager'); ?></span>
+                                <span><?php _e('You have finished this unit', 'ielts-course-manager'); ?></span>
+                                <?php if (isset($next_unit) && $next_unit): ?>
+                                    <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary" style="margin-top: 10px;">
+                                        <?php _e('Move on to next unit', 'ielts-course-manager'); ?>
+                                    </a>
+                                <?php endif; ?>
                             <?php else: ?>
                                 <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
                             <?php endif; ?>
