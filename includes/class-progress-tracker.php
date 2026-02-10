@@ -156,7 +156,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_lesson'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $course_id, $int_pattern, $str_pattern));
@@ -174,7 +174,7 @@ class IELTS_CM_Progress_Tracker {
                     FROM {$wpdb->postmeta} pm
                     INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
                     WHERE p.post_type = 'ielts_resource'
-                      AND p.post_status != 'trash'
+                      AND p.post_status = 'publish'
                       AND pm.meta_key = '_ielts_cm_lesson_id' 
                       AND pm.meta_value IN ($lesson_placeholders)
                 ", $lesson_ids));
@@ -190,7 +190,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $course_id, $int_pattern, $str_pattern));
@@ -279,7 +279,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_resource'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -290,7 +290,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -403,7 +403,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_resource'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -416,7 +416,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -479,7 +479,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -549,7 +549,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -618,7 +618,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_course_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_course_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $course_id, $int_pattern, $str_pattern));
@@ -687,7 +687,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_resource'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -714,7 +714,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_resource'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -756,7 +756,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND ((pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)
                 OR (pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)))
         ", $lesson_id, $int_pattern, $str_pattern));
@@ -801,7 +801,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_resource'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND pm.meta_key = '_ielts_cm_lesson_id'
               AND pm.meta_value IN ($lesson_placeholders)
             GROUP BY pm.meta_value
@@ -821,7 +821,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_resource'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND pm.meta_key = '_ielts_cm_lesson_id'
               AND pm.meta_value IN ($lesson_placeholders)
         ", $lesson_ids));
@@ -861,7 +861,7 @@ class IELTS_CM_Progress_Tracker {
             FROM {$wpdb->postmeta} pm
             INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
             WHERE p.post_type = 'ielts_quiz'
-              AND p.post_status != 'trash'
+              AND p.post_status = 'publish'
               AND pm.meta_key = '_ielts_cm_lesson_id'
               AND pm.meta_value IN ($lesson_placeholders)
             GROUP BY pm.meta_value
