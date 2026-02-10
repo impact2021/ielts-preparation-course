@@ -1385,7 +1385,7 @@ if ($lesson_id) {
                     <?php else: ?>
                         <div class="nav-completion-message">
                             <?php if ($is_last_lesson): ?>
-                                <span><?php _e('You have finished this unit', 'ielts-course-manager'); ?></span>
+                                <span><?php _e('That is the end of this unit', 'ielts-course-manager'); ?></span>
                                 <?php if (isset($next_unit) && $next_unit): ?>
                                     <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary" style="margin-top: 10px;">
                                         <?php _e('Move on to next unit', 'ielts-course-manager'); ?>
