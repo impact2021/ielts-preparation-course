@@ -75,8 +75,8 @@ if (!isset($columns)) {
                                 <?php _e('Your Progress:', 'ielts-course-manager'); ?>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: <?php echo esc_attr(round($completion, 1)); ?>%;">
-                                    <span class="progress-text"><?php echo esc_html(round($completion, 1)); ?>%</span>
+                                <div class="progress-fill" style="width: <?php echo esc_attr(number_format($completion, 1, '.', '')); ?>%;">
+                                    <span class="progress-text"><?php echo esc_html(number_format($completion, 1)); ?>%</span>
                                 </div>
                             </div>
                         </div>
