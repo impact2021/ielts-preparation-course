@@ -41,7 +41,7 @@ class IELTS_CM_Post_Types {
             'show_in_menu' => true,
             'show_in_rest' => true,
             'menu_icon' => 'dashicons-welcome-learn-more',
-            'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+            'supports' => array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
             'rewrite' => array('slug' => 'ielts-course'),
             'capability_type' => 'post',
         );
