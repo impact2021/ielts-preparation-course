@@ -211,7 +211,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             $current_course = get_post($course_id);
             if ($current_course) {
                 // Get all published units ordered by menu_order
-                $all_courses = get_posts(array(
+                $all_units = get_posts(array(
                     'post_type' => 'ielts_course',
                     'posts_per_page' => -1,
                     'orderby' => 'menu_order',
@@ -220,10 +220,10 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                 ));
                 
                 // Find the current unit and get the next one
-                foreach ($all_courses as $index => $course) {
-                    if ($course->ID == $course_id) {
-                        if (isset($all_courses[$index + 1])) {
-                            $next_unit = $all_courses[$index + 1];
+                foreach ($all_units as $index => $unit) {
+                    if ($unit->ID == $course_id) {
+                        if (isset($all_units[$index + 1])) {
+                            $next_unit = $all_units[$index + 1];
                         }
                         break;
                     }
