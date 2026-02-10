@@ -1307,8 +1307,7 @@ if ($lesson_id) {
                     <?php if ($lesson_id): ?>
                         <a href="<?php echo esc_url(get_permalink($lesson_id)); ?>" class="nav-link nav-back-to-lesson">
                             <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('the lesson menu', 'ielts-course-manager'); ?></strong>
+                                <small><?php _e('Back to the Lesson', 'ielts-course-manager'); ?></small>
                             </span>
                         </a>
                     <?php endif; ?>
@@ -1330,8 +1329,7 @@ if ($lesson_id) {
                     <?php if ($course_id): ?>
                         <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-link nav-back-to-course">
                             <span class="nav-label">
-                                <small><?php _e('Back to', 'ielts-course-manager'); ?></small>
-                                <strong><?php _e('the unit', 'ielts-course-manager'); ?></strong>
+                                <small><?php _e('Back to the Unit', 'ielts-course-manager'); ?></small>
                             </span>
                         </a>
                     <?php endif; ?>
