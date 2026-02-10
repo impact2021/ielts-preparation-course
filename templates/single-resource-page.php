@@ -66,7 +66,7 @@ body.ielts-resource-single .content-area {
                     
                     // Check if this resource has been accessed before
                     global $wpdb;
-                    $table = $progress_tracker->get_progress_table();
+                    $table = esc_sql($progress_tracker->get_progress_table());
                     $existing = $wpdb->get_row($wpdb->prepare(
                         "SELECT id, completed FROM {$table} WHERE user_id = %d AND lesson_id = %d AND resource_id = %d",
                         $user_id, $lesson_id, $resource_id
