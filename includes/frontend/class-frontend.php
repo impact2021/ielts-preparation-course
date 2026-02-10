@@ -928,6 +928,9 @@ class IELTS_CM_Frontend {
         $user_first_name = esc_html(get_user_meta($current_user->ID, 'first_name', true));
         $user_last_name = esc_html(get_user_meta($current_user->ID, 'last_name', true));
         
+        // Get primary color from settings
+        $primary_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
+        
         // Start output buffering
         ob_start();
         ?>
@@ -954,7 +957,7 @@ class IELTS_CM_Frontend {
                         <input type="hidden" name="report_last_name" value="<?php echo esc_attr($user_last_name); ?>">
                         <input type="hidden" name="action" value="ielts_cm_submit_error_report">
                         <input type="hidden" name="error_report_nonce" value="<?php echo wp_create_nonce('ielts_error_report_nonce'); ?>">
-                        <button type="submit" style="background: #0073e6; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600;">Submit Report</button>
+                        <button type="submit" style="background: <?php echo esc_attr($primary_color); ?>; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600;">Submit Report</button>
                     </form>
                 </div>
             </div>
@@ -964,22 +967,22 @@ class IELTS_CM_Frontend {
         /* Button styling */
         #impact-report-issue-btn {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #0073e6;
+            bottom: 120px;
+            right: 20px;
+            background: <?php echo esc_attr($primary_color); ?>;
             color: #fff;
             border: none;
             padding: 12px 18px;
             border-radius: 6px;
             cursor: pointer;
-            z-index: 9999;
+            z-index: 9998;
             box-shadow: 0 3px 8px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
             white-space: nowrap;
             overflow: hidden;
         }
         #impact-report-issue-btn:hover { 
-            background: #005bb5;
+            opacity: 0.85;
             transform: translateY(-2px);
         }
         #impact-report-issue-btn.minimized {
@@ -991,11 +994,11 @@ class IELTS_CM_Frontend {
             font-size: 24px;
             line-height: 48px;
             text-align: center;
-            background: #0073e6;
+            background: <?php echo esc_attr($primary_color); ?>;
             box-shadow: 0 3px 8px rgba(0,0,0,0.4);
         }
         #impact-report-issue-btn.minimized:hover {
-            background: #005bb5;
+            opacity: 0.85;
         }
         
         /* Respect reduced motion preferences */

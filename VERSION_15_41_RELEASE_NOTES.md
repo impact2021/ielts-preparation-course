@@ -1,11 +1,13 @@
 # Version 15.41 Release Notes
 
 ## Overview
-This release adds the ability to set menu order for units directly in the unit settings page, allowing administrators to control the navigation order.
+This release adds two improvements:
+1. The ability to set menu order for units directly in the unit settings page, allowing administrators to control the navigation order
+2. Repositioned and recolored the "Report an Error" button to be less obtrusive and match site branding
 
 ## Changes
 
-### Menu Order Support for Units
+### 1. Menu Order Support for Units
 
 **Issue**: Unit navigation was working based on menu order, but there was no way to set the menu order in the admin interface. Administrators had to rely on the default WordPress ordering (usually by date) or use third-party plugins.
 
@@ -24,8 +26,26 @@ This release adds the ability to set menu order for units directly in the unit s
 - Unit navigation already respects `menu_order` in `templates/single-course.php` (line 320)
 - No database changes required - uses WordPress's built-in menu_order field
 
+### 2. Report Error Button Improvements
+
+**Issue**: The circular "Report an Error" button was positioned at the bottom of the page, obscuring the "Next" navigation link. It also used a hardcoded blue color that didn't match site branding.
+
+**Solution**: 
+- Repositioned the button to be higher up on the page (120px from bottom instead of 30px)
+- Moved it slightly more to the right edge (20px from right instead of 30px)
+- Changed z-index to 9998 (from 9999) to ensure it stays below critical navigation elements
+- Updated button colors to use the site's Primary Color setting from admin settings
+- Button and submit form now dynamically use `ielts_cm_vocab_header_color` option
+
+**Visual Changes**:
+- Button is now positioned higher and more to the right, avoiding interference with bottom navigation
+- Button background color matches the Primary Color setting (default: #E56C0A instead of #0073e6)
+- Submit button in the modal also uses the primary color for consistency
+- Hover effect changed to opacity-based for better color consistency
+
 **Files Modified:**
 - `includes/class-post-types.php`
+- `includes/frontend/class-frontend.php`
 - `ielts-course-manager.php` (version bump)
 
 ## Version Numbers
@@ -45,11 +65,20 @@ This release adds the ability to set menu order for units directly in the unit s
 - [ ] Verify "Previous" and "Next" navigation buttons respect menu_order
 - [ ] Change menu_order values and verify navigation updates accordingly
 
-### 3. Backwards Compatibility
+### 3. Test Report Error Button Position and Color
+- [ ] Navigate to any course, lesson, or quiz page as a logged-in user
+- [ ] Verify the Report Error button (?) appears in the bottom-right corner
+- [ ] Verify it's positioned higher than before (not obscuring bottom nav)
+- [ ] Verify the button color matches your Primary Color setting
+- [ ] Click the button to open the modal
+- [ ] Verify the "Submit Report" button also uses the primary color
+- [ ] Change the Primary Color in Settings and verify button updates
+
+### 4. Backwards Compatibility
 - [ ] Verify existing units without menu_order set (defaulting to 0) still work
 - [ ] Verify navigation works correctly for units with same menu_order value
 
 ## Notes
-- This is a minimal change that leverages WordPress's built-in functionality
-- No changes to existing unit navigation logic were required
 - Menu order field is optional - units without a set order will default to 0
+- Report error button color automatically updates when Primary Color is changed in settings
+- Both changes are minimal and leverage existing WordPress and plugin functionality
