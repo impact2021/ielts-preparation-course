@@ -312,7 +312,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         $enrolled_course_ids = array_column($enrolled_courses_data, 'course_id');
         
         if (!empty($enrolled_course_ids)) {
-            // Get all enrolled courses with same categories as current course
+            // Get all enrolled courses
             $all_courses = get_posts(array(
                 'post_type' => 'ielts_course',
                 'posts_per_page' => -1,
