@@ -271,9 +271,9 @@ if ($lesson_id) {
                         </a>
                     <?php endif; ?>
                     
-                    <!-- Always show Return to course button -->
+                    <!-- Always show Return to unit button -->
                     <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="nav-page-link return-course-link nav-link-clickable">
-                        <?php _e('Return to course', 'ielts-course-manager'); ?>
+                        <?php _e('Return to unit', 'ielts-course-manager'); ?>
                     </a>
                     
                     <?php 

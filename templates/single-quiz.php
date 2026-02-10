@@ -102,7 +102,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
         $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
         
-        // Get all resources (sublessons) for this lesson
+        // Get all resources (learning resources) for this lesson
         $resource_ids = $wpdb->get_col($wpdb->prepare("
             SELECT DISTINCT post_id 
             FROM {$wpdb->postmeta} 

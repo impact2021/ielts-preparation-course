@@ -89,7 +89,7 @@ if (!isset($columns)) {
                                 <?php 
                                 // Check if course has been started by checking completion percentage
                                 $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
-                                $button_text = ($completion > 0) ? __('Continue Course', 'ielts-course-manager') : __('Start Course', 'ielts-course-manager');
+                                $button_text = ($completion > 0) ? __('Continue Unit', 'ielts-course-manager') : __('Start Unit', 'ielts-course-manager');
                                 ?>
                                 <a href="<?php echo get_permalink($course->ID); ?>" class="button button-primary">
                                     <?php echo $button_text; ?>

@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
     <h2><?php _e('My Learning Progress', 'ielts-course-manager'); ?></h2>
     
     <?php if ($course_id): ?>
-        <!-- Single course progress -->
+        <!-- Single unit progress -->
         <div class="single-course-progress">
             <div class="course-header">
                 <h3><?php echo esc_html($course->post_title); ?></h3>

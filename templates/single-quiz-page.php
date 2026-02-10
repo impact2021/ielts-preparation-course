@@ -182,17 +182,17 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
                             </a>
                         </p>
                     <?php elseif (!is_user_logged_in()): ?>
-                        <p><?php _e('You need to be enrolled in this course to access this exercise.', 'ielts-course-manager'); ?></p>
+                        <p><?php _e('You need to be enrolled in this unit to access this exercise.', 'ielts-course-manager'); ?></p>
                         <p>
                             <a href="<?php echo esc_url(IELTS_CM_Frontend::get_custom_login_url(get_permalink())); ?>" class="button button-primary">
                                 <?php _e('Login', 'ielts-course-manager'); ?>
                             </a>
                         </p>
                     <?php else: ?>
-                        <p><?php _e('You need to be enrolled in this course to access this exercise.', 'ielts-course-manager'); ?></p>
+                        <p><?php _e('You need to be enrolled in this unit to access this exercise.', 'ielts-course-manager'); ?></p>
                         <p>
                             <a href="<?php echo esc_url(get_permalink($course_id)); ?>" class="button button-primary">
-                                <?php _e('View Course', 'ielts-course-manager'); ?>
+                                <?php _e('View Unit', 'ielts-course-manager'); ?>
                             </a>
                         </p>
                     <?php endif; ?>
