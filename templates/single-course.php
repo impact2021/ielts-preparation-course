@@ -309,7 +309,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
         
         // Get all courses the user is enrolled in
         $enrolled_courses_data = $enrollment->get_user_courses($user_id);
-        $enrolled_course_ids = array_map(function($ec) { return $ec->course_id; }, $enrolled_courses_data);
+        $enrolled_course_ids = array_column($enrolled_courses_data, 'course_id');
         
         if (!empty($enrolled_course_ids)) {
             // Get all enrolled courses with same categories as current course
@@ -331,13 +331,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
                 }
                 
                 // Check if any category matches
-                $has_matching_category = false;
-                foreach ($current_categories as $cat) {
-                    if (in_array($cat, $c_categories)) {
-                        $has_matching_category = true;
-                        break;
-                    }
-                }
+                $has_matching_category = !empty(array_intersect($current_categories, $c_categories));
                 
                 // Include course if it has matching category or if current course has no categories
                 if ($has_matching_category || empty($current_categories)) {
