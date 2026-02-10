@@ -467,9 +467,10 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-single-quiz .option-label > span {
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .ielts-single-quiz .answer-input {
@@ -1057,9 +1058,10 @@ body.ielts-course-archive .content-area {
 }
 
 .ielts-computer-based-quiz .option-label > span {
-    flex: 1;
+    flex: 0 1 auto;
     min-width: 0;
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .ielts-computer-based-quiz .question-answer {
