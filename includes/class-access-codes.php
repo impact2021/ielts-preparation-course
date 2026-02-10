@@ -1237,8 +1237,8 @@ class IELTS_CM_Access_Codes {
                 </div>
                 <div class="iw-card-body">
                     <div style="margin-bottom: 15px;">
-                        <button class="iw-filter-btn active" data-filter="used">Used</button>
-                        <button class="iw-filter-btn" data-filter="available">Unused</button>
+                        <button class="iw-filter-btn" data-filter="used">Used</button>
+                        <button class="iw-filter-btn active" data-filter="available">Unused</button>
                         <button class="iw-btn" onclick="IWDashboard.downloadCSV()" style="float: right;">Download CSV</button>
                     </div>
                     <div style="clear: both;"></div>
@@ -1536,8 +1536,8 @@ class IELTS_CM_Access_Codes {
                 IWDashboard.filterStudents('active');
             }, 0);
             
-            // Initialize code filter to show used by default
-            IWDashboard.filterCodes('used');
+            // Initialize code filter to show available (unused) codes by default
+            IWDashboard.filterCodes('available');
             
             $('#create-invite-form').on('submit', function(e) {
                 e.preventDefault();
