@@ -70,13 +70,14 @@ if (!isset($columns)) {
                         <div class="course-progress">
                             <?php 
                             $completion = $progress_tracker->get_course_completion_percentage($user_id, $course->ID);
+                            $formatted_completion = number_format($completion, 1);
                             ?>
                             <div class="progress-label">
                                 <?php _e('Your Progress:', 'ielts-course-manager'); ?>
                             </div>
                             <div class="progress-bar">
-                                <div class="progress-fill" style="width: <?php echo esc_attr(number_format($completion, 1, '.', '')); ?>%;">
-                                    <span class="progress-text"><?php echo esc_html(number_format($completion, 1)); ?>%</span>
+                                <div class="progress-fill" style="width: <?php echo esc_attr($formatted_completion); ?>%;">
+                                    <span class="progress-text"><?php echo esc_html($formatted_completion); ?>%</span>
                                 </div>
                             </div>
                         </div>
