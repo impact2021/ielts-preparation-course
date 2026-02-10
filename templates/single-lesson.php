@@ -204,6 +204,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                         <svg width="34" height="34" viewBox="0 0 34 34">
                                             <circle class="progress-circle-bg" cx="17" cy="17" r="14" fill="none" stroke="#e0e0e0" stroke-width="2.5"></circle>
                                             <?php if ($is_completed): ?>
+                                                <!-- Completed: Full circle (circumference = 2πr = 2 × 3.14159 × 14 ≈ 87.96) -->
                                                 <circle class="progress-circle-fill" cx="17" cy="17" r="14" fill="none" stroke="#46b450" stroke-width="2.5" 
                                                         stroke-dasharray="87.96" stroke-dashoffset="0" transform="rotate(-90 17 17)"></circle>
                                                 <text x="17" y="17" text-anchor="middle" dy="0.35em" font-size="18" fill="#46b450" font-weight="bold">✓</text>
@@ -417,9 +418,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         .item-progress-circle svg {
             display: block;
         }
-        .progress-circle-fill {
-            transition: stroke-dasharray 0.3s ease;
-        }
+        /* Note: No transition needed - circles are either complete or incomplete, no animation */
         .ielts-content-table .content-type-col {
             width: 180px;
         }
