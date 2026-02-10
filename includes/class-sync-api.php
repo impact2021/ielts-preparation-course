@@ -969,12 +969,18 @@ class IELTS_CM_Sync_API {
             return $content;
         }
         
-        // Rewrite absolute URLs
-        // This handles URLs in href, src, and other HTML attributes
-        $content = str_replace($primary_site_url, $subsite_url, $content);
+        // Escape special regex characters in URLs for safe pattern matching
+        $escaped_primary = preg_quote($primary_site_url, '/');
         
-        // Also handle URLs with trailing slashes
-        $content = str_replace(trailingslashit($primary_site_url), trailingslashit($subsite_url), $content);
+        // Use regex to replace URLs with word boundaries to avoid partial matches
+        // This pattern matches the primary URL followed by either:
+        // - A forward slash (for paths)
+        // - A quote (for attribute values)
+        // - End of string
+        // - Whitespace
+        $pattern = '/(' . $escaped_primary . ')(\/|"|\'|\s|$)/';
+        $replacement = $subsite_url . '$2';
+        $content = preg_replace($pattern, $replacement, $content);
         
         return $content;
     }
