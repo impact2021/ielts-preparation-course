@@ -200,11 +200,18 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                         <tr class="content-row <?php echo $is_completed ? 'completed' : ''; ?>">
                             <?php if ($user_id): ?>
                                 <td class="content-status">
-                                    <?php if ($is_completed): ?>
-                                        <span class="dashicons dashicons-yes-alt" style="color: #46b450;"></span>
-                                    <?php else: ?>
-                                        <span class="dashicons dashicons-marker" style="color: #999;"></span>
-                                    <?php endif; ?>
+                                    <div class="item-progress-circle">
+                                        <svg width="34" height="34" viewBox="0 0 34 34">
+                                            <circle class="progress-circle-bg" cx="17" cy="17" r="14" fill="none" stroke="#e0e0e0" stroke-width="2.5"></circle>
+                                            <?php if ($is_completed): ?>
+                                                <circle class="progress-circle-fill" cx="17" cy="17" r="14" fill="none" stroke="#46b450" stroke-width="2.5" 
+                                                        stroke-dasharray="87.96" stroke-dashoffset="0" transform="rotate(-90 17 17)"></circle>
+                                                <text x="17" y="17" text-anchor="middle" dy="0.35em" font-size="18" fill="#46b450" font-weight="bold">✓</text>
+                                            <?php else: ?>
+                                                <text x="17" y="17" text-anchor="middle" dy="0.35em" font-size="20" fill="#999">○</text>
+                                            <?php endif; ?>
+                                        </svg>
+                                    </div>
                                 </td>
                             <?php endif; ?>
                             <td class="content-type">
@@ -399,6 +406,19 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
         }
         .ielts-content-table .content-status {
             text-align: center;
+        }
+        
+        /* Item circular progress indicator styling */
+        .item-progress-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item-progress-circle svg {
+            display: block;
+        }
+        .progress-circle-fill {
+            transition: stroke-dasharray 0.3s ease;
         }
         .ielts-content-table .content-type-col {
             width: 180px;

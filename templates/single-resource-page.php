@@ -64,13 +64,24 @@ body.ielts-resource-single .content-area {
                     // Check if already completed
                     $is_completed = $progress_tracker->is_resource_completed($user_id, $lesson_id, $resource_id);
                     
-                    // For vocabulary pages, don't auto-mark as complete on first view
-                    // For other resources, auto-mark as complete if not already done
-                    $is_vocabulary_page = get_post_meta($resource_id, '_ielts_cm_is_vocabulary', true);
+                    // Check if this resource has been accessed before
+                    global $wpdb;
+                    $table = $progress_tracker->get_progress_table();
+                    $existing = $wpdb->get_row($wpdb->prepare(
+                        "SELECT id, completed FROM {$table} WHERE user_id = %d AND lesson_id = %d AND resource_id = %d",
+                        $user_id, $lesson_id, $resource_id
+                    ));
                     
-                    if (!$is_completed && !$is_vocabulary_page) {
-                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
-                        $is_completed = true;
+                    if ($existing) {
+                        // Resource has been accessed before - mark as completed if not already
+                        if (!$is_completed) {
+                            $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
+                            $is_completed = true;
+                        }
+                    } else {
+                        // First time viewing - just track access, don't mark as completed
+                        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
+                        $is_completed = false;
                     }
                 }
             }

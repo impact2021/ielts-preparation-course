@@ -102,6 +102,13 @@ class IELTS_CM_Progress_Tracker {
     }
     
     /**
+     * Get the progress table name
+     */
+    public function get_progress_table() {
+        return $this->db->get_progress_table();
+    }
+    
+    /**
      * Get progress for a course
      */
     public function get_course_progress($user_id, $course_id) {
