@@ -968,8 +968,13 @@ class IELTS_CM_Sync_API {
         // Get the subsite URL without trailing slash
         $subsite_url = untrailingslashit(get_site_url());
         
-        // If both URLs are the same, no need to rewrite
-        if ($primary_site_url === $subsite_url) {
+        // Normalize both URLs to use the same scheme for comparison
+        // This prevents unnecessary rewriting when only the scheme differs
+        $primary_normalized = preg_replace('/^https?:\/\//', '', $primary_site_url);
+        $subsite_normalized = preg_replace('/^https?:\/\//', '', $subsite_url);
+        
+        // If both domains are the same (ignoring scheme), no need to rewrite
+        if ($primary_normalized === $subsite_normalized) {
             return $content;
         }
         
@@ -984,8 +989,9 @@ class IELTS_CM_Sync_API {
         // - Question mark (for query parameters)
         // - Ampersand (for additional query parameters)
         // - Closing parenthesis (for JavaScript/CSS)
+        // - Closing square bracket (for shortcodes/arrays)
         // - Whitespace or end of string
-        $pattern = '/(' . $escaped_primary . ')(\/|"|\'|>|\?|&|\)|\s|$)/';
+        $pattern = '/(' . $escaped_primary . ')(\/|"|\'|>|\?|&|\)|\]|\s|$)/';
         $replacement = $subsite_url . '$2';
         $result = preg_replace($pattern, $replacement, $content);
         
