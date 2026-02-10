@@ -274,8 +274,7 @@ if ($lesson_id) {
     // Find next unit if this is the last lesson
     $next_unit = null;
     if ($is_last_lesson && $course_id) {
-        $current_course = get_post($course_id);
-        if ($current_course) {
+        if (get_post_status($course_id) === 'publish') {
             // Get all published units ordered by menu_order
             $all_units = get_posts(array(
                 'post_type' => 'ielts_course',
@@ -287,7 +286,7 @@ if ($lesson_id) {
             
             // Find the current unit and get the next one
             foreach ($all_units as $index => $unit) {
-                if ($unit->ID == $course_id) {
+                if ($unit->ID === $course_id) {
                     if (isset($all_units[$index + 1])) {
                         $next_unit = $all_units[$index + 1];
                     }
