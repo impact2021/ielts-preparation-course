@@ -191,6 +191,10 @@ class IELTS_CM_Auto_Sync_Manager {
     
     /**
      * Get all content that has changed since last sync
+     * Returns items in the correct order to prevent progress loss:
+     * 1. Courses (so lessons can reference them)
+     * 2. Resources and quizzes (so sync_lesson_pages doesn't trash them)
+     * 3. Lessons (after their children exist)
      */
     private function get_changed_content() {
         $changed_items = array();
@@ -198,9 +202,13 @@ class IELTS_CM_Auto_Sync_Manager {
         // Get all courses with hierarchy
         $courses_hierarchy = $this->sync_manager->get_all_courses_with_hierarchy();
         
+        // First pass: Collect all courses
+        $courses = array();
+        $lessons_with_children = array();
+        
         foreach ($courses_hierarchy as $course) {
             if ($this->is_content_changed($course['id'], $course['type'])) {
-                $changed_items[] = array(
+                $courses[] = array(
                     'id' => $course['id'],
                     'type' => $course['type'],
                     'title' => $course['title']
@@ -208,17 +216,12 @@ class IELTS_CM_Auto_Sync_Manager {
             }
             
             foreach ($course['lessons'] as $lesson) {
-                if ($this->is_content_changed($lesson['id'], $lesson['type'])) {
-                    $changed_items[] = array(
-                        'id' => $lesson['id'],
-                        'type' => $lesson['type'],
-                        'title' => $lesson['title']
-                    );
-                }
+                $lesson_children = array();
                 
+                // Collect resources for this lesson
                 foreach ($lesson['resources'] as $resource) {
                     if ($this->is_content_changed($resource['id'], $resource['type'])) {
-                        $changed_items[] = array(
+                        $lesson_children[] = array(
                             'id' => $resource['id'],
                             'type' => $resource['type'],
                             'title' => $resource['title']
@@ -226,15 +229,43 @@ class IELTS_CM_Auto_Sync_Manager {
                     }
                 }
                 
+                // Collect quizzes for this lesson
                 foreach ($lesson['exercises'] as $exercise) {
                     if ($this->is_content_changed($exercise['id'], $exercise['type'])) {
-                        $changed_items[] = array(
+                        $lesson_children[] = array(
                             'id' => $exercise['id'],
                             'type' => $exercise['type'],
                             'title' => $exercise['title']
                         );
                     }
                 }
+                
+                // Store lesson with its children
+                $lessons_with_children[] = array(
+                    'lesson' => $lesson,
+                    'children' => $lesson_children
+                );
+            }
+        }
+        
+        // Add items in the correct order:
+        // 1. All courses first
+        $changed_items = $courses;
+        
+        // 2. Then for each lesson: add children first, then the lesson
+        foreach ($lessons_with_children as $item) {
+            // Add children (resources and quizzes) first
+            foreach ($item['children'] as $child) {
+                $changed_items[] = $child;
+            }
+            
+            // Then add the lesson itself if it has changed
+            if ($this->is_content_changed($item['lesson']['id'], $item['lesson']['type'])) {
+                $changed_items[] = array(
+                    'id' => $item['lesson']['id'],
+                    'type' => $item['lesson']['type'],
+                    'title' => $item['lesson']['title']
+                );
             }
         }
         

@@ -73,6 +73,23 @@ class IELTS_CM_Sync_Status_Page {
             'errors' => array()
         );
         
+        // Sort items by type to ensure correct sync order:
+        // 1. Courses first (so lessons can reference them)
+        // 2. Resources and quizzes (so lessons don't trash them)
+        // 3. Lessons (after their children)
+        $type_priority = array(
+            'course' => 1,
+            'resource' => 2,
+            'quiz' => 2,
+            'lesson' => 3
+        );
+        
+        usort($content_items, function($a, $b) use ($type_priority) {
+            $priority_a = isset($type_priority[$a['type']]) ? $type_priority[$a['type']] : 999;
+            $priority_b = isset($type_priority[$b['type']]) ? $type_priority[$b['type']] : 999;
+            return $priority_a - $priority_b;
+        });
+        
         foreach ($content_items as $item) {
             $content_id = isset($item['id']) ? intval($item['id']) : 0;
             $content_type = isset($item['type']) ? sanitize_text_field($item['type']) : '';

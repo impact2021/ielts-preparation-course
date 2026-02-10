@@ -586,35 +586,37 @@ class IELTS_CM_Multi_Site_Sync {
         
         $results = array();
         
-        // Push the main content first
+        // For lessons, push children BEFORE the main content to prevent progress loss
+        // This ensures sync_lesson_pages doesn't trash existing resources/quizzes
+        if ($content_type === 'lesson') {
+            $lesson_children = $this->push_lesson_children($content_id);
+            $results['resources'] = $lesson_children['resources'];
+            $results['exercises'] = $lesson_children['exercises'];
+        }
+        
+        // Push the main content (course or lesson)
         $main_results = $this->push_content_to_subsites($content_id, $content_type);
         $results['main'] = $main_results;
         
-        // If it's a course, push all lessons, resources, and exercises
+        // If it's a course, push all lessons, resources, and quizzes
         if ($content_type === 'course') {
             $lessons = $this->get_course_lessons($content_id);
             $results['lessons'] = array();
             
             foreach ($lessons as $lesson) {
+                // Push all resources and quizzes for this lesson BEFORE pushing the lesson
+                // This prevents sync_lesson_pages from trashing existing content when the lesson is synced
+                $lesson_children = $this->push_lesson_children($lesson->ID);
+                
+                // Now push the lesson itself - at this point all children are already synced
                 $lesson_results = $this->push_content_to_subsites($lesson->ID, 'lesson');
                 $results['lessons'][$lesson->ID] = array(
                     'title' => $lesson->post_title,
-                    'sync_results' => $lesson_results
+                    'sync_results' => $lesson_results,
+                    'resources' => $lesson_children['resources'],
+                    'exercises' => $lesson_children['exercises']
                 );
-                
-                // Push all resources and exercises for this lesson using helper
-                $lesson_children = $this->push_lesson_children($lesson->ID);
-                $results['lessons'][$lesson->ID]['resources'] = $lesson_children['resources'];
-                $results['lessons'][$lesson->ID]['exercises'] = $lesson_children['exercises'];
             }
-        }
-        
-        // If it's a lesson, push all resources and exercises for this lesson
-        if ($content_type === 'lesson') {
-            // Use helper method to push lesson children
-            $lesson_children = $this->push_lesson_children($content_id);
-            $results['resources'] = $lesson_children['resources'];
-            $results['exercises'] = $lesson_children['exercises'];
         }
         
         return $results;
