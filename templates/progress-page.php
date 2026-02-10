@@ -18,7 +18,7 @@ if (!defined('ABSPATH')) {
                 <h3><?php echo esc_html($course->post_title); ?></h3>
                 <div class="completion-bar">
                     <div class="completion-label">
-                        <?php printf(__('Progress: %s%%', 'ielts-course-manager'), round($completion, 1)); ?>
+                        <?php printf(__('Progress: %s%%', 'ielts-course-manager'), number_format($completion, 1)); ?>
                     </div>
                     <div class="completion-bar-outer">
                         <div class="completion-bar-inner" style="width: <?php echo $completion; ?>%"></div>
@@ -130,7 +130,7 @@ if (!defined('ABSPATH')) {
                             
                             <div class="completion-bar">
                                 <div class="completion-label">
-                                    <?php printf(__('Progress: %s%%', 'ielts-course-manager'), round($course_completion, 1)); ?>
+                                    <?php printf(__('Progress: %s%%', 'ielts-course-manager'), number_format($course_completion, 1)); ?>
                                 </div>
                                 <div class="completion-bar-outer">
                                     <div class="completion-bar-inner" style="width: <?php echo $course_completion; ?>%"></div>
