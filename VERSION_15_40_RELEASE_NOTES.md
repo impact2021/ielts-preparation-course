@@ -1,10 +1,11 @@
 # Version 15.40 Release Notes
 
 ## Overview
-This release addresses three critical requirements:
+This release addresses four critical requirements:
 1. Terminology standardization across the plugin
-2. Fix for Continue button showing on first page load (4th request)
-3. Version number updates
+2. Fix for Continue/Next button showing on first page load (4th request)
+3. Fix for "Completed" badge showing prematurely on resource pages
+4. Version number updates
 
 ## Changes
 
@@ -81,7 +82,46 @@ if ($user_has_completed_quiz && $current_index >= 0 && $current_index < count($a
 - `templates/single-quiz-listening-exercise.php`
 - `templates/single-quiz-listening-practice.php`
 
-### 3. Version Updates
+### 3. Completed Badge Fix (Critical)
+
+**Issue**: The green "Completed" badge/text was appearing on resource pages on the **second visit**, even though users had not actually completed the content. This was confusing because it made users think they had already finished content when they had only viewed it once before.
+
+**Root Cause**: In `single-resource-page.php`, there was logic that automatically marked resources as completed on the second visit:
+
+```php
+if ($existing) {
+    // Resource has been accessed before - mark as completed if not already
+    if (!$is_completed) {
+        $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, true);
+        $is_completed = true;  // ❌ Wrong! Auto-completing on 2nd visit
+    }
+}
+```
+
+This was originally intended to prevent showing "Completed" on the first visit, but it went too far by auto-completing on the second visit.
+
+**Solution**: Resources are now tracked for access (updating `last_accessed` timestamp) but are **NOT** automatically marked as completed:
+
+```php
+if ($existing) {
+    // Resource has been accessed before - update last_accessed but keep completed status as-is
+    $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, $existing->completed);
+} else {
+    // First time viewing - track access without marking as completed
+    $progress_tracker->record_progress($user_id, $course_id, $lesson_id, $resource_id, false);
+}
+```
+
+**Behavior**:
+- **First visit**: Tracks access, no "Completed" badge shown
+- **Second+ visits**: Updates `last_accessed`, preserves existing `completed` status (stays false until explicitly marked)
+- **Badge display**: Only shows when resource is explicitly marked as complete through user action
+
+**Files Updated:**
+- `templates/single-resource-page.php`
+- `includes/frontend/class-frontend.php` (comment updated)
+
+### 4. Version Updates
 
 - Plugin version: `15.39` → `15.40`
 - `IELTS_CM_VERSION` constant: `15.39` → `15.40`
@@ -91,9 +131,9 @@ if ($user_has_completed_quiz && $current_index >= 0 && $current_index < count($a
 
 ## Database Impact
 
-**No database schema changes** were made in this release. All changes are to user-visible labels and button display logic only.
+**No database schema changes** were made in this release. All changes are to user-visible labels and display logic only.
 
-The Continue button fix uses the existing `ielts_cm_quiz_results` table to check for quiz completion, ensuring data integrity.
+The Continue button fix uses the existing `ielts_cm_quiz_results` table to check for quiz completion, and the Completed badge fix properly uses the existing `ielts_cm_progress` table's `completed` field.
 
 ## Testing Recommendations
 
@@ -104,7 +144,7 @@ The Continue button fix uses the existing `ielts_cm_quiz_results` table to check
 - [ ] Check lesson content counts show "learning resource" instead of "sublesson"
 - [ ] Verify enrollment error messages use "unit" instead of "course"
 
-### 2. Continue Button Verification
+### 2. Continue/Next Button Verification
 - [ ] As a logged-in user, navigate to a quiz you have NOT completed
 - [ ] Verify NO "Next" button appears in the top navigation
 - [ ] Complete the quiz (submit answers)
@@ -116,7 +156,16 @@ The Continue button fix uses the existing `ielts_cm_quiz_results` table to check
   - Listening exercise
   - Listening practice
 
-### 3. Backwards Compatibility
+### 3. Completed Badge Verification (NEW)
+- [ ] As a logged-in user, navigate to a resource page you have NOT viewed before
+- [ ] Verify NO green "Completed" badge appears
+- [ ] Leave the page and return to the same resource (second visit)
+- [ ] Verify NO green "Completed" badge appears on second visit
+- [ ] Visit the resource a third time
+- [ ] Verify badge STILL does not appear (should only show when explicitly marked complete)
+- [ ] If there's a way to manually mark the resource as complete, test that the badge appears after doing so
+
+### 4. Backwards Compatibility
 - [ ] Verify all existing quiz results still display correctly
 - [ ] Verify course/unit enrollment still works
 - [ ] Verify progress tracking is unaffected
@@ -139,4 +188,8 @@ No migration needed. This is a drop-in update with no database changes.
 
 ## Summary
 
-This release provides a cleaner, more consistent user experience with proper terminology and fixes a persistent issue with the Continue button appearing prematurely. The changes are surgical and focused, minimizing risk while delivering high user impact.
+This release provides a cleaner, more consistent user experience with:
+1. Proper terminology (Unit, Learning Resource) throughout the interface
+2. Fixed Continue/Next button that only appears after quiz completion
+3. Fixed "Completed" badge that only appears when content is actually completed (not on second visit)
+4. All changes are surgical and focused, minimizing risk while delivering high user impact
