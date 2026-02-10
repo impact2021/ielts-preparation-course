@@ -177,7 +177,7 @@
         });
         
         // Mark resource as complete when clicking navigation buttons
-        $('.resource-nav-link').on('click', function(e) {
+        $(document).on('click', '.resource-nav-link', function(e) {
             var link = $(this);
             var courseId = link.data('course-id');
             var lessonId = link.data('lesson-id');
@@ -185,8 +185,12 @@
             
             // Only mark as complete if we have all required IDs
             if (courseId && lessonId && resourceId) {
+                // Prevent default navigation
+                e.preventDefault();
+                
+                var targetUrl = link.attr('href');
+                
                 // Send AJAX request to mark resource as complete
-                // Don't prevent default - let the navigation happen
                 $.ajax({
                     url: ieltsCM.ajaxUrl,
                     type: 'POST',
@@ -197,8 +201,14 @@
                         lesson_id: lessonId,
                         resource_id: resourceId
                     },
-                    // Use async: false to ensure completion is marked before navigation
-                    async: false
+                    success: function(response) {
+                        // Navigate after successful completion tracking
+                        window.location.href = targetUrl;
+                    },
+                    error: function() {
+                        // Navigate anyway even if tracking fails - don't block user navigation
+                        window.location.href = targetUrl;
+                    }
                 });
             }
         });
