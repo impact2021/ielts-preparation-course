@@ -296,24 +296,69 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
     
     <?php
     // Previous/Next course navigation
-    $all_courses = get_posts(array(
-        'post_type' => 'ielts_course',
-        'posts_per_page' => -1,
-        'orderby' => 'menu_order',
-        'order' => 'ASC',
-        'post_status' => 'publish'
-    ));
+    // Only show navigation for enrolled users
+    $prev_course = null;
+    $next_course = null;
     
-    $current_index = -1;
-    foreach ($all_courses as $index => $c) {
-        if ($c->ID == $course->ID) {
-            $current_index = $index;
-            break;
+    if ($user_id && $is_enrolled) {
+        // Get current course categories
+        $current_categories = wp_get_post_terms($course->ID, 'ielts_course_category', array('fields' => 'slugs'));
+        if (is_wp_error($current_categories)) {
+            $current_categories = array();
+        }
+        
+        // Get all courses the user is enrolled in
+        $enrolled_courses_data = $enrollment->get_user_courses($user_id);
+        $enrolled_course_ids = array_map(function($ec) { return $ec->course_id; }, $enrolled_courses_data);
+        
+        if (!empty($enrolled_course_ids)) {
+            // Get all enrolled courses with same categories as current course
+            $all_courses = get_posts(array(
+                'post_type' => 'ielts_course',
+                'posts_per_page' => -1,
+                'post__in' => $enrolled_course_ids,
+                'orderby' => 'menu_order',
+                'order' => 'ASC',
+                'post_status' => 'publish'
+            ));
+            
+            // Filter courses to only include those with matching categories
+            $filtered_courses = array();
+            foreach ($all_courses as $c) {
+                $c_categories = wp_get_post_terms($c->ID, 'ielts_course_category', array('fields' => 'slugs'));
+                if (is_wp_error($c_categories)) {
+                    $c_categories = array();
+                }
+                
+                // Check if any category matches
+                $has_matching_category = false;
+                foreach ($current_categories as $cat) {
+                    if (in_array($cat, $c_categories)) {
+                        $has_matching_category = true;
+                        break;
+                    }
+                }
+                
+                // Include course if it has matching category or if current course has no categories
+                if ($has_matching_category || empty($current_categories)) {
+                    $filtered_courses[] = $c;
+                }
+            }
+            
+            // Find current course index in filtered list
+            $current_index = -1;
+            foreach ($filtered_courses as $index => $c) {
+                if ($c->ID == $course->ID) {
+                    $current_index = $index;
+                    break;
+                }
+            }
+            
+            // Set previous and next courses
+            $prev_course = ($current_index > 0) ? $filtered_courses[$current_index - 1] : null;
+            $next_course = ($current_index >= 0 && $current_index < count($filtered_courses) - 1) ? $filtered_courses[$current_index + 1] : null;
         }
     }
-    
-    $prev_course = ($current_index > 0) ? $all_courses[$current_index - 1] : null;
-    $next_course = ($current_index >= 0 && $current_index < count($all_courses) - 1) ? $all_courses[$current_index + 1] : null;
     ?>
     
     <?php if ($prev_course || $next_course): ?>
