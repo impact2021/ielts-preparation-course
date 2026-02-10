@@ -959,6 +959,10 @@ class IELTS_CM_Sync_API {
      * Rewrite URLs from primary site to subsite
      * Replaces absolute URLs from primary domain with current subsite domain
      * while preserving the path structure
+     * 
+     * @param string $content The content to rewrite
+     * @param string $primary_site_url The primary site URL to replace
+     * @return string The content with rewritten URLs
      */
     private function rewrite_urls($content, $primary_site_url) {
         // Get the subsite URL without trailing slash
@@ -973,15 +977,26 @@ class IELTS_CM_Sync_API {
         $escaped_primary = preg_quote($primary_site_url, '/');
         
         // Use regex to replace URLs with word boundaries to avoid partial matches
-        // This pattern matches the primary URL followed by either:
-        // - A forward slash (for paths)
-        // - A quote (for attribute values)
-        // - End of string
-        // - Whitespace
-        $pattern = '/(' . $escaped_primary . ')(\/|"|\'|\s|$)/';
+        // This pattern matches the primary URL followed by common delimiters:
+        // - Forward slash (for paths)
+        // - Quotes (for attribute values)
+        // - Greater than (for closing tags)
+        // - Question mark (for query parameters)
+        // - Ampersand (for additional query parameters)
+        // - Closing parenthesis (for JavaScript/CSS)
+        // - Whitespace or end of string
+        $pattern = '/(' . $escaped_primary . ')(\/|"|\'|>|\?|&|\)|\s|$)/';
         $replacement = $subsite_url . '$2';
-        $content = preg_replace($pattern, $replacement, $content);
+        $result = preg_replace($pattern, $replacement, $content);
         
-        return $content;
+        // Check for preg_replace failure
+        if ($result === null) {
+            // Log the error for debugging
+            error_log('IELTS Sync: preg_replace failed during URL rewriting. Pattern: ' . $pattern);
+            // Return original content unchanged
+            return $content;
+        }
+        
+        return $result;
     }
 }
