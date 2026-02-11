@@ -275,29 +275,27 @@ if ($lesson_id) {
     $next_unit = null;
     $next_unit_label = __('Move on to next unit', 'ielts-course-manager');
     if ($is_last_lesson && $course_id) {
-        if (get_post_status($course_id) === 'publish') {
-            // Get all published units ordered by menu_order
-            $all_units = get_posts(array(
-                'post_type' => 'ielts_course',
-                'posts_per_page' => -1,
-                'orderby' => 'menu_order',
-                'order' => 'ASC',
-                'post_status' => 'publish'
-            ));
-            
-            // Find the current unit and get the next one
-            foreach ($all_units as $index => $unit) {
-                if ($unit->ID === $course_id) {
-                    if (isset($all_units[$index + 1])) {
-                        $next_unit = $all_units[$index + 1];
-                        // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
-                        $sanitized_title = sanitize_text_field($next_unit->post_title);
-                        if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
-                            $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
-                        }
+        // Get all published units ordered by menu_order
+        $all_units = get_posts(array(
+            'post_type' => 'ielts_course',
+            'posts_per_page' => -1,
+            'orderby' => 'menu_order',
+            'order' => 'ASC',
+            'post_status' => 'publish'
+        ));
+        
+        // Find the current unit and get the next one
+        foreach ($all_units as $index => $unit) {
+            if ($unit->ID === $course_id) {
+                if (isset($all_units[$index + 1])) {
+                    $next_unit = $all_units[$index + 1];
+                    // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
+                    $sanitized_title = sanitize_text_field($next_unit->post_title);
+                    if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
+                        $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
                     }
-                    break;
                 }
+                break;
             }
         }
     }
@@ -1456,7 +1454,7 @@ if ($lesson_id) {
                             
                             // Get all units (limited to 100 for performance)
                             $debug_all_units = array();
-                            if ($course_id && get_post_status($course_id) === 'publish') {
+                            if ($course_id) {
                                 $debug_all_units = get_posts(array(
                                     'post_type' => 'ielts_course',
                                     'posts_per_page' => 100,
