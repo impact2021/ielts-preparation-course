@@ -23,7 +23,7 @@
         "1": {
           "correct": "Correct. Rugby helped form a national identity.",
           "incorrect": "Incorrect. The transcript links rugby with identity.",
-          "no_answer": "Q9: The correct answer is <strong>identity</strong>. The phrase \"a strong sense of national …\" is a fixed collocation, so recognising common word partnerships helps locate the answer."
+          "no_answer": "Q1: The correct answer is <strong>identity</strong>. The phrase \"a strong sense of national …\" is a fixed collocation, so recognising common word partnerships helps locate the answer."
         }
       }
     },
@@ -48,7 +48,7 @@
         "1": {
           "correct": "Correct. The speaker says New Zealand has a small population.",
           "incorrect": "Incorrect. The transcript refers to population size, not geography.",
-          "no_answer": "Q1: The correct answer is <strong>population</strong>. The adjectives \"young\" and \"small\" are followed by a noun phrase, so you should listen for what New Zealand is small in. The key listening skill here is recognising descriptive sequences."
+          "no_answer": "Q2: The correct answer is <strong>population</strong>. The adjectives \"young\" and \"small\" are followed by a noun phrase, so you should listen for what New Zealand is small in. The key listening skill here is recognising descriptive sequences."
         }
       }
     },
@@ -98,7 +98,7 @@
         "1": {
           "correct": "Correct. The haka is performed in the traditional spirit of Maori tribes.",
           "incorrect": "Incorrect. The transcript uses the word 'traditional'.",
-          "no_answer": "Q3: The correct answer is <strong>traditional</strong>. The phrase \"in the … spirit\" tells you to listen for an adjective describing cultural meaning. The mention of Maori tribes signals a cultural reference."
+          "no_answer": "Q4: The correct answer is <strong>traditional</strong>. The phrase \"in the … spirit\" tells you to listen for an adjective describing cultural meaning. The mention of Maori tribes signals a cultural reference."
         }
       }
     },
@@ -123,7 +123,7 @@
         "1": {
           "correct": "Correct. Rugby helped develop strength.",
           "incorrect": "Incorrect. Strength is named alongside fitness and teamwork.",
-          "no_answer": "Q4: The correct answer is <strong>strength</strong>. The list \"team work, willpower, fitness and …\" signals a parallel noun, so you should listen for another physical quality."
+          "no_answer": "Q5: The correct answer is <strong>strength</strong>. The list \"team work, willpower, fitness and …\" signals a parallel noun, so you should listen for another physical quality."
         }
       }
     },
@@ -148,7 +148,7 @@
         "1": {
           "correct": "Correct. The All Blacks first played internationally in 1884.",
           "incorrect": "Incorrect. A specific year is given in the transcript.",
-          "no_answer": "Q5: The correct answer is <strong>1884</strong>. Phrases like \"first played internationally\" usually introduce a specific year, so the key skill is listening for numbers linked to historical milestones."
+          "no_answer": "Q6: The correct answer is <strong>1884</strong>. Phrases like \"first played internationally\" usually introduce a specific year, so the key skill is listening for numbers linked to historical milestones."
         }
       }
     },
@@ -173,7 +173,7 @@
         "1": {
           "correct": "Correct. Outdoor sport is described as highly valued.",
           "incorrect": "Incorrect. The speaker emphasises the importance of outdoor activity.",
-          "no_answer": "Q6: The correct answer is <strong>highly valued</strong>. The structure \"is …\" signals an evaluative phrase, so you should listen for how New Zealanders feel about outdoor activity."
+          "no_answer": "Q7: The correct answer is <strong>highly valued</strong>. The structure \"is …\" signals an evaluative phrase, so you should listen for how New Zealanders feel about outdoor activity."
         }
       }
     },
@@ -198,7 +198,7 @@
         "1": {
           "correct": "Correct. Golden Oldies allow participation late in life.",
           "incorrect": "Incorrect. The transcript explains how long participation continues.",
-          "no_answer": "Q7: The correct answer is <strong>late in life</strong>. The phrase \"until …\" signals a time expression, so you should listen for how long participation continues."
+          "no_answer": "Q8: The correct answer is <strong>late in life</strong>. The phrase \"until …\" signals a time expression, so you should listen for how long participation continues."
         }
       }
     },
