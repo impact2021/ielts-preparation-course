@@ -287,7 +287,7 @@ if ($lesson_id) {
         // Find the current unit and get the next published one
         $total_units = count($all_units);
         foreach ($all_units as $index => $unit) {
-            if ($unit->ID === $course_id) {
+            if ($unit->ID == $course_id) {
                 // Look for the next published unit
                 for ($i = $index + 1; $i < $total_units; $i++) {
                     if (get_post_status($all_units[$i]->ID) === 'publish') {
