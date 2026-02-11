@@ -1085,14 +1085,14 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         <?php
                         // Visual debugger for "Next Unit" button visibility
                         // Shows when ?debug_nav=1 is in URL or IELTS_CM_DEBUG_NAV constant is true
-                        $show_debug = (isset($_GET['debug_nav']) && $_GET['debug_nav'] == '1') || 
+                        $show_debug = (isset($_GET['debug_nav']) && sanitize_text_field($_GET['debug_nav']) === '1') || 
                                      (defined('IELTS_CM_DEBUG_NAV') && IELTS_CM_DEBUG_NAV);
                         
                         if ($show_debug):
                             // Gather all debug information
                             global $wpdb;
                             
-                            // Get all lessons for this course
+                            // Get all lessons for this course (limited to 100 for performance)
                             $debug_all_lessons = array();
                             if ($course_id) {
                                 $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
@@ -1103,12 +1103,13 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                     FROM {$wpdb->postmeta} 
                                     WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
                                        OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                                    LIMIT 100
                                 ", $course_id, $int_pattern_course, $str_pattern_course));
                                 
                                 if (!empty($all_lesson_ids)) {
                                     $debug_all_lessons = get_posts(array(
                                         'post_type' => 'ielts_lesson',
-                                        'posts_per_page' => -1,
+                                        'posts_per_page' => 100,
                                         'post__in' => $all_lesson_ids,
                                         'orderby' => 'menu_order',
                                         'order' => 'ASC',
@@ -1117,12 +1118,12 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 }
                             }
                             
-                            // Get all units
+                            // Get all units (limited to 100 for performance)
                             $debug_all_units = array();
                             if ($course_id && get_post_status($course_id) === 'publish') {
                                 $debug_all_units = get_posts(array(
                                     'post_type' => 'ielts_course',
-                                    'posts_per_page' => -1,
+                                    'posts_per_page' => 100,
                                     'orderby' => 'menu_order',
                                     'order' => 'ASC',
                                     'post_status' => 'publish'
