@@ -108,7 +108,5 @@ if (!isset($columns)) {
                 </div>
             </div>
         <?php endforeach; ?>
-    <?php else: ?>
-        <p><?php _e('No courses found.', 'ielts-course-manager'); ?></p>
     <?php endif; ?>
 </div>
