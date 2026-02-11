@@ -253,12 +253,7 @@
       }
     }
   ],
-  "reading_texts": [
-    {
-      "title": "Rugby in New Zealand",
-      "content": "More information coming soon"
-    }
-  ],
+  "reading_texts": [],
   "settings": {
     "pass_percentage": "60",
     "layout_type": "two_column_listening",
