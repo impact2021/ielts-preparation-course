@@ -275,24 +275,28 @@ if ($lesson_id) {
     $next_unit = null;
     $next_unit_label = __('Move on to next unit', 'ielts-course-manager');
     if ($is_last_lesson && $course_id) {
-        // Get all published units ordered by menu_order
+        // Get all units (including drafts) ordered by menu_order to find position
         $all_units = get_posts(array(
             'post_type' => 'ielts_course',
             'posts_per_page' => -1,
             'orderby' => 'menu_order',
             'order' => 'ASC',
-            'post_status' => 'publish'
+            'post_status' => 'any'
         ));
         
-        // Find the current unit and get the next one
+        // Find the current unit and get the next published one
         foreach ($all_units as $index => $unit) {
             if ($unit->ID === $course_id) {
-                if (isset($all_units[$index + 1])) {
-                    $next_unit = $all_units[$index + 1];
-                    // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
-                    $sanitized_title = sanitize_text_field($next_unit->post_title);
-                    if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
-                        $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
+                // Look for the next published unit
+                for ($i = $index + 1; $i < count($all_units); $i++) {
+                    if (get_post_status($all_units[$i]->ID) === 'publish') {
+                        $next_unit = $all_units[$i];
+                        // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
+                        $sanitized_title = sanitize_text_field($next_unit->post_title);
+                        if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
+                            $next_unit_label = sprintf(__('Move to Unit %s', 'ielts-course-manager'), $matches[1]);
+                        }
+                        break;
                     }
                 }
                 break;
@@ -1452,7 +1456,7 @@ if ($lesson_id) {
                                 }
                             }
                             
-                            // Get all units (limited to 100 for performance)
+                            // Get all units (limited to 100 for performance, including drafts for debugging)
                             $debug_all_units = array();
                             if ($course_id) {
                                 $debug_all_units = get_posts(array(
@@ -1460,7 +1464,7 @@ if ($lesson_id) {
                                     'posts_per_page' => 100,
                                     'orderby' => 'menu_order',
                                     'order' => 'ASC',
-                                    'post_status' => 'publish'
+                                    'post_status' => 'any'
                                 ));
                             }
                         ?>
@@ -1627,6 +1631,12 @@ if ($lesson_id) {
                                             <li class="<?php echo ($unit_item->ID == $course_id) ? 'current-item' : ''; ?>">
                                                 <strong><?php echo esc_html($unit_item->post_title); ?></strong>
                                                 (ID: <?php echo esc_html($unit_item->ID); ?>)
+                                                <?php 
+                                                $unit_status = get_post_status($unit_item->ID);
+                                                if ($unit_status !== 'publish'): 
+                                                ?>
+                                                    <span class="badge status-<?php echo esc_attr($unit_status); ?>"><?php echo esc_html(strtoupper($unit_status)); ?></span>
+                                                <?php endif; ?>
                                                 <?php if ($unit_item->ID == $course_id): ?>
                                                     <span class="badge">← CURRENT UNIT</span>
                                                 <?php endif; ?>
