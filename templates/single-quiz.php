@@ -219,10 +219,11 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             ));
             
             // Find the current unit and get the next published one
+            $total_units = count($all_units);
             foreach ($all_units as $index => $unit) {
                 if ($unit->ID === $course_id) {
                     // Look for the next published unit
-                    for ($i = $index + 1; $i < count($all_units); $i++) {
+                    for ($i = $index + 1; $i < $total_units; $i++) {
                         if (get_post_status($all_units[$i]->ID) === 'publish') {
                             $next_unit = $all_units[$i];
                             // Extract unit number from title (e.g., "Academic Unit 2" -> "Unit 2")
