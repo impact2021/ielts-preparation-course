@@ -3798,12 +3798,13 @@ body.ielts-quiz-focus-mode .listening-audio-column {
 .speed-option.active {
     background: rgba(59, 130, 246, 0.5);
     font-weight: 600;
+    padding-left: 24px;
 }
 
 .speed-option.active::before {
     content: "✓";
     position: absolute;
-    left: -4px;
+    left: 8px;
     font-weight: bold;
     color: #60a5fa;
 }

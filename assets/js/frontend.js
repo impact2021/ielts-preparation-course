@@ -2941,8 +2941,10 @@
                 // Mark as initialized
                 video.setAttribute('data-speed-controls-initialized', 'true');
                 
-                // Add controls if not present
-                video.setAttribute('controls', 'controls');
+                // Add controls if not already present
+                if (!video.hasAttribute('controls')) {
+                    video.setAttribute('controls', 'controls');
+                }
                 
                 // Wrap video in a container for custom controls
                 var wrapper = video.parentElement;
