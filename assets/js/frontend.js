@@ -2921,6 +2921,14 @@
         
         // Enhanced Video Player with Speed Controls
         // Only applies to native HTML5 video elements (not YouTube/Vimeo iframes)
+        var speedControlCloseHandler = function(e) {
+            if (!e.target.closest('.ielts-video-speed-control')) {
+                document.querySelectorAll('.ielts-speed-menu.show').forEach(function(menu) {
+                    menu.classList.remove('show');
+                });
+            }
+        };
+        
         function initializeVideoSpeedControls() {
             var videos = document.querySelectorAll('.resource-video-wrapper video');
             
@@ -2977,13 +2985,6 @@
                     speedMenu.classList.toggle('show');
                 });
                 
-                // Close menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!speedControl.contains(e.target)) {
-                        speedMenu.classList.remove('show');
-                    }
-                });
-                
                 // Handle speed selection
                 var speedOptions = speedControl.querySelectorAll('.speed-option');
                 speedOptions.forEach(function(option) {
@@ -3015,13 +3016,29 @@
         // Initialize video controls
         initializeVideoSpeedControls();
         
-        // Re-initialize if content is dynamically loaded
+        // Use single event delegation for closing menus
+        document.addEventListener('click', speedControlCloseHandler);
+        
+        // Re-initialize if content is dynamically loaded (with debouncing)
+        var initTimeout;
         var observer = new MutationObserver(function(mutations) {
+            var hasVideoNodes = false;
             mutations.forEach(function(mutation) {
                 if (mutation.addedNodes.length) {
-                    initializeVideoSpeedControls();
+                    mutation.addedNodes.forEach(function(node) {
+                        if (node.nodeType === 1 && (node.tagName === 'VIDEO' || node.querySelector('video'))) {
+                            hasVideoNodes = true;
+                        }
+                    });
                 }
             });
+            
+            if (hasVideoNodes) {
+                clearTimeout(initTimeout);
+                initTimeout = setTimeout(function() {
+                    initializeVideoSpeedControls();
+                }, 100);
+            }
         });
         
         var resourceContent = document.querySelector('.resource-video-wrapper');
