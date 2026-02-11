@@ -3687,3 +3687,162 @@ body.ielts-quiz-focus-mode .listening-audio-column {
         content: ".";
     }
 }
+
+/* ========================================
+   Enhanced Video Player with Speed Controls
+   ======================================== */
+
+/* Video container */
+.ielts-video-container {
+    position: relative;
+    width: 100%;
+}
+
+.ielts-video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background-color: #000;
+    outline: none;
+}
+
+/* Modern video controls styling */
+.ielts-video-container video::-webkit-media-controls-panel {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}
+
+/* Speed control button container */
+.ielts-video-speed-control {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    z-index: 100;
+}
+
+/* Speed button */
+.ielts-speed-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ielts-speed-button:hover {
+    background: rgba(0, 0, 0, 0.85);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.ielts-speed-button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.ielts-speed-button .speed-label {
+    min-width: 30px;
+    text-align: left;
+}
+
+/* Speed menu dropdown */
+.ielts-speed-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 8px;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 6px;
+    min-width: 140px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.ielts-speed-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Speed options */
+.speed-option {
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.speed-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.speed-option.active {
+    background: rgba(59, 130, 246, 0.5);
+    font-weight: 600;
+}
+
+.speed-option.active::before {
+    content: "✓";
+    position: absolute;
+    left: -4px;
+    font-weight: bold;
+    color: #60a5fa;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .ielts-video-speed-control {
+        bottom: 45px;
+        right: 8px;
+    }
+    
+    .ielts-speed-button {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    
+    .ielts-speed-button svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .ielts-speed-menu {
+        min-width: 120px;
+    }
+    
+    .speed-option {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -2918,6 +2918,119 @@
                 }
             });
         }
+        
+        // Enhanced Video Player with Speed Controls
+        // Only applies to native HTML5 video elements (not YouTube/Vimeo iframes)
+        function initializeVideoSpeedControls() {
+            var videos = document.querySelectorAll('.resource-video-wrapper video');
+            
+            videos.forEach(function(video) {
+                // Skip if already initialized
+                if (video.hasAttribute('data-speed-controls-initialized')) {
+                    return;
+                }
+                
+                // Mark as initialized
+                video.setAttribute('data-speed-controls-initialized', 'true');
+                
+                // Add controls if not present
+                video.setAttribute('controls', 'controls');
+                
+                // Wrap video in a container for custom controls
+                var wrapper = video.parentElement;
+                if (!wrapper.classList.contains('ielts-video-container')) {
+                    var container = document.createElement('div');
+                    container.className = 'ielts-video-container';
+                    wrapper.insertBefore(container, video);
+                    container.appendChild(video);
+                    wrapper = container;
+                }
+                
+                // Create speed control dropdown
+                var speedControl = document.createElement('div');
+                speedControl.className = 'ielts-video-speed-control';
+                speedControl.innerHTML = 
+                    '<button class="ielts-speed-button" title="Playback Speed">' +
+                    '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+                    '<circle cx="12" cy="12" r="10"></circle>' +
+                    '<polyline points="12 6 12 12 16 14"></polyline>' +
+                    '</svg>' +
+                    '<span class="speed-label">1x</span>' +
+                    '</button>' +
+                    '<div class="ielts-speed-menu">' +
+                    '<div class="speed-option" data-speed="0.5">0.5x</div>' +
+                    '<div class="speed-option" data-speed="0.75">0.75x</div>' +
+                    '<div class="speed-option active" data-speed="1">Normal (1x)</div>' +
+                    '<div class="speed-option" data-speed="1.25">1.25x</div>' +
+                    '<div class="speed-option" data-speed="1.5">1.5x</div>' +
+                    '<div class="speed-option" data-speed="2">2x</div>' +
+                    '</div>';
+                
+                wrapper.appendChild(speedControl);
+                
+                // Toggle speed menu
+                var speedButton = speedControl.querySelector('.ielts-speed-button');
+                var speedMenu = speedControl.querySelector('.ielts-speed-menu');
+                
+                speedButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    speedMenu.classList.toggle('show');
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!speedControl.contains(e.target)) {
+                        speedMenu.classList.remove('show');
+                    }
+                });
+                
+                // Handle speed selection
+                var speedOptions = speedControl.querySelectorAll('.speed-option');
+                speedOptions.forEach(function(option) {
+                    option.addEventListener('click', function() {
+                        var speed = parseFloat(this.getAttribute('data-speed'));
+                        video.playbackRate = speed;
+                        
+                        // Update active state
+                        speedOptions.forEach(function(opt) {
+                            opt.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        
+                        // Update button label
+                        var label = speedButton.querySelector('.speed-label');
+                        if (speed === 1) {
+                            label.textContent = '1x';
+                        } else {
+                            label.textContent = speed + 'x';
+                        }
+                        
+                        // Close menu
+                        speedMenu.classList.remove('show');
+                    });
+                });
+            });
+        }
+        
+        // Initialize video controls
+        initializeVideoSpeedControls();
+        
+        // Re-initialize if content is dynamically loaded
+        var observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length) {
+                    initializeVideoSpeedControls();
+                }
+            });
+        });
+        
+        var resourceContent = document.querySelector('.resource-video-wrapper');
+        if (resourceContent) {
+            observer.observe(resourceContent, {
+                childList: true,
+                subtree: true
+            });
+        }
     });
     
 })(jQuery);
