@@ -217,6 +217,14 @@ class IELTS_CM_Shortcodes {
                                 break;
                             }
                         }
+                    } elseif ($course_group === 'entry_test') {
+                        // Include only entry-test
+                        foreach ($course_categories as $cat) {
+                            if ($cat === 'entry-test') {
+                                $include_course = true;
+                                break;
+                            }
+                        }
                     }
                     
                     if ($include_course) {
