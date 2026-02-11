@@ -1403,7 +1403,7 @@ if ($lesson_id) {
                                     <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="nav-link">
                                         <?php 
                                         if ($unit_number) {
-                                            printf(__('That is the end of this unit. Move on to Unit %s', 'ielts-course-manager'), $unit_number);
+                                            printf(__('That is the end of this unit. Move on to Unit %s', 'ielts-course-manager'), esc_html($unit_number));
                                         } else {
                                             _e('That is the end of this unit. Move on to next unit', 'ielts-course-manager');
                                         }
