@@ -738,11 +738,26 @@ body.ielts-resource-single .content-area {
                             <?php else: ?>
                                 <div class="nav-completion-message">
                                     <?php if ($is_last_lesson): ?>
-                                        <span><?php _e('That is the end of this unit', 'ielts-course-manager'); ?></span>
                                         <?php if (isset($next_unit) && $next_unit): ?>
-                                            <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary" style="margin-top: 10px;">
-                                                <?php echo esc_html($next_unit_label); ?>
+                                            <?php
+                                            // Extract unit number from title
+                                            $sanitized_title = sanitize_text_field($next_unit->post_title);
+                                            $unit_number = '';
+                                            if (preg_match('/Unit\s+(\d+)/i', $sanitized_title, $matches)) {
+                                                $unit_number = $matches[1];
+                                            }
+                                            ?>
+                                            <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="nav-link">
+                                                <?php 
+                                                if ($unit_number) {
+                                                    printf(__('That is the end of this unit. Move on to Unit %s', 'ielts-course-manager'), esc_html($unit_number));
+                                                } else {
+                                                    _e('That is the end of this unit. Move on to next unit', 'ielts-course-manager');
+                                                }
+                                                ?>
                                             </a>
+                                        <?php else: ?>
+                                            <span><?php _e('That is the end of this unit', 'ielts-course-manager'); ?></span>
                                         <?php endif; ?>
                                     <?php else: ?>
                                         <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
