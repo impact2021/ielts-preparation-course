@@ -1064,12 +1064,13 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         $unit_number = $matches[1];
                                     }
                                     ?>
-                                    <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="nav-link">
+                                    <span><?php _e('That is the end of this unit', 'ielts-course-manager'); ?></span>
+                                    <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary">
                                         <?php 
                                         if ($unit_number) {
-                                            printf(__('That is the end of this unit. Move on to Unit %s', 'ielts-course-manager'), esc_html($unit_number));
+                                            printf(__('Move to Unit %s', 'ielts-course-manager'), esc_html($unit_number));
                                         } else {
-                                            _e('That is the end of this unit. Move on to next unit', 'ielts-course-manager');
+                                            _e('Move to next unit', 'ielts-course-manager');
                                         }
                                         ?>
                                     </a>
