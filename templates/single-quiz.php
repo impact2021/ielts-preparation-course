@@ -1179,6 +1179,22 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td class="label">Course Status:</td>
+                                        <td class="value">
+                                            <?php 
+                                            if ($course_id) {
+                                                $course_status = get_post_status($course_id);
+                                                echo esc_html($course_status);
+                                                if ($course_status !== 'publish') {
+                                                    echo ' <span style="color: #d63638; font-weight: bold;">← THIS IS WHY! Course must be "publish" status</span>';
+                                                }
+                                            } else {
+                                                echo 'NO COURSE ID';
+                                            }
+                                            ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td class="label">Has Next Unit:</td>
                                         <td class="value <?php echo (isset($next_unit) && $next_unit) ? 'success' : 'error'; ?>">
                                             <?php 
