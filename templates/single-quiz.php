@@ -1081,6 +1081,248 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                                 <span><?php _e('You have finished this lesson', 'ielts-course-manager'); ?></span>
                             <?php endif; ?>
                         </div>
+                        
+                        <?php
+                        // Visual debugger for "Next Unit" button visibility
+                        // Shows when ?debug_nav=1 is in URL or IELTS_CM_DEBUG_NAV constant is true
+                        $show_debug = (isset($_GET['debug_nav']) && $_GET['debug_nav'] == '1') || 
+                                     (defined('IELTS_CM_DEBUG_NAV') && IELTS_CM_DEBUG_NAV);
+                        
+                        if ($show_debug):
+                            // Gather all debug information
+                            global $wpdb;
+                            
+                            // Get all lessons for this course
+                            $debug_all_lessons = array();
+                            if ($course_id) {
+                                $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
+                                $str_pattern_course = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
+                                
+                                $all_lesson_ids = $wpdb->get_col($wpdb->prepare("
+                                    SELECT DISTINCT post_id 
+                                    FROM {$wpdb->postmeta} 
+                                    WHERE (meta_key = '_ielts_cm_course_id' AND meta_value = %d)
+                                       OR (meta_key = '_ielts_cm_course_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                                ", $course_id, $int_pattern_course, $str_pattern_course));
+                                
+                                if (!empty($all_lesson_ids)) {
+                                    $debug_all_lessons = get_posts(array(
+                                        'post_type' => 'ielts_lesson',
+                                        'posts_per_page' => -1,
+                                        'post__in' => $all_lesson_ids,
+                                        'orderby' => 'menu_order',
+                                        'order' => 'ASC',
+                                        'post_status' => 'publish'
+                                    ));
+                                }
+                            }
+                            
+                            // Get all units
+                            $debug_all_units = array();
+                            if ($course_id && get_post_status($course_id) === 'publish') {
+                                $debug_all_units = get_posts(array(
+                                    'post_type' => 'ielts_course',
+                                    'posts_per_page' => -1,
+                                    'orderby' => 'menu_order',
+                                    'order' => 'ASC',
+                                    'post_status' => 'publish'
+                                ));
+                            }
+                        ?>
+                        <div class="ielts-nav-debugger">
+                            <div class="debugger-header">
+                                <h3>🔍 Next Unit Button Debugger</h3>
+                                <p class="debugger-subtitle">This panel explains why the "Move to next unit" button is or isn't showing</p>
+                            </div>
+                            
+                            <div class="debugger-section">
+                                <h4>Current State</h4>
+                                <table class="debugger-table">
+                                    <tr>
+                                        <td class="label">Quiz ID:</td>
+                                        <td class="value"><?php echo esc_html($quiz->ID); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Course ID:</td>
+                                        <td class="value"><?php echo esc_html($course_id ? $course_id : 'NOT SET'); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Lesson ID:</td>
+                                        <td class="value"><?php echo esc_html($lesson_id ? $lesson_id : 'NOT SET'); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Has Next Item:</td>
+                                        <td class="value <?php echo $next_item ? 'success' : 'error'; ?>">
+                                            <?php echo $next_item ? '✓ YES (ID: ' . esc_html($next_item->ID) . ' - ' . esc_html($next_item->post_title) . ')' : '✗ NO'; ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="debugger-section">
+                                <h4>Button Logic Check</h4>
+                                <table class="debugger-table">
+                                    <tr>
+                                        <td class="label">Is Last Lesson:</td>
+                                        <td class="value <?php echo (isset($is_last_lesson) && $is_last_lesson) ? 'success' : 'error'; ?>">
+                                            <?php 
+                                            if (isset($is_last_lesson)) {
+                                                echo $is_last_lesson ? '✓ TRUE' : '✗ FALSE';
+                                            } else {
+                                                echo '✗ NOT SET';
+                                            }
+                                            ?>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="label">Has Next Unit:</td>
+                                        <td class="value <?php echo (isset($next_unit) && $next_unit) ? 'success' : 'error'; ?>">
+                                            <?php 
+                                            if (isset($next_unit) && $next_unit) {
+                                                echo '✓ YES (ID: ' . esc_html($next_unit->ID) . ' - ' . esc_html($next_unit->post_title) . ')';
+                                            } else if (isset($next_unit)) {
+                                                echo '✗ NO (variable is set but empty/false)';
+                                            } else {
+                                                echo '✗ NOT SET';
+                                            }
+                                            ?>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="debugger-section debugger-decision">
+                                <h4>Decision Tree</h4>
+                                <div class="decision-flow">
+                                    <?php if (!$next_item): ?>
+                                        <div class="decision-step success">✓ No next item in lesson (last resource/quiz in lesson)</div>
+                                    <?php else: ?>
+                                        <div class="decision-step error">✗ Has next item in lesson → Regular "Next" button should show</div>
+                                    <?php endif; ?>
+                                    
+                                    <?php if (!$next_item): ?>
+                                        <?php if (isset($is_last_lesson) && $is_last_lesson): ?>
+                                            <div class="decision-step success">✓ This is the last lesson in the unit</div>
+                                        <?php else: ?>
+                                            <div class="decision-step error">✗ NOT the last lesson in unit → Shows "You have finished this lesson"</div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                    
+                                    <?php if (!$next_item && isset($is_last_lesson) && $is_last_lesson): ?>
+                                        <?php if (isset($next_unit) && $next_unit): ?>
+                                            <div class="decision-step success">✓ Next unit found → BUTTON SHOULD BE VISIBLE</div>
+                                        <?php else: ?>
+                                            <div class="decision-step error">✗ No next unit found → Only shows completion message</div>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            
+                            <div class="debugger-section">
+                                <h4>Expected Result</h4>
+                                <div class="expected-result">
+                                    <?php if (!$next_item && isset($is_last_lesson) && $is_last_lesson && isset($next_unit) && $next_unit): ?>
+                                        <div class="result-box success">
+                                            <strong>✓ BUTTON SHOULD BE VISIBLE</strong><br>
+                                            The "Move to Unit X" button should appear because:
+                                            <ul>
+                                                <li>This is the last resource/quiz in the lesson</li>
+                                                <li>This is the last lesson in the unit</li>
+                                                <li>A next unit exists (<?php echo esc_html($next_unit->post_title); ?>)</li>
+                                            </ul>
+                                            <strong>If you don't see the button, check:</strong>
+                                            <ul>
+                                                <li>CSS is loaded (check browser dev tools)</li>
+                                                <li>No custom CSS hiding the button</li>
+                                                <li>The .button and .button-primary classes are styled</li>
+                                            </ul>
+                                        </div>
+                                    <?php elseif (!$next_item && isset($is_last_lesson) && $is_last_lesson): ?>
+                                        <div class="result-box warning">
+                                            <strong>⚠ BUTTON NOT SHOWN (No Next Unit)</strong><br>
+                                            Only completion message shows because:
+                                            <ul>
+                                                <li>This is the last resource/quiz in the lesson</li>
+                                                <li>This is the last lesson in the unit</li>
+                                                <li>But there is no next unit (this is the last unit in the course)</li>
+                                            </ul>
+                                        </div>
+                                    <?php elseif (!$next_item): ?>
+                                        <div class="result-box warning">
+                                            <strong>⚠ BUTTON NOT SHOWN (Not Last Lesson)</strong><br>
+                                            Shows "You have finished this lesson" because:
+                                            <ul>
+                                                <li>This is the last resource/quiz in the lesson</li>
+                                                <li>But this is NOT the last lesson in the unit</li>
+                                            </ul>
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="result-box info">
+                                            <strong>ℹ REGULAR NAVIGATION</strong><br>
+                                            Regular "Next" button shows because:
+                                            <ul>
+                                                <li>There is a next resource/quiz in this lesson</li>
+                                            </ul>
+                                        </div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            
+                            <div class="debugger-section">
+                                <h4>All Lessons in Course (in order)</h4>
+                                <?php if (!empty($debug_all_lessons)): ?>
+                                    <ol class="lessons-list">
+                                        <?php foreach ($debug_all_lessons as $index => $lesson_item): ?>
+                                            <li class="<?php echo ($lesson_item->ID == $lesson_id) ? 'current-item' : ''; ?>">
+                                                <strong><?php echo esc_html($lesson_item->post_title); ?></strong>
+                                                (ID: <?php echo esc_html($lesson_item->ID); ?>)
+                                                <?php if ($lesson_item->ID == $lesson_id): ?>
+                                                    <span class="badge">← YOU ARE HERE</span>
+                                                <?php endif; ?>
+                                                <?php if ($index === count($debug_all_lessons) - 1): ?>
+                                                    <span class="badge last">LAST LESSON</span>
+                                                <?php endif; ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ol>
+                                <?php else: ?>
+                                    <p class="no-data">No lessons found for this course</p>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <div class="debugger-section">
+                                <h4>All Units (in order)</h4>
+                                <?php if (!empty($debug_all_units)): ?>
+                                    <ol class="units-list">
+                                        <?php foreach ($debug_all_units as $index => $unit_item): ?>
+                                            <li class="<?php echo ($unit_item->ID == $course_id) ? 'current-item' : ''; ?>">
+                                                <strong><?php echo esc_html($unit_item->post_title); ?></strong>
+                                                (ID: <?php echo esc_html($unit_item->ID); ?>)
+                                                <?php if ($unit_item->ID == $course_id): ?>
+                                                    <span class="badge">← CURRENT UNIT</span>
+                                                <?php endif; ?>
+                                                <?php if (isset($next_unit) && $next_unit && $unit_item->ID == $next_unit->ID): ?>
+                                                    <span class="badge next">← NEXT UNIT</span>
+                                                <?php endif; ?>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ol>
+                                <?php else: ?>
+                                    <p class="no-data">No units found</p>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <div class="debugger-footer">
+                                <p><strong>How to use this debugger:</strong></p>
+                                <ul>
+                                    <li>Add <code>?debug_nav=1</code> to the URL to enable this debugger</li>
+                                    <li>Or define <code>IELTS_CM_DEBUG_NAV</code> constant as <code>true</code> in wp-config.php</li>
+                                    <li>This panel shows all the logic that determines button visibility</li>
+                                    <li>Use this to report exactly why the button isn't showing</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </div>
             </div>
