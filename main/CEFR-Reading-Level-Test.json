@@ -212,7 +212,7 @@
       "instructions": "",
       "question": "6. Children are not allowed to use the leisure centre",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'after 5pm on week days.' The text states: 'Children's hours are Monday to Friday 10am \u2013 12noon and 3pm \u2013 5pm.'",
+      "no_answer_feedback": "The correct answer is 'after 5pm on week days.' The text states: 'Children's hours are Monday to Friday 10am – 12noon and 3pm – 5pm.'",
       "correct_feedback": "Correct! Children's hours end at 5pm on weekdays.",
       "incorrect_feedback": "Incorrect. Look for the specific times when children are allowed to use the centre.",
       "reading_text_id": 1,
@@ -241,7 +241,7 @@
         {
           "text": "after 5pm on week days.",
           "is_correct": true,
-          "feedback": "Correct! The text states: 'Children's hours are Monday to Friday 10am \u2013 12noon and 3pm \u2013 5pm,' so they cannot use it after 5pm."
+          "feedback": "Correct! The text states: 'Children's hours are Monday to Friday 10am – 12noon and 3pm – 5pm,' so they cannot use it after 5pm."
         },
         {
           "text": "before 12 noon on workdays.",
@@ -310,18 +310,18 @@
     {
       "type": "closed_question",
       "instructions": "Level B1 Reading. Read the movie reviews below and match each statement (Questions 8-15) to the correct review (A-H).",
-      "question": "8. This film is a suspenseful mystery.",
+      "question": "8. This film is likely to be honoured by the film industry.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'A - Blakewater'. Correct! Blakewater is described as a thriller that keeps you on the edge of your seat.",
-      "correct_feedback": "Correct! Blakewater is described as a thriller that keeps you on the edge of your seat.",
-      "incorrect_feedback": "Incorrect. Correct! Blakewater is described as a thriller that keeps you on the edge of your seat.",
+      "no_answer_feedback": "The correct answer is 'A - Blakewater'. Blakewater is the right answer for this statement.",
+      "correct_feedback": "Correct! Blakewater is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'A - Blakewater'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
         {
           "text": "A - Blakewater",
           "is_correct": true,
-          "feedback": "Correct! Blakewater is described as a thriller that keeps you on the edge of your seat."
+          "feedback": "Correct! Blakewater is the right answer for this statement."
         },
         {
           "text": "B - Tina and Bree",
@@ -365,11 +365,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "9. This movie focuses on a close relationship between two people.",
+      "question": "9. This movie follows the adventures of 2 people who have just left home.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'B - Tina and Bree'. Correct! Tina and Bree is about a heartwarming friendship between two women.",
-      "correct_feedback": "Correct! Tina and Bree is about a heartwarming friendship between two women.",
-      "incorrect_feedback": "Incorrect. Correct! Tina and Bree is about a heartwarming friendship between two women.",
+      "no_answer_feedback": "The correct answer is 'B - Tina and Bree'. Tina and Bree is the right answer for this statement.",
+      "correct_feedback": "Correct! Tina and Bree is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'B - Tina and Bree'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -381,7 +381,7 @@
         {
           "text": "B - Tina and Bree",
           "is_correct": true,
-          "feedback": "Correct! Tina and Bree is about a heartwarming friendship between two women."
+          "feedback": "Correct! Tina and Bree is the right answer for this statement."
         },
         {
           "text": "C - The Adventures of Genie",
@@ -420,11 +420,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "10. This film is suitable for young viewers.",
+      "question": "10. This is a cartoon animation.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'C - The Adventures of Genie'. Correct! The Adventures of Genie is described as perfect family entertainment.",
-      "correct_feedback": "Correct! The Adventures of Genie is described as perfect family entertainment.",
-      "incorrect_feedback": "Incorrect. Correct! The Adventures of Genie is described as perfect family entertainment.",
+      "no_answer_feedback": "The correct answer is 'C - The Adventures of Genie'. The Adventures of Genie is the right answer for this statement.",
+      "correct_feedback": "Correct! The Adventures of Genie is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -441,7 +441,7 @@
         {
           "text": "C - The Adventures of Genie",
           "is_correct": true,
-          "feedback": "Correct! The Adventures of Genie is described as perfect family entertainment."
+          "feedback": "Correct! The Adventures of Genie is the right answer for this statement."
         },
         {
           "text": "D - Unimaginable",
@@ -475,11 +475,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "11. This movie is set in the future.",
+      "question": "11. This film has a predictable plot.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'D - Unimaginable'. Correct! Unimaginable is set in the year 2157.",
-      "correct_feedback": "Correct! Unimaginable is set in the year 2157.",
-      "incorrect_feedback": "Incorrect. Correct! Unimaginable is set in the year 2157.",
+      "no_answer_feedback": "The correct answer is 'D - Unimaginable'. Unimaginable is the right answer for this statement.",
+      "correct_feedback": "Correct! Unimaginable is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'D - Unimaginable'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -501,7 +501,7 @@
         {
           "text": "D - Unimaginable",
           "is_correct": true,
-          "feedback": "Correct! Unimaginable is set in the year 2157."
+          "feedback": "Correct! Unimaginable is the right answer for this statement."
         },
         {
           "text": "E - Between Two Points",
@@ -530,11 +530,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "12. This film takes place in multiple locations worldwide.",
+      "question": "12. This film is based upon a true story.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'E - Between Two Points'. Correct! Between Two Points features exotic locations in different cities around the world.",
-      "correct_feedback": "Correct! Between Two Points features exotic locations in different cities around the world.",
-      "incorrect_feedback": "Incorrect. Correct! Between Two Points features exotic locations in different cities around the world.",
+      "no_answer_feedback": "The correct answer is 'E - Between Two Points'. Between Two Points is the right answer for this statement.",
+      "correct_feedback": "Correct! Between Two Points is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'E - Between Two Points'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -561,7 +561,7 @@
         {
           "text": "E - Between Two Points",
           "is_correct": true,
-          "feedback": "Correct! Between Two Points features exotic locations in different cities around the world."
+          "feedback": "Correct! Between Two Points is the right answer for this statement."
         },
         {
           "text": "F - Family Planet",
@@ -585,11 +585,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "13. This movie uses computer animation.",
+      "question": "13. This movie is a modern version of an older film.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'F - Family Planet'. Correct! Family Planet is described as an animated film.",
-      "correct_feedback": "Correct! Family Planet is described as an animated film.",
-      "incorrect_feedback": "Incorrect. Correct! Family Planet is described as an animated film.",
+      "no_answer_feedback": "The correct answer is 'F - Family Planet'. Family Planet is the right answer for this statement.",
+      "correct_feedback": "Correct! Family Planet is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'F - Family Planet'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -621,7 +621,7 @@
         {
           "text": "F - Family Planet",
           "is_correct": true,
-          "feedback": "Correct! Family Planet is described as an animated film."
+          "feedback": "Correct! Family Planet is the right answer for this statement."
         },
         {
           "text": "G - The Strangest Summer",
@@ -640,11 +640,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "14. This film is about growing up.",
+      "question": "14. This film is enhanced by its accompanying music.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'G - The Strangest Summer'. Correct! The Strangest Summer is a coming-of-age drama about a teenager.",
-      "correct_feedback": "Correct! The Strangest Summer is a coming-of-age drama about a teenager.",
-      "incorrect_feedback": "Incorrect. Correct! The Strangest Summer is a coming-of-age drama about a teenager.",
+      "no_answer_feedback": "The correct answer is 'G - The Strangest Summer'. The Strangest Summer is the right answer for this statement.",
+      "correct_feedback": "Correct! The Strangest Summer is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -681,7 +681,7 @@
         {
           "text": "G - The Strangest Summer",
           "is_correct": true,
-          "feedback": "Correct! The Strangest Summer is a coming-of-age drama about a teenager."
+          "feedback": "Correct! The Strangest Summer is the right answer for this statement."
         },
         {
           "text": "H - Bastion Creek",
@@ -695,11 +695,11 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "15. This movie belongs to a classic American film genre.",
+      "question": "15. There's no commentary on this film.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is 'H - Bastion Creek'. Correct! Bastion Creek is described as a Western.",
-      "correct_feedback": "Correct! Bastion Creek is described as a Western.",
-      "incorrect_feedback": "Incorrect. Correct! Bastion Creek is described as a Western.",
+      "no_answer_feedback": "The correct answer is 'H - Bastion Creek'. Bastion Creek is the right answer for this statement.",
+      "correct_feedback": "Correct! Bastion Creek is the right answer for this statement.",
+      "incorrect_feedback": "Incorrect. The correct answer is 'H - Bastion Creek'.",
       "reading_text_id": 2,
       "ielts_question_category": "multiple_choice_r",
       "mc_options": [
@@ -741,7 +741,7 @@
         {
           "text": "H - Bastion Creek",
           "is_correct": true,
-          "feedback": "Correct! Bastion Creek is described as a Western."
+          "feedback": "Correct! Bastion Creek is the right answer for this statement."
         }
       ],
       "correct_answer_count": 1,
@@ -750,11 +750,11 @@
     {
       "type": "closed_question",
       "instructions": "Level B2 Reading. Do the following statements agree with the information in the reading passage? Write TRUE if the statement agrees with the information, FALSE if it contradicts, or NOT GIVEN if there is no information.",
-      "question": "16. You should research industry salary standards before negotiating with your manager.",
+      "question": "16. A mistake equally common across all types of employee is the premature acceptance of the first offer for a pay rise.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is TRUE.",
-      "correct_feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions.",
-      "incorrect_feedback": "Incorrect. The passage clearly recommends researching salary standards.",
+      "no_answer_feedback": "The correct answer is FALSE.",
+      "correct_feedback": "Correct! Research shows that younger job-seekers and female job-seekers often make this mistake - so it's NOT equally common across all types.",
+      "incorrect_feedback": "Incorrect. The passage states that younger and female job-seekers often make this mistake, indicating it is NOT equally common across all types of employee.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -763,18 +763,18 @@
       "mc_options": [
         {
           "text": "TRUE",
-          "is_correct": true,
-          "feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions."
+          "is_correct": false,
+          "feedback": "Incorrect. The passage indicates this mistake is more common among younger and female job-seekers, not equally common. The correct answer is FALSE."
         },
         {
           "text": "FALSE",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage clearly recommends researching salary standards. The correct answer is TRUE."
+          "is_correct": true,
+          "feedback": "Correct! Research shows that younger job-seekers and female job-seekers often make this mistake - so it's NOT equally common across all types."
         },
         {
           "text": "NOT GIVEN",
           "is_correct": false,
-          "feedback": "Incorrect. The passage provides information about this. The correct answer is TRUE."
+          "feedback": "Incorrect. The passage provides information about this. The correct answer is FALSE."
         }
       ],
       "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -784,11 +784,45 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "17. You should focus on personal financial needs when presenting your case for a pay rise.",
+      "question": "17. Employees can become demoralised despite having a pay raise.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is FALSE.",
-      "correct_feedback": "Correct! The passage clearly states to focus on the value you bring to the company rather than personal financial needs.",
-      "incorrect_feedback": "Incorrect. The passage advises to focus on value brought to the company, not personal needs.",
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "Correct! The passage states that employees can become demoralised when they hastily accept an inadequate offer.",
+      "incorrect_feedback": "Incorrect. The passage clearly states this can happen when they hastily accept an inadequate offer.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that employees can become demoralised when they hastily accept an inadequate offer."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states this can happen when they hastily accept an inadequate offer. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "18. Many people are unsuccessful in salary discussions because of poor research.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN.",
+      "correct_feedback": "Correct! The text says research is key to success but doesn't say many people fail due to poor research.",
+      "incorrect_feedback": "Incorrect. While the passage mentions research is important, it doesn't state that many people fail due to poor research.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -798,12 +832,46 @@
         {
           "text": "TRUE",
           "is_correct": false,
-          "feedback": "Incorrect. The passage states to focus on value brought to the company, not personal needs. The correct answer is FALSE."
+          "feedback": "Incorrect. The passage says research is key but doesn't say many people fail due to poor research. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage doesn't provide this specific information. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The text says research is key to success but doesn't say many people fail due to poor research."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "19. It is important to clearly state what pay rise is expected at the beginning of the negotiation.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE.",
+      "correct_feedback": "Correct! The passage states that the actual figure aimed for should not be revealed until the last possible moment.",
+      "incorrect_feedback": "Incorrect. The passage advises not to reveal the actual figure until the last possible moment.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage says the actual figure should not be revealed until the last possible moment. The correct answer is FALSE."
         },
         {
           "text": "FALSE",
           "is_correct": true,
-          "feedback": "Correct! The passage clearly states to focus on value brought to the company rather than personal financial needs."
+          "feedback": "Correct! The passage states that the actual figure aimed for should not be revealed until the last possible moment."
         },
         {
           "text": "NOT GIVEN",
@@ -818,11 +886,45 @@
     {
       "type": "closed_question",
       "instructions": "",
-      "question": "18. It is best to request a pay rise during the morning hours.",
+      "question": "20. A negotiation could include a discussion of other benefits as well as salary.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "Correct! The passage states that if the money offered is low, think about discussing the perks of the job.",
+      "incorrect_feedback": "Incorrect. The passage mentions discussing perks if the money offered is low.",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states that if the money offered is low, think about discussing the perks of the job."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions discussing perks if the money offered is low. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "21. You should avoid a pay negotiation when the employment market is not strong.",
       "points": 1,
       "no_answer_feedback": "The correct answer is NOT GIVEN.",
-      "correct_feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise.",
-      "incorrect_feedback": "Incorrect. The passage discusses timing in terms of projects and reviews, but not time of day.",
+      "correct_feedback": "Correct! The text only says to 'be realistic' but doesn't say to avoid negotiation when the market is not strong.",
+      "incorrect_feedback": "Incorrect. The passage mentions being realistic about the employment market but doesn't say to avoid negotiation.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -832,119 +934,17 @@
         {
           "text": "TRUE",
           "is_correct": false,
-          "feedback": "Incorrect. The passage discusses timing (after projects, during reviews) but not time of day. The correct answer is NOT GIVEN."
+          "feedback": "Incorrect. The passage only says to be realistic but doesn't say to avoid negotiation. The correct answer is NOT GIVEN."
         },
         {
           "text": "FALSE",
           "is_correct": false,
-          "feedback": "Incorrect. The passage does not provide information about time of day. The correct answer is NOT GIVEN."
+          "feedback": "Incorrect. The passage doesn't provide this specific information. The correct answer is NOT GIVEN."
         },
         {
           "text": "NOT GIVEN",
           "is_correct": true,
-          "feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise."
-        }
-      ],
-      "options": "TRUE\nFALSE\nNOT GIVEN",
-      "correct_answer_count": 1,
-      "show_option_letters": false
-    },
-    {
-      "type": "closed_question",
-      "instructions": "",
-      "question": "19. If your initial pay rise request is declined, you should ask about future opportunities.",
-      "points": 1,
-      "no_answer_feedback": "The correct answer is TRUE.",
-      "correct_feedback": "Correct! The passage mentions asking about future opportunities if the initial request is declined.",
-      "incorrect_feedback": "Incorrect. Review what the passage suggests doing if your initial request is declined.",
-      "reading_text_id": 3,
-      "audio_section_id": null,
-      "audio_start_time": null,
-      "audio_end_time": null,
-      "ielts_question_category": "true_false_not_given",
-      "mc_options": [
-        {
-          "text": "TRUE",
-          "is_correct": true,
-          "feedback": "Correct! The passage states to ask what improvements would make you eligible for a raise in the future."
-        },
-        {
-          "text": "FALSE",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage recommends asking about future opportunities. The correct answer is TRUE."
-        },
-        {
-          "text": "NOT GIVEN",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
-        }
-      ],
-      "options": "TRUE\nFALSE\nNOT GIVEN",
-      "correct_answer_count": 1,
-      "show_option_letters": false
-    },
-    {
-      "type": "closed_question",
-      "instructions": "",
-      "question": "20. Your manager must make a decision about your pay rise request within one week.",
-      "points": 1,
-      "no_answer_feedback": "The correct answer is FALSE.",
-      "correct_feedback": "Correct! The passage does not specify a one-week timeframe for the decision.",
-      "incorrect_feedback": "Incorrect. The passage does not mention a specific timeframe for the decision.",
-      "reading_text_id": 3,
-      "audio_section_id": null,
-      "audio_start_time": null,
-      "audio_end_time": null,
-      "ielts_question_category": "true_false_not_given",
-      "mc_options": [
-        {
-          "text": "TRUE",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage mentions a two-week timeframe for follow-up, not one week. The correct answer is FALSE."
-        },
-        {
-          "text": "FALSE",
-          "is_correct": true,
-          "feedback": "Correct! The passage suggests requesting a follow-up meeting within two weeks, not one week."
-        },
-        {
-          "text": "NOT GIVEN",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage provides timing information. The correct answer is FALSE."
-        }
-      ],
-      "options": "TRUE\nFALSE\nNOT GIVEN",
-      "correct_answer_count": 1,
-      "show_option_letters": false
-    },
-    {
-      "type": "closed_question",
-      "instructions": "",
-      "question": "21. Negotiation for salary increases is a standard business practice.",
-      "points": 1,
-      "no_answer_feedback": "The correct answer is TRUE.",
-      "correct_feedback": "Correct! The passage presents salary negotiation as a standard business practice.",
-      "incorrect_feedback": "Incorrect. The passage clearly states that salary negotiations are a standard business practice.",
-      "reading_text_id": 3,
-      "audio_section_id": null,
-      "audio_start_time": null,
-      "audio_end_time": null,
-      "ielts_question_category": "true_false_not_given",
-      "mc_options": [
-        {
-          "text": "TRUE",
-          "is_correct": true,
-          "feedback": "Correct! The passage explicitly states that negotiation is a normal business practice."
-        },
-        {
-          "text": "FALSE",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage confirms negotiation is a normal practice. The correct answer is TRUE."
-        },
-        {
-          "text": "NOT GIVEN",
-          "is_correct": false,
-          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+          "feedback": "Correct! The text only says to 'be realistic' but doesn't say to avoid negotiation when the market is not strong."
         }
       ],
       "options": "TRUE\nFALSE\nNOT GIVEN",
@@ -1146,7 +1146,7 @@
       "instructions": "",
       "question": "29. Family arguments were part of the reason why there was a delay of [field 1] before the first prizes.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+      "no_answer_feedback": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 5,
@@ -1162,7 +1162,7 @@
         "1": {
           "correct": "",
           "incorrect": "",
-          "no_answer": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'"
+          "no_answer": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.'"
         }
       }
     },
@@ -1196,7 +1196,7 @@
       "instructions": "",
       "question": "31. [field 1] has earned a Prize on a number of occasions.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'",
+      "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 5,
@@ -1212,7 +1212,7 @@
         "1": {
           "correct": "",
           "incorrect": "",
-          "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'"
+          "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'"
         }
       }
     },
@@ -1221,7 +1221,7 @@
       "instructions": "",
       "question": "32. In the early 1940s, there was [field 1] on two occasions.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'",
+      "no_answer_feedback": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 5,
@@ -1237,7 +1237,7 @@
         "1": {
           "correct": "",
           "incorrect": "",
-          "no_answer": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'"
+          "no_answer": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942.'"
         }
       }
     }
@@ -1249,15 +1249,15 @@
     },
     {
       "title": "Level A2 Reading",
-      "content": "<h3>Rules and Regulations for Members Bringing Guests and Children to the Leisure Centre</h3>\n\n<h4>Members' Guests over 18.</h4>\n\n<p><span id=\"q4\" data-question=\"4\"></span>Members are welcome to introduce guests to the club. <span class=\"reading-answer-marker\">Guests are required to register, pay the current guest fee and must be accompanied by a Member.</span> Members must ensure that their guests are fully aware of the clubs Terms &amp; Conditions and Rules &amp; Regulations. <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Each Member can introduce the same person no more than 6 times per year as a guest.</span> The owners take no responsibility for accidents, injuries, misadventure, theft or damage to personal belongings experienced by guests of the club.</p>\n\n<h4>Children</h4>\n\n<p>Members are allowed to bring their children to the leisure centre during certain hours. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Children's hours are Monday to Friday 10am \u2013 12noon and 3pm \u2013 5pm.</span> At weekends and on national holidays children are allowed to use the centre between 12 noon \u2013 4pm. A child is any individual under 16. All under 16's should be supervised by an adult (over 18) when using the facilities during children's hours. At age 17 all users must pay an adult membership fee. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.</span></p>"
+      "content": "<h3>Rules and Regulations for Members Bringing Guests and Children to the Leisure Centre</h3>\n\n<h4>Members' Guests over 18.</h4>\n\n<p><span id=\"q4\" data-question=\"4\"></span>Members are welcome to introduce guests to the club. <span class=\"reading-answer-marker\">Guests are required to register, pay the current guest fee and must be accompanied by a Member.</span> Members must ensure that their guests are fully aware of the clubs Terms &amp; Conditions and Rules &amp; Regulations. <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Each Member can introduce the same person no more than 6 times per year as a guest.</span> The owners take no responsibility for accidents, injuries, misadventure, theft or damage to personal belongings experienced by guests of the club.</p>\n\n<h4>Children</h4>\n\n<p>Members are allowed to bring their children to the leisure centre during certain hours. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Children's hours are Monday to Friday 10am – 12noon and 3pm – 5pm.</span> At weekends and on national holidays children are allowed to use the centre between 12 noon – 4pm. A child is any individual under 16. All under 16's should be supervised by an adult (over 18) when using the facilities during children's hours. At age 17 all users must pay an adult membership fee. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.</span></p>"
     },
     {
       "title": "Level B1 Reading",
-      "content": "<h3>Level B1 Reading - Movie Reviews</h3>\n\n<p><strong>Instructions:</strong> Read the eight movie reviews below. Then match each statement (Questions 8-15) to the correct movie review (A-H).</p>\n\n<h4>Movie Reviews</h4>\n\n<p><strong>A - Blakewater</strong><br/>\n<span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">This thriller keeps you on the edge of your seat from start to finish</span>. The plot twists are unexpected and the acting is superb. Set in a small coastal town, the mystery unfolds slowly but surely, revealing secrets that have been hidden for decades.</p>\n\n<p><strong>B - Tina and Bree</strong><br/>\n<span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">A heartwarming story about friendship that will make you laugh and cry</span>. Two women from completely different backgrounds become unlikely best friends. The chemistry between the lead actresses is wonderful and makes the film feel genuine and touching.</p>\n\n<p><strong>C - The Adventures of Genie</strong><br/>\n<span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Perfect family entertainment with amazing special effects and a magical storyline</span>. Children will love the colorful characters and exciting adventures, while parents will appreciate the positive messages about believing in yourself.</p>\n\n<p><strong>D - Unimaginable</strong><br/>\n<span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">A science fiction masterpiece with stunning visuals and a thought-provoking plot</span>. Set in the year 2157, this film explores what might happen if artificial intelligence becomes more powerful than humans. The special effects are groundbreaking.</p>\n\n<p><strong>E - Between Two Points</strong><br/>\n<span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">A romantic comedy that delivers plenty of laughs without being too predictable</span>. The story follows two people who keep meeting by chance in different cities around the world. The exotic locations and witty dialogue make this a very enjoyable watch.</p>\n\n<p><strong>F - Family Planet</strong><br/>\n<span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">An animated film that adults will enjoy just as much as children</span>. The story about a family of aliens trying to fit in on Earth is both funny and touching. The animation quality is excellent and the voice actors are perfectly cast.</p>\n\n<p><strong>G - The Strangest Summer</strong><br/>\n<span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">A coming-of-age drama that perfectly captures the confusion of teenage years</span>. The film follows a 16-year-old during one transformative summer. The young actors give remarkably mature performances and the script feels authentic.</p>\n\n<p><strong>H - Bastion Creek</strong><br/>\n<span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">A Western with a modern twist that reinvents the genre for a new generation</span>. While it has traditional gunfights and horseback chases, the film also deals with contemporary themes. The cinematography of the American Southwest is breathtaking.</p>"
+      "content": "<h3>Level B1 Reading - Movie Reviews</h3>\n\n<p><strong>Instructions:</strong> Read the eight movie reviews below. Then match each statement (Questions 8-15) to the correct movie review (A-H).</p>\n\n<h4>Movie Reviews</h4>\n\n<p><strong>A - Blakewater</strong><br/>\n<span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">This thriller is a masterpiece of cinematography and storytelling. It has already won several awards at international film festivals and is being tipped for major recognition at this year's Academy Awards.</span> The performances are outstanding and the direction is flawless.</p>\n\n<p><strong>B - Tina and Bree</strong><br/>\n<span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">This heartwarming road movie follows two young women who have recently moved out of their parents' houses and decide to take a cross-country trip together.</span> Their journey of self-discovery is both funny and touching, as they navigate independence for the first time.</p>\n\n<p><strong>C - The Adventures of Genie</strong><br/>\n<span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">This delightful animated feature uses stunning computer graphics to bring magical characters to life.</span> Perfect for children and adults alike, the colorful animation and imaginative storyline will keep viewers entertained throughout.</p>\n\n<p><strong>D - Unimaginable</strong><br/>\n<span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">While this romance has beautiful cinematography and strong performances, the storyline follows a very familiar formula.</span> You can see every twist coming from miles away, making it somewhat disappointing despite its other qualities.</p>\n\n<p><strong>E - Between Two Points</strong><br/>\n<span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">This powerful drama recounts the real-life experiences of a journalist who travelled across war-torn regions to document human stories.</span> The film stays faithful to actual events and includes interviews with the people involved, making it a compelling and educational watch.</p>\n\n<p><strong>F - Family Planet</strong><br/>\n<span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">This science fiction adventure is a remake of the classic 1960s film of the same name, updated with modern special effects and a more contemporary setting.</span> While purists may prefer the original, this new interpretation brings the story to a whole new generation.</p>\n\n<p><strong>G - The Strangest Summer</strong><br/>\n<span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">The haunting soundtrack perfectly complements the emotional depth of this coming-of-age drama. The original score elevates every scene, turning good moments into great ones.</span> The music has been nominated for several awards and deserves every accolade.</p>\n\n<p><strong>H - Bastion Creek</strong><br/>\n<span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">This unique documentary uses only music and natural sounds to tell its story, with no narrator or dialogue.</span> The stunning visuals of wildlife in the Australian outback speak for themselves, creating a meditative and immersive experience.</p>"
     },
     {
       "title": "Level B2 Reading",
-      "content": "<h4><strong>Guidelines for Negotiating a Pay Rise at Work</strong></h4>\r\n\r\n<p>Many employees feel uncertain about requesting a pay increase from their employer. However, with proper preparation and a professional approach, salary negotiations can be successful.</p>\r\n\r\n<h5>Before You Start</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Research industry salary standards for your position, experience level, and geographic location before initiating any discussion with your manager</span>. This ensures your request is realistic and backed by data.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Document your achievements and contributions over the past year, including successful projects, additional responsibilities you have assumed, and positive feedback from colleagues or clients</span>. This evidence strengthens your case considerably.</p>\r\n\r\n<p>Choose an appropriate time to request a meeting\u2014ideally after a successful project completion, during performance reviews, or when the company is performing well financially.</p>\r\n\r\n<h5>The Negotiation Meeting</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Start the conversation by thanking your manager for considering your request and expressing your commitment to the organization</span>. This sets a positive tone for the discussion.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Present your case clearly by explaining why you deserve a raise, focusing on the value you bring to the company rather than personal financial needs</span>. Mention specific accomplishments and how you have improved efficiency or contributed to company goals.</p>\r\n\r\n<p>Listen carefully to your manager's feedback. They may outline concerns, budget constraints, or offer alternative benefits such as additional vacation days or flexible working arrangements.</p>\r\n\r\n<h5>After the Discussion</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">If your manager needs time to consider, request a follow-up meeting within two weeks to discuss their decision</span>. Agree on a specific date before the meeting concludes.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Even if your initial request is declined, ask what specific improvements or achievements would make you eligible for a raise in the future, and establish clear goals to work towards</span>. This demonstrates your commitment to professional growth and keeps the door open for future negotiations.</p>\r\n\r\n<p>Remember that negotiation is a normal business practice, and most employers expect employees to request pay increases periodically.</p>"
+      "content": "<h4><strong>Guidelines for Negotiating a Pay Rise at Work</strong></h4>\r\n\r\n<p>Many employees feel uncertain about requesting a pay increase from their employer. However, with proper preparation and a professional approach, salary negotiations can be successful.</p>\r\n\r\n<h5>Before You Start</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Research industry salary standards for your position, experience level, and geographic location before initiating any discussion with your manager</span>. This ensures your request is realistic and backed by data.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Document your achievements and contributions over the past year, including successful projects, additional responsibilities you have assumed, and positive feedback from colleagues or clients</span>. This evidence strengthens your case considerably.</p>\r\n\r\n<p>Choose an appropriate time to request a meeting—ideally after a successful project completion, during performance reviews, or when the company is performing well financially.</p>\r\n\r\n<h5>The Negotiation Meeting</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Start the conversation by thanking your manager for considering your request and expressing your commitment to the organization</span>. This sets a positive tone for the discussion.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Present your case clearly by explaining why you deserve a raise, focusing on the value you bring to the company rather than personal financial needs</span>. Mention specific accomplishments and how you have improved efficiency or contributed to company goals.</p>\r\n\r\n<p>Listen carefully to your manager's feedback. They may outline concerns, budget constraints, or offer alternative benefits such as additional vacation days or flexible working arrangements.</p>\r\n\r\n<h5>After the Discussion</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">If your manager needs time to consider, request a follow-up meeting within two weeks to discuss their decision</span>. Agree on a specific date before the meeting concludes.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Even if your initial request is declined, ask what specific improvements or achievements would make you eligible for a raise in the future, and establish clear goals to work towards</span>. This demonstrates your commitment to professional growth and keeps the door open for future negotiations.</p>\r\n\r\n<p>Remember that negotiation is a normal business practice, and most employers expect employees to request pay increases periodically.</p>"
     },
     {
       "title": "Level C1 Reading",
@@ -1265,7 +1265,7 @@
     },
     {
       "title": "Level C2 Reading",
-      "content": "A: <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine</span>, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel\u2019s contribution to science was actually the creation of dynamite. <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \u2018Merchant of Death\u2019, that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made \u2018the greatest contribution to mankind\u2019.</span> <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.</span><br /><br />\r\n\r\nB: Each recipient received \u2013 and still receives \u2013 a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">Yet not every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.</span> In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958</span>. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated \u2013 he simply did not accept any official honour.<br /><br />\r\n\r\nC: <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).</span> <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903.</span> Also, <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942</span>. This was largely due to the world war that was being waged at the time.<br /><br />\r\n\r\nD: <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes \u2013 economics.</span> This was not a category defined in Nobel\u2019s will, but was established by Sweden\u2019s central bank in 1968 on the Bank\u2019s 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.<br /><br />\r\n\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.</span> Each year, between 100 and 250 people are nominated.<br /><br />\r\n\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel\u2019s will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen \u2013 even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br /><br />\r\n\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br /><br />\r\n\r\nH: <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct</span>; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised \u2013 Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br /><br />\r\n\r\nI: <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America.</span> <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).</span> Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for \u2018outstanding international diplomatic efforts\u2019 only 12 days after he took office, with many claiming that the nomination and award were politically motivated.</span><br /><br />\r\n\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a \u2018Peace Prize Concert\u2019 which is broadcast to over 450 million households in over 150 countries.\r\n"
+      "content": "A: <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine</span>, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel’s contribution to science was actually the creation of dynamite. <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the ‘Merchant of Death’, that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made ‘the greatest contribution to mankind’.</span> <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">However, it was not until 5 years after his death that the first prizes were handed out – complications with the will and disagreements among his surviving relatives meant that the process was set back.</span><br /><br />\r\n\r\nB: Each recipient received – and still receives – a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">Yet not every winner, referred to as a ‘laureate’, has actually accepted the award.</span> In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958</span>. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated – he simply did not accept any official honour.<br /><br />\r\n\r\nC: <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).</span> <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903.</span> Also, <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">since its inception, there have been two occasions where no winner was found for the prizes – in 1941 and 1942</span>. This was largely due to the world war that was being waged at the time.<br /><br />\r\n\r\nD: <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes – economics.</span> This was not a category defined in Nobel’s will, but was established by Sweden’s central bank in 1968 on the Bank’s 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.<br /><br />\r\n\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.</span> Each year, between 100 and 250 people are nominated.<br /><br />\r\n\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel’s will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen – even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br /><br />\r\n\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br /><br />\r\n\r\nH: <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct</span>; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised – Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br /><br />\r\n\r\nI: <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America.</span> <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).</span> Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for ‘outstanding international diplomatic efforts’ only 12 days after he took office, with many claiming that the nomination and award were politically motivated.</span><br /><br />\r\n\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a ‘Peace Prize Concert’ which is broadcast to over 450 million households in over 150 countries.\r\n"
     }
   ],
   "settings": {
