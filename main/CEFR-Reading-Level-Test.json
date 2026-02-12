@@ -753,8 +753,8 @@
       "question": "16. You should research industry salary standards before negotiating with your manager.",
       "points": 1,
       "no_answer_feedback": "The correct answer is TRUE.",
-      "correct_feedback": "",
-      "incorrect_feedback": "",
+      "correct_feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions.",
+      "incorrect_feedback": "Incorrect. The passage clearly recommends researching salary standards.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -787,8 +787,8 @@
       "question": "17. You should focus on personal financial needs when presenting your case for a pay rise.",
       "points": 1,
       "no_answer_feedback": "The correct answer is FALSE.",
-      "correct_feedback": "",
-      "incorrect_feedback": "",
+      "correct_feedback": "Correct! The passage clearly states to focus on the value you bring to the company rather than personal financial needs.",
+      "incorrect_feedback": "Incorrect. The passage advises to focus on value brought to the company, not personal needs.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -821,8 +821,8 @@
       "question": "18. It is best to request a pay rise during the morning hours.",
       "points": 1,
       "no_answer_feedback": "The correct answer is NOT GIVEN.",
-      "correct_feedback": "",
-      "incorrect_feedback": "",
+      "correct_feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise.",
+      "incorrect_feedback": "Incorrect. The passage discusses timing in terms of projects and reviews, but not time of day.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -855,8 +855,8 @@
       "question": "19. If your initial pay rise request is declined, you should ask about future opportunities.",
       "points": 1,
       "no_answer_feedback": "The correct answer is TRUE.",
-      "correct_feedback": "",
-      "incorrect_feedback": "",
+      "correct_feedback": "Correct! The passage mentions asking about future opportunities if the initial request is declined.",
+      "incorrect_feedback": "Incorrect. Review what the passage suggests doing if your initial request is declined.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -889,8 +889,8 @@
       "question": "20. Your manager must make a decision about your pay rise request within one week.",
       "points": 1,
       "no_answer_feedback": "The correct answer is FALSE.",
-      "correct_feedback": "",
-      "incorrect_feedback": "",
+      "correct_feedback": "Correct! The passage does not specify a one-week timeframe for the decision.",
+      "incorrect_feedback": "Incorrect. The passage does not mention a specific timeframe for the decision.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -923,8 +923,8 @@
       "question": "21. Negotiation for salary increases is a standard business practice.",
       "points": 1,
       "no_answer_feedback": "The correct answer is TRUE.",
-      "correct_feedback": "",
-      "incorrect_feedback": "",
+      "correct_feedback": "Correct! The passage presents salary negotiation as a standard business practice.",
+      "incorrect_feedback": "Incorrect. The passage clearly states that salary negotiations are a standard business practice.",
       "reading_text_id": 3,
       "audio_section_id": null,
       "audio_start_time": null,
@@ -971,12 +971,13 @@
         "1": {
           "correct": "Correct! Well done.",
           "incorrect": "Incorrect. The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.",
-          "no_answer": "The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'. Remember to review the passage carefully for specific details."
+          "no_answer": "The correct answer is: a blink microscope. Please refer to the reading passage."
         }
       },
       "field_answers": {
         "1": "a blink microscope"
-      }
+      },
+      "no_answer_feedback": "The correct answer is: a blink microscope. Please refer to the reading passage."
     },
     {
       "type": "open_question",
@@ -998,12 +999,13 @@
         "1": {
           "correct": "Correct! Well done.",
           "incorrect": "Incorrect. The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.",
-          "no_answer": "The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'. Remember to review the passage carefully for specific details."
+          "no_answer": "The correct answer is: James Christy. Please refer to the reading passage."
         }
       },
       "field_answers": {
         "1": "James Christy"
-      }
+      },
+      "no_answer_feedback": "The correct answer is: James Christy. Please refer to the reading passage."
     },
     {
       "type": "open_question",
@@ -1025,12 +1027,13 @@
         "1": {
           "correct": "Correct! Well done.",
           "incorrect": "Incorrect. The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'.",
-          "no_answer": "The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'. Remember to review the passage carefully for specific details."
+          "no_answer": "The correct answer is: the scattered disc. Please refer to the reading passage."
         }
       },
       "field_answers": {
         "1": "the scattered disc"
-      }
+      },
+      "no_answer_feedback": "The correct answer is: the scattered disc. Please refer to the reading passage."
     },
     {
       "type": "open_question",
@@ -1052,12 +1055,13 @@
         "1": {
           "correct": "Correct! Well done.",
           "incorrect": "Incorrect. The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'.",
-          "no_answer": "The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'. Remember to review the passage carefully for specific details."
+          "no_answer": "The correct answer is: the Czech Republic. Please refer to the reading passage."
         }
       },
       "field_answers": {
         "1": "the Czech Republic"
-      }
+      },
+      "no_answer_feedback": "The correct answer is: the Czech Republic. Please refer to the reading passage."
     },
     {
       "type": "open_question",
@@ -1079,12 +1083,13 @@
         "1": {
           "correct": "Correct! Well done.",
           "incorrect": "Incorrect. The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.",
-          "no_answer": "The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'. Remember to review the passage carefully for specific details."
+          "no_answer": "The correct answer is: Cthulhu Regio. Please refer to the reading passage."
         }
       },
       "field_answers": {
         "1": "Cthulhu Regio"
-      }
+      },
+      "no_answer_feedback": "The correct answer is: Cthulhu Regio. Please refer to the reading passage."
     },
     {
       "type": "open_question",
