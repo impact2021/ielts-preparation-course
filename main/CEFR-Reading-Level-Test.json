@@ -1,0 +1,1277 @@
+{
+  "title": "CEFR Reading Level Assessment Test",
+  "content": "This test will help you determine your CEFR reading level. You have 45 minutes to complete the test, but you can submit your answers before the timer runs out if you have already finished. In this assessment, there are 6 short reading texts, from Level A1 to Level C2. When you submit your answer, you will see what your current CEFR level is.",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "Level A1 Reading. Read the text below, then select the correct answer for each question.",
+      "question": "1. Where does David live?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'David lives in the city.' The passage states: 'David Edwards lives in a house in the city.'",
+      "correct_feedback": "Correct! The passage states that David Edwards lives in a house in the city.",
+      "incorrect_feedback": "Incorrect. Look at the first sentence of the passage which tells us where David lives.",
+      "reading_text_id": 0,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "David lives in the city.",
+          "is_correct": true,
+          "feedback": "Correct! The passage states: 'David Edwards lives in a house in the city.'"
+        },
+        {
+          "text": "David lives in an apartment.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states David lives in a house, not an apartment."
+        },
+        {
+          "text": "David lives in the countryside.",
+          "is_correct": false,
+          "feedback": "Incorrect. David lives in the city, but he spends most weekends hiking in the countryside."
+        },
+        {
+          "text": "David lives just outside the city.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly states David lives in the city."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "2. Which of these is true?",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'David's mum works in a hospital.' The passage states: 'His mum is a nurse who works in a large hospital.'",
+      "correct_feedback": "Correct! The passage states that David's mum is a nurse who works in a large hospital.",
+      "incorrect_feedback": "Incorrect. Look for information about David's parents' jobs in the passage.",
+      "reading_text_id": 0,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "David's dad is a nurse.",
+          "is_correct": false,
+          "feedback": "Incorrect. David's mum is a nurse, not his dad."
+        },
+        {
+          "text": "David's dad isn't a teacher.",
+          "is_correct": false,
+          "feedback": "Incorrect. David's dad works in a High School teaching history and geography."
+        },
+        {
+          "text": "David's mum teaches history.",
+          "is_correct": false,
+          "feedback": "Incorrect. David's mum is a nurse. His dad teaches history and geography."
+        },
+        {
+          "text": "David's mum works in a hospital.",
+          "is_correct": true,
+          "feedback": "Correct! The passage states: 'His mum is a nurse who works in a large hospital.'"
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "3. David...",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'has a girlfriend called Anne.' The passage ends by stating: 'David's girlfriend is named Anne.'",
+      "correct_feedback": "Correct! The passage states that David's girlfriend is named Anne.",
+      "incorrect_feedback": "Incorrect. Read the passage carefully to find the correct statement about David.",
+      "reading_text_id": 0,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "is the youngest person in the family.",
+          "is_correct": false,
+          "feedback": "Incorrect. David's sister is the youngest person in the family."
+        },
+        {
+          "text": "prefers watching television to listening to music.",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states that David prefers to listen to music (while most of the family like to watch television)."
+        },
+        {
+          "text": "is one of three children.",
+          "is_correct": false,
+          "feedback": "Incorrect. David has two brothers and a sister, making four children in total."
+        },
+        {
+          "text": "has a girlfriend called Anne.",
+          "is_correct": true,
+          "feedback": "Correct! The passage states: 'David's girlfriend is named Anne.'"
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Level A2 Reading. Read the text below, then complete the sentences that follow by selecting the best ending for each sentence.",
+      "question": "4. Adult guests are not allowed to use the facilities",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'unless a member is with them.' The text states: 'Guests are required to register, pay the current guest fee and must be accompanied by a Member.'",
+      "correct_feedback": "Correct! Adult guests must be accompanied by a member.",
+      "incorrect_feedback": "Incorrect. Look for information about what is required for guests to use the facilities.",
+      "reading_text_id": 1,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "cannot use all leisure centre facilities.",
+          "is_correct": false,
+          "feedback": "Incorrect. This applies to children under 12, not adult guests."
+        },
+        {
+          "text": "up to six occasions under guest terms.",
+          "is_correct": false,
+          "feedback": "Incorrect. This refers to how many times the same person can be introduced as a guest per year, not when they can use facilities."
+        },
+        {
+          "text": "unless a member is with them.",
+          "is_correct": true,
+          "feedback": "Correct! The text states: 'Guests must be accompanied by a Member.'"
+        },
+        {
+          "text": "during times it is open to children.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is not mentioned in the text."
+        },
+        {
+          "text": "after 5pm on week days.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about children's hours, not adult guest restrictions."
+        },
+        {
+          "text": "before 12 noon on workdays.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about children's hours, not adult guest restrictions."
+        },
+        {
+          "text": "may use the spa in the company of an adult.",
+          "is_correct": false,
+          "feedback": "Incorrect. This applies to children, not adult guests."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "5. Non members can visit the gym",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'up to six occasions under guest terms.' The text states: 'Each Member can introduce the same person no more than 6 times per year as a guest.'",
+      "correct_feedback": "Correct! Non-members can visit as a guest up to 6 times per year.",
+      "incorrect_feedback": "Incorrect. Look for information about how many times a guest can visit.",
+      "reading_text_id": 1,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "cannot use all leisure centre facilities.",
+          "is_correct": false,
+          "feedback": "Incorrect. This applies to children under 12, not guests in general."
+        },
+        {
+          "text": "up to six occasions under guest terms.",
+          "is_correct": true,
+          "feedback": "Correct! The text states: 'Each Member can introduce the same person no more than 6 times per year as a guest.'"
+        },
+        {
+          "text": "unless a member is with them.",
+          "is_correct": false,
+          "feedback": "Incorrect. While this is true, it's not the best completion for this sentence."
+        },
+        {
+          "text": "during times it is open to children.",
+          "is_correct": false,
+          "feedback": "Incorrect. This doesn't relate to non-member guest visits."
+        },
+        {
+          "text": "after 5pm on week days.",
+          "is_correct": false,
+          "feedback": "Incorrect. This refers to when children are not allowed, not guest visiting times."
+        },
+        {
+          "text": "before 12 noon on workdays.",
+          "is_correct": false,
+          "feedback": "Incorrect. This refers to children's hours."
+        },
+        {
+          "text": "may use the spa in the company of an adult.",
+          "is_correct": false,
+          "feedback": "Incorrect. This applies to children, not non-member guests."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "6. Children are not allowed to use the leisure centre",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'after 5pm on week days.' The text states: 'Children's hours are Monday to Friday 10am \u2013 12noon and 3pm \u2013 5pm.'",
+      "correct_feedback": "Correct! Children's hours end at 5pm on weekdays.",
+      "incorrect_feedback": "Incorrect. Look for the specific times when children are allowed to use the centre.",
+      "reading_text_id": 1,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "cannot use all leisure centre facilities.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is true but not a time restriction."
+        },
+        {
+          "text": "up to six occasions under guest terms.",
+          "is_correct": false,
+          "feedback": "Incorrect. This applies to guests, not children of members."
+        },
+        {
+          "text": "unless a member is with them.",
+          "is_correct": false,
+          "feedback": "Incorrect. While children need supervision, this doesn't complete the sentence about when they can't use the centre."
+        },
+        {
+          "text": "during times it is open to children.",
+          "is_correct": false,
+          "feedback": "Incorrect. This doesn't make sense as a completion."
+        },
+        {
+          "text": "after 5pm on week days.",
+          "is_correct": true,
+          "feedback": "Correct! The text states: 'Children's hours are Monday to Friday 10am \u2013 12noon and 3pm \u2013 5pm,' so they cannot use it after 5pm."
+        },
+        {
+          "text": "before 12 noon on workdays.",
+          "is_correct": false,
+          "feedback": "Incorrect. Children can use the centre from 10am-12noon on workdays."
+        },
+        {
+          "text": "may use the spa in the company of an adult.",
+          "is_correct": false,
+          "feedback": "Incorrect. This doesn't complete the sentence about when children are not allowed."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "7. 11 year olds",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'cannot use all leisure centre facilities.' The text states: 'Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.'",
+      "correct_feedback": "Correct! Children under 12 cannot use the steam room, hot spa or sauna.",
+      "incorrect_feedback": "Incorrect. Look for age restrictions on facility use.",
+      "reading_text_id": 1,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "cannot use all leisure centre facilities.",
+          "is_correct": true,
+          "feedback": "Correct! The text states: 'Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.'"
+        },
+        {
+          "text": "up to six occasions under guest terms.",
+          "is_correct": false,
+          "feedback": "Incorrect. This applies to guests, not to children of members."
+        },
+        {
+          "text": "unless a member is with them.",
+          "is_correct": false,
+          "feedback": "Incorrect. While children need supervision, this doesn't complete the sentence about 11 year olds specifically."
+        },
+        {
+          "text": "during times it is open to children.",
+          "is_correct": false,
+          "feedback": "Incorrect. This doesn't make sense as a completion for this sentence."
+        },
+        {
+          "text": "after 5pm on week days.",
+          "is_correct": false,
+          "feedback": "Incorrect. This is about when children cannot use the centre, not specific to 11 year olds."
+        },
+        {
+          "text": "before 12 noon on workdays.",
+          "is_correct": false,
+          "feedback": "Incorrect. Children can use the centre during these times."
+        },
+        {
+          "text": "may use the spa in the company of an adult.",
+          "is_correct": false,
+          "feedback": "Incorrect. Children under 12 are not allowed to use the spa even with an adult."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Level B1 Reading. Read the movie reviews below and match each statement (Questions 8-15) to the correct review (A-H).",
+      "question": "8. This film is a suspenseful mystery.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'A - Blakewater'. Correct! Blakewater is described as a thriller that keeps you on the edge of your seat.",
+      "correct_feedback": "Correct! Blakewater is described as a thriller that keeps you on the edge of your seat.",
+      "incorrect_feedback": "Incorrect. Correct! Blakewater is described as a thriller that keeps you on the edge of your seat.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": true,
+          "feedback": "Correct! Blakewater is described as a thriller that keeps you on the edge of your seat."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'A - Blakewater'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "9. This movie focuses on a close relationship between two people.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'B - Tina and Bree'. Correct! Tina and Bree is about a heartwarming friendship between two women.",
+      "correct_feedback": "Correct! Tina and Bree is about a heartwarming friendship between two women.",
+      "incorrect_feedback": "Incorrect. Correct! Tina and Bree is about a heartwarming friendship between two women.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": true,
+          "feedback": "Correct! Tina and Bree is about a heartwarming friendship between two women."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'B - Tina and Bree'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "10. This film is suitable for young viewers.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'C - The Adventures of Genie'. Correct! The Adventures of Genie is described as perfect family entertainment.",
+      "correct_feedback": "Correct! The Adventures of Genie is described as perfect family entertainment.",
+      "incorrect_feedback": "Incorrect. Correct! The Adventures of Genie is described as perfect family entertainment.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": true,
+          "feedback": "Correct! The Adventures of Genie is described as perfect family entertainment."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'C - The Adventures of Genie'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "11. This movie is set in the future.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'D - Unimaginable'. Correct! Unimaginable is set in the year 2157.",
+      "correct_feedback": "Correct! Unimaginable is set in the year 2157.",
+      "incorrect_feedback": "Incorrect. Correct! Unimaginable is set in the year 2157.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": true,
+          "feedback": "Correct! Unimaginable is set in the year 2157."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'D - Unimaginable'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "12. This film takes place in multiple locations worldwide.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'E - Between Two Points'. Correct! Between Two Points features exotic locations in different cities around the world.",
+      "correct_feedback": "Correct! Between Two Points features exotic locations in different cities around the world.",
+      "incorrect_feedback": "Incorrect. Correct! Between Two Points features exotic locations in different cities around the world.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": true,
+          "feedback": "Correct! Between Two Points features exotic locations in different cities around the world."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'E - Between Two Points'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "13. This movie uses computer animation.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'F - Family Planet'. Correct! Family Planet is described as an animated film.",
+      "correct_feedback": "Correct! Family Planet is described as an animated film.",
+      "incorrect_feedback": "Incorrect. Correct! Family Planet is described as an animated film.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": true,
+          "feedback": "Correct! Family Planet is described as an animated film."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'F - Family Planet'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "14. This film is about growing up.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'G - The Strangest Summer'. Correct! The Strangest Summer is a coming-of-age drama about a teenager.",
+      "correct_feedback": "Correct! The Strangest Summer is a coming-of-age drama about a teenager.",
+      "incorrect_feedback": "Incorrect. Correct! The Strangest Summer is a coming-of-age drama about a teenager.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": true,
+          "feedback": "Correct! The Strangest Summer is a coming-of-age drama about a teenager."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'G - The Strangest Summer'."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "15. This movie belongs to a classic American film genre.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'H - Bastion Creek'. Correct! Bastion Creek is described as a Western.",
+      "correct_feedback": "Correct! Bastion Creek is described as a Western.",
+      "incorrect_feedback": "Incorrect. Correct! Bastion Creek is described as a Western.",
+      "reading_text_id": 2,
+      "ielts_question_category": "multiple_choice_r",
+      "mc_options": [
+        {
+          "text": "A - Blakewater",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "B - Tina and Bree",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "C - The Adventures of Genie",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "D - Unimaginable",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "E - Between Two Points",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "F - Family Planet",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "G - The Strangest Summer",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'H - Bastion Creek'."
+        },
+        {
+          "text": "H - Bastion Creek",
+          "is_correct": true,
+          "feedback": "Correct! Bastion Creek is described as a Western."
+        }
+      ],
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "Level B2 Reading. Do the following statements agree with the information in the reading passage? Write TRUE if the statement agrees with the information, FALSE if it contradicts, or NOT GIVEN if there is no information.",
+      "question": "16. You should research industry salary standards before negotiating with your manager.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage explicitly states to research industry standards before initiating discussions."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage clearly recommends researching salary standards. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides information about this. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "17. You should focus on personal financial needs when presenting your case for a pay rise.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage states to focus on value brought to the company, not personal needs. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage clearly states to focus on value brought to the company rather than personal financial needs."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "18. It is best to request a pay rise during the morning hours.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is NOT GIVEN.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage discusses timing (after projects, during reviews) but not time of day. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage does not provide information about time of day. The correct answer is NOT GIVEN."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": true,
+          "feedback": "Correct! The passage does not mention what time of day is best for requesting a pay rise."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "19. If your initial pay rise request is declined, you should ask about future opportunities.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage states to ask what improvements would make you eligible for a raise in the future."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage recommends asking about future opportunities. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "20. Your manager must make a decision about your pay rise request within one week.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is FALSE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage mentions a two-week timeframe for follow-up, not one week. The correct answer is FALSE."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": true,
+          "feedback": "Correct! The passage suggests requesting a follow-up meeting within two weeks, not one week."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides timing information. The correct answer is FALSE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "21. Negotiation for salary increases is a standard business practice.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is TRUE.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 3,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "true_false_not_given",
+      "mc_options": [
+        {
+          "text": "TRUE",
+          "is_correct": true,
+          "feedback": "Correct! The passage explicitly states that negotiation is a normal business practice."
+        },
+        {
+          "text": "FALSE",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage confirms negotiation is a normal practice. The correct answer is TRUE."
+        },
+        {
+          "text": "NOT GIVEN",
+          "is_correct": false,
+          "feedback": "Incorrect. The passage provides this information. The correct answer is TRUE."
+        }
+      ],
+      "options": "TRUE\nFALSE\nNOT GIVEN",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "open_question",
+      "instructions": "Level C1 Reading. Complete the sentences below. Write NO MORE THAN TWO WORDS from the passage for each answer.",
+      "question": "22. Charles Tombaugh used a piece of specialist equipment called a .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "blink microscope",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'.",
+          "no_answer": "The correct answer is: BLINK MICROSCOPE. This answer is found in Paragraph B, where Tombaugh's use of specialist equipment is highlighted: 'detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus known as a blink microscope'. Remember to review the passage carefully for specific details."
+        }
+      },
+      "field_answers": {
+        "1": "a blink microscope"
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "23. Pluto's largest satellite was discovered by .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "James Christy",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'.",
+          "no_answer": "The correct answer is: JAMES CHRISTY. This answer is found in Paragraph C, which states: 'Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer James Christy'. Remember to review the passage carefully for specific details."
+        }
+      },
+      "field_answers": {
+        "1": "James Christy"
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "24. Eris is located in an area of the Kuiper belt called the .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "scattered disc",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'.",
+          "no_answer": "The correct answer is: SCATTERED DISC. This answer is found in Paragraph D, which mentions 'the discovery in 2005 of a minor planet... Eris, in an outlying region of the Kuiper belt known as the scattered disc'. Remember to review the passage carefully for specific details."
+        }
+      },
+      "field_answers": {
+        "1": "the scattered disc"
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "25. The International Astronomical Union came up with a formal definition for planets at a meeting held in the .",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "Czech Republic",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'.",
+          "no_answer": "The correct answer is: CZECH REPUBLIC. This answer is found in Paragraph E, which states: 'in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in the Czech Republic'. Remember to review the passage carefully for specific details."
+        }
+      },
+      "field_answers": {
+        "1": "the Czech Republic"
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "26. The name of one area on the surface of Pluto, called , was inspired by the creation of a particular writer.",
+      "points": 1,
+      "reading_text_id": 4,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "mc_options": [],
+      "options": "",
+      "correct_answer_count": 1,
+      "show_option_letters": false,
+      "ielts_question_type": "Sentence Completion",
+      "correct_answer": "Cthulhu Regio",
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! Well done.",
+          "incorrect": "Incorrect. The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'.",
+          "no_answer": "The correct answer is: CTHULHU REGIO. This answer is found in Paragraph F, which mentions 'Cthulhu Regio, the latter named after a fictional deity from the works of American author H.P. Lovecraft'. Remember to review the passage carefully for specific details."
+        }
+      },
+      "field_answers": {
+        "1": "Cthulhu Regio"
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "Level C2 Reading. Complete the sentences below. Write NO MORE THAN THREE WORDS from the passage for each answer.",
+      "question": "27. The Nobel prizes are awarded for [field 1] in a number of fields.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "outstanding contributions"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "28. Nobel was inspired to establish the Prizes following an obituary issued in [field 1].",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "a French newspaper"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes."
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "29. Family arguments were part of the reason why there was a delay of [field 1] before the first prizes.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "5 years|five years"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": "The correct answer is: 5 years or five years. Paragraph A states: 'However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "30. In the middle of the last century, a Russian nominee was compelled into [field 1] the award.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "declining"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": "The correct answer is: declining. Paragraph B states: 'the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958.'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "31. [field 1] has earned a Prize on a number of occasions.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "the Red Cross"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).'"
+        }
+      }
+    },
+    {
+      "type": "open_question",
+      "instructions": "",
+      "question": "32. In the early 1940s, there was [field 1] on two occasions.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": 5,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "sentence_completion_r",
+      "field_count": 1,
+      "field_answers": {
+        "1": "no winner"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "",
+          "incorrect": "",
+          "no_answer": "The correct answer is: no winner. Paragraph C states: 'since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942.'"
+        }
+      }
+    }
+  ],
+  "reading_texts": [
+    {
+      "title": "Level A1 Reading",
+      "content": "<p><span id=\"q1\" data-question=\"1\"></span><span class=\"reading-answer-marker\">David Edwards lives in a house in the city</span>, but spends most weekends hiking in the countryside. <span id=\"q2\" data-question=\"2\"></span><span class=\"reading-answer-marker\">His mum is a nurse who works in a large hospital</span> and his Dad works in a High School teaching history and geography. David has two brothers and a sister. <span id=\"q3\" data-question=\"3\"></span><span class=\"reading-answer-marker\">His sister is the youngest person in the family.</span> In the evenings, most of the family like to watch television, but David prefers to listen to music. David's girlfriend is named Anne.</p>"
+    },
+    {
+      "title": "Level A2 Reading",
+      "content": "<h3>Rules and Regulations for Members Bringing Guests and Children to the Leisure Centre</h3>\n\n<h4>Members' Guests over 18.</h4>\n\n<p><span id=\"q4\" data-question=\"4\"></span>Members are welcome to introduce guests to the club. <span class=\"reading-answer-marker\">Guests are required to register, pay the current guest fee and must be accompanied by a Member.</span> Members must ensure that their guests are fully aware of the clubs Terms &amp; Conditions and Rules &amp; Regulations. <span id=\"q5\" data-question=\"5\"></span><span class=\"reading-answer-marker\">Each Member can introduce the same person no more than 6 times per year as a guest.</span> The owners take no responsibility for accidents, injuries, misadventure, theft or damage to personal belongings experienced by guests of the club.</p>\n\n<h4>Children</h4>\n\n<p>Members are allowed to bring their children to the leisure centre during certain hours. <span id=\"q6\" data-question=\"6\"></span><span class=\"reading-answer-marker\">Children's hours are Monday to Friday 10am \u2013 12noon and 3pm \u2013 5pm.</span> At weekends and on national holidays children are allowed to use the centre between 12 noon \u2013 4pm. A child is any individual under 16. All under 16's should be supervised by an adult (over 18) when using the facilities during children's hours. At age 17 all users must pay an adult membership fee. <span id=\"q7\" data-question=\"7\"></span><span class=\"reading-answer-marker\">Children under the age of 12 are not allowed to use the steam room, hot spa or sauna.</span></p>"
+    },
+    {
+      "title": "Level B1 Reading",
+      "content": "<h3>Level B1 Reading - Movie Reviews</h3>\n\n<p><strong>Instructions:</strong> Read the eight movie reviews below. Then match each statement (Questions 8-15) to the correct movie review (A-H).</p>\n\n<h4>Movie Reviews</h4>\n\n<p><strong>A - Blakewater</strong><br/>\n<span id=\"q8\" data-question=\"8\"></span><span class=\"reading-answer-marker\">This thriller keeps you on the edge of your seat from start to finish</span>. The plot twists are unexpected and the acting is superb. Set in a small coastal town, the mystery unfolds slowly but surely, revealing secrets that have been hidden for decades.</p>\n\n<p><strong>B - Tina and Bree</strong><br/>\n<span id=\"q9\" data-question=\"9\"></span><span class=\"reading-answer-marker\">A heartwarming story about friendship that will make you laugh and cry</span>. Two women from completely different backgrounds become unlikely best friends. The chemistry between the lead actresses is wonderful and makes the film feel genuine and touching.</p>\n\n<p><strong>C - The Adventures of Genie</strong><br/>\n<span id=\"q10\" data-question=\"10\"></span><span class=\"reading-answer-marker\">Perfect family entertainment with amazing special effects and a magical storyline</span>. Children will love the colorful characters and exciting adventures, while parents will appreciate the positive messages about believing in yourself.</p>\n\n<p><strong>D - Unimaginable</strong><br/>\n<span id=\"q11\" data-question=\"11\"></span><span class=\"reading-answer-marker\">A science fiction masterpiece with stunning visuals and a thought-provoking plot</span>. Set in the year 2157, this film explores what might happen if artificial intelligence becomes more powerful than humans. The special effects are groundbreaking.</p>\n\n<p><strong>E - Between Two Points</strong><br/>\n<span id=\"q12\" data-question=\"12\"></span><span class=\"reading-answer-marker\">A romantic comedy that delivers plenty of laughs without being too predictable</span>. The story follows two people who keep meeting by chance in different cities around the world. The exotic locations and witty dialogue make this a very enjoyable watch.</p>\n\n<p><strong>F - Family Planet</strong><br/>\n<span id=\"q13\" data-question=\"13\"></span><span class=\"reading-answer-marker\">An animated film that adults will enjoy just as much as children</span>. The story about a family of aliens trying to fit in on Earth is both funny and touching. The animation quality is excellent and the voice actors are perfectly cast.</p>\n\n<p><strong>G - The Strangest Summer</strong><br/>\n<span id=\"q14\" data-question=\"14\"></span><span class=\"reading-answer-marker\">A coming-of-age drama that perfectly captures the confusion of teenage years</span>. The film follows a 16-year-old during one transformative summer. The young actors give remarkably mature performances and the script feels authentic.</p>\n\n<p><strong>H - Bastion Creek</strong><br/>\n<span id=\"q15\" data-question=\"15\"></span><span class=\"reading-answer-marker\">A Western with a modern twist that reinvents the genre for a new generation</span>. While it has traditional gunfights and horseback chases, the film also deals with contemporary themes. The cinematography of the American Southwest is breathtaking.</p>"
+    },
+    {
+      "title": "Level B2 Reading",
+      "content": "<h4><strong>Guidelines for Negotiating a Pay Rise at Work</strong></h4>\r\n\r\n<p>Many employees feel uncertain about requesting a pay increase from their employer. However, with proper preparation and a professional approach, salary negotiations can be successful.</p>\r\n\r\n<h5>Before You Start</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Research industry salary standards for your position, experience level, and geographic location before initiating any discussion with your manager</span>. This ensures your request is realistic and backed by data.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Document your achievements and contributions over the past year, including successful projects, additional responsibilities you have assumed, and positive feedback from colleagues or clients</span>. This evidence strengthens your case considerably.</p>\r\n\r\n<p>Choose an appropriate time to request a meeting\u2014ideally after a successful project completion, during performance reviews, or when the company is performing well financially.</p>\r\n\r\n<h5>The Negotiation Meeting</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Start the conversation by thanking your manager for considering your request and expressing your commitment to the organization</span>. This sets a positive tone for the discussion.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Present your case clearly by explaining why you deserve a raise, focusing on the value you bring to the company rather than personal financial needs</span>. Mention specific accomplishments and how you have improved efficiency or contributed to company goals.</p>\r\n\r\n<p>Listen carefully to your manager's feedback. They may outline concerns, budget constraints, or offer alternative benefits such as additional vacation days or flexible working arrangements.</p>\r\n\r\n<h5>After the Discussion</h5>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">If your manager needs time to consider, request a follow-up meeting within two weeks to discuss their decision</span>. Agree on a specific date before the meeting concludes.</p>\r\n\r\n<p><span id=\"q21\" data-question=\"21\"></span><span class=\"reading-answer-marker\">Even if your initial request is declined, ask what specific improvements or achievements would make you eligible for a raise in the future, and establish clear goals to work towards</span>. This demonstrates your commitment to professional growth and keeps the door open for future negotiations.</p>\r\n\r\n<p>Remember that negotiation is a normal business practice, and most employers expect employees to request pay increases periodically.</p>"
+    },
+    {
+      "title": "Level C1 Reading",
+      "content": "DWARF PLANET<br />\r\n<br />\r\nThe Discovery, Classification and Exploration of Pluto<br />\r\n<br />\r\n<strong>A: </strong><span class=\"reading-answer-marker\">On the 14th of July, 2015, a NASA deep space probe called New Horizons flew through <span class=\"reading-answer-marker\">the Pluto system in the Kuiper belt</span>, located almost 6 billion kilometres from our sun</span>, gathering high resolution photographs of the dwarf planet and its moons. Scientifically, the aims of the New Horizons mission were to provide experts on Earth with greater detail regarding the geomorphology, atmosphere, magnetosphere and surface composition of Pluto. As well as cameras for high resolution imagery, the spacecraft used an array of on-board scientific equipment to obtain information, including remote sensors, radio transmitters, computer subsystems, a large satellite dish and a radioisotope thermoelectric generator.<br />\r\n<br />\r\n<strong>B: </strong>Pluto was discovered in February, 1930, by the American Charles Tombaugh, a young self-taught astronomer working at the Lowell Observatory in Arizona. Tombaugh, then in his early twenties, detected the existence of the planet by examining anomalies in photographic plates with the aid of a special viewing apparatus <span id=\"q22\" data-question=\"22\"></span><span class=\"reading-answer-marker\">known as a blink microscope</span>. His discovery soon made worldwide news headlines, and on the 25th of May, 1930, the members of the Lowell Observatory chose the name of Pluto for the ninth planet in the Solar System by unanimous vote. The name itself comes from that of the Roman god of the underworld, and was suggested by a schoolgirl living in England, whose uncle, a retired university librarian, had passed on her suggestion through academic acquaintances. <span class=\"reading-answer-marker\">It has been rumoured that Pluto's discovery served as inspiration for Walt Disney's canine character of the same name</span>. There is, however, no question surrounding the naming of the element plutonium, which was named after the planet following the creation of the former by a team of scientists at the University of California in the early 1940s.<br />\r\n<br />\r\n<strong>C: </strong>The estimated mass of Pluto was steadily revised downwards in the decades following its discovery, and was not accurately calculated until 1978, the same year in which Charon, the largest of the planet's five moons, was discovered by the United States Naval Observatory astronomer <span id=\"q23\" data-question=\"23\"></span><span class=\"reading-answer-marker\">James Christy</span>. While the original estimate of Pluto's mass had been seven times that of Earth, Christy and his colleague, Robert Harrington, compared Charon's orbital period and size with those of Pluto, estimating the planet's mass to be approximately 0.2 per cent that of the earth. A pair of smaller satellites, Nix and Hydra, was subsequently identified in 2005, with <span class=\"reading-answer-marker\">the final two of Pluto's known moons, named Kerberos and Styx, being discovered in 2011 and 2012 respectively</span>.<br />\r\n<br />\r\n<strong>D: </strong>However, in spite of having been regarded as the ninth planet in the solar system for more than fifty years, Pluto's status and classification began to come into question towards the close of the twentieth century. Initially, this was due to the fact that during the nineties a number of objects, made of rock and ice and of a similar size to Pluto, were discovered lying within the Kuiper belt, a circumstellar disc, in many ways resembling a gigantic asteroid belt, at the edge of the Solar System beyond Neptune. The first of these new Kuiper Belt Objects (KBOs) was identified in 1992 by a pair of astronomers, David Jewitt and Jane Luu, working out of the Mauna Kea Observatory in Hawaii. Many more Kuiper Belt Objects were found in the years that followed, making Pluto's official status as a planet increasingly controversial among many in the scientific community. While Pluto remains, at present, the largest of the known trans-Neptunian objects located in the Kuiper belt, the discovery in 2005 of a minor planet with a greater mass, Eris, in an outlying region of the Kuiper belt known as <span id=\"q24\" data-question=\"24\"></span><span class=\"reading-answer-marker\">the scattered disc</span>, prompted the International Astronomical Union (IAU) to create a formal definition of the term \"planet\" that excluded Pluto.<br />\r\n<br />\r\n<strong>E: </strong>When the New Horizons interplanetary space probe was launched from Cape Canaveral in January, 2006, its primary mission was to voyage to Pluto, at that time the only remaining unexplored planet in the Solar System. However, in August of the same year, at the General Assembly of the International Astronomical Union (IAU) held in <span id=\"q25\" data-question=\"25\"></span><span class=\"reading-answer-marker\">the Czech Republic</span>, Pluto was reclassified as a dwarf planet on account of the fact that it did not meet one of the three formal conditions required to be classed as a planet. According to the official definition of the IAU, a planet must be in orbit around the sun and have sufficient mass both for its own gravity to make it spherical in shape and <span class=\"reading-answer-marker\">to have cleared the area around its orbit of smaller objects. Failing to meet the third of these criteria, Pluto was classified as a \"dwarf planet\"</span>. While the decision of the IAU to reduce the number of planets in the Solar System from nine to eight has received its fair share of both praise and criticism, the definition of Pluto as a dwarf planet, while controversial, remains in use. Today, there are five known bodies in the Solar System that have been recognised by the IAU as dwarf planets. In addition to Pluto, these are Ceres, Haumea, Makemake and Eris. At the same time, it has been estimated that there may be hundreds more as yet undiscovered and unclassified dwarf planets throughout the Solar System.<br />\r\n<br />\r\n<strong>F: </strong>The high resolution images of Pluto made during the New Horizons close flyby of the planet and beamed back to Earth from across the Solar System have revealed a unique terrain. Far from being a flat, dead world, the rocky dwarf planet's surface contains a multitude of varied, complex landscapes, ranging from oddly-textured ridges with the appearance of tree bark or dragon scales, ice cliffs, valleys and mountains and frozen lakes and oceans to heavily cratered and pitted plains. Experts theorise that, <span class=\"reading-answer-marker\">in addition to the impact of other space bodies colliding with the planet, the majority of its terrain has been shaped by a combination of ice sublimation and tectonic forces</span>. While still awaiting official approval from the International Astronomical Union, names for a number of Pluto's regions and topographical features have already been proposed by the New Horizons discovery team in consultation with the general public, including Tombaugh Regio, the Brass Knuckles, Tartarus Dorsa and <span id=\"q26\" data-question=\"26\"></span><span class=\"reading-answer-marker\">Cthulhu Regio</span>, the latter named after a fictional deity from the works of American author H.P. Lovecraft.<br />\r\n<br />\r\n<strong>G: </strong>Irrespective of its official present classification as a dwarf planet, the New Horizons reconnaissance of Pluto provides a wealth of knowledge and data regarding the last major body in the Solar System not previously visited by a space probe. While the planet, spacecraft and New Horizons team may be comparatively small, the mission to the Pluto system not only represents the culmination of more than a decade's worth of preparation on Earth, but also the beginning of a new chapter in space exploration at the edge of the Solar System and beyond."
+    },
+    {
+      "title": "Level C2 Reading",
+      "content": "A: <span id=\"q28\" data-question=\"28\"></span><span class=\"reading-answer-marker\">The Nobel Prize was first introduced in 1895, and now, over a century later, they are still highly respected awards. Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine</span>, they are named after Alfred Nobel, the man who initially pioneered the idea. Yet the Prizes had an unlikely start; Nobel\u2019s contribution to science was actually the creation of dynamite. <span id=\"q29\" data-question=\"29\"></span><span class=\"reading-answer-marker\">It was only when a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \u2018Merchant of Death\u2019, that Nobel realised the full impact of the legacy he was leaving behind. He decided that after his death, a significant portion of his wealth should be devoted to seeking out and acknowledging those who had made \u2018the greatest contribution to mankind\u2019.</span> <span id=\"q30\" data-question=\"30\"></span><span class=\"reading-answer-marker\">However, it was not until 5 years after his death that the first prizes were handed out \u2013 complications with the will and disagreements among his surviving relatives meant that the process was set back.</span><br /><br />\r\n\r\nB: Each recipient received \u2013 and still receives \u2013 a medal, a diploma and a monetary award. As of 2010, 817 individuals and 23 organizations had been awarded a Nobel Prize. <span id=\"q34\" data-question=\"34\"></span><span class=\"reading-answer-marker\">Yet not every winner, referred to as a \u2018laureate\u2019, has actually accepted the award.</span> In the 1930s, three German winners were not permitted by their government to accept the Nobel Prize, and <span id=\"q31\" data-question=\"31\"></span><span class=\"reading-answer-marker\">the government of the Soviet Union pressured Boris Pasternak into declining his award in 1958</span>. In 1964, Jean Paul Sartre, a French writer, also declined the award, although this was not politically motivated \u2013 he simply did not accept any official honour.<br /><br />\r\n\r\nC: <span id=\"q32\" data-question=\"32\"></span><span class=\"reading-answer-marker\">Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times \u2013 the Red Cross (which has been awarded a Prize three times).</span> <span id=\"q35\" data-question=\"35\"></span><span class=\"reading-answer-marker\">Another interesting statistic is that less than 5 percent of Nobel prizes have been awarded to women, the first of whom was Marie Curie, who won the Nobel Prize in Physics in 1903.</span> Also, <span id=\"q33\" data-question=\"33\"></span><span class=\"reading-answer-marker\">since its inception, there have been two occasions where no winner was found for the prizes \u2013 in 1941 and 1942</span>. This was largely due to the world war that was being waged at the time.<br /><br />\r\n\r\nD: <span id=\"q36\" data-question=\"36\"></span><span class=\"reading-answer-marker\">In 1969, having been running for nearly seventy years, a sixth area was introduced to the Nobel Prizes \u2013 economics.</span> This was not a category defined in Nobel\u2019s will, but was established by Sweden\u2019s central bank in 1968 on the Bank\u2019s 300th anniversary. Since this time, no categories have been added or removed from the prizegiving.<br /><br />\r\n\r\nE: There are of course certain rules governing who can be selected for a Nobel prize. You cannot nominate yourself, nor can a person be nominated after their death. <span id=\"q37\" data-question=\"37\"></span><span class=\"reading-answer-marker\">However, it is possible to award a prize to someone who is dead as long as they were alive during the nomination process.</span> Each year, between 100 and 250 people are nominated.<br /><br />\r\n\r\nF: Arguably the most well-known of the Nobel prizes is the Nobel Peace Prize. According to the terms of Nobel\u2019s will, it is not the Swedish Academy of Science nor the Academy of Arts (both of which select the recipient for the other prizes); instead, the Peace Prize is awarded by 5 people selected by the Norwegian parliament. But it is not just these 5 people who are carefully chosen \u2013 even those who have the right to nominate others are selected from a narrow selection of candidates. Members of national assemblies and governments, as well as selected international governmental bodies, university professors of history, political science, philosophy, law and theology, university presidents and directors of peace research and international affairs institutes, as well as former recipients are among the privileged few.<br /><br />\r\n\r\nG: For a nomination to be considered, only one acceptable nominator needs to suggest the name, but a shortlist of nominees, and the final recipient, is decided by the Nobel Institute, comprising of the 5 people selected by the Norwegian Parliament, as mentioned before.<br /><br />\r\n\r\nH: <span id=\"q38\" data-question=\"38\"></span><span class=\"reading-answer-marker\">Although there is always the aim of reaching a unanimous verdict amongst those judging, there are times when this has not always been the case. In fact, some of the judging panel have resigned following a final decision that they felt was not correct</span>; since its inception, the Peace Prize nominees have included people like Adolf Hitler, Joseph Stalin and Benito Mussolini (although they were not awarded the prize). On the other side, there are certain people who are in many ways synonymous with the struggle for peace yet have not been recognised \u2013 Mahatma Gandhi, for example, was nominated 5 times but never actually won an award.<br /><br />\r\n\r\nI: <span id=\"q39\" data-question=\"39\"></span><span class=\"reading-answer-marker\">Unsurprisingly, there have been a number of controversial winners of the Nobel Peace prize over the last 100 years. In the 1940s, Cordell Hull won the Peace Prize for his efforts in putting together the United Nations, but this was in many respects overshadowed by allegations that he campaigned against allowing a boat of Jewish refugees fleeing the Nazi regime to seek asylum in America.</span> <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">Anti-Semitic allegations tarnished the prize awarded to John Forbes Nash, who was himself suffering from schizophrenia (a disease which is considered to have impacted on some of his more public comments).</span> Rumours also surrounded Wangari Maathai, a scientist and the first African woman to receive the award, with some claiming that she had aimed certain aggressive remarks at non-African scientists. <span id=\"q40\" data-question=\"40\"></span><span class=\"reading-answer-marker\">A claim was also publicly made against the successful nomination of Barack Obama, with the award being given for \u2018outstanding international diplomatic efforts\u2019 only 12 days after he took office, with many claiming that the nomination and award were politically motivated.</span><br /><br />\r\n\r\nJ: But regardless of the controversies, allegations and history of Nobel, there is no doubt that for many countries, and many people, the Nobel Prizes are a welcome recognition of efforts in a wide range of fields. The award ceremony has, in recent years, become something of a global media event. There is a \u2018Peace Prize Concert\u2019 which is broadcast to over 450 million households in over 150 countries.\r\n"
+    }
+  ],
+  "settings": {
+    "pass_percentage": 70,
+    "layout_type": "two_column_reading",
+    "timer_minutes": 45,
+    "starting_question_number": 1
+  },
+  "_metadata": {
+    "test_purpose": "CEFR Reading Level Assessment - Levels A1 to C2",
+    "created_at": "2026-02-12",
+    "notes": "Cleaned up and converted from messy original format to proper JSON structure"
+  }
+}
