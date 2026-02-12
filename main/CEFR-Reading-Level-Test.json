@@ -1096,7 +1096,7 @@
       "instructions": "Level C2 Reading. Complete the sentences below. Write NO MORE THAN THREE WORDS from the passage for each answer.",
       "question": "27. The Nobel prizes are awarded for [field 1] in a number of fields.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
+      "no_answer_feedback": "The correct answer is: outstanding contributions (also acceptable: outstanding contribution, an outstanding contribution). Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 5,
@@ -1106,13 +1106,13 @@
       "ielts_question_category": "sentence_completion_r",
       "field_count": 1,
       "field_answers": {
-        "1": "outstanding contributions"
+        "1": "outstanding contributions|outstanding contribution|an outstanding contribution"
       },
       "field_feedback": {
         "1": {
           "correct": "",
           "incorrect": "",
-          "no_answer": "The correct answer is: outstanding contributions. Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'."
+          "no_answer": "The correct answer is: outstanding contributions (also acceptable: outstanding contribution, an outstanding contribution). Paragraph A states that the prizes are 'Presented to those individuals and organizations that make outstanding contributions in the fields of chemistry, physics, literature, peace, and physiology or medicine'."
         }
       }
     },
@@ -1121,7 +1121,7 @@
       "instructions": "",
       "question": "28. Nobel was inspired to establish the Prizes following an obituary issued in [field 1].",
       "points": 1,
-      "no_answer_feedback": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
+      "no_answer_feedback": "The correct answer is: a french newspaper (also acceptable: french newspaper). Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes.",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 5,
@@ -1131,13 +1131,13 @@
       "ielts_question_category": "sentence_completion_r",
       "field_count": 1,
       "field_answers": {
-        "1": "a French newspaper"
+        "1": "a french newspaper|french newspaper"
       },
       "field_feedback": {
         "1": {
           "correct": "",
           "incorrect": "",
-          "no_answer": "The correct answer is: a French newspaper. Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes."
+          "no_answer": "The correct answer is: a french newspaper (also acceptable: french newspaper). Paragraph A states that 'a French newspaper mistakenly believed Nobel had died, and subsequently printed an obituary referring to him as the \"Merchant of Death\"', which inspired him to establish the prizes."
         }
       }
     },
@@ -1196,7 +1196,7 @@
       "instructions": "",
       "question": "31. [field 1] has earned a Prize on a number of occasions.",
       "points": 1,
-      "no_answer_feedback": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
+      "no_answer_feedback": "The correct answer is: the red cross (also acceptable: red cross). Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'",
       "correct_feedback": "",
       "incorrect_feedback": "",
       "reading_text_id": 5,
@@ -1206,13 +1206,13 @@
       "ielts_question_category": "sentence_completion_r",
       "field_count": 1,
       "field_answers": {
-        "1": "the Red Cross"
+        "1": "the red cross|red cross"
       },
       "field_feedback": {
         "1": {
           "correct": "",
           "incorrect": "",
-          "no_answer": "The correct answer is: the Red Cross. Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'"
+          "no_answer": "The correct answer is: the red cross (also acceptable: red cross). Paragraph C states: 'Of all the recipients of Nobel Prizes, only one organisation or person has been awarded the honour multiple times – the Red Cross (which has been awarded a Prize three times).'"
         }
       }
     },
