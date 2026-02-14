@@ -212,21 +212,9 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         if ($is_last_lesson && $course_id) {
             // Get user's course group to filter units
             $user_id = get_current_user_id();
+            $user = get_userdata($user_id);
+            $is_admin = $user && in_array('administrator', $user->roles);
             $course_group = get_user_meta($user_id, 'iw_course_group', true);
-            
-            // Determine allowed categories based on course group
-            $allowed_categories = array();
-            switch ($course_group) {
-                case 'academic_module':
-                    $allowed_categories = array('academic', 'english', 'academic-practice-tests');
-                    break;
-                case 'general_module':
-                    $allowed_categories = array('general', 'english', 'general-practice-tests');
-                    break;
-                case 'general_english':
-                    $allowed_categories = array('english');
-                    break;
-            }
             
             // Build query args
             $query_args = array(
@@ -237,16 +225,37 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                 'post_status' => 'any'
             );
             
-            // Add category filter if user has a course group
-            if (!empty($allowed_categories)) {
-                $query_args['tax_query'] = array(
-                    array(
-                        'taxonomy' => 'ielts_course_category',
-                        'field' => 'slug',
-                        'terms' => $allowed_categories,
-                        'operator' => 'IN'
-                    )
-                );
+            // Only apply category filter for non-admin users with a valid course group
+            if (!$is_admin && !empty($course_group)) {
+                // Determine allowed categories based on course group
+                $allowed_categories = array();
+                switch ($course_group) {
+                    case 'academic_module':
+                        $allowed_categories = array('academic', 'english', 'academic-practice-tests');
+                        break;
+                    case 'general_module':
+                        $allowed_categories = array('general', 'english', 'general-practice-tests');
+                        break;
+                    case 'general_english':
+                        $allowed_categories = array('english');
+                        break;
+                    default:
+                        // Unknown course group - don't show any next unit for safety
+                        $allowed_categories = array();
+                        break;
+                }
+                
+                // Add category filter if we have allowed categories
+                if (!empty($allowed_categories)) {
+                    $query_args['tax_query'] = array(
+                        array(
+                            'taxonomy' => 'ielts_course_category',
+                            'field' => 'slug',
+                            'terms' => $allowed_categories,
+                            'operator' => 'IN'
+                        )
+                    );
+                }
             }
             
             // Get all units (including drafts) ordered by menu_order to find position
