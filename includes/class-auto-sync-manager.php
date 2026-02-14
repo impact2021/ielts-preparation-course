@@ -24,9 +24,9 @@ class IELTS_CM_Auto_Sync_Manager {
     const MAX_ITEMS_PER_RUN = 50;
     
     /**
-     * Memory threshold (in MB) - stop if memory usage exceeds this
+     * Default memory threshold (in MB) - stop if memory usage exceeds this
      */
-    const MEMORY_THRESHOLD_MB = 100;
+    const DEFAULT_MEMORY_THRESHOLD_MB = 256;
     
     /**
      * Maximum consecutive failures before auto-disabling
@@ -65,6 +65,13 @@ class IELTS_CM_Auto_Sync_Manager {
      */
     public function get_interval() {
         return absint(get_option('ielts_cm_auto_sync_interval', 15));
+    }
+    
+    /**
+     * Get memory threshold in MB
+     */
+    public function get_memory_threshold() {
+        return absint(get_option('ielts_cm_auto_sync_memory_threshold', self::DEFAULT_MEMORY_THRESHOLD_MB));
     }
     
     /**
@@ -148,7 +155,10 @@ class IELTS_CM_Auto_Sync_Manager {
             foreach ($items_to_sync as $item) {
                 // Check memory usage
                 if ($this->is_memory_exceeded()) {
-                    $this->log_sync('system', sprintf('Memory threshold exceeded. Synced %d items.', $synced_count), 'warning');
+                    // Only log if we actually synced some items before hitting the threshold
+                    if ($synced_count > 0) {
+                        $this->log_sync('system', sprintf('Memory threshold exceeded. Synced %d items.', $synced_count), 'warning');
+                    }
                     break;
                 }
                 
@@ -319,9 +329,10 @@ class IELTS_CM_Auto_Sync_Manager {
         $memory_limit_mb = $this->parse_memory_limit($memory_limit);
         
         $current_usage = memory_get_usage(true) / 1024 / 1024; // in MB
+        $threshold = $this->get_memory_threshold();
         
         // If we're using more than the threshold OR more than 80% of limit, stop
-        return ($current_usage > self::MEMORY_THRESHOLD_MB) || 
+        return ($current_usage > $threshold) || 
                ($memory_limit_mb > 0 && $current_usage > ($memory_limit_mb * 0.8));
     }
     
