@@ -240,7 +240,7 @@ if ($lesson_id) {
         $prev_url = get_permalink($prev_post->ID);
     }
     
-    // Check if this is the last lesson in the course (for completion message)
+    // Check if this is the last item of the last lesson in the course (for completion message)
     $is_last_lesson = false;
     if (empty($next_url) && $course_id && $lesson_id) {
         // Get all lessons in the course
@@ -264,7 +264,8 @@ if ($lesson_id) {
                 'post_status' => 'publish'
             ));
             
-            // Check if current lesson is the last one
+            // Check if current lesson is the last one AND we're on the last item within this lesson
+            // (empty($next_url) already confirms we're on the last item in the lesson)
             if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
                 $is_last_lesson = true;
             }

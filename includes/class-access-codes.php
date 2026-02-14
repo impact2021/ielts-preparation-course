@@ -2123,8 +2123,8 @@ class IELTS_CM_Access_Codes {
         }
         $skill_scores = $gamification->get_user_skill_scores($user_id);
         
-        // Calculate overall band score from all skills
-        $skills = array('reading', 'listening', 'writing', 'speaking');
+        // Calculate overall band score from all 6 skills (including grammar and vocabulary)
+        $skills = array('reading', 'listening', 'writing', 'speaking', 'grammar', 'vocabulary');
         $band_scores = array();
         
         foreach ($skills as $skill) {
