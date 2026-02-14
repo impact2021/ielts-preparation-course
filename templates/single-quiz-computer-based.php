@@ -276,14 +276,47 @@ if ($lesson_id) {
     $next_unit = null;
     $next_unit_label = __('Move on to next unit', 'ielts-course-manager');
     if ($is_last_lesson && $course_id) {
-        // Get all units (including drafts) ordered by menu_order to find position
-        $all_units = get_posts(array(
+        // Get user's course group to filter units
+        $user_id = get_current_user_id();
+        $course_group = get_user_meta($user_id, 'iw_course_group', true);
+        
+        // Determine allowed categories based on course group
+        $allowed_categories = array();
+        switch ($course_group) {
+            case 'academic_module':
+                $allowed_categories = array('academic', 'english', 'academic-practice-tests');
+                break;
+            case 'general_module':
+                $allowed_categories = array('general', 'english', 'general-practice-tests');
+                break;
+            case 'general_english':
+                $allowed_categories = array('english');
+                break;
+        }
+        
+        // Build query args
+        $query_args = array(
             'post_type' => 'ielts_course',
             'posts_per_page' => -1,
             'orderby' => 'menu_order',
             'order' => 'ASC',
             'post_status' => 'any'
-        ));
+        );
+        
+        // Add category filter if user has a course group
+        if (!empty($allowed_categories)) {
+            $query_args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'ielts_course_category',
+                    'field' => 'slug',
+                    'terms' => $allowed_categories,
+                    'operator' => 'IN'
+                )
+            );
+        }
+        
+        // Get all units (including drafts) ordered by menu_order to find position
+        $all_units = get_posts($query_args);
         
         // Find the current unit and get the next published one
         $total_units = count($all_units);
