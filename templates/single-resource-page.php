@@ -592,7 +592,7 @@ body.ielts-resource-single .content-area {
                 $prev_item = ($current_index > 0) ? $all_items[$current_index - 1] : null;
                 $next_item = ($current_index >= 0 && $current_index < count($all_items) - 1) ? $all_items[$current_index + 1] : null;
                 
-                // Check if this is the last lesson in the course (for completion message)
+                // Check if this is the last item of the last lesson in the course (for completion message)
                 $is_last_lesson = false;
                 if (!$next_item && $course_id && $lesson_id) {
                     // Get all lessons in the course
@@ -616,7 +616,8 @@ body.ielts-resource-single .content-area {
                             'post_status' => 'publish'
                         ));
                         
-                        // Check if current lesson is the last one
+                        // Check if current lesson is the last one AND we're on the last item within this lesson
+                        // (!$next_item already confirms we're on the last item in the lesson)
                         if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
                             $is_last_lesson = true;
                         }

@@ -174,7 +174,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             $next_label = __('Next', 'ielts-course-manager');
         }
         
-        // Check if this is the last lesson in the course (for completion message)
+        // Check if this is the last item of the last lesson in the course (for completion message)
         $is_last_lesson = false;
         if (!$next_item && $course_id && $lesson_id) {
             // Get all lessons in the course
@@ -198,7 +198,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                     'post_status' => 'publish'
                 ));
                 
-                // Check if current lesson is the last one
+                // Check if current lesson is the last one AND we're on the last item within this lesson
+                // (!$next_item already confirms we're on the last item in the lesson)
                 if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
                     $is_last_lesson = true;
                 }
