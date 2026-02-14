@@ -207,6 +207,7 @@ class IELTS_CM_Sync_Settings_Page {
     private function handle_update_auto_sync() {
         $enabled = isset($_POST['auto_sync_enabled']) ? '1' : '0';
         $interval = absint($_POST['auto_sync_interval'] ?? 15);
+        $memory_threshold = absint($_POST['auto_sync_memory_threshold'] ?? 256);
         
         // Validate interval (minimum 5 minutes, maximum 1440 minutes / 24 hours)
         if ($interval < 5 || $interval > 1440) {
@@ -214,8 +215,15 @@ class IELTS_CM_Sync_Settings_Page {
             return;
         }
         
+        // Validate memory threshold (minimum 64 MB, maximum 2048 MB / 2 GB)
+        if ($memory_threshold < 64 || $memory_threshold > 2048) {
+            add_settings_error('ielts_cm_sync', 'invalid_memory_threshold', 'Invalid memory threshold. Must be between 64 and 2048 MB.');
+            return;
+        }
+        
         update_option('ielts_cm_auto_sync_enabled', $enabled);
         update_option('ielts_cm_auto_sync_interval', $interval);
+        update_option('ielts_cm_auto_sync_memory_threshold', $memory_threshold);
         
         // Initialize auto-sync manager to reschedule cron
         $auto_sync = new IELTS_CM_Auto_Sync_Manager();
@@ -473,6 +481,7 @@ class IELTS_CM_Sync_Settings_Page {
                         $auto_sync = new IELTS_CM_Auto_Sync_Manager();
                         $auto_sync_enabled = $auto_sync->is_enabled();
                         $auto_sync_interval = $auto_sync->get_interval();
+                        $auto_sync_memory_threshold = $auto_sync->get_memory_threshold();
                         $last_run = $auto_sync->get_last_run();
                         $next_run = $auto_sync->get_next_run();
                         $consecutive_failures = absint(get_option('ielts_cm_auto_sync_failures', 0));
@@ -511,6 +520,22 @@ class IELTS_CM_Sync_Settings_Page {
                                         </select>
                                         <p class="description">
                                             <?php _e('How often to check for content changes. Shorter intervals provide faster sync but use more server resources.', 'ielts-course-manager'); ?>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><?php _e('Memory Threshold', 'ielts-course-manager'); ?></th>
+                                    <td>
+                                        <select name="auto_sync_memory_threshold">
+                                            <option value="64" <?php selected($auto_sync_memory_threshold, 64); ?>>64 MB</option>
+                                            <option value="128" <?php selected($auto_sync_memory_threshold, 128); ?>>128 MB</option>
+                                            <option value="256" <?php selected($auto_sync_memory_threshold, 256); ?>>256 MB (Recommended)</option>
+                                            <option value="512" <?php selected($auto_sync_memory_threshold, 512); ?>>512 MB</option>
+                                            <option value="1024" <?php selected($auto_sync_memory_threshold, 1024); ?>>1024 MB (1 GB)</option>
+                                            <option value="2048" <?php selected($auto_sync_memory_threshold, 2048); ?>>2048 MB (2 GB)</option>
+                                        </select>
+                                        <p class="description">
+                                            <?php _e('Maximum memory usage before pausing sync. Higher values allow more items to sync per run but use more server memory. Increase this if you see frequent "Memory threshold exceeded" warnings.', 'ielts-course-manager'); ?>
                                         </p>
                                     </td>
                                 </tr>

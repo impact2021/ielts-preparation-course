@@ -199,11 +199,11 @@ Maximum 50 items per run.
 
 🚨 **Take action if you see**:
 - Multiple consecutive failures
-- "Memory threshold exceeded" messages
+- "Memory threshold exceeded" messages with items synced
 - Very long execution times (>60 sec)
 - Server slowdowns during sync time
 
-**Solution**: Increase interval or check server resources.
+**Solution**: Increase interval, increase memory threshold, or check server resources.
 
 ---
 
@@ -217,6 +217,9 @@ Maximum 50 items per run.
 
 ### Problem: Content Not Syncing
 **Fix**: Run manual sync, check specific error in log
+
+### Problem: Memory Threshold Warnings
+**Fix**: Increase the Memory Threshold setting in Auto-Sync settings (default is 256 MB). If you see warnings with 0 items synced, your baseline memory usage is already high - increase the threshold significantly.
 
 ### Problem: Slow Performance
 **Fix**: Increase interval, reduce content volume

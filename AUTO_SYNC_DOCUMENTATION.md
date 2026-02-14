@@ -22,7 +22,7 @@ The IELTS Course Manager now includes an **Automatic Sync** feature that periodi
 
 ### 3. Server Load Protection
 - **Batch Processing**: Max 50 items per sync run
-- **Memory Monitoring**: Stops if memory usage exceeds 100MB or 80% of PHP limit
+- **Memory Monitoring**: Configurable memory threshold (default 256MB) or 80% of PHP limit
 - **Auto-Disable**: Turns off after 5 consecutive failures
 - **Efficient Detection**: Only changed items are processed
 
@@ -51,6 +51,20 @@ Choose how often to check for changes:
 | **6 hours** | Occasional updates | Minimal |
 | **12 hours** | Twice-daily sync | Minimal |
 | **24 hours** | Daily sync | Minimal |
+
+### Memory Threshold Options
+Configure maximum memory usage before sync pauses:
+
+| Threshold | Recommended For | Use Case |
+|----------|----------------|----------|
+| **64 MB** | Very limited resources | Small shared hosting |
+| **128 MB** | Limited resources | Budget hosting |
+| **256 MB** | Standard configuration | Most sites (Default) |
+| **512 MB** | Large content syncs | Sites with many courses |
+| **1024 MB (1 GB)** | Heavy workloads | Large-scale deployments |
+| **2048 MB (2 GB)** | Very large syncs | Enterprise setups |
+
+**Note**: If you see frequent "Memory threshold exceeded" warnings with 0 items synced, increase this value. The system will also stop if it reaches 80% of your PHP memory_limit setting.
 
 ### Recommended Intervals
 
