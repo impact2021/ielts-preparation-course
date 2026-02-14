@@ -3308,7 +3308,7 @@ class IELTS_CM_Shortcodes {
         }
         
         $atts = shortcode_atts(array(
-            'skills' => 'reading,listening,writing,speaking', // Which skills to show
+            'skills' => 'reading,listening,writing,speaking,grammar,vocabulary', // Which skills to show
             'title' => __('Your Estimated IELTS Band Scores', 'ielts-course-manager')
         ), $atts);
         
@@ -3321,32 +3321,61 @@ class IELTS_CM_Shortcodes {
         // Parse which skills to display
         $skills_to_show = array_map('trim', explode(',', $atts['skills']));
         
+        // Define the 4 official IELTS skills
+        $official_skills = array('reading', 'listening', 'writing', 'speaking');
+        $additional_skills = array('grammar', 'vocabulary');
+        
         // Convert percentage scores to band scores
         $band_scores = array();
-        $total_score = 0;
-        $score_count = 0;
+        $official_total = 0;
+        $official_count = 0;
+        $all_total = 0;
+        $all_count = 0;
+        
         foreach ($skills_to_show as $skill) {
             $skill = strtolower($skill);
             if (isset($skill_scores[$skill])) {
                 $percentage = $skill_scores[$skill];
                 $band_scores[$skill] = $this->convert_percentage_to_band($percentage);
                 if ($skill_scores[$skill] > 0) {
-                    $total_score += $band_scores[$skill];
-                    $score_count++;
+                    // Add to overall total
+                    $all_total += $band_scores[$skill];
+                    $all_count++;
+                    
+                    // Add to official skills total if it's one of the 4 main skills
+                    if (in_array($skill, $official_skills)) {
+                        $official_total += $band_scores[$skill];
+                        $official_count++;
+                    }
                 }
             }
         }
         
-        // Calculate overall band score (average, rounded to nearest 0.5)
-        $overall_score = 0;
-        if ($score_count > 0) {
-            $average = $total_score / $score_count;
-            // Round to nearest 0.5
-            $overall_score = round($average * 2) / 2;
+        // Calculate Skills Total (4 official skills average, rounded to nearest 0.5)
+        $skills_total = 0;
+        if ($official_count > 0) {
+            $average = $official_total / $official_count;
+            $skills_total = round($average * 2) / 2;
+        }
+        
+        // Calculate Overall Total (all 6 skills average, rounded to nearest 0.5)
+        $overall_total = 0;
+        if ($all_count > 0) {
+            $average = $all_total / $all_count;
+            $overall_total = round($average * 2) / 2;
         }
         
         // Get header color from settings (using primary color)
         $header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
+        
+        // Check if we're showing additional skills
+        $showing_additional = false;
+        foreach ($additional_skills as $skill) {
+            if (in_array($skill, $skills_to_show)) {
+                $showing_additional = true;
+                break;
+            }
+        }
         
         ob_start();
         ?>
@@ -3362,10 +3391,19 @@ class IELTS_CM_Shortcodes {
                             <?php foreach ($skills_to_show as $skill): 
                                 $skill = strtolower($skill);
                                 $skill_label = ucfirst($skill);
+                                $is_additional = in_array($skill, $additional_skills);
                             ?>
-                                <th><?php echo esc_html($skill_label); ?></th>
+                                <th class="<?php echo $is_additional ? 'additional-skill' : ''; ?>">
+                                    <?php echo esc_html($skill_label); ?>
+                                    <?php if ($is_additional): ?>
+                                        <span class="skill-indicator">*</span>
+                                    <?php endif; ?>
+                                </th>
                             <?php endforeach; ?>
-                            <th><?php _e('Overall', 'ielts-course-manager'); ?></th>
+                            <?php if ($showing_additional): ?>
+                                <th class="total-column"><?php _e('Skills Total', 'ielts-course-manager'); ?></th>
+                            <?php endif; ?>
+                            <th class="total-column"><?php echo $showing_additional ? __('Overall Total', 'ielts-course-manager') : __('Overall', 'ielts-course-manager'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -3374,8 +3412,9 @@ class IELTS_CM_Shortcodes {
                                 $skill = strtolower($skill);
                                 $band_score = isset($band_scores[$skill]) ? $band_scores[$skill] : 0;
                                 $has_data = isset($skill_scores[$skill]) && $skill_scores[$skill] > 0;
+                                $is_additional = in_array($skill, $additional_skills);
                             ?>
-                                <td class="band-score-cell <?php echo $has_data ? 'has-data' : 'no-data'; ?>">
+                                <td class="band-score-cell <?php echo $has_data ? 'has-data' : 'no-data'; ?> <?php echo $is_additional ? 'additional-skill' : ''; ?>">
                                     <span class="band-score-value">
                                         <?php 
                                         if ($has_data) {
@@ -3392,17 +3431,35 @@ class IELTS_CM_Shortcodes {
                                     <?php endif; ?>
                                 </td>
                             <?php endforeach; ?>
-                            <td class="band-score-cell overall-score <?php echo $score_count > 0 ? 'has-data' : 'no-data'; ?>">
+                            <?php if ($showing_additional): ?>
+                                <td class="band-score-cell skills-total <?php echo $official_count > 0 ? 'has-data' : 'no-data'; ?>">
+                                    <span class="band-score-value">
+                                        <?php 
+                                        if ($official_count > 0) {
+                                            echo esc_html(number_format($skills_total, 1));
+                                        } else {
+                                            echo '—';
+                                        }
+                                        ?>
+                                    </span>
+                                    <?php if ($official_count > 0): ?>
+                                        <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
+                                    <?php else: ?>
+                                        <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
+                                </td>
+                            <?php endif; ?>
+                            <td class="band-score-cell overall-score <?php echo $all_count > 0 ? 'has-data' : 'no-data'; ?>">
                                 <span class="band-score-value">
                                     <?php 
-                                    if ($score_count > 0) {
-                                        echo esc_html(number_format($overall_score, 1));
+                                    if ($all_count > 0) {
+                                        echo esc_html(number_format($overall_total, 1));
                                     } else {
                                         echo '—';
                                     }
                                     ?>
                                 </span>
-                                <?php if ($score_count > 0): ?>
+                                <?php if ($all_count > 0): ?>
                                     <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
                                 <?php else: ?>
                                     <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
@@ -3412,6 +3469,13 @@ class IELTS_CM_Shortcodes {
                     </tbody>
                 </table>
             </div>
+            
+            <?php if ($showing_additional): ?>
+            <p class="band-scores-disclaimer">
+                <strong><?php _e('* Note:', 'ielts-course-manager'); ?></strong> 
+                <?php _e('Grammar and Vocabulary are not rated as separate categories in the official IELTS test. These scores are provided to help you track your progress in these important language areas.', 'ielts-course-manager'); ?>
+            </p>
+            <?php endif; ?>
             
             <p class="band-scores-note">
                 <?php _e('Band scores are estimates based on your test performance. Complete more tests for more accurate results.', 'ielts-course-manager'); ?>
@@ -3455,6 +3519,31 @@ class IELTS_CM_Shortcodes {
             border: 1px solid rgba(255,255,255,0.2);
         }
         
+        .ielts-band-scores-table th.additional-skill {
+            background: rgba(<?php 
+                // Convert hex to RGB and make it slightly lighter
+                $hex = str_replace('#', '', $header_color);
+                $r = hexdec(substr($hex, 0, 2));
+                $g = hexdec(substr($hex, 2, 2));
+                $b = hexdec(substr($hex, 4, 2));
+                // Lighten by 30%
+                $r = min(255, $r + ($r * 0.3));
+                $g = min(255, $g + ($g * 0.3));
+                $b = min(255, $b + ($b * 0.3));
+                echo round($r) . ',' . round($g) . ',' . round($b);
+            ?>, 0.8);
+        }
+        
+        .ielts-band-scores-table th .skill-indicator {
+            font-size: 18px;
+            vertical-align: super;
+            margin-left: 2px;
+        }
+        
+        .ielts-band-scores-table th.total-column {
+            background: #2c3e50;
+        }
+        
         .ielts-band-scores-table td {
             padding: 25px 15px;
             text-align: center;
@@ -3470,6 +3559,14 @@ class IELTS_CM_Shortcodes {
             background: #f9f9f9;
         }
         
+        .band-score-cell.additional-skill {
+            background: #fafafa;
+        }
+        
+        .band-score-cell.additional-skill.has-data {
+            background: #fafafa;
+        }
+        
         .band-score-value {
             display: block;
             font-size: 36px;
@@ -3481,6 +3578,15 @@ class IELTS_CM_Shortcodes {
         .band-score-cell.no-data .band-score-value {
             font-size: 24px;
             color: #999;
+        }
+        
+        .band-score-cell.skills-total {
+            background: #e3f2fd;
+            font-weight: bold;
+        }
+        
+        .band-score-cell.skills-total .band-score-value {
+            color: #1976d2;
         }
         
         .band-score-cell.overall-score {
@@ -3504,6 +3610,21 @@ class IELTS_CM_Shortcodes {
         .no-data-label {
             font-size: 11px;
             color: #999;
+        }
+        
+        .band-scores-disclaimer {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f0f7ff;
+            border-left: 3px solid #1976d2;
+            border-radius: 4px;
+        }
+        
+        .band-scores-disclaimer strong {
+            color: #1976d2;
         }
         
         .band-scores-note {
