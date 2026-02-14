@@ -79,6 +79,9 @@ class IELTS_CM_Auto_Sync_Manager {
     
     /**
      * Add custom cron interval to WordPress cron schedules
+     * 
+     * @param array $schedules Existing cron schedules
+     * @return array Modified cron schedules with custom interval added
      */
     public function add_cron_interval($schedules) {
         $interval_minutes = $this->get_interval();
