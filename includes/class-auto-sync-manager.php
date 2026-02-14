@@ -45,6 +45,9 @@ class IELTS_CM_Auto_Sync_Manager {
      * Initialize auto-sync functionality
      */
     public function init() {
+        // Register custom cron interval (only once)
+        add_filter('cron_schedules', array($this, 'add_cron_interval'));
+        
         // Schedule cron if auto-sync is enabled
         $this->schedule_auto_sync();
         
@@ -75,6 +78,18 @@ class IELTS_CM_Auto_Sync_Manager {
     }
     
     /**
+     * Add custom cron interval to WordPress cron schedules
+     */
+    public function add_cron_interval($schedules) {
+        $interval_minutes = $this->get_interval();
+        $schedules['ielts_cm_auto_sync'] = array(
+            'interval' => $interval_minutes * 60,
+            'display'  => sprintf(__('Every %d minutes', 'ielts-course-manager'), $interval_minutes)
+        );
+        return $schedules;
+    }
+    
+    /**
      * Schedule or unschedule the auto-sync cron job
      */
     public function schedule_auto_sync() {
@@ -88,18 +103,6 @@ class IELTS_CM_Auto_Sync_Manager {
         if (!$this->is_enabled() || !$this->sync_manager->is_primary_site()) {
             return;
         }
-        
-        // Get interval in minutes
-        $interval_minutes = $this->get_interval();
-        
-        // Register custom cron interval if needed
-        add_filter('cron_schedules', function($schedules) use ($interval_minutes) {
-            $schedules['ielts_cm_auto_sync'] = array(
-                'interval' => $interval_minutes * 60,
-                'display'  => sprintf(__('Every %d minutes', 'ielts-course-manager'), $interval_minutes)
-            );
-            return $schedules;
-        });
         
         // Schedule the event
         wp_schedule_event(time(), 'ielts_cm_auto_sync', self::CRON_HOOK);
