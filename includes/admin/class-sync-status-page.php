@@ -259,7 +259,7 @@ class IELTS_CM_Sync_Status_Page {
                     url: ajaxurl,
                     type: 'POST',
                     data: {
-                        action: 'ielts_cm_check_sync',
+                        action: 'ielts_cm_check_sync_status',
                         nonce: '<?php echo wp_create_nonce('ielts_cm_sync_status'); ?>'
                     },
                     success: function(response) {
