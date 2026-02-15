@@ -383,6 +383,7 @@
     // Extension-specific payment functions
     let elementsExtension;
     let paymentElementExtension;
+    let currentExtensionPrice = 0;
     
     function showPaymentSectionExtension(price) {
         const $paymentSection = $('#ielts-payment-section-extension');
@@ -391,8 +392,16 @@
         $paymentSection.slideDown();
         
         // Initialize payment element if not already done or if price changed
-        if (!elementsExtension || !paymentElementExtension) {
+        if (!elementsExtension || !paymentElementExtension || currentExtensionPrice !== price) {
+            // Clean up existing elements before reinitializing
+            if (paymentElementExtension) {
+                paymentElementExtension.unmount();
+            }
+            elementsExtension = null;
+            paymentElementExtension = null;
+            
             initializePaymentElementExtension(price);
+            currentExtensionPrice = price;
         }
     }
     
@@ -406,10 +415,10 @@
         if (paymentElementExtension) {
             paymentElementExtension.unmount();
         }
-        if (elementsExtension) {
-            elementsExtension = null;
-            paymentElementExtension = null;
-        }
+        // Always set to null after cleanup
+        elementsExtension = null;
+        paymentElementExtension = null;
+        currentExtensionPrice = 0;
     }
     
     function initializePaymentElementExtension(price) {

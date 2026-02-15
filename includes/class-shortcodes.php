@@ -2704,7 +2704,7 @@ class IELTS_CM_Shortcodes {
         
         // Enqueue Stripe.js and payment handling scripts if we need to show extension payment
         // (for hybrid sites with access code memberships)
-        $is_access_code_membership = !empty($membership_type) && is_string($membership_type) && strpos($membership_type, 'access_') === 0;
+        $is_access_code_membership = !empty($membership_type) && is_string($membership_type) && (strpos($membership_type, 'access_') === 0);
         $show_extension_payment = $hybrid_mode_enabled && $is_access_code_membership && !$is_trial;
         
         if ($show_extension_payment && get_option('ielts_cm_membership_enabled')) {
