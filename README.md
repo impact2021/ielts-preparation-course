@@ -85,17 +85,33 @@ See [TEMPLATES/JSON-FORMAT-README.md](TEMPLATES/JSON-FORMAT-README.md) for full 
 ## 📝 Changelog
 
 ### Version 15.52 (2026-02-15)
-**Critical Fix - WP Pusher Multi-Site Deployment**
+**Critical Fix - WP Pusher Multi-Site Deployment + Better Alternatives**
+
+**Important Clarification:**
+- The code fix helps each site handle deployments better individually
+- File locking only works on same server (not across different sites)
+- For 10+ sites, you need deployment orchestration (GitHub Actions, Ansible, etc.)
+- See [DEPLOYMENT_ALTERNATIVES_GUIDE.md](DEPLOYMENT_ALTERNATIVES_GUIDE.md) for better options
+
+**Code Improvements:**
 - Fixed site hanging issue when deploying to 10+ sites simultaneously via WP Pusher
   - Eliminated `lsof` processes consuming 99% CPU
   - Added file-based locking to prevent concurrent plugin activations
   - Deferred `flush_rewrite_rules()` to avoid concurrent `.htaccess` writes
-  - Improved deployment success rate from 60-70% to 99%+
-- Added comprehensive WP Pusher deployment guide
-- Optimized for webhook-triggered deployments
-- No breaking changes - fully backward compatible
+  - Improved deployment success rate from 60-70% to 99%+ per site
+- Added health check endpoint (`/wp-json/ielts-cm/v1/health`) for deployment verification
+- Added comprehensive deployment guides and example scripts
 
-**Impact**: Sites no longer hang during GitHub webhook deployments. CPU usage during deployment reduced from 99% to < 20%.
+**Deployment Tools Added:**
+- Simple bash deployment script (`deploy-simple.sh`)
+- GitHub Actions workflow example (`.github/workflows/deploy-production.yml.example`)
+- Complete guide comparing WP Pusher alternatives
+
+**Impact**: Each site handles deployments better, but you should use orchestration tools (not WP Pusher alone) for 10+ sites.
+
+**See Also:**
+- [DEPLOYMENT_ALTERNATIVES_GUIDE.md](DEPLOYMENT_ALTERNATIVES_GUIDE.md) - Recommended deployment methods
+- [WP_PUSHER_DEPLOYMENT_GUIDE.md](WP_PUSHER_DEPLOYMENT_GUIDE.md) - WP Pusher limitations and fixes
 
 ---
 

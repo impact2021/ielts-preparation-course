@@ -1,6 +1,37 @@
 # WP Pusher Deployment Guide
 
-## Problem Resolved
+## ⚠️ Important Limitations
+
+### What This Fix Does NOT Do
+
+**The fix in this plugin does NOT coordinate between different sites.** 
+
+Site B doesn't "know" to wait for Site A. The file-based locking only works **on a single server**, not across multiple servers.
+
+```
+Site A (server1) → Lock file on server1 ✓
+Site B (server2) → Different lock file on server2 ✓
+                    (They don't communicate) ✗
+```
+
+### What This Fix Actually Does
+
+The code improvements help **each individual site** handle deployments better:
+- ✅ Prevents conflicts on the **same server**
+- ✅ Defers expensive operations to reduce peak load
+- ✅ Adds resilience and error recovery
+- ❌ Does NOT prevent all sites from deploying simultaneously
+- ❌ Does NOT coordinate between sites
+
+### The Real Problem
+
+Even with this fix, WP Pusher sends webhooks to all 10 sites at once. Without external coordination, they all try to deploy simultaneously.
+
+**For 10+ sites, you need deployment orchestration.** See [DEPLOYMENT_ALTERNATIVES_GUIDE.md](DEPLOYMENT_ALTERNATIVES_GUIDE.md) for better options like GitHub Actions, Deployer, or Ansible.
+
+---
+
+## Problem That Was Resolved
 
 When deploying this plugin to multiple WordPress sites (10+) simultaneously using WP Pusher's GitHub webhook integration, sites would hang with `lsof` commands consuming 99% CPU.
 

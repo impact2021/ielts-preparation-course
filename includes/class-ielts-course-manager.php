@@ -75,6 +75,9 @@ class IELTS_Course_Manager {
         // Register REST API routes
         add_action('rest_api_init', array($this->sync_api, 'register_routes'));
         
+        // Register health check endpoint for deployment verification
+        add_action('rest_api_init', array($this, 'register_health_check'));
+        
         // Fix serialized data during WordPress import
         add_filter('wp_import_post_meta', array($this, 'fix_imported_serialized_data'), 10, 3);
         
@@ -213,6 +216,48 @@ class IELTS_Course_Manager {
         if (!get_transient('ielts_cm_needs_activation')) {
             delete_transient('ielts_cm_activation_retries');
         }
+    }
+    
+    /**
+     * Register health check endpoint for deployment verification
+     * This endpoint can be used by deployment scripts to verify successful deployment
+     */
+    public function register_health_check() {
+        register_rest_route('ielts-cm/v1', '/health', array(
+            'methods' => 'GET',
+            'callback' => array($this, 'health_check'),
+            'permission_callback' => '__return_true'
+        ));
+    }
+    
+    /**
+     * Health check endpoint callback
+     * Returns plugin status, version, and timestamp for deployment verification
+     */
+    public function health_check($request) {
+        global $wpdb;
+        
+        // Check if plugin is active
+        $is_active = is_plugin_active('ielts-course-manager/ielts-course-manager.php');
+        
+        // Check database connectivity
+        $db_status = 'ok';
+        try {
+            $wpdb->query('SELECT 1');
+        } catch (Exception $e) {
+            $db_status = 'error';
+        }
+        
+        return rest_ensure_response(array(
+            'status' => 'ok',
+            'plugin_active' => $is_active,
+            'version' => IELTS_CM_VERSION,
+            'timestamp' => current_time('mysql'),
+            'site_url' => get_site_url(),
+            'database' => $db_status,
+            'wordpress_version' => get_bloginfo('version'),
+            'php_version' => PHP_VERSION
+        ));
     }
     
     public function enqueue_scripts() {

@@ -1,0 +1,168 @@
+name: Deploy to Production Sites
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  deploy-batch-1:
+    name: Deploy to Sites 1-3
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        site:
+          - name: site1
+            host: site1.example.com
+          - name: site2
+            host: site2.example.com
+          - name: site3
+            host: site3.example.com
+      max-parallel: 1  # Deploy one at a time
+      fail-fast: false  # Continue even if one fails
+    
+    steps:
+      - name: Deploy to ${{ matrix.site.name }}
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ matrix.site.host }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/${{ matrix.site.name }}/wp-content/plugins/ielts-course-manager
+            git stash 2>/dev/null || true
+            git pull origin main
+            cd /var/www/${{ matrix.site.name }}
+            wp rewrite flush 2>/dev/null || true
+      
+      - name: Verify deployment
+        run: |
+          echo "Checking health endpoint for ${{ matrix.site.host }}..."
+          RESPONSE=$(curl -f -s https://${{ matrix.site.host }}/wp-json/ielts-cm/v1/health || echo "failed")
+          
+          if [ "$RESPONSE" = "failed" ]; then
+            echo "❌ Health check failed for ${{ matrix.site.host }}"
+            exit 1
+          fi
+          
+          VERSION=$(echo $RESPONSE | jq -r '.version' 2>/dev/null || echo "unknown")
+          echo "✅ Deployment successful - Version: $VERSION"
+      
+      - name: Wait before next deployment
+        if: matrix.site.name != 'site3'  # Don't wait after last site in batch
+        run: sleep 30
+
+  deploy-batch-2:
+    name: Deploy to Sites 4-6
+    runs-on: ubuntu-latest
+    needs: deploy-batch-1  # Wait for batch 1 to complete
+    strategy:
+      matrix:
+        site:
+          - name: site4
+            host: site4.example.com
+          - name: site5
+            host: site5.example.com
+          - name: site6
+            host: site6.example.com
+      max-parallel: 1
+      fail-fast: false
+    
+    steps:
+      - name: Deploy to ${{ matrix.site.name }}
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ matrix.site.host }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/${{ matrix.site.name }}/wp-content/plugins/ielts-course-manager
+            git stash 2>/dev/null || true
+            git pull origin main
+            cd /var/www/${{ matrix.site.name }}
+            wp rewrite flush 2>/dev/null || true
+      
+      - name: Verify deployment
+        run: |
+          echo "Checking health endpoint for ${{ matrix.site.host }}..."
+          RESPONSE=$(curl -f -s https://${{ matrix.site.host }}/wp-json/ielts-cm/v1/health || echo "failed")
+          
+          if [ "$RESPONSE" = "failed" ]; then
+            echo "❌ Health check failed for ${{ matrix.site.host }}"
+            exit 1
+          fi
+          
+          VERSION=$(echo $RESPONSE | jq -r '.version' 2>/dev/null || echo "unknown")
+          echo "✅ Deployment successful - Version: $VERSION"
+      
+      - name: Wait before next deployment
+        if: matrix.site.name != 'site6'
+        run: sleep 30
+
+  deploy-batch-3:
+    name: Deploy to Sites 7-10
+    runs-on: ubuntu-latest
+    needs: deploy-batch-2  # Wait for batch 2 to complete
+    strategy:
+      matrix:
+        site:
+          - name: site7
+            host: site7.example.com
+          - name: site8
+            host: site8.example.com
+          - name: site9
+            host: site9.example.com
+          - name: site10
+            host: site10.example.com
+      max-parallel: 1
+      fail-fast: false
+    
+    steps:
+      - name: Deploy to ${{ matrix.site.name }}
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ matrix.site.host }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /var/www/${{ matrix.site.name }}/wp-content/plugins/ielts-course-manager
+            git stash 2>/dev/null || true
+            git pull origin main
+            cd /var/www/${{ matrix.site.name }}
+            wp rewrite flush 2>/dev/null || true
+      
+      - name: Verify deployment
+        run: |
+          echo "Checking health endpoint for ${{ matrix.site.host }}..."
+          RESPONSE=$(curl -f -s https://${{ matrix.site.host }}/wp-json/ielts-cm/v1/health || echo "failed")
+          
+          if [ "$RESPONSE" = "failed" ]; then
+            echo "❌ Health check failed for ${{ matrix.site.host }}"
+            exit 1
+          fi
+          
+          VERSION=$(echo $RESPONSE | jq -r '.version' 2>/dev/null || echo "unknown")
+          echo "✅ Deployment successful - Version: $VERSION"
+
+  notify-completion:
+    name: Send Notification
+    runs-on: ubuntu-latest
+    needs: [deploy-batch-1, deploy-batch-2, deploy-batch-3]
+    if: always()  # Run even if some deployments failed
+    
+    steps:
+      - name: Notify success
+        if: ${{ needs.deploy-batch-1.result == 'success' && needs.deploy-batch-2.result == 'success' && needs.deploy-batch-3.result == 'success' }}
+        run: |
+          echo "✅ All deployments completed successfully!"
+          # Add Slack/email notification here if desired
+      
+      - name: Notify partial failure
+        if: ${{ needs.deploy-batch-1.result != 'success' || needs.deploy-batch-2.result != 'success' || needs.deploy-batch-3.result != 'success' }}
+        run: |
+          echo "⚠️ Some deployments failed. Check the logs above."
+          exit 1
