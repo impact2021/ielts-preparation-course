@@ -28,7 +28,10 @@ class IELTS_CM_Activator {
             } finally {
                 flock($lock_handle, LOCK_UN);
                 fclose($lock_handle);
-                @unlink($lock_file);
+                // Clean up lock file
+                if (file_exists($lock_file)) {
+                    unlink($lock_file);
+                }
             }
         } else {
             // Another activation is in progress, defer this one
