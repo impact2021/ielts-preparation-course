@@ -13,9 +13,16 @@ class IELTS_CM_Activator {
         // Use file-based locking to prevent concurrent activation on same server
         // This helps when multiple sites update simultaneously via WP Pusher
         $lock_file = WP_CONTENT_DIR . '/ielts-cm-activation.lock';
-        $lock_handle = @fopen($lock_file, 'c+');
+        $lock_handle = fopen($lock_file, 'c+');
         
-        if ($lock_handle && flock($lock_handle, LOCK_EX | LOCK_NB)) {
+        if (!$lock_handle) {
+            // Could not create lock file - log error and defer
+            error_log('IELTS CM: Could not create activation lock file. Deferring activation.');
+            set_transient('ielts_cm_needs_activation', 1, 300); // 5 minutes
+            return;
+        }
+        
+        if (flock($lock_handle, LOCK_EX | LOCK_NB)) {
             try {
                 self::do_activation();
             } finally {
@@ -27,10 +34,7 @@ class IELTS_CM_Activator {
             // Another activation is in progress, defer this one
             // Set a transient to retry activation on next admin page load
             set_transient('ielts_cm_needs_activation', 1, 300); // 5 minutes
-            
-            if ($lock_handle) {
-                fclose($lock_handle);
-            }
+            fclose($lock_handle);
         }
     }
     

@@ -173,12 +173,40 @@ class IELTS_Course_Manager {
     /**
      * Handle deferred activation
      * This runs when concurrent activation was detected during WP Pusher deployment
+     * Includes retry counter to prevent infinite deferral loops
      */
     public function handle_deferred_activation() {
-        if (get_transient('ielts_cm_needs_activation')) {
+        if (!get_transient('ielts_cm_needs_activation')) {
+            return;
+        }
+        
+        // Check retry counter to prevent infinite loops
+        $retry_count = get_transient('ielts_cm_activation_retries');
+        if ($retry_count === false) {
+            $retry_count = 0;
+        }
+        
+        // Maximum 3 retries to prevent infinite loops
+        if ($retry_count >= 3) {
             delete_transient('ielts_cm_needs_activation');
-            require_once IELTS_CM_PLUGIN_DIR . 'includes/class-activator.php';
-            IELTS_CM_Activator::activate();
+            delete_transient('ielts_cm_activation_retries');
+            error_log('IELTS CM: Activation deferred too many times. Please manually activate the plugin or check for conflicts.');
+            return;
+        }
+        
+        // Increment retry counter
+        set_transient('ielts_cm_activation_retries', $retry_count + 1, 300);
+        
+        // Delete the needs activation flag before attempting
+        delete_transient('ielts_cm_needs_activation');
+        
+        // Attempt activation
+        require_once IELTS_CM_PLUGIN_DIR . 'includes/class-activator.php';
+        IELTS_CM_Activator::activate();
+        
+        // If activation succeeded, clear retry counter
+        if (!get_transient('ielts_cm_needs_activation')) {
+            delete_transient('ielts_cm_activation_retries');
         }
     }
     
