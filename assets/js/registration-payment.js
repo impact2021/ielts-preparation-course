@@ -391,8 +391,8 @@
         // Show payment section
         $paymentSection.slideDown();
         
-        // Initialize payment element if not already done or if price changed
-        if (!elementsExtension || !paymentElementExtension || currentExtensionPrice !== price) {
+        // Reinitialize payment element if price changed or not yet initialized
+        if (currentExtensionPrice !== price) {
             // Clean up existing elements before reinitializing
             if (paymentElementExtension) {
                 paymentElementExtension.unmount();
@@ -400,6 +400,10 @@
             elementsExtension = null;
             paymentElementExtension = null;
             
+            initializePaymentElementExtension(price);
+            currentExtensionPrice = price;
+        } else if (!elementsExtension || !paymentElementExtension) {
+            // Initialize if not already done (first time)
             initializePaymentElementExtension(price);
             currentExtensionPrice = price;
         }
