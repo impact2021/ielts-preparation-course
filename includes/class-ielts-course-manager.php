@@ -63,6 +63,12 @@ class IELTS_Course_Manager {
         // Check for version update and flush permalinks if needed
         add_action('init', array($this, 'check_version_update'));
         
+        // Handle deferred rewrite rules flush (for WP Pusher compatibility)
+        add_action('admin_init', array($this, 'handle_deferred_flush'));
+        
+        // Handle deferred activation (if concurrent activation was detected)
+        add_action('admin_init', array($this, 'handle_deferred_activation'));
+        
         // Register shortcodes on init hook
         add_action('init', array($this->shortcodes, 'register'));
         
@@ -135,18 +141,44 @@ class IELTS_Course_Manager {
         
         $current_version = get_option('ielts_cm_version');
         
-        // If version has changed, flush rewrite rules and update version
+        // If version has changed, update version and schedule deferred flush
         if ($current_version !== IELTS_CM_VERSION) {
             // Run upgrade routine to ensure all database tables exist
             IELTS_CM_Database::create_tables();
             
-            flush_rewrite_rules();
+            // Defer flush_rewrite_rules() to admin_init to avoid concurrent .htaccess writes
+            // This is critical when WP Pusher deploys to multiple sites simultaneously
+            set_transient('ielts_cm_flush_rewrite_rules', 1, 3600); // 1 hour
+            
             update_option('ielts_cm_version', IELTS_CM_VERSION);
-            // Set transient after flushing to confirm version is updated
+            // Set transient after scheduling flush to confirm version is updated
             set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
         } else {
             // Version is current but transient expired, reset it without flushing
             set_transient('ielts_cm_version_checked', IELTS_CM_VERSION, HOUR_IN_SECONDS);
+        }
+    }
+    
+    /**
+     * Handle deferred rewrite rules flush
+     * This runs on admin_init to avoid concurrent .htaccess writes during WP Pusher deployments
+     */
+    public function handle_deferred_flush() {
+        if (get_transient('ielts_cm_flush_rewrite_rules')) {
+            delete_transient('ielts_cm_flush_rewrite_rules');
+            flush_rewrite_rules();
+        }
+    }
+    
+    /**
+     * Handle deferred activation
+     * This runs when concurrent activation was detected during WP Pusher deployment
+     */
+    public function handle_deferred_activation() {
+        if (get_transient('ielts_cm_needs_activation')) {
+            delete_transient('ielts_cm_needs_activation');
+            require_once IELTS_CM_PLUGIN_DIR . 'includes/class-activator.php';
+            IELTS_CM_Activator::activate();
         }
     }
     
