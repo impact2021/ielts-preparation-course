@@ -3240,18 +3240,22 @@ class IELTS_CM_Shortcodes {
                                             } else {
                                                 testResults += '<p style="color: green;">✓ ieltsPayment object is defined</p>';
                                                 
-                                                // Extract duration from selected value
-                                                var duration = selectedValue.replace('extension_', '');
-                                                testResults += '<p><strong>Extracted duration:</strong> <code>' + duration + '</code></p>';
-                                                
-                                                // Check if price exists
-                                                if (ieltsPayment.extensionPricing && ieltsPayment.extensionPricing[duration]) {
-                                                    var price = ieltsPayment.extensionPricing[duration];
-                                                    testResults += '<p style="color: green;">✓ <strong>Price found:</strong> $' + price + '</p>';
-                                                    testResults += '<p>Payment section should appear when you select this option.</p>';
+                                                // Extract duration from selected value - validate format first
+                                                if (!selectedValue.startsWith('extension_')) {
+                                                    testResults += '<p style="color: red;">❌ <strong>ERROR:</strong> Selected value does not start with "extension_" (got: ' + selectedValue + ')</p>';
                                                 } else {
-                                                    testResults += '<p style="color: red;">❌ <strong>ERROR:</strong> No price found for duration "' + duration + '"</p>';
-                                                    testResults += '<p><strong>Available pricing:</strong> <pre>' + JSON.stringify(ieltsPayment.extensionPricing, null, 2) + '</pre></p>';
+                                                    var duration = selectedValue.replace('extension_', '');
+                                                    testResults += '<p><strong>Extracted duration:</strong> <code>' + duration + '</code></p>';
+                                                    
+                                                    // Check if price exists
+                                                    if (ieltsPayment.extensionPricing && ieltsPayment.extensionPricing[duration]) {
+                                                        var price = ieltsPayment.extensionPricing[duration];
+                                                        testResults += '<p style="color: green;">✓ <strong>Price found:</strong> $' + price + '</p>';
+                                                        testResults += '<p>Payment section should appear when you select this option.</p>';
+                                                    } else {
+                                                        testResults += '<p style="color: red;">❌ <strong>ERROR:</strong> No price found for duration "' + duration + '"</p>';
+                                                        testResults += '<p><strong>Available pricing:</strong> <pre>' + JSON.stringify(ieltsPayment.extensionPricing, null, 2) + '</pre></p>';
+                                                    }
                                                 }
                                             }
                                             
@@ -3266,8 +3270,14 @@ class IELTS_CM_Shortcodes {
                                             
                                             // Check if change event listener is attached
                                             testResults += '<p><strong>Testing change event...</strong></p>';
+                                            
+                                            // Show initial results with "checking" message
+                                            $results.html(testResults + '<p><em>Checking visibility...</em></p>').show();
+                                            
+                                            // Trigger the change event
                                             $('#ielts_membership_type_extension').trigger('change');
                                             
+                                            // Wait for animation to complete, then update results
                                             setTimeout(function() {
                                                 if ($paymentSection.is(':visible')) {
                                                     testResults += '<p style="color: green;">✓ Payment section is now visible!</p>';
@@ -3276,8 +3286,6 @@ class IELTS_CM_Shortcodes {
                                                 }
                                                 $results.html(testResults).show();
                                             }, 500);
-                                            
-                                            $results.html(testResults + '<p><em>Checking visibility...</em></p>').show();
                                         });
                                     });
                                     </script>

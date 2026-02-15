@@ -165,7 +165,14 @@
                 console.warn('⚠️ Price is 0 or invalid, hiding payment section');
                 hidePaymentSectionExtension();
                 if (membershipType) {
-                    console.error('❌ Extension option is not properly configured');
+                    const duration = membershipType.replace('extension_', '');
+                    const availablePricing = ieltsPayment.extensionPricing ? JSON.stringify(ieltsPayment.extensionPricing) : 'undefined';
+                    console.error('❌ Extension option not configured:', {
+                        selectedType: membershipType,
+                        extractedDuration: duration,
+                        priceFound: price,
+                        availablePricing: availablePricing
+                    });
                     showErrorExtension('This extension option is not properly configured. Please contact the site administrator or choose a different option.');
                 }
             }
