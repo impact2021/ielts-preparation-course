@@ -101,7 +101,7 @@
     
     // Initialize when DOM is ready
     $(document).ready(function() {
-        // Listen for membership type selection
+        // Listen for membership type selection (registration form)
         $('#ielts_membership_type').on('change', function() {
             const membershipType = $(this).val();
             const price = getPriceForMembershipType(membershipType);
@@ -122,10 +122,31 @@
             }
         });
         
+        // Listen for extension type selection (extension form on account page)
+        $('#ielts_membership_type_extension').on('change', function() {
+            const membershipType = $(this).val();
+            const price = getPriceForMembershipType(membershipType);
+            
+            // Show/hide payment section based on price
+            if (price > 0) {
+                showPaymentSectionExtension(price);
+            } else {
+                hidePaymentSectionExtension();
+                if (membershipType) {
+                    showErrorExtension('This extension option is not properly configured. Please contact the site administrator or choose a different option.');
+                }
+            }
+        });
+        
         // Trigger change event on page load to show payment section if membership is pre-selected
         const $membershipSelect = $('#ielts_membership_type');
         if ($membershipSelect.val()) {
             $membershipSelect.trigger('change');
+        }
+        
+        const $extensionSelect = $('#ielts_membership_type_extension');
+        if ($extensionSelect.val()) {
+            $extensionSelect.trigger('change');
         }
     });
     
@@ -346,13 +367,177 @@
         // Handle both buttons (free submit and payment submit)
         const $freeButton = $('#ielts_register_submit');
         const $paymentButton = $('#ielts_payment_submit');
+        const $extensionButton = $('#ielts_payment_submit_extension');
         
         if (isLoading) {
             $freeButton.prop('disabled', true).addClass('loading');
             $paymentButton.prop('disabled', true).addClass('loading');
+            $extensionButton.prop('disabled', true).addClass('loading');
         } else {
             $freeButton.prop('disabled', false).removeClass('loading');
             $paymentButton.prop('disabled', false).removeClass('loading');
+            $extensionButton.prop('disabled', false).removeClass('loading');
+        }
+    }
+    
+    // Extension-specific payment functions
+    let elementsExtension;
+    let paymentElementExtension;
+    
+    function showPaymentSectionExtension(price) {
+        const $paymentSection = $('#ielts-payment-section-extension');
+        
+        // Show payment section
+        $paymentSection.slideDown();
+        
+        // Initialize payment element if not already done or if price changed
+        if (!elementsExtension || !paymentElementExtension) {
+            initializePaymentElementExtension(price);
+        }
+    }
+    
+    function hidePaymentSectionExtension() {
+        const $paymentSection = $('#ielts-payment-section-extension');
+        
+        // Hide payment section
+        $paymentSection.slideUp();
+        
+        if (elementsExtension) {
+            elementsExtension = null;
+            paymentElementExtension = null;
+        }
+    }
+    
+    function initializePaymentElementExtension(price) {
+        if (!stripe) {
+            console.error('IELTS Payment: Cannot initialize extension payment element - Stripe not initialized');
+            showErrorExtension('Payment system is not configured. Please contact the site administrator.');
+            return;
+        }
+        
+        // Clear any existing payment element
+        $('#payment-element-extension').empty();
+        
+        try {
+            // Create Elements instance in payment mode with preset amount
+            elementsExtension = stripe.elements({
+                mode: 'payment',
+                amount: Math.round(parseFloat(price) * 100), // Amount in cents
+                currency: 'usd',
+                appearance: {
+                    theme: 'stripe',
+                    variables: { colorPrimary: '#0073aa' }
+                }
+            });
+            
+            // Create and mount Payment Element
+            paymentElementExtension = elementsExtension.create('payment');
+            paymentElementExtension.mount('#payment-element-extension');
+        } catch (error) {
+            console.error('IELTS Payment: Error initializing extension payment element:', error);
+            showErrorExtension('Failed to initialize payment form. Please refresh the page and try again.');
+        }
+    }
+    
+    function showErrorExtension(message) {
+        $('#payment-message-extension')
+            .removeClass('success')
+            .addClass('error')
+            .text(message)
+            .css('white-space', 'pre-line')
+            .show();
+    }
+    
+    function showSuccessExtension(message) {
+        $('#payment-message-extension')
+            .removeClass('error')
+            .addClass('success')
+            .text(message)
+            .css('white-space', 'pre-line')
+            .show();
+    }
+    
+    // Intercept extension form submission
+    $('form[name="ielts_extension_form"]').on('submit', function(e) {
+        const membershipType = $('#ielts_membership_type_extension').val();
+        const price = getPriceForMembershipType(membershipType);
+        
+        // If it's a paid extension, handle payment first
+        if (price > 0 && stripe && elementsExtension) {
+            e.preventDefault();
+            handleExtensionPaymentSubmission(membershipType, price);
+        }
+    });
+    
+    async function handleExtensionPaymentSubmission(membershipType, price) {
+        setLoading(true);
+        
+        // Validate card details first
+        const {error: submitError} = await elementsExtension.submit();
+        if (submitError) {
+            showErrorExtension(submitError.message);
+            setLoading(false);
+            return;
+        }
+        
+        // User must be logged in for extensions
+        if (!ieltsPayment.user || !ieltsPayment.user.isLoggedIn) {
+            showErrorExtension('You must be logged in to extend your membership.');
+            setLoading(false);
+            return;
+        }
+        
+        createExtensionPaymentIntentAndConfirm(ieltsPayment.user.userId, membershipType, price);
+    }
+    
+    async function createExtensionPaymentIntentAndConfirm(userId, membershipType, price) {
+        try {
+            // Create payment intent
+            const response = await $.ajax({
+                url: ieltsPayment.ajaxUrl,
+                type: 'POST',
+                data: {
+                    action: 'ielts_create_payment_intent',
+                    nonce: ieltsPayment.nonce,
+                    user_id: userId,
+                    membership_type: membershipType,
+                    amount: price
+                }
+            });
+            
+            if (!response.success) {
+                handleAjaxError({
+                    status: 400,
+                    responseJSON: response
+                }, 'error', response.data || 'Payment intent creation failed', 'payment intent creation');
+                setLoading(false);
+                return;
+            }
+            
+            const clientSecret = response.data.client_secret;
+            
+            // Confirm payment
+            const {error} = await stripe.confirmPayment({
+                elements: elementsExtension,
+                clientSecret: clientSecret,
+                confirmParams: {
+                    return_url: window.location.href,
+                }
+            });
+            
+            if (error) {
+                showErrorExtension(error.message);
+                setLoading(false);
+            } else {
+                // Payment successful - page will reload with success message
+                showSuccessExtension('Payment successful! Your course has been extended.');
+                setTimeout(function() {
+                    window.location.reload();
+                }, 2000);
+            }
+        } catch (error) {
+            handleAjaxError(error, 'error', error.statusText || 'Unknown error', 'extension payment');
+            setLoading(false);
         }
     }
     
