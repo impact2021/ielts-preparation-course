@@ -2695,20 +2695,20 @@ class IELTS_CM_Shortcodes {
         // Check if hybrid mode is enabled
         $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
         
+        // Define extension pricing defaults - used throughout this function
+        $extension_pricing_defaults = array(
+            '1_week' => 5.00,
+            '1_month' => 10.00,
+            '3_months' => 15.00
+        );
+        
         // Enqueue Stripe.js and payment handling scripts if we need to show extension payment
         // (for hybrid sites with access code memberships)
-        $is_access_code_membership = strpos($membership_type, 'access_') === 0;
+        $is_access_code_membership = !empty($membership_type) && is_string($membership_type) && strpos($membership_type, 'access_') === 0;
         $show_extension_payment = $hybrid_mode_enabled && $is_access_code_membership && !$is_trial;
         
         if ($show_extension_payment && get_option('ielts_cm_membership_enabled')) {
             $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
-            
-            // Define extension pricing defaults
-            $extension_pricing_defaults = array(
-                '1_week' => 5.00,
-                '1_month' => 10.00,
-                '3_months' => 15.00
-            );
             $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
             
             if (!empty($stripe_publishable)) {
@@ -3073,12 +3073,7 @@ class IELTS_CM_Shortcodes {
                                     <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
                                     
                                     <?php 
-                                    // Define extension pricing defaults
-                                    $extension_pricing_defaults = array(
-                                        '1_week' => 5.00,
-                                        '1_month' => 10.00,
-                                        '3_months' => 15.00
-                                    );
+                                    // Use extension pricing defined earlier to avoid duplication
                                     $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
                                     ?>
                                     
@@ -3102,21 +3097,6 @@ class IELTS_CM_Shortcodes {
                                         <div id="ielts-payment-section-extension" class="payment-section-container stripe-payment-section" style="display: none;">
                                             <h4 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h4>
                                             
-                                            <!-- Payment Method Selector -->
-                                            <div class="payment-method-selector">
-                                                <label><?php _e('Payment Method', 'ielts-course-manager'); ?></label>
-                                                <div class="payment-methods">
-                                                    <button type="button" class="payment-method-btn active" data-method="stripe">
-                                                        <span class="payment-method-icon">💳</span>
-                                                        <?php _e('Credit/Debit Card', 'ielts-course-manager'); ?>
-                                                    </button>
-                                                    <button type="button" class="payment-method-btn" data-method="paypal">
-                                                        <span class="payment-method-icon">🅿️</span>
-                                                        <?php _e('PayPal', 'ielts-course-manager'); ?>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            
                                             <div class="payment-section-content">
                                                 <!-- Stripe Payment -->
                                                 <div id="stripe-payment-container-extension" class="payment-container active">
@@ -3124,12 +3104,6 @@ class IELTS_CM_Shortcodes {
                                                     <div id="payment-element-extension" class="stripe-payment-element">
                                                         <!-- Stripe Payment Element will be inserted here -->
                                                     </div>
-                                                </div>
-                                                
-                                                <!-- PayPal Payment -->
-                                                <div id="paypal-payment-container-extension" class="payment-container" style="display: none;">
-                                                    <div id="paypal-button-container-extension"></div>
-                                                    <p class="payment-note"><?php _e('Click the PayPal button below to complete your payment securely.', 'ielts-course-manager'); ?></p>
                                                 </div>
                                                 
                                                 <div id="payment-message-extension" class="ielts-message" style="display: none;"></div>

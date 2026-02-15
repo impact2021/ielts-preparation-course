@@ -402,6 +402,10 @@
         // Hide payment section
         $paymentSection.slideUp();
         
+        // Clean up Stripe elements properly
+        if (paymentElementExtension) {
+            paymentElementExtension.unmount();
+        }
         if (elementsExtension) {
             elementsExtension = null;
             paymentElementExtension = null;
@@ -506,10 +510,8 @@
             });
             
             if (!response.success) {
-                handleAjaxError({
-                    status: 400,
-                    responseJSON: response
-                }, 'error', response.data || 'Payment intent creation failed', 'payment intent creation');
+                const errorMessage = response.data || 'Payment intent creation failed';
+                showErrorExtension(errorMessage);
                 setLoading(false);
                 return;
             }
@@ -536,7 +538,11 @@
                 }, 2000);
             }
         } catch (error) {
-            handleAjaxError(error, 'error', error.statusText || 'Unknown error', 'extension payment');
+            console.error('Extension payment error:', error);
+            const errorMessage = error.responseJSON && error.responseJSON.data 
+                ? error.responseJSON.data 
+                : 'An error occurred during payment. Please try again.';
+            showErrorExtension(errorMessage);
             setLoading(false);
         }
     }
