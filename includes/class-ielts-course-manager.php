@@ -190,7 +190,12 @@ class IELTS_Course_Manager {
         if ($retry_count >= 3) {
             delete_transient('ielts_cm_needs_activation');
             delete_transient('ielts_cm_activation_retries');
-            error_log('IELTS CM: Activation deferred too many times. Please manually activate the plugin or check for conflicts.');
+            error_log('IELTS CM: Activation deferred too many times (3 retries). This may indicate a file locking conflict or permission issue. Check error logs for "Could not create activation lock file" messages. If needed, manually delete ' . WP_CONTENT_DIR . '/ielts-cm-activation.lock and reload this page.');
+            
+            // Add admin notice for visibility
+            add_action('admin_notices', function() {
+                echo '<div class="notice notice-warning"><p><strong>IELTS Course Manager:</strong> Plugin activation was deferred multiple times. Please check error logs or contact support if you see this message repeatedly.</p></div>';
+            });
             return;
         }
         

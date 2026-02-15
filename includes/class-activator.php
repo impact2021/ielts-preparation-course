@@ -16,8 +16,10 @@ class IELTS_CM_Activator {
         $lock_handle = fopen($lock_file, 'c+');
         
         if (!$lock_handle) {
-            // Could not create lock file - log error and defer
-            error_log('IELTS CM: Could not create activation lock file. Deferring activation.');
+            // Could not create lock file - log detailed error and defer
+            $error = error_get_last();
+            $error_msg = $error ? $error['message'] : 'Unknown error';
+            error_log("IELTS CM: Could not create activation lock file at $lock_file. Error: $error_msg. Deferring activation.");
             set_transient('ielts_cm_needs_activation', 1, 300); // 5 minutes
             return;
         }
