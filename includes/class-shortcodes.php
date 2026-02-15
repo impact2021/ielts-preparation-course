@@ -2692,6 +2692,50 @@ class IELTS_CM_Shortcodes {
         // Get full member page URL
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         
+        // Check if hybrid mode is enabled
+        $hybrid_mode_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        
+        // Define extension pricing defaults - used throughout this function
+        $extension_pricing_defaults = array(
+            '1_week' => 5.00,
+            '1_month' => 10.00,
+            '3_months' => 15.00
+        );
+        
+        // Enqueue Stripe.js and payment handling scripts if we need to show extension payment
+        // (for hybrid sites with access code memberships)
+        $is_access_code_membership = !empty($membership_type) && is_string($membership_type) && (strpos($membership_type, 'access_') === 0);
+        $show_extension_payment = $hybrid_mode_enabled && $is_access_code_membership && !$is_trial;
+        
+        if ($show_extension_payment && get_option('ielts_cm_membership_enabled')) {
+            $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+            $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
+            
+            if (!empty($stripe_publishable)) {
+                wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
+                wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
+                
+                // Pass user information to JavaScript
+                $user_data = array(
+                    'isLoggedIn' => true,
+                    'userId' => $user->ID,
+                    'firstName' => $user->first_name,
+                    'lastName' => $user->last_name,
+                    'email' => $user->user_email,
+                );
+                
+                wp_localize_script('ielts-registration-payment', 'ieltsPayment', array(
+                    'publishableKey' => $stripe_publishable,
+                    'ajaxUrl' => admin_url('admin-ajax.php'),
+                    'nonce' => wp_create_nonce('ielts_payment_intent'),
+                    'pricing' => array(), // Not needed for extensions only
+                    'extensionPricing' => $extension_pricing,
+                    'user' => $user_data,
+                    'isAdmin' => current_user_can('manage_options'),
+                ));
+            }
+        }
+        
         // Handle profile update form submission
         $update_errors = array();
         $update_success = false;
@@ -3022,15 +3066,58 @@ class IELTS_CM_Shortcodes {
                                 <!-- Access code membership on non-hybrid site - contact partner admin -->
                                 <p><?php _e('Your access was provided through a partner access code. To extend your course access, please contact your course administrator.', 'ielts-course-manager'); ?></p>
                             <?php else: ?>
-                                <!-- Access code membership on hybrid site - show extension options -->
-                                <p><?php _e('Your access was provided through a partner access code. You can extend your course access below.', 'ielts-course-manager'); ?></p>
-                                <?php if (!empty($full_member_page_url)): ?>
-                                    <p>
-                                        <a href="<?php echo esc_url($full_member_page_url); ?>" class="button button-primary">
-                                            <?php _e('Extend Course Access', 'ielts-course-manager'); ?>
-                                        </a>
+                                <!-- Access code membership on hybrid site - show inline extension payment -->
+                                <p><?php _e('Select an extension option below to extend your course access.', 'ielts-course-manager'); ?></p>
+                                
+                                <form method="post" action="" name="ielts_extension_form" class="ielts-form ielts-extension-form">
+                                    <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
+                                    
+                                    <?php 
+                                    // Use extension pricing defined earlier to avoid duplication
+                                    $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
+                                    ?>
+                                    
+                                    <p class="form-field form-field-full">
+                                        <label for="ielts_membership_type_extension"><?php _e('Select Extension Duration', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                                        <select name="ielts_membership_type" id="ielts_membership_type_extension" required class="ielts-form-input">
+                                            <option value=""><?php _e('-- Select an extension option --', 'ielts-course-manager'); ?></option>
+                                            <option value="extension_1_week">
+                                                <?php echo esc_html(sprintf(__('1 Week Extension ($%s)', 'ielts-course-manager'), number_format($extension_pricing['1_week'] ?? 5.00, 2))); ?>
+                                            </option>
+                                            <option value="extension_1_month">
+                                                <?php echo esc_html(sprintf(__('1 Month Extension ($%s)', 'ielts-course-manager'), number_format($extension_pricing['1_month'] ?? 10.00, 2))); ?>
+                                            </option>
+                                            <option value="extension_3_months">
+                                                <?php echo esc_html(sprintf(__('3 Months Extension ($%s)', 'ielts-course-manager'), number_format($extension_pricing['3_months'] ?? 15.00, 2))); ?>
+                                            </option>
+                                        </select>
                                     </p>
-                                <?php endif; ?>
+                                    
+                                    <?php if (get_option('ielts_cm_membership_enabled')): ?>
+                                        <div id="ielts-payment-section-extension" class="payment-section-container stripe-payment-section" style="display: none;">
+                                            <h4 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h4>
+                                            
+                                            <div class="payment-section-content">
+                                                <!-- Stripe Payment -->
+                                                <div id="stripe-payment-container-extension" class="payment-container active">
+                                                    <label><?php _e('Card Details', 'ielts-course-manager'); ?></label>
+                                                    <div id="payment-element-extension" class="stripe-payment-element">
+                                                        <!-- Stripe Payment Element will be inserted here -->
+                                                    </div>
+                                                </div>
+                                                
+                                                <div id="payment-message-extension" class="ielts-message" style="display: none;"></div>
+                                                
+                                                <!-- Payment button at the bottom -->
+                                                <p class="form-field form-field-full payment-submit-button-container" style="margin-top: 20px;">
+                                                    <button type="submit" name="ielts_register_submit" id="ielts_payment_submit_extension" class="ielts-button ielts-button-primary ielts-button-block">
+                                                        <?php _e('Complete Payment & Extend', 'ielts-course-manager'); ?>
+                                                    </button>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    <?php endif; ?>
+                                </form>
                             <?php endif; ?>
                         </div>
                     <?php endif; ?>
