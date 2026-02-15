@@ -32,7 +32,7 @@ class IELTS_CM_Awards {
      */
     public function get_all_awards() {
         return array(
-            // Badges (15 total)
+            // Badges (13 total - removed time-based awards due to timezone issues)
             array('id' => 'getting_started', 'name' => 'Getting Started', 'type' => 'badge', 'description' => 'Complete your first page'),
             array('id' => 'first_test', 'name' => 'First Test', 'type' => 'badge', 'description' => 'Complete your first exercise'),
             array('id' => 'five_exercises', 'name' => 'Five Strong', 'type' => 'badge', 'description' => 'Complete 5 exercises'),
@@ -41,8 +41,6 @@ class IELTS_CM_Awards {
             array('id' => 'fifty_exercises', 'name' => 'Half Century', 'type' => 'badge', 'description' => 'Complete 50 exercises'),
             array('id' => 'first_perfect', 'name' => 'Perfectionist', 'type' => 'badge', 'description' => 'Get your first 100% score'),
             array('id' => 'five_perfect', 'name' => 'Perfect Streak', 'type' => 'badge', 'description' => 'Get 100% on 5 exercises'),
-            array('id' => 'early_bird', 'name' => 'Early Bird', 'type' => 'badge', 'description' => 'Complete an exercise before 9 AM'),
-            array('id' => 'night_owl', 'name' => 'Night Owl', 'type' => 'badge', 'description' => 'Complete an exercise after 9 PM'),
             array('id' => 'week_streak', 'name' => 'Week Warrior', 'type' => 'badge', 'description' => 'Study for 7 days in a row'),
             array('id' => 'month_streak', 'name' => 'Monthly Master', 'type' => 'badge', 'description' => 'Study for 30 days in a row'),
             array('id' => 'speed_demon', 'name' => 'Speed Demon', 'type' => 'badge', 'description' => 'Complete an exercise in under 5 minutes'),
@@ -270,15 +268,8 @@ class IELTS_CM_Awards {
             $this->grant_award($user_id, 'high_scorer');
         }
         
-        // Time-based awards
-        if ($submitted_time) {
-            $hour = date('G', $submitted_time);
-            if ($hour < 9) {
-                $this->grant_award($user_id, 'early_bird');
-            } elseif ($hour >= 21) {
-                $this->grant_award($user_id, 'night_owl');
-            }
-        }
+        // Time-based awards removed due to timezone issues
+        // Users in different timezones were receiving incorrect awards
     }
     
     /**
