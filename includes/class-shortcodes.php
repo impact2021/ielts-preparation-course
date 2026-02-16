@@ -3093,6 +3093,204 @@ class IELTS_CM_Shortcodes {
                                         </select>
                                     </p>
                                     
+                                    <?php 
+                                    // HYBRID SITE ONLY: On-page debugger to help diagnose extension payment issues
+                                    if ($hybrid_mode_enabled && current_user_can('manage_options')):
+                                        $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
+                                        $membership_enabled = get_option('ielts_cm_membership_enabled');
+                                        
+                                        // Gather diagnostic information
+                                        $diagnostics = array(
+                                            'hybrid_mode_enabled' => $hybrid_mode_enabled,
+                                            'membership_enabled' => $membership_enabled,
+                                            'stripe_key_configured' => !empty($stripe_publishable),
+                                            'is_access_code_membership' => $is_access_code_membership,
+                                            'is_trial' => $is_trial,
+                                            'membership_type' => $membership_type,
+                                            'extension_pricing' => $extension_pricing,
+                                            'show_extension_payment' => $show_extension_payment,
+                                            'stripe_key_length' => strlen($stripe_publishable),
+                                        );
+                                        
+                                        // Check if JavaScript should be enqueued
+                                        $should_enqueue_js = $show_extension_payment && $membership_enabled && !empty($stripe_publishable);
+                                    ?>
+                                    
+                                    <!-- HYBRID SITE DEBUGGER (Admin Only) -->
+                                    <div id="extension-debugger" style="background: #f0f0f0; border: 2px solid #999; padding: 15px; margin: 15px 0; border-radius: 5px;">
+                                        <h4 style="margin-top: 0; color: #333;">🔧 Extension Payment Debugger (Admin Only)</h4>
+                                        <p style="margin: 10px 0; font-size: 13px;">
+                                            <strong>Status:</strong> 
+                                            <?php if ($should_enqueue_js): ?>
+                                                <span style="color: green;">✓ JavaScript should be loaded</span>
+                                            <?php else: ?>
+                                                <span style="color: red;">✗ JavaScript NOT loaded</span>
+                                            <?php endif; ?>
+                                        </p>
+                                        
+                                        <details style="margin-top: 10px;">
+                                            <summary style="cursor: pointer; font-weight: bold;">View Diagnostic Details</summary>
+                                            <table style="width: 100%; margin-top: 10px; font-size: 12px; border-collapse: collapse;">
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Hybrid Mode Enabled:</td>
+                                                    <td style="padding: 5px;">
+                                                        <?php echo $diagnostics['hybrid_mode_enabled'] ? '<span style="color: green;">✓ Yes</span>' : '<span style="color: red;">✗ No</span>'; ?>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Membership System Enabled:</td>
+                                                    <td style="padding: 5px;">
+                                                        <?php echo $diagnostics['membership_enabled'] ? '<span style="color: green;">✓ Yes</span>' : '<span style="color: red;">✗ No</span>'; ?>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Stripe Key Configured:</td>
+                                                    <td style="padding: 5px;">
+                                                        <?php echo $diagnostics['stripe_key_configured'] ? '<span style="color: green;">✓ Yes (' . $diagnostics['stripe_key_length'] . ' chars)</span>' : '<span style="color: red;">✗ No</span>'; ?>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Is Access Code Membership:</td>
+                                                    <td style="padding: 5px;">
+                                                        <?php echo $diagnostics['is_access_code_membership'] ? '<span style="color: green;">✓ Yes</span>' : '<span style="color: red;">✗ No</span>'; ?>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Is Trial Membership:</td>
+                                                    <td style="padding: 5px;">
+                                                        <?php echo $diagnostics['is_trial'] ? '<span style="color: orange;">Yes (extensions hidden for trials)</span>' : '<span style="color: green;">✓ No</span>'; ?>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Current Membership Type:</td>
+                                                    <td style="padding: 5px;">
+                                                        <code><?php echo esc_html($diagnostics['membership_type']); ?></code>
+                                                    </td>
+                                                </tr>
+                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                    <td style="padding: 5px; font-weight: bold;">Extension Pricing:</td>
+                                                    <td style="padding: 5px;">
+                                                        <pre style="margin: 0; font-size: 11px;"><?php echo esc_html(print_r($diagnostics['extension_pricing'], true)); ?></pre>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                            <?php if (!$should_enqueue_js): ?>
+                                            <div style="background: #fff3cd; border: 1px solid #ffc107; padding: 10px; margin-top: 10px; border-radius: 3px;">
+                                                <strong>⚠️ Issue Found:</strong>
+                                                <ul style="margin: 5px 0; padding-left: 20px;">
+                                                    <?php if (!$diagnostics['hybrid_mode_enabled']): ?>
+                                                        <li>Hybrid mode is not enabled</li>
+                                                    <?php endif; ?>
+                                                    <?php if (!$diagnostics['membership_enabled']): ?>
+                                                        <li>Membership system is not enabled</li>
+                                                    <?php endif; ?>
+                                                    <?php if (!$diagnostics['stripe_key_configured']): ?>
+                                                        <li>Stripe publishable key is not configured</li>
+                                                    <?php endif; ?>
+                                                    <?php if (!$diagnostics['is_access_code_membership']): ?>
+                                                        <li>User membership type does not start with 'access_' (got: <?php echo esc_html($diagnostics['membership_type']); ?>)</li>
+                                                    <?php endif; ?>
+                                                    <?php if ($diagnostics['is_trial']): ?>
+                                                        <li>User is on a trial membership (extensions only available to paid members)</li>
+                                                    <?php endif; ?>
+                                                </ul>
+                                            </div>
+                                            <?php endif; ?>
+                                        </details>
+                                        
+                                        <button type="button" id="test-extension-dropdown" style="margin-top: 10px; padding: 8px 15px; background: #0073aa; color: white; border: none; border-radius: 3px; cursor: pointer;">
+                                            Test Extension Selection
+                                        </button>
+                                        <div id="test-results" style="margin-top: 10px; display: none; padding: 10px; background: white; border: 1px solid #ddd; border-radius: 3px;"></div>
+                                    </div>
+                                    
+                                    <script>
+                                    jQuery(document).ready(function($) {
+                                        // Log diagnostic information to console for hybrid site debugging
+                                        console.group('🔧 IELTS Course Extension Debugger');
+                                        console.log('Diagnostics:', <?php echo json_encode($diagnostics); ?>);
+                                        console.log('JavaScript should be loaded:', <?php echo $should_enqueue_js ? 'true' : 'false'; ?>);
+                                        console.log('ieltsPayment object available:', typeof ieltsPayment !== 'undefined');
+                                        
+                                        if (typeof ieltsPayment !== 'undefined') {
+                                            console.log('ieltsPayment.extensionPricing:', ieltsPayment.extensionPricing);
+                                            console.log('ieltsPayment.publishableKey length:', ieltsPayment.publishableKey ? ieltsPayment.publishableKey.length : 0);
+                                        } else {
+                                            console.error('❌ ieltsPayment object is NOT defined - payment JavaScript not loaded!');
+                                        }
+                                        console.groupEnd();
+                                        
+                                        // Test button functionality
+                                        $('#test-extension-dropdown').on('click', function() {
+                                            var $results = $('#test-results');
+                                            var selectedValue = $('#ielts_membership_type_extension').val();
+                                            
+                                            if (!selectedValue) {
+                                                $results.html('<p style="color: orange;">⚠️ Please select an extension option first</p>').show();
+                                                return;
+                                            }
+                                            
+                                            var testResults = '<h4>Test Results:</h4>';
+                                            testResults += '<p><strong>Selected value:</strong> <code>' + selectedValue + '</code></p>';
+                                            
+                                            if (typeof ieltsPayment === 'undefined') {
+                                                testResults += '<p style="color: red;">❌ <strong>ERROR:</strong> ieltsPayment object is not defined</p>';
+                                                testResults += '<p>This means the payment JavaScript was not loaded. Check the conditions above.</p>';
+                                            } else {
+                                                testResults += '<p style="color: green;">✓ ieltsPayment object is defined</p>';
+                                                
+                                                // Extract duration from selected value - validate format first
+                                                if (!selectedValue.startsWith('extension_')) {
+                                                    testResults += '<p style="color: red;">❌ <strong>ERROR:</strong> Selected value does not start with "extension_" (got: ' + selectedValue + ')</p>';
+                                                } else {
+                                                    var duration = selectedValue.replace('extension_', '');
+                                                    testResults += '<p><strong>Extracted duration:</strong> <code>' + duration + '</code></p>';
+                                                    
+                                                    // Check if price exists
+                                                    if (ieltsPayment.extensionPricing && ieltsPayment.extensionPricing[duration]) {
+                                                        var price = ieltsPayment.extensionPricing[duration];
+                                                        testResults += '<p style="color: green;">✓ <strong>Price found:</strong> $' + price + '</p>';
+                                                        testResults += '<p>Payment section should appear when you select this option.</p>';
+                                                    } else {
+                                                        testResults += '<p style="color: red;">❌ <strong>ERROR:</strong> No price found for duration "' + duration + '"</p>';
+                                                        testResults += '<p><strong>Available pricing:</strong> <pre>' + JSON.stringify(ieltsPayment.extensionPricing, null, 2) + '</pre></p>';
+                                                    }
+                                                }
+                                            }
+                                            
+                                            // Check if payment section exists in DOM
+                                            var $paymentSection = $('#ielts-payment-section-extension');
+                                            if ($paymentSection.length > 0) {
+                                                testResults += '<p style="color: green;">✓ Payment section element exists in page</p>';
+                                                testResults += '<p><strong>Is visible:</strong> ' + ($paymentSection.is(':visible') ? 'Yes' : 'No (hidden)') + '</p>';
+                                            } else {
+                                                testResults += '<p style="color: red;">❌ Payment section element NOT found in page</p>';
+                                            }
+                                            
+                                            // Check if change event listener is attached
+                                            testResults += '<p><strong>Testing change event...</strong></p>';
+                                            
+                                            // Show initial results with "checking" message
+                                            $results.html(testResults + '<p><em>Checking visibility...</em></p>').show();
+                                            
+                                            // Trigger the change event
+                                            $('#ielts_membership_type_extension').trigger('change');
+                                            
+                                            // Wait for animation to complete, then update results
+                                            setTimeout(function() {
+                                                if ($paymentSection.is(':visible')) {
+                                                    testResults += '<p style="color: green;">✓ Payment section is now visible!</p>';
+                                                } else {
+                                                    testResults += '<p style="color: orange;">⚠️ Payment section is still hidden after change event</p>';
+                                                }
+                                                $results.html(testResults).show();
+                                            }, 500);
+                                        });
+                                    });
+                                    </script>
+                                    <?php endif; // End admin-only debugger ?>
+                                    
                                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                                         <div id="ielts-payment-section-extension" class="payment-section-container stripe-payment-section" style="display: none;">
                                             <h4 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h4>

@@ -95,9 +95,26 @@
     // Initialize Stripe
     if (typeof Stripe !== 'undefined' && ieltsPayment && ieltsPayment.publishableKey) {
         stripe = Stripe(ieltsPayment.publishableKey);
+        console.log('✓ IELTS Payment: Stripe initialized successfully');
     } else {
         console.error('IELTS Payment: Stripe not initialized. Check if Stripe.js is loaded and publishable key is configured.');
+        if (typeof Stripe === 'undefined') {
+            console.error('  - Stripe.js library not loaded');
+        }
+        if (!ieltsPayment) {
+            console.error('  - ieltsPayment object not defined');
+        } else if (!ieltsPayment.publishableKey) {
+            console.error('  - Publishable key not configured');
+        }
     }
+    
+    // Log initialization state for extension debugging
+    console.group('🚀 IELTS Payment Extension Script Loaded');
+    console.log('Stripe available:', typeof Stripe !== 'undefined');
+    console.log('ieltsPayment object:', ieltsPayment);
+    console.log('Extension form found:', $('#ielts_membership_type_extension').length > 0);
+    console.log('Extension payment section found:', $('#ielts-payment-section-extension').length > 0);
+    console.groupEnd();
     
     // Initialize when DOM is ready
     $(document).ready(function() {
@@ -127,12 +144,35 @@
             const membershipType = $(this).val();
             const price = getPriceForMembershipType(membershipType);
             
+            // HYBRID SITE DEBUG: Log extension selection details
+            console.group('🔍 Extension Selection Changed');
+            console.log('Selected membership type:', membershipType);
+            console.log('Calculated price:', price);
+            console.log('Extension pricing available:', ieltsPayment.extensionPricing);
+            
+            if (membershipType) {
+                const duration = membershipType.replace('extension_', '');
+                console.log('Extracted duration:', duration);
+                console.log('Price lookup result:', ieltsPayment.extensionPricing ? ieltsPayment.extensionPricing[duration] : 'extensionPricing not available');
+            }
+            console.groupEnd();
+            
             // Show/hide payment section based on price
             if (price > 0) {
+                console.log('✓ Price is valid, showing payment section');
                 showPaymentSectionExtension(price);
             } else {
+                console.warn('⚠️ Price is 0 or invalid, hiding payment section');
                 hidePaymentSectionExtension();
                 if (membershipType) {
+                    const duration = membershipType.replace('extension_', '');
+                    const availablePricing = ieltsPayment.extensionPricing ? JSON.stringify(ieltsPayment.extensionPricing) : 'undefined';
+                    console.error('❌ Extension option not configured:', {
+                        selectedType: membershipType,
+                        extractedDuration: duration,
+                        priceFound: price,
+                        availablePricing: availablePricing
+                    });
                     showErrorExtension('This extension option is not properly configured. Please contact the site administrator or choose a different option.');
                 }
             }
@@ -386,13 +426,18 @@
     let currentExtensionPrice = 0;
     
     function showPaymentSectionExtension(price) {
+        console.log('📝 showPaymentSectionExtension called with price:', price);
+        
         const $paymentSection = $('#ielts-payment-section-extension');
+        console.log('Payment section element found:', $paymentSection.length > 0);
         
         // Show payment section
         $paymentSection.slideDown();
+        console.log('Payment section slideDown() called');
         
         // Reinitialize payment element if price changed or not yet initialized
         if (currentExtensionPrice !== price) {
+            console.log('Price changed (was:', currentExtensionPrice, 'now:', price, ') - reinitializing');
             // Clean up existing elements before reinitializing
             if (paymentElementExtension) {
                 paymentElementExtension.unmount();
@@ -404,38 +449,53 @@
             currentExtensionPrice = price;
         } else if (!elementsExtension || !paymentElementExtension) {
             // Initialize if not already done (first time)
+            console.log('First time initialization');
             initializePaymentElementExtension(price);
             currentExtensionPrice = price;
+        } else {
+            console.log('Payment element already initialized, no action needed');
         }
     }
     
     function hidePaymentSectionExtension() {
+        console.log('🔒 hidePaymentSectionExtension called');
+        
         const $paymentSection = $('#ielts-payment-section-extension');
         
         // Hide payment section
         $paymentSection.slideUp();
+        console.log('Payment section slideUp() called');
         
         // Clean up Stripe elements properly
         if (paymentElementExtension) {
             paymentElementExtension.unmount();
+            console.log('Payment element unmounted');
         }
         // Always set to null after cleanup
         elementsExtension = null;
         paymentElementExtension = null;
         currentExtensionPrice = 0;
+        console.log('Payment elements cleaned up');
     }
     
     function initializePaymentElementExtension(price) {
+        console.log('💳 initializePaymentElementExtension called with price:', price);
+        
         if (!stripe) {
             console.error('IELTS Payment: Cannot initialize extension payment element - Stripe not initialized');
+            console.error('stripe object is:', stripe);
             showErrorExtension('Payment system is not configured. Please contact the site administrator.');
             return;
         }
+        
+        console.log('Stripe object is available');
         
         // Clear any existing payment element
         $('#payment-element-extension').empty();
         
         try {
+            console.log('Creating Stripe elements with amount:', Math.round(parseFloat(price) * 100), 'cents');
+            
             // Create Elements instance in payment mode with preset amount
             elementsExtension = stripe.elements({
                 mode: 'payment',
@@ -447,9 +507,14 @@
                 }
             });
             
+            console.log('Elements instance created');
+            
             // Create and mount Payment Element
             paymentElementExtension = elementsExtension.create('payment');
+            console.log('Payment element created');
+            
             paymentElementExtension.mount('#payment-element-extension');
+            console.log('✓ Payment element mounted successfully');
         } catch (error) {
             console.error('IELTS Payment: Error initializing extension payment element:', error);
             showErrorExtension('Failed to initialize payment form. Please refresh the page and try again.');
