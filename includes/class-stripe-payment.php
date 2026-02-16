@@ -214,6 +214,41 @@ class IELTS_CM_Stripe_Payment {
             wp_send_json_error('Email already exists. Please use a different email or log in to your existing account.');
         }
         
+        // Validate membership type is required and valid
+        if (empty($membership_type)) {
+            error_log('IELTS Payment: Missing membership type');
+            
+            // Log to database
+            $this->safe_log_payment_error(
+                'validation_error',
+                'Membership type is required',
+                array('email' => $email),
+                null,
+                $email
+            );
+            
+            wp_send_json_error('Membership type is required. Please select a membership option.');
+        }
+        
+        // Validate that the membership type is valid
+        if (class_exists('IELTS_CM_Membership')) {
+            $valid_types = IELTS_CM_Membership::get_valid_membership_types();
+            if (!in_array($membership_type, $valid_types)) {
+                error_log("IELTS Payment: Invalid membership type: $membership_type");
+                
+                // Log to database
+                $this->safe_log_payment_error(
+                    'validation_error',
+                    'Invalid membership type',
+                    array('email' => $email, 'membership_type' => $membership_type),
+                    null,
+                    $email
+                );
+                
+                wp_send_json_error('Invalid membership type selected. Please select a valid membership option.');
+            }
+        }
+        
         // Generate username from email
         $email_parts = explode('@', $email);
         $base_username = sanitize_user($email_parts[0], true);
