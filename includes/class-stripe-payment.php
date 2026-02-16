@@ -231,22 +231,35 @@ class IELTS_CM_Stripe_Payment {
         }
         
         // Validate that the membership type is valid
-        if (class_exists('IELTS_CM_Membership')) {
-            $valid_types = IELTS_CM_Membership::get_valid_membership_types();
-            if (!in_array($membership_type, $valid_types)) {
-                error_log("IELTS Payment: Invalid membership type: $membership_type");
-                
-                // Log to database
-                $this->safe_log_payment_error(
-                    'validation_error',
-                    'Invalid membership type',
-                    array('email' => $email, 'membership_type' => $membership_type),
-                    null,
-                    $email
-                );
-                
-                wp_send_json_error('Invalid membership type selected. Please select a valid membership option.');
-            }
+        if (!class_exists('IELTS_CM_Membership')) {
+            error_log('IELTS Payment: CRITICAL - IELTS_CM_Membership class not found during registration');
+            
+            // Log to database
+            $this->safe_log_payment_error(
+                'system_error',
+                'Membership class not available',
+                array('email' => $email, 'membership_type' => $membership_type),
+                null,
+                $email
+            );
+            
+            wp_send_json_error('System error: Membership system not available. Please contact support.');
+        }
+        
+        $valid_types = IELTS_CM_Membership::get_valid_membership_types();
+        if (!in_array($membership_type, $valid_types)) {
+            error_log("IELTS Payment: Invalid membership type: $membership_type");
+            
+            // Log to database
+            $this->safe_log_payment_error(
+                'validation_error',
+                'Invalid membership type',
+                array('email' => $email, 'membership_type' => $membership_type),
+                null,
+                $email
+            );
+            
+            wp_send_json_error('Invalid membership type selected. Please select a valid membership option.');
         }
         
         // Generate username from email
