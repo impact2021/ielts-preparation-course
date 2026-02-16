@@ -4203,14 +4203,37 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
         }
         
-        // Update menu_order for each lesson
+        // Update menu_order for each lesson using direct database update
+        // This avoids triggering save_post hooks which can cause performance issues
+        global $wpdb;
+        $failed_updates = array();
+        
         foreach ($lesson_order as $item) {
             $lesson_id = intval($item['lesson_id']);
             $order = intval($item['order']);
             
-            wp_update_post(array(
-                'ID' => $lesson_id,
-                'menu_order' => $order
+            $result = $wpdb->update(
+                $wpdb->posts,
+                array('menu_order' => $order),
+                array('ID' => $lesson_id),
+                array('%d'),
+                array('%d')
+            );
+            
+            if ($result === false) {
+                $failed_updates[] = $lesson_id;
+            }
+        }
+        
+        // Clear post cache for updated lessons
+        foreach ($lesson_order as $item) {
+            clean_post_cache(intval($item['lesson_id']));
+        }
+        
+        if (!empty($failed_updates)) {
+            wp_send_json_error(array(
+                'message' => __('Some lessons failed to update', 'ielts-course-manager'),
+                'failed_ids' => $failed_updates
             ));
         }
         
@@ -4239,14 +4262,37 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
         }
         
-        // Update menu_order for each page
+        // Update menu_order for each page using direct database update
+        // This avoids triggering save_post hooks which can cause performance issues
+        global $wpdb;
+        $failed_updates = array();
+        
         foreach ($page_order as $item) {
             $page_id = intval($item['page_id']);
             $order = intval($item['order']);
             
-            wp_update_post(array(
-                'ID' => $page_id,
-                'menu_order' => $order
+            $result = $wpdb->update(
+                $wpdb->posts,
+                array('menu_order' => $order),
+                array('ID' => $page_id),
+                array('%d'),
+                array('%d')
+            );
+            
+            if ($result === false) {
+                $failed_updates[] = $page_id;
+            }
+        }
+        
+        // Clear post cache for updated pages
+        foreach ($page_order as $item) {
+            clean_post_cache(intval($item['page_id']));
+        }
+        
+        if (!empty($failed_updates)) {
+            wp_send_json_error(array(
+                'message' => __('Some pages failed to update', 'ielts-course-manager'),
+                'failed_ids' => $failed_updates
             ));
         }
         
@@ -4275,14 +4321,37 @@ class IELTS_CM_Admin {
             wp_send_json_error(array('message' => __('Invalid data', 'ielts-course-manager')));
         }
         
-        // Update menu_order for each content item (page or quiz)
+        // Update menu_order for each content item (page or quiz) using direct database update
+        // This avoids triggering save_post hooks which can cause performance issues
+        global $wpdb;
+        $failed_updates = array();
+        
         foreach ($content_order as $item) {
             $item_id = intval($item['item_id']);
             $order = intval($item['order']);
             
-            wp_update_post(array(
-                'ID' => $item_id,
-                'menu_order' => $order
+            $result = $wpdb->update(
+                $wpdb->posts,
+                array('menu_order' => $order),
+                array('ID' => $item_id),
+                array('%d'),
+                array('%d')
+            );
+            
+            if ($result === false) {
+                $failed_updates[] = $item_id;
+            }
+        }
+        
+        // Clear post cache for updated content items
+        foreach ($content_order as $item) {
+            clean_post_cache(intval($item['item_id']));
+        }
+        
+        if (!empty($failed_updates)) {
+            wp_send_json_error(array(
+                'message' => __('Some content items failed to update', 'ielts-course-manager'),
+                'failed_ids' => $failed_updates
             ));
         }
         
