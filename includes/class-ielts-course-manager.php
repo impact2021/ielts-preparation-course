@@ -63,6 +63,11 @@ class IELTS_Course_Manager {
         // Check for version update and flush permalinks if needed
         add_action('init', array($this, 'check_version_update'));
         
+        // SECURITY: Block ALL unauthorized user registration
+        add_action('init', array($this, 'block_unauthorized_registration'));
+        add_filter('registration_errors', array($this, 'block_default_registration'), 10, 3);
+        add_action('user_register', array($this, 'verify_authorized_registration'), 1);
+        
         // Register shortcodes on init hook
         add_action('init', array($this->shortcodes, 'register'));
         
@@ -461,5 +466,93 @@ class IELTS_Course_Manager {
             'meta'  => array('class' => 'ielts-cm-version-node')
         );
         $wp_admin_bar->add_node($args);
+    }
+    
+    /**
+     * SECURITY: Block ALL unauthorized user registration
+     * Force disable WordPress default registration
+     */
+    public function block_unauthorized_registration() {
+        // Force disable WordPress's built-in registration
+        update_option('users_can_register', 0);
+        
+        // Log unauthorized registration attempts
+        if (isset($_GET['action']) && $_GET['action'] === 'register' && !is_admin()) {
+            $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            error_log("IELTS Security: Blocked unauthorized registration attempt from IP: {$ip}");
+        }
+    }
+    
+    /**
+     * SECURITY: Block default WordPress registration form
+     * Users can ONLY register through payment or trial system
+     */
+    public function block_default_registration($errors, $sanitized_user_login, $user_email) {
+        // Check if this is coming from our authorized registration handlers
+        $is_authorized = $this->is_authorized_registration_context();
+        
+        if (!$is_authorized) {
+            $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            error_log("IELTS Security: Blocked default registration attempt - User: {$sanitized_user_login}, Email: {$user_email}, IP: {$ip}");
+            
+            $errors->add('registration_blocked', __('<strong>ERROR</strong>: Account creation is only available through our payment or trial registration system.', 'ielts-course-manager'));
+        }
+        
+        return $errors;
+    }
+    
+    /**
+     * SECURITY: Verify user registration is authorized
+     * Kill any registration not coming from our payment/trial system
+     */
+    public function verify_authorized_registration($user_id) {
+        // Check if this is coming from our authorized registration handlers
+        $is_authorized = $this->is_authorized_registration_context();
+        
+        if (!$is_authorized && !current_user_can('create_users')) {
+            // This is an unauthorized registration - delete the user immediately
+            $user = get_userdata($user_id);
+            $email = $user ? $user->user_email : 'unknown';
+            $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            
+            error_log("IELTS Security ALERT: Unauthorized user created and DELETED - ID: {$user_id}, Email: {$email}, IP: {$ip}");
+            
+            // Delete the unauthorized user
+            require_once(ABSPATH . 'wp-admin/includes/user.php');
+            wp_delete_user($user_id);
+            
+            // Prevent any further hooks from running
+            wp_die(__('Unauthorized registration attempt. This incident has been logged.', 'ielts-course-manager'), 'Registration Blocked', array('response' => 403));
+        }
+    }
+    
+    /**
+     * SECURITY: Check if registration is coming from authorized sources
+     * Only our payment/trial system and admins can create accounts
+     */
+    private function is_authorized_registration_context() {
+        // Allow admin-created users
+        if (is_admin() && current_user_can('create_users')) {
+            return true;
+        }
+        
+        // Check if request is coming from our authorized handlers
+        $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 15);
+        
+        foreach ($backtrace as $trace) {
+            // Allow registration from these authorized classes only:
+            // - IELTS_CM_Shortcodes (trial/paid registration form)
+            // - IELTS_CM_Stripe_Payment (Stripe webhook payment confirmation)
+            // - IELTS_CM_Access_Codes (access code registration)
+            if (isset($trace['class']) && in_array($trace['class'], array(
+                'IELTS_CM_Shortcodes',
+                'IELTS_CM_Stripe_Payment',
+                'IELTS_CM_Access_Codes'
+            ))) {
+                return true;
+            }
+        }
+        
+        return false;
     }
 }
