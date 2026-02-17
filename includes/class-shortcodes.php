@@ -1947,25 +1947,33 @@ class IELTS_CM_Shortcodes {
                 
                 $membership_type = isset($_POST['ielts_membership_type']) ? sanitize_text_field($_POST['ielts_membership_type']) : '';
                 
-                // Validate membership type if provided
-                if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
-                    // Extension types are valid for logged-in users upgrading
-                    $valid_types = array_merge(
-                        IELTS_CM_Membership::get_valid_membership_types(), 
-                        IELTS_CM_Membership::EXTENSION_TYPES
-                    );
-                    
-                    if (!in_array($membership_type, $valid_types)) {
-                        $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
+                // Validate membership type - required when membership system is enabled
+                if (get_option('ielts_cm_membership_enabled')) {
+                    // For new registrations (not upgrading), membership selection is required
+                    if (!$is_upgrading && empty($membership_type)) {
+                        $errors[] = __('Please select a membership type to continue.', 'ielts-course-manager');
                     }
                     
-                    // Additional validation: Check if English Only memberships are allowed
-                    $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
-                    if (!$english_only_enabled && in_array($membership_type, array('english_trial', 'english_full'))) {
-                        $errors[] = __('The selected membership type is not available.', 'ielts-course-manager');
+                    // Validate the selected membership type if provided
+                    if (!empty($membership_type)) {
+                        // Extension types are valid for logged-in users upgrading
+                        $valid_types = array_merge(
+                            IELTS_CM_Membership::get_valid_membership_types(), 
+                            IELTS_CM_Membership::EXTENSION_TYPES
+                        );
+                        
+                        if (!in_array($membership_type, $valid_types)) {
+                            $errors[] = __('Invalid membership type selected.', 'ielts-course-manager');
+                        }
+                        
+                        // Additional validation: Check if English Only memberships are allowed
+                        $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
+                        if (!$english_only_enabled && in_array($membership_type, array('english_trial', 'english_full'))) {
+                            $errors[] = __('The selected membership type is not available.', 'ielts-course-manager');
+                        }
+                        // Note: Paid memberships can now be selected during registration
+                        // For paid memberships, users will be redirected to payment after registration
                     }
-                    // Note: Paid memberships can now be selected during registration
-                    // For paid memberships, users will be redirected to payment after registration
                 }
                 
                 // Create user if no errors
