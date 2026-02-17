@@ -1763,10 +1763,65 @@ class IELTS_CM_Access_Codes {
                                     $message.html('<div class="iw-msg error">' + result.error.message + '</div>');
                                     $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
                                 } else {
-                                    $message.html('<div class="iw-msg success">Payment successful! Your access codes have been created. Refreshing...</div>');
-                                    setTimeout(function() {
-                                        location.reload();
-                                    }, 2000);
+                                    // Payment succeeded - check if webhook processed it
+                                    $message.html('<div class="iw-msg success">Payment successful! Processing your order...</div>');
+                                    
+                                    // Use fallback mechanism to check payment status
+                                    // This ensures codes are created even if webhooks fail
+                                    var paymentIntentId = result.paymentIntent.id;
+                                    var checkAttempts = 0;
+                                    var maxAttempts = 10;
+                                    
+                                    function checkPaymentStatus() {
+                                        checkAttempts++;
+                                        
+                                        $.ajax({
+                                            url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                                            type: 'POST',
+                                            data: {
+                                                action: 'ielts_cm_check_payment_status',
+                                                payment_intent_id: paymentIntentId,
+                                                nonce: '<?php echo wp_create_nonce('ielts_cm_check_payment_status'); ?>'
+                                            },
+                                            success: function(response) {
+                                                if (response.success) {
+                                                    if (response.data.status === 'completed' || response.data.status === 'already_processed') {
+                                                        $message.html('<div class="iw-msg success">Payment successful! Your access codes have been created. Refreshing...</div>');
+                                                        setTimeout(function() {
+                                                            location.reload();
+                                                        }, 2000);
+                                                    } else if (checkAttempts < maxAttempts) {
+                                                        // Still processing, try again
+                                                        setTimeout(checkPaymentStatus, 2000);
+                                                    } else {
+                                                        // Max attempts reached
+                                                        $message.html('<div class="iw-msg warning">Payment successful but processing is taking longer than expected. Please refresh the page in a moment to see your codes.</div>');
+                                                        $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
+                                                    }
+                                                } else {
+                                                    if (checkAttempts < maxAttempts) {
+                                                        // Retry on error
+                                                        setTimeout(checkPaymentStatus, 2000);
+                                                    } else {
+                                                        $message.html('<div class="iw-msg warning">Payment successful! If codes don\'t appear, please refresh the page or contact support.</div>');
+                                                        $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
+                                                    }
+                                                }
+                                            },
+                                            error: function() {
+                                                if (checkAttempts < maxAttempts) {
+                                                    // Retry on error
+                                                    setTimeout(checkPaymentStatus, 2000);
+                                                } else {
+                                                    $message.html('<div class="iw-msg warning">Payment successful! If codes don\'t appear, please refresh the page.</div>');
+                                                    $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
+                                                }
+                                            }
+                                        });
+                                    }
+                                    
+                                    // Start checking payment status after a short delay (give webhook a chance first)
+                                    setTimeout(checkPaymentStatus, 3000);
                                 }
                             });
                         } else {

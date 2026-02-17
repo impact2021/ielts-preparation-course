@@ -1007,10 +1007,60 @@ class IELTS_CM_Shortcodes {
                                                             $message.html('<div class="notice notice-error"><p>' + result.error.message + '</p></div>');
                                                             $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
                                                         } else {
-                                                            $message.html('<div class="notice notice-success"><p><?php echo esc_js(__('Payment successful! Your course has been extended.', 'ielts-course-manager')); ?></p></div>');
-                                                            setTimeout(function() {
-                                                                location.reload();
-                                                            }, 2000);
+                                                            // Payment succeeded - check if webhook processed it
+                                                            $message.html('<div class="notice notice-success"><p><?php echo esc_js(__('Payment successful! Processing your extension...', 'ielts-course-manager')); ?></p></div>');
+                                                            
+                                                            // Use fallback mechanism to check payment status
+                                                            var paymentIntentId = result.paymentIntent.id;
+                                                            var checkAttempts = 0;
+                                                            var maxAttempts = 10;
+                                                            
+                                                            function checkPaymentStatus() {
+                                                                checkAttempts++;
+                                                                
+                                                                $.ajax({
+                                                                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                                                                    type: 'POST',
+                                                                    data: {
+                                                                        action: 'ielts_cm_check_payment_status',
+                                                                        payment_intent_id: paymentIntentId,
+                                                                        nonce: '<?php echo wp_create_nonce('ielts_cm_check_payment_status'); ?>'
+                                                                    },
+                                                                    success: function(response) {
+                                                                        if (response.success) {
+                                                                            if (response.data.status === 'completed' || response.data.status === 'already_processed') {
+                                                                                $message.html('<div class="notice notice-success"><p><?php echo esc_js(__('Payment successful! Your course has been extended.', 'ielts-course-manager')); ?></p></div>');
+                                                                                setTimeout(function() {
+                                                                                    location.reload();
+                                                                                }, 2000);
+                                                                            } else if (checkAttempts < maxAttempts) {
+                                                                                setTimeout(checkPaymentStatus, 2000);
+                                                                            } else {
+                                                                                $message.html('<div class="notice notice-warning"><p><?php echo esc_js(__('Payment successful but processing is taking longer than expected. Please refresh the page in a moment.', 'ielts-course-manager')); ?></p></div>');
+                                                                                $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
+                                                                            }
+                                                                        } else {
+                                                                            if (checkAttempts < maxAttempts) {
+                                                                                setTimeout(checkPaymentStatus, 2000);
+                                                                            } else {
+                                                                                $message.html('<div class="notice notice-warning"><p><?php echo esc_js(__('Payment successful! If extension doesn\'t appear, please refresh the page.', 'ielts-course-manager')); ?></p></div>');
+                                                                                $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
+                                                                            }
+                                                                        }
+                                                                    },
+                                                                    error: function() {
+                                                                        if (checkAttempts < maxAttempts) {
+                                                                            setTimeout(checkPaymentStatus, 2000);
+                                                                        } else {
+                                                                            $message.html('<div class="notice notice-warning"><p><?php echo esc_js(__('Payment successful! Please refresh the page.', 'ielts-course-manager')); ?></p></div>');
+                                                                            $button.prop('disabled', false).text('<?php echo esc_js(__('Complete Payment & Extend', 'ielts-course-manager')); ?>');
+                                                                        }
+                                                                    }
+                                                                });
+                                                            }
+                                                            
+                                                            // Start checking payment status after a short delay (give webhook a chance first)
+                                                            setTimeout(checkPaymentStatus, 3000);
                                                         }
                                                     });
                                                 } else {
