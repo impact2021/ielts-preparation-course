@@ -1,44 +1,98 @@
 # Security Fix: Unauthorized Account Creation Prevention
 
-**Date:** February 16, 2026  
-**Severity:** High  
-**Status:** Fixed
+**Date:** February 17, 2026 (Updated)  
+**Severity:** CRITICAL  
+**Status:** COMPREHENSIVE FIX DEPLOYED
 
-## Problem Statement
+## Problem Statement - UPDATED
 
-Users were able to create accounts and change passwords on the primary site without being either paid or trial members. This security vulnerability allowed unauthorized access to the platform without any membership validation.
+Users were creating accounts and changing passwords without being paid or trial members. The issue was more severe than initially identified:
+- Accounts were being created **completely outside** the plugin's registration system
+- Users were bypassing WordPress default registration checks
+- The previous fix validated membership types but didn't block WordPress's native registration
 
-## Root Cause Analysis
+## Root Cause Analysis - COMPLETE
 
-The registration system had two critical server-side validation gaps:
+### Initial Issue (Fixed in v15.x)
+1. Registration form didn't require membership type selection
+2. Stripe payment endpoint didn't validate membership types
 
-### 1. Registration Form Validation Gap (class-shortcodes.php)
+### CRITICAL Issue (Fixed in v16.1)
+**WordPress default registration (`wp-login.php?action=register`) was NOT blocked**
+- Anyone could create accounts via WordPress's built-in registration
+- No validation of payment or trial membership
+- Users could change passwords and potentially access content
+- No audit trail of unauthorized attempts
 
-**Location:** `display_registration()` function, lines 1950-1977
+## Solution - Multi-Layer Security
 
-**Issue:** The validation logic only checked if a membership type was valid **when one was provided**, but didn't enforce that new users **must** select a membership type.
+Implemented **defense-in-depth** approach with 3 security layers:
 
-**Original Code Logic:**
-```php
-if (get_option('ielts_cm_membership_enabled') && !empty($membership_type)) {
-    // Validate the provided type
-}
-```
+### Layer 1: Force Disable WordPress Registration
+**File:** `includes/class-ielts-course-manager.php` - `block_unauthorized_registration()`
+- Automatically sets `users_can_register = 0` on every init
+- Optimized: only updates database if value changed
+- Logs unauthorized registration page access with IP
 
-**Vulnerability:** If `$membership_type` was empty, validation was entirely skipped, allowing account creation without any membership.
+### Layer 2: Registration Errors Filter
+**File:** `includes/class-ielts-course-manager.php` - `block_default_registration()`
+- Hooks: `registration_errors` filter
+- Checks authorization context before allowing registration
+- Displays user-friendly error if unauthorized
+- Logs: user, email, IP address
 
-### 2. Stripe Payment Registration Endpoint (class-stripe-payment.php)
+### Layer 3: User Creation Verification (Kill Switch)
+**File:** `includes/class-ielts-course-manager.php` - `verify_authorized_registration()`
+- Hooks: `user_register` action (priority 1 - runs FIRST)
+- Immediately deletes unauthorized user accounts
+- Terminates request with 403 error
+- Logs: SECURITY ALERT with full details
 
-**Location:** `register_user()` AJAX function, lines 166-255
+### Performance Optimization: Authorization Marker
+**Files:** All registration handlers
+- `IELTS_CM_AUTHORIZED_REGISTRATION` constant set before wp_create_user()
+- Avoids expensive backtrace on legitimate registrations
+- Falls back to backtrace for edge cases
 
-**Issue:** The endpoint accepted a `membership_type` parameter but:
-- Never validated it was provided
-- Never validated it was a valid membership type
-- Stored it without any checks
+### Robust IP Detection
+**File:** `includes/class-ielts-course-manager.php` - `get_client_ip()`
+- Handles Cloudflare (HTTP_CF_CONNECTING_IP)
+- Handles proxies (HTTP_X_FORWARDED_FOR)
+- Handles Nginx (HTTP_X_REAL_IP)
+- Validates IP format to prevent header injection
+- Prevents spoofing attacks
 
-**Vulnerability:** Malicious users could call this AJAX endpoint directly with invalid or empty membership types.
+## Authorization Context
 
-## Security Impact
+### Authorized Registration Sources (ONLY)
+1. **IELTS_CM_Shortcodes** - Trial/paid registration forms
+2. **IELTS_CM_Stripe_Payment** - Stripe webhook confirmations
+3. **IELTS_CM_Access_Codes** - Access code registrations
+4. **Admin users** - Manual WordPress admin user creation
+
+### Authorization Markers Added
+- `includes/class-shortcodes.php` - 2 locations (trial, paid)
+- `includes/class-stripe-payment.php` - 2 locations (initial, webhook)
+- `includes/class-access-codes.php` - 1 location
+
+## Files Modified (v16.1)
+
+1. **includes/class-ielts-course-manager.php** (+128 lines)
+   - Added 3 security check methods
+   - Added IP detection method
+   - Added authorization context checker
+   - Added security hooks in run() method
+
+2. **includes/class-shortcodes.php** (+8 lines)
+   - Added authorization markers (2 locations)
+
+3. **includes/class-stripe-payment.php** (+8 lines)
+   - Added authorization markers (2 locations)
+
+4. **includes/class-access-codes.php** (+4 lines)
+   - Added authorization marker (1 location)
+
+## Security Benefits
 
 ### Before the Fix
 - ✗ Users could create accounts without selecting any membership

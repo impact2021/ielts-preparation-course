@@ -2361,6 +2361,10 @@ class IELTS_CM_Access_Codes {
         
         $password = wp_generate_password(12);
         
+        // Mark this as authorized registration
+        if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
+            define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
+        }
         $user_id = wp_create_user($username, $password, $email);
         
         if (is_wp_error($user_id)) {

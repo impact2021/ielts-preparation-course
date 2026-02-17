@@ -1983,6 +1983,10 @@ class IELTS_CM_Shortcodes {
                         // Just process the membership upgrade
                     } else {
                         // Create new user for registration
+                        // Mark this as authorized registration
+                        if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
+                            define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
+                        }
                         $user_id = wp_create_user($username, $password, $email);
                         if (is_wp_error($user_id)) {
                             $errors[] = $user_id->get_error_message();
@@ -4337,6 +4341,10 @@ class IELTS_CM_Shortcodes {
                 // Create user if no errors
                 if (empty($errors)) {
                     // Create new user
+                    // Mark this as authorized registration
+                    if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
+                        define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
+                    }
                     $user_id = wp_create_user($username, $password, $email);
                     if (is_wp_error($user_id)) {
                         $errors[] = $user_id->get_error_message();
