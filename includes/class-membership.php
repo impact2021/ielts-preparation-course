@@ -327,11 +327,13 @@ class IELTS_CM_Membership {
             $user_org_id = sanitize_text_field($_POST['user_organization_id']);
             
             // Validate organization ID (must be numeric, between 1-999, or empty)
-            if ($user_org_id === '' || $user_org_id === null) {
-                // Empty value - use default organization
-                if (class_exists('IELTS_CM_Access_Codes')) {
-                    update_user_meta($user_id, 'iw_created_by_partner', IELTS_CM_Access_Codes::SITE_PARTNER_ORG_ID);
-                }
+            if ($user_org_id === '') {
+                // Empty value - use default organization (1)
+                // Use constant if available, otherwise fallback to hardcoded value
+                $default_org_id = (class_exists('IELTS_CM_Access_Codes')) 
+                    ? IELTS_CM_Access_Codes::SITE_PARTNER_ORG_ID 
+                    : 1;
+                update_user_meta($user_id, 'iw_created_by_partner', $default_org_id);
             } elseif (is_numeric($user_org_id)) {
                 $org_id = intval($user_org_id);
                 // Validate range (1-999), excluding 0 which is reserved for admins
