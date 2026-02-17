@@ -28,6 +28,9 @@ class IELTS_CM_Stripe_Payment {
         // AJAX endpoint for code purchase payment intent
         add_action('wp_ajax_ielts_cm_create_code_purchase_payment_intent', array($this, 'create_code_purchase_payment_intent'));
         
+        // AJAX endpoint for checking payment status and completing purchase (webhook fallback)
+        add_action('wp_ajax_ielts_cm_check_payment_status', array($this, 'check_payment_status'));
+        
         // Webhook handler for payment confirmation
         add_action('rest_api_init', array($this, 'register_webhook_endpoint'));
     }
@@ -1492,5 +1495,124 @@ class IELTS_CM_Stripe_Payment {
         delete_user_meta($user_id, '_ielts_cm_pending_code_purchase');
         
         error_log("Successfully processed code purchase payment for user $user_id - Codes: " . implode(', ', $generated_codes));
+    }
+    
+    /**
+     * Check payment status directly with Stripe (webhook fallback)
+     * This allows completing purchases when webhooks fail
+     */
+    public function check_payment_status() {
+        error_log('IELTS Stripe: check_payment_status CALLED');
+        
+        // Verify nonce
+        if (!isset($_POST['nonce']) || !wp_verify_nonce($_POST['nonce'], 'ielts_cm_check_payment_status')) {
+            error_log('IELTS Stripe: Check payment status failed - nonce verification failed');
+            wp_send_json_error(array('message' => 'Security check failed'));
+            return;
+        }
+        
+        // Verify user is logged in
+        if (!is_user_logged_in()) {
+            error_log('IELTS Stripe: Check payment status failed - user not logged in');
+            wp_send_json_error(array('message' => 'You must be logged in'));
+            return;
+        }
+        
+        $user_id = get_current_user_id();
+        $payment_intent_id = sanitize_text_field($_POST['payment_intent_id']);
+        
+        if (empty($payment_intent_id)) {
+            wp_send_json_error(array('message' => 'Payment intent ID is required'));
+            return;
+        }
+        
+        error_log("IELTS Stripe: Checking payment status for intent $payment_intent_id (user $user_id)");
+        
+        // Load Stripe
+        $this->load_stripe();
+        
+        try {
+            // Get Stripe secret key
+            $stripe_secret = get_option('ielts_cm_stripe_secret_key');
+            if (empty($stripe_secret)) {
+                wp_send_json_error(array('message' => 'Payment system not configured'));
+                return;
+            }
+            
+            \Stripe\Stripe::setApiKey($stripe_secret);
+            
+            // Retrieve payment intent from Stripe
+            $payment_intent = \Stripe\PaymentIntent::retrieve($payment_intent_id);
+            
+            error_log("IELTS Stripe: Payment intent status: " . $payment_intent->status);
+            
+            // Check if payment was successful
+            if ($payment_intent->status === 'succeeded') {
+                // Verify this payment belongs to the current user
+                $metadata = $payment_intent->metadata;
+                if (!isset($metadata->user_id) || intval($metadata->user_id) !== $user_id) {
+                    error_log("IELTS Stripe: Security error - payment intent user mismatch");
+                    wp_send_json_error(array('message' => 'Payment verification failed'));
+                    return;
+                }
+                
+                // Check if payment was already processed (idempotency)
+                global $wpdb;
+                $payment_table = $wpdb->prefix . 'ielts_cm_payments';
+                $existing_payment = $wpdb->get_row($wpdb->prepare(
+                    "SELECT * FROM $payment_table WHERE transaction_id = %s",
+                    $payment_intent_id
+                ));
+                
+                if ($existing_payment) {
+                    error_log("IELTS Stripe: Payment already processed (idempotency check)");
+                    wp_send_json_success(array(
+                        'status' => 'already_processed',
+                        'message' => 'Payment was already processed'
+                    ));
+                    return;
+                }
+                
+                // Process the payment based on type
+                $payment_type = $metadata->payment_type ?? null;
+                
+                if ($payment_type === 'access_code_purchase') {
+                    error_log("IELTS Stripe: Processing code purchase via fallback mechanism");
+                    $this->handle_code_purchase_payment($payment_intent);
+                    
+                    wp_send_json_success(array(
+                        'status' => 'completed',
+                        'message' => 'Purchase completed successfully'
+                    ));
+                } elseif ($payment_type === 'course_extension') {
+                    error_log("IELTS Stripe: Processing course extension via fallback mechanism");
+                    $this->handle_extension_payment($payment_intent);
+                    
+                    wp_send_json_success(array(
+                        'status' => 'completed',
+                        'message' => 'Extension applied successfully'
+                    ));
+                } else {
+                    error_log("IELTS Stripe: Unknown payment type: " . $payment_type);
+                    wp_send_json_error(array('message' => 'Unknown payment type'));
+                }
+            } elseif ($payment_intent->status === 'processing') {
+                wp_send_json_success(array(
+                    'status' => 'processing',
+                    'message' => 'Payment is being processed'
+                ));
+            } elseif ($payment_intent->status === 'requires_payment_method') {
+                wp_send_json_error(array('message' => 'Payment failed - please try again'));
+            } else {
+                wp_send_json_error(array('message' => 'Payment not completed yet'));
+            }
+            
+        } catch (\Stripe\Exception\ApiErrorException $e) {
+            error_log('IELTS Stripe: API error checking payment status - ' . $e->getMessage());
+            wp_send_json_error(array('message' => 'Error checking payment status: ' . $e->getMessage()));
+        } catch (Exception $e) {
+            error_log('IELTS Stripe: Error checking payment status - ' . $e->getMessage());
+            wp_send_json_error(array('message' => 'An error occurred'));
+        }
     }
 }
