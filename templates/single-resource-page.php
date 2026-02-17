@@ -625,7 +625,7 @@ body.ielts-resource-single .content-area {
                             // Find the next lesson in the course
                             $current_lesson_index = -1;
                             foreach ($all_lessons as $index => $lesson) {
-                                if ($lesson->ID == $lesson_id) {
+                                if ($lesson->ID === (int)$lesson_id) {
                                     $current_lesson_index = $index;
                                     break;
                                 }

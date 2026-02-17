@@ -207,7 +207,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                     // Find the next lesson in the course
                     $current_lesson_index = -1;
                     foreach ($all_lessons as $index => $lesson) {
-                        if ($lesson->ID == $lesson_id) {
+                        if ($lesson->ID === (int)$lesson_id) {
                             $current_lesson_index = $index;
                             break;
                         }
@@ -1114,7 +1114,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                             <span class="nav-arrow">&raquo;</span>
                         </a>
                     <?php elseif (isset($next_lesson) && $next_lesson): ?>
-                        <a href="<?php echo get_permalink($next_lesson->ID); ?>" class="nav-link">
+                        <a href="<?php echo esc_url(get_permalink($next_lesson->ID)); ?>" class="nav-link">
                             <span class="nav-label">
                                 <small><?php _e('Next Lesson', 'ielts-course-manager'); ?></small>
                                 <strong><?php echo esc_html($next_lesson->post_title); ?></strong>
