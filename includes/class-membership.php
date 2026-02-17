@@ -257,6 +257,13 @@ class IELTS_CM_Membership {
             }
         }
         
+        // Get current organization ID for hybrid sites
+        $hybrid_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        $current_org_id = '';
+        if ($hybrid_enabled) {
+            $current_org_id = get_user_meta($user->ID, 'iw_created_by_partner', true);
+        }
+        
         ?>
         <h2><?php _e('Course Enrollment', 'ielts-course-manager'); ?></h2>
         <table class="form-table">
@@ -282,6 +289,19 @@ class IELTS_CM_Membership {
                     <p class="description"><?php _e('Leave empty for lifetime access.', 'ielts-course-manager'); ?></p>
                 </td>
             </tr>
+            <?php if ($hybrid_enabled): ?>
+            <tr>
+                <th><label for="user_organization_id"><?php _e('Organization ID', 'ielts-course-manager'); ?></label></th>
+                <td>
+                    <input type="number" name="user_organization_id" id="user_organization_id" 
+                           value="<?php echo esc_attr($current_org_id); ?>" 
+                           class="regular-text" min="1" max="999" step="1">
+                    <p class="description">
+                        <?php _e('Assign this user to an organization (1-999). Users in the same organization can be managed together by partner admins. Leave empty to use default organization (1).', 'ielts-course-manager'); ?>
+                    </p>
+                </td>
+            </tr>
+            <?php endif; ?>
         </table>
         <?php
     }
@@ -300,6 +320,26 @@ class IELTS_CM_Membership {
         // Get the unified course and expiry values
         $user_course = isset($_POST['user_course']) ? sanitize_text_field($_POST['user_course']) : '';
         $user_expiry = isset($_POST['user_expiry']) ? sanitize_text_field($_POST['user_expiry']) : '';
+        
+        // Handle organization ID for hybrid sites
+        $hybrid_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        if ($hybrid_enabled && isset($_POST['user_organization_id'])) {
+            $user_org_id = sanitize_text_field($_POST['user_organization_id']);
+            
+            // Validate organization ID (must be numeric, between 1-999, or empty)
+            if ($user_org_id === '' || $user_org_id === null) {
+                // Empty value - use default organization
+                if (class_exists('IELTS_CM_Access_Codes')) {
+                    update_user_meta($user_id, 'iw_created_by_partner', IELTS_CM_Access_Codes::SITE_PARTNER_ORG_ID);
+                }
+            } elseif (is_numeric($user_org_id)) {
+                $org_id = intval($user_org_id);
+                // Validate range (1-999), excluding 0 which is reserved for admins
+                if ($org_id >= 1 && $org_id <= 999) {
+                    update_user_meta($user_id, 'iw_created_by_partner', $org_id);
+                }
+            }
+        }
         
         if ($membership_enabled) {
             // Save to paid membership fields
