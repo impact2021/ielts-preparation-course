@@ -242,6 +242,7 @@ if ($lesson_id) {
     
     // Check if this is the last item of the last lesson in the course (for completion message)
     $is_last_lesson = false;
+    $next_lesson = null;
     if (empty($next_url) && $course_id && $lesson_id) {
         // Get all lessons in the course
         $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
@@ -268,6 +269,20 @@ if ($lesson_id) {
             // (empty($next_url) already confirms we're on the last item in the lesson)
             if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
                 $is_last_lesson = true;
+            } else {
+                // Find the next lesson in the course
+                $current_lesson_index = -1;
+                foreach ($all_lessons as $index => $lesson) {
+                    if ($lesson->ID === (int)$lesson_id) {
+                        $current_lesson_index = $index;
+                        break;
+                    }
+                }
+                
+                // If we found the current lesson and there's a next one, store it
+                if ($current_lesson_index >= 0 && $current_lesson_index < count($all_lessons) - 1) {
+                    $next_lesson = $all_lessons[$current_lesson_index + 1];
+                }
             }
         }
     }
@@ -1431,6 +1446,14 @@ if ($lesson_id) {
                             <span class="nav-label">
                                 <small><?php _e('Next', 'ielts-course-manager'); ?></small>
                                 <strong><?php echo esc_html($next_title); ?></strong>
+                            </span>
+                            <span class="nav-arrow">&raquo;</span>
+                        </a>
+                    <?php elseif (isset($next_lesson) && $next_lesson): ?>
+                        <a href="<?php echo esc_url(get_permalink($next_lesson->ID)); ?>" class="nav-link">
+                            <span class="nav-label">
+                                <small><?php _e('Next Lesson', 'ielts-course-manager'); ?></small>
+                                <strong><?php echo esc_html($next_lesson->post_title); ?></strong>
                             </span>
                             <span class="nav-arrow">&raquo;</span>
                         </a>
