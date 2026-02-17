@@ -80,6 +80,48 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
+     * Ensure access codes table exists in database
+     * This handles cases where the plugin was updated but not reactivated
+     * Critical fix: Prevents silent failure when Stripe payment succeeds but codes can't be created
+     */
+    private function ensure_access_codes_table_exists() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
+        
+        // Check if table exists
+        $table_exists = $wpdb->get_var($wpdb->prepare("SHOW TABLES LIKE %s", $table_name)) === $table_name;
+        
+        if (!$table_exists) {
+            error_log('IELTS Access Codes: Access codes table does not exist, creating it now');
+            
+            // Create the table using the same SQL from class-database.php
+            $charset_collate = $wpdb->get_charset_collate();
+            $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+                id bigint(20) NOT NULL AUTO_INCREMENT,
+                code varchar(50) NOT NULL,
+                course_group varchar(50) NOT NULL,
+                duration_days int(11) NOT NULL DEFAULT 30,
+                created_by bigint(20) NOT NULL,
+                created_date datetime DEFAULT CURRENT_TIMESTAMP,
+                status varchar(20) DEFAULT 'active',
+                used_by bigint(20) DEFAULT NULL,
+                used_date datetime DEFAULT NULL,
+                expiry_date datetime DEFAULT NULL,
+                PRIMARY KEY  (id),
+                UNIQUE KEY code (code),
+                KEY created_by (created_by),
+                KEY status (status),
+                KEY used_by (used_by)
+            ) $charset_collate;";
+            
+            require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+            dbDelta($sql);
+            
+            error_log('IELTS Access Codes: Access codes table created successfully');
+        }
+    }
+    
+    /**
      * Verify IELTS_CM_Membership class is loaded
      * Returns true if available, sends error and returns false otherwise
      * 
@@ -1368,17 +1410,14 @@ class IELTS_CM_Stripe_Payment {
             error_log("IELTS Webhook: IELTS_CM_Access_Codes class found, creating codes...");
             $access_codes = new IELTS_CM_Access_Codes();
             
+            // Ensure access codes table exists (critical fix for hybrid system)
+            // This prevents silent failure when Stripe payment succeeds but table is missing
+            $this->ensure_access_codes_table_exists();
+            
             global $wpdb;
             $table_name = $wpdb->prefix . 'ielts_cm_access_codes';
             
-            // Verify table exists
-            $table_exists = $wpdb->get_var("SHOW TABLES LIKE '{$table_name}'") === $table_name;
-            if (!$table_exists) {
-                error_log("CRITICAL: Access codes table $table_name does not exist! Plugin may not be properly activated.");
-                // Still try to continue - maybe the table will be created by the class
-            } else {
-                error_log("IELTS Webhook: Access codes table verified, generating $quantity codes...");
-            }
+            error_log("IELTS Webhook: Access codes table verified, generating $quantity codes...");
             
             // Generate codes
             for ($i = 0; $i < $quantity; $i++) {
