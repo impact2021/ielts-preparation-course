@@ -331,8 +331,6 @@ class IELTS_CM_Access_Codes {
         // Set lock for 5 minutes
         set_transient($lock_key, true, 300);
         
-        global $wpdb;
-        
         // Find all users who have access code memberships but don't have organization assignment
         // These are users created via:
         // 1. Access code registration
