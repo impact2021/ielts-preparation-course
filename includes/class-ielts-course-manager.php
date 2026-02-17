@@ -473,12 +473,14 @@ class IELTS_Course_Manager {
      * Force disable WordPress default registration
      */
     public function block_unauthorized_registration() {
-        // Force disable WordPress's built-in registration
-        update_option('users_can_register', 0);
+        // Force disable WordPress's built-in registration (only update if changed)
+        if (get_option('users_can_register') != 0) {
+            update_option('users_can_register', 0);
+        }
         
         // Log unauthorized registration attempts
         if (isset($_GET['action']) && $_GET['action'] === 'register' && !is_admin()) {
-            $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            $ip = $this->get_client_ip();
             error_log("IELTS Security: Blocked unauthorized registration attempt from IP: {$ip}");
         }
     }
@@ -492,7 +494,7 @@ class IELTS_Course_Manager {
         $is_authorized = $this->is_authorized_registration_context();
         
         if (!$is_authorized) {
-            $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            $ip = $this->get_client_ip();
             error_log("IELTS Security: Blocked default registration attempt - User: {$sanitized_user_login}, Email: {$user_email}, IP: {$ip}");
             
             $errors->add('registration_blocked', __('<strong>ERROR</strong>: Account creation is only available through our payment or trial registration system.', 'ielts-course-manager'));
@@ -513,7 +515,7 @@ class IELTS_Course_Manager {
             // This is an unauthorized registration - delete the user immediately
             $user = get_userdata($user_id);
             $email = $user ? $user->user_email : 'unknown';
-            $ip = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+            $ip = $this->get_client_ip();
             
             error_log("IELTS Security ALERT: Unauthorized user created and DELETED - ID: {$user_id}, Email: {$email}, IP: {$ip}");
             
@@ -527,8 +529,36 @@ class IELTS_Course_Manager {
     }
     
     /**
+     * SECURITY: Get client IP address reliably
+     * Handles proxies and load balancers while preventing header injection
+     */
+    private function get_client_ip() {
+        $ip_headers = array(
+            'HTTP_CF_CONNECTING_IP', // Cloudflare
+            'HTTP_X_FORWARDED_FOR',  // Standard proxy header
+            'HTTP_X_REAL_IP',        // Nginx proxy
+            'REMOTE_ADDR'            // Direct connection
+        );
+        
+        foreach ($ip_headers as $header) {
+            if (!empty($_SERVER[$header])) {
+                // For X-Forwarded-For, get the first IP in the list
+                $ip = trim(explode(',', $_SERVER[$header])[0]);
+                
+                // Validate IP format (IPv4 or IPv6)
+                if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {
+                    return $ip;
+                }
+            }
+        }
+        
+        return 'unknown';
+    }
+    
+    /**
      * SECURITY: Check if registration is coming from authorized sources
      * Only our payment/trial system and admins can create accounts
+     * Uses a marker set by authorized registration flows for efficiency
      */
     private function is_authorized_registration_context() {
         // Allow admin-created users
@@ -536,7 +566,12 @@ class IELTS_Course_Manager {
             return true;
         }
         
-        // Check if request is coming from our authorized handlers
+        // Check for authorization marker set by authorized handlers
+        if (defined('IELTS_CM_AUTHORIZED_REGISTRATION') && IELTS_CM_AUTHORIZED_REGISTRATION === true) {
+            return true;
+        }
+        
+        // Fallback: Check backtrace (less efficient but catches edge cases)
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 15);
         
         foreach ($backtrace as $trace) {

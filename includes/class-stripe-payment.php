@@ -276,6 +276,10 @@ class IELTS_CM_Stripe_Payment {
         add_filter('wp_send_new_user_notifications', '__return_false');
         
         // Create user account
+        // Mark this as authorized registration
+        if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
+            define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
+        }
         $user_id = wp_create_user($username, $password, $email);
         
         // Re-enable new user notifications
@@ -949,6 +953,10 @@ class IELTS_CM_Stripe_Payment {
         add_filter('wp_send_new_user_notifications', '__return_false');
         
         // Create user account
+        // Mark this as authorized registration
+        if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
+            define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
+        }
         $user_id = wp_create_user($username, wp_generate_password(), $email);
         
         // Re-enable new user notifications

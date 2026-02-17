@@ -372,7 +372,7 @@ $completion = $user_id && $is_enrolled ? $progress_tracker->get_course_completio
             <div class="nav-item nav-center">
                 <a href="<?php echo home_url('/'); ?>" class="nav-link nav-back-to-course">
                     <span class="nav-label">
-                        <small><?php _e('Return to course', 'ielts-course-manager'); ?></small>
+                        <small><?php _e('All courses', 'ielts-course-manager'); ?></small>
                     </span>
                 </a>
             </div>
