@@ -341,28 +341,17 @@ class IELTS_CM_Access_Codes {
         // We need to identify them by their roles (access_academic_module, access_general_module, access_general_english)
         $access_code_roles = array_keys(self::ACCESS_CODE_MEMBERSHIP_TYPES);
         
-        // Build the meta_query to find users with access code roles
-        $users_without_org = array();
-        
-        foreach ($access_code_roles as $role) {
-            $users = get_users(array(
-                'role' => $role,
-                'fields' => 'ID',
-                'meta_query' => array(
-                    array(
-                        'key' => 'iw_created_by_partner',
-                        'compare' => 'NOT EXISTS'
-                    )
+        // Use role__in to get all users with any access code role in a single query
+        $users_without_org = get_users(array(
+            'role__in' => $access_code_roles,
+            'fields' => 'ID',
+            'meta_query' => array(
+                array(
+                    'key' => 'iw_created_by_partner',
+                    'compare' => 'NOT EXISTS'
                 )
-            ));
-            
-            if (!empty($users)) {
-                $users_without_org = array_merge($users_without_org, $users);
-            }
-        }
-        
-        // Remove duplicates (in case a user somehow has multiple roles)
-        $users_without_org = array_unique($users_without_org);
+            )
+        ));
         
         if (empty($users_without_org)) {
             // No users to migrate - mark as complete
@@ -376,8 +365,11 @@ class IELTS_CM_Access_Codes {
         // This is the default organization for partner-created users
         $users_migrated = 0;
         foreach ($users_without_org as $user_id) {
+            // update_user_meta returns meta_id (int) on insert, true on update, false on failure
+            // Since we know the meta doesn't exist (from NOT EXISTS query), it will insert
             $result = update_user_meta($user_id, 'iw_created_by_partner', self::SITE_PARTNER_ORG_ID);
-            if ($result !== false) {
+            // Count as migrated if result is not false (could be meta_id or true)
+            if ($result) {
                 $users_migrated++;
             }
         }
