@@ -475,7 +475,6 @@ class IELTS_CM_Membership {
             .application-passwords-section,
             /* Hide unnecessary profile fields */
             .user-url-wrap,
-            .user-nickname-wrap,
             .user-display-name-wrap,
             /* Hide Additional Capabilities and Other Roles */
             .user-capabilities-wrap,
@@ -498,7 +497,7 @@ class IELTS_CM_Membership {
                 });
                 
                 // Hide specific field rows
-                $('.user-url-wrap, .user-nickname-wrap, .user-display-name-wrap, .user-profile-picture, .user-role-wrap').closest('tr').hide();
+                $('.user-url-wrap, .user-display-name-wrap, .user-profile-picture, .user-role-wrap').closest('tr').hide();
                 
                 // Hide paragraphs describing application passwords
                 $('p').filter(function() {
