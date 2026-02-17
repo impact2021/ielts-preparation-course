@@ -89,6 +89,7 @@ class IELTS_CM_Access_Codes {
         add_action('admin_init', array($this, 'block_partner_admin_backend'));
         add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
         add_action('admin_init', array($this, 'migrate_all_partner_data_to_site_org'));
+        add_action('admin_init', array($this, 'migrate_users_without_organization'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -284,6 +285,98 @@ class IELTS_CM_Access_Codes {
         
         // Mark migration as complete
         update_option('iw_partner_site_org_migration_v3_done', true);
+        delete_transient($lock_key);
+    }
+    
+    /**
+     * Migrate users without organization assignment (V4 Migration)
+     * 
+     * This migration retroactively adds the `iw_created_by_partner` meta field
+     * to users who don't have it assigned. This is needed for hybrid sites where
+     * organization filtering is essential.
+     * 
+     * IMPORTANT: This migration ONLY runs on sites with hybrid mode enabled.
+     * Non-hybrid sites don't need organization assignment since all partners
+     * see all data regardless.
+     * 
+     * Users without this meta field are assigned to SITE_PARTNER_ORG_ID (1),
+     * which is the default organization for all partner admins.
+     * 
+     * Public visibility required because it's hooked to admin_init
+     */
+    public function migrate_users_without_organization() {
+        // Only run on hybrid sites - organization filtering is not used otherwise
+        $is_hybrid_mode = get_option('ielts_cm_hybrid_site_enabled', false);
+        if (!$is_hybrid_mode) {
+            return;
+        }
+        
+        // Only allow admins to run this migration
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+        
+        // Check if migration has already run
+        $migration_done = get_option('iw_users_without_org_migration_v4_done', false);
+        if ($migration_done) {
+            return;
+        }
+        
+        // Use transient lock to prevent concurrent execution
+        $lock_key = 'iw_users_without_org_migration_v4_lock';
+        if (get_transient($lock_key)) {
+            return; // Another process is running the migration
+        }
+        
+        // Set lock for 5 minutes
+        set_transient($lock_key, true, 300);
+        
+        // Find all users who have access code memberships but don't have organization assignment
+        // These are users created via:
+        // 1. Access code registration
+        // 2. Manual user creation by partners
+        // 3. Stripe payment webhooks
+        // We need to identify them by their roles (access_academic_module, access_general_module, access_general_english)
+        $access_code_roles = array_keys(self::ACCESS_CODE_MEMBERSHIP_TYPES);
+        
+        // Use role__in to get all users with any access code role in a single query
+        $users_without_org = get_users(array(
+            'role__in' => $access_code_roles,
+            'fields' => 'ID',
+            'meta_query' => array(
+                array(
+                    'key' => 'iw_created_by_partner',
+                    'compare' => 'NOT EXISTS'
+                )
+            )
+        ));
+        
+        if (empty($users_without_org)) {
+            // No users to migrate - mark as complete
+            update_option('iw_users_without_org_migration_v4_done', true);
+            delete_transient($lock_key);
+            error_log("Users without org migration v4: No users to migrate");
+            return;
+        }
+        
+        // Assign all users without organization to SITE_PARTNER_ORG_ID (1)
+        // This is the default organization for partner-created users
+        $users_migrated = 0;
+        foreach ($users_without_org as $user_id) {
+            // update_user_meta returns meta_id (int) on insert, true on update, false on failure
+            // Since we know the meta doesn't exist (from NOT EXISTS query), it will insert
+            $result = update_user_meta($user_id, 'iw_created_by_partner', self::SITE_PARTNER_ORG_ID);
+            // Count as migrated if result is not false (could be meta_id or true)
+            if ($result) {
+                $users_migrated++;
+            }
+        }
+        
+        // Log migration results
+        error_log("Users without org migration v4 completed: Assigned {$users_migrated} users to organization " . self::SITE_PARTNER_ORG_ID);
+        
+        // Mark migration as complete
+        update_option('iw_users_without_org_migration_v4_done', true);
         delete_transient($lock_key);
     }
     

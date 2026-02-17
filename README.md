@@ -98,6 +98,6 @@ See [TEMPLATES/JSON-FORMAT-README.md](TEMPLATES/JSON-FORMAT-README.md) for full 
 
 ---
 
-**Plugin Version**: 15.28  
+**Plugin Version**: 16.0  
 **WordPress Version Required**: 5.8+  
 **PHP Version Required**: 7.2+
