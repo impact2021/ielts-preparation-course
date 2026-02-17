@@ -1574,7 +1574,7 @@ class IELTS_CM_Stripe_Payment {
                 }
                 
                 // Process the payment based on type
-                $payment_type = isset($metadata->payment_type) ? $metadata->payment_type : null;
+                $payment_type = $metadata->payment_type ?? null;
                 
                 if ($payment_type === 'access_code_purchase') {
                     error_log("IELTS Stripe: Processing code purchase via fallback mechanism");
