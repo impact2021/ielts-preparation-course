@@ -594,6 +594,7 @@ body.ielts-resource-single .content-area {
                 
                 // Check if this is the last item of the last lesson in the course (for completion message)
                 $is_last_lesson = false;
+                $next_lesson = null;
                 if (!$next_item && $course_id && $lesson_id) {
                     // Get all lessons in the course
                     $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
@@ -620,6 +621,20 @@ body.ielts-resource-single .content-area {
                         // (!$next_item already confirms we're on the last item in the lesson)
                         if (!empty($all_lessons) && end($all_lessons)->ID == $lesson_id) {
                             $is_last_lesson = true;
+                        } else {
+                            // Find the next lesson in the course
+                            $current_lesson_index = -1;
+                            foreach ($all_lessons as $index => $lesson) {
+                                if ($lesson->ID == $lesson_id) {
+                                    $current_lesson_index = $index;
+                                    break;
+                                }
+                            }
+                            
+                            // If we found the current lesson and there's a next one, store it
+                            if ($current_lesson_index >= 0 && $current_lesson_index < count($all_lessons) - 1) {
+                                $next_lesson = $all_lessons[$current_lesson_index + 1];
+                            }
                         }
                     }
                 }
@@ -778,6 +793,17 @@ body.ielts-resource-single .content-area {
                                     <span class="nav-label">
                                         <small><?php echo esc_html($next_label); ?></small>
                                         <strong><?php echo esc_html($next_item['post']->post_title); ?></strong>
+                                    </span>
+                                    <span class="nav-arrow">&raquo;</span>
+                                </a>
+                            <?php elseif (isset($next_lesson) && $next_lesson): ?>
+                                <?php
+                                $next_lesson_url = get_permalink($next_lesson->ID);
+                                ?>
+                                <a href="<?php echo esc_url($next_lesson_url); ?>" class="nav-link resource-nav-link" data-course-id="<?php echo esc_attr($course_id); ?>" data-lesson-id="<?php echo esc_attr($lesson_id); ?>" data-resource-id="<?php echo esc_attr($resource_id); ?>">
+                                    <span class="nav-label">
+                                        <small><?php _e('Next Lesson', 'ielts-course-manager'); ?></small>
+                                        <strong><?php echo esc_html($next_lesson->post_title); ?></strong>
                                     </span>
                                     <span class="nav-arrow">&raquo;</span>
                                 </a>
