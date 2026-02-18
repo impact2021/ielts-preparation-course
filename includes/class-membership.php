@@ -357,7 +357,6 @@ class IELTS_CM_Membership {
         }
         
         // Handle organization ID for hybrid sites
-        $hybrid_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
         if ($hybrid_enabled && isset($_POST['user_organization_id'])) {
             $user_org_id = sanitize_text_field($_POST['user_organization_id']);
             

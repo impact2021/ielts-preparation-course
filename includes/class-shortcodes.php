@@ -3374,7 +3374,6 @@ class IELTS_CM_Shortcodes {
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
                                 </form>
                             <?php endif; ?>
                         </div>
