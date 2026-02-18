@@ -264,6 +264,10 @@ class IELTS_CM_Membership {
             $current_org_id = get_user_meta($user->ID, 'iw_created_by_partner', true);
         }
         
+        // Check if current user is a partner admin (has manage_partner_invites but not manage_options)
+        $is_partner_admin = current_user_can('manage_partner_invites') && !current_user_can('manage_options');
+        $expiry_readonly = ($hybrid_enabled && $is_partner_admin);
+        
         ?>
         <h2><?php _e('Course Enrollment', 'ielts-course-manager'); ?></h2>
         <table class="form-table">
@@ -285,8 +289,18 @@ class IELTS_CM_Membership {
                 <th><label for="user_expiry"><?php _e('Expiry Date', 'ielts-course-manager'); ?></label></th>
                 <td>
                     <input type="date" name="user_expiry" id="user_expiry" 
-                           value="<?php echo esc_attr($current_expiry); ?>" class="regular-text">
-                    <p class="description"><?php _e('Leave empty for lifetime access.', 'ielts-course-manager'); ?></p>
+                           value="<?php echo esc_attr($current_expiry); ?>" 
+                           class="regular-text"
+                           <?php echo $expiry_readonly ? 'readonly style="background-color: #f0f0f0; cursor: not-allowed;"' : ''; ?>>
+                    <p class="description">
+                        <?php 
+                        if ($expiry_readonly) {
+                            _e('Partner admins cannot change expiry dates on hybrid sites. Only site administrators can modify this field.', 'ielts-course-manager');
+                        } else {
+                            _e('Leave empty for lifetime access.', 'ielts-course-manager');
+                        }
+                        ?>
+                    </p>
                 </td>
             </tr>
             <?php if ($hybrid_enabled): ?>
@@ -317,9 +331,30 @@ class IELTS_CM_Membership {
         // Check if membership system is enabled to determine which fields to save
         $membership_enabled = get_option('ielts_cm_membership_enabled', false);
         
+        // HYBRID SITE RESTRICTION: Partners cannot change expiry dates on hybrid sites
+        // On hybrid sites, only site admins can modify expiry dates
+        $hybrid_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        $is_partner_admin = current_user_can('manage_partner_invites') && !current_user_can('manage_options');
+        
         // Get the unified course and expiry values
         $user_course = isset($_POST['user_course']) ? sanitize_text_field($_POST['user_course']) : '';
         $user_expiry = isset($_POST['user_expiry']) ? sanitize_text_field($_POST['user_expiry']) : '';
+        
+        // If this is a partner admin on a hybrid site, prevent them from changing expiry date
+        if ($hybrid_enabled && $is_partner_admin) {
+            // Get the current expiry date and restore it (don't allow partner to change it)
+            if ($membership_enabled) {
+                $user_expiry = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+            } else {
+                $current_expiry = get_user_meta($user_id, 'iw_membership_expiry', true);
+                if ($current_expiry) {
+                    $timestamp = strtotime($current_expiry);
+                    if ($timestamp !== false) {
+                        $user_expiry = date('Y-m-d', $timestamp);
+                    }
+                }
+            }
+        }
         
         // Handle organization ID for hybrid sites
         $hybrid_enabled = get_option('ielts_cm_hybrid_site_enabled', false);

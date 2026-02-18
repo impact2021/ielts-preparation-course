@@ -2769,7 +2769,8 @@ class IELTS_CM_Shortcodes {
         $is_access_code_membership = !empty($membership_type) && is_string($membership_type) && (strpos($membership_type, 'access_') === 0);
         $show_extension_payment = $hybrid_mode_enabled && $is_access_code_membership && !$is_trial;
         
-        if ($show_extension_payment && get_option('ielts_cm_membership_enabled')) {
+        // Extensions should work on hybrid sites regardless of membership system being enabled
+        if ($show_extension_payment) {
             $stripe_publishable = get_option('ielts_cm_stripe_publishable_key', '');
             $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
             
@@ -3174,8 +3175,8 @@ class IELTS_CM_Shortcodes {
                                             'stripe_key_length' => strlen($stripe_publishable),
                                         );
                                         
-                                        // Check if JavaScript should be enqueued
-                                        $should_enqueue_js = $show_extension_payment && $membership_enabled && !empty($stripe_publishable);
+                                        // Check if JavaScript should be enqueued (no longer requires membership_enabled)
+                                        $should_enqueue_js = $show_extension_payment && !empty($stripe_publishable);
                                     ?>
                                     
                                     <!-- HYBRID SITE DEBUGGER (Admin Only) -->
@@ -3199,10 +3200,10 @@ class IELTS_CM_Shortcodes {
                                                         <?php echo $diagnostics['hybrid_mode_enabled'] ? '<span style="color: green;">✓ Yes</span>' : '<span style="color: red;">✗ No</span>'; ?>
                                                     </td>
                                                 </tr>
-                                                <tr style="border-bottom: 1px solid #ddd;">
+                                                 <tr style="border-bottom: 1px solid #ddd;">
                                                     <td style="padding: 5px; font-weight: bold;">Membership System Enabled:</td>
                                                     <td style="padding: 5px;">
-                                                        <?php echo $diagnostics['membership_enabled'] ? '<span style="color: green;">✓ Yes</span>' : '<span style="color: red;">✗ No</span>'; ?>
+                                                        <?php echo $diagnostics['membership_enabled'] ? '<span style="color: green;">✓ Yes</span>' : '<span style="color: gray;">No (not required for extensions)</span>'; ?>
                                                     </td>
                                                 </tr>
                                                 <tr style="border-bottom: 1px solid #ddd;">
@@ -3243,9 +3244,6 @@ class IELTS_CM_Shortcodes {
                                                 <ul style="margin: 5px 0; padding-left: 20px;">
                                                     <?php if (!$diagnostics['hybrid_mode_enabled']): ?>
                                                         <li>Hybrid mode is not enabled</li>
-                                                    <?php endif; ?>
-                                                    <?php if (!$diagnostics['membership_enabled']): ?>
-                                                        <li>Membership system is not enabled</li>
                                                     <?php endif; ?>
                                                     <?php if (!$diagnostics['stripe_key_configured']): ?>
                                                         <li>Stripe publishable key is not configured</li>
@@ -3353,8 +3351,8 @@ class IELTS_CM_Shortcodes {
                                     </script>
                                     <?php endif; // End admin-only debugger ?>
                                     
-                                    <?php if (get_option('ielts_cm_membership_enabled')): ?>
-                                        <div id="ielts-payment-section-extension" class="payment-section-container stripe-payment-section" style="display: none;">
+                                    <!-- Payment section for extensions (always show on hybrid sites) -->
+                                    <div id="ielts-payment-section-extension" class="payment-section-container stripe-payment-section" style="display: none;">
                                             <h4 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h4>
                                             
                                             <div class="payment-section-content">
@@ -3376,7 +3374,7 @@ class IELTS_CM_Shortcodes {
                                                 </p>
                                             </div>
                                         </div>
-                                    <?php endif; ?>
+                                    </div>
                                 </form>
                             <?php endif; ?>
                         </div>
