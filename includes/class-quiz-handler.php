@@ -67,6 +67,7 @@ class IELTS_CM_Quiz_Handler {
         
         // Auto-default audio_section_id to 0 if not set and there's exactly one audio section
         // This improves usability when users forget to set audio_section_id
+        // Note: audio_section_id uses 0-based indexing, so 0 refers to the first section
         $audio_sections = get_post_meta($quiz_id, '_ielts_cm_audio_sections', true);
         if (is_array($audio_sections) && count($audio_sections) === 1) {
             foreach ($questions as $idx => $question) {
