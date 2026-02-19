@@ -136,7 +136,7 @@ All in the root directory:
 ## 🔍 Troubleshooting
 
 ### "Access code registration is currently not available"
-**Solution:** Enable Access Code Membership System in IELTS Courses → Settings
+**Solution:** Enable Access Code Membership System or Hybrid Site mode in IELTS Courses → Settings
 
 ### "Invalid or already used access code"
 **Solutions:**

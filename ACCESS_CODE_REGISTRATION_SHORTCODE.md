@@ -136,7 +136,7 @@ Create a new page (e.g., "Register with Code") and add:
 ## Troubleshooting
 
 ### "Access code registration is currently not available"
-- Check that Access Code Membership System is enabled in IELTS Courses → Settings
+- Check that Access Code Membership System or Hybrid Site mode is enabled in IELTS Courses → Settings
 
 ### "Invalid or already used access code"
 - Verify code is correct (8 characters, uppercase)
