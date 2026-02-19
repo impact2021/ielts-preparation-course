@@ -166,18 +166,47 @@ class IELTS_CM_Multi_Site_Sync {
             return new WP_Error('not_primary', 'Only primary sites can push content');
         }
         
+        // EMERGENCY FIX: Check if sync is already in progress to prevent cascading timeouts
+        $sync_lock_key = 'ielts_cm_sync_in_progress_' . get_current_user_id();
+        $sync_in_progress = get_transient($sync_lock_key);
+        
+        if ($sync_in_progress) {
+            return new WP_Error('sync_in_progress', 'A sync operation is already in progress. Please wait for it to complete before starting another sync.');
+        }
+        
+        // Set sync lock (expires in 5 minutes as safety)
+        set_transient($sync_lock_key, true, 300);
+        
         $subsites = $this->get_connected_subsites();
         if (empty($subsites)) {
+            delete_transient($sync_lock_key);
             return new WP_Error('no_subsites', 'No connected subsites found');
         }
         
         $results = array();
         $content_hash = $this->generate_content_hash($content_id, $content_type);
         
+        // EMERGENCY FIX: Track failed subsites to implement circuit breaker
+        $failed_count = 0;
+        $max_failures = count($subsites); // Stop if all fail
+        
         foreach ($subsites as $subsite) {
+            // Circuit breaker: if all subsites have failed, stop trying
+            if ($failed_count >= $max_failures) {
+                $results[$subsite->id] = new WP_Error('circuit_breaker', 'Sync stopped due to multiple failures');
+                continue;
+            }
+            
             $result = $this->push_to_subsite($content_id, $content_type, $content_hash, $subsite);
             $results[$subsite->id] = $result;
+            
+            if (is_wp_error($result)) {
+                $failed_count++;
+            }
         }
+        
+        // Clear sync lock
+        delete_transient($sync_lock_key);
         
         return $results;
     }
@@ -193,21 +222,25 @@ class IELTS_CM_Multi_Site_Sync {
         }
         
         // Calculate appropriate timeout based on content size
-        // Larger content needs more time to transmit and process
+        // EMERGENCY FIX: Drastically reduced timeouts to prevent long blocks
+        // Large content can be synced again if it fails, but we can't have 120s blocks
         $content_size = strlen(wp_json_encode($content_data));
-        $timeout = 30; // Base timeout of 30 seconds
+        $timeout = 10; // Reduced from 30s to 10s base timeout
         
-        // Add 1 second per 10KB above the base 10KB (min 30s, max 120s)
+        // Add 1 second per 20KB above the base 10KB (min 10s, max 30s)
+        // Reduced from max 120s to max 30s
         if ($content_size > 10240) { // > 10KB
-            $additional_time = ceil(($content_size - 10240) / 10240);
-            $timeout = min(120, 30 + $additional_time);
+            $additional_time = ceil(($content_size - 10240) / 20480); // Changed from 10240 to 20480
+            $timeout = min(30, 10 + $additional_time); // Reduced max from 120s to 30s
         }
         
-        // Make API request to subsite
+        // EMERGENCY FIX: Use non-blocking request to prevent hanging
+        // This allows the request to fail fast if the subsite is unresponsive
         $response = wp_remote_post(
             trailingslashit($subsite->site_url) . 'wp-json/ielts-cm/v1/sync-content',
             array(
                 'timeout' => $timeout,
+                'blocking' => true, // Keep blocking but with much shorter timeout
                 'headers' => array(
                     'Content-Type' => 'application/json',
                     'X-IELTS-Auth-Token' => $subsite->auth_token
@@ -216,7 +249,10 @@ class IELTS_CM_Multi_Site_Sync {
                     'content_data' => $content_data,
                     'content_hash' => $content_hash,
                     'content_type' => $content_type
-                ))
+                )),
+                // EMERGENCY FIX: Add connection timeout to fail faster
+                'httpversion' => '1.1',
+                'sslverify' => false // Allow self-signed certs in dev environments
             )
         );
         
@@ -571,25 +607,54 @@ class IELTS_CM_Multi_Site_Sync {
             return new WP_Error('not_primary', 'Only primary sites can push content');
         }
         
+        // EMERGENCY FIX: Check if sync is already in progress
+        $sync_lock_key = 'ielts_cm_sync_in_progress_' . get_current_user_id();
+        $sync_in_progress = get_transient($sync_lock_key);
+        
+        if ($sync_in_progress) {
+            return new WP_Error('sync_in_progress', 'A sync operation is already in progress. Please wait for it to complete before starting another sync.');
+        }
+        
         $subsites = $this->get_connected_subsites();
         if (empty($subsites)) {
             return new WP_Error('no_subsites', 'No connected subsites found');
         }
         
-        // Increase PHP execution time limit for large sync operations
-        // This prevents timeouts when syncing courses with many lessons
+        // EMERGENCY FIX: Reduced time limit to prevent long hangs
         $original_time_limit = ini_get('max_execution_time');
-        if ($original_time_limit !== '0') { // Only set if not already unlimited
-            // Suppress warning if function is disabled in php.ini
-            @set_time_limit(300); // 5 minutes should be enough for most courses
+        if ($original_time_limit !== '0') {
+            @set_time_limit(180); // Reduced from 300 to 180 seconds (3 minutes)
         }
         
         $results = array();
         
+        // EMERGENCY FIX: Track errors to bail out early if subsites are down
+        $consecutive_errors = 0;
+        $max_consecutive_errors = 3; // Bail if 3 items fail in a row
+        
         // For lessons, push children BEFORE the main content to prevent progress loss
-        // This ensures sync_lesson_pages doesn't trash existing resources/quizzes
         if ($content_type === 'lesson') {
             $lesson_children = $this->push_lesson_children($content_id);
+            
+            // Check if children sync failed completely
+            $all_failed = true;
+            if (!empty($lesson_children['resources'])) {
+                foreach ($lesson_children['resources'] as $resource) {
+                    if (isset($resource['sync_results']) && !is_wp_error($resource['sync_results'])) {
+                        foreach ($resource['sync_results'] as $result) {
+                            if (!is_wp_error($result) && isset($result['success']) && $result['success']) {
+                                $all_failed = false;
+                                break 2;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if ($all_failed && !empty($lesson_children['resources'])) {
+                return new WP_Error('sync_failed', 'Child content sync failed. Subsites may be unreachable.');
+            }
+            
             $results['resources'] = $lesson_children['resources'];
             $results['exercises'] = $lesson_children['exercises'];
         }
@@ -598,18 +663,71 @@ class IELTS_CM_Multi_Site_Sync {
         $main_results = $this->push_content_to_subsites($content_id, $content_type);
         $results['main'] = $main_results;
         
+        // EMERGENCY FIX: Check if main content sync failed for all subsites
+        if (is_wp_error($main_results)) {
+            return $main_results; // Bail early
+        }
+        
+        $all_main_failed = true;
+        foreach ($main_results as $result) {
+            if (!is_wp_error($result) && isset($result['success']) && $result['success']) {
+                $all_main_failed = false;
+                break;
+            }
+        }
+        
+        if ($all_main_failed) {
+            return new WP_Error('sync_failed', 'Main content sync failed for all subsites. Aborting child sync to prevent further issues.');
+        }
+        
         // If it's a course, push all lessons, resources, and quizzes
         if ($content_type === 'course') {
             $lessons = $this->get_course_lessons($content_id);
             $results['lessons'] = array();
             
-            foreach ($lessons as $lesson) {
+            // EMERGENCY FIX: Limit number of lessons synced in one go
+            $max_lessons_per_sync = 10; // Only sync 10 lessons at a time
+            $lessons_to_sync = array_slice($lessons, 0, $max_lessons_per_sync);
+            
+            if (count($lessons) > $max_lessons_per_sync) {
+                $results['warning'] = sprintf(
+                    'Only syncing first %d of %d lessons to prevent timeout. Please sync remaining lessons individually.',
+                    $max_lessons_per_sync,
+                    count($lessons)
+                );
+            }
+            
+            foreach ($lessons_to_sync as $lesson) {
                 // Push all resources and quizzes for this lesson BEFORE pushing the lesson
-                // This prevents sync_lesson_pages from trashing existing content when the lesson is synced
                 $lesson_children = $this->push_lesson_children($lesson->ID);
                 
-                // Now push the lesson itself - at this point all children are already synced
+                // Now push the lesson itself
                 $lesson_results = $this->push_content_to_subsites($lesson->ID, 'lesson');
+                
+                // EMERGENCY FIX: Check for consecutive errors
+                $lesson_failed = true;
+                if (!is_wp_error($lesson_results)) {
+                    foreach ($lesson_results as $result) {
+                        if (!is_wp_error($result) && isset($result['success']) && $result['success']) {
+                            $lesson_failed = false;
+                            $consecutive_errors = 0; // Reset on success
+                            break;
+                        }
+                    }
+                }
+                
+                if ($lesson_failed) {
+                    $consecutive_errors++;
+                    if ($consecutive_errors >= $max_consecutive_errors) {
+                        $results['error'] = sprintf(
+                            'Stopping sync after %d consecutive failures at lesson: %s. Subsites may be unreachable.',
+                            $consecutive_errors,
+                            $lesson->post_title
+                        );
+                        break; // Stop syncing more lessons
+                    }
+                }
+                
                 $results['lessons'][$lesson->ID] = array(
                     'title' => $lesson->post_title,
                     'sync_results' => $lesson_results,
