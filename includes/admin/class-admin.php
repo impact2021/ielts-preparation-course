@@ -44,6 +44,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_update_page_order', array($this, 'ajax_update_page_order'));
         add_action('wp_ajax_ielts_cm_update_content_order', array($this, 'ajax_update_content_order'));
         add_action('wp_ajax_ielts_cm_push_to_subsites', array($this, 'ajax_push_to_subsites'));
+        add_action('wp_ajax_ielts_cm_clear_sync_lock', array($this, 'ajax_clear_sync_lock')); // EMERGENCY FIX
         add_action('wp_ajax_ielts_cm_get_lessons_by_courses', array($this, 'ajax_get_lessons_by_courses'));
         add_action('wp_ajax_ielts_cm_add_lesson_to_course', array($this, 'ajax_add_lesson_to_course'));
         add_action('wp_ajax_ielts_cm_remove_lesson_from_course', array($this, 'ajax_remove_lesson_from_course'));
@@ -5894,6 +5895,43 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         ob_end_clean();
         
         wp_send_json_success($response_data);
+        return;
+    }
+    
+    /**
+     * EMERGENCY FIX: AJAX handler to clear stuck sync locks
+     * This allows admins to manually clear sync locks if a sync operation gets stuck
+     */
+    public function ajax_clear_sync_lock() {
+        check_ajax_referer('ielts_cm_sync_content', 'nonce');
+        
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Insufficient permissions. Only administrators can clear sync locks.'));
+            return;
+        }
+        
+        global $wpdb;
+        
+        // Clear all sync locks for all users
+        $cleared = $wpdb->query(
+            $wpdb->prepare(
+                "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+                $wpdb->esc_like('_transient_ielts_cm_sync_in_progress_') . '%'
+            )
+        );
+        
+        // Also clear timeout transients
+        $wpdb->query(
+            $wpdb->prepare(
+                "DELETE FROM {$wpdb->options} WHERE option_name LIKE %s",
+                $wpdb->esc_like('_transient_timeout_ielts_cm_sync_in_progress_') . '%'
+            )
+        );
+        
+        wp_send_json_success(array(
+            'message' => sprintf('Cleared %d sync lock(s). You can now start a new sync operation.', max(0, $cleared)),
+            'cleared' => max(0, $cleared)
+        ));
         return;
     }
     

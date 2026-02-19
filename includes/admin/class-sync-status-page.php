@@ -164,6 +164,13 @@ class IELTS_CM_Sync_Status_Page {
                     <span class="dashicons dashicons-update"></span>
                     <?php _e('Check Sync Status', 'ielts-course-manager'); ?>
                 </button>
+                
+                <!-- EMERGENCY FIX: Add button to clear stuck sync locks -->
+                <button id="clear-sync-locks" class="button button-secondary button-large" style="margin-left: 10px;">
+                    <span class="dashicons dashicons-dismiss"></span>
+                    <?php _e('Clear Stuck Sync Locks', 'ielts-course-manager'); ?>
+                </button>
+                
                 <span id="sync-status-message" style="margin-left: 15px; font-weight: bold;"></span>
                 <?php if ($last_check_time): ?>
                     <p style="margin-top: 10px; color: #666;">
@@ -171,6 +178,10 @@ class IELTS_CM_Sync_Status_Page {
                         <strong><?php echo esc_html(human_time_diff(strtotime($last_check_time), current_time('timestamp'))); ?> <?php _e('ago', 'ielts-course-manager'); ?></strong>
                     </p>
                 <?php endif; ?>
+                <p style="margin-top: 10px; color: #e74c3c; font-size: 13px;">
+                    <strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> 
+                    <?php _e('If sync operations are taking too long or subsites are unresponsive, click "Clear Stuck Sync Locks" to reset and try again.', 'ielts-course-manager'); ?>
+                </p>
             </div>
             
             <div class="ielts-cm-sync-status-content">
@@ -279,6 +290,52 @@ class IELTS_CM_Sync_Status_Page {
                     error: function() {
                         $message.html('<span style="color: #721c24;">✗ An error occurred</span>');
                         $button.removeClass('checking').prop('disabled', false);
+                        isChecking = false;
+                    }
+                });
+            });
+            
+            // EMERGENCY FIX: Clear sync locks button
+            $('#clear-sync-locks').on('click', function() {
+                if (isChecking) return;
+                
+                if (!confirm('Are you sure you want to clear all sync locks? Do this only if sync operations are stuck or subsites are unresponsive.')) {
+                    return;
+                }
+                
+                isChecking = true;
+                var $button = $(this);
+                var $message = $('#sync-status-message');
+                
+                $button.prop('disabled', true);
+                $message.html('<span style="color: #0c5460;">Clearing sync locks...</span>');
+                
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'ielts_cm_clear_sync_lock',
+                        nonce: '<?php echo wp_create_nonce('ielts_cm_sync_content'); ?>'
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            $message.html('<span style="color: #155724;">✓ ' + response.data.message + '</span>');
+                            $button.prop('disabled', false);
+                            isChecking = false;
+                            
+                            // Clear message after 5 seconds
+                            setTimeout(function() {
+                                $message.html('');
+                            }, 5000);
+                        } else {
+                            $message.html('<span style="color: #721c24;">✗ Error: ' + response.data.message + '</span>');
+                            $button.prop('disabled', false);
+                            isChecking = false;
+                        }
+                    },
+                    error: function() {
+                        $message.html('<span style="color: #721c24;">✗ An error occurred while clearing locks</span>');
+                        $button.prop('disabled', false);
                         isChecking = false;
                     }
                 });
