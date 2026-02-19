@@ -149,161 +149,120 @@ class IELTS_CM_Sync_Status_Page {
             return;
         }
         
-        // Get all courses with hierarchy
-        $courses_hierarchy = $this->sync_manager->get_all_courses_with_hierarchy();
-        
-        // Get last check time
-        $last_check_time = get_option('ielts_cm_sync_last_check_time', null);
+        // Get simplified summary instead of full hierarchy
+        $last_sync_time = get_option('ielts_cm_last_successful_sync', null);
+        $total_courses = wp_count_posts('ielts_course')->publish;
+        $total_lessons = wp_count_posts('ielts_lesson')->publish;
+        $total_resources = wp_count_posts('ielts_resource')->publish;
+        $total_quizzes = wp_count_posts('ielts_quiz')->publish;
+        $total_items = $total_courses + $total_lessons + $total_resources + $total_quizzes;
         
         ?>
         <div class="wrap">
-            <h1><?php _e('Content Sync Status', 'ielts-course-manager'); ?></h1>
+            <h1><?php _e('Content Sync Management', 'ielts-course-manager'); ?></h1>
+            
+            <div class="notice notice-info" style="padding: 15px;">
+                <h2 style="margin-top: 0;"><?php _e('⚡ Quick Sync Actions', 'ielts-course-manager'); ?></h2>
+                <p style="font-size: 14px; margin-bottom: 15px;">
+                    <?php _e('Use these tools to manage content synchronization with your subsites.', 'ielts-course-manager'); ?>
+                </p>
+            </div>
             
             <div class="ielts-cm-sync-status-header" style="margin: 20px 0;">
-                <button id="check-sync-status" class="button button-primary button-large">
-                    <span class="dashicons dashicons-update"></span>
-                    <?php _e('Check Sync Status', 'ielts-course-manager'); ?>
-                </button>
                 
-                <!-- EMERGENCY FIX: Add button to clear stuck sync locks -->
-                <button id="clear-sync-locks" class="button button-secondary button-large" style="margin-left: 10px;">
+                <!-- Clear Stuck Sync Locks Button -->
+                <button id="clear-sync-locks" class="button button-secondary button-large">
                     <span class="dashicons dashicons-dismiss"></span>
                     <?php _e('Clear Stuck Sync Locks', 'ielts-course-manager'); ?>
                 </button>
                 
                 <span id="sync-status-message" style="margin-left: 15px; font-weight: bold;"></span>
-                <?php if ($last_check_time): ?>
-                    <p style="margin-top: 10px; color: #666;">
-                        <?php _e('Last checked:', 'ielts-course-manager'); ?> 
-                        <strong><?php echo esc_html(human_time_diff(strtotime($last_check_time), current_time('timestamp'))); ?> <?php _e('ago', 'ielts-course-manager'); ?></strong>
-                    </p>
-                <?php endif; ?>
-                <p style="margin-top: 10px; color: #e74c3c; font-size: 13px;">
-                    <strong><?php _e('Note:', 'ielts-course-manager'); ?></strong> 
-                    <?php _e('If sync operations are taking too long or subsites are unresponsive, click "Clear Stuck Sync Locks" to reset and try again.', 'ielts-course-manager'); ?>
-                </p>
-            </div>
-            
-            <div class="ielts-cm-sync-status-content">
                 
-                <?php if (empty($courses_hierarchy)): ?>
-                    <div class="notice notice-info">
-                        <p><?php _e('No courses found. Please create some courses first.', 'ielts-course-manager'); ?></p>
-                    </div>
-                <?php else: ?>
-                
-                <table class="wp-list-table widefat fixed striped">
-                    <thead>
+                <div style="margin-top: 20px; padding: 20px; background: #f9f9f9; border-left: 4px solid #0073aa;">
+                    <h3 style="margin-top: 0;"><?php _e('Content Summary', 'ielts-course-manager'); ?></h3>
+                    <table style="width: 100%; max-width: 600px;">
                         <tr>
-                            <th style="width: 40%;"><?php _e('Course (Unit) Name', 'ielts-course-manager'); ?></th>
-                            <?php 
-                            $subsite_count = count($subsites);
-                            $subsite_width = $subsite_count > 0 ? floor(60 / $subsite_count) : 60;
-                            foreach ($subsites as $subsite): 
-                            ?>
-                                <th style="width: <?php echo $subsite_width; ?>%;">
-                                    <?php echo esc_html($subsite->site_name); ?>
-                                </th>
-                            <?php endforeach; ?>
+                            <td><strong><?php _e('Total Courses (Units):', 'ielts-course-manager'); ?></strong></td>
+                            <td><?php echo number_format($total_courses); ?></td>
                         </tr>
-                    </thead>
-                    <tbody id="sync-status-table-body">
-                        <?php 
-                        foreach ($courses_hierarchy as $course): 
-                            $this->render_course_row($course, $subsites);
-                        endforeach; 
-                        ?>
-                    </tbody>
-                </table>
+                        <tr>
+                            <td><strong><?php _e('Total Lessons:', 'ielts-course-manager'); ?></strong></td>
+                            <td><?php echo number_format($total_lessons); ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php _e('Total Resources (Sublessons):', 'ielts-course-manager'); ?></strong></td>
+                            <td><?php echo number_format($total_resources); ?></td>
+                        </tr>
+                        <tr>
+                            <td><strong><?php _e('Total Exercises (Quizzes):', 'ielts-course-manager'); ?></strong></td>
+                            <td><?php echo number_format($total_quizzes); ?></td>
+                        </tr>
+                        <tr style="border-top: 2px solid #ddd;">
+                            <td><strong><?php _e('Total Items:', 'ielts-course-manager'); ?></strong></td>
+                            <td><strong><?php echo number_format($total_items); ?></strong></td>
+                        </tr>
+                    </table>
+                </div>
                 
+                <div style="margin-top: 20px; padding: 20px; background: #f0f9ff; border-left: 4px solid #00a0d2;">
+                    <h3 style="margin-top: 0;"><?php _e('Connected Subsites', 'ielts-course-manager'); ?></h3>
+                    <ul style="margin: 10px 0;">
+                        <?php foreach ($subsites as $subsite): ?>
+                            <li>
+                                <strong><?php echo esc_html($subsite->site_name); ?></strong> - 
+                                <code><?php echo esc_html($subsite->site_url); ?></code>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+                
+                <?php if ($last_sync_time): ?>
+                    <div style="margin-top: 20px; padding: 15px; background: #d4edda; border-left: 4px solid #28a745;">
+                        <p style="margin: 0;">
+                            <strong><?php _e('Last Successful Sync:', 'ielts-course-manager'); ?></strong> 
+                            <?php echo esc_html(human_time_diff(strtotime($last_sync_time), current_time('timestamp'))); ?> 
+                            <?php _e('ago', 'ielts-course-manager'); ?>
+                            (<?php echo esc_html(date_i18n(get_option('date_format') . ' ' . get_option('time_format'), strtotime($last_sync_time))); ?>)
+                        </p>
+                    </div>
                 <?php endif; ?>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #fff3cd; border-left: 4px solid #ffc107;">
+                    <h3 style="margin-top: 0;"><?php _e('⚠️ Important Notes', 'ielts-course-manager'); ?></h3>
+                    <ul style="margin: 10px 0; line-height: 1.8;">
+                        <li><?php _e('<strong>Sync Individual Items:</strong> Go to Courses, Lessons, Resources, or Quizzes in the admin menu and use the "Push to Subsites" button on each item.', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('<strong>Course Sync Limit:</strong> Courses are limited to syncing 10 lessons at a time to prevent timeouts.', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('<strong>Lesson Sync:</strong> If a lesson has many resources/quizzes, sync them individually first, then sync the lesson.', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('<strong>Timeout Issues:</strong> If sync operations are stuck or taking too long, click "Clear Stuck Sync Locks" above.', 'ielts-course-manager'); ?></li>
+                        <li><?php _e('<strong>Best Practice:</strong> Sync content in small batches rather than all at once to avoid timeouts.', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
+                
+                <div style="margin-top: 20px; padding: 15px; background: #f8d7da; border-left: 4px solid #dc3545;">
+                    <h3 style="margin-top: 0;"><?php _e('🔧 Troubleshooting', 'ielts-course-manager'); ?></h3>
+                    <ul style="margin: 10px 0; line-height: 1.8;">
+                        <li><strong><?php _e('Subsites Unreachable?', 'ielts-course-manager'); ?></strong> <?php _e('Click "Clear Stuck Sync Locks" and wait 30 seconds before trying again.', 'ielts-course-manager'); ?></li>
+                        <li><strong><?php _e('Timeout Errors?', 'ielts-course-manager'); ?></strong> <?php _e('Sync smaller batches. For large lessons, sync resources/quizzes individually first.', 'ielts-course-manager'); ?></li>
+                        <li><strong><?php _e('Already Syncing?', 'ielts-course-manager'); ?></strong> <?php _e('Only one sync operation can run at a time. Wait for it to complete or clear locks.', 'ielts-course-manager'); ?></li>
+                    </ul>
+                </div>
                 
             </div>
         </div>
         
-        <style>
-            .ielts-cm-sync-status-content {
-                margin-top: 20px;
-            }
-            .sync-status-icon {
-                font-size: 24px;
-                line-height: 1;
-            }
-            .sync-status-synced {
-                color: #155724;
-            }
-            .sync-status-not-synced {
-                color: #721c24;
-            }
-            #check-sync-status .dashicons {
-                margin-top: 3px;
-            }
-            #check-sync-status.checking .dashicons {
-                animation: rotation 1s infinite linear;
-            }
-            @keyframes rotation {
-                from {
-                    transform: rotate(0deg);
-                }
-                to {
-                    transform: rotate(359deg);
-                }
-            }
-        </style>
-        
         <script>
         jQuery(document).ready(function($) {
-            var isChecking = false;
+            var isClearing = false;
             
-            // Check sync status button
-            $('#check-sync-status').on('click', function() {
-                if (isChecking) return;
-                
-                isChecking = true;
-                var $button = $(this);
-                var $message = $('#sync-status-message');
-                
-                $button.addClass('checking').prop('disabled', true);
-                $message.html('<span style="color: #0c5460;">Checking sync status...</span>');
-                
-                $.ajax({
-                    url: ajaxurl,
-                    type: 'POST',
-                    data: {
-                        action: 'ielts_cm_check_sync_status',
-                        nonce: '<?php echo wp_create_nonce('ielts_cm_sync_status'); ?>'
-                    },
-                    success: function(response) {
-                        if (response.success) {
-                            $message.html('<span style="color: #155724;">✓ Sync status updated</span>');
-                            
-                            // Reload page to show updated status
-                            setTimeout(function() {
-                                location.reload();
-                            }, 1000);
-                        } else {
-                            $message.html('<span style="color: #721c24;">✗ Error: ' + response.data.message + '</span>');
-                            $button.removeClass('checking').prop('disabled', false);
-                            isChecking = false;
-                        }
-                    },
-                    error: function() {
-                        $message.html('<span style="color: #721c24;">✗ An error occurred</span>');
-                        $button.removeClass('checking').prop('disabled', false);
-                        isChecking = false;
-                    }
-                });
-            });
-            
-            // EMERGENCY FIX: Clear sync locks button
+            // Clear sync locks button
             $('#clear-sync-locks').on('click', function() {
-                if (isChecking) return;
+                if (isClearing) return;
                 
                 if (!confirm('Are you sure you want to clear all sync locks? Do this only if sync operations are stuck or subsites are unresponsive.')) {
                     return;
                 }
                 
-                isChecking = true;
+                isClearing = true;
                 var $button = $(this);
                 var $message = $('#sync-status-message');
                 
@@ -321,7 +280,7 @@ class IELTS_CM_Sync_Status_Page {
                         if (response.success) {
                             $message.html('<span style="color: #155724;">✓ ' + response.data.message + '</span>');
                             $button.prop('disabled', false);
-                            isChecking = false;
+                            isClearing = false;
                             
                             // Clear message after 5 seconds
                             setTimeout(function() {
@@ -330,13 +289,13 @@ class IELTS_CM_Sync_Status_Page {
                         } else {
                             $message.html('<span style="color: #721c24;">✗ Error: ' + response.data.message + '</span>');
                             $button.prop('disabled', false);
-                            isChecking = false;
+                            isClearing = false;
                         }
                     },
                     error: function() {
                         $message.html('<span style="color: #721c24;">✗ An error occurred while clearing locks</span>');
                         $button.prop('disabled', false);
-                        isChecking = false;
+                        isClearing = false;
                     }
                 });
             });

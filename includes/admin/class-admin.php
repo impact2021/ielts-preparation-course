@@ -5710,7 +5710,14 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                         // Provide specific error messages for different failure types
                         var errorMessage;
                         if (status === 'timeout') {
-                            errorMessage = '<?php _e('The sync operation timed out. The course may be too large to sync all at once. Some content may have been synced successfully. Please try syncing individual lessons instead, or contact your administrator to increase server timeout limits.', 'ielts-course-manager'); ?>';
+                            // Provide content-type specific timeout messages
+                            if (contentType === 'course') {
+                                errorMessage = '<?php _e('The sync operation timed out. The course may have too many lessons to sync at once (limited to 10 lessons per sync). Some content may have been synced successfully. Please try syncing individual lessons, or contact your administrator.', 'ielts-course-manager'); ?>';
+                            } else if (contentType === 'lesson') {
+                                errorMessage = '<?php _e('The sync operation timed out. This lesson may have too many resources/quizzes. Please try syncing the resources and quizzes individually first, then sync the lesson separately.', 'ielts-course-manager'); ?>';
+                            } else {
+                                errorMessage = '<?php _e('The sync operation timed out. Please try again or contact your administrator to increase server timeout limits.', 'ielts-course-manager'); ?>';
+                            }
                         } else {
                             errorMessage = error || status || '<?php _e('Network error. Please check your connection and try again.', 'ielts-course-manager'); ?>';
                         }
@@ -5890,6 +5897,9 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 'results' => $formatted_results
             );
         }
+        
+        // Update last successful sync timestamp
+        update_option('ielts_cm_last_successful_sync', current_time('mysql'));
         
         // Clean output buffer before sending response
         ob_end_clean();
