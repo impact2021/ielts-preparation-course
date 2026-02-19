@@ -65,6 +65,19 @@ class IELTS_CM_Quiz_Handler {
             $questions = array();
         }
         
+        // Auto-default audio_section_id to 0 if not set and there's exactly one audio section
+        // This improves usability when users forget to set audio_section_id
+        $audio_sections = get_post_meta($quiz_id, '_ielts_cm_audio_sections', true);
+        if (is_array($audio_sections) && count($audio_sections) === 1) {
+            foreach ($questions as $idx => $question) {
+                if ((!isset($question['audio_section_id']) || $question['audio_section_id'] === null) && 
+                    (!isset($question['reading_text_id']) || $question['reading_text_id'] === null)) {
+                    // Only default if no reading_text_id either (avoid ambiguity)
+                    $questions[$idx]['audio_section_id'] = 0;
+                }
+            }
+        }
+        
         $score = 0;
         $max_score = 0;
         $question_results = array();
