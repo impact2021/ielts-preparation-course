@@ -70,8 +70,7 @@ class IELTS_CM_Quiz_Handler {
         $audio_sections = get_post_meta($quiz_id, '_ielts_cm_audio_sections', true);
         if (is_array($audio_sections) && count($audio_sections) === 1) {
             foreach ($questions as $idx => $question) {
-                if ((!isset($question['audio_section_id']) || $question['audio_section_id'] === null) && 
-                    (!isset($question['reading_text_id']) || $question['reading_text_id'] === null)) {
+                if (!isset($question['audio_section_id']) && !isset($question['reading_text_id'])) {
                     // Only default if no reading_text_id either (avoid ambiguity)
                     $questions[$idx]['audio_section_id'] = 0;
                 }

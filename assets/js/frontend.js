@@ -391,7 +391,7 @@
                         // Helper function to check if a question was answered
                         function isQuestionAnswered(questionResult) {
                             var userAnswer = questionResult.user_answer;
-                            if (userAnswer === null || userAnswer === undefined) {
+                            if (userAnswer == null) {
                                 return false;
                             }
                             // Handle arrays (multi-select, etc.)
@@ -956,9 +956,7 @@
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
                                 } else if (needsShowMeContainer(questionResult) || isQuestionAnswered(questionResult)) {
-                                    // Create an empty question-level feedback div for "Show me" button
-                                    // even when feedback is shown per-option (for correct/incorrect answers),
-                                    // OR if the question was answered (to provide visual feedback indicator)
+                                    // Create container for Show me button, per-option feedback, or visual feedback indicator for answered questions
                                     createShowMeContainer(questionElement, questionResult);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
