@@ -828,101 +828,77 @@ class IELTS_CM_Progress_Tracker {
         
         // Get resource counts for all lessons
         // Need to check both singular (_ielts_cm_lesson_id) and plural (_ielts_cm_lesson_ids)
+        // Use DISTINCT to avoid counting the same resource twice
         foreach ($lesson_ids as $lesson_id) {
-            // For singular lesson_id
-            $singular_count = $wpdb->get_var($wpdb->prepare("
-                SELECT COUNT(DISTINCT pm.post_id)
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-                WHERE p.post_type = 'ielts_resource'
-                  AND p.post_status = 'publish'
-                  AND pm.meta_key = '_ielts_cm_lesson_id'
-                  AND pm.meta_value = %d
-            ", $lesson_id));
-            
             // For plural lesson_ids - check serialized array patterns
             $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
             $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
             
-            $plural_count = $wpdb->get_var($wpdb->prepare("
-                SELECT COUNT(DISTINCT pm.post_id)
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            // Count distinct resources that match either singular or plural lesson association
+            $count = $wpdb->get_var($wpdb->prepare("
+                SELECT COUNT(DISTINCT p.ID)
+                FROM {$wpdb->posts} p
                 WHERE p.post_type = 'ielts_resource'
                   AND p.post_status = 'publish'
-                  AND pm.meta_key = '_ielts_cm_lesson_ids'
-                  AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)
-            ", $int_pattern, $str_pattern));
+                  AND p.ID IN (
+                    SELECT post_id FROM {$wpdb->postmeta}
+                    WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                       OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                  )
+            ", $lesson_id, $int_pattern, $str_pattern));
             
-            $counts[$lesson_id]['resource_count'] = intval($singular_count) + intval($plural_count);
+            $counts[$lesson_id]['resource_count'] = intval($count);
         }
         
         // Get video counts for all lessons
         // Videos are resources with a video URL, need to check both singular and plural lesson associations
+        // Use DISTINCT to avoid counting the same resource twice
         foreach ($lesson_ids as $lesson_id) {
-            // For singular lesson_id
-            $singular_video_count = $wpdb->get_var($wpdb->prepare("
-                SELECT COUNT(DISTINCT pm.post_id)
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-                INNER JOIN {$wpdb->postmeta} pm_video ON pm.post_id = pm_video.post_id
-                WHERE p.post_type = 'ielts_resource'
-                  AND p.post_status = 'publish'
-                  AND pm.meta_key = '_ielts_cm_lesson_id'
-                  AND pm.meta_value = %d
-                  AND pm_video.meta_key = '_ielts_cm_video_url'
-                  AND pm_video.meta_value != ''
-            ", $lesson_id));
-            
             // For plural lesson_ids - check serialized array patterns
             $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
             $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
             
-            $plural_video_count = $wpdb->get_var($wpdb->prepare("
-                SELECT COUNT(DISTINCT pm.post_id)
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-                INNER JOIN {$wpdb->postmeta} pm_video ON pm.post_id = pm_video.post_id
+            // Count distinct resources with videos that match either singular or plural lesson association
+            $count = $wpdb->get_var($wpdb->prepare("
+                SELECT COUNT(DISTINCT p.ID)
+                FROM {$wpdb->posts} p
+                INNER JOIN {$wpdb->postmeta} pm_video ON p.ID = pm_video.post_id
                 WHERE p.post_type = 'ielts_resource'
                   AND p.post_status = 'publish'
-                  AND pm.meta_key = '_ielts_cm_lesson_ids'
-                  AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)
                   AND pm_video.meta_key = '_ielts_cm_video_url'
                   AND pm_video.meta_value != ''
-            ", $int_pattern, $str_pattern));
+                  AND p.ID IN (
+                    SELECT post_id FROM {$wpdb->postmeta}
+                    WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                       OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                  )
+            ", $lesson_id, $int_pattern, $str_pattern));
             
-            $counts[$lesson_id]['video_count'] = intval($singular_video_count) + intval($plural_video_count);
+            $counts[$lesson_id]['video_count'] = intval($count);
         }
         
         // Get quiz counts for all lessons
         // Need to check both singular (_ielts_cm_lesson_id) and plural (_ielts_cm_lesson_ids)
+        // Use DISTINCT to avoid counting the same quiz twice
         foreach ($lesson_ids as $lesson_id) {
-            // For singular lesson_id
-            $singular_count = $wpdb->get_var($wpdb->prepare("
-                SELECT COUNT(DISTINCT pm.post_id)
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-                WHERE p.post_type = 'ielts_quiz'
-                  AND p.post_status = 'publish'
-                  AND pm.meta_key = '_ielts_cm_lesson_id'
-                  AND pm.meta_value = %d
-            ", $lesson_id));
-            
             // For plural lesson_ids - check serialized array patterns
             $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
             $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
             
-            $plural_count = $wpdb->get_var($wpdb->prepare("
-                SELECT COUNT(DISTINCT pm.post_id)
-                FROM {$wpdb->postmeta} pm
-                INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+            // Count distinct quizzes that match either singular or plural lesson association
+            $count = $wpdb->get_var($wpdb->prepare("
+                SELECT COUNT(DISTINCT p.ID)
+                FROM {$wpdb->posts} p
                 WHERE p.post_type = 'ielts_quiz'
                   AND p.post_status = 'publish'
-                  AND pm.meta_key = '_ielts_cm_lesson_ids'
-                  AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s)
-            ", $int_pattern, $str_pattern));
+                  AND p.ID IN (
+                    SELECT post_id FROM {$wpdb->postmeta}
+                    WHERE (meta_key = '_ielts_cm_lesson_id' AND meta_value = %d)
+                       OR (meta_key = '_ielts_cm_lesson_ids' AND (meta_value LIKE %s OR meta_value LIKE %s))
+                  )
+            ", $lesson_id, $int_pattern, $str_pattern));
             
-            $counts[$lesson_id]['quiz_count'] = intval($singular_count) + intval($plural_count);
+            $counts[$lesson_id]['quiz_count'] = intval($count);
         }
         
         return $counts;
