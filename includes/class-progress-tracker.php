@@ -827,83 +827,218 @@ class IELTS_CM_Progress_Tracker {
         }
         
         // Get resource counts for all lessons
-        $resource_counts = $wpdb->get_results($wpdb->prepare("
-            SELECT 
-                pm.meta_value as lesson_id,
-                COUNT(DISTINCT pm.post_id) as count
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+        // Need to check both singular (_ielts_cm_lesson_id) and plural (_ielts_cm_lesson_ids)
+        // Build OR conditions for all lessons to check in a single query
+        $where_conditions = array();
+        $prepare_args = array();
+        
+        foreach ($lesson_ids as $lesson_id) {
+            // For singular lesson_id
+            $where_conditions[] = "(pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)";
+            $prepare_args[] = $lesson_id;
+            
+            // For plural lesson_ids - check serialized array patterns
+            $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+            $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+            
+            $where_conditions[] = "(pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s))";
+            $prepare_args[] = $int_pattern;
+            $prepare_args[] = $str_pattern;
+        }
+        
+        $where_clause = implode(' OR ', $where_conditions);
+        
+        // Get all resources with their lesson associations
+        $resource_results = $wpdb->get_results($wpdb->prepare("
+            SELECT DISTINCT
+                p.ID as resource_id,
+                pm.meta_key,
+                pm.meta_value
+            FROM {$wpdb->posts} p
+            INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
             WHERE p.post_type = 'ielts_resource'
               AND p.post_status = 'publish'
-              AND pm.meta_key = '_ielts_cm_lesson_id'
-              AND pm.meta_value IN ($lesson_placeholders)
-            GROUP BY pm.meta_value
-        ", $lesson_ids), ARRAY_A);
+              AND ($where_clause)
+        ", $prepare_args), ARRAY_A);
         
-        foreach ($resource_counts as $row) {
-            $lesson_id = intval($row['lesson_id']);
-            if (isset($counts[$lesson_id])) {
-                $counts[$lesson_id]['resource_count'] = intval($row['count']);
+        // Process results and count resources per lesson
+        foreach ($resource_results as $row) {
+            $resource_id = intval($row['resource_id']);
+            $meta_key = $row['meta_key'];
+            $meta_value = $row['meta_value'];
+            
+            if ($meta_key === '_ielts_cm_lesson_id') {
+                $lesson_id = intval($meta_value);
+                if (isset($counts[$lesson_id]) && !isset($counts[$lesson_id]['_resource_' . $resource_id])) {
+                    $counts[$lesson_id]['resource_count']++;
+                    $counts[$lesson_id]['_resource_' . $resource_id] = true; // Mark as counted
+                }
+            } elseif ($meta_key === '_ielts_cm_lesson_ids') {
+                // meta_value is serialized array, check which lessons it contains
+                $lesson_ids_array = maybe_unserialize($meta_value);
+                if (is_array($lesson_ids_array)) {
+                    foreach ($lesson_ids_array as $lid) {
+                        $lid = intval($lid);
+                        if (isset($counts[$lid]) && !isset($counts[$lid]['_resource_' . $resource_id])) {
+                            $counts[$lid]['resource_count']++;
+                            $counts[$lid]['_resource_' . $resource_id] = true; // Mark as counted
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Clean up temporary tracking keys
+        foreach ($lesson_ids as $lesson_id) {
+            foreach ($counts[$lesson_id] as $key => $value) {
+                if (strpos($key, '_resource_') === 0) {
+                    unset($counts[$lesson_id][$key]);
+                }
             }
         }
         
         // Get video counts for all lessons
-        // First get all resource IDs for these lessons
-        $resource_ids = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT pm.post_id 
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+        // Videos are resources with a video URL, need to check both singular and plural lesson associations
+        // Build OR conditions for all lessons to check in a single query
+        $where_conditions = array();
+        $prepare_args = array();
+        
+        foreach ($lesson_ids as $lesson_id) {
+            // For singular lesson_id
+            $where_conditions[] = "(pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)";
+            $prepare_args[] = $lesson_id;
+            
+            // For plural lesson_ids - check serialized array patterns
+            $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+            $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+            
+            $where_conditions[] = "(pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s))";
+            $prepare_args[] = $int_pattern;
+            $prepare_args[] = $str_pattern;
+        }
+        
+        $where_clause = implode(' OR ', $where_conditions);
+        
+        // Get all resources with videos and their lesson associations
+        $video_results = $wpdb->get_results($wpdb->prepare("
+            SELECT DISTINCT
+                p.ID as resource_id,
+                pm.meta_key,
+                pm.meta_value
+            FROM {$wpdb->posts} p
+            INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
+            INNER JOIN {$wpdb->postmeta} pm_video ON p.ID = pm_video.post_id
             WHERE p.post_type = 'ielts_resource'
               AND p.post_status = 'publish'
-              AND pm.meta_key = '_ielts_cm_lesson_id'
-              AND pm.meta_value IN ($lesson_placeholders)
-        ", $lesson_ids));
+              AND pm_video.meta_key = '_ielts_cm_video_url'
+              AND pm_video.meta_value != ''
+              AND ($where_clause)
+        ", $prepare_args), ARRAY_A);
         
-        if (!empty($resource_ids)) {
-            $resource_ids = array_map('intval', $resource_ids);
-            $resource_placeholders = implode(',', array_fill(0, count($resource_ids), '%d'));
+        // Process results and count videos per lesson
+        foreach ($video_results as $row) {
+            $resource_id = intval($row['resource_id']);
+            $meta_key = $row['meta_key'];
+            $meta_value = $row['meta_value'];
             
-            // Get resources with videos and their lesson IDs
-            $video_counts = $wpdb->get_results($wpdb->prepare("
-                SELECT 
-                    pm_lesson.meta_value as lesson_id,
-                    COUNT(DISTINCT pm_video.post_id) as count
-                FROM {$wpdb->postmeta} pm_video
-                INNER JOIN {$wpdb->postmeta} pm_lesson ON pm_video.post_id = pm_lesson.post_id
-                WHERE pm_video.post_id IN ($resource_placeholders)
-                  AND pm_video.meta_key = '_ielts_cm_video_url'
-                  AND pm_video.meta_value != ''
-                  AND pm_lesson.meta_key = '_ielts_cm_lesson_id'
-                  AND pm_lesson.meta_value IN ($lesson_placeholders)
-                GROUP BY lesson_id
-            ", array_merge($resource_ids, $lesson_ids)), ARRAY_A);
-            
-            foreach ($video_counts as $row) {
-                $lesson_id = intval($row['lesson_id']);
-                if (isset($counts[$lesson_id])) {
-                    $counts[$lesson_id]['video_count'] = intval($row['count']);
+            if ($meta_key === '_ielts_cm_lesson_id') {
+                $lesson_id = intval($meta_value);
+                if (isset($counts[$lesson_id]) && !isset($counts[$lesson_id]['_video_' . $resource_id])) {
+                    $counts[$lesson_id]['video_count']++;
+                    $counts[$lesson_id]['_video_' . $resource_id] = true; // Mark as counted
+                }
+            } elseif ($meta_key === '_ielts_cm_lesson_ids') {
+                // meta_value is serialized array, check which lessons it contains
+                $lesson_ids_array = maybe_unserialize($meta_value);
+                if (is_array($lesson_ids_array)) {
+                    foreach ($lesson_ids_array as $lid) {
+                        $lid = intval($lid);
+                        if (isset($counts[$lid]) && !isset($counts[$lid]['_video_' . $resource_id])) {
+                            $counts[$lid]['video_count']++;
+                            $counts[$lid]['_video_' . $resource_id] = true; // Mark as counted
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Clean up temporary tracking keys
+        foreach ($lesson_ids as $lesson_id) {
+            foreach ($counts[$lesson_id] as $key => $value) {
+                if (strpos($key, '_video_') === 0) {
+                    unset($counts[$lesson_id][$key]);
                 }
             }
         }
         
         // Get quiz counts for all lessons
-        $quiz_counts = $wpdb->get_results($wpdb->prepare("
-            SELECT 
-                pm.meta_value as lesson_id,
-                COUNT(DISTINCT pm.post_id) as count
-            FROM {$wpdb->postmeta} pm
-            INNER JOIN {$wpdb->posts} p ON pm.post_id = p.ID
+        // Need to check both singular (_ielts_cm_lesson_id) and plural (_ielts_cm_lesson_ids)
+        // Build OR conditions for all lessons to check in a single query
+        $where_conditions = array();
+        $prepare_args = array();
+        
+        foreach ($lesson_ids as $lesson_id) {
+            // For singular lesson_id
+            $where_conditions[] = "(pm.meta_key = '_ielts_cm_lesson_id' AND pm.meta_value = %d)";
+            $prepare_args[] = $lesson_id;
+            
+            // For plural lesson_ids - check serialized array patterns
+            $int_pattern = '%' . $wpdb->esc_like('i:' . $lesson_id . ';') . '%';
+            $str_pattern = '%' . $wpdb->esc_like(serialize(strval($lesson_id))) . '%';
+            
+            $where_conditions[] = "(pm.meta_key = '_ielts_cm_lesson_ids' AND (pm.meta_value LIKE %s OR pm.meta_value LIKE %s))";
+            $prepare_args[] = $int_pattern;
+            $prepare_args[] = $str_pattern;
+        }
+        
+        $where_clause = implode(' OR ', $where_conditions);
+        
+        // Get all quizzes with their lesson associations
+        $quiz_results = $wpdb->get_results($wpdb->prepare("
+            SELECT DISTINCT
+                p.ID as quiz_id,
+                pm.meta_key,
+                pm.meta_value
+            FROM {$wpdb->posts} p
+            INNER JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
             WHERE p.post_type = 'ielts_quiz'
               AND p.post_status = 'publish'
-              AND pm.meta_key = '_ielts_cm_lesson_id'
-              AND pm.meta_value IN ($lesson_placeholders)
-            GROUP BY pm.meta_value
-        ", $lesson_ids), ARRAY_A);
+              AND ($where_clause)
+        ", $prepare_args), ARRAY_A);
         
-        foreach ($quiz_counts as $row) {
-            $lesson_id = intval($row['lesson_id']);
-            if (isset($counts[$lesson_id])) {
-                $counts[$lesson_id]['quiz_count'] = intval($row['count']);
+        // Process results and count quizzes per lesson
+        foreach ($quiz_results as $row) {
+            $quiz_id = intval($row['quiz_id']);
+            $meta_key = $row['meta_key'];
+            $meta_value = $row['meta_value'];
+            
+            if ($meta_key === '_ielts_cm_lesson_id') {
+                $lesson_id = intval($meta_value);
+                if (isset($counts[$lesson_id]) && !isset($counts[$lesson_id]['_quiz_' . $quiz_id])) {
+                    $counts[$lesson_id]['quiz_count']++;
+                    $counts[$lesson_id]['_quiz_' . $quiz_id] = true; // Mark as counted
+                }
+            } elseif ($meta_key === '_ielts_cm_lesson_ids') {
+                // meta_value is serialized array, check which lessons it contains
+                $lesson_ids_array = maybe_unserialize($meta_value);
+                if (is_array($lesson_ids_array)) {
+                    foreach ($lesson_ids_array as $lid) {
+                        $lid = intval($lid);
+                        if (isset($counts[$lid]) && !isset($counts[$lid]['_quiz_' . $quiz_id])) {
+                            $counts[$lid]['quiz_count']++;
+                            $counts[$lid]['_quiz_' . $quiz_id] = true; // Mark as counted
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Clean up temporary tracking keys
+        foreach ($lesson_ids as $lesson_id) {
+            foreach ($counts[$lesson_id] as $key => $value) {
+                if (strpos($key, '_quiz_') === 0) {
+                    unset($counts[$lesson_id][$key]);
+                }
             }
         }
         
