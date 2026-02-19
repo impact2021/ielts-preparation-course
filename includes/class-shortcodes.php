@@ -1912,9 +1912,10 @@ class IELTS_CM_Shortcodes {
             // The form will be rendered but without the registration fields (name, email, password)
         }
         
-        if (!is_user_logged_in() && !get_option('users_can_register')) {
-            return '<p>' . __('User registration is currently not allowed.', 'ielts-course-manager') . '</p>';
-        }
+        // Note: We don't check get_option('users_can_register') here because:
+        // 1. The plugin's own authorization system handles security
+        // 2. WordPress registration is force-disabled for security
+        // 3. This form uses the IELTS_CM_AUTHORIZED_REGISTRATION marker
         
         $errors = array();
         $success = false;
@@ -4295,10 +4296,10 @@ class IELTS_CM_Shortcodes {
             return '<p>' . __('You are already logged in. Access codes can only be used during registration.', 'ielts-course-manager') . '</p>';
         }
         
-        // Check if user registration is allowed
-        if (!get_option('users_can_register')) {
-            return '<p>' . __('User registration is currently not allowed.', 'ielts-course-manager') . '</p>';
-        }
+        // Note: We don't check get_option('users_can_register') here because:
+        // 1. The plugin's own authorization system handles security
+        // 2. WordPress registration is force-disabled for security
+        // 3. This form uses the IELTS_CM_AUTHORIZED_REGISTRATION marker
         
         $errors = array();
         $success = false;
