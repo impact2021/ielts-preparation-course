@@ -4286,8 +4286,8 @@ class IELTS_CM_Shortcodes {
             'redirect' => ''
         ), $atts);
         
-        // Check if access code system is enabled
-        if (!get_option('ielts_cm_access_code_enabled', false)) {
+        // Check if access code system is enabled (also available on hybrid sites)
+        if (!get_option('ielts_cm_access_code_enabled', false) && !get_option('ielts_cm_hybrid_site_enabled', false)) {
             return '<p>' . __('Access code registration is currently not available.', 'ielts-course-manager') . '</p>';
         }
         
