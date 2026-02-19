@@ -388,6 +388,27 @@
                                    (questionResult.reading_text_id !== null && questionResult.reading_text_id !== undefined);
                         }
                         
+                        // Helper function to check if a question was answered
+                        function isQuestionAnswered(questionResult) {
+                            var userAnswer = questionResult.user_answer;
+                            if (userAnswer === null || userAnswer === undefined) {
+                                return false;
+                            }
+                            // Handle arrays (multi-select, etc.)
+                            if (Array.isArray(userAnswer)) {
+                                return userAnswer.length > 0;
+                            }
+                            // Handle objects (dropdown_paragraph, etc.)
+                            if (typeof userAnswer === 'object') {
+                                return Object.keys(userAnswer).length > 0;
+                            }
+                            // Handle strings and numbers
+                            if (typeof userAnswer === 'string') {
+                                return userAnswer.trim() !== '';
+                            }
+                            return true; // For numbers and other truthy values
+                        }
+                        
                         // Helper function to create empty feedback div for "Show me" button container
                         function createShowMeContainer(questionElement, questionResult) {
                             var feedbackDiv = $('<div>')
@@ -934,9 +955,10 @@
                                         .addClass('feedback-incorrect')
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
-                                } else if (needsShowMeContainer(questionResult)) {
+                                } else if (needsShowMeContainer(questionResult) || isQuestionAnswered(questionResult)) {
                                     // Create an empty question-level feedback div for "Show me" button
-                                    // even when feedback is shown per-option (for correct/incorrect answers)
+                                    // even when feedback is shown per-option (for correct/incorrect answers),
+                                    // OR if the question was answered (to provide visual feedback indicator)
                                     createShowMeContainer(questionElement, questionResult);
                                 }
                             } else if (questionResult.question_type === 'closed_question') {
@@ -979,6 +1001,7 @@
                                     
                                     // Show general question-level feedback if provided
                                     // This includes "Show me" links that are added server-side
+                                    // Always create a feedback container if the question was answered (to show correct/incorrect indicator)
                                     if (questionResult.feedback) {
                                         var feedbackClass = questionResult.correct ? 'feedback-correct' : 'feedback-incorrect';
                                         var feedbackDiv = $('<div>')
@@ -986,9 +1009,10 @@
                                             .addClass(feedbackClass)
                                             .html(questionResult.feedback);
                                         questionElement.append(feedbackDiv);
-                                    } else if (needsShowMeContainer(questionResult)) {
+                                    } else if (needsShowMeContainer(questionResult) || isQuestionAnswered(questionResult)) {
                                         // Create an empty question-level feedback div for "Show me" button
-                                        // if no feedback but audio_section_id or reading_text_id exists
+                                        // if no feedback but audio_section_id or reading_text_id exists,
+                                        // OR if the question was answered (to provide visual feedback indicator)
                                         createShowMeContainer(questionElement, questionResult);
                                     }
                                 } else if (questionResult.feedback) {
@@ -999,9 +1023,10 @@
                                         .addClass(feedbackClass)
                                         .html(questionResult.feedback);
                                     questionElement.append(feedbackDiv);
-                                } else if (needsShowMeContainer(questionResult)) {
+                                } else if (needsShowMeContainer(questionResult) || isQuestionAnswered(questionResult)) {
                                     // Create an empty question-level feedback div for "Show me" button
-                                    // when there's no feedback text but audio_section_id or reading_text_id exists
+                                    // when there's no feedback text but audio_section_id or reading_text_id exists,
+                                    // OR if the question was answered (to provide visual feedback indicator)
                                     createShowMeContainer(questionElement, questionResult);
                                 }
                             } else if (questionResult.question_type === 'multiple_choice' || 
@@ -1112,9 +1137,10 @@
                                     
                                     questionElement.append(feedbackDiv);
                                 }
-                            } else if (questionResult.feedback || needsShowMeContainer(questionResult)) {
+                            } else if (questionResult.feedback || needsShowMeContainer(questionResult) || isQuestionAnswered(questionResult)) {
                                 // For other question types (text input, etc.), show general feedback
                                 // OR create container for "Show me" button even if no feedback text
+                                // OR create container if the question was answered (to provide visual feedback indicator)
                                 // Remove any existing feedback first
                                 questionElement.find('.question-feedback-message').remove();
                                 
