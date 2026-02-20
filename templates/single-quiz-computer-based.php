@@ -218,8 +218,7 @@ if ($lesson_id) {
     }
     
     // If there's a next item in this lesson, get its URL and title
-    // Only show the next button if user has already completed this quiz
-    if ($user_has_completed_quiz && $current_index >= 0 && $current_index < count($all_items) - 1) {
+    if ($current_index >= 0 && $current_index < count($all_items) - 1) {
         $next_post = $all_items[$current_index + 1]['post'];
         $next_title = $next_post->post_title;
         // Truncate to 15 characters
