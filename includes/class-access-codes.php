@@ -2622,18 +2622,25 @@ class IELTS_CM_Access_Codes {
         $message .= "{$login_url}\n\n";
         $message .= "Best regards,\nIELTS Course Team";
 
-        wp_mail($user->user_email, $subject, $message);
+        $mail_sent = wp_mail($user->user_email, $subject, $message);
 
-        // Log this event for auditing
+        // Log this event for auditing (regardless of mail outcome so we have a full trail)
         $current_user = wp_get_current_user();
+        $log_note = $mail_sent
+            ? 'Admin/partner triggered "Resend Welcome Email" — password reset link sent, existing password preserved.'
+            : 'Admin/partner triggered "Resend Welcome Email" — email delivery failed, but reset link was generated. Existing password preserved.';
         IELTS_CM_Database::log_password_reset_event(
             $user_id,
             $user->user_email,
             'admin_resend_welcome',
             $current_user->ID,
             $current_user->user_email,
-            'Admin/partner triggered "Resend Welcome Email" — password reset link sent, existing password preserved.'
+            $log_note
         );
+
+        if ( ! $mail_sent ) {
+            wp_send_json_error( array( 'message' => 'Failed to send welcome email. Please check your server mail configuration.' ) );
+        }
 
         wp_send_json_success(array('message' => 'Welcome email sent with password reset link'));
     }

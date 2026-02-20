@@ -8590,14 +8590,15 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         }
 
         global $wpdb;
-        $log_table = $wpdb->prefix . 'ielts_cm_password_reset_log';
+        $log_table     = $wpdb->prefix . 'ielts_cm_password_reset_log';
+        $log_table_esc = esc_sql( $log_table );
 
         // Handle "clear all" action
         if (
             isset( $_GET['action'] ) && $_GET['action'] === 'clear_all' &&
             check_admin_referer( 'clear_all_password_reset_logs' )
         ) {
-            $wpdb->query( 'DELETE FROM ' . esc_sql( $log_table ) );
+            $wpdb->query( 'DELETE FROM ' . $log_table_esc );
             echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'All password reset logs cleared.', 'ielts-course-manager' ) . '</p></div>';
         }
 
@@ -8606,22 +8607,26 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         $current_page = isset( $_GET['paged'] ) ? max( 1, intval( $_GET['paged'] ) ) : 1;
         $offset       = ( $current_page - 1 ) * $per_page;
 
-        $total_logs  = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$log_table}" );
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
+        $total_logs  = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$log_table_esc}" );
         $total_pages = $total_logs > 0 ? ceil( $total_logs / $per_page ) : 1;
 
         $logs = $wpdb->get_results( $wpdb->prepare(
-            "SELECT * FROM {$log_table} ORDER BY created_at DESC LIMIT %d OFFSET %d",
+            // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
+            "SELECT * FROM {$log_table_esc} ORDER BY created_at DESC LIMIT %d OFFSET %d",
             $per_page,
             $offset
         ) );
 
         // Statistics
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
         $stats_by_type = $wpdb->get_results(
-            "SELECT reset_type, COUNT(*) as count FROM {$log_table} GROUP BY reset_type ORDER BY count DESC"
+            "SELECT reset_type, COUNT(*) as count FROM {$log_table_esc} GROUP BY reset_type ORDER BY count DESC"
         );
 
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
         $recent_24h = (int) $wpdb->get_var(
-            "SELECT COUNT(*) FROM {$log_table} WHERE created_at >= DATE_SUB(NOW(), INTERVAL 24 HOUR)"
+            "SELECT COUNT(*) FROM {$log_table_esc} WHERE created_at >= DATE_SUB(NOW(), INTERVAL 24 HOUR)"
         );
 
         $reset_type_labels = array(
