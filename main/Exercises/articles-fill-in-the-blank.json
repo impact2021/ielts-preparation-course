@@ -1,0 +1,115 @@
+{
+  "title": "Articles – Fill in the Blank Practice",
+  "content": "<p>Complete the text below using an appropriate article (<strong>a</strong>, <strong>an</strong> or <strong>the</strong>). If no article is needed, type <strong>X</strong>.</p>",
+  "questions": [
+    {
+      "type": "open_question",
+      "instructions": "Complete the text below using an appropriate article (a, an or the). Type your answers in the spaces provided. If no article is needed, type X.",
+      "question": "1. [field 1] pollution we are discharging into our rivers and 2. [field 2] lakes is causing long term damage to 3. [field 3] world's ecosystems. A large proportion of 4. [field 4] damage we inflict is, in reality, avoidable. For example, widespread usage of 5. [field 5] biodegradable washing powder would reduce 6. [field 6] negative effect we have.\n\nHuman activity has also contributed enormously to air pollution, especially from 7. [field 7] vehicles we drive which emit 8. [field 8] fumes harmful to 9. [field 9] environment. Many governments are now introducing legislation to reduce the number of older cars on the road as these cause more problems than newer models. For example, in 10. [field 10] Japan it is rare to see 11. [field 11] car of more than 4 or 5 years old being driven as changes in vehicle registration laws have made it exceptionally expensive to drive anything other than 12. [field 12] relatively new car.",
+      "points": 12,
+      "no_answer_feedback": "",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Summary Completion",
+      "field_count": 12,
+      "field_answers": {
+        "1": "the|The|THE",
+        "2": "X|x",
+        "3": "the|The|THE",
+        "4": "the|The|THE",
+        "5": "X|x",
+        "6": "the|The|THE",
+        "7": "the|The|THE",
+        "8": "X|x",
+        "9": "the|The|THE",
+        "10": "X|x",
+        "11": "a|A",
+        "12": "a|A"
+      },
+      "field_feedback": {
+        "1": {
+          "correct": "Correct! The answer is 'the'. We use 'the' here because the following clause ('we are discharging into our rivers and lakes') makes this pollution specific – it is not pollution in general but the particular pollution we are releasing.",
+          "incorrect": "Incorrect. The correct answer is 'the'. The following clause ('we are discharging into our rivers and lakes') makes this a specific, identifiable noun, so we use 'the'.",
+          "no_answer": "The correct answer is 'the'. We use 'the' here because the pollution is made specific by the clause that follows ('we are discharging into our rivers and lakes'). When a noun is identified or specified by a following clause, we use 'the'."
+        },
+        "2": {
+          "correct": "Correct! The answer is X (no article). 'Lakes' is a plural countable noun used in a general sense here – it refers to lakes in general, not specific lakes. No article is used with plural countable nouns in a general sense.",
+          "incorrect": "Incorrect. The correct answer is X (no article). 'Lakes' is a plural countable noun used in a general sense. No article is needed when talking generally about plural countable nouns.",
+          "no_answer": "The correct answer is X (no article). 'Lakes' is a plural countable noun used in a general sense – we are talking about rivers and lakes in general. No article is used with plural countable nouns in a general sense."
+        },
+        "3": {
+          "correct": "Correct! The answer is 'the'. We use 'the' with 'world' because there is only one world – it is unique. We always use 'the' with nouns that are unique (the world, the sun, the sky, the environment).",
+          "incorrect": "Incorrect. The correct answer is 'the'. We use 'the' with 'world' because the world is unique – there is only one. Unique nouns always take 'the'.",
+          "no_answer": "The correct answer is 'the'. We use 'the' with 'world' because the world is unique – there is only one. We always use 'the' before unique nouns such as 'the world', 'the sun', and 'the environment'."
+        },
+        "4": {
+          "correct": "Correct! The answer is 'the'. We use 'the' because 'damage' has already been mentioned in the text (the damage caused by discharging pollution into rivers and lakes). When a noun is referred to a second time, we use 'the'.",
+          "incorrect": "Incorrect. The correct answer is 'the'. 'Damage' was introduced in the previous sentence. When we refer to something that has already been mentioned, we use the definite article 'the'.",
+          "no_answer": "The correct answer is 'the'. 'Damage' has already been referred to earlier in the text. When a noun is mentioned for the second time (or when it is understood from context), we use 'the'."
+        },
+        "5": {
+          "correct": "Correct! The answer is X (no article). 'Biodegradable washing powder' is an uncountable noun used in a general sense – we are talking about this type of product in general, not a specific batch. No article is used with uncountable nouns in a general sense.",
+          "incorrect": "Incorrect. The correct answer is X (no article). 'Washing powder' is an uncountable noun used in a general sense. No article is needed when talking generally about uncountable nouns.",
+          "no_answer": "The correct answer is X (no article). 'Biodegradable washing powder' is an uncountable noun used in a general sense. We use no article with uncountable nouns when referring to them in general."
+        },
+        "6": {
+          "correct": "Correct! The answer is 'the'. We use 'the' because the noun phrase 'negative effect we have' is made specific by the relative clause 'we have' – it refers to the particular effect that human activity has, not effects in general.",
+          "incorrect": "Incorrect. The correct answer is 'the'. The relative clause 'we have' makes 'negative effect' specific – it refers to the particular effect that we (humans) have. When a noun is made specific by a following clause, we use 'the'.",
+          "no_answer": "The correct answer is 'the'. We use 'the' because the relative clause 'we have' specifies exactly which negative effect is meant. When a noun is made specific by a following clause or phrase, we use 'the'."
+        },
+        "7": {
+          "correct": "Correct! The answer is 'the'. We use 'the' because the noun phrase 'vehicles we drive' is made specific by the relative clause 'we drive' – it refers to the particular vehicles that people use, not vehicles in general.",
+          "incorrect": "Incorrect. The correct answer is 'the'. The relative clause 'we drive' makes 'vehicles' specific – it refers to the particular vehicles that people drive. When a noun is made specific by a following clause, we use 'the'.",
+          "no_answer": "The correct answer is 'the'. We use 'the' because the relative clause 'we drive' identifies exactly which vehicles are meant. When a noun is made specific by a following clause or phrase, we use 'the'."
+        },
+        "8": {
+          "correct": "Correct! The answer is X (no article). 'Fumes' is a plural countable noun used in a general sense here – it refers to vehicle fumes in general, not specific fumes. No article is used with plural countable nouns in a general sense.",
+          "incorrect": "Incorrect. The correct answer is X (no article). 'Fumes' is a plural countable noun used in a general sense. No article is needed when talking generally about plural countable nouns.",
+          "no_answer": "The correct answer is X (no article). 'Fumes' is a plural countable noun used in a general sense – it refers to exhaust fumes in general. No article is used with plural countable nouns in a general sense."
+        },
+        "9": {
+          "correct": "Correct! The answer is 'the'. We use 'the' with 'environment' because the environment is unique – there is only one. Like 'the world' or 'the sun', we always use 'the' with this noun.",
+          "incorrect": "Incorrect. The correct answer is 'the'. 'The environment' is unique – there is only one. We always use 'the' with nouns that refer to something unique, such as 'the world', 'the sun', and 'the environment'.",
+          "no_answer": "The correct answer is 'the'. The environment is unique – there is only one. We always use 'the' before unique nouns. Compare: 'the world', 'the sun', 'the environment'."
+        },
+        "10": {
+          "correct": "Correct! The answer is X (no article). Names of most countries do not take an article. 'Japan' is a proper noun (a country name), so no article is used. We say 'in Japan', not 'in the Japan'.",
+          "incorrect": "Incorrect. The correct answer is X (no article). Names of most countries do not use an article. 'Japan' is a country name (a proper noun), so no article is needed.",
+          "no_answer": "The correct answer is X (no article). Names of most countries do not take an article. We say 'in Japan', not 'in the Japan'. Country names are proper nouns and are generally used without an article."
+        },
+        "11": {
+          "correct": "Correct! The answer is 'a'. We use the indefinite article 'a' because we are talking about one car of many in general – any car that is more than 4 or 5 years old. This is the first (and only) mention of this car, and it is not specific.",
+          "incorrect": "Incorrect. The correct answer is 'a'. We use 'a' when talking generally about one of many. Here, the text refers to any car of more than 4 or 5 years old – not a specific car – so we use the indefinite article 'a'.",
+          "no_answer": "The correct answer is 'a'. We use 'a' when talking generally about one of many. Here, any car of more than 4 or 5 years old is meant – not a specific car. Use the indefinite article 'a' for singular countable nouns in a general sense."
+        },
+        "12": {
+          "correct": "Correct! The answer is 'a'. We use the indefinite article 'a' because we are talking generally about one car of many – any relatively new car. This is a non-specific reference to a type of car, not a particular car.",
+          "incorrect": "Incorrect. The correct answer is 'a'. We use 'a' when talking generally about one of many. 'A relatively new car' means any relatively new car in general – not a specific one. Use the indefinite article 'a' for singular countable nouns in a general sense.",
+          "no_answer": "The correct answer is 'a'. We use 'a' when talking generally about one of many. 'A relatively new car' refers to any relatively new car in general, not a specific one. Use the indefinite article 'a' for singular countable nouns in a general sense."
+        }
+      }
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_exercise",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "0",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-02-20 08:13:11",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}

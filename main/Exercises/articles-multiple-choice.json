@@ -1,0 +1,303 @@
+{
+  "title": "Articles – Multiple Choice Practice",
+  "content": "<p>Choose the correct article (<strong>a</strong>, <strong>an</strong>, <strong>the</strong>, or <strong>Ø</strong> for no article) to complete each sentence.</p>",
+  "questions": [
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "For many, the most difficult aspect of being _____ student is the time spent on research.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'a'. In this case you are talking about one of many students. We are not focusing on a particular student, so we use 'a'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": true,
+          "feedback": "Correct! The answer is 'a'. In this case you are talking about one of many students. We are not focusing on a particular student, so we use 'a'."
+        },
+        {
+          "text": "an",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'a'. We use 'an' before vowel sounds, but 'student' begins with a consonant sound /s/. We use 'a' here because we are talking about one student among many, not a specific one."
+        },
+        {
+          "text": "the",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'a'. We use 'the' when referring to a specific noun already known to the reader. Here we are talking about students in general – one of many – so we use 'a'."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'a'. No article is used with plural countable nouns or uncountable nouns in a general sense. 'Student' is a singular countable noun and requires the indefinite article 'a'."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "_____ IELTS examiner I had for my test was very friendly.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'the'. In this case you are talking about a specific IELTS examiner (the one who examined the speaker), so we use 'the'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'the'. We use 'the' because we are referring to a specific IELTS examiner – the one who examined the speaker. When context makes it clear exactly which person is meant, we use 'the'."
+        },
+        {
+          "text": "an",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'the'. 'An' is used for non-specific singular nouns before a vowel sound. Here the examiner is specific – the one who tested the speaker – so we use 'the'."
+        },
+        {
+          "text": "the",
+          "is_correct": true,
+          "feedback": "Correct! The answer is 'the'. In this case you are talking about a specific IELTS examiner – the one who examined the speaker. We use 'the' to refer to a specific, identifiable noun."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'the'. No article is used with plural countable nouns or uncountable nouns in a general sense. Here 'IELTS examiner' is singular and refers to a specific person, so we use 'the'."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "Many people prefer not to use _____ public transport.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Ø (no article). In this case you are talking generally about an uncountable noun (public transport), so we use no article.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'Public transport' is an uncountable noun. We do not use 'a' with uncountable nouns – no article is needed here."
+        },
+        {
+          "text": "an",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'Public transport' is an uncountable noun. We do not use 'an' with uncountable nouns – no article is needed here."
+        },
+        {
+          "text": "the",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'The' would suggest a specific type of public transport already known to the reader. Here we are talking generally about public transport as a concept, so no article is used."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": true,
+          "feedback": "Correct! The answer is Ø (no article). In this case you are talking generally about an uncountable noun (public transport), so we use no article."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "A video game with excessive violence can cause some younger children to act irresponsibly. _____ game may even encourage them to be equally violent.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'the'. In the first sentence, the text is not specific about which game. However, in the second sentence the game is mentioned again, therefore we use 'the'.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'the'. Although 'a video game' is used in the first mention, by the second sentence the game is being referred to again and is now specific. When a noun is mentioned for the second time, we use 'the'."
+        },
+        {
+          "text": "an",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'the'. 'An' is used for non-specific nouns before a vowel sound, but 'game' begins with a consonant sound. More importantly, this game has already been introduced in the first sentence, so we use 'the' to refer back to it."
+        },
+        {
+          "text": "the",
+          "is_correct": true,
+          "feedback": "Correct! The answer is 'the'. In the first sentence, the text is not specific about which game (a video game). However, in the second sentence the game is mentioned again, therefore we use 'the'."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'the'. 'Game' is a singular countable noun that has already been introduced in the previous sentence. When we refer back to something already mentioned, we use 'the'."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "It seems that many international sports people become over concerned with their celebrity status and forget how much of _____ honour it is to be representing their country.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is 'an'. This is only one honour of many – we are not being specific about the honour. We use 'an' because 'honour' begins with a vowel sound (the 'h' is silent).",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'an'. We use 'an' instead of 'a' before vowel sounds. 'Honour' begins with a vowel sound because the 'h' is silent (it sounds like 'on-our'). This is one honour of many, so we use the indefinite article 'an'."
+        },
+        {
+          "text": "an",
+          "is_correct": true,
+          "feedback": "Correct! The answer is 'an'. This is only one honour of many – we are not being specific about the honour. We use 'an' (not 'a') because 'honour' begins with a vowel sound (the 'h' is silent)."
+        },
+        {
+          "text": "the",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'an'. 'The' would suggest a specific honour already known to the reader. Here we are talking about an honour in general – one of many. We also use 'an' rather than 'a' because 'honour' begins with a vowel sound."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is 'an'. 'Honour' is used here as a singular countable noun, so it requires an article. We use 'an' because 'honour' begins with a vowel sound (the 'h' is silent), and the indefinite article is used because it is one honour of many."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "The internet is a good place for _____ information, although there are dangers, especially for younger computer users.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Ø (no article). In this case you are talking generally about an uncountable noun (information), so we use no article.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'Information' is an uncountable noun. We do not use 'a' with uncountable nouns – no article is needed here."
+        },
+        {
+          "text": "an",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'Information' is an uncountable noun. Although 'information' begins with a vowel sound, we do not use 'an' with uncountable nouns – no article is needed."
+        },
+        {
+          "text": "the",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'The' would suggest specific information already known to the reader. Here we are talking generally about information found on the internet, so no article is used."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": true,
+          "feedback": "Correct! The answer is Ø (no article). In this case you are talking generally about an uncountable noun (information), so we use no article."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    },
+    {
+      "type": "closed_question",
+      "instructions": "",
+      "question": "It can be argued that _____ migrants can bring enormous benefits to their host country.",
+      "points": 1,
+      "no_answer_feedback": "The correct answer is Ø (no article). In this case you are talking generally about more than one countable noun (migrants), so we use no article.",
+      "correct_feedback": "",
+      "incorrect_feedback": "",
+      "reading_text_id": null,
+      "audio_section_id": null,
+      "audio_start_time": null,
+      "audio_end_time": null,
+      "ielts_question_category": "",
+      "ielts_question_type": "Multiple Choice (Single Answer)",
+      "mc_options": [
+        {
+          "text": "a",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'A' is used with singular countable nouns. 'Migrants' is a plural countable noun used in a general sense, so 'a' cannot be used."
+        },
+        {
+          "text": "an",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'An' is used with singular countable nouns before a vowel sound. 'Migrants' is a plural countable noun, so 'an' cannot be used."
+        },
+        {
+          "text": "the",
+          "is_correct": false,
+          "feedback": "Incorrect. The correct answer is Ø (no article). 'The' would refer to specific migrants already known to the reader. Here we are making a general statement about migrants as a group, so no article is used."
+        },
+        {
+          "text": "Ø (no article)",
+          "is_correct": true,
+          "feedback": "Correct! The answer is Ø (no article). In this case you are talking generally about more than one countable noun (migrants), so we use no article."
+        }
+      ],
+      "options": "a\nan\nthe\nØ (no article)",
+      "correct_answer_count": 1,
+      "show_option_letters": false
+    }
+  ],
+  "reading_texts": [],
+  "settings": {
+    "pass_percentage": "70",
+    "layout_type": "two_column_exercise",
+    "cbt_test_type": "",
+    "exercise_label": "exercise",
+    "open_as_popup": "",
+    "scoring_type": "percentage",
+    "timer_minutes": "0",
+    "starting_question_number": "1"
+  },
+  "_metadata": {
+    "exported_at": "2026-02-20 08:13:11",
+    "exported_by": "impact",
+    "plugin_version": "12.2",
+    "format_version": "1.0"
+  }
+}
