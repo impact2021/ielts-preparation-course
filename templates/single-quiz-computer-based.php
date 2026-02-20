@@ -241,9 +241,10 @@ if ($lesson_id) {
     }
     
     // Check if this is the last item of the last lesson in the course (for completion message)
+    // Use position-based check (not $next_url which depends on completion status)
     $is_last_lesson = false;
     $next_lesson = null;
-    if (empty($next_url) && $course_id && $lesson_id) {
+    if ($current_index >= 0 && $current_index === count($all_items) - 1 && $course_id && $lesson_id) {
         // Get all lessons in the course
         $int_pattern_course = '%' . $wpdb->esc_like('i:' . $course_id . ';') . '%';
         $str_pattern_course = '%' . $wpdb->esc_like(serialize(strval($course_id))) . '%';
@@ -1397,6 +1398,13 @@ if ($lesson_id) {
             </div>
             
             <!-- Sticky Bottom Navigation with Timer and Submit -->
+            <?php
+            // Show completion message only when: variables are not set (lesson_id was empty),
+            // no items found, item not found in list, OR current item IS the last in the lesson.
+            // This prevents showing completion messages for non-last unsubmitted exercises.
+            $show_completion_message = !isset($current_index) || !isset($all_items) || empty($all_items)
+                || $current_index < 0 || $current_index === count($all_items) - 1;
+            ?>
             <div class="ielts-sticky-bottom-nav quiz-bottom-nav">
                 <div class="nav-item nav-prev">
                     <?php if ($prev_url): ?>
@@ -1457,7 +1465,7 @@ if ($lesson_id) {
                             </span>
                             <span class="nav-arrow">&raquo;</span>
                         </a>
-                    <?php else: ?>
+                    <?php elseif ($show_completion_message): ?>
                         <div class="nav-completion-message">
                             <?php if ($is_last_lesson): ?>
                                 <?php if (isset($next_unit) && $next_unit): ?>
