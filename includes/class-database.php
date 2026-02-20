@@ -19,6 +19,7 @@ class IELTS_CM_Database {
     private $payment_error_log_table;
     private $auto_sync_log_table;
     private $webhook_log_table;
+    private $password_reset_log_table;
     
     public function __construct() {
         global $wpdb;
@@ -32,6 +33,7 @@ class IELTS_CM_Database {
         $this->payment_error_log_table = $wpdb->prefix . 'ielts_cm_payment_errors';
         $this->auto_sync_log_table = $wpdb->prefix . 'ielts_cm_auto_sync_log';
         $this->webhook_log_table = $wpdb->prefix . 'ielts_cm_webhook_log';
+        $this->password_reset_log_table = $wpdb->prefix . 'ielts_cm_password_reset_log';
     }
     
     /**
@@ -242,6 +244,25 @@ class IELTS_CM_Database {
             KEY created_at (created_at)
         ) $charset_collate;";
         
+        // Password reset audit log table
+        $password_reset_log_table = $wpdb->prefix . 'ielts_cm_password_reset_log';
+        $sql_password_reset_log = "CREATE TABLE IF NOT EXISTS $password_reset_log_table (
+            id bigint(20) NOT NULL AUTO_INCREMENT,
+            user_id bigint(20) DEFAULT NULL,
+            user_email varchar(255) DEFAULT NULL,
+            reset_type varchar(50) NOT NULL,
+            initiated_by bigint(20) DEFAULT NULL,
+            initiated_by_email varchar(255) DEFAULT NULL,
+            ip_address varchar(45) DEFAULT NULL,
+            user_agent text DEFAULT NULL,
+            notes text DEFAULT NULL,
+            created_at datetime DEFAULT CURRENT_TIMESTAMP,
+            PRIMARY KEY  (id),
+            KEY user_id (user_id),
+            KEY reset_type (reset_type),
+            KEY created_at (created_at)
+        ) $charset_collate;";
+
         require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
         dbDelta($sql_progress);
         dbDelta($sql_quiz_results);
@@ -255,6 +276,7 @@ class IELTS_CM_Database {
         dbDelta($sql_access_codes);
         dbDelta($sql_access_code_courses);
         dbDelta($sql_webhook_log);
+        dbDelta($sql_password_reset_log);
     }
     
     /**
@@ -275,7 +297,8 @@ class IELTS_CM_Database {
             $wpdb->prefix . 'ielts_cm_auto_sync_log',
             $wpdb->prefix . 'ielts_cm_access_codes',
             $wpdb->prefix . 'ielts_cm_access_code_courses',
-            $wpdb->prefix . 'ielts_cm_webhook_log'
+            $wpdb->prefix . 'ielts_cm_webhook_log',
+            $wpdb->prefix . 'ielts_cm_password_reset_log'
         );
         
         foreach ($tables as $table) {
@@ -454,6 +477,87 @@ class IELTS_CM_Database {
             
             require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
             dbDelta($sql);
+        }
+    }
+
+    /**
+     * Log a password reset event for auditing purposes.
+     *
+     * reset_type values:
+     *   'user_initiated'     – user clicked "Lost your password?" and completed the reset
+     *   'user_reset_request' – user requested a reset link (retrieve_password)
+     *   'admin_resend_welcome' – admin/partner clicked "Resend Welcome Email" (sends reset link)
+     *   'admin_force_reset'  – admin directly set a new password via wp-admin
+     *
+     * @param int|null    $user_id           Target user ID
+     * @param string|null $user_email        Target user email
+     * @param string      $reset_type        One of the values above
+     * @param int|null    $initiated_by      WP user ID of the person who triggered this (null = self)
+     * @param string|null $initiated_by_email Email of the person who triggered this
+     * @param string|null $notes             Optional free-text note
+     * @return int|false Insert ID on success, false on failure
+     */
+    public static function log_password_reset_event( $user_id, $user_email, $reset_type, $initiated_by = null, $initiated_by_email = null, $notes = null ) {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_password_reset_log';
+
+        // Ensure table exists (created during plugin activation, but guard against edge cases)
+        self::ensure_password_reset_log_table_exists();
+
+        $ip_address = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+        $user_agent = isset( $_SERVER['HTTP_USER_AGENT'] ) ? sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ) : '';
+
+        $result = $wpdb->insert(
+            $table_name,
+            array(
+                'user_id'             => $user_id ? intval( $user_id ) : null,
+                'user_email'          => $user_email ? sanitize_email( $user_email ) : null,
+                'reset_type'          => sanitize_text_field( $reset_type ),
+                'initiated_by'        => $initiated_by ? intval( $initiated_by ) : null,
+                'initiated_by_email'  => $initiated_by_email ? sanitize_email( $initiated_by_email ) : null,
+                'ip_address'          => $ip_address,
+                'user_agent'          => $user_agent,
+                'notes'               => $notes ? sanitize_textarea_field( $notes ) : null,
+                'created_at'          => current_time( 'mysql' ),
+            ),
+            array( '%d', '%s', '%s', '%d', '%s', '%s', '%s', '%s', '%s' )
+        );
+
+        if ( $result === false ) {
+            error_log( 'IELTS Password Reset Log: Failed to insert record - ' . $wpdb->last_error );
+            return false;
+        }
+
+        return $wpdb->insert_id;
+    }
+
+    /**
+     * Ensure the password reset log table exists.
+     */
+    private static function ensure_password_reset_log_table_exists() {
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_password_reset_log';
+
+        if ( $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $table_name ) ) !== $table_name ) {
+            $charset_collate = $wpdb->get_charset_collate();
+            $sql = "CREATE TABLE IF NOT EXISTS $table_name (
+                id bigint(20) NOT NULL AUTO_INCREMENT,
+                user_id bigint(20) DEFAULT NULL,
+                user_email varchar(255) DEFAULT NULL,
+                reset_type varchar(50) NOT NULL,
+                initiated_by bigint(20) DEFAULT NULL,
+                initiated_by_email varchar(255) DEFAULT NULL,
+                ip_address varchar(45) DEFAULT NULL,
+                user_agent text DEFAULT NULL,
+                notes text DEFAULT NULL,
+                created_at datetime DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY  (id),
+                KEY user_id (user_id),
+                KEY reset_type (reset_type),
+                KEY created_at (created_at)
+            ) $charset_collate;";
+            require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+            dbDelta( $sql );
         }
     }
 }
