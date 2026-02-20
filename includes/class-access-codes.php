@@ -2602,14 +2602,47 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'User not found'));
         }
         
-        // Generate a new password
-        $new_password = wp_generate_password(12);
-        wp_set_password($new_password, $user_id);
-        
-        // Send welcome email with new password
-        $this->send_welcome_email($user_id, $user->user_login, $new_password);
-        
-        wp_send_json_success(array('message' => 'Welcome email sent with new password'));
+        // Send a password reset link instead of generating a new password.
+        // This preserves the user's existing password and lets them choose their own.
+        $reset_key = get_password_reset_key($user);
+        if (is_wp_error($reset_key)) {
+            wp_send_json_error(array('message' => 'Could not generate password reset link: ' . $reset_key->get_error_message()));
+        }
+
+        $login_url = get_option('iw_login_page_url', wp_login_url());
+        $reset_url = network_site_url('wp-login.php?action=rp&key=' . rawurlencode($reset_key) . '&login=' . rawurlencode($user->user_login), 'login');
+
+        $subject  = 'Your IELTS Course Access';
+        $message  = "Hello,\n\n";
+        $message .= "Your account details:\n\n";
+        $message .= "Username: {$user->user_login}\n\n";
+        $message .= "To set or reset your password, click the link below (valid for 24 hours):\n";
+        $message .= "{$reset_url}\n\n";
+        $message .= "After setting your password, you can log in here:\n";
+        $message .= "{$login_url}\n\n";
+        $message .= "Best regards,\nIELTS Course Team";
+
+        $mail_sent = wp_mail($user->user_email, $subject, $message);
+
+        // Log this event for auditing (regardless of mail outcome so we have a full trail)
+        $current_user = wp_get_current_user();
+        $log_note = $mail_sent
+            ? 'Admin/partner triggered "Resend Welcome Email" — password reset link sent, existing password preserved.'
+            : 'Admin/partner triggered "Resend Welcome Email" — email delivery failed, but reset link was generated. Existing password preserved.';
+        IELTS_CM_Database::log_password_reset_event(
+            $user_id,
+            $user->user_email,
+            'admin_resend_welcome',
+            $current_user->ID,
+            $current_user->user_email,
+            $log_note
+        );
+
+        if ( ! $mail_sent ) {
+            wp_send_json_error( array( 'message' => 'Failed to send welcome email. Please check your server mail configuration.' ) );
+        }
+
+        wp_send_json_success(array('message' => 'Welcome email sent with password reset link'));
     }
     
     /**

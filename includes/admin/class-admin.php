@@ -4398,6 +4398,15 @@ class IELTS_CM_Admin {
             'ielts-payment-errors',
             array($this, 'payment_errors_page')
         );
+
+        add_submenu_page(
+            'edit.php?post_type=ielts_course',
+            __('Password Reset Log', 'ielts-course-manager'),
+            __('Password Reset Log', 'ielts-course-manager'),
+            'manage_options',
+            'ielts-password-reset-log',
+            array($this, 'password_reset_log_page')
+        );
     }
     
     /**
@@ -8565,6 +8574,201 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                     • <?php _e('Stripe API errors are shown both here and in the Stripe Dashboard', 'ielts-course-manager'); ?>
                 </p>
             </div>
+        </div>
+        <?php
+    }
+
+    /**
+     * Password Reset Log admin page.
+     *
+     * Displays all password-reset-related events so admins can diagnose why
+     * users are repeatedly resetting their passwords shortly after enrolment.
+     */
+    public function password_reset_log_page() {
+        if ( ! current_user_can( 'manage_options' ) ) {
+            wp_die( __( 'You do not have sufficient permissions to access this page.', 'ielts-course-manager' ) );
+        }
+
+        global $wpdb;
+        $log_table     = $wpdb->prefix . 'ielts_cm_password_reset_log';
+        $log_table_esc = esc_sql( $log_table );
+
+        // Handle "clear all" action
+        if (
+            isset( $_GET['action'] ) && $_GET['action'] === 'clear_all' &&
+            check_admin_referer( 'clear_all_password_reset_logs' )
+        ) {
+            $wpdb->query( 'DELETE FROM ' . $log_table_esc );
+            echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'All password reset logs cleared.', 'ielts-course-manager' ) . '</p></div>';
+        }
+
+        // Pagination
+        $per_page     = 50;
+        $current_page = isset( $_GET['paged'] ) ? max( 1, intval( $_GET['paged'] ) ) : 1;
+        $offset       = ( $current_page - 1 ) * $per_page;
+
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
+        $total_logs  = (int) $wpdb->get_var( "SELECT COUNT(*) FROM {$log_table_esc}" );
+        $total_pages = $total_logs > 0 ? ceil( $total_logs / $per_page ) : 1;
+
+        $logs = $wpdb->get_results( $wpdb->prepare(
+            // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
+            "SELECT * FROM {$log_table_esc} ORDER BY created_at DESC LIMIT %d OFFSET %d",
+            $per_page,
+            $offset
+        ) );
+
+        // Statistics
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
+        $stats_by_type = $wpdb->get_results(
+            "SELECT reset_type, COUNT(*) as count FROM {$log_table_esc} GROUP BY reset_type ORDER BY count DESC"
+        );
+
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is plugin-controlled, not user input
+        $recent_24h = (int) $wpdb->get_var(
+            "SELECT COUNT(*) FROM {$log_table_esc} WHERE created_at >= DATE_SUB(NOW(), INTERVAL 24 HOUR)"
+        );
+
+        $reset_type_labels = array(
+            'user_reset_request'   => __( 'User requested reset link', 'ielts-course-manager' ),
+            'user_initiated'       => __( 'User completed reset', 'ielts-course-manager' ),
+            'admin_resend_welcome' => __( 'Admin: resend welcome email', 'ielts-course-manager' ),
+            'admin_force_reset'    => __( 'Admin: force reset', 'ielts-course-manager' ),
+        );
+
+        ?>
+        <div class="wrap">
+            <h1><?php esc_html_e( 'Password Reset Log', 'ielts-course-manager' ); ?></h1>
+
+            <div class="notice notice-info">
+                <p>
+                    <?php esc_html_e( 'This log tracks all password-reset events to help diagnose why users are frequently resetting their passwords after enrolment.', 'ielts-course-manager' ); ?>
+                    <?php esc_html_e( 'A high volume of "User requested reset link" events shortly after enrolment suggests users are not receiving (or are ignoring) the welcome email containing their initial credentials.', 'ielts-course-manager' ); ?>
+                </p>
+                <p>
+                    <strong><?php esc_html_e( 'Total Events Logged:', 'ielts-course-manager' ); ?></strong> <?php echo number_format( $total_logs ); ?>&nbsp;&nbsp;
+                    <strong><?php esc_html_e( 'Events in Last 24 Hours:', 'ielts-course-manager' ); ?></strong> <?php echo number_format( $recent_24h ); ?>
+                </p>
+            </div>
+
+            <?php if ( ! empty( $stats_by_type ) ) : ?>
+            <h2><?php esc_html_e( 'Statistics by Event Type', 'ielts-course-manager' ); ?></h2>
+            <table class="wp-list-table widefat fixed striped" style="max-width: 600px;">
+                <thead>
+                    <tr>
+                        <th><?php esc_html_e( 'Event Type', 'ielts-course-manager' ); ?></th>
+                        <th><?php esc_html_e( 'Count', 'ielts-course-manager' ); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ( $stats_by_type as $stat ) : ?>
+                    <tr>
+                        <td><?php echo esc_html( isset( $reset_type_labels[ $stat->reset_type ] ) ? $reset_type_labels[ $stat->reset_type ] : $stat->reset_type ); ?></td>
+                        <td><?php echo number_format( $stat->count ); ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <?php endif; ?>
+
+            <h2><?php esc_html_e( 'Event Log', 'ielts-course-manager' ); ?></h2>
+
+            <?php if ( $total_logs > 0 ) : ?>
+            <div style="margin-bottom: 10px;">
+                <a href="<?php echo esc_url( wp_nonce_url( add_query_arg( 'action', 'clear_all' ), 'clear_all_password_reset_logs' ) ); ?>"
+                   class="button button-secondary"
+                   onclick="return confirm('<?php esc_attr_e( 'Are you sure you want to delete all password reset logs? This cannot be undone.', 'ielts-course-manager' ); ?>')">
+                    <?php esc_html_e( 'Clear All Logs', 'ielts-course-manager' ); ?>
+                </a>
+            </div>
+
+            <table class="wp-list-table widefat fixed striped">
+                <thead>
+                    <tr>
+                        <th style="width: 140px;"><?php esc_html_e( 'Date/Time', 'ielts-course-manager' ); ?></th>
+                        <th style="width: 160px;"><?php esc_html_e( 'Event Type', 'ielts-course-manager' ); ?></th>
+                        <th><?php esc_html_e( 'Affected User', 'ielts-course-manager' ); ?></th>
+                        <th><?php esc_html_e( 'Triggered By', 'ielts-course-manager' ); ?></th>
+                        <th><?php esc_html_e( 'Notes', 'ielts-course-manager' ); ?></th>
+                        <th style="width: 100px;"><?php esc_html_e( 'IP Address', 'ielts-course-manager' ); ?></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ( $logs as $log ) : ?>
+                    <tr>
+                        <td><?php echo esc_html( mysql2date( 'Y-m-d H:i:s', $log->created_at ) ); ?></td>
+                        <td>
+                            <?php
+                            $label = isset( $reset_type_labels[ $log->reset_type ] ) ? $reset_type_labels[ $log->reset_type ] : $log->reset_type;
+                            $badge_color = in_array( $log->reset_type, array( 'admin_resend_welcome', 'admin_force_reset' ), true ) ? '#d63638' : '#2271b1';
+                            echo '<span style="color:' . esc_attr( $badge_color ) . ';font-weight:600;">' . esc_html( $label ) . '</span>';
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            if ( $log->user_id ) {
+                                $user = get_userdata( $log->user_id );
+                                if ( $user ) {
+                                    echo '<a href="' . esc_url( get_edit_user_link( $log->user_id ) ) . '">' . esc_html( $user->display_name ) . '</a>';
+                                    echo '<br><small>' . esc_html( $user->user_email ) . '</small>';
+                                } else {
+                                    echo 'ID: ' . esc_html( $log->user_id );
+                                    if ( $log->user_email ) {
+                                        echo '<br><small>' . esc_html( $log->user_email ) . '</small>';
+                                    }
+                                }
+                            } elseif ( $log->user_email ) {
+                                echo esc_html( $log->user_email );
+                            } else {
+                                echo '—';
+                            }
+                            ?>
+                        </td>
+                        <td>
+                            <?php
+                            if ( $log->initiated_by ) {
+                                $initiator = get_userdata( $log->initiated_by );
+                                if ( $initiator ) {
+                                    echo '<a href="' . esc_url( get_edit_user_link( $log->initiated_by ) ) . '">' . esc_html( $initiator->display_name ) . '</a>';
+                                    echo '<br><small>' . esc_html( $initiator->user_email ) . '</small>';
+                                } else {
+                                    echo 'ID: ' . esc_html( $log->initiated_by );
+                                    if ( $log->initiated_by_email ) {
+                                        echo '<br><small>' . esc_html( $log->initiated_by_email ) . '</small>';
+                                    }
+                                }
+                            } else {
+                                echo '<em>' . esc_html__( 'Self (user)', 'ielts-course-manager' ) . '</em>';
+                            }
+                            ?>
+                        </td>
+                        <td><?php echo $log->notes ? esc_html( $log->notes ) : '—'; ?></td>
+                        <td><?php echo $log->ip_address ? esc_html( $log->ip_address ) : '—'; ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+
+            <?php if ( $total_pages > 1 ) : ?>
+            <div class="tablenav bottom">
+                <div class="tablenav-pages">
+                    <?php
+                    echo paginate_links( array(
+                        'base'      => add_query_arg( 'paged', '%#%' ),
+                        'format'    => '',
+                        'prev_text' => __( '&laquo;' ),
+                        'next_text' => __( '&raquo;' ),
+                        'total'     => $total_pages,
+                        'current'   => $current_page,
+                    ) );
+                    ?>
+                </div>
+            </div>
+            <?php endif; ?>
+
+            <?php else : ?>
+            <p><?php esc_html_e( 'No password reset events have been logged yet.', 'ielts-course-manager' ); ?></p>
+            <?php endif; ?>
         </div>
         <?php
     }

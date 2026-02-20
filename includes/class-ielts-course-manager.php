@@ -121,6 +121,10 @@ class IELTS_Course_Manager {
         add_action('wp_trash_post', array($this, 'sync_content_deletion'), 10, 1);
         add_action('before_delete_post', array($this, 'sync_content_deletion'), 10, 1);
         
+        // Log password reset events for auditing (tracks why users need to reset passwords)
+        add_action('retrieve_password', array($this, 'log_password_reset_request'), 10, 1);
+        add_action('after_password_reset', array($this, 'log_password_reset_complete'), 10, 2);
+        
         // Add plugin version to admin bar
         add_action('admin_bar_menu', array($this, 'add_version_to_admin_bar'), 100);
     }
@@ -468,6 +472,43 @@ class IELTS_Course_Manager {
         $wp_admin_bar->add_node($args);
     }
     
+    /**
+     * Log when a user requests a password reset link ("Lost your password?").
+     *
+     * @param string $user_login The user's login name.
+     */
+    public function log_password_reset_request( $user_login ) {
+        $user = get_user_by( 'login', $user_login );
+        if ( ! $user ) {
+            return;
+        }
+        IELTS_CM_Database::log_password_reset_event(
+            $user->ID,
+            $user->user_email,
+            'user_reset_request',
+            null,
+            null,
+            'User requested a password reset link via "Lost your password?" form.'
+        );
+    }
+
+    /**
+     * Log when a user successfully completes a password reset.
+     *
+     * @param WP_User $user     The user object.
+     * @param string  $new_pass The new password (not logged for security).
+     */
+    public function log_password_reset_complete( $user, $new_pass ) {
+        IELTS_CM_Database::log_password_reset_event(
+            $user->ID,
+            $user->user_email,
+            'user_initiated',
+            null,
+            null,
+            'User completed password reset via the WordPress password reset form.'
+        );
+    }
+
     /**
      * SECURITY: Block ALL unauthorized user registration
      * Force disable WordPress default registration
