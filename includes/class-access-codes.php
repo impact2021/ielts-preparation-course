@@ -1677,34 +1677,50 @@ class IELTS_CM_Access_Codes {
             $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
             if ($stripe_enabled): 
             ?>
-            // Initialize Stripe for code purchase
+            // Initialize Stripe for code purchase using Payment Element
             var stripeForCodePurchase = Stripe('<?php echo esc_js(get_option('ielts_cm_stripe_publishable_key')); ?>');
-            var codePurchaseElements = stripeForCodePurchase.elements();
-            var codePurchaseCardElement = codePurchaseElements.create('card', {
-                style: {
-                    base: {
-                        fontSize: '16px',
-                        color: '#32325d',
-                        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                        '::placeholder': {
-                            color: '#aab7c4'
-                        }
-                    }
+            var codePurchaseElements = null;
+            var codePurchasePaymentElement = null;
+
+            function initCodePurchasePaymentElement(price) {
+                var amountInCents = Math.round(parseFloat(price) * 100);
+                if (!amountInCents || amountInCents <= 0) return;
+
+                if (codePurchasePaymentElement) {
+                    codePurchasePaymentElement.unmount();
+                    codePurchasePaymentElement = null;
+                    codePurchaseElements = null;
                 }
-            });
-            
-            if (document.getElementById('code-card-element')) {
-                codePurchaseCardElement.mount('#code-card-element');
-                
-                codePurchaseCardElement.on('change', function(event) {
-                    var displayError = document.getElementById('code-card-errors');
-                    if (event.error) {
-                        displayError.textContent = event.error.message;
-                    } else {
-                        displayError.textContent = '';
+
+                $('#code-card-element').empty();
+
+                codePurchaseElements = stripeForCodePurchase.elements({
+                    mode: 'payment',
+                    amount: amountInCents,
+                    currency: 'usd',
+                    appearance: {
+                        theme: 'stripe',
+                        variables: { colorPrimary: '#0073aa' }
                     }
                 });
+
+                codePurchasePaymentElement = codePurchaseElements.create('payment');
+                codePurchasePaymentElement.mount('#code-card-element');
             }
+
+            // Initialize with the default selected quantity's price
+            var initialCodePrice = $('#code-quantity-select option:selected').data('price');
+            if (initialCodePrice) {
+                initCodePurchasePaymentElement(initialCodePrice);
+            }
+
+            // Re-initialize when quantity changes
+            $('#code-quantity-select').on('change', function() {
+                var price = $(this).find('option:selected').data('price');
+                if (price) {
+                    initCodePurchasePaymentElement(price);
+                }
+            });
             
             // Toggle payment method display for code purchase
             $('input[name="code_payment_method"]').on('change', function() {
@@ -1732,13 +1748,26 @@ class IELTS_CM_Access_Codes {
                     alert('Please fill in all fields');
                     return;
                 }
+
+                if (!codePurchaseElements) {
+                    alert('Payment form is not ready. Please wait a moment and try again.');
+                    return;
+                }
                 
                 var $button = $(this);
                 var $message = $('#code-purchase-message');
                 
                 $button.prop('disabled', true).text('Processing...');
                 $message.html('');
-                
+
+                // Validate payment details before creating the payment intent
+                codePurchaseElements.submit().then(function(submitResult) {
+                    if (submitResult.error) {
+                        $message.html('<div class="iw-msg error">' + submitResult.error.message + '</div>');
+                        $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
+                        return;
+                    }
+
                 // Create payment intent on server
                 $.ajax({
                     url: '<?php echo admin_url('admin-ajax.php'); ?>',
@@ -1754,10 +1783,13 @@ class IELTS_CM_Access_Codes {
                     success: function(response) {
                         if (response.success) {
                             // Confirm payment with Stripe
-                            stripeForCodePurchase.confirmCardPayment(response.data.client_secret, {
-                                payment_method: {
-                                    card: codePurchaseCardElement
-                                }
+                            stripeForCodePurchase.confirmPayment({
+                                elements: codePurchaseElements,
+                                clientSecret: response.data.client_secret,
+                                confirmParams: {
+                                    return_url: window.location.href
+                                },
+                                redirect: 'if_required'
                             }).then(function(result) {
                                 if (result.error) {
                                     $message.html('<div class="iw-msg error">' + result.error.message + '</div>');
@@ -1834,6 +1866,7 @@ class IELTS_CM_Access_Codes {
                         $button.prop('disabled', false).text('Complete Payment & Purchase Codes');
                     }
                 });
+                }); // end codePurchaseElements.submit().then()
             });
             <?php endif; ?>
             
