@@ -1276,8 +1276,8 @@ class IELTS_CM_Stripe_Payment {
             return;
         }
         
-        // Verify course group is valid
-        $valid_groups = array('academic_module', 'general_module', 'general_english', 'entry_test');
+        // Verify course group is valid ('any' is valid for universal access codes)
+        $valid_groups = array('academic_module', 'general_module', 'general_english', 'entry_test', 'any');
         if (!in_array($course_group, $valid_groups)) {
             wp_send_json_error(array('message' => 'Invalid course group'));
             return;
