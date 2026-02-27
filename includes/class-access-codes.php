@@ -1124,7 +1124,7 @@ class IELTS_CM_Access_Codes {
         <div class="iw-dashboard">
             <?php 
             $remaining_places = $is_hybrid_mode ? 999999 : ($max_students - $active_count);
-            $master_code = $this->get_master_code($partner_org_id);
+            $master_code = $is_hybrid_mode ? false : $this->get_master_code($partner_org_id);
             ?>
             <?php if (!$is_hybrid_mode): ?>
             <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo esc_html($active_count); ?> / <?php echo esc_html($max_students); ?></p>
@@ -1132,6 +1132,7 @@ class IELTS_CM_Access_Codes {
             <p style="margin-bottom: 15px;"><strong>Active Students:</strong> <?php echo esc_html($active_count); ?></p>
             <?php endif; ?>
 
+            <?php if (!$is_hybrid_mode): ?>
             <div class="iw-card expanded" style="border-color: #2271b1;">
                 <div class="iw-card-header" style="background: #f0f6ff;">
                     <h2>&#128273; Master Access Code</h2>
@@ -1162,6 +1163,7 @@ class IELTS_CM_Access_Codes {
                     <?php endif; ?>
                 </div>
             </div>
+            <?php endif; ?>
 
             <?php if ($is_hybrid_mode): 
                 // Check if payment methods are enabled
