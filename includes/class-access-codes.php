@@ -1316,6 +1316,17 @@ class IELTS_CM_Access_Codes {
                                 <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
                             </tr>
                             <tr>
+                                <th>Course Group:</th>
+                                <td>
+                                    <select name="course_group" required>
+                                        <?php foreach ($this->course_groups as $key => $label): ?>
+                                            <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
+                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
                                 <th>Send copy to me:</th>
                                 <td>
                                     <label>
@@ -2421,8 +2432,13 @@ class IELTS_CM_Access_Codes {
         $first_name = sanitize_text_field($_POST['first_name']);
         $last_name = sanitize_text_field($_POST['last_name']);
         $days = absint($_POST['days']);
-        $course_group = 'any';
+        $course_group = sanitize_text_field($_POST['course_group']);
         $send_copy_to_partner = isset($_POST['send_copy_to_partner']) && $_POST['send_copy_to_partner'] === '1';
+        
+        // Validate course group first to fail fast on invalid input
+        if (!array_key_exists($course_group, $this->course_groups)) {
+            wp_send_json_error(array('message' => 'Invalid course group'));
+        }
         
         if (!is_email($email)) {
             wp_send_json_error(array('message' => 'Invalid email'));
