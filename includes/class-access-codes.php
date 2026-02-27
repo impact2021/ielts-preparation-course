@@ -104,6 +104,7 @@ class IELTS_CM_Access_Codes {
         add_action('wp_ajax_iw_purchase_codes', array($this, 'ajax_purchase_codes'));
         add_action('wp_ajax_ielts_cm_create_paypal_code_order', array($this, 'ajax_create_paypal_code_order'));
         add_action('wp_ajax_ielts_cm_capture_paypal_code_order', array($this, 'ajax_capture_paypal_code_order'));
+        add_action('wp_ajax_iw_roll_master_code', array($this, 'ajax_roll_master_code'));
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
@@ -1123,13 +1124,45 @@ class IELTS_CM_Access_Codes {
         <div class="iw-dashboard">
             <?php 
             $remaining_places = $is_hybrid_mode ? 999999 : ($max_students - $active_count);
+            $master_code = $this->get_master_code($partner_org_id);
             ?>
             <?php if (!$is_hybrid_mode): ?>
             <p style="margin-bottom: 15px;"><strong>Students:</strong> <?php echo esc_html($active_count); ?> / <?php echo esc_html($max_students); ?></p>
             <?php else: ?>
             <p style="margin-bottom: 15px;"><strong>Active Students:</strong> <?php echo esc_html($active_count); ?></p>
             <?php endif; ?>
-            
+
+            <div class="iw-card expanded" style="border-color: #2271b1;">
+                <div class="iw-card-header" style="background: #f0f6ff;">
+                    <h2>&#128273; Master Access Code</h2>
+                </div>
+                <div class="iw-card-body" style="background: #f0f6ff;">
+                    <p style="background: #fff3cd; border: 1px solid #ffc107; padding: 12px; border-radius: 4px; margin-top: 0;">
+                        <strong>&#9888; Important:</strong> This master code can be used an <strong>unlimited number of times</strong>. Share it carefully &mdash; anyone with this code can create an account and choose their own course. If you need to disable access, use the <strong>Roll Master Code</strong> button below to generate a new code (the old code will instantly stop working).
+                    </p>
+                    <?php if ($master_code): ?>
+                    <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding: 15px; background: white; border: 2px solid #2271b1; border-radius: 4px; flex-wrap: wrap;">
+                        <div>
+                            <label style="display: block; font-size: 0.85em; color: #666; margin-bottom: 4px;">Current Master Code:</label>
+                            <code id="master-code-display" style="font-size: 1.4em; font-weight: bold; letter-spacing: 2px;"><?php echo esc_html($master_code); ?></code>
+                        </div>
+                        <button class="iw-btn" type="button" onclick="var c=document.getElementById('master-code-display').textContent;navigator.clipboard.writeText(c).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},2000);}.bind(this));">Copy</button>
+                    </div>
+                    <?php else: ?>
+                    <p>No master code exists yet. Click the button below to generate one.</p>
+                    <?php endif; ?>
+                    <div id="master-code-msg"></div>
+                    <button class="iw-btn <?php echo $master_code ? 'iw-btn-danger' : ''; ?>" type="button" id="roll-master-code-btn" onclick="IWDashboard.rollMasterCode()">
+                        <?php echo $master_code ? '&#128260; Roll Master Code (Generate New)' : 'Generate Master Code'; ?>
+                    </button>
+                    <?php if ($master_code): ?>
+                    <p style="font-size: 0.85em; color: #666; margin-top: 8px; margin-bottom: 0;">
+                        Rolling will <strong>immediately invalidate</strong> the current code. Students who have already registered will not be affected.
+                    </p>
+                    <?php endif; ?>
+                </div>
+            </div>
+
             <?php if ($is_hybrid_mode): 
                 // Check if payment methods are enabled
                 $stripe_enabled = get_option('ielts_cm_stripe_enabled', false);
@@ -1174,17 +1207,6 @@ class IELTS_CM_Access_Codes {
                                         }
                                     }
                                     ?>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Course Group:</th>
-                            <td>
-                                <select id="code-course-group" required style="width: 100%;">
-                                    <?php foreach ($this->course_groups as $key => $label): ?>
-                                        <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
-                                        <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
-                                    <?php endforeach; ?>
                                 </select>
                             </td>
                         </tr>
@@ -1254,17 +1276,6 @@ class IELTS_CM_Access_Codes {
                                 </td>
                             </tr>
                             <tr>
-                                <th>Course Group:</th>
-                                <td>
-                                    <select name="course_group" required>
-                                        <?php foreach ($this->course_groups as $key => $label): ?>
-                                            <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
-                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
                                 <th>Access Days:</th>
                                 <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
                             </tr>
@@ -1303,17 +1314,6 @@ class IELTS_CM_Access_Codes {
                             <tr>
                                 <th>Access Days:</th>
                                 <td><input type="number" name="days" value="<?php echo get_option('iw_default_invite_days', 365); ?>" min="1" required></td>
-                            </tr>
-                            <tr>
-                                <th>Course Group:</th>
-                                <td>
-                                    <select name="course_group" required>
-                                        <?php foreach ($this->course_groups as $key => $label): ?>
-                                            <?php if ($key === 'entry_test' && !get_option('ielts_cm_entry_test_enabled', false)) continue; ?>
-                                            <option value="<?php echo esc_attr($key); ?>"><?php echo esc_html($label); ?></option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                </td>
                             </tr>
                             <tr>
                                 <th>Send copy to me:</th>
@@ -1373,6 +1373,31 @@ class IELTS_CM_Access_Codes {
             revokeNonce: '<?php echo wp_create_nonce('iw_revoke_student'); ?>',
             editNonce: '<?php echo wp_create_nonce('iw_edit_student'); ?>',
             resendNonce: '<?php echo wp_create_nonce('iw_resend_welcome'); ?>',
+            rollMasterNonce: '<?php echo wp_create_nonce('iw_roll_master_code'); ?>',
+            hasMasterCode: <?php echo $master_code ? 'true' : 'false'; ?>,
+            
+            rollMasterCode: function() {
+                var $msg = jQuery('#master-code-msg');
+                if (IWDashboard.hasMasterCode) {
+                    if (!confirm('WARNING: Rolling the master code will IMMEDIATELY invalidate the current code. Anyone who has not yet registered with the old code will no longer be able to use it.\n\nAre you sure you want to generate a new master code?')) {
+                        return;
+                    }
+                }
+                $msg.html('<div class="iw-msg">Generating new master code...</div>');
+                jQuery('#roll-master-code-btn').prop('disabled', true);
+                jQuery.post('<?php echo admin_url('admin-ajax.php'); ?>', {
+                    action: 'iw_roll_master_code',
+                    nonce: IWDashboard.rollMasterNonce
+                }, function(response) {
+                    if (response.success) {
+                        $msg.html('<div class="iw-msg success">' + response.data.message + '</div>');
+                        setTimeout(function() { location.reload(); }, 1500);
+                    } else {
+                        $msg.html('<div class="iw-msg error">' + response.data.message + '</div>');
+                        jQuery('#roll-master-code-btn').prop('disabled', false);
+                    }
+                });
+            },
             
             filterCodes: function(status) {
                 jQuery('.iw-filter-btn').removeClass('active');
@@ -1724,12 +1749,11 @@ class IELTS_CM_Access_Codes {
                 e.preventDefault();
                 
                 var quantity = $('#code-quantity-select').val();
-                var courseGroup = $('#code-course-group').val();
                 var accessDays = 30; // Fixed 30-day access for hybrid sites
                 var price = $('#code-quantity-select option:selected').data('price');
                 
-                if (!quantity || !courseGroup) {
-                    alert('Please fill in all fields');
+                if (!quantity) {
+                    alert('Please select the number of codes');
                     return;
                 }
                 
@@ -1746,7 +1770,7 @@ class IELTS_CM_Access_Codes {
                     data: {
                         action: 'ielts_cm_create_code_purchase_payment_intent',
                         quantity: quantity,
-                        course_group: courseGroup,
+                        course_group: 'any',
                         access_days: accessDays,
                         price: price,
                         nonce: '<?php echo wp_create_nonce('ielts_cm_code_purchase_payment'); ?>'
@@ -1846,12 +1870,11 @@ class IELTS_CM_Access_Codes {
                 paypal.Buttons({
                     createOrder: function(data, actions) {
                         var quantity = $('#code-quantity-select').val();
-                        var courseGroup = $('#code-course-group').val();
                         var accessDays = 30; // Fixed 30-day access for hybrid sites
                         var price = $('#code-quantity-select option:selected').data('price');
                         
-                        if (!quantity || !courseGroup) {
-                            $('#code-purchase-message').html('<div class="iw-msg error">Please fill in all fields</div>');
+                        if (!quantity) {
+                            $('#code-purchase-message').html('<div class="iw-msg error">Please select the number of codes</div>');
                             return actions.reject();
                         }
                         
@@ -1866,7 +1889,7 @@ class IELTS_CM_Access_Codes {
                             body: new URLSearchParams({
                                 action: 'ielts_cm_create_paypal_code_order',
                                 quantity: quantity,
-                                course_group: courseGroup,
+                                course_group: 'any',
                                 access_days: accessDays,
                                 price: price,
                                 nonce: '<?php echo wp_create_nonce('ielts_cm_paypal_code_purchase'); ?>'
@@ -2035,13 +2058,13 @@ class IELTS_CM_Access_Codes {
             if ($partner_org_id == self::ADMIN_ORG_ID) {
                 // Site admin - see all codes
                 $codes = $wpdb->get_results($wpdb->prepare(
-                    "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+                    "SELECT * FROM $table WHERE status != 'master' ORDER BY created_date DESC LIMIT %d",
                     self::CODES_TABLE_LIMIT
                 ));
             } else {
                 // Partner admin - see only codes from their organization
                 $codes = $wpdb->get_results($wpdb->prepare(
-                    "SELECT * FROM $table WHERE created_by = %d ORDER BY created_date DESC LIMIT %d",
+                    "SELECT * FROM $table WHERE created_by = %d AND status != 'master' ORDER BY created_date DESC LIMIT %d",
                     $partner_org_id,
                     self::CODES_TABLE_LIMIT
                 ));
@@ -2050,7 +2073,7 @@ class IELTS_CM_Access_Codes {
             // NON-HYBRID MODE: All partner admins see all codes
             // This maintains backward compatibility for non-hybrid sites
             $codes = $wpdb->get_results($wpdb->prepare(
-                "SELECT * FROM $table ORDER BY created_date DESC LIMIT %d",
+                "SELECT * FROM $table WHERE status != 'master' ORDER BY created_date DESC LIMIT %d",
                 self::CODES_TABLE_LIMIT
             ));
         }
@@ -2332,7 +2355,7 @@ class IELTS_CM_Access_Codes {
         }
         
         $quantity = absint($_POST['quantity']);
-        $course_group = sanitize_text_field($_POST['course_group']);
+        $course_group = 'any';
         $days = absint($_POST['days']);
         
         // Check remaining places based on tier level
@@ -2354,10 +2377,6 @@ class IELTS_CM_Access_Codes {
                 absint($max_students),
                 absint($active_count)
             )));
-        }
-        
-        if (!array_key_exists($course_group, $this->course_groups)) {
-            wp_send_json_error(array('message' => 'Invalid course group'));
         }
         
         global $wpdb;
@@ -2395,7 +2414,7 @@ class IELTS_CM_Access_Codes {
         $first_name = sanitize_text_field($_POST['first_name']);
         $last_name = sanitize_text_field($_POST['last_name']);
         $days = absint($_POST['days']);
-        $course_group = sanitize_text_field($_POST['course_group']);
+        $course_group = 'any';
         $send_copy_to_partner = isset($_POST['send_copy_to_partner']) && $_POST['send_copy_to_partner'] === '1';
         
         if (!is_email($email)) {
@@ -2661,16 +2680,12 @@ class IELTS_CM_Access_Codes {
         }
         
         $quantity = absint($_POST['quantity']);
-        $course_group = sanitize_text_field($_POST['course_group']);
+        $course_group = 'any';
         $days = absint($_POST['days']);
         
         // Validate inputs
         if (!in_array($quantity, array(50, 100, 200, 300))) {
             wp_send_json_error(array('message' => 'Invalid quantity selected'));
-        }
-        
-        if (!array_key_exists($course_group, $this->course_groups)) {
-            wp_send_json_error(array('message' => 'Invalid course group'));
         }
         
         if ($days < 1) {
@@ -2774,6 +2789,70 @@ class IELTS_CM_Access_Codes {
     }
     
     /**
+     * Get the current master code for a partner org
+     * 
+     * @param int $partner_org_id Partner organization ID
+     * @return string|false The master code or false if none exists
+     */
+    private function get_master_code($partner_org_id) {
+        global $wpdb;
+        $table = $wpdb->prefix . 'ielts_cm_access_codes';
+        $code = $wpdb->get_var($wpdb->prepare(
+            "SELECT code FROM $table WHERE status = 'master' AND created_by = %d ORDER BY id DESC LIMIT 1",
+            $partner_org_id
+        ));
+        return $code ? $code : false;
+    }
+    
+    /**
+     * AJAX handler to roll (regenerate) the master access code
+     */
+    public function ajax_roll_master_code() {
+        check_ajax_referer('iw_roll_master_code', 'nonce');
+        
+        if (!current_user_can('manage_partner_invites') && !current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Unauthorized'));
+            return;
+        }
+        
+        global $wpdb;
+        $table = $wpdb->prefix . 'ielts_cm_access_codes';
+        $partner_org_id = $this->get_partner_org_id();
+        
+        // Deactivate any existing master codes for this org
+        $wpdb->update(
+            $table,
+            array('status' => 'expired'),
+            array('status' => 'master', 'created_by' => $partner_org_id),
+            array('%s'),
+            array('%s', '%d')
+        );
+        
+        // Generate new master code
+        $new_code = $this->generate_unique_code();
+        $duration_days = intval(get_option('iw_default_invite_days', 365));
+        
+        $result = $wpdb->insert($table, array(
+            'code' => $new_code,
+            'course_group' => 'any',
+            'duration_days' => $duration_days,
+            'status' => 'master',
+            'created_by' => $partner_org_id,
+            'created_date' => current_time('mysql')
+        ));
+        
+        if ($result === false) {
+            wp_send_json_error(array('message' => 'Failed to generate master code. Please try again.'));
+            return;
+        }
+        
+        wp_send_json_success(array(
+            'message' => 'New master code generated: ' . $new_code,
+            'code' => $new_code
+        ));
+    }
+    
+    /**
      * Enroll user in courses based on their course group
      * Public method so it can be called from admin enrollment process
      * 
@@ -2810,6 +2889,23 @@ class IELTS_CM_Access_Codes {
             case 'entry_test':
                 $category_slugs = array('entry-test');
                 break;
+            case 'any':
+                // Enroll in all published courses
+                $all_course_ids = get_posts(array(
+                    'post_type' => 'ielts_course',
+                    'posts_per_page' => -1,
+                    'post_status' => 'publish',
+                    'fields' => 'ids'
+                ));
+                if (!empty($all_course_ids)) {
+                    require_once IELTS_CM_PLUGIN_DIR . 'includes/class-enrollment.php';
+                    $enrollment = new IELTS_CM_Enrollment();
+                    $expiry_date = get_user_meta($user_id, 'iw_membership_expiry', true);
+                    foreach ($all_course_ids as $course_id) {
+                        $enrollment->enroll($user_id, $course_id, 'active', $expiry_date);
+                    }
+                }
+                return;
         }
         
         // Query courses by category slugs
@@ -2910,7 +3006,18 @@ class IELTS_CM_Access_Codes {
             'entry_test' => 'access_entry_test'
         );
         
-        if (isset($role_mapping[$course_group])) {
+        if ($course_group === 'any') {
+            // Assign all access code roles so is_enrolled checks pass for any course
+            update_user_meta($user_id, '_ielts_cm_membership_type', 'access_academic_module');
+            update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            $user = get_userdata($user_id);
+            if ($user) {
+                foreach (self::ACCESS_CODE_MEMBERSHIP_TYPES as $role_slug => $role_name) {
+                    $user->add_role($role_slug);
+                }
+            }
+        } elseif (isset($role_mapping[$course_group])) {
             $membership_type = $role_mapping[$course_group];
             
             // Set membership type meta (used by is_enrolled check)
@@ -3038,6 +3145,11 @@ class IELTS_CM_Access_Codes {
      * Get display name for course group, including legacy values
      */
     private function get_course_group_display_name($group) {
+        // Special values
+        if ($group === 'any') {
+            return 'Any Course (Student Selects)';
+        }
+        
         // Legacy course group names for backward compatibility
         $legacy_groups = array(
             'academic_english' => 'IELTS Academic + English (Legacy)',
@@ -3093,7 +3205,7 @@ class IELTS_CM_Access_Codes {
         error_log("IELTS PayPal: Creating PayPal order for user $user_id");
         
         $quantity = intval($_POST['quantity']);
-        $course_group = sanitize_text_field($_POST['course_group']);
+        $course_group = 'any';
         // Fixed 30-day access for hybrid sites (validated above - this function only runs on hybrid sites)
         $access_days = 30;
         $price = floatval($_POST['price']);
@@ -3101,12 +3213,6 @@ class IELTS_CM_Access_Codes {
         // Validate inputs
         if ($quantity <= 0 || $price <= 0) {
             wp_send_json_error(array('message' => 'Invalid purchase parameters'));
-            return;
-        }
-        
-        // Verify course group is valid
-        if (!array_key_exists($course_group, $this->course_groups)) {
-            wp_send_json_error(array('message' => 'Invalid course group'));
             return;
         }
         

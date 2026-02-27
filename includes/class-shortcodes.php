@@ -4316,6 +4316,7 @@ class IELTS_CM_Shortcodes {
                 $password = isset($_POST['ielts_password']) ? $_POST['ielts_password'] : '';
                 $password_confirm = isset($_POST['ielts_password_confirm']) ? $_POST['ielts_password_confirm'] : '';
                 $access_code = isset($_POST['ielts_access_code']) ? strtoupper(sanitize_text_field($_POST['ielts_access_code'])) : '';
+                $selected_course_group = isset($_POST['ielts_course_group']) ? sanitize_text_field($_POST['ielts_course_group']) : '';
                 
                 // Validate name fields
                 if (empty($first_name)) {
@@ -4347,11 +4348,11 @@ class IELTS_CM_Shortcodes {
                 if (empty($access_code)) {
                     $errors[] = __('Access code is required.', 'ielts-course-manager');
                 } else {
-                    // Check if access code exists and is valid
+                    // Check if access code exists and is valid (accept both active and master codes)
                     global $wpdb;
                     $table = $wpdb->prefix . 'ielts_cm_access_codes';
                     $code_data = $wpdb->get_row($wpdb->prepare(
-                        "SELECT * FROM $table WHERE code = %s AND status = 'active'",
+                        "SELECT * FROM $table WHERE code = %s AND status IN ('active', 'master')",
                         $access_code
                     ));
                     
@@ -4359,6 +4360,12 @@ class IELTS_CM_Shortcodes {
                         $errors[] = __('Invalid or already used access code.', 'ielts-course-manager');
                     } elseif (!empty($code_data->expiry_date) && strtotime($code_data->expiry_date) < time()) {
                         $errors[] = __('This access code has expired.', 'ielts-course-manager');
+                    } elseif (in_array($code_data->course_group, array('any', 'master'), true)) {
+                        // Code is valid for any course - student must select one
+                        $valid_groups = array('academic_module', 'general_module', 'general_english', 'entry_test');
+                        if (empty($selected_course_group) || !in_array($selected_course_group, $valid_groups, true)) {
+                            $errors[] = __('Please select your course access.', 'ielts-course-manager');
+                        }
                     }
                 }
                 
@@ -4406,7 +4413,12 @@ class IELTS_CM_Shortcodes {
                         ));
                         
                         // Apply access code benefits
-                        $course_group = $code_data->course_group;
+                        // For 'any'/'master' codes, use the student's selected course group
+                        if (in_array($code_data->course_group, array('any', 'master'), true) && !empty($selected_course_group)) {
+                            $course_group = $selected_course_group;
+                        } else {
+                            $course_group = $code_data->course_group;
+                        }
                         $duration_days = $code_data->duration_days;
                         $expiry_date = date('Y-m-d H:i:s', strtotime("+{$duration_days} days"));
                         
@@ -4414,7 +4426,7 @@ class IELTS_CM_Shortcodes {
                         if (class_exists('IELTS_CM_Access_Codes')) {
                             $access_codes = new IELTS_CM_Access_Codes();
                             
-                            // Set membership using the private method via reflection or directly set the meta
+                            // Set membership type meta and role
                             update_user_meta($user_id, 'iw_course_group', $course_group);
                             update_user_meta($user_id, 'iw_membership_expiry', $expiry_date);
                             update_user_meta($user_id, 'iw_membership_status', 'active');
@@ -4423,7 +4435,8 @@ class IELTS_CM_Shortcodes {
                             $role_mapping = array(
                                 'academic_module' => 'access_academic_module',
                                 'general_module' => 'access_general_module',
-                                'general_english' => 'access_general_english'
+                                'general_english' => 'access_general_english',
+                                'entry_test' => 'access_entry_test'
                             );
                             
                             if (isset($role_mapping[$course_group])) {
@@ -4445,16 +4458,18 @@ class IELTS_CM_Shortcodes {
                             $access_codes->enroll_user_in_courses($user_id, $course_group);
                         }
                         
-                        // Mark access code as used
-                        $wpdb->update(
-                            $table,
-                            array(
-                                'status' => 'used',
-                                'used_by' => $user_id,
-                                'used_date' => current_time('mysql')
-                            ),
-                            array('id' => $code_data->id)
-                        );
+                        // Mark access code as used (but NOT for master codes - they can be reused)
+                        if ($code_data->status !== 'master') {
+                            $wpdb->update(
+                                $table,
+                                array(
+                                    'status' => 'used',
+                                    'used_by' => $user_id,
+                                    'used_date' => current_time('mysql')
+                                ),
+                                array('id' => $code_data->id)
+                            );
+                        }
                         
                         // Store who created this user (from the code creator)
                         update_user_meta($user_id, 'iw_created_by_partner', $code_data->created_by);
@@ -4550,6 +4565,21 @@ class IELTS_CM_Shortcodes {
                                    placeholder="<?php esc_attr_e('Re-enter password', 'ielts-course-manager'); ?>">
                         </div>
                     </div>
+                </div>
+                
+                <!-- Course Selection - shown for all codes (required for 'any' access codes) -->
+                <div class="form-field form-field-full" style="margin-top: 20px; padding: 20px; background: #f0f6ff; border: 1px solid #2271b1; border-radius: 6px;">
+                    <label for="ielts_course_group" style="font-weight: 600; font-size: 1.05em;"><?php _e('Select Your Course Access', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                    <select name="ielts_course_group" id="ielts_course_group" class="ielts-form-input" style="margin-top: 8px; width: 100%;">
+                        <option value=""><?php _e('-- Select your course --', 'ielts-course-manager'); ?></option>
+                        <option value="academic_module" <?php selected(isset($_POST['ielts_course_group']) ? $_POST['ielts_course_group'] : '', 'academic_module'); ?>><?php _e('Academic IELTS', 'ielts-course-manager'); ?></option>
+                        <option value="general_module" <?php selected(isset($_POST['ielts_course_group']) ? $_POST['ielts_course_group'] : '', 'general_module'); ?>><?php _e('General Training IELTS', 'ielts-course-manager'); ?></option>
+                        <option value="general_english" <?php selected(isset($_POST['ielts_course_group']) ? $_POST['ielts_course_group'] : '', 'general_english'); ?>><?php _e('General English', 'ielts-course-manager'); ?></option>
+                        <?php if (get_option('ielts_cm_entry_test_enabled', false)): ?>
+                        <option value="entry_test" <?php selected(isset($_POST['ielts_course_group']) ? $_POST['ielts_course_group'] : '', 'entry_test'); ?>><?php _e('Entry Test', 'ielts-course-manager'); ?></option>
+                        <?php endif; ?>
+                    </select>
+                    <small class="form-help"><?php _e('Choose the course you wish to access with your code.', 'ielts-course-manager'); ?></small>
                 </div>
                 
                 <div class="form-field form-field-full form-submit">
