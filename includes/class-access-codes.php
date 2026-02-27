@@ -1146,7 +1146,7 @@ class IELTS_CM_Access_Codes {
                             <label style="display: block; font-size: 0.85em; color: #666; margin-bottom: 4px;">Current Master Code:</label>
                             <code id="master-code-display" style="font-size: 1.4em; font-weight: bold; letter-spacing: 2px;"><?php echo esc_html($master_code); ?></code>
                         </div>
-                        <button class="iw-btn" type="button" onclick="var c=document.getElementById('master-code-display').textContent;navigator.clipboard.writeText(c).then(function(){var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy';},2000);}.bind(this));">Copy</button>
+                        <button class="iw-btn" type="button" onclick="IWDashboard.copyMasterCode(this)">Copy</button>
                     </div>
                     <?php else: ?>
                     <p>No master code exists yet. Click the button below to generate one.</p>
@@ -1376,8 +1376,15 @@ class IELTS_CM_Access_Codes {
             rollMasterNonce: '<?php echo wp_create_nonce('iw_roll_master_code'); ?>',
             hasMasterCode: <?php echo $master_code ? 'true' : 'false'; ?>,
             
-            rollMasterCode: function() {
-                var $msg = jQuery('#master-code-msg');
+            copyMasterCode: function(btn) {
+                var code = document.getElementById('master-code-display').textContent;
+                navigator.clipboard.writeText(code).then(function() {
+                    btn.textContent = 'Copied!';
+                    setTimeout(function() { btn.textContent = 'Copy'; }, 2000);
+                });
+            },
+            
+            rollMasterCode: function() {                var $msg = jQuery('#master-code-msg');
                 if (IWDashboard.hasMasterCode) {
                     if (!confirm('WARNING: Rolling the master code will IMMEDIATELY invalidate the current code. Anyone who has not yet registered with the old code will no longer be able to use it.\n\nAre you sure you want to generate a new master code?')) {
                         return;

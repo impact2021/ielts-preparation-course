@@ -4360,7 +4360,7 @@ class IELTS_CM_Shortcodes {
                         $errors[] = __('Invalid or already used access code.', 'ielts-course-manager');
                     } elseif (!empty($code_data->expiry_date) && strtotime($code_data->expiry_date) < time()) {
                         $errors[] = __('This access code has expired.', 'ielts-course-manager');
-                    } elseif (in_array($code_data->course_group, array('any', 'master'), true)) {
+                    } elseif ($code_data->course_group === 'any') {
                         // Code is valid for any course - student must select one
                         $valid_groups = array('academic_module', 'general_module', 'general_english', 'entry_test');
                         if (empty($selected_course_group) || !in_array($selected_course_group, $valid_groups, true)) {
@@ -4413,8 +4413,8 @@ class IELTS_CM_Shortcodes {
                         ));
                         
                         // Apply access code benefits
-                        // For 'any'/'master' codes, use the student's selected course group
-                        if (in_array($code_data->course_group, array('any', 'master'), true) && !empty($selected_course_group)) {
+                        // For 'any' codes (including master codes which have course_group='any'), use the student's selected course group
+                        if ($code_data->course_group === 'any' && !empty($selected_course_group)) {
                             $course_group = $selected_course_group;
                         } else {
                             $course_group = $code_data->course_group;
