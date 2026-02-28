@@ -92,6 +92,16 @@ class IELTS_CM_Frontend {
     }
     
     /**
+     * Get custom password reset page URL from settings.
+     * Returns empty string if not configured (caller should fall back to WP default).
+     *
+     * @return string Password reset page URL, or empty string if not configured.
+     */
+    public static function get_custom_password_reset_url() {
+        return get_option('ielts_cm_password_reset_page_url', '');
+    }
+
+    /**
      * Get custom login URL from settings
      * Falls back to /membership-login/ if not set
      * 

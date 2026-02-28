@@ -5324,6 +5324,11 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
             'default' => false,
             'sanitize_callback' => 'rest_sanitize_boolean'
         ));
+        register_setting('ielts_cm_settings', 'ielts_cm_password_reset_page_url', array(
+            'type' => 'string',
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw'
+        ));
     }
     
     /**
@@ -5365,14 +5370,20 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
             if (isset($_POST['ielts_cm_vocab_header_color'])) {
                 update_option('ielts_cm_vocab_header_color', sanitize_hex_color($_POST['ielts_cm_vocab_header_color']));
             }
+
+            // Save custom password reset page URL.
+            if (isset($_POST['ielts_cm_password_reset_page_url'])) {
+                update_option('ielts_cm_password_reset_page_url', esc_url_raw($_POST['ielts_cm_password_reset_page_url']));
+            }
             
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
         
-        $delete_data_on_uninstall = get_option('ielts_cm_delete_data_on_uninstall', false);
-        $membership_enabled = get_option('ielts_cm_membership_enabled', false);
-        $access_code_enabled = get_option('ielts_cm_access_code_enabled', false);
-        $hybrid_site_enabled = get_option('ielts_cm_hybrid_site_enabled', false);
+        $delete_data_on_uninstall    = get_option('ielts_cm_delete_data_on_uninstall', false);
+        $membership_enabled          = get_option('ielts_cm_membership_enabled', false);
+        $access_code_enabled         = get_option('ielts_cm_access_code_enabled', false);
+        $hybrid_site_enabled         = get_option('ielts_cm_hybrid_site_enabled', false);
+        $password_reset_page_url     = get_option('ielts_cm_password_reset_page_url', '');
         
         // Determine which site type is currently selected
         $current_site_type = 'none';
@@ -5462,6 +5473,19 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                                 <input type="text" id="ielts_cm_vocab_header_color" name="ielts_cm_vocab_header_color" value="<?php echo esc_attr($vocab_header_color); ?>" class="ielts-cm-color-picker" data-default-color="#E56C0A">
                                 <p class="description">
                                     <?php _e('Set the primary color for your site. This is used for vocabulary table headers, band scores table headers, and will be used in additional places later.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Password Reset Page URL', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <input type="url" name="ielts_cm_password_reset_page_url" value="<?php echo esc_attr($password_reset_page_url); ?>" class="regular-text" placeholder="https://yoursite.com/reset-password/">
+                                <p class="description">
+                                    <?php _e('URL of the page containing the <code>[ielts_reset_password]</code> shortcode. When set, password reset emails and the "Lost your password?" link will direct users to this page instead of the WordPress default login screen. Leave blank to keep the WordPress default behaviour.', 'ielts-course-manager'); ?>
                                 </p>
                             </fieldset>
                         </td>
