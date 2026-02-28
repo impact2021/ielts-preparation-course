@@ -41,8 +41,28 @@ body.ielts-resource-single .content-area {
             $resource_id = $resource->ID;
             
             // Get lesson ID
+            // If a lesson_id URL parameter was passed (e.g. from a lesson page that uses this resource
+            // in multiple courses), use that to resolve the correct course for access checking.
+            $requested_lesson_id = filter_input(INPUT_GET, 'lesson_id', FILTER_VALIDATE_INT);
+            if (!$requested_lesson_id) {
+                $requested_lesson_id = 0;
+            }
             $lesson_id = get_post_meta($resource_id, '_ielts_cm_lesson_id', true);
-            
+
+            if ($requested_lesson_id) {
+                // Validate: the requested lesson must actually be linked to this resource.
+                $linked_lesson_ids = get_post_meta($resource_id, '_ielts_cm_lesson_ids', true);
+                if (!is_array($linked_lesson_ids)) {
+                    $linked_lesson_ids = $lesson_id ? array($lesson_id) : array();
+                }
+                // Also accept the single-value meta in case _ielts_cm_lesson_ids is not populated.
+                $linked_lesson_ids = array_map('intval', $linked_lesson_ids);
+                if (in_array($requested_lesson_id, $linked_lesson_ids, true)
+                    || intval($lesson_id) === $requested_lesson_id) {
+                    $lesson_id = $requested_lesson_id;
+                }
+            }
+
             // Get course ID from lesson
             $course_id = null;
             if ($lesson_id) {

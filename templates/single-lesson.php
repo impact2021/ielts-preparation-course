@@ -226,6 +226,10 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                     // For CBT quizzes with popup enabled, link should go to fullscreen mode
                                     if ($item_type === 'quiz' && isset($use_fullscreen) && $use_fullscreen) {
                                         $quiz_url = add_query_arg('fullscreen', '1', get_permalink($post_item->ID));
+                                    } elseif ($item_type === 'resource') {
+                                        // Pass lesson_id so the resource page can resolve the correct course for access checks
+                                        // (resources can be shared across lessons in different courses)
+                                        $quiz_url = add_query_arg('lesson_id', $lesson->ID, get_permalink($post_item->ID));
                                     } else {
                                         $quiz_url = get_permalink($post_item->ID);
                                     }
@@ -280,7 +284,13 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                         <?php echo isset($best_result) && $best_result ? __('Retake (Fullscreen)', 'ielts-course-manager') : __('Start CBT Exercise', 'ielts-course-manager'); ?>
                                     </a>
                                 <?php else: ?>
-                                    <a href="<?php echo get_permalink($post_item->ID); ?>" class="button button-primary button-small">
+                                    <?php
+                                    // For resources, include lesson_id so the resource page resolves the correct course
+                                    $action_url = ($item_type === 'resource')
+                                        ? add_query_arg('lesson_id', $lesson->ID, get_permalink($post_item->ID))
+                                        : get_permalink($post_item->ID);
+                                    ?>
+                                    <a href="<?php echo esc_url($action_url); ?>" class="button button-primary button-small">
                                         <?php 
                                         if ($item_type === 'quiz') {
                                             echo isset($best_result) && $best_result ? __('Retake', 'ielts-course-manager') : __('Take Exercise', 'ielts-course-manager');
