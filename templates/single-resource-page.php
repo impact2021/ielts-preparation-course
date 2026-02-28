@@ -756,7 +756,11 @@ body.ielts-resource-single .content-area {
                                     }
                                     $prev_label = __('Previous Exercise', 'ielts-course-manager');
                                 } else {
-                                    $prev_url = get_permalink($prev_item['post']->ID);
+                                    // Pass lesson_id so the resource page resolves the correct course for access checks
+                                    // (resources can be shared across lessons in different courses)
+                                    $prev_url = $lesson_id
+                                        ? add_query_arg('lesson_id', $lesson_id, get_permalink($prev_item['post']->ID))
+                                        : get_permalink($prev_item['post']->ID);
                                     $prev_label = __('Previous', 'ielts-course-manager');
                                 }
                                 ?>
@@ -805,7 +809,11 @@ body.ielts-resource-single .content-area {
                                     }
                                     $next_label = __('Next Exercise', 'ielts-course-manager');
                                 } else {
-                                    $next_url = get_permalink($next_item['post']->ID);
+                                    // Pass lesson_id so the resource page resolves the correct course for access checks
+                                    // (resources can be shared across lessons in different courses)
+                                    $next_url = $lesson_id
+                                        ? add_query_arg('lesson_id', $lesson_id, get_permalink($next_item['post']->ID))
+                                        : get_permalink($next_item['post']->ID);
                                     $next_label = __('Next', 'ielts-course-manager');
                                 }
                                 ?>

@@ -94,6 +94,8 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
     $next_item = null;
     $prev_label = '';
     $next_label = '';
+    $prev_url = '';
+    $next_url = '';
     
     if ($lesson_id) {
         global $wpdb;
@@ -166,12 +168,22 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         $prev_item = ($current_index > 0) ? $all_content_items[$current_index - 1]['post'] : null;
         $next_item = ($current_index >= 0 && $current_index < count($all_content_items) - 1) ? $all_content_items[$current_index + 1]['post'] : null;
         
-        // Determine labels for previous/next items
+        // Determine labels and URLs for previous/next items
         if ($prev_item) {
             $prev_label = __('Previous', 'ielts-course-manager');
+            // Pass lesson_id for resources so access check uses the correct lesson/course
+            // (resources can be shared across lessons in different courses)
+            $prev_url = ($prev_item->post_type === 'ielts_resource' && $lesson_id)
+                ? add_query_arg('lesson_id', $lesson_id, get_permalink($prev_item->ID))
+                : get_permalink($prev_item->ID);
         }
         if ($next_item) {
             $next_label = __('Next', 'ielts-course-manager');
+            // Pass lesson_id for resources so access check uses the correct lesson/course
+            // (resources can be shared across lessons in different courses)
+            $next_url = ($next_item->post_type === 'ielts_resource' && $lesson_id)
+                ? add_query_arg('lesson_id', $lesson_id, get_permalink($next_item->ID))
+                : get_permalink($next_item->ID);
         }
         
         // Check if this is the last item of the last lesson in the course (for completion message)
@@ -1064,7 +1076,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
             <div class="ielts-sticky-bottom-nav quiz-bottom-nav">
                 <div class="nav-item nav-prev">
                     <?php if (isset($prev_item) && $prev_item): ?>
-                        <a href="<?php echo get_permalink($prev_item->ID); ?>" class="nav-link">
+                        <a href="<?php echo esc_url($prev_url); ?>" class="nav-link">
                             <span class="nav-arrow">&laquo;</span>
                             <span class="nav-label">
                                 <small><?php echo isset($prev_label) ? esc_html($prev_label) : __('Previous', 'ielts-course-manager'); ?></small>
@@ -1106,7 +1118,7 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                 </div>
                 <div class="nav-item nav-next">
                     <?php if (isset($next_item) && $next_item): ?>
-                        <a href="<?php echo get_permalink($next_item->ID); ?>" class="nav-link">
+                        <a href="<?php echo esc_url($next_url); ?>" class="nav-link">
                             <span class="nav-label">
                                 <small><?php echo isset($next_label) ? esc_html($next_label) : __('Next', 'ielts-course-manager'); ?></small>
                                 <strong><?php echo esc_html($next_item->post_title); ?></strong>
