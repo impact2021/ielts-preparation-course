@@ -125,6 +125,12 @@ class IELTS_Course_Manager {
         add_action('retrieve_password', array($this, 'log_password_reset_request'), 10, 1);
         add_action('after_password_reset', array($this, 'log_password_reset_complete'), 10, 2);
         
+        // Redirect "Lost your password?" to the custom reset page when one is configured
+        add_filter('lostpassword_url', array($this, 'custom_lostpassword_url'), 10, 2);
+        
+        // Also update the reset link inside any password-reset emails triggered via wp-login.php
+        add_filter('retrieve_password_message', array($this, 'custom_retrieve_password_message'), 10, 4);
+        
         // Add plugin version to admin bar
         add_action('admin_bar_menu', array($this, 'add_version_to_admin_bar'), 100);
     }
@@ -471,7 +477,57 @@ class IELTS_Course_Manager {
         );
         $wp_admin_bar->add_node($args);
     }
-    
+
+    /**
+     * Redirect the "Lost your password?" link to the custom reset page.
+     * Only takes effect when 'ielts_cm_password_reset_page_url' is configured.
+     *
+     * @param string $lostpassword_url Default WordPress lost-password URL.
+     * @param string $redirect         Redirect URL passed to wp_lostpassword_url().
+     * @return string
+     */
+    public function custom_lostpassword_url( $lostpassword_url, $redirect ) {
+        $reset_page_url = IELTS_CM_Frontend::get_custom_password_reset_url();
+        if ( empty( $reset_page_url ) ) {
+            return $lostpassword_url; // Not configured – keep WordPress default.
+        }
+        if ( ! empty( $redirect ) ) {
+            $reset_page_url = add_query_arg( 'redirect_to', rawurlencode( $redirect ), $reset_page_url );
+        }
+        return $reset_page_url;
+    }
+
+    /**
+     * Replace the wp-login.php reset link in password-reset emails with the
+     * custom reset page URL (safety net for resets triggered via wp-login.php).
+     *
+     * @param string  $message    Email message body.
+     * @param string  $key        Password reset key.
+     * @param string  $user_login User login name.
+     * @param WP_User $user_data  User object.
+     * @return string
+     */
+    public function custom_retrieve_password_message( $message, $key, $user_login, $user_data ) {
+        $reset_page_url = IELTS_CM_Frontend::get_custom_password_reset_url();
+        if ( empty( $reset_page_url ) ) {
+            return $message;
+        }
+        $custom_reset_url = add_query_arg(
+            array(
+                'key'   => $key,
+                'login' => rawurlencode( $user_login ),
+            ),
+            $reset_page_url
+        );
+        // Replace any wp-login.php reset link in the message body.
+        $message = preg_replace(
+            '|https?://\S+wp-login\.php\?action=rp[^\s\r\n]*|',
+            $custom_reset_url,
+            $message
+        );
+        return $message;
+    }
+
     /**
      * Log when a user requests a password reset link ("Lost your password?").
      *

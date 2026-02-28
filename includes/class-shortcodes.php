@@ -27,6 +27,7 @@ class IELTS_CM_Shortcodes {
         add_shortcode('ielts_login', array($this, 'display_login'));
         add_shortcode('ielts_registration', array($this, 'display_registration'));
         add_shortcode('ielts_account', array($this, 'display_account'));
+        add_shortcode('ielts_reset_password', array($this, 'display_reset_password'));
         
         // Login stats shortcode
         add_shortcode('ielts_login_stats', array($this, 'display_login_stats'));
@@ -1752,11 +1753,28 @@ class IELTS_CM_Shortcodes {
         $redirect_url = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
         // Ensure redirect is to same site for security
         $redirect_url = wp_validate_redirect($redirect_url, home_url());
+
+        // Detect login failure/empty and show an inline error so the user
+        // stays on this page rather than being sent to wp-login.php with an error.
+        $login_error = '';
+        if (isset($_GET['login'])) {
+            $login_status = sanitize_key($_GET['login']);
+            if ($login_status === 'failed') {
+                $login_error = __('Incorrect email or password. Please try again.', 'ielts-course-manager');
+            } elseif ($login_status === 'empty') {
+                $login_error = __('Please enter your email address and password.', 'ielts-course-manager');
+            }
+        }
         
         ob_start();
         ?>
         <div class="ielts-login-form-wrapper">
             <div class="ielts-login-form">
+                <?php if (!empty($login_error)): ?>
+                <div class="ielts-login-error" role="alert">
+                    <?php echo esc_html($login_error); ?>
+                </div>
+                <?php endif; ?>
                 <?php
                 wp_login_form(array(
                     'redirect' => $redirect_url,
@@ -1770,7 +1788,7 @@ class IELTS_CM_Shortcodes {
                 ));
                 ?>
                 <p class="ielts-login-links">
-                    <a href="<?php echo wp_lostpassword_url($redirect_url); ?>"><?php _e('Lost your password?', 'ielts-course-manager'); ?></a>
+                    <a href="<?php echo esc_url(wp_lostpassword_url($redirect_url)); ?>"><?php _e('Lost your password?', 'ielts-course-manager'); ?></a>
                 </p>
             </div>
         </div>
@@ -1850,11 +1868,306 @@ class IELTS_CM_Shortcodes {
         .ielts-login-links a:hover {
             text-decoration: underline;
         }
+        .ielts-login-error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 18px;
+            font-size: 14px;
+            font-weight: 500;
+        }
         </style>
         <?php
         return ob_get_clean();
     }
-    
+
+    /**
+     * Display custom password reset form.
+     *
+     * Handles two distinct modes:
+     *   1. Request-reset: user submits their email → we generate a key and send a
+     *      custom email containing a link back to this same page.
+     *   2. Set-new-password: user arrives via the emailed link (?key=…&login=…) →
+     *      we validate the key and let the user choose a new password.
+     *
+     * Usage: [ielts_reset_password]
+     */
+    public function display_reset_password($atts) {
+        $atts = shortcode_atts(array(
+            'redirect' => ''
+        ), $atts);
+
+        $login_url     = IELTS_CM_Frontend::get_custom_login_url();
+        $reset_page    = IELTS_CM_Frontend::get_custom_password_reset_url();
+        // Fall back to the current page if no explicit reset page is configured.
+        if (empty($reset_page)) {
+            $reset_page = esc_url_raw(add_query_arg(array()));
+        }
+        $redirect_url  = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : $login_url;
+        $redirect_url  = wp_validate_redirect($redirect_url, $login_url);
+
+        $key        = isset($_GET['key'])              ? sanitize_text_field(wp_unslash($_GET['key']))   : '';
+        $user_login = isset($_GET['login'])            ? sanitize_user(wp_unslash($_GET['login']))       : '';
+
+        // Detect post-reset redirect flag (?ielts_password_reset=1).
+        $just_reset = isset($_GET['ielts_password_reset']) && $_GET['ielts_password_reset'] === '1';
+
+        $error_message   = '';
+        $success_message = '';
+        $mode            = 'request_reset'; // or 'set_password'
+
+        // ── Mode: set new password ──────────────────────────────────────────────
+        if ($key && $user_login) {
+            $valid_user = check_password_reset_key($key, $user_login);
+            if (is_wp_error($valid_user)) {
+                $error_message = __('This password reset link has expired or is invalid. Please request a new one.', 'ielts-course-manager');
+            } else {
+                $mode = 'set_password';
+
+                if (isset($_POST['ielts_set_password_submit'])) {
+                    if (!isset($_POST['ielts_set_password_nonce']) || !wp_verify_nonce($_POST['ielts_set_password_nonce'], 'ielts_set_password')) {
+                        $error_message = __('Security check failed. Please try again.', 'ielts-course-manager');
+                    } else {
+                        $new_password     = isset($_POST['ielts_new_password'])     ? wp_unslash($_POST['ielts_new_password'])     : '';
+                        $confirm_password = isset($_POST['ielts_confirm_password']) ? wp_unslash($_POST['ielts_confirm_password']) : '';
+
+                        if (empty($new_password)) {
+                            $error_message = __('Please enter a new password.', 'ielts-course-manager');
+                        } elseif (strlen($new_password) < 6) {
+                            $error_message = __('Password must be at least 6 characters.', 'ielts-course-manager');
+                        } elseif ($new_password !== $confirm_password) {
+                            $error_message = __('Passwords do not match.', 'ielts-course-manager');
+                        } else {
+                            reset_password($valid_user, $new_password);
+                            // Redirect to avoid re-submission and hide the now-invalid key from the URL.
+                            wp_safe_redirect(add_query_arg('ielts_password_reset', '1', $reset_page));
+                            exit;
+                        }
+                    }
+                }
+            }
+        }
+
+        // ── Mode: request reset ─────────────────────────────────────────────────
+        if ($mode === 'request_reset' && !$just_reset && isset($_POST['ielts_request_reset_submit'])) {
+            if (!isset($_POST['ielts_request_reset_nonce']) || !wp_verify_nonce($_POST['ielts_request_reset_nonce'], 'ielts_request_reset')) {
+                $error_message = __('Security check failed. Please try again.', 'ielts-course-manager');
+            } else {
+                $submitted_login = isset($_POST['ielts_user_login']) ? sanitize_text_field(wp_unslash($_POST['ielts_user_login'])) : '';
+
+                if (empty($submitted_login)) {
+                    $error_message = __('Please enter your email address.', 'ielts-course-manager');
+                } else {
+                    $user = is_email($submitted_login)
+                        ? get_user_by('email', $submitted_login)
+                        : get_user_by('login', $submitted_login);
+
+                    if ($user) {
+                        $reset_key = get_password_reset_key($user);
+                        if (!is_wp_error($reset_key)) {
+                            $reset_link = add_query_arg(
+                                array(
+                                    'key'   => $reset_key,
+                                    'login' => rawurlencode($user->user_login),
+                                ),
+                                $reset_page
+                            );
+
+                            $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
+                            /* translators: 1: site name */
+                            $subject  = sprintf(__('[%s] Password Reset', 'ielts-course-manager'), $blogname);
+                            /* translators: 1: site name 2: username 3: reset link */
+                            $body     = sprintf(
+                                __("Someone has requested a password reset for the following account:\r\n\r\nSite: %1\$s\r\nUsername: %2\$s\r\n\r\nIf this was a mistake, you can ignore this email — your password will not change.\r\n\r\nTo reset your password, click the link below (valid for 24 hours):\r\n%3\$s", 'ielts-course-manager'),
+                                $blogname,
+                                $user->user_login,
+                                $reset_link
+                            );
+                            wp_mail($user->user_email, $subject, $body);
+
+                            // Log the request for auditing (fires even if mail delivery
+                            // failed at the SMTP level – the key was still generated).
+                            do_action('retrieve_password', $user->user_login);
+                        }
+                    }
+                    // Always show the same message to prevent user-enumeration.
+                    $success_message = __('If an account with that email exists, you will receive a password reset link shortly. Please check your inbox (and spam folder).', 'ielts-course-manager');
+                }
+            }
+        }
+
+        ob_start();
+        ?>
+        <div class="ielts-reset-password-wrapper">
+            <div class="ielts-reset-password-form">
+
+                <?php if ($just_reset): ?>
+                    <div class="ielts-rp-message ielts-rp-success" role="status">
+                        <span class="ielts-rp-icon">&#10003;</span>
+                        <?php _e('Your password has been reset successfully.', 'ielts-course-manager'); ?>
+                        <a href="<?php echo esc_url($login_url); ?>"><?php _e('Click here to log in', 'ielts-course-manager'); ?></a>
+                    </div>
+
+                <?php elseif ($mode === 'set_password'): ?>
+                    <h2><?php _e('Set New Password', 'ielts-course-manager'); ?></h2>
+                    <?php if (!empty($error_message)): ?>
+                        <div class="ielts-rp-message ielts-rp-error" role="alert">
+                            <?php echo esc_html($error_message); ?>
+                        </div>
+                    <?php endif; ?>
+                    <form method="post" action="">
+                        <?php wp_nonce_field('ielts_set_password', 'ielts_set_password_nonce'); ?>
+                        <input type="hidden" name="ielts_set_password_submit" value="1">
+                        <div class="ielts-rp-field">
+                            <label for="ielts_new_password"><?php _e('New Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="password" name="ielts_new_password" id="ielts_new_password" required minlength="6" class="ielts-rp-input" autocomplete="new-password">
+                        </div>
+                        <div class="ielts-rp-field">
+                            <label for="ielts_confirm_password"><?php _e('Confirm New Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                            <input type="password" name="ielts_confirm_password" id="ielts_confirm_password" required minlength="6" class="ielts-rp-input" autocomplete="new-password">
+                        </div>
+                        <button type="submit" class="ielts-rp-btn"><?php _e('Reset Password', 'ielts-course-manager'); ?></button>
+                    </form>
+
+                <?php else: ?>
+                    <?php if (!empty($error_message)): ?>
+                        <div class="ielts-rp-message ielts-rp-error" role="alert">
+                            <?php echo esc_html($error_message); ?>
+                            <?php if (!$key && !$user_login): ?>
+                                <br><a href="<?php echo esc_url($reset_page); ?>"><?php _e('Try again', 'ielts-course-manager'); ?></a>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (!empty($success_message)): ?>
+                        <div class="ielts-rp-message ielts-rp-success" role="status">
+                            <?php echo esc_html($success_message); ?>
+                        </div>
+                    <?php endif; ?>
+                    <?php if (empty($success_message)): ?>
+                        <h2><?php _e('Reset Your Password', 'ielts-course-manager'); ?></h2>
+                        <p class="ielts-rp-intro"><?php _e('Enter your email address and we will send you a link to reset your password.', 'ielts-course-manager'); ?></p>
+                        <form method="post" action="">
+                            <?php wp_nonce_field('ielts_request_reset', 'ielts_request_reset_nonce'); ?>
+                            <div class="ielts-rp-field">
+                                <label for="ielts_user_login"><?php _e('Email Address', 'ielts-course-manager'); ?></label>
+                                <input type="email" name="ielts_user_login" id="ielts_user_login" required class="ielts-rp-input" autocomplete="email">
+                            </div>
+                            <button type="submit" name="ielts_request_reset_submit" value="1" class="ielts-rp-btn"><?php _e('Send Reset Link', 'ielts-course-manager'); ?></button>
+                            <p class="ielts-rp-back"><a href="<?php echo esc_url($login_url); ?>">&larr; <?php _e('Back to Login', 'ielts-course-manager'); ?></a></p>
+                        </form>
+                    <?php else: ?>
+                        <p class="ielts-rp-back"><a href="<?php echo esc_url($login_url); ?>">&larr; <?php _e('Back to Login', 'ielts-course-manager'); ?></a></p>
+                    <?php endif; ?>
+
+                <?php endif; ?>
+
+            </div>
+        </div>
+        <style>
+        .ielts-reset-password-wrapper {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .ielts-reset-password-form {
+            padding: 30px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .ielts-reset-password-form h2 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 22px;
+            color: #333;
+        }
+        .ielts-rp-intro {
+            color: #666;
+            margin-bottom: 22px;
+            font-size: 14px;
+        }
+        .ielts-rp-message {
+            padding: 12px 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .ielts-rp-error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+        }
+        .ielts-rp-success {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #16a34a;
+        }
+        .ielts-rp-success a {
+            color: #15803d;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+        .ielts-rp-icon {
+            margin-right: 6px;
+            font-weight: bold;
+        }
+        .ielts-rp-field {
+            margin-bottom: 18px;
+        }
+        .ielts-rp-field label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+        .ielts-rp-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .ielts-rp-input:focus {
+            outline: none;
+            border-color: #0073aa;
+        }
+        .ielts-rp-btn {
+            width: 100%;
+            padding: 14px 20px;
+            background: #0073aa;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .ielts-rp-btn:hover {
+            background: #005177;
+        }
+        .ielts-rp-back {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .ielts-rp-back a {
+            color: #0073aa;
+            text-decoration: none;
+        }
+        .ielts-rp-back a:hover {
+            text-decoration: underline;
+        }
+        </style>
+        <?php
+        return ob_get_clean();
+    }
+
     /**
      * Display registration form
      */
