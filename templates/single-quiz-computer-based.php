@@ -225,7 +225,10 @@ if ($lesson_id) {
         if (strlen($next_title) > 15) {
             $next_title = substr($next_title, 0, 15) . '...';
         }
-        $next_url = get_permalink($next_post->ID);
+        // Pass lesson_id so the destination page resolves the correct course for access checks
+        $next_url = $lesson_id
+            ? add_query_arg('lesson_id', $lesson_id, get_permalink($next_post->ID))
+            : get_permalink($next_post->ID);
     }
     
     // If there's a previous item in this lesson, get its URL and title
@@ -236,7 +239,10 @@ if ($lesson_id) {
         if (strlen($prev_title) > 15) {
             $prev_title = substr($prev_title, 0, 15) . '...';
         }
-        $prev_url = get_permalink($prev_post->ID);
+        // Pass lesson_id so the destination page resolves the correct course for access checks
+        $prev_url = $lesson_id
+            ? add_query_arg('lesson_id', $lesson_id, get_permalink($prev_post->ID))
+            : get_permalink($prev_post->ID);
     }
     
     // Check if this is the last item of the last lesson in the course (for completion message)

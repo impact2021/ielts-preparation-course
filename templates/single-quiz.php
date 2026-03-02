@@ -171,17 +171,17 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
         // Determine labels and URLs for previous/next items
         if ($prev_item) {
             $prev_label = __('Previous', 'ielts-course-manager');
-            // Pass lesson_id for resources so access check uses the correct lesson/course
-            // (resources can be shared across lessons in different courses)
-            $prev_url = ($prev_item->post_type === 'ielts_resource' && $lesson_id)
+            // Pass lesson_id so the destination page resolves the correct course for access checks
+            // (content can be shared across lessons in different courses)
+            $prev_url = $lesson_id
                 ? add_query_arg('lesson_id', $lesson_id, get_permalink($prev_item->ID))
                 : get_permalink($prev_item->ID);
         }
         if ($next_item) {
             $next_label = __('Next', 'ielts-course-manager');
-            // Pass lesson_id for resources so access check uses the correct lesson/course
-            // (resources can be shared across lessons in different courses)
-            $next_url = ($next_item->post_type === 'ielts_resource' && $lesson_id)
+            // Pass lesson_id so the destination page resolves the correct course for access checks
+            // (content can be shared across lessons in different courses)
+            $next_url = $lesson_id
                 ? add_query_arg('lesson_id', $lesson_id, get_permalink($next_item->ID))
                 : get_permalink($next_item->ID);
         }
