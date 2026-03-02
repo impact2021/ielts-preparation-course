@@ -272,6 +272,18 @@ $timer_minutes = get_post_meta($quiz->ID, '_ielts_cm_timer_minutes', true);
                         break;
                 }
                 
+                // Narrow to the same category as the current unit to avoid cross-course-type navigation
+                // (e.g., prevent navigating from a General Training unit to an English course unit)
+                if (!empty($allowed_categories)) {
+                    $current_unit_terms = wp_get_post_terms($course_id, 'ielts_course_category', array('fields' => 'slugs'));
+                    if (!empty($current_unit_terms) && !is_wp_error($current_unit_terms)) {
+                        $same_category = array_intersect($allowed_categories, $current_unit_terms);
+                        if (!empty($same_category)) {
+                            $allowed_categories = array_values($same_category);
+                        }
+                    }
+                }
+
                 // Add category filter if we have allowed categories
                 if (!empty($allowed_categories)) {
                     $query_args['tax_query'] = array(
