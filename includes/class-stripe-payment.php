@@ -556,8 +556,11 @@ class IELTS_CM_Stripe_Payment {
                 'automatic_payment_methods' => [
                     'enabled' => true,
                 ],
+                'receipt_email' => $user->user_email,
+                'description' => 'IELTS Course Membership - ' . $membership_type,
                 'metadata' => [
                     'user_id' => $user_id,
+                    'user_email' => $user->user_email,
                     'membership_type' => $membership_type,
                     'payment_id' => $payment_id,
                     'is_registration' => 'true',
@@ -947,7 +950,7 @@ class IELTS_CM_Stripe_Payment {
     }
     
     /**
-     * Create user and assign membership after successful payment
+     * Dispatch a succeeded PaymentIntent to the appropriate handler
      */
     private function handle_successful_payment($payment_intent) {
         $metadata = $payment_intent->metadata;
@@ -955,6 +958,13 @@ class IELTS_CM_Stripe_Payment {
         error_log('IELTS Stripe Webhook: handle_successful_payment called for payment_intent: ' . $payment_intent->id);
         error_log('IELTS Stripe Webhook: Metadata payment_type: ' . (isset($metadata->payment_type) ? $metadata->payment_type : 'NOT SET'));
         
+        // Check if this is a registration payment (user was created before payment)
+        if (isset($metadata->is_registration) && $metadata->is_registration === 'true') {
+            error_log('IELTS Stripe Webhook: Delegating to handle_registration_payment');
+            $this->handle_registration_payment($payment_intent);
+            return;
+        }
+
         // Check if this is a course extension payment
         if (isset($metadata->payment_type) && $metadata->payment_type === 'course_extension') {
             error_log('IELTS Stripe Webhook: Delegating to handle_extension_payment');
@@ -968,96 +978,98 @@ class IELTS_CM_Stripe_Payment {
             $this->handle_code_purchase_payment($payment_intent);
             return;
         }
-        
-        error_log('IELTS Stripe Webhook: Processing as standard membership payment');
-        
-        // Extract user data from metadata
-        $email = $metadata->email;
-        $first_name = $metadata->first_name;
-        $last_name = $metadata->last_name;
+
+        error_log('IELTS Stripe Webhook: Unrecognized payment intent - no matching payment_type or is_registration flag. Payment Intent ID: ' . $payment_intent->id);
+    }
+
+    /**
+     * Activate membership for a user who registered before paying (webhook fallback)
+     *
+     * This is called when the confirm_payment AJAX request fails or never fires and
+     * Stripe sends a payment_intent.succeeded webhook instead.  The user account was
+     * already created by register_user(), so we only need to look them up and activate
+     * their membership - we must NOT try to create a new user here.
+     */
+    private function handle_registration_payment($payment_intent) {
+        $metadata = $payment_intent->metadata;
+
+        $user_id = intval($metadata->user_id);
         $membership_type = $metadata->membership_type;
-        
-        // Check if user already exists (idempotency)
-        if (email_exists($email)) {
-            error_log("User already exists for email: $email");
+        $payment_id = isset($metadata->payment_id) ? intval($metadata->payment_id) : 0;
+
+        error_log("IELTS Payment Webhook: handle_registration_payment for user $user_id, membership $membership_type");
+
+        // Verify the user account exists
+        $user = get_userdata($user_id);
+        if (!$user) {
+            error_log("IELTS Payment Webhook: Registration payment - user $user_id not found");
             return;
         }
-        
-        // Generate username from email
-        $email_parts = explode('@', $email);
-        $base_username = sanitize_user($email_parts[0], true);
-        $username = $base_username;
-        $counter = 1;
-        while (username_exists($username)) {
-            $username = $base_username . $counter;
-            $counter++;
-        }
-        
-        // Suppress automatic new user notification in webhook
-        // We'll send the welcome email after membership is activated
-        add_filter('wp_send_new_user_notifications', '__return_false');
-        
-        // Create user account
-        // Mark this as authorized registration
-        if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
-            define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
-        }
-        $user_id = wp_create_user($username, wp_generate_password(), $email);
-        
-        // Re-enable new user notifications
-        remove_filter('wp_send_new_user_notifications', '__return_false');
-        
-        if (is_wp_error($user_id)) {
-            error_log('Failed to create user: ' . $user_id->get_error_message());
-            return;
-        }
-        
-        // Update user meta
-        wp_update_user(array(
-            'ID' => $user_id,
-            'first_name' => $first_name,
-            'last_name' => $last_name,
-            'display_name' => $first_name . ' ' . $last_name,
+
+        // Idempotency: skip if this payment intent was already processed
+        global $wpdb;
+        $table_name = $wpdb->prefix . 'ielts_cm_payments';
+        $existing = $wpdb->get_row($wpdb->prepare(
+            "SELECT id FROM {$table_name} WHERE transaction_id = %s AND payment_status = 'completed'",
+            $payment_intent->id
         ));
-        
-        // Assign paid membership
-        update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-        
-        // Verify IELTS_CM_Membership class is available
-        if (!$this->verify_membership_class('webhook')) {
-            error_log('IELTS Payment Webhook: Membership handler not loaded');
+        if ($existing) {
+            error_log("IELTS Payment Webhook: Registration payment already processed for user $user_id (idempotency)");
             return;
         }
-        
+
+        // Mark the pending payment record as completed
+        if ($payment_id) {
+            $wpdb->update(
+                $table_name,
+                array('payment_status' => 'completed', 'transaction_id' => $payment_intent->id),
+                array('id' => $payment_id),
+                array('%s', '%s'),
+                array('%d')
+            );
+        }
+
+        // Assign membership type
+        update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+
+        // Verify IELTS_CM_Membership class is available
+        if (!$this->verify_membership_class('webhook_registration')) {
+            error_log('IELTS Payment Webhook: Membership handler not loaded for registration webhook');
+            return;
+        }
+
         try {
-            // Set status to active (this also assigns the WordPress role)
+            // Activate the membership (also assigns the WordPress role)
             $membership = new IELTS_CM_Membership();
             $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
-            
+
             // Clear expiry email tracking when activating new membership
             delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
-            
+
             // Set expiry date
             $expiry_date = $membership->calculate_expiry_date($membership_type);
             update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-            
+
             // Store payment info
             update_user_meta($user_id, '_ielts_cm_payment_intent_id', $payment_intent->id);
             update_user_meta($user_id, '_ielts_cm_payment_amount', $payment_intent->amount / 100);
             update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
-            
+
+            // Clean up pending registration flags
+            delete_user_meta($user_id, '_ielts_cm_pending_membership_type');
+            delete_user_meta($user_id, '_ielts_cm_registration_pending');
+
             // Send welcome email after membership activation
-            // Note: We suppressed the automatic email during user creation
             try {
                 wp_new_user_notification($user_id, null, 'both');
-                error_log("IELTS Payment Webhook: Welcome email sent successfully for user $user_id");
+                error_log("IELTS Payment Webhook: Welcome email sent for user $user_id");
             } catch (Throwable $e) {
                 error_log('IELTS Payment Webhook: Failed to send welcome email - ' . $e->getMessage());
             }
-            
-            error_log("Successfully created user $user_id with membership $membership_type after payment");
+
+            error_log("IELTS Payment Webhook: Successfully activated membership $membership_type for user $user_id via webhook");
         } catch (Throwable $e) {
-            error_log('IELTS Payment Webhook: Error activating membership - ' . $e->getMessage());
+            error_log('IELTS Payment Webhook: Error activating membership for user ' . $user_id . ' - ' . $e->getMessage());
             error_log('IELTS Payment Webhook: Stack trace - ' . $e->getTraceAsString());
         }
     }
