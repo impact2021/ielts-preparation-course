@@ -63,23 +63,37 @@ body.ielts-resource-single .content-area {
                 }
             }
 
-            // Get course ID from lesson
+            // Get all course IDs for this resource's lesson (primary + multi-course)
             $course_id = null;
             if ($lesson_id) {
-                $course_id = get_post_meta($lesson_id, '_ielts_cm_course_id', true);
+                $primary_course_id = get_post_meta($lesson_id, '_ielts_cm_course_id', true);
+                $course_ids_meta = get_post_meta($lesson_id, '_ielts_cm_course_ids', true);
+                $all_course_ids = array_values(array_unique(array_filter(array_merge(
+                    $primary_course_id ? array(intval($primary_course_id)) : array(),
+                    is_array($course_ids_meta) ? array_map('intval', $course_ids_meta) : array()
+                ))));
+                $course_id = $primary_course_id; // fallback for non-access check uses
+            } else {
+                $all_course_ids = array();
             }
             
             $user_id = get_current_user_id();
             $progress_tracker = new IELTS_CM_Progress_Tracker();
             
-            // Check if user has access to this resource
+            // Check if user has access to this resource via any linked course
             $has_access = false;
             $is_completed = false;
             $has_visited_before = false;  // Track if user has visited this resource before
             
-            if ($user_id && $course_id) {
+            if ($user_id && !empty($all_course_ids)) {
                 $enrollment = new IELTS_CM_Enrollment();
-                $has_access = $enrollment->is_enrolled($user_id, $course_id);
+                foreach ($all_course_ids as $cid) {
+                    if ($enrollment->is_enrolled($user_id, $cid)) {
+                        $course_id = $cid; // Use the accessible course for context
+                        $has_access = true;
+                        break;
+                    }
+                }
                 
                 if ($has_access && $lesson_id) {
                     // Check if this resource has been accessed before
