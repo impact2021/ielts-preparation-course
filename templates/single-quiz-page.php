@@ -122,6 +122,26 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
             // Get course and lesson IDs
             $course_id = get_post_meta($quiz_id, '_ielts_cm_course_id', true);
             $lesson_id = get_post_meta($quiz_id, '_ielts_cm_lesson_id', true);
+
+            // If a lesson_id URL parameter was passed (e.g. from a lesson page that uses this quiz
+            // in multiple courses), use that to resolve the correct course for access checking.
+            $requested_lesson_id = filter_input(INPUT_GET, 'lesson_id', FILTER_VALIDATE_INT);
+            if (!$requested_lesson_id) {
+                $requested_lesson_id = 0;
+            }
+            if ($requested_lesson_id) {
+                // Validate: the requested lesson must actually be linked to this quiz.
+                $linked_lesson_ids = get_post_meta($quiz_id, '_ielts_cm_lesson_ids', true);
+                if (!is_array($linked_lesson_ids)) {
+                    $linked_lesson_ids = $lesson_id ? array($lesson_id) : array();
+                }
+                $linked_lesson_ids = array_map('intval', $linked_lesson_ids);
+                if (in_array($requested_lesson_id, $linked_lesson_ids, true)
+                    || intval($lesson_id) === $requested_lesson_id) {
+                    $lesson_id = $requested_lesson_id;
+                    $course_id = get_post_meta($lesson_id, '_ielts_cm_course_id', true);
+                }
+            }
             
             // Check if user has access to this quiz
             $user_id = get_current_user_id();

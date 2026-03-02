@@ -103,6 +103,22 @@ class IELTS_CM_Enrollment {
             return true;
         }
         
+        // For access-code users, user_has_course_access() is the authoritative check based on
+        // the user's course group (iw_course_group). If it returned false above, deny access
+        // immediately so that switching a user from Academic to General (or vice versa) takes
+        // effect at once, without relying on the enrollment table being manually updated.
+        if (class_exists('IELTS_CM_Access_Codes')) {
+            $user_for_role_check = get_userdata($user_id);
+            if ($user_for_role_check) {
+                $access_code_roles = array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES);
+                foreach ($user_for_role_check->roles as $role) {
+                    if (in_array($role, $access_code_roles)) {
+                        return false;
+                    }
+                }
+            }
+        }
+        
         global $wpdb;
         $table = $this->db->get_enrollment_table();
         
