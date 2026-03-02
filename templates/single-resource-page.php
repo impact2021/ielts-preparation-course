@@ -862,7 +862,7 @@ body.ielts-resource-single .content-area {
                                             }
                                             ?>
                                             <span><?php _e('That is the end of this unit', 'ielts-course-manager'); ?></span>
-                                            <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary">
+                                            <a href="<?php echo esc_url(get_permalink($next_unit->ID)); ?>" class="button button-primary resource-nav-link" data-course-id="<?php echo esc_attr($course_id); ?>" data-lesson-id="<?php echo esc_attr($lesson_id); ?>" data-resource-id="<?php echo esc_attr($resource_id); ?>">
                                                 <?php 
                                                 if ($unit_number) {
                                                     printf(__('Move to Unit %s', 'ielts-course-manager'), esc_html($unit_number));
