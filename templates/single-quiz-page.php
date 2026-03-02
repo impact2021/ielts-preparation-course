@@ -142,14 +142,35 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
                     $course_id = get_post_meta($lesson_id, '_ielts_cm_course_id', true);
                 }
             }
-            
-            // Check if user has access to this quiz
+
+            // Build the full list of course IDs this quiz is associated with, so that a quiz
+            // shared between an Academic and a General Training course is accessible to students
+            // of either module (not just the module that owns the primary _ielts_cm_course_id).
+            if ($lesson_id) {
+                $lesson_course_ids_meta = get_post_meta($lesson_id, '_ielts_cm_course_ids', true);
+            } else {
+                $lesson_course_ids_meta = array();
+            }
+            $quiz_course_ids_meta = get_post_meta($quiz_id, '_ielts_cm_course_ids', true);
+            $all_course_ids = array_values(array_unique(array_filter(array_merge(
+                $course_id ? array(intval($course_id)) : array(),
+                is_array($lesson_course_ids_meta) ? array_map('intval', $lesson_course_ids_meta) : array(),
+                is_array($quiz_course_ids_meta) ? array_map('intval', $quiz_course_ids_meta) : array()
+            ))));
+
+            // Check if user has access to this quiz via any linked course
             $user_id = get_current_user_id();
             $has_access = false;
             
-            if ($user_id && $course_id) {
+            if ($user_id && !empty($all_course_ids)) {
                 $enrollment = new IELTS_CM_Enrollment();
-                $has_access = $enrollment->is_enrolled($user_id, $course_id);
+                foreach ($all_course_ids as $cid) {
+                    if ($enrollment->is_enrolled($user_id, $cid)) {
+                        $course_id = $cid; // Use the accessible course for context
+                        $has_access = true;
+                        break;
+                    }
+                }
             }
             
             if (!$has_access && $course_id):
