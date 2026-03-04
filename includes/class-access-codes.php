@@ -1119,6 +1119,16 @@ class IELTS_CM_Access_Codes {
             .iw-table th { background: #f9f9f9; font-weight: 600; }
             .iw-table tr:hover { background: #f5f5f5; }
             input[type="text"], input[type="email"], input[type="number"], select { padding: 6px 10px; border: 1px solid #ddd; border-radius: 3px; width: 100%; }
+            .iw-per-page { display: flex; align-items: center; gap: 6px; font-size: 0.9em; margin-bottom: 8px; }
+            .iw-per-page select { width: auto; padding: 4px 8px; }
+            .iw-pagination { margin-top: 12px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; min-height: 28px; }
+            .iw-pagination-info { color: #666; font-size: 0.9em; }
+            .iw-pagination-controls { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+            .iw-page-btn { display: inline-block; padding: 4px 10px; border: 1px solid #ddd; border-radius: 3px; background: #fff; cursor: pointer; font-size: 0.9em; line-height: 1.4; }
+            .iw-page-btn:hover:not(:disabled) { background: #f0f0f0; }
+            .iw-page-btn.active { background: #0073aa; color: #fff; border-color: #0073aa; cursor: default; }
+            .iw-page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+            .iw-pagination-ellipsis { padding: 4px 6px; }
         </style>
         
         <div class="iw-dashboard">
@@ -1357,7 +1367,19 @@ class IELTS_CM_Access_Codes {
                         <button class="iw-btn" onclick="IWDashboard.downloadCSV()" style="float: right;">Download CSV</button>
                     </div>
                     <div style="clear: both;"></div>
+                    <div class="iw-per-page">
+                        <label for="iw-codes-per-page"><?php _e('Show:', 'ielts-course-manager'); ?></label>
+                        <select id="iw-codes-per-page">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="0"><?php _e('All', 'ielts-course-manager'); ?></option>
+                        </select>
+                        <span><?php _e('per page', 'ielts-course-manager'); ?></span>
+                    </div>
                     <?php echo $this->render_codes_table($partner_org_id); ?>
+                    <div id="iw-codes-pagination" class="iw-pagination"></div>
                 </div>
             </div>
             
@@ -1374,7 +1396,19 @@ class IELTS_CM_Access_Codes {
                         <button class="iw-filter-btn active" data-filter-students="active">Active (<?php echo esc_html($active_student_count); ?>)</button>
                         <button class="iw-filter-btn" data-filter-students="expired">Expired (<?php echo esc_html($expired_student_count); ?>)</button>
                     </div>
+                    <div class="iw-per-page">
+                        <label for="iw-students-per-page"><?php _e('Show:', 'ielts-course-manager'); ?></label>
+                        <select id="iw-students-per-page">
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="0"><?php _e('All', 'ielts-course-manager'); ?></option>
+                        </select>
+                        <span><?php _e('per page', 'ielts-course-manager'); ?></span>
+                    </div>
                     <?php echo $this->render_students_table($active_students); ?>
+                    <div id="iw-students-pagination" class="iw-pagination"></div>
                 </div>
             </div>
         </div>
@@ -1388,6 +1422,10 @@ class IELTS_CM_Access_Codes {
             resendNonce: '<?php echo wp_create_nonce('iw_resend_welcome'); ?>',
             rollMasterNonce: '<?php echo wp_create_nonce('iw_roll_master_code'); ?>',
             hasMasterCode: <?php echo $master_code ? 'true' : 'false'; ?>,
+            codesCurrentPage: 1,
+            codesPerPage: 10,
+            studentsCurrentPage: 1,
+            studentsPerPage: 10,
             
             copyMasterCode: function(btn) {
                 var code = document.getElementById('master-code-display').textContent;
@@ -1420,37 +1458,17 @@ class IELTS_CM_Access_Codes {
             },
             
             filterCodes: function(status) {
-                jQuery('.iw-filter-btn').removeClass('active');
+                jQuery('.iw-filter-btn[data-filter]').removeClass('active');
                 jQuery('.iw-filter-btn[data-filter="' + status + '"]').addClass('active');
                 
-                if (status === 'available') {
-                    // Show unused/available codes (status = 'active')
-                    jQuery('.iw-table tbody tr').each(function() {
-                        if (jQuery(this).data('status') === 'active') {
-                            jQuery(this).show();
-                        } else {
-                            jQuery(this).hide();
-                        }
-                    });
-                } else if (status === 'used') {
-                    // Show used codes (status = 'used')
-                    jQuery('.iw-table tbody tr').each(function() {
-                        if (jQuery(this).data('status') === 'used') {
-                            jQuery(this).show();
-                        } else {
-                            jQuery(this).hide();
-                        }
-                    });
-                } else {
-                    // Default: show all matching the status
-                    jQuery('.iw-table tbody tr').each(function() {
-                        if (jQuery(this).data('status') === status) {
-                            jQuery(this).show();
-                        } else {
-                            jQuery(this).hide();
-                        }
-                    });
-                }
+                jQuery('.iw-table:not(.iw-students-table) tbody tr').each(function() {
+                    var rowStatus = jQuery(this).data('status');
+                    var visible = (status === 'available') ? (rowStatus === 'active') : (rowStatus === status);
+                    jQuery(this).attr('data-filter-visible', visible ? '1' : '0');
+                });
+                
+                IWDashboard.codesCurrentPage = 1;
+                IWDashboard.paginateCodes();
             },
             
             deleteCode: function(codeId) {
@@ -1594,12 +1612,9 @@ class IELTS_CM_Access_Codes {
                         shouldShowBySearch = rowText.indexOf(searchTerm) !== -1;
                     }
                     
-                    if (shouldShowByStatus && shouldShowBySearch) {
-                        $row.show();
-                        visibleCount++;
-                    } else {
-                        $row.hide();
-                    }
+                    var visible = shouldShowByStatus && shouldShowBySearch;
+                    $row.attr('data-filter-visible', visible ? '1' : '0');
+                    if (visible) visibleCount++;
                 });
                 
                 // Show/hide empty state messages
@@ -1609,6 +1624,7 @@ class IELTS_CM_Access_Codes {
                 
                 if (visibleCount === 0) {
                     $table.hide();
+                    jQuery('#iw-students-pagination').html('');
                     if (searchTerm) {
                         // Show custom message for no search results (use text() for safe insertion)
                         var searchValue = jQuery('#iw-student-search').val();
@@ -1620,7 +1636,96 @@ class IELTS_CM_Access_Codes {
                     }
                 } else {
                     $table.show();
+                    IWDashboard.studentsCurrentPage = 1;
+                    IWDashboard.paginateStudents();
                 }
+            },
+            
+            paginateCodes: function() {
+                var perPage = IWDashboard.codesPerPage;
+                var currentPage = IWDashboard.codesCurrentPage;
+                var $allRows = jQuery('.iw-table:not(.iw-students-table) tbody tr');
+                var $filteredRows = $allRows.filter('[data-filter-visible="1"]');
+                var total = $filteredRows.length;
+                var totalPages = (perPage === 0 || total === 0) ? 1 : Math.ceil(total / perPage);
+                
+                if (currentPage > totalPages) { currentPage = totalPages; IWDashboard.codesCurrentPage = currentPage; }
+                if (currentPage < 1) { currentPage = 1; IWDashboard.codesCurrentPage = 1; }
+                
+                $allRows.hide();
+                if (perPage === 0) {
+                    $filteredRows.show();
+                } else {
+                    var start = (currentPage - 1) * perPage;
+                    $filteredRows.slice(start, start + perPage).show();
+                }
+                
+                IWDashboard.renderPagination('#iw-codes-pagination', total, totalPages, currentPage, perPage, function(page) {
+                    IWDashboard.codesCurrentPage = page;
+                    IWDashboard.paginateCodes();
+                });
+            },
+            
+            paginateStudents: function() {
+                var perPage = IWDashboard.studentsPerPage;
+                var currentPage = IWDashboard.studentsCurrentPage;
+                var $allRows = jQuery('.iw-students-table tbody tr');
+                var $filteredRows = $allRows.filter('[data-filter-visible="1"]');
+                var total = $filteredRows.length;
+                var totalPages = (perPage === 0 || total === 0) ? 1 : Math.ceil(total / perPage);
+                
+                if (currentPage > totalPages) { currentPage = totalPages; IWDashboard.studentsCurrentPage = currentPage; }
+                if (currentPage < 1) { currentPage = 1; IWDashboard.studentsCurrentPage = 1; }
+                
+                $allRows.hide();
+                if (perPage === 0) {
+                    $filteredRows.show();
+                } else {
+                    var start = (currentPage - 1) * perPage;
+                    $filteredRows.slice(start, start + perPage).show();
+                }
+                
+                IWDashboard.renderPagination('#iw-students-pagination', total, totalPages, currentPage, perPage, function(page) {
+                    IWDashboard.studentsCurrentPage = page;
+                    IWDashboard.paginateStudents();
+                });
+            },
+            
+            renderPagination: function(selector, total, totalPages, currentPage, perPage, onPageChange) {
+                var $container = jQuery(selector);
+                if (total === 0) { $container.html(''); return; }
+                
+                var start = (perPage === 0) ? 1 : (currentPage - 1) * perPage + 1;
+                var end = (perPage === 0) ? total : Math.min(currentPage * perPage, total);
+                var infoHtml = '<span class="iw-pagination-info">Showing ' + start + '\u2013' + end + ' of ' + total + '</span>';
+                
+                if (perPage === 0 || totalPages <= 1) { $container.html(infoHtml); return; }
+                
+                var controlsHtml = '<div class="iw-pagination-controls">';
+                controlsHtml += '<button class="iw-page-btn" ' + (currentPage === 1 ? 'disabled' : '') + ' data-page="' + (currentPage - 1) + '">&laquo; Prev</button>';
+                
+                var startPage = Math.max(1, currentPage - 2);
+                var endPage = Math.min(totalPages, startPage + 4);
+                startPage = Math.max(1, endPage - 4);
+                
+                if (startPage > 1) {
+                    controlsHtml += '<button class="iw-page-btn" data-page="1">1</button>';
+                    if (startPage > 2) { controlsHtml += '<span class="iw-pagination-ellipsis">\u2026</span>'; }
+                }
+                for (var p = startPage; p <= endPage; p++) {
+                    controlsHtml += '<button class="iw-page-btn' + (p === currentPage ? ' active' : '') + '" data-page="' + p + '">' + p + '</button>';
+                }
+                if (endPage < totalPages) {
+                    if (endPage < totalPages - 1) { controlsHtml += '<span class="iw-pagination-ellipsis">\u2026</span>'; }
+                    controlsHtml += '<button class="iw-page-btn" data-page="' + totalPages + '">' + totalPages + '</button>';
+                }
+                controlsHtml += '<button class="iw-page-btn" ' + (currentPage === totalPages ? 'disabled' : '') + ' data-page="' + (currentPage + 1) + '">Next &raquo;</button>';
+                controlsHtml += '</div>';
+                
+                $container.html(infoHtml + controlsHtml);
+                $container.find('.iw-page-btn:not([disabled])').on('click', function() {
+                    onPageChange(parseInt(jQuery(this).data('page')));
+                });
             },
             
             downloadCSV: function() {
@@ -1632,7 +1737,7 @@ class IELTS_CM_Access_Codes {
                 }
                 
                 var csv = 'Code,Group,Days,Status,Used By,Created\n';
-                jQuery('.iw-table tbody tr:visible').each(function() {
+                jQuery('.iw-table:not(.iw-students-table) tbody tr[data-filter-visible="1"]').each(function() {
                     var cols = jQuery(this).find('td');
                     if (cols.length >= 6) {
                         csv += escapeCSV(cols.eq(0).text()) + ',';
@@ -1685,6 +1790,19 @@ class IELTS_CM_Access_Codes {
             
             // Initialize code filter to show available (unused) codes by default
             IWDashboard.filterCodes('available');
+            
+            // Per-page selector handlers
+            $('#iw-codes-per-page').on('change', function() {
+                IWDashboard.codesPerPage = parseInt($(this).val());
+                IWDashboard.codesCurrentPage = 1;
+                IWDashboard.paginateCodes();
+            });
+            
+            $('#iw-students-per-page').on('change', function() {
+                IWDashboard.studentsPerPage = parseInt($(this).val());
+                IWDashboard.studentsCurrentPage = 1;
+                IWDashboard.paginateStudents();
+            });
             
             $('#create-invite-form').on('submit', function(e) {
                 e.preventDefault();
