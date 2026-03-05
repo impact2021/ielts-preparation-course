@@ -90,6 +90,7 @@ class IELTS_CM_Access_Codes {
         add_action('admin_init', array($this, 'migrate_partner_data_to_site_org'));
         add_action('admin_init', array($this, 'migrate_all_partner_data_to_site_org'));
         add_action('admin_init', array($this, 'migrate_users_without_organization'));
+        add_action('admin_init', array($this, 'migrate_unused_codes_to_any_course_group'));
         
         // Partner dashboard shortcode
         add_shortcode('iw_partner_dashboard', array($this, 'partner_dashboard_shortcode'));
@@ -378,6 +379,71 @@ class IELTS_CM_Access_Codes {
         
         // Mark migration as complete
         update_option('iw_users_without_org_migration_v4_done', true);
+        delete_transient($lock_key);
+    }
+    
+    /**
+     * Migrate previously-created unused codes to work with any course (V5 Migration)
+     * 
+     * Some partners created and issued codes that were locked to a specific course group
+     * (e.g. 'academic_module', 'general_module'). This migration updates all such codes
+     * that have not yet been used (status = 'active') so they work with any enrolment,
+     * matching the behaviour of newly created codes (course_group = 'any').
+     * 
+     * Only active/unused codes are changed. Used codes (status = 'used') and expired
+     * codes (status = 'expired') are intentionally left untouched to preserve the
+     * historical record. The duration_days of each code is preserved unchanged.
+     * 
+     * Public visibility required because it's hooked to admin_init
+     */
+    public function migrate_unused_codes_to_any_course_group() {
+        // Only allow admins to run this migration
+        if (!current_user_can('manage_options')) {
+            return;
+        }
+        
+        // Check if migration has already run
+        $migration_done = get_option('iw_unused_codes_any_group_migration_v5_done', false);
+        if ($migration_done) {
+            return;
+        }
+        
+        // Use transient lock to prevent concurrent execution
+        $lock_key = 'iw_unused_codes_any_group_migration_v5_lock';
+        if (get_transient($lock_key)) {
+            return; // Another process is running the migration
+        }
+        
+        // Set lock for 5 minutes
+        set_transient($lock_key, true, 300);
+        
+        global $wpdb;
+        
+        $codes_table = $wpdb->prefix . 'ielts_cm_access_codes';
+        
+        // Update all active (unused) codes that are locked to a specific course group.
+        // We only touch 'active' codes - used/expired codes are left as-is to preserve history.
+        $result = $wpdb->query(
+            $wpdb->prepare(
+                "UPDATE {$codes_table} SET course_group = %s WHERE status = %s AND course_group != %s",
+                'any',
+                'active',
+                'any'
+            )
+        );
+        
+        if ($result === false) {
+            error_log("Unused codes any-group migration v5 failed: " . $wpdb->last_error);
+            delete_transient($lock_key);
+            return;
+        }
+        
+        if ($result > 0) {
+            error_log("Unused codes any-group migration v5 completed: Updated {$result} active codes to course_group='any'");
+        }
+        
+        // Mark migration as complete
+        update_option('iw_unused_codes_any_group_migration_v5_done', true);
         delete_transient($lock_key);
     }
     
