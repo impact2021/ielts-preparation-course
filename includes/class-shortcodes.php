@@ -4848,7 +4848,7 @@ class IELTS_CM_Shortcodes {
                     <input type="text" name="ielts_access_code" id="ielts_access_code" required class="ielts-form-input"
                            value="<?php echo isset($_POST['ielts_access_code']) ? esc_attr(strtoupper($_POST['ielts_access_code'])) : ''; ?>"
                            style="text-transform: uppercase;" maxlength="50" placeholder="XXXXXXXX">
-                    <small class="form-help"><?php _e('Enter the 8-character code you received', 'ielts-course-manager'); ?></small>
+                    <small class="form-help"><?php _e('Enter the code you received', 'ielts-course-manager'); ?></small>
                 </div>
                 
                 <!-- Two Column Layout -->
