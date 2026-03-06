@@ -225,7 +225,8 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                                     <?php 
                                     // For CBT quizzes with popup enabled, link should go to fullscreen mode
                                     if ($item_type === 'quiz' && isset($use_fullscreen) && $use_fullscreen) {
-                                        $quiz_url = add_query_arg('fullscreen', '1', get_permalink($post_item->ID));
+                                        // Pass both fullscreen flag and lesson_id so the quiz page resolves the correct course
+                                        $quiz_url = add_query_arg(array('fullscreen' => '1', 'lesson_id' => $lesson->ID), get_permalink($post_item->ID));
                                     } elseif (in_array($item_type, array('resource', 'quiz'))) {
                                         // Pass lesson_id so the target page can resolve the correct course for access checks
                                         // (resources and exercises can be shared across lessons in different module types)
@@ -279,7 +280,7 @@ $is_completed = $user_id ? $progress_tracker->is_lesson_completed($user_id, $les
                             <td class="content-action">
                                 <?php if ($item_type === 'quiz' && isset($use_fullscreen) && $use_fullscreen): ?>
                                     <!-- CBT Exercise with fullscreen mode -->
-                                    <a href="<?php echo add_query_arg('fullscreen', '1', get_permalink($post_item->ID)); ?>" 
+                                    <a href="<?php echo esc_url(add_query_arg(array('fullscreen' => '1', 'lesson_id' => $lesson->ID), get_permalink($post_item->ID))); ?>" 
                                        class="button button-primary button-small">
                                         <?php echo isset($best_result) && $best_result ? __('Retake (Fullscreen)', 'ielts-course-manager') : __('Start CBT Exercise', 'ielts-course-manager'); ?>
                                     </a>
