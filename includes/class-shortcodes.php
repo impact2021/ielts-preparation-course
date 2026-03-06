@@ -1766,8 +1766,15 @@ class IELTS_CM_Shortcodes {
             return '<p>' . __('You are already logged in.', 'ielts-course-manager') . ' <a href="' . wp_logout_url() . '">' . __('Logout', 'ielts-course-manager') . '</a></p>';
         }
         
-        // Validate and sanitize redirect URL
-        $redirect_url = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+        // Validate and sanitize redirect URL.
+        // Priority: shortcode attribute → ?redirect_to query param → home URL.
+        if (!empty($atts['redirect'])) {
+            $redirect_url = esc_url_raw($atts['redirect']);
+        } elseif (!empty($_GET['redirect_to'])) {
+            $redirect_url = esc_url_raw(wp_unslash($_GET['redirect_to']));
+        } else {
+            $redirect_url = home_url();
+        }
         // Ensure redirect is to same site for security
         $redirect_url = wp_validate_redirect($redirect_url, home_url());
 

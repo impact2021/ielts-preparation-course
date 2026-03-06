@@ -125,6 +125,11 @@ class IELTS_Course_Manager {
         add_action('retrieve_password', array($this, 'log_password_reset_request'), 10, 1);
         add_action('after_password_reset', array($this, 'log_password_reset_complete'), 10, 2);
         
+        // Redirect WordPress login to the custom login page so that login-failure
+        // redirects land on the custom page (with ?login=failed / ?login=empty)
+        // rather than on wp-login.php, where the error query parameter gets lost.
+        add_filter('login_url', array($this, 'custom_login_url'), 10, 3);
+
         // Redirect "Lost your password?" to the custom reset page when one is configured
         add_filter('lostpassword_url', array($this, 'custom_lostpassword_url'), 10, 2);
         
@@ -476,6 +481,21 @@ class IELTS_Course_Manager {
             'meta'  => array('class' => 'ielts-cm-version-node')
         );
         $wp_admin_bar->add_node($args);
+    }
+
+    /**
+     * Redirect WordPress's login URL to the custom login page.
+     * This ensures that when WordPress redirects after a failed login attempt
+     * (adding ?login=failed or ?login=empty), it targets the custom login page
+     * rather than wp-login.php, so the inline error message is displayed.
+     *
+     * @param string $login_url    Default WordPress login URL.
+     * @param string $redirect     Redirect URL to forward to after a successful login.
+     * @param bool   $force_reauth Whether to force re-authentication.
+     * @return string
+     */
+    public function custom_login_url( $login_url, $redirect, $force_reauth ) {
+        return IELTS_CM_Frontend::get_custom_login_url( $redirect );
     }
 
     /**
