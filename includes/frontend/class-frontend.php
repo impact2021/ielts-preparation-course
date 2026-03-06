@@ -40,6 +40,10 @@ class IELTS_CM_Frontend {
         // Allow email login
         add_filter('authenticate', array($this, 'authenticate_with_email'), 20, 3);
         
+        // Redirect failed logins back to the custom login page with an error flag
+        // so the inline error message in display_login() can be displayed.
+        add_action('wp_login_failed', array($this, 'handle_login_failed'), 10, 2);
+        
         // AJAX handler for error report submission
         add_action('wp_ajax_ielts_cm_submit_error_report', array($this, 'handle_error_report_submission'));
         
@@ -90,7 +94,138 @@ class IELTS_CM_Frontend {
         
         return $user;
     }
-    
+
+    /**
+     * Redirect failed login attempts back to the custom login page with an
+     * inline error flag so the [ielts_login] shortcode can display the
+     * appropriate error message instead of leaving the user on wp-login.php.
+     *
+     * @param string   $username The username that was attempted.
+     * @param WP_Error $error    The error returned by wp_authenticate().
+     */
+    public function handle_login_failed($username, $error) {
+        $login_url = self::get_custom_login_url();
+
+        // Map the WordPress error code to the two states the shortcode understands.
+        $error_code   = $error instanceof WP_Error ? $error->get_error_code() : '';
+        $login_status = in_array($error_code, array('empty_username', 'empty_password'), true)
+            ? 'empty'
+            : 'failed';
+
+        $login_url = add_query_arg('login', $login_status, $login_url);
+
+        // Preserve the redirect_to parameter so the user lands in the right
+        // place after they correct their credentials and log in successfully.
+        // wp_login_form() sends redirect_to as a hidden POST field.
+        if (!empty($_POST['redirect_to'])) {
+            $login_url = add_query_arg('redirect_to', esc_url_raw(wp_unslash($_POST['redirect_to'])), $login_url);
+        }
+
+        // Send admin notification email if the setting is enabled (default: on).
+        if (get_option('ielts_cm_login_fail_notify_email', true)) {
+            $this->send_login_fail_notification($username, $error_code);
+        }
+
+        wp_safe_redirect($login_url);
+        exit;
+    }
+
+    /**
+     * Send an admin notification email when a login attempt fails.
+     *
+     * Rate-limited to a maximum of 10 emails per hour to prevent inbox flooding
+     * from automated or brute-force attacks.
+     *
+     * @param string $username   The username or email address that was attempted.
+     * @param string $error_code The WordPress authentication error code.
+     */
+    private function send_login_fail_notification($username, $error_code) {
+        // Rate-limit: allow at most 10 notification emails per hour to prevent
+        // inbox flooding from automated or brute-force attacks.
+        $rate_key   = 'ielts_cm_login_fail_notify_count';
+        $rate_count = (int) get_transient($rate_key);
+        if ($rate_count >= 10) {
+            return;
+        }
+        set_transient($rate_key, $rate_count + 1, HOUR_IN_SECONDS);
+
+        $admin_email = get_option('admin_email');
+        $site_name   = get_bloginfo('name');
+
+        // Determine a human-readable reason.
+        $reason_map = array(
+            'empty_username'       => __('No username or email address was provided.', 'ielts-course-manager'),
+            'empty_password'       => __('No password was provided.', 'ielts-course-manager'),
+            'invalid_username'     => __('Unknown username or email address.', 'ielts-course-manager'),
+            'invalid_email'        => __('Unknown email address.', 'ielts-course-manager'),
+            'incorrect_password'   => __('Incorrect password.', 'ielts-course-manager'),
+        );
+        $reason = isset($reason_map[$error_code])
+            ? $reason_map[$error_code]
+            : sprintf(__('Authentication error (%s).', 'ielts-course-manager'), $error_code);
+
+        // Collect pertinent information.
+        $attempted_user = !empty($username) ? $username : __('(none provided)', 'ielts-course-manager');
+        $ip_address     = $this->get_client_ip();
+        $user_agent     = isset($_SERVER['HTTP_USER_AGENT']) ? sanitize_text_field(wp_unslash($_SERVER['HTTP_USER_AGENT'])) : __('unknown', 'ielts-course-manager');
+        $time           = current_time('mysql');
+        $login_url      = self::get_custom_login_url();
+
+        /* translators: %s: site name */
+        $subject = sprintf(__('[%s] Failed Login Attempt', 'ielts-course-manager'), $site_name);
+
+        $body  = sprintf(__('A failed login attempt was recorded on %s.', 'ielts-course-manager'), $site_name) . "\n\n";
+        $body .= sprintf(__('Username / Email: %s', 'ielts-course-manager'), $attempted_user) . "\n";
+        $body .= sprintf(__('Reason: %s', 'ielts-course-manager'), $reason) . "\n";
+        $body .= sprintf(__('IP Address: %s', 'ielts-course-manager'), $ip_address) . "\n";
+        $body .= sprintf(__('User Agent: %s', 'ielts-course-manager'), $user_agent) . "\n";
+        $body .= sprintf(__('Date/Time: %s', 'ielts-course-manager'), $time) . "\n";
+        $body .= sprintf(__('Login Page: %s', 'ielts-course-manager'), $login_url) . "\n\n";
+        $body .= __('You can disable these notifications in IELTS Course Manager → Settings.', 'ielts-course-manager') . "\n";
+
+        wp_mail($admin_email, $subject, $body);
+    }
+
+    /**
+     * Retrieve the most likely real client IP address, accounting for common
+     * reverse-proxy and load-balancer forwarding headers.
+     *
+     * The first IP in X-Forwarded-For is used only when it is a valid IP
+     * address, preventing trivial header-injection spoofing.
+     *
+     * @return string Sanitized IP address, or 'unknown'.
+     */
+    private function get_client_ip() {
+        // Check forwarding headers set by proxies/load-balancers.
+        $forwarding_headers = array(
+            'HTTP_X_FORWARDED_FOR',
+            'HTTP_X_REAL_IP',
+            'HTTP_CLIENT_IP',
+        );
+
+        foreach ($forwarding_headers as $header) {
+            if (empty($_SERVER[$header])) {
+                continue;
+            }
+            // X-Forwarded-For may contain a comma-separated list; take the first entry.
+            $raw_ip = sanitize_text_field(wp_unslash($_SERVER[$header]));
+            $ip     = trim(explode(',', $raw_ip)[0]);
+            if (filter_var($ip, FILTER_VALIDATE_IP)) {
+                return $ip;
+            }
+        }
+
+        // Fall back to the direct connection address.
+        if (!empty($_SERVER['REMOTE_ADDR'])) {
+            $ip = sanitize_text_field(wp_unslash($_SERVER['REMOTE_ADDR']));
+            if (filter_var($ip, FILTER_VALIDATE_IP)) {
+                return $ip;
+            }
+        }
+
+        return __('unknown', 'ielts-course-manager');
+    }
+
     /**
      * Get custom password reset page URL from settings.
      * Returns empty string if not configured (caller should fall back to WP default).

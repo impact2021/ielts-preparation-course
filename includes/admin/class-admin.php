@@ -5329,6 +5329,11 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
             'default' => '',
             'sanitize_callback' => 'esc_url_raw'
         ));
+        register_setting('ielts_cm_settings', 'ielts_cm_login_fail_notify_email', array(
+            'type' => 'boolean',
+            'default' => true,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
     }
     
     /**
@@ -5375,6 +5380,9 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
             if (isset($_POST['ielts_cm_password_reset_page_url'])) {
                 update_option('ielts_cm_password_reset_page_url', esc_url_raw($_POST['ielts_cm_password_reset_page_url']));
             }
+
+            // Save login failure email notification toggle.
+            update_option('ielts_cm_login_fail_notify_email', isset($_POST['ielts_cm_login_fail_notify_email']));
             
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
@@ -5384,6 +5392,7 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         $access_code_enabled         = get_option('ielts_cm_access_code_enabled', false);
         $hybrid_site_enabled         = get_option('ielts_cm_hybrid_site_enabled', false);
         $password_reset_page_url     = get_option('ielts_cm_password_reset_page_url', '');
+        $login_fail_notify_email     = get_option('ielts_cm_login_fail_notify_email', true);
         
         // Determine which site type is currently selected
         $current_site_type = 'none';
@@ -5490,7 +5499,26 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                             </fieldset>
                         </td>
                     </tr>
-                </table>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Login Failure Email Notifications', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_login_fail_notify_email" value="1" <?php checked($login_fail_notify_email, true); ?>>
+                                    <?php _e('Send an email to the site administrator when a login attempt fails', 'ielts-course-manager'); ?>
+                                </label>
+                                <p class="description">
+                                    <?php
+                                    printf(
+                                        /* translators: %s: admin email address */
+                                        __('When enabled, a notification email will be sent to %s each time a login attempt fails. The email includes the username or email address used, the error type, the visitor\'s IP address, and the time of the attempt. Enabled by default.', 'ielts-course-manager'),
+                                        '<strong>' . esc_html(get_option('admin_email')) . '</strong>'
+                                    );
+                                    ?>
+                                </p>
+                            </fieldset>
                         </td>
                     </tr>
                 </table>
