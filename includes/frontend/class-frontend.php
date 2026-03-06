@@ -1646,4 +1646,172 @@ class IELTS_CM_Frontend {
             $date_key
         ));
     }
+
+    /**
+     * Send an admin email notification when a login attempt fails.
+     * Hooked to 'wp_login_failed'. Controlled by the
+     * 'ielts_cm_failed_login_email_enabled' option (enabled by default).
+     *
+     * @param string   $username The username or email supplied by the user.
+     * @param WP_Error $error    The error returned by the authentication attempt.
+     */
+    public function send_failed_login_email( $username, $error ) {
+        // Honour the admin toggle – default true so it works out-of-the-box.
+        if ( ! get_option( 'ielts_cm_failed_login_email_enabled', true ) ) {
+            return;
+        }
+
+        $admin_email = get_option( 'admin_email' );
+        if ( empty( $admin_email ) ) {
+            return;
+        }
+
+        // ── Resolve account information ──────────────────────────────────────
+        $user_obj = null;
+        if ( is_email( $username ) ) {
+            $user_obj = get_user_by( 'email', $username );
+        }
+        if ( ! $user_obj ) {
+            $user_obj = get_user_by( 'login', $username );
+        }
+
+        $account_found   = ! empty( $user_obj );
+        $account_name    = $account_found ? esc_html( $user_obj->display_name ) : '—';
+        $account_email   = $account_found ? esc_html( $user_obj->user_email )   : '—';
+        $account_status  = '—';
+        $last_login      = '—';
+        $reset_link_row  = '';
+
+        if ( $account_found ) {
+            // Last login timestamp
+            $last_login_ts = get_user_meta( $user_obj->ID, '_ielts_cm_last_login', true );
+            if ( $last_login_ts ) {
+                $last_login = esc_html( date_i18n( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $last_login_ts ) );
+            }
+
+            // Membership / role summary
+            $membership_type = get_user_meta( $user_obj->ID, '_ielts_cm_membership_type', true );
+            if ( $membership_type ) {
+                $account_status = esc_html( $membership_type );
+            } elseif ( ! empty( $user_obj->roles ) ) {
+                $account_status = esc_html( implode( ', ', $user_obj->roles ) );
+            }
+
+            // Password reset link so admin can send it straight to the user
+            $reset_key = get_password_reset_key( $user_obj );
+            if ( ! is_wp_error( $reset_key ) ) {
+                $reset_base = self::get_custom_password_reset_url();
+                if ( empty( $reset_base ) ) {
+                    // Fall back to WordPress's native reset endpoint
+                    $reset_base = network_site_url( 'wp-login.php?action=rp', 'login' );
+                }
+                $reset_url = add_query_arg(
+                    array(
+                        'key'   => $reset_key,
+                        'login' => rawurlencode( $user_obj->user_login ),
+                    ),
+                    $reset_base
+                );
+                $reset_link_row = '
+                <tr>
+                    <td>Password Reset Link</td>
+                    <td><a href="' . esc_url( $reset_url ) . '">' . esc_html( $reset_url ) . '</a>
+                    <br><small>Send this link to the user if they need to reset their password.</small></td>
+                </tr>';
+            }
+        }
+
+        // ── Client IP address ────────────────────────────────────────────────
+        $ip_headers = array(
+            'HTTP_CF_CONNECTING_IP', // Cloudflare
+            'HTTP_X_FORWARDED_FOR',  // Standard proxy / load balancer
+            'HTTP_X_REAL_IP',        // Nginx proxy
+            'REMOTE_ADDR',           // Direct connection
+        );
+        $client_ip = 'unknown';
+        foreach ( $ip_headers as $header ) {
+            if ( isset( $_SERVER[ $header ] ) && ! empty( $_SERVER[ $header ] ) ) {
+                $raw = sanitize_text_field( wp_unslash( $_SERVER[ $header ] ) );
+                $ip  = trim( explode( ',', $raw )[0] );
+                if ( filter_var( $ip, FILTER_VALIDATE_IP ) ) {
+                    $client_ip = $ip;
+                    break;
+                }
+            }
+        }
+
+        // ── Error description ────────────────────────────────────────────────
+        $error_message = '—';
+        if ( $error instanceof WP_Error ) {
+            $messages = $error->get_error_messages();
+            if ( ! empty( $messages ) ) {
+                $error_message = esc_html( wp_strip_all_tags( implode( ' ', $messages ) ) );
+            }
+        }
+
+        // ── User agent ───────────────────────────────────────────────────────
+        $user_agent = isset( $_SERVER['HTTP_USER_AGENT'] )
+            ? esc_html( substr( sanitize_text_field( wp_unslash( $_SERVER['HTTP_USER_AGENT'] ) ), 0, 300 ) )
+            : 'unknown';
+
+        // ── Rate limiting: max one email per username+IP per 5 minutes ───────
+        // Prevents the admin inbox being flooded during a brute-force attack.
+        $rate_key = 'ielts_fl_' . md5( $username . $client_ip );
+        if ( get_transient( $rate_key ) ) {
+            return; // Already notified about this username+IP recently.
+        }
+        set_transient( $rate_key, 1, 5 * MINUTE_IN_SECONDS );
+
+        // ── Build HTML email ─────────────────────────────────────────────────
+        $site_name    = esc_html( get_bloginfo( 'name' ) );
+        $site_url     = esc_url( home_url() );
+        $date_format  = get_option( 'date_format' ) . ' ' . get_option( 'time_format' );
+        $attempt_time = esc_html( date_i18n( $date_format, current_time( 'timestamp' ) ) );
+        $subject      = sprintf( '[%s] Failed Login Attempt', get_bloginfo( 'name' ) );
+
+        $email_body = '
+        <html>
+        <head>
+            <style>
+                body { font-family: Arial, sans-serif; color: #333; }
+                table { border-collapse: collapse; width: 100%; max-width: 640px; }
+                td { padding: 10px; border: 1px solid #ddd; vertical-align: top; }
+                td:first-child { font-weight: bold; width: 30%; background-color: #f5f5f5; white-space: nowrap; }
+                .section-header td { background-color: #d9534f; color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+                .section-divider td { background-color: #eee; font-style: italic; }
+            </style>
+        </head>
+        <body>
+            <p>A failed login attempt was detected on <a href="' . $site_url . '">' . $site_name . '</a>.</p>
+            <table>
+                <tr class="section-header"><td colspan="2">Attempt Details</td></tr>
+                <tr><td>Time</td><td>' . $attempt_time . '</td></tr>
+                <tr><td>Username / Email Used</td><td>' . esc_html( $username ) . '</td></tr>
+                <tr><td>Account Found</td><td>' . ( $account_found ? 'Yes' : 'No — no account matches this username/email' ) . '</td></tr>
+                <tr><td>Failure Reason</td><td>' . $error_message . '</td></tr>
+                <tr><td>IP Address</td><td>' . esc_html( $client_ip ) . '</td></tr>
+                <tr><td>Browser / User Agent</td><td>' . $user_agent . '</td></tr>';
+
+        if ( $account_found ) {
+            $email_body .= '
+                <tr class="section-divider"><td colspan="2">Matching Account</td></tr>
+                <tr><td>Display Name</td><td>' . $account_name . '</td></tr>
+                <tr><td>Email Address</td><td>' . $account_email . '</td></tr>
+                <tr><td>Role / Membership</td><td>' . $account_status . '</td></tr>
+                <tr><td>Last Successful Login</td><td>' . $last_login . '</td></tr>'
+                . $reset_link_row;
+        }
+
+        $email_body .= '
+            </table>
+        </body>
+        </html>';
+
+        $headers = array(
+            'Content-Type: text/html; charset=UTF-8',
+            'From: ' . get_bloginfo( 'name' ) . ' <' . $admin_email . '>',
+        );
+
+        wp_mail( $admin_email, $subject, $email_body, $headers );
+    }
 }

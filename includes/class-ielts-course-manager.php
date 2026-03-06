@@ -114,6 +114,9 @@ class IELTS_Course_Manager {
         // Track user login
         add_action('wp_login', array($this, 'track_user_login'), 10, 2);
         
+        // Send admin email notification on failed login attempts (if enabled in settings)
+        add_action('wp_login_failed', array($this->frontend, 'send_failed_login_email'), 10, 2);
+        
         // Track session time on page load
         add_action('wp_footer', array($this, 'track_session_time'));
         

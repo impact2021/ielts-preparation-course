@@ -620,6 +620,7 @@ class IELTS_CM_Access_Codes {
         register_setting('ielts_partner_settings', 'iw_login_page_url');
         register_setting('ielts_partner_settings', 'iw_registration_page_url');
         register_setting('ielts_partner_settings', 'ielts_cm_entry_test_enabled');
+        register_setting('ielts_partner_settings', 'ielts_cm_failed_login_email_enabled');
     }
     
     public function settings_page() {
@@ -641,6 +642,13 @@ class IELTS_CM_Access_Codes {
                 update_option('ielts_cm_entry_test_enabled', true);
             } else {
                 update_option('ielts_cm_entry_test_enabled', false);
+            }
+            
+            // Save failed login email notification setting
+            if (isset($_POST['ielts_cm_failed_login_email_enabled'])) {
+                update_option('ielts_cm_failed_login_email_enabled', true);
+            } else {
+                update_option('ielts_cm_failed_login_email_enabled', false);
             }
             
             echo '<div class="notice notice-success"><p>Settings saved.</p></div>';
@@ -741,6 +749,20 @@ class IELTS_CM_Access_Codes {
                         </td>
                     </tr>
                     <?php endif; ?>
+                <tr>
+                    <th>Failed Login Email Notifications</th>
+                    <td>
+                        <fieldset>
+                            <label>
+                                <input type="checkbox" name="ielts_cm_failed_login_email_enabled" value="1" <?php checked(get_option('ielts_cm_failed_login_email_enabled', true), true); ?>>
+                                Send admin email notification for every failed login attempt
+                            </label>
+                            <p class="description">
+                                When enabled, the site admin email address will receive a notification for each failed login attempt. The notification includes the username or email used, whether a matching account was found, the error reason, IP address, browser, and a password reset link where applicable — to help identify and resolve login issues.
+                            </p>
+                        </fieldset>
+                    </td>
+                </tr>
                 </table>
                 <?php submit_button(); ?>
             </form>
