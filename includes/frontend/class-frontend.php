@@ -40,6 +40,10 @@ class IELTS_CM_Frontend {
         // Allow email login
         add_filter('authenticate', array($this, 'authenticate_with_email'), 20, 3);
         
+        // Redirect failed logins back to the custom login page with an error flag
+        // so the inline error message in display_login() can be displayed.
+        add_action('wp_login_failed', array($this, 'handle_login_failed'), 10, 2);
+        
         // AJAX handler for error report submission
         add_action('wp_ajax_ielts_cm_submit_error_report', array($this, 'handle_error_report_submission'));
         
@@ -90,7 +94,37 @@ class IELTS_CM_Frontend {
         
         return $user;
     }
-    
+
+    /**
+     * Redirect failed login attempts back to the custom login page with an
+     * inline error flag so the [ielts_login] shortcode can display the
+     * appropriate error message instead of leaving the user on wp-login.php.
+     *
+     * @param string   $username The username that was attempted.
+     * @param WP_Error $error    The error returned by wp_authenticate().
+     */
+    public function handle_login_failed($username, $error) {
+        $login_url = self::get_custom_login_url();
+
+        // Map the WordPress error code to the two states the shortcode understands.
+        $error_code   = $error instanceof WP_Error ? $error->get_error_code() : '';
+        $login_status = in_array($error_code, array('empty_username', 'empty_password'), true)
+            ? 'empty'
+            : 'failed';
+
+        $login_url = add_query_arg('login', $login_status, $login_url);
+
+        // Preserve the redirect_to parameter so the user lands in the right
+        // place after they correct their credentials and log in successfully.
+        // wp_login_form() sends redirect_to as a hidden POST field.
+        if (!empty($_POST['redirect_to'])) {
+            $login_url = add_query_arg('redirect_to', esc_url_raw(wp_unslash($_POST['redirect_to'])), $login_url);
+        }
+
+        wp_safe_redirect($login_url);
+        exit;
+    }
+
     /**
      * Get custom password reset page URL from settings.
      * Returns empty string if not configured (caller should fall back to WP default).
