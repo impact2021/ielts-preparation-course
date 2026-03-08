@@ -37,12 +37,19 @@ class IELTS_CM_Frontend {
         // Hide admin bar for students (non-admins)
         add_action('after_setup_theme', array($this, 'hide_admin_bar_for_students'));
         
+        // Block login attempts that exceed the configured rate limit.
+        // Priority 1 ensures this runs before WordPress authenticates the credentials.
+        add_filter('authenticate', array($this, 'check_login_rate_limit'), 1, 3);
+
         // Allow email login
         add_filter('authenticate', array($this, 'authenticate_with_email'), 20, 3);
         
         // Redirect failed logins back to the custom login page with an error flag
         // so the inline error message in display_login() can be displayed.
         add_action('wp_login_failed', array($this, 'handle_login_failed'), 10, 2);
+
+        // Clear failed-attempt counters when a user logs in successfully.
+        add_action('wp_login', array($this, 'clear_login_rate_limit'), 10, 2);
         
         // AJAX handler for error report submission
         add_action('wp_ajax_ielts_cm_submit_error_report', array($this, 'handle_error_report_submission'));
@@ -96,6 +103,100 @@ class IELTS_CM_Frontend {
     }
 
     /**
+     * Check whether the current login attempt should be blocked due to too many
+     * recent failures from the same IP address or for the same username.
+     *
+     * Hooked to the 'authenticate' filter at priority 1 so that it fires before
+     * WordPress verifies the credentials, stopping repeated attempts early.
+     *
+     * @param WP_User|WP_Error|null $user     Result passed through the filter chain.
+     * @param string                $username Username or email address supplied.
+     * @param string                $password Password supplied (not used here).
+     * @return WP_User|WP_Error|null Original $user value, or a WP_Error if locked out.
+     */
+    public function check_login_rate_limit($user, $username, $password) {
+        // If lockout protection is disabled, or no credentials were provided, pass through.
+        if (!get_option('ielts_cm_login_lockout_enabled', true) || empty($username)) {
+            return $user;
+        }
+
+        $max_attempts = min(100, max(1, (int) get_option('ielts_cm_login_max_attempts', 5)));
+        $ip           = $this->get_client_ip();
+        $ip_key       = 'ielts_cm_lat_ip_' . md5($ip);
+        $user_key     = 'ielts_cm_lat_u_' . md5(strtolower($username));
+
+        if (
+            (int) get_transient($ip_key)   >= $max_attempts ||
+            (int) get_transient($user_key) >= $max_attempts
+        ) {
+            $lockout_duration = min(1440, max(1, (int) get_option('ielts_cm_login_lockout_duration', 30)));
+            return new WP_Error(
+                'too_many_attempts',
+                sprintf(
+                    /* translators: %d: lockout duration in minutes */
+                    __('<strong>Too many failed login attempts.</strong> Please wait %d minutes before trying again.', 'ielts-course-manager'),
+                    $lockout_duration
+                )
+            );
+        }
+
+        return $user;
+    }
+
+    /**
+     * Record a failed login attempt and increment the per-IP and per-username
+     * counters stored as WordPress transients.
+     *
+     * @param string $username The username (or email) that was attempted.
+     * @param string $error_code The WordPress authentication error code.
+     */
+    private function record_login_failure($username, $error_code) {
+        // Don't count our own lockout error or empty-field submissions as genuine
+        // authentication failures — they are not credential-guessing attempts.
+        $skip_codes = array('too_many_attempts', 'empty_username', 'empty_password');
+        if (in_array($error_code, $skip_codes, true)) {
+            return;
+        }
+
+        if (!get_option('ielts_cm_login_lockout_enabled', true)) {
+            return;
+        }
+
+        $lockout_seconds = min(1440, max(1, (int) get_option('ielts_cm_login_lockout_duration', 30))) * MINUTE_IN_SECONDS;
+
+        // Track by IP.
+        $ip      = $this->get_client_ip();
+        $ip_key  = 'ielts_cm_lat_ip_' . md5($ip);
+        $ip_cnt  = (int) get_transient($ip_key);
+        set_transient($ip_key, $ip_cnt + 1, $lockout_seconds);
+
+        // Track by username / email (normalized to lower-case).
+        if (!empty($username)) {
+            $user_key = 'ielts_cm_lat_u_' . md5(strtolower($username));
+            $user_cnt = (int) get_transient($user_key);
+            set_transient($user_key, $user_cnt + 1, $lockout_seconds);
+        }
+    }
+
+    /**
+     * Clear the rate-limit counters for the IP address and username that just
+     * logged in successfully so legitimate users are never locked out.
+     *
+     * Hooked to the 'wp_login' action.
+     *
+     * @param string  $user_login The user's login name.
+     * @param WP_User $user       The logged-in user object.
+     */
+    public function clear_login_rate_limit($user_login, $user) {
+        // Clear by username.
+        delete_transient('ielts_cm_lat_u_' . md5(strtolower($user_login)));
+
+        // Clear by current IP so a legitimate user behind the same IP is unblocked.
+        $ip = $this->get_client_ip();
+        delete_transient('ielts_cm_lat_ip_' . md5($ip));
+    }
+
+    /**
      * Redirect failed login attempts back to the custom login page with an
      * inline error flag so the [ielts_login] shortcode can display the
      * appropriate error message instead of leaving the user on wp-login.php.
@@ -120,6 +221,9 @@ class IELTS_CM_Frontend {
         if (!empty($_POST['redirect_to'])) {
             $login_url = add_query_arg('redirect_to', esc_url_raw(wp_unslash($_POST['redirect_to'])), $login_url);
         }
+
+        // Increment the per-IP and per-username failure counters.
+        $this->record_login_failure($username, $error_code);
 
         // Send admin notification email if the setting is enabled (default: on).
         if (get_option('ielts_cm_login_fail_notify_email', true)) {
