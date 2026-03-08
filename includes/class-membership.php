@@ -1380,6 +1380,9 @@ class IELTS_CM_Membership {
                         case 'general_english':
                             $allowed_categories = array('english');
                             break;
+                        case 'entry_test':
+                            $allowed_categories = array('entry-test');
+                            break;
                         default:
                             // Unknown course group - deny access
                             return false;
