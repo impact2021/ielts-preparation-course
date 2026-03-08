@@ -33,6 +33,12 @@ class IELTS_CM_Stripe_Payment {
         
         // Webhook handler for payment confirmation
         add_action('rest_api_init', array($this, 'register_webhook_endpoint'));
+        
+        // PayPal membership payment AJAX endpoints
+        add_action('wp_ajax_nopriv_ielts_cm_create_paypal_membership_order', array($this, 'create_paypal_membership_order'));
+        add_action('wp_ajax_ielts_cm_create_paypal_membership_order', array($this, 'create_paypal_membership_order'));
+        add_action('wp_ajax_nopriv_ielts_cm_capture_paypal_membership_order', array($this, 'capture_paypal_membership_order'));
+        add_action('wp_ajax_ielts_cm_capture_paypal_membership_order', array($this, 'capture_paypal_membership_order'));
     }
     
     /**
@@ -1626,5 +1632,298 @@ class IELTS_CM_Stripe_Payment {
             error_log('IELTS Stripe: Error checking payment status - ' . $e->getMessage());
             wp_send_json_error(array('message' => 'An error occurred'));
         }
+    }
+    
+    /**
+     * Get a PayPal API access token using client credentials
+     *
+     * @return string|WP_Error Access token string or WP_Error on failure
+     */
+    private function get_paypal_access_token() {
+        $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
+        $paypal_secret    = get_option('ielts_cm_paypal_secret', '');
+        
+        if (empty($paypal_client_id) || empty($paypal_secret)) {
+            return new WP_Error('paypal_not_configured', 'PayPal is not configured properly');
+        }
+        
+        $auth_response = wp_remote_post('https://api-m.paypal.com/v1/oauth2/token', array(
+            'headers' => array(
+                'Accept'          => 'application/json',
+                'Accept-Language' => 'en_US',
+                'Authorization'   => 'Basic ' . base64_encode($paypal_client_id . ':' . $paypal_secret),
+            ),
+            'body' => array('grant_type' => 'client_credentials'),
+        ));
+        
+        if (is_wp_error($auth_response)) {
+            error_log('IELTS PayPal: Auth request failed - ' . $auth_response->get_error_message());
+            return new WP_Error('paypal_auth_failed', 'PayPal authentication failed');
+        }
+        
+        $auth_body = json_decode(wp_remote_retrieve_body($auth_response), true);
+        if (empty($auth_body['access_token'])) {
+            error_log('IELTS PayPal: Auth response missing access_token - ' . print_r($auth_body, true));
+            return new WP_Error('paypal_auth_failed', 'PayPal authentication failed');
+        }
+        
+        return $auth_body['access_token'];
+    }
+    
+    /**
+     * AJAX handler: Create a PayPal order for a membership registration/upgrade.
+     * Accepts an already-created user_id (user account was created in a prior step).
+     */
+    public function create_paypal_membership_order() {
+        error_log('IELTS PayPal: create_paypal_membership_order called');
+        
+        $this->verify_nonce('create_paypal_membership_order');
+        
+        if (!get_option('ielts_cm_paypal_enabled', false)) {
+            wp_send_json_error('PayPal is not enabled on this site.');
+            return;
+        }
+        
+        $user_id        = intval($_POST['user_id'] ?? 0);
+        $membership_type = sanitize_text_field($_POST['membership_type'] ?? '');
+        $amount         = floatval($_POST['amount'] ?? 0);
+        
+        if ($user_id <= 0 || !get_userdata($user_id)) {
+            wp_send_json_error('Invalid user account.');
+            return;
+        }
+        
+        if (empty($membership_type)) {
+            wp_send_json_error('Membership type is required.');
+            return;
+        }
+        
+        // Validate amount against server-side pricing to prevent tampering
+        $pricing      = get_option('ielts_cm_membership_pricing', array());
+        $server_price = isset($pricing[$membership_type]) ? floatval($pricing[$membership_type]) : 0;
+        if ($server_price <= 0 || abs($server_price - $amount) > 0.01) {
+            error_log("IELTS PayPal: Price mismatch for $membership_type - sent $amount, expected $server_price");
+            wp_send_json_error('Price mismatch. Please refresh the page and try again.');
+            return;
+        }
+        
+        $access_token = $this->get_paypal_access_token();
+        if (is_wp_error($access_token)) {
+            wp_send_json_error($access_token->get_error_message());
+            return;
+        }
+        
+        $order_data = array(
+            'intent'       => 'CAPTURE',
+            'purchase_units' => array(
+                array(
+                    'description' => 'IELTS Course Membership - ' . $membership_type,
+                    'amount'      => array(
+                        'currency_code' => 'USD',
+                        'value'         => number_format($amount, 2, '.', ''),
+                    ),
+                ),
+            ),
+            'application_context' => array(
+                'brand_name'          => get_bloginfo('name'),
+                'shipping_preference' => 'NO_SHIPPING',
+            ),
+        );
+        
+        $create_response = wp_remote_post('https://api-m.paypal.com/v2/checkout/orders', array(
+            'headers' => array(
+                'Content-Type'  => 'application/json',
+                'Authorization' => 'Bearer ' . $access_token,
+            ),
+            'body' => wp_json_encode($order_data),
+        ));
+        
+        if (is_wp_error($create_response)) {
+            error_log('IELTS PayPal: Create order request failed - ' . $create_response->get_error_message());
+            wp_send_json_error('Failed to create PayPal order. Please try again.');
+            return;
+        }
+        
+        $create_body = json_decode(wp_remote_retrieve_body($create_response), true);
+        if (empty($create_body['id'])) {
+            error_log('IELTS PayPal: Create order failed - ' . print_r($create_body, true));
+            wp_send_json_error('Failed to create PayPal order. Please try again.');
+            return;
+        }
+        
+        // Store pending payment data against the user so we can verify on capture
+        update_user_meta($user_id, '_ielts_cm_pending_paypal_membership', array(
+            'order_id'       => $create_body['id'],
+            'membership_type' => $membership_type,
+            'amount'         => $amount,
+            'created'        => time(),
+        ));
+        
+        error_log("IELTS PayPal: Order {$create_body['id']} created for user $user_id ($membership_type)");
+        wp_send_json_success(array('order_id' => $create_body['id']));
+    }
+    
+    /**
+     * AJAX handler: Capture an approved PayPal membership order and activate the membership.
+     */
+    public function capture_paypal_membership_order() {
+        error_log('IELTS PayPal: capture_paypal_membership_order called');
+        
+        $this->verify_nonce('capture_paypal_membership_order');
+        
+        if (!get_option('ielts_cm_paypal_enabled', false)) {
+            wp_send_json_error('PayPal is not enabled on this site.');
+            return;
+        }
+        
+        $order_id = sanitize_text_field($_POST['order_id'] ?? '');
+        $user_id  = intval($_POST['user_id'] ?? 0);
+        
+        if (empty($order_id)) {
+            wp_send_json_error('Order ID is required.');
+            return;
+        }
+        
+        if ($user_id <= 0 || !get_userdata($user_id)) {
+            wp_send_json_error('Invalid user account.');
+            return;
+        }
+        
+        // Verify the order belongs to this user (prevents order-swapping attacks)
+        $pending = get_user_meta($user_id, '_ielts_cm_pending_paypal_membership', true);
+        if (empty($pending) || $pending['order_id'] !== $order_id) {
+            error_log("IELTS PayPal: Capture failed - order $order_id does not match pending data for user $user_id");
+            wp_send_json_error('Invalid order. Please try again.');
+            return;
+        }
+        
+        // Reject orders older than 1 hour
+        if (isset($pending['created']) && (time() - $pending['created']) > 3600) {
+            delete_user_meta($user_id, '_ielts_cm_pending_paypal_membership');
+            wp_send_json_error('Order expired. Please start the payment process again.');
+            return;
+        }
+        
+        $membership_type = $pending['membership_type'];
+        $amount          = $pending['amount'];
+        
+        $access_token = $this->get_paypal_access_token();
+        if (is_wp_error($access_token)) {
+            wp_send_json_error($access_token->get_error_message());
+            return;
+        }
+        
+        // Verify the order is in APPROVED state before capturing
+        $get_order_response = wp_remote_get("https://api-m.paypal.com/v2/checkout/orders/{$order_id}", array(
+            'headers' => array(
+                'Content-Type'  => 'application/json',
+                'Authorization' => 'Bearer ' . $access_token,
+            ),
+        ));
+        
+        if (is_wp_error($get_order_response)) {
+            error_log('IELTS PayPal: Get order request failed - ' . $get_order_response->get_error_message());
+            wp_send_json_error('Failed to verify PayPal order.');
+            return;
+        }
+        
+        $order_details = json_decode(wp_remote_retrieve_body($get_order_response), true);
+        if (empty($order_details['status']) || $order_details['status'] !== 'APPROVED') {
+            error_log('IELTS PayPal: Order not in APPROVED state - ' . print_r($order_details, true));
+            wp_send_json_error('Payment has not been approved by PayPal. Status: ' . ($order_details['status'] ?? 'unknown'));
+            return;
+        }
+        
+        // Capture the order
+        $capture_response = wp_remote_post("https://api-m.paypal.com/v2/checkout/orders/{$order_id}/capture", array(
+            'headers' => array(
+                'Content-Type'  => 'application/json',
+                'Authorization' => 'Bearer ' . $access_token,
+            ),
+            'body' => '',
+        ));
+        
+        if (is_wp_error($capture_response)) {
+            error_log('IELTS PayPal: Capture request failed - ' . $capture_response->get_error_message());
+            wp_send_json_error('Failed to capture PayPal payment. Please contact support.');
+            return;
+        }
+        
+        $capture_body = json_decode(wp_remote_retrieve_body($capture_response), true);
+        if (empty($capture_body['status']) || $capture_body['status'] !== 'COMPLETED') {
+            error_log('IELTS PayPal: Capture failed - ' . print_r($capture_body, true));
+            wp_send_json_error('PayPal payment capture failed. Please contact support.');
+            return;
+        }
+        
+        // Log payment to the payments table
+        $this->ensure_payment_table_exists();
+        global $wpdb;
+        $table_name    = $wpdb->prefix . 'ielts_cm_payments';
+        $insert_result = $wpdb->insert(
+            $table_name,
+            array(
+                'user_id'        => $user_id,
+                'membership_type' => $membership_type,
+                'amount'         => $amount,
+                'transaction_id' => $order_id,
+                'payment_status' => 'completed',
+            ),
+            array('%d', '%s', '%f', '%s', '%s')
+        );
+        
+        if ($insert_result === false) {
+            error_log("IELTS PayPal: Failed to log payment for user $user_id - " . $wpdb->last_error);
+        }
+        
+        // Activate membership
+        if (!$this->verify_membership_class('capture_paypal_membership_order')) {
+            error_log("IELTS PayPal: CRITICAL - PayPal order $order_id captured but membership class unavailable for user $user_id. Manual activation required.");
+            wp_send_json_error('Your payment was received (PayPal order: ' . esc_html($order_id) . ') but membership activation failed due to a system error. Please contact support with this order ID and we will manually activate your membership or issue a refund.');
+            return;
+        }
+        
+        try {
+            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+            
+            $membership = new IELTS_CM_Membership();
+            $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+            delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
+            
+            $expiry_date = $membership->calculate_expiry_date($membership_type);
+            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+            update_user_meta($user_id, '_ielts_cm_payment_date', current_time('mysql'));
+            
+            // Clean up registration and pending flags
+            delete_user_meta($user_id, '_ielts_cm_pending_paypal_membership');
+            delete_user_meta($user_id, '_ielts_cm_pending_membership_type');
+            delete_user_meta($user_id, '_ielts_cm_registration_pending');
+            
+            // Send welcome email
+            try {
+                wp_new_user_notification($user_id, null, 'both');
+            } catch (Throwable $e) {
+                error_log('IELTS PayPal: Failed to send welcome email - ' . $e->getMessage());
+            }
+            
+        } catch (Throwable $e) {
+            error_log('IELTS PayPal: CRITICAL - Error activating membership after capture - ' . $e->getMessage() . " (user $user_id, order $order_id)");
+            wp_send_json_error('Your payment was received (PayPal order: ' . esc_html($order_id) . ') but membership activation encountered an error. Please contact support with this order ID and we will manually activate your membership.');
+            return;
+        }
+        
+        // Auto-login the user
+        wp_set_auth_cookie($user_id, true);
+        wp_set_current_user($user_id);
+        $user = get_userdata($user_id);
+        do_action('wp_login', $user ? $user->user_login : '', $user);
+        
+        $redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
+        if (empty($redirect_url)) {
+            $redirect_url = current_user_can('read') ? admin_url() : home_url();
+        }
+        
+        error_log("IELTS PayPal: Membership $membership_type activated for user $user_id (order $order_id)");
+        wp_send_json_success(array('redirect' => $redirect_url));
     }
 }

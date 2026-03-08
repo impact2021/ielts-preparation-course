@@ -2213,9 +2213,23 @@ class IELTS_CM_Shortcodes {
             $pricing = get_option('ielts_cm_membership_pricing', array());
             $extension_pricing = get_option('ielts_cm_extension_pricing', $extension_pricing_defaults);
             
+            // PayPal configuration
+            $paypal_enabled   = get_option('ielts_cm_paypal_enabled', false);
+            $paypal_client_id = get_option('ielts_cm_paypal_client_id', '');
+            $paypal_active    = $paypal_enabled && !empty($paypal_client_id);
+            
             if (!empty($stripe_publishable)) {
                 wp_enqueue_script('stripe-js', 'https://js.stripe.com/v3/', array(), null, true);
-                wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', array('jquery', 'stripe-js'), IELTS_CM_VERSION, true);
+                
+                // Load PayPal SDK when PayPal is enabled so it is available for registration-payment.js
+                $paypal_dep = array('jquery', 'stripe-js');
+                if ($paypal_active) {
+                    $paypal_sdk_url = 'https://www.paypal.com/sdk/js?client-id=' . urlencode($paypal_client_id) . '&currency=USD';
+                    wp_enqueue_script('paypal-sdk', $paypal_sdk_url, array(), null, true);
+                    $paypal_dep[] = 'paypal-sdk';
+                }
+                
+                wp_enqueue_script('ielts-registration-payment', IELTS_CM_PLUGIN_URL . 'assets/js/registration-payment.js', $paypal_dep, IELTS_CM_VERSION, true);
                 
                 // Pass user information to JavaScript for logged-in users
                 $user_data = array('isLoggedIn' => false);
@@ -2238,6 +2252,7 @@ class IELTS_CM_Shortcodes {
                     'extensionPricing' => $extension_pricing,
                     'user' => $user_data,
                     'isAdmin' => current_user_can('manage_options'),
+                    'paypalEnabled' => $paypal_active,
                 ));
             }
         }
@@ -3022,13 +3037,6 @@ class IELTS_CM_Shortcodes {
                                     paypalContainer.classList.add('active');
                                     stripeContainer.setAttribute('aria-hidden', 'true');
                                     paypalContainer.setAttribute('aria-hidden', 'false');
-                                    
-                                    // Note: PayPal integration would be initialized here
-                                    // For now, show a placeholder message
-                                    var paypalButtonContainer = document.getElementById('paypal-button-container');
-                                    if (paypalButtonContainer && !paypalButtonContainer.hasChildNodes()) {
-                                        paypalButtonContainer.innerHTML = '<div style="padding: 20px; background: #fff; border: 2px dashed #ddd; border-radius: 4px; text-align: center;"><p style="margin: 0; color: #666;">PayPal integration coming soon.</p><p style="margin: 10px 0 0 0; font-size: 12px; color: #999;">Please use Credit/Debit Card payment or contact support.</p></div>';
-                                    }
                                 }
                             });
                         });
