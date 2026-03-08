@@ -2359,6 +2359,11 @@ class IELTS_CM_Shortcodes {
                         if (!$english_only_enabled && in_array($membership_type, array('english_trial', 'english_full'))) {
                             $errors[] = __('The selected membership type is not available.', 'ielts-course-manager');
                         }
+                        // Additional validation: Check if free trial is enabled
+                        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', false);
+                        if (!$free_trial_enabled && IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                            $errors[] = __('Free trial enrollment is not currently available.', 'ielts-course-manager');
+                        }
                         // Note: Paid memberships can now be selected during registration
                         // For paid memberships, users will be redirected to payment after registration
                     }
@@ -2590,11 +2595,16 @@ class IELTS_CM_Shortcodes {
                                         $trial_options = array();
                                         $paid_options = array();
                                         
+                                        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', false);
+                                        
                                         foreach ($membership_levels as $key => $label) {
                                             $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
                                             $option_label = $label;
                                             
                                             if (IELTS_CM_Membership::is_trial_membership($key)) {
+                                                if (!$free_trial_enabled) {
+                                                    continue;
+                                                }
                                                 $option_label .= ' (Free Trial)';
                                                 $trial_options[$key] = $option_label;
                                             } else {

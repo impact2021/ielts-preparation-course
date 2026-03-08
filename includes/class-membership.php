@@ -629,6 +629,7 @@ class IELTS_CM_Membership {
     public function register_settings() {
         // Register membership settings
         register_setting('ielts_membership_settings', 'ielts_cm_membership_enabled');
+        register_setting('ielts_membership_settings', 'ielts_cm_free_trial_enabled');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_course_mapping');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_durations');
         register_setting('ielts_membership_settings', 'ielts_cm_full_member_page_url');
@@ -781,6 +782,7 @@ class IELTS_CM_Membership {
         }
         
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
+            update_option('ielts_cm_free_trial_enabled', isset($_POST['ielts_cm_free_trial_enabled']) ? 1 : 0);
             update_option('ielts_cm_english_only_enabled', isset($_POST['ielts_cm_english_only_enabled']) ? 1 : 0);
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
             update_option('ielts_cm_post_payment_redirect_url', sanitize_text_field($_POST['ielts_cm_post_payment_redirect_url']));
@@ -801,6 +803,7 @@ class IELTS_CM_Membership {
         }
         
         $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
+        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', false);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
@@ -842,6 +845,18 @@ class IELTS_CM_Membership {
                 <?php wp_nonce_field('ielts_membership_settings'); ?>
                 
                 <table class="form-table">
+                    <tr>
+                        <th scope="row"><?php _e('Enable Free Trial', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="ielts_cm_free_trial_enabled" value="1" <?php checked($free_trial_enabled, 1); ?>>
+                                <?php _e('Allow users to enrol in free trial memberships', 'ielts-course-manager'); ?>
+                            </label>
+                            <p class="description">
+                                <?php _e('When disabled, free trial options will be hidden from the registration form and the trial popup will not be shown. Users will not be able to enrol in a free trial.', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
                     <tr>
                         <th scope="row"><?php _e('Enable English Only Membership', 'ielts-course-manager'); ?></th>
                         <td>
