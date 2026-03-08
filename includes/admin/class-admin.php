@@ -5334,6 +5334,21 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
             'default' => true,
             'sanitize_callback' => 'rest_sanitize_boolean'
         ));
+        register_setting('ielts_cm_settings', 'ielts_cm_login_lockout_enabled', array(
+            'type' => 'boolean',
+            'default' => true,
+            'sanitize_callback' => 'rest_sanitize_boolean'
+        ));
+        register_setting('ielts_cm_settings', 'ielts_cm_login_max_attempts', array(
+            'type' => 'integer',
+            'default' => 5,
+            'sanitize_callback' => function($v) { return min(100, max(1, absint($v))); }
+        ));
+        register_setting('ielts_cm_settings', 'ielts_cm_login_lockout_duration', array(
+            'type' => 'integer',
+            'default' => 30,
+            'sanitize_callback' => function($v) { return min(1440, max(1, absint($v))); }
+        ));
     }
     
     /**
@@ -5383,6 +5398,15 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
 
             // Save login failure email notification toggle.
             update_option('ielts_cm_login_fail_notify_email', isset($_POST['ielts_cm_login_fail_notify_email']));
+
+            // Save login lockout (brute-force protection) settings.
+            update_option('ielts_cm_login_lockout_enabled', isset($_POST['ielts_cm_login_lockout_enabled']));
+            if (isset($_POST['ielts_cm_login_max_attempts'])) {
+                update_option('ielts_cm_login_max_attempts', min(100, max(1, absint($_POST['ielts_cm_login_max_attempts']))));
+            }
+            if (isset($_POST['ielts_cm_login_lockout_duration'])) {
+                update_option('ielts_cm_login_lockout_duration', min(1440, max(1, absint($_POST['ielts_cm_login_lockout_duration']))));
+            }
             
             echo '<div class="notice notice-success is-dismissible"><p>' . __('Settings saved.', 'ielts-course-manager') . '</p></div>';
         }
@@ -5393,6 +5417,9 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         $hybrid_site_enabled         = get_option('ielts_cm_hybrid_site_enabled', false);
         $password_reset_page_url     = get_option('ielts_cm_password_reset_page_url', '');
         $login_fail_notify_email     = get_option('ielts_cm_login_fail_notify_email', true);
+        $login_lockout_enabled       = get_option('ielts_cm_login_lockout_enabled', true);
+        $login_max_attempts          = max(1, (int) get_option('ielts_cm_login_max_attempts', 5));
+        $login_lockout_duration      = max(1, (int) get_option('ielts_cm_login_lockout_duration', 30));
         
         // Determine which site type is currently selected
         $current_site_type = 'none';
@@ -5519,6 +5546,44 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                                     ?>
                                 </p>
                             </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Login Lockout (Brute-Force Protection)', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <fieldset>
+                                <label>
+                                    <input type="checkbox" name="ielts_cm_login_lockout_enabled" value="1" <?php checked($login_lockout_enabled, true); ?>>
+                                    <?php _e('Enable login lockout after repeated failed attempts', 'ielts-course-manager'); ?>
+                                </label>
+                                <p class="description">
+                                    <?php _e('When enabled, an IP address or username that exceeds the maximum number of failed login attempts will be temporarily blocked from logging in. Enabled by default.', 'ielts-course-manager'); ?>
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Maximum Login Attempts', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <input type="number" name="ielts_cm_login_max_attempts" value="<?php echo esc_attr($login_max_attempts); ?>" min="1" max="100" class="small-text">
+                            <p class="description">
+                                <?php _e('Number of failed login attempts allowed before the IP address or username is locked out. Default: 5.', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <?php _e('Lockout Duration (minutes)', 'ielts-course-manager'); ?>
+                        </th>
+                        <td>
+                            <input type="number" name="ielts_cm_login_lockout_duration" value="<?php echo esc_attr($login_lockout_duration); ?>" min="1" max="1440" class="small-text">
+                            <p class="description">
+                                <?php _e('How long (in minutes) a locked-out IP address or username is blocked from attempting to log in. Default: 30.', 'ielts-course-manager'); ?>
+                            </p>
                         </td>
                     </tr>
                 </table>
