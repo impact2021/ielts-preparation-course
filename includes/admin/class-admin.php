@@ -5329,11 +5329,6 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
             'default' => '',
             'sanitize_callback' => 'esc_url_raw'
         ));
-        register_setting('ielts_cm_settings', 'ielts_cm_login_fail_notify_email', array(
-            'type' => 'boolean',
-            'default' => true,
-            'sanitize_callback' => 'rest_sanitize_boolean'
-        ));
         register_setting('ielts_cm_settings', 'ielts_cm_login_lockout_enabled', array(
             'type' => 'boolean',
             'default' => true,
@@ -5396,9 +5391,6 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 update_option('ielts_cm_password_reset_page_url', esc_url_raw($_POST['ielts_cm_password_reset_page_url']));
             }
 
-            // Save login failure email notification toggle.
-            update_option('ielts_cm_login_fail_notify_email', isset($_POST['ielts_cm_login_fail_notify_email']));
-
             // Save login lockout (brute-force protection) settings.
             update_option('ielts_cm_login_lockout_enabled', isset($_POST['ielts_cm_login_lockout_enabled']));
             if (isset($_POST['ielts_cm_login_max_attempts'])) {
@@ -5416,7 +5408,6 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         $access_code_enabled         = get_option('ielts_cm_access_code_enabled', false);
         $hybrid_site_enabled         = get_option('ielts_cm_hybrid_site_enabled', false);
         $password_reset_page_url     = get_option('ielts_cm_password_reset_page_url', '');
-        $login_fail_notify_email     = get_option('ielts_cm_login_fail_notify_email', true);
         $login_lockout_enabled       = get_option('ielts_cm_login_lockout_enabled', true);
         $login_max_attempts          = max(1, (int) get_option('ielts_cm_login_max_attempts', 5));
         $login_lockout_duration      = max(1, (int) get_option('ielts_cm_login_lockout_duration', 30));
@@ -5522,28 +5513,6 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                                 <input type="url" name="ielts_cm_password_reset_page_url" value="<?php echo esc_attr($password_reset_page_url); ?>" class="regular-text" placeholder="https://yoursite.com/reset-password/">
                                 <p class="description">
                                     <?php _e('URL of the page containing the <code>[ielts_reset_password]</code> shortcode. When set, password reset emails and the "Lost your password?" link will direct users to this page instead of the WordPress default login screen. Leave blank to keep the WordPress default behaviour.', 'ielts-course-manager'); ?>
-                                </p>
-                            </fieldset>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">
-                            <?php _e('Login Failure Email Notifications', 'ielts-course-manager'); ?>
-                        </th>
-                        <td>
-                            <fieldset>
-                                <label>
-                                    <input type="checkbox" name="ielts_cm_login_fail_notify_email" value="1" <?php checked($login_fail_notify_email, true); ?>>
-                                    <?php _e('Send an email to the site administrator when a login attempt fails', 'ielts-course-manager'); ?>
-                                </label>
-                                <p class="description">
-                                    <?php
-                                    printf(
-                                        /* translators: %s: admin email address */
-                                        __('When enabled, a notification email will be sent to %s each time a login attempt fails. The email includes the username or email address used, the error type, the visitor\'s IP address, and the time of the attempt. Enabled by default.', 'ielts-course-manager'),
-                                        '<strong>' . esc_html(get_option('admin_email')) . '</strong>'
-                                    );
-                                    ?>
                                 </p>
                             </fieldset>
                         </td>
