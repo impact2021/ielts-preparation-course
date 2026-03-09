@@ -15,6 +15,7 @@
     let stripe;
     let elements;
     let paymentElement;
+    let selectedPaymentMethod = 'stripe'; // Tracks which payment method the user has selected
     
     // Helper function to get price for membership type
     function getPriceForMembershipType(membershipType) {
@@ -188,6 +189,29 @@
         if ($extensionSelect.val()) {
             $extensionSelect.trigger('change');
         }
+        
+        // Handle payment method switching (Stripe vs PayPal)
+        $(document).on('click', '.payment-method-btn', function() {
+            const method = $(this).data('method');
+            if (!method) return;
+            
+            selectedPaymentMethod = method;
+            
+            if (method === 'paypal') {
+                // Hide the Stripe submit button; PayPal Buttons handle their own submission
+                $('#ielts_payment_submit').hide();
+                // Initialize PayPal Buttons (idempotent – re-renders if already mounted)
+                const membershipType = $('#ielts_membership_type').val();
+                const price = getPriceForMembershipType(membershipType);
+                if (price > 0) {
+                    initializePaypalButtons(membershipType, price);
+                }
+            } else {
+                // Switching back to Stripe
+                selectedPaymentMethod = 'stripe';
+                $('#ielts_payment_submit').show();
+            }
+        });
     });
     
     function showPaymentSection(price) {
@@ -255,6 +279,13 @@
     $('form[name="ielts_registration_form"]').on('submit', function(e) {
         const membershipType = $('#ielts_membership_type').val();
         const price = getPriceForMembershipType(membershipType);
+        
+        // If PayPal is selected, payment is handled by PayPal Buttons – block accidental form submit
+        if (price > 0 && selectedPaymentMethod === 'paypal') {
+            e.preventDefault();
+            showError('Please use the PayPal button above to complete your payment.');
+            return;
+        }
         
         // If it's a paid membership, handle payment first
         if (price > 0 && stripe && elements) {
@@ -383,6 +414,155 @@
             }
         });
     }
+    
+    // ─── PayPal integration for membership registration ────────────────────────
+    
+    /**
+     * Create a PayPal order on the server for the given user and membership.
+     * Returns a Promise that resolves to the PayPal order ID.
+     */
+    function createPaypalMembershipOrder(userId, membershipType, price) {
+        return new Promise(function(resolve, reject) {
+            $.ajax({
+                url: ieltsPayment.ajaxUrl,
+                method: 'POST',
+                data: {
+                    action: 'ielts_cm_create_paypal_membership_order',
+                    nonce: ieltsPayment.nonce,
+                    user_id: userId,
+                    membership_type: membershipType,
+                    amount: price
+                },
+                success: function(response) {
+                    if (response.success) {
+                        resolve(response.data.order_id);
+                    } else {
+                        showError(response.data || 'Failed to create PayPal order.');
+                        reject(new Error(response.data || 'Failed to create PayPal order.'));
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    handleAjaxError(jqXHR, textStatus, errorThrown, 'create_paypal_membership_order');
+                    reject(new Error('Network error creating PayPal order.'));
+                }
+            });
+        });
+    }
+    
+    /**
+     * Render PayPal Buttons inside #paypal-button-container for the registration form.
+     * Clears any previously-rendered buttons before rendering fresh ones.
+     */
+    function initializePaypalButtons(membershipType, price) {
+        if (!ieltsPayment.paypalEnabled) {
+            showError('PayPal is not enabled on this site. Please use Credit/Debit Card payment.');
+            return;
+        }
+        
+        if (typeof paypal === 'undefined') {
+            showError('PayPal could not be loaded. Please refresh the page or use Credit/Debit Card payment.');
+            return;
+        }
+        
+        const container = document.getElementById('paypal-button-container');
+        if (!container) return;
+        
+        // Clear any previously-rendered buttons
+        container.innerHTML = '';
+        
+        // userId is stored here after the user account is created in createOrder
+        let registeredUserId = null;
+        
+        paypal.Buttons({
+            createOrder: function() {
+                const isLoggedIn = ieltsPayment.user && ieltsPayment.user.isLoggedIn;
+                
+                if (isLoggedIn) {
+                    // User already exists – go straight to creating the PayPal order
+                    return createPaypalMembershipOrder(ieltsPayment.user.userId, membershipType, price)
+                        .then(function(orderId) {
+                            registeredUserId = ieltsPayment.user.userId;
+                            return orderId;
+                        });
+                }
+                
+                // New user – register the account first, then create the PayPal order
+                return new Promise(function(resolve, reject) {
+                    $.ajax({
+                        url: ieltsPayment.ajaxUrl,
+                        method: 'POST',
+                        data: {
+                            action: 'ielts_register_user',
+                            nonce: ieltsPayment.nonce,
+                            first_name: $('#ielts_first_name').val(),
+                            last_name: $('#ielts_last_name').val(),
+                            email: $('#ielts_email').val(),
+                            password: $('#ielts_password').val(),
+                            membership_type: membershipType
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                registeredUserId = response.data.user_id;
+                                createPaypalMembershipOrder(registeredUserId, membershipType, price)
+                                    .then(resolve)
+                                    .catch(reject);
+                            } else {
+                                showError(response.data || 'Failed to create account. Please check your details and try again.');
+                                reject(new Error(response.data || 'Account creation failed.'));
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            handleAjaxError(jqXHR, textStatus, errorThrown, 'paypal_register_user');
+                            reject(new Error('Network error during account creation.'));
+                        }
+                    });
+                });
+            },
+            
+            onApprove: function(data) {
+                return new Promise(function(resolve, reject) {
+                    $.ajax({
+                        url: ieltsPayment.ajaxUrl,
+                        method: 'POST',
+                        data: {
+                            action: 'ielts_cm_capture_paypal_membership_order',
+                            nonce: ieltsPayment.nonce,
+                            order_id: data.orderID,
+                            user_id: registeredUserId
+                        },
+                        success: function(response) {
+                            if (response.success) {
+                                showSuccess('Payment successful! Your account is being set up…');
+                                setTimeout(function() {
+                                    window.location.href = response.data.redirect || (window.location.origin + window.location.pathname + '?registration=success');
+                                }, 2000);
+                                resolve();
+                            } else {
+                                showError(response.data || 'Payment capture failed. Please contact support.');
+                                reject(new Error(response.data || 'Capture failed.'));
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            handleAjaxError(jqXHR, textStatus, errorThrown, 'capture_paypal_membership_order');
+                            reject(new Error('Network error capturing PayPal payment.'));
+                        }
+                    });
+                });
+            },
+            
+            onError: function(err) {
+                console.error('IELTS Payment: PayPal error', err);
+                showError('A PayPal error occurred. Please try again or use Credit/Debit Card payment.');
+            },
+            
+            onCancel: function() {
+                showError('PayPal payment was cancelled. You can try again or use Credit/Debit Card payment.');
+            }
+            
+        }).render('#paypal-button-container');
+    }
+    
+    // ─── End of PayPal integration ─────────────────────────────────────────────
     
     function showError(message) {
         // Use text() to avoid XSS, then add line breaks with CSS
