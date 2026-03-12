@@ -2293,8 +2293,8 @@ class IELTS_CM_Shortcodes {
                     $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
                     $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
                     $email = sanitize_email($_POST['ielts_email']);
-                    $password = $_POST['ielts_password'];
-                    $password_confirm = $_POST['ielts_password_confirm'];
+                    $password = isset($_POST['ielts_password']) ? wp_unslash($_POST['ielts_password']) : '';
+                    $password_confirm = isset($_POST['ielts_password_confirm']) ? wp_unslash($_POST['ielts_password_confirm']) : '';
                     
                     // Validate name fields
                     if (empty($first_name)) {
@@ -4668,8 +4668,8 @@ class IELTS_CM_Shortcodes {
                 $first_name = isset($_POST['ielts_first_name']) ? sanitize_text_field($_POST['ielts_first_name']) : '';
                 $last_name = isset($_POST['ielts_last_name']) ? sanitize_text_field($_POST['ielts_last_name']) : '';
                 $email = isset($_POST['ielts_email']) ? sanitize_email($_POST['ielts_email']) : '';
-                $password = isset($_POST['ielts_password']) ? $_POST['ielts_password'] : '';
-                $password_confirm = isset($_POST['ielts_password_confirm']) ? $_POST['ielts_password_confirm'] : '';
+                $password = isset($_POST['ielts_password']) ? wp_unslash($_POST['ielts_password']) : '';
+                $password_confirm = isset($_POST['ielts_password_confirm']) ? wp_unslash($_POST['ielts_password_confirm']) : '';
                 $access_code = isset($_POST['ielts_access_code']) ? strtoupper(sanitize_text_field($_POST['ielts_access_code'])) : '';
                 $selected_course_group = isset($_POST['ielts_course_group']) ? sanitize_text_field($_POST['ielts_course_group']) : '';
                 
