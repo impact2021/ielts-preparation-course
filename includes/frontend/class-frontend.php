@@ -191,6 +191,16 @@ class IELTS_CM_Frontend {
         // Clear by username.
         delete_transient('ielts_cm_lat_u_' . md5(strtolower($user_login)));
 
+        // Also clear by the user's email address. The login form is labelled
+        // "Email Address" so users always type their email, and failed attempts
+        // are therefore tracked under md5(email). Without this, the email-keyed
+        // counter is never reset on a successful login, allowing it to accumulate
+        // across sessions until it hits max_attempts and permanently locks the
+        // user out — even after a password reset.
+        if ($user instanceof WP_User && !empty($user->user_email)) {
+            delete_transient('ielts_cm_lat_u_' . md5(strtolower($user->user_email)));
+        }
+
         // Clear by current IP so a legitimate user behind the same IP is unblocked.
         $ip = $this->get_client_ip();
         delete_transient('ielts_cm_lat_ip_' . md5($ip));
@@ -207,11 +217,20 @@ class IELTS_CM_Frontend {
     public function handle_login_failed($username, $error) {
         $login_url = self::get_custom_login_url();
 
-        // Map the WordPress error code to the two states the shortcode understands.
-        $error_code   = $error instanceof WP_Error ? $error->get_error_code() : '';
-        $login_status = in_array($error_code, array('empty_username', 'empty_password'), true)
-            ? 'empty'
-            : 'failed';
+        // Map the WordPress error code to the states the shortcode understands.
+        $error_code = $error instanceof WP_Error ? $error->get_error_code() : '';
+        if (in_array($error_code, array('empty_username', 'empty_password'), true)) {
+            $login_status = 'empty';
+        } elseif ($error_code === 'too_many_attempts') {
+            // Use a distinct status so the shortcode can display the real
+            // "too many attempts – wait N minutes" message rather than the
+            // generic "incorrect password" message, which causes users to
+            // reset their password in a loop without realising they are
+            // rate-limited.
+            $login_status = 'locked';
+        } else {
+            $login_status = 'failed';
+        }
 
         $login_url = add_query_arg('login', $login_status, $login_url);
 

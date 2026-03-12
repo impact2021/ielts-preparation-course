@@ -1787,6 +1787,13 @@ class IELTS_CM_Shortcodes {
                 $login_error = __('Incorrect email or password. Please try again.', 'ielts-course-manager');
             } elseif ($login_status === 'empty') {
                 $login_error = __('Please enter your email address and password.', 'ielts-course-manager');
+            } elseif ($login_status === 'locked') {
+                $lockout_duration = min(1440, max(1, (int) get_option('ielts_cm_login_lockout_duration', 30)));
+                $login_error = sprintf(
+                    /* translators: %d: lockout duration in minutes */
+                    __('Too many failed login attempts. Please wait %d minutes before trying again.', 'ielts-course-manager'),
+                    $lockout_duration
+                );
             }
         }
         
