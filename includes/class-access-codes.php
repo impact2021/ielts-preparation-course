@@ -2642,7 +2642,14 @@ class IELTS_CM_Access_Codes {
             wp_send_json_error(array('message' => 'An account with this email already exists'));
         }
         
-        $password = wp_generate_password(12);
+        // Generate an alphanumeric-only password for the welcome email.
+        // wp_generate_password() with special chars includes a space character in
+        // its default character set (~25 % of 12-char passwords contain a space).
+        // Users receiving the password by email often cannot see or type the space,
+        // causing consistent login failures.  Alphanumeric-only passwords (a-z A-Z
+        // 0-9) are safe to copy-paste from any email client and, at 16 characters,
+        // provide more entropy (≈95 bits) than the previous 12-char mix (≈78 bits).
+        $password = wp_generate_password(16, false);
         
         // Mark this as authorized registration
         if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {

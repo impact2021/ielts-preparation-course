@@ -81,24 +81,50 @@ class IELTS_CM_Frontend {
         if ($user instanceof WP_User || empty($username) || empty($password)) {
             return $user;
         }
-        
-        // Check if username is an email - if so, get the user by email
+
+        // ── Unslash retry ────────────────────────────────────────────────────────
+        // WordPress's wp_magic_quotes() slashes all $_POST values (adding a
+        // backslash before ', ", and \) before wp_signon() reads $_POST['pwd'].
+        // However, wp_set_password() and the WordPress admin "Edit User" form
+        // store the *unslashed* hash.  For any password that contains ', ", or \
+        // the slashed comparison always fails.  Retry with the real (unslashed)
+        // password so that admin-set passwords containing these characters work.
+        $unslashed_password = wp_unslash($password);
+        if ($unslashed_password !== $password) {
+            $user_obj = is_email($username)
+                ? (get_user_by('email', $username) ?: get_user_by('login', $username))
+                : (get_user_by('login', $username) ?: get_user_by('email', $username));
+
+            if ($user_obj instanceof WP_User) {
+                // Re-run the full WordPress auth function (not just wp_check_password)
+                // so that the wp_authenticate_user filter and any third-party checks
+                // still fire even on the unslash retry path.
+                $retry = wp_authenticate_username_password(null, $user_obj->user_login, $unslashed_password);
+                if ($retry instanceof WP_User) {
+                    return $retry;
+                }
+            }
+        }
+
+        // ── Email-address fallback ────────────────────────────────────────────────
+        // If the submitted value looks like an email address, try to find the user
+        // by email and authenticate by their stored user_login.  Since WordPress 4.5
+        // this is handled by wp_authenticate_email_password, but we keep the fallback
+        // for edge-cases (e.g. user_login differs from user_email) and to ensure
+        // consistent timing when no matching account exists.
         if (is_email($username)) {
             $user_obj = get_user_by('email', $username);
             if ($user_obj) {
-                // Authenticate using the username instead of email
-                // This ensures consistent timing regardless of whether email exists
                 $user = wp_authenticate_username_password(null, $user_obj->user_login, $password);
-            }
-            // If email doesn't exist, still call wp_authenticate_username_password
-            // to maintain consistent timing and avoid user enumeration
-            else {
-                // Use a completely random username to maintain timing consistency
+            } else {
+                // No account found for this email.  Run a dummy comparison so that
+                // response timing is the same whether the email exists or not,
+                // preventing user-enumeration via timing side-channels.
                 $random_username = wp_generate_password(16, false, false);
                 wp_authenticate_username_password(null, $random_username, $password);
             }
         }
-        
+
         return $user;
     }
 
