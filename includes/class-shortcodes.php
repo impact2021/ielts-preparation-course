@@ -188,51 +188,54 @@ class IELTS_CM_Shortcodes {
             $course_group = get_user_meta($user_id, 'iw_course_group', true);
             
             if (!empty($course_group)) {
-                $filtered_courses = array();
-                foreach ($courses as $course) {
-                    $course_categories = wp_get_post_terms($course->ID, 'ielts_course_category', array('fields' => 'slugs'));
-                    $include_course = false;
-                    
-                    // Determine if course should be included based on course group
-                    if ($course_group === 'academic_module') {
-                        // Include academic, english, and academic-practice-tests
-                        foreach ($course_categories as $cat) {
-                            if (in_array($cat, array('academic', 'english', 'academic-practice-tests'))) {
-                                $include_course = true;
-                                break;
+                // 'any' course group means the user has access to all courses — skip filtering
+                if ($course_group !== 'any') {
+                    $filtered_courses = array();
+                    foreach ($courses as $course) {
+                        $course_categories = wp_get_post_terms($course->ID, 'ielts_course_category', array('fields' => 'slugs'));
+                        $include_course = false;
+                        
+                        // Determine if course should be included based on course group
+                        if ($course_group === 'academic_module') {
+                            // Include academic, english, and academic-practice-tests
+                            foreach ($course_categories as $cat) {
+                                if (in_array($cat, array('academic', 'english', 'academic-practice-tests'))) {
+                                    $include_course = true;
+                                    break;
+                                }
+                            }
+                        } elseif ($course_group === 'general_module') {
+                            // Include general, english, and general-practice-tests
+                            foreach ($course_categories as $cat) {
+                                if (in_array($cat, array('general', 'english', 'general-practice-tests'))) {
+                                    $include_course = true;
+                                    break;
+                                }
+                            }
+                        } elseif ($course_group === 'general_english') {
+                            // Include only english
+                            foreach ($course_categories as $cat) {
+                                if ($cat === 'english') {
+                                    $include_course = true;
+                                    break;
+                                }
+                            }
+                        } elseif ($course_group === 'entry_test') {
+                            // Include only entry-test
+                            foreach ($course_categories as $cat) {
+                                if ($cat === 'entry-test') {
+                                    $include_course = true;
+                                    break;
+                                }
                             }
                         }
-                    } elseif ($course_group === 'general_module') {
-                        // Include general, english, and general-practice-tests
-                        foreach ($course_categories as $cat) {
-                            if (in_array($cat, array('general', 'english', 'general-practice-tests'))) {
-                                $include_course = true;
-                                break;
-                            }
-                        }
-                    } elseif ($course_group === 'general_english') {
-                        // Include only english
-                        foreach ($course_categories as $cat) {
-                            if ($cat === 'english') {
-                                $include_course = true;
-                                break;
-                            }
-                        }
-                    } elseif ($course_group === 'entry_test') {
-                        // Include only entry-test
-                        foreach ($course_categories as $cat) {
-                            if ($cat === 'entry-test') {
-                                $include_course = true;
-                                break;
-                            }
+                        
+                        if ($include_course) {
+                            $filtered_courses[] = $course;
                         }
                     }
-                    
-                    if ($include_course) {
-                        $filtered_courses[] = $course;
-                    }
+                    $courses = $filtered_courses;
                 }
-                $courses = $filtered_courses;
             }
         }
         

@@ -2753,7 +2753,7 @@ class IELTS_CM_Access_Codes {
         }
         
         // Validate membership type - must be provided and valid
-        $valid_membership_types = array('academic_module', 'general_module', 'general_english');
+        $valid_membership_types = array('academic_module', 'general_module', 'general_english', 'entry_test');
         if (empty($new_membership_type)) {
             wp_send_json_error(array('message' => 'Membership type is required'));
         }
@@ -2801,7 +2801,8 @@ class IELTS_CM_Access_Codes {
                 $role_mapping = array(
                     'academic_module' => 'access_academic_module',
                     'general_module' => 'access_general_module',
-                    'general_english' => 'access_general_english'
+                    'general_english' => 'access_general_english',
+                    'entry_test' => 'access_entry_test'
                 );
                 
                 if (isset($role_mapping[$new_membership_type])) {
@@ -2811,8 +2812,13 @@ class IELTS_CM_Access_Codes {
                     }
                     // Add the new role
                     $user->add_role($role_mapping[$new_membership_type]);
+                    // Update the membership type meta to keep it in sync
+                    update_user_meta($user_id, '_ielts_cm_membership_type', $role_mapping[$new_membership_type]);
                 }
             }
+            
+            // Re-enroll user in courses matching their new membership type
+            $this->enroll_user_in_courses($user_id, $new_membership_type);
         }
         
         // Create dynamic success message
