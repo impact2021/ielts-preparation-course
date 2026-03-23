@@ -430,7 +430,8 @@ class IELTS_CM_Membership {
                 $role_mapping = array(
                     'academic_module' => 'access_academic_module',
                     'general_module' => 'access_general_module',
-                    'general_english' => 'access_general_english'
+                    'general_english' => 'access_general_english',
+                    'entry_test' => 'access_entry_test'
                 );
                 
                 if (isset($role_mapping[$user_course])) {
@@ -1428,6 +1429,9 @@ class IELTS_CM_Membership {
                     // Map course group to allowed category slugs
                     $allowed_categories = array();
                     switch ($course_group) {
+                        case 'any':
+                            // User has access to all courses regardless of category
+                            return true;
                         case 'academic_module':
                             $allowed_categories = array('academic', 'english', 'academic-practice-tests');
                             break;
