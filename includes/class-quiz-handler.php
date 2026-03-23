@@ -334,12 +334,18 @@ class IELTS_CM_Quiz_Handler {
                         // Check against correct answers
                         $field_correct_answer = isset($question['field_answers'][$field_num]) ? $question['field_answers'][$field_num] : '';
                         
-                        $accepted_answers = explode('|', $field_correct_answer);
-                        foreach ($accepted_answers as $accepted) {
-                            $accepted_trimmed = trim($accepted);
-                            if (strcasecmp($accepted_trimmed, $user_field_answer) === 0) {
-                                $field_correct = true;
-                                break;
+                        if (empty($field_correct_answer)) {
+                            // No correct answer defined - accept any non-empty answer
+                            // ($user_field_answer is guaranteed non-empty by the outer check above)
+                            $field_correct = true;
+                        } else {
+                            $accepted_answers = explode('|', $field_correct_answer);
+                            foreach ($accepted_answers as $accepted) {
+                                $accepted_trimmed = trim($accepted);
+                                if (strcasecmp($accepted_trimmed, $user_field_answer) === 0) {
+                                    $field_correct = true;
+                                    break;
+                                }
                             }
                         }
                         
