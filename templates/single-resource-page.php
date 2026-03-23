@@ -272,7 +272,7 @@ body.ielts-resource-single .content-area {
                 <?php if ($is_vocabulary && !empty($vocabulary_items)): ?>
                     <!-- Vocabulary page layout -->
                     <div class="resource-vocabulary-content">
-                        <p><?php _e('To complete this lesson, you will need to know the following vocabulary. When you are sure you know all the words, continue to the next page.', 'ielts-course-manager'); ?></p>
+                        <p><?php _e('When you are sure you know all the words, continue to the next page.', 'ielts-course-manager'); ?></p>
                         
                         <?php 
                         // Get vocabulary header color

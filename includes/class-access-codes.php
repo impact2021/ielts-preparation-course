@@ -2771,8 +2771,16 @@ class IELTS_CM_Access_Codes {
         $date->setTime(23, 59, 59);
         $mysql_date = $date->format('Y-m-d H:i:s');
         
-        // Update expiry date
+        // Update expiry date in both meta key systems so users.php backend and
+        // the daily cron/check_expired_on_access stay in sync with the partner dashboard.
         update_user_meta($user_id, 'iw_membership_expiry', $mysql_date);
+        update_user_meta($user_id, '_ielts_cm_membership_expiry', $mysql_date);
+        // Reset status to active so the users.php column shows correctly and
+        // the cron job will re-evaluate this user against the new expiry date.
+        update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+        // Clear the expiry-email flag so a notification can be sent when
+        // the new (extended) date eventually passes.
+        delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
         
         // Track what was updated for the success message
         $updated_fields = array();

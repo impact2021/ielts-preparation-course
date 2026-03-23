@@ -340,11 +340,16 @@
                         var html = '<div class="quiz-result ' + (isPassing ? 'pass' : 'fail') + '">';
                         html += '<h3>' + (isPassing ? 'Congratulations! You Passed!' : exerciseLabel + ' completed') + '</h3>';
                         
-                        // Display score based on type (band score or percentage) with larger font
+                        // Display score based on type (band score, CEFR level, or percentage) with larger font
                         if (result.display_type === 'band') {
                             html += '<div class="quiz-score-display">';
                             html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' correct</p>';
                             html += '<p class="score-large"><strong>IELTS Band Score:</strong> ' + result.display_score + '</p>';
+                            html += '</div>';
+                        } else if (result.display_type === 'cefr') {
+                            html += '<div class="quiz-score-display">';
+                            html += '<p><strong>Your Score:</strong> ' + result.score + ' / ' + result.max_score + ' correct</p>';
+                            html += '<p class="score-large"><strong>CEFR Level:</strong> ' + result.display_score + '</p>';
                             html += '</div>';
                         } else {
                             html += '<div class="quiz-score-display">';
@@ -1280,6 +1285,8 @@
                                 var scoreHtml = '';
                                 if (result.display_type === 'band') {
                                     scoreHtml = '<div class="timer-content"><strong>Band Score:</strong> <span>' + result.display_score + '</span></div>';
+                                } else if (result.display_type === 'cefr') {
+                                    scoreHtml = '<div class="timer-content"><strong>CEFR Level:</strong> <span>' + result.display_score + '</span></div>';
                                 } else {
                                     scoreHtml = '<div class="timer-content"><strong>Score:</strong> <span>' + result.percentage + '%</span></div>';
                                 }
