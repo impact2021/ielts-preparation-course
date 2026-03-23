@@ -8332,6 +8332,9 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                             1 => $question['correct_answer']
                         );
                         unset($question['correct_answer']);
+                    } elseif (isset($question['field_answers']) && is_array($question['field_answers'])) {
+                        // Reindex existing field_answers to 1-based (handles 0-indexed JSON arrays)
+                        $question['field_answers'] = $this->reindex_field_answers_to_one_based($question['field_answers']);
                     }
                     
                     // Replace ________ (8 or more underscores) with [field 1] in question text
