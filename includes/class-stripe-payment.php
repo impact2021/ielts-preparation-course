@@ -370,6 +370,10 @@ class IELTS_CM_Stripe_Payment {
         $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
         $amount = isset($_POST['amount']) ? floatval($_POST['amount']) : 0;
         
+        // Detect Pay What You Can mode: sent when the user sets a custom amount on the primary site.
+        $is_pwyw = isset($_POST['pwyw_amount']) && !empty($_POST['pwyw_amount']);
+        $pwyw_amount = $is_pwyw ? floatval($_POST['pwyw_amount']) : 0;
+        
         error_log("IELTS Payment: create_payment_intent - User: $user_id, Membership type selected");
         
         // Validate user exists
@@ -447,8 +451,36 @@ class IELTS_CM_Stripe_Payment {
             $server_price = floatval($pricing[$membership_type]);
         }
         
-        // Verify amount matches server-side price
-        if (abs($amount - $server_price) > 0.01) {
+        // Verify amount matches server-side price (or validate PWYW minimum)
+        if ($is_pwyw) {
+            // SECURITY: Validate PWYW on primary site only, and check against configured minimum.
+            $sync_manager = new IELTS_CM_Multi_Site_Sync();
+            if (!$sync_manager->is_primary_site() || !get_option('ielts_cm_pwyw_enabled', false)) {
+                error_log("IELTS Payment: PWYW attempted on non-primary site or when PWYW is disabled");
+                wp_send_json_error('Pay What You Can is not available on this site.', 400);
+            }
+            
+            $pwyw_minimum = max(5.00, floatval(get_option('ielts_cm_pwyw_minimum', 5.00)));
+            if ($pwyw_amount < $pwyw_minimum - 0.01) {
+                error_log("IELTS Payment: PWYW amount below minimum: $pwyw_amount < $pwyw_minimum");
+                $this->safe_log_payment_error(
+                    'validation_error',
+                    'PWYW amount below minimum',
+                    array('pwyw_amount' => $pwyw_amount, 'minimum' => $pwyw_minimum, 'membership_type' => $membership_type),
+                    $user_id,
+                    $user->user_email,
+                    $membership_type,
+                    $pwyw_amount
+                );
+                wp_send_json_error(
+                    sprintf('Minimum payment is $%.2f. Please enter a higher amount.', $pwyw_minimum),
+                    400
+                );
+            }
+            
+            // Use the user-supplied PWYW amount as the actual charge amount.
+            $amount = $pwyw_amount;
+        } elseif (abs($amount - $server_price) > 0.01) {
             error_log("IELTS Payment: Amount mismatch detected");
             
             // Log to database

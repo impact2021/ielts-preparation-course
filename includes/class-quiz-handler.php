@@ -1388,6 +1388,17 @@ class IELTS_CM_Quiz_Handler {
             );
         }
         
+        // CEFR level display
+        if ($scoring_type === 'cefr') {
+            $cefr_level = $this->convert_percentage_to_cefr($percentage);
+            return array(
+                'display' => 'Level ' . $cefr_level,
+                'value' => $percentage,
+                'type' => 'cefr',
+                'cefr_level' => $cefr_level
+            );
+        }
+        
         // IELTS band score display
         $band_score = $this->convert_to_band_score($score, $scoring_type);
         return array(
@@ -1395,6 +1406,21 @@ class IELTS_CM_Quiz_Handler {
             'value' => $band_score,
             'type' => 'band'
         );
+    }
+    
+    /**
+     * Convert percentage score to CEFR level (A1–C2)
+     *
+     * @param float $percentage Score as a percentage (0–100)
+     * @return string CEFR level (A1, A2, B1, B2, C1, or C2)
+     */
+    public function convert_percentage_to_cefr($percentage) {
+        if ($percentage >= 85) return 'C2';
+        if ($percentage >= 70) return 'C1';
+        if ($percentage >= 55) return 'B2';
+        if ($percentage >= 40) return 'B1';
+        if ($percentage >= 25) return 'A2';
+        return 'A1';
     }
     
     /**

@@ -2253,6 +2253,8 @@ class IELTS_CM_Shortcodes {
                     'user' => $user_data,
                     'isAdmin' => current_user_can('manage_options'),
                     'paypalEnabled' => $paypal_active,
+                    'pwywEnabled' => $this->is_pwyw_active(),
+                    'pwywMinimum' => floatval(get_option('ielts_cm_pwyw_minimum', 5.00)),
                 ));
             }
         }
@@ -2375,7 +2377,7 @@ class IELTS_CM_Shortcodes {
                             $errors[] = __('The selected membership type is not available.', 'ielts-course-manager');
                         }
                         // Additional validation: Check if free trial is enabled
-                        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', false);
+                        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', true);
                         if (!$free_trial_enabled && IELTS_CM_Membership::is_trial_membership($membership_type)) {
                             $errors[] = __('Free trial enrollment is not currently available.', 'ielts-course-manager');
                         }
@@ -2610,7 +2612,7 @@ class IELTS_CM_Shortcodes {
                                         $trial_options = array();
                                         $paid_options = array();
                                         
-                                        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', false);
+                                        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', true);
                                         
                                         foreach ($membership_levels as $key => $label) {
                                             $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
@@ -2720,6 +2722,33 @@ class IELTS_CM_Shortcodes {
                     <?php if (get_option('ielts_cm_membership_enabled')): ?>
                         <div id="ielts-payment-section" class="payment-section-container stripe-payment-section" style="display: none;">
                             <h3 class="payment-section-title"><?php _e('Payment Details', 'ielts-course-manager'); ?></h3>
+                            
+                            <!-- Pay What You Can amount input (primary site only, shown via JS) -->
+                            <?php if ($this->is_pwyw_active()): ?>
+                            <div id="ielts-pwyw-container" style="display: none; margin-bottom: 20px;">
+                                <label for="ielts-pwyw-amount" style="display: block; margin-bottom: 6px; font-weight: 600;">
+                                    <?php _e('Choose your price (USD)', 'ielts-course-manager'); ?>
+                                </label>
+                                <div style="display: flex; align-items: center; gap: 8px; max-width: 200px;">
+                                    <span style="font-size: 1.1em;">$</span>
+                                    <input type="number"
+                                           id="ielts-pwyw-amount"
+                                           name="ielts_pwyw_amount"
+                                           min="<?php echo esc_attr(number_format(floatval(get_option('ielts_cm_pwyw_minimum', 5.00)), 2, '.', '')); ?>"
+                                           step="0.01"
+                                           placeholder="<?php echo esc_attr(number_format(floatval(get_option('ielts_cm_pwyw_minimum', 5.00)), 2, '.', '')); ?>"
+                                           class="ielts-form-input"
+                                           style="width: 120px;">
+                                </div>
+                                <p class="form-help">
+                                    <?php echo esc_html(sprintf(
+                                        /* translators: %s: minimum amount */
+                                        __('Minimum: $%s USD. Pay what you can — every contribution helps!', 'ielts-course-manager'),
+                                        number_format(floatval(get_option('ielts_cm_pwyw_minimum', 5.00)), 2)
+                                    )); ?>
+                                </p>
+                            </div>
+                            <?php endif; ?>
                             
                             <!-- Payment Method Selector -->
                             <div class="payment-method-selector">
@@ -4008,9 +4037,12 @@ class IELTS_CM_Shortcodes {
         }
         
         $atts = shortcode_atts(array(
-            'skills' => 'reading,listening,writing,speaking,grammar,vocabulary', // Which skills to show
-            'title' => __('Your Estimated IELTS Band Scores', 'ielts-course-manager')
+            'skills'       => 'reading,listening,writing,speaking,grammar,vocabulary', // Which skills to show
+            'title'        => __('Your Estimated IELTS Band Scores', 'ielts-course-manager'),
+            'display_type' => 'band', // 'band' for IELTS band scores, 'cefr' for CEFR levels (A1–C2)
         ), $atts);
+        
+        $show_cefr = (strtolower($atts['display_type']) === 'cefr');
         
         $user_id = get_current_user_id();
         
@@ -4025,8 +4057,10 @@ class IELTS_CM_Shortcodes {
         $official_skills = array('reading', 'listening', 'writing', 'speaking');
         $additional_skills = array('grammar', 'vocabulary');
         
-        // Convert percentage scores to band scores
+        // Convert percentage scores to band scores or CEFR levels
         $band_scores = array();
+        $cefr_levels = array();
+        $percentages = array();
         $official_total = 0;
         $official_count = 0;
         $all_total = 0;
@@ -4036,7 +4070,9 @@ class IELTS_CM_Shortcodes {
             $skill = strtolower($skill);
             if (isset($skill_scores[$skill])) {
                 $percentage = $skill_scores[$skill];
+                $percentages[$skill] = $percentage;
                 $band_scores[$skill] = $this->convert_percentage_to_band($percentage);
+                $cefr_levels[$skill] = $this->convert_percentage_to_cefr($percentage);
                 if ($skill_scores[$skill] > 0) {
                     // Add to overall total
                     $all_total += $band_scores[$skill];
@@ -4118,14 +4154,20 @@ class IELTS_CM_Shortcodes {
                                     <span class="band-score-value">
                                         <?php 
                                         if ($has_data) {
-                                            echo esc_html(number_format($band_score, 1));
+                                            if ($show_cefr) {
+                                                echo esc_html('LEVEL ' . (isset($cefr_levels[$skill]) ? $cefr_levels[$skill] : '—'));
+                                            } else {
+                                                echo esc_html(number_format($band_score, 1));
+                                            }
                                         } else {
                                             echo '—';
                                         }
                                         ?>
                                     </span>
                                     <?php if ($has_data): ?>
+                                        <?php if (!$show_cefr): ?>
                                         <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
+                                        <?php endif; ?>
                                     <?php else: ?>
                                         <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
                                     <?php endif; ?>
@@ -4136,14 +4178,20 @@ class IELTS_CM_Shortcodes {
                                     <span class="band-score-value">
                                         <?php 
                                         if ($official_count > 0) {
-                                            echo esc_html(number_format($skills_total, 1));
+                                            if ($show_cefr) {
+                                                echo esc_html('LEVEL ' . $this->convert_percentage_to_cefr(($official_total / $official_count / 9) * 100));
+                                            } else {
+                                                echo esc_html(number_format($skills_total, 1));
+                                            }
                                         } else {
                                             echo '—';
                                         }
                                         ?>
                                     </span>
                                     <?php if ($official_count > 0): ?>
+                                        <?php if (!$show_cefr): ?>
                                         <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
+                                        <?php endif; ?>
                                     <?php else: ?>
                                         <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
                                     <?php endif; ?>
@@ -4153,14 +4201,20 @@ class IELTS_CM_Shortcodes {
                                 <span class="band-score-value">
                                     <?php 
                                     if ($all_count > 0) {
-                                        echo esc_html(number_format($overall_total, 1));
+                                        if ($show_cefr) {
+                                            echo esc_html('LEVEL ' . $this->convert_percentage_to_cefr(($all_total / $all_count / 9) * 100));
+                                        } else {
+                                            echo esc_html(number_format($overall_total, 1));
+                                        }
                                     } else {
                                         echo '—';
                                     }
                                     ?>
                                 </span>
                                 <?php if ($all_count > 0): ?>
+                                    <?php if (!$show_cefr): ?>
                                     <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
+                                    <?php endif; ?>
                                 <?php else: ?>
                                     <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
                                 <?php endif; ?>
@@ -4178,7 +4232,13 @@ class IELTS_CM_Shortcodes {
             <?php endif; ?>
             
             <p class="band-scores-note">
-                <?php _e('Band scores are estimates based on your test performance. Complete more tests for more accurate results.', 'ielts-course-manager'); ?>
+                <?php 
+                if ($show_cefr) {
+                    _e('CEFR levels are estimates based on your test performance. Complete more tests for more accurate results.', 'ielts-course-manager');
+                } else {
+                    _e('Band scores are estimates based on your test performance. Complete more tests for more accurate results.', 'ielts-course-manager');
+                }
+                ?>
             </p>
         </div>
         
@@ -4401,6 +4461,35 @@ class IELTS_CM_Shortcodes {
         if ($percentage >= 15) return 1.5;
         if ($percentage >= 10) return 1.0;
         return 0.5;
+    }
+    
+    /**
+     * Convert a percentage score to a CEFR level (A1–C2).
+     *
+     * @param float $percentage Score percentage (0–100)
+     * @return string CEFR level: A1, A2, B1, B2, C1, or C2
+     */
+    private function convert_percentage_to_cefr($percentage) {
+        if ($percentage >= 85) return 'C2';
+        if ($percentage >= 70) return 'C1';
+        if ($percentage >= 55) return 'B2';
+        if ($percentage >= 40) return 'B1';
+        if ($percentage >= 25) return 'A2';
+        return 'A1';
+    }
+    
+    /**
+     * Check whether Pay What You Can is active on this site.
+     * PWYW is only available on the primary site (standalone or primary role).
+     *
+     * @return bool
+     */
+    private function is_pwyw_active() {
+        $sync_manager = new IELTS_CM_Multi_Site_Sync();
+        if (!$sync_manager->is_primary_site()) {
+            return false;
+        }
+        return (bool) get_option('ielts_cm_pwyw_enabled', false);
     }
     
     /**
