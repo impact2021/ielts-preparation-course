@@ -304,6 +304,22 @@ class IELTS_CM_Quiz_Handler {
                 $all_correct = true;
                 $any_answered = false;
                 
+                // Normalize field_answers to 1-based indexing.
+                // Questions imported from JSON before the import-time reindexing fix may have
+                // 0-based arrays (e.g., field_answers[0]) stored in the database. Converting
+                // here ensures both legacy DB data and freshly-imported data are handled the
+                // same way without requiring a data migration.
+                $field_answers_raw = isset($question['field_answers']) && is_array($question['field_answers'])
+                    ? $question['field_answers']
+                    : array();
+                if (!empty($field_answers_raw) && isset($field_answers_raw[0]) && !isset($field_answers_raw[1])) {
+                    $reindexed = array();
+                    foreach (array_values($field_answers_raw) as $k => $v) {
+                        $reindexed[$k + 1] = $v;
+                    }
+                    $question['field_answers'] = $reindexed;
+                }
+                
                 // Get user answers - handle both nested format (from JavaScript) and flat format
                 $user_answers = array();
                 if (isset($answers[$index]) && is_array($answers[$index])) {
@@ -329,7 +345,8 @@ class IELTS_CM_Quiz_Handler {
                     $field_question_num = $display_start + $field_num - 1;
                     
                     $field_correct = false;
-                    if (!empty($user_field_answer)) {
+                    // Use !== '' instead of !empty() so that "0" is treated as a valid answer
+                    if ($user_field_answer !== '') {
                         $any_answered = true;
                         // Check against correct answers
                         $field_correct_answer = isset($question['field_answers'][$field_num]) ? $question['field_answers'][$field_num] : '';
