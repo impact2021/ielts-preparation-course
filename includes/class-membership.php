@@ -630,6 +630,8 @@ class IELTS_CM_Membership {
         // Register membership settings
         register_setting('ielts_membership_settings', 'ielts_cm_membership_enabled');
         register_setting('ielts_membership_settings', 'ielts_cm_free_trial_enabled');
+        register_setting('ielts_membership_settings', 'ielts_cm_pwyw_enabled');
+        register_setting('ielts_membership_settings', 'ielts_cm_pwyw_minimum');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_course_mapping');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_durations');
         register_setting('ielts_membership_settings', 'ielts_cm_full_member_page_url');
@@ -787,6 +789,14 @@ class IELTS_CM_Membership {
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
             update_option('ielts_cm_post_payment_redirect_url', sanitize_text_field($_POST['ielts_cm_post_payment_redirect_url']));
             
+            // Save Pay What You Can settings (primary site only)
+            $sync_manager = new IELTS_CM_Multi_Site_Sync();
+            if ($sync_manager->is_primary_site()) {
+                update_option('ielts_cm_pwyw_enabled', isset($_POST['ielts_cm_pwyw_enabled']) ? 1 : 0);
+                $pwyw_minimum = isset($_POST['ielts_cm_pwyw_minimum']) ? floatval($_POST['ielts_cm_pwyw_minimum']) : 5.00;
+                update_option('ielts_cm_pwyw_minimum', max(5.00, $pwyw_minimum));
+            }
+            
             // Save duration settings
             $durations = array();
             foreach (self::MEMBERSHIP_LEVELS as $key => $label) {
@@ -803,10 +813,16 @@ class IELTS_CM_Membership {
         }
         
         $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
-        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', false);
+        $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', true);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
+        
+        // Pay What You Can settings (primary site only)
+        $sync_manager_display = new IELTS_CM_Multi_Site_Sync();
+        $is_primary_for_display = $sync_manager_display->is_primary_site();
+        $pwyw_enabled  = (bool) get_option('ielts_cm_pwyw_enabled', false);
+        $pwyw_minimum  = floatval(get_option('ielts_cm_pwyw_minimum', 5.00));
         
         // Set default durations
         $default_durations = array(
@@ -869,6 +885,32 @@ class IELTS_CM_Membership {
                             </p>
                         </td>
                     </tr>
+                    <?php if ($is_primary_for_display): ?>
+                    <tr>
+                        <th scope="row"><?php _e('Pay What You Can (Full Membership)', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="ielts_cm_pwyw_enabled" value="1" <?php checked($pwyw_enabled, 1); ?>>
+                                <?php _e('Allow trial members to choose their own price when upgrading to full membership', 'ielts-course-manager'); ?>
+                            </label>
+                            <p class="description">
+                                <?php _e('When enabled, trial members upgrading to full membership will see a "name your price" field instead of a fixed price. Only available on the primary site.', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><?php _e('Minimum PWYW Amount', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <input type="number" name="ielts_cm_pwyw_minimum" 
+                                   value="<?php echo esc_attr(number_format($pwyw_minimum, 2, '.', '')); ?>"
+                                   min="5" step="0.01" class="small-text">
+                            <span>&nbsp;USD</span>
+                            <p class="description">
+                                <?php _e('Minimum amount a user must pay (must be at least $5.00).', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
                     <tr>
                         <th scope="row"><?php _e('Become a Full Member Page', 'ielts-course-manager'); ?></th>
                         <td>

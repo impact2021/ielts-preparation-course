@@ -40,6 +40,46 @@
         return ieltsPayment.pricing[membershipType] || 0;
     }
     
+    // Check whether PWYW mode applies to the given membership type.
+    // PWYW only applies to non-trial, non-extension full memberships on the primary site.
+    function isPwywMembership(membershipType) {
+        if (!ieltsPayment || !ieltsPayment.pwywEnabled) {
+            return false;
+        }
+        if (!membershipType) {
+            return false;
+        }
+        if (membershipType.startsWith('extension_')) {
+            return false;
+        }
+        // Trial memberships end in '_trial'
+        if (membershipType.endsWith('_trial')) {
+            return false;
+        }
+        return true;
+    }
+    
+    // Get the effective price to use for Stripe Elements initialisation.
+    // For PWYW memberships we use the minimum as a placeholder; the actual
+    // user-entered amount is read at submission time.
+    function getEffectivePrice(membershipType) {
+        if (isPwywMembership(membershipType)) {
+            return ieltsPayment.pwywMinimum || 5.00;
+        }
+        return getPriceForMembershipType(membershipType);
+    }
+    
+    // Show or hide the PWYW amount field.
+    function togglePwywField(show) {
+        const $container = $('#ielts-pwyw-container');
+        if (!$container.length) return;
+        if (show) {
+            $container.show();
+        } else {
+            $container.hide();
+        }
+    }
+    
     // Helper function to handle AJAX errors consistently
     // Note: Logs full error details to console for debugging purposes.
     // In production, consider limiting responseText logging if security is a concern.
@@ -122,10 +162,13 @@
         // Listen for membership type selection (registration form)
         $('#ielts_membership_type').on('change', function() {
             const membershipType = $(this).val();
-            const price = getPriceForMembershipType(membershipType);
+            const price = getEffectivePrice(membershipType);
             
             // Check if this is a paid membership (not a trial) or an extension
             const isPaidMembership = membershipType && (!membershipType.endsWith('_trial') || membershipType.startsWith('extension_'));
+            
+            // Show or hide the PWYW field
+            togglePwywField(isPwywMembership(membershipType));
             
             // Show/hide payment section based on price
             if (price > 0) {
@@ -212,6 +255,20 @@
                 $('#ielts_payment_submit').show();
             }
         });
+        
+        // Reinitialize Stripe elements when the PWYW amount changes
+        $('#ielts-pwyw-amount').on('change blur', function() {
+            const membershipType = $('#ielts_membership_type').val();
+            if (!isPwywMembership(membershipType)) return;
+            const entered = parseFloat($(this).val());
+            const minimum = ieltsPayment.pwywMinimum || 5.00;
+            if (entered && entered >= minimum) {
+                // Reinitialize elements with the new amount
+                elements = null;
+                paymentElement = null;
+                initializePaymentElement(entered);
+            }
+        });
     });
     
     function showPaymentSection(price) {
@@ -278,7 +335,20 @@
     // Intercept form submission
     $('form[name="ielts_registration_form"]').on('submit', function(e) {
         const membershipType = $('#ielts_membership_type').val();
-        const price = getPriceForMembershipType(membershipType);
+        let price;
+        
+        if (isPwywMembership(membershipType)) {
+            const entered = parseFloat($('#ielts-pwyw-amount').val());
+            const minimum = ieltsPayment.pwywMinimum || 5.00;
+            if (!entered || entered < minimum) {
+                e.preventDefault();
+                showError('Please enter an amount of at least $' + minimum.toFixed(2) + ' USD.');
+                return;
+            }
+            price = entered;
+        } else {
+            price = getPriceForMembershipType(membershipType);
+        }
         
         // If PayPal is selected, payment is handled by PayPal Buttons – block accidental form submit
         if (price > 0 && selectedPaymentMethod === 'paypal') {
@@ -348,16 +418,24 @@
     
     function createPaymentIntentAndConfirm(userId, membershipType, price) {
         // Create Payment Intent on server
+        const data = {
+            action: 'ielts_create_payment_intent',
+            nonce: ieltsPayment.nonce,
+            user_id: userId,
+            membership_type: membershipType,
+            amount: price
+        };
+        
+        // For PWYW memberships, send the custom amount separately so the server
+        // can apply its minimum validation without requiring an exact price match.
+        if (isPwywMembership(membershipType)) {
+            data.pwyw_amount = price;
+        }
+        
         $.ajax({
             url: ieltsPayment.ajaxUrl,
             method: 'POST',
-            data: {
-                action: 'ielts_create_payment_intent',
-                nonce: ieltsPayment.nonce,
-                user_id: userId,
-                membership_type: membershipType,
-                amount: price
-            },
+            data: data,
             success: async function(response) {
                 if (response.success) {
                     // Confirm payment with Stripe
