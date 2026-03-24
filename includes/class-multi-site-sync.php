@@ -131,6 +131,7 @@ class IELTS_CM_Multi_Site_Sync {
             'title' => $post->post_title,
             'content' => $post->post_content,
             'modified' => $post->post_modified,
+            'menu_order' => $post->menu_order,
             'type' => $content_type
         );
         

@@ -19,9 +19,9 @@ class IELTS_CM_Auto_Sync_Manager {
     const CRON_HOOK = 'ielts_cm_auto_sync_content';
     
     /**
-     * Maximum items to sync per run (to prevent timeouts)
+     * Maximum items to sync per run (kept at 1 for very gradual syncing to avoid server overload)
      */
-    const MAX_ITEMS_PER_RUN = 50;
+    const MAX_ITEMS_PER_RUN = 1;
     
     /**
      * Default memory threshold (in MB) - stop if memory usage exceeds this
@@ -207,84 +207,48 @@ class IELTS_CM_Auto_Sync_Manager {
     
     /**
      * Get all content that has changed since last sync
-     * Returns items in the correct order to prevent progress loss:
-     * 1. Courses (so lessons can reference them)
-     * 2. Resources and quizzes (so sync_lesson_pages doesn't trash them)
-     * 3. Lessons (after their children exist)
+     * Returns items ordered by most recently modified first so recently updated
+     * content is always prioritised during gradual background sync.
      */
     private function get_changed_content() {
+        // Map plugin post types to sync content-type strings
+        $post_type_map = array(
+            'ielts_course'   => 'course',
+            'ielts_lesson'   => 'lesson',
+            'ielts_resource' => 'resource',
+            'ielts_quiz'     => 'quiz',
+        );
+
+        // Fetch published posts of every relevant type, most recently modified first.
+        // Use -1 (unlimited) so all changed posts are discovered; the per-run limit
+        // (MAX_ITEMS_PER_RUN) controls how many actually get synced each cron fire.
+        // Memory usage is kept in check by the existing is_memory_exceeded() guard in
+        // run_auto_sync() and by the lightweight nature of the is_content_changed checks.
+        $posts = get_posts( array(
+            'post_type'        => array_keys( $post_type_map ),
+            'posts_per_page'   => -1,
+            'post_status'      => 'publish',
+            'orderby'          => 'modified',
+            'order'            => 'DESC',
+            'suppress_filters' => true,
+            'no_found_rows'    => true,
+            'update_post_meta_cache' => false,
+            'update_post_term_cache' => false,
+        ) );
+
         $changed_items = array();
-        
-        // Get all courses with hierarchy
-        $courses_hierarchy = $this->sync_manager->get_all_courses_with_hierarchy();
-        
-        // First pass: Collect all courses
-        $courses = array();
-        $lessons_with_children = array();
-        
-        foreach ($courses_hierarchy as $course) {
-            if ($this->is_content_changed($course['id'], $course['type'])) {
-                $courses[] = array(
-                    'id' => $course['id'],
-                    'type' => $course['type'],
-                    'title' => $course['title']
-                );
-            }
-            
-            foreach ($course['lessons'] as $lesson) {
-                $lesson_children = array();
-                
-                // Collect resources for this lesson
-                foreach ($lesson['resources'] as $resource) {
-                    if ($this->is_content_changed($resource['id'], $resource['type'])) {
-                        $lesson_children[] = array(
-                            'id' => $resource['id'],
-                            'type' => $resource['type'],
-                            'title' => $resource['title']
-                        );
-                    }
-                }
-                
-                // Collect quizzes for this lesson
-                foreach ($lesson['exercises'] as $exercise) {
-                    if ($this->is_content_changed($exercise['id'], $exercise['type'])) {
-                        $lesson_children[] = array(
-                            'id' => $exercise['id'],
-                            'type' => $exercise['type'],
-                            'title' => $exercise['title']
-                        );
-                    }
-                }
-                
-                // Store lesson with its children
-                $lessons_with_children[] = array(
-                    'lesson' => $lesson,
-                    'children' => $lesson_children
-                );
-            }
-        }
-        
-        // Add items in the correct order:
-        // 1. All courses first
-        $changed_items = $courses;
-        
-        // 2. Then for each lesson: add children first, then the lesson
-        foreach ($lessons_with_children as $item) {
-            // Add children (resources and quizzes) first
-            foreach ($item['children'] as $child) {
-                $changed_items[] = $child;
-            }
-            
-            // Then add the lesson itself if it has changed
-            if ($this->is_content_changed($item['lesson']['id'], $item['lesson']['type'])) {
+
+        foreach ( $posts as $post ) {
+            $content_type = $post_type_map[ $post->post_type ];
+            if ( $this->is_content_changed( $post->ID, $content_type ) ) {
                 $changed_items[] = array(
-                    'id' => $item['lesson']['id'],
-                    'type' => $item['lesson']['type'],
-                    'title' => $item['lesson']['title']
+                    'id'    => $post->ID,
+                    'type'  => $content_type,
+                    'title' => $post->post_title,
                 );
             }
         }
-        
+
         return $changed_items;
     }
     
@@ -384,10 +348,11 @@ class IELTS_CM_Auto_Sync_Manager {
             array('%s', '%s', '%s', '%s')
         );
         
-        // Keep only last 100 log entries to prevent table bloat
+        // Keep only last 300 log entries to prevent table bloat while retaining
+        // enough history to display 50 non-system auto-synced items
         $wpdb->query("DELETE FROM $table WHERE id NOT IN (
             SELECT id FROM (
-                SELECT id FROM $table ORDER BY log_date DESC LIMIT 100
+                SELECT id FROM $table ORDER BY log_date DESC LIMIT 300
             ) as temp
         )");
     }
