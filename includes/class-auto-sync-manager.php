@@ -48,12 +48,12 @@ class IELTS_CM_Auto_Sync_Manager {
         // Register custom cron interval (only once)
         add_filter('cron_schedules', array($this, 'add_cron_interval'));
         
-        // Schedule cron if auto-sync is enabled
+        // Schedule cron if auto-sync is enabled (only if not already scheduled)
         $this->schedule_auto_sync();
         
-        // Add hook to reschedule when settings change
-        add_action('update_option_ielts_cm_auto_sync_enabled', array($this, 'schedule_auto_sync'));
-        add_action('update_option_ielts_cm_auto_sync_interval', array($this, 'schedule_auto_sync'));
+        // Fully reschedule when settings change so the new interval takes effect immediately
+        add_action('update_option_ielts_cm_auto_sync_enabled', array($this, 'reschedule_auto_sync'));
+        add_action('update_option_ielts_cm_auto_sync_interval', array($this, 'reschedule_auto_sync'));
     }
     
     /**
@@ -93,22 +93,46 @@ class IELTS_CM_Auto_Sync_Manager {
     }
     
     /**
-     * Schedule or unschedule the auto-sync cron job
+     * Schedule the auto-sync cron job if it is not already scheduled.
+     *
+     * This method is safe to call on every page load: it does nothing when an
+     * event is already queued, so it never resets an in-progress interval.
+     * Use reschedule_auto_sync() when a settings change must take effect
+     * immediately.
      */
     public function schedule_auto_sync() {
-        // Clear existing schedule
+        // If disabled or not on primary site, remove any stale schedule
+        if (!$this->is_enabled() || !$this->sync_manager->is_primary_site()) {
+            $timestamp = wp_next_scheduled(self::CRON_HOOK);
+            if ($timestamp) {
+                wp_unschedule_event($timestamp, self::CRON_HOOK);
+            }
+            return;
+        }
+        
+        // Only schedule when there is no existing event.  Unconditionally
+        // unscheduling + rescheduling to time() on every page load was the
+        // primary cause of slow page loads: pseudo-cron would fire the hook
+        // on every subsequent request because the next-run timestamp was
+        // always in the past (see reschedule_auto_sync() for forced resets).
+        if (!wp_next_scheduled(self::CRON_HOOK)) {
+            wp_schedule_event(time(), 'ielts_cm_auto_sync', self::CRON_HOOK);
+        }
+    }
+
+    /**
+     * Clear and re-create the auto-sync cron schedule.
+     *
+     * Called when the enabled flag or interval option changes so the new
+     * settings take effect straight away without waiting for the old event
+     * to fire naturally.
+     */
+    public function reschedule_auto_sync() {
         $timestamp = wp_next_scheduled(self::CRON_HOOK);
         if ($timestamp) {
             wp_unschedule_event($timestamp, self::CRON_HOOK);
         }
-        
-        // Only schedule if enabled and on primary site
-        if (!$this->is_enabled() || !$this->sync_manager->is_primary_site()) {
-            return;
-        }
-        
-        // Schedule the event
-        wp_schedule_event(time(), 'ielts_cm_auto_sync', self::CRON_HOOK);
+        $this->schedule_auto_sync();
     }
     
     /**
@@ -160,6 +184,17 @@ class IELTS_CM_Auto_Sync_Manager {
         $this->log_sync('system', 'Auto-sync started', 'running');
         
         try {
+            // Stamp the rate-limit gate BEFORE the expensive content scan so that:
+            //   a) parallel cron calls (pseudo-cron fires on every page load) are
+            //      blocked immediately, and
+            //   b) when there are no changed items we still wait the full interval
+            //      before scanning again instead of re-running the scan on every
+            //      subsequent page load.
+            // The TTL equals the configured interval, so the gate expires exactly
+            // when the next run may legitimately occur.
+            $interval_seconds = $this->get_interval() * 60;
+            set_transient(self::RATE_LIMIT_KEY, true, $interval_seconds);
+
             // Get all content that needs checking
             $changed_items = $this->get_changed_content();
             
@@ -169,13 +204,6 @@ class IELTS_CM_Auto_Sync_Manager {
                 update_option('ielts_cm_auto_sync_failures', 0); // Reset failure counter
                 return;
             }
-
-            // Stamp the rate-limit gate immediately so that any other cron call
-            // that arrives while we are working does not start a parallel sync.
-            // TTL equals the configured interval in seconds so the gate expires
-            // exactly when the next item may legitimately be synced.
-            $interval_seconds = $this->get_interval() * 60;
-            set_transient(self::RATE_LIMIT_KEY, true, $interval_seconds);
 
             // Limit items per run
             $items_to_sync = array_slice($changed_items, 0, self::MAX_ITEMS_PER_RUN);
@@ -266,9 +294,15 @@ class IELTS_CM_Auto_Sync_Manager {
 
         $changed_items = array();
 
+        // Fetch subsites once to avoid an extra DB query per post inside the loop.
+        $subsites = $this->sync_manager->get_connected_subsites();
+        if (empty($subsites)) {
+            return $changed_items;
+        }
+
         foreach ( $posts as $post ) {
             $content_type = $post_type_map[ $post->post_type ];
-            if ( $this->is_content_changed( $post->ID, $content_type ) ) {
+            if ( $this->is_content_changed( $post->ID, $content_type, $subsites ) ) {
                 $changed_items[] = array(
                     'id'    => $post->ID,
                     'type'  => $content_type,
@@ -282,8 +316,14 @@ class IELTS_CM_Auto_Sync_Manager {
     
     /**
      * Check if content has changed since last successful sync
+     *
+     * @param int    $content_id   Post ID to check.
+     * @param string $content_type Plugin content-type string (course, lesson, …).
+     * @param array  $subsites     Pre-fetched subsite rows.  When null the list
+     *                             is fetched from the database (kept for backwards
+     *                             compatibility with any direct callers).
      */
-    private function is_content_changed($content_id, $content_type) {
+    private function is_content_changed($content_id, $content_type, $subsites = null) {
         global $wpdb;
         
         $current_hash = $this->sync_manager->generate_content_hash($content_id, $content_type);
@@ -291,8 +331,10 @@ class IELTS_CM_Auto_Sync_Manager {
             return false; // Content doesn't exist
         }
         
-        $subsites = $this->sync_manager->get_connected_subsites();
-        
+        if ($subsites === null) {
+            $subsites = $this->sync_manager->get_connected_subsites();
+        }
+
         // Check if ANY subsite is out of sync
         foreach ($subsites as $subsite) {
             $table = $this->db->get_content_sync_table();
