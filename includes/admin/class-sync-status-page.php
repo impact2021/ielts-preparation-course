@@ -83,9 +83,25 @@ class IELTS_CM_Sync_Status_Page {
                 <span id="sync-lock-message" style="margin-left:10px;font-weight:bold;"></span>
             </p>
 
+            <!-- Pending Sync Items -->
+            <h2><?php _e('Pending Sync Items', 'ielts-course-manager'); ?></h2>
+            <p><?php _e('These items have not yet been synced to all subsites, or have changed since their last sync.', 'ielts-course-manager'); ?></p>
+            <p>
+                <button id="load-pending-items" class="button button-primary">
+                    <?php _e('Load Pending Items', 'ielts-course-manager'); ?>
+                </button>
+                <button id="push-all-pending" class="button button-secondary" style="display:none;margin-left:8px;">
+                    <?php _e('Push All', 'ielts-course-manager'); ?>
+                </button>
+                <span id="pending-status-message" style="margin-left:10px;font-weight:bold;"></span>
+            </p>
+            <div id="pending-items-container"></div>
+
             <?php if (empty($logs)): ?>
+                <h2><?php _e('Sync Log', 'ielts-course-manager'); ?></h2>
                 <p><?php _e('No items have been automatically synced yet.', 'ielts-course-manager'); ?></p>
             <?php else: ?>
+                <h2><?php _e('Sync Log', 'ielts-course-manager'); ?></h2>
                 <table class="widefat fixed striped" style="max-width:900px;">
                     <thead>
                         <tr>
@@ -116,6 +132,9 @@ class IELTS_CM_Sync_Status_Page {
 
         <script>
         jQuery(document).ready(function($) {
+            var syncNonce = '<?php echo wp_create_nonce('ielts_cm_sync_content'); ?>';
+
+            // ── Clear Stuck Sync Locks ────────────────────────────────────────────
             $('#clear-sync-locks').on('click', function() {
                 if (!confirm('<?php echo esc_js(__('Clear all sync locks? Do this only if sync operations are stuck.', 'ielts-course-manager')); ?>')) {
                     return;
@@ -126,7 +145,7 @@ class IELTS_CM_Sync_Status_Page {
                 $msg.html('<span style="color:#0c5460;"><?php echo esc_js(__('Clearing…', 'ielts-course-manager')); ?></span>');
                 $.post(ajaxurl, {
                     action: 'ielts_cm_clear_sync_lock',
-                    nonce:  '<?php echo wp_create_nonce('ielts_cm_sync_content'); ?>'
+                    nonce:  syncNonce
                 }, function(response) {
                     if (response.success) {
                         $msg.html('<span style="color:#155724;">\u2713 ' + response.data.message + '</span>');
@@ -139,6 +158,94 @@ class IELTS_CM_Sync_Status_Page {
                     $msg.html('<span style="color:#721c24;">\u2717 <?php echo esc_js(__('Request failed', 'ielts-course-manager')); ?></span>');
                     $btn.prop('disabled', false);
                 });
+            });
+
+            // ── Pending Items ─────────────────────────────────────────────────────
+            var pendingItems = [];
+
+            $('#load-pending-items').on('click', function() {
+                var $btn = $(this);
+                var $msg = $('#pending-status-message');
+                $btn.prop('disabled', true).text('<?php echo esc_js(__('Loading…', 'ielts-course-manager')); ?>');
+                $msg.html('');
+                $('#push-all-pending').hide();
+
+                $.post(ajaxurl, {
+                    action: 'ielts_cm_get_pending_items',
+                    nonce:  syncNonce
+                }, function(response) {
+                    $btn.prop('disabled', false).text('<?php echo esc_js(__('Reload', 'ielts-course-manager')); ?>');
+                    if (!response.success) {
+                        $msg.html('<span style="color:#721c24;">\u2717 ' + (response.data ? response.data.message : '<?php echo esc_js(__('Error', 'ielts-course-manager')); ?>') + '</span>');
+                        return;
+                    }
+                    pendingItems = response.data.items;
+                    renderPendingTable(pendingItems);
+                    if (pendingItems.length > 0) {
+                        $('#push-all-pending').show();
+                    }
+                }).fail(function() {
+                    $btn.prop('disabled', false).text('<?php echo esc_js(__('Load Pending Items', 'ielts-course-manager')); ?>');
+                    $msg.html('<span style="color:#721c24;">\u2717 <?php echo esc_js(__('Request failed', 'ielts-course-manager')); ?></span>');
+                });
+            });
+
+            function renderPendingTable(items) {
+                var $container = $('#pending-items-container');
+                if (items.length === 0) {
+                    $container.html('<p style="color:#155724;font-weight:bold;">\u2713 <?php echo esc_js(__('All items are up to date — nothing pending.', 'ielts-course-manager')); ?></p>');
+                    return;
+                }
+                var html = '<p><strong>' + items.length + ' <?php echo esc_js(__('item(s) pending sync:', 'ielts-course-manager')); ?></strong></p>';
+                html += '<table class="widefat fixed striped" style="max-width:900px;">';
+                html += '<thead><tr>';
+                html += '<th><?php echo esc_js(__('Title', 'ielts-course-manager')); ?></th>';
+                html += '<th style="width:100px;"><?php echo esc_js(__('Type', 'ielts-course-manager')); ?></th>';
+                html += '<th style="width:90px;"></th>';
+                html += '</tr></thead><tbody>';
+                $.each(items, function(i, item) {
+                    html += '<tr id="pending-row-' + item.id + '-' + item.type + '">';
+                    html += '<td>' + $('<span>').text(item.title).html() + '</td>';
+                    html += '<td>' + $('<span>').text(item.type.charAt(0).toUpperCase() + item.type.slice(1)).html() + '</td>';
+                    html += '<td><button class="button button-small push-single-item" data-id="' + item.id + '" data-type="' + item.type + '"><?php echo esc_js(__('Push Now', 'ielts-course-manager')); ?></button></td>';
+                    html += '</tr>';
+                });
+                html += '</tbody></table>';
+                $container.html(html);
+            }
+
+            // Push a single item
+            $('#pending-items-container').on('click', '.push-single-item', function() {
+                var $btn  = $(this);
+                var id    = $btn.data('id');
+                var type  = $btn.data('type');
+                var $row  = $('#pending-row-' + id + '-' + type);
+                $btn.prop('disabled', true).text('<?php echo esc_js(__('Pushing…', 'ielts-course-manager')); ?>');
+                $.post(ajaxurl, {
+                    action:       'ielts_cm_push_to_subsites',
+                    post_id:      id,
+                    content_type: type,
+                    nonce:        syncNonce
+                }, function(response) {
+                    if (response.success) {
+                        $row.find('td').last().html('<span style="color:#155724;font-weight:bold;">\u2713 <?php echo esc_js(__('Pushed', 'ielts-course-manager')); ?></span>');
+                        setTimeout(function(){ $row.fadeOut(400, function(){ $(this).remove(); }); }, 1500);
+                    } else {
+                        $btn.prop('disabled', false).text('<?php echo esc_js(__('Push Now', 'ielts-course-manager')); ?>');
+                        $row.find('td').last().append('<span style="color:#721c24;margin-left:6px;">\u2717 <?php echo esc_js(__('Failed', 'ielts-course-manager')); ?></span>');
+                    }
+                }).fail(function() {
+                    $btn.prop('disabled', false).text('<?php echo esc_js(__('Push Now', 'ielts-course-manager')); ?>');
+                });
+            });
+
+            // Push all pending items sequentially
+            $('#push-all-pending').on('click', function() {
+                if (!confirm('<?php echo esc_js(__('Push all pending items to subsites? This may take a while.', 'ielts-course-manager')); ?>')) {
+                    return;
+                }
+                var $allBtns = $('#pending-items-container').find('.push-single-item');
+                $allBtns.each(function() { $(this).trigger('click'); });
             });
         });
         </script>
