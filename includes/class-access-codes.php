@@ -2786,40 +2786,40 @@ class IELTS_CM_Access_Codes {
         $updated_fields = array();
         $updated_fields[] = 'expiry date';
         
-        // Update membership type
+        // Update membership type meta if it changed
         $current_membership_type = get_user_meta($user_id, 'iw_course_group', true);
-        
-        // Only update if it's different
         if ($current_membership_type !== $new_membership_type) {
             update_user_meta($user_id, 'iw_course_group', $new_membership_type);
             $updated_fields[] = 'membership type';
-            
-            // Update user role to match the membership type
+        }
+        
+        // Always restore the user's access code role and update enrollment records.
+        // This is necessary because an expired course strips the role via sync_user_role(),
+        // so re-extending must re-grant access regardless of whether the membership type changed.
+        $role_mapping = array(
+            'academic_module' => 'access_academic_module',
+            'general_module' => 'access_general_module',
+            'general_english' => 'access_general_english',
+            'entry_test' => 'access_entry_test'
+        );
+        
+        if (isset($role_mapping[$new_membership_type])) {
             $user = get_userdata($user_id);
             if ($user) {
-                // Map course group to access code membership role
-                $role_mapping = array(
-                    'academic_module' => 'access_academic_module',
-                    'general_module' => 'access_general_module',
-                    'general_english' => 'access_general_english',
-                    'entry_test' => 'access_entry_test'
-                );
-                
-                if (isset($role_mapping[$new_membership_type])) {
-                    // Remove all access code roles first
-                    foreach ($role_mapping as $role) {
-                        $user->remove_role($role);
-                    }
-                    // Add the new role
-                    $user->add_role($role_mapping[$new_membership_type]);
-                    // Update the membership type meta to keep it in sync
-                    update_user_meta($user_id, '_ielts_cm_membership_type', $role_mapping[$new_membership_type]);
+                // Remove all access code roles first
+                foreach ($role_mapping as $role) {
+                    $user->remove_role($role);
                 }
+                // Add the correct role
+                $user->add_role($role_mapping[$new_membership_type]);
+                // Keep membership type meta in sync
+                update_user_meta($user_id, '_ielts_cm_membership_type', $role_mapping[$new_membership_type]);
             }
-            
-            // Re-enroll user in courses matching their new membership type
-            $this->enroll_user_in_courses($user_id, $new_membership_type);
         }
+        
+        // Always re-enroll user in courses so the enrollment table course_end_date
+        // reflects the updated expiry and enrollment status is set to 'active'.
+        $this->enroll_user_in_courses($user_id, $new_membership_type);
         
         // Create dynamic success message
         $message = 'Student ' . implode(' and ', $updated_fields) . ' updated successfully';
