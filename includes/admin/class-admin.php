@@ -6034,6 +6034,10 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
                 $wpdb->esc_like('_transient_timeout_ielts_cm_sync_in_progress_') . '%'
             )
         );
+
+        // Also clear the auto-sync rate-limit gate so the next cron run is not
+        // held back by a leftover transient after locks have been manually cleared.
+        delete_transient(IELTS_CM_Auto_Sync_Manager::RATE_LIMIT_KEY);
         
         wp_send_json_success(array(
             'message' => sprintf('Cleared %d sync lock(s). You can now start a new sync operation.', max(0, $cleared)),
