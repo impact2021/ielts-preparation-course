@@ -45,6 +45,7 @@ class IELTS_CM_Admin {
         add_action('wp_ajax_ielts_cm_update_content_order', array($this, 'ajax_update_content_order'));
         add_action('wp_ajax_ielts_cm_push_to_subsites', array($this, 'ajax_push_to_subsites'));
         add_action('wp_ajax_ielts_cm_clear_sync_lock', array($this, 'ajax_clear_sync_lock')); // EMERGENCY FIX
+        add_action('wp_ajax_ielts_cm_get_pending_items', array($this, 'ajax_get_pending_items'));
         add_action('wp_ajax_ielts_cm_get_lessons_by_courses', array($this, 'ajax_get_lessons_by_courses'));
         add_action('wp_ajax_ielts_cm_add_lesson_to_course', array($this, 'ajax_add_lesson_to_course'));
         add_action('wp_ajax_ielts_cm_remove_lesson_from_course', array($this, 'ajax_remove_lesson_from_course'));
@@ -6045,7 +6046,27 @@ text: '&lt;h3&gt;Welcome to IELTS!&lt;/h3&gt;&lt;p&gt;Your learning journey begi
         ));
         return;
     }
-    
+
+    /**
+     * AJAX handler: return all items pending sync as a JSON array.
+     */
+    public function ajax_get_pending_items() {
+        check_ajax_referer('ielts_cm_sync_content', 'nonce');
+
+        if (!current_user_can('manage_options')) {
+            wp_send_json_error(array('message' => 'Insufficient permissions.'));
+            return;
+        }
+
+        $auto_sync = new IELTS_CM_Auto_Sync_Manager();
+        $items     = $auto_sync->get_pending_items();
+
+        wp_send_json_success(array(
+            'items' => $items,
+            'count' => count($items),
+        ));
+    }
+
     /**
      * AJAX handler to get lessons filtered by course IDs
      */

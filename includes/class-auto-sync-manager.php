@@ -472,4 +472,19 @@ class IELTS_CM_Auto_Sync_Manager {
     public function trigger_manual_sync() {
         $this->run_auto_sync();
     }
+
+    /**
+     * Return all items that are pending sync (not yet synced or changed since last sync).
+     * Returns at most $limit items (0 = no limit).
+     *
+     * @param int $limit Maximum number of items to return. 0 means no limit.
+     * @return array Array of items, each with 'id', 'type', and 'title'.
+     */
+    public function get_pending_items( $limit = 0 ) {
+        $items = $this->get_changed_content();
+        if ( $limit > 0 && count( $items ) > $limit ) {
+            return array_slice( $items, 0, $limit );
+        }
+        return $items;
+    }
 }
