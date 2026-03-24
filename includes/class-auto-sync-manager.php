@@ -112,11 +112,28 @@ class IELTS_CM_Auto_Sync_Manager {
     }
     
     /**
+     * Transient key used as a rate-limit gate between item syncs.
+     * The transient is set for `interval` seconds after each item is synced, so
+     * subsequent cron fires within that window exit immediately without syncing
+     * another item.  This guarantees at most 1 item per configured interval
+     * regardless of how often WordPress pseudo-cron fires (e.g. on busy sites).
+     */
+    const RATE_LIMIT_KEY = 'ielts_cm_auto_sync_rate_limit';
+
+    /**
      * Run the automatic sync process
      */
     public function run_auto_sync() {
         // Double-check it's enabled and on primary site
         if (!$this->is_enabled() || !$this->sync_manager->is_primary_site()) {
+            return;
+        }
+
+        // Rate-limit gate: exit silently if the previous item was synced less than
+        // `interval` seconds ago.  WordPress pseudo-cron can fire on every page
+        // load once the scheduled time has passed, so without this guard a single
+        // busy minute could sync many items even though MAX_ITEMS_PER_RUN = 1.
+        if (get_transient(self::RATE_LIMIT_KEY)) {
             return;
         }
         
@@ -152,7 +169,14 @@ class IELTS_CM_Auto_Sync_Manager {
                 update_option('ielts_cm_auto_sync_failures', 0); // Reset failure counter
                 return;
             }
-            
+
+            // Stamp the rate-limit gate immediately so that any other cron call
+            // that arrives while we are working does not start a parallel sync.
+            // TTL equals the configured interval in seconds so the gate expires
+            // exactly when the next item may legitimately be synced.
+            $interval_seconds = $this->get_interval() * 60;
+            set_transient(self::RATE_LIMIT_KEY, true, $interval_seconds);
+
             // Limit items per run
             $items_to_sync = array_slice($changed_items, 0, self::MAX_ITEMS_PER_RUN);
             $synced_count = 0;
@@ -202,6 +226,10 @@ class IELTS_CM_Auto_Sync_Manager {
         } catch (Exception $e) {
             $this->log_sync('system', 'Auto-sync failed with exception: ' . $e->getMessage(), 'failed');
             update_option('ielts_cm_auto_sync_failures', $consecutive_failures + 1);
+            // Remove the rate-limit gate on an unexpected exception: nothing was
+            // successfully synced, so the next scheduled run should be allowed to
+            // retry without waiting the full interval.
+            delete_transient(self::RATE_LIMIT_KEY);
         }
     }
     
