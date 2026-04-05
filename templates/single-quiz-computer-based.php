@@ -585,7 +585,7 @@ if ($lesson_id) {
                                 <?php endforeach; ?>
                             <?php else: ?>
                                 <div class="reading-text-section">
-                                    <p class="no-reading-text"><?php _e('No reading is needed to complete this exercise.', 'ielts-course-manager'); ?></p>
+                                    <p class="no-reading-text"><?php _e('No reading text is needed to complete this exercise.', 'ielts-course-manager'); ?></p>
                                 </div>
                             <?php endif; ?>
                         </div>
