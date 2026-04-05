@@ -4103,6 +4103,11 @@ class IELTS_CM_Shortcodes {
             $average = $all_total / $all_count;
             $overall_total = round($average * 2) / 2;
         }
+
+        // Derive the overall CEFR level from the overall band-score average
+        $overall_cefr = $all_count > 0
+            ? $this->convert_percentage_to_cefr(($all_total / $all_count / 9) * 100)
+            : null;
         
         // Get header color from settings (using primary color)
         $header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
@@ -4143,6 +4148,7 @@ class IELTS_CM_Shortcodes {
                                 <th class="total-column"><?php _e('Skills Total', 'ielts-course-manager'); ?></th>
                             <?php endif; ?>
                             <th class="total-column"><?php echo $showing_additional ? __('Overall Total', 'ielts-course-manager') : __('Overall', 'ielts-course-manager'); ?></th>
+                            <th class="cefr-column"><?php _e('CEFR Level', 'ielts-course-manager'); ?></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -4218,6 +4224,16 @@ class IELTS_CM_Shortcodes {
                                     <?php if (!$show_cefr): ?>
                                     <span class="band-score-label"><?php _e('Band', 'ielts-course-manager'); ?></span>
                                     <?php endif; ?>
+                                <?php else: ?>
+                                    <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
+                                <?php endif; ?>
+                            </td>
+                            <td class="band-score-cell cefr-score <?php echo $overall_cefr ? 'has-data' : 'no-data'; ?>">
+                                <span class="band-score-value">
+                                    <?php echo $overall_cefr ? esc_html($overall_cefr) : '—'; ?>
+                                </span>
+                                <?php if ($overall_cefr): ?>
+                                    <span class="band-score-label"><?php _e('Level', 'ielts-course-manager'); ?></span>
                                 <?php else: ?>
                                     <span class="band-score-label no-data-label"><?php _e('No tests yet', 'ielts-course-manager'); ?></span>
                                 <?php endif; ?>
@@ -4359,6 +4375,19 @@ class IELTS_CM_Shortcodes {
         
         .band-score-cell.overall-score .band-score-value {
             color: #E46B0A;
+        }
+        
+        .ielts-band-scores-table th.cefr-column {
+            background: #4a235a;
+        }
+        
+        .band-score-cell.cefr-score {
+            background: #f3e5f5;
+            font-weight: bold;
+        }
+        
+        .band-score-cell.cefr-score .band-score-value {
+            color: #6a1b9a;
         }
         
         .band-score-label {
