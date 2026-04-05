@@ -4068,6 +4068,8 @@ class IELTS_CM_Shortcodes {
         $official_count = 0;
         $all_total = 0;
         $all_count = 0;
+        $all_percentage_total = 0;
+        $official_percentage_total = 0;
         
         foreach ($skills_to_show as $skill) {
             $skill = strtolower($skill);
@@ -4079,11 +4081,13 @@ class IELTS_CM_Shortcodes {
                 if ($skill_scores[$skill] > 0) {
                     // Add to overall total
                     $all_total += $band_scores[$skill];
+                    $all_percentage_total += $percentage;
                     $all_count++;
                     
                     // Add to official skills total if it's one of the 4 main skills
                     if (in_array($skill, $official_skills)) {
                         $official_total += $band_scores[$skill];
+                        $official_percentage_total += $percentage;
                         $official_count++;
                     }
                 }
@@ -4104,10 +4108,45 @@ class IELTS_CM_Shortcodes {
             $overall_total = round($average * 2) / 2;
         }
 
-        // Derive the overall CEFR level from the overall band-score average
-        $overall_cefr = $all_count > 0
-            ? $this->convert_percentage_to_cefr(($all_total / $all_count / 9) * 100)
-            : null;
+        // Derive the overall CEFR level from the average of best scores for CEFR-scored exercises
+        $overall_cefr = null;
+        {
+            global $wpdb;
+            $db = new IELTS_CM_Database();
+            $quiz_results_table = $db->get_quiz_results_table();
+
+            $cefr_quiz_ids = get_posts(array(
+                'post_type'      => 'ielts_quiz',
+                'meta_query'     => array(
+                    array(
+                        'key'     => '_ielts_cm_scoring_type',
+                        'value'   => 'cefr',
+                        'compare' => '=',
+                    ),
+                ),
+                'fields'         => 'ids',
+                'posts_per_page' => -1,
+            ));
+
+            if (!empty($cefr_quiz_ids)) {
+                $placeholders = implode(',', array_fill(0, count($cefr_quiz_ids), '%d'));
+                $avg_pct = $wpdb->get_var($wpdb->prepare(
+                    "SELECT AVG(best_percentage) as avg_score
+                     FROM (
+                         SELECT quiz_id, MAX(percentage) as best_percentage
+                         FROM {$quiz_results_table}
+                         WHERE user_id = %d
+                         AND quiz_id IN ({$placeholders})
+                         GROUP BY quiz_id
+                     ) as best_scores",
+                    array_merge(array($user_id), $cefr_quiz_ids)
+                ));
+
+                if ($avg_pct !== null) {
+                    $overall_cefr = $this->convert_percentage_to_cefr(floatval($avg_pct));
+                }
+            }
+        }
         
         // Get header color from settings (using primary color)
         $header_color = get_option('ielts_cm_vocab_header_color', '#E56C0A');
@@ -4188,7 +4227,7 @@ class IELTS_CM_Shortcodes {
                                         <?php 
                                         if ($official_count > 0) {
                                             if ($show_cefr) {
-                                                echo esc_html('LEVEL ' . $this->convert_percentage_to_cefr(($official_total / $official_count / 9) * 100));
+                                                echo esc_html('LEVEL ' . $this->convert_percentage_to_cefr($official_percentage_total / $official_count));
                                             } else {
                                                 echo esc_html(number_format($skills_total, 1));
                                             }
@@ -4211,7 +4250,7 @@ class IELTS_CM_Shortcodes {
                                     <?php 
                                     if ($all_count > 0) {
                                         if ($show_cefr) {
-                                            echo esc_html('LEVEL ' . $this->convert_percentage_to_cefr(($all_total / $all_count / 9) * 100));
+                                            echo esc_html('LEVEL ' . $this->convert_percentage_to_cefr($all_percentage_total / $all_count));
                                         } else {
                                             echo esc_html(number_format($overall_total, 1));
                                         }
