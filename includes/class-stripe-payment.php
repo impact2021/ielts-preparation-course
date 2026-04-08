@@ -214,7 +214,7 @@ class IELTS_CM_Stripe_Payment {
         $first_name = isset($_POST['first_name']) ? sanitize_text_field($_POST['first_name']) : '';
         $last_name = isset($_POST['last_name']) ? sanitize_text_field($_POST['last_name']) : '';
         $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
-        $password = isset($_POST['password']) ? $_POST['password'] : '';
+        $password = isset($_POST['password']) ? wp_unslash($_POST['password']) : '';
         $membership_type = isset($_POST['membership_type']) ? sanitize_text_field($_POST['membership_type']) : '';
         
         error_log("IELTS Payment: Received data - User ID: (new registration), Type: $membership_type");
@@ -234,7 +234,11 @@ class IELTS_CM_Stripe_Payment {
             
             wp_send_json_error('All fields are required. Please fill in all registration fields.');
         }
-        
+
+        if (strlen($password) < 6) {
+            wp_send_json_error('Password must be at least 6 characters.');
+        }
+
         if (!is_email($email)) {
             error_log('IELTS Payment: Invalid email format');
             
