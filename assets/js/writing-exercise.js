@@ -67,10 +67,19 @@
         $('.ielts-writing-textarea').each(function() {
             var $ta  = $(this);
             var idx  = $ta.data('question-index');
-            // Pull prompt from the hidden data attribute on the prompt panel
             var $promptPanel = $('#writing-prompt-' + idx);
-            var taskPrompt   = $promptPanel.find('.writing-task-prompt').text().trim();
-            // Fallback: try the entire prompt panel text minus the label and minimums
+            var taskPrompt   = $promptPanel.find('.writing-task-prompt-source').val();
+
+            if (taskPrompt) {
+                taskPrompt = taskPrompt.trim();
+            }
+
+            // Fallback: extract the visible prompt text
+            if (!taskPrompt) {
+                taskPrompt = $promptPanel.find('.writing-task-prompt').text().trim();
+            }
+
+            // Final fallback: try the entire prompt panel text minus the label and minimums
             if (!taskPrompt) {
                 taskPrompt = $promptPanel.text().trim();
             }
