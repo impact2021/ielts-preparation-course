@@ -3129,7 +3129,7 @@ class IELTS_CM_Admin {
                         name="questions[<?php echo $index; ?>][ai_assessment_notes]"
                         rows="4"
                         style="width: 100%;"
-                        placeholder="<?php esc_attr_e('Optional private notes for AI scoring and feedback (e.g., what to prioritise for this exact task).', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['ai_assessment_notes']) ? $question['ai_assessment_notes'] : ''); ?></textarea>
+                        placeholder="<?php esc_attr_e('Optional private notes for AI scoring and feedback (e.g., what to prioritize for this exact task).', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['ai_assessment_notes']) ? $question['ai_assessment_notes'] : ''); ?></textarea>
                     <small style="display:block; margin-top:5px;"><?php _e('These notes are sent only to the AI assessor for this question and are never displayed in the student task prompt/results.', 'ielts-course-manager'); ?></small>
                 </p>
                 <p>
