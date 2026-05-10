@@ -651,6 +651,7 @@ PROMPT;
         }
 
         return wp_json_encode(array(
+            '_format'        => 'task_prompt_context_v1',
             'ai_prompt'      => $task_prompt,
             'student_prompt' => $student_prompt,
             'task_image_url' => $task_image_url,
@@ -664,7 +665,12 @@ PROMPT;
         $stored_task_prompt = (string) $stored_task_prompt;
         $decoded = json_decode($stored_task_prompt, true);
 
-        if (is_array($decoded) && (isset($decoded['ai_prompt']) || isset($decoded['student_prompt']) || isset($decoded['task_image_url']))) {
+        $is_context_payload = is_array($decoded) && (
+            (($decoded['_format'] ?? '') === 'task_prompt_context_v1') ||
+            (array_key_exists('ai_prompt', $decoded) && array_key_exists('student_prompt', $decoded) && array_key_exists('task_image_url', $decoded))
+        );
+
+        if ($is_context_payload) {
             $ai_prompt = isset($decoded['ai_prompt']) ? sanitize_textarea_field($decoded['ai_prompt']) : '';
             $has_student_prompt = array_key_exists('student_prompt', $decoded);
             $student_prompt = $has_student_prompt ? sanitize_textarea_field($decoded['student_prompt']) : '';
@@ -724,11 +730,11 @@ PROMPT;
         $lr         = $assessment['score_lexical'] ?? 0;
         $gra        = $assessment['score_grammar'] ?? 0;
         $word_count = $essay_text ? str_word_count($essay_text) : 0;
-        $task_prompt_context = $this->decode_task_prompt_context(
-            $this->encode_task_prompt_context($task_prompt, $student_prompt, $task_image_url)
-        );
-        $display_task_prompt = $task_prompt_context['student_prompt'];
-        $display_task_image  = $task_prompt_context['task_image_url'];
+        $display_task_image  = (string) $task_image_url;
+        $display_task_prompt = (string) $student_prompt;
+        if ($display_task_prompt === '' && $display_task_image === '') {
+            $display_task_prompt = (string) $task_prompt;
+        }
 
         // Task-specific band label
         $band_label = 'Overall Band Score';

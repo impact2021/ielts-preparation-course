@@ -594,7 +594,12 @@ class IELTS_CM_Writing_Admin {
         $stored_task_prompt = (string) $stored_task_prompt;
         $decoded = json_decode($stored_task_prompt, true);
 
-        if (is_array($decoded) && (isset($decoded['ai_prompt']) || isset($decoded['student_prompt']) || isset($decoded['task_image_url']))) {
+        $is_context_payload = is_array($decoded) && (
+            (($decoded['_format'] ?? '') === 'task_prompt_context_v1') ||
+            (array_key_exists('ai_prompt', $decoded) && array_key_exists('student_prompt', $decoded) && array_key_exists('task_image_url', $decoded))
+        );
+
+        if ($is_context_payload) {
             $has_student_prompt = array_key_exists('student_prompt', $decoded);
             return array(
                 'student_prompt' => $has_student_prompt ? sanitize_textarea_field($decoded['student_prompt']) : sanitize_textarea_field($decoded['ai_prompt'] ?? ''),
