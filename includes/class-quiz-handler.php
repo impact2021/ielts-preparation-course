@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Quiz_Handler {
     
     private $db;
-    private const MIN_BAND_SCORE = 0.0;
+    private const MIN_BAND_SCORE = 1.0;
     private const MAX_BAND_SCORE = 9.0;
     
     public function __construct() {
@@ -1354,7 +1354,7 @@ class IELTS_CM_Quiz_Handler {
      * Convert correct answers to IELTS band score
      * 
      * @param float|int $score_value Score value:
-     *                               - writing_assessment: direct IELTS band score (0-9, float)
+     *                               - writing_assessment: direct IELTS band score (1.0-9.0, float)
      *                               - other IELTS scoring types: count of correct answers (integer)
      * @param string $scoring_type Type of scoring (ielts_general_reading, ielts_academic_reading, ielts_listening)
      * @return float Band score (0-9)
