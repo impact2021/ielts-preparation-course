@@ -15,23 +15,23 @@ This archive includes:
 
 ## Current Documentation
 
-For current and active documentation, please refer to the files in the root directory:
+For current and active documentation, please refer to the active docs location:
 
-### Active Documentation (Root Directory)
+### Active Documentation
 - `README.md` - Main project documentation
-- `VERSION_12_8_RELEASE_NOTES.md` - Current version release notes
-- `DEVELOPMENT-GUIDELINES.md` - Development guidelines
-- `EXERCISE_JSON_STANDARDS.md` - JSON format standards
-- `READING_PASSAGE_MARKER_GUIDE.md` - Guide for marking reading passages
-- `TRANSCRIPT_MARKER_PLACEMENT_GUIDE.md` - Guide for marking transcripts
-- `ANSWER-FEEDBACK-GUIDELINES.md` - Guidelines for answer feedback
-- `CRITICAL-FEEDBACK-RULES.md` - Critical feedback rules
-- `QUESTION_COUNTING_RULES.md` - Question counting standards
-- `FULL_READING_TEST_DOCUMENTATION.md` - Complete reading test documentation
-- `DROPDOWN-QUESTION-FAQ.md` - FAQ for dropdown questions
-- `HEADINGS-QUESTIONS-GUIDE.md` - Guide for headings questions
-- `IMPORT_FORMAT_ANALYSIS.md` - Import format analysis
-- `IMPORT_OPTIONS_GUIDE.md` - Import options guide
+- `non-plugin-files/root-docs/VERSION_12_8_RELEASE_NOTES.md` - Current version release notes
+- `non-plugin-files/root-docs/DEVELOPMENT-GUIDELINES.md` - Development guidelines
+- `non-plugin-files/root-docs/EXERCISE_JSON_STANDARDS.md` - JSON format standards
+- `non-plugin-files/root-docs/READING_PASSAGE_MARKER_GUIDE.md` - Guide for marking reading passages
+- `non-plugin-files/root-docs/TRANSCRIPT_MARKER_PLACEMENT_GUIDE.md` - Guide for marking transcripts
+- `non-plugin-files/root-docs/ANSWER-FEEDBACK-GUIDELINES.md` - Guidelines for answer feedback
+- `non-plugin-files/root-docs/CRITICAL-FEEDBACK-RULES.md` - Critical feedback rules
+- `non-plugin-files/root-docs/QUESTION_COUNTING_RULES.md` - Question counting standards
+- `non-plugin-files/root-docs/FULL_READING_TEST_DOCUMENTATION.md` - Complete reading test documentation
+- `non-plugin-files/root-docs/DROPDOWN-QUESTION-FAQ.md` - FAQ for dropdown questions
+- `non-plugin-files/root-docs/HEADINGS-QUESTIONS-GUIDE.md` - Guide for headings questions
+- `non-plugin-files/root-docs/IMPORT_FORMAT_ANALYSIS.md` - Import format analysis
+- `non-plugin-files/root-docs/IMPORT_OPTIONS_GUIDE.md` - Import options guide
 
 ## Why Archive?
 
@@ -47,8 +47,8 @@ These files were moved to this folder to:
 - **v10.x** - Major refactoring and feature additions
 - **v11.x** - Extensive testing, quality improvements, and bug fixes
 - **v12.0-12.7** - Unified template implementation and highlighting improvements
-- **v12.8** - Current version (see `VERSION_12_8_RELEASE_NOTES.md` in root)
+- **v12.8** - Current version (see `non-plugin-files/root-docs/VERSION_12_8_RELEASE_NOTES.md`)
 
 ---
 
-**Note:** These files are kept for reference only. For current development, always refer to the active documentation in the root directory.
+**Note:** These files are kept for reference only. For current development, always refer to the active documentation paths above.
