@@ -1351,7 +1351,9 @@ class IELTS_CM_Quiz_Handler {
     /**
      * Convert correct answers to IELTS band score
      * 
-     * @param float $score_value Score value (correct answer count or direct band score)
+     * @param float $score_value Score value:
+     *                           - writing_assessment: direct IELTS band score (0-9)
+     *                           - other IELTS scoring types: count of correct answers
      * @param string $scoring_type Type of scoring (ielts_general_reading, ielts_academic_reading, ielts_listening)
      * @return float Band score (0-9)
      */
