@@ -3124,6 +3124,15 @@ class IELTS_CM_Admin {
                     <small style="display:block; margin-top:5px;"><?php _e('Upload the image via Media Library, copy the URL and paste it here. Leave blank for Task 2 or Task 1 General.', 'ielts-course-manager'); ?></small>
                 </p>
                 <p>
+                    <label><?php _e('AI Assessment Notes (Private — not shown to students)', 'ielts-course-manager'); ?></label><br>
+                    <textarea
+                        name="questions[<?php echo $index; ?>][ai_assessment_notes]"
+                        rows="4"
+                        style="width: 100%;"
+                        placeholder="<?php esc_attr_e('Optional private notes for AI scoring and feedback (e.g., what to prioritize for this exact task).', 'ielts-course-manager'); ?>"><?php echo esc_textarea(isset($question['ai_assessment_notes']) ? $question['ai_assessment_notes'] : ''); ?></textarea>
+                    <small style="display:block; margin-top:5px;"><?php _e('These notes are sent only to the AI assessor for this question and are never displayed in the student task prompt/results.', 'ielts-course-manager'); ?></small>
+                </p>
+                <p>
                     <small><?php _e('The task prompt is taken from the Question Text field above.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
@@ -4343,9 +4352,10 @@ and explain why you particularly enjoyed it."><?php echo esc_textarea($sp_p2); ?
                             }
                         }
                     } elseif ($question['type'] === 'writing_task') {
-                        // Handle writing_task — save task_type and task_image_url
+                        // Handle writing_task — save task_type, task_image_url, and private AI assessment notes
                         $question_data['task_type']      = isset($question['task_type']) ? sanitize_text_field($question['task_type']) : 'task2';
                         $question_data['task_image_url'] = isset($question['task_image_url']) ? esc_url_raw($question['task_image_url']) : '';
+                        $question_data['ai_assessment_notes'] = isset($question['ai_assessment_notes']) ? sanitize_textarea_field($question['ai_assessment_notes']) : '';
                         $question_data['points']         = 1;
                     } elseif ($question['type'] === 'speaking_test') {
                         // Handle speaking_test — save questions for all three parts
