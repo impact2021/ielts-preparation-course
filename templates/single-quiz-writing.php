@@ -131,6 +131,13 @@ $show_completion_message = !isset($current_index) || empty($all_items) || $curre
                     $task_type     = isset($question['task_type']) ? $question['task_type'] : 'task2';
                     $task_prompt   = isset($question['question']) ? $question['question'] : '';
                     $task_image_url = isset($question['task_image_url']) ? $question['task_image_url'] : '';
+                    // For Task 1 Academic: if no explicit image URL, try to extract the first
+                    // image from the question content so it is passed through to the results display.
+                    if ($task_type === 'task1_academic' && empty($task_image_url) && !empty($task_prompt)) {
+                        if (preg_match('/<img[^>]+src\s*=\s*["\']?([^"\'>\s]+)["\']?[^>]*>/i', $task_prompt, $img_src_match)) {
+                            $task_image_url = esc_url_raw($img_src_match[1]);
+                        }
+                    }
                     $show_task_prompt_to_student = !($task_type === 'task1_academic' && !empty($task_image_url));
                     $student_task_prompt = $show_task_prompt_to_student ? $task_prompt : '';
                     $task_labels   = array(

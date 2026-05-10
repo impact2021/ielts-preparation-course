@@ -42,7 +42,7 @@ class IELTS_CM_Writing_Assessment {
     public function enqueue_assets() {
         if (!is_user_logged_in()) return;
 
-        $writing_version = '1.53';
+        $writing_version = '1.54';
 
         wp_enqueue_style(
             'ielts-writing-assessment',

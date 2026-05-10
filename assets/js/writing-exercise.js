@@ -76,7 +76,21 @@
                 studentPrompt = $promptPanel.find('.writing-task-prompt').text().trim();
             }
             if (!taskPrompt) {
-                taskPrompt = studentPrompt || $promptPanel.text().trim();
+                if (studentPrompt) {
+                    taskPrompt = studentPrompt;
+                } else {
+                    // No text prompt available — use a task-appropriate generic description.
+                    // Avoid $promptPanel.text() which captures the UI label ("Task 1 — Academic")
+                    // and the minimum word count hint, which are not useful as AI context.
+                    var taskType = $ta.data('task-type') || '';
+                    if (taskType === 'task2') {
+                        taskPrompt = 'IELTS Writing Task 2 essay.';
+                    } else if (taskImageUrl) {
+                        taskPrompt = 'IELTS Academic Writing Task 1: describe the visual data shown in the image.';
+                    } else {
+                        taskPrompt = 'IELTS Writing Task 1 response.';
+                    }
+                }
             }
             tasks.push({
                 index:       idx,
