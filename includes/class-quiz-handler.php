@@ -1356,6 +1356,11 @@ class IELTS_CM_Quiz_Handler {
      * @return float Band score (0-9)
      */
     public function convert_to_band_score($correct_answers, $scoring_type) {
+        // Writing assessment stores band directly in score
+        if ($scoring_type === 'writing_assessment') {
+            return floatval($correct_answers);
+        }
+
         // Get the conversion table
         $table_data = $this->get_band_score_table($scoring_type);
         

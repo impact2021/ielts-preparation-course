@@ -1543,7 +1543,7 @@ class IELTS_CM_Admin {
                 <option value="writing_assessment" <?php selected($scoring_type, 'writing_assessment'); ?>><?php _e('IELTS Writing Assessment (Band Score)', 'ielts-course-manager'); ?></option>
                 <option value="cefr" <?php selected($scoring_type, 'cefr'); ?>><?php _e('CEFR Level (A1–C2)', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Choose how results are displayed. For IELTS Reading, Listening, and Writing Assessment exercises, results will show as band scores (0-9) instead of percentages. For CEFR, results will show as A1–C2 levels.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Choose how results are displayed. For IELTS Reading and Listening, band scores are converted from correct answers. For IELTS Writing Assessment, the saved band score is shown directly. For CEFR, results will show as A1–C2 levels.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
