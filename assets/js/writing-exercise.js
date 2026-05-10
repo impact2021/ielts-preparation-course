@@ -75,6 +75,7 @@
             var $promptPanel = $('#writing-prompt-' + idx);
             var taskPrompt   = ($promptPanel.data('ai-prompt') || '').toString().trim();
             var studentPrompt = ($promptPanel.data('student-prompt') || '').toString().trim();
+            var aiAssessmentNotes = ($promptPanel.data('ai-assessment-notes') || '').toString().trim();
             var taskImageUrl = ($promptPanel.data('task-image-url') || '').toString().trim();
 
             if (!studentPrompt) {
@@ -103,6 +104,7 @@
                 essay_text:  $ta.val(),
                 task_prompt: taskPrompt,
                 student_prompt: studentPrompt,
+                ai_assessment_notes: aiAssessmentNotes,
                 task_image_url: taskImageUrl,
             });
         });
@@ -156,6 +158,7 @@
                     task_type:     task.task_type,
                     task_prompt:   task.task_prompt,
                     student_prompt: task.student_prompt,
+                    ai_assessment_notes: task.ai_assessment_notes,
                     task_image_url: task.task_image_url,
                     essay_text:    task.essay_text,
                     exercise_mode: 1,

@@ -131,6 +131,7 @@ $show_completion_message = !isset($current_index) || empty($all_items) || $curre
                     $task_type     = isset($question['task_type']) ? $question['task_type'] : 'task2';
                     $task_prompt   = isset($question['question']) ? $question['question'] : '';
                     $task_image_url = isset($question['task_image_url']) ? $question['task_image_url'] : '';
+                    $ai_assessment_notes = isset($question['ai_assessment_notes']) ? $question['ai_assessment_notes'] : '';
                     // For Task 1 Academic: if no explicit image URL, try to extract the first
                     // image from the question content so it is passed through to the results display.
                     if ($task_type === 'task1_academic' && empty($task_image_url) && !empty($task_prompt)) {
@@ -150,6 +151,7 @@ $show_completion_message = !isset($current_index) || empty($all_items) || $curre
                 <div class="ielts-writing-prompt-panel"
                      id="writing-prompt-<?php echo esc_attr($idx); ?>"
                      data-ai-prompt="<?php echo esc_attr(wp_strip_all_tags($task_prompt)); ?>"
+                     data-ai-assessment-notes="<?php echo esc_attr($ai_assessment_notes); ?>"
                      data-student-prompt="<?php echo esc_attr(wp_strip_all_tags($student_task_prompt)); ?>"
                      data-task-image-url="<?php echo esc_attr($task_image_url); ?>"
                      style="<?php echo ($idx === $first_index) ? '' : 'display:none;'; ?>">
