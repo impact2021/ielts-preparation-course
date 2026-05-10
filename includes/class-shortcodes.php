@@ -3495,7 +3495,7 @@ class IELTS_CM_Shortcodes {
                                     </p>
                                 <?php endif; ?>
                             <?php elseif (!$hybrid_mode_enabled): ?>
-                                <!-- Access code membership on non-hybrid site - enter extension code -->
+                                <!-- Access code membership on non-hybrid site: show extension code message and form -->
                                 <p><?php _e('Enter an access code below to extend your course access.', 'ielts-course-manager'); ?></p>
                                 <div id="ielts-extend-code-message"></div>
                                 <form id="ielts-extend-code-form" class="ielts-form">
