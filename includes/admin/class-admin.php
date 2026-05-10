@@ -107,6 +107,15 @@ class IELTS_CM_Admin {
             $inline_script = "jQuery(document).ready(function($) { $('.ielts-cm-color-picker').wpColorPicker(); });";
             wp_add_inline_script('wp-color-picker', $inline_script);
         }
+
+        // Enqueue media library on exercise edit pages (needed for writing task image picker)
+        if (in_array($hook, array('post.php', 'post-new.php'))) {
+            $post_id   = isset($_GET['post']) ? intval($_GET['post']) : 0;
+            $post_type = $post_id ? get_post_type($post_id) : (isset($_GET['post_type']) ? sanitize_key($_GET['post_type']) : '');
+            if ($post_type === 'ielts_quiz') {
+                wp_enqueue_media();
+            }
+        }
     }
     
     /**
@@ -1682,6 +1691,35 @@ class IELTS_CM_Admin {
                 // Open the uploader
                 audioUploader.open();
             });
+
+            // Writing task image picker
+            if (typeof wp !== 'undefined' && wp.media) {
+            $(document).on('click', '.writing-task-image-select', function() {
+                var questionIndex = $(this).data('question-index');
+                var $btn = $(this);
+                var $container = $btn.closest('.writing-task-settings');
+                var imageFrame = wp.media({
+                    title: '<?php _e('Select Chart or Graph Image', 'ielts-course-manager'); ?>',
+                    button: { text: '<?php _e('Use this image', 'ielts-course-manager'); ?>' },
+                    library: { type: 'image' },
+                    multiple: false
+                });
+                imageFrame.on('select', function() {
+                    var attachment = imageFrame.state().get('selection').first().toJSON();
+                    $container.find('.writing-task-image-id').val(attachment.id);
+                    $container.find('.writing-task-image-preview').attr('src', attachment.sizes && attachment.sizes.thumbnail ? attachment.sizes.thumbnail.url : attachment.url).show();
+                    $container.find('.writing-task-image-remove').show();
+                });
+                imageFrame.open();
+            });
+
+            $(document).on('click', '.writing-task-image-remove', function() {
+                var $container = $(this).closest('.writing-task-settings');
+                $container.find('.writing-task-image-id').val('');
+                $container.find('.writing-task-image-preview').attr('src', '').hide();
+                $(this).hide();
+            });
+            } // end wp.media guard
             
             // Add audio section
             var audioSectionIndex = <?php 
@@ -2215,6 +2253,26 @@ class IELTS_CM_Admin {
                     container.find('.open-question-settings').hide();
                     container.find('.open-question-help').hide();
                 }
+                if (type === 'writing_task') {
+                    container.find('.writing-task-settings').show();
+                    container.find('.mc-options-field').hide();
+                    container.find('.no-answer-feedback-field').hide();
+                    container.find('.correct-answer-field').hide();
+                    container.find('.question-category').closest('p').hide();
+                } else {
+                    container.find('.writing-task-settings').hide();
+                }
+                if (type === 'speaking_test') {
+                    container.find('.speaking-test-settings').show();
+                    container.find('.mc-options-field').hide();
+                    container.find('.no-answer-feedback-field').hide();
+                    container.find('.correct-answer-field').hide();
+                    container.find('.question-category').closest('p').hide();
+                    container.find('.question-text-field').closest('p').hide();
+                } else {
+                    container.find('.speaking-test-settings').hide();
+                    container.find('.question-text-field').closest('p').show();
+                }
             });
             
             // Add multiple choice option
@@ -2497,7 +2555,17 @@ class IELTS_CM_Admin {
                     $content.slideUp(200);
                     $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
                 } else {
-                    $content.slideDown(200);
+                    $content.slideDown(200, function() {
+                        // Reinitialise any TinyMCE editors inside this question that lost their size
+                        $content.find('.wp-editor-wrap').each(function() {
+                            var $wrap = $(this);
+                            var editorId = $wrap.attr('id').replace('wp-', '').replace('-wrap', '');
+                            var editor = typeof tinymce !== 'undefined' ? tinymce.get(editorId) : null;
+                            if (editor) {
+                                editor.execCommand('mceAutoResize');
+                            }
+                        });
+                    });
                     $toggle.removeClass('dashicons-arrow-right-alt2').addClass('dashicons-arrow-down-alt2');
                 }
             });
@@ -2509,6 +2577,35 @@ class IELTS_CM_Admin {
                 if ($content.length && $toggle.length) {
                     $content.hide();
                     $toggle.removeClass('dashicons-arrow-down-alt2').addClass('dashicons-arrow-right-alt2');
+                }
+            });
+
+            // Initialise writing_task field visibility on page load
+            $('.question-item').each(function() {
+                var $item = $(this);
+                var type = $item.find('select.question-type').val();
+                if (type === 'writing_task') {
+                    $item.find('.writing-task-settings').show();
+                    $item.find('.mc-options-field').hide();
+                    $item.find('.no-answer-feedback-field').hide();
+                    $item.find('.correct-answer-field').hide();
+                    $item.find('.summary-completion-field').hide();
+                    $item.find('.multi-select-settings').hide();
+                    $item.find('.open-question-settings').hide();
+                    $item.find('.dropdown-paragraph-field').hide();
+                    $item.find('.question-category').closest('p').hide();
+                }
+                if (type === 'speaking_test') {
+                    $item.find('.speaking-test-settings').show();
+                    $item.find('.mc-options-field').hide();
+                    $item.find('.no-answer-feedback-field').hide();
+                    $item.find('.correct-answer-field').hide();
+                    $item.find('.summary-completion-field').hide();
+                    $item.find('.multi-select-settings').hide();
+                    $item.find('.open-question-settings').hide();
+                    $item.find('.dropdown-paragraph-field').hide();
+                    $item.find('.question-category').closest('p').hide();
+                    $item.find('.question-text-field').closest('p').hide();
                 }
             });
             
@@ -2831,8 +2928,16 @@ class IELTS_CM_Admin {
                         $label_parts[] = sprintf(__('Questions %d – %d', 'ielts-course-manager'), $display_start, $display_end);
                     }
                     
-                    // Part 2: IELTS question category (if selected)
-                    if (!empty($question['ielts_question_category'])) {
+                    // Part 2: IELTS question category (if selected) or writing task type
+                    if (!empty($question['type']) && $question['type'] === 'writing_task') {
+                        $task_type_labels = array(
+                            'task2'          => 'Writing — Task 2 Essay',
+                            'task1_academic' => 'Writing — Task 1 Academic',
+                            'task1_general'  => 'Writing — Task 1 General',
+                        );
+                        $task_type = isset($question['task_type']) ? $question['task_type'] : 'task2';
+                        $label_parts[0] = isset($task_type_labels[$task_type]) ? $task_type_labels[$task_type] : 'Writing Task';
+                    } elseif (!empty($question['ielts_question_category'])) {
                         $category_labels = $this->get_ielts_category_labels();
                         if (isset($category_labels[$question['ielts_question_category']])) {
                             $label_parts[] = $category_labels[$question['ielts_question_category']];
@@ -2998,6 +3103,90 @@ class IELTS_CM_Admin {
                 </p>
             </div>
             
+            <!-- Writing Task Settings -->
+            <div class="writing-task-settings" style="<?php echo (isset($question['type']) && $question['type'] === 'writing_task') ? '' : 'display:none;'; ?> padding: 15px; background: #f0f6fc; border-left: 4px solid #2271b1; margin-bottom: 15px;">
+                <h5 style="margin-top:0;"><?php _e('Writing Task Settings', 'ielts-course-manager'); ?></h5>
+                <p>
+                    <label><?php _e('Task Type', 'ielts-course-manager'); ?></label><br>
+                    <select name="questions[<?php echo $index; ?>][task_type]" style="width: 100%;">
+                        <option value="task2" <?php selected(isset($question['task_type']) ? $question['task_type'] : 'task2', 'task2'); ?>><?php _e('Task 2 — Essay (Academic/General)', 'ielts-course-manager'); ?></option>
+                        <option value="task1_academic" <?php selected(isset($question['task_type']) ? $question['task_type'] : '', 'task1_academic'); ?>><?php _e('Task 1 Academic — Graph/Chart/Diagram', 'ielts-course-manager'); ?></option>
+                        <option value="task1_general" <?php selected(isset($question['task_type']) ? $question['task_type'] : '', 'task1_general'); ?>><?php _e('Task 1 General — Letter', 'ielts-course-manager'); ?></option>
+                    </select>
+                </p>
+                <p>
+                    <label><?php _e('Task Image URL (Task 1 Academic — paste URL from Media Library)', 'ielts-course-manager'); ?></label><br>
+                    <input type="text"
+                           name="questions[<?php echo $index; ?>][task_image_url]"
+                           value="<?php echo esc_attr(isset($question['task_image_url']) ? $question['task_image_url'] : ''); ?>"
+                           style="width: 100%;"
+                           placeholder="https://...">
+                    <small style="display:block; margin-top:5px;"><?php _e('Upload the image via Media Library, copy the URL and paste it here. Leave blank for Task 2 or Task 1 General.', 'ielts-course-manager'); ?></small>
+                </p>
+                <p>
+                    <small><?php _e('The task prompt is taken from the Question Text field above.', 'ielts-course-manager'); ?></small>
+                </p>
+            </div>
+
+            <!-- Speaking Test Settings -->
+            <?php
+            $is_speaking = isset($question['type']) && $question['type'] === 'speaking_test';
+            $sp_p1 = isset($question['speaking_p1_questions']) ? $question['speaking_p1_questions'] : array('', '', '', '', '', '');
+            $sp_p2 = isset($question['speaking_p2_cuecard']) ? $question['speaking_p2_cuecard'] : '';
+            $sp_p3 = isset($question['speaking_p3_questions']) ? $question['speaking_p3_questions'] : array('', '', '', '', '', '');
+            while (count($sp_p1) < 6) $sp_p1[] = '';
+            while (count($sp_p3) < 6) $sp_p3[] = '';
+            ?>
+            <div class="speaking-test-settings" style="<?php echo $is_speaking ? '' : 'display:none;'; ?> margin-bottom: 15px;">
+
+                <div style="padding: 15px; background: #f0f6fc; border-left: 4px solid #2271b1; margin-bottom: 12px;">
+                    <h5 style="margin-top:0;"><?php _e('Part 1 — Questions (up to 6)', 'ielts-course-manager'); ?></h5>
+                    <p><small><?php _e('Enter up to 6 questions. The examiner will ask each one — recording starts automatically after each question. Students have 30 seconds per answer.', 'ielts-course-manager'); ?></small></p>
+                    <?php foreach ($sp_p1 as $qi => $qval): ?>
+                    <p style="margin-bottom:8px;">
+                        <label style="font-size:12px; color:#555;"><?php printf(__('Question %d', 'ielts-course-manager'), $qi + 1); ?></label><br>
+                        <input type="text"
+                               name="questions[<?php echo $index; ?>][speaking_p1_questions][<?php echo $qi; ?>]"
+                               value="<?php echo esc_attr($qval); ?>"
+                               style="width:100%;"
+                               placeholder="<?php esc_attr_e('e.g. Can you describe the area where you grew up?', 'ielts-course-manager'); ?>">
+                    </p>
+                    <?php endforeach; ?>
+                </div>
+
+                <div style="padding: 15px; background: #f0f6fc; border-left: 4px solid #e56c0a; margin-bottom: 12px;">
+                    <h5 style="margin-top:0;"><?php _e('Part 2 — Cue Card', 'ielts-course-manager'); ?></h5>
+                    <p><small><?php _e('Enter the cue card text exactly as you want it displayed. Student gets 1 minute to prepare (with notes), then 2 minutes to speak.', 'ielts-course-manager'); ?></small></p>
+                    <textarea
+                        name="questions[<?php echo $index; ?>][speaking_p2_cuecard]"
+                        rows="6"
+                        style="width:100%; font-family: monospace; font-size:13px;"
+                        placeholder="Describe a place you have visited that you particularly enjoyed.
+
+You should say:
+  - where it is
+  - when you went there
+  - what you did there
+and explain why you particularly enjoyed it."><?php echo esc_textarea($sp_p2); ?></textarea>
+                </div>
+
+                <div style="padding: 15px; background: #f0f6fc; border-left: 4px solid #16a34a;">
+                    <h5 style="margin-top:0;"><?php _e('Part 3 — Discussion Questions (up to 6)', 'ielts-course-manager'); ?></h5>
+                    <p><small><?php _e('Enter up to 6 questions. These are used as seed questions — the system will adapt follow-up questions based on the student\'s answers. Students have 60 seconds per answer.', 'ielts-course-manager'); ?></small></p>
+                    <?php foreach ($sp_p3 as $qi => $qval): ?>
+                    <p style="margin-bottom:8px;">
+                        <label style="font-size:12px; color:#555;"><?php printf(__('Question %d', 'ielts-course-manager'), $qi + 1); ?></label><br>
+                        <input type="text"
+                               name="questions[<?php echo $index; ?>][speaking_p3_questions][<?php echo $qi; ?>]"
+                               value="<?php echo esc_attr($qval); ?>"
+                               style="width:100%;"
+                               placeholder="<?php esc_attr_e('e.g. Do you think cities are becoming too overcrowded?', 'ielts-course-manager'); ?>">
+                    </p>
+                    <?php endforeach; ?>
+                </div>
+
+            </div>
+
             <!-- New structured options for multiple choice -->
             <div class="mc-options-field" style="<?php echo (isset($question['type']) && !in_array($question['type'], array('multiple_choice', 'multi_select', 'headings', 'matching_classifying', 'matching', 'locating_information', 'closed_question', 'closed_question_dropdown'))) ? 'display:none;' : ''; ?>">
                 <h5><?php _e('Answer Options', 'ielts-course-manager'); ?></h5>
@@ -3822,8 +4011,10 @@ class IELTS_CM_Admin {
             $questions = array();
             if (isset($_POST['questions']) && is_array($_POST['questions'])) {
                 foreach ($_POST['questions'] as $question) {
-                    // Skip empty questions
-                    if (empty($question['question'])) {
+                    $q_type = isset($question['type']) ? sanitize_text_field($question['type']) : '';
+
+                    // Skip empty questions — writing_task and speaking_test don't use the question text field
+                    if (!in_array($q_type, array('writing_task', 'speaking_test')) && empty($question['question'])) {
                         continue;
                     }
                     
@@ -4151,6 +4342,23 @@ class IELTS_CM_Admin {
                                 $question_data['field_audio_times'] = $field_audio_times;
                             }
                         }
+                    } elseif ($question['type'] === 'writing_task') {
+                        // Handle writing_task — save task_type and task_image_url
+                        $question_data['task_type']      = isset($question['task_type']) ? sanitize_text_field($question['task_type']) : 'task2';
+                        $question_data['task_image_url'] = isset($question['task_image_url']) ? esc_url_raw($question['task_image_url']) : '';
+                        $question_data['points']         = 1;
+                    } elseif ($question['type'] === 'speaking_test') {
+                        // Handle speaking_test — save questions for all three parts
+                        $p1 = isset($question['speaking_p1_questions']) && is_array($question['speaking_p1_questions'])
+                            ? array_map('sanitize_text_field', $question['speaking_p1_questions'])
+                            : array();
+                        $p3 = isset($question['speaking_p3_questions']) && is_array($question['speaking_p3_questions'])
+                            ? array_map('sanitize_text_field', $question['speaking_p3_questions'])
+                            : array();
+                        $question_data['speaking_p1_questions'] = array_values(array_filter($p1));
+                        $question_data['speaking_p2_cuecard']   = isset($question['speaking_p2_cuecard']) ? sanitize_textarea_field($question['speaking_p2_cuecard']) : '';
+                        $question_data['speaking_p3_questions'] = array_values(array_filter($p3));
+                        $question_data['points']                = 1;
                     } else {
                         // Non-multiple choice questions
                         $question_data['options'] = isset($question['options']) ? sanitize_textarea_field($question['options']) : '';

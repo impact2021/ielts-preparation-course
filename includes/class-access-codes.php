@@ -106,6 +106,7 @@ class IELTS_CM_Access_Codes {
         add_action('wp_ajax_ielts_cm_create_paypal_code_order', array($this, 'ajax_create_paypal_code_order'));
         add_action('wp_ajax_ielts_cm_capture_paypal_code_order', array($this, 'ajax_capture_paypal_code_order'));
         add_action('wp_ajax_iw_roll_master_code', array($this, 'ajax_roll_master_code'));
+        add_action('wp_ajax_ielts_cm_extend_by_code', array($this, 'ajax_extend_by_code'));
         
         // Enqueue scripts
         add_action('wp_enqueue_scripts', array($this, 'enqueue_frontend_scripts'));
@@ -620,6 +621,7 @@ class IELTS_CM_Access_Codes {
         register_setting('ielts_partner_settings', 'iw_login_page_url');
         register_setting('ielts_partner_settings', 'iw_registration_page_url');
         register_setting('ielts_partner_settings', 'ielts_cm_entry_test_enabled');
+        register_setting('ielts_partner_settings', 'ielts_cm_my_account_url');
     }
     
     public function settings_page() {
@@ -635,6 +637,7 @@ class IELTS_CM_Access_Codes {
             update_option('iw_redirect_after_creation', esc_url_raw($_POST['iw_redirect_after_creation']));
             update_option('iw_login_page_url', esc_url_raw($_POST['iw_login_page_url']));
             update_option('iw_registration_page_url', esc_url_raw($_POST['iw_registration_page_url']));
+            update_option('ielts_cm_my_account_url', esc_url_raw($_POST['ielts_cm_my_account_url']));
             
             // Save entry test setting
             if (isset($_POST['ielts_cm_entry_test_enabled'])) {
@@ -653,6 +656,7 @@ class IELTS_CM_Access_Codes {
         $redirect_url = get_option('iw_redirect_after_creation', '');
         $login_url = get_option('iw_login_page_url', wp_login_url());
         $register_url = get_option('iw_registration_page_url', wp_registration_url());
+        $my_account_url = get_option('ielts_cm_my_account_url', home_url('/my-account/'));
         $entry_test_enabled = get_option('ielts_cm_entry_test_enabled', false);
         
         ?>
@@ -720,6 +724,13 @@ class IELTS_CM_Access_Codes {
                     <tr>
                         <th>Registration Page URL</th>
                         <td><input type="url" name="iw_registration_page_url" value="<?php echo esc_attr($register_url); ?>" class="regular-text"></td>
+                    </tr>
+                    <tr>
+                        <th>My Account Page URL</th>
+                        <td>
+                            <input type="url" name="ielts_cm_my_account_url" value="<?php echo esc_attr($my_account_url); ?>" class="regular-text">
+                            <p class="description">Expired or unenrolled users will be redirected here. Defaults to <code>/my-account/</code>.</p>
+                        </td>
                     </tr>
                     <?php
                     // Only show Entry Test option for Access Code sites (not hybrid or paid membership sites)
@@ -3764,5 +3775,102 @@ class IELTS_CM_Access_Codes {
         error_log(sprintf('PayPal code purchase completed for user %d - Order: %s - %d codes generated', $user_id, $order_id, count($generated_codes)));
         
         wp_send_json_success(array('message' => 'Codes generated successfully'));
+    }
+
+    /**
+     * AJAX: extend an access-code membership by redeeming a new access code.
+     *
+     * Validates the submitted code, extends the user's expiry date by the
+     * code's duration_days, and marks the code as used (master codes are
+     * never marked used so they remain reusable).
+     */
+    public function ajax_extend_by_code() {
+        // Must be logged in
+        if (!is_user_logged_in()) {
+            wp_send_json_error(array('message' => __('You must be logged in to use this feature.', 'ielts-course-manager')));
+        }
+
+        // Verify nonce
+        if (!isset($_POST['ielts_extend_code_nonce']) || !wp_verify_nonce($_POST['ielts_extend_code_nonce'], 'ielts_extend_by_code')) {
+            wp_send_json_error(array('message' => __('Security check failed. Please refresh the page and try again.', 'ielts-course-manager')));
+        }
+
+        $user_id = get_current_user_id();
+        $code    = isset($_POST['ielts_extend_access_code']) ? strtoupper(sanitize_text_field($_POST['ielts_extend_access_code'])) : '';
+
+        if (empty($code)) {
+            wp_send_json_error(array('message' => __('Please enter an access code.', 'ielts-course-manager')));
+        }
+
+        // Confirm this user has an access-code membership (role starts with 'access_')
+        $membership_type = get_user_meta($user_id, '_ielts_cm_membership_type', true);
+        if (empty($membership_type) || strpos($membership_type, 'access_') !== 0) {
+            wp_send_json_error(array('message' => __('This feature is only available for access code memberships.', 'ielts-course-manager')));
+        }
+
+        global $wpdb;
+        $table     = $wpdb->prefix . 'ielts_cm_access_codes';
+        $code_data = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $table WHERE code = %s AND status IN ('active', 'master')",
+            $code
+        ));
+
+        if (!$code_data) {
+            wp_send_json_error(array('message' => __('Invalid or already used access code.', 'ielts-course-manager')));
+        }
+
+        if (!empty($code_data->expiry_date) && strtotime($code_data->expiry_date) < time()) {
+            wp_send_json_error(array('message' => __('This access code has expired.', 'ielts-course-manager')));
+        }
+
+        $duration_days = intval($code_data->duration_days);
+        if ($duration_days <= 0) {
+            wp_send_json_error(array('message' => __('This code does not carry a valid duration. Please contact your administrator.', 'ielts-course-manager')));
+        }
+
+        // Calculate new expiry: extend from today if already expired, otherwise from current expiry
+        $current_expiry_raw = get_user_meta($user_id, '_ielts_cm_membership_expiry', true);
+        $current_expiry_ts  = !empty($current_expiry_raw) ? strtotime($current_expiry_raw) : 0;
+        $base_ts            = ($current_expiry_ts > time()) ? $current_expiry_ts : time();
+        $new_expiry_ts      = strtotime("+{$duration_days} days", $base_ts);
+        $new_expiry_date    = date('Y-m-d H:i:s', $new_expiry_ts);
+
+        // Update all expiry meta fields
+        update_user_meta($user_id, '_ielts_cm_membership_expiry', $new_expiry_date);
+        update_user_meta($user_id, '_ielts_cm_membership_status', 'active');
+        update_user_meta($user_id, 'iw_membership_expiry', $new_expiry_date);
+        update_user_meta($user_id, 'iw_membership_status', 'active');
+
+        // Restore the WordPress role if expiry had caused it to be demoted to subscriber.
+        // _ielts_cm_membership_type is never cleared on expiry, so it still holds the
+        // correct access-code role slug (e.g. 'access_general_module').
+        $user_obj = get_userdata($user_id);
+        if ($user_obj && !in_array('administrator', $user_obj->roles)) {
+            $user_obj->set_role($membership_type);
+        }
+
+        // Mark code as used (skip for master codes — they are reusable)
+        if ($code_data->status !== 'master') {
+            $wpdb->update(
+                $table,
+                array(
+                    'status'  => 'used',
+                    'used_by' => $user_id,
+                    'used_at' => current_time('mysql'),
+                ),
+                array('id' => $code_data->id),
+                array('%s', '%d', '%s'),
+                array('%d')
+            );
+        }
+
+        $formatted_expiry = date('F j, Y', $new_expiry_ts);
+        /* translators: %s = formatted expiry date */
+        $message = sprintf(
+            __('Your course access has been extended. Your new expiry date is %s.', 'ielts-course-manager'),
+            $formatted_expiry
+        );
+
+        wp_send_json_success(array('message' => $message));
     }
 }

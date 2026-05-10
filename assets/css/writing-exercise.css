@@ -1,0 +1,454 @@
+/* ============================================
+   IELTS Writing Exercise — Styles
+   ============================================ */
+
+/* Override: hide the standard question nav numbers on writing exercises */
+.ielts-writing-exercise-quiz .question-nav-btn {
+    min-width: 80px;
+    padding: 6px 14px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.ielts-writing-exercise-quiz .question-nav-btn.active {
+    background: var(--ielts-progress-color, #2271b1);
+    color: #fff;
+    border-color: var(--ielts-progress-color, #2271b1);
+}
+
+/* ─── Left Column: Prompt ─── */
+.ielts-writing-prompt-panel {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.writing-task-label {
+    display: inline-block;
+    background: var(--ielts-progress-color, #2271b1);
+    color: #fff;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 14px;
+}
+
+.writing-task-image {
+    margin-bottom: 16px;
+}
+
+.writing-chart-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.writing-task-prompt {
+    font-size: 0.95em;
+    line-height: 1.7;
+    color: #333;
+}
+
+.writing-task-minimums {
+    margin-top: 16px;
+    padding: 10px 14px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-size: 0.88em;
+    color: #555;
+}
+
+.writing-task-minimums p { margin: 0; }
+
+/* ─── Right Column: Essay Area ─── */
+.ielts-writing-task-area {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0;
+}
+
+.writing-area-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.88em;
+}
+
+.writing-area-title {
+    font-weight: 600;
+    color: #333;
+}
+
+.writing-area-counts { color: #666; }
+
+.ielts-writing-textarea {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+    line-height: 1.7;
+    resize: none;
+    outline: none;
+    min-height: 500px;
+}
+
+.ielts-writing-textarea:focus {
+    box-shadow: inset 0 0 0 2px var(--ielts-progress-color, #2271b1);
+}
+
+/* ─── Progress Bar ─── */
+.ielts-writing-progress-wrap {
+    max-width: 480px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+}
+
+.ielts-writing-progress-wrap .ielts-progress-bar-track {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.ielts-writing-progress-wrap .ielts-progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--ielts-progress-color, #2271b1);
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.ielts-writing-progress-wrap .ielts-progress-label {
+    font-size: 0.92em;
+    color: #555;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+/* ─── Results ─── */
+.ielts-writing-result-panel {
+    padding: 0 4px;
+}
+
+/* Old combined band styles replaced by new results layout */
+
+.ielts-writing-error {
+    background: #fce8e6;
+    border: 1px solid #c0392b;
+    color: #7a1e1e;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+}
+
+/* ─── Task nav buttons inside bottom bar ─── */
+.ielts-writing-task-btns {
+    display: flex;
+    gap: 6px;
+    margin-right: 12px;
+}
+
+.ielts-writing-nav-btn {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.6);
+    color: #fff;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 0.88em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.ielts-writing-nav-btn:hover {
+    background: rgba(255,255,255,0.3);
+    border-color: #fff;
+}
+
+.ielts-writing-nav-btn.active {
+    background: #fff;
+    border-color: #fff;
+    color: #333;
+}
+
+/* ─── Focus mode flex fix for writing exercise ─── */
+body.ielts-quiz-focus-mode .ielts-writing-exercise-quiz {
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+body.ielts-quiz-focus-mode .ielts-writing-exercise-quiz .quiz-form {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}
+
+body.ielts-quiz-focus-mode #ielts-writing-container {
+    flex: 1 !important;
+    min-height: 0 !important;
+}
+
+body.ielts-quiz-focus-mode #ielts-writing-results-area {
+    flex: 1 !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+}
+
+/* Results grid styles now defined below */
+
+/* ─── Results layout: score top, columns scroll below ─── */
+#ielts-writing-results-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#ielts-writing-results-area.ielts-results-hidden {
+    display: none !important;
+}
+
+/* Combined score bar — pinned, never scrolls */
+.ielts-writing-combined-band {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 24px;
+    background: #1d3557;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.combined-band-label {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
+.combined-band-value {
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.combined-band-note {
+    font-size: 0.8em;
+    opacity: 0.7;
+    margin: 0;
+}
+
+/* Results grid fills remaining height */
+.ielts-writing-results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.ielts-writing-result-col {
+    border-right: 2px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.ielts-writing-result-col:last-child {
+    border-right: none;
+}
+
+.ielts-writing-result-col-header {
+    padding: 10px 16px;
+    background: #f0f0f0;
+    color: #333;
+    font-weight: 700;
+    font-size: 0.88em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.ielts-writing-result-col-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 4px;
+    min-height: 0;
+}
+
+/* Focus mode: results area fills flex space when visible */
+body.ielts-quiz-focus-mode #ielts-writing-results-area:not(.ielts-results-hidden) {
+    flex: 1 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* ─── Exercise results card overrides ─── */
+
+/* Header: band score left, summary right */
+.ielts-writing-result-col-content .ielts-results-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e8e8e8;
+    background: #fafafa;
+}
+
+.ielts-writing-result-col-content .ielts-results-header-band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.ielts-writing-result-col-content .ielts-band-label {
+    font-size: 0.72em;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #666;
+    margin-bottom: 4px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.ielts-writing-result-col-content .ielts-band-score {
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ielts-writing-result-col-content .ielts-results-header-summary {
+    flex: 1;
+}
+
+.ielts-writing-result-col-content .ielts-summary {
+    margin: 0;
+    font-size: 0.88em;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Accordion styles */
+.ielts-writing-result-col-content .ielts-accordion {
+    border-bottom: 1px solid #e8e8e8;
+    margin: 0;
+}
+
+.ielts-writing-result-col-content .ielts-accordion-summary {
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 0.88em;
+    font-weight: 600;
+    color: #333;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fafafa;
+    user-select: none;
+}
+
+.ielts-writing-result-col-content .ielts-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.ielts-writing-result-col-content .ielts-accordion-summary::before {
+    content: '▶';
+    font-size: 0.7em;
+    color: #999;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.ielts-writing-result-col-content details[open] .ielts-accordion-summary::before {
+    transform: rotate(90deg);
+}
+
+.ielts-writing-result-col-content .ielts-accordion-content {
+    padding: 12px 16px;
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: #444;
+    background: #fff;
+}
+
+/* Single column criteria */
+.ielts-writing-result-col-content .ielts-criteria-single {
+    padding: 0 16px;
+}
+
+.ielts-writing-result-col-content .ielts-criterion {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.ielts-writing-result-col-content .ielts-criterion:last-child {
+    border-bottom: none;
+}
+
+/* Single column strengths/improvements */
+.ielts-writing-result-col-content .ielts-strengths,
+.ielts-writing-result-col-content .ielts-improvements {
+    padding: 0 16px 12px;
+}
+
+.ielts-writing-result-col-content .ielts-strengths h4,
+.ielts-writing-result-col-content .ielts-improvements h4 {
+    font-size: 0.9em;
+    margin: 12px 0 8px;
+}
+
+.ielts-writing-result-col-content .ielts-strengths ul,
+.ielts-writing-result-col-content .ielts-improvements ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.ielts-writing-result-col-content .ielts-strengths li,
+.ielts-writing-result-col-content .ielts-improvements li {
+    font-size: 0.85em;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+/* ─── Dispute button ─── */
+.ielts-writing-result-col-content .ielts-dispute-btn {
+    margin-top: 8px;
+    background: none;
+    border: 1px solid #ccc;
+    color: #666;
+    font-size: 0.78em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ielts-writing-result-col-content .ielts-dispute-btn:hover {
+    border-color: #999;
+    color: #333;
+}

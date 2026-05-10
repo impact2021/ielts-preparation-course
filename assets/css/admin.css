@@ -123,3 +123,16 @@
     display: block;
     margin-top: 5px;
 }
+
+/* Prevent TinyMCE auto-resize inside collapsed question items */
+.question-content .wp-editor-wrap .mce-container,
+.question-content .wp-editor-wrap iframe {
+    min-height: 50px;
+}
+.question-item .question-content[style*="display: none"] .mce-container,
+.question-item .question-content[style*="display: none"] iframe {
+    visibility: hidden;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+}

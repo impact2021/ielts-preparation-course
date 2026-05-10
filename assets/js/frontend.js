@@ -91,7 +91,11 @@
                     
                     // Auto-submit the form
                     alert('Time is up! The exercise will be submitted automatically.');
-                    $('#ielts-quiz-form').submit();
+                    var $form = $('#ielts-quiz-form');
+                    if ($form.data('has-writing')) {
+                        $form.data('auto-submit', 1).attr('data-auto-submit', '1');
+                    }
+                    $form.submit();
                 }
             }, 1000);
         }

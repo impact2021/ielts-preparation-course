@@ -3,7 +3,7 @@
  * Plugin Name: IELTS Course Manager
  * Plugin URI: https://www.ieltstestonline.com/
  * Description: A flexible Learning Management System for IELTS preparation courses with lessons, resources, quizzes, and progress tracking.
- * Version: 16.20
+ * Version: 16.25
  * Author: IELTStestONLINE
  * Author URI: https://www.ieltstestonline.com/
  * Text Domain: ielts-course-manager
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('IELTS_CM_VERSION', '16.20');
+define('IELTS_CM_VERSION', '16.25');
 define('IELTS_CM_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('IELTS_CM_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('IELTS_CM_PLUGIN_FILE', __FILE__);
@@ -49,6 +49,9 @@ require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-settings-page.php'
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-sync-status-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-tours-page.php';
 require_once IELTS_CM_PLUGIN_DIR . 'includes/frontend/class-frontend.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/class-writing-assessment.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/admin/class-writing-admin.php';
+require_once IELTS_CM_PLUGIN_DIR . 'includes/class-speaking-assessment.php';
 
 /**
  * Initialize the plugin
@@ -72,6 +75,16 @@ function ielts_cm_init() {
     // Initialize Search functionality
     $search = new IELTS_CM_Search();
     $search->init();
+
+    // Initialize Writing Assessment
+    $writing = new IELTS_CM_Writing_Assessment();
+    $writing->init();
+
+    $speaking = new IELTS_CM_Speaking_Assessment();
+    $speaking->init();
+
+    $writing_admin = new IELTS_CM_Writing_Admin();
+    $writing_admin->init();
 }
 add_action('plugins_loaded', 'ielts_cm_init');
 

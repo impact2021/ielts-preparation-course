@@ -1,0 +1,975 @@
+/* ============================================
+   IELTS Speaking Assessment — Styles
+   ============================================ */
+
+.ielts-speaking-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+/* ─── Header ─── */
+.ielts-speaking-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ielts-speaking-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.ielts-speaking-header-text {
+    flex: 1;
+}
+
+.ielts-speaking-header-text h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: #111;
+}
+
+.ielts-speaking-header-text p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.ielts-speaking-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #dcfce7;
+    color: #166534;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.ielts-speaking-badge.warn {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* ─── Progress ─── */
+.ielts-speaking-progress {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+}
+
+.ielts-speaking-prog-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    transition: background 0.3s;
+}
+
+.ielts-speaking-prog-dot.done { background: #16a34a; }
+.ielts-speaking-prog-dot.active { background: #2563eb; }
+
+/* ─── Chat area ─── */
+.ielts-speaking-chat {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.ielts-speaking-messages {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 200px;
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.ielts-speaking-msg {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.ielts-speaking-msg.user {
+    flex-direction: row-reverse;
+}
+
+.ielts-speaking-msg-av {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.ielts-speaking-msg.examiner .ielts-speaking-msg-av {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.ielts-speaking-msg.user .ielts-speaking-msg-av {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.ielts-speaking-bubble {
+    max-width: 80%;
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ielts-speaking-msg.examiner .ielts-speaking-bubble {
+    background: #f9fafb;
+    border-radius: 4px 12px 12px 12px;
+    color: #111;
+}
+
+.ielts-speaking-msg.user .ielts-speaking-bubble {
+    background: #dbeafe;
+    color: #1e3a8a;
+    border-radius: 12px 4px 12px 12px;
+}
+
+.ielts-speaking-bubble.typing {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+/* ─── Controls ─── */
+.ielts-speaking-controls {
+    padding: 12px 16px;
+    border-top: 1px solid #f3f4f6;
+    background: #f9fafb;
+}
+
+.ielts-speaking-ctrl-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.ielts-speaking-rec-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #374151;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.ielts-speaking-rec-btn:hover:not(:disabled) {
+    background: #f3f4f6;
+}
+
+.ielts-speaking-rec-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.ielts-speaking-rec-btn.recording {
+    background: #fee2e2;
+    color: #dc2626;
+    border-color: #fca5a5;
+}
+
+.ielts-rec-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+}
+
+.ielts-speaking-rec-btn.recording .ielts-rec-dot {
+    animation: ielts-blink 1s infinite;
+}
+
+@keyframes ielts-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+
+.ielts-speaking-preview {
+    flex: 1;
+    font-size: 13px;
+    color: #9ca3af;
+    font-style: italic;
+    min-width: 0;
+}
+
+.ielts-speaking-preview.has-text {
+    color: #374151;
+    font-style: normal;
+}
+
+.ielts-speaking-send-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    background: #fff;
+    color: #374151;
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+
+.ielts-speaking-send-btn:hover:not(:disabled) {
+    background: #f3f4f6;
+}
+
+.ielts-speaking-send-btn:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+.ielts-speaking-text-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.ielts-speaking-text-row textarea {
+    flex: 1;
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    resize: none;
+    font-family: inherit;
+}
+
+.ielts-speaking-status {
+    font-size: 12px;
+    color: #9ca3af;
+    min-height: 16px;
+}
+
+/* ─── Results ─── */
+.ielts-speaking-results-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.ielts-speaking-res-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 1.25rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ielts-speaking-res-band-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    min-width: 80px;
+}
+
+.ielts-speaking-band-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.ielts-speaking-band-score {
+    font-size: 40px;
+    font-weight: 600;
+    color: #2563eb;
+    line-height: 1;
+}
+
+.ielts-speaking-band-sub {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+.ielts-speaking-res-summary-col {
+    flex: 1;
+}
+
+.ielts-speaking-examiner-note {
+    font-size: 14px;
+    color: #374151;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ─── Criteria ─── */
+.ielts-speaking-criteria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ielts-speaking-criterion {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    border-right: 1px solid #e5e7eb;
+}
+
+.ielts-speaking-criterion:nth-child(even) {
+    border-right: none;
+}
+
+.ielts-speaking-criterion:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.ielts-speaking-crit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.ielts-speaking-crit-name {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #6b7280;
+}
+
+.ielts-speaking-crit-score {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.ielts-speaking-crit-na {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+.ielts-speaking-bar {
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.ielts-speaking-bar-fill {
+    height: 100%;
+    background: #2563eb;
+    border-radius: 2px;
+    transition: width 0.6s ease;
+}
+
+.ielts-speaking-crit-note {
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.5;
+    margin: 0 0 4px;
+}
+
+.ielts-speaking-why-not {
+    font-size: 12px;
+    color: #374151;
+    font-style: italic;
+    margin: 4px 0 0;
+    padding-top: 4px;
+    border-top: 1px dashed #e5e7eb;
+}
+
+/* ─── Strengths / Improvements ─── */
+.ielts-speaking-fb-section {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ielts-speaking-fb-section:last-child {
+    border-bottom: none;
+}
+
+.ielts-speaking-fb-section h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 8px;
+}
+
+.ielts-speaking-fb-section ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.ielts-speaking-fb-section li {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+/* ─── Progress bar during assessment ─── */
+.ielts-speaking-assessing {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.ielts-speaking-progress-bar-track {
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+    margin: 0 auto 12px;
+    max-width: 320px;
+}
+
+.ielts-speaking-progress-bar-fill {
+    height: 100%;
+    background: var(--ielts-speaking-color, #2563eb);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.8s ease;
+}
+
+.ielts-speaking-progress-label {
+    font-size: 13px;
+    color: #6b7280;
+    transition: opacity 0.3s ease;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 560px) {
+    .ielts-speaking-criteria {
+        grid-template-columns: 1fr;
+    }
+    .ielts-speaking-criterion {
+        border-right: none !important;
+    }
+    .ielts-speaking-criterion:nth-last-child(-n+2) {
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .ielts-speaking-criterion:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ─── Transcript review row ─── */
+.ielts-speaking-transcript-label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.ielts-speaking-transcript-textarea {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fff;
+    color: #111;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.ielts-speaking-transcript-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ielts-speaking-status-inline {
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* ─── Mic check panel ─── */
+.ielts-mic-check-panel {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.ielts-mic-check-panel h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #111;
+}
+
+.ielts-mic-check-panel p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0 0 14px;
+    line-height: 1.6;
+}
+
+.ielts-mic-check-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ielts-speaking-confirm-btn {
+    background: #1d4ed8 !important;
+    color: #fff !important;
+    border-color: #1d4ed8 !important;
+}
+
+.ielts-speaking-confirm-btn:hover:not(:disabled) {
+    background: #1e40af !important;
+}
+
+/* ─── Countdown ─── */
+.ielts-countdown-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.ielts-countdown-bar-track {
+    flex: 1;
+    height: 6px;
+    background: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.ielts-countdown-bar-fill {
+    height: 100%;
+    background: #16a34a;
+    border-radius: 3px;
+    width: 100%;
+    transition: background 0.5s;
+}
+
+.ielts-countdown-bar-fill.ielts-countdown-urgent {
+    background: #dc2626;
+}
+
+.ielts-countdown-num {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    min-width: 28px;
+    text-align: right;
+}
+
+/* ─── Recording indicator ─── */
+.ielts-recording-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #dc2626;
+    font-weight: 500;
+}
+
+.ielts-rec-pulse {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #dc2626;
+    animation: ielts-pulse 1s infinite;
+}
+
+@keyframes ielts-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+/* ─── Finish button ─── */
+.ielts-finish-btn {
+    background: #fff !important;
+    border-color: #d1d5db !important;
+    color: #374151 !important;
+    font-size: 14px !important;
+    padding: 10px 20px !important;
+}
+
+.ielts-finish-btn:hover:not(:disabled) {
+    background: #f3f4f6 !important;
+}
+
+.ielts-speaking-ctrl-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* ─── Speaking exercise template ─── */
+.ielts-speaking-exercise-quiz {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ielts-speaking-exercise-quiz .quiz-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.ielts-speaking-exercise-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    min-height: 0;
+}
+
+/* Part label */
+.ielts-speaking-part-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: #6b7280;
+    margin-bottom: 8px;
+    padding: 0 2px;
+}
+
+/* Part 2 cue card */
+.ielts-p2-cuecard-panel {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #e56c0a;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #111;
+}
+
+/* Part 2 split layout */
+.ielts-p2-split {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.ielts-p2-split .ielts-p2-cuecard-panel {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.ielts-p2-split #ielts-p2-notes-wrap {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+@media (max-width: 640px) {
+    .ielts-p2-split {
+        flex-direction: column;
+    }
+}
+
+/* Part 2 notes */
+.ielts-p2-notes-label {
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.ielts-p2-notes-textarea {
+    width: 100%;
+    font-size: 13px;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #fffef0;
+    color: #111;
+    resize: vertical;
+    font-family: inherit;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    min-height: 80px;
+}
+
+/* Parts summary in results */
+.ielts-speaking-parts-summary {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ielts-speaking-part-note {
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* ─── Gender choice ─── */
+.ielts-gender-btns {
+    display: flex;
+    gap: 12px;
+    margin: 12px 0 8px;
+    flex-wrap: wrap;
+}
+
+.ielts-gender-btn {
+    flex: 1;
+    min-width: 140px;
+    padding: 14px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    background: #fff;
+    color: #374151;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.ielts-gender-btn:hover {
+    border-color: #6b7280;
+    background: #f9fafb;
+}
+
+.ielts-gender-btn.selected {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.ielts-gender-icon {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.ielts-gender-note {
+    font-size: 12px;
+    color: #9ca3af;
+    margin: 4px 0 0;
+}
+
+/* ─── Single question display ─── */
+.ielts-speaking-question-display {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    margin-bottom: 12px;
+}
+
+.ielts-current-question {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #111;
+    padding: 16px 20px;
+    border-left: 4px solid var(--ielts-speaking-color, #E56C0A);
+    background: #fafafa;
+    border-radius: 0 8px 8px 0;
+    width: 100%;
+}
+
+.ielts-current-question.ielts-q-intro {
+    border-left-color: #6b7280;
+    color: #374151;
+    font-size: 14px;
+}
+
+.ielts-current-question.ielts-q-part3 {
+    border-left-color: #16a34a;
+}
+
+/* ─── Enlarged Part 2 notes ─── */
+.ielts-p2-notes-textarea {
+    min-height: 160px !important;
+}
+
+/* ─── Noise calibration level meter ─── */
+.ielts-level-meter-wrap {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 16px;
+    height: 160px;
+}
+
+.ielts-level-meter {
+    position: relative;
+    flex: 1;
+    background: #f3f4f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.ielts-level-fill-red {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0%;
+    background: #dc2626;
+    transition: height 0.05s ease;
+}
+
+.ielts-level-fill-green {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0%;
+    background: #16a34a;
+    transition: height 0.05s ease, bottom 0.05s ease;
+}
+
+.ielts-level-threshold {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #111;
+    pointer-events: none;
+    transition: bottom 0.1s ease;
+}
+
+.ielts-cal-slider-vertical {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    -webkit-appearance: slider-vertical;
+    appearance: auto;
+    width: 28px;
+    height: 100%;
+    cursor: pointer;
+    accent-color: var(--ielts-speaking-color, #E56C0A);
+    flex-shrink: 0;
+}
+
+.ielts-cal-hint {
+    font-size: 13px;
+    color: #374151;
+    margin-bottom: 12px;
+    min-height: 2.5em;
+}
+
+/* ─── Live level meter in interview ─── */
+.ielts-interview-body {
+    display: block;
+}
+
+.ielts-live-meter-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 14px;
+}
+
+.ielts-live-meter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f3f4f6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.ielts-live-meter .ielts-level-fill-red {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0%;
+    background: #dc2626;
+    transition: height 0.08s ease;
+}
+
+.ielts-live-meter .ielts-level-fill-green {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0%;
+    background: #16a34a;
+    transition: height 0.08s ease;
+}
+
+.ielts-live-meter .ielts-level-threshold {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #111;
+    pointer-events: none;
+    transition: bottom 0.1s ease;
+}
+
+.ielts-interview-content {
+    display: block;
+}
+
+/* ─── Silence warning ─── */
+#ielts-speaking-interview {
+    position: relative;
+}
+
+#ielts-silence-warning {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.78);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 24px;
+    font-size: 13px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 20;
+    animation: ielts-pulse-fade 2s ease-in-out infinite;
+}
+
+@keyframes ielts-pulse-fade {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.45; }
+}

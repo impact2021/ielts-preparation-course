@@ -1,0 +1,172 @@
+/* ============================================
+   IELTS Writing Assessment — Admin Styles
+   ============================================ */
+
+.ielts-writing-admin-wrap { max-width: 1200px; }
+
+.ielts-admin-filters { margin: 16px 0; display: flex; gap: 8px; flex-wrap: wrap; }
+.ielts-admin-filters .button { position: relative; }
+
+.ielts-badge {
+    display: inline-block;
+    background: #c0392b;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 6px;
+    font-size: 0.78em;
+    margin-left: 4px;
+    font-weight: 700;
+}
+
+.ielts-submissions-table .ielts-row-disputed { background: #fff8e1 !important; }
+.ielts-override-indicator { font-size: 0.85em; color: #888; }
+
+/* --- Detail Page Grid --- */
+.ielts-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.ielts-detail-box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+}
+
+.ielts-detail-box h3 {
+    margin: 0 0 12px;
+    font-size: 1em;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.ielts-detail-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 16px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.ielts-back-link {
+    font-size: 0.75em;
+    font-weight: normal;
+    margin-right: 12px;
+    color: #666;
+    text-decoration: none;
+}
+.ielts-back-link:hover { color: #2271b1; }
+
+.ielts-dispute-notice {
+    background: #fff8e1;
+    border-left: 4px solid #f5a623;
+    padding: 12px 16px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 16px;
+    font-size: 0.9em;
+}
+.ielts-dispute-notice p { margin: 6px 0 0; color: #555; }
+
+.ielts-essay-text {
+    font-size: 0.92em;
+    line-height: 1.7;
+    color: #333;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 12px;
+}
+
+/* --- Scores Table --- */
+.ielts-scores-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+.ielts-scores-table td { padding: 6px 8px; border-bottom: 1px solid #f5f5f5; }
+.ielts-scores-table td:last-child { text-align: right; font-size: 1.05em; }
+
+/* --- Override Form --- */
+.ielts-override-box { border-color: #2271b1; }
+
+.ielts-override-field {
+    margin-bottom: 14px;
+}
+
+.ielts-override-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.88em;
+}
+
+.ielts-override-field label small {
+    font-weight: normal;
+    color: #888;
+    margin-left: 6px;
+}
+
+.ielts-score-select, .ielts-override-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: inherit;
+}
+
+.ielts-score-select { max-width: 100px; }
+
+.ielts-override-field textarea { resize: vertical; }
+
+.ielts-override-actions { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+.ielts-override-feedback {
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+.ielts-override-feedback.success { background: #e6f4ea; color: #1a6b3a; border: 1px solid #27ae60; }
+.ielts-override-feedback.error   { background: #fce8e6; color: #7a1e1e; border: 1px solid #c0392b; }
+
+/* --- Settings Page --- */
+.ielts-settings-section {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin-bottom: 24px;
+}
+
+.ielts-settings-section h2 {
+    margin: 0 0 16px;
+    font-size: 1.05em;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* --- Status Pills --- */
+.ielts-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.ielts-status--auto     { background: #e8f0fe; color: #1557b0; }
+.ielts-status--disputed { background: #fff0e0; color: #b05e00; }
+.ielts-status--reviewed { background: #e6f4ea; color: #1a6b3a; }
+
+@media (max-width: 900px) {
+    .ielts-detail-grid { grid-template-columns: 1fr; }
+}

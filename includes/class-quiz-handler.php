@@ -140,6 +140,12 @@ class IELTS_CM_Quiz_Handler {
                 // For open question, count number of fields
                 $field_count = isset($q['field_count']) ? intval($q['field_count']) : 1;
                 $question_count = max(1, $field_count);
+            } elseif ($q['type'] === 'writing_task') {
+                // Writing task counts as 1 nav slot
+                $question_count = 1;
+            } elseif ($q['type'] === 'speaking_test') {
+                // Speaking test counts as 1 nav slot
+                $question_count = 1;
             }
             
             $question_display_numbers[$idx] = array(
@@ -151,6 +157,11 @@ class IELTS_CM_Quiz_Handler {
         }
         
         foreach ($questions as $index => $question) {
+            // Writing tasks and speaking tests are scored via their own AJAX handlers — skip entirely here
+            if ($question['type'] === 'writing_task' || $question['type'] === 'speaking_test') {
+                continue;
+            }
+
             // Calculate max score for each question type
             if ($question['type'] === 'closed_question' || $question['type'] === 'closed_question_dropdown') {
                 // Closed question (including dropdown variant) - points equal to number of correct answers
@@ -1268,9 +1279,11 @@ class IELTS_CM_Quiz_Handler {
      */
     public static function get_quiz_types() {
         return array(
-            'closed_question' => __('Closed Question (Multiple Choice with configurable answers)', 'ielts-course-manager'),
+            'closed_question'          => __('Closed Question (Multiple Choice with configurable answers)', 'ielts-course-manager'),
             'closed_question_dropdown' => __('Closed Question Dropdown (Inline dropdown menus)', 'ielts-course-manager'),
-            'open_question' => __('Open Question (Text input with configurable fields)', 'ielts-course-manager')
+            'open_question'            => __('Open Question (Text input with configurable fields)', 'ielts-course-manager'),
+            'writing_task'             => __('Writing Task (AI-assessed IELTS writing question)', 'ielts-course-manager'),
+            'speaking_test'            => __('Speaking Test (AI-assessed IELTS speaking test — Parts 1, 2 & 3)', 'ielts-course-manager'),
         );
     }
     
