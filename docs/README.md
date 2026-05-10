@@ -18,7 +18,7 @@ Complete reference for all available shortcodes in the plugin:
 - Course and lesson display shortcodes
 - Usage examples and parameters
 
-### [Dropdown Question Type FAQ](../DROPDOWN-QUESTION-FAQ.md)
+### [Dropdown Question Type FAQ](../non-plugin-files/root-docs/DROPDOWN-QUESTION-FAQ.md)
 Quick reference for using dropdown questions in exercises:
 - Where to put dropdown options
 - Complete working examples
@@ -30,7 +30,7 @@ Quick reference for using dropdown questions in exercises:
 - **Adding Videos**: See [VIDEO-FIELD-GUIDE.md](VIDEO-FIELD-GUIDE.md)
 - **Shortcodes**: See [SHORTCODES.md](SHORTCODES.md)
 - **Creating Exercises**: See main TEMPLATES directory
-- **Dropdown Questions**: See [DROPDOWN-QUESTION-FAQ.md](../DROPDOWN-QUESTION-FAQ.md)
+- **Dropdown Questions**: See [DROPDOWN-QUESTION-FAQ.md](../non-plugin-files/root-docs/DROPDOWN-QUESTION-FAQ.md)
 
 ### For Developers
 - **Template Files**: See `/TEMPLATES` directory
