@@ -1540,9 +1540,10 @@ class IELTS_CM_Admin {
                 <option value="ielts_general_reading" <?php selected($scoring_type, 'ielts_general_reading'); ?>><?php _e('IELTS General Training Reading (Band Score)', 'ielts-course-manager'); ?></option>
                 <option value="ielts_academic_reading" <?php selected($scoring_type, 'ielts_academic_reading'); ?>><?php _e('IELTS Academic Reading (Band Score)', 'ielts-course-manager'); ?></option>
                 <option value="ielts_listening" <?php selected($scoring_type, 'ielts_listening'); ?>><?php _e('IELTS Listening (Band Score)', 'ielts-course-manager'); ?></option>
+                <option value="writing_assessment" <?php selected($scoring_type, 'writing_assessment'); ?>><?php _e('IELTS Writing Assessment (Band Score)', 'ielts-course-manager'); ?></option>
                 <option value="cefr" <?php selected($scoring_type, 'cefr'); ?>><?php _e('CEFR Level (A1–C2)', 'ielts-course-manager'); ?></option>
             </select>
-            <small><?php _e('Choose how results are displayed. For IELTS Reading and Listening exercises, results will show as band scores (0-9) instead of percentages. For CEFR, results will show as A1–C2 levels.', 'ielts-course-manager'); ?></small>
+            <small><?php _e('Choose how results are displayed. For IELTS Reading, Listening, and Writing Assessment exercises, results will show as band scores (0-9) instead of percentages. For CEFR, results will show as A1–C2 levels.', 'ielts-course-manager'); ?></small>
         </p>
         
         <?php
@@ -3957,7 +3958,7 @@ and explain why you particularly enjoyed it."><?php echo esc_textarea($sp_p2); ?
             // Save scoring type with validation
             if (isset($_POST['ielts_cm_scoring_type'])) {
                 $scoring_type = sanitize_text_field($_POST['ielts_cm_scoring_type']);
-                $valid_types = array('percentage', 'ielts_general_reading', 'ielts_academic_reading', 'ielts_listening', 'cefr');
+                $valid_types = array('percentage', 'ielts_general_reading', 'ielts_academic_reading', 'ielts_listening', 'writing_assessment', 'cefr');
                 if (in_array($scoring_type, $valid_types)) {
                     update_post_meta($post_id, '_ielts_cm_scoring_type', $scoring_type);
                 }

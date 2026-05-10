@@ -1400,6 +1400,16 @@ class IELTS_CM_Quiz_Handler {
                 'type' => 'percentage'
             );
         }
+
+        // Writing assessment display (stored score is already a band value)
+        if ($scoring_type === 'writing_assessment') {
+            $band_score = floatval($score);
+            return array(
+                'display' => 'Band ' . number_format($band_score, 1),
+                'value' => $band_score,
+                'type' => 'band'
+            );
+        }
         
         // CEFR level display
         if ($scoring_type === 'cefr') {

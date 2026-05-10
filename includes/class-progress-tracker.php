@@ -610,8 +610,12 @@ class IELTS_CM_Progress_Tracker {
             // Get best result for this quiz
             $best_result = $quiz_handler->get_best_quiz_result($user_id, $quiz_id);
             if ($best_result) {
-                // Convert to band score
-                $band_score = $quiz_handler->convert_to_band_score($best_result->score, $scoring_type);
+                // Convert to band score (writing assessment stores band directly in score)
+                if ($scoring_type === 'writing_assessment') {
+                    $band_score = floatval($best_result->score);
+                } else {
+                    $band_score = $quiz_handler->convert_to_band_score($best_result->score, $scoring_type);
+                }
                 $band_scores[] = $band_score;
             }
         }
