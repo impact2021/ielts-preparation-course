@@ -1351,14 +1351,14 @@ class IELTS_CM_Quiz_Handler {
     /**
      * Convert correct answers to IELTS band score
      * 
-     * @param int $correct_answers Number of correct answers
+     * @param float $score_value Score value (correct answer count or direct band score)
      * @param string $scoring_type Type of scoring (ielts_general_reading, ielts_academic_reading, ielts_listening)
      * @return float Band score (0-9)
      */
-    public function convert_to_band_score($correct_answers, $scoring_type) {
+    public function convert_to_band_score($score_value, $scoring_type) {
         // Writing assessment stores band directly in score
         if ($scoring_type === 'writing_assessment') {
-            return floatval($correct_answers);
+            return floatval($score_value);
         }
 
         // Get the conversion table
@@ -1372,12 +1372,12 @@ class IELTS_CM_Quiz_Handler {
         $max_score = $table_data['max_score'];
         
         // Look up the band score
-        if (isset($table[$correct_answers])) {
-            return $table[$correct_answers];
+        if (isset($table[$score_value])) {
+            return $table[$score_value];
         }
         
         // If exact match not found, use the highest available score for scores above max
-        if ($correct_answers > $max_score) {
+        if ($score_value > $max_score) {
             return $table[$max_score];
         }
         
