@@ -446,6 +446,7 @@ class IELTS_CM_Writing_Assessment {
             'body' => json_encode(array(
                 'model'      => 'claude-sonnet-4-6',
                 'max_tokens' => 2000,
+                'temperature'=> 0,
                 'system'     => $system_prompt,
                 'messages'   => array(
                     array('role' => 'user', 'content' => $user_message),
