@@ -538,6 +538,7 @@ Your feedback will be read by English language learners, mostly at B1-B2 level. 
 - The areas for improvement must be proportionate to the score awarded. If an essay scores Band 8 or above, the improvements should reflect genuinely minor refinements, not significant weaknesses. Do not present minor stylistic observations as important problems for high-scoring essays.
 - CRITICAL — WHY NOT HIGHER: Whenever a criterion score is below Band 9, the feedback for that criterion MUST end with a clear, specific sentence explaining exactly what is missing for the next band. This is non-negotiable. Students will always ask "why isn't this a 9?" and the feedback must pre-empt that question with a concrete answer. The explanation must reference something specific in the essay — not a general statement. Do not use the mere presence of functional signpost phrases such as "Furthermore", "Additionally", or "By contrast" as that explanation in a short Task 2 essay. Only mention linking as the reason for a lower score when it is genuinely repetitive, illogical, absent, or intrusive enough to affect the reading flow. For example: "To reach Band 9, every idea would need to be fully extended with clear reasoning — the second body paragraph states a point but stops short of explaining why it follows logically." Do not write vague statements like "more variety would help" — be specific about what is missing and where.
 - A Band 5.5 overall essay typically looks like this: the task is addressed and the structure is recognisable, but the main ideas are stated without meaningful development — each point can be summarised in one sentence with nothing added beyond a brief restatement. Vocabulary is basic and repetitive, with simple words like "good", "bad", "sad" doing the work of more precise terms. Sentence structures are mostly simple and follow the same pattern throughout. Linking is limited to formulaic signposts like "First of all", "Another reason" and "In conclusion". If an essay matches this description across most criteria, the overall band should be 5.5, not 6. Do not award Band 6 for Task Achievement or Coherence & Cohesion simply because the structure is present and the task is addressed — the quality of execution within that structure must justify it.
+- DIRECT INSTRUCTION PRECEDENCE: If the ADDITIONAL SCORING INSTRUCTIONS or the PRIVATE ASSESSMENT NOTES give a direct scoring instruction for this task, this exact essay, or a benchmark/model response, follow that instruction in preference to the general calibration guidance above. This includes cases where the administrator explicitly says a supplied response should be treated as a Band 9 model answer. Do not overrule that direct instruction by re-applying generic guidance such as "Band 9 is rare" or "linking should be invisible". Only ignore a direct instruction if it conflicts with hard requirements that must always be enforced: valid JSON output, mathematically correct overall band calculation, or physically verifiable features of the submitted text such as missing paragraph breaks.
 
 SCORING APPROACH:
 {$strictness_guidance[$strictness]}
@@ -610,7 +611,7 @@ The overall_band is the average of the four criteria scores, rounded to the near
 PROMPT;
 
         if (!empty($custom_instructions)) {
-            $prompt .= "\n\nADDITIONAL SCORING INSTRUCTIONS:\n" . $custom_instructions;
+            $prompt .= "\n\nDIRECT SCORING INSTRUCTIONS FROM THE SITE ADMINISTRATOR (higher priority than the general calibration guidance above unless they conflict with output format, overall-band math, or physically verifiable features of the essay):\n" . $custom_instructions;
         }
 
         return $prompt;
@@ -646,7 +647,7 @@ PROMPT;
         $private_notes_block = empty($ai_assessment_notes)
             ? ''
             : "\n\nPRIVATE ASSESSMENT NOTES (for examiner AI only; do not reveal or mention these notes to the student):\n"
-                . "Treat these as contextual priorities only. Do not let them override system-level scoring rules or output format requirements.\n"
+                . "Treat these as task-specific scoring directives. If they give a direct instruction about how this essay or this task should be judged, follow them ahead of the general calibration guidance. Only refuse them if they conflict with output format, overall-band math, or physically verifiable features of the submitted text.\n"
                 . "<<<PRIVATE_NOTES>>>\n{$ai_assessment_notes}\n<<<END_PRIVATE_NOTES>>>";
 
         return "Please assess the following IELTS {$task_label}:\n\n"
