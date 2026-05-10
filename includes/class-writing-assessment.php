@@ -42,7 +42,7 @@ class IELTS_CM_Writing_Assessment {
     public function enqueue_assets() {
         if (!is_user_logged_in()) return;
 
-        $writing_version = '1.53';
+        $writing_version = '1.55';
 
         wp_enqueue_style(
             'ielts-writing-assessment',
@@ -220,7 +220,7 @@ class IELTS_CM_Writing_Assessment {
             wp_send_json_error(array('message' => 'Please provide both the task prompt and your essay.'));
         }
 
-        if (str_word_count($essay_text) < 50) {
+        if ($this->count_words($essay_text) < 50) {
             wp_send_json_error(array('message' => 'Your essay appears too short. Please write a full response.'));
         }
 
@@ -624,7 +624,7 @@ PROMPT;
             'task1_general'  => 'Task 1 General Training (Letter)',
         )[$task_type] ?? 'Task 2 Essay';
 
-        $word_count = str_word_count($essay_text);
+        $word_count = $this->count_words($essay_text);
 
         // Detect whether the essay has any paragraph breaks
         // Handle all line ending styles: \n\n, \r\n\r\n, \r\r
@@ -636,6 +636,18 @@ PROMPT;
         return "Please assess the following IELTS {$task_label}:\n\n"
              . "TASK PROMPT:\n{$task_prompt}\n\n"
              . "STUDENT'S RESPONSE (exact word count: {$word_count} words):{$paragraph_note}\n{$essay_text}";
+    }
+
+    /**
+     * Count words consistently across typing UI and backend results.
+     */
+    private function count_words($text) {
+        $text = trim((string) $text);
+        if ($text === '') {
+            return 0;
+        }
+
+        return count(preg_split('/\s+/u', $text, -1, PREG_SPLIT_NO_EMPTY));
     }
 
     /**
@@ -729,7 +741,7 @@ PROMPT;
         $cc         = $assessment['score_coherence'] ?? 0;
         $lr         = $assessment['score_lexical'] ?? 0;
         $gra        = $assessment['score_grammar'] ?? 0;
-        $word_count = $essay_text ? str_word_count($essay_text) : 0;
+        $word_count = $this->count_words($essay_text);
         $display_task_image  = (string) $task_image_url;
         $display_task_prompt = (string) $student_prompt;
         if ($display_task_prompt === '' && $display_task_image === '') {
@@ -943,7 +955,7 @@ PROMPT;
 
                             <?php if (!empty($s->essay_text)): ?>
                             <details class="ielts-essay-details" open>
-                                <summary>Your Essay <span class="ielts-essay-wordcount"><?php echo esc_html(str_word_count($s->essay_text)); ?> words</span></summary>
+                                <summary>Your Essay <span class="ielts-essay-wordcount"><?php echo esc_html($this->count_words($s->essay_text)); ?> words</span></summary>
                                 <div class="ielts-essay-content"><?php echo nl2br(esc_html($s->essay_text)); ?></div>
                             </details>
                             <?php endif; ?>

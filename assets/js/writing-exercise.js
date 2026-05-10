@@ -8,6 +8,11 @@
     var progressTimers = [];
     var submitted      = false;
 
+    function countWords(text) {
+        var normalized = (text || '').trim();
+        return normalized ? normalized.split(/\s+/).filter(Boolean).length : 0;
+    }
+
     // ─── Set progress bar colour ─────────────────────────────────────
     if (cfg.progressColor) {
         document.documentElement.style.setProperty('--ielts-progress-color', cfg.progressColor);
@@ -19,7 +24,7 @@
         var idx  = $ta.data('question-index');
         var text = $ta.val();
 
-        var words = text.trim().length > 0 ? text.trim().split(/\s+/).filter(Boolean).length : 0;
+        var words = countWords(text);
         $('#word-count-' + idx).text(words);
 
         var paras = text.trim().length > 0
@@ -76,7 +81,21 @@
                 studentPrompt = $promptPanel.find('.writing-task-prompt').text().trim();
             }
             if (!taskPrompt) {
-                taskPrompt = studentPrompt || $promptPanel.text().trim();
+                if (studentPrompt) {
+                    taskPrompt = studentPrompt;
+                } else {
+                    // No text prompt available — use a task-appropriate generic description.
+                    // Avoid $promptPanel.text() which captures the UI label ("Task 1 — Academic")
+                    // and the minimum word count hint, which are not useful as AI context.
+                    var taskType = $ta.data('task-type') || '';
+                    if (taskType === 'task2') {
+                        taskPrompt = 'IELTS Writing Task 2 essay.';
+                    } else if (taskImageUrl) {
+                        taskPrompt = 'IELTS Academic Writing Task 1: describe the visual data shown in the image.';
+                    } else {
+                        taskPrompt = 'IELTS Writing Task 1 response.';
+                    }
+                }
             }
             tasks.push({
                 index:       idx,
@@ -100,7 +119,7 @@
         if (!isAutoSubmit) {
         for (var i = 0; i < tasks.length; i++) {
             var t = tasks[i];
-            var wordCount = t.essay_text.trim().split(/\s+/).filter(Boolean).length;
+            var wordCount = countWords(t.essay_text);
 
             if (wordCount < 50) {
                 alert('Your ' + (t.task_type === 'task2' ? 'Task 2' : 'Task 1') + ' response is too short (' + wordCount + ' words). The minimum to submit is 50 words.');

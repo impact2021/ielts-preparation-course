@@ -4,10 +4,15 @@
 
     var currentSubmissionId = null;
 
+    function countWords(text) {
+        var normalized = (text || '').trim();
+        return normalized ? normalized.split(/\s+/).filter(Boolean).length : 0;
+    }
+
     // ─── Word & Paragraph Counter ────────────────────────────────────
     $('#ielts-essay-text').on('input', function() {
         var text  = $(this).val();
-        var words = text.trim().split(/\s+/).filter(Boolean).length;
+        var words = countWords(text);
         $('#ielts-word-count-num').text(words);
 
         // Count paragraphs — split on one or more blank lines
@@ -107,7 +112,7 @@
             return;
         }
 
-        var wordCount = essayText.split(/\s+/).filter(Boolean).length;
+        var wordCount = countWords(essayText);
         if (wordCount < 50) {
             alert(
                 'Your essay is too short to submit.\n\n' +
