@@ -1363,6 +1363,7 @@ class IELTS_CM_Quiz_Handler {
         // Writing assessment stores band directly in score
         if ($scoring_type === 'writing_assessment') {
             $band_score = floatval($score_value);
+            // Clamp to valid IELTS range to guard against invalid stored/requested values.
             return max(self::MIN_BAND_SCORE, min(self::MAX_BAND_SCORE, $band_score));
         }
 
