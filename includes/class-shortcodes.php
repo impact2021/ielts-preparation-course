@@ -128,9 +128,14 @@ class IELTS_CM_Shortcodes {
      */
     private function create_trial_verification_request($payload) {
         $token = wp_generate_password(32, false, false);
-        $code = (string) wp_rand(100000, 999999);
+        try {
+            $code = (string) random_int(100000, 999999);
+        } catch (Exception $e) {
+            $code = (string) wp_rand(100000, 999999);
+        }
 
-        $payload['verification_code'] = $code;
+        $payload['verification_code_hash'] = hash('sha256', $code);
+        $payload['verification_attempts'] = 0;
         $payload['created_at'] = current_time('mysql');
 
         set_transient($this->get_trial_verification_transient_key($token), $payload, 2 * HOUR_IN_SECONDS);
@@ -2348,11 +2353,13 @@ class IELTS_CM_Shortcodes {
         $trial_verification_email = '';
 
         if (isset($_POST['ielts_verify_trial_email_submit'])) {
-            if (!isset($_POST['ielts_register_nonce']) || !wp_verify_nonce($_POST['ielts_register_nonce'], 'ielts_register')) {
+            if (!isset($_POST['ielts_trial_verify_nonce']) || !wp_verify_nonce($_POST['ielts_trial_verify_nonce'], 'ielts_trial_verify')) {
                 $errors[] = __('Security check failed.', 'ielts-course-manager');
             } else {
                 $trial_verification_token = sanitize_key($_POST['ielts_trial_verification_token'] ?? '');
-                $submitted_code = preg_replace('/\D/', '', sanitize_text_field($_POST['ielts_trial_verification_code'] ?? ''));
+                $submitted_code = preg_replace('/\D/', '', (string) ($_POST['ielts_trial_verification_code'] ?? ''));
+                $verify_password = isset($_POST['ielts_trial_password']) ? wp_unslash((string) $_POST['ielts_trial_password']) : '';
+                $verify_password_confirm = isset($_POST['ielts_trial_password_confirm']) ? wp_unslash((string) $_POST['ielts_trial_password_confirm']) : '';
 
                 if (empty($trial_verification_token) || empty($submitted_code)) {
                     $errors[] = __('Verification code is required.', 'ielts-course-manager');
@@ -2366,8 +2373,19 @@ class IELTS_CM_Shortcodes {
                     } else {
                         $trial_verification_email = $pending_data['email'] ?? '';
                         $show_trial_verification_form = true;
+                        $attempts = isset($pending_data['verification_attempts']) ? intval($pending_data['verification_attempts']) : 0;
 
-                        if (!hash_equals((string) ($pending_data['verification_code'] ?? ''), (string) $submitted_code)) {
+                        if ($attempts >= 5) {
+                            delete_transient($pending_key);
+                            $errors[] = __('Too many verification attempts. Please register again.', 'ielts-course-manager');
+                            $show_trial_verification_form = false;
+                        }
+
+                        if ($attempts < 5) {
+                            $submitted_code_hash = hash('sha256', (string) $submitted_code);
+                            if (!hash_equals((string) ($pending_data['verification_code_hash'] ?? ''), $submitted_code_hash)) {
+                            $pending_data['verification_attempts'] = $attempts + 1;
+                            set_transient($pending_key, $pending_data, 2 * HOUR_IN_SECONDS);
                             $errors[] = __('Invalid verification code. Please try again.', 'ielts-course-manager');
                         } elseif (!empty($pending_data['email']) && email_exists($pending_data['email'])) {
                             delete_transient($pending_key);
@@ -2377,67 +2395,84 @@ class IELTS_CM_Shortcodes {
                             $first_name = sanitize_text_field($pending_data['first_name'] ?? '');
                             $last_name = sanitize_text_field($pending_data['last_name'] ?? '');
                             $email = sanitize_email($pending_data['email'] ?? '');
-                            $password = (string) ($pending_data['password'] ?? '');
                             $membership_type = sanitize_text_field($pending_data['membership_type'] ?? '');
 
-                            $base_username = 'user';
-                            if (is_email($email) && strpos($email, '@') !== false) {
-                                $email_parts = explode('@', $email);
-                                $candidate = sanitize_user($email_parts[0], true);
-                                if (!empty($candidate)) {
-                                    $base_username = $candidate;
-                                }
+                            if (empty($verify_password)) {
+                                $errors[] = __('Password is required.', 'ielts-course-manager');
+                            } elseif (strlen($verify_password) < 6) {
+                                $errors[] = __('Password must be at least 6 characters.', 'ielts-course-manager');
+                            } elseif ($verify_password !== $verify_password_confirm) {
+                                $errors[] = __('Passwords do not match.', 'ielts-course-manager');
                             }
-                            $username = $base_username;
-                            if (username_exists($username)) {
-                                $username = $base_username . '_' . time();
+
+                            if (empty($errors)) {
+                                $base_username = 'user';
+                                if (is_email($email) && strpos($email, '@') !== false) {
+                                    $email_parts = explode('@', $email);
+                                    $candidate = sanitize_user($email_parts[0], true);
+                                    if (!empty($candidate)) {
+                                        $base_username = $candidate;
+                                    }
+                                }
+                                $username = $base_username;
                                 if (username_exists($username)) {
-                                    $username = $base_username . '_' . wp_generate_password(8, false);
-                                }
-                            }
+                                    $attempt = 0;
+                                    do {
+                                        $attempt++;
+                                        $username = $base_username . '_' . wp_generate_password(8, false, false);
+                                    } while (username_exists($username) && $attempt < 5);
 
-                            if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
-                                define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
-                            }
-
-                            $user_id = wp_create_user($username, $password, $email);
-                            if (is_wp_error($user_id)) {
-                                $errors[] = $user_id->get_error_message();
-                            } else {
-                                wp_update_user(array(
-                                    'ID' => $user_id,
-                                    'first_name' => $first_name,
-                                    'last_name' => $last_name
-                                ));
-
-                                if (!empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type)) {
-                                    update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
-                                    $membership = new IELTS_CM_Membership();
-                                    $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
-                                    delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
-                                    $expiry_date = $membership->calculate_expiry_date($membership_type);
-                                    update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
-                                    $membership->send_enrollment_email($user_id, $membership_type);
+                                    if (username_exists($username)) {
+                                        $errors[] = __('Could not generate a unique username. Please try again.', 'ielts-course-manager');
+                                    }
                                 }
 
-                                wp_set_current_user($user_id);
-                                wp_set_auth_cookie($user_id, true);
-                                $user_obj = get_userdata($user_id);
-                                do_action('wp_login', $user_obj->user_login, $user_obj);
+                                if (empty($errors)) {
+                                    if (!defined('IELTS_CM_AUTHORIZED_REGISTRATION')) {
+                                        define('IELTS_CM_AUTHORIZED_REGISTRATION', true);
+                                    }
 
-                                delete_transient($pending_key);
+                                    $user_id = wp_create_user($username, $verify_password, $email);
+                                    if (is_wp_error($user_id)) {
+                                        $errors[] = $user_id->get_error_message();
+                                    } else {
+                                        wp_update_user(array(
+                                            'ID' => $user_id,
+                                            'first_name' => $first_name,
+                                            'last_name' => $last_name
+                                        ));
 
-                                $post_account_redirect = get_option('ielts_cm_post_payment_redirect_url', '');
-                                if (!empty($post_account_redirect)) {
-                                    $redirect_to = $post_account_redirect;
-                                } else {
-                                    $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                                        if (!empty($membership_type) && IELTS_CM_Membership::is_trial_membership($membership_type)) {
+                                            update_user_meta($user_id, '_ielts_cm_membership_type', $membership_type);
+                                            $membership = new IELTS_CM_Membership();
+                                            $membership->set_user_membership_status($user_id, IELTS_CM_Membership::STATUS_ACTIVE);
+                                            delete_user_meta($user_id, '_ielts_cm_expiry_email_sent');
+                                            $expiry_date = $membership->calculate_expiry_date($membership_type);
+                                            update_user_meta($user_id, '_ielts_cm_membership_expiry', $expiry_date);
+                                            $membership->send_enrollment_email($user_id, $membership_type);
+                                        }
+
+                                        wp_set_current_user($user_id);
+                                        wp_set_auth_cookie($user_id, true);
+                                        $user_obj = get_userdata($user_id);
+                                        do_action('wp_login', $user_obj->user_login, $user_obj);
+
+                                        delete_transient($pending_key);
+
+                                        $post_account_redirect = get_option('ielts_cm_post_payment_redirect_url', '');
+                                        if (!empty($post_account_redirect)) {
+                                            $redirect_to = $post_account_redirect;
+                                        } else {
+                                            $redirect_to = !empty($atts['redirect']) ? esc_url_raw($atts['redirect']) : home_url();
+                                        }
+
+                                        $redirect_to = wp_validate_redirect($redirect_to, home_url());
+                                        wp_safe_redirect($redirect_to);
+                                        exit;
+                                    }
                                 }
-
-                                $redirect_to = wp_validate_redirect($redirect_to, home_url());
-                                wp_safe_redirect($redirect_to);
-                                exit;
                             }
+                        }
                         }
                     }
                 }
@@ -2568,7 +2603,6 @@ class IELTS_CM_Shortcodes {
                             'first_name' => $first_name,
                             'last_name' => $last_name,
                             'email' => $email,
-                            'password' => $password,
                             'membership_type' => $membership_type,
                         );
                         $verification_request = $this->create_trial_verification_request($verification_data);
@@ -2740,7 +2774,7 @@ class IELTS_CM_Shortcodes {
             <?php if (!$success): ?>
                 <?php if ($show_trial_verification_form): ?>
                 <form method="post" action="" name="ielts_registration_form" class="ielts-form">
-                    <?php wp_nonce_field('ielts_register', 'ielts_register_nonce'); ?>
+                    <?php wp_nonce_field('ielts_trial_verify', 'ielts_trial_verify_nonce'); ?>
                     <input type="hidden" name="ielts_trial_verification_token" value="<?php echo esc_attr($trial_verification_token); ?>">
 
                     <?php if (!empty($trial_verification_email)): ?>
@@ -2752,8 +2786,18 @@ class IELTS_CM_Shortcodes {
 
                     <p class="form-field form-field-full">
                         <label for="ielts_trial_verification_code"><?php _e('Verification Code', 'ielts-course-manager'); ?> <span class="required">*</span></label>
-                        <input type="text" name="ielts_trial_verification_code" id="ielts_trial_verification_code" required class="ielts-form-input" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="123456">
+                        <input type="tel" name="ielts_trial_verification_code" id="ielts_trial_verification_code" required class="ielts-form-input" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="one-time-code" placeholder="123456">
                         <small class="form-help"><?php _e('Enter the 6-digit code from your email.', 'ielts-course-manager'); ?></small>
+                    </p>
+
+                    <p class="form-field form-field-half">
+                        <label for="ielts_trial_password"><?php _e('Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="password" name="ielts_trial_password" id="ielts_trial_password" required class="ielts-form-input">
+                    </p>
+
+                    <p class="form-field form-field-half">
+                        <label for="ielts_trial_password_confirm"><?php _e('Confirm Password', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                        <input type="password" name="ielts_trial_password_confirm" id="ielts_trial_password_confirm" required class="ielts-form-input">
                     </p>
 
                     <p class="form-field form-field-full submit-button-container">

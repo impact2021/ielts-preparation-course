@@ -47,7 +47,13 @@ class IELTS_CM_Quiz_Handler {
         if (!$user_id) {
             return false;
         }
-        return is_main_site() && user_can($user_id, 'manage_options');
+        $is_primary_site = is_main_site();
+        if (class_exists('IELTS_CM_Multi_Site_Sync')) {
+            $sync_manager = new IELTS_CM_Multi_Site_Sync();
+            $is_primary_site = $sync_manager->is_primary_site();
+        }
+
+        return $is_primary_site && user_can($user_id, 'manage_options');
     }
 
     /**
