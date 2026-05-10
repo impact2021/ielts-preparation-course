@@ -238,6 +238,7 @@ class IELTS_CM_Writing_Admin {
         $display_lr  = $override ? ($override['score_lexical'] ?? $submission->score_lexical) : $submission->score_lexical;
         $display_gra = $override ? ($override['score_grammar'] ?? $submission->score_grammar) : $submission->score_grammar;
         $display_band= $override ? ($override['overall_band'] ?? $submission->overall_band) : $submission->overall_band;
+        $task_prompt_context = $this->decode_task_prompt_context($submission->task_prompt);
 
         $band_options = array(1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,7.5,8,8.5,9);
         ?>
@@ -267,7 +268,14 @@ class IELTS_CM_Writing_Admin {
 
                     <div class="ielts-detail-box">
                         <h3>Task Prompt</h3>
-                        <div class="ielts-essay-text"><?php echo nl2br(esc_html($submission->task_prompt)); ?></div>
+                        <div class="ielts-essay-text">
+                            <?php if (!empty($task_prompt_context['task_image_url'])): ?>
+                                <p><img src="<?php echo esc_url($task_prompt_context['task_image_url']); ?>" alt="" style="max-width:100%; height:auto;"></p>
+                            <?php endif; ?>
+                            <?php if (!empty($task_prompt_context['student_prompt'])): ?>
+                                <div><?php echo nl2br(esc_html($task_prompt_context['student_prompt'])); ?></div>
+                            <?php endif; ?>
+                        </div>
                     </div>
 
                     <div class="ielts-detail-box">
@@ -577,6 +585,27 @@ class IELTS_CM_Writing_Admin {
         );
 
         wp_send_json_success(array('message' => 'Submission window reset. The student can now submit again.'));
+    }
+
+    /**
+     * Decode stored task prompt context
+     */
+    private function decode_task_prompt_context($stored_task_prompt) {
+        $stored_task_prompt = (string) $stored_task_prompt;
+        $decoded = json_decode($stored_task_prompt, true);
+
+        if (is_array($decoded) && (isset($decoded['ai_prompt']) || isset($decoded['student_prompt']) || isset($decoded['task_image_url']))) {
+            $has_student_prompt = array_key_exists('student_prompt', $decoded);
+            return array(
+                'student_prompt' => $has_student_prompt ? sanitize_textarea_field($decoded['student_prompt']) : sanitize_textarea_field($decoded['ai_prompt'] ?? ''),
+                'task_image_url' => esc_url_raw($decoded['task_image_url'] ?? ''),
+            );
+        }
+
+        return array(
+            'student_prompt' => $stored_task_prompt,
+            'task_image_url' => '',
+        );
     }
 
     /**
