@@ -1411,7 +1411,7 @@ class IELTS_CM_Quiz_Handler {
 
         // Writing assessment display (stored score is already a band value)
         if ($scoring_type === 'writing_assessment') {
-            $band_score = floatval($score);
+            $band_score = $this->convert_to_band_score($score, $scoring_type);
             return array(
                 'display' => 'Band ' . number_format($band_score, 1),
                 'value' => $band_score,
