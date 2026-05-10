@@ -10,6 +10,8 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Quiz_Handler {
     
     private $db;
+    private const MIN_BAND_SCORE = 0.0;
+    private const MAX_BAND_SCORE = 9.0;
     
     public function __construct() {
         $this->db = new IELTS_CM_Database();
@@ -1351,9 +1353,9 @@ class IELTS_CM_Quiz_Handler {
     /**
      * Convert correct answers to IELTS band score
      * 
-     * @param float $score_value Score value:
-     *                           - writing_assessment: direct IELTS band score (0-9)
-     *                           - other IELTS scoring types: count of correct answers
+     * @param float|int $score_value Score value:
+     *                               - writing_assessment: direct IELTS band score (0-9, float)
+     *                               - other IELTS scoring types: count of correct answers (integer)
      * @param string $scoring_type Type of scoring (ielts_general_reading, ielts_academic_reading, ielts_listening)
      * @return float Band score (0-9)
      */
@@ -1361,7 +1363,7 @@ class IELTS_CM_Quiz_Handler {
         // Writing assessment stores band directly in score
         if ($scoring_type === 'writing_assessment') {
             $band_score = floatval($score_value);
-            return max(0.0, min(9.0, $band_score));
+            return max(self::MIN_BAND_SCORE, min(self::MAX_BAND_SCORE, $band_score));
         }
 
         // Get the conversion table
