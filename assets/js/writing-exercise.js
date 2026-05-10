@@ -68,19 +68,23 @@
             var $ta  = $(this);
             var idx  = $ta.data('question-index');
             var $promptPanel = $('#writing-prompt-' + idx);
-            var taskPrompt   = $promptPanel.find('.writing-task-prompt-source').val();
+            var taskPrompt   = '';
+
+            if ($promptPanel.length) {
+                taskPrompt = $promptPanel.find('.writing-task-prompt-source').val();
+            }
 
             if (taskPrompt) {
                 taskPrompt = taskPrompt.trim();
             }
 
             // Fallback: extract the visible prompt text
-            if (!taskPrompt) {
+            if (!taskPrompt && $promptPanel.length) {
                 taskPrompt = $promptPanel.find('.writing-task-prompt').text().trim();
             }
 
             // Final fallback: try the entire prompt panel text minus the label and minimums
-            if (!taskPrompt) {
+            if (!taskPrompt && $promptPanel.length) {
                 taskPrompt = $promptPanel.text().trim();
             }
             tasks.push({
