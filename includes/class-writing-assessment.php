@@ -234,6 +234,9 @@ class IELTS_CM_Writing_Assessment {
             ));
         }
 
+        // Enforce hard cap when the AI identifies a wholly irrelevant/wrong-task response.
+        $assessment = $this->apply_wholly_irrelevant_cap($assessment);
+
         // Calculate overall band in PHP using proper IELTS rounding rules
         // This prevents Claude from second-guessing the mathematical result
         $assessment['overall_band'] = $this->calculate_overall_band(
@@ -492,6 +495,30 @@ class IELTS_CM_Writing_Assessment {
     }
 
     /**
+     * Apply a hard score cap for responses that are wholly irrelevant to the assigned task type.
+     */
+    private function apply_wholly_irrelevant_cap($assessment) {
+        if (!is_array($assessment)) {
+            return $assessment;
+        }
+
+        $flag_raw = $assessment['is_wholly_irrelevant'] ?? false;
+        $is_wholly_irrelevant = filter_var($flag_raw, FILTER_VALIDATE_BOOLEAN);
+
+        if (!$is_wholly_irrelevant) {
+            return $assessment;
+        }
+
+        foreach (array('score_task_achievement', 'score_coherence', 'score_lexical', 'score_grammar') as $score_key) {
+            if (isset($assessment[$score_key]) && is_numeric($assessment[$score_key])) {
+                $assessment[$score_key] = min(4.0, floatval($assessment[$score_key]));
+            }
+        }
+
+        return $assessment;
+    }
+
+    /**
      * Build the system prompt for Claude
      */
     private function build_system_prompt($task_type) {
@@ -540,7 +567,7 @@ Your feedback will be read by English language learners, mostly at B1-B2 level. 
 - CRITICAL — WHY NOT HIGHER: Whenever a criterion score is below Band 9, the feedback for that criterion MUST end with a clear, specific sentence explaining exactly what is missing for the next band. This is non-negotiable. Students will always ask "why isn't this a 9?" and the feedback must pre-empt that question with a concrete answer. The explanation must reference something specific in the essay — not a general statement. Do not use the mere presence of functional signpost phrases such as "Furthermore", "Additionally", or "By contrast" as that explanation in a short Task 2 essay. Only mention linking as the reason for a lower score when it is genuinely repetitive, illogical, absent, or intrusive enough to affect the reading flow. For example: "To reach Band 9, every idea would need to be fully extended with clear reasoning — the second body paragraph states a point but stops short of explaining why it follows logically." Do not write vague statements like "more variety would help" — be specific about what is missing and where.
 - A Band 5.5 overall essay typically looks like this: the task is addressed and the structure is recognisable, but the main ideas are stated without meaningful development — each point can be summarised in one sentence with nothing added beyond a brief restatement. Vocabulary is basic and repetitive, with simple words like "good", "bad", "sad" doing the work of more precise terms. Sentence structures are mostly simple and follow the same pattern throughout. Linking is limited to formulaic signposts like "First of all", "Another reason" and "In conclusion". If an essay matches this description across most criteria, the overall band should be 5.5, not 6. Do not award Band 6 for Task Achievement or Coherence & Cohesion simply because the structure is present and the task is addressed — the quality of execution within that structure must justify it.
 - DIRECT INSTRUCTION PRECEDENCE: If the DIRECT SCORING INSTRUCTIONS FROM THE SITE ADMINISTRATOR or the PRIVATE ASSESSMENT NOTES give a direct scoring instruction for this task, this exact essay, or a benchmark/model response, follow that instruction in preference to the general calibration guidance above. This includes cases where the administrator explicitly says a supplied response should be treated as a Band 9 model answer. Do not override that direct instruction by re-applying generic guidance such as "Band 9 is rare" or "linking should be invisible". Only ignore a direct instruction if it conflicts with hard requirements that must always be enforced: valid JSON output, mathematically correct overall band calculation, or physically verifiable features of the submitted text such as missing paragraph breaks.
-- TASK IRRELEVANCE AND SCORING: If the submitted text does not address the task prompt at all (for example, a Task 1 response is submitted in the Task 2 area), this affects Task Achievement/Response (TA) most severely — a completely off-task response should receive a very low TA score. However, Coherence & Cohesion, Lexical Resource, and Grammatical Range & Accuracy must still be scored based on the observable language performance in the text itself, regardless of whether the content answers the prompt. Only assign very low scores (Band 1–2) for CC, LR, or GRA if the writing itself genuinely demonstrates weak performance in those areas. Do not apply the same extremely low score across all four criteria simply because the content is irrelevant to the task. Assess the actual language in front of you.
+- TASK TYPE FAILURE / WHOLLY IRRELEVANT RESPONSE: If the response is entirely the wrong type of writing for the assigned task (for example, a Task 1 graph/chart description submitted for Task 2, or a Task 2 opinion essay submitted for Task 1), treat this as a fundamental task failure. In this case, set "is_wholly_irrelevant" to true and output ALL criterion scores (TA, CC, LR, GRA) as 4.0 or below. Do not output Band 4.5 or above in any criterion for a wholly irrelevant wrong-task-type response, even if parts of the language quality are strong. If the response is not wholly irrelevant in this way, set "is_wholly_irrelevant" to false.
 
 SCORING APPROACH:
 {$strictness_guidance[$strictness]}
@@ -587,6 +614,7 @@ You MUST respond with ONLY valid JSON in exactly this structure — no preamble,
   "score_coherence": 6.0,
   "score_lexical": 6.5,
   "score_grammar": 6.0,
+  "is_wholly_irrelevant": false,
   "overall_band": 6.5,
   "summary": "A brief 2-3 sentence overall assessment of the essay.",
   "feedback_task_achievement": "Detailed feedback on task achievement/response.",
