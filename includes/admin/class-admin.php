@@ -3125,8 +3125,8 @@ class IELTS_CM_Admin {
                 </p>
                 <p>
                     <small><?php _e('The task prompt is taken from the Question Text field above.', 'ielts-course-manager'); ?></small>
-                    <small style="display:block; margin-top:5px;"><?php _e('For Task 1 Academic image questions, the image is display-only. Add a text version of the chart or table data in the Question Text field so the AI can assess the student response correctly.', 'ielts-course-manager'); ?></small>
-                    <small style="display:block; margin-top:5px;"><?php _e('Include the chart title, categories, years, values, and any notes in the Question Text. The student sees the image, but the AI only receives the Question Text and the student answer.', 'ielts-course-manager'); ?></small>
+                    <br><small><?php _e('For Task 1 Academic image questions, the image is display-only. Add a text version of the chart or table data in the Question Text field so the AI can assess the student response correctly.', 'ielts-course-manager'); ?></small>
+                    <br><small><?php _e('Include the chart title, categories, years, values, and any notes in the Question Text. The student sees the image, but the AI only receives the Question Text and the student answer.', 'ielts-course-manager'); ?></small>
                 </p>
             </div>
 

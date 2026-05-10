@@ -140,7 +140,7 @@ $show_completion_message = !isset($current_index) || empty($all_items) || $curre
                 ?>
                 <div class="ielts-writing-prompt-panel" id="writing-prompt-<?php echo esc_attr($idx); ?>" style="<?php echo ($idx === $first_index) ? '' : 'display:none;'; ?>">
                     <div class="writing-task-label"><?php echo esc_html($task_label); ?></div>
-                    <textarea class="writing-task-prompt-source" hidden aria-hidden="true"><?php echo esc_textarea($task_prompt); ?></textarea>
+                    <textarea class="writing-task-prompt-source" hidden><?php echo esc_textarea($task_prompt); ?></textarea>
                     <?php if ($task_image_url): ?>
                     <div class="writing-task-image">
                         <img src="<?php echo esc_url($task_image_url); ?>" alt="" class="writing-chart-image">
