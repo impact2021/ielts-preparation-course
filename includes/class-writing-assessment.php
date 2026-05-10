@@ -212,6 +212,8 @@ class IELTS_CM_Writing_Assessment {
 
         $task_type   = sanitize_text_field($_POST['task_type'] ?? 'task2');
         $task_prompt = sanitize_textarea_field(wp_unslash($_POST['task_prompt'] ?? ''));
+        $student_prompt = sanitize_textarea_field(wp_unslash($_POST['student_prompt'] ?? ''));
+        $task_image_url = esc_url_raw(wp_unslash($_POST['task_image_url'] ?? ''));
         $essay_text  = sanitize_textarea_field(wp_unslash($_POST['essay_text'] ?? ''));
 
         if (empty($task_prompt) || empty($essay_text)) {
@@ -241,7 +243,7 @@ class IELTS_CM_Writing_Assessment {
         );
 
         // Save to database
-        $submission_id = $this->save_submission($user_id, $task_type, $task_prompt, $essay_text, $assessment);
+        $submission_id = $this->save_submission($user_id, $task_type, $task_prompt, $student_prompt, $task_image_url, $essay_text, $assessment);
 
         if (!$submission_id) {
             wp_send_json_error(array('message' => 'Failed to save your submission. Please try again.'));
@@ -250,7 +252,7 @@ class IELTS_CM_Writing_Assessment {
         wp_send_json_success(array(
             'submission_id' => $submission_id,
             'assessment'    => $assessment,
-            'html'          => $this->render_results($assessment, $submission_id, $task_prompt, $essay_text, $task_type),
+            'html'          => $this->render_results($assessment, $submission_id, $task_prompt, $essay_text, $task_type, $student_prompt, $task_image_url),
         ));
     }
 
@@ -637,10 +639,64 @@ PROMPT;
     }
 
     /**
+     * Encode task prompt context for storage
+     */
+    private function encode_task_prompt_context($task_prompt, $student_prompt = '', $task_image_url = '') {
+        $task_prompt    = (string) $task_prompt;
+        $student_prompt = (string) $student_prompt;
+        $task_image_url = (string) $task_image_url;
+
+        if ($student_prompt === '' && $task_image_url === '') {
+            return $task_prompt;
+        }
+
+        return wp_json_encode(array(
+            '_format'        => 'task_prompt_context_v1',
+            'ai_prompt'      => $task_prompt,
+            'student_prompt' => $student_prompt,
+            'task_image_url' => $task_image_url,
+        ));
+    }
+
+    /**
+     * Decode stored task prompt context
+     */
+    private function decode_task_prompt_context($stored_task_prompt) {
+        $stored_task_prompt = (string) $stored_task_prompt;
+        $decoded = json_decode($stored_task_prompt, true);
+
+        $is_context_payload = is_array($decoded) && (
+            (($decoded['_format'] ?? '') === 'task_prompt_context_v1') ||
+            (array_key_exists('ai_prompt', $decoded) && array_key_exists('student_prompt', $decoded) && array_key_exists('task_image_url', $decoded))
+        );
+
+        if ($is_context_payload) {
+            $ai_prompt = isset($decoded['ai_prompt']) ? sanitize_textarea_field($decoded['ai_prompt']) : '';
+            $has_student_prompt = array_key_exists('student_prompt', $decoded);
+            $student_prompt = $has_student_prompt ? sanitize_textarea_field($decoded['student_prompt']) : '';
+            $task_image_url = isset($decoded['task_image_url']) ? esc_url_raw($decoded['task_image_url']) : '';
+
+            return array(
+                'ai_prompt'      => $ai_prompt,
+                'student_prompt' => $has_student_prompt ? $student_prompt : $ai_prompt,
+                'task_image_url' => $task_image_url,
+            );
+        }
+
+        return array(
+            'ai_prompt'      => $stored_task_prompt,
+            'student_prompt' => $stored_task_prompt,
+            'task_image_url' => '',
+        );
+    }
+
+    /**
      * Save submission to database
      */
-    private function save_submission($user_id, $task_type, $task_prompt, $essay_text, $assessment) {
+    private function save_submission($user_id, $task_type, $task_prompt, $student_prompt, $task_image_url, $essay_text, $assessment) {
         global $wpdb;
+
+        $stored_task_prompt = $this->encode_task_prompt_context($task_prompt, $student_prompt, $task_image_url);
 
         $result = $wpdb->insert(
             $this->table_name,
@@ -648,7 +704,7 @@ PROMPT;
                 'user_id'              => $user_id,
                 'submitted_at'         => current_time('mysql'),
                 'task_type'            => $task_type,
-                'task_prompt'          => $task_prompt,
+                'task_prompt'          => $stored_task_prompt,
                 'essay_text'           => $essay_text,
                 'score_task_achievement' => $assessment['score_task_achievement'] ?? 0,
                 'score_coherence'      => $assessment['score_coherence'] ?? 0,
@@ -667,13 +723,18 @@ PROMPT;
     /**
      * Render the results HTML
      */
-    private function render_results($assessment, $submission_id, $task_prompt = '', $essay_text = '', $task_type = '') {
+    private function render_results($assessment, $submission_id, $task_prompt = '', $essay_text = '', $task_type = '', $student_prompt = '', $task_image_url = '') {
         $overall    = $assessment['overall_band'] ?? 0;
         $ta         = $assessment['score_task_achievement'] ?? 0;
         $cc         = $assessment['score_coherence'] ?? 0;
         $lr         = $assessment['score_lexical'] ?? 0;
         $gra        = $assessment['score_grammar'] ?? 0;
         $word_count = $essay_text ? str_word_count($essay_text) : 0;
+        $display_task_image  = (string) $task_image_url;
+        $display_task_prompt = (string) $student_prompt;
+        if ($display_task_prompt === '' && $display_task_image === '') {
+            $display_task_prompt = (string) $task_prompt;
+        }
 
         // Task-specific band label
         $band_label = 'Overall Band Score';
@@ -712,10 +773,17 @@ PROMPT;
             </div>
 
             <!-- Task prompt accordion -->
-            <?php if ($task_prompt): ?>
+            <?php if ($display_task_prompt || $display_task_image): ?>
             <details class="ielts-accordion">
                 <summary class="ielts-accordion-summary">Task Prompt</summary>
-                <div class="ielts-accordion-content ielts-essay-content"><?php echo nl2br(esc_html($task_prompt)); ?></div>
+                <div class="ielts-accordion-content ielts-essay-content">
+                    <?php if ($display_task_image): ?>
+                        <p><img src="<?php echo esc_url($display_task_image); ?>" alt="" style="max-width:100%; height:auto;"></p>
+                    <?php endif; ?>
+                    <?php if ($display_task_prompt): ?>
+                        <div><?php echo nl2br(esc_html($display_task_prompt)); ?></div>
+                    <?php endif; ?>
+                </div>
             </details>
             <?php endif; ?>
 
@@ -829,6 +897,7 @@ PROMPT;
                 $lr       = $override ? ($override['score_lexical'] ?? $s->score_lexical) : $s->score_lexical;
                 $gra      = $override ? ($override['score_grammar'] ?? $s->score_grammar) : $s->score_grammar;
                 $ai       = !empty($s->ai_feedback) ? json_decode($s->ai_feedback, true) : array();
+                $task_prompt_context = $this->decode_task_prompt_context($s->task_prompt);
                 $status_labels = array(
                     'auto_scored'       => '<span class="ielts-status ielts-status--auto">Auto-scored</span>',
                     'disputed'          => '<span class="ielts-status ielts-status--disputed">Under Review</span>',
@@ -858,10 +927,17 @@ PROMPT;
                             </div>
                             <?php endif; ?>
 
-                            <?php if (!empty($s->task_prompt)): ?>
+                            <?php if (!empty($task_prompt_context['student_prompt']) || !empty($task_prompt_context['task_image_url'])): ?>
                             <div class="ielts-history-prompt">
                                 <strong>Task Prompt</strong>
-                                <div class="ielts-essay-content"><?php echo nl2br(esc_html($s->task_prompt)); ?></div>
+                                <div class="ielts-essay-content">
+                                    <?php if (!empty($task_prompt_context['task_image_url'])): ?>
+                                        <p><img src="<?php echo esc_url($task_prompt_context['task_image_url']); ?>" alt="" style="max-width:100%; height:auto;"></p>
+                                    <?php endif; ?>
+                                    <?php if (!empty($task_prompt_context['student_prompt'])): ?>
+                                        <div><?php echo nl2br(esc_html($task_prompt_context['student_prompt'])); ?></div>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                             <?php endif; ?>
 

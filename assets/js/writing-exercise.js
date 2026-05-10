@@ -67,18 +67,24 @@
         $('.ielts-writing-textarea').each(function() {
             var $ta  = $(this);
             var idx  = $ta.data('question-index');
-            // Pull prompt from the hidden data attribute on the prompt panel
             var $promptPanel = $('#writing-prompt-' + idx);
-            var taskPrompt   = $promptPanel.find('.writing-task-prompt').text().trim();
-            // Fallback: try the entire prompt panel text minus the label and minimums
+            var taskPrompt   = ($promptPanel.data('ai-prompt') || '').toString().trim();
+            var studentPrompt = ($promptPanel.data('student-prompt') || '').toString().trim();
+            var taskImageUrl = ($promptPanel.data('task-image-url') || '').toString().trim();
+
+            if (!studentPrompt) {
+                studentPrompt = $promptPanel.find('.writing-task-prompt').text().trim();
+            }
             if (!taskPrompt) {
-                taskPrompt = $promptPanel.text().trim();
+                taskPrompt = studentPrompt || $promptPanel.text().trim();
             }
             tasks.push({
                 index:       idx,
                 task_type:   $ta.data('task-type'),
                 essay_text:  $ta.val(),
                 task_prompt: taskPrompt,
+                student_prompt: studentPrompt,
+                task_image_url: taskImageUrl,
             });
         });
 
@@ -130,6 +136,8 @@
                     nonce:         cfg.nonce,
                     task_type:     task.task_type,
                     task_prompt:   task.task_prompt,
+                    student_prompt: task.student_prompt,
+                    task_image_url: task.task_image_url,
                     essay_text:    task.essay_text,
                     exercise_mode: 1,
                 },

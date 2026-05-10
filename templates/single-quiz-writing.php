@@ -131,6 +131,8 @@ $show_completion_message = !isset($current_index) || empty($all_items) || $curre
                     $task_type     = isset($question['task_type']) ? $question['task_type'] : 'task2';
                     $task_prompt   = isset($question['question']) ? $question['question'] : '';
                     $task_image_url = isset($question['task_image_url']) ? $question['task_image_url'] : '';
+                    $show_task_prompt_to_student = !($task_type === 'task1_academic' && !empty($task_image_url));
+                    $student_task_prompt = $show_task_prompt_to_student ? $task_prompt : '';
                     $task_labels   = array(
                         'task2'          => 'Task 2',
                         'task1_academic' => 'Task 1 — Academic',
@@ -138,16 +140,23 @@ $show_completion_message = !isset($current_index) || empty($all_items) || $curre
                     );
                     $task_label = isset($task_labels[$task_type]) ? $task_labels[$task_type] : 'Writing Task';
                 ?>
-                <div class="ielts-writing-prompt-panel" id="writing-prompt-<?php echo esc_attr($idx); ?>" style="<?php echo ($idx === $first_index) ? '' : 'display:none;'; ?>">
+                <div class="ielts-writing-prompt-panel"
+                     id="writing-prompt-<?php echo esc_attr($idx); ?>"
+                     data-ai-prompt="<?php echo esc_attr(wp_strip_all_tags($task_prompt)); ?>"
+                     data-student-prompt="<?php echo esc_attr(wp_strip_all_tags($student_task_prompt)); ?>"
+                     data-task-image-url="<?php echo esc_attr($task_image_url); ?>"
+                     style="<?php echo ($idx === $first_index) ? '' : 'display:none;'; ?>">
                     <div class="writing-task-label"><?php echo esc_html($task_label); ?></div>
                     <?php if ($task_image_url): ?>
                     <div class="writing-task-image">
                         <img src="<?php echo esc_url($task_image_url); ?>" alt="" class="writing-chart-image">
                     </div>
                     <?php endif; ?>
+                    <?php if (!empty($student_task_prompt)): ?>
                     <div class="writing-task-prompt">
-                        <?php echo wp_kses_post(wpautop($task_prompt)); ?>
+                        <?php echo wp_kses_post(wpautop($student_task_prompt)); ?>
                     </div>
+                    <?php endif; ?>
                     <div class="writing-task-minimums">
                         <p><strong><?php _e('Minimum:', 'ielts-course-manager'); ?></strong>
                         <?php echo ($task_type === 'task2') ? '250 words' : '150 words'; ?></p>
