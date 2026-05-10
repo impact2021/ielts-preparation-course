@@ -8,6 +8,11 @@
     var progressTimers = [];
     var submitted      = false;
 
+    function countWords(text) {
+        var normalized = (text || '').trim();
+        return normalized ? normalized.split(/\s+/).filter(Boolean).length : 0;
+    }
+
     // ─── Set progress bar colour ─────────────────────────────────────
     if (cfg.progressColor) {
         document.documentElement.style.setProperty('--ielts-progress-color', cfg.progressColor);
@@ -19,7 +24,7 @@
         var idx  = $ta.data('question-index');
         var text = $ta.val();
 
-        var words = text.trim().length > 0 ? text.trim().split(/\s+/).filter(Boolean).length : 0;
+        var words = countWords(text);
         $('#word-count-' + idx).text(words);
 
         var paras = text.trim().length > 0
@@ -114,7 +119,7 @@
         if (!isAutoSubmit) {
         for (var i = 0; i < tasks.length; i++) {
             var t = tasks[i];
-            var wordCount = t.essay_text.trim().split(/\s+/).filter(Boolean).length;
+            var wordCount = countWords(t.essay_text);
 
             if (wordCount < 50) {
                 alert('Your ' + (t.task_type === 'task2' ? 'Task 2' : 'Task 1') + ' response is too short (' + wordCount + ' words). The minimum to submit is 50 words.');
