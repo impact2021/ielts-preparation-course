@@ -36,6 +36,128 @@ class IELTS_CM_Quiz_Handler {
                $field_audio_times['start'] !== null && 
                $field_audio_times['end'] !== null;
     }
+
+    /**
+     * Main-site admins are exempt from repeat delay limits.
+     *
+     * @param int $user_id User ID.
+     * @return bool
+     */
+    public static function is_repeat_delay_exempt_user($user_id) {
+        if (!$user_id) {
+            return false;
+        }
+        return is_main_site() && user_can($user_id, 'manage_options');
+    }
+
+    /**
+     * Get repeat delay hours for a quiz (0 = disabled).
+     *
+     * @param int $quiz_id Quiz ID.
+     * @return int
+     */
+    public static function get_repeat_delay_hours($quiz_id) {
+        $hours = intval(get_post_meta($quiz_id, '_ielts_cm_repeat_delay_hours', true));
+        return max(0, $hours);
+    }
+
+    /**
+     * Format an attempt score for cooldown messages.
+     *
+     * @param object $attempt Quiz result row.
+     * @return string
+     */
+    public static function format_attempt_score($attempt) {
+        $answers = json_decode($attempt->answers, true);
+        $is_band_score = is_array($answers) && (!empty($answers['writing_exercise']) || !empty($answers['speaking_exercise']));
+
+        if ($is_band_score) {
+            return sprintf(__('Band %s', 'ielts-course-manager'), number_format((float) $attempt->score, 1));
+        }
+
+        return sprintf(
+            __('%1$s / %2$s (%3$s%%)', 'ielts-course-manager'),
+            number_format((float) $attempt->score, 2),
+            number_format((float) $attempt->max_score, 2),
+            number_format((float) $attempt->percentage, 2)
+        );
+    }
+
+    /**
+     * Get repeat delay status for a user/quiz.
+     *
+     * @param int $user_id User ID.
+     * @param int $quiz_id Quiz ID.
+     * @return array
+     */
+    public static function get_repeat_delay_status($user_id, $quiz_id) {
+        $status = array(
+            'allowed' => true,
+            'delay_hours' => 0,
+            'hours_since_last_attempt' => null,
+            'hours_until_next_attempt' => null,
+            'last_attempt_score' => '',
+            'last_attempt_at' => '',
+            'next_attempt_at' => '',
+        );
+
+        if (!$user_id || !$quiz_id || self::is_repeat_delay_exempt_user($user_id)) {
+            return $status;
+        }
+
+        $delay_hours = self::get_repeat_delay_hours($quiz_id);
+        if ($delay_hours <= 0) {
+            return $status;
+        }
+
+        global $wpdb;
+        $table = $wpdb->prefix . 'ielts_cm_quiz_results';
+        $last_attempt = $wpdb->get_row($wpdb->prepare(
+            "SELECT * FROM $table WHERE user_id = %d AND quiz_id = %d ORDER BY submitted_date DESC LIMIT 1",
+            $user_id,
+            $quiz_id
+        ));
+
+        $status['delay_hours'] = $delay_hours;
+        if (!$last_attempt) {
+            return $status;
+        }
+
+        $last_ts = strtotime($last_attempt->submitted_date);
+        if (!$last_ts) {
+            return $status;
+        }
+
+        $now_ts = current_time('timestamp');
+        $next_ts = $last_ts + ($delay_hours * HOUR_IN_SECONDS);
+
+        $status['last_attempt_score'] = self::format_attempt_score($last_attempt);
+        $status['last_attempt_at'] = date_i18n(get_option('date_format') . ' ' . get_option('time_format'), $last_ts);
+        $status['next_attempt_at'] = date_i18n(get_option('date_format') . ' ' . get_option('time_format'), $next_ts);
+        $status['hours_since_last_attempt'] = max(0, round(($now_ts - $last_ts) / HOUR_IN_SECONDS, 1));
+
+        if ($now_ts < $next_ts) {
+            $status['allowed'] = false;
+            $status['hours_until_next_attempt'] = max(0.1, round(($next_ts - $now_ts) / HOUR_IN_SECONDS, 1));
+        }
+
+        return $status;
+    }
+
+    /**
+     * Build a user-facing repeat delay message.
+     *
+     * @param array $status Repeat delay status.
+     * @return string
+     */
+    public static function build_repeat_delay_message($status) {
+        return sprintf(
+            __('You last took this exercise %1$s hours ago. You can take it again in %2$s hours. Your previous score was %3$s.', 'ielts-course-manager'),
+            number_format((float) $status['hours_since_last_attempt'], 1),
+            number_format((float) $status['hours_until_next_attempt'], 1),
+            $status['last_attempt_score']
+        );
+    }
     
     /**
      * Submit quiz answers
@@ -47,8 +169,16 @@ class IELTS_CM_Quiz_Handler {
         if (!$user_id) {
             wp_send_json_error(array('message' => 'User not logged in'));
         }
-        
+
         $quiz_id = intval($_POST['quiz_id']);
+        $repeat_status = self::get_repeat_delay_status($user_id, $quiz_id);
+        if (!$repeat_status['allowed']) {
+            wp_send_json_error(array(
+                'message' => self::build_repeat_delay_message($repeat_status),
+                'repeat_delay' => $repeat_status
+            ));
+        }
+
         $course_id = intval($_POST['course_id']);
         $lesson_id = isset($_POST['lesson_id']) ? intval($_POST['lesson_id']) : null;
         $answers = isset($_POST['answers']) ? json_decode(stripslashes($_POST['answers']), true) : array();

@@ -42,7 +42,7 @@ class IELTS_CM_Writing_Assessment {
     public function enqueue_assets() {
         if (!is_user_logged_in()) return;
 
-        $writing_version = '1.55';
+        $writing_version = '1.56';
 
         wp_enqueue_style(
             'ielts-writing-assessment',
@@ -199,6 +199,19 @@ class IELTS_CM_Writing_Assessment {
         $user_id = get_current_user_id();
         if (!$user_id) {
             wp_send_json_error(array('message' => 'You must be logged in.'));
+        }
+
+        $quiz_id = intval($_POST['quiz_id'] ?? 0);
+
+        // Exercise-level repeat delay (used for AI-cost control in writing quiz exercises).
+        if ($quiz_id > 0 && class_exists('IELTS_CM_Quiz_Handler')) {
+            $repeat_status = IELTS_CM_Quiz_Handler::get_repeat_delay_status($user_id, $quiz_id);
+            if (!$repeat_status['allowed']) {
+                wp_send_json_error(array(
+                    'message' => IELTS_CM_Quiz_Handler::build_repeat_delay_message($repeat_status),
+                    'repeat_delay' => $repeat_status
+                ));
+            }
         }
 
         // Check 24-hour limit (admins and exercise mode are exempt)

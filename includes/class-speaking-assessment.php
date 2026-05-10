@@ -21,7 +21,7 @@ class IELTS_CM_Speaking_Assessment {
     }
 
     public function enqueue_assets() {
-        $v = '3.0';
+        $v = '3.1';
         wp_enqueue_style('ielts-speaking', IELTS_CM_PLUGIN_URL . 'assets/css/speaking.css', array(), $v);
 
         // Enqueue standalone shortcode JS
@@ -340,6 +340,18 @@ Return ONLY valid JSON:
     public function ajax_assess_full() {
         check_ajax_referer('ielts_speaking_nonce', 'nonce');
         if (!is_user_logged_in()) { wp_send_json_error(array('message' => 'Please log in.')); }
+
+        $user_id = get_current_user_id();
+        $quiz_id = intval($_POST['quiz_id'] ?? 0);
+        if ($quiz_id > 0 && class_exists('IELTS_CM_Quiz_Handler')) {
+            $repeat_status = IELTS_CM_Quiz_Handler::get_repeat_delay_status($user_id, $quiz_id);
+            if (!$repeat_status['allowed']) {
+                wp_send_json_error(array(
+                    'message' => IELTS_CM_Quiz_Handler::build_repeat_delay_message($repeat_status),
+                    'repeat_delay' => $repeat_status
+                ));
+            }
+        }
 
         $raw = isset($_POST['responses']) ? $_POST['responses'] : array();
         if (empty($raw) || !is_array($raw)) { wp_send_json_error(array('message' => 'No responses.')); }
