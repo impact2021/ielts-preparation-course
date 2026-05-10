@@ -10,6 +10,8 @@ if (!defined('ABSPATH')) {
 class IELTS_CM_Quiz_Handler {
     
     private $db;
+    private const MIN_BAND_SCORE = 1.0;
+    private const MAX_BAND_SCORE = 9.0;
     
     public function __construct() {
         $this->db = new IELTS_CM_Database();
@@ -1351,11 +1353,20 @@ class IELTS_CM_Quiz_Handler {
     /**
      * Convert correct answers to IELTS band score
      * 
-     * @param int $correct_answers Number of correct answers
+     * @param float|int $score_value Score value:
+     *                               - writing_assessment: direct IELTS band score (1.0-9.0, float)
+     *                               - other IELTS scoring types: count of correct answers (integer)
      * @param string $scoring_type Type of scoring (ielts_general_reading, ielts_academic_reading, ielts_listening)
      * @return float Band score (0-9)
      */
-    public function convert_to_band_score($correct_answers, $scoring_type) {
+    public function convert_to_band_score($score_value, $scoring_type) {
+        // Writing assessment stores band directly in score
+        if ($scoring_type === 'writing_assessment') {
+            $band_score = floatval($score_value);
+            // Clamp to valid IELTS range to guard against invalid stored/requested values.
+            return max(self::MIN_BAND_SCORE, min(self::MAX_BAND_SCORE, $band_score));
+        }
+
         // Get the conversion table
         $table_data = $this->get_band_score_table($scoring_type);
         
@@ -1367,12 +1378,12 @@ class IELTS_CM_Quiz_Handler {
         $max_score = $table_data['max_score'];
         
         // Look up the band score
-        if (isset($table[$correct_answers])) {
-            return $table[$correct_answers];
+        if (isset($table[$score_value])) {
+            return $table[$score_value];
         }
         
         // If exact match not found, use the highest available score for scores above max
-        if ($correct_answers > $max_score) {
+        if ($score_value > $max_score) {
             return $table[$max_score];
         }
         
@@ -1398,6 +1409,16 @@ class IELTS_CM_Quiz_Handler {
                 'display' => round($percentage, 1) . '%',
                 'value' => $percentage,
                 'type' => 'percentage'
+            );
+        }
+
+        // Writing assessment display (stored score is already a band value)
+        if ($scoring_type === 'writing_assessment') {
+            $band_score = $this->convert_to_band_score($score, $scoring_type);
+            return array(
+                'display' => 'Band ' . number_format($band_score, 1),
+                'value' => $band_score,
+                'type' => 'band'
             );
         }
         
