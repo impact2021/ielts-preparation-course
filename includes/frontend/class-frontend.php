@@ -36,6 +36,9 @@ class IELTS_CM_Frontend {
         
         // Hide admin bar for students (non-admins)
         add_action('after_setup_theme', array($this, 'hide_admin_bar_for_students'));
+
+        // Redirect expired/unenrolled access-code users to the my-account page
+        add_action('template_redirect', array($this, 'redirect_expired_access_code_users'));
         
         // Block login attempts that exceed the configured rate limit.
         // Priority 1 ensures this runs before WordPress authenticates the credentials.
@@ -71,6 +74,95 @@ class IELTS_CM_Frontend {
         if (!current_user_can('administrator') && !is_admin()) {
             show_admin_bar(false);
         }
+    }
+
+    /**
+     * Redirect expired or unenrolled access-code users to the my-account page.
+     *
+     * Only fires on access-code sites. Bypasses administrators, partner admins,
+     * the my-account page itself, the login page, and logout actions so users
+     * are never redirect-looped.
+     */
+    public function redirect_expired_access_code_users() {
+        // Only applies to access-code sites
+        if (!get_option('ielts_cm_access_code_enabled', false)) {
+            return;
+        }
+
+        // Only applies to logged-in users
+        if (!is_user_logged_in()) {
+            return;
+        }
+
+        $user = wp_get_current_user();
+
+        // Never redirect administrators or partner admins
+        if (in_array('administrator', $user->roles) || in_array('partner_admin', $user->roles)) {
+            return;
+        }
+
+        // Never redirect during a logout action
+        if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+            return;
+        }
+
+        // Get the configured my-account URL (default /my-account/)
+        $my_account_url = get_option('ielts_cm_my_account_url', home_url('/my-account/'));
+
+        // Never redirect if already on the my-account page or the WP login page
+        $current_url = home_url(add_query_arg(array(), $GLOBALS['wp']->request));
+        $my_account_path = rtrim(parse_url($my_account_url, PHP_URL_PATH), '/');
+        $current_path    = '/' . ltrim($GLOBALS['wp']->request, '/');
+
+        if (rtrim($current_path, '/') === $my_account_path) {
+            return;
+        }
+        if (in_array($GLOBALS['pagenow'] ?? '', array('wp-login.php', 'wp-register.php'))) {
+            return;
+        }
+
+        // Determine whether this user needs to be redirected.
+        // Case 1: Has an access-code membership type but it has expired.
+        // Case 2: Plain subscriber with no membership type at all (never enrolled).
+        $membership_type   = get_user_meta($user->ID, '_ielts_cm_membership_type', true);
+        $membership_status = get_user_meta($user->ID, '_ielts_cm_membership_status', true);
+        $expiry_date       = get_user_meta($user->ID, 'iw_membership_expiry', true);
+
+        $has_access_code_type = !empty($membership_type) && strpos($membership_type, 'access_') === 0;
+
+        if ($has_access_code_type) {
+            // Check if expired by status or by date
+            $is_expired_by_status = ($membership_status === 'expired');
+            $is_expired_by_date   = !empty($expiry_date) && strtotime($expiry_date) <= time();
+
+            if (!$is_expired_by_status && !$is_expired_by_date) {
+                return; // Active access-code user — no redirect
+            }
+        } else {
+            // No access-code membership type — plain subscriber or unknown role
+            // Only redirect if they have no valid membership role at all
+            $access_code_roles    = class_exists('IELTS_CM_Access_Codes')
+                ? array_keys(IELTS_CM_Access_Codes::ACCESS_CODE_MEMBERSHIP_TYPES)
+                : array();
+            $paid_roles           = array_keys(IELTS_CM_Membership::MEMBERSHIP_LEVELS);
+            $all_membership_roles = array_merge($access_code_roles, $paid_roles);
+
+            $has_any_membership_role = false;
+            foreach ($user->roles as $role) {
+                if (in_array($role, $all_membership_roles)) {
+                    $has_any_membership_role = true;
+                    break;
+                }
+            }
+
+            if ($has_any_membership_role) {
+                return; // Has some other valid membership role — leave alone
+            }
+        }
+
+        // Redirect to my-account page
+        wp_safe_redirect($my_account_url);
+        exit;
     }
     
     /**

@@ -1,0 +1,518 @@
+/* ============================================
+   IELTS Writing Assessment — Frontend Styles
+   ============================================ */
+
+.ielts-writing-wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.ielts-writing-title {
+    font-size: 1.6em;
+    margin-bottom: 6px;
+}
+
+.ielts-writing-subtitle {
+    color: #555;
+    margin-bottom: 24px;
+}
+
+/* --- Cooldown Notice --- */
+.ielts-writing-cooldown {
+    background: #fff8e1;
+    border-left: 4px solid #f5a623;
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95em;
+}
+
+.ielts-writing-cooldown-icon { font-size: 1.3em; }
+
+/* --- Form --- */
+.ielts-writing-form--disabled { opacity: 0.6; pointer-events: none; }
+
+.ielts-writing-field {
+    margin-bottom: 20px;
+}
+
+.ielts-writing-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+}
+
+.ielts-required { color: #c0392b; }
+
+.ielts-field-hint {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0 0 6px 0;
+}
+
+.ielts-writing-field textarea,
+.ielts-writing-field select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.95em;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
+}
+
+.ielts-writing-field textarea:focus,
+.ielts-writing-field select:focus {
+    outline: none;
+    border-color: #4a90d9;
+    box-shadow: 0 0 0 2px rgba(74,144,217,0.15);
+}
+
+.ielts-word-count {
+    text-align: right;
+    font-size: 0.82em;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* --- Buttons --- */
+.ielts-writing-btn {
+    display: inline-block;
+    padding: 11px 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: background 0.2s, opacity 0.2s;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.ielts-writing-btn--primary {
+    background: #2271b1;
+    color: #fff;
+}
+.ielts-writing-btn--primary:hover { background: #135e96; }
+
+.ielts-writing-btn--secondary {
+    background: #f0f0f1;
+    color: #333;
+    border: 1px solid #ccc;
+}
+.ielts-writing-btn--secondary:hover { background: #ddd; }
+
+.ielts-writing-btn--ghost {
+    background: transparent;
+    color: #666;
+    border: 1px solid #ccc;
+}
+.ielts-writing-btn--ghost:hover { background: #f0f0f0; }
+
+.ielts-writing-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* --- Progress Bar Loading --- */
+.ielts-writing-loading {
+    padding: 40px 20px;
+}
+
+.ielts-progress-wrap {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.ielts-progress-bar-track {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.ielts-progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--ielts-progress-color, #2271b1);
+    border-radius: 4px;
+    transition: width 0.8s ease;
+}
+
+.ielts-progress-label {
+    font-size: 0.92em;
+    color: #555;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+/* --- Results Card --- */
+.ielts-writing-results { margin: 30px 0; }
+
+.ielts-results-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.ielts-results-header {
+    background: #1d3557;
+    color: #fff;
+    padding: 24px 28px;
+    text-align: center;
+}
+
+.ielts-overall-band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.ielts-band-label {
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+.ielts-band-score {
+    font-size: 3.2em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 12px 28px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.band-high      { background: #27ae60; color: #fff; }
+.band-mid       { background: #f5a623; color: #fff; }
+.band-low       { background: #e67e22; color: #fff; }
+.band-very-low  { background: #c0392b; color: #fff; }
+
+.ielts-summary { opacity: 0.9; font-size: 0.95em; max-width: 600px; margin: 0 auto; }
+
+/* --- Criteria Grid --- */
+.ielts-criteria-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ielts-criterion {
+    padding: 20px 24px;
+    border-bottom: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+}
+
+.ielts-criterion:nth-child(even) { border-right: none; }
+
+.ielts-criterion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.ielts-criterion-label { font-weight: 600; font-size: 0.9em; color: #333; }
+
+.ielts-criterion-score {
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+}
+
+.ielts-criterion-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.ielts-criterion-fill {
+    height: 100%;
+    background: #2271b1;
+    border-radius: 3px;
+    transition: width 0.6s ease;
+}
+
+.ielts-criterion-feedback { font-size: 0.88em; color: #555; line-height: 1.5; margin: 0; }
+
+/* --- Issues Section --- */
+.ielts-issues-section {
+    padding: 20px 24px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.ielts-issues-section h4 { margin: 0 0 12px; font-size: 1em; color: #333; }
+
+.ielts-issue-item {
+    background: #fff8f8;
+    border-left: 3px solid #c0392b;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.88em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: baseline;
+}
+
+.ielts-issue-error { color: #c0392b; text-decoration: line-through; font-weight: 500; }
+.ielts-issue-arrow { color: #999; }
+.ielts-issue-correction { color: #27ae60; font-weight: 500; }
+.ielts-issue-explanation { color: #666; font-style: italic; flex-basis: 100%; }
+
+/* --- Strengths/Improvements --- */
+.ielts-feedback-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.ielts-strengths, .ielts-improvements {
+    padding: 20px 24px;
+}
+
+.ielts-strengths { border-right: 1px solid #f0f0f0; }
+
+.ielts-strengths h4, .ielts-improvements h4 { margin: 0 0 10px; font-size: 0.95em; }
+
+.ielts-strengths ul, .ielts-improvements ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.ielts-strengths li, .ielts-improvements li {
+    font-size: 0.88em;
+    color: #444;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* --- Writing Actions (Dispute) --- */
+.ielts-writing-actions { margin-top: 16px; }
+
+.ielts-dispute-form {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 18px;
+    margin-top: 16px;
+}
+
+.ielts-dispute-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+
+.ielts-dispute-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.ielts-dispute-success {
+    background: #edfbf0;
+    border: 1px solid #27ae60;
+    border-radius: 6px;
+    padding: 14px 18px;
+    margin-top: 12px;
+    font-size: 0.92em;
+    color: #1a6b3a;
+}
+
+/* --- History Table --- */
+.ielts-writing-history-section {
+    margin-top: 40px;
+    border-top: 2px solid #e0e0e0;
+    padding-top: 24px;
+}
+
+.ielts-writing-history-section h3 { margin-bottom: 14px; }
+
+.ielts-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.ielts-history-table th {
+    background: #f5f5f5;
+    padding: 9px 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+    font-weight: 600;
+    font-size: 0.85em;
+    color: #333;
+}
+
+.ielts-history-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.ielts-history-feedback-row td {
+    background: #f9f9f9;
+    font-size: 0.87em;
+    color: #444;
+    padding: 8px 12px;
+}
+
+/* --- Status Pills --- */
+.ielts-status {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.ielts-status--auto     { background: #e8f0fe; color: #1557b0; }
+.ielts-status--disputed { background: #fff0e0; color: #b05e00; }
+.ielts-status--reviewed { background: #e6f4ea; color: #1a6b3a; }
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+    .ielts-criteria-grid,
+    .ielts-feedback-columns { grid-template-columns: 1fr; }
+    .ielts-criterion:nth-child(even) { border-right: none; }
+    .ielts-strengths { border-right: none; border-bottom: 1px solid #f0f0f0; }
+}
+
+.ielts-writing-notice {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    padding: 12px 16px;
+    border-radius: 4px;
+}
+
+
+/* --- Submitted Essay Display --- */
+.ielts-submitted-essay {
+    border-top: 1px solid #f0f0f0;
+    padding: 20px 24px;
+}
+
+.ielts-essay-details {
+    margin-bottom: 12px;
+}
+
+.ielts-essay-details summary {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+}
+
+.ielts-essay-details summary::-webkit-details-marker { color: #999; }
+
+.ielts-essay-wordcount {
+    font-weight: normal;
+    color: #888;
+    font-size: 0.85em;
+}
+
+.ielts-essay-content {
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 14px 16px;
+    margin-top: 8px;
+    font-size: 0.9em;
+    line-height: 1.7;
+    color: #444;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+}
+
+.ielts-task-prompt-block {
+    margin-bottom: 16px;
+}
+
+.ielts-task-prompt-label {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+/* --- History Toggle Button --- */
+.ielts-history-toggle-btn {
+    background: #f0f0f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.82em;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.ielts-history-toggle-btn:hover { background: #ddd; }
+
+/* --- History Detail Row --- */
+.ielts-history-detail-row td { padding: 0; }
+
+.ielts-history-detail {
+    padding: 20px 24px;
+    background: #fafafa;
+    border-top: 2px solid var(--ielts-progress-color, #2271b1);
+}
+
+.ielts-history-instructor-note {
+    background: #e6f4ea;
+    border-left: 4px solid #27ae60;
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 16px;
+    font-size: 0.9em;
+}
+
+.ielts-history-prompt {
+    margin-bottom: 16px;
+}
+
+.ielts-history-prompt strong {
+    display: block;
+    font-size: 0.9em;
+    margin-bottom: 6px;
+}
+
+.ielts-history-summary {
+    font-size: 0.92em;
+    color: #444;
+    margin: 12px 0 16px;
+    font-style: italic;
+}
+
+/* --- Show All History Button --- */
+.ielts-history-show-all {
+    text-align: center;
+    margin-top: 14px;
+}

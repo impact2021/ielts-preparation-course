@@ -12,6 +12,7 @@ class IELTS_CM_Activator {
     public static function activate() {
         // Create database tables
         IELTS_CM_Database::create_tables();
+        IELTS_CM_Writing_Assessment::create_table();
         
         // Register post types before flushing to ensure proper rewrite rules
         require_once IELTS_CM_PLUGIN_DIR . 'includes/class-post-types.php';

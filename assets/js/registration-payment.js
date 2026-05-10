@@ -237,12 +237,24 @@
         $(document).on('click', '.payment-method-btn', function() {
             const method = $(this).data('method');
             if (!method) return;
-            
+
             selectedPaymentMethod = method;
-            
+
+            // Update active state on buttons
+            $('.payment-method-btn').removeClass('active').attr('aria-pressed', 'false');
+            $(this).addClass('active').attr('aria-pressed', 'true');
+
+            const $stripeContainer = $('#stripe-payment-container');
+            const $paypalContainer = $('#paypal-payment-container');
+
             if (method === 'paypal') {
+                // Switch containers
+                $stripeContainer.removeClass('active').attr('aria-hidden', 'true');
+                $paypalContainer.addClass('active').attr('aria-hidden', 'false');
+
                 // Hide the Stripe submit button; PayPal Buttons handle their own submission
                 $('#ielts_payment_submit').hide();
+
                 // Initialize PayPal Buttons (idempotent – re-renders if already mounted)
                 const membershipType = $('#ielts_membership_type').val();
                 const price = getPriceForMembershipType(membershipType);
@@ -251,7 +263,8 @@
                 }
             } else {
                 // Switching back to Stripe
-                selectedPaymentMethod = 'stripe';
+                $paypalContainer.removeClass('active').attr('aria-hidden', 'true');
+                $stripeContainer.addClass('active').attr('aria-hidden', 'false');
                 $('#ielts_payment_submit').show();
             }
         });

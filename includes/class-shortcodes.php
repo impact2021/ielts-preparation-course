@@ -2778,7 +2778,7 @@ class IELTS_CM_Shortcodes {
                                 </div>
                                 
                                 <!-- PayPal Payment -->
-                                <div id="paypal-payment-container" class="payment-container" style="display: none;">
+                                <div id="paypal-payment-container" class="payment-container">
                                     <div id="paypal-button-container"></div>
                                     <p class="payment-note"><?php _e('Click the PayPal button below to complete your payment securely.', 'ielts-course-manager'); ?></p>
                                 </div>
@@ -3036,44 +3036,8 @@ class IELTS_CM_Shortcodes {
         (function() {
             // Add loading animation to Create Account button for non-payment submissions
             document.addEventListener('DOMContentLoaded', function() {
-                // Payment method switcher - only if payment section exists
-                var paymentSection = document.getElementById('ielts-payment-section');
-                if (paymentSection) {
-                    var paymentMethodBtns = document.querySelectorAll('.payment-method-btn');
-                    var stripeContainer = document.getElementById('stripe-payment-container');
-                    var paypalContainer = document.getElementById('paypal-payment-container');
-                    
-                    if (paymentMethodBtns.length > 0 && stripeContainer && paypalContainer) {
-                        paymentMethodBtns.forEach(function(btn) {
-                            btn.addEventListener('click', function(e) {
-                                e.preventDefault();
-                                var method = this.getAttribute('data-method');
-                                
-                                // Update button states and ARIA attributes
-                                paymentMethodBtns.forEach(function(b) {
-                                    b.classList.remove('active');
-                                    b.setAttribute('aria-pressed', 'false');
-                                });
-                                this.classList.add('active');
-                                this.setAttribute('aria-pressed', 'true');
-                                
-                                // Show/hide payment containers
-                                stripeContainer.classList.remove('active');
-                                paypalContainer.classList.remove('active');
-                                
-                                if (method === 'stripe') {
-                                    stripeContainer.classList.add('active');
-                                    paypalContainer.setAttribute('aria-hidden', 'true');
-                                    stripeContainer.setAttribute('aria-hidden', 'false');
-                                } else if (method === 'paypal') {
-                                    paypalContainer.classList.add('active');
-                                    stripeContainer.setAttribute('aria-hidden', 'true');
-                                    paypalContainer.setAttribute('aria-hidden', 'false');
-                                }
-                            });
-                        });
-                    }
-                }
+                // Payment method switching is handled by registration-payment.js
+                // which also initialises PayPal Buttons on demand.
                 
                 var form = document.querySelector('form[name="ielts_registration_form"]');
                 if (form) {
@@ -3479,19 +3443,36 @@ class IELTS_CM_Shortcodes {
                                 $membership_name = isset($membership_levels[$membership_type]) 
                                     ? $membership_levels[$membership_type] 
                                     : $membership_type;
-                                printf(
-                                    __('You are currently enrolled in: %s', 'ielts-course-manager'), 
-                                    '<strong>' . esc_html($membership_name) . '</strong>'
-                                );
+                                // Determine whether enrolment is still active or has expired
+                                $extend_expiry_ts = !empty($expiry_date) ? strtotime($expiry_date) : false;
+                                $extend_is_expired = $extend_expiry_ts && $extend_expiry_ts < time();
+                                if ($extend_is_expired) {
+                                    printf(
+                                        __('You were previously enrolled in: %s', 'ielts-course-manager'),
+                                        '<strong>' . esc_html($membership_name) . '</strong>'
+                                    );
+                                } else {
+                                    printf(
+                                        __('You are currently enrolled in: %s', 'ielts-course-manager'),
+                                        '<strong>' . esc_html($membership_name) . '</strong>'
+                                    );
+                                }
                                 ?>
                             </p>
                             <?php if (!empty($expiry_date)): ?>
                                 <p>
                                     <?php 
-                                    printf(
-                                        __('Your membership will expire on: %s', 'ielts-course-manager'),
-                                        '<strong>' . date('F j, Y', strtotime($expiry_date)) . '</strong>'
-                                    );
+                                    if ($extend_is_expired) {
+                                        printf(
+                                            __('Your membership expired on: %s', 'ielts-course-manager'),
+                                            '<strong>' . date('F j, Y', $extend_expiry_ts) . '</strong>'
+                                        );
+                                    } else {
+                                        printf(
+                                            __('Your membership expires on: %s', 'ielts-course-manager'),
+                                            '<strong>' . date('F j, Y', $extend_expiry_ts) . '</strong>'
+                                        );
+                                    }
                                     ?>
                                 </p>
                             <?php endif; ?>
@@ -3514,8 +3495,70 @@ class IELTS_CM_Shortcodes {
                                     </p>
                                 <?php endif; ?>
                             <?php elseif (!$hybrid_mode_enabled): ?>
-                                <!-- Access code membership on non-hybrid site - contact partner admin -->
-                                <p><?php _e('Your access was provided through a partner access code. To extend your course access, please contact your course administrator.', 'ielts-course-manager'); ?></p>
+                                <!-- Access code membership on non-hybrid site: show extension code message and form -->
+                                <p><?php _e('Enter an access code below to extend your course access.', 'ielts-course-manager'); ?></p>
+                                <div id="ielts-extend-code-message"></div>
+                                <form id="ielts-extend-code-form" class="ielts-form">
+                                    <?php wp_nonce_field('ielts_extend_by_code', 'ielts_extend_code_nonce'); ?>
+                                    <div class="ielts-form-group">
+                                        <label for="ielts_extend_access_code"><?php _e('Access Code', 'ielts-course-manager'); ?> <span class="required">*</span></label>
+                                        <input type="text" id="ielts_extend_access_code" name="ielts_extend_access_code"
+                                               class="ielts-form-input" placeholder="<?php esc_attr_e('Enter your access code', 'ielts-course-manager'); ?>"
+                                               style="text-transform:uppercase;" maxlength="32">
+                                    </div>
+                                    <div class="ielts-form-actions">
+                                        <button type="submit" class="ielts-button ielts-button-primary" id="ielts-extend-code-submit">
+                                            <?php _e('Apply Code', 'ielts-course-manager'); ?>
+                                        </button>
+                                    </div>
+                                </form>
+                                <script>
+                                (function(){
+                                    var form    = document.getElementById('ielts-extend-code-form');
+                                    var msgBox  = document.getElementById('ielts-extend-code-message');
+                                    var btn     = document.getElementById('ielts-extend-code-submit');
+                                    if (!form) return;
+                                    form.addEventListener('submit', function(e){
+                                        e.preventDefault();
+                                        var code  = document.getElementById('ielts_extend_access_code').value.trim().toUpperCase();
+                                        var nonce = form.querySelector('[name="ielts_extend_code_nonce"]').value;
+                                        if (!code) {
+                                            msgBox.innerHTML = '<div class="ielts-message ielts-error"><p><?php echo esc_js(__('Please enter an access code.', 'ielts-course-manager')); ?></p></div>';
+                                            return;
+                                        }
+                                        btn.disabled = true;
+                                        btn.textContent = '<?php echo esc_js(__('Applying…', 'ielts-course-manager')); ?>';
+                                        msgBox.innerHTML = '';
+                                        var data = new FormData();
+                                        data.append('action', 'ielts_cm_extend_by_code');
+                                        data.append('ielts_extend_code_nonce', nonce);
+                                        data.append('ielts_extend_access_code', code);
+                                        fetch('<?php echo esc_url(admin_url('admin-ajax.php')); ?>', {
+                                            method: 'POST',
+                                            credentials: 'same-origin',
+                                            body: data
+                                        })
+                                        .then(function(r){ return r.json(); })
+                                        .then(function(resp){
+                                            if (resp.success) {
+                                                msgBox.innerHTML = '<div class="ielts-message ielts-success"><p>' + resp.data.message + '</p></div>';
+                                                form.style.display = 'none';
+                                                // Refresh the page after 2 seconds so the new expiry date shows
+                                                setTimeout(function(){ window.location.reload(); }, 2000);
+                                            } else {
+                                                msgBox.innerHTML = '<div class="ielts-message ielts-error"><p>' + resp.data.message + '</p></div>';
+                                                btn.disabled = false;
+                                                btn.textContent = '<?php echo esc_js(__('Apply Code', 'ielts-course-manager')); ?>';
+                                            }
+                                        })
+                                        .catch(function(){
+                                            msgBox.innerHTML = '<div class="ielts-message ielts-error"><p><?php echo esc_js(__('An error occurred. Please try again.', 'ielts-course-manager')); ?></p></div>';
+                                            btn.disabled = false;
+                                            btn.textContent = '<?php echo esc_js(__('Apply Code', 'ielts-course-manager')); ?>';
+                                        });
+                                    });
+                                })();
+                                </script>
                             <?php else: ?>
                                 <!-- Access code membership on hybrid site - show inline extension payment -->
                                 <p><?php _e('Select an extension option below to extend your course access.', 'ielts-course-manager'); ?></p>

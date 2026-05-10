@@ -295,7 +295,23 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
             // Include the appropriate template based on layout type
             // Both two_column_reading and two_column_listening use the same template
             if (in_array($layout_type, array('two_column_reading', 'two_column_listening'))) {
-                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
+                // Check if this exercise has writing_task or speaking_test questions
+                $questions_check = get_post_meta($quiz_id, '_ielts_cm_questions', true);
+                $has_writing_tasks  = false;
+                $has_speaking_tests = false;
+                if (is_array($questions_check)) {
+                    foreach ($questions_check as $q) {
+                        if (isset($q['type']) && $q['type'] === 'writing_task')  $has_writing_tasks  = true;
+                        if (isset($q['type']) && $q['type'] === 'speaking_test') $has_speaking_tests = true;
+                    }
+                }
+                if ($has_speaking_tests) {
+                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-speaking.php';
+                } elseif ($has_writing_tasks) {
+                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-writing.php';
+                } else {
+                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
+                }
             } else {
                 $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
             }
