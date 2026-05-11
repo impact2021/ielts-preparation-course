@@ -98,7 +98,7 @@ class IELTS_CM_Shortcodes {
      * @return bool
      */
     private function is_trial_email_verification_enabled() {
-        if (!(bool) get_option('ielts_cm_trial_email_verification_enabled', false)) {
+        if (!(bool) get_option('ielts_cm_trial_email_verification_enabled', true)) {
             return false;
         }
 

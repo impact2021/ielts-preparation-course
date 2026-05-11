@@ -817,7 +817,7 @@ class IELTS_CM_Membership {
         
         $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
         $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', true);
-        $trial_email_verification_enabled = (bool) get_option('ielts_cm_trial_email_verification_enabled', false);
+        $trial_email_verification_enabled = (bool) get_option('ielts_cm_trial_email_verification_enabled', true);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
