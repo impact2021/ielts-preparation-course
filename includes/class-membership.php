@@ -1633,7 +1633,7 @@ Director IELTStestONLINE'
             <p><?php _e('Available placeholders:', 'ielts-course-manager'); ?></p>
             <ul>
                 <li><code>{first_name}</code> - <?php _e('User\'s first name (recommended)', 'ielts-course-manager'); ?></li>
-                <li><code>{username}</code> - <?php _e('User\'s display name', 'ielts-course-manager'); ?></li>
+                <li><code>{username}</code> - <?php _e('User\'s first name, or display name if no first name is set (same as {first_name})', 'ielts-course-manager'); ?></li>
                 <li><code>{email}</code> - <?php _e('User\'s email address', 'ielts-course-manager'); ?></li>
                 <li><code>{membership_name}</code> - <?php _e('Name of the membership plan', 'ielts-course-manager'); ?></li>
                 <li><code>{expiry_date}</code> - <?php _e('Membership expiry date', 'ielts-course-manager'); ?></li>
@@ -1761,6 +1761,12 @@ Director IELTStestONLINE'
      * Migrate email templates to updated defaults (runs once on init)
      */
     private function maybe_migrate_email_templates() {
+        static $already_checked = false;
+        if ($already_checked) {
+            return;
+        }
+        $already_checked = true;
+
         $migrated_version = get_option('ielts_cm_email_template_version', '0');
         if (version_compare($migrated_version, '1.1', '>=')) {
             return;
