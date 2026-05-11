@@ -157,18 +157,25 @@ class IELTS_CM_Quiz_Handler {
      * @return string
      */
     public static function build_repeat_delay_message($status) {
-        $hours_until = number_format((float) $status['hours_until_next_attempt'], 1);
+        $hours_until_value = round((float) $status['hours_until_next_attempt'], 1);
+        $hours_until = number_format($hours_until_value, 1);
+        $hours_label = ($hours_until_value === 1.0)
+            ? __('hour', 'ielts-course-manager')
+            : __('hours', 'ielts-course-manager');
+
         if (!empty($status['last_attempt_score'])) {
             return sprintf(
-                __('You need to wait %1$s hours before you can submit a new attempt. Your previous score was %2$s.', 'ielts-course-manager'),
+                __('You need to wait %1$s %2$s before you can submit a new attempt. Your previous score was %3$s.', 'ielts-course-manager'),
                 $hours_until,
+                $hours_label,
                 $status['last_attempt_score']
             );
         }
 
         return sprintf(
-            __('You need to wait %s hours before you can submit a new attempt.', 'ielts-course-manager'),
-            $hours_until
+            __('You need to wait %1$s %2$s before you can submit a new attempt.', 'ielts-course-manager'),
+            $hours_until,
+            $hours_label
         );
     }
     
