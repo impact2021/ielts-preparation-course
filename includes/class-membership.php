@@ -75,6 +75,9 @@ class IELTS_CM_Membership {
         // Create custom roles for membership levels on init
         $this->create_membership_roles();
         
+        // Migrate email templates to updated defaults
+        $this->maybe_migrate_email_templates();
+        
         // Add admin menu (only shows if system is enabled) and register settings
         add_action('admin_menu', array($this, 'add_admin_menu'));
         add_action('admin_init', array($this, 'register_settings'));
@@ -1560,7 +1563,7 @@ class IELTS_CM_Membership {
         // Get saved email templates or set defaults
         $trial_enrollment = get_option('ielts_cm_email_trial_enrollment', array(
             'subject' => 'Welcome to Your Free Trial!',
-            'message' => 'Hi {username},
+            'message' => 'Hi {first_name},
 
 Welcome to your free trial of {membership_name}!
 
@@ -1568,13 +1571,17 @@ Your trial will expire on {expiry_date}.
 
 To continue accessing all our courses after your trial ends, please upgrade to a full membership.
 
-Best regards,
-The IELTS Team'
+Visit our site: {site_url}
+Upgrade now: {upgrade_url}
+
+All the best,
+Patrick
+Director IELTStestONLINE'
         ));
         
         $full_enrollment = get_option('ielts_cm_email_full_enrollment', array(
             'subject' => 'Welcome to Your Full Membership!',
-            'message' => 'Hi {username},
+            'message' => 'Hi {first_name},
 
 Welcome to {membership_name}!
 
@@ -1582,13 +1589,16 @@ You now have full access to all courses and features.
 
 Your membership will expire on {expiry_date}.
 
-Best regards,
-The IELTS Team'
+Visit our site: {site_url}
+
+All the best,
+Patrick
+Director IELTStestONLINE'
         ));
         
         $trial_expired = get_option('ielts_cm_email_trial_expired', array(
             'subject' => 'Your Trial Has Expired',
-            'message' => 'Hi {username},
+            'message' => 'Hi {first_name},
 
 Your trial membership has expired.
 
@@ -1596,13 +1606,14 @@ To continue accessing our courses, please upgrade to a full membership.
 
 Visit: {upgrade_url}
 
-Best regards,
-The IELTS Team'
+All the best,
+Patrick
+Director IELTStestONLINE'
         ));
         
         $full_expired = get_option('ielts_cm_email_full_expired', array(
             'subject' => 'Your Membership Has Expired',
-            'message' => 'Hi {username},
+            'message' => 'Hi {first_name},
 
 Your membership has expired.
 
@@ -1610,8 +1621,9 @@ To renew your membership and continue accessing our courses, please visit your a
 
 Visit: {renewal_url}
 
-Best regards,
-The IELTS Team'
+All the best,
+Patrick
+Director IELTStestONLINE'
         ));
         
         ?>
@@ -1620,11 +1632,14 @@ The IELTS Team'
             <p><?php _e('Configure the default emails sent to users for different membership events.', 'ielts-course-manager'); ?></p>
             <p><?php _e('Available placeholders:', 'ielts-course-manager'); ?></p>
             <ul>
+                <li><code>{first_name}</code> - <?php _e('User\'s first name (recommended)', 'ielts-course-manager'); ?></li>
                 <li><code>{username}</code> - <?php _e('User\'s display name', 'ielts-course-manager'); ?></li>
                 <li><code>{email}</code> - <?php _e('User\'s email address', 'ielts-course-manager'); ?></li>
                 <li><code>{membership_name}</code> - <?php _e('Name of the membership plan', 'ielts-course-manager'); ?></li>
                 <li><code>{expiry_date}</code> - <?php _e('Membership expiry date', 'ielts-course-manager'); ?></li>
-                <li><code>{upgrade_url}</code> - <?php _e('URL to upgrade membership', 'ielts-course-manager'); ?></li>
+                <li><code>{site_url}</code> - <?php _e('URL to the site home page', 'ielts-course-manager'); ?></li>
+                <li><code>{upgrade_url}</code> - <?php _e('URL to upgrade/enrol in membership', 'ielts-course-manager'); ?></li>
+                <li><code>{enrol_url}</code> - <?php _e('URL to the enrolment page (same as upgrade URL)', 'ielts-course-manager'); ?></li>
                 <li><code>{renewal_url}</code> - <?php _e('URL to renew membership', 'ielts-course-manager'); ?></li>
                 <li><code>{videos_completed}</code> - <?php _e('Number of videos watched', 'ielts-course-manager'); ?></li>
                 <li><code>{total_videos}</code> - <?php _e('Total number of videos available', 'ielts-course-manager'); ?></li>
@@ -1743,6 +1758,57 @@ The IELTS Team'
     }
     
     /**
+     * Migrate email templates to updated defaults (runs once on init)
+     */
+    private function maybe_migrate_email_templates() {
+        $migrated_version = get_option('ielts_cm_email_template_version', '0');
+        if (version_compare($migrated_version, '1.1', '>=')) {
+            return;
+        }
+
+        $old_signoff = "Best regards,\nThe IELTS Team";
+        $new_signoff  = "All the best,\nPatrick\nDirector IELTStestONLINE";
+
+        // Migrate trial enrollment template
+        $trial_template = get_option('ielts_cm_email_trial_enrollment', array());
+        if (!empty($trial_template['message']) && strpos($trial_template['message'], $old_signoff) !== false) {
+            $trial_template['message'] = str_replace($old_signoff, $new_signoff, $trial_template['message']);
+            if (strpos($trial_template['message'], '{site_url}') === false
+                && strpos($trial_template['message'], '{upgrade_url}') === false) {
+                $trial_template['message'] = str_replace(
+                    "please upgrade to a full membership.",
+                    "please upgrade to a full membership.\n\nVisit our site: {site_url}\nUpgrade now: {upgrade_url}",
+                    $trial_template['message']
+                );
+            }
+            update_option('ielts_cm_email_trial_enrollment', $trial_template);
+        }
+
+        // Migrate full enrollment template
+        $full_template = get_option('ielts_cm_email_full_enrollment', array());
+        if (!empty($full_template['message']) && strpos($full_template['message'], $old_signoff) !== false) {
+            $full_template['message'] = str_replace($old_signoff, $new_signoff, $full_template['message']);
+            update_option('ielts_cm_email_full_enrollment', $full_template);
+        }
+
+        // Migrate trial expired template
+        $trial_expired = get_option('ielts_cm_email_trial_expired', array());
+        if (!empty($trial_expired['message']) && strpos($trial_expired['message'], $old_signoff) !== false) {
+            $trial_expired['message'] = str_replace($old_signoff, $new_signoff, $trial_expired['message']);
+            update_option('ielts_cm_email_trial_expired', $trial_expired);
+        }
+
+        // Migrate full expired template
+        $full_expired = get_option('ielts_cm_email_full_expired', array());
+        if (!empty($full_expired['message']) && strpos($full_expired['message'], $old_signoff) !== false) {
+            $full_expired['message'] = str_replace($old_signoff, $new_signoff, $full_expired['message']);
+            update_option('ielts_cm_email_full_expired', $full_expired);
+        }
+
+        update_option('ielts_cm_email_template_version', '1.1');
+    }
+
+    /**
      * Send enrollment email
      */
     public function send_enrollment_email($user_id, $membership_type) {
@@ -1764,7 +1830,7 @@ The IELTS Team'
             if ($is_trial) {
                 $template = array(
                     'subject' => 'Welcome to Your Free Trial!',
-                    'message' => 'Hi {username},
+                    'message' => 'Hi {first_name},
 
 Welcome to your free trial of {membership_name}!
 
@@ -1772,20 +1838,27 @@ Your trial will expire on {expiry_date}.
 
 To continue accessing all our courses after your trial ends, please upgrade to a full membership.
 
-Best regards,
-The IELTS Team'
+Visit our site: {site_url}
+Upgrade now: {upgrade_url}
+
+All the best,
+Patrick
+Director IELTStestONLINE'
                 );
             } else {
                 $template = array(
                     'subject' => 'Welcome to Your Full Membership!',
-                    'message' => 'Hi {username},
+                    'message' => 'Hi {first_name},
 
 Welcome to {membership_name}!
 
 You now have full access to all our courses.
 
-Best regards,
-The IELTS Team'
+Visit our site: {site_url}
+
+All the best,
+Patrick
+Director IELTStestONLINE'
                 );
             }
             
@@ -1877,13 +1950,17 @@ The IELTS Team'
         $band_score_text = $overall_band > 0 ? number_format($overall_band, 1) : 'N/A';
         
         // Replace placeholders
+        $first_name = $user->first_name ?: $user->display_name;
         $placeholders = array(
-            '{username}' => $user->display_name,
+            '{username}' => $first_name,
+            '{first_name}' => $first_name,
             '{email}' => $user->user_email,
             '{membership_name}' => $membership_name,
             '{expiry_date}' => $expiry_date ? $expiry_date : 'N/A',
+            '{site_url}' => home_url(),
             '{upgrade_url}' => $upgrade_url,
             '{renewal_url}' => $upgrade_url,
+            '{enrol_url}' => $upgrade_url,
             '{videos_completed}' => $videos_completed ?: 0,
             '{total_videos}' => $total_videos ?: 0,
             '{exercises_completed}' => $exercises_completed ?: 0,
@@ -2123,7 +2200,7 @@ The IELTS Team'
             if ($type === 'trial') {
                 $email_template = array(
                     'subject' => 'Your Trial Has Expired',
-                    'message' => 'Hi {username},
+                    'message' => 'Hi {first_name},
 
 Your trial membership for {membership_name} has expired.
 
@@ -2131,22 +2208,24 @@ To continue accessing our courses, please upgrade to a full membership.
 
 Visit: {upgrade_url}
 
-Best regards,
-The IELTS Team'
+All the best,
+Patrick
+Director IELTStestONLINE'
                 );
             } else {
                 $email_template = array(
                     'subject' => 'Your Membership Has Expired',
-                    'message' => 'Hi {username},
+                    'message' => 'Hi {first_name},
 
 Your membership for {membership_name} has expired.
 
 To renew your membership and continue accessing our courses, please visit your account page.
 
-Visit: {upgrade_url}
+Visit: {renewal_url}
 
-Best regards,
-The IELTS Team'
+All the best,
+Patrick
+Director IELTStestONLINE'
                 );
             }
             
@@ -2161,10 +2240,11 @@ The IELTS Team'
         
         $upgrade_url = get_option('ielts_cm_full_member_page_url', home_url());
         
+        $first_name = $user->first_name ?: $user->display_name;
         $subject = $email_template['subject'];
         $message = str_replace(
-            array('{username}', '{membership_name}', '{upgrade_url}', '{renewal_url}'),
-            array($user->display_name, $membership_name, $upgrade_url, $upgrade_url),
+            array('{username}', '{first_name}', '{membership_name}', '{site_url}', '{upgrade_url}', '{renewal_url}', '{enrol_url}'),
+            array($first_name, $first_name, $membership_name, home_url(), $upgrade_url, $upgrade_url, $upgrade_url),
             $email_template['message']
         );
         
