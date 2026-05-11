@@ -266,60 +266,75 @@ body.ielts-quiz-focus-mode.ielts-quiz-single .content-area {
                 <?php
             else:
                 // User has access, show the quiz content
+                $repeat_status = IELTS_CM_Quiz_Handler::get_repeat_delay_status($user_id, $quiz_id);
+                if (!$repeat_status['allowed']):
+                    ?>
+                    <div class="ielts-access-restricted">
+                        <div class="access-restricted-icon">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1a11 11 0 1 0 0 22 11 11 0 0 0 0-22zm0 20a9 9 0 1 1 0-18 9 9 0 0 1 0 18z" fill="#666"/>
+                                <path d="M12 7a1 1 0 0 1 1 1v6a1 1 0 0 1-2 0V8a1 1 0 0 1 1-1zm0 10a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="#666"/>
+                            </svg>
+                        </div>
+                        <h2><?php _e('Please wait before your next attempt', 'ielts-course-manager'); ?></h2>
+                        <p><?php echo esc_html(IELTS_CM_Quiz_Handler::build_repeat_delay_message($repeat_status)); ?></p>
+                    </div>
+                    <?php
+                else:
             
-            // Get layout type
-            $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
-            if (!$layout_type) {
-                $layout_type = 'two_column_reading';
-            }
-            
-            // Determine which template to use
-            // For backward compatibility, map old values to new ones
-            if ($layout_type === 'computer_based') {
-                // Check old cbt_test_type for backward compatibility
-                $old_cbt_test_type = get_post_meta($quiz_id, '_ielts_cm_cbt_test_type', true);
-                if ($old_cbt_test_type === 'listening') {
-                    $layout_type = 'two_column_listening';
-                } elseif ($old_cbt_test_type === 'reading') {
-                    $layout_type = 'two_column_reading';
-                } else {
+                // Get layout type
+                $layout_type = get_post_meta($quiz_id, '_ielts_cm_layout_type', true);
+                if (!$layout_type) {
                     $layout_type = 'two_column_reading';
                 }
-            } elseif ($layout_type === 'standard' || $layout_type === 'one_column_exercise' || $layout_type === 'two_column_exercise') {
-                // Map deprecated templates to two_column_reading
-                $layout_type = 'two_column_reading';
-            } elseif ($layout_type === 'listening_practice' || $layout_type === 'listening_exercise') {
-                $layout_type = 'two_column_listening';
-            }
-            
-            // Include the appropriate template based on layout type
-            // Both two_column_reading and two_column_listening use the same template
-            if (in_array($layout_type, array('two_column_reading', 'two_column_listening'))) {
-                // Check if this exercise has writing_task or speaking_test questions
-                $questions_check = get_post_meta($quiz_id, '_ielts_cm_questions', true);
-                $has_writing_tasks  = false;
-                $has_speaking_tests = false;
-                if (is_array($questions_check)) {
-                    foreach ($questions_check as $q) {
-                        if (isset($q['type']) && $q['type'] === 'writing_task')  $has_writing_tasks  = true;
-                        if (isset($q['type']) && $q['type'] === 'speaking_test') $has_speaking_tests = true;
+                
+                // Determine which template to use
+                // For backward compatibility, map old values to new ones
+                if ($layout_type === 'computer_based') {
+                    // Check old cbt_test_type for backward compatibility
+                    $old_cbt_test_type = get_post_meta($quiz_id, '_ielts_cm_cbt_test_type', true);
+                    if ($old_cbt_test_type === 'listening') {
+                        $layout_type = 'two_column_listening';
+                    } elseif ($old_cbt_test_type === 'reading') {
+                        $layout_type = 'two_column_reading';
+                    } else {
+                        $layout_type = 'two_column_reading';
                     }
+                } elseif ($layout_type === 'standard' || $layout_type === 'one_column_exercise' || $layout_type === 'two_column_exercise') {
+                    // Map deprecated templates to two_column_reading
+                    $layout_type = 'two_column_reading';
+                } elseif ($layout_type === 'listening_practice' || $layout_type === 'listening_exercise') {
+                    $layout_type = 'two_column_listening';
                 }
-                if ($has_speaking_tests) {
-                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-speaking.php';
-                } elseif ($has_writing_tasks) {
-                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-writing.php';
+                
+                // Include the appropriate template based on layout type
+                // Both two_column_reading and two_column_listening use the same template
+                if (in_array($layout_type, array('two_column_reading', 'two_column_listening'))) {
+                    // Check if this exercise has writing_task or speaking_test questions
+                    $questions_check = get_post_meta($quiz_id, '_ielts_cm_questions', true);
+                    $has_writing_tasks  = false;
+                    $has_speaking_tests = false;
+                    if (is_array($questions_check)) {
+                        foreach ($questions_check as $q) {
+                            if (isset($q['type']) && $q['type'] === 'writing_task')  $has_writing_tasks  = true;
+                            if (isset($q['type']) && $q['type'] === 'speaking_test') $has_speaking_tests = true;
+                        }
+                    }
+                    if ($has_speaking_tests) {
+                        $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-speaking.php';
+                    } elseif ($has_writing_tasks) {
+                        $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-writing.php';
+                    } else {
+                        $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
+                    }
                 } else {
-                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz-computer-based.php';
+                    $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
                 }
-            } else {
-                $template = IELTS_CM_PLUGIN_DIR . 'templates/single-quiz.php';
-            }
-            
-            if (file_exists($template)) {
-                include $template;
-            }
-            
+                
+                if (file_exists($template)) {
+                    include $template;
+                }
+                endif;
             endif; // end has_access check
             
         endwhile;

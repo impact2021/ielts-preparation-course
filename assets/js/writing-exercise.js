@@ -205,7 +205,7 @@
                     }
                 } else {
                     $('#writing-result-content-' + idx).html(
-                        '<div class="ielts-writing-error">Assessment failed: ' + (response.data ? response.data.message : 'Unknown error') + '</div>'
+                        '<div class="ielts-writing-error">' + (response.data ? response.data.message : 'Unknown error') + '</div>'
                     );
                     $('#writing-result-' + idx).show();
                 }
