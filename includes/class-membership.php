@@ -1930,9 +1930,11 @@ The IELTS Team'
             $unit = $durations[$membership_type]['unit'];
         }
         
-        // Use UTC time consistently to avoid timezone issues
-        $current_utc = gmdate('Y-m-d H:i:s');
-        $current_timestamp = strtotime($current_utc);
+        // Use time() for the current UTC timestamp - this is always correct regardless
+        // of the PHP/WordPress timezone setting. Using strtotime(gmdate(...)) is wrong
+        // because gmdate() returns a UTC string but strtotime() interprets it in the
+        // local PHP timezone, producing an incorrect base timestamp.
+        $current_timestamp = time();
         
         switch ($unit) {
             case 'minutes':
