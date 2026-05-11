@@ -1263,6 +1263,7 @@ class IELTS_CM_Admin {
         $layout_type = get_post_meta($post->ID, '_ielts_cm_layout_type', true);
         $reading_texts = get_post_meta($post->ID, '_ielts_cm_reading_texts', true);
         $exercise_label = get_post_meta($post->ID, '_ielts_cm_exercise_label', true);
+        $repeat_delay_hours = intval(get_post_meta($post->ID, '_ielts_cm_repeat_delay_hours', true));
         
         // Ensure we have an array for questions
         if (!is_array($questions)) {
@@ -1407,6 +1408,12 @@ class IELTS_CM_Admin {
                 <option value="practice_test" <?php selected($exercise_label, 'practice_test'); ?>><?php _e('Practice test', 'ielts-course-manager'); ?></option>
             </select>
             <small><?php _e('Choose how this exercise will be labeled on the frontend for students. This does not change the backend label.', 'ielts-course-manager'); ?></small>
+        </p>
+
+        <p>
+            <label for="ielts_cm_repeat_delay_hours"><?php _e('Allow Repeat After (Hours)', 'ielts-course-manager'); ?></label><br>
+            <input type="number" id="ielts_cm_repeat_delay_hours" name="ielts_cm_repeat_delay_hours" value="<?php echo esc_attr($repeat_delay_hours); ?>" min="0" step="1" style="width: 120px;">
+            <br><small><?php _e('Set to 0 to disable (default). When set above 0, students must wait this many hours before retaking this exercise. Main site admins are exempt.', 'ielts-course-manager'); ?></small>
         </p>
         
         <p style="display: none;">
@@ -3983,6 +3990,12 @@ and explain why you particularly enjoyed it."><?php echo esc_textarea($sp_p2); ?
                 } else {
                     update_post_meta($post_id, '_ielts_cm_exercise_label', 'exercise');
                 }
+            }
+
+            // Save repeat delay hours (0 = disabled)
+            if (isset($_POST['ielts_cm_repeat_delay_hours'])) {
+                $repeat_delay_hours = max(0, intval($_POST['ielts_cm_repeat_delay_hours']));
+                update_post_meta($post_id, '_ielts_cm_repeat_delay_hours', $repeat_delay_hours);
             }
             
             // Save reading texts

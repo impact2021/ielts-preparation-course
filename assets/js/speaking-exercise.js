@@ -707,7 +707,7 @@ jQuery(document).ready(function ($) {
         }
         $.ajax({
             url: cfg.ajaxUrl, method: 'POST', timeout: 90000,
-            data: { action: 'ielts_cm_speaking_assess_full', nonce: cfg.nonce, responses: responsesArr },
+            data: { action: 'ielts_cm_speaking_assess_full', nonce: cfg.nonce, quiz_id: cfg.quizId, responses: responsesArr },
             success: function (r) {
                 completeAssessProgress();
                 setTimeout(function () {

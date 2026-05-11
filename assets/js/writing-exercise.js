@@ -155,6 +155,7 @@
                 data: {
                     action:        'ielts_cm_submit_writing',
                     nonce:         cfg.nonce,
+                    quiz_id:       cfg.quizId,
                     task_type:     task.task_type,
                     task_prompt:   task.task_prompt,
                     student_prompt: task.student_prompt,

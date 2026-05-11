@@ -631,6 +631,7 @@ class IELTS_CM_Membership {
         // Register membership settings
         register_setting('ielts_membership_settings', 'ielts_cm_membership_enabled');
         register_setting('ielts_membership_settings', 'ielts_cm_free_trial_enabled');
+        register_setting('ielts_membership_settings', 'ielts_cm_trial_email_verification_enabled');
         register_setting('ielts_membership_settings', 'ielts_cm_pwyw_enabled');
         register_setting('ielts_membership_settings', 'ielts_cm_pwyw_minimum');
         register_setting('ielts_membership_settings', 'ielts_cm_membership_course_mapping');
@@ -786,6 +787,7 @@ class IELTS_CM_Membership {
         
         if (isset($_POST['submit']) && check_admin_referer('ielts_membership_settings')) {
             update_option('ielts_cm_free_trial_enabled', isset($_POST['ielts_cm_free_trial_enabled']) ? 1 : 0);
+            update_option('ielts_cm_trial_email_verification_enabled', isset($_POST['ielts_cm_trial_email_verification_enabled']) ? 1 : 0);
             update_option('ielts_cm_english_only_enabled', isset($_POST['ielts_cm_english_only_enabled']) ? 1 : 0);
             update_option('ielts_cm_full_member_page_url', sanitize_text_field($_POST['ielts_cm_full_member_page_url']));
             update_option('ielts_cm_post_payment_redirect_url', sanitize_text_field($_POST['ielts_cm_post_payment_redirect_url']));
@@ -815,6 +817,7 @@ class IELTS_CM_Membership {
         
         $english_only_enabled = (bool) get_option('ielts_cm_english_only_enabled', false);
         $free_trial_enabled = (bool) get_option('ielts_cm_free_trial_enabled', true);
+        $trial_email_verification_enabled = (bool) get_option('ielts_cm_trial_email_verification_enabled', false);
         $full_member_page_url = get_option('ielts_cm_full_member_page_url', '');
         $post_payment_redirect_url = get_option('ielts_cm_post_payment_redirect_url', '');
         $durations = get_option('ielts_cm_membership_durations', array());
@@ -886,6 +889,20 @@ class IELTS_CM_Membership {
                             </p>
                         </td>
                     </tr>
+                    <?php if ($is_primary_for_display): ?>
+                    <tr>
+                        <th scope="row"><?php _e('Free Trial Email Verification', 'ielts-course-manager'); ?></th>
+                        <td>
+                            <label>
+                                <input type="checkbox" name="ielts_cm_trial_email_verification_enabled" value="1" <?php checked($trial_email_verification_enabled, 1); ?>>
+                                <?php _e('Require email verification before creating new free-trial accounts', 'ielts-course-manager'); ?>
+                            </label>
+                            <p class="description">
+                                <?php _e('Only applies on the primary site and only to new free-trial registrations. Paid registrations, access-code registrations, and admin-created users are not affected.', 'ielts-course-manager'); ?>
+                            </p>
+                        </td>
+                    </tr>
+                    <?php endif; ?>
                     <?php if ($is_primary_for_display): ?>
                     <tr>
                         <th scope="row"><?php _e('Pay What You Can (Full Membership)', 'ielts-course-manager'); ?></th>

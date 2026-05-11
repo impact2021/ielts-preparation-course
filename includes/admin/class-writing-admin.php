@@ -117,15 +117,51 @@ class IELTS_CM_Writing_Admin {
     }
 
     /**
-     * Render the submissions list
+     * Render the submissions list with pagination, per-page selector, and bulk delete
      */
     private function render_submissions_list() {
         global $wpdb;
 
-        $status_filter = sanitize_text_field($_GET['status'] ?? '');
-        $where         = $status_filter ? $wpdb->prepare("WHERE s.status = %s", $status_filter) : '';
+        // ── Bulk delete ─────────────────────────────────────────────────────────
+        $bulk_message = '';
+        if (
+            isset($_POST['ielts_bulk_action']) && $_POST['ielts_bulk_action'] === 'delete' &&
+            isset($_POST['_wpnonce']) && wp_verify_nonce($_POST['_wpnonce'], 'ielts_writing_bulk_delete') &&
+            current_user_can('manage_options')
+        ) {
+            $ids = isset($_POST['submission_ids']) ? array_map('intval', (array) $_POST['submission_ids']) : array();
+            $ids = array_filter($ids);
+            if (!empty($ids)) {
+                $placeholders = implode(',', array_fill(0, count($ids), '%d'));
+                // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+                $wpdb->query($wpdb->prepare("DELETE FROM {$this->table_name} WHERE id IN ($placeholders)", $ids));
+                $bulk_message = sprintf('%d submission(s) permanently deleted.', count($ids));
+            } else {
+                $bulk_message = 'No submissions selected.';
+            }
+        }
 
-        $submissions = $wpdb->get_results(
+        // ── Filters and pagination params ────────────────────────────────────
+        $status_filter    = sanitize_text_field($_GET['status'] ?? '');
+        $per_page_options = array(10, 25, 50, 100);
+        $per_page         = intval($_GET['per_page'] ?? 10);
+        if (!in_array($per_page, $per_page_options, true)) {
+            $per_page = 10;
+        }
+        $paged = max(1, intval($_GET['paged'] ?? 1));
+
+        $where = $status_filter ? $wpdb->prepare("WHERE s.status = %s", $status_filter) : '';
+
+        // ── Total count + page count ─────────────────────────────────────────
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+        $total       = (int) $wpdb->get_var("SELECT COUNT(*) FROM {$this->table_name} s {$where}");
+        $total_pages = max(1, (int) ceil($total / $per_page));
+        $paged       = min($paged, $total_pages);
+        $offset      = ($paged - 1) * $per_page;
+
+        // ── Paginated query ──────────────────────────────────────────────────
+        // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+        $submissions = $wpdb->get_results($wpdb->prepare(
             "SELECT s.*, u.display_name, u.user_email
              FROM {$this->table_name} s
              LEFT JOIN {$wpdb->users} u ON s.user_id = u.ID
@@ -133,15 +169,36 @@ class IELTS_CM_Writing_Admin {
              ORDER BY
                CASE WHEN s.status = 'disputed' THEN 0 ELSE 1 END,
                s.submitted_at DESC
-             LIMIT 100"
-        );
+             LIMIT %d OFFSET %d",
+            $per_page,
+            $offset
+        ));
 
-        $disputed_count = $wpdb->get_var(
+        $disputed_count = (int) $wpdb->get_var(
             "SELECT COUNT(*) FROM {$this->table_name} WHERE status = 'disputed'"
         );
+
+        // ── URL helpers ──────────────────────────────────────────────────────
+        $base_url   = admin_url('edit.php?post_type=ielts_course&page=ielts-writing-submissions');
+        $list_url   = $base_url . ($status_filter ? '&status=' . urlencode($status_filter) : '');
+        $list_url  .= ($per_page !== 10 ? '&per_page=' . $per_page : '');
+        $paged_base = $list_url . '&paged=%#%';
+
+        $pagination_html = paginate_links(array(
+            'base'      => $list_url . '%_%',
+            'format'    => '&paged=%#%',
+            'current'   => $paged,
+            'total'     => $total_pages,
+            'prev_text' => '&laquo;',
+            'next_text' => '&raquo;',
+        ));
         ?>
         <div class="wrap ielts-writing-admin-wrap">
             <h1 class="wp-heading-inline">Writing Assessment Submissions</h1>
+
+            <?php if ($bulk_message): ?>
+            <div class="notice notice-success is-dismissible"><p><?php echo esc_html($bulk_message); ?></p></div>
+            <?php endif; ?>
 
             <?php if ($disputed_count > 0): ?>
             <div class="notice notice-warning inline">
@@ -150,64 +207,134 @@ class IELTS_CM_Writing_Admin {
             <?php endif; ?>
 
             <div class="ielts-admin-filters">
-                <a href="?post_type=ielts_course&page=ielts-writing-submissions" class="button <?php echo !$status_filter ? 'button-primary' : ''; ?>">All</a>
-                <a href="?post_type=ielts_course&page=ielts-writing-submissions&status=disputed" class="button <?php echo $status_filter === 'disputed' ? 'button-primary' : ''; ?>">
+                <a href="<?php echo esc_url($base_url . ($per_page !== 10 ? '&per_page=' . $per_page : '')); ?>" class="button <?php echo !$status_filter ? 'button-primary' : ''; ?>">All</a>
+                <a href="<?php echo esc_url($base_url . '&status=disputed' . ($per_page !== 10 ? '&per_page=' . $per_page : '')); ?>" class="button <?php echo $status_filter === 'disputed' ? 'button-primary' : ''; ?>">
                     Disputed <?php if ($disputed_count > 0): ?><span class="ielts-badge"><?php echo intval($disputed_count); ?></span><?php endif; ?>
                 </a>
-                <a href="?post_type=ielts_course&page=ielts-writing-submissions&status=manually_reviewed" class="button <?php echo $status_filter === 'manually_reviewed' ? 'button-primary' : ''; ?>">Reviewed</a>
-                <a href="?post_type=ielts_course&page=ielts-writing-submissions&status=auto_scored" class="button <?php echo $status_filter === 'auto_scored' ? 'button-primary' : ''; ?>">Auto-scored</a>
+                <a href="<?php echo esc_url($base_url . '&status=manually_reviewed' . ($per_page !== 10 ? '&per_page=' . $per_page : '')); ?>" class="button <?php echo $status_filter === 'manually_reviewed' ? 'button-primary' : ''; ?>">Reviewed</a>
+                <a href="<?php echo esc_url($base_url . '&status=auto_scored' . ($per_page !== 10 ? '&per_page=' . $per_page : '')); ?>" class="button <?php echo $status_filter === 'auto_scored' ? 'button-primary' : ''; ?>">Auto-scored</a>
             </div>
 
-            <table class="wp-list-table widefat fixed striped ielts-submissions-table">
-                <thead>
-                    <tr>
-                        <th>Student</th>
-                        <th>Date</th>
-                        <th>Task Type</th>
-                        <th>Overall Band</th>
-                        <th>TA</th>
-                        <th>CC</th>
-                        <th>LR</th>
-                        <th>GRA</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php if (empty($submissions)): ?>
-                    <tr><td colspan="10">No submissions found.</td></tr>
-                <?php else: ?>
-                    <?php foreach ($submissions as $s):
-                        $override = !empty($s->admin_override_scores) ? json_decode($s->admin_override_scores, true) : null;
-                        $band = $override ? ($override['overall_band'] ?? $s->overall_band) : $s->overall_band;
-                        $ta   = $override ? ($override['score_task_achievement'] ?? $s->score_task_achievement) : $s->score_task_achievement;
-                        $cc   = $override ? ($override['score_coherence'] ?? $s->score_coherence) : $s->score_coherence;
-                        $lr   = $override ? ($override['score_lexical'] ?? $s->score_lexical) : $s->score_lexical;
-                        $gra  = $override ? ($override['score_grammar'] ?? $s->score_grammar) : $s->score_grammar;
-                        $row_class = $s->status === 'disputed' ? 'ielts-row-disputed' : '';
-                    ?>
-                    <tr class="<?php echo esc_attr($row_class); ?>">
-                        <td>
-                            <strong><?php echo esc_html($s->display_name); ?></strong><br>
-                            <small><?php echo esc_html($s->user_email); ?></small>
-                        </td>
-                        <td><?php echo esc_html(date('d M Y H:i', strtotime($s->submitted_at))); ?></td>
-                        <td><?php echo esc_html($this->task_type_label($s->task_type)); ?></td>
-                        <td><strong><?php echo esc_html($band); ?></strong><?php echo $override ? ' <span class="ielts-override-indicator" title="Manually overridden">✏️</span>' : ''; ?></td>
-                        <td><?php echo esc_html($ta); ?></td>
-                        <td><?php echo esc_html($cc); ?></td>
-                        <td><?php echo esc_html($lr); ?></td>
-                        <td><?php echo esc_html($gra); ?></td>
-                        <td><?php echo $this->status_badge($s->status); ?></td>
-                        <td>
-                            <a href="?post_type=ielts_course&page=ielts-writing-submissions&action=view&id=<?php echo intval($s->id); ?>" class="button button-small">Review</a>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-                </tbody>
-            </table>
+            <form method="post" action="<?php echo esc_url($list_url); ?>" id="ielts-bulk-form">
+                <?php wp_nonce_field('ielts_writing_bulk_delete'); ?>
+                <input type="hidden" name="ielts_bulk_action" value="delete">
+
+                <!-- Top tablenav: bulk actions + per-page + pagination -->
+                <div class="tablenav top">
+                    <div class="alignleft actions bulkactions">
+                        <button type="submit" class="button ielts-bulk-delete-btn"
+                            onclick="return confirm('Permanently delete selected submissions? This cannot be undone.');">
+                            Delete Selected
+                        </button>
+                    </div>
+                    <div class="alignright tablenav-pages" style="display:flex;align-items:center;gap:12px;">
+                        <span class="displaying-num">
+                            <?php echo sprintf('%s item%s', number_format_i18n($total), $total === 1 ? '' : 's'); ?>
+                        </span>
+                        <?php if ($pagination_html): ?>
+                        <span class="pagination-links"><?php echo $pagination_html; ?></span>
+                        <?php endif; ?>
+                        <label for="ielts-per-page-top" style="white-space:nowrap;">
+                            Show:
+                            <select id="ielts-per-page-top" onchange="window.location='<?php echo esc_url($list_url . '&per_page='); ?>'+this.value">
+                                <?php foreach ($per_page_options as $opt): ?>
+                                <option value="<?php echo intval($opt); ?>" <?php selected($per_page, $opt); ?>><?php echo intval($opt); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <table class="wp-list-table widefat fixed striped ielts-submissions-table">
+                    <thead>
+                        <tr>
+                            <th class="check-column" style="width:2.2em;">
+                                <input type="checkbox" id="ielts-check-all" title="Select all on this page">
+                            </th>
+                            <th>Student</th>
+                            <th>Date</th>
+                            <th>Task Type</th>
+                            <th>Overall Band</th>
+                            <th>TA</th>
+                            <th>CC</th>
+                            <th>LR</th>
+                            <th>GRA</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php if (empty($submissions)): ?>
+                        <tr><td colspan="11">No submissions found.</td></tr>
+                    <?php else: ?>
+                        <?php foreach ($submissions as $s):
+                            $override  = !empty($s->admin_override_scores) ? json_decode($s->admin_override_scores, true) : null;
+                            $band      = $override ? ($override['overall_band'] ?? $s->overall_band) : $s->overall_band;
+                            $ta        = $override ? ($override['score_task_achievement'] ?? $s->score_task_achievement) : $s->score_task_achievement;
+                            $cc        = $override ? ($override['score_coherence'] ?? $s->score_coherence) : $s->score_coherence;
+                            $lr        = $override ? ($override['score_lexical'] ?? $s->score_lexical) : $s->score_lexical;
+                            $gra       = $override ? ($override['score_grammar'] ?? $s->score_grammar) : $s->score_grammar;
+                            $row_class = $s->status === 'disputed' ? 'ielts-row-disputed' : '';
+                        ?>
+                        <tr class="<?php echo esc_attr($row_class); ?>">
+                            <td class="check-column">
+                                <input type="checkbox" name="submission_ids[]" value="<?php echo intval($s->id); ?>">
+                            </td>
+                            <td>
+                                <strong><?php echo esc_html($s->display_name); ?></strong><br>
+                                <small><?php echo esc_html($s->user_email); ?></small>
+                            </td>
+                            <td><?php echo esc_html(date('d M Y H:i', strtotime($s->submitted_at))); ?></td>
+                            <td><?php echo esc_html($this->task_type_label($s->task_type)); ?></td>
+                            <td><strong><?php echo esc_html($band); ?></strong><?php echo $override ? ' <span class="ielts-override-indicator" title="Manually overridden">✏️</span>' : ''; ?></td>
+                            <td><?php echo esc_html($ta); ?></td>
+                            <td><?php echo esc_html($cc); ?></td>
+                            <td><?php echo esc_html($lr); ?></td>
+                            <td><?php echo esc_html($gra); ?></td>
+                            <td><?php echo $this->status_badge($s->status); ?></td>
+                            <td>
+                                <a href="<?php echo esc_url($base_url . '&action=view&id=' . intval($s->id)); ?>" class="button button-small">Review</a>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                    </tbody>
+                </table>
+
+                <!-- Bottom tablenav: bulk actions + pagination -->
+                <div class="tablenav bottom">
+                    <div class="alignleft actions bulkactions">
+                        <button type="submit" class="button ielts-bulk-delete-btn"
+                            onclick="return confirm('Permanently delete selected submissions? This cannot be undone.');">
+                            Delete Selected
+                        </button>
+                    </div>
+                    <?php if ($pagination_html): ?>
+                    <div class="alignright tablenav-pages">
+                        <span class="displaying-num">
+                            <?php echo sprintf('%s item%s', number_format_i18n($total), $total === 1 ? '' : 's'); ?>
+                        </span>
+                        <span class="pagination-links"><?php echo $pagination_html; ?></span>
+                    </div>
+                    <?php endif; ?>
+                </div>
+
+            </form>
         </div>
+
+        <script>
+        (function() {
+            var checkAll = document.getElementById('ielts-check-all');
+            if (checkAll) {
+                checkAll.addEventListener('change', function() {
+                    var checked = this.checked;
+                    document.querySelectorAll('input[name="submission_ids[]"]').forEach(function(cb) {
+                        cb.checked = checked;
+                    });
+                });
+            }
+        }());
+        </script>
         <?php
     }
 
