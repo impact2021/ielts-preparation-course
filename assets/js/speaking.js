@@ -330,7 +330,7 @@
                 setTimeout(function () {
                     $('#ielts-speaking-results').html(response.success
                         ? response.data.html
-                        : '<div style="padding:2rem;color:#dc2626;font-size:14px;">Assessment failed: ' + (response.data ? response.data.message : 'Unknown error') + '</div>'
+                        : '<div style="padding:2rem;color:#dc2626;font-size:14px;">' + (response.data ? response.data.message : 'Unknown error') + '</div>'
                     );
                 }, 400);
             },

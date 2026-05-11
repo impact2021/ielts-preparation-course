@@ -715,7 +715,7 @@ jQuery(document).ready(function ($) {
                         $results.html(r.data.html);
                         saveSpeakingScore(r.data.assessment.overall_band);
                     } else {
-                        $results.html('<div style="padding:2rem;color:#dc2626;font-size:14px;">Assessment failed: ' + (r.data ? r.data.message : 'Unknown error') + '</div>');
+                        $results.html('<div style="padding:2rem;color:#dc2626;font-size:14px;">' + (r.data ? r.data.message : 'Unknown error') + '</div>');
                     }
                 }, 400);
             },
