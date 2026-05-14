@@ -2521,10 +2521,10 @@ class IELTS_CM_Admin {
                                 return; // Skip if regex doesn't match
                             }
                             
-                            var oldIndex = matches[1];
+                            var oldIndex = parseInt(matches[1], 10);
                             var newIndex = index;
                             
-                            if (oldIndex != newIndex) {
+                            if (oldIndex !== newIndex) {
                                 $(this).find('input, select, textarea').each(function() {
                                     var name = $(this).attr('name');
                                     if (name && name.indexOf('questions[' + oldIndex + ']') === 0) {
