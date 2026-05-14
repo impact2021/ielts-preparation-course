@@ -114,6 +114,7 @@ class IELTS_CM_Admin {
             $post_type = $post_id ? get_post_type($post_id) : (isset($_GET['post_type']) ? sanitize_key($_GET['post_type']) : '');
             if ($post_type === 'ielts_quiz') {
                 wp_enqueue_media();
+                wp_enqueue_script('jquery-ui-sortable');
             }
         }
     }
@@ -2500,53 +2501,55 @@ class IELTS_CM_Admin {
             });
             
             // Initialize drag and drop for questions
-            $('#questions-container').sortable({
-                handle: '.question-drag-handle',
-                placeholder: 'ui-sortable-placeholder',
-                update: function(event, ui) {
-                    // Update question numbers
-                    $('#questions-container .question-item').each(function(index) {
-                        $(this).find('h4').text('<?php _e('Question', 'ielts-course-manager'); ?> ' + (index + 1));
-                        
-                        // Update all input/select/textarea names to reflect new index
-                        var nameMatch = $(this).find('select[name^="questions["]').first().attr('name');
-                        if (!nameMatch) {
-                            return; // Skip if no match found
-                        }
-                        
-                        var matches = nameMatch.match(/questions\[(\d+)\]/);
-                        if (!matches || !matches[1]) {
-                            return; // Skip if regex doesn't match
-                        }
-                        
-                        var oldIndex = matches[1];
-                        var newIndex = index;
-                        
-                        if (oldIndex != newIndex) {
-                            $(this).find('input, select, textarea').each(function() {
-                                var name = $(this).attr('name');
-                                if (name && name.indexOf('questions[' + oldIndex + ']') === 0) {
-                                    $(this).attr('name', name.replace('questions[' + oldIndex + ']', 'questions[' + newIndex + ']'));
-                                }
-                            });
+            if (typeof $.fn.sortable === 'function') {
+                $('#questions-container').sortable({
+                    handle: '.question-drag-handle',
+                    placeholder: 'ui-sortable-placeholder',
+                    update: function(event, ui) {
+                        // Update question numbers
+                        $('#questions-container .question-item').each(function(index) {
+                            $(this).find('h4').text('<?php _e('Question', 'ielts-course-manager'); ?> ' + (index + 1));
                             
-                            // Update data-question-index attributes
-                            $(this).find('[data-question-index]').attr('data-question-index', newIndex);
-                            
-                            // Update editor IDs if they exist
-                            var editorId = 'question_' + oldIndex;
-                            var newEditorId = 'question_' + newIndex;
-                            if (typeof tinymce !== 'undefined' && tinymce.get(editorId)) {
-                                var editorContent = tinymce.get(editorId).getContent();
-                                tinymce.get(editorId).remove();
-                                var $textarea = $(this).find('textarea[id="' + editorId + '"]');
-                                $textarea.attr('id', newEditorId);
-                                $textarea.val(editorContent); // Restore content to textarea
+                            // Update all input/select/textarea names to reflect new index
+                            var nameMatch = $(this).find('select[name^="questions["]').first().attr('name');
+                            if (!nameMatch) {
+                                return; // Skip if no match found
                             }
-                        }
-                    });
-                }
-            });
+                            
+                            var matches = nameMatch.match(/questions\[(\d+)\]/);
+                            if (!matches || !matches[1]) {
+                                return; // Skip if regex doesn't match
+                            }
+                            
+                            var oldIndex = matches[1];
+                            var newIndex = index;
+                            
+                            if (oldIndex != newIndex) {
+                                $(this).find('input, select, textarea').each(function() {
+                                    var name = $(this).attr('name');
+                                    if (name && name.indexOf('questions[' + oldIndex + ']') === 0) {
+                                        $(this).attr('name', name.replace('questions[' + oldIndex + ']', 'questions[' + newIndex + ']'));
+                                    }
+                                });
+                                
+                                // Update data-question-index attributes
+                                $(this).find('[data-question-index]').attr('data-question-index', newIndex);
+                                
+                                // Update editor IDs if they exist
+                                var editorId = 'question_' + oldIndex;
+                                var newEditorId = 'question_' + newIndex;
+                                if (typeof tinymce !== 'undefined' && tinymce.get(editorId)) {
+                                    var editorContent = tinymce.get(editorId).getContent();
+                                    tinymce.get(editorId).remove();
+                                    var $textarea = $(this).find('textarea[id="' + editorId + '"]');
+                                    $textarea.attr('id', newEditorId);
+                                    $textarea.val(editorContent); // Restore content to textarea
+                                }
+                            }
+                        });
+                    }
+                });
+            }
             
             // Handle question expand/collapse
             $(document).on('click', '.question-header', function(e) {

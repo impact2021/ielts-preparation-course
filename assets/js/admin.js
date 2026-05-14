@@ -6,18 +6,20 @@
     'use strict';
     
     $(document).ready(function() {
+        var hasSortable = typeof $.fn.sortable === 'function';
+
         // Initialize lesson ordering sortable
-        if ($('#course-lessons-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
+        if (hasSortable && $('#course-lessons-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
             initLessonOrdering();
         }
         
         // Initialize lesson page ordering sortable
-        if ($('#lesson-pages-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
+        if (hasSortable && $('#lesson-pages-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
             initPageOrdering();
         }
         
         // Initialize lesson content (pages and exercises) ordering sortable
-        if ($('#lesson-content-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
+        if (hasSortable && $('#lesson-content-sortable').length && typeof ieltsCMAdmin !== 'undefined') {
             initContentOrdering();
         }
     });
