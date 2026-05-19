@@ -877,7 +877,7 @@ class IELTS_CM_Access_Codes {
                                 // Only fetch if we haven't already for this org
                                 if (!isset($org_student_counts[$admin_org_id])) {
                                     $org_students = $this->get_partner_students((int)$admin_org_id);
-                                    $org_student_counts[$admin_org_id] = count($org_students);
+                                    $org_student_counts[$admin_org_id] = $this->count_active_partner_students($org_students);
                                 }
                             endforeach;
                             
@@ -1143,22 +1143,15 @@ class IELTS_CM_Access_Codes {
         // This allows multiple partner admins to see the same data
         $partner_org_id = $this->get_partner_org_id();
         $max_students = get_option('iw_max_students_per_partner', 100);
-        $active_students = $this->get_partner_students($partner_org_id);
-        $active_count = count($active_students);
+        $students = $this->get_partner_students($partner_org_id);
+        $active_count = $this->count_active_partner_students($students);
         
         // Calculate active and expired student counts for display on tabs
         $active_student_count = 0;
         $expired_student_count = 0;
-        foreach ($active_students as $student) {
-            $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
-            if ($expiry) {
-                $expiry_timestamp = strtotime($expiry);
-                $is_active = $expiry_timestamp > time();
-                if ($is_active) {
-                    $active_student_count++;
-                } else {
-                    $expired_student_count++;
-                }
+        foreach ($students as $student) {
+            if ($this->is_partner_student_active($student->user_id)) {
+                $active_student_count++;
             } else {
                 $expired_student_count++;
             }
@@ -1484,7 +1477,7 @@ class IELTS_CM_Access_Codes {
                         </select>
                         <span><?php _e('per page', 'ielts-course-manager'); ?></span>
                     </div>
-                    <?php echo $this->render_students_table($active_students); ?>
+                    <?php echo $this->render_students_table($students); ?>
                     <div id="iw-students-pagination" class="iw-pagination"></div>
                 </div>
             </div>
@@ -2365,17 +2358,12 @@ class IELTS_CM_Access_Codes {
             if (!$user) continue;
             
             $group = get_user_meta($student->user_id, 'iw_course_group', true);
-            $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
-            
             // Calculate overall band score
             $overall_band_score = $this->calculate_overall_band_score($student->user_id, $gamification);
             
             // Determine if membership is active or expired
-            $is_active = false;
-            if ($expiry) {
-                $expiry_timestamp = strtotime($expiry);
-                $is_active = $expiry_timestamp > time();
-            }
+            $is_active = $this->is_partner_student_active($student->user_id);
+            $expiry = get_user_meta($student->user_id, 'iw_membership_expiry', true);
             
             if ($is_active) {
                 $has_active = true;
@@ -2490,6 +2478,49 @@ class IELTS_CM_Access_Codes {
         }
         return $results;
     }
+
+    /**
+     * Check if a partner-managed student currently has active access.
+     *
+     * @param int $user_id Student user ID.
+     * @return bool True when active, false when expired/inactive.
+     */
+    private function is_partner_student_active($user_id) {
+        $status = get_user_meta($user_id, 'iw_membership_status', true);
+        if ($status === 'expired') {
+            return false;
+        }
+
+        $expiry = get_user_meta($user_id, 'iw_membership_expiry', true);
+        if (empty($expiry)) {
+            return false;
+        }
+
+        $expiry_timestamp = strtotime($expiry);
+        if ($expiry_timestamp === false) {
+            return false;
+        }
+
+        return $expiry_timestamp > time();
+    }
+
+    /**
+     * Count active students in a partner student result set.
+     *
+     * @param array $students Array of student objects containing user_id.
+     * @return int
+     */
+    private function count_active_partner_students($students) {
+        $count = 0;
+
+        foreach ($students as $student) {
+            if (!empty($student->user_id) && $this->is_partner_student_active($student->user_id)) {
+                $count++;
+            }
+        }
+
+        return $count;
+    }
     
     /**
      * Calculate overall band score for a user
@@ -2577,8 +2608,8 @@ class IELTS_CM_Access_Codes {
         // Use partner organization ID instead of individual user ID
         $partner_org_id = $this->get_partner_org_id();
         $max_students = get_option('iw_max_students_per_partner', 100);
-        $active_students = $this->get_partner_students($partner_org_id);
-        $active_count = count($active_students);
+        $students = $this->get_partner_students($partner_org_id);
+        $active_count = $this->count_active_partner_students($students);
         $remaining_places = $max_students - $active_count;
         
         if ($quantity < 1) {

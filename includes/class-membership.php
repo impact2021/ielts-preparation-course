@@ -1115,6 +1115,18 @@ class IELTS_CM_Membership {
                 }
             }
             update_option('ielts_cm_membership_pricing', $pricing);
+
+            // Save membership duration settings on payment page too
+            $durations = get_option('ielts_cm_membership_durations', array());
+            foreach (self::MEMBERSHIP_LEVELS as $key => $label) {
+                if (isset($_POST['duration_value_' . $key]) && isset($_POST['duration_unit_' . $key])) {
+                    $durations[$key] = array(
+                        'value' => absint($_POST['duration_value_' . $key]),
+                        'unit' => sanitize_text_field($_POST['duration_unit_' . $key])
+                    );
+                }
+            }
+            update_option('ielts_cm_membership_durations', $durations);
             
             // Save and validate course extension pricing
             $extension_pricing = array();
@@ -1176,6 +1188,22 @@ class IELTS_CM_Membership {
         $paypal_secret = get_option('ielts_cm_paypal_secret', '');
         $paypal_address = get_option('ielts_cm_paypal_address', '');
         $pricing = get_option('ielts_cm_membership_pricing', array());
+        $durations = get_option('ielts_cm_membership_durations', array());
+
+        $default_durations = array(
+            'academic_trial' => array('value' => 6, 'unit' => 'hours'),
+            'general_trial' => array('value' => 6, 'unit' => 'hours'),
+            'academic_full' => array('value' => 30, 'unit' => 'days'),
+            'general_full' => array('value' => 30, 'unit' => 'days'),
+            'english_trial' => array('value' => 6, 'unit' => 'hours'),
+            'english_full' => array('value' => 30, 'unit' => 'days')
+        );
+
+        foreach ($default_durations as $key => $default) {
+            if (!isset($durations[$key])) {
+                $durations[$key] = $default;
+            }
+        }
         
         // Get extension pricing with defaults
         $extension_pricing = get_option('ielts_cm_extension_pricing', array(
@@ -1201,6 +1229,39 @@ class IELTS_CM_Membership {
                                        value="<?php echo isset($pricing[$key]) ? esc_attr($pricing[$key]) : '0'; ?>" 
                                        class="regular-text">
                                 <p class="description"><?php _e('Price in USD (0 for free)', 'ielts-course-manager'); ?></p>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+
+                <h2><?php _e('Membership Durations', 'ielts-course-manager'); ?></h2>
+                <p class="description"><?php _e('Set how long each membership lasts.', 'ielts-course-manager'); ?></p>
+                <table class="form-table">
+                    <?php foreach (self::MEMBERSHIP_LEVELS as $key => $label): ?>
+                        <tr>
+                            <th scope="row"><?php echo esc_html($label); ?></th>
+                            <td>
+                                <input type="number" min="1" step="1"
+                                       name="duration_value_<?php echo esc_attr($key); ?>"
+                                       value="<?php echo isset($durations[$key]['value']) ? esc_attr($durations[$key]['value']) : ''; ?>"
+                                       style="width: 80px;">
+                                <select name="duration_unit_<?php echo esc_attr($key); ?>">
+                                    <option value="minutes" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'minutes'); ?>>
+                                        <?php _e('Minutes', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="hours" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'hours'); ?>>
+                                        <?php _e('Hours', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="days" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'days'); ?>>
+                                        <?php _e('Days', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="weeks" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'weeks'); ?>>
+                                        <?php _e('Weeks', 'ielts-course-manager'); ?>
+                                    </option>
+                                    <option value="months" <?php selected(isset($durations[$key]['unit']) ? $durations[$key]['unit'] : '', 'months'); ?>>
+                                        <?php _e('Months', 'ielts-course-manager'); ?>
+                                    </option>
+                                </select>
                             </td>
                         </tr>
                     <?php endforeach; ?>
