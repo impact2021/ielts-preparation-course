@@ -2882,6 +2882,15 @@ class IELTS_CM_Shortcodes {
                                         }
                                         
                                         $pricing = get_option('ielts_cm_membership_pricing', array());
+                                        $durations = get_option('ielts_cm_membership_durations', array());
+                                        $default_durations = array(
+                                            'academic_trial' => array('value' => 6, 'unit' => 'hours'),
+                                            'general_trial' => array('value' => 6, 'unit' => 'hours'),
+                                            'academic_full' => array('value' => 30, 'unit' => 'days'),
+                                            'general_full' => array('value' => 30, 'unit' => 'days'),
+                                            'english_trial' => array('value' => 6, 'unit' => 'hours'),
+                                            'english_full' => array('value' => 30, 'unit' => 'days')
+                                        );
                                         $selected_membership = isset($_POST['ielts_membership_type']) ? $_POST['ielts_membership_type'] : '';
                                         
                                         // Group memberships by type
@@ -2893,17 +2902,38 @@ class IELTS_CM_Shortcodes {
                                         foreach ($membership_levels as $key => $label) {
                                             $price = isset($pricing[$key]) ? floatval($pricing[$key]) : 0;
                                             $option_label = $label;
+
+                                            $duration_label = '';
+                                            $duration_value = isset($durations[$key]['value']) ? absint($durations[$key]['value']) : 0;
+                                            $duration_unit = isset($durations[$key]['unit']) ? sanitize_key($durations[$key]['unit']) : '';
+                                            if ($duration_value < 1 && isset($default_durations[$key])) {
+                                                $duration_value = absint($default_durations[$key]['value']);
+                                                $duration_unit = sanitize_key($default_durations[$key]['unit']);
+                                            }
+                                            if ($duration_value > 0 && !empty($duration_unit)) {
+                                                if ($duration_value === 1 && substr($duration_unit, -1) === 's') {
+                                                    $duration_unit = substr($duration_unit, 0, -1);
+                                                }
+                                                $duration_label = sprintf('%d %s', $duration_value, $duration_unit);
+                                            }
                                             
                                             if (IELTS_CM_Membership::is_trial_membership($key)) {
                                                 if (!$free_trial_enabled) {
                                                     continue;
                                                 }
-                                                $option_label .= ' (Free Trial)';
+                                                $option_label .= ' (Free Trial';
+                                                if (!empty($duration_label)) {
+                                                    $option_label .= ' - ' . $duration_label;
+                                                }
+                                                $option_label .= ')';
                                                 $trial_options[$key] = $option_label;
                                             } else {
                                                 // Paid membership - always show price information
                                                 if ($price > 0) {
                                                     $option_label .= ' ($' . number_format($price, 2) . ')';
+                                                    if (!empty($duration_label)) {
+                                                        $option_label .= ' - ' . $duration_label;
+                                                    }
                                                 } else {
                                                     // Warning: price not configured
                                                     $option_label .= ' (Price Not Set - Contact Admin)';
