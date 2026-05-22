@@ -183,8 +183,16 @@
     margin: 10px 0 0 18px;
 }
 
-#ielts-writing-submit-error .ielts-writing-modal-error-close {
+#ielts-writing-submit-error .ielts-writing-error-actions {
     margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#ielts-writing-submit-error .ielts-writing-modal-error-close {
+    /* no extra margin needed — handled by flex gap */
 }
 
 /* ─── Task nav buttons inside bottom bar ─── */

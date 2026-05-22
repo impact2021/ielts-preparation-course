@@ -1884,48 +1884,50 @@
             $('#cbt-result-modal .cbt-result-modal-body').html(resultHtml);
             $('#cbt-result-modal').fadeIn(300);
             $('body').css('overflow', 'hidden');
-            
-            // Handle modal close (use event delegation)
-            $(document).on('click', '.cbt-result-modal-close, .cbt-result-modal-overlay', function() {
-                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
-                $('body').css('overflow', '');
-            });
-            
-            // Handle retake button (use event delegation)
-            $(document).on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
-                e.preventDefault();
-                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
+        }
+        
+        // CBT result modal — close via X button only (backdrop click does NOT close)
+        $(document).on('click', '.cbt-result-modal-close', function() {
+            $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
+            $('body').css('overflow', '');
+        });
+        
+        // CBT result modal — retake button
+        $(document).on('click', '#cbt-result-modal .quiz-retake-btn', function(e) {
+            e.preventDefault();
+            e.stopImmediatePropagation(); // prevent the outer .quiz-retake-btn handler from double-firing
+            $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION, function() {
                 $('body').css('overflow', '');
                 forceReload();
             });
+        });
+        
+        // CBT result modal — "Review my answers" button
+        $(document).on('click', '.cbt-review-answers-btn', function(e) {
+            e.preventDefault();
+            $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
+            $('body').css('overflow', '');
             
-            // Handle "Review my answers" button (use event delegation)
-            $(document).on('click', '.cbt-review-answers-btn', function(e) {
-                e.preventDefault();
-                $('#cbt-result-modal').fadeOut(MODAL_FADEOUT_DURATION);
-                $('body').css('overflow', '');
+            // Scroll to show feedback after modal closes
+            setTimeout(function() {
+                // Find the first question dynamically (more robust than assuming #question-0)
+                var firstQuestion = $('.quiz-question[id^="question-"]').first();
+                if (firstQuestion.length === 0) {
+                    // Fallback to #question-0 if dynamic selector doesn't work
+                    firstQuestion = $('#question-0');
+                }
+                if (firstQuestion.length === 0) {
+                    // Final fallback: try to find any element with class quiz-question
+                    firstQuestion = $('.quiz-question').first();
+                }
                 
-                // Scroll to show feedback after modal closes
-                setTimeout(function() {
-                    // Find the first question dynamically (more robust than assuming #question-0)
-                    var firstQuestion = $('.quiz-question[id^="question-"]').first();
-                    if (firstQuestion.length === 0) {
-                        // Fallback to #question-0 if dynamic selector doesn't work
-                        firstQuestion = $('#question-0');
-                    }
-                    if (firstQuestion.length === 0) {
-                        // Final fallback: try to find any element with class quiz-question
-                        firstQuestion = $('.quiz-question').first();
-                    }
-                    
-                    // Only scroll if we found a question element
-                    if (firstQuestion.length > 0) {
-                        scrollToQuestion(firstQuestion);
-                    }
-                    // If no question found, modal closes without scrolling (graceful degradation)
-                }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
-            });
-        }
+                // Only scroll if we found a question element
+                if (firstQuestion.length > 0) {
+                    scrollToQuestion(firstQuestion);
+                }
+                // If no question found, modal closes without scrolling (graceful degradation)
+            }, MODAL_FADEOUT_DURATION + MODAL_FADEOUT_BUFFER);
+        });
         
         // Multi-select max selections enforcement and progressive nav button marking
         $('.multi-select-options').each(function() {
