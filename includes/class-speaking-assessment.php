@@ -21,7 +21,7 @@ class IELTS_CM_Speaking_Assessment {
     }
 
     public function enqueue_assets() {
-        $v = '3.1';
+        $v = '3.2';
         wp_enqueue_style('ielts-speaking', IELTS_CM_PLUGIN_URL . 'assets/css/speaking.css', array(), $v);
 
         // Enqueue standalone shortcode JS
@@ -91,7 +91,7 @@ class IELTS_CM_Speaking_Assessment {
             'progressColor' => get_option('ielts_cm_vocab_header_color', '#E56C0A'),
             'hasOpenAI'     => !empty(get_option('ielts_cm_openai_api_key', '')),
             'p1Questions'   => $p1,
-            'p2Cuecard'     => $p2,
+            'p2Cuecard'     => wp_strip_all_tags($p2),
             'p3Questions'   => $p3,
         ));
     }
@@ -186,7 +186,7 @@ class IELTS_CM_Speaking_Assessment {
         $body .= '--' . $boundary . '--' . "\r\n";
 
         $response = wp_remote_post('https://api.openai.com/v1/audio/transcriptions', array(
-            'timeout' => 60,
+            'timeout' => 120,
             'headers' => array(
                 'Authorization' => 'Bearer ' . $openai_key,
                 'Content-Type'  => 'multipart/form-data; boundary=' . $boundary,

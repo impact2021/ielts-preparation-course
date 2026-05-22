@@ -684,6 +684,30 @@
     color: #111;
 }
 
+.ielts-p2-cuecard-content h1,
+.ielts-p2-cuecard-content h2,
+.ielts-p2-cuecard-content h3,
+.ielts-p2-cuecard-content h4,
+.ielts-p2-cuecard-content h5,
+.ielts-p2-cuecard-content h6 {
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+.ielts-p2-cuecard-content p {
+    margin: 0 0 10px;
+}
+
+.ielts-p2-cuecard-content ul,
+.ielts-p2-cuecard-content ol {
+    margin: 0 0 10px 20px;
+    padding-left: 18px;
+}
+
+.ielts-p2-cuecard-content li {
+    margin-bottom: 4px;
+}
+
 /* Part 2 split layout */
 .ielts-p2-split {
     display: flex;

@@ -39,9 +39,13 @@ jQuery(document).ready(function ($) {
     var progressTimers = [];
     var pendingTx      = 0;
     var transcripts    = {};
+    var recordedAudioMeta = {};
     var assessDone     = false;
     var p3AdaptiveQ    = [];
     var p3QIdx         = 0;
+    var recordingBytes = 0;
+    var recordingHealthTimer = null;
+    var recordingStartAt = 0;
 
     // Silence detection — one shared context/analyser for entire session
     var audioCtx       = null;
@@ -514,6 +518,8 @@ jQuery(document).ready(function ($) {
     // ─── Recording ────────────────────────────────────────────────────
     function startRecording(key, maxSecs, onDone) {
         audioChunks = [];
+        recordingBytes = 0;
+        recordingStartAt = Date.now();
         var mimeType = '';
         var types = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/ogg','audio/mp4'];
         for (var i = 0; i < types.length; i++) {
@@ -523,10 +529,20 @@ jQuery(document).ready(function ($) {
         function doRecord(s) {
             stream = s;
             mediaRecorder = new MediaRecorder(s, mimeType ? { mimeType: mimeType } : {});
-            mediaRecorder.ondataavailable = function (e) { if (e.data && e.data.size > 0) audioChunks.push(e.data); };
+            mediaRecorder.ondataavailable = function (e) {
+                if (e.data && e.data.size > 0) {
+                    audioChunks.push(e.data);
+                    recordingBytes += e.data.size;
+                }
+            };
             mediaRecorder.onstop = function () {
                 stopSilenceDetection();
+                stopRecordingHealthMonitor();
                 var blob = new Blob(audioChunks, { type: mimeType || 'audio/webm' });
+                recordedAudioMeta[key] = {
+                    size: blob.size || 0,
+                    mimeType: mimeType || 'audio/webm'
+                };
                 transcribeInBackground(blob, mimeType || 'audio/webm', key);
                 onDone();
             };
@@ -535,12 +551,18 @@ jQuery(document).ready(function ($) {
             $finishBtn.prop('disabled', false).off('click').on('click', function () {
                 if (recording) stopRecording();
             });
-            $status.html('<span class="ielts-recording-indicator"><span class="ielts-rec-pulse"></span> Recording</span>');
+            $status.html(
+                '<span class="ielts-recording-indicator"><span class="ielts-rec-pulse"></span> Recording</span>' +
+                ' <span id="ielts-recording-health">Checking mic signal...</span>'
+            );
+            startRecordingHealthMonitor();
             startCountdown(maxSecs, null, function () {
                 if (recording) stopRecording();
             }, 'speaking');
             startSilenceDetection(s, function () {
-                if (recording) { $status.text(''); stopRecording(); }
+                if (recording) {
+                    setRecordingHealthMessage('You are very quiet — please keep speaking clearly.', true);
+                }
             });
         }
 
@@ -558,6 +580,8 @@ jQuery(document).ready(function ($) {
         recording = false;
         clearCountdown();
         stopSilenceDetection();
+        stopRecordingHealthMonitor();
+        hideSilenceWarning();
         $finishBtn.prop('disabled', true).hide();
         $status.text('');
         mediaRecorder.stop();
@@ -589,9 +613,7 @@ jQuery(document).ready(function ($) {
                 silentFor++;
                 if (silentFor >= SILENCE_SECS && !warnShown) {
                     warnShown = true;
-                    showSilenceWarning(function () {
-                        if (recording) { $status.text(''); stopRecording(); }
-                    });
+                    showSilenceWarning();
                 }
             }
         }, 1000);
@@ -600,6 +622,38 @@ jQuery(document).ready(function ($) {
     function stopSilenceDetection() {
         if (silenceTimer) { clearInterval(silenceTimer); silenceTimer = null; }
         // Never close audioCtx/sharedAnalyser — they persist for the whole session
+    }
+
+    function setRecordingHealthMessage(message, isWarn) {
+        var $health = $('#ielts-recording-health');
+        if (!$health.length) return;
+        $health.text(message);
+        $health.css('color', isWarn ? '#dc2626' : '#16a34a');
+    }
+
+    function startRecordingHealthMonitor() {
+        stopRecordingHealthMonitor();
+        recordingHealthTimer = setInterval(function () {
+            if (!recording) {
+                stopRecordingHealthMonitor();
+                return;
+            }
+            var elapsed = Math.floor((Date.now() - recordingStartAt) / 1000);
+            if (recordingBytes > 0) {
+                setRecordingHealthMessage('Mic signal detected.', false);
+            } else if (elapsed >= 4) {
+                setRecordingHealthMessage('No audio data detected yet — check your microphone.', true);
+            } else {
+                setRecordingHealthMessage('Checking mic signal...', false);
+            }
+        }, 1000);
+    }
+
+    function stopRecordingHealthMonitor() {
+        if (recordingHealthTimer) {
+            clearInterval(recordingHealthTimer);
+            recordingHealthTimer = null;
+        }
     }
 
     var silenceWarnTimer = null;
@@ -659,7 +713,8 @@ jQuery(document).ready(function ($) {
     }
 
     // ─── Transcription ────────────────────────────────────────────────
-    function transcribeInBackground(blob, mimeType, key) {
+    function transcribeInBackground(blob, mimeType, key, attempt) {
+        attempt = attempt || 1;
         pendingTx++;
         var ext = mimeType.indexOf('ogg') !== -1 ? 'ogg' : mimeType.indexOf('mp4') !== -1 ? 'mp4' : 'webm';
         var fd  = new FormData();
@@ -668,15 +723,25 @@ jQuery(document).ready(function ($) {
         fd.append('nonce', cfg.nonce);
         $.ajax({
             url: cfg.ajaxUrl, method: 'POST', data: fd,
-            processData: false, contentType: false, timeout: 60000,
+            processData: false, contentType: false, timeout: 120000,
             success: function (r) {
                 pendingTx--;
-                transcripts[key] = r.success ? r.data.transcript : '[transcription failed]';
+                if (r.success && r.data && r.data.transcript) {
+                    transcripts[key] = r.data.transcript;
+                } else if (attempt < 3) {
+                    setTimeout(function () { transcribeInBackground(blob, mimeType, key, attempt + 1); }, 600);
+                } else {
+                    transcripts[key] = '';
+                }
                 if (assessDone && pendingTx === 0) runAssessment();
             },
             error: function () {
                 pendingTx--;
-                transcripts[key] = '[transcription error]';
+                if (attempt < 3) {
+                    setTimeout(function () { transcribeInBackground(blob, mimeType, key, attempt + 1); }, 800);
+                } else {
+                    transcripts[key] = '';
+                }
                 if (assessDone && pendingTx === 0) runAssessment();
             }
         });
@@ -697,13 +762,22 @@ jQuery(document).ready(function ($) {
     }
 
     function runAssessment() {
+        function buildAnswer(key) {
+            var transcript = transcripts[key];
+            if (typeof transcript === 'string' && transcript.trim() !== '') return transcript;
+            if (recordedAudioMeta[key] && recordedAudioMeta[key].size > 1024) {
+                return '[Audio was captured, but transcription was unavailable due to a technical issue.]';
+            }
+            return '[No transcribed response captured]';
+        }
+
         var responsesArr = [];
         P1_QUESTIONS.forEach(function (q, i) {
-            responsesArr.push({ part: 1, question: q, answer: transcripts['p1_' + i] || '[no response]' });
+            responsesArr.push({ part: 1, question: q, answer: buildAnswer('p1_' + i) });
         });
-        responsesArr.push({ part: 2, question: P2_CUECARD, answer: transcripts['p2'] || '[no response]' });
+        responsesArr.push({ part: 2, question: P2_CUECARD, answer: buildAnswer('p2') });
         for (var i = 0; i < p3QIdx; i++) {
-            responsesArr.push({ part: 3, question: p3AdaptiveQ[i] || '', answer: transcripts['p3_' + i] || '[no response]' });
+            responsesArr.push({ part: 3, question: p3AdaptiveQ[i] || '', answer: buildAnswer('p3_' + i) });
         }
         $.ajax({
             url: cfg.ajaxUrl, method: 'POST', timeout: 90000,

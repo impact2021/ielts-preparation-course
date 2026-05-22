@@ -3148,17 +3148,17 @@ class IELTS_CM_Admin {
             <!-- Speaking Test Settings -->
             <?php
             $is_speaking = isset($question['type']) && $question['type'] === 'speaking_test';
-            $sp_p1 = isset($question['speaking_p1_questions']) ? $question['speaking_p1_questions'] : array('', '', '', '', '', '');
+            $sp_p1 = isset($question['speaking_p1_questions']) ? $question['speaking_p1_questions'] : array('', '', '', '', '', '', '', '', '');
             $sp_p2 = isset($question['speaking_p2_cuecard']) ? $question['speaking_p2_cuecard'] : '';
             $sp_p3 = isset($question['speaking_p3_questions']) ? $question['speaking_p3_questions'] : array('', '', '', '', '', '');
-            while (count($sp_p1) < 6) $sp_p1[] = '';
+            while (count($sp_p1) < 9) $sp_p1[] = '';
             while (count($sp_p3) < 6) $sp_p3[] = '';
             ?>
             <div class="speaking-test-settings" style="<?php echo $is_speaking ? '' : 'display:none;'; ?> margin-bottom: 15px;">
 
                 <div style="padding: 15px; background: #f0f6fc; border-left: 4px solid #2271b1; margin-bottom: 12px;">
-                    <h5 style="margin-top:0;"><?php _e('Part 1 — Questions (up to 6)', 'ielts-course-manager'); ?></h5>
-                    <p><small><?php _e('Enter up to 6 questions. The examiner will ask each one — recording starts automatically after each question. Students have 30 seconds per answer.', 'ielts-course-manager'); ?></small></p>
+                    <h5 style="margin-top:0;"><?php _e('Part 1 — Questions (up to 9)', 'ielts-course-manager'); ?></h5>
+                    <p><small><?php _e('Enter up to 9 questions. The examiner will ask each one — recording starts automatically after each question. Students have 30 seconds per answer.', 'ielts-course-manager'); ?></small></p>
                     <?php foreach ($sp_p1 as $qi => $qval): ?>
                     <p style="margin-bottom:8px;">
                         <label style="font-size:12px; color:#555;"><?php printf(__('Question %d', 'ielts-course-manager'), $qi + 1); ?></label><br>
@@ -4380,7 +4380,7 @@ and explain why you particularly enjoyed it."><?php echo esc_textarea($sp_p2); ?
                             ? array_map('sanitize_text_field', $question['speaking_p3_questions'])
                             : array();
                         $question_data['speaking_p1_questions'] = array_values(array_filter($p1));
-                        $question_data['speaking_p2_cuecard']   = isset($question['speaking_p2_cuecard']) ? sanitize_textarea_field($question['speaking_p2_cuecard']) : '';
+                        $question_data['speaking_p2_cuecard']   = isset($question['speaking_p2_cuecard']) ? wp_kses_post($question['speaking_p2_cuecard']) : '';
                         $question_data['speaking_p3_questions'] = array_values(array_filter($p3));
                         $question_data['points']                = 1;
                     } else {
