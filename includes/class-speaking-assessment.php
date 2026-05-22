@@ -21,7 +21,7 @@ class IELTS_CM_Speaking_Assessment {
     }
 
     public function enqueue_assets() {
-        $v = '3.2';
+        $v = '3.3';
         wp_enqueue_style('ielts-speaking', IELTS_CM_PLUGIN_URL . 'assets/css/speaking.css', array(), $v);
 
         // Enqueue standalone shortcode JS
