@@ -65,11 +65,6 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
         <div class="ielts-speaking-exercise-container">
             <div class="ielts-speaking-wrap" id="ielts-speaking-exercise-app">
 
-                <!-- Version label -->
-                <div style="background:#dc2626;color:#fff;font-size:11px;font-weight:700;text-align:center;padding:4px 0;letter-spacing:0.05em;border-radius:6px 6px 0 0;">
-                    Claude Is Stealing From Me — Version 3.0
-                </div>
-
                 <!-- Header -->
                 <div class="ielts-speaking-header">
                     <div class="ielts-speaking-avatar" id="ielts-examiner-avatar">E</div>

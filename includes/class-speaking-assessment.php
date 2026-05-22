@@ -186,7 +186,7 @@ class IELTS_CM_Speaking_Assessment {
         $body .= '--' . $boundary . '--' . "\r\n";
 
         $response = wp_remote_post('https://api.openai.com/v1/audio/transcriptions', array(
-            'timeout' => 60,
+            'timeout' => 120,
             'headers' => array(
                 'Authorization' => 'Bearer ' . $openai_key,
                 'Content-Type'  => 'multipart/form-data; boundary=' . $boundary,
