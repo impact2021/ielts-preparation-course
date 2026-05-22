@@ -96,6 +96,7 @@
 
     // ─── Submit Essay ────────────────────────────────────────────────
     $('#ielts-submit-btn').on('click', function() {
+        var $submitBtn = $(this);
         var taskType   = $('#ielts-task-type').val();
         var taskPrompt = $.trim($('#ielts-task-prompt').val());
         var essayText  = $.trim($('#ielts-essay-text').val());
@@ -138,8 +139,8 @@
             if (!proceed) return;
         }
 
-        $('#ielts-writing-form-section').hide();
-        $('#ielts-writing-loading').show();
+        $submitBtn.prop('disabled', true).text('Submitting...');
+        $('#ielts-writing-loading').css('display', 'flex');
         $('#ielts-writing-results').hide();
         startProgress();
 
@@ -156,8 +157,10 @@
             success: function(response) {
                 completeProgress();
                 $('#ielts-writing-loading').hide();
+                $submitBtn.prop('disabled', false).text('Submit for Assessment');
 
                 if (response.success) {
+                    $('#ielts-writing-form-section').hide();
                     currentSubmissionId = response.data.submission_id;
                     $('#ielts-results-content').html(response.data.html);
                     $('#ielts-writing-results').show();
@@ -167,14 +170,13 @@
                         scrollTop: $('#ielts-writing-results').offset().top - 30
                     }, 400);
                 } else {
-                    $('#ielts-writing-form-section').show();
                     alert('Error: ' + (response.data.message || 'Something went wrong. Please try again.'));
                 }
             },
             error: function() {
                 completeProgress();
                 $('#ielts-writing-loading').hide();
-                $('#ielts-writing-form-section').show();
+                $submitBtn.prop('disabled', false).text('Submit for Assessment');
                 alert('A network error occurred. Please check your connection and try again.');
             }
         });
