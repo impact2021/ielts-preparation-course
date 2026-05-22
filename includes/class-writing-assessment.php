@@ -477,7 +477,7 @@ class IELTS_CM_Writing_Assessment {
 
             if (is_wp_error($response)) {
                 if ($attempt < $max_attempts) {
-                    usleep($this->get_retry_delay_seconds($attempt, $response) * 1000000);
+                    usleep($this->get_retry_delay_seconds($attempt) * 1000000);
                     continue;
                 }
 
@@ -542,7 +542,7 @@ class IELTS_CM_Writing_Assessment {
     private function get_retry_delay_seconds($attempt, $response = null, $body = array()) {
         $retry_after = 0;
 
-        if ($response) {
+        if (is_array($response)) {
             $retry_after = intval(wp_remote_retrieve_header($response, 'retry-after'));
         }
 
@@ -555,7 +555,7 @@ class IELTS_CM_Writing_Assessment {
         }
 
         if ($retry_after < 1) {
-            $retry_after = min(6, $attempt * 2);
+            $retry_after = min(10, pow(2, max(0, $attempt - 1)));
         }
 
         return max(1, min(10, $retry_after));
