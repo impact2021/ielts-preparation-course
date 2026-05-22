@@ -91,7 +91,7 @@ class IELTS_CM_Speaking_Assessment {
             'progressColor' => get_option('ielts_cm_vocab_header_color', '#E56C0A'),
             'hasOpenAI'     => !empty(get_option('ielts_cm_openai_api_key', '')),
             'p1Questions'   => $p1,
-            'p2Cuecard'     => $p2,
+            'p2Cuecard'     => wp_strip_all_tags($p2),
             'p3Questions'   => $p3,
         ));
     }

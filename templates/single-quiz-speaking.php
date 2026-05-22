@@ -144,7 +144,7 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                     <div id="ielts-p2-layout" style="display:none;">
                         <div class="ielts-p2-split">
                             <div id="ielts-p2-cuecard" class="ielts-p2-cuecard-panel">
-                                <div class="ielts-p2-cuecard-content"><?php echo esc_html($p2_cuecard); ?></div>
+                                <div class="ielts-p2-cuecard-content"><?php echo wp_kses_post($p2_cuecard); ?></div>
                             </div>
                             <div id="ielts-p2-notes-wrap">
                                 <div class="ielts-p2-notes-label">Your preparation notes (not submitted — stays visible while you speak):</div>
@@ -227,7 +227,7 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
             'progressColor' => get_option('ielts_cm_vocab_header_color', '#E56C0A'),
             'hasOpenAI'     => !empty(get_option('ielts_cm_openai_api_key', '')),
             'p1Questions'   => $p1_questions,
-            'p2Cuecard'     => $p2_cuecard,
+            'p2Cuecard'     => wp_strip_all_tags($p2_cuecard),
             'p3Questions'   => $p3_questions,
         )); ?>;
         </script>

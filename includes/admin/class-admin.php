@@ -4380,7 +4380,7 @@ and explain why you particularly enjoyed it."><?php echo esc_textarea($sp_p2); ?
                             ? array_map('sanitize_text_field', $question['speaking_p3_questions'])
                             : array();
                         $question_data['speaking_p1_questions'] = array_values(array_filter($p1));
-                        $question_data['speaking_p2_cuecard']   = isset($question['speaking_p2_cuecard']) ? sanitize_textarea_field($question['speaking_p2_cuecard']) : '';
+                        $question_data['speaking_p2_cuecard']   = isset($question['speaking_p2_cuecard']) ? wp_kses_post($question['speaking_p2_cuecard']) : '';
                         $question_data['speaking_p3_questions'] = array_values(array_filter($p3));
                         $question_data['points']                = 1;
                     } else {
