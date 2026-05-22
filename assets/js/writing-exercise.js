@@ -7,10 +7,54 @@
     var cfg            = ieltsWritingExercise;
     var progressTimers = [];
     var submitted      = false;
+    var defaultSubmitText = $('#ielts-writing-submit-btn').text() || 'Submit';
 
     function countWords(text) {
         var normalized = (text || '').trim();
         return normalized ? normalized.split(/\s+/).filter(Boolean).length : 0;
+    }
+
+    function getSubmitErrorBox() {
+        var $box = $('#ielts-writing-submit-error');
+
+        if (!$box.length) {
+            $box = $('<div id="ielts-writing-submit-error" class="ielts-writing-error" style="display:none;" role="alert"></div>');
+            $('#ielts-writing-container').before($box);
+        }
+
+        return $box;
+    }
+
+    function clearSubmitError() {
+        getSubmitErrorBox().hide().empty();
+    }
+
+    function showSubmitError(messages) {
+        var items = Array.isArray(messages) ? messages.filter(Boolean) : [];
+        var html = '<strong>Assessment could not be completed.</strong>' +
+            '<div>Your writing is still in the editor below, so you can try again without losing it.</div>';
+
+        if (items.length) {
+            html += '<ul>';
+            items.forEach(function(message) {
+                html += '<li>' + $('<div>').text(message).html() + '</li>';
+            });
+            html += '</ul>';
+        }
+
+        var $box = getSubmitErrorBox();
+        $box.html(html).show();
+
+        $('html, body').animate({
+            scrollTop: $box.offset().top - 30
+        }, 300);
+    }
+
+    function resetResultsView() {
+        $('.ielts-writing-result-col-content').empty();
+        $('.ielts-writing-result-col').hide();
+        $('#ielts-writing-combined-score').hide();
+        $('#ielts-writing-results-area').addClass('ielts-results-hidden');
     }
 
     // ─── Set progress bar colour ─────────────────────────────────────
@@ -142,9 +186,11 @@
         }
 
         // Disable submit button and show progress
+        clearSubmitError();
+        resetResultsView();
         $('#ielts-writing-submit-btn').prop('disabled', true).text('Assessing...');
-        $('#ielts-writing-compose-area').hide();
-        $('#ielts-writing-assessing').show();
+        $('.ielts-writing-nav-btn').prop('disabled', true);
+        $('#ielts-writing-assessing').css('display', 'flex');
         startProgress(tasks.length);
 
         // Fire parallel API calls — collect as plain array of promises
@@ -167,7 +213,14 @@
             }).then(function(response) {
                 return { task: task, response: response };
             }, function(jqXHR, textStatus, errorThrown) {
-                return $.Deferred().resolve({ task: task, response: { success: false, data: { message: textStatus + ': ' + errorThrown } } }).promise();
+                var message = jqXHR && jqXHR.responseJSON && jqXHR.responseJSON.data && jqXHR.responseJSON.data.message
+                    ? jqXHR.responseJSON.data.message
+                    : (errorThrown || textStatus || 'Request failed.');
+
+                return $.Deferred().resolve({
+                    task: task,
+                    response: { success: false, data: { message: message } }
+                }).promise();
             });
         });
 
@@ -180,11 +233,11 @@
 
             completeProgress();
             $('#ielts-writing-assessing').hide();
-            $('#ielts-writing-container').hide();
-            $('#ielts-writing-results-area').removeClass('ielts-results-hidden');
 
             var task1Band = null;
             var task2Band = null;
+            var failedMessages = [];
+            var hasFailures = false;
 
             results.forEach(function(result) {
                 var task     = result.task;
@@ -204,12 +257,23 @@
                         task1Band = parseFloat(assessment.overall_band);
                     }
                 } else {
-                    $('#writing-result-content-' + idx).html(
-                        '<div class="ielts-writing-error">' + (response.data ? response.data.message : 'Unknown error') + '</div>'
+                    hasFailures = true;
+                    failedMessages.push(
+                        (task.task_type === 'task2' ? 'Task 2' : 'Task 1') + ': ' +
+                        (response.data ? response.data.message : 'Unknown error')
                     );
-                    $('#writing-result-' + idx).show();
                 }
             });
+
+            if (hasFailures) {
+                $('#ielts-writing-submit-btn').prop('disabled', false).text(defaultSubmitText);
+                $('.ielts-writing-nav-btn').prop('disabled', false);
+                showSubmitError(failedMessages);
+                return;
+            }
+
+            $('#ielts-writing-container').hide();
+            $('#ielts-writing-results-area').removeClass('ielts-results-hidden');
 
             // Calculate combined IELTS writing band
             var combinedBand = null;

@@ -42,7 +42,7 @@ class IELTS_CM_Writing_Assessment {
     public function enqueue_assets() {
         if (!is_user_logged_in()) return;
 
-        $writing_version = '1.56';
+        $writing_version = '1.57';
 
         wp_enqueue_style(
             'ielts-writing-assessment',
@@ -452,7 +452,7 @@ class IELTS_CM_Writing_Assessment {
         $system_prompt = $this->build_system_prompt($task_type);
         $user_message  = $this->build_user_message($task_type, $task_prompt, $essay_text, $ai_assessment_notes);
 
-        $response = wp_remote_post('https://api.anthropic.com/v1/messages', array(
+        $request_args = array(
             'timeout' => 90,
             'headers' => array(
                 'Content-Type'      => 'application/json',
@@ -460,40 +460,105 @@ class IELTS_CM_Writing_Assessment {
                 'anthropic-version' => '2023-06-01',
             ),
             'body' => json_encode(array(
-                'model'      => 'claude-sonnet-4-6',
-                'max_tokens' => 2000,
+                'model'       => 'claude-sonnet-4-6',
+                'max_tokens'  => 2000,
                 'temperature' => 0,
-                'system'     => $system_prompt,
-                'messages'   => array(
+                'system'      => $system_prompt,
+                'messages'    => array(
                     array('role' => 'user', 'content' => $user_message),
                 ),
             )),
-        ));
+        );
 
-        if (is_wp_error($response)) {
-            return new WP_Error('api_error', 'Could not connect to the assessment service. Please try again later.');
-        }
+        $max_attempts = 3;
 
-        $code = wp_remote_retrieve_response_code($response);
-        $body = json_decode(wp_remote_retrieve_body($response), true);
+        for ($attempt = 1; $attempt <= $max_attempts; $attempt++) {
+            $response = wp_remote_post('https://api.anthropic.com/v1/messages', $request_args);
 
-        if ($code !== 200 || empty($body['content'][0]['text'])) {
+            if (is_wp_error($response)) {
+                if ($attempt < $max_attempts) {
+                    usleep($this->get_retry_delay_seconds($attempt, $response) * 1000000);
+                    continue;
+                }
+
+                return new WP_Error('api_error', 'Could not connect to the assessment service. Please try again later.');
+            }
+
+            $code = wp_remote_retrieve_response_code($response);
+            $body = json_decode(wp_remote_retrieve_body($response), true);
+
+            if ($code === 200 && !empty($body['content'][0]['text'])) {
+                $raw = $body['content'][0]['text'];
+
+                preg_match('/\{[\s\S]*\}/m', $raw, $matches);
+                if (empty($matches[0])) {
+                    return new WP_Error('parse_error', 'Could not parse the assessment response. Please try again.');
+                }
+
+                $assessment = json_decode($matches[0], true);
+                if (json_last_error() !== JSON_ERROR_NONE) {
+                    return new WP_Error('parse_error', 'Could not parse the assessment response. Please try again.');
+                }
+
+                return $assessment;
+            }
+
+            if ($this->should_retry_assessment_response($code, $response, $body)) {
+                if ($attempt < $max_attempts) {
+                    usleep($this->get_retry_delay_seconds($attempt, $response, $body) * 1000000);
+                    continue;
+                }
+
+                return new WP_Error('api_error', 'The assessment service is temporarily overloaded. Please try again in a moment. Your writing is still on the page, so you can resubmit without losing it.');
+            }
+
             return new WP_Error('api_error', 'The assessment service returned an unexpected response (HTTP ' . $code . '). Please try again.');
         }
 
-        $raw = $body['content'][0]['text'];
+        return new WP_Error('api_error', 'The assessment service is temporarily unavailable. Please try again.');
+    }
 
-        preg_match('/\{[\s\S]*\}/m', $raw, $matches);
-        if (empty($matches[0])) {
-            return new WP_Error('parse_error', 'Could not parse the assessment response. Please try again.');
+    private function should_retry_assessment_response($code, $response, $body) {
+        $retryable_codes = array(429, 500, 502, 503, 504, 529);
+        if (in_array(intval($code), $retryable_codes, true)) {
+            return true;
         }
 
-        $assessment = json_decode($matches[0], true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            return new WP_Error('parse_error', 'Could not parse the assessment response. Please try again.');
+        $error_type = strtolower((string) ($body['error']['type'] ?? ''));
+        $error_message = strtolower((string) ($body['error']['message'] ?? ''));
+
+        if (strpos($error_type, 'overloaded') !== false || strpos($error_message, 'overloaded') !== false) {
+            return true;
         }
 
-        return $assessment;
+        if (strpos($error_message, 'rate limit') !== false || strpos($error_message, 'temporarily unavailable') !== false) {
+            return true;
+        }
+
+        $retry_after = wp_remote_retrieve_header($response, 'retry-after');
+        return is_numeric($retry_after) && intval($retry_after) > 0;
+    }
+
+    private function get_retry_delay_seconds($attempt, $response = null, $body = array()) {
+        $retry_after = 0;
+
+        if ($response) {
+            $retry_after = intval(wp_remote_retrieve_header($response, 'retry-after'));
+        }
+
+        if ($retry_after < 1 && !empty($body['error']['retry_after']) && is_numeric($body['error']['retry_after'])) {
+            $retry_after = intval($body['error']['retry_after']);
+        }
+
+        if ($retry_after < 1 && !empty($body['retry_after']) && is_numeric($body['retry_after'])) {
+            $retry_after = intval($body['retry_after']);
+        }
+
+        if ($retry_after < 1) {
+            $retry_after = min(6, $attempt * 2);
+        }
+
+        return max(1, min(10, $retry_after));
     }
 
     /**
