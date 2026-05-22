@@ -18,11 +18,17 @@
     }
 
     function getSubmitErrorBox() {
-        var $box = $('#ielts-writing-submit-error');
+        var $modal = $('#ielts-writing-assessing');
+        var $box = $modal.find('#ielts-writing-submit-error');
 
         if (!$box.length) {
             $box = $('<div id="ielts-writing-submit-error" class="ielts-writing-error" style="display:none;" role="alert"></div>');
-            $('#ielts-writing-container').before($box);
+            var $wrap = $modal.find('.ielts-writing-progress-wrap');
+            if ($wrap.length) {
+                $wrap.append($box);
+            } else {
+                $('#ielts-writing-container').before($box);
+            }
         }
 
         return $box;
@@ -45,12 +51,10 @@
             html += '</ul>';
         }
 
+        html += '<button type="button" class="button button-secondary ielts-writing-modal-error-close">Close</button>';
+
         var $box = getSubmitErrorBox();
         $box.html(html).show();
-
-        $('html, body').animate({
-            scrollTop: $box.offset().top - 30
-        }, 300);
     }
 
     function getTaskLabel(task) {
@@ -377,7 +381,6 @@
 
             completeProgress();
             clearRetryStatus();
-            $('#ielts-writing-assessing').hide();
 
             var task1Band = null;
             var task2Band = null;
@@ -413,10 +416,12 @@
             if (hasFailures) {
                 $('#ielts-writing-submit-btn').prop('disabled', false).text(defaultSubmitText);
                 $('.ielts-writing-nav-btn').prop('disabled', false);
+                $('#ielts-exercise-progress-label').text('Assessment failed. Please review the error and try again.');
                 showSubmitError(failedMessages);
                 return;
             }
 
+            $('#ielts-writing-assessing').hide();
             $('#ielts-writing-container').hide();
             $('#ielts-writing-results-area').removeClass('ielts-results-hidden');
 
@@ -513,6 +518,11 @@
             $('#ielts-exercise-progress-label').text('Done — loading your results...').css('opacity', 1);
         }, 200);
     }
+
+    $(document).on('click', '#ielts-writing-assessing .ielts-writing-modal-error-close', function() {
+        clearSubmitError();
+        $('#ielts-writing-assessing').hide();
+    });
 
     // ─── Dispute handling ─────────────────────────────────────────────
     $(document).on('click', '.ielts-dispute-btn', function() {
