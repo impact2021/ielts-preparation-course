@@ -21,7 +21,7 @@ class IELTS_CM_Speaking_Assessment {
     }
 
     public function enqueue_assets() {
-        $v = '3.2';
+        $v = '3.3';
         wp_enqueue_style('ielts-speaking', IELTS_CM_PLUGIN_URL . 'assets/css/speaking.css', array(), $v);
 
         // Enqueue standalone shortcode JS
@@ -240,11 +240,13 @@ class IELTS_CM_Speaking_Assessment {
         if (is_wp_error($response)) { wp_send_json_error(array('message' => 'Assessment failed: ' . $response->get_error_message())); }
 
         $body = json_decode(wp_remote_retrieve_body($response), true);
-        if (empty($body['content'][0]['text'])) { wp_send_json_error(array('message' => 'Empty assessment response.')); }
+        $text = $this->extract_anthropic_text($body);
+        if ($text === '') { wp_send_json_error(array('message' => 'Empty assessment response.')); }
 
-        $text       = preg_replace('/```json|```/', '', $body['content'][0]['text']);
-        $assessment = json_decode(trim($text), true);
-        if (!$assessment) { wp_send_json_error(array('message' => 'Could not parse assessment.')); }
+        $assessment = $this->parse_assessment_json($text);
+        if (!$assessment) {
+            wp_send_json_error(array('message' => 'Assessment format error. Please retry.'));
+        }
 
         wp_send_json_success(array('html' => $this->render_results($assessment), 'assessment' => $assessment));
     }
@@ -384,11 +386,56 @@ Return ONLY valid JSON:
 
         if (is_wp_error($response)) { wp_send_json_error(array('message'=>'Assessment failed: '.$response->get_error_message())); }
         $body = json_decode(wp_remote_retrieve_body($response), true);
-        if (empty($body['content'][0]['text'])) { wp_send_json_error(array('message'=>'Empty response.')); }
-        $text = preg_replace('/```json|```/', '', $body['content'][0]['text']);
-        $assessment = json_decode(trim($text), true);
-        if (!$assessment) { wp_send_json_error(array('message'=>'Could not parse assessment.')); }
+        $text = $this->extract_anthropic_text($body);
+        if ($text === '') { wp_send_json_error(array('message'=>'Empty response.')); }
+
+        $assessment = $this->parse_assessment_json($text);
+        if (!$assessment) {
+            wp_send_json_error(array('message' => 'Assessment format error. Please retry.'));
+        }
+
         wp_send_json_success(array('html'=>$this->render_full_results($assessment),'assessment'=>$assessment));
+    }
+
+    private function extract_anthropic_text($body) {
+        if (!is_array($body) || empty($body['content']) || !is_array($body['content'])) {
+            return '';
+        }
+
+        $chunks = array();
+        foreach ($body['content'] as $item) {
+            if (is_array($item) && !empty($item['text']) && is_string($item['text'])) {
+                $chunks[] = $item['text'];
+            }
+        }
+
+        return trim(implode("\n", $chunks));
+    }
+
+    private function parse_assessment_json($raw_text) {
+        if (!is_string($raw_text) || trim($raw_text) === '') {
+            return null;
+        }
+
+        $clean = trim(str_replace(array('```json', '```'), '', $raw_text));
+        $decoded = json_decode($clean, true);
+        if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
+            return $decoded;
+        }
+
+        $start = strpos($clean, '{');
+        $end   = strrpos($clean, '}');
+        if ($start === false || $end === false || $end <= $start) {
+            return null;
+        }
+
+        $snippet = substr($clean, $start, $end - $start + 1);
+        $decoded = json_decode(trim($snippet), true);
+        if (json_last_error() === JSON_ERROR_NONE && is_array($decoded)) {
+            return $decoded;
+        }
+
+        return null;
     }
 
     public function ajax_next_question() {
