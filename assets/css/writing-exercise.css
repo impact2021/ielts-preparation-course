@@ -183,6 +183,10 @@
     margin: 10px 0 0 18px;
 }
 
+#ielts-writing-submit-error .ielts-writing-modal-error-close {
+    margin-top: 12px;
+}
+
 /* ─── Task nav buttons inside bottom bar ─── */
 .ielts-writing-task-btns {
     display: flex;
