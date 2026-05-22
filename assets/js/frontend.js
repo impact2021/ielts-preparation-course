@@ -224,9 +224,12 @@
         
         // Quiz submission (using event delegation to handle both static and modal forms)
         $(document).on('submit', '#ielts-quiz-form', function(e) {
-            e.preventDefault();
-            
             var form = $(this);
+            if (form.data('has-writing')) {
+                return;
+            }
+
+            e.preventDefault();
             var quizContainer = form.closest('.ielts-single-quiz, .ielts-computer-based-quiz, .ielts-listening-practice-quiz, .ielts-listening-exercise-quiz');
             
             // If form is inside modal, get data from the original quiz container
@@ -2824,6 +2827,7 @@
                 html += '<th>Score</th>';
                 html += '<th>Percentage</th>';
                 html += '<th>Date</th>';
+                html += '<th>Feedback</th>';
                 if (isAdmin) {
                     html += '<th>Actions</th>';
                 }
@@ -2834,20 +2838,57 @@
                     var attemptNum = attempts.length - index;
                     // Using default 70% pass threshold - ideally this would come from quiz settings
                     var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
+                    var answers = attempt.answers || {};
+                    var feedbackSnapshot = Array.isArray(answers.feedback_snapshot) ? answers.feedback_snapshot : [];
+                    var hasFeedback = feedbackSnapshot.length > 0;
+                    var detailId = 'attempt-feedback-' + attempt.id;
                     
                     html += '<tr data-attempt-id="' + attempt.id + '">';
                     html += '<td>' + attemptNum + '</td>';
                     html += '<td>' + attempt.score + ' / ' + attempt.max_score + '</td>';
                     html += '<td><span class="percentage-badge percentage-' + passClass + '">' + attempt.percentage + '%</span></td>';
                     html += '<td>' + attempt.submitted_date + '</td>';
+                    html += '<td>';
+                    if (hasFeedback) {
+                        html += '<button class="button button-small view-attempt-feedback-btn" data-target="' + detailId + '">View Feedback</button>';
+                    } else {
+                        html += '<span style="color:#777;">—</span>';
+                    }
+                    html += '</td>';
                     if (isAdmin) {
                         html += '<td><button class="delete-attempt-modal-btn button button-small" data-attempt-id="' + attempt.id + '" data-quiz-id="' + quizId + '">Delete</button></td>';
                     }
                     html += '</tr>';
+
+                    if (hasFeedback) {
+                        var colspan = isAdmin ? 6 : 5;
+                        html += '<tr id="' + detailId + '" class="attempt-feedback-row" style="display:none;">';
+                        html += '<td colspan="' + colspan + '" style="background:#fafafa; border-top:0;">';
+                        html += '<div class="attempt-feedback-content" style="padding:10px 0;">';
+                        feedbackSnapshot.forEach(function(taskFeedback, taskIndex) {
+                            var label = taskFeedback.task_type === 'task2' ? 'Task 2' : 'Task 1';
+                            var bandText = taskFeedback.overall_band ? ' (Band ' + taskFeedback.overall_band + ')' : '';
+                            html += '<div style="margin-bottom:' + (taskIndex === feedbackSnapshot.length - 1 ? '0' : '14px') + ';">';
+                            html += '<div style="font-weight:600; margin-bottom:6px;">' + label + ' Feedback' + bandText + '</div>';
+                            html += '<div class="attempt-feedback-html">' + (taskFeedback.html || '') + '</div>';
+                            html += '</div>';
+                        });
+                        html += '</div>';
+                        html += '</td>';
+                        html += '</tr>';
+                    }
                 });
                 
                 html += '</tbody></table>';
                 $('#attempts-modal .attempts-list').html(html);
+
+                $('#attempts-modal .view-attempt-feedback-btn').on('click', function() {
+                    var target = $(this).data('target');
+                    var $row = $('#' + target);
+                    var isVisible = $row.is(':visible');
+                    $row.slideToggle(180);
+                    $(this).text(isVisible ? 'View Feedback' : 'Hide Feedback');
+                });
                 
                 // Add delete functionality for admin
                 if (isAdmin) {

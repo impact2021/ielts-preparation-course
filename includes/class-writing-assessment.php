@@ -328,6 +328,8 @@ class IELTS_CM_Writing_Assessment {
         $course_id  = intval($_POST['course_id'] ?? 0);
         $lesson_id  = intval($_POST['lesson_id'] ?? 0);
         $band_score = floatval($_POST['band_score'] ?? 0);
+        $submission_ids_raw = $_POST['submission_ids'] ?? array();
+        $feedback_snapshot_raw = $_POST['feedback_snapshot'] ?? array();
         // Map band score to a percentage that converts back correctly via convert_percentage_to_band()
         // Keys must be strings to avoid PHP float-to-int casting in array lookups
         $band_to_pct = array(
@@ -348,6 +350,37 @@ class IELTS_CM_Writing_Assessment {
 
         // Store band score as percentage of 9 for compatibility with the gamification system
         // max_score = 9 (max band), score = actual band, percentage = (band/9)*100
+        $submission_ids = array();
+        if (is_array($submission_ids_raw)) {
+            foreach ($submission_ids_raw as $sid) {
+                $sid = intval($sid);
+                if ($sid > 0) {
+                    $submission_ids[] = $sid;
+                }
+            }
+        }
+        $submission_ids = array_values(array_unique($submission_ids));
+
+        $feedback_snapshot = array();
+        if (is_array($feedback_snapshot_raw)) {
+            foreach ($feedback_snapshot_raw as $item) {
+                if (!is_array($item)) {
+                    continue;
+                }
+                $task_type = sanitize_text_field($item['task_type'] ?? '');
+                $overall_band = isset($item['overall_band']) ? floatval($item['overall_band']) : 0;
+                $html = isset($item['html']) ? wp_kses_post(wp_unslash($item['html'])) : '';
+                if ($html === '') {
+                    continue;
+                }
+                $feedback_snapshot[] = array(
+                    'task_type'    => $task_type,
+                    'overall_band' => $overall_band,
+                    'html'         => $html,
+                );
+            }
+        }
+
         $result = $wpdb->insert(
             $table,
             array(
@@ -358,7 +391,12 @@ class IELTS_CM_Writing_Assessment {
                 'score'          => $band_score,
                 'max_score'      => 9,
                 'percentage'     => $percentage,
-                'answers'        => json_encode(array('writing_exercise' => true, 'band_score' => $band_score)),
+                'answers'        => json_encode(array(
+                    'writing_exercise' => true,
+                    'band_score' => $band_score,
+                    'submission_ids' => $submission_ids,
+                    'feedback_snapshot' => $feedback_snapshot,
+                )),
                 'submitted_date' => current_time('mysql'),
             ),
             array('%d','%d','%d','%d','%f','%f','%f','%s','%s')
@@ -620,11 +658,16 @@ class IELTS_CM_Writing_Assessment {
 You are an expert IELTS examiner with extensive experience marking {$task_label} responses.
 
 LANGUAGE OF FEEDBACK — THIS IS CRITICAL:
-Your feedback will be read by English language learners, mostly at B1-B2 level. Write ALL feedback in simple, clear English.
+Your feedback will be read by English language learners. Write ALL feedback in simple, clear English.
 - ALWAYS write in the second person, addressing the student directly as "you". Never refer to the student in the third person (e.g. never say "the student", "the writer", "the candidate", or "they"). Every sentence of feedback — including the summary — must speak directly to the student: "You have...", "Your essay...", "You could improve...".
 - Use short sentences.
 - Avoid academic or technical language. Do not use words like "lexical", "cohesive devices", "syntactic", "discourse markers", "nominal groups" or similar jargon.
 - Instead of "lexical resource", say "vocabulary". Instead of "cohesive devices", say "linking words". Instead of "syntactic complexity", say "sentence structures".
+- Match language complexity to the student's level based on the final overall band score you assign:
+  - If overall_band is 5.0 or below: keep language at CEFR B1 maximum (no B2/C1 vocabulary).
+  - If overall_band is 5.5 to 6.5: keep language at CEFR B2 maximum.
+  - If overall_band is 7.0 or above: you may use up to CEFR C1, but still keep wording clear and student-friendly.
+- For Band 5.0 or below, use very common everyday words and very direct phrasing. Avoid advanced vocabulary.
 - Be direct and encouraging, but honest. Say exactly what the problem is and how to fix it.
 - When mentioning the word count, ALWAYS use the exact word count provided in the user message — never estimate or say "approximately".
 - Do NOT give advice about target word counts beyond the official IELTS minimums (150 for Task 1, 250 for Task 2). Do not suggest that writing more words than the minimum will improve scores — this is not how IELTS is marked. If the student has met the minimum, do not comment on word count at all.
@@ -919,7 +962,7 @@ PROMPT;
                         <p><img src="<?php echo esc_url($display_task_image); ?>" alt="" style="max-width:100%; height:auto;"></p>
                     <?php endif; ?>
                     <?php if ($display_task_prompt): ?>
-                        <div><?php echo nl2br(esc_html($display_task_prompt)); ?></div>
+                        <div><?php echo esc_html($display_task_prompt); ?></div>
                     <?php endif; ?>
                 </div>
             </details>
@@ -929,7 +972,7 @@ PROMPT;
             <?php if ($essay_text): ?>
             <details class="ielts-accordion">
                 <summary class="ielts-accordion-summary">Your Response <span class="ielts-essay-wordcount"><?php echo esc_html($word_count); ?> words</span></summary>
-                <div class="ielts-accordion-content ielts-essay-content"><?php echo nl2br(esc_html($essay_text)); ?></div>
+                <div class="ielts-accordion-content ielts-essay-content"><?php echo esc_html($essay_text); ?></div>
             </details>
             <?php endif; ?>
 
@@ -1073,7 +1116,7 @@ PROMPT;
                                         <p><img src="<?php echo esc_url($task_prompt_context['task_image_url']); ?>" alt="" style="max-width:100%; height:auto;"></p>
                                     <?php endif; ?>
                                     <?php if (!empty($task_prompt_context['student_prompt'])): ?>
-                                        <div><?php echo nl2br(esc_html($task_prompt_context['student_prompt'])); ?></div>
+                                        <div><?php echo esc_html($task_prompt_context['student_prompt']); ?></div>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -1082,7 +1125,7 @@ PROMPT;
                             <?php if (!empty($s->essay_text)): ?>
                             <details class="ielts-essay-details" open>
                                 <summary>Your Essay <span class="ielts-essay-wordcount"><?php echo esc_html($this->count_words($s->essay_text)); ?> words</span></summary>
-                                <div class="ielts-essay-content"><?php echo nl2br(esc_html($s->essay_text)); ?></div>
+                                <div class="ielts-essay-content"><?php echo esc_html($s->essay_text); ?></div>
                             </details>
                             <?php endif; ?>
 
