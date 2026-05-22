@@ -152,6 +152,13 @@
     transition: opacity 0.3s ease;
 }
 
+.ielts-writing-progress-wrap .ielts-progress-retry-status {
+    margin-top: 8px;
+    font-size: 0.82em;
+    color: #7a4a00;
+    text-align: center;
+}
+
 /* ─── Results ─── */
 .ielts-writing-result-panel {
     padding: 0 4px;
