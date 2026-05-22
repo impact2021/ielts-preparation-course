@@ -43,6 +43,9 @@ jQuery(document).ready(function ($) {
     var assessDone     = false;
     var p3AdaptiveQ    = [];
     var p3QIdx         = 0;
+    var recordingBytes = 0;
+    var recordingHealthTimer = null;
+    var recordingStartAt = 0;
 
     // Silence detection — one shared context/analyser for entire session
     var audioCtx       = null;
@@ -515,6 +518,8 @@ jQuery(document).ready(function ($) {
     // ─── Recording ────────────────────────────────────────────────────
     function startRecording(key, maxSecs, onDone) {
         audioChunks = [];
+        recordingBytes = 0;
+        recordingStartAt = Date.now();
         var mimeType = '';
         var types = ['audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus','audio/ogg','audio/mp4'];
         for (var i = 0; i < types.length; i++) {
@@ -524,9 +529,15 @@ jQuery(document).ready(function ($) {
         function doRecord(s) {
             stream = s;
             mediaRecorder = new MediaRecorder(s, mimeType ? { mimeType: mimeType } : {});
-            mediaRecorder.ondataavailable = function (e) { if (e.data && e.data.size > 0) audioChunks.push(e.data); };
+            mediaRecorder.ondataavailable = function (e) {
+                if (e.data && e.data.size > 0) {
+                    audioChunks.push(e.data);
+                    recordingBytes += e.data.size;
+                }
+            };
             mediaRecorder.onstop = function () {
                 stopSilenceDetection();
+                stopRecordingHealthMonitor();
                 var blob = new Blob(audioChunks, { type: mimeType || 'audio/webm' });
                 recordedAudioMeta[key] = {
                     size: blob.size || 0,
@@ -540,12 +551,18 @@ jQuery(document).ready(function ($) {
             $finishBtn.prop('disabled', false).off('click').on('click', function () {
                 if (recording) stopRecording();
             });
-            $status.html('<span class="ielts-recording-indicator"><span class="ielts-rec-pulse"></span> Recording</span>');
+            $status.html(
+                '<span class="ielts-recording-indicator"><span class="ielts-rec-pulse"></span> Recording</span>' +
+                ' <span id="ielts-recording-health">Checking mic signal...</span>'
+            );
+            startRecordingHealthMonitor();
             startCountdown(maxSecs, null, function () {
                 if (recording) stopRecording();
             }, 'speaking');
             startSilenceDetection(s, function () {
-                if (recording) { $status.text('You are very quiet — please keep speaking clearly.'); }
+                if (recording) {
+                    setRecordingHealthMessage('You are very quiet — please keep speaking clearly.', true);
+                }
             });
         }
 
@@ -563,6 +580,7 @@ jQuery(document).ready(function ($) {
         recording = false;
         clearCountdown();
         stopSilenceDetection();
+        stopRecordingHealthMonitor();
         hideSilenceWarning();
         $finishBtn.prop('disabled', true).hide();
         $status.text('');
@@ -604,6 +622,38 @@ jQuery(document).ready(function ($) {
     function stopSilenceDetection() {
         if (silenceTimer) { clearInterval(silenceTimer); silenceTimer = null; }
         // Never close audioCtx/sharedAnalyser — they persist for the whole session
+    }
+
+    function setRecordingHealthMessage(message, isWarn) {
+        var $health = $('#ielts-recording-health');
+        if (!$health.length) return;
+        $health.text(message);
+        $health.css('color', isWarn ? '#dc2626' : '#16a34a');
+    }
+
+    function startRecordingHealthMonitor() {
+        stopRecordingHealthMonitor();
+        recordingHealthTimer = setInterval(function () {
+            if (!recording) {
+                stopRecordingHealthMonitor();
+                return;
+            }
+            var elapsed = Math.floor((Date.now() - recordingStartAt) / 1000);
+            if (recordingBytes > 0) {
+                setRecordingHealthMessage('Mic signal detected.', false);
+            } else if (elapsed >= 4) {
+                setRecordingHealthMessage('No audio data detected yet — check your microphone.', true);
+            } else {
+                setRecordingHealthMessage('Checking mic signal...', false);
+            }
+        }, 1000);
+    }
+
+    function stopRecordingHealthMonitor() {
+        if (recordingHealthTimer) {
+            clearInterval(recordingHealthTimer);
+            recordingHealthTimer = null;
+        }
     }
 
     var silenceWarnTimer = null;
