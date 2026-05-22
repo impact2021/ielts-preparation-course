@@ -8,10 +8,6 @@ jQuery(document).ready(function ($) {
     window.addEventListener('beforeunload', function () {
         if (window.speechSynthesis) window.speechSynthesis.cancel();
     });
-    document.addEventListener('visibilitychange', function () {
-        if (document.hidden && window.speechSynthesis) window.speechSynthesis.cancel();
-    });
-
     if (typeof ieltsSpeakingExercise === 'undefined') {
         $('.ielts-gender-btn').on('click', function () {
             $(this).addClass('selected');
@@ -125,15 +121,26 @@ jQuery(document).ready(function ($) {
         if (!synth) { if (onEnd) onEnd(); return; }
         speechGen++;
         var myGen = speechGen;
+        var completed = false;
+        var wordCount = (text || '').trim() ? (text || '').trim().split(/\s+/).length : 0;
+        var timeoutMs = Math.min(90000, Math.max(4000, Math.round((wordCount / 2.5) * 1000) + 1500));
+        var fallbackTimer = null;
+        function done() {
+            if (completed) return;
+            completed = true;
+            if (fallbackTimer) { clearTimeout(fallbackTimer); fallbackTimer = null; }
+            if (speechGen === myGen && onEnd) onEnd();
+        }
         synth.cancel();
         var utt    = new SpeechSynthesisUtterance(text);
         utt.rate   = 0.92;
         utt.pitch  = GENDER === 'male' ? 0.85 : 1.05;
         utt.volume = 1.0;
         if (voice) utt.voice = voice;
-        utt.onend   = function () { if (speechGen === myGen && onEnd) onEnd(); };
-        utt.onerror = function (e) { if (e.error !== 'interrupted' && speechGen === myGen && onEnd) onEnd(); };
+        utt.onend   = done;
+        utt.onerror = done;
         synth.speak(utt);
+        fallbackTimer = setTimeout(done, timeoutMs);
     }
 
     function cancelSpeak() {
@@ -182,10 +189,23 @@ jQuery(document).ready(function ($) {
         var $confirm = $('#ielts-mic-confirm');
         var $micSt   = $('#ielts-mic-status');
         var chunks = [], recorder = null, micStream = null, blob = null, audio = null;
+        function setMicCheckIndicator(isOk, message) {
+            $micSt.empty();
+            var $dot = $('<span class="ielts-mic-check-indicator" aria-hidden="true"></span>');
+            if (!isOk) $dot.addClass('is-error');
+            $micSt.append($dot);
+            if (message) {
+                $micSt.append($('<span class="ielts-mic-check-message"></span>').text(message));
+            }
+        }
+
+        setMicCheckIndicator(true, '');
 
         $start.off('click').on('click', function () {
-            $micSt.text('Recording for 5 seconds...');
             $start.prop('disabled', true);
+            $play.prop('disabled', true);
+            $confirm.prop('disabled', true);
+            setMicCheckIndicator(true, '');
             chunks = [];
             navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
                 micStream = s;
@@ -193,15 +213,21 @@ jQuery(document).ready(function ($) {
                 recorder.ondataavailable = function (e) { if (e.data.size > 0) chunks.push(e.data); };
                 recorder.onstop = function () {
                     blob = new Blob(chunks, { type: 'audio/webm' });
+                    $start.prop('disabled', false);
+                    if (!blob || blob.size < 1024) {
+                        blob = null;
+                        setMicCheckIndicator(false, 'No microphone audio was detected. Please check microphone permissions/input and try again.');
+                        return;
+                    }
                     // Don't stop micStream tracks — keep stream alive for calibration
-                    $micSt.text('Done. Play it back to confirm your mic is working.');
+                    setMicCheckIndicator(true, '');
                     $play.prop('disabled', false);
                     $confirm.prop('disabled', false);
                 };
                 recorder.start();
                 setTimeout(function () { recorder.stop(); }, 5000);
             }).catch(function (err) {
-                $micSt.text(err.name === 'NotAllowedError' ? 'Mic access denied — please allow microphone access and reload.' : 'Mic error: ' + err.message);
+                setMicCheckIndicator(false, err.name === 'NotAllowedError' ? 'Mic access denied — please allow microphone access and reload.' : 'Mic error: ' + err.message);
                 $start.prop('disabled', false);
             });
         });
@@ -210,9 +236,10 @@ jQuery(document).ready(function ($) {
             if (!blob) return;
             if (audio) audio.pause();
             audio = new Audio(URL.createObjectURL(blob));
-            audio.play();
-            $micSt.text('Playing back...');
-            audio.onended = function () { $micSt.text('Sounds good? Click Confirm to start the test.'); };
+            audio.play().catch(function () {
+                setMicCheckIndicator(false, 'Unable to play the recording. Please record again.');
+            });
+            audio.onended = function () { setMicCheckIndicator(true, ''); };
         });
 
         $confirm.off('click').on('click', function () {
@@ -552,8 +579,8 @@ jQuery(document).ready(function ($) {
                 if (recording) stopRecording();
             });
             $status.html(
-                '<span class="ielts-recording-indicator"><span class="ielts-rec-pulse"></span> Recording</span>' +
-                ' <span id="ielts-recording-health">Checking mic signal...</span>'
+                '<span class="ielts-recording-indicator"><span class="ielts-rec-pulse"></span></span>' +
+                ' <span id="ielts-recording-health" class="ielts-recording-health-message"></span>'
             );
             startRecordingHealthMonitor();
             startCountdown(maxSecs, null, function () {
@@ -562,6 +589,7 @@ jQuery(document).ready(function ($) {
             startSilenceDetection(s, function () {
                 if (recording) {
                     setRecordingHealthMessage('You are very quiet — please keep speaking clearly.', true);
+                    stopRecording();
                 }
             });
         }
@@ -614,6 +642,7 @@ jQuery(document).ready(function ($) {
                 if (silentFor >= SILENCE_SECS && !warnShown) {
                     warnShown = true;
                     showSilenceWarning();
+                    if (onSilence) onSilence();
                 }
             }
         }, 1000);
@@ -626,9 +655,16 @@ jQuery(document).ready(function ($) {
 
     function setRecordingHealthMessage(message, isWarn) {
         var $health = $('#ielts-recording-health');
+        var $dot = $('.ielts-recording-indicator');
         if (!$health.length) return;
-        $health.text(message);
-        $health.css('color', isWarn ? '#dc2626' : '#16a34a');
+        if ($dot.length) {
+            $dot.toggleClass('is-error', !!isWarn);
+        }
+        if (isWarn && message) {
+            $health.text(message).show();
+        } else {
+            $health.text('').hide();
+        }
     }
 
     function startRecordingHealthMonitor() {
@@ -640,11 +676,11 @@ jQuery(document).ready(function ($) {
             }
             var elapsed = Math.floor((Date.now() - recordingStartAt) / 1000);
             if (recordingBytes > 0) {
-                setRecordingHealthMessage('Mic signal detected.', false);
+                setRecordingHealthMessage('', false);
             } else if (elapsed >= 4) {
                 setRecordingHealthMessage('No audio data detected yet — check your microphone.', true);
             } else {
-                setRecordingHealthMessage('Checking mic signal...', false);
+                setRecordingHealthMessage('', false);
             }
         }, 1000);
     }
