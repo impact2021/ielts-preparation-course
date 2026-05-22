@@ -231,6 +231,8 @@
         $('.ielts-writing-result-col').hide();
         $('#ielts-writing-combined-score').hide();
         $('#ielts-writing-results-area').addClass('ielts-results-hidden');
+        $('#ielts-writing-results-area').scrollTop(0);
+        $('.ielts-writing-result-col-content').scrollTop(0);
     }
 
     // ─── Set progress bar colour ─────────────────────────────────────
@@ -389,6 +391,8 @@
             var task2Band = null;
             var failedMessages = [];
             var hasFailures = false;
+            var submissionIds = [];
+            var feedbackSnapshot = [];
 
             results.forEach(function(result) {
                 var task     = result.task;
@@ -401,6 +405,17 @@
 
                     $('#writing-result-content-' + idx).html(html);
                     $('#writing-result-' + idx).show();
+                    $('#writing-result-content-' + idx).scrollTop(0);
+
+                    var submissionId = parseInt(response.data.submission_id, 10);
+                    if (!isNaN(submissionId) && submissionId > 0) {
+                        submissionIds.push(submissionId);
+                    }
+                    feedbackSnapshot.push({
+                        task_type: task.task_type,
+                        overall_band: assessment.overall_band,
+                        html: html
+                    });
 
                     if (task.task_type === 'task2') {
                         task2Band = parseFloat(assessment.overall_band);
@@ -427,6 +442,8 @@
             $('#ielts-writing-assessing').hide();
             $('#ielts-writing-container').hide();
             $('#ielts-writing-results-area').removeClass('ielts-results-hidden');
+            $('#ielts-writing-results-area').scrollTop(0);
+            $('.ielts-writing-result-col-content').scrollTop(0);
 
             // Calculate combined IELTS writing band
             var combinedBand = null;
@@ -442,7 +459,7 @@
             if (combinedBand !== null) {
                 $('#ielts-combined-band-value').text(combinedBand.toFixed(1));
                 $('#ielts-writing-combined-score').show();
-                saveWritingScore(combinedBand);
+                saveWritingScore(combinedBand, submissionIds, feedbackSnapshot);
             }
 
             submitted = true;
@@ -455,7 +472,7 @@
     });
 
     // ─── Save combined writing score ─────────────────────────────────
-    function saveWritingScore(combinedBand) {
+    function saveWritingScore(combinedBand, submissionIds, feedbackSnapshot) {
         $.ajax({
             url: cfg.ajaxUrl,
             method: 'POST',
@@ -466,6 +483,8 @@
                 course_id:  cfg.courseId,
                 lesson_id:  cfg.lessonId,
                 band_score: combinedBand,
+                submission_ids: Array.isArray(submissionIds) ? submissionIds : [],
+                feedback_snapshot: Array.isArray(feedbackSnapshot) ? feedbackSnapshot : [],
             },
         });
     }
