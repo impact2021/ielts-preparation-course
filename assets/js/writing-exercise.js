@@ -51,7 +51,10 @@
             html += '</ul>';
         }
 
-        html += '<button type="button" class="button button-secondary ielts-writing-modal-error-close">Close</button>';
+        html += '<div class="ielts-writing-error-actions">';
+        html += '<button type="button" class="button button-primary ielts-writing-modal-retry">Try Again</button>';
+        html += ' <button type="button" class="button button-secondary ielts-writing-modal-error-close">Edit My Response</button>';
+        html += '</div>';
 
         var $box = getSubmitErrorBox();
         $box.html(html).show();
@@ -522,6 +525,11 @@
     $(document).on('click', '#ielts-writing-assessing .ielts-writing-modal-error-close', function() {
         clearSubmitError();
         $('#ielts-writing-assessing').hide();
+    });
+
+    $(document).on('click', '#ielts-writing-assessing .ielts-writing-modal-retry', function() {
+        clearSubmitError();
+        $('#ielts-quiz-form[data-has-writing="1"]').trigger('submit');
     });
 
     // ─── Dispute handling ─────────────────────────────────────────────
