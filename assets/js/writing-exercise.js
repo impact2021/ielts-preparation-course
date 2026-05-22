@@ -6,8 +6,11 @@
 
     var cfg            = ieltsWritingExercise;
     var progressTimers = [];
+    var retryStatusByTask = {};
+    var retryCountdownTimers = {};
     var submitted      = false;
     var defaultSubmitText = $('#ielts-writing-submit-btn').text() || 'Submit';
+    var maxFrontendRetryAttempts = 3;
 
     function countWords(text) {
         var normalized = (text || '').trim();
@@ -40,6 +43,172 @@
                 html += '<li>' + $('<div>').text(message).html() + '</li>';
             });
             html += '</ul>';
+        }
+
+        function getTaskLabel(task) {
+            return task.task_type === 'task2' ? 'Task 2' : 'Task 1';
+        }
+
+        function getRetryStatusBox() {
+            var $box = $('#ielts-exercise-retry-status');
+
+            if (!$box.length) {
+                $box = $('<div id="ielts-exercise-retry-status" class="ielts-progress-retry-status" style="display:none;" aria-live="polite"></div>');
+                $('#ielts-exercise-progress-label').after($box);
+            }
+
+            return $box;
+        }
+
+        function renderRetryStatus() {
+            var $box = getRetryStatusBox();
+            var messages = Object.keys(retryStatusByTask).sort().map(function(key) {
+                return retryStatusByTask[key];
+            }).filter(Boolean);
+
+            if (!messages.length) {
+                $box.hide().text('');
+                return;
+            }
+
+            $box.text(messages.join(' | ')).show();
+        }
+
+        function setRetryStatus(taskIndex, message) {
+            retryStatusByTask[taskIndex] = message;
+            renderRetryStatus();
+        }
+
+        function clearRetryStatus(taskIndex) {
+            if (typeof taskIndex !== 'undefined' && taskIndex !== null) {
+                delete retryStatusByTask[taskIndex];
+            } else {
+                retryStatusByTask = {};
+            }
+
+            renderRetryStatus();
+        }
+
+        function clearRetryCountdownTimer(taskIndex) {
+            if (retryCountdownTimers[taskIndex]) {
+                clearInterval(retryCountdownTimers[taskIndex]);
+                delete retryCountdownTimers[taskIndex];
+            }
+        }
+
+        function shouldRetryAssessmentFailure(message) {
+            var normalized = (message || '').toLowerCase();
+
+            if (!normalized) return false;
+
+            return normalized.indexOf('temporarily overloaded') !== -1 ||
+                normalized.indexOf('overloaded') !== -1 ||
+                normalized.indexOf('rate limit') !== -1 ||
+                normalized.indexOf('temporarily unavailable') !== -1 ||
+                normalized.indexOf('service unavailable') !== -1 ||
+                normalized.indexOf('could not connect') !== -1 ||
+                normalized.indexOf('network error') !== -1 ||
+                normalized.indexOf('timeout') !== -1 ||
+                normalized.indexOf('request failed') !== -1;
+        }
+
+        function getRetryDelaySeconds(message, attempt) {
+            var normalized = (message || '').toLowerCase();
+            var match = normalized.match(/retry(?:ing)?(?:\s+after)?\s+(\d+)\s*(?:s|sec|secs|second|seconds)?/i);
+
+            if (match && match[1]) {
+                var parsed = parseInt(match[1], 10);
+                if (!isNaN(parsed) && parsed > 0) {
+                    return Math.min(10, parsed);
+                }
+            }
+
+            return Math.min(10, Math.pow(2, Math.max(0, attempt - 1)));
+        }
+
+        function countdownToRetry(task, attempt, maxAttempts, delaySeconds) {
+            var deferred = $.Deferred();
+            var remaining = Math.max(1, parseInt(delaySeconds, 10) || 1);
+            var label = getTaskLabel(task);
+
+            clearRetryCountdownTimer(task.index);
+            setRetryStatus(task.index, label + ' is busy. Retrying in ' + remaining + 's (' + (attempt + 1) + '/' + maxAttempts + ')…');
+
+            retryCountdownTimers[task.index] = setInterval(function() {
+                remaining -= 1;
+
+                if (remaining <= 0) {
+                    clearRetryCountdownTimer(task.index);
+                    clearRetryStatus(task.index);
+                    deferred.resolve();
+                    return;
+                }
+
+                setRetryStatus(task.index, label + ' is busy. Retrying in ' + remaining + 's (' + (attempt + 1) + '/' + maxAttempts + ')…');
+            }, 1000);
+
+            return deferred.promise();
+        }
+
+        function submitTaskRequest(task) {
+            return $.ajax({
+                url:    cfg.ajaxUrl,
+                method: 'POST',
+                data: {
+                    action:        'ielts_cm_submit_writing',
+                    nonce:         cfg.nonce,
+                    quiz_id:       cfg.quizId,
+                    task_type:     task.task_type,
+                    task_prompt:   task.task_prompt,
+                    student_prompt: task.student_prompt,
+                    ai_assessment_notes: task.ai_assessment_notes,
+                    task_image_url: task.task_image_url,
+                    essay_text:    task.essay_text,
+                    exercise_mode: 1,
+                },
+            }).then(function(response) {
+                return { task: task, response: response };
+            }, function(jqXHR, textStatus, errorThrown) {
+                var message = jqXHR && jqXHR.responseJSON && jqXHR.responseJSON.data && jqXHR.responseJSON.data.message
+                    ? jqXHR.responseJSON.data.message
+                    : (errorThrown || textStatus || 'Request failed.');
+
+                return $.Deferred().resolve({
+                    task: task,
+                    response: { success: false, data: { message: message } }
+                }).promise();
+            });
+        }
+
+        function submitTaskWithRetry(task) {
+            var attempt = 1;
+
+            function runAttempt() {
+                return submitTaskRequest(task).then(function(result) {
+                    if (result.response && result.response.success) {
+                        clearRetryCountdownTimer(task.index);
+                        clearRetryStatus(task.index);
+                        return result;
+                    }
+
+                    var message = result.response && result.response.data ? result.response.data.message : '';
+                    var canRetry = attempt < maxFrontendRetryAttempts && shouldRetryAssessmentFailure(message);
+
+                    if (!canRetry) {
+                        clearRetryCountdownTimer(task.index);
+                        clearRetryStatus(task.index);
+                        return result;
+                    }
+
+                    var delaySeconds = getRetryDelaySeconds(message, attempt);
+                    return countdownToRetry(task, attempt, maxFrontendRetryAttempts, delaySeconds).then(function() {
+                        attempt += 1;
+                        return runAttempt();
+                    });
+                });
+            }
+
+            return runAttempt();
         }
 
         var $box = getSubmitErrorBox();
@@ -188,40 +357,15 @@
         // Disable submit button and show progress
         clearSubmitError();
         resetResultsView();
+        clearRetryStatus();
         $('#ielts-writing-submit-btn').prop('disabled', true).text('Assessing...');
         $('.ielts-writing-nav-btn').prop('disabled', true);
         $('#ielts-writing-assessing').css('display', 'flex');
         startProgress(tasks.length);
 
-        // Fire parallel API calls — collect as plain array of promises
+        // Fire parallel API calls with per-task retries for transient overloads
         var ajaxCalls = tasks.map(function(task) {
-            return $.ajax({
-                url:    cfg.ajaxUrl,
-                method: 'POST',
-                data: {
-                    action:        'ielts_cm_submit_writing',
-                    nonce:         cfg.nonce,
-                    quiz_id:       cfg.quizId,
-                    task_type:     task.task_type,
-                    task_prompt:   task.task_prompt,
-                    student_prompt: task.student_prompt,
-                    ai_assessment_notes: task.ai_assessment_notes,
-                    task_image_url: task.task_image_url,
-                    essay_text:    task.essay_text,
-                    exercise_mode: 1,
-                },
-            }).then(function(response) {
-                return { task: task, response: response };
-            }, function(jqXHR, textStatus, errorThrown) {
-                var message = jqXHR && jqXHR.responseJSON && jqXHR.responseJSON.data && jqXHR.responseJSON.data.message
-                    ? jqXHR.responseJSON.data.message
-                    : (errorThrown || textStatus || 'Request failed.');
-
-                return $.Deferred().resolve({
-                    task: task,
-                    response: { success: false, data: { message: message } }
-                }).promise();
-            });
+            return submitTaskWithRetry(task);
         });
 
         // Wait for all calls regardless of count
@@ -232,6 +376,7 @@
                 : Array.prototype.slice.call(arguments);
 
             completeProgress();
+            clearRetryStatus();
             $('#ielts-writing-assessing').hide();
 
             var task1Band = null;
@@ -359,6 +504,9 @@
     function completeProgress() {
         progressTimers.forEach(function(t) { clearTimeout(t); });
         progressTimers = [];
+        Object.keys(retryCountdownTimers).forEach(function(key) {
+            clearRetryCountdownTimer(key);
+        });
         $('#ielts-exercise-progress-fill').css('width', '100%');
         $('#ielts-exercise-progress-label').css('opacity', 0);
         setTimeout(function() {
