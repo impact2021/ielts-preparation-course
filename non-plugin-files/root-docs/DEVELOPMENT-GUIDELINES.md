@@ -48,6 +48,7 @@ This document consolidates ALL critical guidelines, known issues, and best pract
 - [ ] PHP serialization integrity has been verified
 - [ ] Changes have been tested in WordPress
 - [ ] No "No questions found" errors occur
+- [ ] Plugin version numbers are increased for this commit (`Version` header and `IELTS_CM_VERSION`)
 
 ---
 
@@ -686,7 +687,7 @@ php TEMPLATES/validate-xml.php "file-fixed.xml"
 
 ### Updating Version
 
-When releasing a new version:
+For every new commit:
 
 1. Update version in `ielts-course-manager.php` header comment
 2. Update `IELTS_CM_VERSION` constant
