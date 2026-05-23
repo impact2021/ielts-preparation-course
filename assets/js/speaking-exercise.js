@@ -4,6 +4,14 @@ jQuery(document).ready(function ($) {
 
     if (!$('#ielts-speaking-exercise-app').length) return;
 
+    var $introPanel = $('#ielts-speaking-intro');
+    var $genderChoice = $('#ielts-gender-choice');
+
+    $('#ielts-speaking-start-btn').on('click', function () {
+        $introPanel.hide();
+        $genderChoice.show();
+    });
+
     // Stop speech immediately if the page is left, reloaded, or hidden
     window.addEventListener('beforeunload', function () {
         if (window.speechSynthesis) window.speechSynthesis.cancel();
@@ -15,7 +23,7 @@ jQuery(document).ready(function ($) {
     if (typeof ieltsSpeakingExercise === 'undefined') {
         $('.ielts-gender-btn').on('click', function () {
             $(this).addClass('selected');
-            $('#ielts-gender-choice').hide();
+            $genderChoice.hide();
             $('#ielts-mic-check').show();
         });
         return;
@@ -63,7 +71,6 @@ jQuery(document).ready(function ($) {
 
     document.documentElement.style.setProperty('--ielts-speaking-color', cfg.progressColor || '#E56C0A');
 
-    var $genderChoice   = $('#ielts-gender-choice');
     var $micCheck       = $('#ielts-mic-check');
     var $interview      = $('#ielts-speaking-interview');
     var $results        = $('#ielts-speaking-results');

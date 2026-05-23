@@ -70,13 +70,24 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                     <div class="ielts-speaking-avatar" id="ielts-examiner-avatar">E</div>
                     <div class="ielts-speaking-header-text">
                         <h3>IELTS Speaking Test</h3>
-                        <p>Parts 1, 2 and 3. The examiner will speak each question. Recording starts automatically.</p>
+                        <p>Beta speaking assessment with a quick recording test first, the full test after that, and feedback at the end.</p>
                     </div>
                     <span class="ielts-speaking-badge" id="ielts-speech-badge">ready</span>
                 </div>
 
+                <div id="ielts-speaking-intro" class="ielts-speaking-intro-panel">
+                    <h4>Before you start</h4>
+                    <ul class="ielts-speaking-intro-list">
+                        <li>This speaking assessment is currently in beta.</li>
+                        <li>If anything goes wrong, please use the floating question mark on the right to report it.</li>
+                        <li>It works poorly in Firefox and is much better in Chrome or another Chromium browser.</li>
+                        <li>You will begin with a short recording test, then complete the full speaking test, and receive feedback at the end.</li>
+                    </ul>
+                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Start</button>
+                </div>
+
                 <!-- Gender choice -->
-                <div id="ielts-gender-choice" class="ielts-mic-check-panel">
+                <div id="ielts-gender-choice" class="ielts-mic-check-panel" style="display:none;">
                     <h4>Choose your examiner</h4>
                     <p>Would you prefer a male or female examiner voice?</p>
                     <div class="ielts-gender-btns">
