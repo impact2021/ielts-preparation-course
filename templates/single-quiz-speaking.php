@@ -56,6 +56,13 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
      data-course-id="<?php echo esc_attr($course_id); ?>"
      data-lesson-id="<?php echo esc_attr($lesson_id); ?>">
 
+    <!-- Admin header toggle -->
+    <?php if (current_user_can('manage_options')): ?>
+    <button type="button" id="header-toggle-btn" class="header-toggle-btn" title="<?php _e('Toggle header visibility', 'ielts-course-manager'); ?>">
+        <span class="toggle-icon">▼</span>
+    </button>
+    <?php endif; ?>
+
     <div class="quiz-header">
         <h2 style="margin:0;"><?php echo esc_html($quiz->post_title); ?></h2>
     </div>
@@ -67,12 +74,10 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
 
                 <!-- Header -->
                 <div class="ielts-speaking-header">
-                    <div class="ielts-speaking-avatar" id="ielts-examiner-avatar">E</div>
                     <div class="ielts-speaking-header-text">
-                        <h3>IELTS Speaking Test</h3>
-                        <p>Beta speaking assessment with a quick recording test first, the full test after that, and feedback at the end.</p>
+                        <h3>Speaking assessment</h3>
                     </div>
-                    <span class="ielts-speaking-badge" id="ielts-speech-badge">ready</span>
+                    <span class="ielts-speaking-badge ielts-speaking-badge-hidden" id="ielts-speech-badge"></span>
                 </div>
 
                 <div id="ielts-speaking-intro" class="ielts-speaking-intro-panel">
@@ -82,8 +87,7 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                         <li>If anything breaks, use the floating ? button to report it.</li>
                         <li>Start with a short recording test, then complete the full test for final feedback.</li>
                     </ul>
-                    <p class="ielts-speaking-intro-cta">Ready to show your speaking skills?</p>
-                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Let&rsquo;s start speaking 🚀</button>
+                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Start the speaking assessment</button>
                     <div class="ielts-speaking-browser-guide">
                         <p class="ielts-speaking-browser-guide-title">Best browser choice for this test</p>
                         <div class="ielts-speaking-browser-guide-table-wrap">
@@ -127,12 +131,8 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                     <h4>Choose your examiner</h4>
                     <p>Would you prefer a male or female examiner voice?</p>
                     <div class="ielts-gender-btns">
-                        <button type="button" class="ielts-gender-btn" data-gender="female">
-                            <span class="ielts-gender-icon">&#9792;</span> Female examiner
-                        </button>
-                        <button type="button" class="ielts-gender-btn" data-gender="male">
-                            <span class="ielts-gender-icon">&#9794;</span> Male examiner
-                        </button>
+                        <button type="button" class="ielts-gender-btn" data-gender="female">Female examiner</button>
+                        <button type="button" class="ielts-gender-btn" data-gender="male">Male examiner</button>
                     </div>
                     <p class="ielts-gender-note">Voice quality depends on your browser and device.</p>
                 </div>
@@ -142,9 +142,7 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                     <h4>Microphone check</h4>
                     <p>Click <strong>Record test</strong>, say a few words, then play it back to confirm your mic is working.</p>
                     <div class="ielts-mic-check-actions">
-                        <button type="button" class="ielts-speaking-rec-btn" id="ielts-mic-start">
-                            <span class="ielts-rec-dot"></span> Record test (5 seconds)
-                        </button>
+                        <button type="button" class="ielts-speaking-rec-btn" id="ielts-mic-start">Record test (5 seconds)</button>
                         <button type="button" class="ielts-speaking-send-btn" id="ielts-mic-play" disabled>Play back</button>
                         <button type="button" class="ielts-speaking-send-btn ielts-speaking-confirm-btn" id="ielts-mic-confirm" disabled>Confirm &amp; start test</button>
                     </div>

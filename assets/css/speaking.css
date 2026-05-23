@@ -67,12 +67,20 @@
     color: #92400e;
 }
 
+.ielts-speaking-badge-hidden {
+    display: none;
+}
+
+.ielts-speaking-badge-hidden.warn {
+    display: inline-block;
+}
+
 .ielts-speaking-intro-panel {
     margin-bottom: 0.9rem;
     padding: 1rem 1.15rem;
     border: 1px solid #bfdbfe;
     border-radius: 14px;
-    background: linear-gradient(160deg, #eff6ff 0%, #ffffff 70%);
+    background: #ffffff;
     box-shadow: 0 12px 28px rgba(37, 99, 235, 0.16);
     text-align: center;
 }
@@ -85,17 +93,17 @@
 }
 
 .ielts-speaking-intro-list {
-    margin: 0 auto 0.7rem;
+    margin: 0 auto 0.55rem;
     padding-left: 1.2rem;
     color: #374151;
     text-align: left;
     max-width: none;
-    font-size: 13px;
+    font-size: inherit;
 }
 
 .ielts-speaking-intro-list li {
-    margin-bottom: 0.35rem;
-    line-height: 1.35;
+    margin-bottom: 0.2rem;
+    line-height: inherit;
 }
 
 .ielts-speaking-browser-guide {
@@ -207,13 +215,6 @@
     color: #b91c1c;
 }
 
-.ielts-speaking-intro-cta {
-    margin: 0 0 0.5rem;
-    font-size: 14px;
-    font-weight: 600;
-    color: #1d4ed8;
-}
-
 .ielts-speaking-primary-btn {
     display: inline-flex;
     align-items: center;
@@ -223,7 +224,7 @@
     min-width: 240px;
     border: 1px solid transparent;
     border-radius: 999px;
-    background: linear-gradient(135deg, var(--ielts-speaking-color, #2563eb), #4f46e5);
+    background: var(--ielts-speaking-color, #2563eb);
     color: #fff;
     font-size: 14px;
     font-weight: 600;
@@ -241,11 +242,6 @@
 }
 
 .ielts-speaking-wrap.is-intro-active .ielts-speaking-header {
-    margin-bottom: 0.6rem;
-    padding-bottom: 0.55rem;
-}
-
-.ielts-speaking-wrap.is-intro-active .ielts-speaking-header-text {
     display: none;
 }
 
