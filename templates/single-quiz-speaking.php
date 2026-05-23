@@ -83,7 +83,8 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                         <li>It works poorly in Firefox and is much better in Chrome or another Chromium browser.</li>
                         <li>You will begin with a short recording test, then complete the full speaking test, and receive feedback at the end.</li>
                     </ul>
-                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Start</button>
+                    <p class="ielts-speaking-intro-cta">Ready to show your speaking skills?</p>
+                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Let&rsquo;s start speaking 🚀</button>
                 </div>
 
                 <!-- Gender choice -->
