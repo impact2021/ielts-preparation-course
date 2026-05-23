@@ -67,6 +67,48 @@
     color: #92400e;
 }
 
+.ielts-speaking-intro-panel {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #f9fafb;
+}
+
+.ielts-speaking-intro-panel h4 {
+    margin: 0 0 0.75rem;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+}
+
+.ielts-speaking-intro-list {
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+    color: #374151;
+}
+
+.ielts-speaking-intro-list li {
+    margin-bottom: 0.55rem;
+    line-height: 1.6;
+}
+
+.ielts-speaking-primary-btn {
+    padding: 10px 18px;
+    border: 1px solid var(--ielts-speaking-color, #2563eb);
+    border-radius: 999px;
+    background: var(--ielts-speaking-color, #2563eb);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+.ielts-speaking-primary-btn:hover {
+    opacity: 0.92;
+}
+
 /* ─── Progress ─── */
 .ielts-speaking-progress {
     display: flex;
