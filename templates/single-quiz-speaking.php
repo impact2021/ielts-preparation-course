@@ -63,7 +63,7 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
     <form id="ielts-quiz-form" class="quiz-form" data-quiz-id="<?php echo esc_attr($quiz->ID); ?>" data-has-speaking="1">
 
         <div class="ielts-speaking-exercise-container">
-            <div class="ielts-speaking-wrap" id="ielts-speaking-exercise-app">
+            <div class="ielts-speaking-wrap is-intro-active" id="ielts-speaking-exercise-app">
 
                 <!-- Header -->
                 <div class="ielts-speaking-header">
@@ -78,10 +78,12 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                 <div id="ielts-speaking-intro" class="ielts-speaking-intro-panel">
                     <h4>Before you start</h4>
                     <ul class="ielts-speaking-intro-list">
-                        <li>This speaking assessment is currently in beta.</li>
-                        <li>If anything goes wrong, please use the floating question mark on the right to report it.</li>
-                        <li>You will begin with a short recording test, then complete the full speaking test, and receive feedback at the end.</li>
+                        <li>This speaking assessment is in beta.</li>
+                        <li>If anything breaks, use the floating ? button to report it.</li>
+                        <li>Start with a short recording test, then complete the full test for final feedback.</li>
                     </ul>
+                    <p class="ielts-speaking-intro-cta">Ready to show your speaking skills?</p>
+                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Let&rsquo;s start speaking 🚀</button>
                     <div class="ielts-speaking-browser-guide">
                         <p class="ielts-speaking-browser-guide-title">Best browser choice for this test</p>
                         <div class="ielts-speaking-browser-guide-table-wrap">
@@ -96,30 +98,28 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                                 <tbody>
                                     <tr>
                                         <td class="ielts-browser-cell"><strong class="ielts-browser-name">Chrome</strong><span class="ielts-browser-status is-best">✓ Best</span></td>
-                                        <td>Examiner voices sound the most natural and the full experience works best.</td>
+                                        <td>Most natural examiner voice and most reliable full experience.</td>
                                         <td>Very few known issues.</td>
                                     </tr>
                                     <tr>
                                         <td class="ielts-browser-cell"><strong class="ielts-browser-name">Edge</strong><span class="ielts-browser-status is-good">● Good</span></td>
-                                        <td>Usually close to Chrome because it uses the same Chromium engine.</td>
-                                        <td>Available voice choices can vary by device.</td>
+                                        <td>Very close to Chrome on the same Chromium engine.</td>
+                                        <td>Voice options can vary by device.</td>
                                     </tr>
                                     <tr>
                                         <td class="ielts-browser-cell"><strong class="ielts-browser-name">Safari</strong><span class="ielts-browser-status is-mixed">△ OK</span></td>
-                                        <td>Works well on Apple devices and microphone access is usually solid.</td>
-                                        <td>Voice quality depends more on Apple system voices and permission prompts can be stricter.</td>
+                                        <td>Usually good on Apple devices with stable mic access.</td>
+                                        <td>Voice quality depends on Apple voices; permissions can be stricter.</td>
                                     </tr>
                                     <tr>
                                         <td class="ielts-browser-cell"><strong class="ielts-browser-name">Firefox</strong><span class="ielts-browser-status is-limited">~ Limited</span></td>
-                                        <td>Basic recording can still work.</td>
-                                        <td>Examiner voices sound more robotic and the overall experience is less reliable.</td>
+                                        <td>Basic recording may still work.</td>
+                                        <td>More robotic voice and less reliable overall.</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    <p class="ielts-speaking-intro-cta">Ready to show your speaking skills?</p>
-                    <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Let&rsquo;s start speaking 🚀</button>
                 </div>
 
                 <!-- Gender choice -->
@@ -283,8 +283,10 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
             if (!event.target || event.target.id !== 'ielts-speaking-start-btn') return;
             var intro = document.getElementById('ielts-speaking-intro');
             var gender = document.getElementById('ielts-gender-choice');
+            var app = document.getElementById('ielts-speaking-exercise-app');
             if (intro) intro.style.display = 'none';
             if (gender) gender.style.display = 'block';
+            if (app) app.classList.remove('is-intro-active');
         });
         </script>
 
