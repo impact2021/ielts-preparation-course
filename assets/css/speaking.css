@@ -3,7 +3,7 @@
    ============================================ */
 
 .ielts-speaking-wrap {
-    max-width: 720px;
+    max-width: 980px;
     margin: 0 auto;
     font-family: inherit;
 }
@@ -69,9 +69,8 @@
 
 .ielts-speaking-intro-panel {
     margin-bottom: 1.5rem;
-    padding: 1.5rem;
+    padding: 1.5rem 1.75rem;
     border: 1px solid #bfdbfe;
-    border-left: 5px solid var(--ielts-speaking-color, #2563eb);
     border-radius: 14px;
     background: linear-gradient(160deg, #eff6ff 0%, #ffffff 70%);
     box-shadow: 0 12px 28px rgba(37, 99, 235, 0.16);
@@ -90,7 +89,7 @@
     padding-left: 1.2rem;
     color: #374151;
     text-align: left;
-    max-width: 620px;
+    max-width: none;
 }
 
 .ielts-speaking-intro-list li {
@@ -99,7 +98,8 @@
 }
 
 .ielts-speaking-browser-guide {
-    max-width: 620px;
+    width: 100%;
+    max-width: none;
     margin: 0 auto 1rem;
     padding: 1rem;
     border: 1px solid #c7d2fe;
@@ -122,31 +122,30 @@
 .ielts-speaking-browser-guide-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 540px;
+    min-width: 600px;
+    table-layout: fixed;
+    border: 1px solid #d7deea;
+    background: #fff;
 }
 
 .ielts-speaking-browser-guide-table th,
 .ielts-speaking-browser-guide-table td {
-    padding: 0.75rem;
-    border-top: 1px solid #e5e7eb;
+    padding: 0.55rem 0.65rem;
+    border: 1px solid #d7deea;
     vertical-align: top;
-    font-size: 13px;
-    line-height: 1.55;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.45;
     color: #374151;
 }
 
 .ielts-speaking-browser-guide-table thead th {
-    border-top: none;
-    padding-top: 0;
-    font-size: 12px;
+    background: #f8fafc;
+    font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: #6b7280;
-}
-
-.ielts-speaking-browser-guide-table tbody tr:first-child td {
-    border-top: 1px solid #dbeafe;
 }
 
 .ielts-speaking-browser-guide-table td strong {
@@ -157,9 +156,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.28rem 0.65rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 999px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -248,6 +247,14 @@
 }
 
 @media (max-width: 640px) {
+    .ielts-speaking-wrap {
+        max-width: 100%;
+    }
+
+    .ielts-speaking-intro-panel {
+        padding: 1.25rem;
+    }
+
     .ielts-speaking-browser-guide {
         padding: 0.85rem;
     }
