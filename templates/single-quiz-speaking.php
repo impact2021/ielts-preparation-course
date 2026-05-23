@@ -242,6 +242,15 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
             'p3Questions'   => $p3_questions,
         )); ?>;
         </script>
+        <script>
+        document.addEventListener('click', function (event) {
+            if (!event.target || event.target.id !== 'ielts-speaking-start-btn') return;
+            var intro = document.getElementById('ielts-speaking-intro');
+            var gender = document.getElementById('ielts-gender-choice');
+            if (intro) intro.style.display = 'none';
+            if (gender) gender.style.display = 'block';
+        });
+        </script>
 
     </form>
 </div>
