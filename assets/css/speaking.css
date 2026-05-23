@@ -98,6 +98,92 @@
     line-height: 1.6;
 }
 
+.ielts-speaking-browser-guide {
+    max-width: 620px;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.92);
+    text-align: left;
+}
+
+.ielts-speaking-browser-guide-title {
+    margin: 0 0 0.75rem;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e3a8a;
+}
+
+.ielts-speaking-browser-guide-table-wrap {
+    overflow-x: auto;
+}
+
+.ielts-speaking-browser-guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+}
+
+.ielts-speaking-browser-guide-table th,
+.ielts-speaking-browser-guide-table td {
+    padding: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    vertical-align: top;
+    font-size: 13px;
+    line-height: 1.55;
+    color: #374151;
+}
+
+.ielts-speaking-browser-guide-table thead th {
+    border-top: none;
+    padding-top: 0;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #6b7280;
+}
+
+.ielts-speaking-browser-guide-table tbody tr:first-child td {
+    border-top: 1px solid #dbeafe;
+}
+
+.ielts-speaking-browser-guide-table td strong {
+    color: #111827;
+}
+
+.ielts-browser-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.28rem 0.65rem;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ielts-browser-status.is-best {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.ielts-browser-status.is-good {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.ielts-browser-status.is-mixed {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.ielts-browser-status.is-limited {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
 .ielts-speaking-intro-cta {
     margin: 0 0 0.75rem;
     font-size: 15px;
@@ -158,6 +244,12 @@
     .ielts-speaking-primary-btn {
         animation: none;
         transition: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .ielts-speaking-browser-guide {
+        padding: 0.85rem;
     }
 }
 

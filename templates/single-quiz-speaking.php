@@ -80,9 +80,49 @@ $show_completion = empty($all_items) || $current_index < 0 || $current_index ===
                     <ul class="ielts-speaking-intro-list">
                         <li>This speaking assessment is currently in beta.</li>
                         <li>If anything goes wrong, please use the floating question mark on the right to report it.</li>
-                        <li>It works poorly in Firefox and is much better in Chrome or another Chromium browser.</li>
                         <li>You will begin with a short recording test, then complete the full speaking test, and receive feedback at the end.</li>
                     </ul>
+                    <div class="ielts-speaking-browser-guide">
+                        <p class="ielts-speaking-browser-guide-title">Best browser choice for this test</p>
+                        <div class="ielts-speaking-browser-guide-table-wrap">
+                            <table class="ielts-speaking-browser-guide-table">
+                                <thead>
+                                    <tr>
+                                        <th>Browser</th>
+                                        <th>Rating</th>
+                                        <th>Strengths</th>
+                                        <th>Limitations</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Chrome</strong></td>
+                                        <td><span class="ielts-browser-status is-best">✓ Best</span></td>
+                                        <td>Examiner voices sound the most natural and the full experience works best.</td>
+                                        <td>Very few known issues.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Edge</strong></td>
+                                        <td><span class="ielts-browser-status is-good">● Good</span></td>
+                                        <td>Usually close to Chrome because it uses the same Chromium engine.</td>
+                                        <td>Available voice choices can vary by device.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Safari</strong></td>
+                                        <td><span class="ielts-browser-status is-mixed">△ OK</span></td>
+                                        <td>Works well on Apple devices and microphone access is usually solid.</td>
+                                        <td>Voice quality depends more on Apple system voices and permission prompts can be stricter.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Firefox</strong></td>
+                                        <td><span class="ielts-browser-status is-limited">~ Limited</span></td>
+                                        <td>Basic recording can still work.</td>
+                                        <td>Examiner voices sound more robotic and the overall experience is less reliable.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                     <p class="ielts-speaking-intro-cta">Ready to show your speaking skills?</p>
                     <button type="button" class="ielts-speaking-primary-btn" id="ielts-speaking-start-btn">Let&rsquo;s start speaking 🚀</button>
                 </div>
