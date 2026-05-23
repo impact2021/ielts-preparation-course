@@ -52,7 +52,8 @@ jQuery(document).ready(function ($) {
     var sharedAnalyser = null;
     var sharedBuf      = null;
     var silenceTimer   = null;
-    var SILENCE_SECS   = 5;
+    var SILENCE_SECS      = 5;  // seconds of silence before warning appears
+    var SILENCE_WARN_SECS = 5;  // seconds the warning is shown before advancing
     var SILENCE_THRESH = 10; // overwritten by calibration
 
     var MAX_P1    = 30;
@@ -613,9 +614,12 @@ jQuery(document).ready(function ($) {
                 silentFor++;
                 if (silentFor >= SILENCE_SECS && !warnShown) {
                     warnShown = true;
-                    showSilenceWarning(1, 'No speech detected — moving to the next question.');
+                    // Notify immediately (sets a health-message label only)
                     if (typeof onSilence === 'function') onSilence();
-                    if (recording) stopRecording();
+                    // Show countdown warning; stopRecording fires only after it expires
+                    showSilenceWarning(SILENCE_WARN_SECS, 'No speech detected — moving on in', function () {
+                        if (recording) stopRecording();
+                    });
                 }
             }
         }, 1000);
@@ -662,16 +666,13 @@ jQuery(document).ready(function ($) {
     function showSilenceWarning(seconds, message, onExpire) {
         hideSilenceWarning(); // clear any existing before showing
         var $warn = $('<div id="ielts-silence-warning" style="display:none;position:fixed;bottom:36px;left:50%;transform:translateX(-50%);background:rgba(30,30,30,0.88);color:#fff;padding:12px 28px;border-radius:30px;font-size:14px;font-weight:500;white-space:nowrap;pointer-events:none;z-index:99999;box-shadow:0 4px 20px rgba(0,0,0,0.3);letter-spacing:0.01em;"></div>');
-        $warn.text(message || 'You need to be speaking or the examiner will move on.');
-        $('body').append($warn);
-        // Gentle pulse: fade in, hold, fade out, repeat
-        function pulse() {
-            $warn.fadeIn(600).delay(1200).fadeOut(600, function () {
-                if ($warn.parent().length) pulse();
-            });
-        }
-        pulse();
         var secs = typeof seconds === 'number' && seconds > 0 ? Math.ceil(seconds) : 5;
+        var baseMsg = message || 'No speech detected — moving on in';
+        // Update text with live countdown so the user can see how long they have
+        function updateText() { $warn.text(baseMsg + ' ' + secs + 's\u2026'); }
+        updateText();
+        $('body').append($warn);
+        $warn.fadeIn(300);
         silenceWarnTimer = setInterval(function () {
             secs--;
             if (secs <= 0) {
@@ -681,6 +682,8 @@ jQuery(document).ready(function ($) {
                     $warn.remove();
                     if (onExpire) onExpire();
                 });
+            } else {
+                updateText();
             }
         }, 1000);
     }
