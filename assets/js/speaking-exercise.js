@@ -662,34 +662,46 @@ jQuery(document).ready(function ($) {
         }
     }
 
-    var silenceWarnTimer = null;
+    var silenceWarnTimer  = null; // setTimeout handle for per-second countdown ticks
+    var silenceExpireTimer = null; // setTimeout handle for the deferred onExpire call
+
     function showSilenceWarning(seconds, message, onExpire) {
-        hideSilenceWarning(); // clear any existing before showing
+        hideSilenceWarning(); // cancel any existing warning + timers
         var $warn = $('<div id="ielts-silence-warning" style="display:none;position:fixed;bottom:36px;left:50%;transform:translateX(-50%);background:rgba(30,30,30,0.88);color:#fff;padding:12px 28px;border-radius:30px;font-size:14px;font-weight:500;white-space:nowrap;pointer-events:none;z-index:99999;box-shadow:0 4px 20px rgba(0,0,0,0.3);letter-spacing:0.01em;"></div>');
         var secs = typeof seconds === 'number' && seconds > 0 ? Math.ceil(seconds) : 5;
         var baseMsg = message || 'No speech detected — moving on in';
-        // Update text with live countdown so the user can see how long they have
+
         function updateText() { $warn.text(baseMsg + ' ' + secs + 's\u2026'); }
         updateText();
         $('body').append($warn);
         $warn.fadeIn(300);
-        silenceWarnTimer = setInterval(function () {
+
+        // Use a setTimeout chain (not setInterval) so each tick only fires once
+        // and cannot race with hideSilenceWarning cancelling the timer.
+        function tick() {
             secs--;
-            if (secs <= 0) {
-                clearInterval(silenceWarnTimer);
-                silenceWarnTimer = null;
-                $warn.stop(true, true).fadeOut(400, function () {
-                    $warn.remove();
-                    if (onExpire) onExpire();
-                });
-            } else {
+            if (secs > 0) {
                 updateText();
+                silenceWarnTimer = setTimeout(tick, 1000);
+            } else {
+                silenceWarnTimer = null;
+                // Fade out the overlay, then schedule onExpire via its own
+                // cancellable timer so hideSilenceWarning can suppress it if
+                // stopRecording() is called from a different code path first.
+                $warn.fadeOut(400, function () {
+                    $warn.remove();
+                    if (typeof onExpire === 'function') {
+                        silenceExpireTimer = setTimeout(onExpire, 0);
+                    }
+                });
             }
-        }, 1000);
+        }
+        silenceWarnTimer = setTimeout(tick, 1000);
     }
 
     function hideSilenceWarning() {
-        if (silenceWarnTimer) { clearInterval(silenceWarnTimer); silenceWarnTimer = null; }
+        if (silenceWarnTimer)  { clearTimeout(silenceWarnTimer);  silenceWarnTimer  = null; }
+        if (silenceExpireTimer){ clearTimeout(silenceExpireTimer); silenceExpireTimer = null; }
         $('#ielts-silence-warning').stop(true, true).fadeOut(300, function () { $(this).remove(); });
     }
 
