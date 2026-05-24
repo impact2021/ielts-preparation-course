@@ -208,30 +208,24 @@ class IELTS_CM_Awards {
             'high_scores' => intval($high_scores)
         );
     }
-    
+
     /**
-     * Check for first page completion
+     * Reconcile progress-based awards from current user stats.
+     * This handles users with historical progress data that may have skipped
+     * exact-threshold event hooks in earlier sessions/imports.
      */
-    public function check_first_page_completion($user_id, $resource_id) {
-        $stats = $this->get_user_stats($user_id);
-        
-        if ($stats['pages_completed'] == 1) {
+    private function reconcile_progress_awards($user_id, $stats = null) {
+        if (!is_array($stats)) {
+            $stats = $this->get_user_stats($user_id);
+        }
+
+        if ($stats['pages_completed'] >= 1) {
             $this->grant_award($user_id, 'getting_started');
         }
-    }
-    
-    /**
-     * Check for quiz-related awards
-     */
-    public function check_quiz_awards($user_id, $quiz_id, $percentage, $submitted_time = null) {
-        $stats = $this->get_user_stats($user_id);
-        
-        // First test
-        if ($stats['exercises_completed'] == 1) {
+
+        if ($stats['exercises_completed'] >= 1) {
             $this->grant_award($user_id, 'first_test');
         }
-        
-        // Exercise count milestones
         if ($stats['exercises_completed'] >= 5) {
             $this->grant_award($user_id, 'five_exercises');
         }
@@ -247,6 +241,22 @@ class IELTS_CM_Awards {
         if ($stats['exercises_completed'] >= 100) {
             $this->grant_award($user_id, 'hundred_exercises');
         }
+    }
+    
+    /**
+     * Check for first page completion
+     */
+    public function check_first_page_completion($user_id, $resource_id) {
+        $stats = $this->get_user_stats($user_id);
+        $this->reconcile_progress_awards($user_id, $stats);
+    }
+    
+    /**
+     * Check for quiz-related awards
+     */
+    public function check_quiz_awards($user_id, $quiz_id, $percentage, $submitted_time = null) {
+        $stats = $this->get_user_stats($user_id);
+        $this->reconcile_progress_awards($user_id, $stats);
         
         // Perfect score awards
         if ($percentage >= 100) {
@@ -320,6 +330,9 @@ class IELTS_CM_Awards {
             wp_send_json_error(array('message' => 'User not logged in'));
             return;
         }
+
+        // Ensure milestone awards are in sync with current historical progress.
+        $this->reconcile_progress_awards($user_id);
         
         $earned_awards = $this->get_user_awards($user_id);
         $all_awards = $this->get_all_awards();
