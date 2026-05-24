@@ -493,3 +493,68 @@ body.ielts-quiz-focus-mode #ielts-writing-results-area:not(.ielts-results-hidden
     border-color: #999;
     color: #333;
 }
+
+@media (max-width: 768px) {
+    #ielts-writing-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    #ielts-writing-left-col,
+    #ielts-writing-right-col {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    #ielts-writing-left-col {
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    #ielts-writing-right-col {
+        max-height: none !important;
+    }
+
+    .ielts-writing-prompt-panel {
+        overflow-y: visible;
+    }
+
+    .writing-area-header {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+    }
+
+    .ielts-writing-textarea {
+        min-height: 320px;
+    }
+
+    .ielts-writing-combined-band {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .ielts-writing-results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ielts-writing-result-col {
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .ielts-writing-result-col:last-child {
+        border-bottom: none;
+    }
+
+    .ielts-writing-result-col-content .ielts-results-header {
+        flex-direction: column;
+    }
+
+    .ielts-writing-result-col-content .ielts-results-header-band {
+        align-items: flex-start;
+        min-width: 0;
+    }
+}
