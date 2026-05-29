@@ -239,13 +239,20 @@ class IELTS_CM_Speaking_Assessment {
 
         if (is_wp_error($response)) { wp_send_json_error(array('message' => 'Assessment failed: ' . $response->get_error_message())); }
 
+        $code = wp_remote_retrieve_response_code($response);
         $body = json_decode(wp_remote_retrieve_body($response), true);
+        if ($code !== 200) {
+            wp_send_json_error(array('message' => $this->build_speaking_assessment_error_message('http_error', $code, $body)));
+        }
+
         $text = $this->extract_anthropic_text($body);
-        if ($text === '') { wp_send_json_error(array('message' => 'Empty assessment response.')); }
+        if ($text === '') {
+            wp_send_json_error(array('message' => $this->build_speaking_assessment_error_message('empty_response', $code, $body)));
+        }
 
         $assessment = $this->parse_assessment_json($text);
         if (!$assessment) {
-            wp_send_json_error(array('message' => 'Assessment format error. Please retry.'));
+            wp_send_json_error(array('message' => $this->build_speaking_assessment_error_message('invalid_format', $code, $body)));
         }
 
         wp_send_json_success(array('html' => $this->render_results($assessment), 'assessment' => $assessment));
@@ -385,13 +392,20 @@ Return ONLY valid JSON:
         ));
 
         if (is_wp_error($response)) { wp_send_json_error(array('message'=>'Assessment failed: '.$response->get_error_message())); }
+        $code = wp_remote_retrieve_response_code($response);
         $body = json_decode(wp_remote_retrieve_body($response), true);
+        if ($code !== 200) {
+            wp_send_json_error(array('message' => $this->build_speaking_assessment_error_message('http_error', $code, $body)));
+        }
+
         $text = $this->extract_anthropic_text($body);
-        if ($text === '') { wp_send_json_error(array('message'=>'Empty response.')); }
+        if ($text === '') {
+            wp_send_json_error(array('message' => $this->build_speaking_assessment_error_message('empty_response', $code, $body)));
+        }
 
         $assessment = $this->parse_assessment_json($text);
         if (!$assessment) {
-            wp_send_json_error(array('message' => 'Assessment format error. Please retry.'));
+            wp_send_json_error(array('message' => $this->build_speaking_assessment_error_message('invalid_format', $code, $body)));
         }
 
         wp_send_json_success(array('html'=>$this->render_full_results($assessment),'assessment'=>$assessment));
@@ -410,6 +424,53 @@ Return ONLY valid JSON:
         }
 
         return trim(implode("\n", $chunks));
+    }
+
+    private function build_speaking_assessment_error_message($reason, $http_code = 0, $body = array()) {
+        $http_code = intval($http_code);
+        $error_type = strtolower((string) ($body['error']['type'] ?? ''));
+        $error_message = strtolower((string) ($body['error']['message'] ?? ''));
+
+        if ($reason === 'http_error') {
+            if (in_array($http_code, array(401, 403), true)) {
+                return 'Your speaking test could not be marked because the assessment service rejected the site API credentials. Please report code ' . $this->format_speaking_issue_code('AUTH', $http_code) . '.';
+            }
+
+            if (in_array($http_code, array(429, 529), true) || strpos($error_type, 'overloaded') !== false || strpos($error_message, 'overloaded') !== false) {
+                return 'Your speaking test could not be marked because the assessment service is busy right now. Please wait a minute and try again. If this keeps happening, please report code ' . $this->format_speaking_issue_code('BUSY', $http_code ?: 429) . '.';
+            }
+
+            if (in_array($http_code, array(500, 502, 503, 504), true)) {
+                return 'Your speaking test could not be marked because the assessment service had a server problem. Please try again shortly. If it keeps happening, please report code ' . $this->format_speaking_issue_code('UPSTREAM', $http_code) . '.';
+            }
+
+            if (in_array($http_code, array(400, 413, 422), true)) {
+                return 'Your speaking test could not be marked because the assessment request was rejected by the assessment service. Please report code ' . $this->format_speaking_issue_code('REQUEST', $http_code) . '.';
+            }
+
+            return 'Your speaking test could not be marked because the assessment service returned an unexpected error. Please report code ' . $this->format_speaking_issue_code('HTTP', $http_code ?: 0) . '.';
+        }
+
+        if ($reason === 'empty_response') {
+            return 'Your speaking test was submitted, but the assessment service returned no feedback text. Please report code ' . $this->format_speaking_issue_code('EMPTY', $http_code ?: 200) . '.';
+        }
+
+        if ($reason === 'invalid_format') {
+            return 'Your speaking test was submitted, but the assessment service returned feedback in an unreadable format. Please report code ' . $this->format_speaking_issue_code('FORMAT') . '.';
+        }
+
+        return 'Your speaking test could not be marked because of an unexpected assessment error. Please report code ' . $this->format_speaking_issue_code('UNKNOWN', $http_code ?: 0) . '.';
+    }
+
+    private function format_speaking_issue_code($code, $http_code = 0) {
+        $code = strtoupper(preg_replace('/[^A-Z0-9]+/', '-', (string) $code));
+        $http_code = intval($http_code);
+
+        if ($http_code > 0) {
+            return 'SPEAKING-' . $code . '-' . $http_code;
+        }
+
+        return 'SPEAKING-' . $code;
     }
 
     private function parse_assessment_json($raw_text) {
