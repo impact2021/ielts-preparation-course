@@ -801,7 +801,15 @@ jQuery(document).ready(function ($) {
                 setTimeout(function () {
                     if (r.success) {
                         $results.html(r.data.html);
-                        saveSpeakingScore(r.data.assessment.overall_band);
+                        var feedbackSnapshot = [];
+                        if (r.data && r.data.html) {
+                            feedbackSnapshot.push({
+                                task_type: 'speaking',
+                                overall_band: r.data.assessment && r.data.assessment.overall_band ? r.data.assessment.overall_band : null,
+                                html: r.data.html
+                            });
+                        }
+                        saveSpeakingScore(r.data.assessment.overall_band, feedbackSnapshot);
                     } else {
                         $results.html('<div style="padding:2rem;color:#dc2626;font-size:14px;">' + (r.data ? r.data.message : 'Unknown error') + '</div>');
                     }
@@ -814,10 +822,18 @@ jQuery(document).ready(function ($) {
         });
     }
 
-    function saveSpeakingScore(band) {
+    function saveSpeakingScore(band, feedbackSnapshot) {
         $.ajax({
             url: cfg.ajaxUrl, method: 'POST',
-            data: { action: 'ielts_cm_save_speaking_score', nonce: cfg.nonce, quiz_id: cfg.quizId, course_id: cfg.courseId, lesson_id: cfg.lessonId, band_score: band },
+            data: {
+                action: 'ielts_cm_save_speaking_score',
+                nonce: cfg.nonce,
+                quiz_id: cfg.quizId,
+                course_id: cfg.courseId,
+                lesson_id: cfg.lessonId,
+                band_score: band,
+                feedback_snapshot: Array.isArray(feedbackSnapshot) ? feedbackSnapshot : []
+            },
             success: function () {
                 $('#ielts-speaking-next-link').css({ opacity: 1, 'pointer-events': 'auto' });
                 $('#ielts-speaking-completion').show();

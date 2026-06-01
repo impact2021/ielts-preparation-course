@@ -525,11 +525,31 @@ Return ONLY valid JSON:
         $course_id = intval($_POST['course_id'] ?? 0);
         $lesson_id = intval($_POST['lesson_id'] ?? 0);
         $band      = floatval($_POST['band_score'] ?? 0);
+        $feedback_snapshot_raw = $_POST['feedback_snapshot'] ?? array();
         if (!$user_id || !$quiz_id) { wp_send_json_error(array('message'=>'Invalid request.')); }
         $map = array('9.0'=>97,'8.5'=>92,'8.0'=>87,'7.5'=>82,'7.0'=>73,'6.5'=>67,'6.0'=>62,'5.5'=>57,'5.0'=>52,'4.5'=>47,'4.0'=>42,'3.5'=>37,'3.0'=>32,'2.5'=>27,'2.0'=>22,'1.5'=>17,'1.0'=>12);
         $pct = isset($map[number_format($band,1)]) ? $map[number_format($band,1)] : round(($band/9)*100,1);
+        $feedback_snapshot = array();
+        if (is_array($feedback_snapshot_raw)) {
+            foreach ($feedback_snapshot_raw as $item) {
+                if (!is_array($item)) {
+                    continue;
+                }
+                $task_type = sanitize_text_field($item['task_type'] ?? '');
+                $overall_band = isset($item['overall_band']) ? floatval($item['overall_band']) : 0;
+                $html = isset($item['html']) ? wp_kses_post(wp_unslash($item['html'])) : '';
+                if ($html === '') {
+                    continue;
+                }
+                $feedback_snapshot[] = array(
+                    'task_type'    => $task_type,
+                    'overall_band' => $overall_band,
+                    'html'         => $html,
+                );
+            }
+        }
         global $wpdb;
-        $wpdb->insert($wpdb->prefix.'ielts_cm_quiz_results',array('user_id'=>$user_id,'quiz_id'=>$quiz_id,'course_id'=>$course_id,'lesson_id'=>$lesson_id?:null,'score'=>$band,'max_score'=>9,'percentage'=>$pct,'answers'=>json_encode(array('speaking_exercise'=>true,'band_score'=>$band)),'submitted_date'=>current_time('mysql')),array('%d','%d','%d','%d','%f','%f','%f','%s','%s'));
+        $wpdb->insert($wpdb->prefix.'ielts_cm_quiz_results',array('user_id'=>$user_id,'quiz_id'=>$quiz_id,'course_id'=>$course_id,'lesson_id'=>$lesson_id?:null,'score'=>$band,'max_score'=>9,'percentage'=>$pct,'answers'=>json_encode(array('speaking_exercise'=>true,'band_score'=>$band,'feedback_snapshot'=>$feedback_snapshot)),'submitted_date'=>current_time('mysql')),array('%d','%d','%d','%d','%f','%f','%f','%s','%s'));
         do_action('ielts_cm_quiz_submitted',$user_id,$quiz_id,$pct,time());
         wp_send_json_success(array('message'=>'Score saved.'));
     }
