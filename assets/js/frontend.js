@@ -2627,6 +2627,40 @@
             }
         }
         
+        function getAttemptFeedbackSnapshot(attempt) {
+            var answers = attempt && attempt.answers ? attempt.answers : {};
+            var feedbackSnapshot = Array.isArray(answers.feedback_snapshot) ? answers.feedback_snapshot : [];
+            return feedbackSnapshot.filter(function(item) {
+                return item && typeof item === 'object' && item.html;
+            });
+        }
+
+        function getAttemptFeedbackLabel(taskType) {
+            if (taskType === 'task2') {
+                return 'Task 2';
+            }
+            if (taskType === 'task1_academic' || taskType === 'task1_general' || taskType === 'task1') {
+                return 'Task 1';
+            }
+            if (taskType === 'speaking') {
+                return 'Speaking';
+            }
+            return 'Feedback';
+        }
+
+        function renderAttemptFeedbackSections(feedbackSnapshot) {
+            var html = '';
+            feedbackSnapshot.forEach(function(taskFeedback, taskIndex) {
+                var label = getAttemptFeedbackLabel(taskFeedback.task_type);
+                var bandText = taskFeedback.overall_band ? ' (Band ' + taskFeedback.overall_band + ')' : '';
+                html += '<div style="margin-bottom:' + (taskIndex === feedbackSnapshot.length - 1 ? '0' : '14px') + ';">';
+                html += '<div style="font-weight:600; margin-bottom:6px;">' + label + ' Feedback' + bandText + '</div>';
+                html += '<div class="attempt-feedback-html">' + (taskFeedback.html || '') + '</div>';
+                html += '</div>';
+            });
+            return html;
+        }
+
         // Previous Attempts functionality
         if ($('.quiz-attempts-section').length) {
             var attemptsLoaded = false;
@@ -2693,6 +2727,7 @@
                 html += '<th>Score</th>';
                 html += '<th>Percentage</th>';
                 html += '<th>Date</th>';
+                html += '<th>Feedback</th>';
                 if (isAdmin) {
                     html += '<th>Actions</th>';
                 }
@@ -2703,20 +2738,49 @@
                     var attemptNum = attempts.length - index;
                     // Using default 70% pass threshold - ideally this would come from quiz settings
                     var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
+                    var feedbackSnapshot = getAttemptFeedbackSnapshot(attempt);
+                    var hasFeedback = feedbackSnapshot.length > 0;
+                    var detailId = 'quiz-attempt-feedback-' + attempt.id;
                     
                     html += '<tr data-attempt-id="' + attempt.id + '">';
                     html += '<td>' + attemptNum + '</td>';
                     html += '<td>' + attempt.score + ' / ' + attempt.max_score + '</td>';
                     html += '<td><span class="percentage-badge percentage-' + passClass + '">' + attempt.percentage + '%</span></td>';
                     html += '<td>' + attempt.submitted_date + '</td>';
+                    html += '<td>';
+                    if (hasFeedback) {
+                        html += '<button class="button button-small view-attempt-feedback-btn" data-target="' + detailId + '">View Feedback</button>';
+                    } else {
+                        html += '<span style="color:#777;">—</span>';
+                    }
+                    html += '</td>';
                     if (isAdmin) {
                         html += '<td><button class="delete-attempt-btn button button-small" data-attempt-id="' + attempt.id + '">Delete</button></td>';
                     }
                     html += '</tr>';
+
+                    if (hasFeedback) {
+                        var colspan = isAdmin ? 6 : 5;
+                        html += '<tr id="' + detailId + '" class="attempt-feedback-row" style="display:none;">';
+                        html += '<td colspan="' + colspan + '" style="background:#fafafa; border-top:0;">';
+                        html += '<div class="attempt-feedback-content" style="padding:10px 0;">';
+                        html += renderAttemptFeedbackSections(feedbackSnapshot);
+                        html += '</div>';
+                        html += '</td>';
+                        html += '</tr>';
+                    }
                 });
                 
                 html += '</tbody></table>';
                 $('.attempts-list').html(html);
+
+                $('.attempts-list .view-attempt-feedback-btn').on('click', function() {
+                    var target = $(this).data('target');
+                    var $row = $('#' + target);
+                    var isVisible = $row.is(':visible');
+                    $row.slideToggle(180);
+                    $(this).text(isVisible ? 'View Feedback' : 'Hide Feedback');
+                });
                 
                 // Add delete functionality for admin
                 if (isAdmin) {
@@ -2838,8 +2902,7 @@
                     var attemptNum = attempts.length - index;
                     // Using default 70% pass threshold - ideally this would come from quiz settings
                     var passClass = attempt.percentage >= 70 ? 'pass' : 'fail';
-                    var answers = attempt.answers || {};
-                    var feedbackSnapshot = Array.isArray(answers.feedback_snapshot) ? answers.feedback_snapshot : [];
+                    var feedbackSnapshot = getAttemptFeedbackSnapshot(attempt);
                     var hasFeedback = feedbackSnapshot.length > 0;
                     var detailId = 'attempt-feedback-' + attempt.id;
                     
@@ -2865,14 +2928,7 @@
                         html += '<tr id="' + detailId + '" class="attempt-feedback-row" style="display:none;">';
                         html += '<td colspan="' + colspan + '" style="background:#fafafa; border-top:0;">';
                         html += '<div class="attempt-feedback-content" style="padding:10px 0;">';
-                        feedbackSnapshot.forEach(function(taskFeedback, taskIndex) {
-                            var label = taskFeedback.task_type === 'task2' ? 'Task 2' : 'Task 1';
-                            var bandText = taskFeedback.overall_band ? ' (Band ' + taskFeedback.overall_band + ')' : '';
-                            html += '<div style="margin-bottom:' + (taskIndex === feedbackSnapshot.length - 1 ? '0' : '14px') + ';">';
-                            html += '<div style="font-weight:600; margin-bottom:6px;">' + label + ' Feedback' + bandText + '</div>';
-                            html += '<div class="attempt-feedback-html">' + (taskFeedback.html || '') + '</div>';
-                            html += '</div>';
-                        });
+                        html += renderAttemptFeedbackSections(feedbackSnapshot);
                         html += '</div>';
                         html += '</td>';
                         html += '</tr>';
